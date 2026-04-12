@@ -161,8 +161,8 @@ const recipes = [
     ],
     // ── Brands used in this recipe ──
     brands: [
-      { name: "Fairlife", item: "Fat-free milk", why: "Higher protein per serving than regular milk, lactose-free", image: "/images/brands/fairlife-milk.webp", url: "https://fairlife.com" },
-      { name: "Dan-O's", item: "Outlaw seasoning", why: "All-purpose spice blend with heat — replaces 4-5 individual spices", image: "/images/brands/danos-outlaw.webp", url: "https://danosseasoning.com" },
+      { name: "Fairlife", item: "Fat-free milk", why: "Higher protein per serving than regular milk, lactose-free", image: "/images/brands/fairlife-milk.png", url: "https://fairlife.com" },
+      { name: "Dan-O's", item: "Outlaw seasoning", why: "All-purpose spice blend with heat — replaces 4-5 individual spices", image: "/images/brands/danos-outlaw.png", url: "https://danosseasoning.com" },
       { name: "Del Real", item: "Shredded chicken", why: "Pre-cooked, saves 20+ min, consistent shred texture", image: "/images/brands/del-real-chicken.webp", url: "https://delrealfood.com" },
     ],
   },
@@ -305,8 +305,8 @@ const recipes = [
       { text: "PLATE: Pasta in bowl, sliced tri-tip ON TOP (don't bury it \u2014 it steams and loses sear). Optional chili flakes + lime." },
     ],
     brands: [
-      { name: "Fairlife", item: "Fat-free milk", why: "Higher protein per serving, lactose-free, blends smooth into sauce", image: "/images/brands/fairlife-milk.webp", url: "https://fairlife.com" },
-      { name: "Dan-O's", item: "Outlaw seasoning", why: "All-purpose spice with heat \u2014 perfect on steak and in the sauce", image: "/images/brands/danos-outlaw.webp", url: "https://danosseasoning.com" },
+      { name: "Fairlife", item: "Fat-free milk", why: "Higher protein per serving, lactose-free, blends smooth into sauce", image: "/images/brands/fairlife-milk.png", url: "https://fairlife.com" },
+      { name: "Dan-O's", item: "Outlaw seasoning", why: "All-purpose spice with heat \u2014 perfect on steak and in the sauce", image: "/images/brands/danos-outlaw.png", url: "https://danosseasoning.com" },
       { name: "Earth's Best", item: "Mini meatballs", why: "Pre-cooked, mild, kid-approved protein swap", image: "/images/brands/earths-best-meatballs.webp", url: "https://earthsbest.com" },
     ],
     mealPrep: {
