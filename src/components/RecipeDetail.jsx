@@ -212,6 +212,20 @@ export default function RecipeDetail({ recipe }) {
           </section>
         )}
 
+        {/* Meal Prep */}
+        {recipe.mealPrep && (
+          <section className="mt-8 bg-neutral-900 border border-neutral-800 rounded-xl p-5">
+            <h2 className="text-sm font-bold uppercase tracking-wider text-amber-500 mb-3">
+              Meal Prep
+            </h2>
+            <div className="space-y-2 text-sm text-neutral-300">
+              <p><span className="text-neutral-500 font-semibold">Storage:</span> {recipe.mealPrep.storage}</p>
+              <p><span className="text-neutral-500 font-semibold">Reheat:</span> {recipe.mealPrep.reheat}</p>
+              <p><span className="text-neutral-500 font-semibold">Lasts:</span> {recipe.mealPrep.lasts}</p>
+            </div>
+          </section>
+        )}
+
         {/* Tags */}
         <div className="flex gap-2 flex-wrap mt-8 mb-8">
           {recipe.tags.map((tag) => (
