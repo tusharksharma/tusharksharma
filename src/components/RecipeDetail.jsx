@@ -11,7 +11,7 @@ export default function RecipeDetail({ recipe }) {
   const [mode, setMode] = useState("adult");
   const hasSplit = !!recipe.splitCook;
   const isSplit = hasSplit && mode === "split";
-  const ppc = ((recipe.protein / recipe.calories) * 100).toFixed(0);
+  const ppc = ((recipe.protein * 4 / recipe.calories) * 100).toFixed(0);
 
   return (
     <div className="min-h-screen bg-neutral-950 text-neutral-100">

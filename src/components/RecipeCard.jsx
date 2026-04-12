@@ -13,7 +13,7 @@ const splitLabels = {
 };
 
 export default function RecipeCard({ recipe }) {
-  const ppc = ((recipe.protein / recipe.calories) * 100).toFixed(0);
+  const ppc = ((recipe.protein * 4 / recipe.calories) * 100).toFixed(0);
   const split = splitLabels[recipe.splitFriendly];
 
   return (
