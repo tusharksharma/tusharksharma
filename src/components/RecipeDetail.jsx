@@ -196,18 +196,29 @@ export default function RecipeDetail({ recipe }) {
               Brands I Use
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-              {recipe.brands.map((b, i) => (
-                <div
-                  key={i}
-                  className="bg-neutral-900 border border-neutral-800 rounded-xl p-4"
-                >
-                  <div className="text-amber-400 font-black text-sm">{b.name}</div>
-                  <div className="text-white text-xs font-semibold mt-0.5">{b.item}</div>
-                  <div className="text-neutral-500 text-xs mt-1.5 leading-relaxed">
-                    {b.why}
+              {recipe.brands.map((b, i) => {
+                const inner = (
+                  <div className="bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden hover:border-amber-500/30 transition-colors">
+                    {b.image && (
+                      <div className="bg-white p-3 flex items-center justify-center h-32">
+                        <img src={b.image} alt={b.name} className="max-h-full max-w-full object-contain" loading="lazy" />
+                      </div>
+                    )}
+                    <div className="p-4">
+                      <div className="text-amber-400 font-black text-sm">{b.name}</div>
+                      <div className="text-white text-xs font-semibold mt-0.5">{b.item}</div>
+                      <div className="text-neutral-500 text-xs mt-1.5 leading-relaxed">{b.why}</div>
+                    </div>
                   </div>
-                </div>
-              ))}
+                );
+                return b.url ? (
+                  <a key={i} href={b.url} target="_blank" rel="noopener noreferrer" className="block">
+                    {inner}
+                  </a>
+                ) : (
+                  <div key={i}>{inner}</div>
+                );
+              })}
             </div>
           </section>
         )}
