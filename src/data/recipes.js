@@ -182,7 +182,7 @@ const recipes = [
     servings: 4,
     protein: 45,
     calories: 500,
-    image: "/images/tritip/step4-sauce-build-c.png",
+    image: "/images/tritip/hero-plated.png",
     description: "Seared tri-tip + cottage cheese cream sauce + penne. Adults get chili oil and Dan-O's. Kids get meatballs or sausage in a mild creamy coat. One sauce base, two finishes.",
     whyItWorks: "This stress-tests the Split Cook Method with a different protein. Tri-tip for adults, pre-cooked meatballs for kids — same sauce base, same pasta, zero extra cooking time. The cottage cheese + beef broth sauce gives body without heavy cream. Meal preps well if you store pasta and protein separately.",
     executionRules: [
@@ -209,19 +209,19 @@ const recipes = [
       sharedSteps: [
         {
           text: "COOK PASTA: Salted water, cook to al dente. Reserve 1/2 cup pasta water. Set aside.",
-          images: ["/images/tritip/step1-cook-pasta-a.png", "/images/tritip/step1-cook-pasta-b.png"],
+          images: [""],
         },
         {
           text: "COOK ADULT PROTEIN: Season tri-tip aggressively with Dan-O's. Sear high heat (or grill), 4-5 min per side. Rest 5-10 min. Slice THIN against the grain. Do NOT overcook — this kills the dish.",
-          images: ["/images/tritip/step2-sear-tritip-a.png", "/images/tritip/step2-sear-tritip-c.png"],
+          images: ["/images/tritip/step2-sear.png", "/images/tritip/step2-sliced.png"],
         },
         {
           text: "COOK KID PROTEIN: Heat meatballs or sausage separately. Keep mild — no spice. Set aside.",
-          images: ["/images/tritip/step3-kid-protein-a.png", "/images/tritip/step3-kid-protein-b.png"],
+          images: [""],
         },
         {
           text: "BUILD SHARED SAUCE: Blend cottage cheese + milk + beef broth until smooth. In a pan, saut\u00e9 garlic 30 sec, add spinach and wilt, pour in blended sauce. Simmer 2-3 min.",
-          images: ["/images/tritip/step4-sauce-build-a.png", "/images/tritip/step4-sauce-build-b.png", "/images/tritip/step4-sauce-build-c.png"],
+          images: ["/images/tritip/step4-sauce-blend.png", "/images/tritip/step4-sauce-pour.png", "/images/tritip/hero-plated.png"],
         },
       ],
       adult: {
@@ -297,9 +297,9 @@ const recipes = [
       "Optional: chili flakes, lime",
     ],
     steps: [
-      { text: "COOK PASTA: Salted water, cook to al dente. Reserve 1/2 cup pasta water. Set aside.", images: ["/images/tritip/step1-cook-pasta-a.png", "/images/tritip/step1-cook-pasta-b.png"] },
-      { text: "SEAR TRI-TIP: Season aggressively with Dan-O's. Sear high heat, 4-5 min per side. Rest 5-10 min. Slice THIN against the grain.", images: ["/images/tritip/step2-sear-tritip-a.png", "/images/tritip/step2-sear-tritip-c.png"] },
-      { text: "BUILD SAUCE: Blend cottage cheese + milk + beef broth. Saut\u00e9 garlic, wilt spinach, pour in sauce. Simmer 2-3 min.", images: ["/images/tritip/step4-sauce-build-a.png", "/images/tritip/step4-sauce-build-b.png", "/images/tritip/step4-sauce-build-c.png"] },
+      { text: "COOK PASTA: Salted water, cook to al dente. Reserve 1/2 cup pasta water. Set aside.", images: [""] },
+      { text: "SEAR TRI-TIP: Season aggressively with Dan-O's. Sear high heat, 4-5 min per side. Rest 5-10 min. Slice THIN against the grain.", images: ["/images/tritip/step2-sear.png", "/images/tritip/step2-sliced.png"] },
+      { text: "BUILD SAUCE: Blend cottage cheese + milk + beef broth. Saut\u00e9 garlic, wilt spinach, pour in sauce. Simmer 2-3 min.", images: ["/images/tritip/step4-sauce-blend.png", "/images/tritip/step4-sauce-pour.png", "/images/tritip/hero-plated.png"] },
       { text: "FLAVOR BUILD: Add chili oil, smoked paprika, garlic powder, Dan-O's to sauce. Stir." },
       { text: "COMBINE: Add pasta + splash of pasta water. Toss until coated." },
       { text: "PLATE: Pasta in bowl, sliced tri-tip ON TOP (don't bury it \u2014 it steams and loses sear). Optional chili flakes + lime." },
