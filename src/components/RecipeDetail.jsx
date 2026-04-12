@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const pillarColors = {
   "Protein Meals": "text-amber-500 bg-amber-500/10 border-amber-500/30",
@@ -6,7 +7,7 @@ const pillarColors = {
   "Cooking Techniques": "text-blue-400 bg-blue-400/10 border-blue-400/30",
 };
 
-export default function RecipeDetail({ recipe, onBack }) {
+export default function RecipeDetail({ recipe }) {
   const [mode, setMode] = useState("adult");
   const hasSplit = !!recipe.splitCook;
   const isSplit = hasSplit && mode === "split";
@@ -17,12 +18,12 @@ export default function RecipeDetail({ recipe, onBack }) {
       {/* Back nav */}
       <div className="border-b border-neutral-800 sticky top-0 z-10 bg-neutral-950/90 backdrop-blur-sm">
         <div className="max-w-3xl mx-auto px-4 py-4 flex items-center justify-between">
-          <button
-            onClick={onBack}
-            className="text-neutral-500 hover:text-amber-400 transition-colors text-sm font-semibold cursor-pointer"
+          <Link
+            to="/"
+            className="text-neutral-500 hover:text-amber-400 transition-colors text-sm font-semibold"
           >
             &larr; The Split Plate
-          </button>
+          </Link>
           <span
             className={`text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full border ${
               pillarColors[recipe.pillar] || ""

@@ -4,6 +4,11 @@ const recipes = [
   // ═══════════════════════════════════════════
   {
     id: 1,
+    slug: "spicy-fajita-chicken-gnocchi",
+    proteinAnchor: "chicken",
+    mealType: "pasta",
+    flavorDirection: "creamy-comfort",
+    splitFriendly: "full",
     title: "Spicy Fajita Chicken Gnocchi",
     category: "Core Signatures",
     pillar: "Protein Meals",
@@ -162,6 +167,11 @@ const recipes = [
   },
   {
     id: 2,
+    slug: "chili-cream-tri-tip-penne",
+    proteinAnchor: "beef",
+    mealType: "pasta",
+    flavorDirection: "smoky-southwest",
+    splitFriendly: "easy-swap",
     title: "Chili Cream Tri-Tip Penne",
     category: "Core Signatures",
     pillar: "Protein Meals",
@@ -199,6 +209,11 @@ const recipes = [
   },
   {
     id: 3,
+    slug: "swedish-steak-noodles",
+    proteinAnchor: "beef",
+    mealType: "pasta",
+    flavorDirection: "creamy-comfort",
+    splitFriendly: "easy-swap",
     title: "Swedish-Style High Protein Steak & Noodles",
     category: "Core Signatures",
     pillar: "Protein Meals",
@@ -237,6 +252,11 @@ const recipes = [
   },
   {
     id: 4,
+    slug: "spicy-beef-broccoli-bowls",
+    proteinAnchor: "beef",
+    mealType: "rice-bowl",
+    flavorDirection: "spicy-asian",
+    splitFriendly: "easy-swap",
     title: "Spicy Beef & Broccoli Rice Bowls",
     category: "Core Signatures",
     pillar: "Protein Meals",
@@ -275,6 +295,11 @@ const recipes = [
   },
   {
     id: 5,
+    slug: "doner-beef-lavash-wraps",
+    proteinAnchor: "beef",
+    mealType: "wrap",
+    flavorDirection: "smoky-southwest",
+    splitFriendly: "full",
     title: "Sheet Pan Doner-Style Beef Lavash Wraps",
     category: "Core Signatures",
     pillar: "Protein Meals",
@@ -316,6 +341,11 @@ const recipes = [
   // ═══════════════════════════════════════════
   {
     id: 6,
+    slug: "philly-cheesesteak-sliders",
+    proteinAnchor: "beef",
+    mealType: "wrap",
+    flavorDirection: "creamy-comfort",
+    splitFriendly: "easy-swap",
     title: "Philly Cheesesteak Sliders (Lean Version)",
     category: "Fast Meals",
     pillar: "Protein Meals",
@@ -350,6 +380,11 @@ const recipes = [
   },
   {
     id: 7,
+    slug: "mini-naan-protein-pizzas",
+    proteinAnchor: "chicken",
+    mealType: "other",
+    flavorDirection: "creamy-comfort",
+    splitFriendly: "full",
     title: "Mini Naan High-Protein Pizzas",
     category: "Fast Meals",
     pillar: "Protein Meals",
@@ -383,6 +418,11 @@ const recipes = [
   },
   {
     id: 8,
+    slug: "chicken-thigh-2-marinade-prep",
+    proteinAnchor: "chicken",
+    mealType: "other",
+    flavorDirection: "smoky-southwest",
+    splitFriendly: "full",
     title: "Chicken Thigh Meal Prep (2 Marinade System)",
     category: "Fast Meals",
     pillar: "Protein Meals",
@@ -428,6 +468,11 @@ const recipes = [
   // ═══════════════════════════════════════════
   {
     id: 9,
+    slug: "pan-seared-bavette-chimichurri",
+    proteinAnchor: "steak",
+    mealType: "other",
+    flavorDirection: "smoky-southwest",
+    splitFriendly: "adult-only",
     title: "Pan-Seared Bavette with Chimichurri",
     category: "Steak & Protein",
     pillar: "Cooking Techniques",
@@ -467,6 +512,11 @@ const recipes = [
   },
   {
     id: 10,
+    slug: "picanha-reverse-sear",
+    proteinAnchor: "steak",
+    mealType: "other",
+    flavorDirection: "smoky-southwest",
+    splitFriendly: "adult-only",
     title: "Picanha Fat Cap Reverse Sear",
     category: "Steak & Protein",
     pillar: "Cooking Techniques",
@@ -497,6 +547,11 @@ const recipes = [
   },
   {
     id: 11,
+    slug: "smoky-southwest-flank-steak",
+    proteinAnchor: "steak",
+    mealType: "other",
+    flavorDirection: "smoky-southwest",
+    splitFriendly: "easy-swap",
     title: "Smoky Southwest Flank Steak",
     category: "Steak & Protein",
     pillar: "Protein Meals",
@@ -536,6 +591,11 @@ const recipes = [
   // ═══════════════════════════════════════════
   {
     id: 12,
+    slug: "cottage-cheese-fajita-pasta",
+    proteinAnchor: "chicken",
+    mealType: "pasta",
+    flavorDirection: "creamy-comfort",
+    splitFriendly: "easy-swap",
     title: "Creamy Cottage Cheese Fajita Pasta",
     category: "Pasta Systems",
     pillar: "Sauce Systems",
@@ -573,6 +633,11 @@ const recipes = [
   },
   {
     id: 13,
+    slug: "spicy-chicken-rotini",
+    proteinAnchor: "chicken",
+    mealType: "pasta",
+    flavorDirection: "creamy-comfort",
+    splitFriendly: "easy-swap",
     title: "Spicy Chicken Rotini (Low-Cal Cream Sauce)",
     category: "Pasta Systems",
     pillar: "Sauce Systems",
@@ -609,6 +674,11 @@ const recipes = [
   },
   {
     id: 14,
+    slug: "gnocchi-chicken-skillet",
+    proteinAnchor: "chicken",
+    mealType: "pasta",
+    flavorDirection: "creamy-comfort",
+    splitFriendly: "easy-swap",
     title: "Gnocchi Chicken Skillet (Crispy Method)",
     category: "Pasta Systems",
     pillar: "Cooking Techniques",
@@ -649,6 +719,11 @@ const recipes = [
   // ═══════════════════════════════════════════
   {
     id: 15,
+    slug: "cottage-cheese-sauce-base",
+    proteinAnchor: "any",
+    mealType: "sauce",
+    flavorDirection: "creamy-comfort",
+    splitFriendly: "not-applicable",
     title: "High-Protein Cream Sauce Base (Cottage Cheese System)",
     category: "Sauces & Systems",
     pillar: "Sauce Systems",
@@ -680,6 +755,11 @@ const recipes = [
   },
   {
     id: 16,
+    slug: "smoky-southwest-chili-oil",
+    proteinAnchor: "any",
+    mealType: "sauce",
+    flavorDirection: "smoky-southwest",
+    splitFriendly: "not-applicable",
     title: "Smoky Southwest Chili Oil Drizzle",
     category: "Sauces & Systems",
     pillar: "Sauce Systems",
@@ -713,6 +793,11 @@ const recipes = [
   },
   {
     id: 17,
+    slug: "quick-chimichurri",
+    proteinAnchor: "any",
+    mealType: "sauce",
+    flavorDirection: "smoky-southwest",
+    splitFriendly: "not-applicable",
     title: "Quick Chimichurri (No-Fuss Version)",
     category: "Sauces & Systems",
     pillar: "Sauce Systems",
@@ -743,6 +828,11 @@ const recipes = [
   },
   {
     id: 18,
+    slug: "general-tso-sauce",
+    proteinAnchor: "any",
+    mealType: "sauce",
+    flavorDirection: "spicy-asian",
+    splitFriendly: "not-applicable",
     title: "General Tso High-Protein Sauce",
     category: "Sauces & Systems",
     pillar: "Sauce Systems",
@@ -780,6 +870,11 @@ const recipes = [
   // ═══════════════════════════════════════════
   {
     id: 19,
+    slug: "air-fryer-charred-broccoli",
+    proteinAnchor: "any",
+    mealType: "side",
+    flavorDirection: "smoky-southwest",
+    splitFriendly: "not-applicable",
     title: "Air Fryer Charred Broccoli (No-Soggy Method)",
     category: "Sides That Matter",
     pillar: "Cooking Techniques",
@@ -811,6 +906,11 @@ const recipes = [
   },
   {
     id: 20,
+    slug: "sweet-potato-croutons",
+    proteinAnchor: "any",
+    mealType: "side",
+    flavorDirection: "smoky-southwest",
+    splitFriendly: "not-applicable",
     title: "Sweet Potato Croutons",
     category: "Sides That Matter",
     pillar: "Cooking Techniques",
@@ -847,3 +947,7 @@ export default recipes;
 
 export const categories = [...new Set(recipes.map((r) => r.category))];
 export const pillars = [...new Set(recipes.map((r) => r.pillar))];
+export const proteinAnchors = [...new Set(recipes.map((r) => r.proteinAnchor))];
+export const mealTypes = [...new Set(recipes.map((r) => r.mealType))];
+export const flavorDirections = [...new Set(recipes.map((r) => r.flavorDirection))];
+export function getBySlug(slug) { return recipes.find((r) => r.slug === slug); }
