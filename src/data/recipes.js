@@ -4,6 +4,7 @@ const recipes = [
   // ═══════════════════════════════════════════
   {
     id: 1,
+    status: "live",
     slug: "spicy-fajita-chicken-gnocchi",
     proteinAnchor: "chicken",
     mealType: "pasta",
@@ -167,6 +168,7 @@ const recipes = [
   },
   {
     id: 2,
+    status: "coming-soon",
     slug: "chili-cream-tri-tip-penne",
     proteinAnchor: "beef",
     mealType: "pasta",
@@ -209,6 +211,7 @@ const recipes = [
   },
   {
     id: 3,
+    status: "placeholder",
     slug: "swedish-steak-noodles",
     proteinAnchor: "beef",
     mealType: "pasta",
@@ -252,6 +255,7 @@ const recipes = [
   },
   {
     id: 4,
+    status: "coming-soon",
     slug: "spicy-beef-broccoli-bowls",
     proteinAnchor: "beef",
     mealType: "rice-bowl",
@@ -295,6 +299,7 @@ const recipes = [
   },
   {
     id: 5,
+    status: "placeholder",
     slug: "doner-beef-lavash-wraps",
     proteinAnchor: "beef",
     mealType: "wrap",
@@ -341,6 +346,7 @@ const recipes = [
   // ═══════════════════════════════════════════
   {
     id: 6,
+    status: "placeholder",
     slug: "philly-cheesesteak-sliders",
     proteinAnchor: "beef",
     mealType: "wrap",
@@ -380,6 +386,7 @@ const recipes = [
   },
   {
     id: 7,
+    status: "placeholder",
     slug: "mini-naan-protein-pizzas",
     proteinAnchor: "chicken",
     mealType: "other",
@@ -418,6 +425,7 @@ const recipes = [
   },
   {
     id: 8,
+    status: "placeholder",
     slug: "chicken-thigh-2-marinade-prep",
     proteinAnchor: "chicken",
     mealType: "other",
@@ -468,6 +476,7 @@ const recipes = [
   // ═══════════════════════════════════════════
   {
     id: 9,
+    status: "placeholder",
     slug: "pan-seared-bavette-chimichurri",
     proteinAnchor: "steak",
     mealType: "other",
@@ -512,6 +521,7 @@ const recipes = [
   },
   {
     id: 10,
+    status: "placeholder",
     slug: "picanha-reverse-sear",
     proteinAnchor: "steak",
     mealType: "other",
@@ -547,6 +557,7 @@ const recipes = [
   },
   {
     id: 11,
+    status: "placeholder",
     slug: "smoky-southwest-flank-steak",
     proteinAnchor: "steak",
     mealType: "other",
@@ -591,6 +602,7 @@ const recipes = [
   // ═══════════════════════════════════════════
   {
     id: 12,
+    status: "placeholder",
     slug: "cottage-cheese-fajita-pasta",
     proteinAnchor: "chicken",
     mealType: "pasta",
@@ -633,6 +645,7 @@ const recipes = [
   },
   {
     id: 13,
+    status: "placeholder",
     slug: "spicy-chicken-rotini",
     proteinAnchor: "chicken",
     mealType: "pasta",
@@ -674,6 +687,7 @@ const recipes = [
   },
   {
     id: 14,
+    status: "placeholder",
     slug: "gnocchi-chicken-skillet",
     proteinAnchor: "chicken",
     mealType: "pasta",
@@ -719,6 +733,7 @@ const recipes = [
   // ═══════════════════════════════════════════
   {
     id: 15,
+    status: "placeholder",
     slug: "cottage-cheese-sauce-base",
     proteinAnchor: "any",
     mealType: "sauce",
@@ -755,6 +770,7 @@ const recipes = [
   },
   {
     id: 16,
+    status: "placeholder",
     slug: "smoky-southwest-chili-oil",
     proteinAnchor: "any",
     mealType: "sauce",
@@ -793,6 +809,7 @@ const recipes = [
   },
   {
     id: 17,
+    status: "placeholder",
     slug: "quick-chimichurri",
     proteinAnchor: "any",
     mealType: "sauce",
@@ -828,6 +845,7 @@ const recipes = [
   },
   {
     id: 18,
+    status: "placeholder",
     slug: "general-tso-sauce",
     proteinAnchor: "any",
     mealType: "sauce",
@@ -870,6 +888,7 @@ const recipes = [
   // ═══════════════════════════════════════════
   {
     id: 19,
+    status: "placeholder",
     slug: "air-fryer-charred-broccoli",
     proteinAnchor: "any",
     mealType: "side",
@@ -906,6 +925,7 @@ const recipes = [
   },
   {
     id: 20,
+    status: "placeholder",
     slug: "sweet-potato-croutons",
     proteinAnchor: "any",
     mealType: "side",
@@ -945,9 +965,9 @@ const recipes = [
 
 export default recipes;
 
-export const categories = [...new Set(recipes.map((r) => r.category))];
-export const pillars = [...new Set(recipes.map((r) => r.pillar))];
-export const proteinAnchors = [...new Set(recipes.map((r) => r.proteinAnchor))];
-export const mealTypes = [...new Set(recipes.map((r) => r.mealType))];
-export const flavorDirections = [...new Set(recipes.map((r) => r.flavorDirection))];
+export const liveRecipes = recipes.filter((r) => r.status === "live");
+export const comingSoonRecipes = recipes.filter((r) => r.status === "coming-soon");
+export const visibleRecipes = recipes.filter((r) => r.status !== "placeholder");
+export const categories = [...new Set(visibleRecipes.map((r) => r.category))];
+export const pillars = [...new Set(visibleRecipes.map((r) => r.pillar))];
 export function getBySlug(slug) { return recipes.find((r) => r.slug === slug); }
