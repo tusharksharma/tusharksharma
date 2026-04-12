@@ -114,7 +114,22 @@ const recipes = [
             ],
           },
           {
-            label: "Option B — Dry Plate (lowest friction)",
+            label: "Option B — Rao's Alfredo",
+            extraIngredients: [
+              "2-3 tbsp Rao's Alfredo sauce",
+              "Optional: shredded mild cheese on top",
+            ],
+            steps: [
+              {
+                text: "SAUCE: Warm 2-3 tbsp Rao's Alfredo in the kid pan. Skip the cottage cheese sauce entirely for this option.",
+              },
+              {
+                text: "COMBINE: Add gnocchi + chicken (or kid protein swap). Toss in Rao's until coated. Add cheese if they want it.",
+              },
+            ],
+          },
+          {
+            label: "Option C — Dry Plate (lowest friction)",
             extraIngredients: [
               "Optional: ketchup or mild dipping sauce on side",
             ],
@@ -164,6 +179,7 @@ const recipes = [
       { name: "Fairlife", item: "Fat-free milk", why: "Higher protein per serving than regular milk, lactose-free", image: "/images/brands/fairlife-milk.png", url: "https://fairlife.com/ultra-filtered-milk/fat-free-skim-milk/" },
       { name: "Dan-O's", item: "Outlaw seasoning", why: "All-purpose spice blend with heat — replaces 4-5 individual spices", image: "/images/brands/danos-outlaw.png", url: "https://danosseasoning.com/product/sweet-tangy-bbq-seasoning-made-with-tamarind-medium-bottle/" },
       { name: "Del Real", item: "Shredded chicken", why: "Pre-cooked, saves 20+ min, consistent shred texture", image: "/images/brands/del-real-chicken.webp", url: "https://delrealfoods.com/products/pulled-chicken" },
+      { name: "Rao's", item: "Alfredo sauce", why: "Kid Option B — store-bought shortcut that actually tastes good. Skip the cottage cheese sauce for kids who want familiar flavor.", image: "/images/brands/raos-alfredo.png", url: "https://www.raos.com/products/alfredo-sauce" },
     ],
   },
   {
