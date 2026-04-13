@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import recipes, { liveRecipes, comingSoonRecipes } from "../data/recipes";
 import HeroSection from "../components/HeroSection";
 import HowItWorks from "../components/HowItWorks";
+import YourWeek from "../components/YourWeek";
 import RecipeCard from "../components/RecipeCard";
 
 const START_HERE = [
@@ -15,6 +16,7 @@ export default function HomePage() {
     <div className="min-h-screen bg-neutral-950 text-neutral-100">
       <HeroSection />
       <HowItWorks />
+      <YourWeek />
 
       {/* Start Here */}
       <section className="border-b border-neutral-800 bg-neutral-900/50" id="recipes">
