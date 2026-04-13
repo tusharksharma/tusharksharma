@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { sauces, quickLunches } from "../data/cookbook";
 
 const TABS = [
@@ -201,12 +202,12 @@ export default function CookbookPage() {
     <div className="min-h-screen bg-neutral-950 text-neutral-100">
       <div className="max-w-5xl mx-auto px-4 py-16">
         <div className="mb-8">
-          <h1 className="text-3xl font-black text-white">Recipes</h1>
+          <h1 className="text-3xl font-black text-white">Power-Ups</h1>
           <p className="text-neutral-400 text-sm mt-1">
-            Sauces, building blocks, and quick wins — no planning required.
+            Sauces and building blocks that make any dinner better — adds flavor in 5 min.
           </p>
           <p className="text-neutral-600 text-[10px] mt-1">
-            Use these to level up your weekly dinners or when you're cooking off-system.
+            Use these to upgrade your weekly dinners or when you're cooking off-system.
           </p>
         </div>
 
@@ -247,6 +248,15 @@ export default function CookbookPage() {
             <p className="text-neutral-600 text-sm">Coming soon.</p>
           </div>
         )}
+
+        {/* Cross-link to Weekly */}
+        <div className="mt-12 text-center bg-neutral-900/30 border border-neutral-800 rounded-xl py-5 px-4">
+          <p className="text-neutral-500 text-xs">Want the full system?</p>
+          <Link to="/" className="text-amber-400 text-sm font-bold hover:underline mt-1 inline-block">
+            Go to Weekly Dinner Plan &rarr;
+          </Link>
+          <p className="text-neutral-600 text-[10px] mt-1">3 dinners. 1 shop. 0 decisions.</p>
+        </div>
       </div>
     </div>
   );

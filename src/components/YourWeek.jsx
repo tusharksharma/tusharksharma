@@ -309,8 +309,24 @@ export default function YourWeek() {
           <GroceryList servings={servings} excludedTags={excludedTags} />
         </div>
 
+        {/* Sauce bridge */}
+        <div className="mt-8 bg-neutral-900/50 border border-amber-500/20 rounded-xl p-4">
+          <div className="flex items-center justify-between mb-2">
+            <h4 className="text-xs font-bold text-amber-400">Add flavor to any dinner</h4>
+            <Link to="/cookbook" className="text-amber-500 text-[10px] font-bold hover:underline">View all sauces &rarr;</Link>
+          </div>
+          <p className="text-neutral-400 text-xs">Sauces that turn any meal from good to great. ~30 cal, 5 min, works on everything.</p>
+          <Link to="/cookbook" className="mt-3 flex items-center gap-3 bg-neutral-800/50 rounded-lg p-3 hover:bg-neutral-800 transition-colors">
+            <div className="flex-1">
+              <span className="text-white text-xs font-bold">Money Mustard</span>
+              <span className="text-neutral-500 text-[10px] ml-2">Chick-fil-A style, high protein</span>
+            </div>
+            <span className="text-amber-500 text-[10px] font-bold">Use this &rarr;</span>
+          </Link>
+        </div>
+
         {/* Flexibility note */}
-        <div className="mt-8 bg-neutral-900/50 border border-neutral-800 rounded-xl p-4">
+        <div className="mt-4 bg-neutral-900/50 border border-neutral-800 rounded-xl p-4">
           <h4 className="text-xs font-bold text-white mb-2">Make it yours</h4>
           <div className="space-y-1.5 text-xs text-neutral-400">
             <p>Swap any protein: chicken &harr; beef &harr; turkey. System still works.</p>
