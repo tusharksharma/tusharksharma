@@ -21,8 +21,8 @@ export default function HeroSection() {
           Cook once. Split smart. High-protein meals that work for both adults
           and kids — without doubling effort.
         </p>
-        <p className="text-neutral-500 mt-3 text-sm">
-          Protein stays high. Flavor stays bold. Execution stays simple.
+        <p className="text-amber-500/70 mt-3 text-sm font-bold">
+          3 meals. 1 shop. 0 decisions.
         </p>
         <div className="flex gap-3 justify-center mt-8 flex-wrap">
           <a
