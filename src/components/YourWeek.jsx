@@ -10,18 +10,18 @@ const WEEKS = {
     label: "Week 1",
     subtitle: "Stir-fry, Gnocchi, Steak Pasta",
     cookDays: [
-      { day: "Monday", label: "Fast Win", id: 4, time: "25 min", reheats: true, adult: "Spicy soy-sesame, charred broccoli, chili oil", kid: "Mild soy, broccoli on side, meatballs", needs: ["Beef", "Broccoli", "Rice", "Soy sauce", "Bone broth"] },
-      { day: "Wednesday", label: "Comfort + Protein", id: 1, time: "30 min", reheats: false, adult: "Spicy fajita cream, peppers, chili oil", kid: "Rao's Alfredo or mild creamy", needs: ["Chicken", "Gnocchi", "Bell peppers", "Cottage cheese", "Dan-O's"] },
-      { day: "Friday", label: "Cook Once, Win Twice", id: 2, time: "35 min", reheats: true, adult: "Chili cream sauce, Dan-O's, sliced tri-tip", kid: "Mild creamy penne, meatballs, cheese", needs: ["Tri-tip", "Penne", "Spinach", "Cottage cheese", "Beef broth"] },
+      { day: "Monday", label: "Fast Win", vibe: "Start easy — lowest friction dinner of the week", id: 4, time: "25 min", reheats: true, adult: "Spicy soy-sesame, charred broccoli, chili oil", kid: "Mild soy, broccoli on side, meatballs", needs: ["Beef", "Broccoli", "Rice", "Soy sauce", "Bone broth"] },
+      { day: "Wednesday", label: "Comfort + Protein", vibe: "Midweek reset — comfort food that earns its calories", id: 1, time: "30 min", reheats: false, adult: "Spicy fajita cream, peppers, chili oil", kid: "Rao's Alfredo or mild creamy", needs: ["Chicken", "Gnocchi", "Bell peppers", "Cottage cheese", "Dan-O's"] },
+      { day: "Friday", label: "Cook Once, Win Twice", vibe: "Finish strong — cook tonight, weekend is handled", id: 2, time: "35 min", reheats: true, adult: "Chili cream sauce, Dan-O's, sliced tri-tip", kid: "Mild creamy penne, meatballs, cheese", needs: ["Tri-tip", "Penne", "Spinach", "Cottage cheese", "Beef broth"] },
     ],
   },
   2: {
     label: "Week 2",
     subtitle: "Steak Pasta, Stir-fry, Gnocchi",
     cookDays: [
-      { day: "Monday", label: "Fast Comfort", id: 2, time: "35 min", reheats: true, adult: "Chili cream tri-tip over penne, Dan-O's heat", kid: "Mild creamy penne, meatballs, cheese on top", needs: ["Tri-tip", "Penne", "Spinach", "Cottage cheese", "Beef broth"] },
-      { day: "Wednesday", label: "Midweek Power Bowl", id: 4, time: "25 min", reheats: true, adult: "Spicy soy-sesame beef, charred broccoli, chili oil", kid: "Mild soy, broccoli on side, meatballs", needs: ["Beef", "Broccoli", "Rice", "Soy sauce", "Bone broth"] },
-      { day: "Friday", label: "Crispy Finish", id: 1, time: "30 min", reheats: false, adult: "Spicy fajita gnocchi, cream sauce, lime", kid: "Rao's Alfredo or butter gnocchi, cheese", needs: ["Chicken", "Gnocchi", "Bell peppers", "Cottage cheese", "Dan-O's"] },
+      { day: "Monday", label: "Fast Comfort", vibe: "Start easy — creamy pasta to kick off the week", id: 2, time: "35 min", reheats: true, adult: "Chili cream tri-tip over penne, Dan-O's heat", kid: "Mild creamy penne, meatballs, cheese on top", needs: ["Tri-tip", "Penne", "Spinach", "Cottage cheese", "Beef broth"] },
+      { day: "Wednesday", label: "Midweek Power Bowl", vibe: "Midweek reset — fast, high-protein, no fuss", id: 4, time: "25 min", reheats: true, adult: "Spicy soy-sesame beef, charred broccoli, chili oil", kid: "Mild soy, broccoli on side, meatballs", needs: ["Beef", "Broccoli", "Rice", "Soy sauce", "Bone broth"] },
+      { day: "Friday", label: "Crispy Finish", vibe: "Finish strong — crispy gnocchi, weekend is set", id: 1, time: "30 min", reheats: false, adult: "Spicy fajita gnocchi, cream sauce, lime", kid: "Rao's Alfredo or butter gnocchi, cheese", needs: ["Chicken", "Gnocchi", "Bell peppers", "Cottage cheese", "Dan-O's"] },
     ],
   },
 };
@@ -36,7 +36,7 @@ function getLeftoverMsg(servings, variant) {
   return { tue: "Beef & Broccoli — already handled", thu: "No cooking. You're covered.", sat: "Tri-Tip Penne — already handled", sun: "Flexible — eat out, reset, or finish leftovers" };
 }
 
-function CookDay({ day, label, id, time, reheats, adult, kid, needs, servings, enabled, onToggle }) {
+function CookDay({ day, label, vibe, id, time, reheats, adult, kid, needs, servings, enabled, onToggle }) {
   const r = recipes.find((x) => x.id === id);
   if (!r) return null;
   return (
@@ -68,6 +68,9 @@ function CookDay({ day, label, id, time, reheats, adult, kid, needs, servings, e
                 <span className="text-neutral-600 text-[10px]">{time} &middot; {servings} servings</span>
               </div>
               <h3 className={`font-bold text-sm transition-colors ${enabled ? "text-white group-hover:text-amber-400" : "text-neutral-600 line-through"}`}>{r.title}</h3>
+              {enabled && vibe && (
+                <p className="text-neutral-500 text-[10px] italic mt-0.5">{vibe}</p>
+              )}
               {enabled && (
                 <>
                   <div className="mt-2 space-y-1">

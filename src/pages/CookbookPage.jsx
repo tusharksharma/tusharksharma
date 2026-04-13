@@ -211,6 +211,25 @@ export default function CookbookPage() {
           </p>
         </div>
 
+        {/* Quick Fix Today */}
+        <div className="mb-8 bg-amber-500/5 border border-amber-500/20 rounded-xl p-5">
+          <div className="flex items-center gap-2 mb-3">
+            <span className="text-amber-500 text-xs font-black uppercase tracking-wider">Quick Fix Today</span>
+            <span className="text-neutral-600 text-[10px]">Need food now?</span>
+          </div>
+          <div className="space-y-2">
+            {sauces.length > 0 && (
+              <button onClick={() => setSelectedSauce(sauces[0])} className="w-full text-left flex items-center justify-between bg-neutral-800/50 rounded-lg p-3 hover:bg-neutral-800 transition-colors cursor-pointer group">
+                <div>
+                  <span className="text-white text-xs font-bold group-hover:text-amber-400 transition-colors">{sauces[0].title}</span>
+                  <span className="text-neutral-500 text-[10px] ml-2">Add flavor to any protein in {sauces[0].time}</span>
+                </div>
+                <span className="text-amber-500 text-[10px] font-bold">Use this &rarr;</span>
+              </button>
+            )}
+          </div>
+        </div>
+
         {TABS.length > 1 && (
           <div className="flex gap-2 mb-8">
             {TABS.map((t) => (
