@@ -20,16 +20,22 @@ const recipes = [
     calories: 425,
     image: "/images/gnocchi/hero-finished-dish.png",
     role: "The Texture Hero",
-    hook: "This fixes soggy gnocchi and bland chicken in one pan — crispy outside, creamy sauce, and split-friendly for kids who won't touch spice.",
-    description: "~35g protein for ~425 calories. Crispy pan-fried gnocchi + spicy cottage cheese cream sauce + pre-cooked shredded chicken. Adults get chili oil and Dan-O's. Kids get Rao's Alfredo or a dry plate. One cook, two outcomes, 30 minutes.",
-    whyItWorks: "Crispy gnocchi base = texture contrast that makes the whole dish feel indulgent. Cottage cheese sauce delivers protein without heavy cream calories. The split happens post-chicken, pre-sauce — so neither version is compromised. This is the recipe that proves bland high-protein food is a choice, not a requirement.",
+    hook: "This is what I make when I don't want to cook twice. Crispy gnocchi, creamy spicy sauce, and a kid plate that's ready in the same 30 minutes — no separate meal, no compromise.",
+    description: "~35g protein for ~425 calories. Pan-fried gnocchi with golden crispy edges, a spicy cottage cheese cream sauce, and pre-cooked shredded chicken. This replaces the soggy, bland 'healthy' meals that make you reach for takeout. Adults get chili oil and Dan-O's. Kids get Rao's Alfredo or a dry plate. 30 minutes, one workflow.",
+    whyItWorks: "Most gnocchi recipes boil it into mush. Most high-protein sauces taste like diet food. Most family meals mean cooking twice. This fixes all three. Pan-frying gnocchi creates a crispy shell with a soft center — that texture contrast is what makes the dish feel indulgent on 425 calories. The cottage cheese sauce is indistinguishable from cream sauce but packs 14g protein per serving. And the split happens after shared cooking is done, so you're not doing double work — you're just finishing two pans differently for 3 extra minutes.",
     executionRules: [
       "Don't sauce everything before splitting — sauce goes in AFTER the split point.",
       "Don't overcook after sauce — breaks texture. Simmer 2-3 min max.",
       "Don't force veggies into kid portion — serve on side, they eat more when they choose.",
-      "Don't make separate full meals — that defeats the entire system.",
-      "Don't boil gnocchi — pan-fry only. Boiled = mush.",
-      "Don't skip the lime — flavor goes flat without acid.",
+      "Don't boil gnocchi — pan-fry only. Boiled = mush, and the whole recipe falls apart.",
+      "Don't skip the lime — flavor goes flat without acid. This is what makes it taste complete.",
+    ],
+    troubleshooting: [
+      { problem: "Gnocchi is soggy / soft", fix: "You either boiled it or crowded the pan. Single layer, medium-high heat, don't touch for 3-4 min per side. If using frozen gnocchi, thaw first." },
+      { problem: "Sauce is grainy / chunky", fix: "Blend longer — full 60 seconds on high. Cottage cheese must be completely smooth before it hits the pan." },
+      { problem: "Sauce is too thick / paste-like", fix: "Add more milk, 1 tbsp at a time. You want it to coat a spoon, not clump." },
+      { problem: "Dish tastes flat", fix: "You skipped the lime. Squeeze half a lime over the finished dish — acid is what ties everything together." },
+      { problem: "Too heavy / rich", fix: "You used too much sauce. The sauce should coat the gnocchi, not pool at the bottom of the pan. Less is more." },
     ],
     // ── Split Cook Method™ ──
     splitCook: {
@@ -216,6 +222,12 @@ const recipes = [
       "Don't mix kid + adult protein before the split — sauce goes on AFTER splitting.",
       "Don't store pasta in sauce for meal prep — store separately, reheat with a splash of milk or broth.",
       "Don't overload on sauce — should coat, not drown.",
+    ],
+    troubleshooting: [
+      { problem: "Tri-tip is chewy / tough", fix: "Two possible causes: overcooked (pull at 130\u00b0F internal, not 160) or sliced with the grain. Always slice thin against the grain at a slight angle." },
+      { problem: "Sauce broke / looks curdled", fix: "You boiled it. Cottage cheese sauce needs a gentle simmer, never a rolling boil. If it breaks, blend it again with a splash of milk." },
+      { problem: "Pasta is mushy after reheating", fix: "You stored pasta in the sauce. Store separately next time. Reheat pasta with a splash of broth, then add sauce." },
+      { problem: "Dish tastes bland", fix: "Add more Dan-O's and a squeeze of lime. The spice and acid are what make this feel like a restaurant dish, not diet food." },
     ],
     splitCook: {
       splitRatio: "70% Adult / 30% Kid",
@@ -411,6 +423,13 @@ const recipes = [
       "Don't overcook broccoli — charred edges and bright green, not army green mush.",
       "Don't skip slicing thin against the grain — chewy beef = failed dish.",
       "Don't mix adult sauce into the full batch before splitting.",
+    ],
+    troubleshooting: [
+      { problem: "Beef is chewy / tough", fix: "Either sliced too thick, cut with the grain, or skipped the cornstarch velvet. Slice thin against the grain, toss with soy + cornstarch, let sit 10-15 min before searing." },
+      { problem: "Broccoli is mushy / army green", fix: "Overcooked or too much moisture. Pat dry, high heat, single layer. You want charred edges in 3-4 min, not steamed in 10." },
+      { problem: "Rice is soggy / wet", fix: "Too much sauce on the rice, or too much broth when cooking. Stick to 1:2 ratio. Sauce should glaze the beef, not pool in the bowl." },
+      { problem: "Beef didn't sear / looks grey", fix: "Pan wasn't hot enough or too crowded. Wait for wisps of smoke before adding beef. Do 2-3 batches, not all at once." },
+      { problem: "Tastes like generic stir-fry", fix: "Add more sesame oil and finish with chili oil. The bone broth rice should carry the base flavor — if it's bland, you used water instead of broth." },
     ],
     splitCook: {
       splitRatio: "70% Adult / 30% Kid",

@@ -182,6 +182,23 @@ export default function RecipeDetail({ recipe }) {
           </section>
         )}
 
+        {/* Troubleshooting — If This Goes Wrong */}
+        {recipe.troubleshooting && recipe.troubleshooting.length > 0 && (
+          <section className="mt-8 bg-amber-950/20 border border-amber-900/40 rounded-xl p-5">
+            <h2 className="text-sm font-bold uppercase tracking-wider text-amber-400 mb-3">
+              If This Goes Wrong
+            </h2>
+            <div className="space-y-3">
+              {recipe.troubleshooting.map((t, i) => (
+                <div key={i} className="text-sm">
+                  <p className="text-white font-semibold">{t.problem}</p>
+                  <p className="text-neutral-400 mt-0.5">{t.fix}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
         {/* Variations (only in adult mode) */}
         {recipe.variations && recipe.variations.length > 0 && !isSplit && (
           <section className="mt-8 bg-neutral-900 border border-neutral-800 rounded-xl p-5">
