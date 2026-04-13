@@ -62,12 +62,18 @@ export default function RecipeDetail({ recipe }) {
           <h1 className="text-3xl font-black text-white mt-1">
             {recipe.title}
           </h1>
+          {recipe.makeThisWhen && (
+            <div className="mt-3 bg-amber-500/10 border border-amber-500/20 rounded-lg px-4 py-3">
+              <span className="text-amber-500 text-xs font-bold uppercase tracking-wider">Make This When</span>
+              <p className="text-amber-100/90 text-sm mt-1 leading-relaxed">{recipe.makeThisWhen}</p>
+            </div>
+          )}
           {recipe.hook && (
-            <p className="text-amber-400/90 mt-2 text-sm font-medium leading-relaxed">
+            <p className="text-neutral-300 mt-3 text-sm leading-relaxed">
               {recipe.hook}
             </p>
           )}
-          <p className="text-neutral-400 mt-2 leading-relaxed text-sm">
+          <p className="text-neutral-500 mt-2 leading-relaxed text-xs">
             {recipe.description}
           </p>
 
@@ -119,16 +125,47 @@ export default function RecipeDetail({ recipe }) {
           </div>
         )}
 
-        {/* Why It Works */}
-        {recipe.whyItWorks && (
-          <section className="mt-8 bg-neutral-900 border border-neutral-800 rounded-xl p-5">
-            <h2 className="text-sm font-bold uppercase tracking-wider text-amber-500 mb-2">
-              Why It Works
-            </h2>
-            <p className="text-neutral-300 text-sm leading-relaxed">
-              {recipe.whyItWorks}
-            </p>
-          </section>
+        {/* Why Most Versions Fail + Why This Works */}
+        {(recipe.whyMostFail || recipe.whyThisWorks || recipe.whyItWorks) && (
+          <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {recipe.whyMostFail && (
+              <section className="bg-red-950/20 border border-red-900/40 rounded-xl p-5">
+                <h2 className="text-sm font-bold uppercase tracking-wider text-red-400 mb-3">
+                  Why Most Versions Fail
+                </h2>
+                <ul className="space-y-2">
+                  {recipe.whyMostFail.map((r, i) => (
+                    <li key={i} className="text-sm text-neutral-300 flex gap-2">
+                      <span className="text-red-400 flex-shrink-0">&#10005;</span>
+                      {r}
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            )}
+            {recipe.whyThisWorks ? (
+              <section className="bg-green-950/20 border border-green-900/40 rounded-xl p-5">
+                <h2 className="text-sm font-bold uppercase tracking-wider text-green-400 mb-3">
+                  Why This Version Works
+                </h2>
+                <ul className="space-y-2">
+                  {recipe.whyThisWorks.map((r, i) => (
+                    <li key={i} className="text-sm text-neutral-300 flex gap-2">
+                      <span className="text-green-400 flex-shrink-0">&#10003;</span>
+                      {r}
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            ) : recipe.whyItWorks ? (
+              <section className="bg-neutral-900 border border-neutral-800 rounded-xl p-5">
+                <h2 className="text-sm font-bold uppercase tracking-wider text-amber-500 mb-2">
+                  Why It Works
+                </h2>
+                <p className="text-neutral-300 text-sm leading-relaxed">{recipe.whyItWorks}</p>
+              </section>
+            ) : null}
+          </div>
         )}
 
         {/* ═══ SPLIT COOK VIEW ═══ */}
@@ -390,10 +427,13 @@ function SplitCookView({ recipe }) {
         {sc.splitPoint}
       </p>
       {sc.splitRatio && (
-        <p className="text-center text-amber-500/70 text-xs font-bold mb-8">
+        <p className="text-center text-amber-500/70 text-xs font-bold mb-2">
           {sc.splitRatio}
         </p>
       )}
+      <p className="text-center text-neutral-600 text-xs font-semibold italic mb-8">
+        Cook once. Split smart. Done.
+      </p>
 
       {/* ── PHASE 2: Adult + Kid side by side ── */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
