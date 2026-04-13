@@ -10,15 +10,15 @@ const GROCERY = {
     { name: "Earth's Best mini meatballs", qty: "1 bag", meal: "Kid swap" },
   ],
   "Carbs": [
-    { name: "Rice", baseQty: 2, unit: "cups dry", meal: "Mon" },
+    { name: "Rice", baseQty: 14, unit: "oz dry", meal: "Mon" },
     { name: "Shelf-stable gnocchi", baseQty: 16, unit: "oz", meal: "Wed" },
     { name: "Penne pasta", baseQty: 8, unit: "oz", meal: "Fri" },
   ],
   "Vegetables": [
-    { name: "Broccoli", baseQty: 3.5, unit: "cups", meal: "Mon" },
+    { name: "Broccoli", baseQty: 12, unit: "oz", meal: "Mon" },
     { name: "Bell peppers", baseQty: 2.5, unit: "", meal: "Wed" },
     { name: "Onion", baseQty: 1, unit: "large", meal: "All" },
-    { name: "Spinach", baseQty: 2, unit: "cups", meal: "Fri" },
+    { name: "Spinach", baseQty: 3, unit: "oz", meal: "Fri" },
     { name: "Garlic", qty: "1 head", meal: "All" },
   ],
   "Sauce & Flavor": [
@@ -30,7 +30,7 @@ const GROCERY = {
     { name: "Lime", qty: "1", meal: "Wed + Fri" },
   ],
   "Creamy Base": [
-    { name: "Cottage cheese", baseQty: 1.5, unit: "cups", meal: "Wed + Fri" },
+    { name: "Cottage cheese", baseQty: 12, unit: "oz", meal: "Wed + Fri" },
     { name: "Fairlife fat-free milk", qty: "", meal: "Sauce base" },
   ],
   "Kid Mode": [
