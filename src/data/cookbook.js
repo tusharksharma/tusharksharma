@@ -40,10 +40,11 @@ export const sauces = [
       { problem: "Not enough heat", fix: "Add more hot honey sriracha, 2-3g at a time" },
     ],
     brands: [
-      { name: "Fage", item: "Total 0% Greek Yogurt", why: "Thick, high protein, neutral tang — the sauce base", image: "/images/brands/fairlife-milk.png", url: "https://usa.fage/products/yogurt/fage-total-0" },
-      { name: "French's", item: "Organic Yellow Mustard", why: "Clean, consistent tang without weird additives", url: "https://www.frenchs.com/products/mustard/organic-classic-yellow-mustard" },
+      { name: "Fage", item: "Total 0% Greek Yogurt", why: "Thick, high protein, neutral tang — the sauce base", image: "/images/brands/fage-yogurt.jpg", url: "https://usa.fage/products/yogurt/fage-total-0" },
+      { name: "French's", item: "Organic Yellow Mustard", why: "Clean, consistent tang without weird additives", image: "/images/brands/frenchs-mustard.jpg", url: "https://www.frenchs.com/products/mustard/organic-classic-yellow-mustard" },
+      { name: "Daisy", item: "Light Sour Cream", why: "Adds creaminess without heavy calories", image: "/images/brands/daisy-sour-cream.jpg", url: "https://www.daisybrand.com/sour-cream/light/" },
       { name: "Fairlife", item: "Fat-free milk", why: "Smooths the sauce without adding calories", image: "/images/brands/fairlife-milk.png", url: "https://fairlife.com/ultra-filtered-milk/fat-free-skim-milk/" },
-      { name: "Bragg", item: "Apple Cider Vinegar", why: "Clean acid that brightens without harshness", url: "https://www.bragg.com/products/organic-apple-cider-vinegar" },
+      { name: "Bragg", item: "Apple Cider Vinegar", why: "Clean acid that brightens without harshness", image: "/images/brands/bragg-vinegar.jpg", url: "https://www.bragg.com/products/organic-apple-cider-vinegar" },
     ],
     mealPrep: {
       storage: "Airtight container in fridge.",
