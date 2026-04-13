@@ -22,7 +22,7 @@ export default function RecipeDetail({ recipe }) {
             to="/"
             className="flex items-center gap-2 text-neutral-500 hover:text-amber-400 transition-colors text-sm font-semibold"
           >
-            <img src="/images/favicon.png" alt="" className="w-5 h-5 rounded-full" />
+            <img src="/images/favicon.png" alt="" className="w-5 h-5" />
             The Split Plate
           </Link>
           <span

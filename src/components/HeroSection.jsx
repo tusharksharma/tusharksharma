@@ -7,7 +7,7 @@ export default function HeroSection() {
         <img
           src="/images/logo-sm.png"
           alt="The Split Plate"
-          className="w-16 h-16 mx-auto mb-4 rounded-full"
+          className="w-20 h-20 mx-auto mb-4"
         />
         <p className="text-amber-500 font-black text-sm tracking-[0.3em] uppercase mb-4">
           The Split Plate
