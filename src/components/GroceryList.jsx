@@ -2,38 +2,38 @@ import { useState, useCallback } from "react";
 
 const GROCERY = {
   "Protein": [
-    { item: "Ground beef or sirloin (1.25 lb)", meal: "Beef & Broccoli" },
-    { item: "Chicken thighs or Del Real shredded chicken (1.25 lb)", meal: "Gnocchi" },
-    { item: "Tri-tip steak (1.25 lb)", meal: "Penne" },
-    { item: "Earth's Best mini meatballs", meal: "Kid protein swap" },
+    { name: "Ground beef or sirloin", qty: "1.25 lb", meal: "Mon" },
+    { name: "Chicken thighs or Del Real shredded", qty: "1.25 lb", meal: "Wed" },
+    { name: "Tri-tip steak", qty: "1.25 lb", meal: "Fri" },
+    { name: "Earth's Best mini meatballs", qty: "1 bag", meal: "Kid swap" },
   ],
   "Carbs": [
-    { item: "Rice, 2 cups dry", meal: "Beef & Broccoli" },
-    { item: "Shelf-stable gnocchi (16 oz)", meal: "Gnocchi" },
-    { item: "Penne pasta (8 oz)", meal: "Penne" },
+    { name: "Rice", qty: "2 cups dry", meal: "Mon" },
+    { name: "Shelf-stable gnocchi", qty: "16 oz", meal: "Wed" },
+    { name: "Penne pasta", qty: "8 oz", meal: "Fri" },
   ],
   "Vegetables": [
-    { item: "Broccoli, 3-4 cups fresh or frozen", meal: "Beef & Broccoli" },
-    { item: "Bell peppers (2-3)", meal: "Gnocchi" },
-    { item: "Onion, 1 large", meal: "All meals" },
-    { item: "Spinach, 2 cups", meal: "Penne" },
-    { item: "Garlic, 1 head", meal: "All meals" },
+    { name: "Broccoli", qty: "3-4 cups", meal: "Mon" },
+    { name: "Bell peppers", qty: "2-3", meal: "Wed" },
+    { name: "Onion", qty: "1 large", meal: "All" },
+    { name: "Spinach", qty: "2 cups", meal: "Fri" },
+    { name: "Garlic", qty: "1 head", meal: "All" },
   ],
   "Sauce & Flavor": [
-    { item: "Soy sauce or tamari", meal: "Beef & Broccoli" },
-    { item: "Roli Roti bone broth", meal: "Rice + Penne sauce" },
-    { item: "Dan-O's Outlaw seasoning", meal: "Gnocchi + Penne" },
-    { item: "Chili oil or sriracha", meal: "All meals" },
-    { item: "Sesame oil", meal: "Beef & Broccoli" },
-    { item: "Lime (1)", meal: "Gnocchi + Penne" },
+    { name: "Soy sauce or tamari", qty: "", meal: "Mon" },
+    { name: "Roli Roti bone broth", qty: "1 carton", meal: "Mon + Fri" },
+    { name: "Dan-O's Outlaw seasoning", qty: "", meal: "Wed + Fri" },
+    { name: "Chili oil or sriracha", qty: "", meal: "All" },
+    { name: "Sesame oil", qty: "", meal: "Mon" },
+    { name: "Lime", qty: "1", meal: "Wed + Fri" },
   ],
-  "Creamy / Protein Base": [
-    { item: "Cottage cheese (1.5 cups)", meal: "Gnocchi + Penne sauce" },
-    { item: "Fairlife fat-free milk", meal: "Sauce base" },
+  "Creamy Base": [
+    { name: "Cottage cheese", qty: "1.5 cups", meal: "Wed + Fri" },
+    { name: "Fairlife fat-free milk", qty: "", meal: "Sauce base" },
   ],
   "Kid Mode": [
-    { item: "Rao's Alfredo sauce", meal: "Gnocchi kid option" },
-    { item: "Shredded mild cheese", meal: "Kid topping" },
+    { name: "Rao's Alfredo sauce", qty: "1 jar", meal: "Wed kid" },
+    { name: "Shredded mild cheese", qty: "", meal: "Kid topping" },
   ],
 };
 
@@ -56,11 +56,13 @@ export default function GroceryList() {
   const copyList = () => {
     const text = Object.entries(GROCERY)
       .map(([cat, items]) =>
-        `${cat}:\n${items.map((i) => `  - ${i.item}`).join("\n")}`
+        `${cat}:\n${items.map((i) => `  - ${i.name}${i.qty ? ` (${i.qty})` : ""}`).join("\n")}`
       )
       .join("\n\n");
     navigator.clipboard.writeText(text);
   };
+
+  const allDone = checkedCount === totalCount && totalCount > 0;
 
   const checkedCount = checked.size;
   const totalCount = allItems.length;
@@ -143,17 +145,24 @@ export default function GroceryList() {
                     </span>
                     <div className="flex-1 min-w-0">
                       <span
-                        className={`text-xs block transition-colors ${
+                        className={`text-xs font-semibold block transition-colors ${
                           isChecked
                             ? "text-neutral-600 line-through"
-                            : "text-neutral-200"
+                            : "text-neutral-100"
                         }`}
                       >
-                        {entry.item}
+                        {entry.name}
                       </span>
-                      <span className="text-[10px] text-neutral-600">
-                        {entry.meal}
-                      </span>
+                      <div className="flex items-center gap-2 mt-0.5">
+                        {entry.qty && (
+                          <span className={`text-[10px] ${isChecked ? "text-neutral-700" : "text-neutral-500"}`}>
+                            {entry.qty}
+                          </span>
+                        )}
+                        <span className="text-[10px] bg-neutral-800 text-neutral-600 px-1.5 py-0 rounded">
+                          {entry.meal}
+                        </span>
+                      </div>
                     </div>
                   </li>
                 );
@@ -163,34 +172,20 @@ export default function GroceryList() {
         ))}
       </div>
 
-      {/* Efficiency block */}
-      <div className="px-5 py-4 border-t border-neutral-800 bg-neutral-900/50">
-        <h4 className="text-xs font-bold text-neutral-400 uppercase tracking-wider mb-2">
-          Why this list is efficient
-        </h4>
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
-          {[
-            "3 proteins \u2192 3 meals",
-            "Shared veg across meals",
-            "Same sauce base reused",
-            "Minimal waste",
-          ].map((t) => (
-            <div
-              key={t}
-              className="bg-neutral-800/50 rounded-lg px-3 py-2 text-center"
-            >
-              <span className="text-[10px] text-neutral-400">{t}</span>
-            </div>
-          ))}
+      {/* Completion state */}
+      {allDone ? (
+        <div className="px-5 py-6 border-t border-amber-500/30 bg-amber-500/5 text-center">
+          <p className="text-amber-400 font-black text-sm">Done. You just solved your week.</p>
+          <p className="text-neutral-500 text-xs mt-1">3 meals, 7 days, zero decisions left.</p>
         </div>
-      </div>
-
-      {/* Next week hook */}
-      <div className="px-5 py-3 border-t border-neutral-800 text-center">
-        <p className="text-neutral-600 text-xs">
-          Next week drops Sunday &middot; Reuse pantry staples &middot; Swap 1 protein &middot; Repeat the system
-        </p>
-      </div>
+      ) : (
+        <div className="px-5 py-4 border-t border-neutral-800 bg-neutral-900/50">
+          <p className="text-neutral-500 text-xs text-center">
+            You only buy <span className="text-white font-semibold">3 proteins</span>. That covers your entire week.
+            Same veg reused. Same sauce base. Minimal waste.
+          </p>
+        </div>
+      )}
     </div>
   );
 }

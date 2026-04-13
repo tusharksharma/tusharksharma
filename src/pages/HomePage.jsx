@@ -1,15 +1,8 @@
-import { Link } from "react-router-dom";
-import recipes, { liveRecipes, comingSoonRecipes } from "../data/recipes";
+import { liveRecipes, comingSoonRecipes } from "../data/recipes";
 import HeroSection from "../components/HeroSection";
 import HowItWorks from "../components/HowItWorks";
 import YourWeek from "../components/YourWeek";
 import RecipeCard from "../components/RecipeCard";
-
-const START_HERE = [
-  { id: 1, label: "Best First Recipe", reason: "Crispy + creamy + easy split" },
-  { id: 4, label: "Fastest Weekday Meal", reason: "25 min, meal preps all week" },
-  { id: 2, label: "Best Meal Prep", reason: "Steak pasta that reheats well" },
-];
 
 export default function HomePage() {
   return (
@@ -17,35 +10,6 @@ export default function HomePage() {
       <HeroSection />
       <HowItWorks />
       <YourWeek />
-
-      {/* Start Here */}
-      <section className="border-b border-neutral-800 bg-neutral-900/50" id="recipes">
-        <div className="max-w-5xl mx-auto px-4 py-16">
-          <h2 className="text-2xl font-black text-white mb-2">Start Here</h2>
-          <p className="text-neutral-500 text-sm mb-6">
-            Three recipes. Three different formats. Pick the one that fits your week.
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            {START_HERE.map(({ id, label, reason }) => {
-              const r = recipes.find((x) => x.id === id);
-              if (!r) return null;
-              return (
-                <Link to={`/recipes/${r.slug}`} key={id} className="block group">
-                  <div className="bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden hover:border-amber-500/50 transition-all">
-                    <img src={r.image} alt={r.title} className="w-full h-40 object-cover group-hover:brightness-110 transition-all" loading="lazy" />
-                    <div className="p-4">
-                      <span className="text-amber-500 text-xs font-bold uppercase tracking-wider">{label}</span>
-                      <h3 className="text-white font-bold text-sm mt-1 group-hover:text-amber-400 transition-colors">{r.title}</h3>
-                      <p className="text-neutral-500 text-xs mt-1">{reason}</p>
-                      <p className="text-amber-400/80 text-xs font-semibold mt-2">{r.protein}g protein &middot; {r.calories} cal &middot; {r.time}</p>
-                    </div>
-                  </div>
-                </Link>
-              );
-            })}
-          </div>
-        </div>
-      </section>
 
       {/* All Live Recipes */}
       <section className="border-b border-neutral-800">
