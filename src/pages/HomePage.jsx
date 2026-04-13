@@ -57,9 +57,9 @@ export default function HomePage() {
         <div className="max-w-4xl mx-auto px-4 py-16 text-center">
           <h2 className="text-2xl font-black text-white mb-8">Built for Real Life</h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-            <TrustCard title="No separate meals" desc="One cook, two outcomes. Adults and kids eat from the same workflow." />
+            <TrustCard title="No separate dinners" desc="One cook, two outcomes. Adults and kids eat from the same workflow." />
             <TrustCard title="No exotic ingredients" desc="Grocery store staples. Pre-cooked protein welcome. No judgment." />
-            <TrustCard title="No 90-min recipes" desc="Most meals done in 30 minutes. Repeatable systems, not one-off projects." />
+            <TrustCard title="No 90-min recipes" desc="Most dinners done in 30 minutes. Repeatable systems, not one-off projects." />
           </div>
         </div>
       </section>
@@ -79,7 +79,7 @@ export default function HomePage() {
             ))}
           </div>
           <p className="text-neutral-400 mt-8 text-sm italic max-w-lg mx-auto">
-            "I build high-protein meals that are efficient, flavorful, and repeatable — designed for real life, not perfection."
+            "I build high-protein dinners that are efficient, flavorful, and repeatable — designed for real life, not perfection."
           </p>
         </div>
       </section>

@@ -18,7 +18,7 @@ export default function HeroSection() {
           <span className="text-amber-400">No Extra Work.</span>
         </h1>
         <p className="text-neutral-400 mt-6 text-lg max-w-2xl mx-auto leading-relaxed">
-          A weekly dinner system for families who want high-protein meals
+          A dinner system for families who want high-protein dinners
           without cooking twice — adults and kids, same workflow.
         </p>
         <p className="text-amber-500/70 mt-3 text-sm font-bold">

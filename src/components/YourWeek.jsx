@@ -5,11 +5,26 @@ import GroceryList from "./GroceryList";
 
 const SERVINGS_OPTIONS = [2, 4, 6, 8];
 
-const COOK_DAYS = [
-  { day: "Monday", label: "Fast Win", id: 4, time: "25 min", reheats: true, adult: "Spicy soy-sesame, charred broccoli, chili oil", kid: "Mild soy, broccoli on side, meatballs", needs: ["Beef", "Broccoli", "Rice", "Soy sauce", "Bone broth"], groceryTags: ["Mon"] },
-  { day: "Wednesday", label: "Comfort + Protein", id: 1, time: "30 min", reheats: false, adult: "Spicy fajita cream, peppers, chili oil", kid: "Rao's Alfredo or mild creamy", needs: ["Chicken", "Gnocchi", "Bell peppers", "Cottage cheese", "Dan-O's"], groceryTags: ["Wed"] },
-  { day: "Friday", label: "Cook Once, Win Twice", id: 2, time: "35 min", reheats: true, adult: "Chili cream sauce, Dan-O's, sliced tri-tip", kid: "Mild creamy penne, meatballs, cheese", needs: ["Tri-tip", "Penne", "Spinach", "Cottage cheese", "Beef broth"], groceryTags: ["Fri"] },
-];
+const WEEKS = {
+  1: {
+    label: "Week 1",
+    subtitle: "Stir-fry, Gnocchi, Steak Pasta",
+    cookDays: [
+      { day: "Monday", label: "Fast Win", id: 4, time: "25 min", reheats: true, adult: "Spicy soy-sesame, charred broccoli, chili oil", kid: "Mild soy, broccoli on side, meatballs", needs: ["Beef", "Broccoli", "Rice", "Soy sauce", "Bone broth"] },
+      { day: "Wednesday", label: "Comfort + Protein", id: 1, time: "30 min", reheats: false, adult: "Spicy fajita cream, peppers, chili oil", kid: "Rao's Alfredo or mild creamy", needs: ["Chicken", "Gnocchi", "Bell peppers", "Cottage cheese", "Dan-O's"] },
+      { day: "Friday", label: "Cook Once, Win Twice", id: 2, time: "35 min", reheats: true, adult: "Chili cream sauce, Dan-O's, sliced tri-tip", kid: "Mild creamy penne, meatballs, cheese", needs: ["Tri-tip", "Penne", "Spinach", "Cottage cheese", "Beef broth"] },
+    ],
+  },
+  2: {
+    label: "Week 2",
+    subtitle: "Steak Pasta, Stir-fry, Gnocchi",
+    cookDays: [
+      { day: "Monday", label: "Fast Comfort", id: 2, time: "35 min", reheats: true, adult: "Chili cream tri-tip over penne, Dan-O's heat", kid: "Mild creamy penne, meatballs, cheese on top", needs: ["Tri-tip", "Penne", "Spinach", "Cottage cheese", "Beef broth"] },
+      { day: "Wednesday", label: "Midweek Power Bowl", id: 4, time: "25 min", reheats: true, adult: "Spicy soy-sesame beef, charred broccoli, chili oil", kid: "Mild soy, broccoli on side, meatballs", needs: ["Beef", "Broccoli", "Rice", "Soy sauce", "Bone broth"] },
+      { day: "Friday", label: "Crispy Finish", id: 1, time: "30 min", reheats: false, adult: "Spicy fajita gnocchi, cream sauce, lime", kid: "Rao's Alfredo or butter gnocchi, cheese", needs: ["Chicken", "Gnocchi", "Bell peppers", "Cottage cheese", "Dan-O's"] },
+    ],
+  },
+};
 
 function getLeftoverMsg(servings, variant) {
   if (servings <= 2) {
@@ -108,12 +123,19 @@ function FlexDay({ day, meal }) {
 }
 
 export default function YourWeek() {
+  const [week, setWeek] = useState(1);
   const [servings, setServings] = useState(4);
   const [enabledMeals, setEnabledMeals] = useState({ Mon: true, Wed: true, Fri: true });
   const [showFeedback, setShowFeedback] = useState(false);
 
+  const currentWeek = WEEKS[week];
   const enabledCount = Object.values(enabledMeals).filter(Boolean).length;
   const leftoverMsgs = getLeftoverMsg(servings);
+
+  const handleWeekChange = (w) => {
+    setWeek(w);
+    setEnabledMeals({ Mon: true, Wed: true, Fri: true });
+  };
 
   const toggleMeal = (dayKey) => {
     const current = enabledMeals[dayKey];
@@ -151,10 +173,28 @@ export default function YourWeek() {
       <div className="max-w-3xl mx-auto px-4 py-16">
         {/* Header */}
         <div className="text-center mb-6">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-amber-500 mb-2">This Week</p>
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-amber-500 mb-2">Dinner System</p>
           <h2 className="text-3xl font-black text-white">3 Dinners. 1 Shop. 0 Decisions.</h2>
           <p className="text-neutral-400 text-sm mt-2">Follow top to bottom. Your week is handled.</p>
           <p className="text-neutral-600 text-[10px] mt-1">Built for busy weeknights. ~30 min dinners. Beginner-friendly.</p>
+        </div>
+
+        {/* Week selector */}
+        <div className="flex items-center justify-center gap-2 mb-6">
+          {Object.entries(WEEKS).map(([num, w]) => (
+            <button
+              key={num}
+              onClick={() => handleWeekChange(Number(num))}
+              className={`px-4 py-2 rounded-lg text-xs font-bold transition-all cursor-pointer ${
+                week === Number(num)
+                  ? "bg-amber-500 text-black"
+                  : "bg-neutral-800 text-neutral-400 hover:bg-neutral-700"
+              }`}
+            >
+              {w.label}
+            </button>
+          ))}
+          <span className="text-neutral-600 text-[10px] ml-2">{currentWeek.subtitle}</span>
         </div>
 
         {/* Servings toggle */}
@@ -233,19 +273,19 @@ export default function YourWeek() {
           <div className="space-y-2 relative">
             {/* Monday */}
             <TimelineDot type="cook" enabled={enabledMeals.Mon} />
-            <CookDay {...COOK_DAYS[0]} servings={servings} enabled={enabledMeals.Mon} onToggle={() => toggleMeal("Mon")} />
+            <CookDay {...currentWeek.cookDays[0]} servings={servings} enabled={enabledMeals.Mon} onToggle={() => toggleMeal("Mon")} />
             <TimelineDot type="leftover" enabled={enabledMeals.Mon} />
             <LeftoverDay day="Tuesday" meal={leftoverMsgs.tue} visible={enabledMeals.Mon} />
 
             {/* Wednesday */}
             <TimelineDot type="cook" enabled={enabledMeals.Wed} />
-            <CookDay {...COOK_DAYS[1]} servings={servings} enabled={enabledMeals.Wed} onToggle={() => toggleMeal("Wed")} />
+            <CookDay {...currentWeek.cookDays[1]} servings={servings} enabled={enabledMeals.Wed} onToggle={() => toggleMeal("Wed")} />
             <TimelineDot type="leftover" enabled={enabledMeals.Wed} />
             <LeftoverDay day="Thursday" meal={leftoverMsgs.thu} visible={enabledMeals.Wed} />
 
             {/* Friday */}
             <TimelineDot type="cook" enabled={enabledMeals.Fri} />
-            <CookDay {...COOK_DAYS[2]} servings={servings} enabled={enabledMeals.Fri} onToggle={() => toggleMeal("Fri")} />
+            <CookDay {...currentWeek.cookDays[2]} servings={servings} enabled={enabledMeals.Fri} onToggle={() => toggleMeal("Fri")} />
             <TimelineDot type="leftover" enabled={enabledMeals.Fri} />
             <LeftoverDay day="Saturday" meal={leftoverMsgs.sat} visible={enabledMeals.Fri} />
 
