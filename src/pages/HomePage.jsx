@@ -4,6 +4,15 @@ import HowItWorks from "../components/HowItWorks";
 import YourWeek from "../components/YourWeek";
 import RecipeCard from "../components/RecipeCard";
 
+function TrustCard({ title, desc }) {
+  return (
+    <div className="bg-neutral-900 border border-neutral-800 rounded-xl p-6">
+      <h3 className="text-white font-bold text-sm">{title}</h3>
+      <p className="text-neutral-500 text-xs mt-2 leading-relaxed">{desc}</p>
+    </div>
+  );
+}
+
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-neutral-950 text-neutral-100">
@@ -48,18 +57,9 @@ export default function HomePage() {
         <div className="max-w-4xl mx-auto px-4 py-16 text-center">
           <h2 className="text-2xl font-black text-white mb-8">Built for Real Life</h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-            <TrustCard
-              title="No separate meals"
-              desc="One cook, two outcomes. Adults and kids eat from the same workflow."
-            />
-            <TrustCard
-              title="No exotic ingredients"
-              desc="Grocery store staples. Pre-cooked protein welcome. No judgment."
-            />
-            <TrustCard
-              title="No 90-min recipes"
-              desc="Most meals done in 30 minutes. Repeatable systems, not one-off projects."
-            />
+            <TrustCard title="No separate meals" desc="One cook, two outcomes. Adults and kids eat from the same workflow." />
+            <TrustCard title="No exotic ingredients" desc="Grocery store staples. Pre-cooked protein welcome. No judgment." />
+            <TrustCard title="No 90-min recipes" desc="Most meals done in 30 minutes. Repeatable systems, not one-off projects." />
           </div>
         </div>
       </section>
@@ -69,8 +69,7 @@ export default function HomePage() {
         <div className="max-w-3xl mx-auto px-4 py-16 text-center">
           <h2 className="text-2xl font-black text-white">Why This Works</h2>
           <p className="text-neutral-500 mt-4 text-sm">
-            Most high-protein food fails because it's bland, repetitive, and
-            unrealistic.
+            Most high-protein food fails because it's bland, repetitive, and unrealistic.
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8">
             {["Texture Contrast", "Controlled Calories", "Bold Flavor", "Simple Execution"].map((l) => (
@@ -80,8 +79,7 @@ export default function HomePage() {
             ))}
           </div>
           <p className="text-neutral-400 mt-8 text-sm italic max-w-lg mx-auto">
-            "I build high-protein meals that are efficient, flavorful, and
-            repeatable — designed for real life, not perfection."
+            "I build high-protein meals that are efficient, flavorful, and repeatable — designed for real life, not perfection."
           </p>
         </div>
       </section>
@@ -89,23 +87,10 @@ export default function HomePage() {
       {/* Footer */}
       <footer className="border-t border-neutral-800 py-8 text-center text-neutral-600 text-sm">
         <img src="/images/favicon.png" alt="The Split Plate" className="w-10 h-10 mx-auto mb-2" />
-        <p className="text-amber-500/80 font-black text-xs tracking-[0.2em] uppercase">
-          The Split Plate
-        </p>
-        <p className="text-neutral-500 font-semibold mt-2">
-          Protein Meals &middot; Sauce Systems &middot; Cooking Techniques
-        </p>
+        <p className="text-amber-500/80 font-black text-xs tracking-[0.2em] uppercase">The Split Plate</p>
+        <p className="text-neutral-500 font-semibold mt-2">Protein Meals &middot; Sauce Systems &middot; Cooking Techniques</p>
         <p className="mt-2 text-neutral-700">Cook once. Split. Done.</p>
       </footer>
-    </div>
-  );
-}
-
-function TrustCard({ title, desc }) {
-  return (
-    <div className="bg-neutral-900 border border-neutral-800 rounded-xl p-6">
-      <h3 className="text-white font-bold text-sm">{title}</h3>
-      <p className="text-neutral-500 text-xs mt-2 leading-relaxed">{desc}</p>
     </div>
   );
 }
