@@ -51,10 +51,21 @@ function scaleQty(entry, scale) {
   return entry.qty || "";
 }
 
-export default function GroceryList({ servings = 4 }) {
+export default function GroceryList({ servings = 4, excludedTags = [] }) {
   const [checked, setChecked] = useState(new Set());
   const [isOpen, setIsOpen] = useState(false);
   const scale = servings / 4;
+
+  // Filter out items whose meal tag matches an excluded day
+  const isExcluded = (entry) => {
+    if (excludedTags.length === 0) return false;
+    // Items tagged "All" or multi-day tags that still have included days stay
+    const tag = entry.meal;
+    if (tag === "All" || tag === "Sauce base" || tag === "Kid swap" || tag === "Kid topping") return false;
+    // Check if ALL days in this tag are excluded
+    const tagDays = tag.split(/\s*\+\s*/).map((d) => d.trim().substring(0, 3));
+    return tagDays.every((d) => excludedTags.includes(d));
+  };
 
   const toggle = useCallback((idx) => {
     setChecked((prev) => {
@@ -75,9 +86,10 @@ export default function GroceryList({ servings = 4 }) {
     navigator.clipboard.writeText(text);
   };
 
+  const visibleCount = allItems.filter((e) => !isExcluded(e)).length;
   const checkedCount = checked.size;
-  const totalCount = allItems.length;
-  const allDone = checkedCount === totalCount && totalCount > 0;
+  const totalCount = visibleCount;
+  const allDone = checkedCount >= totalCount && totalCount > 0;
 
   if (!isOpen) {
     return (
@@ -101,7 +113,7 @@ export default function GroceryList({ servings = 4 }) {
           <button onClick={() => setIsOpen(false)} className="text-neutral-500 hover:text-neutral-300 text-xs cursor-pointer">Close</button>
         </div>
         <p className="text-neutral-500 text-xs">
-          Feeds {servings} people &middot; 3 meals &middot; leftovers included &middot; minimal waste
+          Feeds {servings} people &middot; 3 dinners &middot; leftovers included &middot; minimal waste
         </p>
         <div className="flex items-center gap-3 mt-3">
           <button onClick={copyList} className="px-3 py-1.5 bg-neutral-800 text-neutral-300 text-xs font-semibold rounded-lg hover:bg-neutral-700 transition-colors cursor-pointer">
@@ -124,6 +136,7 @@ export default function GroceryList({ servings = 4 }) {
             <ul className="space-y-0.5">
               {items.map((entry) => {
                 const idx = globalIdx++;
+                if (isExcluded(entry)) return null;
                 const isChecked = checked.has(idx);
                 const qty = scaleQty(entry, scale);
                 return (
@@ -152,7 +165,7 @@ export default function GroceryList({ servings = 4 }) {
       {allDone ? (
         <div className="px-5 py-6 border-t border-amber-500/30 bg-amber-500/5 text-center">
           <p className="text-amber-400 font-black text-sm">Done. You just solved your week.</p>
-          <p className="text-neutral-500 text-xs mt-1">3 meals, 7 days, zero decisions left.</p>
+          <p className="text-neutral-500 text-xs mt-1">3 dinners, 7 days, zero decisions left.</p>
         </div>
       ) : (
         <div className="px-5 py-4 border-t border-neutral-800 bg-neutral-900/50">

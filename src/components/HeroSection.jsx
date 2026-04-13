@@ -13,29 +13,32 @@ export default function HeroSection() {
           The Split Plate
         </p>
         <h1 className="text-4xl sm:text-6xl font-black tracking-tight text-white leading-[1.1]">
-          One Meal. Two Outcomes.
+          One Dinner. Two Outcomes.
           <br />
           <span className="text-amber-400">No Extra Work.</span>
         </h1>
         <p className="text-neutral-400 mt-6 text-lg max-w-2xl mx-auto leading-relaxed">
-          Cook once. Split smart. High-protein meals that work for both adults
-          and kids — without doubling effort.
+          A weekly dinner system for families who want high-protein meals
+          without cooking twice — adults and kids, same workflow.
         </p>
         <p className="text-amber-500/70 mt-3 text-sm font-bold">
-          3 meals. 1 shop. 0 decisions.
+          3 dinners. 1 shop. 0 decisions.
+        </p>
+        <p className="text-neutral-600 mt-1 text-xs">
+          Dinner system. Not full-day meal planning.
         </p>
         <div className="flex gap-3 justify-center mt-8 flex-wrap">
           <a
-            href="#recipes"
+            href="#timeline"
             className="px-6 py-3 bg-amber-500 text-black font-bold rounded-xl hover:bg-amber-400 transition-colors cursor-pointer text-sm"
           >
-            Browse Recipes
+            Start This Week
           </a>
           <Link
             to="/recipes/spicy-fajita-chicken-gnocchi"
             className="px-6 py-3 bg-neutral-800 text-white font-bold rounded-xl border border-neutral-700 hover:bg-neutral-700 transition-colors text-sm"
           >
-            Try the Flagship Recipe
+            See a Recipe
           </Link>
         </div>
       </div>

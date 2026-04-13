@@ -1,101 +1,94 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { Link } from "react-router-dom";
 import recipes from "../data/recipes";
 import GroceryList from "./GroceryList";
 
-const SERVINGS_OPTIONS = [2, 4, 6];
+const SERVINGS_OPTIONS = [2, 4, 6, 8];
 
 const COOK_DAYS = [
-  { day: "Monday", label: "Fast Win", id: 4, time: "25 min", reheats: true, adult: "Spicy soy-sesame, charred broccoli, chili oil", kid: "Mild soy, broccoli on side, meatballs", needs: ["Beef", "Broccoli", "Rice", "Soy sauce", "Bone broth"] },
-  { day: "Wednesday", label: "Comfort + Protein", id: 1, time: "30 min", reheats: false, adult: "Spicy fajita cream, peppers, chili oil", kid: "Rao's Alfredo or mild creamy", needs: ["Chicken", "Gnocchi", "Bell peppers", "Cottage cheese", "Dan-O's"] },
-  { day: "Friday", label: "Cook Once, Win Twice", id: 2, time: "35 min", reheats: true, adult: "Chili cream sauce, Dan-O's, sliced tri-tip", kid: "Mild creamy penne, meatballs, cheese", needs: ["Tri-tip", "Penne", "Spinach", "Cottage cheese", "Beef broth"] },
+  { day: "Monday", label: "Fast Win", id: 4, time: "25 min", reheats: true, adult: "Spicy soy-sesame, charred broccoli, chili oil", kid: "Mild soy, broccoli on side, meatballs", needs: ["Beef", "Broccoli", "Rice", "Soy sauce", "Bone broth"], groceryTags: ["Mon"] },
+  { day: "Wednesday", label: "Comfort + Protein", id: 1, time: "30 min", reheats: false, adult: "Spicy fajita cream, peppers, chili oil", kid: "Rao's Alfredo or mild creamy", needs: ["Chicken", "Gnocchi", "Bell peppers", "Cottage cheese", "Dan-O's"], groceryTags: ["Wed"] },
+  { day: "Friday", label: "Cook Once, Win Twice", id: 2, time: "35 min", reheats: true, adult: "Chili cream sauce, Dan-O's, sliced tri-tip", kid: "Mild creamy penne, meatballs, cheese", needs: ["Tri-tip", "Penne", "Spinach", "Cottage cheese", "Beef broth"], groceryTags: ["Fri"] },
 ];
 
-function getTimeline(servings) {
+function getLeftoverMsg(servings, variant) {
   if (servings <= 2) {
-    return [
-      { type: "cook", ...COOK_DAYS[0] },
-      { type: "leftover", day: "Tuesday", meal: "No cooking. Reheat Monday's bowl." },
-      { type: "cook", ...COOK_DAYS[1] },
-      { type: "leftover", day: "Thursday", meal: "No cooking. Finish Wednesday's gnocchi or grab something light." },
-      { type: "cook", ...COOK_DAYS[2] },
-      { type: "leftover", day: "Saturday", meal: "No cooking. Reheat Friday's penne — smaller portions." },
-      { type: "flex", day: "Sunday", meal: "Flexible — eat out or reset" },
-    ];
+    return { tue: "No cooking. Reheat Monday's bowl.", thu: "No cooking. Finish Wednesday's gnocchi or grab something light.", sat: "No cooking. Reheat Friday's penne — smaller portions.", sun: "Flexible — eat out or reset" };
   }
   if (servings >= 6) {
-    return [
-      { type: "cook", ...COOK_DAYS[0] },
-      { type: "leftover", day: "Tuesday", meal: "Beef & Broccoli — fully covered" },
-      { type: "cook", ...COOK_DAYS[1] },
-      { type: "leftover", day: "Thursday", meal: "Gnocchi or extra Beef & Broccoli — fully covered" },
-      { type: "cook", ...COOK_DAYS[2] },
-      { type: "leftover", day: "Saturday", meal: "Tri-Tip Penne — plenty for two days" },
-      { type: "flex", day: "Sunday", meal: "Still have leftovers — or eat out" },
-    ];
+    return { tue: "Beef & Broccoli — fully covered", thu: "Gnocchi or extra Beef & Broccoli — fully covered", sat: "Tri-Tip Penne — plenty for two days", sun: "Still have leftovers — or eat out" };
   }
-  // Default: 4
-  return [
-    { type: "cook", ...COOK_DAYS[0] },
-    { type: "leftover", day: "Tuesday", meal: "Beef & Broccoli — already handled" },
-    { type: "cook", ...COOK_DAYS[1] },
-    { type: "leftover", day: "Thursday", meal: "No cooking. You're covered." },
-    { type: "cook", ...COOK_DAYS[2] },
-    { type: "leftover", day: "Saturday", meal: "Tri-Tip Penne — already handled" },
-    { type: "flex", day: "Sunday", meal: "Flexible — eat out, reset, or finish leftovers" },
-  ];
+  return { tue: "Beef & Broccoli — already handled", thu: "No cooking. You're covered.", sat: "Tri-Tip Penne — already handled", sun: "Flexible — eat out, reset, or finish leftovers" };
 }
 
-function CookDay({ day, label, id, time, reheats, adult, kid, needs, servings }) {
+function CookDay({ day, label, id, time, reheats, adult, kid, needs, servings, enabled, onToggle }) {
   const r = recipes.find((x) => x.id === id);
   if (!r) return null;
   return (
-    <Link to={`/recipes/${r.slug}`} className="block group">
-      <div className="bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden hover:border-amber-500/40 transition-all">
-        <div className="flex flex-col sm:flex-row">
-          <div className="sm:w-40 flex-shrink-0 relative">
-            <img src={r.image} alt={r.title} className="w-full h-32 sm:h-full object-cover group-hover:brightness-110 transition-all" loading="lazy" />
-            <div className="absolute top-2 left-2 flex gap-1.5">
-              <span className="text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded bg-amber-500 text-black">{day}</span>
-              {reheats && <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-green-600/80 text-white">Reheats</span>}
-            </div>
-          </div>
-          <div className="flex-1 p-4">
-            <div className="flex items-center gap-2 mb-1">
-              <span className="text-amber-500 text-[10px] font-bold uppercase tracking-wider">{label}</span>
-              <span className="text-neutral-600 text-[10px]">{time} &middot; {servings} servings</span>
-            </div>
-            <h3 className="text-white font-bold text-sm group-hover:text-amber-400 transition-colors">{r.title}</h3>
-            <div className="mt-2 space-y-1">
-              <div className="flex gap-2 items-start">
-                <span className="text-red-400 text-[10px] font-black mt-0.5 w-8 flex-shrink-0">ADULT</span>
-                <p className="text-neutral-400 text-xs">{adult}</p>
-              </div>
-              <div className="flex gap-2 items-start">
-                <span className="text-green-400 text-[10px] font-black mt-0.5 w-8 flex-shrink-0">KID</span>
-                <p className="text-neutral-400 text-xs">{kid}</p>
+    <div className={`transition-all ${enabled ? "" : "opacity-40"}`}>
+      <div className="flex items-center gap-2 mb-1 sm:pl-12">
+        <button
+          onClick={(e) => { e.preventDefault(); onToggle(); }}
+          className={`w-5 h-5 rounded border flex-shrink-0 flex items-center justify-center text-[10px] cursor-pointer transition-colors ${
+            enabled ? "bg-amber-500 border-amber-500 text-black" : "border-neutral-600 bg-neutral-800"
+          }`}
+        >
+          {enabled && "\u2713"}
+        </button>
+        <span className="text-neutral-500 text-[10px]">{enabled ? "Included" : "Skipped — removed from grocery"}</span>
+      </div>
+      <Link to={enabled ? `/recipes/${r.slug}` : "#"} className={`block ${enabled ? "group" : "pointer-events-none"}`}>
+        <div className={`bg-neutral-900 border rounded-xl overflow-hidden transition-all ${enabled ? "border-neutral-800 hover:border-amber-500/40" : "border-neutral-800/50"}`}>
+          <div className="flex flex-col sm:flex-row">
+            <div className="sm:w-40 flex-shrink-0 relative">
+              <img src={r.image} alt={r.title} className={`w-full h-32 sm:h-full object-cover transition-all ${enabled ? "group-hover:brightness-110" : "grayscale brightness-50"}`} loading="lazy" />
+              <div className="absolute top-2 left-2 flex gap-1.5">
+                <span className="text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded bg-amber-500 text-black">{day}</span>
+                {reheats && enabled && <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-green-600/80 text-white">Reheats</span>}
               </div>
             </div>
-            <div className="mt-2 flex gap-1.5 flex-wrap">
-              {needs.map((n) => (
-                <span key={n} className="text-[10px] bg-neutral-800 text-neutral-500 px-2 py-0.5 rounded-full">{n}</span>
-              ))}
-            </div>
-            <div className="mt-2 flex items-center gap-2 text-[10px]">
-              <span className="text-amber-400 font-bold">{r.protein}g protein</span>
-              <span className="text-neutral-700">&middot;</span>
-              <span className="text-neutral-500">{r.calories} cal/serving</span>
-              <span className="text-neutral-700">&middot;</span>
-              <span className="text-neutral-500">{Math.round((r.protein * 4 / r.calories) * 100)}% PPC</span>
+            <div className="flex-1 p-4">
+              <div className="flex items-center gap-2 mb-1">
+                <span className="text-amber-500 text-[10px] font-bold uppercase tracking-wider">{label}</span>
+                <span className="text-neutral-600 text-[10px]">{time} &middot; {servings} servings</span>
+              </div>
+              <h3 className={`font-bold text-sm transition-colors ${enabled ? "text-white group-hover:text-amber-400" : "text-neutral-600 line-through"}`}>{r.title}</h3>
+              {enabled && (
+                <>
+                  <div className="mt-2 space-y-1">
+                    <div className="flex gap-2 items-start">
+                      <span className="text-red-400 text-[10px] font-black mt-0.5 w-8 flex-shrink-0">ADULT</span>
+                      <p className="text-neutral-400 text-xs">{adult}</p>
+                    </div>
+                    <div className="flex gap-2 items-start">
+                      <span className="text-green-400 text-[10px] font-black mt-0.5 w-8 flex-shrink-0">KID</span>
+                      <p className="text-neutral-400 text-xs">{kid}</p>
+                    </div>
+                  </div>
+                  <div className="mt-2 flex gap-1.5 flex-wrap">
+                    {needs.map((n) => (
+                      <span key={n} className="text-[10px] bg-neutral-800 text-neutral-500 px-2 py-0.5 rounded-full">{n}</span>
+                    ))}
+                  </div>
+                  <div className="mt-2 flex items-center gap-2 text-[10px]">
+                    <span className="text-amber-400 font-bold">{r.protein}g protein</span>
+                    <span className="text-neutral-700">&middot;</span>
+                    <span className="text-neutral-500">{r.calories} cal/serving</span>
+                    <span className="text-neutral-700">&middot;</span>
+                    <span className="text-neutral-500">{Math.round((r.protein * 4 / r.calories) * 100)}% PPC</span>
+                  </div>
+                </>
+              )}
             </div>
           </div>
         </div>
-      </div>
-    </Link>
+      </Link>
+    </div>
   );
 }
 
-function LeftoverDay({ day, meal }) {
+function LeftoverDay({ day, meal, visible }) {
+  if (!visible) return null;
   return (
     <div className="flex items-center gap-3 px-4 py-3 bg-neutral-900/30 border border-neutral-800/50 rounded-lg">
       <span className="text-[10px] font-bold uppercase tracking-wider text-neutral-600 w-12 flex-shrink-0">{day}</span>
@@ -116,9 +109,19 @@ function FlexDay({ day, meal }) {
 
 export default function YourWeek() {
   const [servings, setServings] = useState(4);
+  const [enabledMeals, setEnabledMeals] = useState({ Mon: true, Wed: true, Fri: true });
   const [showFeedback, setShowFeedback] = useState(false);
 
-  const timeline = getTimeline(servings);
+  const enabledCount = Object.values(enabledMeals).filter(Boolean).length;
+  const leftoverMsgs = getLeftoverMsg(servings);
+
+  const toggleMeal = (dayKey) => {
+    const current = enabledMeals[dayKey];
+    if (current && enabledCount <= 2) return; // guardrail: keep at least 2
+    setEnabledMeals((prev) => ({ ...prev, [dayKey]: !prev[dayKey] }));
+  };
+
+  const resetMeals = () => setEnabledMeals({ Mon: true, Wed: true, Fri: true });
 
   const handleServingsChange = (s) => {
     setServings(s);
@@ -132,27 +135,36 @@ export default function YourWeek() {
     }
   }, [showFeedback, servings]);
 
+  // Build excluded grocery tags
+  const excludedTags = useMemo(() => {
+    const tags = [];
+    if (!enabledMeals.Mon) tags.push("Mon");
+    if (!enabledMeals.Wed) tags.push("Wed");
+    if (!enabledMeals.Fri) tags.push("Fri");
+    return tags;
+  }, [enabledMeals]);
+
+  const dayKeys = ["Mon", "Wed", "Fri"];
+
   return (
     <section className="border-b border-neutral-800 bg-gradient-to-b from-neutral-950 to-neutral-900/80">
       <div className="max-w-3xl mx-auto px-4 py-16">
         {/* Header */}
         <div className="text-center mb-6">
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-amber-500 mb-2">This Week</p>
-          <h2 className="text-3xl font-black text-white">3 Meals. 1 Shop. 0 Decisions.</h2>
+          <h2 className="text-3xl font-black text-white">3 Dinners. 1 Shop. 0 Decisions.</h2>
           <p className="text-neutral-400 text-sm mt-2">Follow top to bottom. Your week is handled.</p>
         </div>
 
         {/* Servings toggle */}
-        <div className="bg-neutral-900/50 border border-neutral-800 rounded-xl p-4 mb-8">
+        <div className="bg-neutral-900/50 border border-neutral-800 rounded-xl p-4 mb-6">
           <div className="flex items-center justify-between mb-2">
             <div>
               <span className="text-white text-xs font-bold">Adjust your week</span>
-              <span className="text-neutral-600 text-[10px] ml-2">Best for households of 2-6</span>
+              <span className="text-neutral-600 text-[10px] ml-2">Households of 2-8</span>
             </div>
             {showFeedback && (
-              <span className="text-amber-400 text-[10px] font-bold animate-pulse">
-                Updated for {servings} servings
-              </span>
+              <span className="text-amber-400 text-[10px] font-bold animate-pulse">Updated for {servings}</span>
             )}
           </div>
           <div className="flex items-center gap-3">
@@ -171,12 +183,24 @@ export default function YourWeek() {
               ))}
             </div>
             <span className="text-neutral-600 text-[10px]">
-              {servings === 2 ? "Couple — minimal leftovers" : servings === 6 ? "Large family — extra leftovers" : "Family of 4 — standard + leftovers"}
+              {servings <= 2 ? "Couple — light leftovers" : servings <= 4 ? "Family — standard" : servings <= 6 ? "Large family — extra leftovers" : "Meal prep — maximum batch"}
             </span>
           </div>
         </div>
 
-        {/* Quick start */}
+        {/* Meal inclusion */}
+        {enabledCount < 3 && (
+          <div className="flex items-center justify-between mb-4 px-1">
+            <span className="text-neutral-500 text-[10px]">
+              {enabledCount} of 3 dinners active &middot; grocery adjusted
+            </span>
+            <button onClick={resetMeals} className="text-amber-500 text-[10px] font-bold cursor-pointer hover:underline">
+              Reset to full week
+            </button>
+          </div>
+        )}
+
+        {/* Start here */}
         <div className="mb-8 bg-amber-500/5 border border-amber-500/20 rounded-xl py-4 px-5">
           <div className="flex items-center gap-2 mb-2">
             <span className="text-amber-500 text-xs font-black uppercase tracking-wider">Start here</span>
@@ -188,7 +212,7 @@ export default function YourWeek() {
               <p className="text-neutral-500 text-[10px] mt-0.5">One list, one trip</p>
             </div>
             <div>
-              <span className="text-white font-bold text-sm">2. Follow</span>
+              <span className="text-white font-bold text-sm">2. Cook</span>
               <p className="text-neutral-500 text-[10px] mt-0.5">Mon &rarr; Wed &rarr; Fri</p>
             </div>
             <div>
@@ -198,49 +222,54 @@ export default function YourWeek() {
           </div>
         </div>
 
-        {/* Timeline with connector */}
+        {/* Timeline */}
         <div className="relative" id="timeline">
           <div className="absolute left-6 top-4 bottom-4 w-px bg-neutral-800 hidden sm:block" />
           <div className="space-y-2 relative">
-            {timeline.map((entry, i) => (
-              <div key={`${entry.day}-${servings}`} className="relative">
-                <div className={`absolute left-[21px] top-4 w-2.5 h-2.5 rounded-full border-2 hidden sm:block z-10 ${
-                  entry.type === "cook" ? "bg-amber-500 border-amber-500" : entry.type === "leftover" ? "bg-neutral-700 border-neutral-600" : "bg-neutral-800 border-neutral-700"
-                }`} />
-                <div className="sm:pl-12">
-                  {entry.type === "cook" ? (
-                    <CookDay {...entry} servings={servings} />
-                  ) : entry.type === "leftover" ? (
-                    <LeftoverDay day={entry.day} meal={entry.meal} />
-                  ) : (
-                    <FlexDay day={entry.day} meal={entry.meal} />
-                  )}
-                </div>
-              </div>
-            ))}
+            {/* Monday */}
+            <TimelineDot type="cook" enabled={enabledMeals.Mon} />
+            <CookDay {...COOK_DAYS[0]} servings={servings} enabled={enabledMeals.Mon} onToggle={() => toggleMeal("Mon")} />
+            <TimelineDot type="leftover" enabled={enabledMeals.Mon} />
+            <LeftoverDay day="Tuesday" meal={leftoverMsgs.tue} visible={enabledMeals.Mon} />
+
+            {/* Wednesday */}
+            <TimelineDot type="cook" enabled={enabledMeals.Wed} />
+            <CookDay {...COOK_DAYS[1]} servings={servings} enabled={enabledMeals.Wed} onToggle={() => toggleMeal("Wed")} />
+            <TimelineDot type="leftover" enabled={enabledMeals.Wed} />
+            <LeftoverDay day="Thursday" meal={leftoverMsgs.thu} visible={enabledMeals.Wed} />
+
+            {/* Friday */}
+            <TimelineDot type="cook" enabled={enabledMeals.Fri} />
+            <CookDay {...COOK_DAYS[2]} servings={servings} enabled={enabledMeals.Fri} onToggle={() => toggleMeal("Fri")} />
+            <TimelineDot type="leftover" enabled={enabledMeals.Fri} />
+            <LeftoverDay day="Saturday" meal={leftoverMsgs.sat} visible={enabledMeals.Fri} />
+
+            {/* Sunday */}
+            <TimelineDot type="flex" />
+            <FlexDay day="Sunday" meal={leftoverMsgs.sun} />
           </div>
         </div>
 
         {/* Weekly stats */}
         <div className="mt-8 flex justify-center gap-4 text-xs text-neutral-500 flex-wrap">
-          <span><span className="text-amber-400 font-bold">~{Math.round(375 * servings / 4)}g protein</span> this week</span>
+          <span><span className="text-amber-400 font-bold">~{Math.round(375 * servings / 4 * enabledCount / 3)}g protein</span> this week</span>
           <span className="text-neutral-700">|</span>
-          <span><span className="text-white font-semibold">3 cooks</span>, 7 days covered</span>
+          <span><span className="text-white font-semibold">{enabledCount} cooks</span>, 7 days covered</span>
           <span className="text-neutral-700">|</span>
           <span>~30 min avg</span>
         </div>
 
         {/* Grocery */}
         <div className="mt-10" id="grocery">
-          <GroceryList servings={servings} />
+          <GroceryList servings={servings} excludedTags={excludedTags} />
         </div>
 
         {/* Flexibility note */}
         <div className="mt-8 bg-neutral-900/50 border border-neutral-800 rounded-xl p-4">
           <h4 className="text-xs font-bold text-white mb-2">Make it yours</h4>
           <div className="space-y-1.5 text-xs text-neutral-400">
-            <p>Swap any protein: chicken &harr; beef &harr; turkey &harr; ground meat. System still works.</p>
-            <p>Don't like a recipe? Replace with any other from the site — same split method applies.</p>
+            <p>Swap any protein: chicken &harr; beef &harr; turkey. System still works.</p>
+            <p>Uncheck a dinner above to remove it from your week and grocery list.</p>
             <p>Adjust spice levels, not the structure. That's how this stays repeatable.</p>
           </div>
         </div>
@@ -255,14 +284,17 @@ export default function YourWeek() {
         {/* Return hook */}
         <div className="mt-6 text-center bg-neutral-900/30 border border-neutral-800 rounded-xl py-5 px-4">
           <p className="text-white text-xs font-bold">Come back Sunday</p>
-          <p className="text-neutral-500 text-[10px] mt-1">
-            Same system. New week. Swap 1 protein, keep the structure, zero thinking.
-          </p>
-          <p className="text-amber-500/60 text-[10px] mt-2 font-semibold">
-            3 meals. 1 shop. 0 decisions. Every week.
-          </p>
+          <p className="text-neutral-500 text-[10px] mt-1">Same system. New week. Swap 1 protein, keep the structure, zero thinking.</p>
+          <p className="text-amber-500/60 text-[10px] mt-2 font-semibold">3 dinners. 1 shop. 0 decisions. Every week.</p>
         </div>
       </div>
     </section>
   );
+}
+
+function TimelineDot({ type, enabled = true }) {
+  if (!enabled && type !== "flex") return <div className="h-0" />;
+  return <div className="h-0 relative"><div className={`absolute left-[21px] top-2 w-2.5 h-2.5 rounded-full border-2 hidden sm:block z-10 ${
+    type === "cook" ? "bg-amber-500 border-amber-500" : type === "leftover" ? "bg-neutral-700 border-neutral-600" : "bg-neutral-800 border-neutral-700"
+  }`} /></div>;
 }
