@@ -15,11 +15,11 @@ function getTimeline(servings) {
   if (servings <= 2) {
     return [
       { type: "cook", ...COOK_DAYS[0] },
-      { type: "leftover", day: "Tuesday", meal: "Light leftovers or quick meal" },
+      { type: "leftover", day: "Tuesday", meal: "No cooking. Reheat Monday's bowl." },
       { type: "cook", ...COOK_DAYS[1] },
-      { type: "leftover", day: "Thursday", meal: "Light leftovers or quick meal" },
+      { type: "leftover", day: "Thursday", meal: "No cooking. Finish Wednesday's gnocchi or grab something light." },
       { type: "cook", ...COOK_DAYS[2] },
-      { type: "leftover", day: "Saturday", meal: "Light leftovers — may need a snack" },
+      { type: "leftover", day: "Saturday", meal: "No cooking. Reheat Friday's penne — smaller portions." },
       { type: "flex", day: "Sunday", meal: "Flexible — eat out or reset" },
     ];
   }
@@ -173,8 +173,11 @@ export default function YourWeek() {
         </div>
 
         {/* Quick start */}
-        <div className="text-center mb-8 text-neutral-500 text-xs">
-          <span className="text-white font-semibold">1.</span> Shop once &rarr; <span className="text-white font-semibold">2.</span> Follow the week &rarr; <span className="text-white font-semibold">3.</span> Done
+        <div className="text-center mb-8 bg-amber-500/5 border border-amber-500/20 rounded-lg py-3 px-4">
+          <span className="text-amber-500 text-[10px] font-bold uppercase tracking-wider">Start here</span>
+          <div className="text-neutral-400 text-xs mt-1">
+            <span className="text-white font-semibold">1.</span> Shop once &rarr; <span className="text-white font-semibold">2.</span> Follow the week &rarr; <span className="text-white font-semibold">3.</span> Done
+          </div>
         </div>
 
         {/* Timeline with connector */}
