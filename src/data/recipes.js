@@ -519,7 +519,7 @@ const recipes = [
       { text: "COMBINE: Return beef + broccoli. Toss until glossy. Serve over bone broth rice. Sesame seeds + green onion on top." },
     ],
     brands: [
-      { name: "Roli Roti", item: "Butcher's Bone Broth", why: "Cooks rice with built-in flavor \u2014 replaces plain water for zero extra effort", image: "/images/brands/roli-roti-broth.png", url: "https://roliroti.com" },
+      { name: "Roli Roti", item: "Butcher's Bone Broth", why: "Cooks rice with built-in flavor \u2014 replaces plain water for zero extra effort", image: "/images/brands/roli-roti-broth.jpg", url: "https://roliroti.com/products/organic-chicken-broth/" },
       { name: "Earth's Best", item: "Mini meatballs", why: "Pre-cooked, mild, kid-approved protein swap", image: "/images/brands/earths-best-meatballs.webp", url: "https://www.earthsbest.com/products/mini-beef-meatballs-toddler" },
     ],
     mealPrep: {
