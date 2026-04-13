@@ -62,10 +62,9 @@ export default function GroceryList() {
     navigator.clipboard.writeText(text);
   };
 
-  const allDone = checkedCount === totalCount && totalCount > 0;
-
   const checkedCount = checked.size;
   const totalCount = allItems.length;
+  const allDone = checkedCount === totalCount && totalCount > 0;
 
   if (!isOpen) {
     return (
