@@ -19,8 +19,10 @@ const recipes = [
     protein: 35,
     calories: 425,
     image: "/images/gnocchi/hero-finished-dish.png",
-    description: "Crispy pan-fried gnocchi + spicy cottage cheese cream sauce + pre-cooked shredded chicken. This is the flagship recipe — it proves that high-protein meals don't have to be soft, bland, or repetitive.",
-    whyItWorks: "One cook, two outcomes. Texture + flavor prioritized. Flexible but controlled. Most 'healthy' meals fail because they're soft, bland, and repetitive. This fixes all three: crispy gnocchi (texture), spicy creamy sauce (flavor), high protein (efficiency).",
+    role: "The Texture Hero",
+    hook: "This fixes soggy gnocchi and bland chicken in one pan — crispy outside, creamy sauce, and split-friendly for kids who won't touch spice.",
+    description: "~35g protein for ~425 calories. Crispy pan-fried gnocchi + spicy cottage cheese cream sauce + pre-cooked shredded chicken. Adults get chili oil and Dan-O's. Kids get Rao's Alfredo or a dry plate. One cook, two outcomes, 30 minutes.",
+    whyItWorks: "Crispy gnocchi base = texture contrast that makes the whole dish feel indulgent. Cottage cheese sauce delivers protein without heavy cream calories. The split happens post-chicken, pre-sauce — so neither version is compromised. This is the recipe that proves bland high-protein food is a choice, not a requirement.",
     executionRules: [
       "Don't sauce everything before splitting — sauce goes in AFTER the split point.",
       "Don't overcook after sauce — breaks texture. Simmer 2-3 min max.",
@@ -32,7 +34,7 @@ const recipes = [
     // ── Split Cook Method™ ──
     splitCook: {
       splitRatio: "70% Adult / 30% Kid",
-      splitPoint: "After chicken is crisped (end of Phase 1, Step 3). Divide gnocchi, chicken, and veg into 2 pans NOW.",
+      splitPoint: "STOP. Chicken is crisped. Divide gnocchi, chicken, and veg into 2 pans NOW — everything after this point is different for adults and kids.",
       sharedIngredients: [
         "--- BASE ---",
         "1 pack shelf-stable gnocchi (~16 oz)",
@@ -181,6 +183,11 @@ const recipes = [
       { name: "Del Real", item: "Shredded chicken", why: "Pre-cooked, saves 20+ min, consistent shred texture", image: "/images/brands/del-real-chicken.webp", url: "https://delrealfoods.com/products/pulled-chicken" },
       { name: "Rao's", item: "Alfredo sauce", why: "Kid Option B — store-bought shortcut that actually tastes good. Skip the cottage cheese sauce for kids who want familiar flavor.", image: "/images/brands/raos-alfredo.png", url: "https://raos.goldbelly.com/alfredo-sauce-15-oz?ref=collection" },
     ],
+    mealPrep: {
+      storage: "Store gnocchi + sauce together (the crisp won't survive anyway). Keep chicken separate if possible.",
+      reheat: "Microwave 90 sec or pan reheat with a splash of milk to loosen the sauce. The gnocchi won't re-crisp — that's the tradeoff. Fresh is best for this one.",
+      lasts: "2-3 days in fridge. Best eaten same day for texture.",
+    },
   },
   {
     id: 2,
@@ -199,8 +206,10 @@ const recipes = [
     protein: 45,
     calories: 500,
     image: "/images/tritip/hero-plated.png",
-    description: "Seared tri-tip + cottage cheese cream sauce + penne. Adults get chili oil and Dan-O's. Kids get meatballs or sausage in a mild creamy coat. One sauce base, two finishes.",
-    whyItWorks: "This stress-tests the Split Cook Method with a different protein. Tri-tip for adults, pre-cooked meatballs for kids — same sauce base, same pasta, zero extra cooking time. The cottage cheese + beef broth sauce gives body without heavy cream. Meal preps well if you store pasta and protein separately.",
+    role: "The Steak Meal Prep",
+    hook: "Most steak pasta recipes are 800+ calories of cream. This one delivers ~45g protein for ~500 calories — and your kids eat from the same pot without you cooking twice.",
+    description: "~45g protein for ~500 calories. Seared tri-tip sliced thin over penne in a cottage cheese cream sauce. Adults get chili oil and Dan-O's heat. Kids get meatballs or sausage in a mild creamy coat. Stores and reheats without turning into mush.",
+    whyItWorks: "Tri-tip is lean but beefy — cheaper than ribeye, more flavor than chicken breast. The cottage cheese + beef broth sauce replaces heavy cream without anyone noticing. Split happens post-sauce-build, so both pans get the same creamy base — only the protein and heat level changes. Meal preps for 3-4 days if you store pasta and protein separately.",
     executionRules: [
       "Don't overcook tri-tip — this kills the entire dish. Pull at medium-rare, rest 5-10 min.",
       "Don't slice with the grain — ruins texture. Always against the grain, thin.",
@@ -210,7 +219,7 @@ const recipes = [
     ],
     splitCook: {
       splitRatio: "70% Adult / 30% Kid",
-      splitPoint: "After sauce base is built (end of Phase 1, Step 4). Divide sauce + pasta into two pans NOW.",
+      splitPoint: "STOP. Sauce base is done. Divide sauce + pasta into two pans NOW — adult gets chili oil and tri-tip, kid gets meatballs and mild cheese.",
       sharedIngredients: [
         "--- PASTA ---",
         "8 oz penne (dry)",
@@ -392,8 +401,10 @@ const recipes = [
     protein: 45,
     calories: 500,
     image: "/images/beefbroccoli/hero.png",
-    description: "Bone broth rice + seared beef + charred broccoli + soy-sesame sauce. Adults get chili oil and sriracha. Kids get mini meatballs or beef sausage in a mild soy glaze. Stir-fry is hard to split — this proves it works.",
-    whyItWorks: "Stir-fry is the hardest category for Split Cook — overcooking, soggy veg, bad reheating. This solves all three: bone broth rice adds flavor without effort, velveting the beef with cornstarch gives restaurant texture, and the split happens post-sear so neither version suffers. If this works, the whole system holds.",
+    role: "The Fast Weekday Workhorse",
+    hook: "Stir-fry is the meal most people overcook, over-sauce, and can't split for kids. This fixes all three — charred broccoli, velveted beef, bone broth rice, and a clean split that takes zero extra time.",
+    description: "~45g protein for ~500 calories. Bone broth rice + seared beef strips + charred broccoli in a soy-sesame glaze. Adults get chili oil and sriracha. Kids get mini meatballs or grass-fed beef sausage in a mild soy coat. 25 minutes, meal preps for the week.",
+    whyItWorks: "Bone broth rice adds depth without effort — just swap water for broth. Velveting the beef with cornstarch gives restaurant-quality texture from any cut. Broccoli gets charred in cast iron, not steamed into mush. The split happens after shared cooking is done — both versions use the same rice and broccoli, only the protein and sauce heat changes.",
     executionRules: [
       "Don't overcrowd the pan when searing beef — steaming instead of searing ruins it. Do batches.",
       "Don't use too much sauce — soggy rice kills the bowl. Keep it glossy, not soupy.",
@@ -403,7 +414,7 @@ const recipes = [
     ],
     splitCook: {
       splitRatio: "70% Adult / 30% Kid",
-      splitPoint: "After broccoli is cooked (end of Phase 1, Step 3). Divide rice, broccoli into bowls. Cook proteins separately.",
+      splitPoint: "STOP. Rice and broccoli are done. Bowl up the base now — adult bowls get seared beef with spicy sauce, kid bowls get meatballs or sausage with mild soy.",
       sharedIngredients: [
         "--- RICE ---",
         "1 cup rice",

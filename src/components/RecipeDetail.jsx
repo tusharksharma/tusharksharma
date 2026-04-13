@@ -54,10 +54,20 @@ export default function RecipeDetail({ recipe }) {
               </span>
             )}
           </div>
-          <h1 className="text-3xl font-black text-white mt-2">
+          {recipe.role && (
+            <span className="text-xs font-semibold text-neutral-500 uppercase tracking-wider">
+              {recipe.role}
+            </span>
+          )}
+          <h1 className="text-3xl font-black text-white mt-1">
             {recipe.title}
           </h1>
-          <p className="text-neutral-400 mt-2 leading-relaxed">
+          {recipe.hook && (
+            <p className="text-amber-400/90 mt-2 text-sm font-medium leading-relaxed">
+              {recipe.hook}
+            </p>
+          )}
+          <p className="text-neutral-400 mt-2 leading-relaxed text-sm">
             {recipe.description}
           </p>
 
