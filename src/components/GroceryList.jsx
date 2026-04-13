@@ -23,7 +23,7 @@ const GROCERY = {
   ],
   "Sauce & Flavor": [
     { name: "Soy sauce or tamari", qty: "", meal: "Mon" },
-    { name: "Roli Roti bone broth", qty: "1 carton", meal: "Mon + Fri" },
+    { name: "Roli Roti bone broth", qty: "32 oz carton", meal: "Mon + Fri" },
     { name: "Dan-O's Outlaw seasoning", qty: "", meal: "Wed + Fri" },
     { name: "Chili oil or sriracha", qty: "", meal: "All" },
     { name: "Sesame oil", qty: "", meal: "Mon" },
@@ -34,7 +34,7 @@ const GROCERY = {
     { name: "Fairlife fat-free milk", qty: "", meal: "Sauce base" },
   ],
   "Kid Mode": [
-    { name: "Rao's Alfredo sauce", qty: "1 jar", meal: "Wed kid" },
+    { name: "Rao's Alfredo sauce", qty: "15 oz jar", meal: "Wed kid" },
     { name: "Shredded mild cheese", qty: "", meal: "Kid topping" },
   ],
 };
