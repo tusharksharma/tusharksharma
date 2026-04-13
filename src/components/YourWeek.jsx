@@ -1,6 +1,6 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
-import recipes from "../data/recipes";
+import recipes from "../data/recipes.js";
+import GroceryList from "./GroceryList.jsx";
 
 const WEEK = [
   {
@@ -48,46 +48,7 @@ const CALENDAR = [
   { day: "Sun", type: "flex", meal: "Flexible / eat out / reset" },
 ];
 
-const GROCERY = {
-  "Protein": [
-    "1.25 lb beef (tri-tip, flank, or sirloin)",
-    "1-1.25 lb chicken thighs or Del Real shredded chicken",
-    "1.25 lb tri-tip steak",
-    "Earth's Best mini meatballs (kid protein swap)",
-  ],
-  "Carbs": [
-    "2 cups rice (dry)",
-    "1 pack gnocchi (~16 oz)",
-    "8 oz penne pasta",
-  ],
-  "Vegetables": [
-    "3-4 cups broccoli (fresh or frozen)",
-    "2-3 bell peppers",
-    "1 large onion",
-    "2 cups spinach",
-    "1 head garlic",
-  ],
-  "Sauce & Flavor": [
-    "Soy sauce or tamari",
-    "Roli Roti bone broth (for rice)",
-    "Beef broth (for pasta sauce)",
-    "Dan-O's Outlaw seasoning",
-    "Chili oil or sriracha",
-    "Sesame oil",
-    "1 lime",
-  ],
-  "Creamy / Protein Base": [
-    "Cottage cheese (1.5 cups total)",
-    "Fairlife fat-free milk",
-  ],
-  "Kid Mode Add-ons": [
-    "Rao's Alfredo sauce (for gnocchi kid option)",
-    "Shredded mild cheese (mozz or cheddar)",
-  ],
-};
-
 export default function YourWeek() {
-  const [showGrocery, setShowGrocery] = useState(false);
 
   return (
     <section className="border-b border-neutral-800 bg-gradient-to-b from-neutral-950 to-neutral-900/80">
@@ -210,45 +171,9 @@ export default function YourWeek() {
           <span><span className="text-white font-semibold">3 cooks</span>, 12 meals covered</span>
         </div>
 
-        {/* Grocery list toggle */}
+        {/* Grocery list */}
         <div className="mt-8">
-          <button
-            onClick={() => setShowGrocery(!showGrocery)}
-            className="w-full bg-amber-500 text-black font-bold rounded-xl py-3 text-sm hover:bg-amber-400 transition-colors cursor-pointer"
-          >
-            {showGrocery ? "Hide Grocery List" : "Shop This Week"}
-          </button>
-
-          {showGrocery && (
-            <div className="mt-4 bg-neutral-900 border border-neutral-800 rounded-xl p-5">
-              <div className="flex items-center justify-between mb-4">
-                <h3 className="text-sm font-bold text-white">Week 1 Grocery List</h3>
-                <span className="text-[10px] text-neutral-500 uppercase tracking-wider">
-                  Buy once &middot; Cook 3x &middot; Everything overlaps
-                </span>
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {Object.entries(GROCERY).map(([category, items]) => (
-                  <div key={category}>
-                    <h4 className="text-xs font-bold uppercase tracking-wider text-amber-500 mb-2">
-                      {category}
-                    </h4>
-                    <ul className="space-y-1">
-                      {items.map((item, i) => (
-                        <li key={i} className="text-xs text-neutral-300 flex gap-2">
-                          <span className="text-neutral-600 flex-shrink-0">&#9744;</span>
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-              </div>
-              <p className="text-neutral-600 text-[10px] mt-4 italic text-center">
-                Same veggies reused across meals. Protein rotates. Sauce base is consistent.
-              </p>
-            </div>
-          )}
+          <GroceryList />
         </div>
 
         {/* How the week works */}
