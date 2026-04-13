@@ -81,8 +81,12 @@ function CookDay({ day, label, id, time, reheats, adult, kid, needs, servings })
                 <span key={n} className="text-[10px] bg-neutral-800 text-neutral-500 px-2 py-0.5 rounded-full">{n}</span>
               ))}
             </div>
-            <div className="mt-2 text-[10px] text-neutral-600">
-              {r.protein}g protein &middot; {r.calories} cal
+            <div className="mt-2 flex items-center gap-2 text-[10px]">
+              <span className="text-amber-400 font-bold">{r.protein}g protein</span>
+              <span className="text-neutral-700">&middot;</span>
+              <span className="text-neutral-500">{r.calories} cal/serving</span>
+              <span className="text-neutral-700">&middot;</span>
+              <span className="text-neutral-500">{Math.round((r.protein * 4 / r.calories) * 100)}% PPC</span>
             </div>
           </div>
         </div>
@@ -173,10 +177,24 @@ export default function YourWeek() {
         </div>
 
         {/* Quick start */}
-        <div className="text-center mb-8 bg-amber-500/5 border border-amber-500/20 rounded-lg py-3 px-4">
-          <span className="text-amber-500 text-[10px] font-bold uppercase tracking-wider">Start here</span>
-          <div className="text-neutral-400 text-xs mt-1">
-            <span className="text-white font-semibold">1.</span> Shop once &rarr; <span className="text-white font-semibold">2.</span> Follow the week &rarr; <span className="text-white font-semibold">3.</span> Done
+        <div className="mb-8 bg-amber-500/5 border border-amber-500/20 rounded-xl py-4 px-5">
+          <div className="flex items-center gap-2 mb-2">
+            <span className="text-amber-500 text-xs font-black uppercase tracking-wider">Start here</span>
+            <span className="text-neutral-600 text-[10px]">Zero decisions required</span>
+          </div>
+          <div className="grid grid-cols-3 gap-3 text-center">
+            <div>
+              <a href="#grocery" className="text-white font-bold text-sm hover:text-amber-400 transition-colors">1. Shop</a>
+              <p className="text-neutral-500 text-[10px] mt-0.5">One list, one trip</p>
+            </div>
+            <div>
+              <span className="text-white font-bold text-sm">2. Follow</span>
+              <p className="text-neutral-500 text-[10px] mt-0.5">Mon &rarr; Wed &rarr; Fri</p>
+            </div>
+            <div>
+              <span className="text-white font-bold text-sm">3. Done</span>
+              <p className="text-neutral-500 text-[10px] mt-0.5">7 days handled</p>
+            </div>
           </div>
         </div>
 
@@ -217,15 +235,32 @@ export default function YourWeek() {
           <GroceryList servings={servings} />
         </div>
 
-        {/* Completion */}
-        <div className="mt-8 text-center py-6 bg-neutral-900/30 border border-neutral-800 rounded-xl">
-          <p className="text-neutral-500 text-xs">Once you've shopped and checked everything off:</p>
-          <p className="text-amber-400 font-bold text-sm mt-1">Your entire week is handled. Zero food decisions left.</p>
+        {/* Flexibility note */}
+        <div className="mt-8 bg-neutral-900/50 border border-neutral-800 rounded-xl p-4">
+          <h4 className="text-xs font-bold text-white mb-2">Make it yours</h4>
+          <div className="space-y-1.5 text-xs text-neutral-400">
+            <p>Swap any protein: chicken &harr; beef &harr; turkey &harr; ground meat. System still works.</p>
+            <p>Don't like a recipe? Replace with any other from the site — same split method applies.</p>
+            <p>Adjust spice levels, not the structure. That's how this stays repeatable.</p>
+          </div>
         </div>
 
-        {/* Next week */}
-        <div className="mt-6 text-center">
-          <p className="text-neutral-600 text-xs">Next week drops Sunday &middot; Same system, new flavors &middot; Zero thinking</p>
+        {/* Completion */}
+        <div className="mt-6 text-center py-6 bg-amber-500/5 border border-amber-500/20 rounded-xl">
+          <p className="text-neutral-500 text-xs">Once you've shopped and checked everything off:</p>
+          <p className="text-amber-400 font-black text-base mt-1">Zero food decisions left this week.</p>
+          <p className="text-neutral-600 text-[10px] mt-1">That's the point.</p>
+        </div>
+
+        {/* Return hook */}
+        <div className="mt-6 text-center bg-neutral-900/30 border border-neutral-800 rounded-xl py-5 px-4">
+          <p className="text-white text-xs font-bold">Come back Sunday</p>
+          <p className="text-neutral-500 text-[10px] mt-1">
+            Same system. New week. Swap 1 protein, keep the structure, zero thinking.
+          </p>
+          <p className="text-amber-500/60 text-[10px] mt-2 font-semibold">
+            3 meals. 1 shop. 0 decisions. Every week.
+          </p>
         </div>
       </div>
     </section>
