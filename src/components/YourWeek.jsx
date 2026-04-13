@@ -1,19 +1,50 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import recipes from "../data/recipes";
 import GroceryList from "./GroceryList";
 
 const SERVINGS_OPTIONS = [2, 4, 6];
 
-const TIMELINE = [
-  { type: "cook", day: "Monday", label: "Fast Win", id: 4, time: "25 min", reheats: true, adult: "Spicy soy-sesame, charred broccoli, chili oil", kid: "Mild soy, broccoli on side, meatballs", needs: ["Beef", "Broccoli", "Rice", "Soy sauce", "Bone broth"] },
-  { type: "leftover", day: "Tuesday", meal: "Beef & Broccoli — already handled" },
-  { type: "cook", day: "Wednesday", label: "Comfort + Protein", id: 1, time: "30 min", reheats: false, adult: "Spicy fajita cream, peppers, chili oil", kid: "Rao's Alfredo or mild creamy", needs: ["Chicken", "Gnocchi", "Bell peppers", "Cottage cheese", "Dan-O's"] },
-  { type: "leftover", day: "Thursday", meal: "No cooking. You're covered." },
-  { type: "cook", day: "Friday", label: "Cook Once, Win Twice", id: 2, time: "35 min", reheats: true, adult: "Chili cream sauce, Dan-O's, sliced tri-tip", kid: "Mild creamy penne, meatballs, cheese", needs: ["Tri-tip", "Penne", "Spinach", "Cottage cheese", "Beef broth"] },
-  { type: "leftover", day: "Saturday", meal: "Tri-Tip Penne — already handled" },
-  { type: "flex", day: "Sunday", meal: "Flexible — eat out, reset, or finish leftovers" },
+const COOK_DAYS = [
+  { day: "Monday", label: "Fast Win", id: 4, time: "25 min", reheats: true, adult: "Spicy soy-sesame, charred broccoli, chili oil", kid: "Mild soy, broccoli on side, meatballs", needs: ["Beef", "Broccoli", "Rice", "Soy sauce", "Bone broth"] },
+  { day: "Wednesday", label: "Comfort + Protein", id: 1, time: "30 min", reheats: false, adult: "Spicy fajita cream, peppers, chili oil", kid: "Rao's Alfredo or mild creamy", needs: ["Chicken", "Gnocchi", "Bell peppers", "Cottage cheese", "Dan-O's"] },
+  { day: "Friday", label: "Cook Once, Win Twice", id: 2, time: "35 min", reheats: true, adult: "Chili cream sauce, Dan-O's, sliced tri-tip", kid: "Mild creamy penne, meatballs, cheese", needs: ["Tri-tip", "Penne", "Spinach", "Cottage cheese", "Beef broth"] },
 ];
+
+function getTimeline(servings) {
+  if (servings <= 2) {
+    return [
+      { type: "cook", ...COOK_DAYS[0] },
+      { type: "leftover", day: "Tuesday", meal: "Light leftovers or quick meal" },
+      { type: "cook", ...COOK_DAYS[1] },
+      { type: "leftover", day: "Thursday", meal: "Light leftovers or quick meal" },
+      { type: "cook", ...COOK_DAYS[2] },
+      { type: "leftover", day: "Saturday", meal: "Light leftovers — may need a snack" },
+      { type: "flex", day: "Sunday", meal: "Flexible — eat out or reset" },
+    ];
+  }
+  if (servings >= 6) {
+    return [
+      { type: "cook", ...COOK_DAYS[0] },
+      { type: "leftover", day: "Tuesday", meal: "Beef & Broccoli — fully covered" },
+      { type: "cook", ...COOK_DAYS[1] },
+      { type: "leftover", day: "Thursday", meal: "Gnocchi or extra Beef & Broccoli — fully covered" },
+      { type: "cook", ...COOK_DAYS[2] },
+      { type: "leftover", day: "Saturday", meal: "Tri-Tip Penne — plenty for two days" },
+      { type: "flex", day: "Sunday", meal: "Still have leftovers — or eat out" },
+    ];
+  }
+  // Default: 4
+  return [
+    { type: "cook", ...COOK_DAYS[0] },
+    { type: "leftover", day: "Tuesday", meal: "Beef & Broccoli — already handled" },
+    { type: "cook", ...COOK_DAYS[1] },
+    { type: "leftover", day: "Thursday", meal: "No cooking. You're covered." },
+    { type: "cook", ...COOK_DAYS[2] },
+    { type: "leftover", day: "Saturday", meal: "Tri-Tip Penne — already handled" },
+    { type: "flex", day: "Sunday", meal: "Flexible — eat out, reset, or finish leftovers" },
+  ];
+}
 
 function CookDay({ day, label, id, time, reheats, adult, kid, needs, servings }) {
   const r = recipes.find((x) => x.id === id);
@@ -81,6 +112,21 @@ function FlexDay({ day, meal }) {
 
 export default function YourWeek() {
   const [servings, setServings] = useState(4);
+  const [showFeedback, setShowFeedback] = useState(false);
+
+  const timeline = getTimeline(servings);
+
+  const handleServingsChange = (s) => {
+    setServings(s);
+    setShowFeedback(true);
+  };
+
+  useEffect(() => {
+    if (showFeedback) {
+      const t = setTimeout(() => setShowFeedback(false), 2000);
+      return () => clearTimeout(t);
+    }
+  }, [showFeedback, servings]);
 
   return (
     <section className="border-b border-neutral-800 bg-gradient-to-b from-neutral-950 to-neutral-900/80">
@@ -93,26 +139,37 @@ export default function YourWeek() {
         </div>
 
         {/* Servings toggle */}
-        <div className="flex items-center justify-center gap-3 mb-8">
-          <span className="text-neutral-500 text-xs font-semibold">Servings:</span>
-          <div className="flex gap-1">
-            {SERVINGS_OPTIONS.map((s) => (
-              <button
-                key={s}
-                onClick={() => setServings(s)}
-                className={`w-10 h-10 rounded-lg text-sm font-bold transition-all cursor-pointer ${
-                  servings === s
-                    ? "bg-amber-500 text-black"
-                    : "bg-neutral-800 text-neutral-400 hover:bg-neutral-700"
-                }`}
-              >
-                {s}
-              </button>
-            ))}
+        <div className="bg-neutral-900/50 border border-neutral-800 rounded-xl p-4 mb-8">
+          <div className="flex items-center justify-between mb-2">
+            <div>
+              <span className="text-white text-xs font-bold">Adjust your week</span>
+              <span className="text-neutral-600 text-[10px] ml-2">Best for households of 2-6</span>
+            </div>
+            {showFeedback && (
+              <span className="text-amber-400 text-[10px] font-bold animate-pulse">
+                Updated for {servings} servings
+              </span>
+            )}
           </div>
-          <span className="text-neutral-600 text-[10px]">
-            {servings === 2 ? "minimal leftovers" : servings === 6 ? "extra leftovers" : "standard + leftovers"}
-          </span>
+          <div className="flex items-center gap-3">
+            <span className="text-neutral-500 text-xs">Servings:</span>
+            <div className="flex gap-1">
+              {SERVINGS_OPTIONS.map((s) => (
+                <button
+                  key={s}
+                  onClick={() => handleServingsChange(s)}
+                  className={`w-10 h-10 rounded-lg text-sm font-bold transition-all cursor-pointer ${
+                    servings === s ? "bg-amber-500 text-black scale-110" : "bg-neutral-800 text-neutral-400 hover:bg-neutral-700"
+                  }`}
+                >
+                  {s}
+                </button>
+              ))}
+            </div>
+            <span className="text-neutral-600 text-[10px]">
+              {servings === 2 ? "Couple — minimal leftovers" : servings === 6 ? "Large family — extra leftovers" : "Family of 4 — standard + leftovers"}
+            </span>
+          </div>
         </div>
 
         {/* Quick start */}
@@ -120,15 +177,12 @@ export default function YourWeek() {
           <span className="text-white font-semibold">1.</span> Shop once &rarr; <span className="text-white font-semibold">2.</span> Follow the week &rarr; <span className="text-white font-semibold">3.</span> Done
         </div>
 
-        {/* Timeline with connector line */}
+        {/* Timeline with connector */}
         <div className="relative" id="timeline">
-          {/* Vertical connector */}
           <div className="absolute left-6 top-4 bottom-4 w-px bg-neutral-800 hidden sm:block" />
-
           <div className="space-y-2 relative">
-            {TIMELINE.map((entry, i) => (
-              <div key={i} className="relative">
-                {/* Dot on timeline */}
+            {timeline.map((entry, i) => (
+              <div key={`${entry.day}-${servings}`} className="relative">
                 <div className={`absolute left-[21px] top-4 w-2.5 h-2.5 rounded-full border-2 hidden sm:block z-10 ${
                   entry.type === "cook" ? "bg-amber-500 border-amber-500" : entry.type === "leftover" ? "bg-neutral-700 border-neutral-600" : "bg-neutral-800 border-neutral-700"
                 }`} />
@@ -155,7 +209,7 @@ export default function YourWeek() {
           <span>~30 min avg</span>
         </div>
 
-        {/* Shop button */}
+        {/* Grocery */}
         <div className="mt-10" id="grocery">
           <GroceryList servings={servings} />
         </div>
@@ -166,7 +220,7 @@ export default function YourWeek() {
           <p className="text-amber-400 font-bold text-sm mt-1">Your entire week is handled. Zero food decisions left.</p>
         </div>
 
-        {/* Next week hook */}
+        {/* Next week */}
         <div className="mt-6 text-center">
           <p className="text-neutral-600 text-xs">Next week drops Sunday &middot; Same system, new flavors &middot; Zero thinking</p>
         </div>
