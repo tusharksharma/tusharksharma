@@ -113,8 +113,21 @@ export default function GroceryList({ servings = 4, excludedTags = [] }) {
           <button onClick={() => setIsOpen(false)} className="text-neutral-500 hover:text-neutral-300 text-xs cursor-pointer">Close</button>
         </div>
         <p className="text-neutral-500 text-xs">
-          Feeds {servings} people &middot; 3 dinners &middot; leftovers included &middot; minimal waste
+          Feeds {servings} people &middot; {3 - excludedTags.length} dinners &middot; leftovers included &middot; minimal waste
         </p>
+        {excludedTags.length > 0 && (
+          <p className="text-amber-400 text-[10px] font-semibold mt-1">
+            Shopping list updated for {3 - excludedTags.length} dinners
+          </p>
+        )}
+        <div className="flex items-center gap-3 mt-2 text-[10px]">
+          <span className="text-neutral-600">Included:</span>
+          {["Mon", "Wed", "Fri"].map((d) => (
+            <span key={d} className={excludedTags.includes(d) ? "text-neutral-700 line-through" : "text-neutral-400 font-semibold"}>
+              {d}
+            </span>
+          ))}
+        </div>
         <div className="flex items-center gap-3 mt-3">
           <button onClick={copyList} className="px-3 py-1.5 bg-neutral-800 text-neutral-300 text-xs font-semibold rounded-lg hover:bg-neutral-700 transition-colors cursor-pointer">
             Copy List

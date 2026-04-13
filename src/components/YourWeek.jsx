@@ -154,6 +154,7 @@ export default function YourWeek() {
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-amber-500 mb-2">This Week</p>
           <h2 className="text-3xl font-black text-white">3 Dinners. 1 Shop. 0 Decisions.</h2>
           <p className="text-neutral-400 text-sm mt-2">Follow top to bottom. Your week is handled.</p>
+          <p className="text-neutral-600 text-[10px] mt-1">Built for busy weeknights. ~30 min dinners. Beginner-friendly.</p>
         </div>
 
         {/* Servings toggle */}
@@ -189,7 +190,7 @@ export default function YourWeek() {
         </div>
 
         {/* Meal inclusion */}
-        {enabledCount < 3 && (
+        {enabledCount < 3 ? (
           <div className="flex items-center justify-between mb-4 px-1">
             <span className="text-neutral-500 text-[10px]">
               {enabledCount} of 3 dinners active &middot; grocery adjusted
@@ -198,6 +199,10 @@ export default function YourWeek() {
               Reset to full week
             </button>
           </div>
+        ) : (
+          <p className="text-neutral-600 text-[10px] text-center mb-4">
+            Can't do all 3? Uncheck a dinner below to skip it — grocery updates automatically.
+          </p>
         )}
 
         {/* Start here */}
@@ -284,8 +289,9 @@ export default function YourWeek() {
         {/* Return hook */}
         <div className="mt-6 text-center bg-neutral-900/30 border border-neutral-800 rounded-xl py-5 px-4">
           <p className="text-white text-xs font-bold">Come back Sunday</p>
-          <p className="text-neutral-500 text-[10px] mt-1">Same system. New week. Swap 1 protein, keep the structure, zero thinking.</p>
-          <p className="text-amber-500/60 text-[10px] mt-2 font-semibold">3 dinners. 1 shop. 0 decisions. Every week.</p>
+          <p className="text-amber-400 text-[10px] mt-1 font-semibold">New dinners every week.</p>
+          <p className="text-neutral-500 text-[10px] mt-1">Same system, new flavors. Swap 1 protein, keep the structure, zero thinking.</p>
+          <p className="text-neutral-600 text-[10px] mt-2">3 dinners. 1 shop. 0 decisions. Every week.</p>
         </div>
       </div>
     </section>
