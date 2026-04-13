@@ -4,6 +4,11 @@ export default function HeroSection() {
   return (
     <section className="border-b border-neutral-800">
       <div className="max-w-5xl mx-auto px-4 py-16 sm:py-24 text-center">
+        <img
+          src="/images/logo-sm.png"
+          alt="The Split Plate"
+          className="w-16 h-16 mx-auto mb-4 rounded-full"
+        />
         <p className="text-amber-500 font-black text-sm tracking-[0.3em] uppercase mb-4">
           The Split Plate
         </p>

@@ -122,6 +122,7 @@ export default function HomePage() {
 
       {/* Footer */}
       <footer className="border-t border-neutral-800 py-8 text-center text-neutral-600 text-sm">
+        <img src="/images/favicon.png" alt="The Split Plate" className="w-8 h-8 rounded-full mx-auto mb-2" />
         <p className="text-amber-500/80 font-black text-xs tracking-[0.2em] uppercase">
           The Split Plate
         </p>

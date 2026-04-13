@@ -20,9 +20,10 @@ export default function RecipeDetail({ recipe }) {
         <div className="max-w-3xl mx-auto px-4 py-4 flex items-center justify-between">
           <Link
             to="/"
-            className="text-neutral-500 hover:text-amber-400 transition-colors text-sm font-semibold"
+            className="flex items-center gap-2 text-neutral-500 hover:text-amber-400 transition-colors text-sm font-semibold"
           >
-            &larr; The Split Plate
+            <img src="/images/favicon.png" alt="" className="w-5 h-5 rounded-full" />
+            The Split Plate
           </Link>
           <span
             className={`text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full border ${
