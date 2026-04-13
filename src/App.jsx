@@ -1,7 +1,9 @@
 import { Routes, Route } from "react-router-dom";
 import { Component } from "react";
+import Nav from "./components/Nav";
 import HomePage from "./pages/HomePage";
 import RecipePage from "./pages/RecipePage";
+import CookbookPage from "./pages/CookbookPage";
 
 class ErrorBoundary extends Component {
   constructor(props) { super(props); this.state = { error: null }; }
@@ -26,8 +28,10 @@ class ErrorBoundary extends Component {
 function App() {
   return (
     <ErrorBoundary>
+      <Nav />
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/cookbook" element={<CookbookPage />} />
         <Route path="/recipes/:slug" element={<RecipePage />} />
       </Routes>
     </ErrorBoundary>
