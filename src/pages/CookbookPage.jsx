@@ -10,7 +10,11 @@ const TABS = [
 
 function SauceCard({ sauce, onSelect }) {
   return (
-    <button onClick={() => onSelect(sauce)} className="text-left bg-neutral-900 border border-neutral-800 rounded-xl p-5 hover:border-amber-500/40 transition-all cursor-pointer group w-full">
+    <button onClick={() => onSelect(sauce)} className="text-left bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden hover:border-amber-500/40 transition-all cursor-pointer group w-full">
+      {sauce.heroImage && (
+        <img src={sauce.heroImage} alt={sauce.title} className="w-full h-36 object-cover" loading="lazy" />
+      )}
+      <div className={sauce.heroImage ? "p-5 pt-3" : "p-5"}>
       <h3 className="text-white font-bold text-sm group-hover:text-amber-400 transition-colors">{sauce.title}</h3>
       <p className="text-neutral-500 text-xs mt-0.5">{sauce.flavorProfile}</p>
       <div className="flex items-center gap-2 mt-2 text-[10px] text-neutral-600">
@@ -24,6 +28,7 @@ function SauceCard({ sauce, onSelect }) {
         {sauce.bestFor.map((b) => (
           <span key={b} className="text-[9px] bg-neutral-800 text-neutral-500 px-1.5 py-0.5 rounded">{b}</span>
         ))}
+      </div>
       </div>
     </button>
   );
