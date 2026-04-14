@@ -1287,7 +1287,7 @@ const recipes = [
       "Kids won't eat it because it all looks the same",
     ],
     whyThisWorks: [
-      "Split seasoning: Dan-O's Original (kids) vs Outlaw Blackened (adults) — same cook time",
+      "Split seasoning: Dan-O's Original (kids) vs Outlaw Blackened Bloody Mary (adults) — same cook time",
       "Cheesoning on hot broccoli = transforms boring veg into something people actually eat",
       "Air fryer = hands-off, consistent, no babysitting",
       "Different plates from the same cook — kids get a roll for comfort, adults get extra broccoli for volume",
@@ -1322,10 +1322,10 @@ const recipes = [
           images: ["/images/airfryer-chicken/step1-raw-airfryer.jpg"],
         },
         {
-          text: "SEASON SPLIT: Season half with Dan-O's Original (kid/mild side), half with Outlaw Blackened (adult/bold side). Both go in the air fryer together.",
+          text: "SEASON SPLIT: Season half with Dan-O's Original (kid/mild side), half with Outlaw Blackened Bloody Mary (adult/bold side). Both go in the air fryer together.",
         },
         {
-          text: "PREP BROCCOLI: Toss frozen broccoli with light oil spray + salt or Dan-O's Original. Don't overcrowd.",
+          text: "PREP BROCCOLI: Toss frozen broccoli with light oil spray + salt. Don't overcrowd. Cheesoning goes on AFTER cooking.",
           images: ["/images/airfryer-chicken/step2-broccoli-prep.jpg"],
         },
         {
@@ -1344,7 +1344,7 @@ const recipes = [
         calories: 380,
         extraIngredients: [
           "--- ADULT SEASONING ---",
-          "Dan-O's Outlaw Blackened",
+          "Dan-O's Outlaw Blackened Bloody Mary",
           "Extra Cheesoning",
           "Optional: Money Mustard sauce",
         ],
@@ -1361,7 +1361,7 @@ const recipes = [
           {
             label: "Option A \u2014 Full Plate",
             extraIngredients: [
-              "Dan-O's Original (mild)",
+              "Dan-O's Original + salt (mild)",
               "1 dinner roll per kid",
             ],
             steps: [
@@ -1384,7 +1384,7 @@ const recipes = [
     ingredients: [
       "--- PROTEIN ---",
       "6-8 chicken thighs (bone-in, skin-on)",
-      "Dan-O's Outlaw Blackened seasoning",
+      "Dan-O's Outlaw Blackened Bloody Mary seasoning",
       "Oil spray",
       "--- VEG ---",
       "Frozen broccoli florets",
@@ -1395,7 +1395,7 @@ const recipes = [
       "Money Mustard sauce",
     ],
     steps: [
-      { text: "PREP: Pat chicken dry. Oil spray. Season with Outlaw Blackened.", images: ["/images/airfryer-chicken/step1-raw-airfryer.jpg"] },
+      { text: "PREP: Pat chicken dry. Oil spray. Season with Outlaw Blackened Bloody Mary.", images: ["/images/airfryer-chicken/step1-raw-airfryer.jpg"] },
       { text: "COOK CHICKEN: Air fryer 375°F, 16-20 min, flip halfway. Pull at 165°F." },
       { text: "PREP BROCCOLI: Toss frozen broccoli with oil spray + salt. Single layer.", images: ["/images/airfryer-chicken/step2-broccoli-prep.jpg"] },
       { text: "COOK BROCCOLI: Air fryer 400°F, 10-14 min, shake halfway. Charred edges." },
@@ -1403,9 +1403,9 @@ const recipes = [
       { text: "PLATE: Chicken + cheesy broccoli. Money Mustard on the side if you want.", images: ["/images/airfryer-chicken/hero-adult-plate.jpg"] },
     ],
     brands: [
-      { name: "Dan-O's", item: "Original Seasoning", why: "Mild all-purpose for kid-friendly chicken", image: "/images/brands/danos-outlaw.png", url: "https://danosseasoning.com" },
-      { name: "Dan-O's", item: "Outlaw Blackened", why: "Bold heat for adult chicken — same cook time, different flavor", image: "/images/brands/danos-outlaw.png", url: "https://danosseasoning.com" },
-      { name: "Dan-O's", item: "Cheesoning", why: "The broccoli hack — turns boring veg into something people request", image: "/images/brands/danos-outlaw.png", url: "https://danosseasoning.com" },
+      { name: "Dan-O's", item: "Original Seasoning", why: "Mild all-purpose for kid-friendly chicken + salt base", image: "/images/brands/danos-original.png", url: "https://danosseasoning.com/product/original-seasoning-large/" },
+      { name: "Dan-O's", item: "Outlaw Blackened Bloody Mary Bloody Mary", why: "Bold smoky heat for adult chicken — same cook time, completely different flavor", image: "/images/brands/danos-blackened-bloody-mary.png", url: "https://danosseasoning.com/product/blackened-bloody-mary-medium-bottle/" },
+      { name: "Dan-O's", item: "Cheesoning", why: "The broccoli hack — sprinkle on hot veg and it transforms into something people actually request", image: "/images/brands/danos-cheesoning.png", url: "https://danosseasoning.com/product/cheesoning-seasoning-medium/" },
     ],
     mealPrep: {
       storage: "Store chicken and broccoli separately. Chicken reheats well, broccoli loses some crunch.",
