@@ -1299,7 +1299,7 @@ const recipes = [
       "Don't skip the flip at halfway — both sides need direct heat.",
     ],
     troubleshooting: [
-      { problem: "Chicken skin isn't crispy", fix: "You didn't pat it dry. Also check you used oil spray — it needs a thin fat layer." },
+      { problem: "Chicken isn't crispy on the outside", fix: "You didn't pat it dry. Also check you used oil spray — it needs a thin fat layer for browning." },
       { problem: "Broccoli is soggy / steamed", fix: "Overcrowded the basket. Do two batches if needed. Single layer is non-negotiable." },
       { problem: "Cheesoning didn't stick", fix: "You waited too long. Sprinkle within 30 seconds of pulling from the air fryer while it's still hot." },
       { problem: "Chicken overcooked / dry", fix: "Thighs are forgiving but check at 16 min. Pull at 165°F internal — carryover does the rest." },
