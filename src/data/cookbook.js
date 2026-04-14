@@ -58,3 +58,69 @@ export const sauces = [
 ];
 
 export const quickLunches = [];
+
+export const desserts = [
+  {
+    id: "chocolate-protein-brownie-bowl",
+    title: "Chocolate Protein Brownie Bowl",
+    tagline: "Pumpkin for texture. Chocolate is the flavor.",
+    flavorProfile: "Rich, fudgy, chocolate-forward, warm",
+    calories: 918,
+    caloriesPerServing: 230,
+    protein: 91,
+    proteinPerServing: 23,
+    servings: 4,
+    time: "5 min prep + 1 min microwave per serving",
+    bestFor: ["Post-dinner", "Dessert", "Sweet craving", "Cutting-friendly"],
+    useThisWhen: "You want a warm, fudgy chocolate dessert that hits 23g protein per serving — and you want it in under 2 minutes from mix to mouth.",
+    whyPumpkinWorks: "The pumpkin is here for texture, not pumpkin flavor. It adds moisture and softness so the brownie bowl stays fudgy instead of dry. You won't taste it.",
+    splitNote: {
+      adult: "Full recipe as written. Top with Ninja Creami protein pint for 400+ cal dessert.",
+      kid: "Same recipe works for kids — it's already mild chocolate. Skip the Ninja Creami or use regular ice cream.",
+    },
+    ingredients: [
+      "--- DRY MIX ---",
+      "60g PEScience Select Protein (Chocolate Truffle)",
+      "40g Protein Cookie Butter Powder (Cookies & Cream)",
+      "30g Anthony's Organic Black Cocoa Powder",
+      "20g all-purpose flour",
+      "8g monk fruit sweetener",
+      "4g baking powder",
+      "2 pinches salt",
+      "--- WET MIX ---",
+      "160g Thrive Market Organic Pumpkin",
+      "160g Fairlife Fat Free Milk",
+      "2 eggs",
+      "--- ADD-IN (at cook time) ---",
+      "40g Lily's Milk Chocolate Style Baking Chips (10g per serving)",
+      "--- TO SERVE ---",
+      "1 scoop Ninja Creami protein pint (optional)",
+    ],
+    steps: [
+      "MIX DRY: Whisk PEScience protein, cookie butter powder, black cocoa, flour, monk sweetener, baking powder, and salt. Break up all cocoa clumps.",
+      "MIX WET: Whisk pumpkin puree, Fairlife milk, and eggs until smooth.",
+      "BUILD ONE SERVING: Add 1/4 dry mix + 1/4 wet mix to a microwave-safe bowl. Stir until smooth. Fold in 10g Lily's chips.",
+      "MICROWAVE: ~1 minute. Start checking at 50 seconds. Stop when top is just set but still soft — it keeps cooking.",
+      "SERVE: Top with Ninja Creami protein pint scoop. Eat immediately.",
+    ],
+    troubleshooting: [
+      { problem: "Brownie is dry / cakey", fix: "You overcooked it. Pull at 50-55 seconds. The center should still look slightly underdone." },
+      { problem: "Tastes like pumpkin", fix: "You used too much. Stick to exact 160g. The cocoa should completely mask it." },
+      { problem: "Metallic / bitter taste", fix: "You used baking soda instead of baking powder, or too much. Use 4g baking powder max." },
+      { problem: "Too dense / heavy", fix: "Under-mixed. The wet and dry need to be fully combined — no dry pockets." },
+      { problem: "Not sweet enough", fix: "Add 5g more monk sweetener or an extra 5g chocolate chips." },
+    ],
+    brands: [
+      { name: "PEScience", item: "Select Protein (Chocolate Truffle)", why: "Best-tasting chocolate protein powder that actually bakes well — not chalky", image: "/images/brands/pescience-chocolate.png", url: "https://www.pescience.com/products/select-protein" },
+      { name: "Anthony's", item: "Organic Black Cocoa Powder", why: "Deep, dark chocolate color and flavor — makes it look and taste like real brownie", image: "/images/brands/anthonys-black-cocoa.jpg", url: "https://anthonysgoods.com/products/anthonys-organic-alkalized-cocoa-powder-dutch-process" },
+      { name: "Lily's", item: "Milk Chocolate Baking Chips", why: "Melty chocolate pockets without the sugar bomb — keeps macros clean", image: "/images/brands/lilys-chocolate-chips.webp", url: "https://www.lilys.com/products/milk-chocolate-style-baking-chips" },
+      { name: "Thrive Market", item: "Organic Pumpkin", why: "The hidden texture hack — adds moisture and fudginess without fat or flavor", image: "/images/brands/thrive-pumpkin.jpg", url: "https://thrivemarket.com/p/thrive-market-organic-pumpkin" },
+      { name: "Fairlife", item: "Fat Free Milk", why: "Higher protein than regular milk, blends smooth into the batter", image: "/images/brands/fairlife-milk.png", url: "https://fairlife.com/ultra-filtered-milk/fat-free-skim-milk/" },
+    ],
+    mealPrep: {
+      storage: "Mix dry base in bulk and store in a jar. Mix wet fresh each time. Don't pre-mix wet+dry — it won't keep.",
+      lasts: "Dry mix keeps 2-3 weeks in an airtight container. Each serving is made fresh in 2 min.",
+      reheat: "Not needed — each serving is made fresh in the microwave.",
+    },
+  },
+];

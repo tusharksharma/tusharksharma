@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { sauces, quickLunches } from "../data/cookbook";
+import { sauces, quickLunches, desserts } from "../data/cookbook";
 
 const TABS = [
   ...(sauces.length > 0 ? ["Sauces"] : []),
+  ...(desserts.length > 0 ? ["Desserts"] : []),
   ...(quickLunches.length > 0 ? ["Quick Lunches"] : []),
 ];
 
@@ -186,13 +187,13 @@ function SauceDetail({ sauce, onBack }) {
 
 export default function CookbookPage() {
   const [tab, setTab] = useState(TABS[0] || "Sauces");
-  const [selectedSauce, setSelectedSauce] = useState(null);
+  const [selectedItem, setSelectedItem] = useState(null);
 
-  if (selectedSauce) {
+  if (selectedItem) {
     return (
       <div className="min-h-screen bg-neutral-950 text-neutral-100">
         <div className="max-w-5xl mx-auto px-4 py-10">
-          <SauceDetail sauce={selectedSauce} onBack={() => setSelectedSauce(null)} />
+          <SauceDetail sauce={selectedItem} onBack={() => setSelectedItem(null)} />
         </div>
       </div>
     );
@@ -219,7 +220,7 @@ export default function CookbookPage() {
           </div>
           <div className="space-y-2">
             {sauces.length > 0 && (
-              <button onClick={() => setSelectedSauce(sauces[0])} className="w-full text-left flex items-center justify-between bg-neutral-800/50 rounded-lg p-3 hover:bg-neutral-800 transition-colors cursor-pointer group">
+              <button onClick={() => setSelectedItem(sauces[0])} className="w-full text-left flex items-center justify-between bg-neutral-800/50 rounded-lg p-3 hover:bg-neutral-800 transition-colors cursor-pointer group">
                 <div>
                   <span className="text-white text-xs font-bold group-hover:text-amber-400 transition-colors">{sauces[0].title}</span>
                   <span className="text-neutral-500 text-[10px] ml-2">Add flavor to any protein in {sauces[0].time}</span>
@@ -253,7 +254,20 @@ export default function CookbookPage() {
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {sauces.map((s) => (
-                <SauceCard key={s.id} sauce={s} onSelect={setSelectedSauce} />
+                <SauceCard key={s.id} sauce={s} onSelect={setSelectedItem} />
+              ))}
+            </div>
+          </div>
+        )}
+
+        {tab === "Desserts" && desserts.length > 0 && (
+          <div>
+            <p className="text-neutral-500 text-xs mb-4">
+              High-protein desserts that don't wreck your macros. Dessert that earns its spot.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {desserts.map((d) => (
+                <SauceCard key={d.id} sauce={d} onSelect={setSelectedItem} />
               ))}
             </div>
           </div>
