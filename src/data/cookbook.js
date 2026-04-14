@@ -64,6 +64,8 @@ export const desserts = [
     id: "chocolate-protein-brownie-bowl",
     title: "Chocolate Protein Brownie Bowl",
     tagline: "Pumpkin for texture. Chocolate is the flavor.",
+    heroImage: "/images/brownie-bowl-hero.png",
+    prepImage: "/images/brownie-bowl-prep.png",
     flavorProfile: "Rich, fudgy, chocolate-forward, warm",
     calories: 918,
     caloriesPerServing: 230,

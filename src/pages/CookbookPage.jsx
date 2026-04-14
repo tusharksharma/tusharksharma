@@ -34,6 +34,12 @@ function SauceDetail({ sauce, onBack }) {
     <div className="max-w-2xl mx-auto">
       <button onClick={onBack} className="text-neutral-500 hover:text-amber-400 text-xs font-semibold mb-6 cursor-pointer">&larr; Back to Recipes</button>
 
+      {sauce.heroImage && (
+        <div className="rounded-2xl overflow-hidden mb-6">
+          <img src={sauce.heroImage} alt={sauce.title} className="w-full h-64 sm:h-80 object-cover" loading="lazy" />
+        </div>
+      )}
+
       <h1 className="text-2xl font-black text-white">{sauce.title}</h1>
       <p className="text-amber-400/80 text-sm mt-1 font-medium">{sauce.tagline}</p>
       <p className="text-neutral-500 text-xs mt-1">{sauce.flavorProfile}</p>
@@ -81,6 +87,14 @@ function SauceDetail({ sauce, onBack }) {
           ))}
         </ul>
       </div>
+
+      {/* Prep Image */}
+      {sauce.prepImage && (
+        <div className="mt-6 rounded-xl overflow-hidden">
+          <img src={sauce.prepImage} alt={`${sauce.title} prep`} className="w-full h-48 sm:h-56 object-cover" loading="lazy" />
+          <p className="text-neutral-600 text-[10px] mt-1 text-center">Mise en place</p>
+        </div>
+      )}
 
       {/* Method */}
       <div className="mt-6">
