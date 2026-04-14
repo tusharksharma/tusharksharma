@@ -42,7 +42,7 @@ const GROCERY_BY_WEEK = {
   2: {
     "Protein": [
       { name: "Tri-tip steak", baseQty: 1.25, unit: "lb", meal: "Mon" },
-      { name: "Chicken thighs (bone-in)", baseQty: 2, unit: "lb", meal: "Wed" },
+      { name: "Chicken thighs (boneless skinless)", baseQty: 2, unit: "lb", meal: "Wed" },
       { name: "Chicken thighs or Del Real shredded", baseQty: 1.25, unit: "lb", meal: "Fri" },
       { name: "Earth's Best mini meatballs", qty: "1 bag", meal: "Kid swap" },
     ],
