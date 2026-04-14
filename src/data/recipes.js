@@ -1309,7 +1309,7 @@ const recipes = [
       splitPoint: "STOP. Chicken and broccoli are done. Plate differently — adults get bold seasoning + extra veg, kids get mild + dinner roll.",
       sharedIngredients: [
         "--- PROTEIN ---",
-        "6-8 chicken thighs (bone-in, skin-on)",
+        "6-8 chicken thighs (boneless, skinless)",
         "Oil spray",
         "--- VEG ---",
         "Frozen broccoli florets",
@@ -1383,7 +1383,7 @@ const recipes = [
     // Solo mode
     ingredients: [
       "--- PROTEIN ---",
-      "6-8 chicken thighs (bone-in, skin-on)",
+      "6-8 chicken thighs (boneless, skinless)",
       "Dan-O's Outlaw Blackened Bloody Mary seasoning",
       "Oil spray",
       "--- VEG ---",
