@@ -2,44 +2,82 @@ import { useState, useCallback } from "react";
 
 // Base quantities at 4 servings. Scalable items have baseQty (number) + unit.
 // Non-scalable items (pantry staples) have qty as string.
-const GROCERY = {
-  "Protein": [
-    { name: "Ground beef or sirloin", baseQty: 1.25, unit: "lb", meal: "Mon" },
-    { name: "Chicken thighs or Del Real shredded", baseQty: 1.25, unit: "lb", meal: "Wed" },
-    { name: "Tri-tip steak", baseQty: 1.25, unit: "lb", meal: "Fri" },
-    { name: "Earth's Best mini meatballs", qty: "1 bag", meal: "Kid swap" },
-  ],
-  "Carbs": [
-    { name: "Rice", baseQty: 14, unit: "oz dry", meal: "Mon" },
-    { name: "Shelf-stable gnocchi", baseQty: 16, unit: "oz", meal: "Wed" },
-    { name: "Penne pasta", baseQty: 8, unit: "oz", meal: "Fri" },
-  ],
-  "Vegetables": [
-    { name: "Broccoli", baseQty: 12, unit: "oz", meal: "Mon" },
-    { name: "Bell peppers", baseQty: 2.5, unit: "", meal: "Wed" },
-    { name: "Onion", baseQty: 1, unit: "large", meal: "All" },
-    { name: "Spinach", baseQty: 3, unit: "oz", meal: "Fri" },
-    { name: "Garlic", qty: "1 head", meal: "All" },
-  ],
-  "Sauce & Flavor": [
-    { name: "Soy sauce or tamari", qty: "", meal: "Mon" },
-    { name: "Roli Roti bone broth", qty: "32 oz carton", meal: "Mon + Fri" },
-    { name: "Dan-O's Outlaw seasoning", qty: "", meal: "Wed + Fri" },
-    { name: "Chili oil or sriracha", qty: "", meal: "All" },
-    { name: "Sesame oil", qty: "", meal: "Mon" },
-    { name: "Lime", qty: "1", meal: "Wed + Fri" },
-  ],
-  "Creamy Base": [
-    { name: "Cottage cheese", baseQty: 12, unit: "oz", meal: "Wed + Fri" },
-    { name: "Fairlife fat-free milk", qty: "", meal: "Sauce base" },
-  ],
-  "Kid Mode": [
-    { name: "Rao's Alfredo sauce", qty: "15 oz jar", meal: "Wed kid" },
-    { name: "Shredded mild cheese", qty: "", meal: "Kid topping" },
-  ],
+const GROCERY_BY_WEEK = {
+  1: {
+    "Protein": [
+      { name: "Ground beef or sirloin", baseQty: 1.25, unit: "lb", meal: "Mon" },
+      { name: "Chicken thighs or Del Real shredded", baseQty: 1.25, unit: "lb", meal: "Wed" },
+      { name: "Tri-tip steak", baseQty: 1.25, unit: "lb", meal: "Fri" },
+      { name: "Earth's Best mini meatballs", qty: "1 bag", meal: "Kid swap" },
+    ],
+    "Carbs": [
+      { name: "Rice", baseQty: 14, unit: "oz dry", meal: "Mon" },
+      { name: "Shelf-stable gnocchi", baseQty: 16, unit: "oz", meal: "Wed" },
+      { name: "Penne pasta", baseQty: 8, unit: "oz", meal: "Fri" },
+    ],
+    "Vegetables": [
+      { name: "Broccoli", baseQty: 12, unit: "oz", meal: "Mon" },
+      { name: "Bell peppers", baseQty: 2.5, unit: "", meal: "Wed" },
+      { name: "Onion", baseQty: 1, unit: "large", meal: "All" },
+      { name: "Spinach", baseQty: 3, unit: "oz", meal: "Fri" },
+      { name: "Garlic", qty: "1 head", meal: "All" },
+    ],
+    "Sauce & Flavor": [
+      { name: "Soy sauce or tamari", qty: "", meal: "Mon" },
+      { name: "Roli Roti bone broth", qty: "32 oz carton", meal: "Mon + Fri" },
+      { name: "Dan-O's Outlaw seasoning", qty: "", meal: "Wed + Fri" },
+      { name: "Chili oil or sriracha", qty: "", meal: "All" },
+      { name: "Sesame oil", qty: "", meal: "Mon" },
+      { name: "Lime", qty: "1", meal: "Wed + Fri" },
+    ],
+    "Creamy Base": [
+      { name: "Cottage cheese", baseQty: 12, unit: "oz", meal: "Wed + Fri" },
+      { name: "Fairlife fat-free milk", qty: "", meal: "Sauce base" },
+    ],
+    "Kid Mode": [
+      { name: "Rao's Alfredo sauce", qty: "15 oz jar", meal: "Wed kid" },
+      { name: "Shredded mild cheese", qty: "", meal: "Kid topping" },
+    ],
+  },
+  2: {
+    "Protein": [
+      { name: "Tri-tip steak", baseQty: 1.25, unit: "lb", meal: "Mon" },
+      { name: "Chicken thighs (bone-in)", baseQty: 2, unit: "lb", meal: "Wed" },
+      { name: "Chicken thighs or Del Real shredded", baseQty: 1.25, unit: "lb", meal: "Fri" },
+      { name: "Earth's Best mini meatballs", qty: "1 bag", meal: "Kid swap" },
+    ],
+    "Carbs": [
+      { name: "Penne pasta", baseQty: 8, unit: "oz", meal: "Mon" },
+      { name: "Dinner rolls", qty: "4 pack", meal: "Wed kid" },
+      { name: "Shelf-stable gnocchi", baseQty: 16, unit: "oz", meal: "Fri" },
+    ],
+    "Vegetables": [
+      { name: "Spinach", baseQty: 3, unit: "oz", meal: "Mon" },
+      { name: "Broccoli", baseQty: 16, unit: "oz", meal: "Wed" },
+      { name: "Bell peppers", baseQty: 2.5, unit: "", meal: "Fri" },
+      { name: "Onion", baseQty: 1, unit: "large", meal: "All" },
+      { name: "Garlic", qty: "1 head", meal: "All" },
+    ],
+    "Sauce & Flavor": [
+      { name: "Roli Roti bone broth", qty: "32 oz carton", meal: "Mon" },
+      { name: "Dan-O's Outlaw seasoning", qty: "", meal: "Wed + Fri" },
+      { name: "Dan-O's Original seasoning", qty: "", meal: "Wed" },
+      { name: "Chili oil or sriracha", qty: "", meal: "All" },
+      { name: "Lime", qty: "1", meal: "Fri" },
+    ],
+    "Creamy Base": [
+      { name: "Cottage cheese", baseQty: 12, unit: "oz", meal: "Mon + Fri" },
+      { name: "Fairlife fat-free milk", qty: "", meal: "Sauce base" },
+      { name: "Shredded cheddar", qty: "8 oz bag", meal: "Wed" },
+    ],
+    "Kid Mode": [
+      { name: "Rao's Alfredo sauce", qty: "15 oz jar", meal: "Fri kid" },
+      { name: "Shredded mild cheese", qty: "", meal: "Kid topping" },
+    ],
+  },
 };
 
-const allItems = Object.values(GROCERY).flat();
+function getGrocery(week) { return GROCERY_BY_WEEK[week] || GROCERY_BY_WEEK[1]; }
 
 function scaleQty(entry, scale) {
   if (entry.baseQty != null) {
@@ -51,10 +89,19 @@ function scaleQty(entry, scale) {
   return entry.qty || "";
 }
 
-export default function GroceryList({ servings = 4, excludedTags = [] }) {
+export default function GroceryList({ servings = 4, excludedTags = [], week = 1 }) {
   const [checked, setChecked] = useState(new Set());
   const [isOpen, setIsOpen] = useState(false);
+  const [prevWeek, setPrevWeek] = useState(week);
   const scale = servings / 4;
+  const GROCERY = getGrocery(week);
+  const allItems = Object.values(GROCERY).flat();
+
+  // Reset checked items when week changes
+  if (week !== prevWeek) {
+    setChecked(new Set());
+    setPrevWeek(week);
+  }
 
   // Filter out items whose meal tag matches an excluded day
   const isExcluded = (entry) => {
@@ -109,7 +156,7 @@ export default function GroceryList({ servings = 4, excludedTags = [] }) {
       {/* Header */}
       <div className="px-5 py-4 border-b border-neutral-800">
         <div className="flex items-center justify-between mb-1">
-          <h3 className="text-sm font-bold text-white">Week 1 Grocery List</h3>
+          <h3 className="text-sm font-bold text-white">Week {week} Grocery List</h3>
           <button onClick={() => setIsOpen(false)} className="text-neutral-500 hover:text-neutral-300 text-xs cursor-pointer">Close</button>
         </div>
         <p className="text-neutral-500 text-xs">

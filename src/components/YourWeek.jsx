@@ -309,7 +309,7 @@ export default function YourWeek() {
 
         {/* Grocery */}
         <div className="mt-10" id="grocery">
-          <GroceryList servings={servings} excludedTags={excludedTags} />
+          <GroceryList servings={servings} excludedTags={excludedTags} week={week} />
         </div>
 
         {/* Sauce bridge */}
