@@ -20,7 +20,7 @@ const WEEKS = {
     subtitle: "Steak Pasta, Stir-fry, Gnocchi",
     cookDays: [
       { day: "Monday", label: "Fast Comfort", vibe: "Start easy — creamy pasta to kick off the week", id: 2, time: "35 min", reheats: true, adult: "Chili cream tri-tip over penne, Dan-O's heat", kid: "Mild creamy penne, meatballs, cheese on top", needs: ["Tri-tip", "Penne", "Spinach", "Cottage cheese", "Beef broth"] },
-      { day: "Wednesday", label: "Midweek Power Bowl", vibe: "Midweek reset — fast, high-protein, no fuss", id: 4, time: "25 min", reheats: true, adult: "Spicy soy-sesame beef, charred broccoli, chili oil", kid: "Mild soy, broccoli on side, meatballs", needs: ["Beef", "Broccoli", "Rice", "Soy sauce", "Bone broth"] },
+      { day: "Wednesday", label: "Hands-Off Win", vibe: "Midweek reset — air fryer does the work, you don't", id: 21, time: "25 min", reheats: true, adult: "Outlaw Blackened chicken, cheesy broccoli, Money Mustard", kid: "Original seasoned chicken, broccoli, dinner roll", needs: ["Chicken thighs", "Broccoli", "Dan-O's", "Dinner rolls"] },
       { day: "Friday", label: "Crispy Finish", vibe: "Finish strong — crispy gnocchi, weekend is set", id: 1, time: "30 min", reheats: false, adult: "Spicy fajita gnocchi, cream sauce, lime", kid: "Rao's Alfredo or butter gnocchi, cheese", needs: ["Chicken", "Gnocchi", "Bell peppers", "Cottage cheese", "Dan-O's"] },
     ],
   },

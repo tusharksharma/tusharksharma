@@ -1256,6 +1256,163 @@ const recipes = [
       "Use as croutons on salads, toppers on bowls, or a side to any protein. The crunch factor changes the whole plate.",
     ],
   },
+
+  // ═══════════════════════════════════════════
+  // 🍗 NEW — AIR FRYER CHICKEN
+  // ═══════════════════════════════════════════
+  {
+    id: 21,
+    status: "live",
+    slug: "air-fryer-chicken-thighs-cheesy-broccoli",
+    proteinAnchor: "chicken",
+    mealType: "other",
+    flavorDirection: "smoky-southwest",
+    splitFriendly: "full",
+    title: "Air Fryer Chicken Thighs + Cheesy Broccoli",
+    category: "Core Signatures",
+    pillar: "Protein Meals",
+    tags: ["air-fryer", "chicken", "broccoli", "split-cook", "easy", "hands-off"],
+    time: "25 min",
+    servings: 4,
+    protein: 42,
+    calories: 380,
+    image: "/images/airfryer-chicken/hero-adult-plate.jpg",
+    role: "The Hands-Off Winner",
+    makeThisWhen: "You want dinner done in 25 minutes with zero pan-watching — air fryer does the work while you handle everything else.",
+    hook: "This is the recipe that proves 'chicken and broccoli' doesn't have to be sad. Dan-O's Cheesoning on hot broccoli changes everything. Same cook, different plates — kids get comfort, adults get flavor.",
+    description: "~42g protein for ~380 calories. Air fryer chicken thighs seasoned two ways (mild for kids, bold for adults) + broccoli finished with Dan-O's Cheesoning. Dinner rolls for kids. 25 minutes, hands-off.",
+    whyMostFail: [
+      "Chicken and broccoli = the most boring meal in fitness",
+      "Air fryer broccoli usually comes out steamed and soggy",
+      "Kids won't eat it because it all looks the same",
+    ],
+    whyThisWorks: [
+      "Split seasoning: Dan-O's Original (kids) vs Outlaw Blackened (adults) — same cook time",
+      "Cheesoning on hot broccoli = transforms boring veg into something people actually eat",
+      "Air fryer = hands-off, consistent, no babysitting",
+      "Different plates from the same cook — kids get a roll for comfort, adults get extra broccoli for volume",
+    ],
+    executionRules: [
+      "Pat chicken DRY before seasoning — moisture kills crispness in the air fryer.",
+      "Don't overcrowd broccoli — single layer or it steams instead of crisps.",
+      "Add Cheesoning IMMEDIATELY when broccoli comes out — it needs the heat to stick.",
+      "Don't skip the flip at halfway — both sides need direct heat.",
+    ],
+    troubleshooting: [
+      { problem: "Chicken skin isn't crispy", fix: "You didn't pat it dry. Also check you used oil spray — it needs a thin fat layer." },
+      { problem: "Broccoli is soggy / steamed", fix: "Overcrowded the basket. Do two batches if needed. Single layer is non-negotiable." },
+      { problem: "Cheesoning didn't stick", fix: "You waited too long. Sprinkle within 30 seconds of pulling from the air fryer while it's still hot." },
+      { problem: "Chicken overcooked / dry", fix: "Thighs are forgiving but check at 16 min. Pull at 165°F internal — carryover does the rest." },
+    ],
+    splitCook: {
+      splitRatio: "50% Adult / 50% Kid",
+      splitPoint: "STOP. Chicken and broccoli are done. Plate differently — adults get bold seasoning + extra veg, kids get mild + dinner roll.",
+      sharedIngredients: [
+        "--- PROTEIN ---",
+        "6-8 chicken thighs (bone-in, skin-on)",
+        "Oil spray",
+        "--- VEG ---",
+        "Frozen broccoli florets",
+        "Oil spray",
+        "Dan-O's Cheesoning (for finishing)",
+      ],
+      sharedSteps: [
+        {
+          text: "PREP CHICKEN: Pat chicken thighs completely dry. Light oil spray on both sides.",
+          images: ["/images/airfryer-chicken/step1-raw-airfryer.jpg"],
+        },
+        {
+          text: "SEASON SPLIT: Season half with Dan-O's Original (kid/mild side), half with Outlaw Blackened (adult/bold side). Both go in the air fryer together.",
+        },
+        {
+          text: "PREP BROCCOLI: Toss frozen broccoli with light oil spray + salt or Dan-O's Original. Don't overcrowd.",
+          images: ["/images/airfryer-chicken/step2-broccoli-prep.jpg"],
+        },
+        {
+          text: "COOK CHICKEN: 375°F, 16-20 min, flip halfway. Target: 165°F internal.",
+        },
+        {
+          text: "COOK BROCCOLI: 400°F, 10-14 min, shake halfway. Goal: crispy charred edges.",
+        },
+        {
+          text: "CHEESONING FINISH: Immediately sprinkle Dan-O's Cheesoning on hot broccoli. Toss while hot — this is the differentiator.",
+        },
+      ],
+      adult: {
+        label: "Adult \u2014 Bold + High Protein",
+        protein: 42,
+        calories: 380,
+        extraIngredients: [
+          "--- ADULT SEASONING ---",
+          "Dan-O's Outlaw Blackened",
+          "Extra Cheesoning",
+          "Optional: Money Mustard sauce",
+        ],
+        steps: [
+          { text: "PLATE: 2 chicken thighs (Outlaw seasoned) + 4 oz cheesy broccoli. Optional Money Mustard on the side." },
+        ],
+      },
+      kid: {
+        label: "Kid Plate \u2014 Comfort + Familiar",
+        protein: 22,
+        calories: 320,
+        proteinSwap: "If kids don't like thighs, cube the chicken into bite-sized pieces or use Kirkland chicken bites.",
+        options: [
+          {
+            label: "Option A \u2014 Full Plate",
+            extraIngredients: [
+              "Dan-O's Original (mild)",
+              "1 dinner roll per kid",
+            ],
+            steps: [
+              { text: "PLATE: 1 chicken thigh (Original seasoned) + 2 oz broccoli + dinner roll. Cube chicken if needed for small kids.", images: ["/images/airfryer-chicken/kid-plate.jpg"] },
+            ],
+          },
+          {
+            label: "Option B \u2014 Deconstructed",
+            extraIngredients: [
+              "Ketchup or mild dipping sauce on side",
+            ],
+            steps: [
+              { text: "PLATE: Cubed chicken + broccoli on side (not mixed) + roll. Dipping sauce optional." },
+            ],
+          },
+        ],
+      },
+    },
+    // Solo mode
+    ingredients: [
+      "--- PROTEIN ---",
+      "6-8 chicken thighs (bone-in, skin-on)",
+      "Dan-O's Outlaw Blackened seasoning",
+      "Oil spray",
+      "--- VEG ---",
+      "Frozen broccoli florets",
+      "Oil spray",
+      "Salt",
+      "Dan-O's Cheesoning",
+      "--- OPTIONAL ---",
+      "Money Mustard sauce",
+    ],
+    steps: [
+      { text: "PREP: Pat chicken dry. Oil spray. Season with Outlaw Blackened.", images: ["/images/airfryer-chicken/step1-raw-airfryer.jpg"] },
+      { text: "COOK CHICKEN: Air fryer 375°F, 16-20 min, flip halfway. Pull at 165°F." },
+      { text: "PREP BROCCOLI: Toss frozen broccoli with oil spray + salt. Single layer.", images: ["/images/airfryer-chicken/step2-broccoli-prep.jpg"] },
+      { text: "COOK BROCCOLI: Air fryer 400°F, 10-14 min, shake halfway. Charred edges." },
+      { text: "CHEESONING: Sprinkle Dan-O's Cheesoning on hot broccoli immediately. Toss." },
+      { text: "PLATE: Chicken + cheesy broccoli. Money Mustard on the side if you want.", images: ["/images/airfryer-chicken/hero-adult-plate.jpg"] },
+    ],
+    brands: [
+      { name: "Dan-O's", item: "Original Seasoning", why: "Mild all-purpose for kid-friendly chicken", image: "/images/brands/danos-outlaw.png", url: "https://danosseasoning.com" },
+      { name: "Dan-O's", item: "Outlaw Blackened", why: "Bold heat for adult chicken — same cook time, different flavor", image: "/images/brands/danos-outlaw.png", url: "https://danosseasoning.com" },
+      { name: "Dan-O's", item: "Cheesoning", why: "The broccoli hack — turns boring veg into something people request", image: "/images/brands/danos-outlaw.png", url: "https://danosseasoning.com" },
+    ],
+    mealPrep: {
+      storage: "Store chicken and broccoli separately. Chicken reheats well, broccoli loses some crunch.",
+      reheat: "Air fryer 350°F for 3-4 min to re-crisp. Microwave works for chicken but kills broccoli texture.",
+      lasts: "3-4 days in fridge.",
+    },
+  },
 ];
 
 export default recipes;
