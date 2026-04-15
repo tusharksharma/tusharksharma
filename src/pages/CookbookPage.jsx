@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { sauces, quickLunches, desserts } from "../data/cookbook";
+import { sauces, quickLunches, desserts, breakfasts } from "../data/cookbook";
 
 const TABS = [
   ...(sauces.length > 0 ? ["Sauces"] : []),
+  ...(breakfasts.length > 0 ? ["Breakfast"] : []),
   ...(desserts.length > 0 ? ["Desserts"] : []),
   ...(quickLunches.length > 0 ? ["Quick Lunches"] : []),
 ];
@@ -62,6 +63,14 @@ function SauceDetail({ sauce, onBack }) {
         <span className="text-amber-500 text-[10px] font-bold uppercase tracking-wider">Use This When</span>
         <p className="text-neutral-300 text-sm mt-1">{sauce.useThisWhen}</p>
       </div>
+
+      {/* Core Ratio */}
+      {sauce.coreRatio && (
+        <div className="mt-4 bg-red-950/20 border border-red-900/40 rounded-xl p-4">
+          <span className="text-red-400 text-[10px] font-bold uppercase tracking-wider">Core Ratio (Locked)</span>
+          <p className="text-neutral-300 text-sm mt-1 font-semibold">{sauce.coreRatio}</p>
+        </div>
+      )}
 
       {/* Flavor Target */}
       <div className="mt-4 bg-neutral-900 border border-neutral-800 rounded-xl p-4">
@@ -274,6 +283,19 @@ export default function CookbookPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {sauces.map((s) => (
                 <SauceCard key={s.id} sauce={s} onSelect={setSelectedItem} />
+              ))}
+            </div>
+          </div>
+        )}
+
+        {tab === "Breakfast" && breakfasts.length > 0 && (
+          <div>
+            <p className="text-neutral-500 text-xs mb-4">
+              ~40g protein, 10 minutes, one pan. Breakfast that earns its calories.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {breakfasts.map((b) => (
+                <SauceCard key={b.id} sauce={b} onSelect={setSelectedItem} />
               ))}
             </div>
           </div>

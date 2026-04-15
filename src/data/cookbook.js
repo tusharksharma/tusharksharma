@@ -57,6 +57,58 @@ export const sauces = [
   },
 ];
 
+export const breakfasts = [
+  {
+    id: "loaded-steak-egg-skillet",
+    title: "Loaded Steak & Egg Skillet",
+    tagline: "Same meal. Different plates. Everyone wins.",
+    flavorProfile: "Savory, rich, clean heat (adult), mild comfort (kid)",
+    calories: 300,
+    caloriesPerServing: 300,
+    protein: 40,
+    servings: 1,
+    time: "10 min",
+    bestFor: ["Breakfast", "High protein", "Cutting-friendly", "One-pan"],
+    useThisWhen: "You want ~40g protein in 10 minutes flat — one pan, no complexity, splits perfectly for kids.",
+    flavorTarget: "Savory eggs + seasoned steak + melted cheese. Adults get chili heat. Kids get mild comfort.",
+    coreRatio: "3 eggs + 3 oz steak + 1 oz cheese — this is the system. Do not change this across servings.",
+    splitNote: {
+      adult: "Full ratio (3 eggs / 3 oz steak / 1 oz cheese), chilies included, slightly more salt",
+      kid: "~2 eggs, ~1–1.5 oz steak, no chilies, slightly more cheese. Mild, familiar, no resistance.",
+    },
+    ingredients: [
+      "3 large eggs",
+      "3 oz Soules Kitchen Thinly Sliced Beef Fajitas",
+      "1 oz Kraft Fat Free Cheddar Cheese",
+      "Fresh red + green chilies (optional — adults only)",
+      "Redmond Real Salt",
+    ],
+    steps: [
+      "PREP: Chop Soules fajita beef into smaller pieces if needed. Slice chilies. Whisk eggs with a pinch of Redmond salt.",
+      "HEAT + BUILD: Medium heat pan. Add steak + chilies. Cook 1–2 min — it's already cooked, just reheat + slight crisp.",
+      "ADD EGGS: Pour eggs evenly over steak. Do not stir. Cover the pan — this is key.",
+      "ADD CHEESE: Sprinkle 1 oz Kraft fat-free cheddar evenly.",
+      "FINISH: Cover 1–2 min until eggs are set. Fold or leave open-face.",
+    ],
+    troubleshooting: [
+      { problem: "Eggs are rubbery", fix: "Heat was too high or you cooked too long after covering. Medium heat, 1-2 min covered max." },
+      { problem: "Steak is chewy", fix: "Chop it smaller. It's pre-cooked — you just need to warm and crisp the edges." },
+      { problem: "Feels too lean / light", fix: "Add a slice of avocado or a drizzle of olive oil on top. Don't change the base recipe." },
+      { problem: "Cheese didn't melt", fix: "You didn't cover the pan. The steam melts the cheese — lid is non-negotiable." },
+    ],
+    brands: [
+      { name: "Soules Kitchen", item: "Thinly Sliced Beef Fajitas", why: "Pre-cooked, pre-seasoned — zero prep friction, just reheat and crisp" },
+      { name: "Kraft", item: "Fat Free Cheddar", why: "Protein boost without adding calories — melts well under a lid" },
+      { name: "Redmond", item: "Real Salt", why: "Clean mineral salt — better flavor than table salt, no additives" },
+    ],
+    mealPrep: {
+      storage: "Best made fresh — 10 min is fast enough. Don't batch this.",
+      lasts: "N/A — cook per serving.",
+      reheat: "N/A — each one is made fresh in 10 min.",
+    },
+  },
+];
+
 export const quickLunches = [];
 
 export const desserts = [
