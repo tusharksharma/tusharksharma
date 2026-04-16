@@ -194,7 +194,7 @@ export const quickLunches = [
       { problem: "Kids won't try the sauce", fix: "Don't push it. Serve plain or with ketchup. They'll come around." },
     ],
     brands: [
-      { name: "Kirkland", item: "Lightly Breaded Chicken Chunks", why: "Best macros of any frozen nugget — real breast meat, no antibiotics, lightly breaded. Sits perfectly between kid dino nuggets and real cooked chicken. Tastes great, air fries crispy, and the protein-to-calorie ratio beats everything else in the freezer aisle.", image: "/images/brands/kirkland-chicken-chunks.jpg", url: "https://www.costco.com/p/-/kirkland-signature-lightly-breaded-chicken-breast-chunks-4-lbs/4000202951" },
+      { name: "Kirkland", item: "Lightly Breaded Chicken Chunks", why: "The sweet spot. Dino nuggets are for toddlers. Real Good Foods has the highest protein but kids won't eat them. These sit right in the middle — real breast meat, lightly breaded, no antibiotics, crispy in the air fryer, and the whole family actually eats them. Best macros you'll get without a fight.", image: "/images/brands/kirkland-chicken-chunks.jpg", url: "https://www.costco.com/p/-/kirkland-signature-lightly-breaded-chicken-breast-chunks-4-lbs/4000202951" },
     ],
     mealPrep: {
       storage: "Keep bag in freezer. Cook per serving.",
