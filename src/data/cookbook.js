@@ -168,21 +168,21 @@ export const quickLunches = [
     heroImage: "/images/chicken-chunks-hero.png",
     prepImage: "/images/chicken-chunks-prep.png",
     flavorProfile: "Crispy, savory, dippable — Chick-fil-A energy at home",
-    calories: 200,
-    caloriesPerServing: 200,
-    protein: 20,
+    calories: 330,
+    caloriesPerServing: 330,
+    protein: 30,
     servings: 1,
     time: "10–12 min",
     bestFor: ["Quick lunch", "Freezer hack", "High protein", "Zero prep"],
     useThisWhen: "You need protein in 10 minutes with zero prep. Freezer to plate — the air fryer does the work.",
     flavorTarget: "Crispy breaded chicken + creamy tangy Money Mustard dip. Keep sauce on the side — dipping beats coating.",
     splitNote: {
-      adult: "8–10 pieces + Money Mustard for dipping. Optional: heavier sauce portion.",
-      kid: "4–6 pieces. Plain or with ketchup. Don't force the mustard sauce — they'll try it when they're ready.",
+      adult: "6 oz chicken (~300 cal, 30g protein) + 1 serving Money Mustard for dipping.",
+      kid: "3 oz chicken. Plain or with ketchup. Don't force the mustard sauce — they'll try it when they're ready.",
     },
     ingredients: [
-      "Kirkland Signature Lightly Breaded Chicken Breast Chunks (8–10 pieces adult, 4–6 kid)",
-      { text: "Money Mustard sauce", link: "/cookbook/money-mustard" },
+      "6 oz Kirkland Signature Lightly Breaded Chicken Breast Chunks (adult) / 3 oz (kid)",
+      { text: "1 serving Money Mustard sauce (adult)", link: "/cookbook/money-mustard" },
     ],
     steps: [
       "COOK: Air fry at 400°F for 10–12 min. Shake basket halfway. Goal: crispy outside, not soggy.",
@@ -194,7 +194,7 @@ export const quickLunches = [
       { problem: "Kids won't try the sauce", fix: "Don't push it. Serve plain or with ketchup. They'll come around." },
     ],
     brands: [
-      { name: "Kirkland", item: "Lightly Breaded Chicken Chunks", why: "Best frozen chicken chunks — real breast meat, no antibiotics, crispy in the air fryer", image: "/images/brands/kirkland-chicken-chunks.jpg", url: "https://www.costco.com/p/-/kirkland-signature-lightly-breaded-chicken-breast-chunks-4-lbs/4000202951" },
+      { name: "Kirkland", item: "Lightly Breaded Chicken Chunks", why: "Best macros of any frozen nugget — real breast meat, no antibiotics, lightly breaded. Sits perfectly between kid dino nuggets and real cooked chicken. Tastes great, air fries crispy, and the protein-to-calorie ratio beats everything else in the freezer aisle.", image: "/images/brands/kirkland-chicken-chunks.jpg", url: "https://www.costco.com/p/-/kirkland-signature-lightly-breaded-chicken-breast-chunks-4-lbs/4000202951" },
     ],
     mealPrep: {
       storage: "Keep bag in freezer. Cook per serving.",
