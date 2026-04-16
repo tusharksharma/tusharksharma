@@ -82,8 +82,9 @@ export const breakfasts = [
       "3 large eggs",
       "3 oz Soules Kitchen Thinly Sliced Beef Fajitas",
       "1 oz Kraft Fat Free Cheddar Cheese",
-      "Fresh red + green chilies (optional — adults only)",
+      "Dan-O's Crunchy Seasoning",
       "Redmond Real Salt",
+      "Fresh red + green chilies (optional — adults only)",
     ],
     steps: [
       "PREP: Chop Soules fajita beef into smaller pieces if needed. Slice chilies. Whisk eggs with a pinch of Redmond salt.",
@@ -99,9 +100,10 @@ export const breakfasts = [
       { problem: "Cheese didn't melt", fix: "You didn't cover the pan. The steam melts the cheese — lid is non-negotiable." },
     ],
     brands: [
-      { name: "Soules Kitchen", item: "Thinly Sliced Beef Fajitas", why: "Pre-cooked, pre-seasoned — zero prep friction, just reheat and crisp" },
-      { name: "Kraft", item: "Fat Free Cheddar", why: "Protein boost without adding calories — melts well under a lid" },
-      { name: "Redmond", item: "Real Salt", why: "Clean mineral salt — better flavor than table salt, no additives" },
+      { name: "Soules Kitchen", item: "Thinly Sliced Beef Fajitas", why: "Pre-cooked, pre-seasoned — zero prep friction, just reheat and crisp", image: "/images/brands/soules-fajita-steak.png", url: "https://www.souleskitchen.com/products/fajita-steak/" },
+      { name: "Kraft", item: "Fat Free Cheddar", why: "Protein boost without adding calories — melts well under a lid", image: "/images/brands/kraft-ff-cheddar.jpg", url: "https://kraftnaturalcheese.com/product/shredded-cheese/cheddar-fat-free/" },
+      { name: "Dan-O's", item: "Crunchy Seasoning", why: "Adds texture and savory crunch — finishes the skillet perfectly", image: "/images/brands/danos-crunchy.png", url: "https://danosseasoning.com/product/crunchy-seasoning-small/" },
+      { name: "Redmond", item: "Real Salt", why: "Clean mineral salt — better flavor than table salt, no additives", image: "/images/brands/redmond-real-salt.jpg", url: "https://redmond.life/products/real-salt-refill-pouch-26-oz" },
     ],
     mealPrep: {
       storage: "Best made fresh — 10 min is fast enough. Don't batch this.",
