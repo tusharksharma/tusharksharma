@@ -4,6 +4,7 @@ import Nav from "./components/Nav";
 import HomePage from "./pages/HomePage";
 import RecipePage from "./pages/RecipePage";
 import CookbookPage from "./pages/CookbookPage";
+import CookbookDetailPage from "./pages/CookbookDetailPage";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -39,6 +40,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/cookbook" element={<CookbookPage />} />
+        <Route path="/cookbook/:id" element={<CookbookDetailPage />} />
         <Route path="/recipes/:slug" element={<RecipePage />} />
       </Routes>
     </ErrorBoundary>
