@@ -159,7 +159,49 @@ export const breakfasts = [
   },
 ];
 
-export const quickLunches = [];
+export const quickLunches = [
+  {
+    id: "crispy-chicken-money-mustard",
+    title: "Crispy Chicken + Money Mustard",
+    tagline: "Freezer meal. Upgraded.",
+    heroImage: "/images/chicken-chunks-hero.png",
+    prepImage: "/images/chicken-chunks-prep.png",
+    flavorProfile: "Crispy, savory, dippable — Chick-fil-A energy at home",
+    calories: 200,
+    caloriesPerServing: 200,
+    protein: 20,
+    servings: 1,
+    time: "10–12 min",
+    bestFor: ["Quick lunch", "Freezer hack", "High protein", "Zero prep"],
+    useThisWhen: "You need protein in 10 minutes with zero prep. Freezer to plate — the air fryer does the work.",
+    flavorTarget: "Crispy breaded chicken + creamy tangy Money Mustard dip. Keep sauce on the side — dipping beats coating.",
+    splitNote: {
+      adult: "8–10 pieces + Money Mustard for dipping. Optional: heavier sauce portion.",
+      kid: "4–6 pieces. Plain or with ketchup. Don't force the mustard sauce — they'll try it when they're ready.",
+    },
+    ingredients: [
+      "Kirkland Signature Lightly Breaded Chicken Breast Chunks (8–10 pieces adult, 4–6 kid)",
+      "Money Mustard sauce (your recipe — already in Sauces tab)",
+    ],
+    steps: [
+      "COOK: Air fry at 400°F for 10–12 min. Shake basket halfway. Goal: crispy outside, not soggy.",
+      "PLATE: Add chicken to plate. Money Mustard on the side — dipping > coating.",
+    ],
+    troubleshooting: [
+      { problem: "Chicken is soggy / not crispy", fix: "Don't overcrowd the air fryer basket. Single layer, space between pieces. Shake halfway." },
+      { problem: "Chicken is dry inside", fix: "You overcooked it. Pull at 10 min and check — these are pre-cooked, you're just crisping them." },
+      { problem: "Kids won't try the sauce", fix: "Don't push it. Serve plain or with ketchup. They'll come around." },
+    ],
+    brands: [
+      { name: "Kirkland", item: "Lightly Breaded Chicken Chunks", why: "Best frozen chicken chunks — real breast meat, no antibiotics, crispy in the air fryer", image: "/images/brands/kirkland-chicken-chunks.jpg", url: "https://www.costco.com/p/-/kirkland-signature-lightly-breaded-chicken-breast-chunks-4-lbs/4000202951" },
+    ],
+    mealPrep: {
+      storage: "Keep bag in freezer. Cook per serving.",
+      lasts: "Months in freezer — that's the point.",
+      reheat: "Air fry from frozen every time. Don't microwave these.",
+    },
+  },
+];
 
 export const desserts = [
   {

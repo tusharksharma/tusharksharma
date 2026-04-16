@@ -128,9 +128,13 @@ export default function CookbookPage() {
         {tab === "Quick Lunches" && quickLunches.length > 0 && (
           <div>
             <p className="text-neutral-500 text-xs mb-4">
-              10-15 min, high protein, repeatable. Your "I need something NOW" fallback.
+              10 min, high protein, zero prep. Freezer to plate — your "I need something NOW" fallback.
             </p>
-            <p className="text-neutral-600 text-sm">Coming soon.</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {quickLunches.map((q) => (
+                <RecipeCard key={q.id} item={q} />
+              ))}
+            </div>
           </div>
         )}
 
