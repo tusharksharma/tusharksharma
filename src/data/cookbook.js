@@ -3,6 +3,7 @@ export const sauces = [
     id: "money-mustard",
     title: "Money Mustard",
     tagline: "High-Protein Chick-fil-A Style Sauce (with a Kick)",
+    heroImage: "/images/money-mustard-hero.png",
     flavorProfile: "Creamy, tangy, smoky, slight heat",
     calories: 250,
     caloriesPerServing: 32,
