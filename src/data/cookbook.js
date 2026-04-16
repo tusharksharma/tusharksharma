@@ -111,6 +111,50 @@ export const breakfasts = [
       reheat: "N/A — each one is made fresh in 10 min.",
     },
   },
+  {
+    id: "protein-cereal-hack",
+    title: "Protein Cereal Hack",
+    tagline: "Keep your cereal. Upgrade your milk.",
+    flavorProfile: "Whatever cereal you pick — taste stays the same",
+    calories: 210,
+    caloriesPerServing: 210,
+    protein: 20,
+    servings: 1,
+    time: "1 min",
+    bestFor: ["Breakfast", "Snack", "No-cook", "Zero friction"],
+    useThisWhen: "You want cereal but need protein. No cooking, no prep, no compromise. +15g protein in 60 seconds.",
+    flavorTarget: "Your cereal, unchanged. The protein hides in the milk — you don't taste it if you use unflavored isolate.",
+    splitNote: {
+      adult: "Same cereal (28g measured) + protein milk: 1/2 cup Fairlife + 1/2 scoop unflavored whey isolate. ~20g protein.",
+      kid: "Same cereal (28g measured) + 1/2 cup Fairlife straight. No protein powder needed. Cereal isn't bad — it's about portion and frequency.",
+    },
+    ingredients: [
+      "28g cereal (1 measured serving — S'mores, Cinnamon Toast Crunch, whatever you like)",
+      "1/2 cup Fairlife Fat Free Ultra-Filtered Milk",
+      "1/2 serving Opportuniteas Grass-Fed Whey Protein Isolate (unflavored)",
+    ],
+    steps: [
+      "MIX PROTEIN MILK: Add 1/2 scoop unflavored whey isolate to 1/2 cup Fairlife. Shake or whisk until fully smooth. No clumps.",
+      "POUR: Pour protein milk over 28g measured cereal.",
+      "EAT: That's it. No cooking, no prep.",
+    ],
+    troubleshooting: [
+      { problem: "Milk is clumpy / gritty", fix: "You didn't mix properly. Use a blender bottle or whisk hard. Protein goes in milk FIRST, not on cereal." },
+      { problem: "Cereal tastes weird", fix: "You used flavored whey. Only unflavored isolate works — vanilla/chocolate ruins the cereal taste." },
+      { problem: "Feels like too little food", fix: "28g is a real serving. Most people free-pour 3x that. Measure once so you know what a serving looks like." },
+      { problem: "Kids want more", fix: "That's fine — give them a normal portion with regular Fairlife. Don't over-optimize kids." },
+    ],
+    brands: [
+      { name: "Malt-O-Meal", item: "S'mores Cereal", why: "Cheap, tastes great, comes in a bag — less waste than boxes", image: "/images/brands/maltomeal-smores.png", url: "https://www.maltomeal.com/product/smores-cereal/" },
+      { name: "Opportuniteas", item: "Grass-Fed Whey Isolate (Unflavored)", why: "Dissolves clean, no flavor — the only whey that doesn't ruin cereal", image: "/images/brands/opportuniteas-whey.png", url: "https://opportuniteas.com/products/opportuniteas-grass-fed-whey-protein-isolate" },
+      { name: "Fairlife", item: "Fat Free Ultra-Filtered Milk", why: "Higher protein than regular milk, ultra-filtered so it's smooth", image: "/images/brands/fairlife-milk.png", url: "https://fairlife.com/ultra-filtered-milk/fat-free-skim-milk/" },
+    ],
+    mealPrep: {
+      storage: "N/A — 60 seconds to make.",
+      lasts: "N/A — eat immediately, cereal gets soggy.",
+      reheat: "N/A.",
+    },
+  },
 ];
 
 export const quickLunches = [];
