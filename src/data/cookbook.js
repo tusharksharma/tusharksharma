@@ -181,7 +181,7 @@ export const quickLunches = [
     },
     ingredients: [
       "Kirkland Signature Lightly Breaded Chicken Breast Chunks (8–10 pieces adult, 4–6 kid)",
-      "Money Mustard sauce (your recipe — already in Sauces tab)",
+      { text: "Money Mustard sauce", link: "/cookbook/money-mustard" },
     ],
     steps: [
       "COOK: Air fry at 400°F for 10–12 min. Shake basket halfway. Goal: crispy outside, not soggy.",

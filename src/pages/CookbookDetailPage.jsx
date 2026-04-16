@@ -79,9 +79,18 @@ export default function CookbookDetailPage() {
         <div className="mt-6">
           <h2 className="text-sm font-bold text-white mb-2">Ingredients</h2>
           <ul className="bg-neutral-900 border border-neutral-800 rounded-xl divide-y divide-neutral-800">
-            {sauce.ingredients.map((item, i) => (
-              <li key={i} className="px-4 py-2.5 text-sm text-neutral-300">{item}</li>
-            ))}
+            {sauce.ingredients.map((item, i) => {
+              const isLinked = typeof item === "object" && item.link;
+              return (
+                <li key={i} className="px-4 py-2.5 text-sm text-neutral-300">
+                  {isLinked ? (
+                    <Link to={item.link} className="text-amber-400 hover:underline font-semibold">{item.text}</Link>
+                  ) : (
+                    typeof item === "object" ? item.text : item
+                  )}
+                </li>
+              );
+            })}
           </ul>
         </div>
 
