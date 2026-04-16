@@ -87,10 +87,10 @@ export const breakfasts = [
       "Fresh red + green chilies (optional — adults only)",
     ],
     steps: [
-      "PREP: Chop Soules fajita beef into smaller pieces if needed. Slice chilies. Whisk eggs with a pinch of Redmond salt.",
-      "HEAT + BUILD: Medium heat pan. Add steak + chilies. Cook 1–2 min — it's already cooked, just reheat + slight crisp.",
+      "PREP: Chop Soules fajita beef into smaller pieces if needed. Slice chilies. Whisk eggs with a pinch of Redmond Real Salt.",
+      "HEAT + BUILD: Medium heat pan. Add steak + chilies. Season with Dan-O's Crunchy. Cook 1–2 min — it's already cooked, just reheat + slight crisp.",
       "ADD EGGS: Pour eggs evenly over steak. Do not stir. Cover the pan — this is key.",
-      "ADD CHEESE: Sprinkle 1 oz Kraft fat-free cheddar evenly.",
+      "ADD CHEESE: Sprinkle 1 oz Kraft fat-free cheddar evenly. Light hit of Dan-O's Crunchy on top.",
       "FINISH: Cover 1–2 min until eggs are set. Fold or leave open-face.",
     ],
     troubleshooting: [
