@@ -115,6 +115,8 @@ export const breakfasts = [
     id: "protein-cereal-hack",
     title: "Protein Cereal Hack",
     tagline: "Keep your cereal. Upgrade your milk.",
+    heroImage: "/images/cereal-hack-hero.png",
+    prepImage: "/images/cereal-hack-prep.png",
     flavorProfile: "Whatever cereal you pick — taste stays the same",
     calories: 210,
     caloriesPerServing: 210,
