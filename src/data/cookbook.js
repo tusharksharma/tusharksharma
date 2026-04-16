@@ -62,6 +62,8 @@ export const breakfasts = [
     id: "loaded-steak-egg-skillet",
     title: "Loaded Steak & Egg Skillet",
     tagline: "Same meal. Different plates. Everyone wins.",
+    heroImage: "/images/steak-egg-skillet-hero.png",
+    prepImage: "/images/steak-egg-skillet-prep.png",
     flavorProfile: "Savory, rich, clean heat (adult), mild comfort (kid)",
     calories: 300,
     caloriesPerServing: 300,
