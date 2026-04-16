@@ -141,7 +141,7 @@ export const breakfasts = [
       "EAT: That's it. No cooking, no prep.",
     ],
     troubleshooting: [
-      { problem: "Milk is clumpy / gritty", fix: "You didn't mix properly. Use a blender bottle or whisk hard. Protein goes in milk FIRST, not on cereal." },
+      { problem: "Milk is clumpy / gritty", fix: "You didn't mix properly. Use a blender bottle or whisk hard. Protein goes in milk FIRST, not on cereal. Pro tip: make it the night before so it's not frothy from shaking." },
       { problem: "Cereal tastes weird", fix: "You used flavored whey. Only unflavored isolate works — vanilla/chocolate ruins the cereal taste." },
       { problem: "Feels like too little food", fix: "28g is a real serving. Most people free-pour 3x that. Measure once so you know what a serving looks like." },
       { problem: "Kids want more", fix: "That's fine — give them a normal portion with regular Fairlife. Don't over-optimize kids." },
