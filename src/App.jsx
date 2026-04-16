@@ -1,9 +1,15 @@
-import { Routes, Route } from "react-router-dom";
-import { Component } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
+import { Component, useEffect } from "react";
 import Nav from "./components/Nav";
 import HomePage from "./pages/HomePage";
 import RecipePage from "./pages/RecipePage";
 import CookbookPage from "./pages/CookbookPage";
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => { window.scrollTo(0, 0); }, [pathname]);
+  return null;
+}
 
 class ErrorBoundary extends Component {
   constructor(props) { super(props); this.state = { error: null }; }
@@ -28,6 +34,7 @@ class ErrorBoundary extends Component {
 function App() {
   return (
     <ErrorBoundary>
+      <ScrollToTop />
       <Nav />
       <Routes>
         <Route path="/" element={<HomePage />} />
