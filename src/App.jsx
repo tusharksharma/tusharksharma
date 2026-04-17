@@ -6,6 +6,7 @@ import RecipePage from "./pages/RecipePage";
 import CookbookPage from "./pages/CookbookPage";
 import CookbookDetailPage from "./pages/CookbookDetailPage";
 import DinnersPage from "./pages/DinnersPage";
+import AboutPage from "./pages/AboutPage";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -41,6 +42,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/dinners" element={<DinnersPage />} />
+        <Route path="/about" element={<AboutPage />} />
         <Route path="/cookbook" element={<CookbookPage />} />
         <Route path="/cookbook/:id" element={<CookbookDetailPage />} />
         <Route path="/recipes/:slug" element={<RecipePage />} />

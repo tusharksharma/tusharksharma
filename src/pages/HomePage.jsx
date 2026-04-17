@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { liveRecipes, comingSoonRecipes } from "../data/recipes";
 import useMeta from "../hooks/useMeta";
 import HeroSection from "../components/HeroSection";
@@ -90,8 +91,9 @@ export default function HomePage() {
       <footer className="border-t border-neutral-800 py-8 text-center text-neutral-600 text-sm">
         <img src="/images/favicon.png" alt="The Split Plate" className="w-10 h-10 mx-auto mb-2" />
         <p className="text-amber-500/80 font-black text-xs tracking-[0.2em] uppercase">The Split Plate</p>
-        <p className="text-neutral-500 font-semibold mt-2">Protein Meals &middot; Sauce Systems &middot; Cooking Techniques</p>
-        <p className="mt-2 text-neutral-700">Cook once. Split. Done.</p>
+        <p className="text-neutral-500 font-semibold mt-2">Dinners &middot; Power-Ups &middot; Weekly Plans</p>
+        <Link to="/about" className="text-neutral-600 text-xs hover:text-amber-400 mt-2 inline-block">About</Link>
+        <p className="mt-2 text-neutral-700">One cook. Two plates. Done.</p>
       </footer>
     </div>
   );
