@@ -1,4 +1,4 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 
 // Base quantities at 4 servings. Scalable items have baseQty (number) + unit.
 // Non-scalable items (pantry staples) have qty as string.
@@ -98,24 +98,20 @@ function scaleQty(entry, scale) {
 export default function GroceryList({ servings = 4, excludedTags = [], week = 1 }) {
   const [checked, setChecked] = useState(new Set());
   const [isOpen, setIsOpen] = useState(false);
-  const [prevWeek, setPrevWeek] = useState(week);
   const scale = servings / 4;
   const GROCERY = getGrocery(week);
   const allItems = Object.values(GROCERY).flat();
 
   // Reset checked items when week changes
-  if (week !== prevWeek) {
+  useEffect(() => {
     setChecked(new Set());
-    setPrevWeek(week);
-  }
+  }, [week]);
 
   // Filter out items whose meal tag matches an excluded day
   const isExcluded = (entry) => {
     if (excludedTags.length === 0) return false;
-    // Items tagged "All" or multi-day tags that still have included days stay
     const tag = entry.meal;
     if (tag === "All" || tag === "Sauce base" || tag === "Kid swap" || tag === "Kid topping") return false;
-    // Check if ALL days in this tag are excluded
     const tagDays = tag.split(/\s*\+\s*/).map((d) => d.trim().substring(0, 3));
     return tagDays.every((d) => excludedTags.includes(d));
   };
@@ -132,17 +128,26 @@ export default function GroceryList({ servings = 4, excludedTags = [], week = 1 
 
   const copyList = () => {
     const text = Object.entries(GROCERY)
-      .map(([cat, items]) =>
-        `${cat}:\n${items.map((i) => `  - ${i.name}${scaleQty(i, scale) ? ` (${scaleQty(i, scale)})` : ""}`).join("\n")}`
-      )
+      .map(([cat, items]) => {
+        const visible = items.filter((i) => !isExcluded(i));
+        if (visible.length === 0) return null;
+        return `${cat}:\n${visible.map((i) => `  - ${i.name}${scaleQty(i, scale) ? ` (${scaleQty(i, scale)})` : ""}`).join("\n")}`;
+      })
+      .filter(Boolean)
       .join("\n\n");
     navigator.clipboard.writeText(text);
   };
 
-  const visibleCount = allItems.filter((e) => !isExcluded(e)).length;
-  const checkedCount = checked.size;
-  const totalCount = visibleCount;
-  const allDone = checkedCount >= totalCount && totalCount > 0;
+  // Build a set of visible item indices for accurate counting
+  let countIdx = 0;
+  const visibleIndices = new Set();
+  allItems.forEach((entry) => {
+    const idx = countIdx++;
+    if (!isExcluded(entry)) visibleIndices.add(idx);
+  });
+  const visibleCount = visibleIndices.size;
+  const checkedCount = [...checked].filter((idx) => visibleIndices.has(idx)).length;
+  const allDone = checkedCount >= visibleCount && visibleCount > 0;
 
   if (!isOpen) {
     return (
@@ -190,7 +195,7 @@ export default function GroceryList({ servings = 4, excludedTags = [], week = 1 
               Clear ({checkedCount})
             </button>
           )}
-          <span className="text-neutral-600 text-xs ml-auto">{checkedCount}/{totalCount}</span>
+          <span className="text-neutral-600 text-xs ml-auto">{checkedCount}/{visibleCount}</span>
         </div>
       </div>
 

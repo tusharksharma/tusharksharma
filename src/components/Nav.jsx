@@ -3,7 +3,8 @@ import { Link, useLocation } from "react-router-dom";
 export default function Nav() {
   const { pathname } = useLocation();
   const isWeekly = pathname === "/";
-  const isCookbook = pathname === "/cookbook";
+  const isDinners = pathname.startsWith("/recipes");
+  const isCookbook = pathname.startsWith("/cookbook");
 
   return (
     <nav className="border-b border-neutral-800 bg-neutral-950/90 backdrop-blur-sm sticky top-0 z-20">
@@ -15,19 +16,27 @@ export default function Nav() {
         <div className="flex gap-1">
           <Link
             to="/"
-            className={`px-4 py-1.5 rounded-lg text-xs font-bold transition-colors ${
-              isWeekly ? "bg-amber-500 text-black" : "text-neutral-400 hover:text-white"
+            className={`px-3 sm:px-4 py-1.5 rounded-lg text-xs font-bold transition-colors ${
+              isWeekly && !isDinners ? "bg-amber-500 text-black" : "text-neutral-400 hover:text-white"
             }`}
           >
-            Weekly Plan
+            This Week
+          </Link>
+          <Link
+            to="/dinners"
+            className={`px-3 sm:px-4 py-1.5 rounded-lg text-xs font-bold transition-colors ${
+              isDinners ? "bg-amber-500 text-black" : "text-neutral-400 hover:text-white"
+            }`}
+          >
+            Dinners
           </Link>
           <Link
             to="/cookbook"
-            className={`px-4 py-1.5 rounded-lg text-xs font-bold transition-colors ${
+            className={`px-3 sm:px-4 py-1.5 rounded-lg text-xs font-bold transition-colors ${
               isCookbook ? "bg-amber-500 text-black" : "text-neutral-400 hover:text-white"
             }`}
           >
-            Recipes
+            Power-Ups
           </Link>
         </div>
       </div>

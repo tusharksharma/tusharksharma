@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import useMeta from "../hooks/useMeta";
 import { sauces, quickLunches, desserts, breakfasts } from "../data/cookbook";
 
 const TABS = [
@@ -36,6 +37,7 @@ function RecipeCard({ item }) {
 }
 
 export default function CookbookPage() {
+  useMeta({ title: "Power-Ups", description: "Sauces, breakfast hacks, and desserts that boost protein without the effort." });
   const [tab, setTab] = useState(TABS[0] || "Sauces");
 
   return (

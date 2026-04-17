@@ -26,7 +26,7 @@ const WEEKS = {
   },
 };
 
-function getLeftoverMsg(servings, variant) {
+function getLeftoverMsg(servings) {
   if (servings <= 2) {
     return { tue: "No cooking. Reheat Monday's bowl.", thu: "No cooking. Finish Wednesday's gnocchi or grab something light.", sat: "No cooking. Reheat Friday's penne — smaller portions.", sun: "Flexible — eat out or reset" };
   }
@@ -169,17 +169,15 @@ export default function YourWeek() {
     return tags;
   }, [enabledMeals]);
 
-  const dayKeys = ["Mon", "Wed", "Fri"];
-
   return (
     <section className="border-b border-neutral-800 bg-gradient-to-b from-neutral-950 to-neutral-900/80">
       <div className="max-w-3xl mx-auto px-4 py-16">
         {/* Header */}
         <div className="text-center mb-6">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-amber-500 mb-2">Dinner System</p>
-          <h2 className="text-3xl font-black text-white">3 Dinners. 1 Shop. 0 Decisions.</h2>
-          <p className="text-neutral-400 text-sm mt-2">Follow top to bottom. Your week is handled.</p>
-          <p className="text-neutral-600 text-[10px] mt-1">Built for busy weeknights. ~30 min dinners. Beginner-friendly.</p>
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-amber-500 mb-2">This Week</p>
+          <h2 className="text-3xl font-black text-white">3 Dinners. 1 Grocery Run.</h2>
+          <p className="text-neutral-400 text-sm mt-2">Pick a week, follow the plan, shop once.</p>
+          <p className="text-neutral-600 text-[10px] mt-1">~30 min dinners. Beginner-friendly. Leftovers built in.</p>
         </div>
 
         {/* Week selector */}

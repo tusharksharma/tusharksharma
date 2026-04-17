@@ -1,11 +1,13 @@
 import { useParams, Link } from "react-router-dom";
 import { sauces, desserts, breakfasts, quickLunches } from "../data/cookbook";
+import useMeta from "../hooks/useMeta";
 
 const allItems = [...sauces, ...breakfasts, ...desserts, ...quickLunches];
 
 export default function CookbookDetailPage() {
   const { id } = useParams();
   const sauce = allItems.find((item) => item.id === id);
+  useMeta(sauce ? { title: sauce.title, description: sauce.useThisWhen, image: sauce.heroImage } : {});
 
   if (!sauce) {
     return (

@@ -1,4 +1,5 @@
 import { liveRecipes, comingSoonRecipes } from "../data/recipes";
+import useMeta from "../hooks/useMeta";
 import HeroSection from "../components/HeroSection";
 import HowItWorks from "../components/HowItWorks";
 import YourWeek from "../components/YourWeek";
@@ -14,6 +15,7 @@ function TrustCard({ title, desc }) {
 }
 
 export default function HomePage() {
+  useMeta({ description: "High-protein family dinners with the Split Cook Method. One cook, two plates — adults and kids from the same workflow." });
   return (
     <div className="min-h-screen bg-neutral-950 text-neutral-100">
       <HeroSection />

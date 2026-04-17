@@ -21,8 +21,8 @@ export default function HowItWorks() {
     <section className="border-b border-neutral-800 bg-neutral-900/50">
       <div className="max-w-5xl mx-auto px-4 py-16">
         <div className="text-center mb-10">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-neutral-500 mb-2">Your Unfair Advantage</p>
-          <h2 className="text-3xl font-black text-white">The Split Cook Method&trade;</h2>
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-neutral-500 mb-2">How It Works</p>
+          <h2 className="text-3xl font-black text-white">The Split Cook Method</h2>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
           <StepCard num="1" color="amber" title="Cook the Base" desc="Protein + carbs + foundation. No spice. No complexity." />
@@ -30,7 +30,7 @@ export default function HowItWorks() {
           <StepCard num="3" color="red" title="Adult Finish" desc="Bold flavor. Spice. Full experience." />
           <StepCard num="4" color="green" title="Kid Finish" desc="Mild. Simple. Familiar." />
         </div>
-        <p className="text-center text-neutral-500 text-sm mt-8">One workflow. Two outcomes. Zero extra time.</p>
+        <p className="text-center text-neutral-500 text-sm mt-8">One cook. Two plates. Same amount of time.</p>
       </div>
     </section>
   );
