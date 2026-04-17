@@ -1471,9 +1471,9 @@ const recipes = [
         "Lime wedges",
       ],
       sharedSteps: [
-        { text: "MIX: Combine ground chicken, shredded cheddar, salt, and light Spiceology Taco seasoning. Don't overmix — keep it loose." },
-        { text: "SMASH: Spread 40g chicken mix onto each keto tortilla, 50g onto each street taco tortilla. Thin and even — this is critical." },
-        { text: "COOK: Chicken side down on griddle or flat pan, medium heat, 4-5 min until browned. Flip, cook tortilla side 1-2 min. Cover briefly to steam through." },
+        { text: "MIX: Combine ground chicken, shredded cheddar, salt, and light Spiceology Taco seasoning. Don't overmix — keep it loose.", images: ["/images/smash-tacos/step1-ingredients.png", "/images/smash-tacos/step2-mixing.png"] },
+        { text: "SMASH: Spread 40g chicken mix onto each keto tortilla, 50g onto each street taco tortilla. Thin and even — this is critical.", images: ["/images/smash-tacos/step3-smash-raw.png"] },
+        { text: "COOK: Chicken side down on griddle or flat pan, medium heat, 4-5 min until browned. Flip, cook tortilla side 1-2 min. Cover briefly to steam through.", images: ["/images/smash-tacos/step4-griddle-cooking.png"] },
       ],
       adult: {
         label: "Adult — Caesar Crunch (Keto)",
@@ -1488,7 +1488,7 @@ const recipes = [
           "Fresh cilantro + lime squeeze",
         ],
         steps: [
-          { text: "BUILD: Top each taco with romaine, Bolthouse Caesar, crushed Quest chips, cilantro, and a squeeze of lime." },
+          { text: "BUILD: Top each taco with romaine, Bolthouse Caesar, crushed Quest chips, cilantro, and a squeeze of lime.", images: ["/images/smash-tacos/step5-caesar-salad.png", "/images/smash-tacos/step6-plated-adult.png"] },
         ],
       },
       kid: {
@@ -1530,10 +1530,10 @@ const recipes = [
       "Lime",
     ],
     steps: [
-      { text: "MIX: Combine ground chicken, shredded cheddar, salt, and light Spiceology Taco seasoning. Keep it loose." },
-      { text: "SMASH: Spread 40g on keto tortillas, 50g on street taco tortillas. Thin and even." },
-      { text: "COOK: Chicken side down on griddle, medium heat, 4-5 min. Flip, 1-2 min. Cover briefly to steam through." },
-      { text: "BUILD: Top with romaine, Caesar dressing, crushed Quest chips, cilantro, and lime (adults). Kids get simpler tacos + sides." },
+      { text: "MIX: Combine ground chicken, shredded cheddar, salt, and light Spiceology Taco seasoning. Keep it loose.", images: ["/images/smash-tacos/step1-ingredients.png", "/images/smash-tacos/step2-mixing.png"] },
+      { text: "SMASH: Spread 40g on keto tortillas, 50g on street taco tortillas. Thin and even.", images: ["/images/smash-tacos/step3-smash-raw.png"] },
+      { text: "COOK: Chicken side down on griddle, medium heat, 4-5 min. Flip, 1-2 min. Cover briefly to steam through.", images: ["/images/smash-tacos/step4-griddle-cooking.png"] },
+      { text: "BUILD: Top with romaine, Caesar dressing, crushed Quest chips, cilantro, and lime (adults). Kids get simpler tacos + sides.", images: ["/images/smash-tacos/step5-caesar-salad.png", "/images/smash-tacos/step6-plated-adult.png"] },
     ],
     brands: [
       { name: "Spiceology", item: "Taco Seasoning", why: "Clean taco seasoning with no fillers — periodic table jar looks sick on the counter too", image: "/images/brands/spiceology-taco.jpg", url: "https://spiceology.com/products/taco-seasoning" },
