@@ -42,37 +42,41 @@ const GROCERY_BY_WEEK = {
   2: {
     "Protein": [
       { name: "Tri-tip steak", baseQty: 1.25, unit: "lb", meal: "Mon" },
-      { name: "Chicken thighs (boneless skinless)", baseQty: 2, unit: "lb", meal: "Wed" },
+      { name: "99/1 ground chicken", baseQty: 24, unit: "oz", meal: "Wed" },
       { name: "Chicken thighs or Del Real shredded", baseQty: 1.25, unit: "lb", meal: "Fri" },
       { name: "Earth's Best mini meatballs", qty: "1 bag", meal: "Kid swap" },
     ],
     "Carbs": [
       { name: "Penne pasta", baseQty: 8, unit: "oz", meal: "Mon" },
-      { name: "Dinner rolls", qty: "4 pack", meal: "Wed kid" },
+      { name: "Mission Zero Net Carbs tortillas", qty: "1 pack", meal: "Wed" },
+      { name: "Mission regular tortillas", qty: "1 pack", meal: "Wed kid" },
       { name: "Shelf-stable gnocchi", baseQty: 16, unit: "oz", meal: "Fri" },
     ],
     "Vegetables": [
       { name: "Spinach", baseQty: 3, unit: "oz", meal: "Mon" },
-      { name: "Broccoli", baseQty: 16, unit: "oz", meal: "Wed" },
+      { name: "Romaine lettuce", qty: "1 head", meal: "Wed" },
       { name: "Bell peppers", baseQty: 2.5, unit: "", meal: "Fri" },
       { name: "Onion", baseQty: 1, unit: "large", meal: "All" },
       { name: "Garlic", qty: "1 head", meal: "All" },
     ],
     "Sauce & Flavor": [
       { name: "Roli Roti bone broth", qty: "32 oz carton", meal: "Mon" },
-      { name: "Dan-O's Outlaw seasoning", qty: "", meal: "Wed + Fri" },
-      { name: "Dan-O's Original seasoning", qty: "", meal: "Wed" },
+      { name: "Dan-O's Taco seasoning", qty: "", meal: "Wed" },
+      { name: "Dan-O's Outlaw seasoning", qty: "", meal: "Fri" },
+      { name: "Bolthouse Farms Caesar dressing", qty: "1 bottle", meal: "Wed" },
       { name: "Chili oil or sriracha", qty: "", meal: "All" },
       { name: "Lime", qty: "1", meal: "Fri" },
     ],
     "Creamy Base": [
       { name: "Cottage cheese", baseQty: 12, unit: "oz", meal: "Mon + Fri" },
       { name: "Fairlife fat-free milk", qty: "", meal: "Sauce base" },
-      { name: "Shredded cheddar", qty: "8 oz bag", meal: "Wed" },
+      { name: "Kraft Fat Free Cheddar", qty: "4 oz", meal: "Wed" },
     ],
     "Kid Mode": [
       { name: "Rao's Alfredo sauce", qty: "15 oz jar", meal: "Fri kid" },
-      { name: "Shredded mild cheese", qty: "", meal: "Kid topping" },
+      { name: "Regular Caesar dressing", qty: "", meal: "Wed kid" },
+      { name: "Quest Tortilla Chips", qty: "1 bag", meal: "Wed" },
+      { name: "Regular chips", qty: "", meal: "Wed kid" },
     ],
   },
 };
