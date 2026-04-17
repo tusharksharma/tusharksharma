@@ -495,19 +495,32 @@ function SplitCookView({ recipe }) {
    ════════════════════════════════════════════ */
 
 function StepImages({ images }) {
+  const [expanded, setExpanded] = useState(null);
   if (!images || images.length === 0) return null;
   return (
-    <div className="flex gap-2 mt-3 overflow-x-auto pb-2 -mx-1 px-1">
-      {images.map((src, i) => (
-        <img
-          key={i}
-          src={src}
-          alt=""
-          className="w-28 h-28 sm:w-32 sm:h-32 object-cover rounded-lg flex-shrink-0 border border-neutral-800"
-          loading="lazy"
-        />
-      ))}
-    </div>
+    <>
+      <div className="flex gap-2 mt-3 overflow-x-auto pb-2 -mx-1 px-1">
+        {images.map((src, i) => (
+          <img
+            key={i}
+            src={src}
+            alt=""
+            className="w-28 h-28 sm:w-32 sm:h-32 object-cover rounded-lg flex-shrink-0 border border-neutral-800 cursor-pointer hover:border-amber-500/50 transition-colors"
+            loading="lazy"
+            onClick={() => setExpanded(src)}
+          />
+        ))}
+      </div>
+      {expanded && (
+        <div
+          className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4 cursor-pointer"
+          onClick={() => setExpanded(null)}
+        >
+          <img src={expanded} alt="" className="max-w-full max-h-[90vh] object-contain rounded-xl" />
+          <button className="absolute top-4 right-4 text-white/70 hover:text-white text-2xl font-bold">&times;</button>
+        </div>
+      )}
+    </>
   );
 }
 
