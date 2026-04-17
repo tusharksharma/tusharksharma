@@ -49,7 +49,7 @@ const GROCERY_BY_WEEK = {
     "Carbs": [
       { name: "Penne pasta", baseQty: 8, unit: "oz", meal: "Mon" },
       { name: "Mission Zero Net Carbs tortillas", qty: "1 pack", meal: "Wed" },
-      { name: "Mission regular tortillas", qty: "1 pack", meal: "Wed kid" },
+      { name: "Mission Street Tacos flour tortillas", qty: "1 pack", meal: "Wed kid" },
       { name: "Shelf-stable gnocchi", baseQty: 16, unit: "oz", meal: "Fri" },
     ],
     "Vegetables": [
@@ -61,16 +61,17 @@ const GROCERY_BY_WEEK = {
     ],
     "Sauce & Flavor": [
       { name: "Roli Roti bone broth", qty: "32 oz carton", meal: "Mon" },
-      { name: "Dan-O's Taco seasoning", qty: "", meal: "Wed" },
+      { name: "Spiceology Taco seasoning", qty: "", meal: "Wed" },
       { name: "Dan-O's Outlaw seasoning", qty: "", meal: "Fri" },
       { name: "Bolthouse Farms Caesar dressing", qty: "1 bottle", meal: "Wed" },
       { name: "Chili oil or sriracha", qty: "", meal: "All" },
-      { name: "Lime", qty: "1", meal: "Fri" },
+      { name: "Lime", qty: "2", meal: "Wed + Fri" },
+      { name: "Fresh cilantro", qty: "1 bunch", meal: "Wed" },
     ],
     "Creamy Base": [
       { name: "Cottage cheese", baseQty: 12, unit: "oz", meal: "Mon + Fri" },
       { name: "Fairlife fat-free milk", qty: "", meal: "Sauce base" },
-      { name: "Kraft Fat Free Cheddar", qty: "4 oz", meal: "Wed" },
+      { name: "Kraft Mild Cheddar shredded", qty: "4 oz", meal: "Wed" },
     ],
     "Kid Mode": [
       { name: "Rao's Alfredo sauce", qty: "15 oz jar", meal: "Fri kid" },
