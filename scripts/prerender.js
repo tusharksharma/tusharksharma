@@ -39,17 +39,15 @@ function extractRecipes(src) {
 
 function extractCookbookItems(src) {
   const items = [];
-  const idMatches = [...src.matchAll(/id:\s*"([^"]+)"/g)];
-  const titleMatches = [...src.matchAll(/title:\s*"([^"]+)"/g)];
-  const taglineMatches = [...src.matchAll(/tagline:\s*"([^"]+)"/g)];
-  const heroMatches = [...src.matchAll(/heroImage:\s*"([^"]+)"/g)];
-  for (let i = 0; i < idMatches.length; i++) {
-    items.push({
-      id: idMatches[i]?.[1],
-      title: titleMatches[i]?.[1],
-      description: taglineMatches[i]?.[1] || "",
-      image: heroMatches[i]?.[1] || "",
-    });
+  // Match recipe blocks that start with { followed by id: "slug-like-id"
+  const blockRegex = /\{\s*\n\s*id:\s*"([a-z0-9-]+)",\s*\n\s*title:\s*"([^"]+)",\s*\n\s*tagline:\s*"([^"]+)",/g;
+  let m;
+  while ((m = blockRegex.exec(src)) !== null) {
+    const id = m[1];
+    // Find heroImage near this position
+    const after = src.slice(m.index, m.index + 300);
+    const hero = after.match(/heroImage:\s*"([^"]+)"/)?.[1] || "";
+    items.push({ id, title: m[2], description: m[3], image: hero });
   }
   return items;
 }
