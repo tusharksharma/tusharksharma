@@ -1540,7 +1540,7 @@ const recipes = [
       { name: "Mission", item: "Zero Net Carbs Tortillas", why: "Keto-friendly, holds up to smash cooking, 3 tortillas = 110 cal", image: "/images/brands/mission-zero-carbs.png", url: "https://www.missionfoods.com/products/zero-net-carbs-tortillas-original/" },
       { name: "Mission", item: "Street Tacos Flour Tortillas", why: "Perfect street taco size for kids — soft, familiar, no resistance", image: "/images/brands/mission-street-tacos.png", url: "https://www.missionfoods.com/products/street-tacos-flour-tortillas/" },
       { name: "Quest", item: "Loaded Taco Protein Chips", why: "Protein + crunch without junk carbs — crushed on top is the move", image: "/images/brands/quest-loaded-taco.png", url: "https://www.questnutrition.com/products/loaded-taco-protein-chips" },
-      { name: "Bolthouse Farms", item: "Caesar Dressing", why: "Lower calorie Caesar that actually tastes good — yogurt-based" },
+      { name: "Bolthouse Farms", item: "Creamy Caesar Dressing", why: "Lower calorie Caesar that actually tastes good — yogurt-based, refrigerated", image: "/images/brands/bolthouse-caesar.png", url: "https://www.bolthouse.com/product/creamy-caesar/" },
       { name: "Kraft", item: "Mild Cheddar Shredded", why: "Melts into the chicken mix — binds and adds moisture. Regular mild, not fat free", image: "/images/brands/kraft-ff-cheddar.jpg", url: "https://kraftnaturalcheese.com/product/shredded-cheese/cheddar-fat-free/" },
     ],
     mealPrep: {
