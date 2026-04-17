@@ -19,7 +19,7 @@ const cookbookRaw = readFileSync("src/data/cookbook.js", "utf-8");
 // Extract live recipe slugs + metadata via regex (avoids ESM import issues with JSX)
 function extractRecipes(src) {
   const recipes = [];
-  const blocks = src.split(/\n  \{/).slice(1);
+  const blocks = src.split(/\n {2}\{/).slice(1);
   for (const block of blocks) {
     const id = block.match(/id:\s*(\d+)/)?.[1];
     const status = block.match(/status:\s*"([^"]+)"/)?.[1];

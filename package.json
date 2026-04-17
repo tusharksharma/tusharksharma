@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node scripts/prerender.js || echo 'Prerender warning: script failed, continuing with SPA fallback'",
+    "build": "vite build && node scripts/prerender.js",
     "lint": "eslint .",
     "preview": "vite preview"
   },

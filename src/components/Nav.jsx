@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 export default function Nav() {
   const { pathname } = useLocation();
   const isWeekly = pathname === "/";
-  const isDinners = pathname.startsWith("/recipes");
+  const isDinners = pathname === "/dinners" || pathname.startsWith("/recipes");
   const isCookbook = pathname.startsWith("/cookbook");
 
   return (
