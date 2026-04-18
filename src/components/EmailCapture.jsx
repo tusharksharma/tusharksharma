@@ -1,28 +1,46 @@
 import { useState } from "react";
 import track from "../hooks/useTrack";
 
+const KIT_API_KEY = "deQ-JNGHBPKabvq01q7XCw";
+
 export default function EmailCapture() {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!email || !email.includes("@")) {
       setError("Enter a valid email");
       return;
     }
-    // Store locally for now — wire to Mailchimp/ConvertKit/Buttondown later
-    const subscribers = JSON.parse(localStorage.getItem("sp_subscribers") || "[]");
-    if (subscribers.includes(email)) {
-      setError("You're already signed up");
-      return;
-    }
-    subscribers.push(email);
-    localStorage.setItem("sp_subscribers", JSON.stringify(subscribers));
-    track("email_capture", { email });
-    setSubmitted(true);
+
+    setLoading(true);
     setError("");
+
+    try {
+      const res = await fetch("https://api.kit.com/v4/subscribers", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "X-Kit-Api-Key": KIT_API_KEY,
+        },
+        body: JSON.stringify({ email_address: email }),
+      });
+
+      if (res.ok) {
+        track("email_capture", { email });
+        setSubmitted(true);
+      } else {
+        const data = await res.json().catch(() => ({}));
+        setError(data.message || "Something went wrong. Try again.");
+      }
+    } catch {
+      setError("Network error. Try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   if (submitted) {
@@ -46,13 +64,15 @@ export default function EmailCapture() {
           value={email}
           onChange={(e) => { setEmail(e.target.value); setError(""); }}
           placeholder="your@email.com"
-          className="flex-1 px-4 py-2.5 bg-neutral-800 border border-neutral-700 rounded-lg text-white text-sm placeholder-neutral-600 focus:outline-none focus:border-amber-500 transition-colors"
+          disabled={loading}
+          className="flex-1 px-4 py-2.5 bg-neutral-800 border border-neutral-700 rounded-lg text-white text-sm placeholder-neutral-600 focus:outline-none focus:border-amber-500 transition-colors disabled:opacity-50"
         />
         <button
           type="submit"
-          className="px-5 py-2.5 bg-amber-500 text-black font-bold rounded-lg text-sm hover:bg-amber-400 transition-colors cursor-pointer flex-shrink-0"
+          disabled={loading}
+          className="px-5 py-2.5 bg-amber-500 text-black font-bold rounded-lg text-sm hover:bg-amber-400 transition-colors cursor-pointer flex-shrink-0 disabled:opacity-50 disabled:cursor-wait"
         >
-          Sign Up
+          {loading ? "..." : "Sign Up"}
         </button>
       </form>
       {error && <p className="text-red-400 text-xs text-center mt-2">{error}</p>}
