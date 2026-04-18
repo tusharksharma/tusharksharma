@@ -1,7 +1,7 @@
 import { useState } from "react";
 import track from "../hooks/useTrack";
 
-const KIT_API_KEY = "deQ-JNGHBPKabvq01q7XCw";
+const KIT_API_KEY = "kit_23ff1501ff395b6cfc66e683e1bdfd67";
 
 export default function EmailCapture() {
   const [email, setEmail] = useState("");
