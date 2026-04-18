@@ -5,6 +5,7 @@ import HeroSection from "../components/HeroSection";
 import HowItWorks from "../components/HowItWorks";
 import YourWeek from "../components/YourWeek";
 import RecipeCard from "../components/RecipeCard";
+import EmailCapture from "../components/EmailCapture";
 
 function TrustCard({ title, desc }) {
   return (
@@ -22,6 +23,13 @@ export default function HomePage() {
       <HeroSection />
       <HowItWorks />
       <YourWeek />
+
+      {/* Email capture */}
+      <section className="border-b border-neutral-800">
+        <div className="max-w-3xl mx-auto px-4 py-12">
+          <EmailCapture />
+        </div>
+      </section>
 
       {/* All Live Recipes */}
       <section className="border-b border-neutral-800">

@@ -1,4 +1,5 @@
 import { useState, useCallback, useEffect } from "react";
+import track from "../hooks/useTrack";
 
 // Base quantities at 4 servings. Scalable items have baseQty (number) + unit.
 // Non-scalable items (pantry staples) have qty as string.
@@ -173,7 +174,7 @@ export default function GroceryList({ adults = 2, kids = 2, leftovers = true, ex
   if (!isOpen) {
     return (
       <button
-        onClick={() => setIsOpen(true)}
+        onClick={() => { setIsOpen(true); track("grocery_open", { week, adults, kids, leftovers }); }}
         className="w-full bg-amber-500 text-black font-bold rounded-xl py-3.5 text-sm hover:bg-amber-400 transition-colors cursor-pointer"
       >
         Shop This Week ({adults} adults{kids > 0 ? ` + ${kids} kids` : ""}{leftovers ? " + leftovers" : ""})
@@ -208,7 +209,7 @@ export default function GroceryList({ adults = 2, kids = 2, leftovers = true, ex
           ))}
         </div>
         <div className="flex items-center gap-3 mt-3">
-          <button onClick={copyList} className="px-3 py-1.5 bg-neutral-800 text-neutral-300 text-xs font-semibold rounded-lg hover:bg-neutral-700 transition-colors cursor-pointer">
+          <button onClick={() => { copyList(); track("grocery_copy", { week }); }} className="px-3 py-1.5 bg-neutral-800 text-neutral-300 text-xs font-semibold rounded-lg hover:bg-neutral-700 transition-colors cursor-pointer">
             Copy List
           </button>
           {checkedCount > 0 && (

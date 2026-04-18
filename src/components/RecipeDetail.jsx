@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import track from "../hooks/useTrack";
 
 const pillarColors = {
   "Protein Meals": "text-amber-500 bg-amber-500/10 border-amber-500/30",
@@ -317,7 +318,7 @@ export default function RecipeDetail({ recipe }) {
                   </div>
                 );
                 return b.url ? (
-                  <a key={i} href={b.url} target="_blank" rel="noopener noreferrer" className="block">
+                  <a key={i} href={b.url} target="_blank" rel="noopener noreferrer" onClick={() => track("brand_click", { brand: b.name, item: b.item, url: b.url })} className="block">
                     {inner}
                   </a>
                 ) : (

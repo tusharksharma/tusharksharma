@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { liveRecipes } from "../data/recipes";
+import track from "../hooks/useTrack";
 
 const RECIPES = liveRecipes.filter((r) => r.splitFriendly);
 const COUNT = RECIPES.length;
@@ -41,6 +42,7 @@ export default function FanSpinner() {
       }
       setResult(RECIPES[bestIdx]);
       setSpinning(false);
+      track("fan_spin", { result: RECIPES[bestIdx].title });
     }, 4000);
   };
 

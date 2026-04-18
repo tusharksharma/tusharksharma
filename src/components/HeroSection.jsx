@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import track from "../hooks/useTrack";
 
 export default function HeroSection() {
   return (
@@ -35,12 +36,14 @@ export default function HeroSection() {
             <div className="flex gap-3 mt-6 flex-wrap justify-center sm:justify-start">
               <a
                 href="#timeline"
+                onClick={() => track("hero_cta_click", { cta: "see_this_week" })}
                 className="px-6 py-3 bg-amber-500 text-black font-bold rounded-xl hover:bg-amber-400 transition-colors cursor-pointer text-sm"
               >
                 See This Week
               </a>
               <Link
                 to="/dinners"
+                onClick={() => track("hero_cta_click", { cta: "browse_dinners" })}
                 className="px-6 py-3 bg-neutral-800 text-white font-bold rounded-xl border border-neutral-700 hover:bg-neutral-700 transition-colors text-sm"
               >
                 Browse Dinners
