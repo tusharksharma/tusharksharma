@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import recipes from "../data/recipes";
 import GroceryList from "./GroceryList";
 
-const SERVINGS_OPTIONS = [2, 4, 6, 8];
+const ADULT_OPTIONS = [1, 2, 3, 4];
+const KID_OPTIONS = [0, 1, 2, 3];
 
 const WEEKS = {
   // ──────────────────────────────────────────────────────────
@@ -134,10 +135,12 @@ function FlexDay({ day, meal }) {
 
 export default function YourWeek() {
   const [week, setWeek] = useState(1);
-  const [servings, setServings] = useState(4);
+  const [adults, setAdults] = useState(2);
+  const [kids, setKids] = useState(2);
   const [enabledMeals, setEnabledMeals] = useState({ Mon: true, Wed: true, Fri: true });
   const [showFeedback, setShowFeedback] = useState(false);
 
+  const servings = adults + kids;
   const currentWeek = WEEKS[week];
   const enabledCount = Object.values(enabledMeals).filter(Boolean).length;
   const leftoverMsgs = getLeftoverMsg(servings);
@@ -155,8 +158,8 @@ export default function YourWeek() {
 
   const resetMeals = () => setEnabledMeals({ Mon: true, Wed: true, Fri: true });
 
-  const handleServingsChange = (s) => {
-    setServings(s);
+  const handleFamilyChange = (setter, val) => {
+    setter(val);
     setShowFeedback(true);
   };
 
@@ -205,34 +208,40 @@ export default function YourWeek() {
           <span className="text-neutral-600 text-[10px] ml-2">{currentWeek.subtitle}</span>
         </div>
 
-        {/* Servings toggle */}
+        {/* Family size */}
         <div className="bg-neutral-900/50 border border-neutral-800 rounded-xl p-4 mb-6">
-          <div className="flex items-center justify-between mb-2">
+          <div className="flex items-center justify-between mb-3">
             <div>
-              <span className="text-white text-xs font-bold">Adjust your week</span>
-              <span className="text-neutral-600 text-[10px] ml-2">Households of 2-8</span>
+              <span className="text-white text-xs font-bold">Your family</span>
+              <span className="text-neutral-600 text-[10px] ml-2">Adjusts grocery + portions</span>
             </div>
             {showFeedback && (
               <span className="text-amber-400 text-[10px] font-bold animate-pulse">Updated for {servings}</span>
             )}
           </div>
-          <div className="flex items-center gap-3">
-            <span className="text-neutral-500 text-xs">Servings:</span>
-            <div className="flex gap-1">
-              {SERVINGS_OPTIONS.map((s) => (
-                <button
-                  key={s}
-                  onClick={() => handleServingsChange(s)}
-                  className={`w-10 h-10 rounded-lg text-sm font-bold transition-all cursor-pointer ${
-                    servings === s ? "bg-amber-500 text-black scale-110" : "bg-neutral-800 text-neutral-400 hover:bg-neutral-700"
-                  }`}
-                >
-                  {s}
-                </button>
-              ))}
+          <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex items-center gap-3">
+              <span className="text-neutral-500 text-xs w-12">Adults:</span>
+              <div className="flex gap-1">
+                {ADULT_OPTIONS.map((n) => (
+                  <button key={n} onClick={() => handleFamilyChange(setAdults, n)}
+                    className={`w-9 h-9 rounded-lg text-sm font-bold transition-all cursor-pointer ${adults === n ? "bg-red-500 text-white scale-110" : "bg-neutral-800 text-neutral-400 hover:bg-neutral-700"}`}
+                  >{n}</button>
+                ))}
+              </div>
             </div>
-            <span className="text-neutral-600 text-[10px]">
-              {servings <= 2 ? "Couple — light leftovers" : servings <= 4 ? "Family — standard" : servings <= 6 ? "Large family — extra leftovers" : "Meal prep — maximum batch"}
+            <div className="flex items-center gap-3">
+              <span className="text-neutral-500 text-xs w-12">Kids:</span>
+              <div className="flex gap-1">
+                {KID_OPTIONS.map((n) => (
+                  <button key={n} onClick={() => handleFamilyChange(setKids, n)}
+                    className={`w-9 h-9 rounded-lg text-sm font-bold transition-all cursor-pointer ${kids === n ? "bg-green-500 text-white scale-110" : "bg-neutral-800 text-neutral-400 hover:bg-neutral-700"}`}
+                  >{n}</button>
+                ))}
+              </div>
+            </div>
+            <span className="text-neutral-600 text-[10px] self-center">
+              {adults + kids} servings total{kids > 0 ? ` (kids at smaller portions)` : ""}
             </span>
           </div>
         </div>
@@ -314,7 +323,7 @@ export default function YourWeek() {
 
         {/* Grocery */}
         <div className="mt-10" id="grocery">
-          <GroceryList servings={servings} excludedTags={excludedTags} week={week} />
+          <GroceryList adults={adults} kids={kids} excludedTags={excludedTags} week={week} />
         </div>
 
         {/* Sauce bridge */}

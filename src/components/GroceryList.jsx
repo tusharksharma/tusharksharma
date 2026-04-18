@@ -92,9 +92,18 @@ const GROCERY_BY_WEEK = {
 
 function getGrocery(week) { return GROCERY_BY_WEEK[week] || GROCERY_BY_WEEK[1]; }
 
-function scaleQty(entry, scale) {
+// Kids eat ~60% adult portions for scalable items
+const KID_SCALE = 0.6;
+
+function scaleQty(entry, adults, kids) {
   if (entry.baseQty != null) {
-    const scaled = entry.baseQty * scale;
+    // Base quantities are for 4 servings (2 adults + 2 kids standard)
+    const isKidItem = /kid/i.test(entry.meal);
+    const adultScale = adults / 2;
+    const kidScale = kids / 2;
+    const scaled = isKidItem
+      ? entry.baseQty * kidScale
+      : entry.baseQty * (adultScale + kidScale * KID_SCALE) / (1 + KID_SCALE);
     const rounded = Math.round(scaled * 10) / 10;
     const display = rounded % 1 === 0 ? rounded.toString() : rounded.toFixed(1);
     return `~${display} ${entry.unit}`.trim();
@@ -102,10 +111,9 @@ function scaleQty(entry, scale) {
   return entry.qty || "";
 }
 
-export default function GroceryList({ servings = 4, excludedTags = [], week = 1 }) {
+export default function GroceryList({ adults = 2, kids = 2, excludedTags = [], week = 1 }) {
   const [checked, setChecked] = useState(new Set());
   const [isOpen, setIsOpen] = useState(false);
-  const scale = servings / 4;
   const GROCERY = getGrocery(week);
   const allItems = Object.values(GROCERY).flat();
 
@@ -138,7 +146,7 @@ export default function GroceryList({ servings = 4, excludedTags = [], week = 1 
       .map(([cat, items]) => {
         const visible = items.filter((i) => !isExcluded(i));
         if (visible.length === 0) return null;
-        return `${cat}:\n${visible.map((i) => `  - ${i.name}${scaleQty(i, scale) ? ` (${scaleQty(i, scale)})` : ""}`).join("\n")}`;
+        return `${cat}:\n${visible.map((i) => `  - ${i.name}${scaleQty(i, adults, kids) ? ` (${scaleQty(i, adults, kids)})` : ""}`).join("\n")}`;
       })
       .filter(Boolean)
       .join("\n\n");
@@ -162,7 +170,7 @@ export default function GroceryList({ servings = 4, excludedTags = [], week = 1 
         onClick={() => setIsOpen(true)}
         className="w-full bg-amber-500 text-black font-bold rounded-xl py-3.5 text-sm hover:bg-amber-400 transition-colors cursor-pointer"
       >
-        Shop This Week ({servings} servings)
+        Shop This Week ({adults} adults{kids > 0 ? ` + ${kids} kids` : ""})
       </button>
     );
   }
@@ -178,7 +186,7 @@ export default function GroceryList({ servings = 4, excludedTags = [], week = 1 
           <button onClick={() => setIsOpen(false)} className="text-neutral-500 hover:text-neutral-300 text-xs cursor-pointer">Close</button>
         </div>
         <p className="text-neutral-500 text-xs">
-          Feeds {servings} people &middot; {3 - excludedTags.length} dinners &middot; leftovers included &middot; minimal waste
+          {adults} adults{kids > 0 ? ` + ${kids} kids` : ""} &middot; {3 - excludedTags.length} dinners &middot; leftovers included
         </p>
         {excludedTags.length > 0 && (
           <p className="text-amber-400 text-[10px] font-semibold mt-1">
@@ -216,7 +224,7 @@ export default function GroceryList({ servings = 4, excludedTags = [], week = 1 
                 const idx = globalIdx++;
                 if (isExcluded(entry)) return null;
                 const isChecked = checked.has(idx);
-                const qty = scaleQty(entry, scale);
+                const qty = scaleQty(entry, adults, kids);
                 return (
                   <li key={idx} onClick={() => toggle(idx)} className="flex items-start gap-3 py-2 px-2 -mx-2 rounded-lg hover:bg-neutral-800/50 cursor-pointer select-none transition-colors">
                     <span className={`w-4 h-4 mt-0.5 rounded border flex-shrink-0 flex items-center justify-center text-[10px] transition-colors ${isChecked ? "bg-amber-500 border-amber-500 text-black" : "border-neutral-600"}`}>
