@@ -61,6 +61,7 @@ const routes = [
   { path: "/dinners", title: "Dinners — The Split Plate", description: "High-protein family dinners with the Split Cook Method. Same cook, different plates for adults and kids." },
   { path: "/cookbook", title: "Power-Ups — The Split Plate", description: "Sauces, breakfast hacks, and desserts that boost protein without the effort." },
   { path: "/about", title: "About — The Split Plate", description: "One meal. Two plates. The Split Plate is a dinner system for families who want high-protein meals without cooking twice." },
+  { path: "/fan", title: "In the Hands of the Fan — The Split Plate", description: "Can't decide what to cook? Spin the fan and let it pick your dinner." },
   ...recipes.map((r) => ({
     path: `/recipes/${r.slug}`,
     title: `${r.title} — The Split Plate`,

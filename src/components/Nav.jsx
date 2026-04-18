@@ -5,6 +5,7 @@ export default function Nav() {
   const isWeekly = pathname === "/";
   const isDinners = pathname === "/dinners" || pathname.startsWith("/recipes");
   const isCookbook = pathname.startsWith("/cookbook");
+  const isFan = pathname === "/fan";
 
   return (
     <nav className="border-b border-neutral-800 bg-neutral-950/90 backdrop-blur-sm sticky top-0 z-20">
@@ -37,6 +38,14 @@ export default function Nav() {
             }`}
           >
             Power-Ups
+          </Link>
+          <Link
+            to="/fan"
+            className={`px-3 sm:px-4 py-1.5 rounded-lg text-xs font-bold transition-colors ${
+              isFan ? "bg-amber-500 text-black" : "text-neutral-400 hover:text-white"
+            }`}
+          >
+            The Fan
           </Link>
         </div>
       </div>

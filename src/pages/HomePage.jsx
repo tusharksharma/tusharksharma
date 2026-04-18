@@ -5,7 +5,6 @@ import HeroSection from "../components/HeroSection";
 import HowItWorks from "../components/HowItWorks";
 import YourWeek from "../components/YourWeek";
 import RecipeCard from "../components/RecipeCard";
-import FanSpinner from "../components/FanSpinner";
 
 function TrustCard({ title, desc }) {
   return (
@@ -23,8 +22,6 @@ export default function HomePage() {
       <HeroSection />
       <HowItWorks />
       <YourWeek />
-
-      <FanSpinner />
 
       {/* All Live Recipes */}
       <section className="border-b border-neutral-800">
