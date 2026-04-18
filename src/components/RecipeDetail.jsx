@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import track from "../hooks/useTrack";
+import { liveRecipes } from "../data/recipes";
 
 const pillarColors = {
   "Protein Meals": "text-amber-500 bg-amber-500/10 border-amber-500/30",
@@ -328,6 +329,9 @@ export default function RecipeDetail({ recipe }) {
             </div>
           </section>
         )}
+
+        {/* Related Recipes */}
+        <RelatedRecipes current={recipe} />
 
         {/* Meal Prep */}
         {recipe.mealPrep && (
@@ -733,6 +737,77 @@ function Stat({ label, value, highlight }) {
         {label}
       </div>
     </div>
+  );
+}
+
+function RelatedRecipes({ current }) {
+  const related = useMemo(() => {
+    const dinners = liveRecipes.filter(
+      (r) => r.pillar === "Protein Meals" && r.id !== current.id
+    );
+    // Prefer different proteinAnchor for variety
+    const different = dinners.filter(
+      (r) => r.proteinAnchor !== current.proteinAnchor
+    );
+    const pool = different.length >= 2 ? different : dinners;
+    // Shuffle deterministically based on current id
+    const sorted = [...pool].sort(
+      (a, b) => ((a.id * 7 + current.id) % 13) - ((b.id * 7 + current.id) % 13)
+    );
+    return sorted.slice(0, 2);
+  }, [current.id, current.proteinAnchor]);
+
+  return (
+    <section className="mt-10">
+      <h2 className="text-sm font-bold uppercase tracking-wider text-neutral-400 mb-4">
+        Related Recipes
+      </h2>
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        {related.map((r) => (
+          <Link
+            key={r.id}
+            to={`/recipes/${r.slug}`}
+            className="bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden hover:border-amber-500/30 transition-colors block"
+          >
+            <img
+              src={r.image}
+              alt={r.title}
+              className="w-full h-36 object-cover"
+              loading="lazy"
+            />
+            <div className="p-3">
+              <h3 className="text-white font-bold text-sm leading-tight">
+                {r.title}
+              </h3>
+              <div className="flex gap-2 mt-2 text-[10px] text-neutral-500">
+                <span className="text-amber-400 font-bold">{r.protein}g protein</span>
+                <span>{r.calories} cal</span>
+                <span>{r.time}</span>
+              </div>
+            </div>
+          </Link>
+        ))}
+
+        {/* Power-up: Money Mustard */}
+        <Link
+          to="/cookbook/money-mustard"
+          className="bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden hover:border-amber-500/30 transition-colors block"
+        >
+          <div className="h-36 bg-amber-500/10 flex items-center justify-center">
+            <span className="text-amber-500 text-3xl font-black">+</span>
+          </div>
+          <div className="p-3">
+            <h3 className="text-white font-bold text-sm leading-tight">
+              Money Mustard
+            </h3>
+            <div className="flex gap-2 mt-2 text-[10px] text-neutral-500">
+              <span className="text-amber-400 font-bold">Power-Up</span>
+              <span>Pairs with everything</span>
+            </div>
+          </div>
+        </Link>
+      </div>
+    </section>
   );
 }
 

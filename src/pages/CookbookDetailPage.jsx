@@ -1,5 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import { sauces, desserts, breakfasts, quickLunches } from "../data/cookbook";
+import { liveRecipes } from "../data/recipes";
 import useMeta from "../hooks/useMeta";
 
 const allItems = [...sauces, ...breakfasts, ...desserts, ...quickLunches];
@@ -201,6 +202,54 @@ export default function CookbookDetailPage() {
             <span><span className="text-white font-bold">{sauce.calories}</span> cal total</span>
             <span><span className="text-white font-bold">~{sauce.caloriesPerServing}</span> cal/serving</span>
             <span><span className="text-white font-bold">{sauce.servings}</span> servings</span>
+          </div>
+        </div>
+
+        {/* Related — Dinner Recipes + Back to Cookbook */}
+        <div className="mt-10">
+          <h2 className="text-sm font-bold uppercase tracking-wider text-neutral-400 mb-4">
+            Try It With
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            {liveRecipes
+              .filter((r) => r.pillar === "Protein Meals")
+              .slice(0, 2)
+              .map((r) => (
+                <Link
+                  key={r.id}
+                  to={`/recipes/${r.slug}`}
+                  className="bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden hover:border-amber-500/30 transition-colors block"
+                >
+                  <img
+                    src={r.image}
+                    alt={r.title}
+                    className="w-full h-36 object-cover"
+                    loading="lazy"
+                  />
+                  <div className="p-3">
+                    <h3 className="text-white font-bold text-sm leading-tight">
+                      {r.title}
+                    </h3>
+                    <div className="flex gap-2 mt-2 text-[10px] text-neutral-500">
+                      <span className="text-amber-400 font-bold">{r.protein}g protein</span>
+                      <span>{r.calories} cal</span>
+                      <span>{r.time}</span>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+
+            {/* Back to all cookbook items */}
+            <Link
+              to="/cookbook"
+              className="bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden hover:border-amber-500/30 transition-colors flex items-center justify-center"
+            >
+              <div className="p-6 text-center">
+                <span className="text-amber-500 text-2xl font-black block mb-2">&larr;</span>
+                <h3 className="text-white font-bold text-sm">All Cookbook Recipes</h3>
+                <p className="text-neutral-500 text-[10px] mt-1">Sauces, breakfasts, and more</p>
+              </div>
+            </Link>
           </div>
         </div>
       </div>
