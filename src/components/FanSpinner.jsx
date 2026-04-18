@@ -27,9 +27,19 @@ export default function FanSpinner() {
     setRotation(totalRotation);
 
     setTimeout(() => {
-      const normalizedAngle = (360 - (totalRotation % 360)) % 360;
-      const index = Math.floor(normalizedAngle / SLICE_DEG) % COUNT;
-      setResult(RECIPES[index]);
+      // Pointer is at top (270° in unit-circle terms).
+      // Blade i sits at (i * SLICE_DEG). After rotation R, blade i is at (i * SLICE_DEG + R) % 360.
+      // Find which blade is closest to 270° (top).
+      const finalRotation = totalRotation % 360;
+      let bestIdx = 0;
+      let bestDist = Infinity;
+      for (let i = 0; i < COUNT; i++) {
+        const bladeAngle = (i * SLICE_DEG + finalRotation) % 360;
+        // Distance to 270° (top), wrapping around
+        const dist = Math.min(Math.abs(bladeAngle - 270), 360 - Math.abs(bladeAngle - 270));
+        if (dist < bestDist) { bestDist = dist; bestIdx = i; }
+      }
+      setResult(RECIPES[bestIdx]);
       setSpinning(false);
     }, 4000);
   };
