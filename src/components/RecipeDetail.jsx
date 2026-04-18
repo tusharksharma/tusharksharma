@@ -11,11 +11,12 @@ export default function RecipeDetail({ recipe }) {
   const [mode, setMode] = useState("adult");
   const [adults, setAdults] = useState(2);
   const [kids, setKids] = useState(2);
+  const [leftovers, setLeftovers] = useState(false);
   const hasSplit = !!recipe.splitCook;
   const isSplit = hasSplit && mode === "split";
   const baseServings = recipe.servings || 4;
   const totalServings = adults + kids;
-  const scale = totalServings / baseServings;
+  const scale = (totalServings / baseServings) * (leftovers ? 2 : 1);
   const ppc = ((recipe.protein * 4 / recipe.calories) * 100).toFixed(0);
 
   return (
@@ -105,8 +106,15 @@ export default function RecipeDetail({ recipe }) {
                 ))}
               </div>
             </div>
-            {totalServings !== baseServings && (
-              <span className="text-amber-400 text-[10px] font-bold ml-auto">Scaled to {totalServings}</span>
+            <button
+              onClick={() => setLeftovers(!leftovers)}
+              className={`flex items-center gap-1 px-2 py-1 rounded text-[10px] font-bold cursor-pointer transition-all ${leftovers ? "bg-amber-500 text-black" : "bg-neutral-800 text-neutral-500 hover:bg-neutral-700"}`}
+            >
+              <span className={`w-2.5 h-2.5 rounded-sm border ${leftovers ? "bg-black border-black" : "border-neutral-600"} flex items-center justify-center text-[7px]`}>{leftovers ? "\u2713" : ""}</span>
+              Leftovers
+            </button>
+            {scale !== 1 && (
+              <span className="text-amber-400 text-[10px] font-bold ml-auto">Ingredients scaled {leftovers ? "(2x for leftovers)" : ""}</span>
             )}
           </div>
 

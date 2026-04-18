@@ -137,10 +137,11 @@ export default function YourWeek() {
   const [week, setWeek] = useState(1);
   const [adults, setAdults] = useState(2);
   const [kids, setKids] = useState(2);
+  const [leftovers, setLeftovers] = useState(true);
   const [enabledMeals, setEnabledMeals] = useState({ Mon: true, Wed: true, Fri: true });
   const [showFeedback, setShowFeedback] = useState(false);
 
-  const servings = adults + kids;
+  const servings = (adults + kids) * (leftovers ? 2 : 1);
   const currentWeek = WEEKS[week];
   const enabledCount = Object.values(enabledMeals).filter(Boolean).length;
   const leftoverMsgs = getLeftoverMsg(servings);
@@ -240,8 +241,17 @@ export default function YourWeek() {
                 ))}
               </div>
             </div>
+            <div className="flex items-center gap-2 self-center">
+              <button
+                onClick={() => { setLeftovers(!leftovers); setShowFeedback(true); }}
+                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold cursor-pointer transition-all ${leftovers ? "bg-amber-500 text-black" : "bg-neutral-800 text-neutral-500 hover:bg-neutral-700"}`}
+              >
+                <span className={`w-3 h-3 rounded-sm border ${leftovers ? "bg-black border-black" : "border-neutral-600"} flex items-center justify-center text-[8px]`}>{leftovers ? "\u2713" : ""}</span>
+                Leftovers
+              </button>
+            </div>
             <span className="text-neutral-600 text-[10px] self-center">
-              {adults + kids} servings total{kids > 0 ? ` (kids at smaller portions)` : ""}
+              {servings} servings{leftovers ? " (doubled for next-day leftovers)" : ""}
             </span>
           </div>
         </div>
@@ -323,7 +333,7 @@ export default function YourWeek() {
 
         {/* Grocery */}
         <div className="mt-10" id="grocery">
-          <GroceryList adults={adults} kids={kids} excludedTags={excludedTags} week={week} />
+          <GroceryList adults={adults} kids={kids} leftovers={leftovers} excludedTags={excludedTags} week={week} />
         </div>
 
         {/* Sauce bridge */}
