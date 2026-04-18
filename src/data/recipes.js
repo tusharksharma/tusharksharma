@@ -1653,8 +1653,8 @@ const recipes = [
       "Shredded lettuce",
     ],
     steps: [
-      { text: "COOK: Air fry chicken fillets at 400°F for 10-12 min until crispy.", images: ["/images/chicken-sandwich/hero.png"] },
-      { text: "TOAST: Lightly toast buns in a pan, 30 seconds butter side down." },
+      { text: "COOK: Air fry chicken fillets at 400°F for 10-12 min until crispy.", images: ["/images/chicken-sandwich/prep.png"] },
+      { text: "TOAST: Lightly toast buns in a pan, 30 seconds butter side down.", images: ["/images/chicken-sandwich/prep.png"] },
       { text: "BUILD ADULT: Sauce on bottom bun. Chicken. Pickles + lettuce. Top bun. Serve 2 per plate." },
       { text: "BUILD KID: Cut fillet in half. Slider buns. Plain or ketchup. Fruit on side." },
     ],
