@@ -17,11 +17,11 @@ const WEEKS = {
   },
   2: {
     label: "Week 2",
-    subtitle: "Smash Tacos, Air Fryer Chicken, Gnocchi",
+    subtitle: "Smash Tacos, Chicken Sandwiches, Air Fryer Chicken",
     cookDays: [
       { day: "Monday", label: "Smash Night", vibe: "Start easy — crispy smash tacos, Caesar finish, 15 min", id: 22, time: "15 min", reheats: true, adult: "Keto tortilla, Caesar, crushed Quest chips", kid: "Street taco tortilla, simple taco, chips on side", needs: ["Ground chicken", "Cheddar", "Keto tortillas", "Romaine", "Caesar dressing"] },
-      { day: "Wednesday", label: "Hands-Off Win", vibe: "Midweek reset — air fryer does the work, you don't", id: 21, time: "25 min", reheats: true, adult: "Outlaw Blackened chicken, cheesy broccoli, Money Mustard", kid: "Original seasoned chicken, broccoli, dinner roll", needs: ["Chicken thighs", "Broccoli", "Dan-O's", "Dinner rolls"] },
-      { day: "Friday", label: "Crispy Finish", vibe: "Finish strong — crispy gnocchi, weekend is set", id: 1, time: "30 min", reheats: false, adult: "Spicy fajita gnocchi, cream sauce, lime", kid: "Rao's Alfredo or butter gnocchi, cheese", needs: ["Chicken", "Gnocchi", "Bell peppers", "Cottage cheese", "Dan-O's"] },
+      { day: "Wednesday", label: "Fast Food Night", vibe: "Midweek reset — crispy chicken sandwiches, better than drive-through", id: 23, time: "15 min", reheats: true, adult: "Keto bun, chipotle or Money Mustard, pickles", kid: "Slider buns, plain or ketchup", needs: ["Kirkland chicken fillets", "Keto buns", "Slider buns", "Sauce"] },
+      { day: "Friday", label: "Hands-Off Win", vibe: "Finish strong — air fryer does the work, you don't", id: 21, time: "25 min", reheats: true, adult: "Outlaw Blackened chicken, cheesy broccoli, Money Mustard", kid: "Original seasoned chicken, broccoli, dinner roll", needs: ["Chicken thighs", "Broccoli", "Dan-O's", "Dinner rolls"] },
     ],
   },
 };
