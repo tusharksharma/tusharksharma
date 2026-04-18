@@ -34,14 +34,11 @@ const WEEKS = {
   },
 };
 
-function getLeftoverMsg(servings) {
-  if (servings <= 2) {
-    return { tue: "No cooking. Reheat Monday's bowl.", thu: "No cooking. Finish Wednesday's gnocchi or grab something light.", sat: "No cooking. Reheat Friday's penne — smaller portions.", sun: "Flexible — eat out or reset" };
+function getLeftoverMsg(hasLeftovers) {
+  if (!hasLeftovers) {
+    return { tue: "No leftovers — eat out or cook something quick", thu: "No leftovers — eat out or cook something quick", sat: "No leftovers — eat out or cook something quick", sun: "Flexible — eat out or reset" };
   }
-  if (servings >= 6) {
-    return { tue: "Beef & Broccoli — fully covered", thu: "Gnocchi or extra Beef & Broccoli — fully covered", sat: "Tri-Tip Penne — plenty for two days", sun: "Still have leftovers — or eat out" };
-  }
-  return { tue: "Beef & Broccoli — already handled", thu: "No cooking. You're covered.", sat: "Tri-Tip Penne — already handled", sun: "Flexible — eat out, reset, or finish leftovers" };
+  return { tue: "Reheat Monday's dinner — already handled", thu: "Reheat Wednesday's dinner — already handled", sat: "Reheat Friday's dinner — already handled", sun: "Flexible — finish leftovers, eat out, or reset" };
 }
 
 function CookDay({ day, label, vibe, id, time, reheats, adult, kid, needs, servings, enabled, onToggle }) {
@@ -144,7 +141,7 @@ export default function YourWeek() {
   const servings = (adults + kids) * (leftovers ? 2 : 1);
   const currentWeek = WEEKS[week];
   const enabledCount = Object.values(enabledMeals).filter(Boolean).length;
-  const leftoverMsgs = getLeftoverMsg(servings);
+  const leftoverMsgs = getLeftoverMsg(leftovers);
 
   const handleWeekChange = (w) => {
     setWeek(w);
@@ -302,19 +299,19 @@ export default function YourWeek() {
             <TimelineDot type="cook" enabled={enabledMeals.Mon} />
             <CookDay {...currentWeek.cookDays[0]} servings={servings} enabled={enabledMeals.Mon} onToggle={() => toggleMeal("Mon")} />
             <TimelineDot type="leftover" enabled={enabledMeals.Mon} />
-            <LeftoverDay day="Tuesday" meal={leftoverMsgs.tue} visible={enabledMeals.Mon} />
+            <LeftoverDay day="Tuesday" meal={leftoverMsgs.tue} visible={leftovers && enabledMeals.Mon} />
 
             {/* Wednesday */}
             <TimelineDot type="cook" enabled={enabledMeals.Wed} />
             <CookDay {...currentWeek.cookDays[1]} servings={servings} enabled={enabledMeals.Wed} onToggle={() => toggleMeal("Wed")} />
             <TimelineDot type="leftover" enabled={enabledMeals.Wed} />
-            <LeftoverDay day="Thursday" meal={leftoverMsgs.thu} visible={enabledMeals.Wed} />
+            <LeftoverDay day="Thursday" meal={leftoverMsgs.thu} visible={leftovers && enabledMeals.Wed} />
 
             {/* Friday */}
             <TimelineDot type="cook" enabled={enabledMeals.Fri} />
             <CookDay {...currentWeek.cookDays[2]} servings={servings} enabled={enabledMeals.Fri} onToggle={() => toggleMeal("Fri")} />
             <TimelineDot type="leftover" enabled={enabledMeals.Fri} />
-            <LeftoverDay day="Saturday" meal={leftoverMsgs.sat} visible={enabledMeals.Fri} />
+            <LeftoverDay day="Saturday" meal={leftoverMsgs.sat} visible={leftovers && enabledMeals.Fri} />
 
             {/* Sunday */}
             <TimelineDot type="flex" />

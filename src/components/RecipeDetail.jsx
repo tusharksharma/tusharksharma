@@ -620,21 +620,41 @@ function StepList({ steps, startAt = 1, accent }) {
   );
 }
 
+function parseFrac(s) {
+  s = s.trim();
+  // "1/2" → 0.5, "3/4" → 0.75
+  if (s.includes("/")) {
+    const [num, den] = s.split("/").map(Number);
+    return den ? num / den : parseFloat(s);
+  }
+  return parseFloat(s);
+}
+
+function formatNum(n) {
+  // Try to express as a clean fraction if close
+  const fracs = [[0.25, "1/4"], [0.33, "1/3"], [0.5, "1/2"], [0.67, "2/3"], [0.75, "3/4"]];
+  const whole = Math.floor(n);
+  const remainder = n - whole;
+  if (remainder < 0.05) return whole.toString();
+  for (const [val, str] of fracs) {
+    if (Math.abs(remainder - val) < 0.05) {
+      return whole > 0 ? `${whole} ${str}` : str;
+    }
+  }
+  const rounded = Math.round(n * 10) / 10;
+  return rounded % 1 === 0 ? rounded.toString() : rounded.toFixed(1);
+}
+
 function scaleIngredientText(text, scale) {
   if (scale === 1) return text;
-  // Match leading numbers like "24 oz", "1.25 lb", "2-2.5 cups", "1/2 cup"
-  return text.replace(/^(\d+(?:\.\d+)?(?:\s*[-–]\s*\d+(?:\.\d+)?)?)/g, (match) => {
-    // Handle ranges like "2-2.5"
-    if (/[-–]/.test(match)) {
-      const parts = match.split(/[-–]/).map((p) => {
-        const n = parseFloat(p.trim()) * scale;
-        return Math.round(n * 10) / 10;
-      });
+  // Match leading quantities: "24", "1.25", "2-2.5", "1/2", "3/4"
+  return text.replace(/^(\d+\/\d+|\d+(?:\.\d+)?(?:\s*[-–]\s*(?:\d+\/\d+|\d+(?:\.\d+)?))?)/g, (match) => {
+    // Handle ranges like "2-2.5" or "1/2-3/4"
+    if (/[-–]/.test(match) && !match.startsWith("-")) {
+      const parts = match.split(/\s*[-–]\s*/).map((p) => formatNum(parseFrac(p) * scale));
       return parts.join("–");
     }
-    const n = parseFloat(match) * scale;
-    const rounded = Math.round(n * 10) / 10;
-    return rounded % 1 === 0 ? rounded.toString() : rounded.toFixed(1);
+    return formatNum(parseFrac(match) * scale);
   });
 }
 
