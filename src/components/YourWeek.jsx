@@ -6,22 +6,29 @@ import GroceryList from "./GroceryList";
 const SERVINGS_OPTIONS = [2, 4, 6, 8];
 
 const WEEKS = {
+  // ──────────────────────────────────────────────────────────
+  // BALANCE RULE: each week should mix carb levels.
+  //   carbLevel on each recipe: "high" (rice/pasta/gnocchi),
+  //   "low" (keto tortilla/bun), "none" (no starch).
+  //   Target: no week should be all-high or all-low.
+  //   Current: 1 high + 1 low + 1 moderate per week.
+  // ──────────────────────────────────────────────────────────
   1: {
     label: "Week 1",
-    subtitle: "Stir-fry, Gnocchi, Steak Pasta",
+    subtitle: "Stir-fry, Chicken Sandwiches, Gnocchi",
     cookDays: [
-      { day: "Monday", label: "Fast Win", vibe: "Start easy — lowest friction dinner of the week", id: 4, time: "25 min", reheats: true, adult: "Spicy soy-sesame, charred broccoli, chili oil", kid: "Mild soy, broccoli on side, meatballs", needs: ["Beef", "Broccoli", "Rice", "Soy sauce", "Bone broth"] },
-      { day: "Wednesday", label: "Comfort + Protein", vibe: "Midweek reset — comfort food that earns its calories", id: 1, time: "30 min", reheats: false, adult: "Spicy fajita cream, peppers, chili oil", kid: "Rao's Alfredo or mild creamy", needs: ["Chicken", "Gnocchi", "Bell peppers", "Cottage cheese", "Dan-O's"] },
-      { day: "Friday", label: "Cook Once, Win Twice", vibe: "Finish strong — cook tonight, weekend is handled", id: 2, time: "35 min", reheats: true, adult: "Chili cream sauce, Dan-O's, sliced tri-tip", kid: "Mild creamy penne, meatballs, cheese", needs: ["Tri-tip", "Penne", "Spinach", "Cottage cheese", "Beef broth"] },
+      { day: "Monday", label: "Fast Win", vibe: "Start easy — lowest friction dinner of the week", id: 4, time: "25 min", reheats: true, adult: "Spicy soy-sesame, charred broccoli, chili oil", kid: "Mild soy, broccoli on side, meatballs", needs: ["Beef", "Broccoli", "Rice", "Soy sauce", "Bone broth"], carbLevel: "high" },
+      { day: "Wednesday", label: "Fast Food Night", vibe: "Midweek reset — crispy chicken sandwiches, better than drive-through", id: 23, time: "15 min", reheats: true, adult: "Keto bun, chipotle or Money Mustard, pickles", kid: "Slider buns, plain or ketchup", needs: ["Kirkland chicken fillets", "Keto buns", "Slider buns", "Sauce"], carbLevel: "low" },
+      { day: "Friday", label: "Comfort + Protein", vibe: "Finish strong — comfort food that earns its calories", id: 1, time: "30 min", reheats: false, adult: "Spicy fajita cream, peppers, chili oil", kid: "Rao's Alfredo or mild creamy", needs: ["Chicken", "Gnocchi", "Bell peppers", "Cottage cheese", "Dan-O's"], carbLevel: "high" },
     ],
   },
   2: {
     label: "Week 2",
-    subtitle: "Smash Tacos, Chicken Sandwiches, Air Fryer Chicken",
+    subtitle: "Smash Tacos, Tri-tip Penne, Air Fryer Chicken",
     cookDays: [
-      { day: "Monday", label: "Smash Night", vibe: "Start easy — crispy smash tacos, Caesar finish, 15 min", id: 22, time: "15 min", reheats: true, adult: "Keto tortilla, Caesar, crushed Quest chips", kid: "Street taco tortilla, simple taco, chips on side", needs: ["Ground chicken", "Cheddar", "Keto tortillas", "Romaine", "Caesar dressing"] },
-      { day: "Wednesday", label: "Fast Food Night", vibe: "Midweek reset — crispy chicken sandwiches, better than drive-through", id: 23, time: "15 min", reheats: true, adult: "Keto bun, chipotle or Money Mustard, pickles", kid: "Slider buns, plain or ketchup", needs: ["Kirkland chicken fillets", "Keto buns", "Slider buns", "Sauce"] },
-      { day: "Friday", label: "Hands-Off Win", vibe: "Finish strong — air fryer does the work, you don't", id: 21, time: "25 min", reheats: true, adult: "Outlaw Blackened chicken, cheesy broccoli, Money Mustard", kid: "Original seasoned chicken, broccoli, dinner roll", needs: ["Chicken thighs", "Broccoli", "Dan-O's", "Dinner rolls"] },
+      { day: "Monday", label: "Smash Night", vibe: "Start easy — crispy smash tacos, Caesar finish, 15 min", id: 22, time: "15 min", reheats: true, adult: "Keto tortilla, Caesar, crushed Quest chips", kid: "Street taco tortilla, simple taco, chips on side", needs: ["Ground chicken", "Cheddar", "Keto tortillas", "Romaine", "Caesar dressing"], carbLevel: "low" },
+      { day: "Wednesday", label: "Cook Once, Win Twice", vibe: "Midweek reset — creamy pasta, weekend is handled", id: 2, time: "35 min", reheats: true, adult: "Chili cream sauce, Dan-O's, sliced tri-tip", kid: "Mild creamy penne, meatballs, cheese", needs: ["Tri-tip", "Penne", "Spinach", "Cottage cheese", "Beef broth"], carbLevel: "high" },
+      { day: "Friday", label: "Hands-Off Win", vibe: "Finish strong — air fryer does the work, you don't", id: 21, time: "25 min", reheats: true, adult: "Outlaw Blackened chicken, cheesy broccoli, Money Mustard", kid: "Original seasoned chicken, broccoli, dinner roll", needs: ["Chicken thighs", "Broccoli", "Dan-O's", "Dinner rolls"], carbLevel: "none" },
     ],
   },
 };

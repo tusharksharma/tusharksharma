@@ -5,6 +5,7 @@ const recipes = [
   {
     id: 1,
     status: "live",
+    carbLevel: "high", // gnocchi
     slug: "spicy-fajita-chicken-gnocchi",
     proteinAnchor: "chicken",
     mealType: "pasta",
@@ -209,6 +210,7 @@ const recipes = [
   {
     id: 2,
     status: "live",
+    carbLevel: "high", // penne pasta
     slug: "chili-cream-tri-tip-penne",
     proteinAnchor: "beef",
     mealType: "pasta",
@@ -421,6 +423,7 @@ const recipes = [
   {
     id: 4,
     status: "live",
+    carbLevel: "high", // rice
     slug: "spicy-beef-broccoli-bowls",
     proteinAnchor: "beef",
     mealType: "rice-bowl",
@@ -1263,6 +1266,7 @@ const recipes = [
   {
     id: 21,
     status: "live",
+    carbLevel: "none", // no starch
     slug: "air-fryer-chicken-thighs-cheesy-broccoli",
     proteinAnchor: "chicken",
     mealType: "other",
@@ -1416,6 +1420,7 @@ const recipes = [
   {
     id: 22,
     status: "live",
+    carbLevel: "low", // keto tortillas
     slug: "chicken-smash-caesar-tacos",
     proteinAnchor: "chicken",
     mealType: "other",
@@ -1553,6 +1558,7 @@ const recipes = [
   {
     id: 23,
     status: "live",
+    carbLevel: "low", // keto buns
     slug: "spicy-chicken-sandwich",
     proteinAnchor: "chicken",
     mealType: "other",
