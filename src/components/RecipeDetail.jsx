@@ -16,8 +16,6 @@ export default function RecipeDetail({ recipe }) {
   const baseServings = recipe.servings || 4;
   const totalServings = adults + kids;
   const scale = totalServings / baseServings;
-  const scaledProtein = Math.round(recipe.protein * scale);
-  const scaledCalories = Math.round(recipe.calories * scale);
   const ppc = ((recipe.protein * 4 / recipe.calories) * 100).toFixed(0);
 
   return (
@@ -116,8 +114,8 @@ export default function RecipeDetail({ recipe }) {
           <div className="flex flex-wrap gap-3 mt-4">
             <Stat label="Time" value={recipe.time} />
             <Stat label="Servings" value={totalServings} />
-            <Stat label="Calories" value={scaledCalories} />
-            <Stat label="Protein" value={`${scaledProtein}g`} highlight />
+            <Stat label="Cal/serving" value={recipe.calories} />
+            <Stat label="Protein/serving" value={`${recipe.protein}g`} highlight />
             <Stat label="PPC" value={`${ppc}%`} highlight />
           </div>
         </div>
