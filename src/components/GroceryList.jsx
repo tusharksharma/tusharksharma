@@ -95,12 +95,20 @@ const GROCERY_BY_WEEK = {
 
 function getGrocery(week) { return GROCERY_BY_WEEK[week] || GROCERY_BY_WEEK[1]; }
 
+// Units that must be purchased as whole items — always round up
+const WHOLE_UNITS = new Set(["head", "bunch", "bag", "jar", "pack", "large", "bottle", "buns", "fillets", "rolls", "tortillas", "servings"]);
+
 // All baseQty values are for 4 servings. Scale = totalServings / 4.
 // Consistent with recipe pages and weekly planner — kids count as full servings.
 function scaleQty(entry, adults, kids, leftovers) {
   if (entry.baseQty != null) {
     const scale = ((adults + kids) / 4) * (leftovers ? 2 : 1);
     const scaled = entry.baseQty * scale;
+    // Whole-unit items round up (you can't buy half a head of lettuce)
+    if (WHOLE_UNITS.has(entry.unit)) {
+      const ceiled = Math.ceil(scaled);
+      return `${ceiled} ${entry.unit}`.trim();
+    }
     const rounded = Math.round(scaled * 10) / 10;
     const display = rounded % 1 === 0 ? rounded.toString() : rounded.toFixed(1);
     return `~${display} ${entry.unit}`.trim();
@@ -115,10 +123,10 @@ export default function GroceryList({ adults = 2, kids = 2, leftovers = true, ex
   const GROCERY = getGrocery(week);
   const allItems = Object.values(GROCERY).flat();
 
-  // Reset checked items when week changes
+  // Reset checked items when anything changes the shopping list
   useEffect(() => {
     setChecked(new Set());
-  }, [week]);
+  }, [week, adults, kids, leftovers, excludedTags]);
 
   // Filter out items whose meal tag matches an excluded day
   const isExcluded = (entry) => {
