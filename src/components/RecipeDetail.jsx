@@ -205,13 +205,13 @@ export default function RecipeDetail({ recipe }) {
 
         {/* ═══ SPLIT COOK VIEW ═══ */}
         {isSplit ? (
-          <SplitCookView recipe={recipe} />
+          <SplitCookView recipe={recipe} scale={scale} />
         ) : (
           /* ═══ STANDARD VIEW ═══ */
           <>
             <section className="mt-8">
               <h2 className="text-xl font-bold text-white mb-3">Ingredients</h2>
-              <IngredientList items={recipe.ingredients} />
+              <IngredientList items={recipe.ingredients} scale={scale} />
             </section>
             <section className="mt-8">
               <h2 className="text-xl font-bold text-white mb-3">Method</h2>
@@ -356,7 +356,7 @@ export default function RecipeDetail({ recipe }) {
    SPLIT COOK VIEW
    ════════════════════════════════════════════ */
 
-function SplitCookView({ recipe }) {
+function SplitCookView({ recipe, scale = 1 }) {
   const sc = recipe.splitCook;
   const [kidOption, setKidOption] = useState(0);
   const hasKidOptions = sc.kid.options && sc.kid.options.length > 0;
@@ -368,7 +368,7 @@ function SplitCookView({ recipe }) {
         <h2 className="text-xl font-bold text-white mb-3">
           Shared Ingredients
         </h2>
-        <IngredientList items={sc.sharedIngredients} />
+        <IngredientList items={sc.sharedIngredients} scale={scale} />
       </section>
 
       {/* Adult + Kid ingredients side by side */}
@@ -379,7 +379,7 @@ function SplitCookView({ recipe }) {
               {sc.adult.label}
             </h3>
           </div>
-          <IngredientList items={sc.adult.extraIngredients} accent="red" />
+          <IngredientList items={sc.adult.extraIngredients} accent="red" scale={scale} />
           <div className="flex gap-3 mt-2">
             <MiniStat label="Protein" value={`${sc.adult.protein}g`} />
             <MiniStat label="Cal" value={sc.adult.calories} />
@@ -413,10 +413,11 @@ function SplitCookView({ recipe }) {
               <IngredientList
                 items={sc.kid.options[kidOption].extraIngredients}
                 accent="green"
+                scale={scale}
               />
             </>
           ) : (
-            <IngredientList items={sc.kid.extraIngredients || []} accent="green" />
+            <IngredientList items={sc.kid.extraIngredients || []} accent="green" scale={scale} />
           )}
           {sc.kid.protein && (
             <div className="flex gap-3 mt-2">
@@ -613,7 +614,25 @@ function StepList({ steps, startAt = 1, accent }) {
   );
 }
 
-function IngredientList({ items, accent }) {
+function scaleIngredientText(text, scale) {
+  if (scale === 1) return text;
+  // Match leading numbers like "24 oz", "1.25 lb", "2-2.5 cups", "1/2 cup"
+  return text.replace(/^(\d+(?:\.\d+)?(?:\s*[-–]\s*\d+(?:\.\d+)?)?)/g, (match) => {
+    // Handle ranges like "2-2.5"
+    if (/[-–]/.test(match)) {
+      const parts = match.split(/[-–]/).map((p) => {
+        const n = parseFloat(p.trim()) * scale;
+        return Math.round(n * 10) / 10;
+      });
+      return parts.join("–");
+    }
+    const n = parseFloat(match) * scale;
+    const rounded = Math.round(n * 10) / 10;
+    return rounded % 1 === 0 ? rounded.toString() : rounded.toFixed(1);
+  });
+}
+
+function IngredientList({ items, accent, scale = 1 }) {
   const headerColor =
     accent === "red"
       ? "text-red-400"
@@ -643,7 +662,8 @@ function IngredientList({ items, accent }) {
               isNote ? "text-neutral-500 pl-8 italic" : "text-neutral-300"
             }`}
           >
-            {item}
+            {isHeader || isNote ? item : scaleIngredientText(item, scale)}
+            {scale !== 1 && !isHeader && !isNote && <span className="text-amber-500/40 text-[10px] ml-1">scaled</span>}
           </li>
         );
       })}

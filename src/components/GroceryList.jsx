@@ -2,112 +2,110 @@ import { useState, useCallback, useEffect } from "react";
 
 // Base quantities at 4 servings. Scalable items have baseQty (number) + unit.
 // Non-scalable items (pantry staples) have qty as string.
+// All baseQty values are calibrated for 4 servings (2 adults + 2 kids).
+// Items with baseQty scale with family size. Items with only qty are pantry
+// staples or "buy 1" items that don't need scaling (seasonings, oil, etc).
 const GROCERY_BY_WEEK = {
-  // Week 1: Mon=Beef Stir-fry (high carb), Wed=Chicken Sandwiches (low carb), Fri=Gnocchi (high carb)
+  // Week 1: Mon=Beef Stir-fry, Wed=Chicken Sandwiches, Fri=Gnocchi
   1: {
     "Protein": [
       { name: "Ground beef or sirloin", baseQty: 1.25, unit: "lb", meal: "Mon" },
-      { name: "Kirkland chicken breast fillets", qty: "4 fillets", meal: "Wed" },
+      { name: "Kirkland chicken breast fillets", baseQty: 4, unit: "fillets", meal: "Wed" },
       { name: "Chicken thighs or Del Real shredded", baseQty: 1.25, unit: "lb", meal: "Fri" },
-      { name: "Earth's Best mini meatballs", qty: "1 bag", meal: "Kid swap" },
+      { name: "Earth's Best mini meatballs", baseQty: 1, unit: "bag", meal: "Kid swap" },
     ],
     "Carbs": [
       { name: "Rice", baseQty: 14, unit: "oz dry", meal: "Mon" },
-      { name: "Bettergoods Keto Hamburger Buns", qty: "1 pack", meal: "Wed" },
-      { name: "Slider buns", qty: "1 pack", meal: "Wed kid" },
+      { name: "Bettergoods Keto Hamburger Buns", baseQty: 4, unit: "buns", meal: "Wed" },
+      { name: "Slider buns", baseQty: 4, unit: "buns", meal: "Wed kid" },
       { name: "Shelf-stable gnocchi", baseQty: 16, unit: "oz", meal: "Fri" },
     ],
     "Vegetables": [
       { name: "Broccoli", baseQty: 12, unit: "oz", meal: "Mon" },
-      { name: "Romaine lettuce", qty: "1 head", meal: "Wed" },
+      { name: "Romaine lettuce", baseQty: 1, unit: "head", meal: "Wed" },
       { name: "Pickles", qty: "1 jar", meal: "Wed" },
       { name: "Bell peppers", baseQty: 2.5, unit: "", meal: "Fri" },
       { name: "Onion", baseQty: 1, unit: "large", meal: "All" },
       { name: "Garlic", qty: "1 head", meal: "All" },
     ],
     "Sauce & Flavor": [
-      { name: "Soy sauce or tamari", qty: "", meal: "Mon" },
-      { name: "Roli Roti bone broth", qty: "32 oz carton", meal: "Mon" },
-      { name: "Liquid Chipotle or Money Mustard", qty: "", meal: "Wed" },
-      { name: "Dan-O's Outlaw seasoning", qty: "", meal: "Fri" },
-      { name: "Chili oil or sriracha", qty: "", meal: "All" },
-      { name: "Sesame oil", qty: "", meal: "Mon" },
-      { name: "Lime", qty: "1", meal: "Fri" },
+      { name: "Soy sauce or tamari", qty: "pantry", meal: "Mon" },
+      { name: "Roli Roti bone broth", baseQty: 32, unit: "oz", meal: "Mon" },
+      { name: "Liquid Chipotle or Money Mustard", baseQty: 4, unit: "servings", meal: "Wed" },
+      { name: "Dan-O's Outlaw seasoning", qty: "pantry", meal: "Fri" },
+      { name: "Chili oil or sriracha", qty: "pantry", meal: "All" },
+      { name: "Sesame oil", qty: "pantry", meal: "Mon" },
+      { name: "Lime", baseQty: 1, unit: "", meal: "Fri" },
     ],
     "Creamy Base": [
       { name: "Cottage cheese", baseQty: 12, unit: "oz", meal: "Fri" },
-      { name: "Fairlife fat-free milk", qty: "", meal: "Sauce base" },
+      { name: "Fairlife fat-free milk", qty: "pantry", meal: "Sauce base" },
     ],
     "Kid Mode": [
-      { name: "Rao's Alfredo sauce", qty: "15 oz jar", meal: "Fri kid" },
-      { name: "Ketchup", qty: "", meal: "Wed kid" },
-      { name: "Shredded mild cheese", qty: "", meal: "Kid topping" },
+      { name: "Rao's Alfredo sauce", baseQty: 15, unit: "oz jar", meal: "Fri kid" },
+      { name: "Ketchup", qty: "pantry", meal: "Wed kid" },
+      { name: "Shredded mild cheese", qty: "pantry", meal: "Kid topping" },
     ],
   },
-  // Week 2: Mon=Smash Tacos (low carb), Wed=Tri-tip Penne (high carb), Fri=Air Fryer Chicken (none)
+  // Week 2: Mon=Smash Tacos, Wed=Tri-tip Penne, Fri=Air Fryer Chicken
   2: {
     "Protein": [
       { name: "99/1 ground chicken", baseQty: 24, unit: "oz", meal: "Mon" },
       { name: "Tri-tip steak", baseQty: 1.25, unit: "lb", meal: "Wed" },
       { name: "Chicken thighs (boneless skinless)", baseQty: 2, unit: "lb", meal: "Fri" },
-      { name: "Earth's Best mini meatballs", qty: "1 bag", meal: "Kid swap" },
+      { name: "Earth's Best mini meatballs", baseQty: 1, unit: "bag", meal: "Kid swap" },
     ],
     "Carbs": [
-      { name: "Mission Zero Net Carbs tortillas", qty: "1 pack", meal: "Mon" },
-      { name: "Mission Street Tacos flour tortillas", qty: "1 pack", meal: "Mon kid" },
+      { name: "Mission Zero Net Carbs tortillas", baseQty: 8, unit: "tortillas", meal: "Mon" },
+      { name: "Mission Street Tacos flour tortillas", baseQty: 4, unit: "tortillas", meal: "Mon kid" },
       { name: "Penne pasta", baseQty: 8, unit: "oz", meal: "Wed" },
-      { name: "Dinner rolls", qty: "4 pack", meal: "Fri kid" },
+      { name: "Dinner rolls", baseQty: 4, unit: "rolls", meal: "Fri kid" },
     ],
     "Vegetables": [
-      { name: "Romaine lettuce", qty: "1 head", meal: "Mon" },
+      { name: "Romaine lettuce", baseQty: 1, unit: "head", meal: "Mon" },
       { name: "Spinach", baseQty: 3, unit: "oz", meal: "Wed" },
       { name: "Broccoli", baseQty: 16, unit: "oz", meal: "Fri" },
       { name: "Onion", baseQty: 1, unit: "large", meal: "All" },
       { name: "Garlic", qty: "1 head", meal: "All" },
     ],
     "Sauce & Flavor": [
-      { name: "Spiceology Taco seasoning", qty: "", meal: "Mon" },
-      { name: "Bolthouse Farms Caesar dressing", qty: "1 bottle", meal: "Mon" },
-      { name: "Roli Roti bone broth", qty: "32 oz carton", meal: "Wed" },
-      { name: "Dan-O's Outlaw seasoning", qty: "", meal: "Fri" },
-      { name: "Dan-O's Original seasoning", qty: "", meal: "Fri" },
-      { name: "Dan-O's Cheesoning", qty: "", meal: "Fri" },
-      { name: "Chili oil or sriracha", qty: "", meal: "All" },
-      { name: "Lime", qty: "2", meal: "Mon" },
-      { name: "Fresh cilantro", qty: "1 bunch", meal: "Mon" },
+      { name: "Spiceology Taco seasoning", qty: "pantry", meal: "Mon" },
+      { name: "Bolthouse Farms Caesar dressing", baseQty: 8, unit: "tbsp", meal: "Mon" },
+      { name: "Roli Roti bone broth", baseQty: 32, unit: "oz", meal: "Wed" },
+      { name: "Dan-O's Outlaw seasoning", qty: "pantry", meal: "Fri" },
+      { name: "Dan-O's Original seasoning", qty: "pantry", meal: "Fri" },
+      { name: "Dan-O's Cheesoning", qty: "pantry", meal: "Fri" },
+      { name: "Chili oil or sriracha", qty: "pantry", meal: "All" },
+      { name: "Lime", baseQty: 2, unit: "", meal: "Mon" },
+      { name: "Fresh cilantro", baseQty: 1, unit: "bunch", meal: "Mon" },
     ],
     "Creamy Base": [
-      { name: "Kraft Mild Cheddar shredded", qty: "4 oz", meal: "Mon" },
+      { name: "Kraft Mild Cheddar shredded", baseQty: 4, unit: "oz", meal: "Mon" },
       { name: "Cottage cheese", baseQty: 12, unit: "oz", meal: "Wed" },
-      { name: "Fairlife fat-free milk", qty: "", meal: "Sauce base" },
+      { name: "Fairlife fat-free milk", qty: "pantry", meal: "Sauce base" },
     ],
     "Kid Mode": [
-      { name: "Regular Caesar dressing", qty: "", meal: "Mon kid" },
-      { name: "Quest Tortilla Chips", qty: "1 bag", meal: "Mon" },
-      { name: "Regular chips", qty: "", meal: "Mon kid" },
-      { name: "Shredded mild cheese", qty: "", meal: "Kid topping" },
+      { name: "Regular Caesar dressing", qty: "pantry", meal: "Mon kid" },
+      { name: "Quest Tortilla Chips", baseQty: 1, unit: "bag", meal: "Mon" },
+      { name: "Regular chips", baseQty: 1, unit: "bag", meal: "Mon kid" },
+      { name: "Shredded mild cheese", qty: "pantry", meal: "Kid topping" },
     ],
   },
 };
 
 function getGrocery(week) { return GROCERY_BY_WEEK[week] || GROCERY_BY_WEEK[1]; }
 
-// Kids eat ~60% adult portions for scalable items
-const KID_SCALE = 0.6;
-
+// All baseQty values are for 4 servings. Scale = totalServings / 4.
+// Consistent with recipe pages and weekly planner — kids count as full servings.
 function scaleQty(entry, adults, kids) {
   if (entry.baseQty != null) {
-    // Base quantities are for 4 servings (2 adults + 2 kids standard)
-    const isKidItem = /kid/i.test(entry.meal);
-    const adultScale = adults / 2;
-    const kidScale = kids / 2;
-    const scaled = isKidItem
-      ? entry.baseQty * kidScale
-      : entry.baseQty * (adultScale + kidScale * KID_SCALE) / (1 + KID_SCALE);
+    const scale = (adults + kids) / 4;
+    const scaled = entry.baseQty * scale;
     const rounded = Math.round(scaled * 10) / 10;
     const display = rounded % 1 === 0 ? rounded.toString() : rounded.toFixed(1);
     return `~${display} ${entry.unit}`.trim();
   }
+  if (entry.qty === "pantry") return "";
   return entry.qty || "";
 }
 
