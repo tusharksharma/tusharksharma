@@ -153,4 +153,16 @@ for (const route of routes) {
   count++;
 }
 
-console.log(`Prerendered ${count} routes.`);
+// Auto-generate sitemap from the same routes
+const today = new Date().toISOString().split("T")[0];
+const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${routes.map((r) => {
+  const priority = r.path === "/" ? "1.0" : r.path.startsWith("/recipes/") ? "0.8" : r.path.startsWith("/cookbook/") && r.path !== "/cookbook" ? "0.7" : "0.9";
+  return `  <url><loc>${DOMAIN}${r.path}</loc><lastmod>${today}</lastmod><priority>${priority}</priority></url>`;
+}).join("\n")}
+</urlset>
+`;
+writeFileSync(join(DIST, "sitemap.xml"), sitemapXml);
+
+console.log(`Prerendered ${count} routes. Sitemap: ${routes.length} URLs.`);
