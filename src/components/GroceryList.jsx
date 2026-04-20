@@ -92,6 +92,46 @@ const GROCERY_BY_WEEK = {
       { name: "Shredded mild cheese", qty: "pantry", meal: "Kid topping" },
     ],
   },
+  // Week 3: Mon=Golden Rice Bowl (high), Wed=Chicken Sandwiches (low), Fri=Smash Tacos (low)
+  3: {
+    "Protein": [
+      { name: "Gary's QuickSteak Sirloin", baseQty: 1, unit: "pack", meal: "Mon" },
+      { name: "Kirkland chicken breast fillets", baseQty: 4, unit: "fillets", meal: "Wed" },
+      { name: "99/1 ground chicken", baseQty: 24, unit: "oz", meal: "Fri" },
+    ],
+    "Carbs": [
+      { name: "Rice", baseQty: 14, unit: "oz dry", meal: "Mon" },
+      { name: "Bettergoods Keto Hamburger Buns", baseQty: 4, unit: "buns", meal: "Wed" },
+      { name: "Slider buns", baseQty: 4, unit: "buns", meal: "Wed kid" },
+      { name: "Mission Zero Net Carbs tortillas", baseQty: 8, unit: "tortillas", meal: "Fri" },
+      { name: "Mission Street Tacos flour tortillas", baseQty: 4, unit: "tortillas", meal: "Fri kid" },
+    ],
+    "Vegetables": [
+      { name: "Romaine lettuce", baseQty: 1, unit: "head", meal: "Fri" },
+      { name: "Pickles", qty: "1 jar", meal: "Wed" },
+      { name: "Onion", baseQty: 1, unit: "large", meal: "All" },
+      { name: "Garlic", qty: "1 head", meal: "All" },
+    ],
+    "Sauce & Flavor": [
+      { name: "Chicken bone broth", baseQty: 3, unit: "cups", meal: "Mon" },
+      { name: "Kirkland Organic Ghee", qty: "pantry", meal: "Mon" },
+      { name: "Turmeric", qty: "pantry", meal: "Mon" },
+      { name: "Liquid Chipotle or Money Mustard", baseQty: 4, unit: "servings", meal: "Mon + Wed" },
+      { name: "Spiceology Taco seasoning", qty: "pantry", meal: "Fri" },
+      { name: "Bolthouse Farms Caesar dressing", baseQty: 8, unit: "tbsp", meal: "Fri" },
+      { name: "Lime", baseQty: 2, unit: "", meal: "Mon + Fri" },
+      { name: "Fresh cilantro", baseQty: 1, unit: "bunch", meal: "Mon + Fri" },
+    ],
+    "Creamy Base": [
+      { name: "Kraft Mild Cheddar shredded", baseQty: 4, unit: "oz", meal: "Fri" },
+    ],
+    "Kid Mode": [
+      { name: "Ketchup", qty: "pantry", meal: "Wed kid" },
+      { name: "Regular Caesar dressing", qty: "pantry", meal: "Fri kid" },
+      { name: "Quest Tortilla Chips", baseQty: 1, unit: "bag", meal: "Fri" },
+      { name: "Regular chips", baseQty: 1, unit: "bag", meal: "Fri kid" },
+    ],
+  },
 };
 
 function getGrocery(week) { return GROCERY_BY_WEEK[week] || GROCERY_BY_WEEK[1]; }
