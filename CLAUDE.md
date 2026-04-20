@@ -72,6 +72,48 @@ When adding to `src/data/cookbook.js` (sauces, breakfasts, desserts, quickLunche
 - `useMeta` hook updates client-side meta during SPA navigation
 - Recipe pages get JSON-LD `@type: Recipe` schema with nutrition data
 
+## Image Enhancement Prompts (Gemini)
+
+When a new recipe is added, generate and share these prompts for the user to run through Gemini image enhancement. Replace `{dish}`, `{protein}`, and `{sauce}` with the actual recipe details.
+
+**IMPORTANT**: Always use "Transform this into..." to get Gemini to restyle the scene, not just color-correct.
+
+### 1. Hero (plated dish)
+```
+Transform this into professional overhead food photography. A white bowl on a wooden cutting board, white marble countertop. The bowl has {dish description — e.g., "bright golden turmeric rice topped with thinly shaved seared beef strips, drizzled with chipotle sauce"}. Garnished with fresh cilantro and a lemon wedge. Small garnish bowls nearby. Warm natural side lighting from a window, soft shadows. Linen napkin to one side. Clean, editorial, appetizing food blog style.
+```
+
+### 2. Ingredient flat lay
+```
+Transform this into top-down flat lay food photography. All ingredients for {recipe name} neatly arranged on a wooden cutting board, white marble background. Include product packaging where visible. Warm daylight, minimal shadows. Clean, organized, editorial food blog style. Space between each ingredient for clarity.
+```
+
+### 3. Cooking action (searing/sauteing)
+```
+Transform this into professional food photography. {Protein} searing in a stainless steel pan on a clean white marble countertop next to the stovetop. Visible steam rising. Warm golden side lighting from a window. Shallow depth of field — pan sharp, background blurred. Small bowl of salt and fresh herb sprig beside the pan. Linen towel to one side. Editorial food blog style.
+```
+
+### 4. Process shot (two pans / mid-cook)
+```
+Transform this into overhead food photography. Two pans on a wooden cutting board on a white marble countertop — one with {component 1}, one with {component 2}. Small bowls of garnish nearby. Warm natural daylight from above. Clean, minimal styling. Professional food blog aesthetic.
+```
+
+### 5. Split plate (adult vs kid)
+```
+Overhead food photography of two white bowls side by side on a wooden cutting board, white marble countertop. Left bowl (larger): {adult plate description with sauce and garnish}. Right bowl (smaller): {kid plate description — plain, no sauce}. Small garnish bowls between them. Warm natural daylight. Clean editorial style. The contrast tells the story — same meal, different plates.
+```
+
+### 6. Sauce/condiment close-up
+```
+Transform this into close-up food photography. A small ceramic ramekin of {sauce name} on a wooden surface, white marble background. A spoon resting in the sauce. Warm side lighting, shallow depth of field. The sauce should look creamy and appetizing. Professional food blog style.
+```
+
+### Key rules for prompts:
+- Always say **"thinly shaved/sliced"** for steak — prevents Gemini from generating thick cuts
+- Always specify **"white marble countertop + wooden cutting board"** for consistency across the site
+- Always include **"warm natural side lighting from a window"** — this is the signature look
+- Use **"Transform this into..."** not **"Enhance this photo..."** — the former restyls, the latter barely changes anything
+
 ## Code Style
 
 - `npm run lint` must pass (eslint)
