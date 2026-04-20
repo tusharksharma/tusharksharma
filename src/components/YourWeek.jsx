@@ -15,7 +15,7 @@ const WEEKS = {
   //   Current: 1 high + 1 low + 1 moderate per week.
   // ──────────────────────────────────────────────────────────
   1: {
-    label: "Week 1",
+    label: "Plan A",
     subtitle: "Stir-fry, Chicken Sandwiches, Gnocchi",
     cookDays: [
       { day: "Monday", label: "Fast Win", vibe: "Start easy — lowest friction dinner of the week", id: 4, time: "25 min", reheats: true, adult: "Spicy soy-sesame, charred broccoli, chili oil", kid: "Mild soy, broccoli on side, meatballs", needs: ["Beef", "Broccoli", "Rice", "Soy sauce", "Bone broth"], carbLevel: "high" },
@@ -24,7 +24,7 @@ const WEEKS = {
     ],
   },
   2: {
-    label: "Week 2",
+    label: "Plan B",
     subtitle: "Smash Tacos, Tri-tip Penne, Air Fryer Chicken",
     cookDays: [
       { day: "Monday", label: "Smash Night", vibe: "Start easy — crispy smash tacos, Caesar finish, 15 min", id: 22, time: "15 min", reheats: true, adult: "Keto tortilla, Caesar, crushed Quest chips", kid: "Street taco tortilla, simple taco, chips on side", needs: ["Ground chicken", "Cheddar", "Keto tortillas", "Romaine", "Caesar dressing"], carbLevel: "low" },
@@ -33,7 +33,7 @@ const WEEKS = {
     ],
   },
   3: {
-    label: "Week 3",
+    label: "Plan C",
     subtitle: "Golden Rice Bowl, Chicken Sandwiches, Smash Tacos",
     cookDays: [
       { day: "Monday", label: "System Meal", vibe: "Start easy — golden rice reheats all week, steak is fresh in 10 min", id: 24, time: "25 min", reheats: true, adult: "Golden turmeric rice, seared steak, chipotle drizzle", kid: "Rice + steak, no sauce — rice already has flavor", needs: ["Rice", "Bone broth", "Gary's QuickSteak", "Ghee", "Turmeric"], carbLevel: "high" },
@@ -191,28 +191,30 @@ export default function YourWeek() {
       <div className="max-w-3xl mx-auto px-4 py-16">
         {/* Header */}
         <div className="text-center mb-6">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-amber-500 mb-2">This Week</p>
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-amber-500 mb-2">Sample Weekly Plans</p>
           <h2 className="text-3xl font-black text-white">3 Dinners. 1 Grocery Run.</h2>
-          <p className="text-neutral-400 text-sm mt-2">Pick a week, follow the plan, shop once.</p>
-          <p className="text-neutral-600 text-[10px] mt-1">~30 min dinners. Beginner-friendly. Leftovers built in.</p>
+          <p className="text-neutral-400 text-sm mt-2">Pick a plan that fits your week. Each one is carb-balanced and grocery-ready.</p>
+          <p className="text-neutral-600 text-[10px] mt-1">Every plan mixes high-carb, low-carb, and keto meals so no week feels one-note.</p>
         </div>
 
-        {/* Week selector */}
-        <div className="flex items-center justify-center gap-2 mb-6">
-          {Object.entries(WEEKS).map(([num, w]) => (
-            <button
-              key={num}
-              onClick={() => handleWeekChange(Number(num))}
-              className={`px-4 py-2 rounded-lg text-xs font-bold transition-all cursor-pointer ${
-                week === Number(num)
-                  ? "bg-amber-500 text-black"
-                  : "bg-neutral-800 text-neutral-400 hover:bg-neutral-700"
-              }`}
-            >
-              {w.label}
-            </button>
-          ))}
-          <span className="text-neutral-600 text-[10px] ml-2">{currentWeek.subtitle}</span>
+        {/* Plan selector */}
+        <div className="flex flex-col items-center gap-2 mb-6">
+          <div className="flex items-center gap-2">
+            {Object.entries(WEEKS).map(([num, w]) => (
+              <button
+                key={num}
+                onClick={() => handleWeekChange(Number(num))}
+                className={`px-4 py-2 rounded-lg text-xs font-bold transition-all cursor-pointer ${
+                  week === Number(num)
+                    ? "bg-amber-500 text-black"
+                    : "bg-neutral-800 text-neutral-400 hover:bg-neutral-700"
+                }`}
+              >
+                {w.label}
+              </button>
+            ))}
+          </div>
+          <span className="text-neutral-600 text-[10px]">{currentWeek.subtitle}</span>
         </div>
 
         {/* Family size */}

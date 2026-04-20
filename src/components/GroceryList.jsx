@@ -229,7 +229,7 @@ export default function GroceryList({ adults = 2, kids = 2, leftovers = true, ex
       {/* Header */}
       <div className="px-5 py-4 border-b border-neutral-800">
         <div className="flex items-center justify-between mb-1">
-          <h3 className="text-sm font-bold text-white">Week {week} Grocery List</h3>
+          <h3 className="text-sm font-bold text-white">Plan {String.fromCharCode(64 + week)} Grocery List</h3>
           <button onClick={() => setIsOpen(false)} className="text-neutral-500 hover:text-neutral-300 text-xs cursor-pointer">Close</button>
         </div>
         <p className="text-neutral-500 text-xs">
