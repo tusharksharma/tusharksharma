@@ -8,37 +8,37 @@ const KID_OPTIONS = [0, 1, 2, 3];
 
 const WEEKS = {
   // ──────────────────────────────────────────────────────────
-  // BALANCE RULE: each week should mix carb levels.
-  //   carbLevel on each recipe: "high" (rice/pasta/gnocchi),
-  //   "low" (keto tortilla/bun), "none" (no starch).
-  //   Target: no week should be all-high or all-low.
-  //   Current: 1 high + 1 low + 1 moderate per week.
+  // Each plan has a clear intention so users know which to pick.
+  // Leftover days only show for meals where reheats: true.
   // ──────────────────────────────────────────────────────────
   1: {
-    label: "Plan A",
-    subtitle: "Stir-fry, Chicken Sandwiches, Gnocchi",
+    label: "Fastest Week",
+    description: "Every dinner done in 25 min or less. All reheat for next-day leftovers.",
+    subtitle: "Sandwiches, Smash Tacos, Air Fryer Chicken",
     cookDays: [
-      { day: "Monday", label: "Fast Win", vibe: "Start easy — lowest friction dinner of the week", id: 4, time: "25 min", reheats: true, adult: "Spicy soy-sesame, charred broccoli, chili oil", kid: "Mild soy, broccoli on side, meatballs", needs: ["Beef", "Broccoli", "Rice", "Soy sauce", "Bone broth"], carbLevel: "high" },
-      { day: "Wednesday", label: "Fast Food Night", vibe: "Midweek reset — crispy chicken sandwiches, better than drive-through", id: 23, time: "15 min", reheats: true, adult: "Keto bun, chipotle or Money Mustard, pickles", kid: "Slider buns, plain or ketchup", needs: ["Kirkland chicken fillets", "Keto buns", "Slider buns", "Sauce"], carbLevel: "low" },
-      { day: "Friday", label: "Comfort + Protein", vibe: "Finish strong — comfort food that earns its calories", id: 1, time: "30 min", reheats: false, adult: "Spicy fajita cream, peppers, chili oil", kid: "Rao's Alfredo or mild creamy", needs: ["Chicken", "Gnocchi", "Bell peppers", "Cottage cheese", "Dan-O's"], carbLevel: "high" },
+      { day: "Monday", label: "Fast Food Night", vibe: "15 min — crispy chicken sandwiches, better than drive-through", id: 23, time: "15 min", reheats: true, adult: "Keto bun, chipotle or Money Mustard, pickles", kid: "Slider buns, plain or ketchup", needs: ["Kirkland chicken fillets", "Keto buns", "Slider buns", "Sauce"], carbLevel: "low" },
+      { day: "Wednesday", label: "Smash Night", vibe: "15 min — crispy smash tacos, Caesar finish", id: 22, time: "15 min", reheats: true, adult: "Keto tortilla, Caesar, crushed Quest chips", kid: "Street taco tortilla, simple taco, chips on side", needs: ["Ground chicken", "Cheddar", "Keto tortillas", "Romaine", "Caesar dressing"], carbLevel: "low" },
+      { day: "Friday", label: "Hands-Off Win", vibe: "25 min — air fryer does the work, you don't", id: 21, time: "25 min", reheats: true, adult: "Outlaw Blackened chicken, cheesy broccoli, Money Mustard", kid: "Original seasoned chicken, broccoli, dinner roll", needs: ["Chicken thighs", "Broccoli", "Dan-O's", "Dinner rolls"], carbLevel: "none" },
     ],
   },
   2: {
-    label: "Plan B",
-    subtitle: "Smash Tacos, Tri-tip Penne, Air Fryer Chicken",
+    label: "Comfort Week",
+    description: "Hearty, kid-approved comfort food. Every meal reheats. All beef or steak.",
+    subtitle: "Stir-fry, Tri-tip Penne, Golden Rice Bowl",
     cookDays: [
-      { day: "Monday", label: "Smash Night", vibe: "Start easy — crispy smash tacos, Caesar finish, 15 min", id: 22, time: "15 min", reheats: true, adult: "Keto tortilla, Caesar, crushed Quest chips", kid: "Street taco tortilla, simple taco, chips on side", needs: ["Ground chicken", "Cheddar", "Keto tortillas", "Romaine", "Caesar dressing"], carbLevel: "low" },
-      { day: "Wednesday", label: "Cook Once, Win Twice", vibe: "Midweek reset — creamy pasta, weekend is handled", id: 2, time: "35 min", reheats: true, adult: "Chili cream sauce, Dan-O's, sliced tri-tip", kid: "Mild creamy penne, meatballs, cheese", needs: ["Tri-tip", "Penne", "Spinach", "Cottage cheese", "Beef broth"], carbLevel: "high" },
-      { day: "Friday", label: "Hands-Off Win", vibe: "Finish strong — air fryer does the work, you don't", id: 21, time: "25 min", reheats: true, adult: "Outlaw Blackened chicken, cheesy broccoli, Money Mustard", kid: "Original seasoned chicken, broccoli, dinner roll", needs: ["Chicken thighs", "Broccoli", "Dan-O's", "Dinner rolls"], carbLevel: "none" },
+      { day: "Monday", label: "Fast Win", vibe: "Start easy — lowest friction dinner of the week", id: 4, time: "25 min", reheats: true, adult: "Spicy soy-sesame, charred broccoli, chili oil", kid: "Mild soy, broccoli on side, meatballs", needs: ["Beef", "Broccoli", "Rice", "Soy sauce", "Bone broth"], carbLevel: "high" },
+      { day: "Wednesday", label: "Cook Once, Win Twice", vibe: "Midweek — creamy pasta, weekend is handled", id: 2, time: "35 min", reheats: true, adult: "Chili cream sauce, Dan-O's, sliced tri-tip", kid: "Mild creamy penne, meatballs, cheese", needs: ["Tri-tip", "Penne", "Spinach", "Cottage cheese", "Beef broth"], carbLevel: "high" },
+      { day: "Friday", label: "System Meal", vibe: "Golden rice reheats all week, steak is fresh in 10 min", id: 24, time: "25 min", reheats: true, adult: "Golden turmeric rice, seared steak, chipotle drizzle", kid: "Rice + steak, no sauce — rice already has flavor", needs: ["Rice", "Bone broth", "Gary's QuickSteak", "Ghee", "Turmeric"], carbLevel: "high" },
     ],
   },
   3: {
-    label: "Plan C",
-    subtitle: "Golden Rice Bowl, Chicken Sandwiches, Smash Tacos",
+    label: "Mix It Up",
+    description: "Different style every night. Gnocchi is best fresh (no Saturday leftovers).",
+    subtitle: "Gnocchi, Chicken Sandwiches, Golden Rice Bowl",
     cookDays: [
-      { day: "Monday", label: "System Meal", vibe: "Start easy — golden rice reheats all week, steak is fresh in 10 min", id: 24, time: "25 min", reheats: true, adult: "Golden turmeric rice, seared steak, chipotle drizzle", kid: "Rice + steak, no sauce — rice already has flavor", needs: ["Rice", "Bone broth", "Gary's QuickSteak", "Ghee", "Turmeric"], carbLevel: "high" },
-      { day: "Wednesday", label: "Fast Food Night", vibe: "Midweek reset — crispy chicken sandwiches, better than drive-through", id: 23, time: "15 min", reheats: true, adult: "Keto bun, chipotle or Money Mustard, pickles", kid: "Slider buns, plain or ketchup", needs: ["Kirkland chicken fillets", "Keto buns", "Slider buns", "Sauce"], carbLevel: "low" },
-      { day: "Friday", label: "Smash Night", vibe: "Finish strong — crispy smash tacos, Caesar finish", id: 22, time: "15 min", reheats: true, adult: "Keto tortilla, Caesar, crushed Quest chips", kid: "Street taco tortilla, simple taco, chips on side", needs: ["Ground chicken", "Cheddar", "Keto tortillas", "Romaine", "Caesar dressing"], carbLevel: "low" },
+      { day: "Monday", label: "Comfort + Protein", vibe: "Crispy gnocchi, creamy sauce — comfort that earns its calories", id: 1, time: "30 min", reheats: false, adult: "Spicy fajita cream, peppers, chili oil", kid: "Rao's Alfredo or mild creamy", needs: ["Chicken", "Gnocchi", "Bell peppers", "Cottage cheese", "Dan-O's"], carbLevel: "high" },
+      { day: "Wednesday", label: "Fast Food Night", vibe: "15 min — crispy chicken sandwiches, better than drive-through", id: 23, time: "15 min", reheats: true, adult: "Keto bun, chipotle or Money Mustard, pickles", kid: "Slider buns, plain or ketchup", needs: ["Kirkland chicken fillets", "Keto buns", "Slider buns", "Sauce"], carbLevel: "low" },
+      { day: "Friday", label: "System Meal", vibe: "Golden rice reheats all week, steak is fresh in 10 min", id: 24, time: "25 min", reheats: true, adult: "Golden turmeric rice, seared steak, chipotle drizzle", kid: "Rice + steak, no sauce — rice already has flavor", needs: ["Rice", "Bone broth", "Gary's QuickSteak", "Ghee", "Turmeric"], carbLevel: "high" },
     ],
   },
 };
@@ -193,8 +193,7 @@ export default function YourWeek() {
         <div className="text-center mb-6">
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-amber-500 mb-2">Sample Weekly Plans</p>
           <h2 className="text-3xl font-black text-white">3 Dinners. 1 Grocery Run.</h2>
-          <p className="text-neutral-400 text-sm mt-2">Pick a plan that fits your week. Each one is carb-balanced and grocery-ready.</p>
-          <p className="text-neutral-600 text-[10px] mt-1">Every plan mixes high-carb, low-carb, and keto meals so no week feels one-note.</p>
+          <p className="text-neutral-400 text-sm mt-2">Pick the plan that matches your week. Each has its own grocery list.</p>
         </div>
 
         {/* Plan selector */}
@@ -214,7 +213,10 @@ export default function YourWeek() {
               </button>
             ))}
           </div>
-          <span className="text-neutral-600 text-[10px]">{currentWeek.subtitle}</span>
+          <div className="text-center">
+            <span className="text-neutral-400 text-xs">{currentWeek.subtitle}</span>
+            {currentWeek.description && <p className="text-neutral-600 text-[10px] mt-1">{currentWeek.description}</p>}
+          </div>
         </div>
 
         {/* Family size */}
@@ -310,19 +312,19 @@ export default function YourWeek() {
             <TimelineDot type="cook" enabled={enabledMeals.Mon} />
             <CookDay {...currentWeek.cookDays[0]} servings={servings} enabled={enabledMeals.Mon} onToggle={() => toggleMeal("Mon")} />
             <TimelineDot type="leftover" enabled={enabledMeals.Mon} />
-            <LeftoverDay day="Tuesday" meal={leftoverMsgs.tue} visible={leftovers && enabledMeals.Mon} />
+            <LeftoverDay day="Tuesday" meal={leftoverMsgs.tue} visible={leftovers && enabledMeals.Mon && currentWeek.cookDays[0].reheats} />
 
             {/* Wednesday */}
             <TimelineDot type="cook" enabled={enabledMeals.Wed} />
             <CookDay {...currentWeek.cookDays[1]} servings={servings} enabled={enabledMeals.Wed} onToggle={() => toggleMeal("Wed")} />
             <TimelineDot type="leftover" enabled={enabledMeals.Wed} />
-            <LeftoverDay day="Thursday" meal={leftoverMsgs.thu} visible={leftovers && enabledMeals.Wed} />
+            <LeftoverDay day="Thursday" meal={leftoverMsgs.thu} visible={leftovers && enabledMeals.Wed && currentWeek.cookDays[1].reheats} />
 
             {/* Friday */}
             <TimelineDot type="cook" enabled={enabledMeals.Fri} />
             <CookDay {...currentWeek.cookDays[2]} servings={servings} enabled={enabledMeals.Fri} onToggle={() => toggleMeal("Fri")} />
             <TimelineDot type="leftover" enabled={enabledMeals.Fri} />
-            <LeftoverDay day="Saturday" meal={leftoverMsgs.sat} visible={leftovers && enabledMeals.Fri} />
+            <LeftoverDay day="Saturday" meal={leftoverMsgs.sat} visible={leftovers && enabledMeals.Fri && currentWeek.cookDays[2].reheats} />
 
             {/* Sunday */}
             <TimelineDot type="flex" />
@@ -331,17 +333,23 @@ export default function YourWeek() {
         </div>
 
         {/* Weekly stats */}
-        <div className="mt-8 flex justify-center gap-4 text-xs text-neutral-500 flex-wrap">
-          <span><span className="text-amber-400 font-bold">~{Math.round(375 * servings / 4 * enabledCount / 3)}g protein</span> this week</span>
-          <span className="text-neutral-700">|</span>
-          <span><span className="text-white font-semibold">{enabledCount} cooks</span>, {leftovers ? "7 days covered" : `${enabledCount} dinners`}</span>
-          <span className="text-neutral-700">|</span>
-          <span>~30 min avg</span>
-        </div>
+        {(() => {
+          const dayKeys = ["Mon", "Wed", "Fri"];
+          const leftoverDays = leftovers ? currentWeek.cookDays.filter((d, i) => enabledMeals[dayKeys[i]] && d.reheats).length : 0;
+          return (
+            <div className="mt-8 flex justify-center gap-4 text-xs text-neutral-500 flex-wrap">
+              <span><span className="text-amber-400 font-bold">~{Math.round(375 * servings / 4 * enabledCount / 3)}g protein</span> this week</span>
+              <span className="text-neutral-700">|</span>
+              <span><span className="text-white font-semibold">{enabledCount} cooks</span>{leftovers ? ` + ${leftoverDays} leftover days` : ""}</span>
+              <span className="text-neutral-700">|</span>
+              <span>~30 min avg</span>
+            </div>
+          );
+        })()}
 
         {/* Grocery */}
         <div className="mt-10" id="grocery">
-          <GroceryList adults={adults} kids={kids} leftovers={leftovers} excludedTags={excludedTags} week={week} />
+          <GroceryList adults={adults} kids={kids} leftovers={leftovers} excludedTags={excludedTags} week={week} planLabel={currentWeek.label} />
         </div>
 
         {/* Sauce bridge */}
@@ -371,13 +379,23 @@ export default function YourWeek() {
         </div>
 
         {/* Completion */}
-        <div className="mt-6 text-center py-6 bg-amber-500/5 border border-amber-500/20 rounded-xl">
-          <p className="text-neutral-500 text-xs">Once you've shopped and checked everything off:</p>
-          <p className="text-amber-400 font-black text-base mt-1">
-            {leftovers ? "Zero food decisions left this week." : `${enabledCount} dinners sorted. Off-nights are on you.`}
-          </p>
-          <p className="text-neutral-600 text-[10px] mt-1">{leftovers ? "Cook days + leftover days. All handled." : "Turn on leftovers to cover the full week."}</p>
-        </div>
+        {(() => {
+          const dayKeys = ["Mon", "Wed", "Fri"];
+          const leftoverDays = leftovers ? currentWeek.cookDays.filter((d, i) => enabledMeals[dayKeys[i]] && d.reheats).length : 0;
+          const nonReheatDays = leftovers ? currentWeek.cookDays.filter((d, i) => enabledMeals[dayKeys[i]] && !d.reheats).length : 0;
+          return (
+            <div className="mt-6 text-center py-6 bg-amber-500/5 border border-amber-500/20 rounded-xl">
+              <p className="text-neutral-500 text-xs">Once you've shopped and checked everything off:</p>
+              <p className="text-amber-400 font-black text-base mt-1">
+                {enabledCount} dinners + {leftoverDays} leftover days handled.
+              </p>
+              <p className="text-neutral-600 text-[10px] mt-1">
+                {nonReheatDays > 0 && leftovers ? `${nonReheatDays} dinner best eaten fresh (no leftover day).` : ""}
+                {!leftovers ? "Turn on leftovers to cover more of the week." : ""}
+              </p>
+            </div>
+          );
+        })()}
 
         {/* Return hook */}
         <div className="mt-6 text-center bg-neutral-900/30 border border-neutral-800 rounded-xl py-5 px-4">
