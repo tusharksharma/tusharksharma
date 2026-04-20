@@ -12,8 +12,8 @@ const WEEKS = {
   // Leftover days only show for meals where reheats: true.
   // ──────────────────────────────────────────────────────────
   1: {
-    label: "Fastest Week",
-    description: "Every dinner done in 25 min or less. All reheat for next-day leftovers.",
+    label: "Week 1",
+    description: "Every dinner 25 min or less. All reheat for next-day leftovers.",
     subtitle: "Sandwiches, Smash Tacos, Air Fryer Chicken",
     cookDays: [
       { day: "Monday", label: "Fast Food Night", vibe: "15 min — crispy chicken sandwiches, better than drive-through", id: 23, time: "15 min", reheats: true, adult: "Keto bun, chipotle or Money Mustard, pickles", kid: "Slider buns, plain or ketchup", needs: ["Kirkland chicken fillets", "Keto buns", "Slider buns", "Sauce"], carbLevel: "low" },
@@ -22,8 +22,8 @@ const WEEKS = {
     ],
   },
   2: {
-    label: "Comfort Week",
-    description: "Hearty, kid-approved comfort food. Every meal reheats. All beef or steak.",
+    label: "Week 2",
+    description: "Hearty comfort food. All beef/steak. Every meal reheats.",
     subtitle: "Stir-fry, Tri-tip Penne, Golden Rice Bowl",
     cookDays: [
       { day: "Monday", label: "Fast Win", vibe: "Start easy — lowest friction dinner of the week", id: 4, time: "25 min", reheats: true, adult: "Spicy soy-sesame, charred broccoli, chili oil", kid: "Mild soy, broccoli on side, meatballs", needs: ["Beef", "Broccoli", "Rice", "Soy sauce", "Bone broth"], carbLevel: "high" },
@@ -32,8 +32,8 @@ const WEEKS = {
     ],
   },
   3: {
-    label: "Mix It Up",
-    description: "Different style every night. Gnocchi is best fresh (no Saturday leftovers).",
+    label: "Week 3",
+    description: "Different style every night. Gnocchi is best fresh — no leftover day for it.",
     subtitle: "Gnocchi, Chicken Sandwiches, Golden Rice Bowl",
     cookDays: [
       { day: "Monday", label: "Comfort + Protein", vibe: "Crispy gnocchi, creamy sauce — comfort that earns its calories", id: 1, time: "30 min", reheats: false, adult: "Spicy fajita cream, peppers, chili oil", kid: "Rao's Alfredo or mild creamy", needs: ["Chicken", "Gnocchi", "Bell peppers", "Cottage cheese", "Dan-O's"], carbLevel: "high" },
