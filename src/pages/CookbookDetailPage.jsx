@@ -2,6 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import { sauces, desserts, breakfasts, quickLunches } from "../data/cookbook";
 import { liveRecipes } from "../data/recipes";
 import useMeta from "../hooks/useMeta";
+import track from "../hooks/useTrack";
 
 const allItems = [...sauces, ...breakfasts, ...desserts, ...quickLunches];
 
@@ -173,7 +174,7 @@ export default function CookbookDetailPage() {
                   </div>
                 );
                 return b.url ? (
-                  <a key={i} href={b.url} target="_blank" rel="noopener noreferrer" className="block">{inner}</a>
+                  <a key={i} href={b.url} target="_blank" rel="noopener noreferrer" onClick={() => track("brand_click", { brand: b.name, item: b.item, url: b.url })} className="block">{inner}</a>
                 ) : (
                   <div key={i}>{inner}</div>
                 );

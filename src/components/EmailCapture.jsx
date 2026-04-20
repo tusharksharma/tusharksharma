@@ -30,7 +30,7 @@ export default function EmailCapture() {
       });
 
       if (res.ok) {
-        track("email_capture", { email });
+        track("email_capture");
         setSubmitted(true);
       } else {
         const data = await res.json().catch(() => ({}));

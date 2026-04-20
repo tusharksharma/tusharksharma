@@ -332,7 +332,7 @@ export default function YourWeek() {
         <div className="mt-8 flex justify-center gap-4 text-xs text-neutral-500 flex-wrap">
           <span><span className="text-amber-400 font-bold">~{Math.round(375 * servings / 4 * enabledCount / 3)}g protein</span> this week</span>
           <span className="text-neutral-700">|</span>
-          <span><span className="text-white font-semibold">{enabledCount} cooks</span>, 7 days covered</span>
+          <span><span className="text-white font-semibold">{enabledCount} cooks</span>, {leftovers ? "7 days covered" : `${enabledCount} dinners`}</span>
           <span className="text-neutral-700">|</span>
           <span>~30 min avg</span>
         </div>
@@ -371,8 +371,10 @@ export default function YourWeek() {
         {/* Completion */}
         <div className="mt-6 text-center py-6 bg-amber-500/5 border border-amber-500/20 rounded-xl">
           <p className="text-neutral-500 text-xs">Once you've shopped and checked everything off:</p>
-          <p className="text-amber-400 font-black text-base mt-1">Zero food decisions left this week.</p>
-          <p className="text-neutral-600 text-[10px] mt-1">That's the point.</p>
+          <p className="text-amber-400 font-black text-base mt-1">
+            {leftovers ? "Zero food decisions left this week." : `${enabledCount} dinners sorted. Off-nights are on you.`}
+          </p>
+          <p className="text-neutral-600 text-[10px] mt-1">{leftovers ? "Cook days + leftover days. All handled." : "Turn on leftovers to cover the full week."}</p>
         </div>
 
         {/* Return hook */}
