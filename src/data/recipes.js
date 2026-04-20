@@ -1619,8 +1619,8 @@ const recipes = [
       sharedSteps: [
         { text: "FLAVOR BASE: Heat ghee in pot. Add frozen garlic cubes + frozen baby onions. Cook until soft and fragrant — not browned.", images: ["/images/garlic-rice-bowl/step1-ingredients.webp"] },
         { text: "BLOOM TURMERIC: Add turmeric + salt. Stir 30-60 seconds in the hot fat. This removes the raw spice taste.", images: ["/images/garlic-rice-bowl/step2-turmeric-bloom.webp"] },
-        { text: "COOK RICE: Add rinsed rice, pour in bone broth. Bring to boil, reduce to low, cover. Cook ~15 min until done." },
-        { text: "SEAR STEAK: High heat pan. Add frozen sliced steak directly. Break apart, cook 5-6 min. Salt to taste. Don't overcook." },
+        { text: "COOK RICE: Add rinsed rice, pour in bone broth. Bring to boil, reduce to low, cover. Cook ~15 min until done.", images: ["/images/garlic-rice-bowl/step4-rice-steak-done.webp"] },
+        { text: "SEAR STEAK: High heat pan. Add frozen sliced steak directly. Break apart, cook 5-6 min. Salt to taste. Don't overcook.", images: ["/images/garlic-rice-bowl/step3-steak-sear.webp"] },
       ],
       adult: {
         label: "Adult — Full Bowl + Sauce",
@@ -1679,8 +1679,8 @@ const recipes = [
     steps: [
       { text: "FLAVOR BASE: Heat ghee in pot. Add frozen garlic cubes + frozen baby onions. Cook until soft and fragrant.", images: ["/images/garlic-rice-bowl/step1-ingredients.webp"] },
       { text: "BLOOM TURMERIC: Add turmeric + salt. Stir 30-60 seconds in hot fat.", images: ["/images/garlic-rice-bowl/step2-turmeric-bloom.webp"] },
-      { text: "COOK RICE: Add rinsed rice + bone broth. Boil, reduce to low, cover 15 min." },
-      { text: "SEAR STEAK: High heat, frozen steak direct to pan. Break apart, 5-6 min. Salt to taste." },
+      { text: "COOK RICE: Add rinsed rice + bone broth. Boil, reduce to low, cover 15 min.", images: ["/images/garlic-rice-bowl/step4-rice-steak-done.webp"] },
+      { text: "SEAR STEAK: High heat, frozen steak direct to pan. Break apart, 5-6 min. Salt to taste.", images: ["/images/garlic-rice-bowl/step3-steak-sear.webp"] },
       { text: "BUILD: Rice in bowl, steak on top, light chipotle drizzle. Cilantro + lemon if finishing." },
     ],
     brands: [
