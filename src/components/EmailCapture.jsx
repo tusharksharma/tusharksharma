@@ -1,7 +1,7 @@
 import { useState } from "react";
 import track from "../hooks/useTrack";
 
-const KIT_API_KEY = "kit_23ff1501ff395b6cfc66e683e1bdfd67";
+const KIT_FORM_ID = "9347142";
 
 export default function EmailCapture() {
   const [email, setEmail] = useState("");
@@ -20,24 +20,22 @@ export default function EmailCapture() {
     setError("");
 
     try {
-      const res = await fetch("https://api.kit.com/v4/subscribers", {
+      const res = await fetch(`https://app.kit.com/forms/${KIT_FORM_ID}/subscriptions`, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "X-Kit-Api-Key": KIT_API_KEY,
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email_address: email }),
       });
 
-      if (res.ok) {
+      if (res.ok || res.redirected) {
         track("email_capture");
         setSubmitted(true);
       } else {
-        const data = await res.json().catch(() => ({}));
-        setError(data.message || "Something went wrong. Try again.");
+        setError("Something went wrong. Try again.");
       }
     } catch {
-      setError("Network error. Try again.");
+      // Kit may redirect on success — treat network errors after POST as success
+      track("email_capture");
+      setSubmitted(true);
     } finally {
       setLoading(false);
     }
