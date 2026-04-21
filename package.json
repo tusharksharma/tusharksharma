@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node scripts/prerender.js",
+    "build": "vite build && node scripts/validate-weeks.js && node scripts/prerender.js",
     "deploy": "npm run build && npm run lint && git add dist/ && echo 'dist/ staged — ready to commit and push'",
     "lint": "eslint .",
     "preview": "vite preview"

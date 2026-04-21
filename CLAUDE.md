@@ -21,8 +21,26 @@ When a new dinner recipe is added to `src/data/recipes.js`:
    - Use `qty: "pantry"` for seasonings/oils that don't need scaling
    - Whole-unit items (head, bunch, bag, buns, fillets, etc.) always round up via `WHOLE_UNITS`
    - Tag each item with the correct day (`Mon`, `Wed`, `Fri`) and `kid` suffix for kid-only items
-6. **Run `npm run build`** — this builds the site AND prerenders all routes + generates the sitemap
+6. **Run `npm run build`** — this builds the site AND prerenders all routes + generates the sitemap. The build includes a planner/grocery sync validation that will fail if they don't match.
 7. **Commit dist/** — Vercel serves committed dist directly (free tier can't run npm install)
+
+## CRITICAL: Planner ↔ Grocery Sync Rule
+
+**This is the #1 source of bugs in this codebase.** The weekly planner (`YourWeek.jsx` WEEKS object) and the grocery list (`GroceryList.jsx` GROCERY_BY_WEEK object) are defined separately. They MUST stay in sync.
+
+**Every time you change WEEKS in YourWeek.jsx, you MUST also update GROCERY_BY_WEEK in GroceryList.jsx.** No exceptions.
+
+Checklist when modifying any week:
+1. Read the planner week — note the recipe ID and day for each slot (Mon/Wed/Fri)
+2. Verify GROCERY_BY_WEEK[N] has the correct ingredients for those specific recipes on those specific days
+3. Verify every item's `meal` tag matches the correct day (e.g., if Sandwiches moved from Wed to Mon, all sandwich ingredients must say `meal: "Mon"`)
+4. Run `npm run build` — the validation script will catch mismatches
+5. **Do NOT rely on memory.** Always re-read both files side by side before committing.
+
+Common mistakes that have caused bugs:
+- Shuffling planner meals but leaving grocery days unchanged
+- Adding a new week to the planner but forgetting the grocery list
+- Changing a recipe's day slot without updating ingredient day tags
 
 ## Adding a Cookbook Recipe (Power-Ups)
 
