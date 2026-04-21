@@ -7,6 +7,7 @@ import CookbookPage from "./pages/CookbookPage";
 import CookbookDetailPage from "./pages/CookbookDetailPage";
 import DinnersPage from "./pages/DinnersPage";
 import AboutPage from "./pages/AboutPage";
+import InstallPrompt from "./components/InstallPrompt";
 import FanPage from "./pages/FanPage";
 
 function ScrollToTop() {
@@ -49,6 +50,7 @@ function App() {
         <Route path="/cookbook/:id" element={<CookbookDetailPage />} />
         <Route path="/recipes/:slug" element={<RecipePage />} />
       </Routes>
+      <InstallPrompt />
     </ErrorBoundary>
   );
 }
