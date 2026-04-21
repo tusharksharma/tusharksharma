@@ -1681,7 +1681,7 @@ const recipes = [
       { text: "BLOOM TURMERIC: Add turmeric + salt. Stir 30-60 seconds in hot fat.", images: ["/images/garlic-rice-bowl/step2-turmeric-bloom.webp"] },
       { text: "COOK RICE: Add rinsed rice + bone broth. Boil, reduce to low, cover 15 min.", images: ["/images/garlic-rice-bowl/step4-rice-steak-done.webp"] },
       { text: "SEAR STEAK: High heat, frozen steak direct to pan. Break apart, 5-6 min. Salt to taste.", images: ["/images/garlic-rice-bowl/step3-steak-sear.webp"] },
-      { text: "BUILD: Rice in bowl, steak on top, light chipotle drizzle. Cilantro + lemon if finishing." },
+      { text: "BUILD: Rice in bowl, steak on top, light chipotle drizzle. Cilantro + lemon if finishing.", images: ["/images/garlic-rice-bowl/step5-split-plate.webp"] },
     ],
     brands: [
       { name: "Gary's QuickSteak", item: "100% Sirloin Thinly Sliced Beef", why: "Cooks from frozen in 5 min — real sirloin, not processed. Thin slices sear fast and stay tender.", image: "/images/brands/garys-quicksteak.png", url: "https://garysquicksteak.com/sirloin/" },
