@@ -298,7 +298,7 @@ export const desserts = [
       "1/8 tsp Bob's Red Mill Guar Gum",
       "Pinch of salt",
       "--- FLAVOR LAYER ---",
-      "1 tbsp Sicanio Pistachio Sweet Cream",
+      "1 tbsp Sicania Pistachio Sweet Cream",
       "--- CRUNCH ---",
       "5g toasted kataifi",
     ],
@@ -319,9 +319,9 @@ export const desserts = [
     brands: [
       { name: "Fairlife", item: "2% Ultra-Filtered Milk", why: "Higher protein than regular milk, smooth blend, consistent results", image: "/images/brands/fairlife-milk.png", url: "https://fairlife.com/ultra-filtered-milk/2-percent-reduced-fat-milk/" },
       { name: "Opportuniteas", item: "Grass-Fed Whey Protein Isolate", why: "Dissolves clean, consistent protein per scoop — the base of every Creami pint", image: "/images/brands/opportuniteas-whey.png", url: "https://opportuniteas.com/products/opportuniteas-grass-fed-whey-protein-isolate" },
-      { name: "Ghirardelli", item: "100% Cocoa Dutch-Process", why: "Deep chocolate color and flavor — this is what makes the pint brown, not green" },
-      { name: "Bob's Red Mill", item: "Guar Gum", why: "Tiny amount prevents iciness — gives the Creami something to work with for smooth texture" },
-      { name: "Sicanio", item: "Pistachio Sweet Cream", why: "Real pistachio cream, not extract — swirl it in during the re-spin for actual flavor" },
+      { name: "Ghirardelli", item: "100% Cocoa Dutch-Process", why: "Deep chocolate color and flavor — this is what makes the pint brown, not green", image: "/images/brands/ghirardelli-cocoa.jpg", url: "https://www.ghirardelli.com/premium-baking-cocoa-100--unsweetened-cocoa-powder-8-oz-bag-61865" },
+      { name: "Bob's Red Mill", item: "Guar Gum", why: "Tiny amount prevents iciness — gives the Creami something to work with for smooth texture", image: "/images/brands/bobs-redmill-guar-gum.jpg", url: "https://www.bobsredmill.com/product/guar-gum" },
+      { name: "Sicania", item: "Pistachio Sweet Cream", why: "Real pistachio cream, not extract — swirl it in during the re-spin for actual flavor", image: "/images/brands/sicania-pistachio-cream.jpg", url: "https://www.sicaniafood.com/product/pistachio-sweet-cream-200g-sicania/" },
     ],
     mealPrep: {
       storage: "Freeze pints in advance — up to a week. Spin fresh when ready to eat.",
