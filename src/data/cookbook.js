@@ -317,7 +317,7 @@ export const desserts = [
       { problem: "Pistachio flavor is weak", fix: "Mix the pistachio cream IN during the re-spin, not just on top. It needs to be distributed." },
     ],
     brands: [
-      { name: "Fairlife", item: "2% Ultra-Filtered Milk", why: "Higher protein than regular milk, smooth blend, consistent results", image: "/images/brands/fairlife-milk.png", url: "https://fairlife.com/ultra-filtered-milk/2-percent-reduced-fat-milk/" },
+      { name: "Fairlife", item: "2% Reduced Fat Ultra-Filtered Milk", why: "The 2% fat matters here — gives the Creami body and creaminess that fat-free can't. Higher protein than regular milk.", image: "/images/brands/fairlife-milk.png", url: "https://fairlife.com/ultra-filtered-milk/2-percent-reduced-fat-milk/" },
       { name: "Opportuniteas", item: "Grass-Fed Whey Protein Isolate", why: "Dissolves clean, consistent protein per scoop — the base of every Creami pint", image: "/images/brands/opportuniteas-whey.png", url: "https://opportuniteas.com/products/opportuniteas-grass-fed-whey-protein-isolate" },
       { name: "Ghirardelli", item: "100% Cocoa Dutch-Process", why: "Deep chocolate color and flavor — this is what makes the pint brown, not green", image: "/images/brands/ghirardelli-cocoa.jpg", url: "https://www.ghirardelli.com/premium-baking-cocoa-100--unsweetened-cocoa-powder-8-oz-bag-61865" },
       { name: "Bob's Red Mill", item: "Guar Gum", why: "Tiny amount prevents iciness — gives the Creami something to work with for smooth texture", image: "/images/brands/bobs-redmill-guar-gum.jpg", url: "https://www.bobsredmill.com/product/guar-gum" },
