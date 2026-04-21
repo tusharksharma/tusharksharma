@@ -194,9 +194,9 @@ export const breakfasts = [
       { problem: "Boring", fix: "Add mustard, hot honey, or everything bagel seasoning. The base is intentionally plain so you can customize." },
     ],
     brands: [
-      { name: "Sola", item: "Plain Bagels", why: "15g protein per bagel at 110 cal — the bagel IS the protein source, not just a carb carrier" },
-      { name: "365", item: "Organic Black Forest Uncured Ham", why: "Clean deli ham, no nitrates, consistent slices — Whole Foods brand" },
-      { name: "Philadelphia", item: "Whipped Original Cream Cheese", why: "Whipped = half the calories of regular cream cheese, spreads easier" },
+      { name: "Sola", item: "Plain Bagels", why: "15g protein per bagel at 110 cal — the bagel IS the protein source, not just a carb carrier", image: "/images/brands/sola-plain-bagels.png", url: "https://thesolacompany.com/products/plain-bagels" },
+      { name: "365", item: "Organic Black Forest Uncured Ham", why: "Clean deli ham, no nitrates, consistent slices — Whole Foods brand", image: "/images/brands/365-ham.jpg", url: "https://www.wholefoodsmarket.com/product/365-everyday-value-organic-uncured-black-forest-ham-b074h7j2vt" },
+      { name: "Philadelphia", item: "Whipped Original Cream Cheese", why: "Whipped = half the calories of regular cream cheese, spreads easier", image: "/images/brands/philadelphia-whipped.jpg", url: "https://www.walmart.com/ip/Philadelphia-Original-Whipped-Cream-Cheese-Spread-8-oz-Tub/10295591" },
     ],
     mealPrep: {
       storage: "N/A — 3 minutes to make.",
