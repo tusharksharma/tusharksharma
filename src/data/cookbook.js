@@ -158,6 +158,52 @@ export const breakfasts = [
       reheat: "N/A.",
     },
   },
+  {
+    id: "high-protein-ham-bagel",
+    title: "High-Protein Ham Bagel",
+    tagline: "~30g protein in 3 minutes. No cooking.",
+    heroImage: "/images/ham-bagel-hero.webp",
+    prepImage: "/images/ham-bagel-prep.webp",
+    flavorProfile: "Savory, creamy, simple — deli-style but macro-smart",
+    calories: 215,
+    caloriesPerServing: 215,
+    protein: 30,
+    servings: 1,
+    time: "3 min",
+    bestFor: ["Breakfast", "Quick meal", "No-cook", "High protein"],
+    useThisWhen: "You don't feel like cooking but still need to hit protein. 3 minutes, no heat, no mess.",
+    flavorTarget: "Sola bagel gives the carb base with 15g protein built in. Ham stacks the rest. Whipped cream cheese ties it together.",
+    splitNote: {
+      adult: "Full recipe as written. Optional: toast the bagel, add mustard or hot honey for a flavor upgrade.",
+      kid: "Same build works for kids. Skip the mustard. They'll eat it plain.",
+    },
+    ingredients: [
+      "1 Sola Plain Bagel (110 cal, 15g protein)",
+      "3 slices 365 Organic Black Forest Uncured Ham (~60 cal)",
+      "1 tbsp Philadelphia Whipped Cream Cheese (~35-40 cal)",
+    ],
+    steps: [
+      "SLICE: Cut the Sola bagel in half.",
+      "SPREAD: 1 tbsp whipped cream cheese on one or both halves.",
+      "STACK: Layer 3 slices of ham — stack it, don't flatten it.",
+      "EAT: Close and eat. Optional: toast first for better texture.",
+    ],
+    troubleshooting: [
+      { problem: "Bagel is too dense / dry", fix: "Toast it. Sola bagels are better toasted — the texture improves a lot." },
+      { problem: "Not filling enough", fix: "Add a 4th slice of ham or pair with fruit. The bagel is only 110 cal — there's calorie room." },
+      { problem: "Boring", fix: "Add mustard, hot honey, or everything bagel seasoning. The base is intentionally plain so you can customize." },
+    ],
+    brands: [
+      { name: "Sola", item: "Plain Bagels", why: "15g protein per bagel at 110 cal — the bagel IS the protein source, not just a carb carrier" },
+      { name: "365", item: "Organic Black Forest Uncured Ham", why: "Clean deli ham, no nitrates, consistent slices — Whole Foods brand" },
+      { name: "Philadelphia", item: "Whipped Original Cream Cheese", why: "Whipped = half the calories of regular cream cheese, spreads easier" },
+    ],
+    mealPrep: {
+      storage: "N/A — 3 minutes to make.",
+      lasts: "N/A — eat immediately.",
+      reheat: "N/A.",
+    },
+  },
 ];
 
 export const quickLunches = [
