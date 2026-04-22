@@ -56,6 +56,49 @@ export const sauces = [
       reheat: "No reheat needed — use cold straight from fridge.",
     },
   },
+  {
+    id: "no-judge-chimichurri",
+    title: "No-Judge Chimichurri",
+    tagline: "60-second chimichurri. No chopping herbs. Steak-ready.",
+    flavorProfile: "Bright, herby, tangy, slight heat",
+    calories: 100,
+    caloriesPerServing: 100,
+    protein: 0,
+    servings: 4,
+    time: "1 min + 5 min rest",
+    bestFor: ["Steak", "Chicken", "Rice bowls", "Grilled anything"],
+    useThisWhen: "You want real chimichurri flavor but don't want to chop parsley, cilantro, and garlic for 15 minutes. Spiceology seasoning does the herb work — you just add oil and acid.",
+    flavorTarget: "First taste: bright herb + vinegar. Mid: garlic + oregano. Finish: gentle chili heat. Feels fresh, not heavy.",
+    splitNote: {
+      adult: "Full recipe as written. Spoon over steak, chicken, or any protein.",
+      kid: "Skip for kids — most won't eat herb sauce. Serve their protein plain or with ketchup.",
+    },
+    ingredients: [
+      "2 tbsp olive oil",
+      "1.5 tbsp Spiceology Chimichurri seasoning",
+      "1 tbsp red wine vinegar",
+      "Dash chili flakes",
+    ],
+    steps: [
+      "MIX: Combine olive oil, Spiceology chimichurri seasoning, red wine vinegar, and chili flakes in a small bowl.",
+      "REST: Let sit 5-10 minutes. Don't skip — the vinegar blooms the dried herbs and the flavor develops.",
+      "SERVE: Spoon over steak, chicken, or any grilled protein. 1 tbsp per serving.",
+    ],
+    troubleshooting: [
+      { problem: "Tastes flat / like dried herbs", fix: "You didn't let it rest. The 5-10 min rest is what turns dried seasoning into actual chimichurri." },
+      { problem: "Too oily", fix: "Use 1.5 tbsp oil instead of 2. The seasoning absorbs some oil — adjust to your preference." },
+      { problem: "Too acidic / sharp", fix: "Reduce vinegar to 2 tsp. Or add a tiny pinch of sugar to round it out." },
+      { problem: "Not enough heat", fix: "Add more chili flakes, or a dash of hot sauce." },
+    ],
+    brands: [
+      { name: "Spiceology", item: "Chimichurri Seasoning", why: "Dried herb blend that replaces 15 min of chopping. Just add oil + vinegar.", image: "/images/brands/spiceology-taco.jpg" },
+    ],
+    mealPrep: {
+      storage: "Airtight container in fridge.",
+      lasts: "3-4 days. Gets more flavorful overnight.",
+      reheat: "No reheat — use at room temp or cold. Stir before using.",
+    },
+  },
 ];
 
 export const breakfasts = [
