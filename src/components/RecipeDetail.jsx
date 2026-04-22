@@ -674,15 +674,17 @@ function IngredientList({ items, accent, scale = 1 }) {
   return (
     <ul className="bg-neutral-900 rounded-xl border border-neutral-800 divide-y divide-neutral-800">
       {items.map((item, i) => {
-        const isHeader = item.startsWith("---");
-        const isNote = item.startsWith("  ");
+        const isLinked = typeof item === "object" && item.link;
+        const text = typeof item === "object" ? item.text : item;
+        const isHeader = text.startsWith("---");
+        const isNote = text.startsWith("  ");
         if (isHeader) {
           return (
             <li
               key={i}
               className={`px-4 py-2 text-xs font-bold uppercase tracking-wider bg-neutral-900/50 ${headerColor}`}
             >
-              {item.replace(/---/g, "").trim()}
+              {text.replace(/---/g, "").trim()}
             </li>
           );
         }
@@ -693,7 +695,9 @@ function IngredientList({ items, accent, scale = 1 }) {
               isNote ? "text-neutral-500 pl-8 italic" : "text-neutral-300"
             }`}
           >
-            {isHeader || isNote ? item : scaleIngredientText(item, scale)}
+            {isLinked ? (
+              <Link to={item.link} className="text-amber-400 hover:underline font-semibold">{scaleIngredientText(text, scale)}</Link>
+            ) : isHeader || isNote ? text : scaleIngredientText(text, scale)}
             {scale !== 1 && !isHeader && !isNote && <span className="text-amber-500/40 text-[10px] ml-1">scaled</span>}
           </li>
         );
