@@ -41,6 +41,16 @@ const WEEKS = {
       { day: "Friday", label: "System Meal", vibe: "Golden rice reheats all week, steak is fresh in 10 min", id: 24, time: "25 min", reheats: true, adult: "Golden turmeric rice, seared steak, chipotle drizzle", kid: "Rice + steak, no sauce — rice already has flavor", needs: ["Rice", "Bone broth", "Gary's QuickSteak", "Ghee", "Turmeric"], carbLevel: "high" },
     ],
   },
+  4: {
+    label: "Week 4",
+    description: "Steak night + two fast chicken meals. Bavette is the showstopper.",
+    subtitle: "Steak & Fries, Smash Tacos, Chicken Sandwiches",
+    cookDays: [
+      { day: "Monday", label: "Steak Night", vibe: "Start strong — bavette + chimichurri + air fryer fries", id: 25, time: "20 min", reheats: false, adult: "Bavette steak, chimichurri, fries", kid: "Pork patties, fries, carrots", needs: ["Bavette", "Fries", "Spiceology Chimichurri", "Pork patties"], carbLevel: "low" },
+      { day: "Wednesday", label: "Smash Night", vibe: "15 min — crispy smash tacos, Caesar finish", id: 22, time: "15 min", reheats: true, adult: "Keto tortilla, Caesar, crushed Quest chips", kid: "Street taco tortilla, simple taco, chips on side", needs: ["Ground chicken", "Cheddar", "Keto tortillas", "Romaine", "Caesar dressing"], carbLevel: "low" },
+      { day: "Friday", label: "Fast Food Night", vibe: "Finish easy — crispy chicken sandwiches, 15 min", id: 23, time: "15 min", reheats: true, adult: "Keto bun, chipotle or Money Mustard, pickles", kid: "Slider buns, plain or ketchup", needs: ["Kirkland chicken fillets", "Keto buns", "Slider buns", "Sauce"], carbLevel: "low" },
+    ],
+  },
 };
 
 function getLeftoverMsg(hasLeftovers) {

@@ -124,6 +124,47 @@ const GROCERY_BY_WEEK = {
       { name: "Shredded mild cheese", qty: "pantry", meal: "Kid topping" },
     ],
   },
+  // Week 4: Mon=Steak & Fries(25), Wed=Smash Tacos(22), Fri=Sandwiches(23)
+  4: {
+    "Protein": [
+      { name: "Bavette steak", baseQty: 1.5, unit: "lb", meal: "Mon" },
+      { name: "Pork breakfast patties", baseQty: 6, unit: "patties", meal: "Mon kid" },
+      { name: "99/1 ground chicken", baseQty: 24, unit: "oz", meal: "Wed" },
+      { name: "Kirkland chicken breast fillets", baseQty: 4, unit: "fillets", meal: "Fri" },
+    ],
+    "Carbs": [
+      { name: "Checkers/Rally's frozen fries", baseQty: 4, unit: "servings", meal: "Mon" },
+      { name: "Mission Zero Net Carbs tortillas", baseQty: 8, unit: "tortillas", meal: "Wed" },
+      { name: "Mission Street Tacos flour tortillas", baseQty: 4, unit: "tortillas", meal: "Wed kid" },
+      { name: "Bettergoods Keto Hamburger Buns", baseQty: 4, unit: "buns", meal: "Fri" },
+      { name: "Slider buns", baseQty: 4, unit: "buns", meal: "Fri kid" },
+    ],
+    "Vegetables": [
+      { name: "Baby carrots", baseQty: 1, unit: "bag", meal: "Mon kid" },
+      { name: "Romaine lettuce", baseQty: 1, unit: "head", meal: "Wed + Fri" },
+      { name: "Pickles", qty: "1 jar", meal: "Fri" },
+    ],
+    "Sauce & Flavor": [
+      { name: "SPG seasoning", qty: "pantry", meal: "Mon" },
+      { name: "Spiceology Chimichurri seasoning", qty: "pantry", meal: "Mon" },
+      { name: "Olive oil", qty: "pantry", meal: "Mon" },
+      { name: "Red wine vinegar", qty: "pantry", meal: "Mon" },
+      { name: "Chili flakes", qty: "pantry", meal: "Mon" },
+      { name: "Spiceology Taco seasoning", qty: "pantry", meal: "Wed" },
+      { name: "Bolthouse Farms Caesar dressing", baseQty: 8, unit: "tbsp", meal: "Wed" },
+      { name: "Liquid Chipotle or Money Mustard", baseQty: 4, unit: "servings", meal: "Fri" },
+      { name: "Lime", baseQty: 2, unit: "", meal: "Wed" },
+      { name: "Fresh cilantro", baseQty: 1, unit: "bunch", meal: "Wed" },
+    ],
+    "Creamy Base": [
+      { name: "Kraft Mild Cheddar shredded", baseQty: 4, unit: "oz", meal: "Wed" },
+    ],
+    "Kid Mode": [
+      { name: "Regular Caesar dressing", qty: "pantry", meal: "Wed kid" },
+      { name: "Quest Tortilla Chips", baseQty: 1, unit: "bag", meal: "Wed" },
+      { name: "Ketchup", qty: "pantry", meal: "Fri kid" },
+    ],
+  },
 };
 
 function getGrocery(week) { return GROCERY_BY_WEEK[week] || GROCERY_BY_WEEK[1]; }
