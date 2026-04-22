@@ -60,6 +60,7 @@ export const sauces = [
     id: "no-judge-chimichurri",
     title: "No-Judge Chimichurri",
     tagline: "60-second chimichurri. No chopping herbs. Steak-ready.",
+    heroImage: "/images/chimichurri-hero.webp",
     flavorProfile: "Bright, herby, tangy, slight heat",
     calories: 100,
     caloriesPerServing: 100,
