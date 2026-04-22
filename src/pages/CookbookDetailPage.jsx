@@ -212,10 +212,19 @@ export default function CookbookDetailPage() {
             Try It With
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            {liveRecipes
-              .filter((r) => r.pillar === "Protein Meals")
-              .slice(0, 2)
-              .map((r) => (
+            {(() => {
+              // Contextual matching: prefer recipes that mention this cookbook item's ingredients
+              const keywords = (sauce.title || "").toLowerCase().split(/\s+/);
+              const scored = liveRecipes
+                .filter((r) => r.pillar === "Protein Meals")
+                .map((r) => {
+                  const text = `${r.title} ${r.description || ""} ${(r.tags || []).join(" ")}`.toLowerCase();
+                  const score = keywords.reduce((s, kw) => s + (text.includes(kw) ? 1 : 0), 0);
+                  return { ...r, score };
+                })
+                .sort((a, b) => b.score - a.score);
+              return scored.slice(0, 2);
+            })().map((r) => (
                 <Link
                   key={r.id}
                   to={`/recipes/${r.slug}`}

@@ -1,7 +1,8 @@
-const CACHE_NAME = "splitplate-v1";
+const CACHE_NAME = "splitplate-v2";
 const OFFLINE_URL = "/";
 
-// Cache the app shell + key pages on install
+// On install, precache the app shell. The JS/CSS hashes change per build,
+// so we cache them on first fetch instead of hardcoding filenames.
 self.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) =>
@@ -9,30 +10,29 @@ self.addEventListener("install", (event) => {
         OFFLINE_URL,
         "/manifest.json",
         "/images/favicon.png",
+        "/images/logo-sm.png",
       ])
     )
   );
+  // Take control immediately — don't wait for existing tabs to close
   self.skipWaiting();
 });
 
-// Clean old caches on activate
 self.addEventListener("activate", (event) => {
+  // Clean old caches and claim all open tabs
   event.waitUntil(
-    caches.keys().then((keys) =>
-      Promise.all(keys.filter((k) => k !== CACHE_NAME).map((k) => caches.delete(k)))
-    )
+    caches.keys()
+      .then((keys) => Promise.all(keys.filter((k) => k !== CACHE_NAME).map((k) => caches.delete(k))))
+      .then(() => self.clients.claim())
   );
-  self.clients.claim();
 });
 
-// Network-first for navigations, cache-first for assets
 self.addEventListener("fetch", (event) => {
   const { request } = event;
 
-  // Skip non-GET and cross-origin
   if (request.method !== "GET" || !request.url.startsWith(self.location.origin)) return;
 
-  // Navigation requests (HTML pages) — network first, fall back to cache
+  // Navigation requests (HTML pages) — network first, cache fallback
   if (request.mode === "navigate") {
     event.respondWith(
       fetch(request)
@@ -46,15 +46,31 @@ self.addEventListener("fetch", (event) => {
     return;
   }
 
-  // Assets (JS, CSS, images) — cache first, update in background
-  if (request.url.match(/\.(js|css|png|jpg|jpeg|webp|svg|woff2?)$/)) {
+  // JS/CSS bundles — cache on first fetch, serve from cache after.
+  // This ensures the hashed bundle files are available offline after first visit.
+  if (request.url.match(/\/assets\/index-[A-Za-z0-9_-]+\.(js|css)$/)) {
+    event.respondWith(
+      caches.match(request).then((cached) => {
+        if (cached) return cached;
+        return fetch(request).then((response) => {
+          const clone = response.clone();
+          caches.open(CACHE_NAME).then((cache) => cache.put(request, clone));
+          return response;
+        });
+      })
+    );
+    return;
+  }
+
+  // Other assets (images, fonts) — cache first, update in background
+  if (request.url.match(/\.(png|jpg|jpeg|webp|svg|woff2?)$/)) {
     event.respondWith(
       caches.match(request).then((cached) => {
         const fetchPromise = fetch(request).then((response) => {
           const clone = response.clone();
           caches.open(CACHE_NAME).then((cache) => cache.put(request, clone));
           return response;
-        });
+        }).catch(() => cached);
         return cached || fetchPromise;
       })
     );
