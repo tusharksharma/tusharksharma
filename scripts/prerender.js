@@ -62,13 +62,17 @@ const routes = [
   { path: "/cookbook", title: "Power-Ups — The Split Plate", description: "Sauces, breakfast hacks, and desserts that boost protein without the effort." },
   { path: "/about", title: "About — The Split Plate", description: "One meal. Two plates. The Split Plate is a dinner system for families who want high-protein meals without cooking twice." },
   { path: "/fan", title: "In the Hands of the Fan — The Split Plate", description: "Can't decide what to cook? Spin the fan and let it pick your dinner." },
-  ...recipes.map((r) => ({
-    path: `/recipes/${r.slug}`,
-    title: `${r.title} — The Split Plate`,
-    description: r.description || `${r.title} — ${r.protein}g protein, ${r.calories} cal, ${r.time}.`,
-    image: r.image,
-    schema: buildRecipeSchema(r),
-  })),
+  ...recipes.map((r) => {
+    const idx = recipesRaw.indexOf(`slug: "${r.slug}"`);
+    const ingredients = idx > -1 ? extractIngredients(recipesRaw, idx) : [];
+    return {
+      path: `/recipes/${r.slug}`,
+      title: `${r.title} — The Split Plate`,
+      description: r.description || `${r.title} — ${r.protein}g protein, ${r.calories} cal, ${r.time}.`,
+      image: r.image,
+      schema: buildRecipeSchema(r, ingredients),
+    };
+  }),
   ...cookbookItems.map((c) => ({
     path: `/cookbook/${c.id}`,
     title: `${c.title} — The Split Plate`,
@@ -77,8 +81,25 @@ const routes = [
   })),
 ];
 
-function buildRecipeSchema(r) {
-  return JSON.stringify({
+function extractIngredients(src, startIdx) {
+  // Extract ingredient strings from recipe source starting near startIdx
+  const after = src.slice(startIdx, startIdx + 8000);
+  const ingredBlock = after.match(/ingredients:\s*\[([\s\S]*?)\],/);
+  if (!ingredBlock) return [];
+  const raw = ingredBlock[1];
+  const items = [];
+  // Match plain strings: "ingredient text"
+  // Skip strings that are URLs (/cookbook/...) or section headers (---)
+  for (const m of raw.matchAll(/"([^"]+)"/g)) {
+    const s = m[1];
+    if (s.startsWith("---") || s.startsWith("/") || s === "text" || s === "link") continue;
+    items.push(s);
+  }
+  return items;
+}
+
+function buildRecipeSchema(r, ingredients) {
+  const schema = {
     "@context": "https://schema.org",
     "@type": "Recipe",
     name: r.title,
@@ -93,7 +114,13 @@ function buildRecipeSchema(r) {
     },
     author: { "@type": "Person", name: "The Split Plate" },
     publisher: { "@type": "Organization", name: "The Split Plate", url: DOMAIN },
-  });
+    recipeCategory: "Dinner",
+    recipeCuisine: "American",
+  };
+  if (ingredients && ingredients.length > 0) {
+    schema.recipeIngredient = ingredients;
+  }
+  return JSON.stringify(schema);
 }
 
 function generateHTML(route) {
