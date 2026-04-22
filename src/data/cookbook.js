@@ -92,7 +92,9 @@ export const sauces = [
       { problem: "Not enough heat", fix: "Add more chili flakes, or a dash of hot sauce." },
     ],
     brands: [
-      { name: "Spiceology", item: "Chimichurri Seasoning", why: "Dried herb blend that replaces 15 min of chopping. Just add oil + vinegar.", image: "/images/brands/spiceology-taco.jpg" },
+      { name: "Spiceology", item: "Chimichurri Blend", why: "Dried herb blend that replaces 15 min of chopping. Just add oil + vinegar.", image: "/images/brands/spiceology-chimichurri.jpg", url: "https://spiceology.com/products/chimichurri-blend" },
+      { name: "Napa Valley Naturals", item: "Organic Red Wine Vinegar", why: "Clean acid — the vinegar blooms the dried herbs and makes it taste real", image: "/images/brands/napa-valley-vinegar.jpg", url: "https://www.stonewallkitchen.com/organic-red-wine-vinegar-M311231.html" },
+      { name: "O California", item: "Organic Extra Virgin Olive Oil", why: "Half the sauce is oil — use good oil", image: "/images/brands/o-olive-oil.jpg", url: "https://ooliveoil.com/products/o-california-organic-extra-virgin-olive-oil" },
     ],
     mealPrep: {
       storage: "Airtight container in fridge.",

@@ -1937,7 +1937,11 @@ const recipes = [
       { text: "PLATE: Adults get steak + fries + chimichurri. Kids get pork patties + fries + carrots.", images: ["/images/steak-fries/step4-kid-plate.webp"] },
     ],
     brands: [
-      { name: "Spiceology", item: "Chimichurri Seasoning", why: "60-second chimichurri — no chopping herbs. Just add oil + vinegar.", image: "/images/brands/spiceology-taco.jpg" },
+      { name: "Spiceology", item: "Chimichurri Blend", why: "60-second chimichurri — no chopping herbs. Just add oil + vinegar.", image: "/images/brands/spiceology-chimichurri.jpg", url: "https://spiceology.com/products/chimichurri-blend" },
+      { name: "Napa Valley Naturals", item: "Organic Red Wine Vinegar", why: "Clean acid that blooms the dried herbs — the vinegar makes it chimichurri, not just herb oil", image: "/images/brands/napa-valley-vinegar.jpg", url: "https://www.stonewallkitchen.com/organic-red-wine-vinegar-M311231.html" },
+      { name: "O California", item: "Organic Extra Virgin Olive Oil", why: "Good olive oil matters here — it's half the sauce. California organic, clean flavor.", image: "/images/brands/o-olive-oil.jpg", url: "https://ooliveoil.com/products/o-california-organic-extra-virgin-olive-oil" },
+      { name: "Checkers/Rally's", item: "Famous Seasoned Fries", why: "Best frozen fries for air frying — seasoned, crispy, no oil needed", image: "/images/brands/checkers-fries.jpg", url: "https://www.target.com/p/checkers-frozen-crispy-frozen-seasoned-fries-28oz/-/A-26398457" },
+      { name: "Great Value", item: "Original Pork Sausage Patties", why: "Kid protein swap — familiar, no resistance. Cook in 5 min while steak rests.", image: "/images/brands/great-value-pork-patties.jpg", url: "https://www.walmart.com/ip/Great-Value-Fully-Cooked-Original-Pork-Sausage-Patties-Family-Size-35-6-oz-Frozen/24360492" },
     ],
     mealPrep: {
       storage: "Steak is best fresh. Chimichurri keeps 3-4 days in fridge.",
