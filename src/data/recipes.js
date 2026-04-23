@@ -1934,7 +1934,7 @@ const recipes = [
       { text: "REST: 5 minutes. Don't skip — this is what makes it juicy." },
       { text: "CHIMICHURRI: Mix oil + seasoning + vinegar + chili flakes. Let sit 5 min." },
       { text: "SLICE: Thin, against the grain. Always." },
-      { text: "PLATE: Adults get steak + fries + chimichurri. Kids get pork patties + fries + carrots.", images: ["/images/steak-fries/step4-kid-plate.webp"] },
+      { text: "PLATE: Adults get steak + fries + chimichurri. Kids get pork patties + fries + carrots.", images: ["/images/steak-fries/step5-split-plate.webp", "/images/steak-fries/step4-kid-plate.webp"] },
     ],
     brands: [
       { name: "Spiceology", item: "Chimichurri Blend", why: "60-second chimichurri — no chopping herbs. Just add oil + vinegar.", image: "/images/brands/spiceology-chimichurri.jpg", url: "https://spiceology.com/products/chimichurri-blend" },

@@ -250,6 +250,53 @@ export const breakfasts = [
       reheat: "N/A.",
     },
   },
+  {
+    id: "ham-cheese-power-melt",
+    title: "Ham & Cheese Power Melt",
+    tagline: "Crispy outside. Layered inside. High-protein comfort.",
+    flavorProfile: "Crispy, melty, savory, buttery",
+    calories: 235,
+    caloriesPerServing: 235,
+    protein: 28,
+    servings: 1,
+    time: "10 min",
+    bestFor: ["Breakfast", "Quick meal", "High protein", "Comfort food"],
+    useThisWhen: "You want a grilled cheese that actually has protein. Layered cheese-ham-cheese build melts evenly. 10 min, one pan.",
+    flavorTarget: "Crispy buttered Sola bread on the outside. Inside: alternating layers of melted fat-free cheddar and ham. The layering is the trick — even melt, no cold spots.",
+    splitNote: {
+      adult: "Full recipe as written. Add mustard for a flavor upgrade.",
+      kid: "Same build, skip the mustard. Kids love grilled cheese — this one just happens to have 28g protein.",
+    },
+    ingredients: [
+      "2 slices Sola bread (40 cal each)",
+      "1/2 tbsp butter",
+      "3 slices ham (~60 cal)",
+      "1 oz Kraft Fat Free Cheddar cheese",
+      "Mustard (optional)",
+    ],
+    steps: [
+      "LAYER: Bread → cheese → ham → cheese → ham → cheese → ham → cheese → bread. The alternating layers are key — even melt throughout.",
+      "HEAT: Nonstick pan on LOW heat. Add butter, let it melt.",
+      "COOK: Place sandwich in pan. Cook slowly, 3-4 min per side until golden brown. Low heat prevents burning before cheese melts.",
+      "MELT: Optional — cover with lid for 30-60 seconds to fully melt the cheese.",
+      "REST: 1 minute. Slice and serve with mustard.",
+    ],
+    troubleshooting: [
+      { problem: "Bread burns before cheese melts", fix: "Heat is too high. LOW heat, slow cook. The cheese needs time — don't rush it." },
+      { problem: "Cheese doesn't melt fully", fix: "Cover with a lid for 30-60 sec. The steam melts the inner layers." },
+      { problem: "Soggy / not crispy", fix: "Too much butter, or pan wasn't hot enough when you started. Thin layer of butter, let it sizzle before placing sandwich." },
+      { problem: "Falls apart when flipping", fix: "Flip with a spatula in one quick motion. Or press down gently with another pan to compact it before flipping." },
+    ],
+    brands: [
+      { name: "Sola", item: "Bread", why: "High protein, low carb bread — the sandwich IS a protein source, not just a carrier", image: "/images/brands/sola-plain-bagels.png", url: "https://thesolacompany.com/products/plain-bagels" },
+      { name: "Kraft", item: "Fat Free Cheddar", why: "Melts under a lid, adds protein without fat — the layering trick makes it work", image: "/images/brands/kraft-ff-cheddar.jpg" },
+    ],
+    mealPrep: {
+      storage: "Best fresh — 10 min to make.",
+      lasts: "N/A — eat immediately.",
+      reheat: "Air fryer 350°F for 2 min to re-crisp if needed.",
+    },
+  },
 ];
 
 export const quickLunches = [
