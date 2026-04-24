@@ -90,11 +90,16 @@ When adding to `src/data/cookbook.js` (sauces, breakfasts, desserts, quickLunche
 - `useMeta` hook updates client-side meta during SPA navigation
 - Recipe pages get JSON-LD `@type: Recipe` schema with nutrition data
 
-## Image Enhancement Prompts (Gemini)
+## Image Generation Prompts (ChatGPT preferred, Gemini as backup)
 
-When a new recipe is added, generate and share these prompts for the user to run through Gemini image enhancement. Replace `{dish}`, `{protein}`, and `{sauce}` with the actual recipe details.
+When a new recipe is added, generate and share these prompts for the user. **ChatGPT produces better results than Gemini** — use ChatGPT first.
 
-**IMPORTANT**: Always use "Transform this into..." to get Gemini to restyle the scene, not just color-correct.
+**CRITICAL PROMPT RULES:**
+- Name every brand explicitly (Sola, Kraft, French's, Kirkland, 365, etc.)
+- Describe packaging details (red bag, yellow bottle, green box)
+- Include "partially removed from packaging" for visual variety
+- Always end with "High realism, sharp focus, no generic branding"
+- For Gemini: prefix with "Transform this into..." to restyle (not just enhance)
 
 ### 1. Hero (plated dish)
 ```

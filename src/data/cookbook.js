@@ -254,6 +254,8 @@ export const breakfasts = [
     id: "ham-cheese-power-melt",
     title: "Ham & Cheese Power Melt",
     tagline: "Crispy outside. Layered inside. High-protein comfort.",
+    heroImage: "/images/power-melt-hero.webp",
+    prepImage: "/images/power-melt-prep.webp",
     flavorProfile: "Crispy, melty, savory, buttery",
     calories: 235,
     caloriesPerServing: 235,
@@ -269,10 +271,10 @@ export const breakfasts = [
     },
     ingredients: [
       "2 slices Sola bread (40 cal each)",
-      "1/2 tbsp butter",
-      "3 slices ham (~60 cal)",
+      "1/2 tbsp Kirkland Grass-Fed Butter",
+      "3 slices 365 Organic Black Forest Uncured Ham (~60 cal)",
       "1 oz Kraft Fat Free Cheddar cheese",
-      "Mustard (optional)",
+      "French's Organic Yellow Mustard (optional)",
     ],
     steps: [
       "LAYER: Bread → cheese → ham → cheese → ham → cheese → ham → cheese → bread. The alternating layers are key — even melt throughout.",
@@ -288,8 +290,11 @@ export const breakfasts = [
       { problem: "Falls apart when flipping", fix: "Flip with a spatula in one quick motion. Or press down gently with another pan to compact it before flipping." },
     ],
     brands: [
-      { name: "Sola", item: "Bread", why: "High protein, low carb bread — the sandwich IS a protein source, not just a carrier", image: "/images/brands/sola-plain-bagels.png", url: "https://thesolacompany.com/products/plain-bagels" },
-      { name: "Kraft", item: "Fat Free Cheddar", why: "Melts under a lid, adds protein without fat — the layering trick makes it work", image: "/images/brands/kraft-ff-cheddar.jpg" },
+      { name: "Sola", item: "Sweet & Buttery Bread", why: "High protein, low carb bread — the sandwich IS a protein source, not just a carrier", image: "/images/brands/sola-plain-bagels.png", url: "https://thesolacompany.com/products/plain-bagels" },
+      { name: "Kraft", item: "Fat Free Cheddar Shredded", why: "Melts under a lid, adds protein without fat — the layering trick makes it work", image: "/images/brands/kraft-ff-cheddar.jpg", url: "https://kraftnaturalcheese.com/product/shredded-cheese/cheddar-fat-free/" },
+      { name: "365", item: "Organic Black Forest Uncured Ham", why: "Clean deli ham, no nitrates — Whole Foods brand", image: "/images/brands/365-ham.jpg", url: "https://www.wholefoodsmarket.com/product/365-everyday-value-organic-uncured-black-forest-ham-b074h7j2vt" },
+      { name: "Kirkland", item: "Grass-Fed Butter", why: "Better flavor than regular butter — grass-fed makes a noticeable difference on the crisp", image: "/images/brands/kirkland-ghee.jpg" },
+      { name: "French's", item: "Organic Yellow Mustard", why: "Clean tang that cuts through the richness — optional but recommended", image: "/images/brands/frenchs-mustard.jpg", url: "https://www.frenchs.com/products/mustard/organic-classic-yellow-mustard" },
     ],
     mealPrep: {
       storage: "Best fresh — 10 min to make.",
