@@ -37,8 +37,11 @@ function RecipeCard({ item }) {
 }
 
 export default function CookbookPage() {
-  useMeta({ title: "Power-Ups", description: "Sauces, breakfast hacks, and desserts that boost protein without the effort." });
+  useMeta({ title: "Power-Ups", description: "Sauces, breakfasts, desserts, and quick meals — high-protein upgrades that take 10 minutes or less." });
   const [tab, setTab] = useState(TABS[0] || "Sauces");
+
+  // Pick the best "quick fix" — prefer breakfasts/quick lunches over sauces
+  const quickFix = (breakfasts.length > 0 ? breakfasts : quickLunches.length > 0 ? quickLunches : sauces)[0];
 
   return (
     <div className="min-h-screen bg-neutral-950 text-neutral-100">
@@ -46,31 +49,31 @@ export default function CookbookPage() {
         <div className="mb-8">
           <h1 className="text-3xl font-black text-white">Power-Ups</h1>
           <p className="text-neutral-400 text-sm mt-1">
-            Sauces and building blocks that make any dinner better — adds flavor in 5 min.
+            Sauces, breakfasts, desserts, and quick meals — high-protein upgrades that take 10 minutes or less.
           </p>
           <p className="text-neutral-600 text-[10px] mt-1">
-            Use these to upgrade your weekly dinners or when you're cooking off-system.
+            Everything here is designed to complement your weekly dinners or stand alone when you need something fast.
           </p>
         </div>
 
         {/* Quick Fix Today */}
+        {quickFix && (
         <div className="mb-8 bg-amber-500/5 border border-amber-500/20 rounded-xl p-5">
           <div className="flex items-center gap-2 mb-3">
             <span className="text-amber-500 text-xs font-black uppercase tracking-wider">Quick Fix Today</span>
             <span className="text-neutral-600 text-[10px]">Need food now?</span>
           </div>
           <div className="space-y-2">
-            {sauces.length > 0 && (
-              <Link to={`/cookbook/${sauces[0].id}`} className="w-full text-left flex items-center justify-between bg-neutral-800/50 rounded-lg p-3 hover:bg-neutral-800 transition-colors group">
+              <Link to={`/cookbook/${quickFix.id}`} className="w-full text-left flex items-center justify-between bg-neutral-800/50 rounded-lg p-3 hover:bg-neutral-800 transition-colors group">
                 <div>
-                  <span className="text-white text-xs font-bold group-hover:text-amber-400 transition-colors">{sauces[0].title}</span>
-                  <span className="text-neutral-500 text-[10px] ml-2">Add flavor to any protein in {sauces[0].time}</span>
+                  <span className="text-white text-xs font-bold group-hover:text-amber-400 transition-colors">{quickFix.title}</span>
+                  <span className="text-neutral-500 text-[10px] ml-2">{quickFix.protein}g protein in {quickFix.time}</span>
                 </div>
-                <span className="text-amber-500 text-[10px] font-bold">Use this &rarr;</span>
+                <span className="text-amber-500 text-[10px] font-bold">Try this &rarr;</span>
               </Link>
-            )}
           </div>
         </div>
+        )}
 
         {TABS.length > 1 && (
           <div className="flex gap-2 mb-8">

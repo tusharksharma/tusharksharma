@@ -48,12 +48,18 @@ for (const w of groceryWeekNums) {
 // For each planner week, extract recipe IDs + days and verify grocery has
 // items tagged to those days
 for (const w of plannerWeekNums) {
-  const weekPattern = new RegExp(`^ {2}${w}:\\s*\\{[\\s\\S]*?cookDays:\\s*\\[([\\s\\S]*?)\\]`, "m");
+  // Match cookDays array — use greedy match up to the closing "],\n" to capture all 3 entries
+  const weekPattern = new RegExp(`^ {2}${w}:\\s*\\{[\\s\\S]*?cookDays:\\s*\\[([\\s\\S]*?)\\n {4}\\]`, "m");
   const weekMatch = plannerSrc.match(weekPattern);
   if (!weekMatch) continue;
 
   const ids = [...weekMatch[1].matchAll(/id:\s*(\d+)/g)].map((m) => Number(m[1]));
   const days = [...weekMatch[1].matchAll(/day:\s*"(\w+)"/g)].map((m) => m[1].substring(0, 3));
+
+  if (ids.length !== 3 || days.length !== 3) {
+    console.error(`ERROR: Week ${w} parsed ${ids.length} recipe IDs and ${days.length} days (expected 3 each)`);
+    errors++;
+  }
 
   // Verify grocery has items for each day in this week
   const groceryWeekPattern = new RegExp(`^ {2}${w}:\\s*\\{([\\s\\S]*?)(?=^ {2}\\d+:|^\\};)`, "m");
