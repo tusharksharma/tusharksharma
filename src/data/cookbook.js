@@ -477,6 +477,8 @@ export const desserts = [
     id: "midnight-mix-creami",
     title: "Midnight Mix Creami",
     tagline: "Chocolate protein ice cream with the 5g mix-in method.",
+    heroImage: "/images/midnight-mix-hero.webp",
+    prepImage: "/images/midnight-mix-prep.webp",
     flavorProfile: "Rich chocolate base, crunchy candy mix-ins in every bite",
     calories: 300,
     caloriesPerServing: 300,
