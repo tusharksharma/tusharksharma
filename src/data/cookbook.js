@@ -106,6 +106,7 @@ export const sauces = [
     id: "smoky-chipotle-crema",
     title: "Smoky Chipotle Crema",
     tagline: "Bold. Smoky. Proper heat. Built the way it should be.",
+    heroImage: "/images/chipotle-crema-hero.webp",
     flavorProfile: "Smoke-forward, medium-high heat, tangy, clean finish",
     calories: 480,
     caloriesPerServing: 40,
