@@ -165,6 +165,47 @@ const GROCERY_BY_WEEK = {
       { name: "Ketchup", qty: "pantry", meal: "Fri kid" },
     ],
   },
+  // Week 5: Mon=Tandoori Drumsticks(26), Wed=Air Fryer Chicken(21), Fri=Tri-tip Penne(2)
+  5: {
+    "Protein": [
+      { name: "Skinless chicken drumsticks", baseQty: 10, unit: "drumsticks", meal: "Mon" },
+      { name: "Chicken thighs (boneless skinless)", baseQty: 2, unit: "lb", meal: "Wed" },
+      { name: "Tri-tip steak", baseQty: 1.25, unit: "lb", meal: "Fri" },
+      { name: "Earth's Best mini meatballs", baseQty: 1, unit: "bag", meal: "Kid swap" },
+    ],
+    "Carbs": [
+      { name: "Penne pasta", baseQty: 8, unit: "oz", meal: "Fri" },
+      { name: "Dinner rolls", baseQty: 4, unit: "rolls", meal: "Wed kid" },
+    ],
+    "Vegetables": [
+      { name: "Cucumber", baseQty: 2, unit: "", meal: "Mon" },
+      { name: "Onion", baseQty: 1, unit: "large", meal: "Mon + Fri" },
+      { name: "Broccoli", baseQty: 16, unit: "oz", meal: "Wed" },
+      { name: "Spinach", baseQty: 3, unit: "oz", meal: "Fri" },
+      { name: "Lemon", baseQty: 2, unit: "", meal: "Mon" },
+      { name: "Garlic", qty: "1 head", meal: "All" },
+    ],
+    "Sauce & Flavor": [
+      { name: "Shan Tandoori Masala", baseQty: 1, unit: "packet", meal: "Mon" },
+      { name: "Lawry's seasoning", qty: "pantry", meal: "Mon kid" },
+      { name: "Kala namak (black salt)", qty: "pantry", meal: "Mon" },
+      { name: "Kashmiri chili", qty: "pantry", meal: "Mon" },
+      { name: "Dan-O's Outlaw seasoning", qty: "pantry", meal: "Wed" },
+      { name: "Dan-O's Original seasoning", qty: "pantry", meal: "Wed" },
+      { name: "Dan-O's Cheesoning", qty: "pantry", meal: "Wed" },
+      { name: "Roli Roti bone broth", baseQty: 32, unit: "oz", meal: "Fri" },
+      { name: "Chili oil or sriracha", qty: "pantry", meal: "All" },
+    ],
+    "Creamy Base": [
+      { name: "Fat-free Greek yogurt", baseQty: 1.5, unit: "containers", meal: "Mon" },
+      { name: "Cottage cheese", baseQty: 12, unit: "oz", meal: "Fri" },
+      { name: "Fairlife fat-free milk", qty: "pantry", meal: "Sauce base" },
+    ],
+    "Kid Mode": [
+      { name: "Shredded mild cheese", qty: "pantry", meal: "Kid topping" },
+      { name: "Naan bread", baseQty: 4, unit: "pieces", meal: "Mon kid" },
+    ],
+  },
 };
 
 function getGrocery(week) { return GROCERY_BY_WEEK[week] || GROCERY_BY_WEEK[1]; }

@@ -51,6 +51,16 @@ const WEEKS = {
       { day: "Friday", label: "Fast Food Night", vibe: "Finish easy — crispy chicken sandwiches, 15 min", id: 23, time: "15 min", reheats: true, adult: "Keto bun, chipotle or Money Mustard, pickles", kid: "Slider buns, plain or ketchup", needs: ["Kirkland chicken fillets", "Keto buns", "Slider buns", "Sauce"], carbLevel: "low" },
     ],
   },
+  5: {
+    label: "Week 5",
+    description: "Weekend grill night + two fast weeknight dinners. Marinate Sunday, grill Monday.",
+    subtitle: "Tandoori Drumsticks, Air Fryer Chicken, Tri-tip Penne",
+    cookDays: [
+      { day: "Monday", label: "Grill Night", vibe: "Tandoori drumsticks — marinated overnight, grilled in 30 min", id: 26, time: "30 min", reheats: true, adult: "Shan tandoori drumsticks, onion salad, cucumber", kid: "Lawry's mild drumstick, cucumber, naan", needs: ["Drumsticks", "Greek yogurt", "Shan Tandoori Masala", "Lawry's", "Lemon"], carbLevel: "none" },
+      { day: "Wednesday", label: "Hands-Off Win", vibe: "Air fryer does the work, you don't", id: 21, time: "25 min", reheats: true, adult: "Outlaw Blackened chicken, cheesy broccoli, Money Mustard", kid: "Original seasoned chicken, broccoli, dinner roll", needs: ["Chicken thighs", "Broccoli", "Dan-O's", "Dinner rolls"], carbLevel: "none" },
+      { day: "Friday", label: "Cook Once, Win Twice", vibe: "Creamy pasta, weekend is handled", id: 2, time: "35 min", reheats: true, adult: "Chili cream sauce, Dan-O's, sliced tri-tip", kid: "Mild creamy penne, meatballs, cheese", needs: ["Tri-tip", "Penne", "Spinach", "Cottage cheese", "Beef broth"], carbLevel: "high" },
+    ],
+  },
 };
 
 function getLeftoverMsg(hasLeftovers) {
