@@ -2078,8 +2078,8 @@ const recipes = [
       { text: "PLATE: Adults get 2-3 drumsticks + onion salad + cucumber. Kids get 1 drumstick + cucumber.", images: ["/images/tandoori/step2-split-plate.webp"] },
     ],
     brands: [
-      { name: "Shan", item: "Tandoori Masala", why: "Real Pakistani spice blend — not the watered-down grocery store version. This is what makes it taste like tandoori." },
-      { name: "Lawry's", item: "Seasoned Salt", why: "Kid-safe seasoning that works on everything — mild enough, familiar enough, zero resistance" },
+      { name: "Shan", item: "Tandoori Masala", why: "Real Pakistani spice blend — not the watered-down grocery store version. This is what makes it taste like tandoori.", image: "/images/brands/shan-tandoori.png", url: "https://www.shanfoods.com/product/recipe-mixes/bbq/tandoori/" },
+      { name: "Lawry's", item: "Seasoned Salt", why: "Kid-safe seasoning that works on everything — mild enough, familiar enough, zero resistance", image: "/images/brands/lawrys-seasoned-salt.jpg", url: "https://www.mccormick.com/products/lawrys-seasoned-salt-8-oz" },
       { name: "Fage", item: "Total 0% Greek Yogurt", why: "Thick, high protein, tenderizes the chicken — the marinade base", image: "/images/brands/fage-yogurt.jpg" },
     ],
     mealPrep: {
