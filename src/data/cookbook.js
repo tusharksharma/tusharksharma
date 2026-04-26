@@ -102,6 +102,57 @@ export const sauces = [
       reheat: "No reheat — use at room temp or cold. Stir before using.",
     },
   },
+  {
+    id: "smoky-chipotle-crema",
+    title: "Smoky Chipotle Crema",
+    tagline: "Bold. Smoky. Proper heat. Built the way it should be.",
+    flavorProfile: "Smoke-forward, medium-high heat, tangy, clean finish",
+    calories: 480,
+    caloriesPerServing: 40,
+    protein: 30,
+    servings: 12,
+    time: "5 min + 10 min rest",
+    bestFor: ["Steak", "Tacos", "Rice bowls", "Chicken", "Sandwiches"],
+    useThisWhen: "You want a real chipotle crema with proper heat — not the watered-down restaurant version. Full can of chipotles. Yogurt + lime keep it clean. Dilute separately for kids.",
+    flavorTarget: "First taste: smoky chipotle heat. Mid: tangy yogurt + lime. Finish: clean, not greasy, not heavy. This is designed to hit — if it tastes bland, you under-seasoned.",
+    splitNote: {
+      adult: "Use as-is. Spicy, smoky, full power.",
+      kid: "Mix 1:1 with plain Greek yogurt to dilute. Or skip entirely — most kids won't want this.",
+    },
+    ingredients: [
+      "200g Fage Total 0% Greek Yogurt",
+      "7 oz (198g) La Costeña Chipotle Peppers in Adobo (full can)",
+      "80g Fairlife Fat-Free Milk (~1/3 cup)",
+      "60g Kraft Light Mayo",
+      "1 tbsp lime juice",
+      "3/4-1 tsp salt (taste and adjust)",
+      "1/2 tsp garlic powder",
+      "1/2 tsp cumin",
+    ],
+    steps: [
+      "BLEND: Add everything to blender — yogurt, full chipotle can + adobo, milk, mayo, lime juice, salt, garlic powder, cumin. Blend 30-45 seconds until fully smooth.",
+      "TASTE: Too thick → add 1 tbsp milk. Too sharp → add 1 tbsp yogurt. Too flat → pinch more salt + lime.",
+      "REST: Let sit 10-15 minutes before serving. Heat rounds out, texture tightens. Don't skip.",
+    ],
+    troubleshooting: [
+      { problem: "Not smoky enough / bland", fix: "You diluted it or under-seasoned. Use the full can of chipotles — that's the whole point." },
+      { problem: "Too spicy", fix: "Don't reduce the base recipe — instead, mix portion 1:1 with plain yogurt for a milder version." },
+      { problem: "Too thick / paste-like", fix: "Add milk 1 tbsp at a time. Should be pourable crema, not paste." },
+      { problem: "Tastes muddy / heavy", fix: "Not enough acid. Add more lime juice — the tang is what keeps it clean." },
+      { problem: "Grainy texture", fix: "Didn't blend long enough. Full 30-45 seconds, no chunks." },
+    ],
+    brands: [
+      { name: "La Costeña", item: "Chipotle Peppers in Adobo", why: "Full can = real smoky heat. This is the backbone of the sauce — don't sub it.", image: "/images/brands/la-costena-chipotle.jpg", url: "https://www.target.com/p/la-costena-chipotle-peppers-in-adobo-sauce-7oz/-/A-52527972" },
+      { name: "Fage", item: "Total 0% Greek Yogurt", why: "Thick, high protein, tangy base — keeps the crema clean without heavy cream", image: "/images/brands/fage-yogurt.jpg", url: "https://usa.fage/products/yogurt/fage-total-0" },
+      { name: "Fairlife", item: "Fat-Free Milk", why: "Thins the crema without watering down flavor", image: "/images/brands/fairlife-milk.png", url: "https://fairlife.com/ultra-filtered-milk/fat-free-skim-milk/" },
+      { name: "Kraft", item: "Light Mayo", why: "Controlled creaminess — just enough body without turning it into dressing", image: "/images/brands/kraft-light-mayo.jpg", url: "https://www.heb.com/product-detail/kraft-mayo-light-mayonnaise-squeeze-bottle/1098140" },
+    ],
+    mealPrep: {
+      storage: "Airtight container in fridge.",
+      lasts: "5-7 days. Gets better overnight as flavors meld.",
+      reheat: "No reheat needed — use cold straight from fridge.",
+    },
+  },
 ];
 
 export const breakfasts = [
