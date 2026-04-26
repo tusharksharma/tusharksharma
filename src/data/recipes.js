@@ -1968,9 +1968,9 @@ const recipes = [
     calories: 350,
     image: "/images/tandoori/hero.webp",
     role: "The Weekend Grill",
-    makeThisWhen: "You want tandoori that actually tastes like tandoori — deep spice from Shan masala, yogurt tenderized, charred on the grill or broiled. Two marinades: full power for adults, mild Lawry's for kids.",
+    makeThisWhen: "You want tandoori that actually tastes like tandoori — deep spice from Shan masala, yogurt tenderized, and visible char from the grill or broiler. Two marinades: full power for adults, mild Lawry's for kids.",
     hook: "Two marinades, one cook. Adults get Shan Tandoori Masala — real deal Pakistani spice blend. Kids get Lawry's seasoned yogurt — mild, familiar, zero resistance. Both go on the grill at the same time. Overnight marinade is non-negotiable.",
-    description: "~40g protein for ~350 cal. Skinless drumsticks marinated overnight — adults in Shan Tandoori Masala + yogurt + lemon, kids in Lawry's + yogurt. Grill or bake+broil. Cucumber + onion salad sides.",
+    description: "~40g protein for ~350 cal. Skinless drumsticks marinated overnight — adults in Shan Tandoori Masala + yogurt + lemon, kids in Lawry's + yogurt. Grill or bake+broil until red-orange with dark char marks. Serve 2-3 drumsticks with cucumber + kala namak and onion salad with Kashmiri chili + lemon.",
     whyMostFail: [
       "Skip the slits — spice sits on the surface, doesn't penetrate",
       "Don't marinate long enough — overnight is the minimum for real flavor",
@@ -2007,7 +2007,7 @@ const recipes = [
         { text: "MARINATE ADULT: Mix full yogurt container + 2/3 packet Shan Tandoori Masala + lemon juice + optional red color. Massage deep into slits." },
         { text: "MARINATE KID: Mix half yogurt container + 1-2 tsp Lawry's + tiny lemon squeeze. Keep it light." },
         { text: "REST: Overnight in fridge. Minimum 6 hours." },
-        { text: "COOK: Grill medium-high 10-15 min per side. OR bake 425°F 15-20 min then broil 5-7 min per side." },
+        { text: "COOK: Grill medium-high 10-15 min per side. OR bake 425°F 15-20 min then broil 5-7 min per side. Aim for visible char marks without burning the yogurt crust." },
       ],
       adult: {
         label: "Adult — Full Tandoori",
@@ -2024,7 +2024,7 @@ const recipes = [
           "Onion + Kashmiri chili + lemon",
         ],
         steps: [
-          { text: "PLATE: 2-3 drumsticks per adult. Onion salad + cucumber on side." },
+          { text: "PLATE: 2-3 drumsticks per adult on a white plate. Finish with onion salad (Kashmiri chili + lemon) and sliced cucumber sprinkled with kala namak." },
         ],
       },
       kid: {
