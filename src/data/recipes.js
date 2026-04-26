@@ -1966,7 +1966,7 @@ const recipes = [
     servings: 4,
     protein: 40,
     calories: 350,
-    image: "",
+    image: "/images/tandoori/hero.webp",
     role: "The Weekend Grill",
     makeThisWhen: "You want tandoori that actually tastes like tandoori — deep spice from Shan masala, yogurt tenderized, charred on the grill or broiled. Two marinades: full power for adults, mild Lawry's for kids.",
     hook: "Two marinades, one cook. Adults get Shan Tandoori Masala — real deal Pakistani spice blend. Kids get Lawry's seasoned yogurt — mild, familiar, zero resistance. Both go on the grill at the same time. Overnight marinade is non-negotiable.",
@@ -2070,12 +2070,12 @@ const recipes = [
       "Lemon",
     ],
     steps: [
-      { text: "PREP: Pat dry. Cut 2-3 deep slits per drumstick to the bone. Split into adult + kid piles." },
+      { text: "PREP: Pat dry. Cut 2-3 deep slits per drumstick to the bone. Split into adult + kid piles.", images: ["/images/tandoori/step1-prep.webp"] },
       { text: "MARINATE ADULT: Yogurt + 2/3 Shan packet + lemon. Massage into slits." },
       { text: "MARINATE KID: Half yogurt + 1-2 tsp Lawry's. Keep it mild." },
       { text: "REST: Overnight in fridge. Minimum 6 hours." },
       { text: "COOK: Grill 10-15 min per side. Or bake 425°F 15-20 min, then broil 5-7 min per side." },
-      { text: "PLATE: Adults get 2-3 drumsticks + onion salad + cucumber. Kids get 1 drumstick + cucumber." },
+      { text: "PLATE: Adults get 2-3 drumsticks + onion salad + cucumber. Kids get 1 drumstick + cucumber.", images: ["/images/tandoori/step2-split-plate.webp"] },
     ],
     brands: [
       { name: "Shan", item: "Tandoori Masala", why: "Real Pakistani spice blend — not the watered-down grocery store version. This is what makes it taste like tandoori." },
