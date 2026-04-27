@@ -2108,7 +2108,7 @@ const recipes = [
     image: "/images/quesadillas/hero.webp",
     role: "The Crowd Pleaser",
     makeThisWhen: "You want crispy quesadillas for adults and soft melty street tacos for kids — from the same chicken. Two sauces make it two different meals without cooking twice.",
-    hook: "Same chicken base, two builds. Adults get crispy carb-balance quesadillas with fajita veg and chipotle sauce. Kids get soft street taco tortillas with melted cheese and Primal Kitchen Secret Sauce. Same cook window, zero complaints.",
+    hook: "Same chicken base, two builds. Adults get crispy carb-balance quesadillas with fajita veg and chipotle sauce. Kids get soft street taco tortillas with melted cheese and Primal Kitchen Special Sauce. Same cook window, zero complaints.",
     description: "~40g protein for ~450 cal. Pre-cooked chicken with taco seasoning + bone broth. Adults: crispy quesadilla + fajitas + chipotle sauce. Kids: soft street tacos + melty cheese + mild sauce. 20 min.",
     whyMostFail: [
       "Filling is watery — didn't reduce the broth properly",
@@ -2172,7 +2172,7 @@ const recipes = [
           "--- KID BUILD ---",
           "6 street taco tortillas (3 per kid)",
           "2-3 oz regular cheddar",
-          "Primal Kitchen Secret Sauce",
+          "Primal Kitchen Special Sauce",
         ],
         variants: [
           {
@@ -2199,19 +2199,23 @@ const recipes = [
       "--- KID BUILD ---",
       "6 street taco tortillas",
       "2-3 oz regular cheddar",
-      "Primal Kitchen Secret Sauce",
+      "Primal Kitchen Special Sauce",
     ],
     steps: [
       { text: "FAJITAS: Spray pan, cook onion + peppers 2-3 min. Add seasoning + broth. Reduce.", images: ["/images/quesadillas/step0-ingredients.webp"] },
       { text: "CHICKEN: Add cooked chicken, toss 1-2 min until coated.", images: ["/images/quesadillas/step1-chicken-fajitas.webp"] },
       { text: "ADULT BUILD: Tortilla → cheese → chicken + fajitas → cheese → tortilla. Medium heat, 4-5 min per side.", images: ["/images/quesadillas/step2-cooking.webp"] },
-      { text: "KID BUILD: Street tortilla → cheese → chicken → fold. Medium-low, 2-3 min per side.", images: ["/images/quesadillas/step2-cooking.webp"] },
-      { text: "SERVE: Adults get sliced quesadilla + chipotle sauce. Kids get soft tacos + Primal Kitchen sauce." },
+      { text: "KID BUILD: Street tortilla → cheese → chicken → fold. Medium-low, 2-3 min per side." },
+      { text: "SERVE: Adults get sliced quesadilla + chipotle sauce. Kids get soft tacos + Primal Kitchen sauce.", images: ["/images/quesadillas/hero.webp"] },
     ],
     brands: [
-      { name: "Mission", item: "Carb Balance Tortillas", why: "Lower carb but still gets crispy — the adult tortilla", image: "/images/brands/mission-zero-carbs.png", url: "https://www.missionfoods.com/products/zero-net-carbs-tortillas-original/" },
+      { name: "Mission", item: "Carb Balance Flour Tortillas", why: "4g net carbs, keto-friendly, still gets crispy — the adult tortilla", image: "/images/brands/mission-zero-carbs.png", url: "https://www.missionfoods.com/products/carb-balance-soft-taco-flour-tortillas/" },
       { name: "Mission", item: "Street Tacos Flour Tortillas", why: "Small, soft, kid-sized — perfect for little hands", image: "/images/brands/mission-street-tacos.png", url: "https://www.missionfoods.com/products/street-tacos-flour-tortillas/" },
-      { name: "Primal Kitchen", item: "Secret Sauce", why: "Mild, slightly sweet — the kid sauce that gets zero pushback" },
+      { name: "Kraft", item: "Fat Free Cheddar Shredded", why: "Melts with low heat + lid. Rinse lightly to remove anti-caking powder.", image: "/images/brands/kraft-ff-cheddar.jpg", url: "https://kraftnaturalcheese.com/product/shredded-cheese/cheddar-fat-free/" },
+      { name: "Spiceology", item: "Taco Seasoning", why: "Clean taco seasoning — the 'Ta' jar from the periodic table line", image: "/images/brands/spiceology-taco.jpg", url: "https://spiceology.com/products/taco-seasoning" },
+      { name: "Kirkland", item: "Organic Chicken Bone Broth", why: "Keeps lean chicken juicy without adding fat — simmer until reduced", image: "/images/brands/roli-roti-broth.jpg" },
+      { name: "Chosen Foods", item: "Avocado Oil Spray", why: "High smoke point, clean spray for the pan — no dripping", image: "/images/brands/chosen-foods-spray.png", url: "https://chosenfoods.com/products/avocado-oil-spray-2" },
+      { name: "Primal Kitchen", item: "Special Sauce", why: "Mild, slightly sweet — the kid sauce that gets zero pushback", image: "/images/brands/primal-kitchen-special.png", url: "https://www.primalkitchen.com/products/special-sauce-dipping-sauce" },
     ],
     mealPrep: {
       storage: "Assembled quesadillas keep 2-3 days in fridge. Reheat in air fryer.",
