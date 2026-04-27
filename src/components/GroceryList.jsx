@@ -85,21 +85,22 @@ const GROCERY_BY_WEEK = {
       { name: "Shredded mild cheese", qty: "pantry", meal: "Kid topping" },
     ],
   },
-  // Week 3: Mon=Gnocchi(1), Wed=Sandwiches(23), Fri=Rice Bowl(24)
+  // Week 3: Mon=Gnocchi(1), Wed=Sandwiches(23), Fri=Quesadillas(27)
   3: {
     "Protein": [
       { name: "Chicken thighs or Del Real shredded", baseQty: 1.25, unit: "lb", meal: "Mon" },
       { name: "Kirkland chicken breast fillets", baseQty: 4, unit: "fillets", meal: "Wed" },
-      { name: "Gary's QuickSteak Sirloin", baseQty: 1, unit: "pack", meal: "Fri" },
+      { name: "Cooked chicken (pre-cooked)", baseQty: 10, unit: "oz", meal: "Fri" },
     ],
     "Carbs": [
       { name: "Shelf-stable gnocchi", baseQty: 16, unit: "oz", meal: "Mon" },
       { name: "Bettergoods Keto Hamburger Buns", baseQty: 4, unit: "buns", meal: "Wed" },
       { name: "Slider buns", baseQty: 4, unit: "buns", meal: "Wed kid" },
-      { name: "Rice", baseQty: 14, unit: "oz dry", meal: "Fri" },
+      { name: "Carb-balance tortillas", baseQty: 4, unit: "tortillas", meal: "Fri" },
+      { name: "Street taco tortillas", baseQty: 6, unit: "tortillas", meal: "Fri kid" },
     ],
     "Vegetables": [
-      { name: "Bell peppers", baseQty: 2.5, unit: "", meal: "Mon" },
+      { name: "Bell peppers", baseQty: 2.5, unit: "", meal: "Mon + Fri" },
       { name: "Romaine lettuce", baseQty: 1, unit: "head", meal: "Wed" },
       { name: "Pickles", qty: "1 jar", meal: "Wed" },
       { name: "Onion", baseQty: 1, unit: "large", meal: "All" },
@@ -108,20 +109,22 @@ const GROCERY_BY_WEEK = {
     "Sauce & Flavor": [
       { name: "Dan-O's Outlaw seasoning", qty: "pantry", meal: "Mon" },
       { name: "Lime", baseQty: 1, unit: "", meal: "Mon" },
-      { name: "Liquid Chipotle or Money Mustard", baseQty: 4, unit: "servings", meal: "Wed + Fri" },
-      { name: "Chicken bone broth", baseQty: 3, unit: "cups", meal: "Fri" },
-      { name: "Kirkland Organic Ghee", qty: "pantry", meal: "Fri" },
-      { name: "Turmeric", qty: "pantry", meal: "Fri" },
+      { name: "Liquid Chipotle or Money Mustard", baseQty: 4, unit: "servings", meal: "Wed" },
+      { name: "Taco seasoning", qty: "pantry", meal: "Fri" },
+      { name: "Chicken bone broth", baseQty: 1, unit: "cup", meal: "Fri" },
+      { name: "Smoky Chipotle Crema", baseQty: 4, unit: "servings", meal: "Fri" },
       { name: "Chili oil or sriracha", qty: "pantry", meal: "All" },
     ],
     "Creamy Base": [
       { name: "Cottage cheese", baseQty: 12, unit: "oz", meal: "Mon" },
+      { name: "Fat-free cheddar", baseQty: 3, unit: "oz", meal: "Fri" },
       { name: "Fairlife fat-free milk", qty: "pantry", meal: "Sauce base" },
     ],
     "Kid Mode": [
       { name: "Rao's Alfredo sauce", baseQty: 15, unit: "oz jar", meal: "Mon kid" },
       { name: "Ketchup", qty: "pantry", meal: "Wed kid" },
-      { name: "Shredded mild cheese", qty: "pantry", meal: "Kid topping" },
+      { name: "Regular cheddar", baseQty: 3, unit: "oz", meal: "Fri kid" },
+      { name: "Primal Kitchen Secret Sauce", qty: "pantry", meal: "Fri kid" },
     ],
   },
   // Week 4: Mon=Steak & Fries(25), Wed=Smash Tacos(22), Fri=Sandwiches(23)

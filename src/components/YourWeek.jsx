@@ -38,7 +38,7 @@ const WEEKS = {
     cookDays: [
       { day: "Monday", label: "Comfort + Protein", vibe: "Crispy gnocchi, creamy sauce — comfort that earns its calories", id: 1, time: "30 min", reheats: false, adult: "Spicy fajita cream, peppers, chili oil", kid: "Rao's Alfredo or mild creamy", needs: ["Chicken", "Gnocchi", "Bell peppers", "Cottage cheese", "Dan-O's"], carbLevel: "high" },
       { day: "Wednesday", label: "Fast Food Night", vibe: "15 min — crispy chicken sandwiches, better than drive-through", id: 23, time: "15 min", reheats: true, adult: "Keto bun, chipotle or Money Mustard, pickles", kid: "Slider buns, plain or ketchup", needs: ["Kirkland chicken fillets", "Keto buns", "Slider buns", "Sauce"], carbLevel: "low" },
-      { day: "Friday", label: "System Meal", vibe: "Golden rice reheats all week, steak is fresh in 10 min", id: 24, time: "25 min", reheats: true, adult: "Golden turmeric rice, seared steak, chipotle drizzle", kid: "Rice + steak, no sauce — rice already has flavor", needs: ["Rice", "Bone broth", "Gary's QuickSteak", "Ghee", "Turmeric"], carbLevel: "high" },
+      { day: "Friday", label: "Quesadilla Night", vibe: "Crispy for adults, soft tacos for kids — same chicken", id: 27, time: "20 min", reheats: true, adult: "Crispy quesadilla + fajitas + chipotle sauce", kid: "Soft street tacos + Primal Kitchen sauce", needs: ["Chicken", "Carb-balance tortillas", "Street taco tortillas", "Cheddar", "Chipotle sauce"], carbLevel: "low" },
     ],
   },
   4: {
