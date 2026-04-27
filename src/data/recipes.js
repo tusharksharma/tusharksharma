@@ -2105,7 +2105,7 @@ const recipes = [
     servings: 4,
     protein: 40,
     calories: 450,
-    image: "",
+    image: "/images/quesadillas/hero.webp",
     role: "The Crowd Pleaser",
     makeThisWhen: "You want crispy quesadillas for adults and soft melty street tacos for kids — from the same chicken. Two sauces make it two different meals without cooking twice.",
     hook: "Same chicken base, two builds. Adults get crispy carb-balance quesadillas with fajita veg and chipotle sauce. Kids get soft street taco tortillas with melted cheese and Primal Kitchen Secret Sauce. Same cook window, zero complaints.",
@@ -2202,10 +2202,10 @@ const recipes = [
       "Primal Kitchen Secret Sauce",
     ],
     steps: [
-      { text: "FAJITAS: Spray pan, cook onion + peppers 2-3 min. Add seasoning + broth. Reduce." },
-      { text: "CHICKEN: Add cooked chicken, toss 1-2 min until coated." },
-      { text: "ADULT BUILD: Tortilla → cheese → chicken + fajitas → cheese → tortilla. Medium heat, 4-5 min per side." },
-      { text: "KID BUILD: Street tortilla → cheese → chicken → fold. Medium-low, 2-3 min per side." },
+      { text: "FAJITAS: Spray pan, cook onion + peppers 2-3 min. Add seasoning + broth. Reduce.", images: ["/images/quesadillas/step0-ingredients.webp"] },
+      { text: "CHICKEN: Add cooked chicken, toss 1-2 min until coated.", images: ["/images/quesadillas/step1-chicken-fajitas.webp"] },
+      { text: "ADULT BUILD: Tortilla → cheese → chicken + fajitas → cheese → tortilla. Medium heat, 4-5 min per side.", images: ["/images/quesadillas/step2-cooking.webp"] },
+      { text: "KID BUILD: Street tortilla → cheese → chicken → fold. Medium-low, 2-3 min per side.", images: ["/images/quesadillas/step2-cooking.webp"] },
       { text: "SERVE: Adults get sliced quesadilla + chipotle sauce. Kids get soft tacos + Primal Kitchen sauce." },
     ],
     brands: [
