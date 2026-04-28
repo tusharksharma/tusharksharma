@@ -124,7 +124,7 @@ const GROCERY_BY_WEEK = {
       { name: "Rao's Alfredo sauce", baseQty: 15, unit: "oz jar", meal: "Mon kid" },
       { name: "Ketchup", qty: "pantry", meal: "Wed kid" },
       { name: "Regular cheddar", baseQty: 3, unit: "oz", meal: "Fri kid" },
-      { name: "Primal Kitchen Secret Sauce", qty: "pantry", meal: "Fri kid" },
+      { name: "Primal Kitchen Special Sauce", qty: "pantry", meal: "Fri kid" },
     ],
   },
   // Week 4: Mon=Steak & Fries(25), Wed=Smash Tacos(22), Fri=Sandwiches(23)
@@ -214,7 +214,7 @@ const GROCERY_BY_WEEK = {
 function getGrocery(week) { return GROCERY_BY_WEEK[week] || GROCERY_BY_WEEK[1]; }
 
 // Units that must be purchased as whole items — always round up
-const WHOLE_UNITS = new Set(["head", "bunch", "bag", "jar", "pack", "large", "bottle", "buns", "fillets", "rolls", "tortillas", "servings"]);
+const WHOLE_UNITS = new Set(["head", "bunch", "bag", "jar", "pack", "large", "bottle", "buns", "fillets", "rolls", "tortillas", "servings", "drumsticks", "packet", "containers", "pieces", "patties", "cup", "cups"]);
 
 // All baseQty values are for 4 servings. Scale = totalServings / 4.
 // Consistent with recipe pages and weekly planner — kids count as full servings.

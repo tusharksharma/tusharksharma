@@ -53,7 +53,7 @@ const WEEKS = {
   },
   5: {
     label: "Week 5",
-    description: "Weekend grill night + two fast weeknight dinners. Marinate Sunday, grill Monday.",
+    description: "Grill night Monday + two fast weeknight dinners. Marinate overnight Sunday for Monday.",
     subtitle: "Tandoori Drumsticks, Air Fryer Chicken, Tri-tip Penne",
     cookDays: [
       { day: "Monday", label: "Grill Night", vibe: "Tandoori drumsticks — marinated overnight, grilled in 30 min", id: 26, time: "30 min", reheats: true, adult: "Shan tandoori drumsticks, onion salad, cucumber", kid: "Lawry's mild drumstick, cucumber, naan", needs: ["Drumsticks", "Greek yogurt", "Shan Tandoori Masala", "Lawry's", "Lemon"], carbLevel: "none" },
