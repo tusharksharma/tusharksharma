@@ -209,6 +209,44 @@ const GROCERY_BY_WEEK = {
       { name: "Naan bread", baseQty: 4, unit: "pieces", meal: "Mon kid" },
     ],
   },
+  // Week 6: Mon=Chili Chicken(28), Wed=Beef Stir-fry(4), Fri=Rice Bowl(24)
+  6: {
+    "Protein": [
+      { name: "Kirkland chicken breast chunks", baseQty: 32, unit: "oz", meal: "Mon" },
+      { name: "Ground beef or sirloin", baseQty: 1.25, unit: "lb", meal: "Wed" },
+      { name: "Gary's QuickSteak Sirloin", baseQty: 1, unit: "pack", meal: "Fri" },
+      { name: "Earth's Best mini meatballs", baseQty: 1, unit: "bag", meal: "Kid swap" },
+    ],
+    "Carbs": [
+      { name: "Rice", baseQty: 14, unit: "oz dry", meal: "Wed + Fri" },
+      { name: "Toasted buns", baseQty: 4, unit: "buns", meal: "Mon kid" },
+    ],
+    "Vegetables": [
+      { name: "Bell peppers", baseQty: 16, unit: "oz", meal: "Mon" },
+      { name: "Onion", baseQty: 2, unit: "large", meal: "Mon + Wed" },
+      { name: "Broccoli", baseQty: 12, unit: "oz", meal: "Wed" },
+      { name: "Garlic", qty: "1 head", meal: "All" },
+    ],
+    "Sauce & Flavor": [
+      { name: "Kikkoman Thai Chili Sauce", qty: "pantry", meal: "Mon" },
+      { name: "Ching's Red Chili Sauce", qty: "pantry", meal: "Mon" },
+      { name: "Nakano Rice Vinegar", qty: "pantry", meal: "Mon" },
+      { name: "Kikkoman Soy Sauce", qty: "pantry", meal: "Mon + Wed" },
+      { name: "Sesame Chili Oil", qty: "pantry", meal: "Mon" },
+      { name: "Dynasty Chili Crisp", qty: "pantry", meal: "Mon" },
+      { name: "Jet Tila Umami Punch", qty: "pantry", meal: "Mon" },
+      { name: "Sesame oil", qty: "pantry", meal: "Wed" },
+      { name: "Chicken bone broth", baseQty: 3, unit: "cups", meal: "Fri" },
+      { name: "Kirkland Organic Ghee", qty: "pantry", meal: "Fri" },
+      { name: "Turmeric", qty: "pantry", meal: "Fri" },
+      { name: "Liquid Chipotle Sauce", baseQty: 4, unit: "servings", meal: "Fri" },
+      { name: "Roli Roti bone broth", baseQty: 32, unit: "oz", meal: "Wed" },
+    ],
+    "Creamy Base": [],
+    "Kid Mode": [
+      { name: "Raw mini peppers", baseQty: 1, unit: "bag", meal: "Mon kid" },
+    ],
+  },
 };
 
 function getGrocery(week) { return GROCERY_BY_WEEK[week] || GROCERY_BY_WEEK[1]; }
