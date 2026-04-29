@@ -95,6 +95,7 @@ When adding to `src/data/cookbook.js` (sauces, breakfasts, desserts, quickLunche
 When a new recipe is added, generate and share these prompts for the user. **ChatGPT produces better results than Gemini** — use ChatGPT first.
 
 **CRITICAL PROMPT RULES:**
+- **Always specify aspect ratio first:** Hero = "3:2 landscape (1200x800)", Steps/Prep = "4:3 landscape (800x600)"
 - Name every brand explicitly (Sola, Kraft, French's, Kirkland, 365, etc.)
 - Describe packaging details (red bag, yellow bottle, green box)
 - Include "partially removed from packaging" for visual variety
