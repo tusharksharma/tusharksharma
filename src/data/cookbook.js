@@ -448,8 +448,8 @@ export const quickLunches = [
     brands: [
       { name: "Sola", item: "Sweet & Buttery Bread", why: "8g protein per 2 slices at 80 cal — the bread IS a protein source", image: "/images/brands/sola-bread.png", url: "https://thesolacompany.com/products/sweet-and-buttery-bread" },
       { name: "365", item: "Organic Black Forest Uncured Ham", why: "11g protein per serving. Clean, no nitrates.", image: "/images/brands/365-ham.jpg", url: "https://www.wholefoodsmarket.com/product/365-everyday-value-organic-uncured-black-forest-ham-b074h7j2vt" },
-      { name: "Velveeta", item: "Original Slices", why: "Melts into ham without heat. Creamy binding layer." },
-      { name: "Philadelphia", item: "Whipped Chipotle", why: "Smoky heat in a spread — the adult flavor layer. Half the calories of regular cream cheese.", image: "/images/brands/philadelphia-whipped.jpg" },
+      { name: "Velveeta", item: "Original Slices", why: "Melts into ham without heat. Creamy binding layer.", image: "/images/brands/velveeta-slices.png", url: "https://www.kraftheinz.com/velveeta/products/00021000611447-original-flavored-cheese" },
+      { name: "Philadelphia", item: "Whipped Chipotle", why: "Smoky heat in a spread — the adult flavor layer. Half the calories of regular cream cheese.", image: "/images/brands/philly-whipped-chipotle.png", url: "https://www.kraftheinz.com/philadelphia/products/00021000080441-chipotle-whipped-cream-cheese-spread" },
     ],
     mealPrep: {
       storage: "Best fresh. Can pre-make without lettuce — add greens when eating.",
