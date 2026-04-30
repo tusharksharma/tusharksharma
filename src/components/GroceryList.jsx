@@ -293,13 +293,19 @@ function getGrocery(week) { return GROCERY_BY_WEEK[week] || GROCERY_BY_WEEK[1]; 
 // Units that must be purchased as whole items — always round up
 const WHOLE_UNITS = new Set(["head", "bunch", "bag", "jar", "pack", "large", "bottle", "buns", "fillets", "rolls", "tortillas", "servings", "drumsticks", "packet", "containers", "pieces", "patties", "cup", "cups"]);
 
-// All baseQty values are for 4 servings. Scale = totalServings / 4.
-// Consistent with recipe pages and weekly planner — kids count as full servings.
+// baseQty values are for 4 servings (2 adults + 2 kids standard).
+// Kid-tagged items scale by kids only. All others scale by total.
+// If kids=0, kid items are hidden (not just scaled to 0).
+function isKidItem(entry) {
+  return /kid/i.test(entry.meal);
+}
+
 function scaleQty(entry, adults, kids, leftovers) {
   if (entry.baseQty != null) {
-    const scale = ((adults + kids) / 4) * (leftovers ? 2 : 1);
+    // Kid items scale by kids/2, everything else by total/4
+    const base = isKidItem(entry) ? kids / 2 : (adults + kids) / 4;
+    const scale = base * (leftovers ? 2 : 1);
     const scaled = entry.baseQty * scale;
-    // Whole-unit items round up (you can't buy half a head of lettuce)
     if (WHOLE_UNITS.has(entry.unit)) {
       const ceiled = Math.ceil(scaled);
       return `${ceiled} ${entry.unit}`.trim();
@@ -323,12 +329,15 @@ export default function GroceryList({ adults = 2, kids = 2, leftovers = true, ex
     setChecked(new Set());
   }, [week, adults, kids, leftovers, excludedTags]);
 
-  // Filter out items whose meal tag matches an excluded day
+  // Filter out items based on excluded days AND adult/kid composition
   const isExcluded = (entry) => {
+    // Hide kid items when no kids
+    if (kids === 0 && isKidItem(entry)) return true;
+    // Check excluded day tags
     if (excludedTags.length === 0) return false;
     const tag = entry.meal;
     if (tag === "All" || tag === "Sauce base" || tag === "Kid swap" || tag === "Kid topping") return false;
-    const tagDays = tag.split(/\s*\+\s*/).map((d) => d.trim().substring(0, 3));
+    const tagDays = tag.split(/\s*\+\s*/).map((d) => d.trim().replace(/\s+kid$/, "").substring(0, 3));
     return tagDays.every((d) => excludedTags.includes(d));
   };
 
@@ -451,14 +460,13 @@ export default function GroceryList({ adults = 2, kids = 2, leftovers = true, ex
       {/* Completion / efficiency */}
       {allDone ? (
         <div className="px-5 py-6 border-t border-amber-500/30 bg-amber-500/5 text-center">
-          <p className="text-amber-400 font-black text-sm">Done. You just solved your week.</p>
-          <p className="text-neutral-500 text-xs mt-1">3 dinners, 7 days, zero decisions left.</p>
+          <p className="text-amber-400 font-black text-sm">Shopping list complete.</p>
+          <p className="text-neutral-500 text-xs mt-1">3 dinners planned. One grocery run. You're set.</p>
         </div>
       ) : (
         <div className="px-5 py-4 border-t border-neutral-800 bg-neutral-900/50">
           <p className="text-neutral-500 text-xs text-center">
-            You only buy <span className="text-white font-semibold">3 proteins</span>. That covers your entire week.
-            Same veg reused. Same sauce base. Minimal waste.
+            One grocery run covers the whole plan. Same base ingredients reused across meals. Minimal waste.
           </p>
         </div>
       )}

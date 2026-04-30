@@ -335,11 +335,11 @@ export default function YourWeek() {
             </div>
             <div>
               <span className="text-white font-bold text-sm">2. Cook</span>
-              <p className="text-neutral-500 text-[10px] mt-0.5">Mon &rarr; Wed &rarr; Fri</p>
+              <p className="text-neutral-500 text-[10px] mt-0.5">3 dinners, your schedule</p>
             </div>
             <div>
               <span className="text-white font-bold text-sm">3. Done</span>
-              <p className="text-neutral-500 text-[10px] mt-0.5">7 days handled</p>
+              <p className="text-neutral-500 text-[10px] mt-0.5">{leftovers ? "Leftovers cover off-nights" : "Cook nights sorted"}</p>
             </div>
           </div>
         </div>
