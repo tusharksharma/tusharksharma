@@ -2487,10 +2487,10 @@ const recipes = [
       { text: "FINISH: Add sausage, toss 20 sec. Kill heat. Serve." },
     ],
     brands: [
-      { name: "Buldak", item: "High Protein Ramen", why: "30g protein per pack + real spicy flavor. Cooked in broth = 42g protein before sausage." },
-      { name: "Bilinski's", item: "Organic Cajun Chicken Sausage", why: "19g protein per 1.5 links. Air fries with crispy edges in 5 min. Clean ingredients." },
-      { name: "Kirkland", item: "Organic Chicken Bone Broth", why: "12g protein per cup. Replaces water — free protein + umami depth." },
-      { name: "Maruchan", item: "Chicken Ramen", why: "Kid ramen. Familiar, fast, zero resistance. Don't overthink this one." },
+      { name: "Buldak", item: "High Protein Ramen", why: "30g protein per pack + real spicy flavor. Cooked in broth = 42g protein before sausage.", image: "/images/brands/buldak-ramen.jpg", url: "https://www.walmart.com/ip/Samyang-Buldak-Light-Hot-Chicken-Flavored-Ramen-5-PACK-19-40-Oz-550-g/498657180" },
+      { name: "Bilinski's", item: "Organic Cajun Chicken Sausage", why: "19g protein per 1.5 links. Air fries with crispy edges in 5 min. Clean ingredients.", image: "/images/brands/bilinskis-sausage.webp", url: "https://www.bilinski.com/organicchickensausages/cajun-styleandouille" },
+      { name: "Kirkland", item: "Organic Chicken Bone Broth", why: "12g protein per cup. Replaces water — free protein + umami depth.", image: "/images/brands/kirkland-bone-broth.jpg", url: "https://www.costcobusinessdelivery.com/kirkland-signature-organic-chicken-bone-broth-32-fl-oz,-6-ct.product.100403862.html" },
+      { name: "Maruchan", item: "Chicken Ramen", why: "Kid ramen. Familiar, fast, zero resistance. Don't overthink this one.", image: "/images/brands/maruchan-chicken.jpg", url: "https://maruchan.com/products/ramen/chicken-flavor" },
     ],
     mealPrep: {
       storage: "Best fresh. Ramen doesn't store well.",
