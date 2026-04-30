@@ -247,6 +247,45 @@ const GROCERY_BY_WEEK = {
       { name: "Raw mini peppers", baseQty: 1, unit: "bag", meal: "Mon kid" },
     ],
   },
+  // Week 7: Mon=Buldak Ramen(29), Wed=Quesadillas(27), Fri=Gnocchi(1)
+  7: {
+    "Protein": [
+      { name: "Bilinski's Cajun Chicken Sausage", baseQty: 2, unit: "pack", meal: "Mon" },
+      { name: "Cooked chicken (pre-cooked)", baseQty: 10, unit: "oz", meal: "Wed" },
+      { name: "Chicken thighs or Del Real shredded", baseQty: 1.25, unit: "lb", meal: "Fri" },
+    ],
+    "Carbs": [
+      { name: "Buldak High Protein Ramen", baseQty: 2, unit: "pack", meal: "Mon" },
+      { name: "Maruchan Chicken Ramen", baseQty: 2, unit: "pack", meal: "Mon kid" },
+      { name: "Carb-balance tortillas", baseQty: 4, unit: "tortillas", meal: "Wed" },
+      { name: "Street taco tortillas", baseQty: 6, unit: "tortillas", meal: "Wed kid" },
+      { name: "Shelf-stable gnocchi", baseQty: 16, unit: "oz", meal: "Fri" },
+    ],
+    "Vegetables": [
+      { name: "Bell peppers", baseQty: 2.5, unit: "", meal: "Wed + Fri" },
+      { name: "Onion", baseQty: 1, unit: "large", meal: "Wed + Fri" },
+      { name: "Garlic", qty: "1 head", meal: "All" },
+    ],
+    "Sauce & Flavor": [
+      { name: "Kirkland Chicken Bone Broth", baseQty: 2, unit: "cups", meal: "Mon" },
+      { name: "Taco seasoning", qty: "pantry", meal: "Wed" },
+      { name: "Chicken bone broth", baseQty: 1, unit: "cup", meal: "Wed" },
+      { name: "Smoky Chipotle Crema", baseQty: 4, unit: "servings", meal: "Wed" },
+      { name: "Dan-O's Outlaw seasoning", qty: "pantry", meal: "Fri" },
+      { name: "Lime", baseQty: 1, unit: "", meal: "Fri" },
+      { name: "Chili oil or sriracha", qty: "pantry", meal: "All" },
+    ],
+    "Creamy Base": [
+      { name: "Fat-free cheddar", baseQty: 3, unit: "oz", meal: "Wed" },
+      { name: "Cottage cheese", baseQty: 12, unit: "oz", meal: "Fri" },
+      { name: "Fairlife fat-free milk", qty: "pantry", meal: "Sauce base" },
+    ],
+    "Kid Mode": [
+      { name: "Regular cheddar", baseQty: 3, unit: "oz", meal: "Wed kid" },
+      { name: "Primal Kitchen Special Sauce", qty: "pantry", meal: "Wed kid" },
+      { name: "Rao's Alfredo sauce", baseQty: 15, unit: "oz jar", meal: "Fri kid" },
+    ],
+  },
 };
 
 function getGrocery(week) { return GROCERY_BY_WEEK[week] || GROCERY_BY_WEEK[1]; }

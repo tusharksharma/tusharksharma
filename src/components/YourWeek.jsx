@@ -71,6 +71,16 @@ const WEEKS = {
       { day: "Friday", label: "System Meal", vibe: "Golden rice reheats all week, steak is fresh in 10 min", id: 24, time: "25 min", reheats: true, adult: "Golden turmeric rice, seared steak, chipotle drizzle", kid: "Rice + steak, no sauce — rice already has flavor", needs: ["Rice", "Bone broth", "Gary's QuickSteak", "Ghee", "Turmeric"], carbLevel: "high" },
     ],
   },
+  7: {
+    label: "Week 7",
+    description: "Ramen night + quesadillas + gnocchi. Fast, fun, kid-approved.",
+    subtitle: "Buldak Ramen, Quesadillas, Gnocchi",
+    cookDays: [
+      { day: "Monday", label: "Ramen Night", vibe: "61g protein ramen in 15 min — Buldak for adults, Maruchan for kids", id: 29, time: "15 min", reheats: false, adult: "Spicy Buldak in bone broth, semi-dry, sausage", kid: "Maruchan chicken ramen + sausage", needs: ["Buldak ramen", "Maruchan", "Bilinski's sausage", "Bone broth"], carbLevel: "high" },
+      { day: "Wednesday", label: "Quesadilla Night", vibe: "Crispy for adults, soft tacos for kids — same chicken", id: 27, time: "20 min", reheats: true, adult: "Crispy quesadilla + fajitas + chipotle sauce", kid: "Soft street tacos + mild sauce", needs: ["Chicken", "Tortillas", "Cheddar", "Peppers"], carbLevel: "low" },
+      { day: "Friday", label: "Comfort + Protein", vibe: "Crispy gnocchi, creamy sauce — comfort that earns its calories", id: 1, time: "30 min", reheats: false, adult: "Spicy fajita cream, peppers, chili oil", kid: "Rao's Alfredo or mild creamy", needs: ["Chicken", "Gnocchi", "Bell peppers", "Cottage cheese", "Dan-O's"], carbLevel: "high" },
+    ],
+  },
 };
 
 function getLeftoverMsg(hasLeftovers) {
