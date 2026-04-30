@@ -403,6 +403,9 @@ export const breakfasts = [
       reheat: "Air fryer 350°F for 2 min to re-crisp if needed.",
     },
   },
+];
+
+export const quickLunches = [
   {
     id: "chipotle-ham-sandwich",
     title: "Chipotle Ham Sandwich",
@@ -454,9 +457,6 @@ export const breakfasts = [
       reheat: "N/A — cold sandwich.",
     },
   },
-];
-
-export const quickLunches = [
   {
     id: "crispy-chicken-money-mustard",
     title: "Crispy Chicken + Money Mustard",
