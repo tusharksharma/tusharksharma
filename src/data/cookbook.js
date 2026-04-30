@@ -403,6 +403,57 @@ export const breakfasts = [
       reheat: "Air fryer 350°F for 2 min to re-crisp if needed.",
     },
   },
+  {
+    id: "chipotle-ham-sandwich",
+    title: "Chipotle Ham Sandwich",
+    tagline: "200 cal, 22g protein per sandwich. 5 minutes. No cooking.",
+    heroImage: "/images/chipotle-ham-sandwich-hero.webp",
+    prepImage: "/images/chipotle-ham-sandwich-prep.webp",
+    flavorProfile: "Creamy chipotle, smoky ham, crisp greens, soft bread",
+    calories: 200,
+    caloriesPerServing: 200,
+    protein: 22,
+    servings: 1,
+    time: "5 min",
+    bestFor: ["Lunch", "Quick meal", "No-cook", "High protein"],
+    useThisWhen: "You need a real lunch in 5 minutes with no cooking. 22g protein, 200 cal per sandwich. Eat two for 44g protein at 400 cal.",
+    flavorTarget: "Chipotle cream cheese on both slices for adults — smoky, creamy, no dry bites. Velveeta melts into the ham. Mixed greens add crunch. Kids get regular whipped cream cheese — mild, familiar.",
+    splitNote: {
+      adult: "2 oz ham, Philadelphia Whipped Chipotle, generous greens. Eat 2 for a full meal (400 cal, 44g protein).",
+      kid: "1 oz ham, regular whipped cream cheese, lighter greens. One sandwich is a meal for kids.",
+    },
+    ingredients: [
+      "2 slices Sola Sweet & Buttery bread (80 cal, 8g protein)",
+      "2 oz 365 Organic Black Forest Uncured Ham (60 cal, 11g protein)",
+      "1 slice Velveeta Original (35 cal, 3g protein)",
+      "1 tbsp Philadelphia Whipped Chipotle (25 cal)",
+      "Crisp mixed greens lettuce",
+    ],
+    steps: [
+      "SPREAD: Philadelphia Whipped Chipotle on both slices of bread. Adults get chipotle, kids get regular whipped.",
+      "LAYER: Ham evenly on one slice. Adults 2 oz, kids 1 oz.",
+      "CHEESE: 1 Velveeta slice on top of ham.",
+      "GREENS: Generous layer of crisp mixed greens. This is the texture — don't skip.",
+      "CLOSE: Press lightly to bind. Slice and serve.",
+    ],
+    troubleshooting: [
+      { problem: "Sandwich is dry", fix: "Spread cream cheese on BOTH slices. One side only = dry bites." },
+      { problem: "Falls apart", fix: "Press lightly after closing. The cream cheese acts as glue." },
+      { problem: "Lettuce is wilty / soggy", fix: "Wash and DRY completely. Wet lettuce ruins the texture." },
+      { problem: "Not filling enough", fix: "Eat two. That's 400 cal, 44g protein. Or add extra ham." },
+    ],
+    brands: [
+      { name: "Sola", item: "Sweet & Buttery Bread", why: "8g protein per 2 slices at 80 cal — the bread IS a protein source", image: "/images/brands/sola-bread.png", url: "https://thesolacompany.com/products/sweet-and-buttery-bread" },
+      { name: "365", item: "Organic Black Forest Uncured Ham", why: "11g protein per serving. Clean, no nitrates.", image: "/images/brands/365-ham.jpg", url: "https://www.wholefoodsmarket.com/product/365-everyday-value-organic-uncured-black-forest-ham-b074h7j2vt" },
+      { name: "Velveeta", item: "Original Slices", why: "Melts into ham without heat. Creamy binding layer." },
+      { name: "Philadelphia", item: "Whipped Chipotle", why: "Smoky heat in a spread — the adult flavor layer. Half the calories of regular cream cheese.", image: "/images/brands/philadelphia-whipped.jpg" },
+    ],
+    mealPrep: {
+      storage: "Best fresh. Can pre-make without lettuce — add greens when eating.",
+      lasts: "Same day. Lettuce wilts overnight.",
+      reheat: "N/A — cold sandwich.",
+    },
+  },
 ];
 
 export const quickLunches = [
