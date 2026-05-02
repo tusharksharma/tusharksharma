@@ -101,7 +101,7 @@ export default function CookbookDetailPage() {
         {/* Prep Image */}
         {sauce.prepImage && (
           <div className="mt-6 rounded-xl overflow-hidden">
-            <img src={sauce.prepImage} alt={`${sauce.title} prep`} className="w-full h-56 sm:h-72 object-cover" loading="lazy" />
+            <img src={sauce.prepImage} alt={`${sauce.title} prep`} className="w-full h-72 sm:h-96 object-cover" loading="lazy" />
             <p className="text-neutral-600 text-[10px] mt-1 text-center">Mise en place</p>
           </div>
         )}
