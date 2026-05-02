@@ -498,6 +498,51 @@ export const quickLunches = [
       reheat: "Air fry from frozen every time. Don't microwave these.",
     },
   },
+  {
+    id: "miyoka-protein-ramen",
+    title: "No-Dish Protein Ramen",
+    tagline: "~35g protein. 7 minutes. Zero dishes. Eat from the container.",
+    heroImage: "/images/miyoka-ramen/hero.webp",
+    prepImage: "/images/miyoka-ramen/step0-ingredients.webp",
+    flavorProfile: "Spicy stir-fried ramen, bone broth depth, coated not soupy",
+    calories: 350,
+    caloriesPerServing: 350,
+    protein: 35,
+    servings: 1,
+    time: "7-10 min",
+    bestFor: ["Quick lunch", "No-dish", "High protein", "Zero cleanup"],
+    useThisWhen: "You need protein in under 10 minutes and don't want to wash a single dish. Cook in a pot, pour back into the container, shake with sauce, eat.",
+    flavorTarget: "Spicy stir-fried noodles coated in Miyoka sauce. Bone broth replaces water for extra protein + umami. Not soupy — reduced until coated.",
+    splitNote: {
+      adult: "Use Miyoka Spicy version. Full sauce packet. Optional: chili flakes or soy sauce boost.",
+      kid: "Use Miyoka non-spicy version if available. Or use Maruchan instead — same bone broth trick works.",
+    },
+    ingredients: [
+      "1 Miyoka Protein Spicy Ramen container (25g protein)",
+      "1 cup Kirkland Chicken Bone Broth (not water — 9g extra protein)",
+    ],
+    steps: [
+      "COOK: Add noodles to a small pot. Pour in 1 cup bone broth. Boil, then reduce to medium. Cook 5-7 min until soft and broth is mostly absorbed.",
+      "TRANSFER: Pour cooked noodles back into the Miyoka container. No bowl needed.",
+      "SAUCE: Add the sauce packet. Close lid. Shake well. Let sit 1-2 min to coat.",
+      "EAT: Directly from the container. Done.",
+    ],
+    troubleshooting: [
+      { problem: "Too soupy", fix: "Cook longer — the broth should be mostly absorbed before transferring. Not a soup." },
+      { problem: "Noodles are mushy", fix: "Overcooked. Pull at 5 min — they continue absorbing in the container." },
+      { problem: "Sauce isn't coating evenly", fix: "Shake harder. Or stir with a fork before eating. The 1-2 min rest helps." },
+      { problem: "Not enough protein", fix: "Add a sliced Bilinski's sausage or a soft-boiled egg on top." },
+    ],
+    brands: [
+      { name: "Miyoka", item: "Protein Spicy Ramen (Chicken Flavor)", why: "25g protein per container. Spicy stir-fried style. Eat from the container — zero dishes." },
+      { name: "Kirkland", item: "Organic Chicken Bone Broth", why: "9g protein per cup. Replaces water — free protein + umami.", image: "/images/brands/kirkland-bone-broth.jpg", url: "https://www.costcobusinessdelivery.com/kirkland-signature-organic-chicken-bone-broth-32-fl-oz,-6-ct.product.100403862.html" },
+    ],
+    mealPrep: {
+      storage: "N/A — 7 minutes to make.",
+      lasts: "Eat immediately.",
+      reheat: "N/A.",
+    },
+  },
 ];
 
 export const desserts = [
