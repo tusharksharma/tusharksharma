@@ -187,8 +187,10 @@ export default function YourWeek() {
   const [enabledMeals, setEnabledMeals] = useState({ Mon: true, Wed: true, Fri: true });
   const [showFeedback, setShowFeedback] = useState(false);
 
-  const servings = (adults + kids) * (leftovers ? 2 : 1);
+  const servings = adults + kids;
   const currentWeek = WEEKS[week];
+  // Build per-day reheats map for grocery scaling
+  const dayReheats = { Mon: currentWeek.cookDays[0]?.reheats, Wed: currentWeek.cookDays[1]?.reheats, Fri: currentWeek.cookDays[2]?.reheats };
   const enabledCount = Object.values(enabledMeals).filter(Boolean).length;
   const leftoverMsgs = getLeftoverMsg(leftovers);
 
@@ -389,7 +391,7 @@ export default function YourWeek() {
 
         {/* Grocery */}
         <div className="mt-10" id="grocery">
-          <GroceryList adults={adults} kids={kids} leftovers={leftovers} excludedTags={excludedTags} week={week} planLabel={currentWeek.label} />
+          <GroceryList adults={adults} kids={kids} leftovers={leftovers} dayReheats={dayReheats} excludedTags={excludedTags} week={week} planLabel={currentWeek.label} />
         </div>
 
         {/* Sauce bridge */}

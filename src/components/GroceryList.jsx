@@ -15,9 +15,9 @@ const GROCERY_BY_WEEK = {
       { name: "Chicken thighs (boneless skinless)", baseQty: 2, unit: "lb", meal: "Fri" },
     ],
     "Carbs": [
-      { name: "Bettergoods Keto Hamburger Buns", baseQty: 4, unit: "buns", meal: "Mon" },
+      { name: "Bettergoods Keto Hamburger Buns", baseQty: 4, unit: "buns", meal: "Mon adult" },
       { name: "Slider buns", baseQty: 4, unit: "buns", meal: "Mon kid" },
-      { name: "Mission Zero Net Carbs tortillas", baseQty: 8, unit: "tortillas", meal: "Wed" },
+      { name: "Mission Zero Net Carbs tortillas", baseQty: 8, unit: "tortillas", meal: "Wed adult" },
       { name: "Mission Street Tacos flour tortillas", baseQty: 4, unit: "tortillas", meal: "Wed kid" },
       { name: "Dinner rolls", baseQty: 4, unit: "rolls", meal: "Fri kid" },
     ],
@@ -94,9 +94,9 @@ const GROCERY_BY_WEEK = {
     ],
     "Carbs": [
       { name: "Shelf-stable gnocchi", baseQty: 16, unit: "oz", meal: "Mon" },
-      { name: "Bettergoods Keto Hamburger Buns", baseQty: 4, unit: "buns", meal: "Wed" },
+      { name: "Bettergoods Keto Hamburger Buns", baseQty: 4, unit: "buns", meal: "Wed adult" },
       { name: "Slider buns", baseQty: 4, unit: "buns", meal: "Wed kid" },
-      { name: "Carb-balance tortillas", baseQty: 4, unit: "tortillas", meal: "Fri" },
+      { name: "Carb-balance tortillas", baseQty: 4, unit: "tortillas", meal: "Fri adult" },
       { name: "Street taco tortillas", baseQty: 6, unit: "tortillas", meal: "Fri kid" },
     ],
     "Vegetables": [
@@ -137,9 +137,9 @@ const GROCERY_BY_WEEK = {
     ],
     "Carbs": [
       { name: "Checkers/Rally's frozen fries", baseQty: 4, unit: "servings", meal: "Mon" },
-      { name: "Mission Zero Net Carbs tortillas", baseQty: 8, unit: "tortillas", meal: "Wed" },
+      { name: "Mission Zero Net Carbs tortillas", baseQty: 8, unit: "tortillas", meal: "Wed adult" },
       { name: "Mission Street Tacos flour tortillas", baseQty: 4, unit: "tortillas", meal: "Wed kid" },
-      { name: "Bettergoods Keto Hamburger Buns", baseQty: 4, unit: "buns", meal: "Fri" },
+      { name: "Bettergoods Keto Hamburger Buns", baseQty: 4, unit: "buns", meal: "Fri adult" },
       { name: "Slider buns", baseQty: 4, unit: "buns", meal: "Fri kid" },
     ],
     "Vegetables": [
@@ -255,9 +255,9 @@ const GROCERY_BY_WEEK = {
       { name: "Chicken thighs or Del Real shredded", baseQty: 1.25, unit: "lb", meal: "Fri" },
     ],
     "Carbs": [
-      { name: "Buldak High Protein Ramen", baseQty: 2, unit: "pack", meal: "Mon" },
+      { name: "Buldak High Protein Ramen", baseQty: 2, unit: "pack", meal: "Mon adult" },
       { name: "Maruchan Chicken Ramen", baseQty: 2, unit: "pack", meal: "Mon kid" },
-      { name: "Carb-balance tortillas", baseQty: 4, unit: "tortillas", meal: "Wed" },
+      { name: "Carb-balance tortillas", baseQty: 4, unit: "tortillas", meal: "Wed adult" },
       { name: "Street taco tortillas", baseQty: 6, unit: "tortillas", meal: "Wed kid" },
       { name: "Shelf-stable gnocchi", baseQty: 16, unit: "oz", meal: "Fri" },
     ],
@@ -276,7 +276,7 @@ const GROCERY_BY_WEEK = {
       { name: "Chili oil or sriracha", qty: "pantry", meal: "All" },
     ],
     "Creamy Base": [
-      { name: "Fat-free cheddar", baseQty: 3, unit: "oz", meal: "Wed" },
+      { name: "Fat-free cheddar", baseQty: 3, unit: "oz", meal: "Wed adult" },
       { name: "Cottage cheese", baseQty: 12, unit: "oz", meal: "Fri" },
       { name: "Fairlife fat-free milk", qty: "pantry", meal: "Sauce base" },
     ],
@@ -294,17 +294,28 @@ function getGrocery(week) { return GROCERY_BY_WEEK[week] || GROCERY_BY_WEEK[1]; 
 const WHOLE_UNITS = new Set(["head", "bunch", "bag", "jar", "pack", "large", "bottle", "buns", "fillets", "rolls", "tortillas", "servings", "drumsticks", "packet", "containers", "pieces", "patties", "cup", "cups"]);
 
 // baseQty values are for 4 servings (2 adults + 2 kids standard).
-// Kid-tagged items scale by kids only. All others scale by total.
-// If kids=0, kid items are hidden (not just scaled to 0).
+// Kid-tagged items scale by kids only. Adult-tagged by adults only. Shared by total.
+// Leftovers multiplier only applies if the item's day has reheats:true.
 function isKidItem(entry) {
   return /kid/i.test(entry.meal);
 }
 
-function scaleQty(entry, adults, kids, leftovers) {
+function isAdultItem(entry) {
+  return /adult/i.test(entry.meal);
+}
+
+function getItemDays(entry) {
+  return entry.meal.split(/\s*\+\s*/).map((d) => d.trim().replace(/\s+(kid|adult)$/i, "").substring(0, 3));
+}
+
+function scaleQty(entry, adults, kids, leftovers, dayReheats) {
   if (entry.baseQty != null) {
-    // Kid items scale by kids/2, everything else by total/4
-    const base = isKidItem(entry) ? kids / 2 : (adults + kids) / 4;
-    const scale = base * (leftovers ? 2 : 1);
+    // Kid items scale by kids/2, adult items by adults/2, shared by total/4
+    const base = isKidItem(entry) ? kids / 2 : isAdultItem(entry) ? adults / 2 : (adults + kids) / 4;
+    // Leftovers multiplier only if the item's day(s) all reheat
+    const days = getItemDays(entry);
+    const reheatsForItem = leftovers && days.every((d) => dayReheats && dayReheats[d]);
+    const scale = base * (reheatsForItem ? 2 : 1);
     const scaled = entry.baseQty * scale;
     if (WHOLE_UNITS.has(entry.unit)) {
       const ceiled = Math.ceil(scaled);
@@ -318,7 +329,7 @@ function scaleQty(entry, adults, kids, leftovers) {
   return entry.qty || "";
 }
 
-export default function GroceryList({ adults = 2, kids = 2, leftovers = true, excludedTags = [], week = 1, planLabel = "" }) {
+export default function GroceryList({ adults = 2, kids = 2, leftovers = true, dayReheats = {}, excludedTags = [], week = 1, planLabel = "" }) {
   const [checked, setChecked] = useState(new Set());
   const [isOpen, setIsOpen] = useState(false);
   const GROCERY = getGrocery(week);
@@ -331,13 +342,14 @@ export default function GroceryList({ adults = 2, kids = 2, leftovers = true, ex
 
   // Filter out items based on excluded days AND adult/kid composition
   const isExcluded = (entry) => {
-    // Hide kid items when no kids
+    // Hide kid items when no kids, adult items when no adults
     if (kids === 0 && isKidItem(entry)) return true;
+    if (adults === 0 && isAdultItem(entry)) return true;
     // Check excluded day tags
     if (excludedTags.length === 0) return false;
     const tag = entry.meal;
     if (tag === "All" || tag === "Sauce base" || tag === "Kid swap" || tag === "Kid topping") return false;
-    const tagDays = tag.split(/\s*\+\s*/).map((d) => d.trim().replace(/\s+kid$/, "").substring(0, 3));
+    const tagDays = tag.split(/\s*\+\s*/).map((d) => d.trim().replace(/\s+(kid|adult)$/i, "").substring(0, 3));
     return tagDays.every((d) => excludedTags.includes(d));
   };
 
@@ -356,7 +368,7 @@ export default function GroceryList({ adults = 2, kids = 2, leftovers = true, ex
       .map(([cat, items]) => {
         const visible = items.filter((i) => !isExcluded(i));
         if (visible.length === 0) return null;
-        return `${cat}:\n${visible.map((i) => `  - ${i.name}${scaleQty(i, adults, kids, leftovers) ? ` (${scaleQty(i, adults, kids, leftovers)})` : ""}`).join("\n")}`;
+        return `${cat}:\n${visible.map((i) => `  - ${i.name}${scaleQty(i, adults, kids, leftovers, dayReheats) ? ` (${scaleQty(i, adults, kids, leftovers, dayReheats)})` : ""}`).join("\n")}`;
       })
       .filter(Boolean)
       .join("\n\n");
@@ -434,7 +446,7 @@ export default function GroceryList({ adults = 2, kids = 2, leftovers = true, ex
                 const idx = globalIdx++;
                 if (isExcluded(entry)) return null;
                 const isChecked = checked.has(idx);
-                const qty = scaleQty(entry, adults, kids, leftovers);
+                const qty = scaleQty(entry, adults, kids, leftovers, dayReheats);
                 return (
                   <li key={idx} onClick={() => toggle(idx)} className="flex items-start gap-3 py-2 px-2 -mx-2 rounded-lg hover:bg-neutral-800/50 cursor-pointer select-none transition-colors">
                     <span className={`w-4 h-4 mt-0.5 rounded border flex-shrink-0 flex items-center justify-center text-[10px] transition-colors ${isChecked ? "bg-amber-500 border-amber-500 text-black" : "border-neutral-600"}`}>

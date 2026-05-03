@@ -3,8 +3,13 @@
  *
  * Checks:
  * 1. Same week numbers exist in both files
- * 2. Planner recipe IDs for each week are logged for manual review
- * 3. Grocery day tags match planner day assignments
+ * 2. Each planner week has exactly 3 cook days with recipe IDs
+ * 3. Grocery day tags cover the same days as planner
+ *
+ * Does NOT check:
+ * - Whether grocery items match specific recipes (manual review)
+ * - Leftovers/reheats semantics
+ * - Adult/kid quantity correctness
  */
 import { readFileSync } from "fs";
 
@@ -93,5 +98,5 @@ for (const w of plannerWeekNums) {
 if (errors > 0) {
   throw new Error(`Validation failed with ${errors} error(s). Fix planner/grocery sync.`);
 } else {
-  console.log(`Planner/grocery sync OK (${plannerWeekNums.length} weeks, day tags verified).`);
+  console.log(`Planner/grocery sync OK (${plannerWeekNums.length} weeks, day tags verified). Note: does not verify recipe-item match or adult/kid quantity logic.`);
 }
