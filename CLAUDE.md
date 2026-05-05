@@ -2,6 +2,39 @@
 
 Rules and conventions for working on this recipe site. Follow these exactly.
 
+## Recipe Voice & Content Rules
+
+These rules govern how recipes are WRITTEN, not just how they're coded.
+
+**Hook variety — DO NOT use the same intro pattern for every recipe:**
+- BAD (templated): "You want [fast food] satisfaction at home — [protein] for adults, [mild thing] for kids. Same cook, different plates."
+- GOOD: Vary the hook based on what makes THIS recipe unique — technique, occasion, cultural origin, a surprising macro number, or a specific problem it solves.
+- Only lead with protein/calorie math when the number is genuinely impressive (61g protein ramen earns it, a 30g chicken sandwich does not). Put stats in the stat chips, not the headline.
+
+**Split plate variety — DO NOT default to "adult spicy / kid plain" every time:**
+- Vary the split mechanic across recipes. Options beyond spice level:
+  - Crispy vs soft (quesadilla vs street taco)
+  - Sauced vs dry (glazed chili chicken vs plain air-fried)
+  - Herby vs cheesy (chimichurri finish vs butter/cheese finish)
+  - Bowl vs handheld (same filling, different format)
+  - Full portion vs smaller portion (same flavors, just scaled)
+  - Different protein entirely (steak for adults, pork patties for kids)
+
+**Recipe template tiers — not every recipe needs the full framework:**
+- **Flagship dinners** (complex technique, strong story): full template — makeThisWhen, hook, description, whyMostFail, whyThisWorks, executionRules, troubleshooting, splitCook, brands, mealPrep
+- **Fast dinners** (15 min, simple): skip whyMostFail, compress executionRules, shorter troubleshooting
+- **Power-ups** (sauces, breakfasts, quick lunches): keep tight — the cookbook template is already right-sized
+
+**Cultural specificity wins:**
+- Recipes with a clear cultural identity (tandoori, Indo-Chinese chili chicken, buldak ramen) perform better than generic ones
+- Name the cuisine, the technique, and the specific brands that make it authentic
+- Don't water down cultural recipes to be "approachable" — the adult version should be real, the kid version is the mild adaptation
+
+**makeThisWhen is the most important field:**
+- This shows on Dinner cards and is the primary decision-making copy
+- Write it as: when/why a parent would choose THIS recipe on THAT night
+- Be specific: "Tuesday night, everyone's tired, need 15 min" not "you want a great meal"
+
 ## Adding a New Dinner Recipe
 
 When a new dinner recipe is added to `src/data/recipes.js`:
