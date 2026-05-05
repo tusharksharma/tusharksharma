@@ -150,6 +150,9 @@ export default function RecipeDetail({ recipe }) {
               {recipe.meta.allergens?.length > 0 && (
                 <span><span className="text-neutral-600">Contains:</span> <span className="text-red-400/70">{recipe.meta.allergens.join(", ")}</span></span>
               )}
+              {recipe.meta.warnings?.length > 0 && (
+                <span>{recipe.meta.warnings.map((w) => <span key={w} className="bg-amber-500/10 text-amber-400/80 px-1.5 py-0.5 rounded mr-1">{w.replace(/-/g, " ")}</span>)}</span>
+              )}
               {recipe.meta.dietTags?.length > 0 && (
                 <span>{recipe.meta.dietTags.map((t) => <span key={t} className="bg-neutral-800 text-neutral-400 px-1.5 py-0.5 rounded mr-1">{t}</span>)}</span>
               )}

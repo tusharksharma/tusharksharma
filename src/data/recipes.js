@@ -224,7 +224,7 @@ const recipes = [
     status: "live",
     carbLevel: "high", // penne pasta
     meta: {
-      macros: { protein: 45, calories: 500, fat: 16, carbs: 48, netCarbs: 45, estimated: false },
+      macros: { protein: 45, calories: 500, fat: 16, carbs: 48, netCarbs: 45, estimated: true },
       allergens: ["dairy", "gluten"],
       warnings: ["contains-dairy", "spicy-adult-version"],
       dietTags: ["pork-free"],
@@ -449,7 +449,7 @@ const recipes = [
     status: "live",
     carbLevel: "high", // rice
     meta: {
-      macros: { protein: 45, calories: 500, fat: 14, carbs: 45, netCarbs: 42, estimated: false },
+      macros: { protein: 45, calories: 500, fat: 14, carbs: 45, netCarbs: 42, estimated: true },
       allergens: ["soy"],
       warnings: ["contains-soy", "spicy-adult-version"],
       dietTags: ["dairy-free", "pork-free", "gluten-free-option"],
@@ -1304,7 +1304,7 @@ const recipes = [
     status: "live",
     carbLevel: "none", // no starch
     meta: {
-      macros: { protein: 42, calories: 380, fat: 16, carbs: 8, netCarbs: 5, estimated: false },
+      macros: { protein: 42, calories: 380, fat: 16, carbs: 8, netCarbs: 5, estimated: true },
       allergens: ["dairy"],
       warnings: ["contains-dairy"],
       dietTags: ["gluten-free", "pork-free", "low-carb"],
@@ -1470,7 +1470,7 @@ const recipes = [
     status: "live",
     carbLevel: "low", // keto tortillas
     meta: {
-      macros: { protein: 45, calories: 500, fat: 22, carbs: 18, netCarbs: 8, estimated: false },
+      macros: { protein: 45, calories: 500, fat: 22, carbs: 18, netCarbs: 8, estimated: true },
       allergens: ["dairy", "gluten"],
       warnings: ["contains-dairy", "contains-gluten"],
       dietTags: ["pork-free", "keto-option"],
@@ -1620,7 +1620,7 @@ const recipes = [
     status: "live",
     carbLevel: "high", // rice
     meta: {
-      macros: { protein: 45, calories: 520, fat: 20, carbs: 50, netCarbs: 48, estimated: false },
+      macros: { protein: 45, calories: 520, fat: 20, carbs: 50, netCarbs: 48, estimated: true },
       allergens: ["dairy"],
       warnings: ["contains-dairy"],
       dietTags: ["gluten-free", "pork-free"],
@@ -1774,7 +1774,7 @@ const recipes = [
     status: "live",
     carbLevel: "low", // keto buns
     meta: {
-      macros: { protein: 50, calories: 600, fat: 24, carbs: 30, netCarbs: 12, estimated: false },
+      macros: { protein: 50, calories: 600, fat: 24, carbs: 30, netCarbs: 12, estimated: true },
       allergens: ["gluten", "soy"],
       warnings: ["contains-gluten", "spicy-adult-version"],
       dietTags: ["dairy-free-option", "pork-free", "keto-option"],
@@ -1905,7 +1905,7 @@ const recipes = [
     status: "live",
     carbLevel: "low", // fries only
     meta: {
-      macros: { protein: 45, calories: 620, fat: 30, carbs: 35, netCarbs: 32, estimated: false },
+      macros: { protein: 45, calories: 620, fat: 30, carbs: 35, netCarbs: 32, estimated: true },
       allergens: [],
       warnings: ["contains-pork-kid-version"],
       dietTags: ["dairy-free", "gluten-free-option"],
@@ -2050,7 +2050,7 @@ const recipes = [
     status: "live",
     carbLevel: "none", // no starch — just protein + sides
     meta: {
-      macros: { protein: 40, calories: 350, fat: 10, carbs: 6, netCarbs: 5, estimated: false },
+      macros: { protein: 40, calories: 350, fat: 10, carbs: 6, netCarbs: 5, estimated: true },
       allergens: ["dairy"],
       warnings: ["contains-dairy", "spicy-adult-version", "requires-overnight-marinade"],
       dietTags: ["gluten-free", "pork-free", "low-carb"],
@@ -2201,7 +2201,7 @@ const recipes = [
     status: "live",
     carbLevel: "low", // carb-balance tortillas
     meta: {
-      macros: { protein: 40, calories: 450, fat: 16, carbs: 28, netCarbs: 14, estimated: false },
+      macros: { protein: 40, calories: 450, fat: 16, carbs: 28, netCarbs: 14, estimated: true },
       allergens: ["dairy", "gluten"],
       warnings: ["contains-dairy", "contains-gluten"],
       dietTags: ["pork-free", "keto-option"],
@@ -2348,7 +2348,7 @@ const recipes = [
     status: "live",
     carbLevel: "none", // no starch in the base — serve with rice/noodles optionally
     meta: {
-      macros: { protein: 35, calories: 400, fat: 14, carbs: 20, netCarbs: 18, estimated: false },
+      macros: { protein: 35, calories: 400, fat: 14, carbs: 20, netCarbs: 18, estimated: true },
       allergens: ["soy", "gluten"],
       warnings: ["contains-soy", "contains-gluten", "spicy-adult-version"],
       dietTags: ["dairy-free", "pork-free"],
@@ -2503,7 +2503,7 @@ const recipes = [
     status: "live",
     carbLevel: "high", // noodles
     meta: {
-      macros: { protein: 61, calories: 430, fat: 12, carbs: 38, netCarbs: 35, estimated: false },
+      macros: { protein: 61, calories: 430, fat: 12, carbs: 38, netCarbs: 35, estimated: true },
       allergens: ["soy", "gluten"],
       warnings: ["contains-soy", "contains-gluten", "spicy-adult-version"],
       dietTags: ["dairy-free", "pork-free"],
