@@ -10,10 +10,11 @@ When a new dinner recipe is added to `src/data/recipes.js`:
 2. **Add `carbLevel`** — tag as `"high"` (rice/pasta/gnocchi), `"low"` (keto tortilla/bun), or `"none"` (no starch)
 3. **Add `status: "live"`** and all required fields (slug, proteinAnchor, title, protein, calories, time, servings, image, etc.)
 4. **Update the weekly rotation** in `src/components/YourWeek.jsx`:
-   - If the new recipe creates an unused recipe, add a new week (Week 3, etc.)
+   - **DO NOT add a new week for every recipe.** Only add a new week when the new recipe would otherwise be unused (i.e., it doesn't appear in any existing week).
+   - If possible, swap the new recipe into an existing week where it replaces a repeat.
+   - Target: ceil(N/3) weeks for N recipes. Only add Week N+1 when recipes > slots.
    - Every live dinner recipe must appear in at least one week
    - **Balance rule**: each week must mix carbLevels — no week should be all-high or all-low
-   - **No-repeat rule**: minimize recipe repeats across weeks. With N recipes and 3 slots per week, target ceil(N/3) weeks with zero or minimal repeats
    - **Protein variety**: avoid same proteinAnchor on consecutive days within a week
 5. **Update the grocery list** in `src/components/GroceryList.jsx`:
    - Add a `GROCERY_BY_WEEK[N]` entry for any new week
