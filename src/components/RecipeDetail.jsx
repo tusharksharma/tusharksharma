@@ -12,8 +12,8 @@ const pillarColors = {
 export default function RecipeDetail({ recipe }) {
   const [searchParams] = useSearchParams();
   const [mode, setMode] = useState("adult");
-  const [adults, setAdults] = useState(() => Number(searchParams.get("adults")) || 2);
-  const [kids, setKids] = useState(() => Number(searchParams.get("kids")) || 2);
+  const [adults, setAdults] = useState(() => { const v = searchParams.get("adults"); return v !== null ? Number(v) || 1 : 2; });
+  const [kids, setKids] = useState(() => { const v = searchParams.get("kids"); return v !== null ? Number(v) : 2; });
   const [leftovers, setLeftovers] = useState(() => searchParams.get("leftovers") === "1");
   const hasSplit = !!recipe.splitCook;
   const isSplit = hasSplit && mode === "split";
@@ -125,10 +125,42 @@ export default function RecipeDetail({ recipe }) {
           <div className="flex flex-wrap gap-3 mt-4">
             <Stat label="Time" value={recipe.time} />
             <Stat label="Servings" value={totalServings} />
-            <Stat label="Cal/serving" value={recipe.calories} />
-            <Stat label="Protein/serving" value={`${recipe.protein}g`} highlight />
+            <Stat label="Cal/serving" value={recipe.meta?.macros?.calories || recipe.calories} />
+            <Stat label="Protein/serving" value={`${recipe.meta?.macros?.protein || recipe.protein}g`} highlight />
             <Stat label="PPC" value={`${ppc}%`} highlight />
           </div>
+
+          {/* Metadata section */}
+          {recipe.meta && (
+            <div className="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-[10px] text-neutral-500 bg-neutral-900/50 border border-neutral-800 rounded-lg px-4 py-3">
+              {recipe.meta.macros && (
+                <span>
+                  <span className="text-neutral-600">Macros:</span>{" "}
+                  <span className="text-neutral-300">{recipe.meta.macros.protein}P / {recipe.meta.macros.fat}F / {recipe.meta.macros.carbs}C</span>
+                  {recipe.meta.macros.netCarbs != null && <span className="text-neutral-400"> ({recipe.meta.macros.netCarbs}g net)</span>}
+                  {recipe.meta.macros.estimated && <span className="text-neutral-600 italic"> est.</span>}
+                </span>
+              )}
+              {recipe.meta.costPerServing && (
+                <span><span className="text-neutral-600">Cost:</span> <span className="text-neutral-300">{recipe.meta.costPerServing}/serving</span></span>
+              )}
+              {recipe.meta.splitAxes?.length > 0 && (
+                <span><span className="text-neutral-600">Split:</span> {recipe.meta.splitAxes.map((a) => <span key={a} className="text-amber-400/70 mr-1">{a}</span>)}</span>
+              )}
+              {recipe.meta.allergens?.length > 0 && (
+                <span><span className="text-neutral-600">Contains:</span> <span className="text-red-400/70">{recipe.meta.allergens.join(", ")}</span></span>
+              )}
+              {recipe.meta.dietTags?.length > 0 && (
+                <span>{recipe.meta.dietTags.map((t) => <span key={t} className="bg-neutral-800 text-neutral-400 px-1.5 py-0.5 rounded mr-1">{t}</span>)}</span>
+              )}
+              {recipe.meta.substitutionNotes?.length > 0 && (
+                <div className="w-full mt-1 pt-1 border-t border-neutral-800">
+                  <span className="text-neutral-600">Swaps: </span>
+                  {recipe.meta.substitutionNotes.map((s, i) => <span key={i} className="text-neutral-400">{s}{i < recipe.meta.substitutionNotes.length - 1 ? " · " : ""}</span>)}
+                </div>
+              )}
+            </div>
+          )}
         </div>
 
         {/* Mode Toggle */}

@@ -27,11 +27,11 @@ export default function HeroSection() {
               <span className="text-amber-400">Two plates.</span>
             </h1>
             <p className="text-neutral-400 mt-4 text-base max-w-lg leading-relaxed">
-              High-protein dinners for adults. Kid-friendly plates from the same cook.
-              No second meal. No fighting over food.
+              Family dinners where adults eat what they actually want and kids eat what they'll actually finish.
+              One cook. No separate meals. No negotiating.
             </p>
             <p className="text-neutral-500 mt-2 text-sm">
-              3 dinners a week. 1 grocery run. Done.
+              Pick a weekly plan. Shop once. Cook 3 nights. Leftovers handle the rest.
             </p>
             <div className="flex gap-3 mt-6 flex-wrap justify-center sm:justify-start">
               <a
