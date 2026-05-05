@@ -247,6 +247,50 @@ const GROCERY_BY_WEEK = {
       { name: "Raw mini peppers", baseQty: 1, unit: "bag", meal: "Mon kid" },
     ],
   },
+  // Week 8: Mon=Creamy Steak Noodles(30), Wed=Smash Tacos(22), Fri=Sandwiches(23)
+  8: {
+    "Protein": [
+      { name: "Steak (flat iron or sirloin)", baseQty: 1.25, unit: "lb", meal: "Mon" },
+      { name: "99/1 ground chicken", baseQty: 24, unit: "oz", meal: "Wed" },
+      { name: "Kirkland chicken breast fillets", baseQty: 4, unit: "fillets", meal: "Fri" },
+    ],
+    "Carbs": [
+      { name: "Wide egg noodles", baseQty: 12, unit: "oz", meal: "Mon" },
+      { name: "Mission Zero Net Carbs tortillas", baseQty: 8, unit: "tortillas", meal: "Wed adult" },
+      { name: "Mission Street Tacos flour tortillas", baseQty: 4, unit: "tortillas", meal: "Wed kid" },
+      { name: "Bettergoods Keto Hamburger Buns", baseQty: 4, unit: "buns", meal: "Fri adult" },
+      { name: "Slider buns", baseQty: 4, unit: "buns", meal: "Fri kid" },
+    ],
+    "Vegetables": [
+      { name: "Romaine lettuce", baseQty: 1, unit: "head", meal: "Wed + Fri" },
+      { name: "Pickles", qty: "1 jar", meal: "Fri" },
+      { name: "Fresh parsley", baseQty: 1, unit: "bunch", meal: "Mon + Wed" },
+    ],
+    "Sauce & Flavor": [
+      { name: "Bettergoods Beef Bone Broth", baseQty: 2, unit: "cups", meal: "Mon" },
+      { name: "Dijon mustard", qty: "pantry", meal: "Mon" },
+      { name: "Worcestershire sauce", qty: "pantry", meal: "Mon" },
+      { name: "Garlic powder", qty: "pantry", meal: "Mon" },
+      { name: "Onion powder", qty: "pantry", meal: "Mon" },
+      { name: "Spiceology Taco seasoning", qty: "pantry", meal: "Wed" },
+      { name: "Bolthouse Farms Caesar dressing", baseQty: 8, unit: "tbsp", meal: "Wed" },
+      { name: "Liquid Chipotle or Money Mustard", baseQty: 4, unit: "servings", meal: "Fri" },
+      { name: "Lime", baseQty: 2, unit: "", meal: "Wed" },
+      { name: "Fresh cilantro", baseQty: 1, unit: "bunch", meal: "Wed" },
+    ],
+    "Creamy Base": [
+      { name: "Daisy Cottage Cheese 2%", baseQty: 1, unit: "containers", meal: "Mon" },
+      { name: "Fairlife 2% milk", baseQty: 1, unit: "cups", meal: "Mon" },
+      { name: "Kirkland Grass-Fed Butter", qty: "pantry", meal: "Mon" },
+      { name: "All-purpose flour", qty: "pantry", meal: "Mon" },
+      { name: "Kraft Mild Cheddar shredded", baseQty: 4, unit: "oz", meal: "Wed" },
+    ],
+    "Kid Mode": [
+      { name: "Regular Caesar dressing", qty: "pantry", meal: "Wed kid" },
+      { name: "Quest Tortilla Chips", baseQty: 1, unit: "bag", meal: "Wed" },
+      { name: "Ketchup", qty: "pantry", meal: "Fri kid" },
+    ],
+  },
   // Week 7: Mon=Buldak Ramen(29), Wed=Quesadillas(27), Fri=Gnocchi(1)
   7: {
     "Protein": [

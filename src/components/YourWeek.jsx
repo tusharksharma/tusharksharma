@@ -81,6 +81,16 @@ const WEEKS = {
       { day: "Friday", label: "Comfort + Protein", vibe: "Crispy gnocchi, creamy sauce — comfort that earns its calories", id: 1, time: "30 min", reheats: false, adult: "Spicy fajita cream, peppers, chili oil", kid: "Rao's Alfredo or mild creamy", needs: ["Chicken", "Gnocchi", "Bell peppers", "Cottage cheese", "Dan-O's"], carbLevel: "high" },
     ],
   },
+  8: {
+    label: "Week 8",
+    description: "Comfort-heavy week. Creamy steak noodles + two fast favorites.",
+    subtitle: "Creamy Steak Noodles, Smash Tacos, Chicken Sandwiches",
+    cookDays: [
+      { day: "Monday", label: "Comfort Bowl", vibe: "Creamy steak noodles — cottage cheese sauce, no cream, 31g protein", id: 30, time: "30 min", reheats: true, adult: "Chili flakes + parsley finish", kid: "Plain creamy noodles, optional butter", needs: ["Steak", "Egg noodles", "Cottage cheese", "Beef broth", "Fairlife"], carbLevel: "high" },
+      { day: "Wednesday", label: "Smash Night", vibe: "15 min — crispy smash tacos, Caesar finish", id: 22, time: "15 min", reheats: true, adult: "Keto tortilla, Caesar, crushed Quest chips", kid: "Street taco tortilla, simple taco, chips on side", needs: ["Ground chicken", "Cheddar", "Keto tortillas", "Romaine", "Caesar dressing"], carbLevel: "low" },
+      { day: "Friday", label: "Fast Food Night", vibe: "Finish easy — crispy chicken sandwiches, 15 min", id: 23, time: "15 min", reheats: true, adult: "Keto bun, chipotle or Money Mustard, pickles", kid: "Slider buns, plain or ketchup", needs: ["Kirkland chicken fillets", "Keto buns", "Slider buns", "Sauce"], carbLevel: "low" },
+    ],
+  },
 };
 
 function getLeftoverMsg(hasLeftovers) {
