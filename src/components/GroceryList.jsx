@@ -354,12 +354,16 @@ function getItemDays(entry) {
 
 function scaleQty(entry, adults, kids, leftovers, dayReheats) {
   if (entry.baseQty != null) {
-    // Kid items scale by kids/2, adult items by adults/2, shared by total/4
     const base = isKidItem(entry) ? kids / 2 : isAdultItem(entry) ? adults / 2 : (adults + kids) / 4;
-    // Leftovers multiplier only if the item's day(s) all reheat
+    // Per-day leftovers: split baseQty across tagged days, double only reheating days
     const days = getItemDays(entry);
-    const reheatsForItem = leftovers && days.every((d) => dayReheats && dayReheats[d]);
-    const scale = base * (reheatsForItem ? 2 : 1);
+    let leftoverMultiplier = 1;
+    if (leftovers && dayReheats && days.length > 0) {
+      const reheatCount = days.filter((d) => dayReheats[d]).length;
+      // E.g., 2 days tagged, 1 reheats: multiplier = (1*2 + 1*1) / 2 = 1.5
+      leftoverMultiplier = days.length > 0 ? (reheatCount * 2 + (days.length - reheatCount)) / days.length : 1;
+    }
+    const scale = base * leftoverMultiplier;
     const scaled = entry.baseQty * scale;
     if (WHOLE_UNITS.has(entry.unit)) {
       const ceiled = Math.ceil(scaled);

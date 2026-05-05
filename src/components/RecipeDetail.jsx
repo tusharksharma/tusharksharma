@@ -1,5 +1,5 @@
 import { useState, useMemo } from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import track from "../hooks/useTrack";
 import { liveRecipes } from "../data/recipes";
 
@@ -10,10 +10,11 @@ const pillarColors = {
 };
 
 export default function RecipeDetail({ recipe }) {
+  const [searchParams] = useSearchParams();
   const [mode, setMode] = useState("adult");
-  const [adults, setAdults] = useState(2);
-  const [kids, setKids] = useState(2);
-  const [leftovers, setLeftovers] = useState(false);
+  const [adults, setAdults] = useState(() => Number(searchParams.get("adults")) || 2);
+  const [kids, setKids] = useState(() => Number(searchParams.get("kids")) || 2);
+  const [leftovers, setLeftovers] = useState(() => searchParams.get("leftovers") === "1");
   const hasSplit = !!recipe.splitCook;
   const isSplit = hasSplit && mode === "split";
   const baseServings = recipe.servings || 4;

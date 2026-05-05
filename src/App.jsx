@@ -1,14 +1,16 @@
 import { Routes, Route, useLocation } from "react-router-dom";
-import { Component, useEffect } from "react";
+import { Component, useEffect, lazy, Suspense } from "react";
 import Nav from "./components/Nav";
-import HomePage from "./pages/HomePage";
-import RecipePage from "./pages/RecipePage";
-import CookbookPage from "./pages/CookbookPage";
-import CookbookDetailPage from "./pages/CookbookDetailPage";
-import DinnersPage from "./pages/DinnersPage";
-import AboutPage from "./pages/AboutPage";
 import InstallPrompt from "./components/InstallPrompt";
-import FanPage from "./pages/FanPage";
+
+// Code-split route components — only loaded when navigated to
+const HomePage = lazy(() => import("./pages/HomePage"));
+const RecipePage = lazy(() => import("./pages/RecipePage"));
+const CookbookPage = lazy(() => import("./pages/CookbookPage"));
+const CookbookDetailPage = lazy(() => import("./pages/CookbookDetailPage"));
+const DinnersPage = lazy(() => import("./pages/DinnersPage"));
+const AboutPage = lazy(() => import("./pages/AboutPage"));
+const FanPage = lazy(() => import("./pages/FanPage"));
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -41,15 +43,17 @@ function App() {
     <ErrorBoundary>
       <ScrollToTop />
       <Nav />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/dinners" element={<DinnersPage />} />
-        <Route path="/fan" element={<FanPage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/cookbook" element={<CookbookPage />} />
-        <Route path="/cookbook/:id" element={<CookbookDetailPage />} />
-        <Route path="/recipes/:slug" element={<RecipePage />} />
-      </Routes>
+      <Suspense fallback={<div className="min-h-screen bg-neutral-950" />}>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/dinners" element={<DinnersPage />} />
+          <Route path="/fan" element={<FanPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/cookbook" element={<CookbookPage />} />
+          <Route path="/cookbook/:id" element={<CookbookDetailPage />} />
+          <Route path="/recipes/:slug" element={<RecipePage />} />
+        </Routes>
+      </Suspense>
       <InstallPrompt />
     </ErrorBoundary>
   );
