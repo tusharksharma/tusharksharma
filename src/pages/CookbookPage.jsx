@@ -39,6 +39,16 @@ function RecipeCard({ item }) {
 export default function CookbookPage() {
   useMeta({ title: "Power-Ups", description: "Sauces, breakfasts, desserts, and quick meals — high-protein upgrades that take 10 minutes or less." });
   const [tab, setTab] = useState(TABS[0] || "Sauces");
+  const [cookbookSearch, setCookbookSearch] = useState("");
+
+  const filterItems = (items) => {
+    if (!cookbookSearch) return items;
+    const q = cookbookSearch.toLowerCase();
+    return items.filter((item) => {
+      const text = [item.title, item.tagline, item.flavorProfile, ...(item.bestFor || []), ...(item.ingredients || []).map((i) => typeof i === "object" ? i.text : i)].filter(Boolean).join(" ").toLowerCase();
+      return text.includes(q);
+    });
+  };
 
   // Pick the best "quick fix" — prefer breakfasts/quick lunches over sauces
   const quickFix = (breakfasts.length > 0 ? breakfasts : quickLunches.length > 0 ? quickLunches : sauces)[0];
@@ -75,6 +85,17 @@ export default function CookbookPage() {
         </div>
         )}
 
+        {/* Search */}
+        <div className="mb-4">
+          <input
+            type="text"
+            value={cookbookSearch}
+            onChange={(e) => setCookbookSearch(e.target.value)}
+            placeholder="Search power-ups..."
+            className="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2 text-sm text-neutral-100 placeholder-neutral-500 focus:outline-none focus:border-amber-500/60 transition-colors"
+          />
+        </div>
+
         {TABS.length > 1 && (
           <div className="flex gap-2 mb-8">
             {TABS.map((t) => (
@@ -97,7 +118,7 @@ export default function CookbookPage() {
               Flavor multipliers. ~30 cal per serving. Turn boring protein into something you want to eat.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {sauces.map((s) => (
+              {filterItems(sauces).map((s) => (
                 <RecipeCard key={s.id} item={s} />
               ))}
             </div>
@@ -110,7 +131,7 @@ export default function CookbookPage() {
               ~40g protein, 10 minutes, one pan. Breakfast that earns its calories.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {breakfasts.map((b) => (
+              {filterItems(breakfasts).map((b) => (
                 <RecipeCard key={b.id} item={b} />
               ))}
             </div>
@@ -123,7 +144,7 @@ export default function CookbookPage() {
               High-protein desserts that don't wreck your macros. Dessert that earns its spot.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {desserts.map((d) => (
+              {filterItems(desserts).map((d) => (
                 <RecipeCard key={d.id} item={d} />
               ))}
             </div>
@@ -136,7 +157,7 @@ export default function CookbookPage() {
               10 min, high protein, zero prep. Freezer to plate — your "I need something NOW" fallback.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {quickLunches.map((q) => (
+              {filterItems(quickLunches).map((q) => (
                 <RecipeCard key={q.id} item={q} />
               ))}
             </div>

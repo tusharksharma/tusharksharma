@@ -80,17 +80,17 @@ export default function HomePage() {
         <div className="max-w-3xl mx-auto px-4 py-16 text-center">
           <h2 className="text-2xl font-black text-white">Why This Works</h2>
           <p className="text-neutral-500 mt-4 text-sm">
-            Most high-protein food fails because it's bland, repetitive, and unrealistic.
+            Most family dinner systems fail because they assume everyone eats the same thing. This one doesn't.
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8">
-            {["Texture Contrast", "Controlled Calories", "Bold Flavor", "Simple Execution"].map((l) => (
+            {["Real Flavor", "Honest Macros", "Actual Split", "Repeatable"].map((l) => (
               <div key={l} className="bg-neutral-900 border border-amber-500/20 rounded-lg px-3 py-3">
                 <span className="text-amber-400 text-xs font-bold uppercase tracking-wider">{l}</span>
               </div>
             ))}
           </div>
           <p className="text-neutral-400 mt-8 text-sm italic max-w-lg mx-auto">
-            "I build high-protein dinners that are efficient, flavorful, and repeatable — designed for real life, not perfection."
+            "I build dinners that work for my family — adults eat what they want, kids eat what they'll finish, and nobody cooks twice."
           </p>
         </div>
       </section>

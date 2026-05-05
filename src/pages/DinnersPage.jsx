@@ -13,6 +13,23 @@ const EFFORT_OPTIONS = [...new Set(liveRecipes.flatMap((r) => r.meta?.effortTags
 const SPLIT_OPTIONS = [...new Set(liveRecipes.flatMap((r) => r.meta?.splitAxes || []))].sort();
 const COST_OPTIONS = ["budget", "moderate", "premium"];
 const DIET_OPTIONS = [...new Set(liveRecipes.flatMap((r) => r.meta?.dietTags || []))].sort();
+const ALLERGEN_OPTIONS = [...new Set(liveRecipes.flatMap((r) => r.meta?.allergens || []))].sort();
+
+// Build searchable text per recipe once
+function buildSearchText(r) {
+  return [
+    r.title,
+    (r.tags || []).join(" "),
+    (r.meta?.substitutionNotes || []).join(" "),
+    (r.meta?.proteinTags || []).join(" "),
+    (r.meta?.splitAxes || []).join(" "),
+    (r.meta?.dietTags || []).join(" "),
+    r.makeThisWhen,
+    r.description,
+    // Search ingredient names
+    ...(r.ingredients || []).map((i) => typeof i === "object" ? i.text : i),
+  ].filter(Boolean).join(" ").toLowerCase();
+}
 
 function parseTime(timeStr) {
   if (!timeStr) return 999;
@@ -54,8 +71,9 @@ export default function DinnersPage() {
   const [selectedSplit, setSelectedSplit] = useState([]);
   const [selectedCost, setSelectedCost] = useState([]);
   const [selectedDiet, setSelectedDiet] = useState([]);
+  const [excludeAllergens, setExcludeAllergens] = useState([]);
 
-  const hasActiveFilters = search || selectedProteins.length || selectedTime || selectedEffort.length || selectedSplit.length || selectedCost.length || selectedDiet.length;
+  const hasActiveFilters = search || selectedProteins.length || selectedTime || selectedEffort.length || selectedSplit.length || selectedCost.length || selectedDiet.length || excludeAllergens.length;
 
   function toggleInArray(arr, setArr, value) {
     setArr(arr.includes(value) ? arr.filter((v) => v !== value) : [...arr, value]);
@@ -69,6 +87,7 @@ export default function DinnersPage() {
     setSelectedSplit([]);
     setSelectedCost([]);
     setSelectedDiet([]);
+    setExcludeAllergens([]);
   }
 
   const filtered = useMemo(() => {
@@ -76,13 +95,7 @@ export default function DinnersPage() {
 
     if (search) {
       const q = search.toLowerCase();
-      results = results.filter((r) => {
-        const title = r.title?.toLowerCase() || "";
-        const tags = (r.tags || []).join(" ").toLowerCase();
-        const subs = (r.meta?.substitutionNotes || []).join(" ").toLowerCase();
-        const proteinTags = (r.meta?.proteinTags || []).join(" ").toLowerCase();
-        return title.includes(q) || tags.includes(q) || subs.includes(q) || proteinTags.includes(q);
-      });
+      results = results.filter((r) => buildSearchText(r).includes(q));
     }
 
     if (selectedProteins.length) {
@@ -121,8 +134,14 @@ export default function DinnersPage() {
       );
     }
 
+    if (excludeAllergens.length) {
+      results = results.filter((r) =>
+        !excludeAllergens.some((a) => (r.meta?.allergens || []).includes(a))
+      );
+    }
+
     return results;
-  }, [search, selectedProteins, selectedTime, selectedEffort, selectedSplit, selectedCost, selectedDiet]);
+  }, [search, selectedProteins, selectedTime, selectedEffort, selectedSplit, selectedCost, selectedDiet, excludeAllergens]);
 
   return (
     <div className="min-h-screen bg-neutral-950 text-neutral-100">
@@ -182,6 +201,12 @@ export default function DinnersPage() {
               <Chip key={d} label={d} active={selectedDiet.includes(d)} onClick={() => toggleInArray(selectedDiet, setSelectedDiet, d)} />
             ))}
           </FilterSection>
+
+          <FilterSection title="Exclude">
+            {ALLERGEN_OPTIONS.map((a) => (
+              <Chip key={a} label={`no ${a}`} active={excludeAllergens.includes(a)} onClick={() => toggleInArray(excludeAllergens, setExcludeAllergens, a)} />
+            ))}
+          </FilterSection>
         </div>
 
         {/* Active filters + result count */}
@@ -217,12 +242,18 @@ export default function DinnersPage() {
                   </div>
                   {r.meta && (
                     <div className="flex flex-wrap gap-1 mt-2">
-                      {r.meta.costTier && (
-                        <span className="text-[9px] px-1.5 py-0.5 rounded bg-neutral-800 text-neutral-400">{r.meta.costTier} {r.meta.costPerServing && `(${r.meta.costPerServing})`}</span>
-                      )}
-                      {(r.meta.effortTags || []).slice(0, 2).map((t) => (
+                      {(r.meta.splitAxes || []).slice(0, 2).map((s) => (
+                        <span key={s} className="text-[9px] px-1.5 py-0.5 rounded bg-amber-500/10 text-amber-400/80">{s} split</span>
+                      ))}
+                      {(r.meta.effortTags || []).slice(0, 1).map((t) => (
                         <span key={t} className="text-[9px] px-1.5 py-0.5 rounded bg-neutral-800 text-neutral-400">{t}</span>
                       ))}
+                      {r.meta.costTier && (
+                        <span className="text-[9px] px-1.5 py-0.5 rounded bg-neutral-800 text-neutral-500">{r.meta.costPerServing || r.meta.costTier}</span>
+                      )}
+                      {(r.meta.warnings || []).filter((w) => w.includes("spicy")).length > 0 && (
+                        <span className="text-[9px] px-1.5 py-0.5 rounded bg-red-500/10 text-red-400/70">spicy (adult)</span>
+                      )}
                     </div>
                   )}
                 </div>
