@@ -24,13 +24,6 @@ export default function HomePage() {
       <HowItWorks />
       <YourWeek />
 
-      {/* Email capture */}
-      <section className="border-b border-neutral-800">
-        <div className="max-w-3xl mx-auto px-4 py-12">
-          <EmailCapture />
-        </div>
-      </section>
-
       {/* All Live Recipes */}
       <section className="border-b border-neutral-800">
         <div className="max-w-6xl mx-auto px-4 py-16">
@@ -62,6 +55,13 @@ export default function HomePage() {
           </div>
         </section>
       )}
+
+      {/* Email capture — after seeing the food */}
+      <section className="border-b border-neutral-800">
+        <div className="max-w-3xl mx-auto px-4 py-12">
+          <EmailCapture />
+        </div>
+      </section>
 
       {/* Real Life — Trust */}
       <section className="border-b border-neutral-800">
