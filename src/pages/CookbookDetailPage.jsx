@@ -138,6 +138,31 @@ export default function CookbookDetailPage() {
           </div>
         </div>
 
+        {/* System Insight — the real teaching moment */}
+        {sauce.systemInsight && (
+          <div className="mt-6 bg-gradient-to-br from-amber-500/10 to-amber-500/5 border border-amber-500/30 rounded-xl p-5">
+            <span className="text-amber-500 text-[10px] font-black uppercase tracking-wider">The System</span>
+            <h2 className="text-base font-black text-white mt-1">{sauce.systemInsight.title}</h2>
+            <p className="text-neutral-300 text-sm mt-2">{sauce.systemInsight.body}</p>
+            {sauce.systemInsight.framework && (
+              <div className="mt-4 space-y-2">
+                {sauce.systemInsight.framework.map((f, i) => (
+                  <div key={i} className="bg-neutral-900/60 border border-neutral-800 rounded-lg p-3">
+                    <div className="flex items-baseline gap-2">
+                      <span className="text-amber-400 font-black text-xs uppercase tracking-wider">{f.lever}</span>
+                      <span className="text-neutral-500 text-[10px]">— {f.role}</span>
+                    </div>
+                    <p className="text-neutral-400 text-xs mt-1">{f.swaps}</p>
+                  </div>
+                ))}
+              </div>
+            )}
+            {sauce.systemInsight.payoff && (
+              <p className="text-neutral-300 text-sm mt-4 italic border-l-2 border-amber-500/40 pl-3">{sauce.systemInsight.payoff}</p>
+            )}
+          </div>
+        )}
+
         {/* Troubleshooting */}
         {sauce.troubleshooting && sauce.troubleshooting.length > 0 && (
           <div className="mt-6 bg-amber-950/20 border border-amber-900/40 rounded-xl p-5">
