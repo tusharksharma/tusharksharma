@@ -172,6 +172,78 @@ Transform this into close-up food photography. A small ceramic ramekin of {sauce
 - Always include **"warm natural side lighting from a window"** — this is the signature look
 - Use **"Transform this into..."** not **"Enhance this photo..."** — the former restyls, the latter barely changes anything
 
+## Sauce / Power-Up 3-Shot Image Kit (strict format)
+
+For every new sauce or power-up, generate THREE images that tell a story:
+**Hero** (staged ingredients + finished sauce) → **Action** (sauce in use on a real dish) → **Detail** (texture / consistency proof).
+
+These wire into the cookbook entry as:
+- `heroImage` → top of detail page
+- `prepImage` + `prepImageCaption` → between ingredients and method (override default "Mise en place")
+- `actionImage` + `actionImageCaption` → after method, before "Best For"
+
+### Strict prompt template (use verbatim, fill in the brackets)
+
+Every prompt MUST follow this skeleton, in this order:
+1. **Aspect ratio first** — always `3:2 landscape (1200x800)` for cookbook
+2. **Camera angle** — side / 45-degree / overhead / close-up macro
+3. **Foreground subject** — what's sharp and centered
+4. **Real branded ingredients** — name each brand, packaging color, cap color, label text
+5. **Surface** — warm beige marble OR white marble (pick one and stick with it across the 3 shots)
+6. **Lighting** — "warm natural daylight from the {side|left|upper-left}, soft shadows"
+7. **Style + DOF** — "editorial food blog style, shallow depth of field, background lightly out of focus"
+8. **Suffix** — "High realism, sharp focus, no generic branding, no text overlays"
+
+### Shot 1 — Hero (staged)
+```
+Aspect ratio: 3:2 landscape (1200x800). Editorial food blog style, side angle, slightly above. Small white ceramic ramekin in the foreground filled with {sauce description — color, visible flecks, consistency}, a spoon resting in it. Background staging on warm beige marble or stone tile counter: {Brand 1 with packaging details}, {Brand 2}, {Brand 3}, {Brand 4}, {fresh produce — e.g., one whole lemon and one halved lemon showing pulp}. Soft warm natural daylight from the left, gentle shadows, slight depth of field — bottles lightly out of focus, ramekin in sharp focus. High realism, sharp focus, no generic branding, no text overlays.
+```
+
+### Shot 2 — Action (canonical use case)
+```
+Aspect ratio: 3:2 landscape (1200x800). Top-down 45-degree angle. White ceramic plate with {dish — e.g., charred asparagus spears in a row, deep grill marks, blistered tips}, drizzled diagonally with {sauce description}. {Garnish details — e.g., cracked black pepper flakes scattered}. Plate on warm beige marble counter. Soft-blurred background corner: small white ramekin with more sauce, {one branded ingredient jar}, {fresh garnish}. Warm natural daylight from the side, soft shadows, editorial food magazine style. High realism, sharp focus on the dish and drizzle, shallow depth of field. No text, no generic branding.
+```
+
+### Shot 3 — Detail (texture proof)
+```
+Aspect ratio: 3:2 landscape (1200x800). Close-up macro shot, 45-degree side angle. A metal spoon being lifted out of a white ceramic ramekin filled with {sauce description}. The sauce visibly coats the back of the spoon — {consistency target, e.g., "thick enough to cling, thin enough to drip a single bead"}. Visible {flecks/details — e.g., red chili oil and cracked black pepper suspended}. Background: soft-blurred warm beige marble counter, partial silhouette of {one branded bottle} and {fresh garnish}. Warm natural daylight from upper left, single soft highlight on the sauce surface. Editorial food blog style, high realism, sharp focus on the spoon and drizzle, shallow depth of field. No text, no generic branding.
+```
+
+## End-to-End Image Workflow (when session is fresh)
+
+When the user sends a new recipe + says "give me image prompts" or "all 3 images downloaded":
+
+**Step 1 — Generate prompts.** Use the 3-shot kit above. Name every brand from the recipe's `brands` array. Match the surface across all 3 shots (don't mix marble types).
+
+**Step 2 — User generates in ChatGPT/Gemini.**
+- ChatGPT: paste prompt as-is
+- Gemini: prefix with "Transform this image into:" + attach a real reference photo (image-to-image is much stronger than text-to-image for real packaging)
+
+**Step 3 — User downloads, you optimize.**
+```bash
+cd /Users/tusharsharma/recipes-site/public/images
+magick ~/Downloads/{file1}.png -resize 1200x800^ -gravity center -extent 1200x800 -quality 85 {slug}-hero.webp
+magick ~/Downloads/{file2}.png -resize 1200x800^ -gravity center -extent 1200x800 -quality 85 {slug}-{action-name}.webp
+magick ~/Downloads/{file3}.png -resize 1200x800^ -gravity center -extent 1200x800 -quality 85 {slug}-spoon.webp
+```
+Naming convention: `{recipe-slug}-{role}.webp` where role ∈ `{hero, action-noun (e.g., asparagus), spoon|detail}`.
+
+**Step 4 — Wire into `src/data/cookbook.js`:**
+```js
+heroImage: "/images/{slug}-hero.webp",
+prepImage: "/images/{slug}-spoon.webp",
+prepImageCaption: "Texture target — {what good looks like}",
+actionImage: "/images/{slug}-{action-noun}.webp",
+actionImageCaption: "On {dish} — the canonical use case",
+```
+
+**Step 5 — Verify with `Read` tool on each `.webp`.** Confirm the optimized image looks correct before committing — Read returns the rendered image inline.
+
+**Step 6 — Build, commit, push.**
+```bash
+cd /Users/tusharsharma/recipes-site && npm run build && git add public/images/{slug}-*.webp src/data/cookbook.js dist/ && git commit -m "..." && git push
+```
+
 ## Code Style
 
 - `npm run lint` must pass (eslint)

@@ -102,7 +102,7 @@ export default function CookbookDetailPage() {
         {sauce.prepImage && (
           <div className="mt-6 rounded-xl overflow-hidden">
             <img src={sauce.prepImage} alt={`${sauce.title} prep`} className="w-full h-72 sm:h-96 object-cover" loading="lazy" />
-            <p className="text-neutral-600 text-[10px] mt-1 text-center">Mise en place</p>
+            <p className="text-neutral-600 text-[10px] mt-1 text-center">{sauce.prepImageCaption || "Mise en place"}</p>
           </div>
         )}
 
@@ -127,6 +127,16 @@ export default function CookbookDetailPage() {
             })}
           </ol>
         </div>
+
+        {/* Action Image — "here's the result" shot */}
+        {sauce.actionImage && (
+          <div className="mt-6 rounded-xl overflow-hidden">
+            <img src={sauce.actionImage} alt={sauce.actionImageCaption || `${sauce.title} on a plate`} className="w-full h-72 sm:h-96 object-cover" loading="lazy" />
+            {sauce.actionImageCaption && (
+              <p className="text-neutral-600 text-[10px] mt-1 text-center">{sauce.actionImageCaption}</p>
+            )}
+          </div>
+        )}
 
         {/* Best For */}
         <div className="mt-6">
