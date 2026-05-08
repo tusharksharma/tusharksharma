@@ -85,6 +85,19 @@ When adding to `src/data/cookbook.js` (sauces, breakfasts, desserts, quickLunche
 3. Ingredients can be strings or `{ text, link }` objects for cross-linking (e.g., linking to Money Mustard)
 4. The prerender script auto-discovers cookbook items by matching `id:` + `title:` + `tagline:` patterns
 
+## Brand URLs (mandatory)
+
+**Every brand in the `brands` array MUST have a `url` field** pointing to a real product page. Brands without URLs render as dead cards — they can't be clicked, no GA4 `brand_click` event fires, and the user loses the affiliate/discovery loop.
+
+**Workflow:**
+1. After writing a recipe, scan `brands: [...]` for any entry missing `url`.
+2. **WebSearch each missing brand** with the query format: `{Brand Name} {Product Name} {size} official product page`. Example: `Lee Kum Kee Chiu Chow Chili Oil 7.2 oz official product page`.
+3. **Prefer in this order:** brand's own site (e.g., `kikkomanusa.com`, `smashkitchen.com`, `usa.lkk.com`) → Walmart/Target/Costco → H-E-B/Whole Foods → Amazon (last resort, links rot fastest).
+4. Match the URL to the **exact product variant in the recipe** (12 oz Dijon, not 8 oz; All-Purpose Soy Sauce, not Less Sodium).
+5. While there, double-check the **`item` name matches what's actually on the bottle** — e.g., update "Chili Oil" to "Chiu Chow Style Chili Crisp Oil" if that's the official product name.
+
+This applies to every recipe, not just new ones. If you spot a missing URL while editing existing entries, fix it.
+
 ## Image Rules
 
 - **Hero images**: 1200x800px, WebP, target <200KB

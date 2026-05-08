@@ -260,9 +260,9 @@ export const sauces = [
     },
     brands: [
       { name: "Kraft", item: "Light Mayo", why: "Half the calories of regular mayo, holds emulsion well — the creamy base without the fat bomb", image: "/images/brands/kraft-light-mayo.jpg", url: "https://www.heb.com/product-detail/kraft-mayo-light-mayonnaise-squeeze-bottle/1098140" },
-      { name: "Kikkoman", item: "Soy Sauce", why: "Clean salt + umami — the savory backbone, no surprises" },
-      { name: "Smash Kitchen", item: "Organic Dijon Mustard", why: "Mid-palate depth and emulsifier — what makes the sauce taste 'finished' instead of mixed" },
-      { name: "Lee Kum Kee", item: "Chili Oil", why: "Slow burn, real chili flavor — not just heat. The finishing layer." },
+      { name: "Kikkoman", item: "All-Purpose Soy Sauce", why: "Clean salt + umami — the savory backbone, no surprises", url: "https://kikkomanusa.com/homecooks/products/soy-sauce-non-gmo/" },
+      { name: "Smash Kitchen", item: "Organic Dijon Mustard", why: "Mid-palate depth and emulsifier — what makes the sauce taste 'finished' instead of mixed", url: "https://smashkitchen.com/products/dijon-mustard" },
+      { name: "Lee Kum Kee", item: "Chiu Chow Style Chili Crisp Oil", why: "Slow burn, real chili flavor — not just heat. The finishing layer.", url: "https://usa.lkk.com/en/products/chiu-chow-style-chili-crisp-oil" },
     ],
     mealPrep: {
       storage: "Airtight jar in the fridge. Stir before each use.",
