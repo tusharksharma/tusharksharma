@@ -85,18 +85,37 @@ When adding to `src/data/cookbook.js` (sauces, breakfasts, desserts, quickLunche
 3. Ingredients can be strings or `{ text, link }` objects for cross-linking (e.g., linking to Money Mustard)
 4. The prerender script auto-discovers cookbook items by matching `id:` + `title:` + `tagline:` patterns
 
-## Brand URLs (mandatory)
+## Brand URLs + Images (mandatory)
 
-**Every brand in the `brands` array MUST have a `url` field** pointing to a real product page. Brands without URLs render as dead cards — they can't be clicked, no GA4 `brand_click` event fires, and the user loses the affiliate/discovery loop.
+**Every brand in the `brands` array MUST have BOTH `url` and `image` fields.** Missing `url` = dead card (no click, no GA4 event). Missing `image` = empty white box renders above the brand name (the `b.image &&` guard hides it, but the card still looks broken next to brands that have logos).
 
-**Workflow:**
-1. After writing a recipe, scan `brands: [...]` for any entry missing `url`.
-2. **WebSearch each missing brand** with the query format: `{Brand Name} {Product Name} {size} official product page`. Example: `Lee Kum Kee Chiu Chow Chili Oil 7.2 oz official product page`.
-3. **Prefer in this order:** brand's own site (e.g., `kikkomanusa.com`, `smashkitchen.com`, `usa.lkk.com`) → Walmart/Target/Costco → H-E-B/Whole Foods → Amazon (last resort, links rot fastest).
-4. Match the URL to the **exact product variant in the recipe** (12 oz Dijon, not 8 oz; All-Purpose Soy Sauce, not Less Sodium).
-5. While there, double-check the **`item` name matches what's actually on the bottle** — e.g., update "Chili Oil" to "Chiu Chow Style Chili Crisp Oil" if that's the official product name.
+**Workflow (do this for every brand, every time):**
 
-This applies to every recipe, not just new ones. If you spot a missing URL while editing existing entries, fix it.
+1. After writing a recipe, scan `brands: [...]` for any entry missing `url` OR `image`.
+2. **WebSearch the brand** with: `{Brand Name} {Product Name} {size} official product page`.
+   Example: `Lee Kum Kee Chiu Chow Chili Oil 7.2 oz official product page`.
+3. **WebFetch the most authoritative landing page** (brand site > Walmart > Target > FoodMaxx/SaveMart > Amazon). Ask for the primary product image URL — these typically resolve as Shopify CDN, `target.scene7.com`, or retailer-specific CDNs.
+4. **Download the image** to `public/images/brands/{brand-slug}-{product-slug}.jpg`:
+   ```bash
+   curl -sL -o /Users/tusharsharma/recipes-site/public/images/brands/{slug}.jpg "{image-url}"
+   ```
+   For `target.scene7.com` URLs, bump `wid=300&hei=300` to `wid=800&hei=800` in the URL for higher res.
+5. **Verify with `Read` tool** — confirm it's a real product photo on white/neutral background, not an error page or wrong product.
+6. **Match the URL + image + `item` name to the exact product variant** (12 oz Dijon, not 8 oz; "All-Purpose Soy Sauce", not "Less Sodium"; "Chiu Chow Style Chili Crisp Oil", not just "Chili Oil"). Update `item` text if needed.
+7. Wire both fields into the brand entry:
+   ```js
+   { name: "...", item: "...", why: "...", image: "/images/brands/{slug}.jpg", url: "https://..." }
+   ```
+
+**URL preference order (re-stating because it matters):** brand-owned domain (kikkomanusa.com, smashkitchen.com, usa.lkk.com) → big-box retailer (Walmart, Target, Costco, H-E-B, Whole Foods) → Amazon (last resort — Amazon links rot fastest).
+
+**Image-source notes:**
+- **Brand sites with Shopify**: usually have clean `cdn/shop/files/...` URLs at high res. Append `?width=800` for sizing.
+- **Target**: `target.scene7.com/is/image/Target/GUEST_*` URLs accept `?wid=800&hei=800` query params.
+- **Walmart**: blocked by anti-bot — usually returns "Robot or human?" page. Skip Walmart for image fetching.
+- **Lee Kum Kee USA (`usa.lkk.com`)**: returns 403 to WebFetch. Fallback to FoodMaxx, SaveMart, or Albertsons family of retailers — they share a CloudFront CDN.
+
+This applies to every recipe, not just new ones. If you spot a missing `url` or `image` while editing existing entries, fix it.
 
 ## Image Rules
 
