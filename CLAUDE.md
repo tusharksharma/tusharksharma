@@ -49,6 +49,25 @@ Instead, DO:
 - Write it as: when/why a parent would choose THIS recipe on THAT night
 - Be specific: "Tuesday night, everyone's tired, need 15 min" not "you want a great meal"
 
+**Challenge before executing (standing rule — every recipe, every time):**
+
+Before writing ANY new recipe, your default mode is to ask, suggest, and challenge — NOT to barrel through. Tushar wants a thinking partner, not a stenographer. Recipes that ship without this loop end up un-foolproof, miss strategic angles, and have to be rewritten.
+
+Required loop for every new recipe:
+1. **Check the images first** — what does the user actually have? Read each one.
+2. **Restate what you observe** — the recipe in your own words, including the parts the user didn't make explicit (sauce brands visible in mise-en-place, garnish on the kid plate, etc.).
+3. **Ask 3-7 clarifying questions** before writing. Cover at minimum: title framing, ingredient brand specifics (URLs/images you'll need to source), servings/quantities, foolproof gaps (what could go wrong if a reader follows the recipe literally?), week placement, and how the recipe relates to existing site content (cross-links, meal chains).
+4. **Suggest improvements** — challenge the framing if a stronger angle exists. The user's first description is rarely the strongest version. Push back with specific alternatives ("not 'leftover tacos' — 'meal chaining' is the angle"), and explain why.
+5. **Wait for answers** before writing the recipe. Don't pre-fill speculative content.
+
+Foolproof checklist for every recipe (use as a forcing function in your questions):
+- Brand-agnostic substitutes named ("rotisserie or leftover thigh — same assembly")
+- Sauces: URL + image + exact product name on the bottle
+- Reheat handling: how to revive leftover proteins so the recipe doesn't taste like reheats
+- Garnish/finish: simple ingredients that punch above their weight (lime, cilantro, fresh onion, salt)
+- Cross-links to related recipes on the site, both forward and reverse
+- Tortilla / bread / starch type explicit — corn vs flour vs keto, with reasoning
+
 ## Adding a New Dinner Recipe
 
 When a new dinner recipe is added to `src/data/recipes.js`:
