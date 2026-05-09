@@ -22,8 +22,22 @@ These rules govern how recipes are WRITTEN, not just how they're coded.
 
 **Recipe template tiers — not every recipe needs the full framework:**
 - **Flagship dinners** (complex technique, strong story): full template — makeThisWhen, hook, description, whyMostFail, whyThisWorks, executionRules, troubleshooting, splitCook, brands, mealPrep
+- **Worth Every Penny / Sustainable** (basic but genuinely repeatable): full template, but the **simplicity IS the story**. Don't engineer it into a flagship. Voice cues: "easiest dinner in our rotation", "the recipe is on the back of the bottle", "almost impossible to ruin". Lead with low mental load, not technique. Examples: Dan-O's bone-in thighs, basic Costco pesto pasta, cottage cheese blend sauce as a base. This is the **lane** for thesplitplate.com — relatable beats engineered.
 - **Fast dinners** (15 min, simple): skip whyMostFail, compress executionRules, shorter troubleshooting
 - **Power-ups** (sauces, breakfasts, quick lunches): keep tight — the cookbook template is already right-sized
+
+**The "Worth Every Penny" positioning rule:**
+When a recipe is genuinely simple (3-5 ingredients, one technique, no engineering), DO NOT:
+- Lead with macro math ("38g protein for 480 cal!")
+- Write "best chicken thighs ever" — generic and forgettable
+- Pad executionRules with obvious steps to fill template slots
+- Hide the simplicity. The simplicity IS the value proposition.
+
+Instead, DO:
+- Hook with the **system insight** — "Two trays. Two seasonings. One oven."
+- Frame as **honest endorsement** — "this basic thing was genuinely worth repeating"
+- Use **branding consistency** as a feature — Dan-O's appearing across multiple recipes is "low-effort flavor system", not a coincidence
+- Lean into the photos — lived-in beats engineered. Phone-shot trays > studio plates.
 
 **Cultural specificity wins:**
 - Recipes with a clear cultural identity (tandoori, Indo-Chinese chili chicken, buldak ramen) perform better than generic ones
