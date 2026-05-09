@@ -68,7 +68,7 @@ const WEEKS = {
     cookDays: [
       { day: "Monday", label: "Takeout Night", vibe: "Indo-Chinese chili chicken — glossy, spicy, restaurant-level", id: 28, time: "25 min", reheats: false, adult: "Glossy chili chicken, charred peppers, chili crisp", kid: "Plain air-fried chunks, toasted buns, raw peppers", needs: ["Kirkland chicken chunks", "Chili sauces", "Peppers", "Onions"], carbLevel: "none" },
       { day: "Wednesday", label: "Fast Win", vibe: "Lowest friction dinner of the week", id: 4, time: "25 min", reheats: true, adult: "Spicy soy-sesame, charred broccoli, chili oil", kid: "Mild soy, broccoli on side, meatballs", needs: ["Beef", "Broccoli", "Rice", "Soy sauce", "Bone broth"], carbLevel: "high" },
-      { day: "Friday", label: "Easiest Dinner", vibe: "Two trays, two seasonings, one oven — the back of the bottle is the recipe", id: 31, time: "45 min", reheats: true, adult: "Dan-O's Spicy thighs, charred asparagus, Umami Lemon Heat drizzle", kid: "Dan-O's Original thigh, plain asparagus, folded wrap", needs: ["Bone-in skin-on thighs", "Asparagus", "Dan-O's Spicy", "Dan-O's Original", "Tortillas", "Mayo", "Lemon", "Soy sauce", "Dijon", "Chili oil"], carbLevel: "low" },
+      { day: "Friday", label: "Easiest Dinner", vibe: "Two trays, two seasonings, one oven — the back of the bottle is the recipe", id: 31, time: "45 min", reheats: true, adult: "Dan-O's Spicy thighs, charred asparagus, Umami Lemon Heat drizzle", kid: "Dan-O's Original thigh, plain asparagus, folded wrap", needs: ["Bone-in skin-on thighs", "Asparagus", "Dan-O's Spicy", "Dan-O's Original", "Tortillas", "Mayo", "Lemon", "Soy sauce", "Dijon", "Chili oil"], carbLevel: "low", chainTo: { slug: "next-day-chicken-tacos", title: "Next-Day Chicken Tacos", note: "Chop the leftover thighs fine, save the pan juices, build tacos in 10 min" } },
     ],
   },
   7: {
@@ -169,8 +169,20 @@ function CookDay({ day, label, vibe, id, time, reheats, adult, kid, needs, servi
   );
 }
 
-function LeftoverDay({ day, meal, visible }) {
+function LeftoverDay({ day, meal, visible, chain }) {
   if (!visible) return null;
+  if (chain) {
+    return (
+      <Link to={`/recipes/${chain.slug}`} className="flex items-center gap-3 px-4 py-3 bg-amber-500/5 border border-amber-500/30 rounded-lg hover:bg-amber-500/10 transition-colors group">
+        <span className="text-[10px] font-bold uppercase tracking-wider text-amber-500 w-12 flex-shrink-0">{day}</span>
+        <span className="text-xs text-neutral-200">
+          <span className="font-bold text-amber-400 group-hover:underline">Reinvent as {chain.title}</span>
+          {chain.note && <span className="text-neutral-500 ml-2">— {chain.note}</span>}
+        </span>
+        <span className="text-[10px] bg-amber-900/30 text-amber-500 px-2 py-0.5 rounded-full ml-auto">Meal chain &rarr;</span>
+      </Link>
+    );
+  }
   return (
     <div className="flex items-center gap-3 px-4 py-3 bg-neutral-900/30 border border-neutral-800/50 rounded-lg">
       <span className="text-[10px] font-bold uppercase tracking-wider text-neutral-600 w-12 flex-shrink-0">{day}</span>
@@ -364,19 +376,19 @@ export default function YourWeek() {
             <TimelineDot type="cook" enabled={enabledMeals.Mon} />
             <CookDay {...currentWeek.cookDays[0]} servings={servings} enabled={enabledMeals.Mon} onToggle={() => toggleMeal("Mon")} adults={adults} kids={kids} leftovers={leftovers} />
             <TimelineDot type="leftover" enabled={enabledMeals.Mon} />
-            <LeftoverDay day="Tuesday" meal={leftoverMsgs.tue} visible={leftovers && enabledMeals.Mon && currentWeek.cookDays[0].reheats} />
+            <LeftoverDay day="Tuesday" meal={leftoverMsgs.tue} visible={leftovers && enabledMeals.Mon && currentWeek.cookDays[0].reheats} chain={currentWeek.cookDays[0].chainTo} />
 
             {/* Wednesday */}
             <TimelineDot type="cook" enabled={enabledMeals.Wed} />
             <CookDay {...currentWeek.cookDays[1]} servings={servings} enabled={enabledMeals.Wed} onToggle={() => toggleMeal("Wed")} adults={adults} kids={kids} leftovers={leftovers} />
             <TimelineDot type="leftover" enabled={enabledMeals.Wed} />
-            <LeftoverDay day="Thursday" meal={leftoverMsgs.thu} visible={leftovers && enabledMeals.Wed && currentWeek.cookDays[1].reheats} />
+            <LeftoverDay day="Thursday" meal={leftoverMsgs.thu} visible={leftovers && enabledMeals.Wed && currentWeek.cookDays[1].reheats} chain={currentWeek.cookDays[1].chainTo} />
 
             {/* Friday */}
             <TimelineDot type="cook" enabled={enabledMeals.Fri} />
             <CookDay {...currentWeek.cookDays[2]} servings={servings} enabled={enabledMeals.Fri} onToggle={() => toggleMeal("Fri")} adults={adults} kids={kids} leftovers={leftovers} />
             <TimelineDot type="leftover" enabled={enabledMeals.Fri} />
-            <LeftoverDay day="Saturday" meal={leftoverMsgs.sat} visible={leftovers && enabledMeals.Fri && currentWeek.cookDays[2].reheats} />
+            <LeftoverDay day="Saturday" meal={leftoverMsgs.sat} visible={leftovers && enabledMeals.Fri && currentWeek.cookDays[2].reheats} chain={currentWeek.cookDays[2].chainTo} />
 
             {/* Sunday */}
             <TimelineDot type="flex" />
