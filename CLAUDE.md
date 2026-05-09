@@ -170,9 +170,19 @@ This applies to every recipe, not just new ones. If you spot a missing `url` or 
 - `useMeta` hook updates client-side meta during SPA navigation
 - Recipe pages get JSON-LD `@type: Recipe` schema with nutrition data
 
-## Image Generation Prompts (ChatGPT preferred, Gemini as backup)
+## Image Generation Prompts (MANDATORY — every recipe, every time)
 
-When a new recipe is added, generate and share these prompts for the user. **ChatGPT produces better results than Gemini** — use ChatGPT first.
+**Standing rule: every recipe addition ends with image enhancement prompts.** Not optional. Not "if the user asks." This applies whether or not the user already provided photos — they want polished alternatives offered alongside the lived-in originals so they can pick.
+
+Two prompt paths to offer:
+
+**Path A — Polish (preserve composition):** Use Gemini with "Transform this image into:" + the user's existing photo as input. Keep the same scene, props, plating, and angle, but improve lighting (daylight from window), sharpness, color cast, and noise. Best for hero/plated shots where the user nailed the composition but the kitchen lighting is dim/yellow. Aligns with the "Worth Every Penny" tier — lived-in stays lived-in, just technically better.
+
+**Path B — Studio (restyle):** Generate fresh in ChatGPT or Gemini text-to-image. Full editorial food blog style on warm marble or wood, side-lit, branded ingredients staged. Best for hero card images where polish matters more than authenticity, or when the user wants a "before/after" option.
+
+**Always provide BOTH paths.** Let the user pick which one matches the recipe's tier. Flagship recipes lean studio; Worth Every Penny / Sustainable lean polish.
+
+**ChatGPT produces better results than Gemini for text-to-image (Path B). Gemini is stronger for image-to-image (Path A) because it preserves the input's composition.** Use accordingly.
 
 **CRITICAL PROMPT RULES:**
 - **Always specify aspect ratio first:** Hero = "3:2 landscape (1200x800)", Steps/Prep = "4:3 landscape (800x600)"
