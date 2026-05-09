@@ -56,13 +56,17 @@ When a new dinner recipe is added to `src/data/recipes.js`:
 1. **Assign the next sequential ID** (check the highest existing `id` and increment)
 2. **Add `carbLevel`** — tag as `"high"` (rice/pasta/gnocchi), `"low"` (keto tortilla/bun), or `"none"` (no starch)
 3. **Add `status: "live"`** and all required fields (slug, proteinAnchor, title, protein, calories, time, servings, image, etc.)
-4. **Update the weekly rotation** in `src/components/YourWeek.jsx`:
+4. **MANDATORY — Update the weekly rotation** in `src/components/YourWeek.jsx`:
+   - **This step is not optional.** Every recipe addition MUST end with the planner updated. Tushar will call it out if you skip this.
    - **DO NOT add a new week for every recipe.** Only add a new week when the new recipe would otherwise be unused (i.e., it doesn't appear in any existing week).
+   - **Audit ALL 8 weeks first** before deciding. Print a table: Week | Mon-Wed-Fri | carbLevels | proteins. Identify which weeks are imbalanced (all-low, all-high, all-none, or two consecutive same proteins).
+   - **Prefer swaps that fix imbalances.** A new low-carb chicken recipe should land in a week that's currently all-high, or in a week with a redundant low-carb chicken repeat. Don't drop it into an already-balanced week and create new imbalance.
    - If possible, swap the new recipe into an existing week where it replaces a repeat.
    - Target: ceil(N/3) weeks for N recipes. Only add Week N+1 when recipes > slots.
-   - Every live dinner recipe must appear in at least one week
-   - **Balance rule**: each week must mix carbLevels — no week should be all-high or all-low
-   - **Protein variety**: avoid same proteinAnchor on consecutive days within a week
+   - Every live dinner recipe must appear in at least one week.
+   - **Carb balance rule (mandatory)**: each week must mix carbLevels — no week should be all-high, all-low, or all-none. Aim for 3 different levels per week, or at minimum 2.
+   - **Protein variety rule (mandatory)**: avoid same proteinAnchor on consecutive cook days (Mon→Wed and Wed→Fri are consecutive; Mon→Fri is not).
+   - **Update the week's `description` and `subtitle`** to reflect the new dinner — don't leave the old subtitle pointing at the swapped-out recipe.
 5. **Update the grocery list** in `src/components/GroceryList.jsx`:
    - Add a `GROCERY_BY_WEEK[N]` entry for any new week
    - Use `baseQty` (numeric) for items that scale with family size

@@ -63,12 +63,12 @@ const WEEKS = {
   },
   6: {
     label: "Week 6",
-    description: "Indo-Chinese night + two comfort classics. Chili chicken is the showstopper.",
-    subtitle: "Chili Chicken, Beef Stir-fry, Rice Bowl",
+    description: "Takeout night, comfort stir-fry, easiest dinner. Three styles, balanced carbs.",
+    subtitle: "Chili Chicken, Beef Stir-fry, Dan-O's Thighs",
     cookDays: [
       { day: "Monday", label: "Takeout Night", vibe: "Indo-Chinese chili chicken — glossy, spicy, restaurant-level", id: 28, time: "25 min", reheats: false, adult: "Glossy chili chicken, charred peppers, chili crisp", kid: "Plain air-fried chunks, toasted buns, raw peppers", needs: ["Kirkland chicken chunks", "Chili sauces", "Peppers", "Onions"], carbLevel: "none" },
       { day: "Wednesday", label: "Fast Win", vibe: "Lowest friction dinner of the week", id: 4, time: "25 min", reheats: true, adult: "Spicy soy-sesame, charred broccoli, chili oil", kid: "Mild soy, broccoli on side, meatballs", needs: ["Beef", "Broccoli", "Rice", "Soy sauce", "Bone broth"], carbLevel: "high" },
-      { day: "Friday", label: "System Meal", vibe: "Golden rice reheats all week, steak is fresh in 10 min", id: 24, time: "25 min", reheats: true, adult: "Golden turmeric rice, seared steak, chipotle drizzle", kid: "Rice + steak, no sauce — rice already has flavor", needs: ["Rice", "Bone broth", "Gary's QuickSteak", "Ghee", "Turmeric"], carbLevel: "high" },
+      { day: "Friday", label: "Easiest Dinner", vibe: "Two trays, two seasonings, one oven — the back of the bottle is the recipe", id: 31, time: "45 min", reheats: true, adult: "Dan-O's Spicy thighs, charred asparagus, Umami Lemon Heat drizzle", kid: "Dan-O's Original thigh, plain asparagus, folded wrap", needs: ["Bone-in skin-on thighs", "Asparagus", "Dan-O's Spicy", "Dan-O's Original", "Tortillas", "Mayo", "Lemon", "Soy sauce", "Dijon", "Chili oil"], carbLevel: "low" },
     ],
   },
   7: {
