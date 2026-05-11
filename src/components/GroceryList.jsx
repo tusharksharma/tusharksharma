@@ -169,23 +169,25 @@ const GROCERY_BY_WEEK = {
     ],
   },
   // Week 5: Mon=Tandoori Drumsticks(26), Wed=Air Fryer Chicken(21), Fri=Tri-tip Penne(2)
+  // Week 5: Mon=Tandoori Drumsticks(26), Wed=Buffalo Wing Night(33), Fri=Tri-tip Penne(2)
   5: {
     "Protein": [
       { name: "Skinless chicken drumsticks", baseQty: 10, unit: "drumsticks", meal: "Mon" },
-      { name: "Chicken thighs (boneless skinless)", baseQty: 2, unit: "lb", meal: "Wed" },
+      { name: "Kinder's Buttery Buffalo Party Wings (19 oz frozen)", baseQty: 1, unit: "bag", meal: "Wed" },
       { name: "Tri-tip steak", baseQty: 1.25, unit: "lb", meal: "Fri" },
       { name: "Earth's Best mini meatballs", baseQty: 1, unit: "bag", meal: "Kid swap" },
     ],
     "Carbs": [
       { name: "Penne pasta", baseQty: 8, unit: "oz", meal: "Fri" },
-      { name: "Dinner rolls", baseQty: 4, unit: "rolls", meal: "Wed kid" },
+      { name: "Rudi's Three Cheese Texas Toast", baseQty: 2, unit: "slices", meal: "Wed kid" },
     ],
     "Vegetables": [
       { name: "Cucumber", baseQty: 2, unit: "", meal: "Mon" },
       { name: "Onion", baseQty: 1, unit: "large", meal: "Mon + Fri" },
-      { name: "Broccoli", baseQty: 16, unit: "oz", meal: "Wed" },
+      { name: "Baby carrots", baseQty: 1, unit: "lb", meal: "Wed" },
       { name: "Spinach", baseQty: 3, unit: "oz", meal: "Fri" },
-      { name: "Lemon", baseQty: 2, unit: "", meal: "Mon" },
+      { name: "Lemon", baseQty: 2, unit: "", meal: "Mon + Wed (sauce)" },
+      { name: "Fresh chives", baseQty: 1, unit: "bunch", meal: "Wed" },
       { name: "Garlic", qty: "1 head", meal: "All" },
     ],
     "Sauce & Flavor": [
@@ -193,16 +195,15 @@ const GROCERY_BY_WEEK = {
       { name: "Lawry's seasoning", qty: "pantry", meal: "Mon kid" },
       { name: "Kala namak (black salt)", qty: "pantry", meal: "Mon" },
       { name: "Kashmiri chili", qty: "pantry", meal: "Mon" },
-      { name: "Dan-O's Outlaw seasoning", qty: "pantry", meal: "Wed" },
-      { name: "Dan-O's Original seasoning", qty: "pantry", meal: "Wed" },
-      { name: "Dan-O's Cheesoning", qty: "pantry", meal: "Wed" },
+      { name: "Dan-O's SPG Tri-O (Salt-Pepper-Garlic)", qty: "pantry", meal: "Wed (sauce)" },
       { name: "Roli Roti bone broth", baseQty: 32, unit: "oz", meal: "Fri" },
       { name: "Chili oil or sriracha", qty: "pantry", meal: "All" },
     ],
     "Creamy Base": [
       { name: "Fat-free Greek yogurt", baseQty: 1.5, unit: "containers", meal: "Mon" },
-      { name: "Cottage cheese", baseQty: 12, unit: "oz", meal: "Fri" },
-      { name: "Fairlife fat-free milk", qty: "pantry", meal: "Sauce base" },
+      { name: "Daisy 2% Cottage Cheese (Mon: 6oz Fri; Wed: 150g for crema)", baseQty: 18, unit: "oz", meal: "Wed + Fri" },
+      { name: "365 Blue Cheese Crumbles (4 oz container)", baseQty: 1, unit: "container", meal: "Wed (sauce)" },
+      { name: "Fairlife Fat-Free Lactose-Free milk", qty: "pantry", meal: "Wed (sauce) + Fri" },
     ],
     "Kid Mode": [
       { name: "Shredded mild cheese", qty: "pantry", meal: "Kid topping" },
