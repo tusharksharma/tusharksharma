@@ -25,7 +25,6 @@ const GROCERY_BY_WEEK = {
       { name: "Romaine lettuce", baseQty: 1, unit: "head", meal: "Mon + Wed" },
       { name: "Pickles", qty: "1 jar", meal: "Mon" },
       { name: "Broccoli", baseQty: 16, unit: "oz", meal: "Fri" },
-      { name: "Onion", baseQty: 1, unit: "large", meal: "All" },
       { name: "Garlic", qty: "1 head", meal: "All" },
     ],
     "Sauce & Flavor": [
