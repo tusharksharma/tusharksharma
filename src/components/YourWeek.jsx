@@ -43,12 +43,12 @@ const WEEKS = {
   },
   4: {
     label: "Week 4",
-    description: "Steak night + two fast chicken meals. Bavette is the showstopper.",
-    subtitle: "Steak & Fries, Smash Tacos, Chicken Sandwiches",
+    description: "Steak Monday + Smash Tacos midweek + Emergency Kebab Night Friday. Bavette showstopper, frozen-to-plate rescue.",
+    subtitle: "Steak & Fries, Smash Tacos, Emergency Kebab Night",
     cookDays: [
       { day: "Monday", label: "Steak Night", vibe: "Start strong — bavette + chimichurri + air fryer fries", id: 25, time: "20 min", reheats: false, adult: "Bavette steak, chimichurri, fries", kid: "Pork patties, fries, carrots", needs: ["Bavette", "Fries", "Spiceology Chimichurri", "Pork patties"], carbLevel: "low" },
       { day: "Wednesday", label: "Smash Night", vibe: "15 min — crispy smash tacos, Caesar finish", id: 22, time: "15 min", reheats: true, adult: "Keto tortilla, Caesar, crushed Quest chips", kid: "Street taco tortilla, simple taco, chips on side", needs: ["Ground chicken", "Cheddar", "Keto tortillas", "Romaine", "Caesar dressing"], carbLevel: "low" },
-      { day: "Friday", label: "Fast Food Night", vibe: "Finish easy — crispy chicken sandwiches, 15 min", id: 23, time: "15 min", reheats: true, adult: "Keto bun, chipotle or Money Mustard, pickles", kid: "Slider buns, plain or ketchup", needs: ["Kirkland chicken fillets", "Keto buns", "Slider buns", "Sauce"], carbLevel: "low" },
+      { day: "Friday", label: "Emergency Dinner", vibe: "6 PM, nobody planned — frozen kebab + frozen rumali + 5 min salad = real Indian dinner in 20 min", id: 34, time: "20 min", reheats: true, adult: "Chicken seekh wrapped in rumali + red onion-cucumber-green chutney salad", kid: "Beef seekh + plain rumali + cucumber sticks", needs: ["Colonel Kababz Chicken Seekh", "Colonel Kababz Beef Seekh", "Vadilal Rumali Roti", "Red onion", "Cucumber", "Green chutney"], carbLevel: "high" },
     ],
   },
   5: {

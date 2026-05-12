@@ -2,6 +2,33 @@
 
 Rules and conventions for working on this recipe site. Follow these exactly.
 
+## The Tier Framework (brand thesis)
+
+The Split Plate is not a recipe site. It is a **modular family food system**. Most creators ship one-off recipes; the strategic advantage here is that the meals **stack into a system**. Every recipe should be writable into one of four tiers:
+
+**Tier 1 — Signature Components** (ecosystem sauces, applied across many meals)
+- Protein Blue Cheese Crema, Umami Lemon Heat Sauce, Money Mustard, Chipotle Sauce, Smoky Chipotle Crema, Indo-Chinese Chili Sauce, No-Judge Chimichurri.
+- These are the brand-defining ingredients. They appear in 3+ meals, create repeatability, and make leftovers feel intentional.
+
+**Tier 2 — Reliable Proteins** (the meal anchors, mostly low-friction)
+- Dan-O's bone-in thighs, store rotisserie, frozen Kinder's wings, Colonel Kababz seekh kebabs (chicken AND beef — same brand, two heat levels), Kirkland chicken chunks, Gary's QuickSteak, Sola buns + ham, Soules fajita beef.
+- The protein is rarely the creative move. Pick a reliable one and move on.
+
+**Tier 3 — Emergency Carbs** (ready-or-near-ready starches)
+- Vadilal Rumali Roti, Haldiram's Phulka, Sola bagels, Sola bread, Bettergoods keto buns, slider buns, Mission corn / street taco / Zero Net Carbs tortillas, Rudi's Three Cheese Texas Toast, Maruchan ramen, Miyoka protein ramen.
+- These exist for one reason: to keep cook time honest. Don't pretend everything is from scratch.
+
+**Tier 4 — Freshness Adders** (the small thing that punches above its weight)
+- Cucumber + red onion + green chutney salad, cilantro-onion-lime, chives or scallions, baby carrots, charred asparagus, fresh lime, quick pickles, kachumber, fresh herbs.
+- WITHOUT this tier, every plate becomes freezer-beige. The cucumber-onion salad on a kebab plate; the chives on the buffalo plate; the lime in the taco-night onion salad — these are the difference between "desperate" and "intentional."
+
+**The Formula:**
+**1 Tier 2 protein + 1 Tier 3 carb + 1 Tier 4 freshness adder + (optional) 1 Tier 1 signature sauce = a real family dinner in 25 min or less.**
+
+This is the entire brand. Recipes that follow the formula are foolproof; recipes that ignore it are creator cosplay.
+
+**When writing any new recipe, label which tier each ingredient occupies** (in `substitutionNotes` or `whyThisWorks`). Cross-link Tier 1 sauces when applicable. Surface Tier 4 freshness explicitly in the kid plate variant — kids' plates without freshness adders look sad.
+
 ## Recipe Voice & Content Rules
 
 These rules govern how recipes are WRITTEN, not just how they're coded.

@@ -128,24 +128,26 @@ const GROCERY_BY_WEEK = {
     ],
   },
   // Week 4: Mon=Steak & Fries(25), Wed=Smash Tacos(22), Fri=Sandwiches(23)
+  // Week 4: Mon=Steak & Fries(25), Wed=Smash Tacos(22), Fri=Emergency Kebab Night(34)
   4: {
     "Protein": [
       { name: "Bavette steak", baseQty: 1.5, unit: "lb", meal: "Mon" },
       { name: "Pork breakfast patties", baseQty: 6, unit: "patties", meal: "Mon kid" },
       { name: "99/1 ground chicken", baseQty: 24, unit: "oz", meal: "Wed" },
-      { name: "Kirkland chicken breast fillets", baseQty: 4, unit: "fillets", meal: "Fri" },
+      { name: "Colonel Kababz Chicken Seekh Kabab (8 large, 11 oz frozen)", baseQty: 1, unit: "box", meal: "Fri adult" },
+      { name: "Colonel Kababz Beef Seekh Kabab (8 large, 11 oz frozen)", baseQty: 1, unit: "box", meal: "Fri kid" },
     ],
     "Carbs": [
       { name: "Checkers/Rally's frozen fries", baseQty: 4, unit: "servings", meal: "Mon" },
       { name: "Mission Zero Net Carbs tortillas", baseQty: 8, unit: "tortillas", meal: "Wed adult" },
       { name: "Mission Street Tacos flour tortillas", baseQty: 4, unit: "tortillas", meal: "Wed kid" },
-      { name: "Bettergoods Keto Hamburger Buns", baseQty: 4, unit: "buns", meal: "Fri adult" },
-      { name: "Slider buns", baseQty: 4, unit: "buns", meal: "Fri kid" },
+      { name: "Vadilal Quick Treat Rumali Roti (6 pieces)", baseQty: 1, unit: "pack", meal: "Fri" },
     ],
     "Vegetables": [
       { name: "Baby carrots", baseQty: 1, unit: "bag", meal: "Mon kid" },
-      { name: "Romaine lettuce", baseQty: 1, unit: "head", meal: "Wed + Fri" },
-      { name: "Pickles", qty: "1 jar", meal: "Fri" },
+      { name: "Romaine lettuce", baseQty: 1, unit: "head", meal: "Wed" },
+      { name: "Red onion", baseQty: 1, unit: "medium", meal: "Fri adult" },
+      { name: "Cucumber", baseQty: 1, unit: "medium", meal: "Fri" },
     ],
     "Sauce & Flavor": [
       { name: "SPG seasoning", qty: "pantry", meal: "Mon" },
@@ -155,8 +157,8 @@ const GROCERY_BY_WEEK = {
       { name: "Chili flakes", qty: "pantry", meal: "Mon" },
       { name: "Spiceology Taco seasoning", qty: "pantry", meal: "Wed" },
       { name: "Bolthouse Farms Caesar dressing", baseQty: 8, unit: "tbsp", meal: "Wed" },
-      { name: "Liquid Chipotle or Money Mustard", baseQty: 4, unit: "servings", meal: "Fri" },
-      { name: "Lime", baseQty: 2, unit: "", meal: "Wed" },
+      { name: "Green chutney (store-bought cilantro-mint)", qty: "pantry", meal: "Fri adult" },
+      { name: "Lime", baseQty: 2, unit: "", meal: "Wed + Fri" },
       { name: "Fresh cilantro", baseQty: 1, unit: "bunch", meal: "Wed" },
     ],
     "Creamy Base": [
@@ -165,7 +167,6 @@ const GROCERY_BY_WEEK = {
     "Kid Mode": [
       { name: "Regular Caesar dressing", qty: "pantry", meal: "Wed kid" },
       { name: "Quest Tortilla Chips", baseQty: 1, unit: "bag", meal: "Wed" },
-      { name: "Ketchup", qty: "pantry", meal: "Fri kid" },
     ],
   },
   // Week 5: Mon=Tandoori Drumsticks(26), Wed=Air Fryer Chicken(21), Fri=Tri-tip Penne(2)
