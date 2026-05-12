@@ -3350,7 +3350,7 @@ const recipes = [
     servings: 4,
     protein: 32,
     calories: 460,
-    image: "/images/emergency-kebab-night/adult-plate.webp",
+    image: "/images/emergency-kebab-night/hero.webp",
     role: "The 6 PM Emergency Dinner",
     makeThisWhen: "It's 6 PM, nobody planned, everyone's tired, and the DoorDash math is heading toward $80 for mediocre food. You don't need to cook — you need to ASSEMBLE. Frozen kebab + frozen rumali + a 5-minute onion-cucumber salad = a real Indian family dinner in 20 minutes.",
     hook: "Same brand. Two SKUs. Adults get Colonel Kababz Chicken Seekh (slight kick). Kids get Colonel Kababz Beef Seekh (mild, less spicy). Same macros, different heat — the rare frozen split where the brand does the work for you.",
