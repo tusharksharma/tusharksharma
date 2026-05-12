@@ -95,8 +95,27 @@ for (const w of plannerWeekNums) {
   console.log(`  Week ${w}: ${days.map((d, i) => `${d}=id${ids[i]}`).join(", ")} | Grocery days: ${[...groceryDays].join(", ")}`);
 }
 
+// Verify every unit used in grocery data is recognized by scaleQty.
+// Catches the failure mode where a new entry like { unit: "box", baseQty: 1 } silently
+// renders as "~0.5 box" because it's neither in WHOLE_UNITS nor FRACTIONAL_UNITS.
+const wholeMatch = grocerySrc.match(/const WHOLE_UNITS\s*=\s*new Set\(\[([\s\S]*?)\]\)/);
+const fracMatch = grocerySrc.match(/const FRACTIONAL_UNITS\s*=\s*new Set\(\[([\s\S]*?)\]\)/);
+const knownUnits = new Set();
+for (const m of (wholeMatch?.[1] || "").matchAll(/"([^"]*)"/g)) knownUnits.add(m[1]);
+for (const m of (fracMatch?.[1] || "").matchAll(/"([^"]*)"/g)) knownUnits.add(m[1]);
+
+const usedUnits = new Set();
+for (const m of grocerySrc.matchAll(/unit:\s*"([^"]*)"/g)) usedUnits.add(m[1]);
+
+for (const u of usedUnits) {
+  if (!knownUnits.has(u)) {
+    console.error(`ERROR: grocery entry uses unit "${u}" which is in neither WHOLE_UNITS nor FRACTIONAL_UNITS. Scaling will silently misbehave (e.g. "~0.5 ${u}"). Add it to the correct set in GroceryList.jsx.`);
+    errors++;
+  }
+}
+
 if (errors > 0) {
   throw new Error(`Validation failed with ${errors} error(s). Fix planner/grocery sync.`);
 } else {
-  console.log(`Planner/grocery sync OK (${plannerWeekNums.length} weeks, day tags verified). Note: does not verify recipe-item match or adult/kid quantity logic.`);
+  console.log(`Planner/grocery sync OK (${plannerWeekNums.length} weeks, day tags verified, ${usedUnits.size} units classified). Note: does not verify recipe-item match or adult/kid quantity correctness.`);
 }

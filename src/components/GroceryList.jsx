@@ -342,8 +342,29 @@ const GROCERY_BY_WEEK = {
 
 function getGrocery(week) { return GROCERY_BY_WEEK[week] || GROCERY_BY_WEEK[1]; }
 
-// Units that must be purchased as whole items — always round up
-const WHOLE_UNITS = new Set(["head", "bunch", "bag", "jar", "pack", "large", "bottle", "buns", "fillets", "rolls", "tortillas", "servings", "drumsticks", "packet", "containers", "pieces", "patties", "cup", "cups"]);
+// Units that must be purchased as whole items — always round up.
+// When a new GROCERY_BY_WEEK entry uses a unit not in this set, scaleQty falls back to
+// fractional display (e.g. "~0.5 box"). validate-weeks.js asserts that every unit appearing
+// in any week is either WHOLE_UNITS or in FRACTIONAL_UNITS — to prevent silent regressions.
+const WHOLE_UNITS = new Set([
+  "", // empty unit = bare count (e.g. "2 limes" stored as unit: "")
+  "head", "bunch", "bag", "bags", "jar", "jars", "pack", "packs", "packet", "packets",
+  "large", "medium", "small",
+  "bottle", "bottles",
+  "box", "boxes",
+  "container", "containers",
+  "buns", "fillets", "rolls", "tortillas", "slices", "pieces", "patties", "thighs", "kababs", "drumsticks", "wings",
+  "servings",
+  "lemon", "lemons", "lime", "limes", "cucumber", "cucumbers", "onion", "onions",
+  "cup", "cups",
+]);
+
+// Units that legitimately stay fractional (weight/volume measures).
+// Keep this set in sync with grocery data so validate-weeks.js can flag stragglers.
+const FRACTIONAL_UNITS = new Set([
+  "oz", "oz dry", "oz jar", "lb", "lb bunch",
+  "tbsp", "tsp",
+]);
 
 // baseQty values are for 4 servings (2 adults + 2 kids standard).
 // Kid-tagged items scale by kids only. Adult-tagged by adults only. Shared by total.
@@ -373,6 +394,8 @@ function scaleQty(entry, adults, kids, leftovers, dayReheats) {
     }
     const scale = base * leftoverMultiplier;
     const scaled = entry.baseQty * scale;
+    // Suppress zero-quantity items (e.g. kid-only entries when kids = 0).
+    if (scaled <= 0) return "";
     if (WHOLE_UNITS.has(entry.unit)) {
       const ceiled = Math.ceil(scaled);
       return `${ceiled} ${entry.unit}`.trim();
@@ -422,7 +445,12 @@ export default function GroceryList({ adults = 2, kids = 2, leftovers = true, da
   const copyList = () => {
     const text = Object.entries(GROCERY)
       .map(([cat, items]) => {
-        const visible = items.filter((i) => !isExcluded(i));
+        const visible = items.filter((i) => {
+          if (isExcluded(i)) return false;
+          // Drop baseQty items that scaled to zero.
+          if (i.baseQty != null && scaleQty(i, adults, kids, leftovers, dayReheats) === "") return false;
+          return true;
+        });
         if (visible.length === 0) return null;
         return `${cat}:\n${visible.map((i) => `  - ${i.name}${scaleQty(i, adults, kids, leftovers, dayReheats) ? ` (${scaleQty(i, adults, kids, leftovers, dayReheats)})` : ""}`).join("\n")}`;
       })
@@ -503,6 +531,9 @@ export default function GroceryList({ adults = 2, kids = 2, leftovers = true, da
                 if (isExcluded(entry)) return null;
                 const isChecked = checked.has(idx);
                 const qty = scaleQty(entry, adults, kids, leftovers, dayReheats);
+                // Hide scaled-to-zero baseQty items (e.g. kid-only when kids = 0).
+                // Pantry items keep showing (entry.baseQty undefined, qty === "" is normal).
+                if (entry.baseQty != null && qty === "") return null;
                 return (
                   <li key={idx} onClick={() => toggle(idx)} className="flex items-start gap-3 py-2 px-2 -mx-2 rounded-lg hover:bg-neutral-800/50 cursor-pointer select-none transition-colors">
                     <span className={`w-4 h-4 mt-0.5 rounded border flex-shrink-0 flex items-center justify-center text-[10px] transition-colors ${isChecked ? "bg-amber-500 border-amber-500 text-black" : "border-neutral-600"}`}>

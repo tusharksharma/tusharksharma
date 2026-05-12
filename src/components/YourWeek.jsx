@@ -400,9 +400,22 @@ export default function YourWeek() {
         {(() => {
           const dayKeys = ["Mon", "Wed", "Fri"];
           const leftoverDays = leftovers ? currentWeek.cookDays.filter((d, i) => enabledMeals[dayKeys[i]] && d.reheats).length : 0;
+          // Real protein sum: enabled cook days × recipe-specific adult/kid macros × leftover doubling.
+          // Falls back to top-level recipe.protein when splitCook doesn't break out adult/kid.
+          let totalProtein = 0;
+          currentWeek.cookDays.forEach((day, i) => {
+            if (!enabledMeals[dayKeys[i]]) return;
+            const recipe = recipes.find((r) => r.id === day.id);
+            if (!recipe) return;
+            const adultProt = recipe.splitCook?.adult?.protein ?? recipe.protein ?? 0;
+            const kidProt = recipe.splitCook?.kid?.protein ?? recipe.protein ?? 0;
+            let mealProtein = adults * adultProt + kids * kidProt;
+            if (leftovers && day.reheats) mealProtein *= 2;
+            totalProtein += mealProtein;
+          });
           return (
             <div className="mt-8 flex justify-center gap-4 text-xs text-neutral-500 flex-wrap">
-              <span><span className="text-amber-400 font-bold">~{Math.round(375 * servings / 4 * enabledCount / 3)}g protein</span> this week</span>
+              <span><span className="text-amber-400 font-bold">~{Math.round(totalProtein)}g protein</span> this week</span>
               <span className="text-neutral-700">|</span>
               <span><span className="text-white font-semibold">{enabledCount} cooks</span>{leftovers ? ` + ${leftoverDays} leftover days` : ""}</span>
               <span className="text-neutral-700">|</span>

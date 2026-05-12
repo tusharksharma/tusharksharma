@@ -125,9 +125,9 @@ export default function RecipeDetail({ recipe }) {
           <div className="flex flex-wrap gap-3 mt-4">
             <Stat label="Time" value={recipe.time} />
             <Stat label="Servings" value={totalServings} />
-            <Stat label="Cal/serving" value={recipe.meta?.macros?.calories || recipe.calories} />
-            <Stat label="Protein/serving" value={`${recipe.meta?.macros?.protein || recipe.protein}g`} highlight />
-            <Stat label="PPC" value={`${ppc}%`} highlight />
+            <Stat label="Cal/serving" value={recipe.meta?.macros?.calories || recipe.calories} estimated={recipe.meta?.macros?.estimated} />
+            <Stat label="Protein/serving" value={`${recipe.meta?.macros?.protein || recipe.protein}g`} highlight estimated={recipe.meta?.macros?.estimated} />
+            <Stat label="PPC" value={`${ppc}%`} highlight estimated={recipe.meta?.macros?.estimated} />
           </div>
 
           {/* Metadata section */}
@@ -773,18 +773,19 @@ function PhaseHeader({ label, color, subtitle }) {
   );
 }
 
-function Stat({ label, value, highlight }) {
+function Stat({ label, value, highlight, estimated }) {
   return (
-    <div className="bg-neutral-900 border border-neutral-800 rounded-lg px-4 py-2 text-center min-w-[70px]">
+    <div className="bg-neutral-900 border border-neutral-800 rounded-lg px-4 py-2 text-center min-w-[70px] relative">
       <div
         className={`font-black text-lg ${
           highlight ? "text-amber-400" : "text-white"
         }`}
       >
-        {value}
+        {estimated ? "~" : ""}{value}
       </div>
       <div className="text-neutral-500 text-xs uppercase tracking-wider">
         {label}
+        {estimated && <span className="text-amber-500/60 ml-1 normal-case font-semibold">· est.</span>}
       </div>
     </div>
   );
