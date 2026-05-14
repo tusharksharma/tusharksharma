@@ -571,12 +571,12 @@ export const breakfasts = [
     ],
     steps: [
       "WARM TORTILLAS FIRST: Stack 3 Mission Zero tortillas, wrap in a damp paper towel, microwave 10 seconds. OR pass each over an open gas flame 5 sec/side for char. Stiff cold tortillas = the #1 reason these taste like fitness food. Don't skip.",
-      "FINE-DICE THE HAM: Cut into pieces smaller than your fingernail. Big chunks distribute unevenly — fine dice means every bite has ham. (Mentor's note: this is the difference between 'home cooking' and 'craveable'.)",
+      "FINE-DICE THE HAM: Cut into pieces smaller than your fingernail. Big chunks distribute unevenly — fine dice means every bite gets ham. This is the difference between 'home cooking' and 'craveable fast food'.",
       "SOFT SCRAMBLE: Crack 2 eggs into a small bowl, whisk with a pinch of salt. Heat a nonstick pan on MEDIUM-LOW (not medium, not high), spray with cooking spray. Add eggs. Pull them slowly across the pan with a spatula — you want creamy, slightly underdone curds, not dry chunks. Off heat at 80% set — they finish from carryover. ~90 seconds total.",
       "ADD HAM + CHEESE TO PAN: Off heat, fold in the diced ham + 1 serving Kraft FF cheddar. Residual heat melts the cheese into the egg without overcooking it.",
       "ASSEMBLE: Divide the scramble across the 3 warm tortillas. Don't dump — distribute evenly.",
       "SAUCE THE RIGHT WAY: From a squeeze bottle, draw a thin ZIGZAG of Smoky Chipotle Crema across each taco. Not a dump in the middle. (See sauce: /cookbook/smoky-chipotle-crema.)",
-      "GREEN HIT: Pinch of pickled red onion OR chopped cilantro across all three. This step is what makes it stop looking beige. Mentor's note: skipping this is the difference between 'authentic dad cooking' (fine) and 'craveable content' (the goal).",
+      "GREEN HIT: Pinch of pickled red onion OR chopped cilantro across all three. This is what kills the beige-on-beige problem and makes the plate look intentional instead of desperate. Skip it and you've made fitness food.",
       "EAT HANDHELD: Fold and bite. Eat within 60 sec — Mission Zero tortillas crack if they sit assembled and cold.",
     ],
     troubleshooting: [

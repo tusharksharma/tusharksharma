@@ -33,6 +33,13 @@ This is the entire brand. Recipes that follow the formula are foolproof; recipes
 
 These rules govern how recipes are WRITTEN, not just how they're coded.
 
+**No process exhaust in shipping copy — the site never references the feedback loop:**
+- BAD: "Mentor's note: this is the difference between X and Y." / "Per the mentor's framing..." / "Mentor's fix baked in:"
+- BAD: "Craveable content (the goal)" / "Scalable brand content" / "Brand thesis says..." — content-strategy meta-talk doesn't belong on a recipe page.
+- BAD: Citing a user's feedback as authority. "Tushar said..." / "Per Tushar's note..."
+- GOOD: State the rule directly to the reader as if it's just how cooking works. "Skip this and you've made fitness food." / "Fine dice is the difference between home cooking and craveable fast food." / "Assembled comfort food IS the lane — not a compromise."
+- Voice test: would a stranger reading this recipe wonder "who is the mentor?" If yes, rewrite.
+
 **Hook variety — DO NOT use the same intro pattern for every recipe:**
 - BAD (templated): "You want [fast food] satisfaction at home — [protein] for adults, [mild thing] for kids. Same cook, different plates."
 - GOOD: Vary the hook based on what makes THIS recipe unique — technique, occasion, cultural origin, a surprising macro number, or a specific problem it solves.

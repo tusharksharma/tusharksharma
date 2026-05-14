@@ -3356,7 +3356,7 @@ const recipes = [
     hook: "Same brand. Two SKUs. Adults get Colonel Kababz Chicken Seekh (slight kick). Kids get Colonel Kababz Beef Seekh (mild, less spicy). Same macros, different heat — the rare frozen split where the brand does the work for you.",
     description: "Three frozen products + one fresh element. Air fryer the kebabs for char (5 min finish AFTER the heat-through step), microwave the rumali roti, slice the red onion + cucumber, splash green chutney. Adult plate: chicken kebab wrapped in rumali + onion-chutney salad. Kid divided tray: beef kebab + plain rumali + cucumber sticks. This is the formula — Tier 2 protein + Tier 3 carb + Tier 4 freshness — applied in 20 minutes.",
     whyMostFail: [
-      "Treat frozen kebab as 'sad easy dinner' instead of leverage. The mentor's framing: assembled comfort food is the lane.",
+      "Treat frozen kebab as 'sad easy dinner' instead of leverage. Assembled comfort food IS the lane — not a compromise.",
       "Skip the char step. Microwave-only kebabs are flabby and pale. 5 min in the air fryer at 400°F after heating fixes everything — visible char, real flavor, restaurant feel.",
       "Skip the Tier 4 freshness adder. A plate of kebabs + roti is freezer-beige. The onion-cucumber-chutney salad is what makes it feel intentional.",
       "Plate the components separated like a cafeteria. Adult plate needs INTERACTION — wrap one kebab inside the rumali. Visible interaction beats components.",
