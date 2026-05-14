@@ -575,7 +575,7 @@ export const breakfasts = [
       "SOFT SCRAMBLE: Crack 2 eggs into a small bowl, whisk with a pinch of salt. Heat a nonstick pan on MEDIUM-LOW (not medium, not high), spray with cooking spray. Add eggs. Pull them slowly across the pan with a spatula — you want creamy, slightly underdone curds, not dry chunks. Off heat at 80% set — they finish from carryover. ~90 seconds total.",
       "ADD HAM + CHEESE TO PAN: Off heat, fold in the diced ham + 1 serving Kraft FF cheddar. Residual heat melts the cheese into the egg without overcooking it.",
       "ASSEMBLE: Divide the scramble across the 3 warm tortillas. Don't dump — distribute evenly.",
-      "SAUCE THE RIGHT WAY: From a squeeze bottle, draw a thin ZIGZAG of Smoky Chipotle Crema across each taco. Not a dump in the middle. (See sauce: /cookbook/smoky-chipotle-crema.)",
+      "SAUCE THE RIGHT WAY: From a squeeze bottle, draw a thin ZIGZAG of Smoky Chipotle Crema across each taco. Not a dump in the middle.",
       "GREEN HIT: Pinch of pickled red onion OR chopped cilantro across all three. This is what kills the beige-on-beige problem and makes the plate look intentional instead of desperate. Skip it and you've made fitness food.",
       "EAT HANDHELD: Fold and bite. Eat within 60 sec — Mission Zero tortillas crack if they sit assembled and cold.",
     ],

@@ -208,10 +208,12 @@ export default function CookbookDetailPage() {
                     </div>
                   </div>
                 );
-                return b.url ? (
-                  <a key={i} href={b.url} target="_blank" rel="noopener noreferrer" onClick={() => track("brand_click", { brand: b.name, item: b.item, url: b.url })} className="block">{inner}</a>
+                if (!b.url) return <div key={i}>{inner}</div>;
+                const isInternal = b.url.startsWith("/");
+                return isInternal ? (
+                  <Link key={i} to={b.url} onClick={() => track("brand_click", { brand: b.name, item: b.item, url: b.url })} className="block">{inner}</Link>
                 ) : (
-                  <div key={i}>{inner}</div>
+                  <a key={i} href={b.url} target="_blank" rel="noopener noreferrer" onClick={() => track("brand_click", { brand: b.name, item: b.item, url: b.url })} className="block">{inner}</a>
                 );
               })}
             </div>
