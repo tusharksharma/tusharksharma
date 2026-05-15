@@ -1,10 +1,10 @@
 import { useParams, Link } from "react-router-dom";
-import { sauces, desserts, breakfasts, quickLunches } from "../data/cookbook";
+import { sauces, desserts, breakfasts, quickLunches, bases } from "../data/cookbook";
 import { liveRecipes } from "../data/recipes";
 import useMeta from "../hooks/useMeta";
 import track from "../hooks/useTrack";
 
-const allItems = [...sauces, ...breakfasts, ...desserts, ...quickLunches];
+const allItems = [...bases, ...sauces, ...breakfasts, ...desserts, ...quickLunches];
 
 export default function CookbookDetailPage() {
   const { id } = useParams();
@@ -111,16 +111,23 @@ export default function CookbookDetailPage() {
           <h2 className="text-sm font-bold text-white mb-2">Method</h2>
           <ol className="space-y-3">
             {sauce.steps.map((step, i) => {
-              const colonIdx = step.indexOf(":");
+              // Steps may be strings OR { text, image } objects (the latter for recipes
+              // with process shots that should embed alongside the step text).
+              const text = typeof step === "string" ? step : step.text || "";
+              const image = typeof step === "object" ? step.image : null;
+              const colonIdx = text.indexOf(":");
               const hasLabel = colonIdx > 0 && colonIdx < 20;
-              const label = hasLabel ? step.slice(0, colonIdx) : null;
-              const body = hasLabel ? step.slice(colonIdx + 1).trim() : step;
+              const label = hasLabel ? text.slice(0, colonIdx) : null;
+              const body = hasLabel ? text.slice(colonIdx + 1).trim() : text;
               return (
                 <li key={i} className="flex gap-3">
                   <span className="w-7 h-7 rounded-full bg-amber-500 text-black flex items-center justify-center text-xs font-black flex-shrink-0">{i + 1}</span>
-                  <div className="pt-0.5">
+                  <div className="pt-0.5 flex-1">
                     {label && <span className="text-amber-400 font-bold text-xs uppercase tracking-wider block mb-0.5">{label}</span>}
                     <p className="text-neutral-300 text-sm">{body}</p>
+                    {image && (
+                      <img src={image} alt={label || `Step ${i + 1}`} className="mt-2 w-full max-w-md rounded-lg" loading="lazy" />
+                    )}
                   </div>
                 </li>
               );

@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import useMeta from "../hooks/useMeta";
-import { sauces, quickLunches, desserts, breakfasts } from "../data/cookbook";
+import { sauces, quickLunches, desserts, breakfasts, bases } from "../data/cookbook";
 
 const TABS = [
+  ...(bases.length > 0 ? ["Bases"] : []),
   ...(sauces.length > 0 ? ["Sauces"] : []),
   ...(breakfasts.length > 0 ? ["Breakfast"] : []),
   ...(desserts.length > 0 ? ["Desserts"] : []),
@@ -112,7 +113,20 @@ export default function CookbookPage() {
           </div>
         )}
 
-        {(tab === "Sauces" || TABS.length === 1) && sauces.length > 0 && (
+        {tab === "Bases" && bases.length > 0 && (
+          <div>
+            <p className="text-neutral-500 text-xs mb-4">
+              The modular building blocks. Make once, stack into multiple meals — rice that becomes fried rice, fried rice that becomes a dinner with protein on top.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {filterItems(bases).map((b) => (
+                <RecipeCard key={b.id} item={b} />
+              ))}
+            </div>
+          </div>
+        )}
+
+        {tab === "Sauces" && sauces.length > 0 && (
           <div>
             <p className="text-neutral-500 text-xs mb-4">
               Flavor multipliers. ~30 cal per serving. Turn boring protein into something you want to eat.
