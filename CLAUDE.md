@@ -235,6 +235,8 @@ Two prompt paths to offer:
 
 **Path A — Polish (preserve composition):** Use Gemini with "Transform this image into:" + the user's existing photo as input. Keep the same scene, props, plating, and angle, but improve lighting (daylight from window), sharpness, color cast, and noise. Best for hero/plated shots where the user nailed the composition but the kitchen lighting is dim/yellow. Aligns with the "Worth Every Penny" tier — lived-in stays lived-in, just technically better.
 
+**MANDATORY — name the raw filename for every Path A prompt.** The user uploads the original photo from their Downloads folder to Gemini. They need to know which file. Always cite the original Downloads filename (e.g. `48ECFFBE-85CB-4B59-9E75-7FF9AD2793CF.jpeg`) at the top of each Path A prompt — NOT the optimized `.webp` filename you wrote to `public/images/`. Format: prefix every Path A prompt with `**Input file: <raw-downloads-filename>**`. Skipping this forces the user to scroll back through chat or guess.
+
 **Path B — Studio (restyle):** Generate fresh in ChatGPT or Gemini text-to-image. Full editorial food blog style on warm marble or wood, side-lit, branded ingredients staged. Best for hero card images where polish matters more than authenticity, or when the user wants a "before/after" option.
 
 **Always provide BOTH paths.** Let the user pick which one matches the recipe's tier. Flagship recipes lean studio; Worth Every Penny / Sustainable lean polish.
