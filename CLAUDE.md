@@ -237,6 +237,10 @@ Two prompt paths to offer:
 
 **MANDATORY — name the raw filename for every Path A prompt.** The user uploads the original photo from their Downloads folder to Gemini. They need to know which file. Always cite the original Downloads filename (e.g. `48ECFFBE-85CB-4B59-9E75-7FF9AD2793CF.jpeg`) at the top of each Path A prompt — NOT the optimized `.webp` filename you wrote to `public/images/`. Format: prefix every Path A prompt with `**Input file: <raw-downloads-filename>**`. Skipping this forces the user to scroll back through chat or guess.
 
+**NO BOILERPLATE OPENER on Path A prompts.** Do NOT lead with `"Transform this image into a brighter, sharper version while preserving the exact composition."` — it's templated filler that adds zero information. Gemini already knows it's an image-to-image edit because the user is uploading a photo. Lead directly with the scene description and the SPECIFIC fixes (lighting, color cast, sharpness, garnish add, sauce technique). Examples:
+- BAD: `"Transform this image into a brighter, sharper version while preserving the exact composition. Stainless steel wok on a black induction cooktop..."`
+- GOOD: `"Stainless steel wok on a black induction cooktop with arabesque tile backsplash, fried rice inside with amber-coated grains and chive scatter. Keep the exact composition. Replace harsh overhead lighting with warm natural daylight from upper-left, kill the reflective glare on the stainless rim, sharpen rice texture. Editorial food blog style. No generic branding."`
+
 **Path B — Studio (restyle):** Generate fresh in ChatGPT or Gemini text-to-image. Full editorial food blog style on warm marble or wood, side-lit, branded ingredients staged. Best for hero card images where polish matters more than authenticity, or when the user wants a "before/after" option.
 
 **Always provide BOTH paths.** Let the user pick which one matches the recipe's tier. Flagship recipes lean studio; Worth Every Penny / Sustainable lean polish.
