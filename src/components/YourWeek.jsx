@@ -73,12 +73,12 @@ const WEEKS = {
   },
   7: {
     label: "Week 7",
-    description: "Ramen night + quesadillas + gnocchi. Fast, fun, kid-approved.",
-    subtitle: "Buldak Ramen, Quesadillas, Gnocchi",
+    description: "Ramen night + quesadillas + TKS Sweet Heat Bowl. Asian-leaning week, all modular.",
+    subtitle: "Buldak Ramen, Quesadillas, TKS Sweet Heat Bowl",
     cookDays: [
       { day: "Monday", label: "Ramen Night", vibe: "61g protein ramen in 15 min — Buldak for adults, Maruchan for kids", id: 29, time: "15 min", reheats: false, adult: "Spicy Buldak in bone broth, semi-dry, sausage", kid: "Maruchan chicken ramen + sausage", needs: ["Buldak ramen", "Maruchan", "Bilinski's sausage", "Bone broth"], carbLevel: "high" },
       { day: "Wednesday", label: "Quesadilla Night", vibe: "Crispy for adults, soft tacos for kids — same chicken", id: 27, time: "20 min", reheats: true, adult: "Crispy quesadilla + fajitas + chipotle sauce", kid: "Soft street tacos + mild sauce", needs: ["Chicken", "Tortillas", "Cheddar", "Peppers"], carbLevel: "low" },
-      { day: "Friday", label: "Comfort + Protein", vibe: "Crispy gnocchi, creamy sauce — comfort that earns its calories", id: 1, time: "30 min", reheats: false, adult: "Spicy fajita cream, peppers, chili oil", kid: "Rao's Alfredo or mild creamy", needs: ["Chicken", "Gnocchi", "Bell peppers", "Cottage cheese", "Dan-O's"], carbLevel: "high" },
+      { day: "Friday", label: "Sweet Heat Bowl", vibe: "Crazy Cuizine chicken + TKS Sauce + fried rice. Drop the orange packet, stack the cookbook bases", id: 35, time: "20 min", reheats: true, adult: "Crispy chicken in TKS glaze + Spicy Umami Fried Rice + scallion-sesame garnish", kid: "Plain crispy chicken + half-serving bone broth rice + raw sweet peppers", needs: ["Crazy Cuizine chicken", "Bone broth rice (made ahead)", "TKS Sauce ingredients (ginger garlic paste, sesame chili oil, rice vinegar, soy, bone broth packet, hot honey sriracha)", "Mini sweet peppers"], carbLevel: "high" },
     ],
   },
   8: {

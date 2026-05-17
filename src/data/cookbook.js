@@ -1073,7 +1073,7 @@ export const bases = [
     flavorTarget: "Same texture as good cooked rice (separate grains, not mushy), but with a clean savory backbone instead of nothing. Tastes balanced solo with a splash of soy + chives, AND disappears into fried rice / bowls without fighting the sauce.",
     splitNote: {
       adult: "Use freely as a base for anything — fried rice, bowls, eaten solo with soy + chili oil + chives.",
-      kid: "Kids eat it plain or with a tiny splash of soy sauce. Bone broth makes plain rice taste 'more real' to kids who normally find unseasoned rice boring.",
+      kid: "Kids eat half a serving plain — just reheat with a splash of water. Bone broth makes plain rice taste 'more real' to kids who normally find unseasoned rice boring. Pair with raw mini sweet peppers on the side for the freshness/crunch.",
     },
     ingredients: [
       "2 cups long-grain white rice (basmati or jasmine — basmati separates better for fried rice)",
@@ -1127,7 +1127,7 @@ export const bases = [
     flavorTarget: "Layered umami — soy gives salt + depth, sambal gives fermented heat, sesame chili oil gives aroma + nuttiness, Jet Tila's Umami Punch gives the MSG-style amplification that makes takeout fried rice hit. Rice should look lightly toasted and amber-coated, NOT drenched or wet.",
     splitNote: {
       adult: "Full sauce, full sambal. Optional: scatter sliced Thai chili and chili oil on top.",
-      kid: "Skip the sambal entirely; use half the sauce. Plate in a small bowl, then invert onto the plate as a rice mound — kids respond to the playful shape. Add a side of plain ham or scrambled egg if they need more.",
+      kid: "Most kids skip fried rice entirely — give them half a serving of plain Bone Broth Rice (microwave 60 sec) + their protein + raw mini sweet peppers instead. The fried rice complexity isn't worth the fight. If they DO want fried rice, halve the sambal and serve in a small bowl flipped onto the plate as a mound (kids respond to playful shapes).",
     },
     ingredients: [
       "--- TIER 3 BASE (REQUIRED COLD) ---",
