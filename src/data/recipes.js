@@ -3565,10 +3565,10 @@ const recipes = [
         { text: "Bone Broth Rice (need 2.5 servings of the 8-serving batch — adult fried rice uses 2, kid plain uses 0.5)", link: "/cookbook/bone-broth-rice" },
       ],
       sharedSteps: [
-        { text: "AIR FRY CHICKEN: 1 lb Crazy Cuizine, 400°F, 9-12 min from frozen, single layer, shake basket at 6 min. Pull when crispy + golden + edges crackle.", images: ["/images/tks-sweet-heat-chicken/hero.webp"] },
-        { text: "MAKE THE TKS SAUCE: While chicken air-fries (you have ~10 min). Whisk ginger-garlic paste + sesame chili oil + rice vinegar + soy + Bare Bones packet + hot honey sriracha. Full method in TKS Sauce (Cookbook).", images: [] },
+        { text: "AIR FRY CHICKEN: 1 lb Crazy Cuizine, 400°F, 9-12 min from frozen, single layer, shake basket at 6 min. Pull when crispy + golden + edges crackle.", images: ["/images/tks-sweet-heat-chicken/wok-cooked.webp"] },
+        { text: "MAKE THE TKS SAUCE: While chicken air-fries (you have ~10 min). Whisk ginger-garlic paste + sesame chili oil + rice vinegar + soy + Bare Bones packet + hot honey sriracha. Full method in TKS Sauce (Cookbook).", images: ["/images/tks-sweet-heat-chicken/sauce-ready.webp"] },
         { text: "MAKE THE FRIED RICE: While chicken cooks, fry the cold bone broth rice with egg + sauce per the Spicy Umami Fried Rice method. Use 2 servings of cold bone broth rice for 2 adults. Full method in Spicy Umami Fried Rice (Cookbook).", images: [] },
-        { text: "PULL KID CHICKEN: 6 oz (about half the cooked batch) onto the kid tray. No sauce yet. This is the split point.", images: [] },
+        { text: "PULL KID CHICKEN: 6 oz (about half the cooked batch) onto the kid tray. No sauce yet. This is the split point.", images: ["/images/tks-sweet-heat-chicken/wok-cooked.webp"] },
       ],
       adult: {
         label: "Adult — TKS Sauced + Fried Rice",
@@ -3607,7 +3607,7 @@ const recipes = [
             steps: [
               { text: "REHEAT KID RICE: Half serving plain bone broth rice in a small bowl, splash of water, microwave 60 sec covered with a damp paper towel.", images: [] },
               { text: "SLICE PEPPERS: 4-6 mini sweet peppers cut into rings or sticks. Raw — kids prefer the crunch.", images: [] },
-              { text: "PLATE KID TRAY: 3 oz crispy chicken (no sauce) + half-serving plain bone broth rice + raw sweet peppers. Optional tiny TKS Sauce ramekin on the side. Done.", images: [] },
+              { text: "PLATE KID TRAY: 3 oz crispy chicken (no sauce) + half-serving plain bone broth rice (use a small ramekin and flip onto the plate as a rice mound — kids respond to playful shapes) + raw sweet peppers on the side. Optional tiny TKS Sauce ramekin as dip. Done.", images: ["/images/tks-sweet-heat-chicken/kid-trays.webp"] },
             ],
           },
           {
@@ -3634,13 +3634,13 @@ const recipes = [
       "Toasted sesame seeds",
     ],
     steps: [
-      { text: "AIR FRY ALL THE CHICKEN: 1 lb Crazy Cuizine, 400°F, 9-12 min from frozen. One batch for everyone. Discard the included orange-sauce packet.", images: ["/images/tks-sweet-heat-chicken/hero.webp"] },
-      { text: "MAKE TKS SAUCE: Whisk together while chicken cooks. 2 min. Full method on the TKS Sauce cookbook page." },
+      { text: "AIR FRY ALL THE CHICKEN: 1 lb Crazy Cuizine, 400°F, 9-12 min from frozen. One batch for everyone. Discard the included orange-sauce packet.", images: ["/images/tks-sweet-heat-chicken/wok-cooked.webp"] },
+      { text: "MAKE TKS SAUCE: Whisk together while chicken cooks. 2 min. Full method on the TKS Sauce cookbook page.", images: ["/images/tks-sweet-heat-chicken/sauce-ready.webp"] },
       { text: "MAKE ADULT FRIED RICE: From cold bone broth rice + egg + sauce. Full method on Spicy Umami Fried Rice cookbook page. 12 min total, finishes around the same time as the chicken." },
       { text: "MICROWAVE KID RICE: Half serving plain bone broth rice + splash of water, 60 sec covered." },
-      { text: "PULL KID CHICKEN: 6 oz onto the kid tray BEFORE saucing. The split point." },
+      { text: "PULL KID CHICKEN: 6 oz onto the kid tray BEFORE saucing. The split point.", images: ["/images/tks-sweet-heat-chicken/wok-cooked.webp"] },
       { text: "GLAZE ADULT CHICKEN: Hot dry skillet, adult chicken in, TKS Sauce around the edge, toss 60-90 sec until every piece is glossy." },
-      { text: "PLATE: Adults get fried rice + glazed chicken + scallion-sesame garnish. Kids get plain chicken + half-serving plain rice + raw sweet peppers + optional TKS Sauce ramekin as dip.", images: ["/images/tks-sweet-heat-chicken/hero.webp"] },
+      { text: "PLATE: Adults get fried rice + glazed chicken + scallion-sesame garnish. Kids get plain chicken + half-serving plain rice + raw sweet peppers + optional TKS Sauce ramekin as dip.", images: ["/images/tks-sweet-heat-chicken/kid-trays.webp", "/images/tks-sweet-heat-chicken/hero.webp"] },
     ],
     brands: [
       { name: "Crazy Cuizine", item: "Mandarin Orange Chicken (66 oz Costco party box, discard the packet)", why: "Pre-cooked, pre-breaded, air-fryer ready in 9-12 min. The chicken itself is good — antibiotics-free, 13g protein per 3 oz. The orange-sauce packet is what's wrong with it. One Costco box = 4 dinners at this scale.", image: "/images/brands/crazy-cuizine-mandarin-orange-chicken.jpg", url: "https://www.costco.com/p/-/crazy-cuizine-mandarin-orange-chicken-66-oz/100437350" },
