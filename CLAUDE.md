@@ -237,18 +237,17 @@ Two prompt paths to offer:
 
 **MANDATORY — name the raw filename for every Path A prompt.** The user uploads the original photo from their Downloads folder to Gemini. They need to know which file. Always cite the original Downloads filename (e.g. `48ECFFBE-85CB-4B59-9E75-7FF9AD2793CF.jpeg`) at the top of each Path A prompt — NOT the optimized `.webp` filename you wrote to `public/images/`. Format: prefix every Path A prompt with `**Input file: <raw-downloads-filename>**`. Skipping this forces the user to scroll back through chat or guess.
 
-**NO BOILERPLATE OPENER on Path A prompts.** Do NOT lead with `"Transform this image into a brighter, sharper version while preserving the exact composition."` — it's templated filler that adds zero information. Gemini already knows it's an image-to-image edit because the user is uploading a photo.
+**CANONICAL Path A PROMPT STRUCTURE — every Path A prompt MUST follow this exact 6-part shape:**
 
-**CANONICAL Path A PROMPT STRUCTURE — every Path A prompt MUST follow this exact 5-part shape:**
-
-1. **Scene noun-phrase opener** — declarative, no verbs, no preamble. Lead with the main subject + surface + backsplash/background. Example: `"Stainless steel wok of golden-brown crispy chicken nuggets on a black induction cooktop with grey arabesque tile backsplash."`
-2. **Foreground / additional element details** — additional declarative sentences for any other objects in the frame. Example: `"Small white ramekin of glossy orange-brown TKS sauce sitting on the cooktop next to the wok, with visible flecks (chili, ginger, sesame)."`
-3. **Composition lock** — always start with `"Keep the exact composition"` and optionally append an em-dash with specifics. Example: `"Keep the exact composition — wok left, sauce right, both ready to combine."`
-4. **Lighting + specific fixes** — always start with `"Replace harsh overhead lighting with warm natural daylight from upper-left,"` followed by 2-3 specific fixes comma-separated. Example: `"Replace harsh overhead lighting with warm natural daylight from upper-left, sharpen the chicken breading texture, kill reflective glare on the stainless rim."`
-5. **Close** — always exactly: `"Editorial food blog style. No generic branding."`
+1. **Opener — exactly:** `"Transform the image."` (3-word signal. NOT the longer boilerplate `"Transform this image into a brighter, sharper version while preserving the exact composition."` — that's forbidden filler. The short version is required.)
+2. **Scene noun-phrase** — declarative, no verbs. Subject + surface + backsplash/background. Example: `"Stainless steel wok of golden-brown crispy chicken nuggets on a black induction cooktop with grey arabesque tile backsplash."`
+3. **Foreground / additional element details** — additional declarative sentences for any other objects in the frame. Example: `"Small white ramekin of glossy orange-brown TKS sauce sitting on the cooktop next to the wok, with visible flecks (chili, ginger, sesame)."`
+4. **Composition lock** — always start with `"Keep the exact composition"` and optionally append an em-dash with specifics. Example: `"Keep the exact composition — wok left, sauce right, both ready to combine."`
+5. **Lighting + specific fixes** — always start with `"Replace harsh overhead lighting with warm natural daylight from upper-left,"` followed by 2-3 specific fixes comma-separated. Example: `"Replace harsh overhead lighting with warm natural daylight from upper-left, sharpen the chicken breading texture, kill reflective glare on the stainless rim."`
+6. **Close — exactly:** `"Remove unnecessary stuff and make it instagram postworthy."` (Replaces the prior `"Editorial food blog style. No generic branding."` close. The new close instructs Gemini to declutter AND optimize for social-feed polish in one line.)
 
 Reference prompt (use this shape verbatim, swap content):
-> Stainless steel wok of golden-brown crispy chicken nuggets on a black induction cooktop with grey arabesque tile backsplash. Small white ramekin of glossy orange-brown TKS sauce sitting on the cooktop next to the wok, with visible flecks (chili, ginger, sesame). Keep the exact composition — wok left, sauce right, both ready to combine. Replace harsh overhead lighting with warm natural daylight from upper-left, sharpen the chicken breading texture, kill reflective glare on the stainless rim. Editorial food blog style. No generic branding.
+> Transform the image. Stainless steel wok of golden-brown crispy chicken nuggets on a black induction cooktop with grey arabesque tile backsplash. Small white ramekin of glossy orange-brown TKS sauce sitting on the cooktop next to the wok, with visible flecks (chili, ginger, sesame). Keep the exact composition — wok left, sauce right, both ready to combine. Replace harsh overhead lighting with warm natural daylight from upper-left, sharpen the chicken breading texture, kill reflective glare on the stainless rim. Remove unnecessary stuff and make it instagram postworthy.
 
 **Path B — Studio (restyle):** Generate fresh in ChatGPT or Gemini text-to-image. Full editorial food blog style on warm marble or wood, side-lit, branded ingredients staged. Best for hero card images where polish matters more than authenticity, or when the user wants a "before/after" option.
 
