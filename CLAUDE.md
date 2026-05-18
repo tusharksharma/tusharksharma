@@ -249,6 +249,15 @@ Two prompt paths to offer:
 Reference prompt (use this shape verbatim, swap content):
 > Transform the image. Stainless steel wok of golden-brown crispy chicken nuggets on a black induction cooktop with grey arabesque tile backsplash. Small white ramekin of glossy orange-brown TKS sauce sitting on the cooktop next to the wok, with visible flecks (chili, ginger, sesame). Keep the exact composition — wok left, sauce right, both ready to combine. Replace harsh overhead lighting with warm natural daylight from upper-left, sharpen the chicken breading texture, kill reflective glare on the stainless rim. Remove unnecessary stuff and make it instagram postworthy.
 
+**HERO vs PROCESS — the call you make per shot:**
+
+The `"Remove unnecessary stuff and make it instagram postworthy."` close pulls hard toward magazine/studio aesthetic. That works for some shots and ruins others. The judgment call is yours — pick per shot:
+
+- **HERO images** (the `image:` field on dinner recipes, the `heroImage:` on cookbook entries — the card thumbnail viewed at /dinners or /cookbook): **GO FULL INSTAGRAM-WORTHY.** Standard close applies. These need to stop the scroll. Studio polish, marble backgrounds, perfect plating are fine here. Hero shots earn their polish.
+- **PROCESS / STEP / PREP / LIVED-IN SHOTS** (step images, sauce mise-en-place, kid-tray plating shots, parent's-feet-visible shots, real dinner table shots): **PRESERVE THE LIVED-IN FAMILY CONTEXT.** Override the standard close with: `"Remove unnecessary clutter but PRESERVE the lived-in family kitchen context (pantry bottles, wooden table, parent's feet or kid's hands if in frame, real plates). Make it postworthy in the documentary-family-food style, not magazine-studio style."` These shots are the brand differentiator — Minnie pajamas peeking into the kid-tray, parent's feet on wooden floor, pantry bottles in the background. Strip those and you've made every other healthy-cook account.
+
+Your judgment when deciding per shot: ask "is this the card thumbnail or a step image?" Card thumbnail = full polish. Step/prep/lived-in = preserve family context.
+
 **Path B — Studio (restyle):** Generate fresh in ChatGPT or Gemini text-to-image. Full editorial food blog style on warm marble or wood, side-lit, branded ingredients staged. Best for hero card images where polish matters more than authenticity, or when the user wants a "before/after" option.
 
 **Always provide BOTH paths.** Let the user pick which one matches the recipe's tier. Flagship recipes lean studio; Worth Every Penny / Sustainable lean polish.
