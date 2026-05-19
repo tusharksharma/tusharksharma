@@ -33,6 +33,13 @@ This is the entire brand. Recipes that follow the formula are foolproof; recipes
 
 These rules govern how recipes are WRITTEN, not just how they're coded.
 
+**TKS branding is for sauce twists only — NOT a blanket personal prefix.**
+"TKS" stands for Tushar K. Sharma's initials, but it's not a generic "everything by Tushar" label. It applies in exactly two cases:
+1. **TKS Sauce** — the original twist on General Tso sauce (signature personal twist on a classic recipe).
+2. **Recipes that build directly on TKS Sauce** (e.g. TKS Sweet Heat Chicken uses TKS Sauce as the glaze — the recipe carries the TKS name because the sauce is the recipe's identity).
+
+Do NOT auto-apply TKS to other recipes the user adds (Protein Corn Flakes is just "Protein Corn Flakes", not "TKS Protein Corn Flakes" — there's no sauce-twist relationship). Future expansions (TKS Bowls, TKS Wraps) are only valid if they're plates anchored by TKS Sauce. Don't fabricate the lineage.
+
 **No process exhaust in shipping copy — the site never references the feedback loop:**
 - BAD: "Mentor's note: this is the difference between X and Y." / "Per the mentor's framing..." / "Mentor's fix baked in:"
 - BAD: "Craveable content (the goal)" / "Scalable brand content" / "Brand thesis says..." — content-strategy meta-talk doesn't belong on a recipe page.

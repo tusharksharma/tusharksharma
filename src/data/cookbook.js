@@ -660,6 +660,66 @@ export const breakfasts = [
       reheat: "N/A — make fresh.",
     },
   },
+  {
+    id: "protein-corn-flakes",
+    title: "Protein Corn Flakes",
+    tagline: "The 'this shouldn't work but somehow does' high-protein cereal. Hot Nurri + dry flakes = warm vanilla cereal milk that hits 34g protein.",
+    heroImage: "/images/protein-corn-flakes/hero.webp",
+    prepImage: "/images/protein-corn-flakes/mise-en-place.webp",
+    prepImageCaption: "Two ingredients. Kellogg's Corn Flakes + Nurri Vanilla.",
+    flavorProfile: "Warm malted vanilla milk over partially-crisp corn flakes. Comfort-food breakfast that quietly delivers 34g protein.",
+    calories: 352,
+    caloriesPerServing: 352,
+    protein: 34,
+    servings: 1,
+    time: "3 min",
+    bestFor: [
+      "Pre-workout breakfast",
+      "Post-workout recovery",
+      "30-second school-morning hack",
+      "Comfort breakfast that doesn't wreck macros",
+      "Late-night protein snack",
+    ],
+    useThisWhen: "You want cereal but the math is bad — most protein cereals fail because protein milks are too thin and the flakes sludge instantly. Nurri is thick enough to survive the cereal. Warm it for 2 minutes and it becomes something different: malted vanilla milk over corn flakes. Two ingredients. 34g protein. Done.",
+    flavorTarget: "Warm version: warm vanilla cereal milk with partially-crisp flakes. The Nurri tastes like the milk left at the bottom of a sweetened cereal bowl — but it's the FIRST thing you taste, not the last. Cold version: standard cereal, but the milk doesn't water out the flavor.",
+    splitNote: {
+      adult: "Full recipe as written. Hot version is the move — microwave the Nurri 2 minutes, pour over flakes, eat while partially crisp.",
+      kid: "Kids prefer cold — pour Nurri straight from the can over the flakes. Same macros, less risk of an overheated-bowl meltdown.",
+    },
+    ingredients: [
+      "2 oz Kellogg's Corn Flakes (about 1.5 cups — the Family Size box is the move)",
+      "1 can Nurri Vanilla Ultra-Filtered Milk Shake (11 fl oz, 30g protein)",
+    ],
+    steps: [
+      "WARM THE NURRI (the hot version — your default): Pour the entire Nurri can into a microwave-safe bowl or mug. Microwave 2 minutes. It comes out hot but not boiling — almost like steamed milk.",
+      "PORTION THE FLAKES: 2 oz of Kellogg's Corn Flakes into a separate bowl. Eyeball it at about 1.5 cups — measuring matters less here than for most cereals.",
+      "POUR + EAT IMMEDIATELY: Pour the hot Nurri over the flakes. Eat in the next 90 seconds — you want the flakes partially crisp, not fully soggy. The window matters.",
+      "ALTERNATE (COLD VERSION): Skip the microwave. Pour Nurri straight from the can over the flakes. Standard cereal experience, just with thick protein milk instead of thin almond milk that waters out the flavor.",
+    ],
+    troubleshooting: [
+      { problem: "Flakes get soggy too fast", fix: "You waited too long after pouring. With hot Nurri, the window is 60-90 seconds. Have the spoon in your hand when you pour." },
+      { problem: "Nurri tastes off / chalky after warming", fix: "Microwaved too long. 2 minutes is the cap. If your microwave runs hot, drop to 90 sec and check temperature." },
+      { problem: "Sludgy texture, no crisp", fix: "Used a thinner protein milk (Premier Protein, Fairlife Core Power). Those work but lose the cereal-milk texture. Nurri's higher viscosity is what makes the hot version not collapse into mush." },
+      { problem: "Hungry an hour later", fix: "Real critique — this is low fiber. Acceptable as a pre-workout or post-workout meal (when you'll eat again soon). For a 'fuel until lunch' breakfast, add berries or a tablespoon of crushed walnuts per the smartUpgrades. Or honestly, eat something else." },
+      { problem: "Tastes bland", fix: "Tiny pinch of salt + a dash of cinnamon. That's it. Don't over-engineer this — two ingredients is the brand." },
+    ],
+    smartUpgrades: [
+      "Add fiber / extend satiety: 1/4 cup fresh strawberries OR blueberries on top. Adds ~10 cal, ~1g fiber, keeps you full longer without breaking the simplicity. Optional, not required.",
+      "Muscle-building variant: 1 tbsp crushed walnuts (~50 cal, 1.5g protein, slows digestion). Use when this is your only protein source for hours.",
+      "Dessert mode: pinch of cinnamon + tiny pinch of salt on the flakes before pouring. Costs nothing, doubles the comfort.",
+      "Flavor swap: any thick protein milk works (Fairlife Core Power, Premier Protein, etc.). Macros shift slightly. Nurri Vanilla is the call because the thickness + vanilla doubles as 'malted cereal milk' on the warm version.",
+    ],
+    brands: [
+      { name: "Kellogg's", item: "Corn Flakes (Family Size, 18 oz)", why: "The original. 4 ingredients (corn, sugar, malt, salt). Family Size box at 18 oz is the cost-per-serving sweet spot. Don't substitute for protein cereal — those are bricks. The point is that REGULAR corn flakes + a thick protein milk solves the protein gap honestly.", url: "https://www.kelloggs.com/en_US/products/corn-flakes-cereal-product.html" },
+      { name: "Nurri", item: "Vanilla Ultra-Filtered Milk Shake (11 fl oz can, 30g protein, 150 cal)", why: "Thick enough to survive cereal — that's the whole reason this recipe works. Most protein drinks (whey shakes, almond-milk-based protein milks) are too thin and the flakes turn to sludge instantly. Nurri's ultra-filtered milk + cream + pectin gives it body. Lactose-free, low sugar, kosher.", url: "https://drinknurri.com/product/vanilla/" },
+    ],
+    macroHonesty: "Per-serving macros (352 cal / 34g protein / 52g carbs / 3g fat) computed from the two ingredient labels. Per the macro validator: 34*4 + 52*4 + 3*9 = 371, vs stated 352 = Δ19. Difference comes from rounding in both label panels — flagged estimated. Macros do NOT account for any smartUpgrades (berries / walnuts) — add those macros separately if you use them.",
+    mealPrep: {
+      storage: "N/A — make per serving. Nurri cans store at room temp until opened, then fridge.",
+      lasts: "Unopened Nurri: months. Open can: 1 day fridge. Eat the bowl in 90 seconds or you'll regret it.",
+      reheat: "N/A — make fresh.",
+    },
+  },
 ];
 
 export const quickLunches = [
