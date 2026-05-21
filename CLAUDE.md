@@ -33,6 +33,13 @@ This is the entire brand. Recipes that follow the formula are foolproof; recipes
 
 These rules govern how recipes are WRITTEN, not just how they're coded.
 
+**Protein pasta = splurge on sauce + meat. Regular pasta = lean meat.**
+A design rule for every pasta recipe on the site. The pasta itself is the macro-balance lever:
+- **Protein pasta path** (Pete's Pasta, Kaizen, Banza, etc. — 17g protein / 7g net carbs / high fiber): pair with **full-fat sauce + fatty meat** (Italian sausage, ground beef, chorizo). The pasta's protein + fiber + low net carbs absorbs the indulgence — the macros stay honest because the carb tax is gone.
+- **Regular pasta path** (Barilla, De Cecco, store-brand): pair with **lean meat** (ground turkey, chicken breast, shrimp). The pasta's carbs don't have a built-in macro budget for rich sauce + fatty meat. Restraint goes on the protein, not the sauce.
+- DO NOT pair protein pasta with lean turkey. That's belt-AND-suspenders fitness cosplay. You picked the protein pasta — that IS the lean play. Stack rich on top.
+- This is also how the kid-adult split works in pasta recipes: adults get protein pasta + fatty meat + spinach; kids get regular pasta + same meat (the rich sauce/meat tax doesn't compound if they're not also eating protein pasta). Both versions are honest, neither is fake-healthy.
+
 **TKS branding is for sauce twists only — NOT a blanket personal prefix.**
 "TKS" stands for Tushar K. Sharma's initials, but it's not a generic "everything by Tushar" label. It applies in exactly two cases:
 1. **TKS Sauce** — the original twist on General Tso sauce (signature personal twist on a classic recipe).

@@ -53,12 +53,12 @@ const WEEKS = {
   },
   5: {
     label: "Week 5",
-    description: "Grill night Monday + Buffalo Wing Night midweek + creamy tri-tip Friday. Three different cuisines, balanced carbs.",
-    subtitle: "Tandoori Drumsticks, Buffalo Wing Night, Tri-tip Penne",
+    description: "Grill night Monday + Buffalo Wing Night midweek + creamy sausage-spinach pasta Friday. Adds the first pork protein to the rotation. Meal-preps into 8 containers.",
+    subtitle: "Tandoori Drumsticks, Buffalo Wing Night, Creamy Sausage Spinach Pasta",
     cookDays: [
       { day: "Monday", label: "Grill Night", vibe: "Tandoori drumsticks — marinated overnight, grilled in 30 min", id: 26, time: "30 min", reheats: true, adult: "Shan tandoori drumsticks, onion salad, cucumber", kid: "Lawry's mild drumstick, cucumber, naan", needs: ["Drumsticks", "Greek yogurt", "Shan Tandoori Masala", "Lawry's", "Lemon"], carbLevel: "none" },
       { day: "Wednesday", label: "Wing Night", vibe: "Frozen wings + protein blue cheese crema = junk dinner becomes high-protein comfort", id: 33, time: "25 min", reheats: true, adult: "Sauced wings + crema dip + carrots + chives", kid: "Naked wings + crema dip + Rudi's Three Cheese Texas Toast", needs: ["Kinder's Buttery Buffalo wings", "Baby carrots", "Rudi's Three Cheese Texas Toast", "Daisy cottage cheese", "365 blue cheese", "Fairlife milk", "Dan-O's SPG", "Lemon", "Chives"], carbLevel: "low" },
-      { day: "Friday", label: "Cook Once, Win Twice", vibe: "Creamy pasta, weekend is handled", id: 2, time: "35 min", reheats: true, adult: "Chili cream sauce, Dan-O's, sliced tri-tip", kid: "Mild creamy penne, meatballs, cheese", needs: ["Tri-tip", "Penne", "Spinach", "Cottage cheese", "Beef broth"], carbLevel: "high" },
+      { day: "Friday", label: "Pasta Meal Prep", vibe: "Cook once, 8 meal-prep containers. Pete's rotini + Italian sausage + spinach for adults; Barilla mini penne + sausage only for kids", id: 36, time: "35 min", reheats: true, adult: "Pete's protein rotini + sausage-Alfredo + spinach + chili flakes + Italian seasoning", kid: "Barilla mini penne + sausage-Alfredo (no spinach, no spice)", needs: ["Falls Brand mild Italian sausage (3 lb)", "Pete's Pasta Rotini", "Barilla Mini Penne", "Rao's Homemade Alfredo (2 jars)", "Marketside baby spinach", "Chicken bone broth", "Chili flakes", "Italian seasoning"], carbLevel: "high" },
     ],
   },
   6: {
