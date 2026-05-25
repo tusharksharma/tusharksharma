@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { liveRecipes, comingSoonRecipes } from "../data/recipes";
+import { desserts } from "../data/cookbook";
 import useMeta from "../hooks/useMeta";
 import HeroSection from "../components/HeroSection";
 import HowItWorks from "../components/HowItWorks";
@@ -16,6 +17,41 @@ function TrustCard({ title, desc }) {
   );
 }
 
+function MakeAheadDessertCallout() {
+  const featured = desserts.find((d) => d.bestFor?.includes("Make-ahead"));
+  if (!featured) return null;
+  return (
+    <section className="border-b border-neutral-800 bg-gradient-to-br from-amber-950/20 via-neutral-950 to-neutral-950">
+      <div className="max-w-5xl mx-auto px-4 py-12">
+        <div className="flex items-center gap-2 mb-3">
+          <span className="text-amber-500 text-xs font-black uppercase tracking-wider">This Week's Make-Ahead Dessert</span>
+          <span className="text-neutral-600 text-[10px]">Build Sunday, eat through Thursday</span>
+        </div>
+        <Link to={`/cookbook/${featured.id}`} className="grid grid-cols-1 sm:grid-cols-2 gap-5 bg-neutral-900/60 border border-amber-500/20 rounded-xl overflow-hidden hover:border-amber-500/40 transition-all group">
+          {featured.heroImage && (
+            <img src={featured.heroImage} alt={featured.title} className="w-full h-full object-cover sm:max-h-64" loading="lazy" />
+          )}
+          <div className="p-5 sm:p-6 flex flex-col justify-center">
+            <h3 className="text-white font-black text-lg group-hover:text-amber-400 transition-colors">{featured.title}</h3>
+            <p className="text-neutral-400 text-xs mt-1">{featured.tagline}</p>
+            <div className="flex items-center gap-2 mt-3 text-[10px] text-neutral-500">
+              <span className="text-amber-400 font-bold">{featured.proteinPerServing || featured.protein}g protein</span>
+              <span>&middot;</span>
+              <span>~{featured.caloriesPerServing} cal</span>
+              <span>&middot;</span>
+              <span>{featured.servings} servings</span>
+              <span>&middot;</span>
+              <span>{featured.time}</span>
+            </div>
+            <p className="text-neutral-500 text-xs mt-3 leading-relaxed line-clamp-3">{featured.useThisWhen}</p>
+            <span className="text-amber-400 text-xs font-bold mt-3 group-hover:underline">See the build &rarr;</span>
+          </div>
+        </Link>
+      </div>
+    </section>
+  );
+}
+
 export default function HomePage() {
   useMeta({ description: "High-protein family dinners with the Split Cook Method. One cook, two plates — adults and kids from the same workflow." });
   return (
@@ -23,6 +59,8 @@ export default function HomePage() {
       <HeroSection />
       <HowItWorks />
       <YourWeek />
+
+      <MakeAheadDessertCallout />
 
       {/* All Live Recipes */}
       <section className="border-b border-neutral-800">
