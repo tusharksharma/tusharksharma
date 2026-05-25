@@ -130,6 +130,23 @@ export default function RecipeDetail({ recipe }) {
             <Stat label="PPC" value={`${ppc}%`} highlight estimated={recipe.meta?.macros?.estimated} />
           </div>
 
+          {/* Macro confidence pill */}
+          {recipe.meta?.macros && (
+            <div className="mt-3">
+              {recipe.meta.macros.estimated ? (
+                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-amber-500/15 border border-amber-500/30 text-amber-300">
+                  <span className="text-[11px] font-bold uppercase tracking-wider">~ Estimated macros</span>
+                  <span className="text-amber-300/70 text-[10px]">— calculated from ingredient averages, not measured. Numbers prefixed with "~" throughout.</span>
+                </div>
+              ) : (
+                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-emerald-500/15 border border-emerald-500/30 text-emerald-300">
+                  <span className="text-[11px] font-bold uppercase tracking-wider">✓ Verified macros</span>
+                  <span className="text-emerald-300/70 text-[10px]">— calculated per-ingredient at the listed brands and quantities.</span>
+                </div>
+              )}
+            </div>
+          )}
+
           {/* Metadata section */}
           {recipe.meta && (
             <div className="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-[10px] text-neutral-500 bg-neutral-900/50 border border-neutral-800 rounded-lg px-4 py-3">

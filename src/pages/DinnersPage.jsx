@@ -9,6 +9,11 @@ const TIME_OPTIONS = [
   { label: "25 min", max: 25 },
   { label: "30+ min", max: Infinity },
 ];
+const NET_CARB_OPTIONS = [
+  { label: "≤15g net carbs", max: 15 },
+  { label: "≤30g net carbs", max: 30 },
+  { label: "≤45g net carbs", max: 45 },
+];
 const EFFORT_OPTIONS = [...new Set(liveRecipes.flatMap((r) => r.meta?.effortTags || []))].sort();
 const SPLIT_OPTIONS = [...new Set(liveRecipes.flatMap((r) => r.meta?.splitAxes || []))].sort();
 const COST_OPTIONS = ["budget", "moderate", "premium"];
@@ -80,13 +85,14 @@ export default function DinnersPage() {
   const [search, setSearch] = useState("");
   const [selectedProteins, setSelectedProteins] = useState([]);
   const [selectedTime, setSelectedTime] = useState(null);
+  const [selectedNetCarbs, setSelectedNetCarbs] = useState(null);
   const [selectedEffort, setSelectedEffort] = useState([]);
   const [selectedSplit, setSelectedSplit] = useState([]);
   const [selectedCost, setSelectedCost] = useState([]);
   const [selectedDiet, setSelectedDiet] = useState([]);
   const [excludeAllergens, setExcludeAllergens] = useState([]);
 
-  const hasActiveFilters = search || selectedProteins.length || selectedTime || selectedEffort.length || selectedSplit.length || selectedCost.length || selectedDiet.length || excludeAllergens.length;
+  const hasActiveFilters = search || selectedProteins.length || selectedTime || selectedNetCarbs || selectedEffort.length || selectedSplit.length || selectedCost.length || selectedDiet.length || excludeAllergens.length;
 
   function toggleInArray(arr, setArr, value) {
     setArr(arr.includes(value) ? arr.filter((v) => v !== value) : [...arr, value]);
@@ -96,6 +102,7 @@ export default function DinnersPage() {
     setSearch("");
     setSelectedProteins([]);
     setSelectedTime(null);
+    setSelectedNetCarbs(null);
     setSelectedEffort([]);
     setSelectedSplit([]);
     setSelectedCost([]);
@@ -123,6 +130,13 @@ export default function DinnersPage() {
       } else {
         results = results.filter((r) => parseTime(r.time) <= selectedTime.max);
       }
+    }
+
+    if (selectedNetCarbs) {
+      results = results.filter((r) => {
+        const nc = r.meta?.macros?.netCarbs;
+        return nc != null && nc <= selectedNetCarbs.max;
+      });
     }
 
     if (selectedEffort.length) {
@@ -154,7 +168,7 @@ export default function DinnersPage() {
     }
 
     return results;
-  }, [search, selectedProteins, selectedTime, selectedEffort, selectedSplit, selectedCost, selectedDiet, excludeAllergens]);
+  }, [search, selectedProteins, selectedTime, selectedNetCarbs, selectedEffort, selectedSplit, selectedCost, selectedDiet, excludeAllergens]);
 
   return (
     <div className="min-h-screen bg-neutral-950 text-neutral-100">
@@ -188,6 +202,12 @@ export default function DinnersPage() {
           <FilterSection title="Max time">
             {TIME_OPTIONS.map((t) => (
               <Chip key={t.label} label={t.label} active={selectedTime?.label === t.label} onClick={() => setSelectedTime(selectedTime?.label === t.label ? null : t)} />
+            ))}
+          </FilterSection>
+
+          <FilterSection title="Net carbs">
+            {NET_CARB_OPTIONS.map((n) => (
+              <Chip key={n.label} label={n.label} active={selectedNetCarbs?.label === n.label} onClick={() => setSelectedNetCarbs(selectedNetCarbs?.label === n.label ? null : n)} />
             ))}
           </FilterSection>
 
@@ -252,8 +272,12 @@ export default function DinnersPage() {
                     <span>{r.meta?.macros?.estimated ? "~" : ""}{r.calories} cal</span>
                     <span>&middot;</span>
                     <span>{r.time}</span>
-                    {r.meta?.macros?.estimated && (
-                      <span className="text-amber-500/60 text-[9px] font-semibold uppercase tracking-wider ml-auto">est.</span>
+                    {r.meta?.macros && (
+                      r.meta.macros.estimated ? (
+                        <span className="ml-auto px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-300 text-[9px] font-bold uppercase tracking-wider" title="Macros are an estimate — calculated, not measured per-ingredient">~ EST</span>
+                      ) : (
+                        <span className="ml-auto px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-300 text-[9px] font-bold uppercase tracking-wider" title="Macros are verified per-ingredient">✓ VERIFIED</span>
+                      )
                     )}
                   </div>
                   <div className="flex flex-wrap items-center gap-1.5 mt-2 text-[10px]">
