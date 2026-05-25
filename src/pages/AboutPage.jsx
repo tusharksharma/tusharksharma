@@ -52,6 +52,22 @@ export default function AboutPage() {
             </ul>
           </div>
 
+          {/* The Stance */}
+          <div className="bg-neutral-900 border border-neutral-800 rounded-xl p-5">
+            <h2 className="text-white font-bold text-sm mb-3">The Stance — High-Protein, Not Clean-Eating</h2>
+            <p className="text-neutral-400 text-sm">
+              This is convenience cooking, not clean eating.
+              Packet sauces, jarred Alfredo, frozen wings, breaded chicken, Buldak ramen, Rao's, Dan-O's — they're all in here on purpose.
+            </p>
+            <p className="text-neutral-400 text-sm mt-2">
+              The bar isn't "everything from scratch." The bar is: <span className="text-white font-semibold">does this hit ~35g+ protein, fit in 30 minutes, and get eaten by both adults and kids?</span>
+              Shortcuts that buy back time without taxing macros stay. Shortcuts that wreck the protein-to-calorie ratio get cut.
+            </p>
+            <p className="text-neutral-400 text-sm mt-2">
+              No apologies for using a jar. The goal is a system that survives a Tuesday — not a kitchen that looks good on Instagram.
+            </p>
+          </div>
+
           {/* What You'll Find */}
           <div className="bg-neutral-900 border border-neutral-800 rounded-xl p-5">
             <h2 className="text-white font-bold text-sm mb-3">What You'll Find</h2>

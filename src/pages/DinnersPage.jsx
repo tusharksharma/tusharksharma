@@ -37,6 +37,19 @@ function parseTime(timeStr) {
   return match ? parseInt(match[1], 10) : 999;
 }
 
+// Protein per 100 calories — higher = leaner. >= 8 is excellent, 5-8 is solid, < 5 is fat-heavy.
+function proteinPer100Cal(r) {
+  if (!r.calories || !r.protein) return null;
+  return Math.round((r.protein / r.calories) * 100 * 10) / 10;
+}
+
+function netCarbColor(nc) {
+  if (nc == null) return "bg-neutral-800 text-neutral-500";
+  if (nc < 10) return "bg-emerald-500/15 text-emerald-300";
+  if (nc <= 20) return "bg-amber-500/15 text-amber-300";
+  return "bg-rose-500/15 text-rose-300";
+}
+
 function Chip({ label, active, onClick }) {
   return (
     <button
@@ -243,6 +256,37 @@ export default function DinnersPage() {
                       <span className="text-amber-500/60 text-[9px] font-semibold uppercase tracking-wider ml-auto">est.</span>
                     )}
                   </div>
+                  <div className="flex flex-wrap items-center gap-1.5 mt-2 text-[10px]">
+                    {proteinPer100Cal(r) != null && (
+                      <span className="px-1.5 py-0.5 rounded bg-emerald-500/10 text-emerald-300 font-semibold" title="Protein per 100 calories — higher is leaner">
+                        {proteinPer100Cal(r)}g P/100cal
+                      </span>
+                    )}
+                    {r.meta?.macros?.netCarbs != null && (
+                      <span className={`px-1.5 py-0.5 rounded font-semibold ${netCarbColor(r.meta.macros.netCarbs)}`}>
+                        {r.meta.macros.netCarbs}g net carbs
+                      </span>
+                    )}
+                    {r.meta?.costPerServing && (
+                      <span className="px-1.5 py-0.5 rounded bg-neutral-800 text-neutral-400 font-semibold">{r.meta.costPerServing}/serving</span>
+                    )}
+                  </div>
+                  {(r.splitCook?.adult?.label || r.splitCook?.kid?.label) && (
+                    <div className="grid grid-cols-2 gap-1.5 mt-2">
+                      {r.splitCook?.adult?.label && (
+                        <div className="bg-red-950/30 border border-red-900/40 rounded px-2 py-1.5">
+                          <span className="text-red-400 text-[9px] font-bold uppercase tracking-wider">Adult</span>
+                          <p className="text-neutral-300 text-[10px] mt-0.5 line-clamp-2 leading-tight">{r.splitCook.adult.label.replace(/^Adult\s*[—-]\s*/i, "")}</p>
+                        </div>
+                      )}
+                      {r.splitCook?.kid?.label && (
+                        <div className="bg-green-950/30 border border-green-900/40 rounded px-2 py-1.5">
+                          <span className="text-green-400 text-[9px] font-bold uppercase tracking-wider">Kid</span>
+                          <p className="text-neutral-300 text-[10px] mt-0.5 line-clamp-2 leading-tight">{r.splitCook.kid.label.replace(/^Kid(\s*Path)?\s*[—-]\s*/i, "")}</p>
+                        </div>
+                      )}
+                    </div>
+                  )}
                   {r.meta && (
                     <div className="flex flex-wrap gap-1 mt-2">
                       {(r.meta.splitAxes || []).slice(0, 2).map((s) => (
@@ -251,9 +295,6 @@ export default function DinnersPage() {
                       {(r.meta.effortTags || []).slice(0, 1).map((t) => (
                         <span key={t} className="text-[9px] px-1.5 py-0.5 rounded bg-neutral-800 text-neutral-400">{t}</span>
                       ))}
-                      {r.meta.costTier && (
-                        <span className="text-[9px] px-1.5 py-0.5 rounded bg-neutral-800 text-neutral-500">{r.meta.costPerServing || r.meta.costTier}</span>
-                      )}
                       {(r.meta.warnings || []).filter((w) => w.includes("spicy")).length > 0 && (
                         <span className="text-[9px] px-1.5 py-0.5 rounded bg-red-500/10 text-red-400/70">spicy (adult)</span>
                       )}

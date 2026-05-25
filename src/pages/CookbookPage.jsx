@@ -11,7 +11,18 @@ const TABS = [
   ...(quickLunches.length > 0 ? ["Quick Lunches"] : []),
 ];
 
+function netCarbColor(nc) {
+  if (nc == null) return "bg-neutral-800 text-neutral-500";
+  if (nc < 10) return "bg-emerald-500/15 text-emerald-300";
+  if (nc <= 20) return "bg-amber-500/15 text-amber-300";
+  return "bg-rose-500/15 text-rose-300";
+}
+
 function RecipeCard({ item }) {
+  const ppc = item.protein && item.caloriesPerServing
+    ? Math.round((item.protein / item.caloriesPerServing) * 100 * 10) / 10
+    : null;
+  const netCarbs = item.netCarbs ?? item.macros?.netCarbs;
   return (
     <Link to={`/cookbook/${item.id}`} className="text-left bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden hover:border-amber-500/40 transition-all group w-full block">
       {item.heroImage && (
@@ -26,6 +37,18 @@ function RecipeCard({ item }) {
           <span>{item.protein}g protein</span>
           <span>&middot;</span>
           <span>{item.time}</span>
+        </div>
+        <div className="flex flex-wrap items-center gap-1.5 mt-2 text-[10px]">
+          {ppc != null && (
+            <span className="px-1.5 py-0.5 rounded bg-emerald-500/10 text-emerald-300 font-semibold" title="Protein per 100 calories — higher is leaner">
+              {ppc}g P/100cal
+            </span>
+          )}
+          {netCarbs != null && (
+            <span className={`px-1.5 py-0.5 rounded font-semibold ${netCarbColor(netCarbs)}`}>
+              {netCarbs}g net carbs
+            </span>
+          )}
         </div>
         <div className="flex gap-1 mt-2 flex-wrap">
           {item.bestFor.map((b) => (
