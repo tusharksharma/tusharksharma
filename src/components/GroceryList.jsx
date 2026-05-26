@@ -348,6 +348,35 @@ const GROCERY_BY_WEEK = {
       { name: "Eggs (for adult fried rice)", baseQty: 2, unit: "", meal: "Fri adult" },
     ],
   },
+  9: {
+    "Protein": [
+      { name: "Kinder's Buttery Buffalo wings (frozen)", baseQty: 1, unit: "bag", meal: "Mon" },
+      { name: "Bavette / flank steak", baseQty: 1, unit: "lb", meal: "Wed adult" },
+      { name: "Pork patties (Walmart Marketside)", baseQty: 4, unit: "patties", meal: "Wed kid" },
+      { name: "Boneless skinless chicken thighs", baseQty: 8, unit: "thighs", meal: "Fri" },
+    ],
+    "Carbs": [
+      { name: "Rudi's Three Cheese Texas Toast", baseQty: 4, unit: "slices", meal: "Mon kid" },
+      { name: "Air fryer fries (frozen)", baseQty: 1, unit: "bag", meal: "Wed" },
+      { name: "Little Potato Co. A Little Savory Herb (1 lb tray, microwave-ready)", baseQty: 1, unit: "tray", meal: "Fri" },
+    ],
+    "Vegetables": [
+      { name: "Baby carrots", baseQty: 1, unit: "bag", meal: "Mon" },
+      { name: "Fresh chives", baseQty: 1, unit: "bunch", meal: "Mon adult" },
+      { name: "Lemon", baseQty: 1, unit: "lemon", meal: "Mon adult" },
+    ],
+    "Sauce & Flavor": [
+      { name: "Daisy Cottage Cheese (for blue cheese crema)", baseQty: 1, unit: "tub", meal: "Mon adult" },
+      { name: "365 Whole Foods Blue Cheese Crumbles", baseQty: 1, unit: "container", meal: "Mon adult" },
+      { name: "Fairlife Fat Free Milk", qty: "pantry", meal: "Mon adult" },
+      { name: "Dan-O's SPG Tri-O", qty: "pantry", meal: "Mon adult" },
+      { name: "Spiceology Chimichurri", qty: "pantry", meal: "Wed adult" },
+      { name: "Dan-O's Outlaw Sweet & Tangy BBQ", qty: "pantry", meal: "Fri" },
+      { name: "Lee Kum Kee Chiu Chow Style Chili Crisp Oil", qty: "pantry", meal: "Fri" },
+      { name: "Daisy Light Sour Cream", baseQty: 1, unit: "tub", meal: "Fri" },
+      { name: "Light cooking oil (avocado or vegetable, for marinade)", qty: "pantry", meal: "Fri" },
+    ],
+  },
 };
 
 function getGrocery(week) { return GROCERY_BY_WEEK[week] || GROCERY_BY_WEEK[1]; }
@@ -363,6 +392,7 @@ const WHOLE_UNITS = new Set([
   "bottle", "bottles",
   "box", "boxes",
   "container", "containers",
+  "tub", "tubs",
   "tray", "trays",
   "buns", "fillets", "rolls", "tortillas", "slices", "pieces", "patties", "thighs", "kababs", "drumsticks", "wings",
   "servings",

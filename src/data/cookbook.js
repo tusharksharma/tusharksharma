@@ -395,6 +395,60 @@ export const sauces = [
       reheat: "Use cold or warm. If using on rice bowls, drizzle straight from the jar. If glazing chicken, the hot pan does the heating.",
     },
   },
+  {
+    id: "chili-crisp-sour-cream",
+    title: "Chili Crisp Sour Cream",
+    tagline: "Cool, creamy, lightly spicy. Two ingredients. Cross-links across the cookbook.",
+    heroImage: "/images/outlaw-grilled-thighs/step5-sauce.webp",
+    flavorProfile: "Cool tang from sour cream, slow shallot-garlic burn from chili crisp, visible orange streaks. Reads as restaurant dip — not a 'fitness sauce'.",
+    calories: 160,
+    caloriesPerServing: 40,
+    protein: 4,
+    servings: 4,
+    time: "1 min",
+    bestFor: [
+      "Grilled chicken thighs (Outlaw BBQ, see recipe 37)",
+      "Crispy smashed potatoes",
+      "Buffalo wings (alt to blue cheese crema)",
+      "Leftover grilled chicken wraps",
+      "Baked salmon",
+      "Roasted broccoli or asparagus",
+      "Cutting-friendly dip",
+    ],
+    useThisWhen: "You want a cool, creamy dip that adds heat + complexity without dumping calories. Fold (don't stir) — visible orange chili oil streaks ARE the brand. Build it once Sunday, it crosses 3+ dinners through the week.",
+    flavorTarget: "Cool + creamy + visible chili oil swirl. The chili crisp brings shallot + garlic + slow heat; Daisy Light is the cool/tangy carrier. NOT homogenous beige — fold gently, stop while streaks remain.",
+    splitNote: {
+      adult: "Full recipe. 2-3 tbsp Lee Kum Kee Chiu Chow chili crisp folded into 1/2 cup Daisy Light. Drizzle on the side of grilled chicken, smashed potatoes, wings — anywhere a cool/creamy/spicy dip fits.",
+      kid: "Skip the chili crisp entirely. Plain Daisy Light Sour Cream in a small ramekin or the 3-compartment-tray dip well is the kid version. Kids consistently reject the visual chili-oil streaks — keep the cream pure white for them.",
+    },
+    ingredients: [
+      "1/2 cup Daisy Light Sour Cream",
+      "2-3 tbsp Lee Kum Kee Chiu Chow Style Chili Crisp Oil",
+    ],
+    steps: [
+      "SPOON SOUR CREAM into a small bowl or ramekin.",
+      "ADD CHILI CRISP on top — 2 tbsp if you want a mild dip, 3 tbsp if you want the heat to lead. Lee Kum Kee Chiu Chow specifically because the shallot + garlic bits carry flavor; generic chili oil is too one-note.",
+      "FOLD GENTLY 3-4 TIMES with a spoon. STOP when you can still see orange chili oil streaks running through the white sour cream. Don't stir — fold. Homogenized = beige = looks like ranch. Streaked = chili crisp sour cream.",
+      "SERVE IMMEDIATELY or refrigerate up to 5 days. The streaks blur slightly after a few hours but the flavor holds.",
+    ],
+    troubleshooting: [
+      { problem: "Sauce looks beige / homogenous", fix: "You stirred too much. Drizzle a fresh 1 tsp of chili crisp ON TOP just before serving to restore the visual. Lesson for next time: fold 3-4 times maximum." },
+      { problem: "Too spicy for your taste", fix: "More sour cream — start at 1:8 chili crisp to sour cream ratio (1 tbsp per 1/2 cup). Or add 1 tsp lime juice to brighten and round off the heat." },
+      { problem: "Not spicy enough", fix: "Bump to 3 tbsp chili crisp. Or stir in 1/4 tsp red chili flakes. Don't substitute regular chili oil — Lee Kum Kee Chiu Chow has the shallot + garlic bits doing the flavor work." },
+      { problem: "Watered out / thin after a day", fix: "Daisy Light naturally weeps a little after 24 hours. Stir before serving, drain off any excess clear liquid. OR use full-fat sour cream if you want zero weep (macros climb slightly)." },
+      { problem: "Kid sees the orange streaks and refuses", fix: "Different bowl. The chili crisp version is adult-only — plate the kid's plain sour cream in its own ramekin/compartment so they never see the spicy version mixed in." },
+    ],
+    brands: [
+      { name: "Daisy", item: "Light Sour Cream (1 lb / 16 oz tub, 50% less fat)", why: "Tangy + cool + cuts the chili crisp heat. The Light variant is intentional — chili crisp does the flavor work, sour cream is the carrier. Full-fat works but pushes calories without adding much.", image: "/images/brands/daisy-sour-cream.jpg", url: "https://www.daisybrand.com/our-products/sour-cream/" },
+      { name: "Lee Kum Kee", item: "Chiu Chow Style Chili Crisp Oil (7.2 oz, 205g)", why: "Shallot + garlic bits + chili oil. The Chiu Chow specifically — generic chili oil is too one-note. One jar runs across 3+ recipes (Outlaw thighs marinade + this sauce + leftover wraps).", image: "/images/brands/lee-kum-kee-chili-oil.jpg", url: "https://usa.lkk.com/en/products/chiu-chow-style-chili-crisp-oil-7-2-oz" },
+    ],
+    macroHonesty: "Per-serving (40 cal / 1g protein / 3.5g fat / 2g carbs) computed from 2 tbsp portion (1/8 of full batch). Lee Kum Kee Chiu Chow chili crisp is 40 cal per 1 tbsp; Daisy Light is ~25 cal per 2 tbsp. Total batch at 4 servings = 160 cal. Flagged estimated because chili crisp serving sizes vary by jar.",
+    mealPrep: {
+      storage: "Cover and refrigerate. The streaks blur slightly after a few hours but flavor holds 5 days.",
+      lasts: "5 days refrigerated. Best fresh for the visual; pre-batched for convenience.",
+      reheat: "None — serve cold straight from the fridge.",
+    },
+  },
 ];
 
 export const breakfasts = [

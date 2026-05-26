@@ -91,6 +91,16 @@ const WEEKS = {
       { day: "Friday", label: "Fast Food Night", vibe: "Finish easy — crispy chicken sandwiches, 15 min", id: 23, time: "15 min", reheats: true, adult: "Keto bun, chipotle or Money Mustard, pickles", kid: "Slider buns, plain or ketchup", needs: ["Kirkland chicken fillets", "Keto buns", "Slider buns", "Sauce"], carbLevel: "low" },
     ],
   },
+  9: {
+    label: "Week 9",
+    description: "Three nights, three signature sauces. Buffalo blue cheese crema Monday, chimichurri Wednesday, chili crisp sour cream Friday — sauce-anchored dinners that all reheat.",
+    subtitle: "Buffalo Wings, Steak + Chimichurri, Outlaw Grilled Thighs",
+    cookDays: [
+      { day: "Monday", label: "Wing Night", vibe: "Frozen wings + protein blue cheese crema = junk dinner becomes high-protein comfort", id: 33, time: "25 min", reheats: true, adult: "Sauced wings + crema dip + carrots + chives", kid: "Naked wings + crema dip + Rudi's Three Cheese Texas Toast", needs: ["Kinder's Buttery Buffalo wings", "Baby carrots", "Rudi's Three Cheese Texas Toast", "Daisy cottage cheese", "365 blue cheese", "Fairlife milk", "Dan-O's SPG", "Lemon", "Chives"], carbLevel: "low" },
+      { day: "Wednesday", label: "Steak Night", vibe: "Bavette + chimichurri + air fryer fries — midweek showstopper", id: 25, time: "20 min", reheats: false, adult: "Bavette steak, chimichurri, fries", kid: "Pork patties, fries, carrots", needs: ["Bavette", "Fries", "Spiceology Chimichurri", "Pork patties"], carbLevel: "low" },
+      { day: "Friday", label: "Grill Night", vibe: "Outlaw Sweet & Tangy thighs over crispy smashed potatoes + chili crisp sour cream — split plate ends in a 3-compartment tray for the kid", id: 37, time: "30 min", reheats: true, adult: "Sliced grilled thighs + smashed potatoes + chili crisp sour cream", kid: "Diced chicken (no char) + smashed potatoes + plain sour cream dip in a 3-compartment tray", needs: ["Boneless thighs", "Little Potato Co. Savory Herb tray", "Dan-O's Outlaw Sweet & Tangy", "Lee Kum Kee Chiu Chow Chili Crisp", "Daisy Light Sour Cream"], carbLevel: "high" },
+    ],
+  },
 };
 
 function getLeftoverMsg(hasLeftovers) {
