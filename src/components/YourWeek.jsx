@@ -101,6 +101,16 @@ const WEEKS = {
       { day: "Friday", label: "Grill Night", vibe: "Outlaw Sweet & Tangy thighs over crispy smashed potatoes + chili crisp sour cream — split plate ends in a 3-compartment tray for the kid", id: 37, time: "30 min", reheats: true, adult: "Sliced grilled thighs + smashed potatoes + chili crisp sour cream", kid: "Diced chicken (no char) + smashed potatoes + plain sour cream dip in a 3-compartment tray", needs: ["Boneless thighs", "Little Potato Co. Savory Herb tray", "Dan-O's Outlaw Sweet & Tangy", "Lee Kum Kee Chiu Chow Chili Crisp", "Daisy Light Sour Cream"], carbLevel: "high" },
     ],
   },
+  10: {
+    label: "Week 10",
+    description: "Format variety week. Pork lettuce wraps Monday, golden garlic rice bowls midweek, Dan-O's bone-in thighs Friday. Three proteins, three vehicles, three sauces — no recipe repeats.",
+    subtitle: "Pork Lettuce Wraps, Golden Garlic Rice + Steak, Dan-O's Bone-In Thighs",
+    cookDays: [
+      { day: "Monday", label: "Wrap Night", vibe: "SE-Asian pork mince in Sweet Gem lettuce — Lift Drizzle for adults, mild cilantro-crema mince for kids in slider rolls", id: 38, time: "25 min", reheats: true, adult: "Pork mince + chilies + Lift Drizzle on the side, Sweet Gem leaves", kid: "Pre-mixed mince with Herdez Avocado Cilantro crema + olive oil + bone broth, lettuce OR slider rolls", needs: ["NY Style 95% lean ground pork (2 packs)", "Tanimura & Antle Sweet Gem lettuce", "Verka ginger garlic paste", "Red Boat fish sauce", "Dynasty sesame chili oil", "Kikkoman soy sauce", "ReaLemon", "Deep Coriander", "Dan-O's SPG", "Chosen avocado oil spray", "Green onions", "Fresh red Thai chilies", "Herdez Avocado Cilantro", "Chicken bone broth", "Dinner slider rolls", "Olive oil"], carbLevel: "low" },
+      { day: "Wednesday", label: "System Meal", vibe: "Golden turmeric rice reheats all week, steak is fresh in 10 min", id: 24, time: "25 min", reheats: true, adult: "Golden turmeric rice, seared steak, chipotle drizzle", kid: "Rice + steak, no sauce — rice already has flavor", needs: ["Rice", "Bone broth", "Gary's QuickSteak", "Ghee", "Turmeric"], carbLevel: "high" },
+      { day: "Friday", label: "Easiest Dinner", vibe: "Two trays, two seasonings, one oven — the back of the bottle is the recipe", id: 31, time: "45 min", reheats: true, adult: "Dan-O's Spicy thighs, charred asparagus, Umami Lemon Heat drizzle", kid: "Dan-O's Original thigh, plain asparagus, folded wrap", needs: ["Bone-in skin-on thighs", "Asparagus", "Dan-O's Spicy", "Dan-O's Original", "Tortillas", "Mayo", "Lemon", "Soy sauce", "Dijon", "Chili oil"], carbLevel: "low", chainTo: { slug: "next-day-chicken-tacos", title: "Next-Day Chicken Tacos", note: "Chop the leftover thighs fine, save the pan juices, build tacos in 10 min" } },
+    ],
+  },
 };
 
 function getLeftoverMsg(hasLeftovers) {
