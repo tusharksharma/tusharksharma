@@ -101,6 +101,16 @@ const WEEKS = {
       { day: "Friday", label: "Grill Night", vibe: "Outlaw Sweet & Tangy thighs over crispy smashed potatoes + chili crisp sour cream — split plate ends in a 3-compartment tray for the kid", id: 37, time: "30 min", reheats: true, adult: "Sliced grilled thighs + smashed potatoes + chili crisp sour cream", kid: "Diced chicken (no char) + smashed potatoes + plain sour cream dip in a 3-compartment tray", needs: ["Boneless thighs", "Little Potato Co. Savory Herb tray", "Dan-O's Outlaw Sweet & Tangy", "Lee Kum Kee Chiu Chow Chili Crisp", "Daisy Light Sour Cream"], carbLevel: "high" },
     ],
   },
+  11: {
+    label: "Week 11",
+    description: "Restaurant-grade pork chops Monday with the new Cowboy Butter sauce + crusted snap peas. Smash tacos midweek. Creamy steak noodles Friday — three proteins, three formats, the cookbook side cross-links across two of them.",
+    subtitle: "Pork Chops + Cowboy Butter, Smash Tacos, Creamy Steak Noodles",
+    cookDays: [
+      { day: "Monday", label: "Chops Night", vibe: "Herb-marinated pork chops + Parmesan Corn Chex snap peas + Cowboy Butter drizzle — restaurant-grade weeknight", id: 39, time: "30 min", reheats: true, adult: "Sliced chop + crusted snap peas + Cowboy Butter (herb-folded)", kid: "Diced chop + same snap peas + plain Cowboy Butter in dip well (3-compartment tray)", needs: ["Boneless pork loin chops", "Fresh rosemary", "Fresh thyme", "Garlic", "Kikkoman soy", "Lea & Perrins Worcestershire", "Smash Kitchen Dijon", "Smoked paprika", "Chili flakes", "Lemon", "Snap peas", "Kirkland Parmigiano Stravecchio", "Corn Chex", "Laughing Cow Light", "Kirkland bone broth", "Kirkland butter", "Fresh parsley", "Fresh chives"], carbLevel: "low" },
+      { day: "Wednesday", label: "Smash Night", vibe: "15 min — crispy smash tacos, Caesar finish", id: 22, time: "15 min", reheats: true, adult: "Keto tortilla, Caesar, crushed Quest chips", kid: "Street taco tortilla, simple taco, chips on side", needs: ["Ground chicken", "Cheddar", "Keto tortillas", "Romaine", "Caesar dressing"], carbLevel: "low" },
+      { day: "Friday", label: "Comfort Bowl", vibe: "Creamy steak noodles — cottage cheese sauce, no cream, 31g protein", id: 30, time: "30 min", reheats: true, adult: "Chili flakes + parsley finish", kid: "Plain creamy noodles, optional butter", needs: ["Steak", "Egg noodles", "Cottage cheese", "Beef broth", "Fairlife"], carbLevel: "high" },
+    ],
+  },
   10: {
     label: "Week 10",
     description: "Format variety week. Pork lettuce wraps Monday, golden garlic rice bowls midweek, Dan-O's bone-in thighs Friday. Three proteins, three vehicles, three sauces — no recipe repeats.",
