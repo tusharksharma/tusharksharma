@@ -450,8 +450,8 @@ const recipes = [
     carbLevel: "high", // rice
     meta: {
       macros: { protein: 45, calories: 500, fat: 14, carbs: 45, netCarbs: 42, estimated: true },
-      allergens: ["soy"],
-      warnings: ["contains-soy", "spicy-adult-version"],
+      allergens: ["soy", "sesame"],
+      warnings: ["contains-soy", "contains-sesame", "spicy-adult-version"],
       dietTags: ["dairy-free", "halal", "gluten-free-option"],
       proteinTags: ["beef", "steak"],
       splitAxes: ["spice"],
@@ -2349,8 +2349,8 @@ const recipes = [
     carbLevel: "none", // no starch in the base — serve with rice/noodles optionally
     meta: {
       macros: { protein: 35, calories: 400, fat: 14, carbs: 20, netCarbs: 18, estimated: true },
-      allergens: ["soy", "gluten"],
-      warnings: ["contains-soy", "contains-gluten", "spicy-adult-version"],
+      allergens: ["soy", "gluten", "sesame"],
+      warnings: ["contains-soy", "contains-gluten", "contains-sesame", "spicy-adult-version"],
       dietTags: ["dairy-free", "halal"],
       proteinTags: ["chicken"],
       splitAxes: ["protein"],
@@ -2648,8 +2648,8 @@ const recipes = [
     carbLevel: "high", // egg noodles
     meta: {
       macros: { protein: 31, calories: 391, fat: 12, carbs: 40, netCarbs: 38, estimated: false },
-      allergens: ["dairy", "gluten", "eggs"],
-      warnings: ["contains-dairy", "contains-gluten", "contains-eggs"],
+      allergens: ["dairy", "gluten", "eggs", "fish"],
+      warnings: ["contains-dairy", "contains-gluten", "contains-eggs", "contains-fish-worcestershire"],
       dietTags: ["halal"],
       proteinTags: ["beef", "steak"],
       splitAxes: ["spice"],
@@ -3491,8 +3491,8 @@ const recipes = [
     carbLevel: "high",
     meta: {
       macros: { protein: 23, calories: 400, fat: 14, carbs: 45, netCarbs: 42, estimated: true },
-      allergens: ["soy", "gluten"],
-      warnings: ["contains-soy", "contains-gluten", "spicy-adult-version"],
+      allergens: ["soy", "gluten", "sesame"],
+      warnings: ["contains-soy", "contains-gluten", "contains-sesame", "spicy-adult-version"],
       dietTags: ["egg-free-kid-version", "dairy-free", "nut-free", "halal"],
       proteinTags: ["chicken"],
       splitAxes: ["spice", "carb"],
@@ -4013,9 +4013,9 @@ const recipes = [
     carbLevel: "low",
     meta: {
       macros: { protein: 53, calories: 491, fat: 28, carbs: 11, netCarbs: 11, estimated: true },
-      allergens: ["fish", "soy"],
-      warnings: ["contains-fish-sauce", "contains-soy", "spicy-adult-version"],
-      dietTags: ["gluten-free-option", "halal", "dairy-free", "egg-free", "nut-free", "low-carb"],
+      allergens: ["fish", "soy", "sesame"],
+      warnings: ["contains-fish-sauce", "contains-soy", "contains-sesame", "spicy-adult-version"],
+      dietTags: ["gluten-free-option", "dairy-free", "egg-free", "nut-free", "low-carb"],
       proteinTags: ["pork"],
       splitAxes: ["spice", "sauce", "vehicle"],
       effortTags: ["fast", "weeknight", "one-pan", "one-hand", "split-plate"],
@@ -4209,7 +4209,7 @@ const recipes = [
       { name: "ReaLemon", item: "100% Lemon Juice (small squeeze bottle)", why: "The acid that does the lift. Mentor flagged: 'Without acid this becomes hot oily pork in lettuce.' Use 3 tbsp into the shared seasoning + 3 tbsp into the Lift Drizzle. Fresh-squeezed lemon works but ReaLemon stays in the fridge year-round." },
       { name: "Deep", item: "Coriander Powder (Indian grocery brand)", why: "1/2 tsp into the Lift Drizzle. Bright citrus-floral aromatic — adds the third layer of lift after lemon + chilies. Zero calories, big flavor return." },
     ],
-    macroHonesty: "Per-serving (491 cal / 53g protein / 28g fat / 11g carbs / ~11g net) computed from MacroFactor: 351 cal from the seasoned pork portion (32 oz pork ÷ 4 + aromatics + shared seasoning) + 140 cal from 2 tbsp Lift Drizzle. Verified, not estimated — Tushar logged every ingredient with weights. Kid portion (~280 cal / 28g protein) accounts for smaller pork serving + 1 tbsp olive oil + Herdez Avocado Cilantro + bone broth in the mix. Slider roll adds ~140 cal if kid picks the roll instead of lettuce.",
+    macroHonesty: "Per-serving (491 cal / 53g protein / 28g fat / 11g carbs / ~11g net) computed from MacroFactor: 351 cal from the seasoned pork portion (32 oz pork ÷ 4 + aromatics + shared seasoning) + 140 cal from 2 tbsp Lift Drizzle. Calorie total is MacroFactor-logged but the P/F/C breakdown is approximated (P×4 + F×9 + C×4 = 508 vs 491 logged — a 17-cal gap from how nutrition labels round vs Atwater math). Flagged estimated: true for that reason. Kid portion (~280 cal / 28g protein) accounts for smaller pork serving + 1 tbsp olive oil + Herdez Avocado Cilantro + bone broth in the mix. Slider roll adds ~140 cal if kid picks the roll instead of lettuce.",
     mealPrep: {
       storage: "Seasoned mince (both adult and kid portions) holds 3 days in airtight containers. Lift Drizzle keeps 5 days in a small jar. Sweet Gem lettuce washed + stored with paper towels in the bag — 3 days.",
       reheat: "Microwave the mince covered 60-90 sec. The lettuce is always fresh — wash + dry day-of, or store with paper towels. Lift Drizzle is dump-and-stir, build fresh per meal if possible.",
@@ -4222,9 +4222,9 @@ const recipes = [
     carbLevel: "low",
     meta: {
       macros: { protein: 50, calories: 450, fat: 20, carbs: 12, netCarbs: 10, estimated: true },
-      allergens: ["dairy", "soy"],
-      warnings: ["contains-dairy", "contains-soy", "spicy-adult-version"],
-      dietTags: ["gluten-free-option", "halal", "egg-free", "nut-free", "low-carb"],
+      allergens: ["dairy", "soy", "fish"],
+      warnings: ["contains-dairy", "contains-soy", "contains-fish-worcestershire", "spicy-adult-version"],
+      dietTags: ["gluten-free-option", "egg-free", "nut-free", "low-carb"],
       proteinTags: ["pork"],
       splitAxes: ["spice", "presentation"],
       effortTags: ["fast", "weeknight", "pan-seared", "split-plate"],

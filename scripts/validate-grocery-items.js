@@ -71,7 +71,7 @@ const ALWAYS_OK_ITEMS = new Set([
 function tokenize(str) {
   return str
     .toLowerCase()
-    .replace(/[(),.—–'"\-]/g, " ")
+    .replace(/[(),.—–'"-]/g, " ")
     .split(/\s+/)
     .map((t) => t.replace(/^\d+%?$/, "")) // drop pure numbers and "2%"
     .filter((t) => t.length >= 3 && !STOPWORDS.has(t));
