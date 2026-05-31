@@ -11,6 +11,7 @@ const CookbookDetailPage = lazy(() => import("./pages/CookbookDetailPage"));
 const DinnersPage = lazy(() => import("./pages/DinnersPage"));
 const AboutPage = lazy(() => import("./pages/AboutPage"));
 const FanPage = lazy(() => import("./pages/FanPage"));
+const SocialPage = lazy(() => import("./pages/SocialPage"));
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -52,6 +53,7 @@ function App() {
           <Route path="/cookbook" element={<CookbookPage />} />
           <Route path="/cookbook/:id" element={<CookbookDetailPage />} />
           <Route path="/recipes/:slug" element={<RecipePage />} />
+          <Route path="/social/:slug" element={<SocialPage />} />
         </Routes>
       </Suspense>
       <InstallPrompt />

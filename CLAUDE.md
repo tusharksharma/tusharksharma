@@ -241,6 +241,38 @@ This applies to every recipe, not just new ones. If you spot a missing `url` or 
 - `useMeta` hook updates client-side meta during SPA navigation
 - Recipe pages get JSON-LD `@type: Recipe` schema with nutrition data
 
+## Social Carousel (MANDATORY — every recipe, every time)
+
+**Standing rule: every recipe addition ends with a working `/social/{slug}` page.** Tushar uses these for Instagram posts. The page auto-generates from `recipe` data — no per-recipe work unless something's broken.
+
+The page renders 6 stacked 1080×1080 square cards in this order:
+
+1. **Hero** — `recipe.image` + title overlay + "Cook once. Split smart." tagline
+2. **Macros** — 4-quadrant card: protein, calories, net carbs, total time + cost/serving footnote
+3. **Process image 1** — first non-hero image from `recipe.steps[].images[]` + caption (first sentence of the step text)
+4. **Split** — adult vs kid `splitCook.adult.label` / `splitCook.kid.label` with macros
+5. **Process image 2** — second non-hero image + caption
+6. **Hashtags + brand handles** — auto-generated from `recipe.meta.proteinTags`, `recipe.title`, `recipe.brands[]`
+
+**Workflow per recipe ship:**
+1. Recipe lands at `/recipes/{slug}` (existing).
+2. Open `/social/{slug}` in a browser. Cards render automatically.
+3. Right-click each card → Save as Image (or screenshot at 1080×1080).
+4. Caption / brand tags / hashtags are in the collapsed `<details>` block at the top of the page.
+5. Post the 6 images as an Instagram carousel.
+
+**No per-recipe code work is required if the recipe has:**
+- `image` (hero)
+- `title`, `time`, `servings`
+- `meta.macros.{protein,calories,netCarbs}`
+- `splitCook.{adult,kid}.label`
+- 2+ step images in `recipe.steps[].images[]`
+- `brands: [...]` with `name`
+
+**Brand IG handles** are mapped in `src/pages/SocialPage.jsx` (`KNOWN` object). When a new brand ships, add its handle to that map. If a brand has no known handle, it's silently dropped from the "Brands featured" line.
+
+**Hashtag base** (mandatory across every recipe): `#TheSplitPlate #CookOnceSplitSmart #SplitCook #HighProteinFamilyDinner #FamilyMealPrep #KidApprovedDinner #WeeknightDinner #FamilyDinnerIdeas #HighProtein`. Per-recipe tags layered on from `proteinTags`, `carbLevel`, and `title` words.
+
 ## Image Generation Prompts (MANDATORY — every recipe, every time)
 
 **Standing rule: every recipe addition ends with image enhancement prompts.** Not optional. Not "if the user asks." This applies whether or not the user already provided photos — they want polished alternatives offered alongside the lived-in originals so they can pick.
