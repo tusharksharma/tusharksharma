@@ -122,31 +122,63 @@ function extractCookbookLinks(recipe) {
 
 // Mobile Safari taints the canvas when images are loaded without explicit CORS,
 // even for same-origin images. This pre-fetches every <img> in the given root
-// with `mode: cors` and inlines it as a base64 data URL — toPng then has clean,
-// known-good pixels to work with. Fixes "image cards render blank on phone."
+// and inlines it as a base64 data URL — toPng then has clean, known-good pixels.
+//
+// Pitfalls fixed in this version:
+//   - img.complete returns true for the OLD image right after setting new src,
+//     so the previous resolve-immediately code skipped the actual load wait.
+//     Now uses img.decode() (the standard way to guarantee paint-ready state)
+//     with onload/onerror fallback for browsers without decode().
+//   - Errors used to be swallowed → blank cards with no signal. Now thrown so
+//     the export wrapper can surface a meaningful alert.
+//   - cache: "no-store" forces a fresh CORS-aware fetch (cached responses may
+//     have been retrieved without CORS headers on the first page load).
 async function preloadImagesWithCors(root) {
   const imgs = Array.from(root.querySelectorAll("img"));
+  const failures = [];
   await Promise.all(imgs.map(async (img) => {
     if (img.src.startsWith("data:")) return;
+    if (img.src.startsWith("blob:")) return;
+    const originalSrc = img.src;
     try {
-      const res = await fetch(img.src, { mode: "cors", cache: "force-cache" });
+      const res = await fetch(originalSrc, { mode: "cors", cache: "no-store" });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const blob = await res.blob();
       const dataUrl = await new Promise((resolve, reject) => {
         const reader = new FileReader();
         reader.onloadend = () => resolve(reader.result);
-        reader.onerror = reject;
+        reader.onerror = () => reject(new Error("FileReader failed"));
         reader.readAsDataURL(blob);
       });
       img.src = dataUrl;
-      // Ensure browser flushes the new src into the rendered DOM before toPng reads
-      await new Promise((resolve) => {
-        if (img.complete) resolve();
-        else img.onload = resolve;
-      });
+      // Wait for the browser to actually decode the new src before toPng reads.
+      // img.decode() is the modern guarantee; falls back to onload for older browsers.
+      if (typeof img.decode === "function") {
+        await img.decode().catch(() => {
+          // decode() rejected — fall back to onload race
+          return new Promise((resolve) => {
+            img.onload = resolve;
+            img.onerror = resolve;
+            setTimeout(resolve, 500);
+          });
+        });
+      } else {
+        await new Promise((resolve) => {
+          img.onload = resolve;
+          img.onerror = resolve;
+          setTimeout(resolve, 500);
+        });
+      }
     } catch (e) {
-      console.warn("preload failed for", img.src, e);
+      failures.push({ src: originalSrc, error: e.message });
+      console.warn("preload failed for", originalSrc, e);
     }
   }));
+  if (failures.length > 0 && failures.length === imgs.length) {
+    // Every image failed — surface this loudly, otherwise the user gets a blank card
+    throw new Error(`All ${imgs.length} images failed to preload. Check Network tab for the URLs.`);
+  }
+  return failures;
 }
 
 function BrandStripTop() {
@@ -168,7 +200,10 @@ function DownloadableCard({ children, filename, label }) {
     if (!ref.current) return;
     setBusy(true);
     try {
-      await preloadImagesWithCors(ref.current);
+      const failures = await preloadImagesWithCors(ref.current);
+      if (failures.length > 0) {
+        console.warn(`Partial preload — ${failures.length} image(s) failed:`, failures);
+      }
       const dataUrl = await toPng(ref.current, { pixelRatio: 2, width: 540, height: 540, cacheBust: true, skipFonts: false });
       const blob = await (await fetch(dataUrl)).blob();
       const file = new File([blob], `${filename}.png`, { type: "image/png" });
