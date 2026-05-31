@@ -62,6 +62,7 @@ const routes = [
   { path: "/cookbook", title: "Power-Ups — The Split Plate", description: "Sauces, breakfasts, desserts, and quick meals — high-protein upgrades that take 10 minutes or less." },
   { path: "/about", title: "About — The Split Plate", description: "One meal. Two plates. The Split Plate is a dinner system for families who want high-protein meals without cooking twice." },
   { path: "/fan", title: "In the Hands of the Fan — The Split Plate", description: "Can't decide what to cook? Spin the fan and let it pick your dinner." },
+  { path: "/social", title: "Social Carousels — The Split Plate", description: "Private index of carousel pages for Instagram posting.", noindex: true },
   ...recipes.map((r) => {
     const idx = recipesRaw.indexOf(`slug: "${r.slug}"`);
     const ingredients = idx > -1 ? extractIngredients(recipesRaw, idx) : [];
@@ -78,6 +79,7 @@ const routes = [
     title: `Social Carousel — ${r.title} — The Split Plate`,
     description: `Instagram carousel for ${r.title}.`,
     image: r.image,
+    noindex: true,
   })),
   ...cookbookItems.map((c) => ({
     path: `/cookbook/${c.id}`,
@@ -130,7 +132,7 @@ function buildRecipeSchema(r, ingredients) {
 }
 
 function generateHTML(route) {
-  const { path, title, description, image, schema } = route;
+  const { path, title, description, image, schema, noindex } = route;
   const url = `${DOMAIN}${path}`;
   const ogImage = image ? `${DOMAIN}${image}` : `${DOMAIN}/images/logo.png`;
 
@@ -155,6 +157,7 @@ function generateHTML(route) {
     `<meta property="og:image" content="${ogImage}" />`,
     `<meta property="og:site_name" content="The Split Plate" />`,
     `<meta name="twitter:card" content="summary_large_image" />`,
+    noindex ? `<meta name="robots" content="noindex, nofollow" />` : "",
     schema ? `<script type="application/ld+json">${schema}</script>` : "",
   ].filter(Boolean).join("\n    ");
 
@@ -190,7 +193,7 @@ for (const route of routes) {
 // Auto-generate sitemap — omit lastmod (same date on every URL is noise)
 const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${routes.map((r) => {
+${routes.filter((r) => !r.noindex && !r.path.startsWith("/social")).map((r) => {
   const priority = r.path === "/" ? "1.0" : r.path.startsWith("/recipes/") ? "0.8" : r.path.startsWith("/cookbook/") && r.path !== "/cookbook" ? "0.7" : "0.9";
   return `  <url><loc>${DOMAIN}${r.path}</loc><priority>${priority}</priority></url>`;
 }).join("\n")}
