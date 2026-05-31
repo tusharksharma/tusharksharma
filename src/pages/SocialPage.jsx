@@ -113,23 +113,33 @@ function DownloadableCard({ children, filename, label }) {
   const ref = useRef(null);
   const [busy, setBusy] = useState(false);
 
-  async function download() {
+  async function exportCard() {
     if (!ref.current) return;
     setBusy(true);
     try {
-      const dataUrl = await toPng(ref.current, {
-        pixelRatio: 2,
-        width: 540,
-        height: 540,
-        cacheBust: true,
-      });
+      const dataUrl = await toPng(ref.current, { pixelRatio: 2, width: 540, height: 540, cacheBust: true });
+      const blob = await (await fetch(dataUrl)).blob();
+      const file = new File([blob], `${filename}.png`, { type: "image/png" });
+
+      // Mobile-first: Web Share API → native share sheet → "Save to Photos" / IG / etc.
+      if (typeof navigator !== "undefined" && navigator.canShare && navigator.canShare({ files: [file] })) {
+        try {
+          await navigator.share({ files: [file] });
+          return;
+        } catch (e) {
+          if (e.name === "AbortError") return; // user cancelled — don't fallback
+          // fall through to download
+        }
+      }
+
+      // Desktop fallback: classic download
       const link = document.createElement("a");
       link.download = `${filename}.png`;
       link.href = dataUrl;
       link.click();
     } catch (e) {
       console.error("Card export failed:", e);
-      alert("Export failed — check console. Some images may need to be on the same origin.");
+      alert("Export failed — check console.");
     } finally {
       setBusy(false);
     }
@@ -140,11 +150,11 @@ function DownloadableCard({ children, filename, label }) {
       <div className="flex items-center justify-between mb-2">
         <span className="text-neutral-500 text-[11px] font-semibold uppercase tracking-wider">{label}</span>
         <button
-          onClick={download}
+          onClick={exportCard}
           disabled={busy}
           className="text-amber-400 text-xs font-bold hover:underline cursor-pointer disabled:opacity-50"
         >
-          {busy ? "Exporting…" : "Download PNG ↓"}
+          {busy ? "Exporting…" : "Save image ↓"}
         </button>
       </div>
       <div ref={ref} className="relative aspect-square w-full bg-neutral-950 overflow-hidden flex flex-col" style={{ width: 540, height: 540 }}>
@@ -349,21 +359,46 @@ export default function SocialPage() {
     { id: "hashtags", label: "Card · Hashtags", filename: `${slug}-end-hashtags`, render: <HashtagCardInner recipe={recipe} /> },
   ];
 
-  async function downloadAll() {
-    // Trigger each download sequentially with a small gap so browser doesn't drop them
+  async function saveAll() {
+    // Render every card to a File first, then either share or download
+    const files = [];
     for (const card of cards) {
       const el = document.querySelector(`[data-card-id="${card.id}"] [data-export]`);
       if (!el) continue;
       try {
         const dataUrl = await toPng(el, { pixelRatio: 2, width: 540, height: 540, cacheBust: true });
-        const link = document.createElement("a");
-        link.download = `${card.filename}.png`;
-        link.href = dataUrl;
-        link.click();
-        await new Promise((r) => setTimeout(r, 400));
+        const blob = await (await fetch(dataUrl)).blob();
+        files.push(new File([blob], `${card.filename}.png`, { type: "image/png" }));
       } catch (e) {
         console.error(`Failed export of ${card.id}:`, e);
       }
+    }
+    if (files.length === 0) {
+      alert("No cards exported. Check console.");
+      return;
+    }
+
+    // Mobile-first: try Web Share API with all files — iOS/Android opens share sheet
+    // → "Save N Images" goes straight to Photos. Single user gesture.
+    if (typeof navigator !== "undefined" && navigator.canShare && navigator.canShare({ files })) {
+      try {
+        await navigator.share({ files, title: `${recipe.title} carousel` });
+        return;
+      } catch (e) {
+        if (e.name === "AbortError") return;
+        // fall through to per-file download
+      }
+    }
+
+    // Desktop fallback: trigger downloads sequentially with 400ms gaps
+    for (const file of files) {
+      const url = URL.createObjectURL(file);
+      const link = document.createElement("a");
+      link.download = file.name;
+      link.href = url;
+      link.click();
+      URL.revokeObjectURL(url);
+      await new Promise((r) => setTimeout(r, 400));
     }
   }
 
@@ -372,11 +407,16 @@ export default function SocialPage() {
       <div className="max-w-2xl mx-auto mb-8">
         <h1 className="text-white text-2xl font-black">Social Carousel</h1>
         <p className="text-neutral-400 text-sm mt-1">{recipe.title}</p>
-        <p className="text-neutral-500 text-xs mt-2">{cards.length} cards · 1080×1080 each · click "Download PNG" on each or "Download all" at top.</p>
+        <p className="text-neutral-500 text-xs mt-2">{cards.length} cards · 1080×1080 each.</p>
+        <p className="text-neutral-600 text-[10px] mt-1">
+          <span className="text-neutral-500">On phone:</span> tap "Save all" — your share sheet pops up, choose "Save {cards.length} Images" → all go to Photos.
+          <br />
+          <span className="text-neutral-500">On desktop:</span> tap "Save all" — {cards.length} PNGs download to your Downloads folder.
+        </p>
 
         <div className="mt-4 flex items-center gap-3">
-          <button onClick={downloadAll} className="px-4 py-2 bg-amber-500 text-black font-bold rounded-lg text-sm hover:bg-amber-400 transition-colors cursor-pointer">
-            Download all {cards.length} PNGs
+          <button onClick={saveAll} className="px-4 py-2 bg-amber-500 text-black font-bold rounded-lg text-sm hover:bg-amber-400 transition-colors cursor-pointer">
+            Save all {cards.length} images
           </button>
           <Link to={`/recipes/${recipe.slug}`} className="text-amber-400 text-xs hover:underline">← Back to recipe</Link>
         </div>
