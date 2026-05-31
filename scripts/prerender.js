@@ -73,6 +73,12 @@ const routes = [
       schema: buildRecipeSchema(r, ingredients),
     };
   }),
+  ...recipes.map((r) => ({
+    path: `/social/${r.slug}`,
+    title: `Social Carousel — ${r.title} — The Split Plate`,
+    description: `Instagram carousel for ${r.title}.`,
+    image: r.image,
+  })),
   ...cookbookItems.map((c) => ({
     path: `/cookbook/${c.id}`,
     title: `${c.title} — The Split Plate`,
