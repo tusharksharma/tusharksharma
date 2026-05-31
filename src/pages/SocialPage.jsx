@@ -411,9 +411,9 @@ function flattenIngredients(arr) {
     .filter((line) => !/^---/.test(line)); // drop section headers
 }
 
-function tiktokCaption(recipe, components) {
-  const handles = brandHandles(recipe, "tiktok");
-  const tags = tiktokHashtagsFor(recipe);
+function longCaption(recipe, components, platform = "tiktok") {
+  const handles = brandHandles(recipe, platform);
+  const tags = platform === "tiktok" ? tiktokHashtagsFor(recipe) : hashtagsFor(recipe);
   const lines = [];
   const m = recipe.meta?.macros || {};
 
@@ -611,39 +611,34 @@ export default function SocialPage() {
         </div>
 
         <details className="mt-4 bg-neutral-800/50 border border-neutral-700 rounded-lg p-3 text-xs" open>
-          <summary className="text-amber-400 cursor-pointer font-semibold">TikTok caption (TikTok-verified handles · 5 hashtags only)</summary>
+          <summary className="text-pink-400 cursor-pointer font-semibold">TikTok caption · long-form · TikTok @ handles · 5 hashtags</summary>
           <div className="mt-3 space-y-2">
-            <p className="text-neutral-500">Long-form with full recipe + ingredients + method + brand @ handles (TikTok-verified) + exactly 5 hashtags. Paste into TikTok caption.</p>
             <button
               onClick={() => {
-                navigator.clipboard.writeText(tiktokCaption(recipe, components));
+                navigator.clipboard.writeText(longCaption(recipe, components, "tiktok"));
                 alert("TikTok caption copied to clipboard.");
               }}
               className="px-3 py-1.5 bg-amber-500 text-black font-bold rounded text-[11px] hover:bg-amber-400 cursor-pointer"
             >
               Copy TikTok caption
             </button>
-            <pre className="text-neutral-200 whitespace-pre-wrap text-[11px] bg-neutral-950 p-3 rounded border border-neutral-800 max-h-96 overflow-y-auto leading-relaxed">{tiktokCaption(recipe, components)}</pre>
+            <pre className="text-neutral-200 whitespace-pre-wrap text-[11px] bg-neutral-950 p-3 rounded border border-neutral-800 max-h-96 overflow-y-auto leading-relaxed">{longCaption(recipe, components, "tiktok")}</pre>
           </div>
         </details>
 
-        <details className="mt-3 bg-neutral-800/50 border border-neutral-700 rounded-lg p-3 text-xs">
-          <summary className="text-amber-400 cursor-pointer font-semibold">Instagram caption (IG handles · full hashtag set)</summary>
-          <div className="mt-3 space-y-3">
-            <div>
-              <p className="text-neutral-500 mb-1">Hook (short caption):</p>
-              <pre className="text-neutral-200 whitespace-pre-wrap text-[11px] bg-neutral-950 p-2 rounded border border-neutral-800">{recipe.hook || recipe.makeThisWhen}</pre>
-            </div>
-            {igHandles.length > 0 && (
-              <div>
-                <p className="text-neutral-500 mb-1">Brand tags (Instagram):</p>
-                <pre className="text-neutral-200 whitespace-pre-wrap text-[11px] bg-neutral-950 p-2 rounded border border-neutral-800">{igHandles.join(" ")}</pre>
-              </div>
-            )}
-            <div>
-              <p className="text-neutral-500 mb-1">Hashtags (full set, {igTags.length} tags):</p>
-              <pre className="text-neutral-200 whitespace-pre-wrap text-[11px] bg-neutral-950 p-2 rounded border border-neutral-800">{igTags.join(" ")}</pre>
-            </div>
+        <details className="mt-3 bg-neutral-800/50 border border-neutral-700 rounded-lg p-3 text-xs" open>
+          <summary className="text-orange-400 cursor-pointer font-semibold">Instagram caption · long-form · IG @ handles · full hashtag set</summary>
+          <div className="mt-3 space-y-2">
+            <button
+              onClick={() => {
+                navigator.clipboard.writeText(longCaption(recipe, components, "ig"));
+                alert("Instagram caption copied to clipboard.");
+              }}
+              className="px-3 py-1.5 bg-amber-500 text-black font-bold rounded text-[11px] hover:bg-amber-400 cursor-pointer"
+            >
+              Copy Instagram caption
+            </button>
+            <pre className="text-neutral-200 whitespace-pre-wrap text-[11px] bg-neutral-950 p-3 rounded border border-neutral-800 max-h-96 overflow-y-auto leading-relaxed">{longCaption(recipe, components, "ig")}</pre>
           </div>
         </details>
       </div>
