@@ -342,6 +342,99 @@ function HashtagCardInner({ recipe }) {
   );
 }
 
+// Flatten ingredient list (handles string + {text, link} + comment headers like "--- ADULT ---")
+function flattenIngredients(arr) {
+  if (!arr) return [];
+  return arr
+    .map((item) => typeof item === "string" ? item : item?.text)
+    .filter(Boolean)
+    .filter((line) => !/^---/.test(line)); // drop section headers
+}
+
+function tiktokCaption(recipe, components, handles, tags) {
+  const lines = [];
+  const m = recipe.meta?.macros || {};
+
+  // HOOK — first line, the one that has to land in 1 sec
+  lines.push(recipe.role || recipe.title);
+  lines.push("");
+
+  // QUICK STATS
+  lines.push(`✓ ${m.protein || recipe.protein}g protein`);
+  lines.push(`✓ ~${m.calories || recipe.calories} cal per serving`);
+  if (m.netCarbs != null) lines.push(`✓ ~${m.netCarbs}g net carbs`);
+  lines.push(`✓ ${recipe.time} · ${recipe.servings} servings`);
+  lines.push(`✓ One cook, two plates (adult + kid)`);
+  lines.push("");
+
+  // SPLIT
+  if (recipe.splitCook?.adult?.label || recipe.splitCook?.kid?.label) {
+    lines.push("THE SPLIT");
+    if (recipe.splitCook.adult?.label) lines.push(`👨‍🍳 Adult: ${recipe.splitCook.adult.label}`);
+    if (recipe.splitCook.kid?.label) lines.push(`🧒 Kid: ${recipe.splitCook.kid.label}`);
+    lines.push("");
+  }
+
+  // INGREDIENTS — pull shared + adult + kid distinctly
+  const shared = flattenIngredients(recipe.splitCook?.sharedIngredients);
+  const adult = flattenIngredients(recipe.splitCook?.adult?.extraIngredients);
+  const kid = flattenIngredients(recipe.splitCook?.kid?.extraIngredients);
+  const flat = flattenIngredients(recipe.ingredients);
+
+  if (shared.length) {
+    lines.push("INGREDIENTS (shared)");
+    shared.forEach((i) => lines.push(`• ${i}`));
+    lines.push("");
+  }
+  if (adult.length) {
+    lines.push("ADULT EXTRAS");
+    adult.forEach((i) => lines.push(`• ${i}`));
+    lines.push("");
+  }
+  if (kid.length) {
+    lines.push("KID EXTRAS");
+    kid.forEach((i) => lines.push(`• ${i}`));
+    lines.push("");
+  }
+  if (!shared.length && flat.length) {
+    lines.push("INGREDIENTS");
+    flat.forEach((i) => lines.push(`• ${i}`));
+    lines.push("");
+  }
+
+  // METHOD — first sentence of each step
+  if (recipe.steps?.length) {
+    lines.push("METHOD");
+    recipe.steps.forEach((s, i) => {
+      const first = (s.text || "").split(/[:.]/)[0].trim();
+      if (first) lines.push(`${i + 1}. ${first}.`);
+    });
+    lines.push("");
+  }
+
+  // COMPONENTS (cross-linked sauces / sides)
+  if (components.length) {
+    lines.push("BUILT WITH");
+    components.forEach((c) => lines.push(`• ${c.title} — thesplitplate.com/cookbook/${c.id}`));
+    lines.push("");
+  }
+
+  // CTA
+  lines.push(`Full recipe → thesplitplate.com/recipes/${recipe.slug}`);
+  lines.push("");
+
+  // BRAND TAGS
+  if (handles.length) {
+    lines.push(handles.join(" "));
+    lines.push("");
+  }
+
+  // HASHTAGS
+  lines.push(tags.join(" "));
+
+  return lines.join("\n");
+}
+
 function classifyCookbook(item) {
   if (sauces.includes(item)) return "Sauce";
   if (bases.includes(item)) return "Side / Base";
@@ -452,11 +545,28 @@ export default function SocialPage() {
           <Link to={`/recipes/${recipe.slug}`} className="text-amber-400 text-xs hover:underline">← Back to recipe</Link>
         </div>
 
-        <details className="mt-4 bg-neutral-800/50 border border-neutral-700 rounded-lg p-3 text-xs">
-          <summary className="text-amber-400 cursor-pointer font-semibold">Copy-paste caption + tags + hashtags</summary>
+        <details className="mt-4 bg-neutral-800/50 border border-neutral-700 rounded-lg p-3 text-xs" open>
+          <summary className="text-amber-400 cursor-pointer font-semibold">TikTok / IG long-form caption (tap to copy)</summary>
+          <div className="mt-3 space-y-2">
+            <p className="text-neutral-500">Full recipe + ingredients + method + brand tags + hashtags. Spaced for the scroll. Paste directly into TikTok / IG caption.</p>
+            <button
+              onClick={() => {
+                navigator.clipboard.writeText(tiktokCaption(recipe, components, handles, tags));
+                alert("Caption copied to clipboard.");
+              }}
+              className="px-3 py-1.5 bg-amber-500 text-black font-bold rounded text-[11px] hover:bg-amber-400 cursor-pointer"
+            >
+              Copy caption to clipboard
+            </button>
+            <pre className="text-neutral-200 whitespace-pre-wrap text-[11px] bg-neutral-950 p-3 rounded border border-neutral-800 max-h-96 overflow-y-auto leading-relaxed">{tiktokCaption(recipe, components, handles, tags)}</pre>
+          </div>
+        </details>
+
+        <details className="mt-3 bg-neutral-800/50 border border-neutral-700 rounded-lg p-3 text-xs">
+          <summary className="text-amber-400 cursor-pointer font-semibold">Short caption + brand tags + hashtags (separate)</summary>
           <div className="mt-3 space-y-3">
             <div>
-              <p className="text-neutral-500 mb-1">Suggested caption:</p>
+              <p className="text-neutral-500 mb-1">Hook (short caption):</p>
               <pre className="text-neutral-200 whitespace-pre-wrap text-[11px] bg-neutral-950 p-2 rounded border border-neutral-800">{recipe.hook || recipe.makeThisWhen}</pre>
             </div>
             {handles.length > 0 && (
