@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import { toPng } from "html-to-image";
+import html2canvas from "html2canvas";
 import { liveRecipes } from "../data/recipes";
 import { sauces, bases, breakfasts, desserts, quickLunches } from "../data/cookbook";
 import useMeta from "../hooks/useMeta";
@@ -120,19 +120,31 @@ function extractCookbookLinks(recipe) {
   return [...ids].map((id) => ALL_COOKBOOK.find((c) => c.id === id)).filter(Boolean);
 }
 
-// Mobile Safari taints the canvas when images are loaded without explicit CORS,
-// even for same-origin images. This pre-fetches every <img> in the given root
-// and inlines it as a base64 data URL — toPng then has clean, known-good pixels.
-//
-// Pitfalls fixed in this version:
-//   - img.complete returns true for the OLD image right after setting new src,
-//     so the previous resolve-immediately code skipped the actual load wait.
-//     Now uses img.decode() (the standard way to guarantee paint-ready state)
-//     with onload/onerror fallback for browsers without decode().
-//   - Errors used to be swallowed → blank cards with no signal. Now thrown so
-//     the export wrapper can surface a meaningful alert.
-//   - cache: "no-store" forces a fresh CORS-aware fetch (cached responses may
-//     have been retrieved without CORS headers on the first page load).
+// Render a DOM node to a 1080×1080 PNG Blob using html2canvas. Unlike
+// html-to-image, html2canvas reads pixels via the browser's native canvas
+// painter — it draws what's already painted in the DOM, no internal image
+// re-fetch and no data URL serialization step that could choke on size.
+async function renderCardToBlob(node) {
+  const canvas = await html2canvas(node, {
+    width: 540,
+    height: 540,
+    scale: 2,
+    backgroundColor: "#0a0a0a",
+    useCORS: true,
+    allowTaint: false,
+    logging: false,
+    imageTimeout: 15000,
+  });
+  return new Promise((resolve, reject) => {
+    canvas.toBlob((blob) => {
+      if (blob) resolve(blob);
+      else reject(new Error("canvas.toBlob returned null"));
+    }, "image/png");
+  });
+}
+
+// Legacy preload (no longer called — html2canvas handles images natively).
+// Kept temporarily in case we need it for diagnostic comparison.
 async function preloadImagesWithCors(root) {
   const imgs = Array.from(root.querySelectorAll("img"));
   const failures = [];
@@ -212,14 +224,9 @@ function DownloadableCard({ children, filename, label }) {
     if (!ref.current) return;
     setBusy(true);
     try {
-      const failures = await preloadImagesWithCors(ref.current);
-      if (failures.length > 0) {
-        console.warn(`[${filename}] Partial preload — ${failures.length} image(s) failed:`, failures);
-      }
       const imgsInCard = Array.from(ref.current.querySelectorAll("img"));
-      console.log(`[${filename}] Exporting card with ${imgsInCard.length} image(s):`, imgsInCard.map((i) => ({ src: i.src.slice(0, 80), w: i.naturalWidth, h: i.naturalHeight })));
-      const dataUrl = await toPng(ref.current, { pixelRatio: 2, width: 540, height: 540, skipFonts: false });
-      const blob = await (await fetch(dataUrl)).blob();
+      console.log(`[${filename}] Exporting card with ${imgsInCard.length} image(s):`, imgsInCard.map((i) => ({ src: i.src.slice(0, 80), w: i.naturalWidth, h: i.naturalHeight, complete: i.complete })));
+      const blob = await renderCardToBlob(ref.current);
       const file = new File([blob], `${filename}.png`, { type: "image/png" });
 
       // Mobile-first: Web Share API → native share sheet → "Save to Photos" / IG / etc.
@@ -234,10 +241,12 @@ function DownloadableCard({ children, filename, label }) {
       }
 
       // Desktop fallback: classic download
+      const url = URL.createObjectURL(blob);
       const link = document.createElement("a");
       link.download = `${filename}.png`;
-      link.href = dataUrl;
+      link.href = url;
       link.click();
+      URL.revokeObjectURL(url);
     } catch (e) {
       console.error("Card export failed:", e);
       alert("Export failed — check console.");
@@ -573,15 +582,12 @@ export default function SocialPage() {
   const cards = allCards.slice(0, 10);
 
   async function saveAll() {
-    // Render every card to a File first, then either share or download
     const files = [];
     for (const card of cards) {
       const el = document.querySelector(`[data-card-id="${card.id}"] [data-export]`);
       if (!el) continue;
       try {
-        await preloadImagesWithCors(el);
-        const dataUrl = await toPng(el, { pixelRatio: 2, width: 540, height: 540, skipFonts: false });
-        const blob = await (await fetch(dataUrl)).blob();
+        const blob = await renderCardToBlob(el);
         files.push(new File([blob], `${card.filename}.png`, { type: "image/png" }));
       } catch (e) {
         console.error(`Failed export of ${card.id}:`, e);
