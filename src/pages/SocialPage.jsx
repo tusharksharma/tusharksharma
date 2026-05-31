@@ -204,9 +204,11 @@ function DownloadableCard({ children, filename, label }) {
     try {
       const failures = await preloadImagesWithCors(ref.current);
       if (failures.length > 0) {
-        console.warn(`Partial preload — ${failures.length} image(s) failed:`, failures);
+        console.warn(`[${filename}] Partial preload — ${failures.length} image(s) failed:`, failures);
       }
-      const dataUrl = await toPng(ref.current, { pixelRatio: 2, width: 540, height: 540, cacheBust: true, skipFonts: false });
+      const imgsInCard = Array.from(ref.current.querySelectorAll("img"));
+      console.log(`[${filename}] Exporting card with ${imgsInCard.length} image(s):`, imgsInCard.map((i) => ({ src: i.src.slice(0, 80), w: i.naturalWidth, h: i.naturalHeight })));
+      const dataUrl = await toPng(ref.current, { pixelRatio: 2, width: 540, height: 540, skipFonts: false });
       const blob = await (await fetch(dataUrl)).blob();
       const file = new File([blob], `${filename}.png`, { type: "image/png" });
 
@@ -568,7 +570,7 @@ export default function SocialPage() {
       if (!el) continue;
       try {
         await preloadImagesWithCors(el);
-        const dataUrl = await toPng(el, { pixelRatio: 2, width: 540, height: 540, cacheBust: true, skipFonts: false });
+        const dataUrl = await toPng(el, { pixelRatio: 2, width: 540, height: 540, skipFonts: false });
         const blob = await (await fetch(dataUrl)).blob();
         files.push(new File([blob], `${card.filename}.png`, { type: "image/png" }));
       } catch (e) {
