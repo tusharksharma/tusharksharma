@@ -132,12 +132,37 @@ function loadCanvasImage(src) {
       reject(new Error("Missing image source"));
       return;
     }
+    const url = assetUrl(src);
     const img = new Image();
-    img.crossOrigin = "anonymous";
-    img.decoding = "async";
-    img.onload = () => resolve(img);
-    img.onerror = () => reject(new Error(`Image failed to load: ${src}`));
-    img.src = assetUrl(src);
+    // Only set crossOrigin for ACTUAL cross-origin URLs. Same-origin images
+    // don't need CORS, and setting crossOrigin forces a CORS-validated fetch
+    // that fails if the server (e.g., Vercel static) doesn't send
+    // Access-Control-Allow-Origin headers — causing the export to "download
+    // too fast" with no image painted.
+    try {
+      if (new URL(url).origin !== window.location.origin) {
+        img.crossOrigin = "anonymous";
+      }
+    } catch (_) { /* invalid URL — leave crossOrigin unset */ }
+
+    const onReady = async () => {
+      // img.decode() guarantees paint-ready state. Without it, drawImage may
+      // run before the image is fully decoded, producing a blank canvas.
+      try {
+        if (img.decode) await img.decode();
+      } catch (_) { /* decode() rejected — image already onload'd, proceed */ }
+      resolve(img);
+    };
+
+    img.onload = onReady;
+    img.onerror = () => reject(new Error(`Image failed to load: ${url}`));
+    img.src = url;
+
+    // Cache hit: if the image was already in the browser's image cache, src
+    // assignment may NOT fire onload again. Detect via .complete + naturalWidth.
+    if (img.complete && img.naturalWidth > 0) {
+      onReady();
+    }
   });
 }
 
