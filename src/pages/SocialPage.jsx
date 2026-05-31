@@ -98,6 +98,35 @@ function extractCookbookLinks(recipe) {
   return [...ids].map((id) => ALL_COOKBOOK.find((c) => c.id === id)).filter(Boolean);
 }
 
+// Mobile Safari taints the canvas when images are loaded without explicit CORS,
+// even for same-origin images. This pre-fetches every <img> in the given root
+// with `mode: cors` and inlines it as a base64 data URL — toPng then has clean,
+// known-good pixels to work with. Fixes "image cards render blank on phone."
+async function preloadImagesWithCors(root) {
+  const imgs = Array.from(root.querySelectorAll("img"));
+  await Promise.all(imgs.map(async (img) => {
+    if (img.src.startsWith("data:")) return;
+    try {
+      const res = await fetch(img.src, { mode: "cors", cache: "force-cache" });
+      const blob = await res.blob();
+      const dataUrl = await new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onloadend = () => resolve(reader.result);
+        reader.onerror = reject;
+        reader.readAsDataURL(blob);
+      });
+      img.src = dataUrl;
+      // Ensure browser flushes the new src into the rendered DOM before toPng reads
+      await new Promise((resolve) => {
+        if (img.complete) resolve();
+        else img.onload = resolve;
+      });
+    } catch (e) {
+      console.warn("preload failed for", img.src, e);
+    }
+  }));
+}
+
 function BrandStripTop() {
   return (
     <div className="absolute top-0 left-0 right-0 px-5 py-3 flex items-center justify-between z-20 pointer-events-none">
@@ -117,7 +146,8 @@ function DownloadableCard({ children, filename, label }) {
     if (!ref.current) return;
     setBusy(true);
     try {
-      const dataUrl = await toPng(ref.current, { pixelRatio: 2, width: 540, height: 540, cacheBust: true });
+      await preloadImagesWithCors(ref.current);
+      const dataUrl = await toPng(ref.current, { pixelRatio: 2, width: 540, height: 540, cacheBust: true, skipFonts: false });
       const blob = await (await fetch(dataUrl)).blob();
       const file = new File([blob], `${filename}.png`, { type: "image/png" });
 
@@ -168,7 +198,7 @@ function HeroCardInner({ recipe }) {
   return (
     <>
       {recipe.image && (
-        <img src={recipe.image} alt={recipe.title} className="absolute inset-0 w-full h-full object-cover" />
+        <img src={recipe.image} alt={recipe.title} crossOrigin="anonymous" className="absolute inset-0 w-full h-full object-cover" />
       )}
       <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/40 to-neutral-950/10" />
       <BrandStripTop />
@@ -220,7 +250,7 @@ function MacroCardInner({ recipe }) {
 function ProcessImageCardInner({ src, caption }) {
   return (
     <>
-      <img src={src} alt="" className="absolute inset-0 w-full h-full object-cover" />
+      <img src={src} alt="" crossOrigin="anonymous" className="absolute inset-0 w-full h-full object-cover" />
       <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-transparent to-neutral-950/30" />
       <BrandStripTop />
       {caption && (
@@ -271,7 +301,7 @@ function ComponentCardInner({ item, kind }) {
   return (
     <>
       {item.heroImage && (
-        <img src={item.heroImage} alt={item.title} className="absolute inset-0 w-full h-full object-cover" />
+        <img src={item.heroImage} alt={item.title} crossOrigin="anonymous" className="absolute inset-0 w-full h-full object-cover" />
       )}
       <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/50 to-neutral-950/20" />
       <BrandStripTop />
@@ -366,7 +396,8 @@ export default function SocialPage() {
       const el = document.querySelector(`[data-card-id="${card.id}"] [data-export]`);
       if (!el) continue;
       try {
-        const dataUrl = await toPng(el, { pixelRatio: 2, width: 540, height: 540, cacheBust: true });
+        await preloadImagesWithCors(el);
+        const dataUrl = await toPng(el, { pixelRatio: 2, width: 540, height: 540, cacheBust: true, skipFonts: false });
         const blob = await (await fetch(dataUrl)).blob();
         files.push(new File([blob], `${card.filename}.png`, { type: "image/png" }));
       } catch (e) {
