@@ -141,7 +141,11 @@ async function preloadImagesWithCors(root) {
     if (img.src.startsWith("blob:")) return;
     const originalSrc = img.src;
     try {
-      const res = await fetch(originalSrc, { mode: "cors", cache: "no-store" });
+      // Default mode (same-origin) works for all our /images/* URLs. We deliberately
+      // DON'T pass mode:"cors" — that forces CORS validation even for same-origin
+      // and Vercel's static-asset serving doesn't send CORS headers, so cors mode
+      // would fail entirely.
+      const res = await fetch(originalSrc, { cache: "no-store" });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const blob = await res.blob();
       const dataUrl = await new Promise((resolve, reject) => {
@@ -255,7 +259,7 @@ function HeroCardInner({ recipe }) {
   return (
     <>
       {recipe.image && (
-        <img src={recipe.image} alt={recipe.title} crossOrigin="anonymous" className="absolute inset-0 w-full h-full object-cover" />
+        <img src={recipe.image} alt={recipe.title} className="absolute inset-0 w-full h-full object-cover" />
       )}
       <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/40 to-neutral-950/10" />
       <BrandStripTop />
@@ -307,7 +311,7 @@ function MacroCardInner({ recipe }) {
 function ProcessImageCardInner({ src, caption }) {
   return (
     <>
-      <img src={src} alt="" crossOrigin="anonymous" className="absolute inset-0 w-full h-full object-cover" />
+      <img src={src} alt="" className="absolute inset-0 w-full h-full object-cover" />
       <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-transparent to-neutral-950/30" />
       <BrandStripTop />
       {caption && (
@@ -358,7 +362,7 @@ function ComponentCardInner({ item, kind }) {
   return (
     <>
       {item.heroImage && (
-        <img src={item.heroImage} alt={item.title} crossOrigin="anonymous" className="absolute inset-0 w-full h-full object-cover" />
+        <img src={item.heroImage} alt={item.title} className="absolute inset-0 w-full h-full object-cover" />
       )}
       <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/50 to-neutral-950/20" />
       <BrandStripTop />
