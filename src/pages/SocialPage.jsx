@@ -148,13 +148,11 @@ async function preloadImagesWithCors(root) {
       const res = await fetch(originalSrc, { cache: "no-store" });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const blob = await res.blob();
-      const dataUrl = await new Promise((resolve, reject) => {
-        const reader = new FileReader();
-        reader.onloadend = () => resolve(reader.result);
-        reader.onerror = () => reject(new Error("FileReader failed"));
-        reader.readAsDataURL(blob);
-      });
-      img.src = dataUrl;
+      // Blob URLs > data URLs: no base64 bloat (~33% size penalty), no Mobile
+      // Safari size limits, browser treats them as same-origin so the canvas
+      // doesn't get tainted. The old approach choked on the 2.2 MB gnocchi PNGs
+      // because base64-encoding pushed them past Mobile Safari's data URL ceiling.
+      img.src = URL.createObjectURL(blob);
       // Wait for the browser to actually decode the new src before toPng reads.
       // img.decode() is the modern guarantee; falls back to onload for older browsers.
       if (typeof img.decode === "function") {

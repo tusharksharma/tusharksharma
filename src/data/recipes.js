@@ -31,7 +31,7 @@ const recipes = [
     servings: 4,
     protein: 35,
     calories: 425,
-    image: "/images/gnocchi/hero-finished-dish.png",
+    image: "/images/gnocchi/hero-finished-dish.webp",
     role: "The Texture Hero",
     makeThisWhen: "You want a high-protein dinner that doesn't turn into two separate meals for adults and kids — and you still want real texture (crispy, not mushy).",
     hook: "This replaces ordering takeout on weeknights. Crispy gnocchi, creamy spicy sauce, and a kid plate that's ready in the same 30 minutes — no separate meal, no compromise.",
@@ -80,13 +80,13 @@ const recipes = [
         {
           text: "CRISP THE GNOCCHI: Medium-high heat, 2 tsp oil. Add gnocchi in a single layer. Cook 8-10 min, flipping occasionally. Goal: crispy outside, not soft. Set aside.",
           images: [
-            "/images/gnocchi/step1-crisp-gnocchi.png",
+            "/images/gnocchi/step1-crisp-gnocchi.webp",
           ],
         },
         {
           text: "COOK VEG: Same pan, high heat. Add peppers + onions. Cook 4-5 min until lightly charred. Set aside.",
           images: [
-            "/images/gnocchi/step2-cook-veg.png",
+            "/images/gnocchi/step2-cook-veg.webp",
           ],
         },
         {
@@ -113,7 +113,7 @@ const recipes = [
           {
             text: "BUILD FLAVOR SAUCE: Blend cottage cheese + milk until smooth. Add to adult pan. Mix in Dan-O's, garlic powder, onion powder, smoked paprika, chili oil. Simmer 2-3 min. Should look like a light creamy sauce, not thick paste.",
             images: [
-              "/images/gnocchi/step4-sauce-pour.png",
+              "/images/gnocchi/step4-sauce-pour.webp",
             ],
           },
           {
@@ -199,10 +199,10 @@ const recipes = [
       "Optional: green onions",
     ],
     steps: [
-      { text: "CRISP THE GNOCCHI: Medium-high heat, 2 tsp oil. Add gnocchi in a single layer. Cook 8-10 min, flipping occasionally. Goal: crispy outside, not soft. Set aside.", images: ["/images/gnocchi/step1-crisp-gnocchi.png"] },
-      { text: "COOK VEG: Same pan, high heat. Add peppers + onions. Cook 4-5 min until lightly charred. Set aside.", images: ["/images/gnocchi/step2-cook-veg.png"] },
+      { text: "CRISP THE GNOCCHI: Medium-high heat, 2 tsp oil. Add gnocchi in a single layer. Cook 8-10 min, flipping occasionally. Goal: crispy outside, not soft. Set aside.", images: ["/images/gnocchi/step1-crisp-gnocchi.webp"] },
+      { text: "COOK VEG: Same pan, high heat. Add peppers + onions. Cook 4-5 min until lightly charred. Set aside.", images: ["/images/gnocchi/step2-cook-veg.webp"] },
       { text: "CRISP CHICKEN: Add shredded chicken to pan. Let it sit — develop slight browning. Don't stir constantly." },
-      { text: "BUILD THE SAUCE: Blend cottage cheese + milk until smooth. Add to pan with chicken. Mix in Dan-O's, garlic powder, onion powder, smoked paprika, chili oil. Simmer 2-3 min ONLY. Should look like a light creamy sauce, not thick paste.", images: ["/images/gnocchi/step4-sauce-pour.png"] },
+      { text: "BUILD THE SAUCE: Blend cottage cheese + milk until smooth. Add to pan with chicken. Mix in Dan-O's, garlic powder, onion powder, smoked paprika, chili oil. Simmer 2-3 min ONLY. Should look like a light creamy sauce, not thick paste.", images: ["/images/gnocchi/step4-sauce-pour.webp"] },
       { text: "COMBINE: Add gnocchi + veggies back. Toss gently to coat — 'coated,' not 'swimming.'" },
       { text: "FINISH: Lime squeeze + green onions. This completes the dish — don't skip." },
     ],
