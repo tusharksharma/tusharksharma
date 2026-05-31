@@ -1,10 +1,11 @@
+import { useRef, useState } from "react";
 import { useParams, Link } from "react-router-dom";
+import { toPng } from "html-to-image";
 import { liveRecipes } from "../data/recipes";
+import { sauces, bases, breakfasts, desserts, quickLunches } from "../data/cookbook";
 import useMeta from "../hooks/useMeta";
 
-// Brand palette (matches tailwind classes used across the site)
-// bg-neutral-950 = #0a0a0a, amber-400 = #fbbf24, amber-500 = #f59e0b
-// red-400 = #f87171 (adult), green-400 = #4ade80 (kid)
+const ALL_COOKBOOK = [...sauces, ...bases, ...breakfasts, ...desserts, ...quickLunches];
 
 const HASHTAG_BASE = [
   "#TheSplitPlate", "#CookOnceSplitSmart", "#SplitCook",
@@ -31,64 +32,70 @@ function hashtagsFor(recipe) {
   return [...HASHTAG_BASE, ...proteinTags, ...carbTag, ...titleTags];
 }
 
+const KNOWN_HANDLES = {
+  "Dan-O's": "@danosseasoning",
+  "Kirkland Signature": "@kirklandsignature_costco",
+  "Kirkland": "@kirklandsignature_costco",
+  "Laughing Cow": "@thelaughingcow",
+  "Lea & Perrins": "@leaandperrins",
+  "Smash Kitchen": "@smashkitchenco",
+  "Kikkoman": "@kikkoman_usa",
+  "General Mills": "@generalmills",
+  "Lee Kum Kee": "@leekumkeeusa",
+  "Verka": "@verkadairy",
+  "Red Boat": "@redboatfishsauce",
+  "Tanimura & Antle": "@tanimuraantle",
+  "Chosen Foods": "@chosenfoods",
+  "Herdez": "@herdez",
+  "Daisy": "@daisybrand",
+  "Fage": "@fageusa",
+  "Philadelphia": "@philadelphia",
+  "Whole Earth": "@wholeearthsweetener",
+  "Ghirardelli": "@ghirardelli",
+  "Nescafé": "@nescafe_usa",
+  "HighKey": "@highkeysnacks",
+  "PEScience": "@pescience",
+  "Little Potato Co.": "@littlepotatoco",
+  "NY Style Sausage Co.": "@nystylesausage",
+  "Dynasty": "@dynasty.foods",
+  "Bare Bones": "@barebonesbroth",
+  "Anthony's": "@anthonys.organic",
+  "Lily's": "@lilyssweets",
+  "Thrive Market": "@thrivemarket",
+  "Fairlife": "@fairlife",
+  "Nakano": "@nakanorice",
+  "Taste Flavor Co.": "@tasteflavorco",
+  "Opportuniteas": "@opportuniteas",
+  "Bob's Red Mill": "@bobsredmill",
+  "Marketside (Walmart)": "@marketside",
+  "Pete's Pasta": "@petespasta",
+  "Rao's": "@raoshomemade",
+  "Barilla": "@barillaus",
+  "Falls Brand": "@fallsbrand",
+  "365 Whole Foods": "@wholefoods",
+};
+
 function brandHandles(recipe) {
-  // Static IG handle map — verified against the most common brands on the site.
-  // Add more as new brands ship.
-  const KNOWN = {
-    "Dan-O's": "@danosseasoning",
-    "Kirkland Signature": "@kirklandsignature_costco",
-    "Kirkland": "@kirklandsignature_costco",
-    "Laughing Cow": "@thelaughingcow",
-    "Lea & Perrins": "@leaandperrins",
-    "Smash Kitchen": "@smashkitchenco",
-    "Kikkoman": "@kikkoman_usa",
-    "General Mills": "@generalmills",
-    "Lee Kum Kee": "@leekumkeeusa",
-    "Verka": "@verkadairy",
-    "Red Boat": "@redboatfishsauce",
-    "Tanimura & Antle": "@tanimuraantle",
-    "Chosen Foods": "@chosenfoods",
-    "Herdez": "@herdez",
-    "Daisy": "@daisybrand",
-    "Fage": "@fageusa",
-    "Philadelphia": "@philadelphia",
-    "Whole Earth": "@wholeearthsweetener",
-    "Ghirardelli": "@ghirardelli",
-    "Nescafé": "@nescafe_usa",
-    "HighKey": "@highkeysnacks",
-    "PEScience": "@pescience",
-    "Little Potato Co.": "@littlepotatoco",
-    "NY Style Sausage Co.": "@nystylesausage",
-    "Dynasty": "@dynasty.foods",
-    "Bare Bones": "@barebonesbroth",
-    "Anthony's": "@anthonys.organic",
-    "Lily's": "@lilyssweets",
-    "Thrive Market": "@thrivemarket",
-    "Fairlife": "@fairlife",
-    "Nakano": "@nakanorice",
-    "Taste Flavor Co.": "@tasteflavorco",
-    "Opportuniteas": "@opportuniteas",
-    "Bob's Red Mill": "@bobsredmill",
-    "Marketside (Walmart)": "@marketside",
-    "Pete's Pasta": "@petespasta",
-    "Rao's": "@raoshomemade",
-    "Barilla": "@barillaus",
-    "Falls Brand": "@fallsbrand",
-    "365 Whole Foods": "@wholefoods",
-  };
   return (recipe.brands || [])
-    .map((b) => KNOWN[b.name])
+    .map((b) => KNOWN_HANDLES[b.name])
     .filter(Boolean);
 }
 
-// 1080x1080 Instagram square card. We render at ~540x540 in browser but the
-// layout is locked square — Tushar screenshots and the post will scale up cleanly.
-function Card({ children, className = "" }) {
-  return (
-    <div className={`relative aspect-square w-full max-w-[540px] bg-neutral-950 overflow-hidden flex flex-col ${className}`}>
-      {children}
-    </div>
-  );
+function extractCookbookLinks(recipe) {
+  const ids = new Set();
+  const scan = (arr) => {
+    arr?.forEach((item) => {
+      if (typeof item === "object" && item.link?.startsWith("/cookbook/")) {
+        const id = item.link.replace("/cookbook/", "").replace(/\/$/, "");
+        if (id) ids.add(id);
+      }
+    });
+  };
+  scan(recipe.ingredients);
+  scan(recipe.splitCook?.sharedIngredients);
+  scan(recipe.splitCook?.adult?.extraIngredients);
+  scan(recipe.splitCook?.kid?.extraIngredients);
+  return [...ids].map((id) => ALL_COOKBOOK.find((c) => c.id === id)).filter(Boolean);
 }
 
 function BrandStripTop() {
@@ -100,9 +107,56 @@ function BrandStripTop() {
   );
 }
 
-function HeroCard({ recipe }) {
+// Each downloadable card is 1080×1080 exported at 2x pixelRatio.
+// In the browser we render at 540×540 for screen; the PNG saves at 1080.
+function DownloadableCard({ children, filename, label }) {
+  const ref = useRef(null);
+  const [busy, setBusy] = useState(false);
+
+  async function download() {
+    if (!ref.current) return;
+    setBusy(true);
+    try {
+      const dataUrl = await toPng(ref.current, {
+        pixelRatio: 2,
+        width: 540,
+        height: 540,
+        cacheBust: true,
+      });
+      const link = document.createElement("a");
+      link.download = `${filename}.png`;
+      link.href = dataUrl;
+      link.click();
+    } catch (e) {
+      console.error("Card export failed:", e);
+      alert("Export failed — check console. Some images may need to be on the same origin.");
+    } finally {
+      setBusy(false);
+    }
+  }
+
   return (
-    <Card>
+    <div className="w-full max-w-[540px] mx-auto">
+      <div className="flex items-center justify-between mb-2">
+        <span className="text-neutral-500 text-[11px] font-semibold uppercase tracking-wider">{label}</span>
+        <button
+          onClick={download}
+          disabled={busy}
+          className="text-amber-400 text-xs font-bold hover:underline cursor-pointer disabled:opacity-50"
+        >
+          {busy ? "Exporting…" : "Download PNG ↓"}
+        </button>
+      </div>
+      <div ref={ref} className="relative aspect-square w-full bg-neutral-950 overflow-hidden flex flex-col" style={{ width: 540, height: 540 }}>
+        {children}
+      </div>
+    </div>
+  );
+}
+
+function HeroCardInner({ recipe }) {
+  return (
+    <>
       {recipe.image && (
         <img src={recipe.image} alt={recipe.title} className="absolute inset-0 w-full h-full object-cover" />
       )}
@@ -113,14 +167,14 @@ function HeroCard({ recipe }) {
         <h1 className="text-white text-3xl font-black leading-tight drop-shadow-lg">{recipe.title}</h1>
         <p className="text-amber-400 text-sm font-semibold mt-2">Cook once. Split smart.</p>
       </div>
-    </Card>
+    </>
   );
 }
 
-function MacroCard({ recipe }) {
+function MacroCardInner({ recipe }) {
   const m = recipe.meta?.macros || {};
   return (
-    <Card className="p-7 justify-center">
+    <div className="absolute inset-0 p-7 flex flex-col justify-center">
       <BrandStripTop />
       <div className="space-y-5">
         <div>
@@ -149,14 +203,13 @@ function MacroCard({ recipe }) {
           <p className="text-center text-neutral-400 text-xs">{recipe.meta.costPerServing} per serving · {recipe.servings} servings</p>
         )}
       </div>
-    </Card>
+    </div>
   );
 }
 
-function ProcessImageCard({ src, caption }) {
-  if (!src) return null;
+function ProcessImageCardInner({ src, caption }) {
   return (
-    <Card>
+    <>
       <img src={src} alt="" className="absolute inset-0 w-full h-full object-cover" />
       <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-transparent to-neutral-950/30" />
       <BrandStripTop />
@@ -166,15 +219,15 @@ function ProcessImageCard({ src, caption }) {
           <p className="text-white text-base font-semibold drop-shadow-lg">{caption}</p>
         </div>
       )}
-    </Card>
+    </>
   );
 }
 
-function SplitCard({ recipe }) {
+function SplitCardInner({ recipe }) {
   const adult = recipe.splitCook?.adult;
   const kid = recipe.splitCook?.kid;
   return (
-    <Card className="p-7 justify-center">
+    <div className="absolute inset-0 p-7 flex flex-col justify-center">
       <BrandStripTop />
       <div>
         <div className="w-12 h-1 bg-amber-400 mb-3" />
@@ -200,20 +253,38 @@ function SplitCard({ recipe }) {
           )}
         </div>
       </div>
-    </Card>
+    </div>
   );
 }
 
-function HashtagCard({ recipe }) {
+function ComponentCardInner({ item, kind }) {
+  return (
+    <>
+      {item.heroImage && (
+        <img src={item.heroImage} alt={item.title} className="absolute inset-0 w-full h-full object-cover" />
+      )}
+      <div className="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/50 to-neutral-950/20" />
+      <BrandStripTop />
+      <div className="relative z-10 mt-auto p-6">
+        <span className="text-amber-400 text-[10px] font-bold uppercase tracking-wider">{kind}</span>
+        <div className="w-12 h-1 bg-amber-400 mt-2 mb-2" />
+        <h2 className="text-white text-2xl font-black leading-tight drop-shadow-lg">{item.title}</h2>
+        {item.tagline && <p className="text-neutral-200 text-xs mt-2 drop-shadow leading-snug line-clamp-3">{item.tagline}</p>}
+      </div>
+    </>
+  );
+}
+
+function HashtagCardInner({ recipe }) {
   const tags = hashtagsFor(recipe);
   const handles = brandHandles(recipe);
   return (
-    <Card className="p-7 justify-center">
+    <div className="absolute inset-0 p-7 flex flex-col justify-center">
       <BrandStripTop />
       <div className="space-y-4">
         <div>
           <div className="w-12 h-1 bg-amber-400 mb-3" />
-          <h2 className="text-white text-xl font-black">Recipe at thesplitplate.com</h2>
+          <h2 className="text-white text-xl font-black">thesplitplate.com</h2>
           <p className="text-neutral-400 text-xs mt-1 break-words">/recipes/{recipe.slug}</p>
         </div>
         {handles.length > 0 && (
@@ -227,8 +298,17 @@ function HashtagCard({ recipe }) {
           <p className="text-neutral-400 text-[10px] leading-relaxed break-words">{tags.join(" ")}</p>
         </div>
       </div>
-    </Card>
+    </div>
   );
+}
+
+function classifyCookbook(item) {
+  if (sauces.includes(item)) return "Sauce";
+  if (bases.includes(item)) return "Side / Base";
+  if (breakfasts.includes(item)) return "Breakfast";
+  if (desserts.includes(item)) return "Dessert";
+  if (quickLunches.includes(item)) return "Quick Lunch";
+  return "Component";
 }
 
 export default function SocialPage() {
@@ -244,53 +324,94 @@ export default function SocialPage() {
     );
   }
 
-  // Pull up to 3 process images from the recipe steps
   const processImages = (recipe.steps || [])
     .flatMap((s) => (s.images || []).map((img) => ({ src: img, caption: s.text.split(/[:.]/)[0].trim().slice(0, 60) })))
     .filter((p) => p.src && p.src !== recipe.image)
     .slice(0, 3);
 
+  const components = extractCookbookLinks(recipe);
   const tags = hashtagsFor(recipe);
   const handles = brandHandles(recipe);
+
+  // Build the card sequence dynamically — recipes with sauce + side get more cards
+  const cards = [
+    { id: "hero", label: "Card 1 · Hero", filename: `${slug}-1-hero`, render: <HeroCardInner recipe={recipe} /> },
+    { id: "macros", label: "Card 2 · Macros", filename: `${slug}-2-macros`, render: <MacroCardInner recipe={recipe} /> },
+    ...(processImages[0] ? [{ id: "process1", label: "Card 3 · Process", filename: `${slug}-3-process`, render: <ProcessImageCardInner src={processImages[0].src} caption={processImages[0].caption} /> }] : []),
+    { id: "split", label: `Card ${3 + (processImages[0] ? 1 : 0)} · Split`, filename: `${slug}-split`, render: <SplitCardInner recipe={recipe} /> },
+    ...components.map((c, i) => ({
+      id: `component-${c.id}`,
+      label: `Card · ${classifyCookbook(c)} → ${c.title}`,
+      filename: `${slug}-component-${i + 1}-${c.id}`,
+      render: <ComponentCardInner item={c} kind={classifyCookbook(c)} />,
+    })),
+    ...(processImages[1] ? [{ id: "process2", label: "Card · Process 2", filename: `${slug}-process2`, render: <ProcessImageCardInner src={processImages[1].src} caption={processImages[1].caption} /> }] : []),
+    { id: "hashtags", label: "Card · Hashtags", filename: `${slug}-end-hashtags`, render: <HashtagCardInner recipe={recipe} /> },
+  ];
+
+  async function downloadAll() {
+    // Trigger each download sequentially with a small gap so browser doesn't drop them
+    for (const card of cards) {
+      const el = document.querySelector(`[data-card-id="${card.id}"] [data-export]`);
+      if (!el) continue;
+      try {
+        const dataUrl = await toPng(el, { pixelRatio: 2, width: 540, height: 540, cacheBust: true });
+        const link = document.createElement("a");
+        link.download = `${card.filename}.png`;
+        link.href = dataUrl;
+        link.click();
+        await new Promise((r) => setTimeout(r, 400));
+      } catch (e) {
+        console.error(`Failed export of ${card.id}:`, e);
+      }
+    }
+  }
 
   return (
     <div className="min-h-screen bg-neutral-900 text-neutral-100 py-10 px-4">
       <div className="max-w-2xl mx-auto mb-8">
         <h1 className="text-white text-2xl font-black">Social Carousel</h1>
         <p className="text-neutral-400 text-sm mt-1">{recipe.title}</p>
-        <p className="text-neutral-500 text-xs mt-2">Right-click each card → Save as Image, OR screenshot at 1080×1080 for Instagram. 6 cards = a full carousel post.</p>
-        <div className="mt-4 text-xs space-y-2">
-          <details className="bg-neutral-800/50 border border-neutral-700 rounded-lg p-3">
-            <summary className="text-amber-400 cursor-pointer font-semibold">Copy-paste caption + tags</summary>
-            <div className="mt-3 space-y-3">
-              <div>
-                <p className="text-neutral-500 mb-1">Suggested caption:</p>
-                <pre className="text-neutral-200 whitespace-pre-wrap text-[11px] bg-neutral-950 p-2 rounded border border-neutral-800">{recipe.hook || recipe.makeThisWhen}</pre>
-              </div>
-              {handles.length > 0 && (
-                <div>
-                  <p className="text-neutral-500 mb-1">Brand tags:</p>
-                  <pre className="text-neutral-200 whitespace-pre-wrap text-[11px] bg-neutral-950 p-2 rounded border border-neutral-800">{handles.join(" ")}</pre>
-                </div>
-              )}
-              <div>
-                <p className="text-neutral-500 mb-1">Hashtags:</p>
-                <pre className="text-neutral-200 whitespace-pre-wrap text-[11px] bg-neutral-950 p-2 rounded border border-neutral-800">{tags.join(" ")}</pre>
-              </div>
-            </div>
-          </details>
+        <p className="text-neutral-500 text-xs mt-2">{cards.length} cards · 1080×1080 each · click "Download PNG" on each or "Download all" at top.</p>
+
+        <div className="mt-4 flex items-center gap-3">
+          <button onClick={downloadAll} className="px-4 py-2 bg-amber-500 text-black font-bold rounded-lg text-sm hover:bg-amber-400 transition-colors cursor-pointer">
+            Download all {cards.length} PNGs
+          </button>
+          <Link to={`/recipes/${recipe.slug}`} className="text-amber-400 text-xs hover:underline">← Back to recipe</Link>
         </div>
+
+        <details className="mt-4 bg-neutral-800/50 border border-neutral-700 rounded-lg p-3 text-xs">
+          <summary className="text-amber-400 cursor-pointer font-semibold">Copy-paste caption + tags + hashtags</summary>
+          <div className="mt-3 space-y-3">
+            <div>
+              <p className="text-neutral-500 mb-1">Suggested caption:</p>
+              <pre className="text-neutral-200 whitespace-pre-wrap text-[11px] bg-neutral-950 p-2 rounded border border-neutral-800">{recipe.hook || recipe.makeThisWhen}</pre>
+            </div>
+            {handles.length > 0 && (
+              <div>
+                <p className="text-neutral-500 mb-1">Brand tags:</p>
+                <pre className="text-neutral-200 whitespace-pre-wrap text-[11px] bg-neutral-950 p-2 rounded border border-neutral-800">{handles.join(" ")}</pre>
+              </div>
+            )}
+            <div>
+              <p className="text-neutral-500 mb-1">Hashtags:</p>
+              <pre className="text-neutral-200 whitespace-pre-wrap text-[11px] bg-neutral-950 p-2 rounded border border-neutral-800">{tags.join(" ")}</pre>
+            </div>
+          </div>
+        </details>
       </div>
-      <div className="max-w-2xl mx-auto space-y-6">
-        <HeroCard recipe={recipe} />
-        <MacroCard recipe={recipe} />
-        {processImages[0] && <ProcessImageCard src={processImages[0].src} caption={processImages[0].caption} />}
-        <SplitCard recipe={recipe} />
-        {processImages[1] && <ProcessImageCard src={processImages[1].src} caption={processImages[1].caption} />}
-        <HashtagCard recipe={recipe} />
-      </div>
-      <div className="max-w-2xl mx-auto mt-10 text-center">
-        <Link to={`/recipes/${recipe.slug}`} className="text-amber-400 text-sm hover:underline">← Back to recipe</Link>
+
+      <div className="max-w-2xl mx-auto space-y-8">
+        {cards.map((card) => (
+          <div key={card.id} data-card-id={card.id}>
+            <DownloadableCard filename={card.filename} label={card.label}>
+              <div data-export className="absolute inset-0 bg-neutral-950 flex flex-col">
+                {card.render}
+              </div>
+            </DownloadableCard>
+          </div>
+        ))}
       </div>
     </div>
   );
