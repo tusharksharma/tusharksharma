@@ -372,31 +372,23 @@ function ComponentCardInner({ item, kind }) {
   );
 }
 
-function HashtagCardInner({ recipe, platform }) {
-  const isTiktok = platform === "tiktok";
-  const tags = isTiktok ? tiktokHashtagsFor(recipe) : hashtagsFor(recipe);
-  const handles = brandHandles(recipe, isTiktok ? "tiktok" : "ig");
-  const platformLabel = isTiktok ? "TikTok" : "Instagram";
+// Single clean end card — recipe URL + brand wordmark + tagline. No @ handles,
+// no hashtags. Those live in the COPY-PASTE caption block at the top of the
+// page. Carousel slot is too valuable for tag text — use it for more photos.
+function EndCardInner({ recipe }) {
   return (
-    <div className="absolute inset-0 p-7 flex flex-col justify-center">
+    <div className="absolute inset-0 p-8 flex flex-col justify-between bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950">
       <BrandStripTop />
-      <div className="space-y-4">
-        <div>
-          <span className={`text-[10px] font-bold uppercase tracking-[0.2em] ${isTiktok ? "text-pink-400" : "text-orange-400"}`}>{platformLabel}</span>
-          <div className="w-12 h-1 bg-amber-400 mb-3 mt-1" />
-          <h2 className="text-white text-xl font-black">thesplitplate.com</h2>
-          <p className="text-neutral-400 text-xs mt-1 break-words">/recipes/{recipe.slug}</p>
-        </div>
-        {handles.length > 0 && (
-          <div>
-            <p className="text-amber-400 text-[10px] font-bold uppercase tracking-wider mb-2">Brands featured</p>
-            <p className="text-neutral-300 text-[11px] leading-relaxed break-words">{handles.join(" · ")}</p>
-          </div>
-        )}
-        <div>
-          <p className="text-amber-400 text-[10px] font-bold uppercase tracking-wider mb-2">{isTiktok ? "5 TikTok tags" : "Tags"}</p>
-          <p className="text-neutral-400 text-[10px] leading-relaxed break-words">{tags.join(" ")}</p>
-        </div>
+      <div className="flex-1 flex flex-col justify-center items-center text-center">
+        <span className="text-amber-500/80 text-[10px] font-black tracking-[0.4em] uppercase">The Split Plate</span>
+        <div className="w-16 h-1 bg-amber-400 my-5" />
+        <h2 className="text-white text-2xl font-black leading-tight">{recipe.title}</h2>
+        <p className="text-amber-400 text-sm font-bold mt-4">Cook once. Split smart.</p>
+      </div>
+      <div className="text-center">
+        <p className="text-neutral-500 text-[10px] font-bold uppercase tracking-wider">Full recipe</p>
+        <p className="text-white text-sm font-semibold mt-1">thesplitplate.com</p>
+        <p className="text-neutral-500 text-[10px] mt-1 break-all">/recipes/{recipe.slug}</p>
       </div>
     </div>
   );
@@ -519,10 +511,17 @@ export default function SocialPage() {
     );
   }
 
+  // Pull up to 5 unique process images — gives us enough cards to fill a full
+  // carousel without recycling text-heavy slots. De-duped by src.
+  const seen = new Set();
   const processImages = (recipe.steps || [])
     .flatMap((s) => (s.images || []).map((img) => ({ src: img, caption: s.text.split(/[:.]/)[0].trim().slice(0, 60) })))
-    .filter((p) => p.src && p.src !== recipe.image)
-    .slice(0, 3);
+    .filter((p) => {
+      if (!p.src || p.src === recipe.image || seen.has(p.src)) return false;
+      seen.add(p.src);
+      return true;
+    })
+    .slice(0, 5);
 
   const components = extractCookbookLinks(recipe);
   const igTags = hashtagsFor(recipe);
@@ -530,22 +529,34 @@ export default function SocialPage() {
   const tiktokTags = tiktokHashtagsFor(recipe);
   const tiktokHandlesList = brandHandles(recipe, "tiktok");
 
-  // Build the card sequence dynamically — recipes with sauce + side get more cards
-  const cards = [
-    { id: "hero", label: "Card 1 · Hero", filename: `${slug}-1-hero`, render: <HeroCardInner recipe={recipe} /> },
-    { id: "macros", label: "Card 2 · Macros", filename: `${slug}-2-macros`, render: <MacroCardInner recipe={recipe} /> },
-    ...(processImages[0] ? [{ id: "process1", label: "Card 3 · Process", filename: `${slug}-3-process`, render: <ProcessImageCardInner src={processImages[0].src} caption={processImages[0].caption} /> }] : []),
-    { id: "split", label: `Card ${3 + (processImages[0] ? 1 : 0)} · Split`, filename: `${slug}-split`, render: <SplitCardInner recipe={recipe} /> },
-    ...components.map((c, i) => ({
-      id: `component-${c.id}`,
-      label: `Card · ${classifyCookbook(c)} → ${c.title}`,
-      filename: `${slug}-component-${i + 1}-${c.id}`,
-      render: <ComponentCardInner item={c} kind={classifyCookbook(c)} />,
-    })),
-    ...(processImages[1] ? [{ id: "process2", label: "Card · Process 2", filename: `${slug}-process2`, render: <ProcessImageCardInner src={processImages[1].src} caption={processImages[1].caption} /> }] : []),
-    { id: "hashtags-tiktok", label: "Card · TikTok Hashtags & Handles", filename: `${slug}-end-tiktok`, render: <HashtagCardInner recipe={recipe} platform="tiktok" /> },
-    { id: "hashtags-ig", label: "Card · Instagram Hashtags & Handles", filename: `${slug}-end-instagram`, render: <HashtagCardInner recipe={recipe} platform="ig" /> },
+  // Build the card sequence dynamically. Goal: photos > text. The carousel is
+  // 1 hero + 1 macros + 1 split + N process + M components + 1 end = whatever
+  // fits up to Instagram's 10-card max.
+  const processCards = processImages.map((p, i) => ({
+    id: `process-${i + 1}`,
+    label: `Card · Process ${i + 1}`,
+    filename: `${slug}-process-${i + 1}`,
+    render: <ProcessImageCardInner src={p.src} caption={p.caption} />,
+  }));
+  const componentCards = components.map((c, i) => ({
+    id: `component-${c.id}`,
+    label: `Card · ${classifyCookbook(c)} → ${c.title}`,
+    filename: `${slug}-component-${i + 1}-${c.id}`,
+    render: <ComponentCardInner item={c} kind={classifyCookbook(c)} />,
+  }));
+  // Interleave: hero → macros → process1 → split → components → process2..N → end
+  const allCards = [
+    { id: "hero", label: "Card · Hero", filename: `${slug}-1-hero`, render: <HeroCardInner recipe={recipe} /> },
+    { id: "macros", label: "Card · Macros", filename: `${slug}-2-macros`, render: <MacroCardInner recipe={recipe} /> },
+    ...(processCards[0] ? [processCards[0]] : []),
+    { id: "split", label: "Card · Split", filename: `${slug}-split`, render: <SplitCardInner recipe={recipe} /> },
+    ...componentCards,
+    ...processCards.slice(1),
+    { id: "end", label: "Card · End / Recipe Link", filename: `${slug}-end`, render: <EndCardInner recipe={recipe} /> },
   ];
+  // Instagram carousel max = 10 cards. If we go over, drop the last process
+  // images (preserve hero, macros, split, components, end).
+  const cards = allCards.slice(0, 10);
 
   async function saveAll() {
     // Render every card to a File first, then either share or download
@@ -596,7 +607,7 @@ export default function SocialPage() {
       <div className="max-w-2xl mx-auto mb-8">
         <h1 className="text-white text-2xl font-black">Social Carousel</h1>
         <p className="text-neutral-400 text-sm mt-1">{recipe.title}</p>
-        <p className="text-neutral-500 text-xs mt-2">{cards.length} cards · 1080×1080 each. <span className="text-amber-400">Includes a TikTok hashtag card AND an Instagram hashtag card — use the one for the platform you're posting to (skip the other).</span></p>
+        <p className="text-neutral-500 text-xs mt-2">{cards.length} cards · 1080×1080 each. <span className="text-amber-400">All photos + one clean end card. @ handles and hashtags live in the copy-paste captions below (TikTok / Instagram versions) — not on the card images.</span></p>
         <p className="text-neutral-600 text-[10px] mt-1">
           <span className="text-neutral-500">On phone:</span> tap "Save all" — your share sheet pops up, choose "Save {cards.length} Images" → all go to Photos.
           <br />
