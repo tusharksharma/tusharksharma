@@ -372,15 +372,18 @@ function ComponentCardInner({ item, kind }) {
   );
 }
 
-function HashtagCardInner({ recipe }) {
-  const tags = hashtagsFor(recipe);
-  const handles = brandHandles(recipe);
+function HashtagCardInner({ recipe, platform }) {
+  const isTiktok = platform === "tiktok";
+  const tags = isTiktok ? tiktokHashtagsFor(recipe) : hashtagsFor(recipe);
+  const handles = brandHandles(recipe, isTiktok ? "tiktok" : "ig");
+  const platformLabel = isTiktok ? "TikTok" : "Instagram";
   return (
     <div className="absolute inset-0 p-7 flex flex-col justify-center">
       <BrandStripTop />
       <div className="space-y-4">
         <div>
-          <div className="w-12 h-1 bg-amber-400 mb-3" />
+          <span className={`text-[10px] font-bold uppercase tracking-[0.2em] ${isTiktok ? "text-pink-400" : "text-orange-400"}`}>{platformLabel}</span>
+          <div className="w-12 h-1 bg-amber-400 mb-3 mt-1" />
           <h2 className="text-white text-xl font-black">thesplitplate.com</h2>
           <p className="text-neutral-400 text-xs mt-1 break-words">/recipes/{recipe.slug}</p>
         </div>
@@ -391,7 +394,7 @@ function HashtagCardInner({ recipe }) {
           </div>
         )}
         <div>
-          <p className="text-amber-400 text-[10px] font-bold uppercase tracking-wider mb-2">Tags</p>
+          <p className="text-amber-400 text-[10px] font-bold uppercase tracking-wider mb-2">{isTiktok ? "5 TikTok tags" : "Tags"}</p>
           <p className="text-neutral-400 text-[10px] leading-relaxed break-words">{tags.join(" ")}</p>
         </div>
       </div>
@@ -540,7 +543,8 @@ export default function SocialPage() {
       render: <ComponentCardInner item={c} kind={classifyCookbook(c)} />,
     })),
     ...(processImages[1] ? [{ id: "process2", label: "Card · Process 2", filename: `${slug}-process2`, render: <ProcessImageCardInner src={processImages[1].src} caption={processImages[1].caption} /> }] : []),
-    { id: "hashtags", label: "Card · Hashtags", filename: `${slug}-end-hashtags`, render: <HashtagCardInner recipe={recipe} /> },
+    { id: "hashtags-tiktok", label: "Card · TikTok Hashtags & Handles", filename: `${slug}-end-tiktok`, render: <HashtagCardInner recipe={recipe} platform="tiktok" /> },
+    { id: "hashtags-ig", label: "Card · Instagram Hashtags & Handles", filename: `${slug}-end-instagram`, render: <HashtagCardInner recipe={recipe} platform="ig" /> },
   ];
 
   async function saveAll() {
@@ -592,7 +596,7 @@ export default function SocialPage() {
       <div className="max-w-2xl mx-auto mb-8">
         <h1 className="text-white text-2xl font-black">Social Carousel</h1>
         <p className="text-neutral-400 text-sm mt-1">{recipe.title}</p>
-        <p className="text-neutral-500 text-xs mt-2">{cards.length} cards · 1080×1080 each.</p>
+        <p className="text-neutral-500 text-xs mt-2">{cards.length} cards · 1080×1080 each. <span className="text-amber-400">Includes a TikTok hashtag card AND an Instagram hashtag card — use the one for the platform you're posting to (skip the other).</span></p>
         <p className="text-neutral-600 text-[10px] mt-1">
           <span className="text-neutral-500">On phone:</span> tap "Save all" — your share sheet pops up, choose "Save {cards.length} Images" → all go to Photos.
           <br />
