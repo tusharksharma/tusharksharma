@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { liveRecipes } from "../data/recipes";
 import useMeta from "../hooks/useMeta";
@@ -13,15 +13,11 @@ const STORAGE_KEY = "tsp-social-access-v1";
 
 export default function SocialIndexPage() {
   useMeta({ title: "Social Carousels — Index", description: "Private index of /social/{slug} carousel pages for Instagram posting." });
-  const [unlocked, setUnlocked] = useState(false);
+  const [unlocked, setUnlocked] = useState(() => (
+    typeof window !== "undefined" && window.localStorage.getItem(STORAGE_KEY) === "1"
+  ));
   const [input, setInput] = useState("");
   const [error, setError] = useState(false);
-
-  useEffect(() => {
-    if (typeof window !== "undefined" && window.localStorage.getItem(STORAGE_KEY) === "1") {
-      setUnlocked(true);
-    }
-  }, []);
 
   function submit(e) {
     e.preventDefault();

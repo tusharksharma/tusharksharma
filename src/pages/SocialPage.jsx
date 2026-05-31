@@ -1,6 +1,5 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import html2canvas from "html2canvas";
 import { liveRecipes } from "../data/recipes";
 import { sauces, bases, breakfasts, desserts, quickLunches } from "../data/cookbook";
 import useMeta from "../hooks/useMeta";
@@ -120,89 +119,410 @@ function extractCookbookLinks(recipe) {
   return [...ids].map((id) => ALL_COOKBOOK.find((c) => c.id === id)).filter(Boolean);
 }
 
-// Render a DOM node to a 1080×1080 PNG Blob using html2canvas. Unlike
-// html-to-image, html2canvas reads pixels via the browser's native canvas
-// painter — it draws what's already painted in the DOM, no internal image
-// re-fetch and no data URL serialization step that could choke on size.
-async function renderCardToBlob(node) {
-  const canvas = await html2canvas(node, {
-    width: 540,
-    height: 540,
-    scale: 2,
-    backgroundColor: "#0a0a0a",
-    useCORS: true,
-    allowTaint: false,
-    logging: false,
-    imageTimeout: 15000,
-  });
+const EXPORT_SIZE = 1080;
+
+function assetUrl(src) {
+  if (!src) return "";
+  return new URL(src, window.location.origin).href;
+}
+
+function loadCanvasImage(src) {
   return new Promise((resolve, reject) => {
-    canvas.toBlob((blob) => {
-      if (blob) resolve(blob);
-      else reject(new Error("canvas.toBlob returned null"));
-    }, "image/png");
+    if (!src) {
+      reject(new Error("Missing image source"));
+      return;
+    }
+    const img = new Image();
+    img.crossOrigin = "anonymous";
+    img.decoding = "async";
+    img.onload = () => resolve(img);
+    img.onerror = () => reject(new Error(`Image failed to load: ${src}`));
+    img.src = assetUrl(src);
   });
 }
 
-// Legacy preload (no longer called — html2canvas handles images natively).
-// Kept temporarily in case we need it for diagnostic comparison.
-async function preloadImagesWithCors(root) {
-  const imgs = Array.from(root.querySelectorAll("img"));
-  const failures = [];
-  await Promise.all(imgs.map(async (img) => {
-    if (img.src.startsWith("data:")) return;
-    if (img.src.startsWith("blob:")) return;
-    const originalSrc = img.src;
-    try {
-      // Default mode (same-origin) works for all our /images/* URLs. We deliberately
-      // DON'T pass mode:"cors" — that forces CORS validation even for same-origin
-      // and Vercel's static-asset serving doesn't send CORS headers, so cors mode
-      // would fail entirely.
-      const res = await fetch(originalSrc, { cache: "no-store" });
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      const blob = await res.blob();
-      if (blob.size > 1500000) {
-        console.warn(`[preload] ${originalSrc} is ${(blob.size / 1024 / 1024).toFixed(1)} MB — Mobile Safari may reject data URLs over ~2 MB. Optimize this image to WebP.`);
-      }
-      // Use data URL (NOT blob URL). html-to-image's internal serialization
-      // misbehaves with blob: URLs on Mobile Safari — it can't read them when
-      // re-fetching during canvas conversion. Data URLs are universally
-      // supported and stable, just need to keep images under ~1.5 MB so the
-      // base64-inflated string (~33% larger) stays under Safari's ceiling.
-      const dataUrl = await new Promise((resolve, reject) => {
-        const reader = new FileReader();
-        reader.onloadend = () => resolve(reader.result);
-        reader.onerror = () => reject(new Error("FileReader failed"));
-        reader.readAsDataURL(blob);
-      });
-      img.src = dataUrl;
-      // Wait for the browser to actually decode the new src before toPng reads.
-      // img.decode() is the modern guarantee; falls back to onload for older browsers.
-      if (typeof img.decode === "function") {
-        await img.decode().catch(() => {
-          // decode() rejected — fall back to onload race
-          return new Promise((resolve) => {
-            img.onload = resolve;
-            img.onerror = resolve;
-            setTimeout(resolve, 500);
-          });
-        });
-      } else {
-        await new Promise((resolve) => {
-          img.onload = resolve;
-          img.onerror = resolve;
-          setTimeout(resolve, 500);
-        });
-      }
-    } catch (e) {
-      failures.push({ src: originalSrc, error: e.message });
-      console.warn("preload failed for", originalSrc, e);
-    }
-  }));
-  if (failures.length > 0 && failures.length === imgs.length) {
-    // Every image failed — surface this loudly, otherwise the user gets a blank card
-    throw new Error(`All ${imgs.length} images failed to preload. Check Network tab for the URLs.`);
+function canvasToBlob(canvas) {
+  if (canvas.toBlob) {
+    return new Promise((resolve, reject) => {
+      canvas.toBlob((blob) => {
+        if (blob) resolve(blob);
+        else reject(new Error("canvas.toBlob returned null"));
+      }, "image/png");
+    });
   }
-  return failures;
+  return fetch(canvas.toDataURL("image/png")).then((res) => res.blob());
+}
+
+function makeCanvas() {
+  const canvas = document.createElement("canvas");
+  canvas.width = EXPORT_SIZE;
+  canvas.height = EXPORT_SIZE;
+  const ctx = canvas.getContext("2d");
+  if (!ctx) throw new Error("Could not create export canvas");
+  ctx.imageSmoothingEnabled = true;
+  ctx.imageSmoothingQuality = "high";
+  return { canvas, ctx };
+}
+
+function fillBackground(ctx, color = "#0a0a0a") {
+  ctx.fillStyle = color;
+  ctx.fillRect(0, 0, EXPORT_SIZE, EXPORT_SIZE);
+}
+
+function drawRoundedRect(ctx, x, y, width, height, radius, fill, stroke) {
+  ctx.beginPath();
+  ctx.moveTo(x + radius, y);
+  ctx.lineTo(x + width - radius, y);
+  ctx.quadraticCurveTo(x + width, y, x + width, y + radius);
+  ctx.lineTo(x + width, y + height - radius);
+  ctx.quadraticCurveTo(x + width, y + height, x + width - radius, y + height);
+  ctx.lineTo(x + radius, y + height);
+  ctx.quadraticCurveTo(x, y + height, x, y + height - radius);
+  ctx.lineTo(x, y + radius);
+  ctx.quadraticCurveTo(x, y, x + radius, y);
+  ctx.closePath();
+  if (fill) {
+    ctx.fillStyle = fill;
+    ctx.fill();
+  }
+  if (stroke) {
+    ctx.strokeStyle = stroke;
+    ctx.lineWidth = 2;
+    ctx.stroke();
+  }
+}
+
+function drawCoverImage(ctx, img, x = 0, y = 0, width = EXPORT_SIZE, height = EXPORT_SIZE) {
+  const iw = img.naturalWidth || img.width;
+  const ih = img.naturalHeight || img.height;
+  const scale = Math.max(width / iw, height / ih);
+  const sw = width / scale;
+  const sh = height / scale;
+  const sx = (iw - sw) / 2;
+  const sy = (ih - sh) / 2;
+  ctx.drawImage(img, sx, sy, sw, sh, x, y, width, height);
+}
+
+function drawVerticalGradient(ctx, stops) {
+  const gradient = ctx.createLinearGradient(0, 0, 0, EXPORT_SIZE);
+  stops.forEach(([offset, color]) => gradient.addColorStop(offset, color));
+  ctx.fillStyle = gradient;
+  ctx.fillRect(0, 0, EXPORT_SIZE, EXPORT_SIZE);
+}
+
+function font(weight, size) {
+  return `${weight} ${size}px ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif`;
+}
+
+function drawText(ctx, text, x, y, {
+  size = 32,
+  weight = 700,
+  color = "#ffffff",
+  align = "left",
+  baseline = "top",
+} = {}) {
+  ctx.font = font(weight, size);
+  ctx.fillStyle = color;
+  ctx.textAlign = align;
+  ctx.textBaseline = baseline;
+  ctx.fillText(String(text || ""), x, y);
+}
+
+function drawWrappedText(ctx, text, x, y, maxWidth, {
+  size = 42,
+  weight = 800,
+  color = "#ffffff",
+  lineHeight = Math.round(size * 1.16),
+  maxLines = 3,
+  align = "left",
+} = {}) {
+  ctx.font = font(weight, size);
+  ctx.fillStyle = color;
+  ctx.textAlign = align;
+  ctx.textBaseline = "top";
+
+  const words = String(text || "").split(/\s+/).filter(Boolean);
+  const lines = [];
+  let line = "";
+  words.forEach((word) => {
+    const next = line ? `${line} ${word}` : word;
+    if (ctx.measureText(next).width <= maxWidth || !line) {
+      line = next;
+    } else {
+      lines.push(line);
+      line = word;
+    }
+  });
+  if (line) lines.push(line);
+
+  const visible = lines.slice(0, maxLines);
+  if (lines.length > maxLines && visible.length) {
+    let last = visible[visible.length - 1];
+    while (last.length > 1 && ctx.measureText(`${last}...`).width > maxWidth) {
+      last = last.slice(0, -1);
+    }
+    visible[visible.length - 1] = `${last.trim()}...`;
+  }
+
+  visible.forEach((lineText, index) => {
+    ctx.fillText(lineText, x, y + index * lineHeight);
+  });
+  return y + visible.length * lineHeight;
+}
+
+function drawBrandStrip(ctx) {
+  drawText(ctx, "THE SPLIT PLATE", 40, 28, {
+    size: 20,
+    weight: 900,
+    color: "rgba(245, 158, 11, 0.85)",
+  });
+  drawText(ctx, "thesplitplate.com", EXPORT_SIZE - 40, 30, {
+    size: 20,
+    weight: 500,
+    color: "#737373",
+    align: "right",
+  });
+}
+
+function drawAccentLine(ctx, x, y, width = 96, height = 8) {
+  ctx.fillStyle = "#fbbf24";
+  ctx.fillRect(x, y, width, height);
+}
+
+async function drawOptionalImageCardBase(ctx, src, overlayStops) {
+  fillBackground(ctx);
+  if (src) {
+    const img = await loadCanvasImage(src);
+    drawCoverImage(ctx, img);
+  }
+  drawVerticalGradient(ctx, overlayStops);
+  drawBrandStrip(ctx);
+}
+
+async function drawHeroCard(ctx, recipe) {
+  await drawOptionalImageCardBase(ctx, recipe.image, [
+    [0, "rgba(10, 10, 10, 0.10)"],
+    [0.45, "rgba(10, 10, 10, 0.35)"],
+    [1, "rgba(10, 10, 10, 1)"],
+  ]);
+  drawAccentLine(ctx, 48, 804);
+  const endY = drawWrappedText(ctx, recipe.title, 48, 838, 900, {
+    size: 58,
+    weight: 900,
+    lineHeight: 64,
+    maxLines: 3,
+  });
+  drawText(ctx, "Cook once. Split smart.", 48, endY + 20, {
+    size: 30,
+    weight: 700,
+    color: "#fbbf24",
+  });
+}
+
+function drawMetricBox(ctx, x, y, value, label, color = "#ffffff") {
+  drawRoundedRect(ctx, x, y, 420, 168, 26, "#171717", "#262626");
+  drawText(ctx, value, x + 210, y + 34, {
+    size: 56,
+    weight: 900,
+    color,
+    align: "center",
+  });
+  drawText(ctx, label.toUpperCase(), x + 210, y + 112, {
+    size: 19,
+    weight: 800,
+    color: "#737373",
+    align: "center",
+  });
+}
+
+function drawMacroCard(ctx, recipe) {
+  fillBackground(ctx);
+  drawBrandStrip(ctx);
+  drawAccentLine(ctx, 72, 186);
+  drawWrappedText(ctx, recipe.title, 72, 218, 900, {
+    size: 46,
+    weight: 900,
+    lineHeight: 54,
+    maxLines: 2,
+  });
+  const m = recipe.meta?.macros || {};
+  drawMetricBox(ctx, 72, 390, `${m.protein || recipe.protein}g`, "Protein", "#fbbf24");
+  drawMetricBox(ctx, 588, 390, `~${m.calories || recipe.calories}`, "Calories");
+  drawMetricBox(ctx, 72, 608, `${m.netCarbs != null ? m.netCarbs : m.carbs}g`, "Net Carbs", "#6ee7b7");
+  drawMetricBox(ctx, 588, 608, recipe.time, "Total");
+  if (recipe.meta?.costPerServing) {
+    drawText(ctx, `${recipe.meta.costPerServing} per serving · ${recipe.servings} servings`, EXPORT_SIZE / 2, 842, {
+      size: 24,
+      weight: 500,
+      color: "#a3a3a3",
+      align: "center",
+    });
+  }
+}
+
+async function drawProcessCard(ctx, src, caption) {
+  await drawOptionalImageCardBase(ctx, src, [
+    [0, "rgba(10, 10, 10, 0.28)"],
+    [0.48, "rgba(10, 10, 10, 0.05)"],
+    [1, "rgba(10, 10, 10, 1)"],
+  ]);
+  if (caption) {
+    drawAccentLine(ctx, 48, 850, 64, 5);
+    drawWrappedText(ctx, caption, 48, 875, 900, {
+      size: 31,
+      weight: 700,
+      lineHeight: 40,
+      maxLines: 3,
+    });
+  }
+}
+
+function drawSplitPanel(ctx, x, y, color, label, body, stats) {
+  const border = color === "red" ? "rgba(127, 29, 29, 0.55)" : "rgba(20, 83, 45, 0.55)";
+  const fill = color === "red" ? "rgba(69, 10, 10, 0.32)" : "rgba(5, 46, 22, 0.32)";
+  const accent = color === "red" ? "#f87171" : "#4ade80";
+  drawRoundedRect(ctx, x, y, 900, 186, 24, fill, border);
+  drawText(ctx, label.toUpperCase(), x + 28, y + 26, {
+    size: 20,
+    weight: 900,
+    color: accent,
+  });
+  const bodyEnd = drawWrappedText(ctx, body, x + 28, y + 58, 820, {
+    size: 29,
+    weight: 600,
+    color: "#e5e5e5",
+    lineHeight: 36,
+    maxLines: 2,
+  });
+  if (stats) {
+    drawText(ctx, stats, x + 28, Math.min(bodyEnd + 16, y + 144), {
+      size: 22,
+      weight: 500,
+      color: "#737373",
+    });
+  }
+}
+
+function drawSplitCard(ctx, recipe) {
+  fillBackground(ctx);
+  drawBrandStrip(ctx);
+  drawAccentLine(ctx, 72, 246);
+  drawText(ctx, "One cook, two plates", 72, 284, {
+    size: 45,
+    weight: 900,
+  });
+  const adult = recipe.splitCook?.adult;
+  const kid = recipe.splitCook?.kid;
+  if (adult) {
+    drawSplitPanel(
+      ctx,
+      72,
+      388,
+      "red",
+      "Adult",
+      adult.label,
+      adult.protein != null ? `${adult.protein}g protein · ~${adult.calories} cal` : "",
+    );
+  }
+  if (kid) {
+    drawSplitPanel(
+      ctx,
+      72,
+      620,
+      "green",
+      "Kid",
+      kid.label,
+      kid.protein != null ? `${kid.protein}g protein · ~${kid.calories} cal` : "",
+    );
+  }
+}
+
+async function drawComponentCard(ctx, item, kind) {
+  await drawOptionalImageCardBase(ctx, item.heroImage, [
+    [0, "rgba(10, 10, 10, 0.20)"],
+    [0.45, "rgba(10, 10, 10, 0.50)"],
+    [1, "rgba(10, 10, 10, 1)"],
+  ]);
+  drawText(ctx, kind.toUpperCase(), 48, 778, {
+    size: 20,
+    weight: 900,
+    color: "#fbbf24",
+  });
+  drawAccentLine(ctx, 48, 820);
+  const endY = drawWrappedText(ctx, item.title, 48, 848, 900, {
+    size: 50,
+    weight: 900,
+    lineHeight: 57,
+    maxLines: 2,
+  });
+  if (item.tagline) {
+    drawWrappedText(ctx, item.tagline, 48, endY + 16, 900, {
+      size: 25,
+      weight: 500,
+      color: "#e5e5e5",
+      lineHeight: 32,
+      maxLines: 2,
+    });
+  }
+}
+
+function drawEndCard(ctx, recipe) {
+  const gradient = ctx.createLinearGradient(0, 0, EXPORT_SIZE, EXPORT_SIZE);
+  gradient.addColorStop(0, "#0a0a0a");
+  gradient.addColorStop(0.52, "#171717");
+  gradient.addColorStop(1, "#0a0a0a");
+  ctx.fillStyle = gradient;
+  ctx.fillRect(0, 0, EXPORT_SIZE, EXPORT_SIZE);
+  drawBrandStrip(ctx);
+  drawText(ctx, "THE SPLIT PLATE", EXPORT_SIZE / 2, 360, {
+    size: 21,
+    weight: 900,
+    color: "rgba(245, 158, 11, 0.82)",
+    align: "center",
+  });
+  drawAccentLine(ctx, 460, 422, 160, 8);
+  drawWrappedText(ctx, recipe.title, EXPORT_SIZE / 2, 470, 820, {
+    size: 48,
+    weight: 900,
+    lineHeight: 58,
+    maxLines: 3,
+    align: "center",
+  });
+  drawText(ctx, "Cook once. Split smart.", EXPORT_SIZE / 2, 680, {
+    size: 29,
+    weight: 800,
+    color: "#fbbf24",
+    align: "center",
+  });
+  drawText(ctx, "FULL RECIPE", EXPORT_SIZE / 2, 890, {
+    size: 20,
+    weight: 900,
+    color: "#737373",
+    align: "center",
+  });
+  drawText(ctx, "thesplitplate.com", EXPORT_SIZE / 2, 926, {
+    size: 29,
+    weight: 700,
+    align: "center",
+  });
+  drawText(ctx, `/recipes/${recipe.slug}`, EXPORT_SIZE / 2, 966, {
+    size: 20,
+    weight: 500,
+    color: "#737373",
+    align: "center",
+  });
+}
+
+async function renderSocialCardToBlob(card) {
+  const { canvas, ctx } = makeCanvas();
+  if (card.kind === "hero") await drawHeroCard(ctx, card.recipe);
+  else if (card.kind === "macros") drawMacroCard(ctx, card.recipe);
+  else if (card.kind === "process") await drawProcessCard(ctx, card.src, card.caption);
+  else if (card.kind === "split") drawSplitCard(ctx, card.recipe);
+  else if (card.kind === "component") await drawComponentCard(ctx, card.item, card.componentKind);
+  else if (card.kind === "end") drawEndCard(ctx, card.recipe);
+  else throw new Error(`Unknown social card kind: ${card.kind}`);
+  return canvasToBlob(canvas);
 }
 
 function BrandStripTop() {
@@ -216,18 +536,14 @@ function BrandStripTop() {
 
 // Each downloadable card is 1080×1080 exported at 2x pixelRatio.
 // In the browser we render at 540×540 for screen; the PNG saves at 1080.
-function DownloadableCard({ children, filename, label }) {
-  const ref = useRef(null);
+function DownloadableCard({ children, card }) {
   const [busy, setBusy] = useState(false);
 
   async function exportCard() {
-    if (!ref.current) return;
     setBusy(true);
     try {
-      const imgsInCard = Array.from(ref.current.querySelectorAll("img"));
-      console.log(`[${filename}] Exporting card with ${imgsInCard.length} image(s):`, imgsInCard.map((i) => ({ src: i.src.slice(0, 80), w: i.naturalWidth, h: i.naturalHeight, complete: i.complete })));
-      const blob = await renderCardToBlob(ref.current);
-      const file = new File([blob], `${filename}.png`, { type: "image/png" });
+      const blob = await renderSocialCardToBlob(card);
+      const file = new File([blob], `${card.filename}.png`, { type: "image/png" });
 
       // Mobile-first: Web Share API → native share sheet → "Save to Photos" / IG / etc.
       if (typeof navigator !== "undefined" && navigator.canShare && navigator.canShare({ files: [file] })) {
@@ -243,10 +559,10 @@ function DownloadableCard({ children, filename, label }) {
       // Desktop fallback: classic download
       const url = URL.createObjectURL(blob);
       const link = document.createElement("a");
-      link.download = `${filename}.png`;
+      link.download = `${card.filename}.png`;
       link.href = url;
       link.click();
-      URL.revokeObjectURL(url);
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
     } catch (e) {
       console.error("Card export failed:", e);
       alert("Export failed — check console.");
@@ -258,7 +574,7 @@ function DownloadableCard({ children, filename, label }) {
   return (
     <div className="w-full max-w-[540px] mx-auto">
       <div className="flex items-center justify-between mb-2">
-        <span className="text-neutral-500 text-[11px] font-semibold uppercase tracking-wider">{label}</span>
+        <span className="text-neutral-500 text-[11px] font-semibold uppercase tracking-wider">{card.label}</span>
         <button
           onClick={exportCard}
           disabled={busy}
@@ -267,7 +583,7 @@ function DownloadableCard({ children, filename, label }) {
           {busy ? "Exporting…" : "Save image ↓"}
         </button>
       </div>
-      <div ref={ref} className="relative aspect-square w-full bg-neutral-950 overflow-hidden flex flex-col" style={{ width: 540, height: 540 }}>
+      <div className="relative aspect-square w-full bg-neutral-950 overflow-hidden flex flex-col" style={{ width: 540, height: 540 }}>
         {children}
       </div>
     </div>
@@ -524,6 +840,7 @@ function classifyCookbook(item) {
 export default function SocialPage() {
   const { slug } = useParams();
   const recipe = liveRecipes.find((r) => r.slug === slug);
+  const [saveAllBusy, setSaveAllBusy] = useState(false);
   useMeta({ title: `Social Carousel — ${recipe?.title || "Not Found"}`, description: "Instagram carousel for screenshot + post." });
 
   if (!recipe) {
@@ -547,78 +864,84 @@ export default function SocialPage() {
     .slice(0, 5);
 
   const components = extractCookbookLinks(recipe);
-  const igTags = hashtagsFor(recipe);
-  const igHandles = brandHandles(recipe, "ig");
-  const tiktokTags = tiktokHashtagsFor(recipe);
-  const tiktokHandlesList = brandHandles(recipe, "tiktok");
 
   // Build the card sequence dynamically. Goal: photos > text. The carousel is
   // 1 hero + 1 macros + 1 split + N process + M components + 1 end = whatever
   // fits up to Instagram's 10-card max.
   const processCards = processImages.map((p, i) => ({
     id: `process-${i + 1}`,
+    kind: "process",
     label: `Card · Process ${i + 1}`,
     filename: `${slug}-process-${i + 1}`,
+    src: p.src,
+    caption: p.caption,
     render: <ProcessImageCardInner src={p.src} caption={p.caption} />,
   }));
   const componentCards = components.map((c, i) => ({
     id: `component-${c.id}`,
+    kind: "component",
     label: `Card · ${classifyCookbook(c)} → ${c.title}`,
     filename: `${slug}-component-${i + 1}-${c.id}`,
+    item: c,
+    componentKind: classifyCookbook(c),
     render: <ComponentCardInner item={c} kind={classifyCookbook(c)} />,
   }));
   // Interleave: hero → macros → process1 → split → components → process2..N → end
   const allCards = [
-    { id: "hero", label: "Card · Hero", filename: `${slug}-1-hero`, render: <HeroCardInner recipe={recipe} /> },
-    { id: "macros", label: "Card · Macros", filename: `${slug}-2-macros`, render: <MacroCardInner recipe={recipe} /> },
+    { id: "hero", kind: "hero", label: "Card · Hero", filename: `${slug}-1-hero`, recipe, render: <HeroCardInner recipe={recipe} /> },
+    { id: "macros", kind: "macros", label: "Card · Macros", filename: `${slug}-2-macros`, recipe, render: <MacroCardInner recipe={recipe} /> },
     ...(processCards[0] ? [processCards[0]] : []),
-    { id: "split", label: "Card · Split", filename: `${slug}-split`, render: <SplitCardInner recipe={recipe} /> },
+    { id: "split", kind: "split", label: "Card · Split", filename: `${slug}-split`, recipe, render: <SplitCardInner recipe={recipe} /> },
     ...componentCards,
     ...processCards.slice(1),
-    { id: "end", label: "Card · End / Recipe Link", filename: `${slug}-end`, render: <EndCardInner recipe={recipe} /> },
+    { id: "end", kind: "end", label: "Card · End / Recipe Link", filename: `${slug}-end`, recipe, render: <EndCardInner recipe={recipe} /> },
   ];
   // Instagram carousel max = 10 cards. If we go over, drop the last process
   // images (preserve hero, macros, split, components, end).
   const cards = allCards.slice(0, 10);
 
   async function saveAll() {
+    if (saveAllBusy) return;
+    setSaveAllBusy(true);
     const files = [];
-    for (const card of cards) {
-      const el = document.querySelector(`[data-card-id="${card.id}"] [data-export]`);
-      if (!el) continue;
-      try {
-        const blob = await renderCardToBlob(el);
-        files.push(new File([blob], `${card.filename}.png`, { type: "image/png" }));
-      } catch (e) {
-        console.error(`Failed export of ${card.id}:`, e);
+    try {
+      for (const card of cards) {
+        try {
+          const blob = await renderSocialCardToBlob(card);
+          files.push(new File([blob], `${card.filename}.png`, { type: "image/png" }));
+        } catch (e) {
+          console.error(`Failed export of ${card.id}:`, e);
+        }
       }
-    }
-    if (files.length === 0) {
-      alert("No cards exported. Check console.");
-      return;
-    }
-
-    // Mobile-first: try Web Share API with all files — iOS/Android opens share sheet
-    // → "Save N Images" goes straight to Photos. Single user gesture.
-    if (typeof navigator !== "undefined" && navigator.canShare && navigator.canShare({ files })) {
-      try {
-        await navigator.share({ files, title: `${recipe.title} carousel` });
+      if (files.length === 0) {
+        alert("No cards exported. Check console.");
         return;
-      } catch (e) {
-        if (e.name === "AbortError") return;
-        // fall through to per-file download
       }
-    }
 
-    // Desktop fallback: trigger downloads sequentially with 400ms gaps
-    for (const file of files) {
-      const url = URL.createObjectURL(file);
-      const link = document.createElement("a");
-      link.download = file.name;
-      link.href = url;
-      link.click();
-      URL.revokeObjectURL(url);
-      await new Promise((r) => setTimeout(r, 400));
+      // Mobile-first: try Web Share API with all files — iOS/Android opens share sheet
+      // → "Save N Images" goes straight to Photos. Single user gesture.
+      if (typeof navigator !== "undefined" && navigator.canShare && navigator.canShare({ files })) {
+        try {
+          await navigator.share({ files, title: `${recipe.title} carousel` });
+          return;
+        } catch (e) {
+          if (e.name === "AbortError") return;
+          // fall through to per-file download
+        }
+      }
+
+      // Desktop fallback: trigger downloads sequentially with 400ms gaps
+      for (const file of files) {
+        const url = URL.createObjectURL(file);
+        const link = document.createElement("a");
+        link.download = file.name;
+        link.href = url;
+        link.click();
+        setTimeout(() => URL.revokeObjectURL(url), 1000);
+        await new Promise((r) => setTimeout(r, 400));
+      }
+    } finally {
+      setSaveAllBusy(false);
     }
   }
 
@@ -635,8 +958,12 @@ export default function SocialPage() {
         </p>
 
         <div className="mt-4 flex items-center gap-3">
-          <button onClick={saveAll} className="px-4 py-2 bg-amber-500 text-black font-bold rounded-lg text-sm hover:bg-amber-400 transition-colors cursor-pointer">
-            Save all {cards.length} images
+          <button
+            onClick={saveAll}
+            disabled={saveAllBusy}
+            className="px-4 py-2 bg-amber-500 text-black font-bold rounded-lg text-sm hover:bg-amber-400 transition-colors cursor-pointer disabled:opacity-60 disabled:cursor-wait"
+          >
+            {saveAllBusy ? "Exporting..." : `Save all ${cards.length} images`}
           </button>
           <Link to={`/recipes/${recipe.slug}`} className="text-amber-400 text-xs hover:underline">← Back to recipe</Link>
         </div>
@@ -677,7 +1004,7 @@ export default function SocialPage() {
       <div className="max-w-2xl mx-auto space-y-8">
         {cards.map((card) => (
           <div key={card.id} data-card-id={card.id}>
-            <DownloadableCard filename={card.filename} label={card.label}>
+            <DownloadableCard card={card}>
               <div data-export className="absolute inset-0 bg-neutral-950 flex flex-col">
                 {card.render}
               </div>
