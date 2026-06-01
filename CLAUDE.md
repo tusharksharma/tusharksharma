@@ -269,9 +269,23 @@ The page renders 6 stacked 1080×1080 square cards in this order:
 - 2+ step images in `recipe.steps[].images[]`
 - `brands: [...]` with `name`
 
-**Brand IG handles** are mapped in `src/pages/SocialPage.jsx` (`KNOWN` object). When a new brand ships, add its handle to that map. If a brand has no known handle, it's silently dropped from the "Brands featured" line.
+**Brand IG handles** are mapped in `src/pages/SocialPage.jsx` (`KNOWN_HANDLES` object) with `{ ig, tiktok }` fields per brand. When a new brand ships, add BOTH handles (web-search each separately — many brands have different @ on TikTok vs IG). If a brand has no verified handle for a platform, omit that field — it's silently dropped from that platform's caption.
 
-**Hashtag base** (mandatory across every recipe): `#TheSplitPlate #CookOnceSplitSmart #SplitCook #HighProteinFamilyDinner #FamilyMealPrep #KidApprovedDinner #WeeknightDinner #FamilyDinnerIdeas #HighProtein`. Per-recipe tags layered on from `proteinTags`, `carbLevel`, and `title` words.
+**Hashtag base** (mandatory across every recipe): `#TheSplitPlate #CookOnceSplitSmart #SplitCook #HighProteinFamilyDinner #FamilyMealPrep #KidApprovedDinner #WeeknightDinner #FamilyDinnerIdeas #HighProtein`. Per-recipe tags layered on from `proteinTags`, `carbLevel`, and `title` words. TikTok caption is capped at 5 hashtags via `tiktokHashtagsFor()`.
+
+### Image rendering — DON'T regress this
+
+The carousel renders cards via **direct HTMLCanvas drawing** (`new Image()` + `ctx.drawImage()` + `canvas.toBlob()`), not html-to-image or html2canvas. Those libraries had fatal bugs on Mobile Safari (CORS quirks, data URL size ceilings, blob URL incompatibility, cacheBust mutating URLs). The current approach is bulletproof BECAUSE:
+
+1. `loadCanvasImage()` only sets `img.crossOrigin = "anonymous"` for ACTUAL cross-origin URLs. Setting it for same-origin `/images/*` URLs forces CORS validation that Vercel doesn't satisfy → image load fails or canvas taints → blank export. The "downloads too fast" symptom.
+2. After `img.onload`, it awaits `img.decode()` to guarantee the image is paint-ready before `drawImage` runs. Without this, drawImage may paint nothing silently.
+3. Cache-hit handling: if `img.complete && img.naturalWidth > 0` after src assignment, resolve immediately (browser cache may not refire onload).
+
+**If a recipe's image card exports blank in the future:** open Safari Web Inspector. Check the network panel for the image request — if 200, problem is in the canvas pipeline; if 4xx/CORS error, problem is in serving. **Do NOT switch back to html-to-image or html2canvas** — we ruled both out after multiple PRs. Stay on direct canvas.
+
+**Image format conventions:**
+- Recipe `image` and `steps[].images[]` should be **WebP under 500KB** when possible. PNGs up to 2MB work for the carousel (direct canvas has no size ceiling) but slow down recipe-page load.
+- If a new recipe ships with PNGs > 500KB, batch-convert with `magick {file}.png -resize 1200x1200\> -quality 85 {file}.webp` and update references.
 
 ## Image Generation Prompts (MANDATORY — every recipe, every time)
 
