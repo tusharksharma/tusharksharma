@@ -1,7 +1,16 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { liveRecipes } from "../data/recipes";
+import { sauces, bases, breakfasts, desserts, quickLunches } from "../data/cookbook";
 import useMeta from "../hooks/useMeta";
+
+const COOKBOOK_SECTIONS = [
+  { label: "Sauces", items: sauces },
+  { label: "Bases / Sides", items: bases },
+  { label: "Breakfasts", items: breakfasts },
+  { label: "Desserts", items: desserts },
+  { label: "Quick Lunches", items: quickLunches },
+];
 
 // ⚠️ CLIENT-SIDE GATE — not cryptographically secure.
 // The constant below sits in the JS bundle. Anyone who view-sources can read it.
@@ -64,7 +73,8 @@ export default function SocialIndexPage() {
   }
 
   // Sorted: newest recipe IDs first (most recent carousels at top)
-  const sorted = [...liveRecipes].sort((a, b) => b.id - a.id);
+  const sortedDinners = [...liveRecipes].sort((a, b) => b.id - a.id);
+  const totalCookbook = COOKBOOK_SECTIONS.reduce((n, s) => n + s.items.length, 0);
 
   return (
     <div className="min-h-screen bg-neutral-950 text-neutral-100 py-10 px-4">
@@ -72,12 +82,14 @@ export default function SocialIndexPage() {
         <div className="flex items-baseline justify-between mb-6">
           <div>
             <h1 className="text-white text-2xl font-black">Social Carousels</h1>
-            <p className="text-neutral-500 text-sm mt-1">{sorted.length} recipes · click to open and screenshot</p>
+            <p className="text-neutral-500 text-sm mt-1">{sortedDinners.length} dinners + {totalCookbook} power-ups · click to open and screenshot</p>
           </div>
           <button onClick={lock} className="text-neutral-500 text-xs hover:text-amber-400 cursor-pointer">Lock</button>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          {sorted.map((r) => (
+
+        <h2 className="text-amber-400 text-xs font-black uppercase tracking-[0.2em] mb-3">Dinners ({sortedDinners.length})</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-10">
+          {sortedDinners.map((r) => (
             <Link
               key={r.id}
               to={`/social/${r.slug}`}
@@ -94,6 +106,30 @@ export default function SocialIndexPage() {
             </Link>
           ))}
         </div>
+
+        {COOKBOOK_SECTIONS.map((section) => section.items.length > 0 && (
+          <div key={section.label} className="mb-8">
+            <h2 className="text-amber-400 text-xs font-black uppercase tracking-[0.2em] mb-3">{section.label} ({section.items.length})</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {section.items.map((c) => (
+                <Link
+                  key={c.id}
+                  to={`/social/cookbook/${c.id}`}
+                  className="bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden hover:border-amber-500/40 transition-all flex group"
+                >
+                  {c.heroImage && (
+                    <img src={c.heroImage} alt={c.title} className="w-24 h-24 object-cover flex-shrink-0" loading="lazy" />
+                  )}
+                  <div className="p-3 flex flex-col justify-center min-w-0">
+                    <h3 className="text-white font-bold text-sm group-hover:text-amber-400 transition-colors truncate">{c.title}</h3>
+                    <p className="text-neutral-500 text-[10px] mt-0.5">{(c.proteinPerServing != null ? c.proteinPerServing : c.protein) || 0}g protein · {c.servings} serving{c.servings === 1 ? "" : "s"}</p>
+                    <p className="text-amber-400 text-[10px] mt-1 group-hover:underline">Open carousel →</p>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

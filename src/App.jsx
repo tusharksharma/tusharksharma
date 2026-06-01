@@ -55,6 +55,7 @@ function App() {
           <Route path="/cookbook/:id" element={<CookbookDetailPage />} />
           <Route path="/recipes/:slug" element={<RecipePage />} />
           <Route path="/social" element={<SocialIndexPage />} />
+          <Route path="/social/cookbook/:id" element={<SocialPage />} />
           <Route path="/social/:slug" element={<SocialPage />} />
         </Routes>
       </Suspense>

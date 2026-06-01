@@ -82,6 +82,13 @@ const routes = [
     noindex: true,
   })),
   ...cookbookItems.map((c) => ({
+    path: `/social/cookbook/${c.id}`,
+    title: `Social Carousel — ${c.title} — The Split Plate`,
+    description: `Instagram carousel for ${c.title}.`,
+    image: c.image,
+    noindex: true,
+  })),
+  ...cookbookItems.map((c) => ({
     path: `/cookbook/${c.id}`,
     title: `${c.title} — The Split Plate`,
     description: c.description,

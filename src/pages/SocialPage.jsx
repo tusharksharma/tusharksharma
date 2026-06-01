@@ -530,11 +530,33 @@ function drawEndCard(ctx, recipe) {
     weight: 700,
     align: "center",
   });
-  drawText(ctx, `/recipes/${recipe.slug}`, EXPORT_SIZE / 2, 966, {
+  drawText(ctx, recipe.recipePath || `/recipes/${recipe.slug}`, EXPORT_SIZE / 2, 966, {
     size: 20,
     weight: 500,
     color: "#737373",
     align: "center",
+  });
+}
+
+// Best-For card — cookbook items don't have adult/kid splits, so this card
+// surfaces "what to use this for" (bestFor[] array) instead of the split card.
+function drawBestForCard(ctx, item) {
+  fillBackground(ctx);
+  drawBrandStrip(ctx);
+  drawAccentLine(ctx, 72, 186);
+  drawText(ctx, "Best for", 72, 224, { size: 45, weight: 900 });
+  const list = (item.bestFor || []).slice(0, 6);
+  let y = 350;
+  list.forEach((line) => {
+    drawText(ctx, "•", 72, y, { size: 32, weight: 700, color: "#fbbf24" });
+    const endY = drawWrappedText(ctx, line, 110, y, 880, {
+      size: 28,
+      weight: 600,
+      color: "#e5e5e5",
+      lineHeight: 36,
+      maxLines: 2,
+    });
+    y = Math.max(endY + 16, y + 60);
   });
 }
 
@@ -544,6 +566,7 @@ async function renderSocialCardToBlob(card) {
   else if (card.kind === "macros") drawMacroCard(ctx, card.recipe);
   else if (card.kind === "process") await drawProcessCard(ctx, card.src, card.caption);
   else if (card.kind === "split") drawSplitCard(ctx, card.recipe);
+  else if (card.kind === "bestfor") drawBestForCard(ctx, card.item);
   else if (card.kind === "component") await drawComponentCard(ctx, card.item, card.componentKind);
   else if (card.kind === "end") drawEndCard(ctx, card.recipe);
   else throw new Error(`Unknown social card kind: ${card.kind}`);
@@ -718,6 +741,26 @@ function SplitCardInner({ recipe }) {
   );
 }
 
+function BestForCardInner({ item }) {
+  const list = (item.bestFor || []).slice(0, 6);
+  return (
+    <div className="absolute inset-0 p-7 flex flex-col justify-center">
+      <BrandStripTop />
+      <div>
+        <div className="w-12 h-1 bg-amber-400 mb-3" />
+        <h2 className="text-white text-xl font-black mb-5">Best for</h2>
+        <ul className="space-y-2">
+          {list.map((line) => (
+            <li key={line} className="text-neutral-200 text-sm leading-snug">
+              <span className="text-amber-400 mr-2">•</span>{line}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
+}
+
 function ComponentCardInner({ item, kind }) {
   return (
     <>
@@ -752,7 +795,7 @@ function EndCardInner({ recipe }) {
       <div className="text-center">
         <p className="text-neutral-500 text-[10px] font-bold uppercase tracking-wider">Full recipe</p>
         <p className="text-white text-sm font-semibold mt-1">thesplitplate.com</p>
-        <p className="text-neutral-500 text-[10px] mt-1 break-all">/recipes/{recipe.slug}</p>
+        <p className="text-neutral-500 text-[10px] mt-1 break-all">{recipe.recipePath || `/recipes/${recipe.slug}`}</p>
       </div>
     </div>
   );
@@ -838,7 +881,7 @@ function longCaption(recipe, components, platform = "tiktok") {
   }
 
   // CTA
-  lines.push(`Full recipe → thesplitplate.com/recipes/${recipe.slug}`);
+  lines.push(`Full recipe → thesplitplate.com${recipe.recipePath || `/recipes/${recipe.slug}`}`);
   lines.push("");
 
   // BRAND TAGS
@@ -862,25 +905,90 @@ function classifyCookbook(item) {
   return "Component";
 }
 
+// Adapt a cookbook item into recipe-shaped fields the canvas helpers expect.
+// Cookbook items have different field names — this normalizes them so the
+// same drawing functions (drawHeroCard, drawMacroCard, etc.) work for both.
+function adaptCookbookToRecipe(item, kind) {
+  const protein = item.proteinPerServing != null ? item.proteinPerServing : (item.protein != null ? item.protein : 0);
+  return {
+    // shape: recipe-like surface
+    title: item.title,
+    slug: item.id,
+    image: item.heroImage,
+    time: item.time,
+    servings: item.servings,
+    protein,
+    calories: item.caloriesPerServing || item.calories,
+    hook: item.tagline,
+    makeThisWhen: item.useThisWhen,
+    role: item.tagline,
+    description: item.useThisWhen,
+    // Synthesize macros shape so drawMacroCard works
+    meta: {
+      macros: {
+        protein,
+        calories: item.caloriesPerServing || item.calories,
+        carbs: 0,
+        netCarbs: undefined,
+      },
+      proteinTags: [],
+    },
+    // Cookbook items don't have splitCook — pass undefined so the split card
+    // is replaced by a Best For card in the cookbook card sequence.
+    splitCook: undefined,
+    // Carousel render uses recipe.steps[].images for process cards. Cookbook
+    // items have prepImage / actionImage as distinct fields. Synthesize a
+    // steps array with those so the same logic flows.
+    steps: [
+      item.prepImage ? { text: item.prepImageCaption || "Mise en place", images: [item.prepImage] } : null,
+      item.actionImage ? { text: item.actionImageCaption || "In use", images: [item.actionImage] } : null,
+    ].filter(Boolean),
+    // brands array is the same shape
+    brands: item.brands || [],
+    // Keep originals around for the BestForCard
+    bestFor: item.bestFor,
+    carbLevel: undefined,
+    __cookbookKind: kind,
+    // EndCard + longCaption + Back link consume this to render the right URL
+    recipePath: `/cookbook/${item.id}`,
+  };
+}
+
 export default function SocialPage() {
-  const { slug } = useParams();
-  const recipe = liveRecipes.find((r) => r.slug === slug);
+  const { slug, id } = useParams();
+  const isCookbook = !!id;
+
+  // Look up the item: either a recipe (slug) or a cookbook entry (id)
+  let recipe, cookbookItem, cookbookKind;
+  if (isCookbook) {
+    cookbookItem = ALL_COOKBOOK.find((c) => c.id === id);
+    if (cookbookItem) {
+      cookbookKind = classifyCookbook(cookbookItem);
+      recipe = adaptCookbookToRecipe(cookbookItem, cookbookKind);
+    }
+  } else {
+    recipe = liveRecipes.find((r) => r.slug === slug);
+  }
+
   const [saveAllBusy, setSaveAllBusy] = useState(false);
   useMeta({ title: `Social Carousel — ${recipe?.title || "Not Found"}`, description: "Instagram carousel for screenshot + post." });
 
   if (!recipe) {
     return (
       <div className="min-h-screen bg-neutral-950 text-neutral-100 p-10">
-        <p>Recipe not found. Try <Link to="/dinners" className="text-amber-400">/dinners</Link>.</p>
+        <p>{isCookbook ? "Cookbook item" : "Recipe"} not found. Try <Link to={isCookbook ? "/cookbook" : "/dinners"} className="text-amber-400">{isCookbook ? "/cookbook" : "/dinners"}</Link>.</p>
       </div>
     );
   }
+
+  // slugForFiles is what appears in download filenames AND URLs displayed on the End card
+  const slugForFiles = isCookbook ? `cookbook-${id}` : slug;
 
   // Pull up to 5 unique process images — gives us enough cards to fill a full
   // carousel without recycling text-heavy slots. De-duped by src.
   const seen = new Set();
   const processImages = (recipe.steps || [])
-    .flatMap((s) => (s.images || []).map((img) => ({ src: img, caption: s.text.split(/[:.]/)[0].trim().slice(0, 60) })))
+    .flatMap((s) => (s.images || []).map((img) => ({ src: img, caption: (s.text || "").split(/[:.]/)[0].trim().slice(0, 60) })))
     .filter((p) => {
       if (!p.src || p.src === recipe.image || seen.has(p.src)) return false;
       seen.add(p.src);
@@ -888,7 +996,9 @@ export default function SocialPage() {
     })
     .slice(0, 5);
 
-  const components = extractCookbookLinks(recipe);
+  // Cookbook items don't cross-link to other cookbook items via /cookbook/ ingredient
+  // links the same way dinner recipes do. Skip component cards in cookbook mode.
+  const components = isCookbook ? [] : extractCookbookLinks(recipe);
 
   // Build the card sequence dynamically. Goal: photos > text. The carousel is
   // 1 hero + 1 macros + 1 split + N process + M components + 1 end = whatever
@@ -897,7 +1007,7 @@ export default function SocialPage() {
     id: `process-${i + 1}`,
     kind: "process",
     label: `Card · Process ${i + 1}`,
-    filename: `${slug}-process-${i + 1}`,
+    filename: `${slugForFiles}-process-${i + 1}`,
     src: p.src,
     caption: p.caption,
     render: <ProcessImageCardInner src={p.src} caption={p.caption} />,
@@ -906,20 +1016,26 @@ export default function SocialPage() {
     id: `component-${c.id}`,
     kind: "component",
     label: `Card · ${classifyCookbook(c)} → ${c.title}`,
-    filename: `${slug}-component-${i + 1}-${c.id}`,
+    filename: `${slugForFiles}-component-${i + 1}-${c.id}`,
     item: c,
     componentKind: classifyCookbook(c),
     render: <ComponentCardInner item={c} kind={classifyCookbook(c)} />,
   }));
-  // Interleave: hero → macros → process1 → split → components → process2..N → end
+
+  // Card 4: in dinner mode this is the Split card (adult vs kid); in cookbook
+  // mode it's a Best For card (since cookbook items don't have splitCook).
+  const middleCard = isCookbook
+    ? { id: "bestfor", kind: "bestfor", label: "Card · Best For", filename: `${slugForFiles}-bestfor`, item: cookbookItem, render: <BestForCardInner item={cookbookItem} /> }
+    : { id: "split", kind: "split", label: "Card · Split", filename: `${slugForFiles}-split`, recipe, render: <SplitCardInner recipe={recipe} /> };
+
   const allCards = [
-    { id: "hero", kind: "hero", label: "Card · Hero", filename: `${slug}-1-hero`, recipe, render: <HeroCardInner recipe={recipe} /> },
-    { id: "macros", kind: "macros", label: "Card · Macros", filename: `${slug}-2-macros`, recipe, render: <MacroCardInner recipe={recipe} /> },
+    { id: "hero", kind: "hero", label: "Card · Hero", filename: `${slugForFiles}-1-hero`, recipe, render: <HeroCardInner recipe={recipe} /> },
+    { id: "macros", kind: "macros", label: "Card · Macros", filename: `${slugForFiles}-2-macros`, recipe, render: <MacroCardInner recipe={recipe} /> },
     ...(processCards[0] ? [processCards[0]] : []),
-    { id: "split", kind: "split", label: "Card · Split", filename: `${slug}-split`, recipe, render: <SplitCardInner recipe={recipe} /> },
+    middleCard,
     ...componentCards,
     ...processCards.slice(1),
-    { id: "end", kind: "end", label: "Card · End / Recipe Link", filename: `${slug}-end`, recipe, render: <EndCardInner recipe={recipe} /> },
+    { id: "end", kind: "end", label: "Card · End / Recipe Link", filename: `${slugForFiles}-end`, recipe, render: <EndCardInner recipe={recipe} /> },
   ];
   // Instagram carousel max = 10 cards. If we go over, drop the last process
   // images (preserve hero, macros, split, components, end).
@@ -990,7 +1106,7 @@ export default function SocialPage() {
           >
             {saveAllBusy ? "Exporting..." : `Save all ${cards.length} images`}
           </button>
-          <Link to={`/recipes/${recipe.slug}`} className="text-amber-400 text-xs hover:underline">← Back to recipe</Link>
+          <Link to={recipe.recipePath || `/recipes/${recipe.slug}`} className="text-amber-400 text-xs hover:underline">← Back to {isCookbook ? "cookbook" : "recipe"}</Link>
         </div>
 
         <details className="mt-4 bg-neutral-800/50 border border-neutral-700 rounded-lg p-3 text-xs" open>
