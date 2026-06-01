@@ -101,6 +101,16 @@ const WEEKS = {
       { day: "Friday", label: "Grill Night", vibe: "Outlaw Sweet & Tangy thighs over crispy smashed potatoes + chili crisp sour cream — split plate ends in a 3-compartment tray for the kid", id: 37, time: "30 min", reheats: true, adult: "Sliced grilled thighs + smashed potatoes + chili crisp sour cream", kid: "Diced chicken (no char) + smashed potatoes + plain sour cream dip in a 3-compartment tray", needs: ["Boneless thighs", "Little Potato Co. Savory Herb tray", "Dan-O's Outlaw Sweet & Tangy", "Lee Kum Kee Chiu Chow Chili Crisp", "Daisy Light Sour Cream"], carbLevel: "high" },
     ],
   },
+  12: {
+    label: "Week 12",
+    description: "Pizza night Wednesday with no guilt. Different pizzas per eater + a 27g-protein Caesar Crunch salad that carries the macro budget. Bookended by pork lettuce wraps and a steak rice bowl.",
+    subtitle: "Pork Lettuce Wraps, Caesar Crunch Pizza Night, Golden Garlic Rice + Steak",
+    cookDays: [
+      { day: "Monday", label: "Wrap Night", vibe: "SE-Asian pork mince in Sweet Gem lettuce — Lift Drizzle adult, mild cilantro-crema mince for kids", id: 38, time: "25 min", reheats: true, adult: "Pork mince + chilies + Lift Drizzle, Sweet Gem leaves", kid: "Pre-mixed mince with Herdez Avocado Cilantro + olive oil + bone broth, lettuce OR slider rolls", needs: ["NY Style 95% lean ground pork", "Tanimura & Antle Sweet Gem lettuce", "Verka ginger garlic paste", "Red Boat fish sauce", "Dynasty sesame chili oil", "Kikkoman soy", "ReaLemon", "Deep Coriander", "Dan-O's SPG", "Chosen avocado oil spray", "Green onions", "Fresh red Thai chilies", "Herdez Avocado Cilantro", "Chicken bone broth", "Dinner slider rolls", "Olive oil"], carbLevel: "low" },
+      { day: "Wednesday", label: "Pizza Night", vibe: "Adults: 1/3 Bettergoods Margherita + Caesar Crunch Salad. Kids: personal Red Baron Deep Dish + small salad. Different pizzas, no slice-fairness fights.", id: 40, time: "20 min", reheats: true, adult: "1/3 Bettergoods Margherita + Caesar Crunch Salad with Dan-O's Jalapeño Cheesoning + optional Chipotle Crema", kid: "1 personal Red Baron Deep Dish (Pepperoni or Four Cheese) + small Caesar Crunch portion", needs: ["Soules Kitchen Fajita Chicken (2 pouches)", "Bettergoods Italian Wood-Fired Margherita Pizza", "Red Baron Deep Dish Singles (Pepperoni or Four Cheese, 2)", "Tanimura & Antle Sweet Gem", "Bolthouse Farms Creamy Caesar Parmigiano", "Quest Hot & Spicy Protein Chips", "Dan-O's Jalapeño Cheesoning", "Smoky Chipotle Crema (optional cookbook)"], carbLevel: "high" },
+      { day: "Friday", label: "System Meal", vibe: "Golden turmeric rice reheats all week, steak is fresh in 10 min", id: 24, time: "25 min", reheats: true, adult: "Golden turmeric rice, seared steak, chipotle drizzle", kid: "Rice + steak, no sauce — rice already has flavor", needs: ["Rice", "Bone broth", "Gary's QuickSteak", "Ghee", "Turmeric"], carbLevel: "high" },
+    ],
+  },
   11: {
     label: "Week 11",
     description: "Restaurant-grade pork chops Monday with the new Cowboy Butter sauce + crusted snap peas. Smash tacos midweek. Creamy steak noodles Friday — three proteins, three formats, the cookbook side cross-links across two of them.",

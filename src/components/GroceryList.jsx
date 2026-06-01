@@ -348,6 +348,43 @@ const GROCERY_BY_WEEK = {
       { name: "Eggs (for adult fried rice)", baseQty: 2, unit: "", meal: "Fri adult" },
     ],
   },
+  12: {
+    "Protein": [
+      { name: "NY Style Sausage Co. 95% Lean Ground Pork (16 oz pack)", baseQty: 2, unit: "pack", meal: "Mon" },
+      { name: "Soules Kitchen Fully Cooked Fajita Chicken (6 oz pouch)", baseQty: 2, unit: "pack", meal: "Wed" },
+      { name: "Gary's QuickSteak (or thin-sliced sirloin)", baseQty: 1, unit: "lb", meal: "Fri" },
+    ],
+    "Carbs": [
+      { name: "Bettergoods Italian Wood-Fired Margherita Pizza (14.6 oz)", baseQty: 1, unit: "", meal: "Wed adult" },
+      { name: "Red Baron Deep Dish Singles (Pepperoni or Four Cheese, 2-pack)", baseQty: 1, unit: "pack", meal: "Wed kid" },
+      { name: "Dinner slider rolls (kid backup for Mon lettuce)", baseQty: 4, unit: "rolls", meal: "Mon kid" },
+      { name: "Long-grain rice (golden garlic rice)", baseQty: 2, unit: "cups", meal: "Fri" },
+    ],
+    "Vegetables": [
+      { name: "Tanimura & Antle Artisan Sweet Gem Lettuce (4-head pack)", baseQty: 1, unit: "pack", meal: "Mon + Wed" },
+      { name: "Green onions / scallions", baseQty: 1, unit: "bunch", meal: "Mon" },
+      { name: "Fresh red Thai chilies", baseQty: 4, unit: "", meal: "Mon adult" },
+    ],
+    "Sauce & Flavor": [
+      { name: "Verka Organic Ginger Garlic Paste", qty: "pantry", meal: "Mon" },
+      { name: "Red Boat Fish Sauce 40°N", qty: "pantry", meal: "Mon" },
+      { name: "Dynasty Sesame Chili Oil", qty: "pantry", meal: "Mon" },
+      { name: "Kikkoman All-Purpose Soy Sauce", qty: "pantry", meal: "Mon adult" },
+      { name: "ReaLemon Lemon Juice", qty: "pantry", meal: "Mon" },
+      { name: "Deep Coriander Powder", qty: "pantry", meal: "Mon adult" },
+      { name: "Dan-O's SPG Tri-O", qty: "pantry", meal: "Mon" },
+      { name: "Chosen Foods Avocado Oil Spray", qty: "pantry", meal: "Mon" },
+      { name: "Herdez Taqueria Avocado Cilantro Sauce", baseQty: 1, unit: "bottle", meal: "Mon kid" },
+      { name: "Olive oil (California Organic EVOO)", qty: "pantry", meal: "Mon" },
+      { name: "Kirkland Chicken Bone Broth", qty: "pantry", meal: "Mon kid + Fri" },
+      { name: "Bolthouse Farms Creamy Caesar Parmigiano", baseQty: 1, unit: "bottle", meal: "Wed" },
+      { name: "Quest Hot & Spicy Tortilla Style Protein Chips (1.1 oz bag)", baseQty: 1, unit: "bag", meal: "Wed" },
+      { name: "Dan-O's Jalapeño Cheesoning", qty: "pantry", meal: "Wed adult" },
+      { name: "Smoky Chipotle Crema (cookbook, optional adult drizzle)", qty: "pantry", meal: "Wed adult" },
+      { name: "Ghee", qty: "pantry", meal: "Fri" },
+      { name: "Turmeric", qty: "pantry", meal: "Fri" },
+    ],
+  },
   11: {
     "Protein": [
       { name: "Boneless pork loin chops (1-inch thick, ~6 oz each)", baseQty: 4, unit: "chops", meal: "Mon" },
