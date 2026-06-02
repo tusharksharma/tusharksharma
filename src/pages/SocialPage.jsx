@@ -142,7 +142,7 @@ const KNOWN_HANDLES = {
   "Chosen Foods": { ig: "@chosenfoods", tiktok: "@chosenfoods" },
   "Herdez": { ig: "@herdez", tiktok: "@herdezbrand" },
   "Daisy": { ig: "@daisybrand", tiktok: "@daisysourcreamofficial" },
-  "Fage": { ig: "@fageusa" },
+  "Fage": { ig: "@fage", tiktok: "@fage" },
   "Philadelphia": { ig: "@philadelphia", tiktok: "@philadelphia" },
   "Whole Earth": { ig: "@wholeearthsweetener", tiktok: "@wholeearthsweetener" },
   "Ghirardelli": { ig: "@ghirardelli", tiktok: "@officalghirardelli" },
