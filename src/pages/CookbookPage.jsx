@@ -19,8 +19,13 @@ function netCarbColor(nc) {
 }
 
 function RecipeCard({ item }) {
-  const ppc = item.protein && item.caloriesPerServing
-    ? Math.round((item.protein / item.caloriesPerServing) * 100 * 10) / 10
+  // Per-serving protein: use explicit proteinPerServing, fall back to batch/servings,
+  // then to single-serving items where protein IS the per-serving value.
+  const pps = item.proteinPerServing != null
+    ? item.proteinPerServing
+    : (item.protein != null && item.servings ? Math.round((item.protein / item.servings) * 10) / 10 : item.protein);
+  const ppc = pps && item.caloriesPerServing
+    ? Math.round((pps / item.caloriesPerServing) * 100 * 10) / 10
     : null;
   const netCarbs = item.netCarbs ?? item.macros?.netCarbs;
   return (
@@ -34,7 +39,7 @@ function RecipeCard({ item }) {
         <div className="flex items-center gap-2 mt-2 text-[10px] text-neutral-600">
           <span className="text-amber-400 font-bold">~{item.caloriesPerServing} cal/serving</span>
           <span>&middot;</span>
-          <span>{item.protein}g protein</span>
+          <span>{pps}g protein/serving</span>
           <span>&middot;</span>
           <span>{item.time}</span>
         </div>
@@ -101,7 +106,7 @@ export default function CookbookPage() {
               <Link to={`/cookbook/${quickFix.id}`} className="w-full text-left flex items-center justify-between bg-neutral-800/50 rounded-lg p-3 hover:bg-neutral-800 transition-colors group">
                 <div>
                   <span className="text-white text-xs font-bold group-hover:text-amber-400 transition-colors">{quickFix.title}</span>
-                  <span className="text-neutral-500 text-[10px] ml-2">{quickFix.protein}g protein in {quickFix.time}</span>
+                  <span className="text-neutral-500 text-[10px] ml-2">{quickFix.proteinPerServing ?? (quickFix.servings ? Math.round((quickFix.protein / quickFix.servings) * 10) / 10 : quickFix.protein)}g protein/serving in {quickFix.time}</span>
                 </div>
                 <span className="text-amber-500 text-[10px] font-bold">Try this &rarr;</span>
               </Link>

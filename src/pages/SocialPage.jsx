@@ -909,7 +909,12 @@ function classifyCookbook(item) {
 // Cookbook items have different field names — this normalizes them so the
 // same drawing functions (drawHeroCard, drawMacroCard, etc.) work for both.
 function adaptCookbookToRecipe(item, kind) {
-  const protein = item.proteinPerServing != null ? item.proteinPerServing : (item.protein != null ? item.protein : 0);
+  // Cookbook items store `protein` as BATCH total; `proteinPerServing` is the
+  // honest per-serving number. Fall back to division if proteinPerServing
+  // wasn't set (validator should prevent this, but be defensive).
+  const protein = item.proteinPerServing != null
+    ? item.proteinPerServing
+    : (item.protein != null && item.servings ? Math.round((item.protein / item.servings) * 10) / 10 : (item.protein ?? 0));
   return {
     // shape: recipe-like surface
     title: item.title,

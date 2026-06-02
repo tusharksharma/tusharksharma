@@ -122,7 +122,7 @@ export default function SocialIndexPage() {
                   )}
                   <div className="p-3 flex flex-col justify-center min-w-0">
                     <h3 className="text-white font-bold text-sm group-hover:text-amber-400 transition-colors truncate">{c.title}</h3>
-                    <p className="text-neutral-500 text-[10px] mt-0.5">{(c.proteinPerServing != null ? c.proteinPerServing : c.protein) || 0}g protein · {c.servings} serving{c.servings === 1 ? "" : "s"}</p>
+                    <p className="text-neutral-500 text-[10px] mt-0.5">{c.proteinPerServing ?? (c.servings ? Math.round((c.protein / c.servings) * 10) / 10 : c.protein) ?? 0}g protein/serving · {c.servings} serving{c.servings === 1 ? "" : "s"}</p>
                     <p className="text-amber-400 text-[10px] mt-1 group-hover:underline">Open carousel →</p>
                   </div>
                 </Link>

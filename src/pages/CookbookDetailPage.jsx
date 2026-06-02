@@ -39,7 +39,7 @@ export default function CookbookDetailPage() {
 
         {/* Stats */}
         <div className="flex gap-3 mt-4 flex-wrap">
-          <span className="bg-neutral-800 text-amber-400 text-xs font-bold px-3 py-1.5 rounded-lg">{sauce.protein}g protein</span>
+          <span className="bg-neutral-800 text-amber-400 text-xs font-bold px-3 py-1.5 rounded-lg">{sauce.proteinPerServing ?? (sauce.servings ? Math.round((sauce.protein / sauce.servings) * 10) / 10 : sauce.protein)}g protein/serving</span>
           <span className="bg-neutral-800 text-white text-xs font-bold px-3 py-1.5 rounded-lg">~{sauce.caloriesPerServing} cal/serving</span>
           <span className="bg-neutral-800 text-neutral-400 text-xs px-3 py-1.5 rounded-lg">{sauce.servings} servings</span>
           <span className="bg-neutral-800 text-neutral-400 text-xs px-3 py-1.5 rounded-lg">{sauce.time}</span>
