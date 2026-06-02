@@ -1023,10 +1023,18 @@ function adaptCookbookToRecipe(item, kind) {
     // Cookbook items don't have splitCook — pass undefined so the split card
     // is replaced by a Best For card in the cookbook card sequence.
     splitCook: undefined,
+    // Pass through the actual ingredients array. Cookbook items use a flat
+    // structure (strings + {text, link} objects), not the splitCook variants.
+    // The longCaption() generator falls back to recipe.ingredients when
+    // splitCook.sharedIngredients isn't present.
+    ingredients: item.ingredients || [],
     // Carousel render uses recipe.steps[].images for process cards. Cookbook
-    // items have prepImage / actionImage as distinct fields. Synthesize a
-    // steps array with those so the same logic flows.
+    // items mostly have steps as plain strings + prepImage/actionImage as
+    // distinct fields. Combine: real recipe steps FIRST (for METHOD section
+    // in the caption), then synthesized prepImage/actionImage entries for
+    // process cards. Normalize string steps to { text } objects.
     steps: [
+      ...(item.steps || []).map((s) => typeof s === "string" ? { text: s } : s),
       item.prepImage ? { text: item.prepImageCaption || "Mise en place", images: [item.prepImage] } : null,
       item.actionImage ? { text: item.actionImageCaption || "In use", images: [item.actionImage] } : null,
     ].filter(Boolean),
