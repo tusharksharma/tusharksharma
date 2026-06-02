@@ -6,29 +6,120 @@ import useMeta from "../hooks/useMeta";
 
 const ALL_COOKBOOK = [...sauces, ...bases, ...breakfasts, ...desserts, ...quickLunches];
 
-const HASHTAG_BASE = [
-  "#TheSplitPlate", "#CookOnceSplitSmart", "#SplitCook",
-  "#HighProteinFamilyDinner", "#FamilyMealPrep", "#KidApprovedDinner",
-  "#WeeknightDinner", "#FamilyDinnerIdeas", "#HighProtein",
-];
+// Words we deliberately filter out of title-derived hashtags.
+// Either too generic (#The, #With) or already brand-encoded (#Plate, #Cook).
+const STOPWORDS = new Set([
+  "the", "and", "with", "for", "from", "of", "on", "in", "to", "at", "by",
+  "a", "an", "or", "but", "is", "are",
+  "night", "plate", "cook", "once", "split", "smart", "drizzle",
+  "easy", "fast", "quick", "recipe", "recipes", "dish", "dishes",
+  "high", "low",
+]);
 
 const PROTEIN_HASHTAGS = {
-  pork: ["#PorkChops", "#PorkDinner"],
-  chicken: ["#ChickenDinner", "#ChickenRecipes"],
-  beef: ["#BeefDinner", "#SteakDinner"],
-  steak: ["#SteakNight", "#SteakDinner"],
+  pork: "#PorkRecipe",
+  chicken: "#ChickenRecipe",
+  beef: "#BeefRecipe",
+  steak: "#SteakRecipe",
 };
 
+const MEALTYPE_HASHTAGS = {
+  "wrap": "#LettuceWraps",
+  "pan-seared": "#PanSeared",
+  "grill": "#Grilled",
+  "pizza-split": "#PizzaNight",
+  "bowl": "#GrainBowl",
+  "rice-bowl": "#RiceBowl",
+  "tacos": "#TacoNight",
+  "pasta": "#ProteinPasta",
+  "sandwich": "#HighProteinSandwich",
+  "other": null,
+};
+
+const COOKBOOK_KIND_HASHTAGS = {
+  "Sauce": "#SauceRecipe",
+  "Side / Base": "#HighProteinSide",
+  "Breakfast": "#HighProteinBreakfast",
+  "Dessert": "#ProteinDessert",
+  "Quick Lunch": "#QuickLunch",
+};
+
+// Combine 2-4 significant words from a title into a single CamelCase hashtag.
+// "Smoky Chipotle Crema" → "#SmokyChipotleCrema"
+// "Caesar Crunch Pizza Night" → "#CaesarCrunchPizza" (drops "Night" via STOPWORDS)
+function titleHashtag(title, maxWords = 4) {
+  if (!title) return null;
+  const words = title
+    .split(/[\s+,&\-/]+/)
+    .map((w) => w.replace(/[^a-zA-Z0-9]/g, ""))
+    .filter((w) => {
+      const lower = w.toLowerCase();
+      return lower.length > 2 && !STOPWORDS.has(lower);
+    })
+    .slice(0, maxWords);
+  if (words.length === 0) return null;
+  return `#${words.map((w) => w[0].toUpperCase() + w.slice(1)).join("")}`;
+}
+
+// Extract a use-case hashtag from a cookbook bestFor[] line. First entry
+// usually names the canonical dish ("Steak", "Tacos", "Rice bowls"). Convert
+// to "#SteakSauce", "#TacoSauce", etc.
+function bestForHashtag(item, suffix = "Sauce") {
+  const first = (item.bestFor || [])[0];
+  if (!first) return null;
+  const word = first.split(/\s+/)[0].replace(/[^a-zA-Z]/g, "");
+  if (word.length < 3) return null;
+  return `#${word[0].toUpperCase()}${word.slice(1).toLowerCase()}${suffix}`;
+}
+
+// Generate exactly 5 content-specific hashtags. Same generator for both TikTok
+// and Instagram — both platforms reward specificity over generic brand tags.
+// The brand tag (#TheSplitPlate) takes 1 slot; the other 4 are recipe-driven.
 function hashtagsFor(recipe) {
-  const proteinTag = recipe.meta?.proteinTags?.[0];
-  const proteinTags = PROTEIN_HASHTAGS[proteinTag] || [];
-  const titleTags = recipe.title.split(/\s*[+,]\s*|\s+/)
-    .filter((w) => w.length > 4 && !/^(the|and|with|drizzle|chops?)$/i.test(w))
-    .slice(0, 3)
-    .map((w) => `#${w.replace(/[^a-z0-9]/gi, "")}`)
-    .filter((t) => t.length > 2);
-  const carbTag = recipe.carbLevel === "low" || recipe.carbLevel === "none" ? ["#LowCarbDinner"] : [];
-  return [...HASHTAG_BASE, ...proteinTags, ...carbTag, ...titleTags];
+  const tags = new Set();
+
+  // Cookbook items have __cookbookKind set by adaptCookbookToRecipe
+  const isCookbook = !!recipe.__cookbookKind;
+
+  // 1. Title-derived (the most specific signal)
+  const titleTag = titleHashtag(recipe.title, 4);
+  if (titleTag) tags.add(titleTag);
+
+  if (isCookbook) {
+    // 2. Cookbook type
+    const kindTag = COOKBOOK_KIND_HASHTAGS[recipe.__cookbookKind];
+    if (kindTag) tags.add(kindTag);
+
+    // 3. Use case from bestFor
+    const suffix = recipe.__cookbookKind === "Sauce" ? "Sauce"
+      : recipe.__cookbookKind === "Side / Base" ? "Side"
+      : recipe.__cookbookKind === "Dessert" ? "Dessert"
+      : "Recipe";
+    const useTag = bestForHashtag({ bestFor: recipe.bestFor }, suffix);
+    if (useTag) tags.add(useTag);
+
+    // 4. Macro signal — cookbook items rarely have carbLevel, so use protein density
+    if ((recipe.protein || 0) >= 20) tags.add("#HighProtein");
+    else tags.add("#MealPrep");
+  } else {
+    // 2. Protein anchor (dinner-specific)
+    const protein = recipe.meta?.proteinTags?.[0];
+    if (PROTEIN_HASHTAGS[protein]) tags.add(PROTEIN_HASHTAGS[protein]);
+
+    // 3. Format / mealType
+    const formatTag = MEALTYPE_HASHTAGS[recipe.mealType];
+    if (formatTag) tags.add(formatTag);
+
+    // 4. Macro signal
+    if (recipe.carbLevel === "low" || recipe.carbLevel === "none") tags.add("#LowCarb");
+    else if ((recipe.protein || 0) >= 40) tags.add("#HighProteinDinner");
+    else tags.add("#FamilyDinner");
+  }
+
+  // 5. Brand anchor — ONE slot, not two. Discoverable for the audience.
+  tags.add("#TheSplitPlate");
+
+  return Array.from(tags).slice(0, 5);
 }
 
 // Per-brand handles for Instagram (`ig`) and TikTok (`tiktok`). TikTok handles
@@ -84,22 +175,13 @@ function brandHandles(recipe, platform = "ig") {
     .filter(Boolean);
 }
 
-// TikTok performs best with 3-5 well-targeted hashtags. We pick exactly 5:
-//   1. #TheSplitPlate (brand)
-//   2. #CookOnceSplitSmart (brand tagline — the search-discoverable phrase)
-//   3. Recipe-specific protein tag (#PorkChops, #ChickenDinner, etc.)
-//   4. Audience tag based on macros (high-protein, low-carb, or meal-prep)
-//   5. Format tag (#WeeknightDinner or #FamilyDinner — broad reach)
+// Both TikTok and Instagram cap at 5 specific hashtags (per Tushar — generic
+// brand-stack tags waste discovery slots). The shared hashtagsFor() above
+// generates the same 5 for both platforms — the only thing that differs
+// between TikTok and IG captions is the @ handles (TikTok uses tiktok handles,
+// IG uses ig handles).
 function tiktokHashtagsFor(recipe) {
-  const tags = ["#TheSplitPlate", "#CookOnceSplitSmart"];
-  const proteinTag = recipe.meta?.proteinTags?.[0];
-  const proteinHashtag = (PROTEIN_HASHTAGS[proteinTag] || [])[0];
-  if (proteinHashtag) tags.push(proteinHashtag);
-  if (recipe.carbLevel === "low" || recipe.carbLevel === "none") tags.push("#LowCarbDinner");
-  else if ((recipe.protein || 0) >= 40) tags.push("#HighProteinDinner");
-  else tags.push("#MealPrep");
-  tags.push("#WeeknightDinner");
-  return tags.slice(0, 5);
+  return hashtagsFor(recipe);
 }
 
 function extractCookbookLinks(recipe) {
@@ -1131,7 +1213,7 @@ export default function SocialPage() {
         </details>
 
         <details className="mt-3 bg-neutral-800/50 border border-neutral-700 rounded-lg p-3 text-xs" open>
-          <summary className="text-orange-400 cursor-pointer font-semibold">Instagram caption · long-form · IG @ handles · full hashtag set</summary>
+          <summary className="text-orange-400 cursor-pointer font-semibold">Instagram caption · long-form · IG @ handles · 5 content hashtags</summary>
           <div className="mt-3 space-y-2">
             <button
               onClick={() => {
