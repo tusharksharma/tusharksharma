@@ -167,6 +167,7 @@ const KNOWN_HANDLES = {
   "Barilla": { ig: "@barillaus", tiktok: "@barilla" },
   "Falls Brand": { ig: "@fallsbrand" },
   "365 Whole Foods": { ig: "@wholefoods" },
+  "Godshall's": { ig: "@godshalls", tiktok: "@godshalls" },
 };
 
 function brandHandles(recipe, platform = "ig") {
@@ -225,14 +226,14 @@ function loadCanvasImage(src) {
       if (new URL(url).origin !== window.location.origin) {
         img.crossOrigin = "anonymous";
       }
-    } catch (_) { /* invalid URL — leave crossOrigin unset */ }
+    } catch { /* invalid URL — leave crossOrigin unset */ }
 
     const onReady = async () => {
       // img.decode() guarantees paint-ready state. Without it, drawImage may
       // run before the image is fully decoded, producing a blank canvas.
       try {
         if (img.decode) await img.decode();
-      } catch (_) { /* decode() rejected — image already onload'd, proceed */ }
+      } catch { /* decode() rejected — image already onload'd, proceed */ }
       resolve(img);
     };
 

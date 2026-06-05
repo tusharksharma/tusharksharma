@@ -13,7 +13,7 @@ const src = readFileSync("src/data/cookbook.js", "utf-8");
 
 // Match each cookbook entry { ... } at top level — pulls id, title, protein,
 // proteinPerServing, servings fields whether present or not.
-const entryRegex = /\{\s*\n([\s\S]*?)\n  \}/g;
+const entryRegex = /\{\s*\n([\s\S]*?)\n {2}\}/g;
 
 let errors = 0;
 let count = 0;

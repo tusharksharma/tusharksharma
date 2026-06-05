@@ -131,6 +131,16 @@ const WEEKS = {
       { day: "Friday", label: "Easiest Dinner", vibe: "Two trays, two seasonings, one oven — the back of the bottle is the recipe", id: 31, time: "45 min", reheats: true, adult: "Dan-O's Spicy thighs, charred asparagus, Umami Lemon Heat drizzle", kid: "Dan-O's Original thigh, plain asparagus, folded wrap", needs: ["Bone-in skin-on thighs", "Asparagus", "Dan-O's Spicy", "Dan-O's Original", "Tortillas", "Mayo", "Lemon", "Soy sauce", "Dijon", "Chili oil"], carbLevel: "low", chainTo: { slug: "next-day-chicken-tacos", title: "Next-Day Chicken Tacos", note: "Chop the leftover thighs fine, save the pan juices, build tacos in 10 min" } },
     ],
   },
+  13: {
+    label: "Week 13",
+    description: "Pasta comfort anchor Monday + low-carb Wed and Fri for balance. Three proteins (beef bacon, pork, chicken), three formats (creamy pasta, lettuce wraps, sandwiches), three flavor lanes — comfort, SE-Asian, fast food.",
+    subtitle: "Creamy Beef Bacon Pasta, Pork Lettuce Wraps, Chicken Sandwiches",
+    cookDays: [
+      { day: "Monday", label: "Comfort Pasta", vibe: "Beef bacon + Carbe Diem keto penne + cottage-cheese-blended Alfredo — looks like restaurant comfort food at 350 cal / 28g protein per adult serving. Kids get plain wheat penne + jar Alfredo.", id: 41, time: "30 min", reheats: true, adult: "Carbe Diem Penne + blended cottage-cheese Alfredo + crispy beef bacon + parsley", kid: "Regular wheat penne + plain Rao's Alfredo (no bacon, no blend, no parsley)", needs: ["Godshall's Beef Bacon (2 packs = 20 slices)", "Carbe Diem Penne", "Regular wheat penne (kid)", "Daisy Low-Fat Cottage Cheese", "Laughing Cow Light wedges", "Rao's Homemade Alfredo", "Kirkland chicken bone broth", "Fresh parsley", "Black pepper"], carbLevel: "high" },
+      { day: "Wednesday", label: "Wrap Night", vibe: "SE-Asian pork mince in Sweet Gem lettuce — Lift Drizzle adult, mild cilantro-crema mince for kids", id: 38, time: "25 min", reheats: true, adult: "Pork mince + chilies + Lift Drizzle, Sweet Gem leaves", kid: "Pre-mixed mince with Herdez Avocado Cilantro + olive oil + bone broth, lettuce OR slider rolls", needs: ["NY Style 95% lean ground pork", "Tanimura & Antle Sweet Gem lettuce", "Verka ginger garlic paste", "Red Boat fish sauce", "Dynasty sesame chili oil", "Kikkoman soy", "ReaLemon", "Deep Coriander", "Dan-O's SPG", "Chosen avocado oil spray", "Green onions", "Fresh red Thai chilies", "Herdez Avocado Cilantro", "Chicken bone broth", "Dinner slider rolls", "Olive oil"], carbLevel: "low" },
+      { day: "Friday", label: "Fast Food Night", vibe: "15 min — crispy chicken sandwiches, better than drive-through", id: 23, time: "15 min", reheats: true, adult: "Keto bun, chipotle or Money Mustard, pickles", kid: "Slider buns, plain or ketchup", needs: ["Kirkland chicken fillets", "Keto buns", "Slider buns", "Sauce"], carbLevel: "low" },
+    ],
+  },
 };
 
 function getLeftoverMsg(hasLeftovers) {

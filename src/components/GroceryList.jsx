@@ -497,6 +497,50 @@ const GROCERY_BY_WEEK = {
       { name: "Light cooking oil (avocado or vegetable, for marinade)", qty: "pantry", meal: "Fri" },
     ],
   },
+  // Week 13: Mon=Creamy Beef Bacon Pasta(41), Wed=Pork Lettuce Wraps(38), Fri=Chicken Sandwiches(23)
+  13: {
+    "Protein": [
+      { name: "Godshall's Beef Bacon (10 oz pack)", baseQty: 2, unit: "pack", meal: "Mon" },
+      { name: "NY Style Sausage Co. 95% Lean Ground Pork (16 oz pack)", baseQty: 2, unit: "pack", meal: "Wed" },
+      { name: "Kirkland chicken breast fillets", baseQty: 4, unit: "fillets", meal: "Fri" },
+    ],
+    "Carbs": [
+      { name: "Carbe Diem Penne (12 oz box, adult)", baseQty: 1, unit: "box", meal: "Mon adult" },
+      { name: "Regular wheat penne (Barilla classic, kid)", baseQty: 1, unit: "box", meal: "Mon kid" },
+      { name: "Dinner slider rolls (kid backup for lettuce)", baseQty: 4, unit: "rolls", meal: "Wed kid" },
+      { name: "Bettergoods Keto Hamburger Buns", baseQty: 4, unit: "buns", meal: "Fri adult" },
+      { name: "Slider buns", baseQty: 4, unit: "buns", meal: "Fri kid" },
+    ],
+    "Vegetables": [
+      { name: "Fresh parsley", baseQty: 1, unit: "bunch", meal: "Mon adult" },
+      { name: "Tanimura & Antle Artisan Sweet Gem Lettuce (4-head pack)", baseQty: 1, unit: "pack", meal: "Wed" },
+      { name: "Green onions / scallions", baseQty: 1, unit: "bunch", meal: "Wed" },
+      { name: "Fresh red Thai chilies", baseQty: 4, unit: "", meal: "Wed adult" },
+      { name: "Pickles", qty: "1 jar", meal: "Fri" },
+      { name: "Romaine lettuce", baseQty: 1, unit: "head", meal: "Fri" },
+    ],
+    "Sauce & Flavor": [
+      { name: "Rao's Homemade Alfredo Sauce", baseQty: 1, unit: "jar", meal: "Mon" },
+      { name: "Kirkland Organic Chicken Sipping Bone Broth", qty: "pantry", meal: "Mon adult + Wed kid" },
+      { name: "Black pepper (cracked)", qty: "pantry", meal: "Mon adult" },
+      { name: "Verka Organic Ginger Garlic Paste", qty: "pantry", meal: "Wed" },
+      { name: "Red Boat Fish Sauce 40°N", qty: "pantry", meal: "Wed" },
+      { name: "Dynasty Sesame Chili Oil (Goma Rayu)", qty: "pantry", meal: "Wed" },
+      { name: "Kikkoman All-Purpose Soy Sauce", qty: "pantry", meal: "Wed adult" },
+      { name: "ReaLemon Lemon Juice", qty: "pantry", meal: "Wed" },
+      { name: "Deep Coriander Powder", qty: "pantry", meal: "Wed adult" },
+      { name: "Dan-O's SPG Tri-O", qty: "pantry", meal: "Wed" },
+      { name: "Chosen Foods Avocado Oil Spray", qty: "pantry", meal: "Wed" },
+      { name: "Olive oil (California Organic EVOO)", qty: "pantry", meal: "Wed" },
+      { name: "Herdez Taqueria Avocado Cilantro Sauce", baseQty: 1, unit: "bottle", meal: "Wed kid" },
+      { name: "Liquid Chipotle or Money Mustard", baseQty: 4, unit: "servings", meal: "Fri" },
+      { name: "Ketchup", qty: "pantry", meal: "Fri kid" },
+    ],
+    "Creamy Base": [
+      { name: "Daisy Low-Fat Cottage Cheese (16 oz tub)", baseQty: 1, unit: "tub", meal: "Mon adult" },
+      { name: "Laughing Cow Light Spreadable Cheese (4 wedges per adult batch)", baseQty: 1, unit: "container", meal: "Mon adult" },
+    ],
+  },
 };
 
 function getGrocery(week) { return GROCERY_BY_WEEK[week] || GROCERY_BY_WEEK[1]; }
