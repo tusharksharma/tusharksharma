@@ -4628,11 +4628,15 @@ const recipes = [
     slug: "creamy-beef-bacon-pasta",
     // Polished-only — the social carousel pulls ONLY from this list, in order.
     // Raw video stills + un-polished phone shots are excluded by design.
-    // To grow this list: produce Gemini "Transform this image" or ChatGPT
-    // studio-restyle outputs of the supporting shots (mise, two-pans, split-
-    // plate, alt final plate) and add the polished filenames here.
+    // Each entry is a Gemini "Transform this image" output (Path A polish,
+    // documentary-family-food close — see recipes-site/CLAUDE.md). Order
+    // chosen so the strongest visual (split-plate side-by-side) lands late
+    // in the carousel for the swipe-back-up scroll moment.
     socialImages: [
-      "/images/creamy-beef-bacon-pasta/hero-final-plate-polished.webp",
+      "/images/creamy-beef-bacon-pasta/mise-sauce-brands-polished.webp",
+      "/images/creamy-beef-bacon-pasta/mise-pasta-bacon-brands-polished.webp",
+      "/images/creamy-beef-bacon-pasta/two-pans-cooking-polished.webp",
+      "/images/creamy-beef-bacon-pasta/split-plate-side-by-side-polished.webp",
     ],
     proteinAnchor: "beef",
     mealType: "pasta",
