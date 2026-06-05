@@ -4689,10 +4689,10 @@ const recipes = [
         "1/2 cup Kirkland Organic Chicken Sipping Bone Broth (half a portion)",
       ],
       sharedSteps: [
-        { text: "PREP: Dice 20 slices Godshall's Beef Bacon (stack + cross-cut into 1/2-inch pieces). Set two pots of salted water to boil. Chop a small handful of parsley for the adult plate.", images: ["/images/creamy-beef-bacon-pasta/step-06-chop-herbs.webp"] },
+        { text: "PREP: Dice 20 slices Godshall's Beef Bacon (stack + cross-cut into 1/2-inch pieces). Set two pots of salted water to boil. Chop a small handful of parsley for the adult plate.", images: ["/images/creamy-beef-bacon-pasta/mise-pasta-bacon-brands.webp", "/images/creamy-beef-bacon-pasta/step-06-chop-herbs.webp"] },
         { text: "RENDER BACON: Diced bacon into a wide skillet over medium-high heat. 6-8 min until crisp. Pour into a strainer set over a bowl. Discard most of the rendered fat (reserve 1 tbsp in the pan if you want).", images: ["/images/creamy-beef-bacon-pasta/step-07-beef-bacon-crumble.webp"] },
-        { text: "BLEND THE ADULT SAUCE (cold/warm, NOT hot): Food processor — full tub Daisy cottage cheese + 4 Laughing Cow Light wedges + 3 servings (~3/4 cup) Rao's Alfredo + 1/2 cup Kirkland bone broth. Blend 60 sec until completely smooth.", images: ["/images/creamy-beef-bacon-pasta/step-02-blend-sauce.webp", "/images/creamy-beef-bacon-pasta/step-03-alfredo-base.webp"] },
-        { text: "COOK TWO PASTAS SIMULTANEOUSLY: Pot 1: 4 servings dry Carbe Diem Penne (adult, ~8 oz dry). Pot 2: 2 servings dry regular wheat penne (kid, ~4 oz dry). Both 9-10 min al dente.", images: [] },
+        { text: "BLEND THE ADULT SAUCE (cold/warm, NOT hot): Food processor — full tub Daisy cottage cheese + 4 Laughing Cow Light wedges + 3 servings (~3/4 cup) Rao's Alfredo + 1/2 cup Kirkland bone broth. Blend 60 sec until completely smooth.", images: ["/images/creamy-beef-bacon-pasta/mise-sauce-brands.webp", "/images/creamy-beef-bacon-pasta/step-02-blend-sauce.webp", "/images/creamy-beef-bacon-pasta/step-03-alfredo-base.webp"] },
+        { text: "COOK TWO PASTAS SIMULTANEOUSLY: Pot 1: 4 servings dry Carbe Diem Penne (adult, ~8 oz dry). Pot 2: 2 servings dry regular wheat penne (kid, ~4 oz dry). Both 9-10 min al dente.", images: ["/images/creamy-beef-bacon-pasta/two-pans-cooking.webp"] },
       ],
       adult: {
         label: "Adult — Carbe Diem + Blended Sauce + Beef Bacon",
@@ -4708,7 +4708,7 @@ const recipes = [
         ],
         steps: [
           { text: "ADULT BUILD: Drained Carbe Diem back into its pot OFF heat. Pour in the blended sauce. Return to LOW heat. Stir 60 sec — should coat the back of a spoon, not slide off. Fold in the crispy bacon (all of it — kids get none).", images: ["/images/creamy-beef-bacon-pasta/step-08-sauce-the-pasta.webp", "/images/creamy-beef-bacon-pasta/step-09-fold-in-bacon.webp"] },
-          { text: "PLATE ADULT: Wide bowl. Generous scoop. Sprinkle chopped parsley + cracked black pepper.", images: ["/images/creamy-beef-bacon-pasta/hero-final-plate.webp", "/images/creamy-beef-bacon-pasta/step-10-final-plate.webp"] },
+          { text: "PLATE ADULT: Wide bowl. Generous scoop. Sprinkle chopped parsley + cracked black pepper.", images: ["/images/creamy-beef-bacon-pasta/split-plate-side-by-side.webp", "/images/creamy-beef-bacon-pasta/hero-final-plate.webp", "/images/creamy-beef-bacon-pasta/step-10-final-plate.webp"] },
         ],
       },
       kid: {
@@ -4764,14 +4764,14 @@ const recipes = [
       "~3/4 cup Rao's Homemade Alfredo (straight from the jar, not the blend) [kid sauce]",
     ],
     steps: [
-      { text: "MISE EN PLACE: 2 packs Godshall's Beef Bacon out, Carbe Diem Penne measured (4 servings), regular wheat penne measured (2 servings), Daisy + Laughing Cow + Rao's + bone broth ready, parsley chopped. Two pasta pots filled and salted.", images: ["/images/creamy-beef-bacon-pasta/step-06-chop-herbs.webp"] },
+      { text: "MISE EN PLACE: 2 packs Godshall's Beef Bacon out, Carbe Diem Penne measured (4 servings), regular wheat penne measured (2 servings), Daisy + Laughing Cow + Rao's + bone broth ready, parsley chopped. Two pasta pots filled and salted.", images: ["/images/creamy-beef-bacon-pasta/mise-pasta-bacon-brands.webp", "/images/creamy-beef-bacon-pasta/mise-sauce-brands.webp", "/images/creamy-beef-bacon-pasta/step-06-chop-herbs.webp"] },
       { text: "DICE BACON: Stack 20 slices + cross-cut into 1/2-inch pieces. Goes faster than slicing one at a time.", images: ["/images/creamy-beef-bacon-pasta/step-04-slice-beef-bacon.webp"] },
       { text: "RENDER BACON CRISPY: Diced bacon into a wide skillet, medium-high. 6-8 min until crisp. Pour into a strainer over a bowl. Discard the bulk of the fat (reserve 1 tbsp if you want a flavor lift).", images: ["/images/creamy-beef-bacon-pasta/step-07-beef-bacon-crumble.webp"] },
       { text: "BLEND THE ADULT SAUCE (cold/warm, NOT hot): Food processor — full tub Daisy cottage cheese + 4 Laughing Cow Light wedges + 3 servings Rao's Alfredo + 1/2 cup Kirkland bone broth. Blend 60 sec until completely smooth.", images: ["/images/creamy-beef-bacon-pasta/step-02-blend-sauce.webp", "/images/creamy-beef-bacon-pasta/step-03-alfredo-base.webp"] },
-      { text: "COOK BOTH PASTAS: Carbe Diem in pot 1 (adult), regular wheat penne in pot 2 (kid). Both 9-10 min al dente. Drain both.", images: [] },
+      { text: "COOK BOTH PASTAS: Carbe Diem in pot 1 (adult), regular wheat penne in pot 2 (kid). Both 9-10 min al dente. Drain both.", images: ["/images/creamy-beef-bacon-pasta/two-pans-cooking.webp"] },
       { text: "ADULT BUILD: Drained Carbe Diem back into its pot OFF heat. Pour in the blended sauce. LOW heat 60 sec. Fold in ALL the crispy bacon.", images: ["/images/creamy-beef-bacon-pasta/step-08-sauce-the-pasta.webp", "/images/creamy-beef-bacon-pasta/step-09-fold-in-bacon.webp"] },
       { text: "KID BUILD: Drained regular penne into its pot OFF heat. Stir in ~3/4 cup Rao's Alfredo straight from the jar. No bacon, no blend, no parsley.", images: [] },
-      { text: "PLATE: Adult — wide bowl, generous scoop, chopped parsley + cracked pepper. Kid — smaller bowl, just penne + Alfredo, nothing visible-different.", images: ["/images/creamy-beef-bacon-pasta/hero-final-plate.webp", "/images/creamy-beef-bacon-pasta/step-10-final-plate.webp"] },
+      { text: "PLATE: Adult — wide bowl, generous scoop, chopped parsley + cracked pepper. Kid — smaller bowl, just penne + Alfredo, nothing visible-different.", images: ["/images/creamy-beef-bacon-pasta/split-plate-side-by-side.webp", "/images/creamy-beef-bacon-pasta/hero-final-plate.webp", "/images/creamy-beef-bacon-pasta/step-10-final-plate.webp"] },
     ],
     brands: [
       { name: "Godshall's", item: "Real Wood Smoked Cured Beef Bacon Plates Sliced (10 oz / ~10 slices, buy 2 packs = 20 slices)", why: "Beef-belly cured + naturally wood-smoked the same way as pork bacon — crispy edges, real meaty flavor. 4g protein per slice. 0 carbs. The unlock for pork-free households who still want bacon pasta. Cross-recipe candidate.", image: "/images/brands/godshalls-beef-bacon.png", url: "https://godshalls.com/products/beef-bacon/" },
