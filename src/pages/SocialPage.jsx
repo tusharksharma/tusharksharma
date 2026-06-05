@@ -1080,17 +1080,35 @@ export default function SocialPage() {
   // slugForFiles is what appears in download filenames AND URLs displayed on the End card
   const slugForFiles = isCookbook ? `cookbook-${id}` : slug;
 
-  // Pull up to 5 unique process images — gives us enough cards to fill a full
-  // carousel without recycling text-heavy slots. De-duped by src.
+  // Quality gate: the social carousel must use polished/cleaned images only
+  // (Gemini "Transform this image" or ChatGPT studio-restyle output). The
+  // step-image flatten was pulling whichever raw video still / phone shot
+  // happened to appear first — including the weak step-04 floor framing.
+  //
+  // Curation rule: prefer recipe.socialImages (explicit list, deterministic
+  // order, all polished). Fall back to step-flatten only when socialImages
+  // is missing (older recipes pre-polishing).
   const seen = new Set();
-  const processImages = (recipe.steps || [])
-    .flatMap((s) => (s.images || []).map((img) => ({ src: img, caption: (s.text || "").split(/[:.]/)[0].trim().slice(0, 60) })))
-    .filter((p) => {
-      if (!p.src || p.src === recipe.image || seen.has(p.src)) return false;
-      seen.add(p.src);
-      return true;
-    })
-    .slice(0, 5);
+  let processImages;
+  if (Array.isArray(recipe.socialImages) && recipe.socialImages.length > 0) {
+    processImages = recipe.socialImages
+      .map((src, i) => ({ src, caption: `Card ${i + 1}` }))
+      .filter((p) => {
+        if (!p.src || p.src === recipe.image || seen.has(p.src)) return false;
+        seen.add(p.src);
+        return true;
+      })
+      .slice(0, 8);
+  } else {
+    processImages = (recipe.steps || [])
+      .flatMap((s) => (s.images || []).map((img) => ({ src: img, caption: (s.text || "").split(/[:.]/)[0].trim().slice(0, 60) })))
+      .filter((p) => {
+        if (!p.src || p.src === recipe.image || seen.has(p.src)) return false;
+        seen.add(p.src);
+        return true;
+      })
+      .slice(0, 5);
+  }
 
   // Cookbook items don't cross-link to other cookbook items via /cookbook/ ingredient
   // links the same way dinner recipes do. Skip component cards in cookbook mode.

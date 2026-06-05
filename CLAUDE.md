@@ -245,7 +245,23 @@ This applies to every recipe, not just new ones. If you spot a missing `url` or 
 
 **Standing rule: every recipe addition ends with a working `/social/{slug}` page.** Tushar uses these for Instagram posts. The page auto-generates from `recipe` data — no per-recipe work unless something's broken.
 
-The page renders 6 stacked 1080×1080 square cards in this order:
+### Polished-only rule for social images (NON-NEGOTIABLE)
+
+**The social carousel must NEVER include raw video stills, un-polished phone shots, or any step image that hasn't been through Gemini "Transform this image" / ChatGPT studio-restyle.** Raw shots make the brand look amateur on Instagram even when they read fine on the recipe page.
+
+Mechanism: every recipe has an explicit `socialImages: [...]` array listing the polished filenames the carousel may pull, in display order. The carousel:
+- If `recipe.socialImages` is present → uses ONLY those, in order, up to 8 cards.
+- If absent (legacy recipes pre-polishing) → falls back to flattening `recipe.steps[].images` step-order with `.slice(0, 5)`.
+
+Rules when adding a new recipe:
+1. **Ship the recipe page with raw + polished images mixed in `steps[].images[]`** — the recipe page benefits from documentary lived-in shots.
+2. **Curate `socialImages` to polished filenames ONLY.** Every entry must be a Gemini-polished or ChatGPT-generated webp/png. Naming convention: `*-polished.webp`, `*-clean.webp`, or studio output filenames like `*-studio.webp`.
+3. **Order matters.** The carousel renders in `socialImages` order. Suggested sequence: mise / ingredient shot → process action shot → split-plate proof shot → final adult plate variant. The Hero card already pulls `recipe.image` — don't duplicate it as the first `socialImages` entry unless it's a DIFFERENT polished crop.
+4. **When you only have a polished hero and nothing else**, ship `socialImages: [hero-polished]` only — short carousel is better than a carousel with raw shots. Then immediately output Path A polish prompts (referencing the raw filenames) for the user to produce supporting polished shots.
+
+### Carousel card order
+
+The page renders up to 10 stacked 1080×1080 square cards in this order:
 
 1. **Hero** — `recipe.image` + title overlay + "Cook once. Split smart." tagline
 2. **Macros** — 4-quadrant card: protein, calories, net carbs, total time + cost/serving footnote

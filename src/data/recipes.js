@@ -4626,6 +4626,14 @@ const recipes = [
       ],
     },
     slug: "creamy-beef-bacon-pasta",
+    // Polished-only — the social carousel pulls ONLY from this list, in order.
+    // Raw video stills + un-polished phone shots are excluded by design.
+    // To grow this list: produce Gemini "Transform this image" or ChatGPT
+    // studio-restyle outputs of the supporting shots (mise, two-pans, split-
+    // plate, alt final plate) and add the polished filenames here.
+    socialImages: [
+      "/images/creamy-beef-bacon-pasta/hero-final-plate-polished.webp",
+    ],
     proteinAnchor: "beef",
     mealType: "pasta",
     flavorDirection: "creamy-comfort",
