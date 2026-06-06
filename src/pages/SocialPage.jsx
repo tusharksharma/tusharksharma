@@ -408,23 +408,17 @@ async function drawOptionalImageCardBase(ctx, src, overlayStops) {
 }
 
 async function drawHeroCard(ctx, recipe) {
+  // Photo-first cover card. No title overlay, no tagline, no accent line —
+  // the food photo IS the hook. Title cards as slide 1 kill swipe momentum
+  // on Instagram carousels. For dinner recipes, the photo here should be
+  // the split-plate (two plates) composition — brand-story in one image.
+  // Only a very subtle bottom darken for visual depth, no text-legibility
+  // gradient needed since there's no text.
   await drawOptionalImageCardBase(ctx, recipe.image, [
-    [0, "rgba(10, 10, 10, 0.10)"],
-    [0.45, "rgba(10, 10, 10, 0.35)"],
-    [1, "rgba(10, 10, 10, 1)"],
+    [0, "rgba(10, 10, 10, 0)"],
+    [0.7, "rgba(10, 10, 10, 0)"],
+    [1, "rgba(10, 10, 10, 0.25)"],
   ]);
-  drawAccentLine(ctx, 48, 804);
-  const endY = drawWrappedText(ctx, recipe.title, 48, 838, 900, {
-    size: 58,
-    weight: 900,
-    lineHeight: 64,
-    maxLines: 3,
-  });
-  drawText(ctx, "Cook once. Split smart.", 48, endY + 20, {
-    size: 30,
-    weight: 700,
-    color: "#fbbf24",
-  });
 }
 
 function drawMetricBox(ctx, x, y, value, label, color = "#ffffff") {

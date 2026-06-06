@@ -245,6 +245,22 @@ This applies to every recipe, not just new ones. If you spot a missing `url` or 
 
 **Standing rule: every recipe addition ends with a working `/social/{slug}` page.** Tushar uses these for Instagram posts. The page auto-generates from `recipe` data — no per-recipe work unless something's broken.
 
+### Dinner hero = split-plate composition (NON-NEGOTIABLE)
+
+**Every dinner recipe's `recipe.image` (the cover slot on the social carousel) must be a SPLIT-PLATE photo — two plates in one frame (adult plate + kid plate). Not a single bowl. Not a closeup. Two plates side by side.**
+
+Why: the cover slide on an Instagram carousel determines whether anyone swipes. The Split Plate brand promise is "two plates, one cook" — the two-plate composition tells that whole story in one image. A single-bowl shot is just another food photo; a two-plate shot is the brand thesis as a hook.
+
+Implementation rules:
+1. **For every new dinner recipe, the hero photo must include both the adult plate and the kid plate visible in the same frame.** Either side-by-side on a wood/marble surface (top-down 45°), or one plate behind the other (depth composition). Both plates must be readable as distinct portions — different sauce, different garnish, different size.
+2. **`recipe.image` points to the polished split-plate webp.** Filename convention: `split-plate-*-polished.webp` (e.g. `split-plate-side-by-side-polished.webp`).
+3. **The single-bowl/closeup hero** (if you have one — many recipes do) **moves into `socialImages` as a later carousel card**, not the cover. Don't waste a polished closeup — it earns a spot, just not slide 1.
+4. **The Hero card renders the photo with NO title overlay, NO tagline, NO accent line, NO heavy black gradient.** The photo is the hook. Only a subtle bottom darken (`rgba(10, 10, 10, 0.25)` peak) for visual depth. Title + tagline + recipe title appear later (Macros, Split, End cards already carry them).
+5. **For cookbook items / desserts / power-ups** (no kid-vs-adult split): use the cleanest single-subject shot as `image`. The split-plate rule applies to DINNER recipes only.
+
+If a recipe doesn't have a split-plate photo yet, produce one before shipping. Path A polish prompt template:
+> Transform the image. Two plates side by side on a warm wood butcher-block: kid plate (smaller, plainer, less sauce, larger ingredient pieces) on [left/top]; adult plate (sauced, garnished, full portion) on [right/bottom]. Keep the exact composition — both plates visible, lived-in family context. Replace harsh overhead lighting with warm natural daylight from upper-left, sharpen plate edges and food details, deepen wood grain warmth. Remove unnecessary clutter but PRESERVE the lived-in family kitchen context (water cans, brand packaging, real-table props in frame). Make it postworthy in the documentary-family-food style, not magazine-studio style.
+
 ### Polished-only rule for social images (NON-NEGOTIABLE)
 
 **The social carousel must NEVER include raw video stills, un-polished phone shots, or any step image that hasn't been through Gemini "Transform this image" / ChatGPT studio-restyle.** Raw shots make the brand look amateur on Instagram even when they read fine on the recipe page.
