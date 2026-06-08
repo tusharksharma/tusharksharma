@@ -88,7 +88,7 @@ export default function RecipeDetail({ recipe }) {
           </p>
 
           {/* Family size picker */}
-          <div className="flex items-center gap-4 mt-5 bg-neutral-900/50 border border-neutral-800 rounded-xl px-4 py-3">
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-3 mt-5 bg-neutral-900/50 border border-neutral-800 rounded-xl px-4 py-3">
             <div className="flex items-center gap-2">
               <span className="text-neutral-500 text-[10px]">Adults</span>
               <div className="flex gap-1">

@@ -4,14 +4,14 @@ import track from "../hooks/useTrack";
 export default function HeroSection() {
   return (
     <section className="border-b border-neutral-800">
-      <div className="max-w-5xl mx-auto px-4 py-12 sm:py-20">
-        <div className="flex flex-col sm:flex-row items-center gap-8 sm:gap-12">
+      <div className="max-w-5xl mx-auto px-4 py-12 sm:py-14">
+        <div className="flex flex-col sm:flex-row-reverse items-center gap-8 sm:gap-12">
           {/* Food visual */}
-          <div className="flex-shrink-0 w-full sm:w-[45%]">
+          <div className="flex-shrink-0 w-full sm:w-[42%]">
             <img
               src="/images/smash-tacos/hero.png"
               alt="Split plate — adult and kid tacos from the same cook"
-              className="w-full rounded-2xl border border-neutral-800"
+              className="w-full rounded-2xl border border-neutral-800 sm:max-h-[420px] sm:object-cover"
             />
             <p className="text-neutral-600 text-[10px] mt-2 text-center">Same cook. Different plates.</p>
           </div>

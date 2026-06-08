@@ -708,7 +708,7 @@ function DownloadableCard({ children, card }) {
           {busy ? "Exporting…" : "Save image ↓"}
         </button>
       </div>
-      <div className="relative aspect-square w-full bg-neutral-950 overflow-hidden flex flex-col" style={{ width: 540, height: 540 }}>
+      <div className="relative aspect-square w-full bg-neutral-950 overflow-hidden flex flex-col">
         {children}
       </div>
     </div>
