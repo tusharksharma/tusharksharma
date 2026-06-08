@@ -541,6 +541,39 @@ const GROCERY_BY_WEEK = {
       { name: "Laughing Cow Light Spreadable Cheese (4 wedges per adult batch)", baseQty: 1, unit: "container", meal: "Mon adult" },
     ],
   },
+  // Week 14: Mon=Carnitas Taco Plate(42), Wed=Buffalo Wing Night(33), Fri=Golden Garlic Rice + Steak(24)
+  14: {
+    "Protein": [
+      { name: "Del Real Slow-Cooked Carnitas (15 oz tray)", baseQty: 1, unit: "tray", meal: "Mon" },
+      { name: "Kinder's Buttery Buffalo Frozen Wings", baseQty: 2, unit: "bag", meal: "Wed" },
+      { name: "Gary's QuickSteak (sliced sirloin, 12 oz pack)", baseQty: 2, unit: "pack", meal: "Fri" },
+    ],
+    "Carbs": [
+      { name: "Mission Yellow Corn Tortillas Super Soft (Good Fiber, 30-count)", baseQty: 1, unit: "pack", meal: "Mon" },
+      { name: "Rudi's Three Cheese Texas Toast", baseQty: 1, unit: "pack", meal: "Wed kid" },
+      { name: "White basmati or jasmine rice", baseQty: 2, unit: "cup", meal: "Fri" },
+    ],
+    "Vegetables": [
+      { name: "Baby carrots", baseQty: 1, unit: "bag", meal: "Wed" },
+      { name: "Chives", baseQty: 1, unit: "bunch", meal: "Wed adult" },
+      { name: "Lemon", baseQty: 1, unit: "lemon", meal: "Wed" },
+    ],
+    "Sauce & Flavor": [
+      { name: "Wholly Guacamole Classic Minis (6-cup pack)", baseQty: 1, unit: "pack", meal: "Mon" },
+      { name: "Mezzetta Pickled Red Onions (16 oz jar)", baseQty: 1, unit: "jar", meal: "Mon adult" },
+      { name: "Lucky Dog Hot Sauce", qty: "pantry", meal: "Mon adult" },
+      { name: "Kirkland Organic Chicken Sipping Bone Broth", qty: "pantry", meal: "Mon + Fri" },
+      { name: "Dan-O's SPG Tri-O", qty: "pantry", meal: "Wed" },
+      { name: "Fairlife Fat Free Milk", qty: "pantry", meal: "Wed adult" },
+      { name: "Ghee (Tin Star or similar)", qty: "pantry", meal: "Fri" },
+      { name: "Ground turmeric", qty: "pantry", meal: "Fri" },
+      { name: "Chipotle paste or sauce (adult drizzle)", qty: "pantry", meal: "Fri adult" },
+    ],
+    "Creamy Base": [
+      { name: "Daisy Low-Fat Cottage Cheese (16 oz tub)", baseQty: 1, unit: "tub", meal: "Wed" },
+      { name: "365 Whole Foods Blue Cheese Crumbles", baseQty: 1, unit: "container", meal: "Wed" },
+    ],
+  },
 };
 
 function getGrocery(week) { return GROCERY_BY_WEEK[week] || GROCERY_BY_WEEK[1]; }

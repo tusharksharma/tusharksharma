@@ -141,6 +141,16 @@ const WEEKS = {
       { day: "Friday", label: "Fast Food Night", vibe: "15 min — crispy chicken sandwiches, better than drive-through", id: 23, time: "15 min", reheats: true, adult: "Keto bun, chipotle or Money Mustard, pickles", kid: "Slider buns, plain or ketchup", needs: ["Kirkland chicken fillets", "Keto buns", "Slider buns", "Sauce"], carbLevel: "low" },
     ],
   },
+  14: {
+    label: "Week 14",
+    description: "Build-your-own Monday + low-carb wings Wednesday + high-carb rice + steak Friday. Three proteins (pork, chicken, beef), three formats (taco plate, wings, rice bowl), three flavor lanes — Mexican bright, comfort food, golden warm-spice.",
+    subtitle: "Carnitas Taco Plate, Buffalo Wing Night, Golden Garlic Rice + Steak",
+    cookDays: [
+      { day: "Monday", label: "Taco Plate", vibe: "15 min — Del Real carnitas seared + broth-braised, build-your-own taco plates. Kids get a compartment tray with separate components, adults get a white plate with onions + Lucky Dog hot sauce. One tray, four servings, zero prep beyond the skillet.", id: 42, time: "15 min", reheats: false, adult: "Carnitas + 3-4 corn tortillas + Wholly guac mini + Mezzetta pickled onions + Lucky Dog", kid: "Compartment tray: 2-3 corn tortillas + 2.5 oz carnitas + Wholly guac mini (no onions, no hot sauce)", needs: ["Del Real Slow-Cooked Carnitas (15 oz tray)", "Mission Yellow Corn Tortillas Super Soft", "Wholly Guacamole Classic Minis (6-cup pack)", "Mezzetta Pickled Red Onions", "Lucky Dog Hot Sauce", "Kirkland chicken bone broth"], carbLevel: "medium" },
+      { day: "Wednesday", label: "Wing Night", vibe: "Frozen wings + protein blue cheese crema = junk dinner becomes high-protein comfort", id: 33, time: "25 min", reheats: true, adult: "Sauced wings + crema dip + carrots + chives", kid: "Naked wings + crema dip + Rudi's Three Cheese Texas Toast", needs: ["Kinder's Buttery Buffalo wings", "Baby carrots", "Rudi's Three Cheese Texas Toast", "Daisy cottage cheese", "365 blue cheese", "Fairlife milk", "Dan-O's SPG", "Lemon", "Chives"], carbLevel: "low" },
+      { day: "Friday", label: "System Meal", vibe: "Golden turmeric rice reheats all week, steak is fresh in 10 min", id: 24, time: "25 min", reheats: true, adult: "Golden turmeric rice, seared steak, chipotle drizzle", kid: "Rice + steak, no sauce — rice already has flavor", needs: ["Rice", "Bone broth", "Gary's QuickSteak", "Ghee", "Turmeric"], carbLevel: "high" },
+    ],
+  },
 };
 
 function getLeftoverMsg(hasLeftovers) {
