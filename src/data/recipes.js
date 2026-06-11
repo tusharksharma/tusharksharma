@@ -5030,6 +5030,18 @@ const recipes = [
       ],
     },
     slug: "high-protein-taco-bowls",
+    // Polished-only — the social carousel pulls ONLY from this list, in order.
+    // Each entry is a Gemini Path A polish (5-part canonical, no composition-lock).
+    // The hero (hero-split-plate-polished) is recipe.image below, NOT in this list
+    // — so it serves as the carousel cover slide without repeating. Order tells
+    // the brand narrative: brand setup → cooking → texture moment → result → kid pattern.
+    socialImages: [
+      "/images/high-protein-taco-bowls/brand-spiceology-taco-seasoning-polished.webp",
+      "/images/high-protein-taco-bowls/step-03-brown-ground-beef-polished.webp",
+      "/images/high-protein-taco-bowls/step-05-cheddar-melted-beef-polished.webp",
+      "/images/high-protein-taco-bowls/adult-bowl-final-polished.webp",
+      "/images/high-protein-taco-bowls/kid-deconstructed-plate-polished.webp",
+    ],
     proteinAnchor: "beef",
     mealType: "taco-bowl",
     flavorDirection: "mexican-protein",
@@ -5042,7 +5054,7 @@ const recipes = [
     servings: 4,
     protein: 67,
     calories: 500,
-    image: "/images/high-protein-taco-bowls/hero-split-plate-photo.webp",
+    image: "/images/high-protein-taco-bowls/hero-split-plate-polished.webp",
     role: "The Highest-Protein Dinner On The Site (67g / Adult Bowl, 7g Net Carbs)",
     makeThisWhen: "Taco night, but built for serious protein. 20 minutes total. Adult bowl: 67g protein / 500 cal / 7g net carbs (the lowest net-carb adult dinner on the site). Kid plate: deconstructed compartment tray — same beef + chips + guac, just smaller portion + regular cheddar.",
     hook: "Quest Loaded Taco chips as the bowl base = chips that contribute 19g protein instead of zero. Plus 93/7 lean beef + Kraft fat-free cheddar + bone-broth braise = 67g protein per adult at 500 cal. The kid plate strips out the macro tricks (regular cheddar, Simply Tostitos corn chips, smaller portion) — same flavor, no friction.",
