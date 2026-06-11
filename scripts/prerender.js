@@ -60,6 +60,7 @@ const routes = [
   { path: "/", title: "The Split Plate — One Meal. Two Plates.", description: "High-protein family dinners with the Split Cook Method. One cook, two plates — adults and kids from the same workflow." },
   { path: "/dinners", title: "Dinners — The Split Plate", description: "High-protein family dinners with the Split Cook Method. Same cook, different plates for adults and kids." },
   { path: "/cookbook", title: "Power-Ups — The Split Plate", description: "Sauces, breakfasts, desserts, and quick meals — high-protein upgrades that take 10 minutes or less." },
+  { path: "/leftovers", title: "Use Up Leftover Ingredients — The Split Plate", description: "Pick what's in your fridge — we'll find recipes that use it. Search by ingredient or brand across every Split Plate dinner." },
   { path: "/about", title: "About — The Split Plate", description: "One meal. Two plates. The Split Plate is a dinner system for families who want high-protein meals without cooking twice." },
   { path: "/fan", title: "In the Hands of the Fan — The Split Plate", description: "Can't decide what to cook? Spin the fan and let it pick your dinner." },
   { path: "/social", title: "Social Carousels — The Split Plate", description: "Private index of carousel pages for Instagram posting.", noindex: true },

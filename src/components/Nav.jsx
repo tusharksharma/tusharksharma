@@ -5,6 +5,7 @@ export default function Nav() {
   const isWeekly = pathname === "/";
   const isDinners = pathname === "/dinners" || pathname.startsWith("/recipes");
   const isCookbook = pathname.startsWith("/cookbook");
+  const isLeftovers = pathname.startsWith("/leftovers");
   const isFan = pathname === "/fan";
 
   return (
@@ -38,6 +39,14 @@ export default function Nav() {
             }`}
           >
             Power-Ups
+          </Link>
+          <Link
+            to="/leftovers"
+            className={`px-3 sm:px-4 py-1.5 rounded-lg text-xs font-bold transition-colors ${
+              isLeftovers ? "bg-amber-500 text-black" : "text-neutral-400 hover:text-white"
+            }`}
+          >
+            Leftovers
           </Link>
           <Link
             to="/fan"

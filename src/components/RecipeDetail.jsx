@@ -2,6 +2,7 @@ import { useState, useMemo } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import track from "../hooks/useTrack";
 import { liveRecipes } from "../data/recipes";
+import LeftoversPanel from "./LeftoversPanel";
 
 const pillarColors = {
   "Protein Meals": "text-amber-500 bg-amber-500/10 border-amber-500/30",
@@ -386,6 +387,9 @@ export default function RecipeDetail({ recipe }) {
             </div>
           </section>
         )}
+
+        {/* Leftovers Panel — cross-recipe pairs that share brands/ingredients */}
+        <LeftoversPanel recipe={recipe} />
 
         {/* Related Recipes */}
         <RelatedRecipes current={recipe} />
