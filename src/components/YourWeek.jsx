@@ -151,6 +151,16 @@ const WEEKS = {
       { day: "Friday", label: "System Meal", vibe: "Golden turmeric rice reheats all week, steak is fresh in 10 min", id: 24, time: "25 min", reheats: true, adult: "Golden turmeric rice, seared steak, chipotle drizzle", kid: "Rice + steak, no sauce — rice already has flavor", needs: ["Rice", "Bone broth", "Gary's QuickSteak", "Ghee", "Turmeric"], carbLevel: "high" },
     ],
   },
+  15: {
+    label: "Week 15",
+    description: "Highest-protein anchor Monday + low-carb Wednesday + high-carb pasta Friday. Three proteins (beef, chicken, pork), three formats (taco bowl, oven thighs, creamy pasta), three flavor lanes — Mexican high-protein, sheet-pan comfort, creamy Italian.",
+    subtitle: "High-Protein Taco Bowls, Dan-O's Bone-In Thighs, Creamy Sausage Spinach Pasta",
+    cookDays: [
+      { day: "Monday", label: "Highest-Protein Anchor", vibe: "20 min — 93/7 lean beef + Quest Loaded Taco chips + Kraft fat-free cheddar = 67g protein / 500 cal / 7g net carbs per adult bowl. The highest-protein, lowest-net-carb dinner on the site. Kids get a compartment tray with Simply Tostitos + Tillamook Medium cheddar + same beef + Wholly guac.", id: 43, time: "20 min", reheats: false, adult: "Quest Loaded Taco chips bowl + cheesy fat-free-cheddar beef + iceberg + Roma + Wholly guac", kid: "Compartment tray: Simply Tostitos chips + medium-cheddar beef + Wholly guac + lettuce/Roma side bowl", needs: ["93/7 lean ground beef (1.25 lb)", "Spiceology Taco Seasoning Blend", "Quest Loaded Taco Protein Chips (2 bags)", "Simply Tostitos Organic Yellow Corn", "Kraft Fat-Free Shredded Cheddar", "Tillamook Medium Cheddar", "Wholly Guacamole Classic Minis (4)", "Iceberg lettuce", "Roma tomatoes (2)", "Kirkland chicken bone broth", "Cooking spray"], carbLevel: "low" },
+      { day: "Wednesday", label: "Easiest Dinner", vibe: "Two trays, two seasonings, one oven — the back of the bottle is the recipe", id: 31, time: "45 min", reheats: true, adult: "Dan-O's Spicy thighs, charred asparagus, Umami Lemon Heat drizzle", kid: "Dan-O's Original thigh, plain asparagus, folded wrap", needs: ["Bone-in skin-on thighs", "Asparagus", "Dan-O's Spicy", "Dan-O's Original", "Tortillas", "Mayo", "Lemon", "Soy sauce", "Dijon", "Chili oil"], carbLevel: "low", chainTo: { slug: "next-day-chicken-tacos", title: "Next-Day Chicken Tacos", note: "Chop the leftover thighs fine, save the pan juices, build tacos in 10 min" } },
+      { day: "Friday", label: "Pasta Meal Prep", vibe: "Cook once, 8 meal-prep containers. Pete's rotini + Italian sausage + spinach for adults; Barilla mini penne + sausage only for kids", id: 36, time: "35 min", reheats: true, adult: "Pete's protein rotini + sausage-Alfredo + spinach + chili flakes + Italian seasoning", kid: "Barilla mini penne + sausage-Alfredo (no spinach, no spice)", needs: ["Falls Brand mild Italian sausage (3 lb)", "Pete's Pasta Rotini", "Barilla Mini Penne", "Rao's Homemade Alfredo (2 jars)", "Marketside baby spinach", "Chicken bone broth", "Chili flakes", "Italian seasoning"], carbLevel: "high" },
+    ],
+  },
 };
 
 function getLeftoverMsg(hasLeftovers) {

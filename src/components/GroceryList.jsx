@@ -574,6 +574,47 @@ const GROCERY_BY_WEEK = {
       { name: "365 Whole Foods Blue Cheese Crumbles", baseQty: 1, unit: "container", meal: "Wed" },
     ],
   },
+  // Week 15: Mon=High-Protein Taco Bowls(43), Wed=Dan-O's Bone-In Thighs(31), Fri=Creamy Sausage Spinach Pasta(36)
+  15: {
+    "Protein": [
+      { name: "93/7 lean ground beef (1.25 lb pack)", baseQty: 1, unit: "pack", meal: "Mon" },
+      { name: "Bone-in skin-on chicken thighs", baseQty: 6, unit: "thighs", meal: "Wed" },
+      { name: "Falls Brand Mild Italian Sausage (24 oz / 1.5 lb tray)", baseQty: 2, unit: "tray", meal: "Fri" },
+    ],
+    "Carbs": [
+      { name: "Quest Loaded Taco Tortilla-Style Protein Chips (1.1 oz bag)", baseQty: 2, unit: "bag", meal: "Mon adult" },
+      { name: "Simply Tostitos Organic Yellow Corn Tortilla Chips", baseQty: 1, unit: "bag", meal: "Mon kid" },
+      { name: "Pete's Pasta Rotini (8 oz, high-protein)", baseQty: 2, unit: "bag", meal: "Fri adult" },
+      { name: "Barilla Mini Penne", baseQty: 1, unit: "box", meal: "Fri kid" },
+    ],
+    "Vegetables": [
+      { name: "Iceberg lettuce", baseQty: 1, unit: "head", meal: "Mon" },
+      { name: "Roma tomatoes", baseQty: 2, unit: "", meal: "Mon" },
+      { name: "Asparagus", baseQty: 1, unit: "bunch", meal: "Wed" },
+      { name: "Lemon", baseQty: 1, unit: "lemon", meal: "Wed adult" },
+      { name: "Marketside Baby Spinach", baseQty: 1, unit: "bag", meal: "Fri adult" },
+    ],
+    "Sauce & Flavor": [
+      { name: "Spiceology Taco Seasoning Blend", qty: "pantry", meal: "Mon" },
+      { name: "Wholly Guacamole Classic Minis (6-cup pack)", baseQty: 1, unit: "pack", meal: "Mon" },
+      { name: "Kirkland Organic Chicken Sipping Bone Broth", qty: "pantry", meal: "Mon + Fri" },
+      { name: "Chosen Foods Avocado Oil Spray", qty: "pantry", meal: "Mon" },
+      { name: "Dan-O's Spicy", qty: "pantry", meal: "Wed adult" },
+      { name: "Dan-O's Original", qty: "pantry", meal: "Wed kid" },
+      { name: "Mayo", qty: "pantry", meal: "Wed adult" },
+      { name: "Dijon mustard", qty: "pantry", meal: "Wed adult" },
+      { name: "Soy sauce (for Umami Lemon Heat)", qty: "pantry", meal: "Wed adult" },
+      { name: "Chili oil", qty: "pantry", meal: "Wed adult" },
+      { name: "Carb-balance tortillas (kid wrap option)", baseQty: 3, unit: "tortillas", meal: "Wed kid" },
+      { name: "Rao's Homemade Alfredo Sauce", baseQty: 2, unit: "jar", meal: "Fri" },
+      { name: "Chili flakes", qty: "pantry", meal: "Fri adult" },
+      { name: "Italian seasoning", qty: "pantry", meal: "Fri adult" },
+    ],
+    "Creamy Base": [
+      { name: "Kraft Fat-Free Shredded Cheddar (7 oz pouch)", baseQty: 1, unit: "container", meal: "Mon adult" },
+      { name: "Tillamook Medium Cheddar Shredded (8 oz)", baseQty: 1, unit: "container", meal: "Mon kid" },
+    ],
+  },
 };
 
 function getGrocery(week) { return GROCERY_BY_WEEK[week] || GROCERY_BY_WEEK[1]; }
