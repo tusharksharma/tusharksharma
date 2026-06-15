@@ -61,7 +61,7 @@ export const sauces = [
     id: "hot-honey-mustard-hack",
     title: "Hot Honey Mustard Hack Sauce",
     tagline: "2 ingredients. 60 seconds. Money Mustard's lazy cousin.",
-    heroImage: "/images/hot-honey-mustard-chicken-nuggets/hero-hot-honey-mustard-chicken-nuggets.webp",
+    heroImage: "/images/hot-honey-mustard-chicken-nuggets/hero-hot-honey-mustard-chicken-nuggets-polished.webp",
     flavorProfile: "Sweet + tangy + slow chili heat. Glossy yellow dip that reads like fast-food honey mustard but lands cleaner on macros.",
     calories: 25,
     caloriesPerServing: 25,
