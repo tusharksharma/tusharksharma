@@ -1096,6 +1096,16 @@ export const breakfasts = [
     tagline: "510 cal. 45g protein. 10 minutes. One pan. Eggs + Gilbert's Caprese + Lao Gan Ma.",
     heroImage: "/images/one-pan-breakfast-skillet/hero-finished-breakfast-skillet-polished.webp",
     prepImage: "/images/one-pan-breakfast-skillet/brand-lao-gan-ma-chili-crisp-polished.webp",
+    // Polished-only carousel — same convention as dinner recipes. SocialPage's
+    // adaptCookbookToRecipe passes this through; processImages prefers it over
+    // step-flatten. Narrative order: protein drop → eggs crack → flavor finish
+    // → cover-to-set. All Gemini Path A polished, no raw video stills.
+    socialImages: [
+      "/images/one-pan-breakfast-skillet/step-02-add-sausage-links-polished.webp",
+      "/images/one-pan-breakfast-skillet/step-03-crack-eggs-polished.webp",
+      "/images/one-pan-breakfast-skillet/step-05-spoon-chili-crisp-polished.webp",
+      "/images/one-pan-breakfast-skillet/step-07-cover-to-set-polished.webp",
+    ],
     flavorProfile: "Savory chicken-sausage + jammy egg yolks + bright spicy chili-crisp finish. Mediterranean meets Sichuan in one pan.",
     calories: 510,
     caloriesPerServing: 510,
@@ -1119,13 +1129,16 @@ export const breakfasts = [
       "1 tsp Lao Gan Ma Fried Chili in Oil (NOT a tablespoon — 1 tsp is the macro lever)",
       "Optional: black pepper or extra chili flakes",
     ],
+    // Steps support per-step `image` field (singular). CookbookDetailPage.jsx
+    // renders the image alongside the step text when present. 4 polished
+    // process shots are wired here; SPRAY/SEASON/SERVE stay as plain strings.
     steps: [
       "SPRAY THE PAN: Nonstick skillet over medium heat. Hit with cooking spray.",
-      "ADD SAUSAGE: 2 Gilbert's Caprese chicken sausage links into the pan. Cook 3-4 min, turning to brown all sides + warm through. The chicken sausage is pre-cooked — you're crisping the exterior, not cooking through raw meat.",
-      "CRACK IN THE EGGS: 3 large eggs cracked directly into the skillet around the sausage links. Keep medium heat — too hot and the whites burn before the yolks set.",
+      { text: "ADD SAUSAGE: 2 Gilbert's Caprese chicken sausage links into the pan. Cook 3-4 min, turning to brown all sides + warm through. The chicken sausage is pre-cooked — you're crisping the exterior, not cooking through raw meat.", image: "/images/one-pan-breakfast-skillet/step-02-add-sausage-links-polished.webp" },
+      { text: "CRACK IN THE EGGS: 3 large eggs cracked directly into the skillet around the sausage links. Keep medium heat — too hot and the whites burn before the yolks set.", image: "/images/one-pan-breakfast-skillet/step-03-crack-eggs-polished.webp" },
       "SEASON: Pinch of kosher salt over the eggs. Black pepper if using.",
-      "ADD CHILI CRISP: 1 tsp Lao Gan Ma Fried Chili in Oil spooned over the eggs (focus on the crispy bits, light on the oil — the oil adds ~80 cal per tablespoon and you only want ~25 cal worth).",
-      "COVER + SET: Lid on. 2-4 min until whites are fully set and yolks are still jammy (or longer if you want them firm). Don't peek every 30 sec — open once at the 2-min mark.",
+      { text: "ADD CHILI CRISP: 1 tsp Lao Gan Ma Fried Chili in Oil spooned over the eggs (focus on the crispy bits, light on the oil — the oil adds ~80 cal per tablespoon and you only want ~25 cal worth).", image: "/images/one-pan-breakfast-skillet/step-05-spoon-chili-crisp-polished.webp" },
+      { text: "COVER + SET: Lid on. 2-4 min until whites are fully set and yolks are still jammy (or longer if you want them firm). Don't peek every 30 sec — open once at the 2-min mark.", image: "/images/one-pan-breakfast-skillet/step-07-cover-to-set-polished.webp" },
       "SERVE HOT: Slide everything onto a plate or eat straight from the skillet. The macro headline is 510 cal / 45g protein assuming 2 Gilbert's links + 3 eggs + 1 tsp Lao Gan Ma — any deviation shifts the math.",
     ],
     troubleshooting: [

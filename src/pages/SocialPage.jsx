@@ -1035,6 +1035,10 @@ function adaptCookbookToRecipe(item, kind) {
     ].filter(Boolean),
     // brands array is the same shape
     brands: item.brands || [],
+    // Pass socialImages through — cookbook entries can opt into the polished-
+    // only carousel by declaring this field (same convention as dinner recipes).
+    // SocialPage's processImages logic prefers this list over step-flatten.
+    socialImages: item.socialImages,
     // Keep originals around for the BestForCard
     bestFor: item.bestFor,
     carbLevel: undefined,
