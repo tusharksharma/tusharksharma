@@ -139,27 +139,41 @@ function buildRecipeSchema(r, ingredients) {
   return JSON.stringify(schema);
 }
 
+// Google SERP truncates meta descriptions at ~155-160 chars; OG previews
+// truncate ~200. Cap at 155 with smart boundary (sentence > word > hard cut).
+// Mirrors the runtime truncation in src/hooks/useMeta.js so prerendered HTML
+// matches what the client-side hook would render.
+function truncateDesc(s, max = 155) {
+  if (!s || s.length <= max) return s;
+  const slice = s.slice(0, max);
+  const lastPeriod = slice.lastIndexOf(". ");
+  if (lastPeriod > max * 0.55) return slice.slice(0, lastPeriod + 1).trim();
+  const lastSpace = slice.lastIndexOf(" ");
+  return (lastSpace > 0 ? slice.slice(0, lastSpace) : slice).trim() + "…";
+}
+
 function generateHTML(route) {
   const { path, title, description, image, schema, noindex } = route;
   const url = `${DOMAIN}${path}`;
   const ogImage = image ? `${DOMAIN}${image}` : `${DOMAIN}/images/logo.png`;
+  const seoDescription = truncateDesc(description);
 
   let html = template;
 
   // Replace title
   html = html.replace(/<title>[^<]*<\/title>/, `<title>${title}</title>`);
 
-  // Replace/add meta description
+  // Replace/add meta description (truncated at 155 for SERP-fit)
   html = html.replace(
     /<meta name="description"[^>]*\/>/,
-    `<meta name="description" content="${escapeAttr(description)}" />`
+    `<meta name="description" content="${escapeAttr(seoDescription)}" />`
   );
 
   // Insert OG tags + canonical + schema before </head>
   const headInsert = [
     `<link rel="canonical" href="${url}" />`,
     `<meta property="og:title" content="${escapeAttr(title)}" />`,
-    `<meta property="og:description" content="${escapeAttr(description)}" />`,
+    `<meta property="og:description" content="${escapeAttr(seoDescription)}" />`,
     `<meta property="og:url" content="${url}" />`,
     `<meta property="og:type" content="${schema ? "article" : "website"}" />`,
     `<meta property="og:image" content="${ogImage}" />`,

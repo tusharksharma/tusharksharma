@@ -32,7 +32,7 @@ function writeSelectedToURL(selected) {
 
 export default function LeftoversPage() {
   useMeta({
-    title: "Use Up Leftover Ingredients — The Split Plate",
+    title: "Use Up Leftover Ingredients",
     description: "Pick what's in your fridge — we'll find recipes that use it. Search by ingredient or brand across every Split Plate dinner.",
   });
 
@@ -85,7 +85,14 @@ export default function LeftoversPage() {
     .map((slug) => {
       const entry = brand[slug] || generic[slug];
       if (!entry) return null;
-      return { slug, label: entry.label || entry.sublabel || slug };
+      // Brand entries: combine brand name + product name so a row of selected
+      // chips like "Kirkland · Sipping Bone Broth" + "Kirkland · Half-and-Half"
+      // doesn't collapse to ambiguous duplicates of just "Kirkland".
+      const isBrand = !!brand[slug];
+      const display = isBrand && entry.sublabel && entry.sublabel !== entry.label
+        ? `${entry.label} · ${entry.sublabel}`
+        : (entry.label || entry.sublabel || slug);
+      return { slug, label: display };
     })
     .filter(Boolean);
 
@@ -192,7 +199,18 @@ export default function LeftoversPage() {
                         {item.image && (
                           <img src={item.image} alt="" className="w-6 h-6 rounded object-cover bg-neutral-800" loading="lazy" />
                         )}
-                        <span>{item.label}</span>
+                        <span className="text-left">
+                          <span className="block">{item.label}</span>
+                          {item.kind === "brand" && item.sublabel && item.sublabel !== item.label && (
+                            <span
+                              className={`block text-[10px] font-normal leading-tight ${
+                                isSelected ? "text-black/60" : "text-neutral-500"
+                              }`}
+                            >
+                              {item.sublabel}
+                            </span>
+                          )}
+                        </span>
                         <span
                           className={`text-[10px] font-normal ${
                             isSelected ? "text-black/60" : "text-neutral-500"

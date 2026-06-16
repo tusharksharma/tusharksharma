@@ -49,7 +49,7 @@ export default function FanSpinner() {
   return (
     <div className="max-w-3xl mx-auto px-4 py-16 text-center">
       <p className="text-xs font-bold uppercase tracking-[0.2em] text-amber-500 mb-2">Feeling Lucky?</p>
-      <h2 className="text-3xl font-black text-white">In the Hands of the Fan</h2>
+      <h1 className="text-3xl font-black text-white">In the Hands of the Fan</h1>
       <p className="text-neutral-400 text-sm mt-2 mb-10">
         Can't decide? Spin the fan. Cook whatever it lands on.
       </p>
