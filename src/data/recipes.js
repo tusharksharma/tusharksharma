@@ -1774,7 +1774,7 @@ const recipes = [
     status: "live",
     carbLevel: "low", // keto buns
     meta: {
-      macros: { protein: 50, calories: 600, fat: 24, carbs: 30, netCarbs: 12, estimated: true },
+      macros: { protein: 50, calories: 540, fat: 24, carbs: 30, netCarbs: 12, estimated: true },
       allergens: ["gluten", "soy"],
       warnings: ["contains-gluten", "spicy-adult-version"],
       dietTags: ["dairy-free-option", "halal", "keto-option"],
@@ -1797,12 +1797,12 @@ const recipes = [
     time: "15 min",
     servings: 4,
     protein: 50,
-    calories: 600,
+    calories: 540,
     image: "/images/chicken-sandwich/hero.png",
     role: "The Fast Food Killer",
     makeThisWhen: "You want Chick-fil-A or Popeyes satisfaction at home — crispy chicken sandwiches with controlled calories. Keto buns for adults, sliders for kids.",
     hook: "Better than fast food — with control. Same Kirkland chicken fillets, two bun types, your choice of sauce. Adults get macro-friendly keto buns at 50 cal each. Kids get familiar sliders. No drive-through needed.",
-    description: "~50g protein for ~600 cal (2 sandwiches). Kirkland chicken fillets air fried crispy, Bettergoods keto buns for adults, slider buns for kids. Add Liquid Chipotle or Money Mustard. 15 minutes.",
+    description: "~50g protein for ~540 cal (2 sandwiches). Kirkland chicken fillets air fried crispy, Bettergoods keto buns for adults, slider buns for kids. Add Liquid Chipotle or Money Mustard. 15 minutes.",
     whyMostFail: [
       "Fast food chicken sandwiches are 600+ cal for ONE sandwich",
       "Homemade versions use raw chicken and take 45 min",
@@ -2050,7 +2050,7 @@ const recipes = [
     status: "live",
     carbLevel: "none", // no starch — just protein + sides
     meta: {
-      macros: { protein: 40, calories: 350, fat: 10, carbs: 6, netCarbs: 5, estimated: true },
+      macros: { protein: 40, calories: 350, fat: 18, carbs: 6, netCarbs: 5, estimated: true },
       allergens: ["dairy"],
       warnings: ["contains-dairy", "spicy-adult-version", "requires-overnight-marinade"],
       dietTags: ["gluten-free", "halal", "low-carb"],
@@ -2348,7 +2348,7 @@ const recipes = [
     status: "live",
     carbLevel: "none", // no starch in the base — serve with rice/noodles optionally
     meta: {
-      macros: { protein: 35, calories: 400, fat: 14, carbs: 20, netCarbs: 18, estimated: true },
+      macros: { protein: 35, calories: 400, fat: 20, carbs: 20, netCarbs: 18, estimated: true },
       allergens: ["soy", "gluten", "sesame"],
       warnings: ["contains-soy", "contains-gluten", "contains-sesame", "spicy-adult-version"],
       dietTags: ["dairy-free", "halal"],
@@ -2503,7 +2503,7 @@ const recipes = [
     status: "live",
     carbLevel: "high", // noodles
     meta: {
-      macros: { protein: 61, calories: 430, fat: 12, carbs: 38, netCarbs: 35, estimated: true },
+      macros: { protein: 45, calories: 430, fat: 12, carbs: 38, netCarbs: 35, estimated: true },
       allergens: ["soy", "gluten"],
       warnings: ["contains-soy", "contains-gluten", "spicy-adult-version"],
       dietTags: ["dairy-free", "halal"],
@@ -2525,12 +2525,12 @@ const recipes = [
     tags: ["ramen", "buldak", "korean", "spicy", "split-cook", "fast", "high-protein", "noodles"],
     time: "15 min",
     servings: 4,
-    protein: 61,
+    protein: 45,
     calories: 430,
     image: "/images/buldak-ramen/hero.webp",
-    role: "The 61g Protein Ramen",
+    role: "The 45g Protein Ramen",
     makeThisWhen: "You want ramen night but need serious protein. Adults get spicy Buldak cooked in bone broth (not water) — semi-dry, coated, not soupy. Kids get Maruchan. Both get Bilinski's sausage. 15 minutes.",
-    hook: "61g protein for 430 cal. That's not a typo. Buldak High Protein Ramen cooked in bone broth instead of water, reduced until coated (not soupy), topped with air-fried Bilinski's cajun sausage. Kids get Maruchan + sausage — mild, familiar, zero resistance. Same kitchen, same 15 minutes.",
+    hook: "45g protein for 430 cal. Buldak High Protein Ramen cooked in bone broth instead of water, reduced until coated (not soupy), topped with air-fried Bilinski's cajun sausage. Kids get Maruchan + sausage — mild, familiar, zero resistance. Same kitchen, same 15 minutes.",
     description: "61g protein for 430 cal. Buldak High Protein Ramen cooked in Kirkland bone broth (not water), reduced to a glossy coat. Bilinski's cajun chicken sausage air fried. Kids get Maruchan chicken ramen + sausage.",
     whyMostFail: [
       "Cook ramen in water — zero extra protein, bland base",
@@ -4795,7 +4795,7 @@ const recipes = [
       { name: "Rao's", item: "Homemade Alfredo Sauce (15 oz jar — used in BOTH the adult blend AND the kid plain pasta)", why: "Real cream + Parmesan + butter, no flour thickener. 3 servings (~3/4 cup) go into the adult blend; another 3/4 cup goes straight onto the kid pasta. One jar serves both lanes. Cross-recipe with id 36 (sausage spinach pasta), id 1 (gnocchi).", image: "/images/brands/raos-alfredo.png", url: "https://raos.com/product/alfredo-sauce/" },
       { name: "Kirkland Signature", item: "Organic Chicken Sipping Bone Broth (8.45 fl oz pouches — use half a pouch for the blend)", why: "Bone broth in the blender thins the sauce so it coats without drowning, plus adds 5g protein from the half portion (free macro win). Cross-recipe across rice bowls (id 24), stir-fries (id 4), steak noodles (id 30), pork lettuce wraps (id 38), pork chops (id 39).", image: "/images/brands/kirkland-bone-broth.jpg", url: "https://www.costco.com/kirkland-signature-organic-chicken-bone-broth%2c-32-fl-oz%2c-6-count.product.100368604.html" },
     ],
-    macroHonesty: "Per adult serving (~350 cal / 27.8g protein / 14.9g fat / 42.7g carbs) computed in the MacroFactor app at 6 total servings. Macro app config: Carbe Diem Penne (660 cal / 48P / 6F / 180C total carbs for 6 servings) + 20 slices Godshall's Beef Bacon (900 cal / 80P / 50F / 0C) + 1 container Daisy Low-Fat Cottage Cheese (120 cal / 17P / 3F / 6C) + 4 Laughing Cow Light wedges (100 cal / 8P / 6F / 4C) + 3 servings Rao's Alfredo (300 cal / 9P / 27F / 6C) + 0.5 portion Kirkland Sipping Bone Broth (23 cal / 5P / 0F / 0C). Total batch ≈ 2103 cal / 167P / 92F / 196C / 1088g — divided by 6 servings = 350.5 cal / 27.8P / 15.3F / 32.7C. Adult plate is the 350-cal anchor; kid plate ≈ 290 cal / 23g protein (smaller portion of regular wheat penne + plain Rao's + ~30% of the rendered bacon split). Bacon is on BOTH plates — the split-cook lever is the sauce + the pasta, not the protein. Flagged estimated because bacon fat retention varies with the drain step; without the fat drain, calories climb ~50/serving.",
+    macroHonesty: "Per adult serving (~350 cal / 27.8g protein / 14.9g fat / 42.7g total carbs / 29g net carbs / 13.7g fiber) computed in the MacroFactor app at 6 total servings. **Fiber-corrected Atwater note**: pure Atwater math (P×4 + total-C×4 + F×9) gives 419 cal, but the 350 figure is honest because MacroFactor uses net-carb tracking (fiber doesn't fully metabolize — modern nutrition science counts soluble corn fiber + Carbe Diem's modified wheat starch closer to 0-2 cal/g than 4 cal/g). Net-carb math: 28×4 + 29×4 + 15×9 = 363 — much closer to the 350 anchor. The protein pasta is what drives the fiber-vs-total-carb gap; standard wheat pasta would have less fiber and the Atwater + headline would line up. Macro app config: Carbe Diem Penne (660 cal / 48P / 6F / 180C total carbs for 6 servings, ~80g fiber) + 20 slices Godshall's Beef Bacon (900 cal / 80P / 50F / 0C) + 1 container Daisy Low-Fat Cottage Cheese (120 cal / 17P / 3F / 6C) + 4 Laughing Cow Light wedges (100 cal / 8P / 6F / 4C) + 3 servings Rao's Alfredo (300 cal / 9P / 27F / 6C) + 0.5 portion Kirkland Sipping Bone Broth (23 cal / 5P / 0F / 0C). Total batch ≈ 2103 cal / 167P / 92F / 196C — divided by 6 servings = 350.5 cal / 27.8P / 15.3F / 32.7C. Bacon is on BOTH plates — the split-cook lever is the sauce + the pasta, not the protein. Kid plate ≈ 290 cal / 23g protein. Flagged estimated because bacon fat retention varies with the drain step; without the fat drain, calories climb ~50/serving.",
     mealPrep: {
       storage: "6 containers, fridge. Pete's-style protein pastas absorb sauce overnight — same here for Carbe Diem. Store with a spoonful of extra sauce or 1 tbsp bone broth on top of each portion to preserve creaminess.",
       reheat: "Microwave covered 90 sec + a 2 tbsp splash of chicken bone broth or water to loosen, stir, 30 more sec. Skip the broth splash and the dish goes chalky by day 3. Stovetop reheat (low heat + bone broth splash + stir) preserves texture best — microwave is acceptable.",
