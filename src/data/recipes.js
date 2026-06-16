@@ -5248,6 +5248,18 @@ const recipes = [
       ],
     },
     slug: "high-protein-halal-cart-chicken-rice-bowls",
+    // Polished-only carousel — Gemini Path A outputs from the 60-sec cook
+    // video. Narrative order: brand setup → cooking (sear) → texture moment
+    // (chop) → assembly (drizzle) → adult result → kid pattern. The hero
+    // (hero-split-plate-polished) is recipe.image below — not duplicated here.
+    socialImages: [
+      "/images/high-protein-halal-cart-chicken-rice-bowls/brand-mezete-toum-sauce-polished.webp",
+      "/images/high-protein-halal-cart-chicken-rice-bowls/step-05-griddle-chicken-polished.webp",
+      "/images/high-protein-halal-cart-chicken-rice-bowls/step-06-chop-griddled-chicken-polished.webp",
+      "/images/high-protein-halal-cart-chicken-rice-bowls/step-09-build-adult-bowl-polished.webp",
+      "/images/high-protein-halal-cart-chicken-rice-bowls/adult-bowl-final-polished.webp",
+      "/images/high-protein-halal-cart-chicken-rice-bowls/kid-deconstructed-white-sauce-polished.webp",
+    ],
     proteinAnchor: "chicken",
     mealType: "rice-bowl",
     flavorDirection: "middle-eastern",
@@ -5260,7 +5272,7 @@ const recipes = [
     servings: 4,
     protein: 50,
     calories: 550,
-    image: "/images/high-protein-halal-cart-chicken-rice-bowls/hero-split-plate-photo.webp",
+    image: "/images/high-protein-halal-cart-chicken-rice-bowls/hero-split-plate-polished.webp",
     role: "The 40-Minute Halal Cart Plate (Yellow Rice + Shawarma Chicken, Adult Bowl + Kid Compartment Tray)",
     makeThisWhen: "You want halal-cart-style dinner without ordering out. 1 lb 8 oz Trader Joe's shawarma chicken thighs onto a griddle, yellow rice cooked in Kirkland bone broth + Bare Bones powder for the protein bump, Mezete toum + Shuug harissa for adults, deconstructed compartment tray with toum-only for kids. 40 minutes, one cook, two finishes.",
     hook: "Yellow rice cooked in chicken bone broth (not water) + Bare Bones broth powder = the rice does ~5g of the protein lift on its own. Adult bowl: 550 cal / 50g protein with toum + harissa. Kid tray: same chicken + rice in a compartment tray with toum drizzle on the chicken, lettuce + tomato in a side bowl. No harissa for kids — that's the only split-cook lever.",
