@@ -1318,17 +1318,17 @@ export const quickLunches = [
     id: "high-protein-chili-cheese-toast",
     title: "High-Protein Chili Cheese Toast",
     tagline: "8 open-faced toasts. 130 cal / 13g protein each. Blended cottage cheese + reduced-fat fiesta + chilies on keto buns.",
-    heroImage: "/images/high-protein-chili-cheese-toast/hero-finished-chili-cheese-toast.webp",
-    prepImage: "/images/high-protein-chili-cheese-toast/context-daisy-low-fat-cottage-cheese.webp",
-    // Polished-only carousel — first commit ships raw stills; polish prompts
-    // queued for follow-up. Narrative: brand → blend → fold → fill → bake.
+    heroImage: "/images/high-protein-chili-cheese-toast/hero-finished-chili-cheese-toast-polished.webp",
+    prepImage: "/images/high-protein-chili-cheese-toast/context-daisy-low-fat-cottage-cheese-polished.webp",
+    // Polished-only carousel. 5 Gemini Path A polished cards (step-11 didn't
+    // get a polish run + the polished-only rule keeps raw out of socialImages).
+    // Narrative: brand → blend → fold → fill → reveal.
     socialImages: [
-      "/images/high-protein-chili-cheese-toast/context-daisy-low-fat-cottage-cheese.webp",
-      "/images/high-protein-chili-cheese-toast/step-02-blend-cottage-cheese.webp",
-      "/images/high-protein-chili-cheese-toast/step-05-mix-cheese-base.webp",
-      "/images/high-protein-chili-cheese-toast/step-10-fill-toasts.webp",
-      "/images/high-protein-chili-cheese-toast/step-11-season-loaded-toasts.webp",
-      "/images/high-protein-chili-cheese-toast/step-12-finished-toasts-reveal.webp",
+      "/images/high-protein-chili-cheese-toast/context-daisy-low-fat-cottage-cheese-polished.webp",
+      "/images/high-protein-chili-cheese-toast/step-02-blend-cottage-cheese-polished.webp",
+      "/images/high-protein-chili-cheese-toast/step-05-mix-cheese-base-polished.webp",
+      "/images/high-protein-chili-cheese-toast/step-10-fill-toasts-polished.webp",
+      "/images/high-protein-chili-cheese-toast/step-12-finished-toasts-reveal-polished.webp",
     ],
     flavorProfile: "Creamy + cheesy + bright chili kick. Crispy melted top, lightly toasted keto-bun base. Tastes like comfort food, lands like a snack.",
     calories: 130,
@@ -1351,17 +1351,17 @@ export const quickLunches = [
     ],
     steps: [
       "OVEN: 375°F. Line a baking sheet with parchment paper (or hit it with cooking spray).",
-      { text: "BLEND COTTAGE CHEESE: Daisy Low Fat cup into a small food processor. Blend 30-45 sec until completely smooth — no curds visible. This is the move that makes the filling creamy not chunky.", image: "/images/high-protein-chili-cheese-toast/step-02-blend-cottage-cheese.webp" },
+      { text: "BLEND COTTAGE CHEESE: Daisy Low Fat cup into a small food processor. Blend 30-45 sec until completely smooth — no curds visible. This is the move that makes the filling creamy not chunky.", image: "/images/high-protein-chili-cheese-toast/step-02-blend-cottage-cheese-polished.webp" },
       { text: "SCOOP TO BOWL: Transfer the blended cottage cheese to a mixing bowl. Should look like thick Greek yogurt at this point.", image: "/images/high-protein-chili-cheese-toast/step-03-scoop-base-to-bowl.webp" },
       { text: "ADD CHEESE: Full 7 oz bag of Great Value Reduced Fat Fiesta Blend shredded cheese into the bowl with the blended cottage cheese.", image: "/images/high-protein-chili-cheese-toast/step-04-add-reduced-fat-cheese.webp" },
-      { text: "FOLD: Mix the shredded cheese into the cottage-cheese base with a spatula until evenly distributed. Filling should look uniform — no dry shred patches, no cottage-cheese clumps.", image: "/images/high-protein-chili-cheese-toast/step-05-mix-cheese-base.webp" },
+      { text: "FOLD: Mix the shredded cheese into the cottage-cheese base with a spatula until evenly distributed. Filling should look uniform — no dry shred patches, no cottage-cheese clumps.", image: "/images/high-protein-chili-cheese-toast/step-05-mix-cheese-base-polished.webp" },
       { text: "CHOP CHILIES: 2-4 Thai bird chilies (hot version) OR 1-2 jalapeños with seeds removed (medium version) finely diced — pieces ~1/8-inch. Smaller dice = better distribution across all 8 toasts.", image: "/images/high-protein-chili-cheese-toast/step-06-chop-chilies.webp" },
       { text: "FOLD CHILIES INTO FILLING: Diced chilies into the cheese mixture. Fold gently to distribute. Don't overmix — visible chili specks throughout the filling is the goal.", image: "/images/high-protein-chili-cheese-toast/step-07-add-chilies-to-filling.webp" },
       { text: "SPLIT BUNS: 4 Oroweat Superior Keto Buns split horizontally into 8 open-faced halves. Arrange cut-side up on the lined baking sheet, spaced so the edges don't touch.", image: "/images/high-protein-chili-cheese-toast/step-09-split-keto-buns.webp" },
-      { text: "FILL THE TOASTS: Divide the filling evenly across all 8 halves. ~2 tbsp filling per toast. Spread to the edges so the cheese melts to the crust. Pile slightly mounded in the center.", image: "/images/high-protein-chili-cheese-toast/step-10-fill-toasts.webp" },
+      { text: "FILL THE TOASTS: Divide the filling evenly across all 8 halves. ~2 tbsp filling per toast. Spread to the edges so the cheese melts to the crust. Pile slightly mounded in the center.", image: "/images/high-protein-chili-cheese-toast/step-10-fill-toasts-polished.webp" },
       { text: "SEASON THE TOPS: Dan-O's Crunchy Seasoning over each toast. Don't be shy — it's the salt + texture finish. ~1/4 tsp per toast.", image: "/images/high-protein-chili-cheese-toast/step-11-season-loaded-toasts.webp" },
       { text: "BAKE: 375°F for ~9 min. Filling should be hot + visibly melted + slightly browned on top. Keto buns dry out fast past 10 min — set a timer.", image: "/images/high-protein-chili-cheese-toast/step-12-bake-at-375.webp" },
-      { text: "REST + SERVE: Let toasts cool 1-2 min before eating (cheese filling is molten right out of the oven). Eat 2-3 immediately, reheat the rest later.", image: "/images/high-protein-chili-cheese-toast/step-12-finished-toasts-reveal.webp" },
+      { text: "REST + SERVE: Let toasts cool 1-2 min before eating (cheese filling is molten right out of the oven). Eat 2-3 immediately, reheat the rest later.", image: "/images/high-protein-chili-cheese-toast/step-12-finished-toasts-reveal-polished.webp" },
     ],
     troubleshooting: [
       { problem: "Filling is too thick / hard to spread", fix: "You under-blended the cottage cheese. Blend another 30 sec until completely smooth. If already mixed with shredded cheese, add 1 tbsp Fairlife milk (or 1 tbsp water) and fold to loosen." },
