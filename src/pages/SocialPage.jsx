@@ -204,6 +204,40 @@ function extractCookbookLinks(recipe) {
 
 const EXPORT_SIZE = 1080;
 
+// Derive a caption for a polished socialImage entry from its filename.
+// Filename-derive gives more specific captions than step backref because
+// multiple polished images often map to the same step text (e.g. step-05 +
+// step-06 both come from one GRIDDLE step). Naming convention encodes the
+// intent: strip `step-NN-` / `brand-` / `hero-` prefixes + `-polished` /
+// `-clean` / `-studio` / `-photo` suffixes + file extension, convert dashes
+// to spaces, title-case the result.
+//
+// Examples (halal cart recipe):
+//   step-05-griddle-chicken-polished.webp     → "Griddle Chicken"
+//   step-06-chop-griddled-chicken-polished    → "Chop Griddled Chicken"
+//   step-09-build-adult-bowl-polished         → "Build Adult Bowl"
+//   brand-mezete-toum-sauce-polished          → "Mezete Toum Sauce"
+//   adult-bowl-final-polished                 → "Adult Bowl Final"
+//   kid-deconstructed-white-sauce-polished    → "Kid Deconstructed White Sauce"
+//
+// Replaces the prior hardcoded "Card 1" / "Card 2" labels that were
+// rendering as text overlays on exported social cards.
+function captionForSocialImage(src, _recipe) {
+  if (!src) return "";
+  return src
+    .split("/")
+    .pop()
+    .replace(/\.(webp|png|jpe?g)$/i, "")
+    .replace(/-(polished|clean|studio|photo)$/i, "")
+    .replace(/^step-\d+-/i, "")
+    .replace(/^brand-/i, "")
+    .replace(/^hero-/i, "")
+    .replace(/-/g, " ")
+    .trim()
+    .replace(/\b\w/g, (c) => c.toUpperCase())
+    .slice(0, 60);
+}
+
 function assetUrl(src) {
   if (!src) return "";
   return new URL(src, window.location.origin).href;
@@ -1086,11 +1120,18 @@ export default function SocialPage() {
   // Curation rule: prefer recipe.socialImages (explicit list, deterministic
   // order, all polished). Fall back to step-flatten only when socialImages
   // is missing (older recipes pre-polishing).
+  //
+  // Caption derivation for socialImages: try to backref each polished image
+  // to its raw counterpart in recipe.steps[].images[] (strip -polished suffix
+  // for the match) and pull the step text. Falls back to filename-derived
+  // title-case if no step matches (e.g. polished hero / brand reveals that
+  // never appeared in steps[]). Replaces the prior hardcoded "Card 1" / "Card
+  // 2" labels that were leaking onto the exported social images.
   const seen = new Set();
   let processImages;
   if (Array.isArray(recipe.socialImages) && recipe.socialImages.length > 0) {
     processImages = recipe.socialImages
-      .map((src, i) => ({ src, caption: `Card ${i + 1}` }))
+      .map((src) => ({ src, caption: captionForSocialImage(src, recipe) }))
       .filter((p) => {
         if (!p.src || p.src === recipe.image || seen.has(p.src)) return false;
         seen.add(p.src);
