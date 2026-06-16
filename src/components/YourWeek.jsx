@@ -161,6 +161,16 @@ const WEEKS = {
       { day: "Friday", label: "Pasta Meal Prep", vibe: "Cook once, 8 meal-prep containers. Pete's rotini + Italian sausage + spinach for adults; Barilla mini penne + sausage only for kids", id: 36, time: "35 min", reheats: true, adult: "Pete's protein rotini + sausage-Alfredo + spinach + chili flakes + Italian seasoning", kid: "Barilla mini penne + sausage-Alfredo (no spinach, no spice)", needs: ["Falls Brand mild Italian sausage (3 lb)", "Pete's Pasta Rotini", "Barilla Mini Penne", "Rao's Homemade Alfredo (2 jars)", "Marketside baby spinach", "Chicken bone broth", "Chili flakes", "Italian seasoning"], carbLevel: "high" },
     ],
   },
+  16: {
+    label: "Week 16",
+    description: "Halal-cart Monday + low-carb pork chops Wednesday + creamy beef pasta Friday. Three proteins (chicken, pork, beef), three formats (rice bowl + chop-and-sauce + creamy pasta), three carb levels — medium, low, high.",
+    subtitle: "Halal Cart Chicken Rice Bowls, Herb-Garlic Pork Chops, Chili Cream Tri-Tip Penne",
+    cookDays: [
+      { day: "Monday", label: "Halal Cart Night", vibe: "40 min — Trader Joe's shawarma chicken griddled with halal-cart edges, yellow basmati cooked in Kirkland bone broth + Bare Bones powder for a protein lift, Mezete toum + Shuug harissa for adults. Kid compartment tray gets toum drizzle only, no harissa. 550 cal / 50g protein adult bowl.", id: 44, time: "40 min", reheats: true, adult: "Yellow rice + chopped chicken + iceberg + Roma + Mezete toum + Shuug harissa", kid: "Compartment tray: rice + chicken with toum drizzle + lettuce/tomato side bowl (no harissa)", needs: ["Trader Joe's Shawarma Chicken Thighs (1.5 lb)", "Basmati rice (1 cup)", "Kirkland chicken bone broth", "Bare Bones Instant Bone Broth Powder (chicken, 15g stick)", "Ghee", "Turmeric, cumin, garlic powder, onion powder", "Iceberg lettuce", "Roma tomatoes (2)", "Mezete Toum sauce", "Shuug Original Harissa Hot Sauce", "Cooking spray"], carbLevel: "medium" },
+      { day: "Wednesday", label: "Chops Night", vibe: "Herb-marinated pork chops + Parmesan Corn Chex snap peas + Cowboy Butter drizzle — restaurant-grade weeknight", id: 39, time: "30 min", reheats: true, adult: "Sliced chop + crusted snap peas + Cowboy Butter (herb-folded)", kid: "Diced chop + same snap peas + plain Cowboy Butter in dip well (3-compartment tray)", needs: ["Boneless pork loin chops", "Fresh rosemary", "Fresh thyme", "Garlic", "Kikkoman soy", "Lea & Perrins Worcestershire", "Smash Kitchen Dijon", "Smoked paprika", "Chili flakes", "Lemon", "Snap peas", "Kirkland Parmigiano Stravecchio", "Corn Chex", "Laughing Cow Light", "Kirkland bone broth", "Kirkland butter", "Fresh parsley", "Fresh chives"], carbLevel: "low" },
+      { day: "Friday", label: "Cook Once, Win Twice", vibe: "Creamy chili cream sauce, tri-tip, penne — adults get heat, kids get mild creamy version with meatballs", id: 2, time: "35 min", reheats: true, adult: "Chili cream sauce, Dan-O's, sliced tri-tip over penne", kid: "Mild creamy penne, meatballs, cheese", needs: ["Tri-tip", "Penne", "Spinach", "Cottage cheese", "Beef broth"], carbLevel: "high" },
+    ],
+  },
 };
 
 function getLeftoverMsg(hasLeftovers) {

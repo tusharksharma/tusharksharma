@@ -615,6 +615,52 @@ const GROCERY_BY_WEEK = {
       { name: "Tillamook Medium Cheddar Shredded (8 oz)", baseQty: 1, unit: "container", meal: "Mon kid" },
     ],
   },
+  // Week 16: Mon=Halal Cart Chicken Rice Bowls(44), Wed=Herb-Garlic Pork Chops(39), Fri=Chili Cream Tri-Tip Penne(2)
+  16: {
+    "Protein": [
+      { name: "Trader Joe's Shawarma-Style Chicken Thighs (1.5 lb pack)", baseQty: 1, unit: "pack", meal: "Mon" },
+      { name: "Boneless pork loin chops", baseQty: 6, unit: "chops", meal: "Wed" },
+      { name: "Tri-tip steak", baseQty: 1, unit: "lb", meal: "Fri" },
+    ],
+    "Carbs": [
+      { name: "Basmati rice (1 cup uncooked for the batch)", baseQty: 1, unit: "cup", meal: "Mon" },
+      { name: "Barilla Penne (or any penne)", baseQty: 1, unit: "box", meal: "Fri" },
+    ],
+    "Vegetables": [
+      { name: "Iceberg lettuce", baseQty: 1, unit: "head", meal: "Mon" },
+      { name: "Roma tomatoes", baseQty: 2, unit: "", meal: "Mon" },
+      { name: "Snap peas", baseQty: 1, unit: "bag", meal: "Wed" },
+      { name: "Fresh rosemary", baseQty: 1, unit: "bunch", meal: "Wed adult" },
+      { name: "Fresh thyme", baseQty: 1, unit: "bunch", meal: "Wed adult" },
+      { name: "Garlic", baseQty: 1, unit: "head", meal: "Wed" },
+      { name: "Lemon", baseQty: 1, unit: "lemon", meal: "Wed adult" },
+      { name: "Fresh parsley", baseQty: 1, unit: "bunch", meal: "Wed adult" },
+      { name: "Fresh chives", baseQty: 1, unit: "bunch", meal: "Wed adult" },
+      { name: "Marketside Baby Spinach", baseQty: 1, unit: "bag", meal: "Fri" },
+    ],
+    "Sauce & Flavor": [
+      { name: "Mezete Toum Sauce (315g squeeze bottle)", baseQty: 1, unit: "bottle", meal: "Mon" },
+      { name: "Shuug Original Harissa Hot Sauce (9 oz bottle)", baseQty: 1, unit: "bottle", meal: "Mon adult" },
+      { name: "Bare Bones Instant Bone Broth Powder Sticks (chicken, 15g)", baseQty: 1, unit: "packet", meal: "Mon" },
+      { name: "Kirkland Organic Chicken Sipping Bone Broth", qty: "pantry", meal: "Mon + Wed" },
+      { name: "Ghee (Tin Star or any brand)", qty: "pantry", meal: "Mon" },
+      { name: "Turmeric, cumin, garlic powder, onion powder", qty: "pantry", meal: "Mon" },
+      { name: "Chosen Foods Avocado Oil Spray", qty: "pantry", meal: "Mon" },
+      { name: "Kikkoman All-Purpose Soy Sauce", qty: "pantry", meal: "Wed adult" },
+      { name: "Lea & Perrins Worcestershire", qty: "pantry", meal: "Wed adult" },
+      { name: "Smash Kitchen Dijon", qty: "pantry", meal: "Wed adult" },
+      { name: "Smoked paprika", qty: "pantry", meal: "Wed adult" },
+      { name: "Chili flakes", qty: "pantry", meal: "Wed adult + Fri adult" },
+      { name: "Kirkland Salted Butter", qty: "pantry", meal: "Wed" },
+      { name: "Dan-O's Original", qty: "pantry", meal: "Fri" },
+    ],
+    "Creamy Base": [
+      { name: "Kirkland Parmigiano Stravecchio", qty: "pantry", meal: "Wed" },
+      { name: "Laughing Cow Light", baseQty: 1, unit: "container", meal: "Wed" },
+      { name: "Corn Chex (for Parmesan crust)", baseQty: 1, unit: "box", meal: "Wed" },
+      { name: "Daisy Low-Fat Cottage Cheese (16 oz tub)", baseQty: 1, unit: "tub", meal: "Fri" },
+    ],
+  },
 };
 
 function getGrocery(week) { return GROCERY_BY_WEEK[week] || GROCERY_BY_WEEK[1]; }
