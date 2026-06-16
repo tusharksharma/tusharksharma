@@ -166,9 +166,18 @@ Common mistakes that have caused bugs:
 When adding to `src/data/cookbook.js` (sauces, breakfasts, desserts, quickLunches):
 
 1. Add to the correct export array (`sauces`, `breakfasts`, `desserts`, `quickLunches`)
-2. Include `heroImage` and `prepImage` if available
+2. Include `heroImage` and `prepImage` if available — both polished (Gemini Path A or ChatGPT studio), no raw phone shots on these slots
 3. Ingredients can be strings or `{ text, link }` objects for cross-linking (e.g., linking to Money Mustard)
 4. The prerender script auto-discovers cookbook items by matching `id:` + `title:` + `tagline:` patterns
+5. **Wire polished process shots into BOTH surfaces (MANDATORY for cookbook items with 3+ steps):**
+   - **Detail page** (`/cookbook/{id}`): convert relevant `steps[]` entries from strings to `{ text: "...", image: "/images/..." }` objects. `CookbookDetailPage.jsx` (line 113-130) renders the image inline below the step text when the step is an object with an `image` field. The schema mixes — strings + objects coexist in the same `steps[]` array. Only wrap process moments (sausage drop, cheese melt, plating) — keep filler steps (spray pan, season, serve) as plain strings.
+   - **Social carousel** (`/social/cookbook/{id}`): add `socialImages: [polished filename array]` to the cookbook entry. `adaptCookbookToRecipe` in `SocialPage.jsx` passes this through; `processImages` prefers it over step-flatten. Same polished-only convention as dinner recipes.
+6. **Standard ship workflow per cookbook entry**:
+   - Polish 3-5 step shots via Gemini Path A (5-part canonical prompt — see "Image Generation Prompts" section). Save as `step-NN-{action}-polished.webp` in `/images/{slug}/`.
+   - Add `socialImages: [...]` array referencing those polished filenames
+   - Convert matching `steps[]` strings to `{text, image}` objects
+   - Run `npm run build` (cookbook validator + prerender)
+   - Commit + push
 
 ## Brand URLs + Images (mandatory)
 
@@ -274,6 +283,11 @@ Rules when adding a new recipe:
 2. **Curate `socialImages` to polished filenames ONLY.** Every entry must be a Gemini-polished or ChatGPT-generated webp/png. Naming convention: `*-polished.webp`, `*-clean.webp`, or studio output filenames like `*-studio.webp`.
 3. **Order matters.** The carousel renders in `socialImages` order. Suggested sequence: mise / ingredient shot → process action shot → split-plate proof shot → final adult plate variant. The Hero card already pulls `recipe.image` — don't duplicate it as the first `socialImages` entry unless it's a DIFFERENT polished crop.
 4. **When you only have a polished hero and nothing else**, ship `socialImages: [hero-polished]` only — short carousel is better than a carousel with raw shots. Then immediately output Path A polish prompts (referencing the raw filenames) for the user to produce supporting polished shots.
+
+**Cookbook items follow the SAME polished-only rule.** Every cookbook entry with process shots must wire them into BOTH surfaces:
+- `step.image` (singular) on relevant step objects → renders inline on the `/cookbook/{id}` detail page
+- `socialImages: [...]` array (polished filenames only) → drives the `/social/cookbook/{id}` carousel
+The `adaptCookbookToRecipe` adapter in `SocialPage.jsx` passes `socialImages` through. No exceptions for cookbook power-ups — if the recipe has process shots worth shooting, they get polished and wired into both surfaces. See "Adding a Cookbook Recipe" section for the full workflow.
 
 ### Carousel card order
 
