@@ -3,6 +3,7 @@ import { sauces, desserts, breakfasts, quickLunches, bases } from "../data/cookb
 import { liveRecipes } from "../data/recipes";
 import useMeta from "../hooks/useMeta";
 import track from "../hooks/useTrack";
+import ZoomableImage from "../components/ZoomableImage";
 
 const allItems = [...bases, ...sauces, ...breakfasts, ...desserts, ...quickLunches];
 
@@ -98,10 +99,10 @@ export default function CookbookDetailPage() {
           </ul>
         </div>
 
-        {/* Prep Image */}
+        {/* Prep Image — small thumb + click-to-expand (per zoomable-step-images rule) */}
         {sauce.prepImage && (
-          <div className="mt-6 rounded-xl overflow-hidden">
-            <img src={sauce.prepImage} alt={`${sauce.title} prep`} className="w-full h-72 sm:h-96 object-cover" loading="lazy" />
+          <div className="mt-6 flex flex-col items-center">
+            <ZoomableImage src={sauce.prepImage} alt={`${sauce.title} prep`} size="lg" />
             <p className="text-neutral-600 text-[10px] mt-1 text-center">{sauce.prepImageCaption || "Mise en place"}</p>
           </div>
         )}
@@ -126,7 +127,7 @@ export default function CookbookDetailPage() {
                     {label && <span className="text-amber-400 font-bold text-xs uppercase tracking-wider block mb-0.5">{label}</span>}
                     <p className="text-neutral-300 text-sm">{body}</p>
                     {image && (
-                      <img src={image} alt={label || `Step ${i + 1}`} className="mt-2 w-full max-w-md rounded-lg" loading="lazy" />
+                      <ZoomableImage src={image} alt={label || `Step ${i + 1}`} size="md" />
                     )}
                   </div>
                 </li>
@@ -135,10 +136,10 @@ export default function CookbookDetailPage() {
           </ol>
         </div>
 
-        {/* Action Image — "here's the result" shot */}
+        {/* Action Image — small thumb + click-to-expand (per zoomable-step-images rule) */}
         {sauce.actionImage && (
-          <div className="mt-6 rounded-xl overflow-hidden">
-            <img src={sauce.actionImage} alt={sauce.actionImageCaption || `${sauce.title} on a plate`} className="w-full h-72 sm:h-96 object-cover" loading="lazy" />
+          <div className="mt-6 flex flex-col items-center">
+            <ZoomableImage src={sauce.actionImage} alt={sauce.actionImageCaption || `${sauce.title} on a plate`} size="lg" />
             {sauce.actionImageCaption && (
               <p className="text-neutral-600 text-[10px] mt-1 text-center">{sauce.actionImageCaption}</p>
             )}
