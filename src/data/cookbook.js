@@ -1042,6 +1042,13 @@ export const breakfasts = [
     tagline: "285 cal. 35g protein. 17g fiber. Microwave mug cake with cookie-dough chunks. 3 minutes flat.",
     heroImage: "/images/high-protein-muffin-cup-powerup/hero-finished-muffin-cup-polished.webp",
     prepImage: "/images/high-protein-muffin-cup-powerup/step-01-product-cup-polished.webp",
+    // Polished-only carousel — backfilled 2026-06-15. 2 polished process
+    // shots available (chop + fold-in); hero + prep already render separately
+    // so they're not duplicated here. Narrative: chunk-prep → fold-in.
+    socialImages: [
+      "/images/high-protein-muffin-cup-powerup/step-06-chop-chormbles-polished.webp",
+      "/images/high-protein-muffin-cup-powerup/step-07-fold-in-chunks-polished.webp",
+    ],
     flavorProfile: "Soft warm muffin, cookies-and-cream sweetness, gooey center, chopped protein-candy chunks throughout. Tastes like dessert, eats like breakfast.",
     calories: 285,
     caloriesPerServing: 285,
@@ -1063,11 +1070,14 @@ export const breakfasts = [
       "1/2 to 3/4 of a Hormbles Chormbles bar, chopped (~75 cal portion)",
       "Optional: extra splash of Fairlife after cooking for softer texture",
     ],
+    // Steps mix strings + {text, image} objects. CookbookDetailPage.jsx renders
+    // the image inline below the step text. 2 polished process shots wired
+    // here; MISE/POUR/MICROWAVE/REST stay as plain strings.
     steps: [
       "MISE: Pop the Bootylicious cup lid + remove any inner foil seal. Measure 1/4 cup Fairlife. Pull out the Hormbles Chormbles bar + a small cutting board.",
       "POUR + STIR: 1/4 cup Fairlife straight into the Bootylicious cup. Stir with a spoon until the dry mix is fully hydrated — no dry pockets. Batter should be thick like brownie batter, not soupy.",
-      "CHOP THE CHORMBLES: ~75 cal worth of Hormbles Chormbles bar into small chunks (~1/4-inch). That's about 3/4 of the original 100-cal SKU, or 1/2 of the newer 140-cal SKU.",
-      "FOLD IN: Sprinkle the chopped Chormbles over the batter. Fold gently with the spoon to distribute. Don't overmix — visible chunks are the point.",
+      { text: "CHOP THE CHORMBLES: ~75 cal worth of Hormbles Chormbles bar into small chunks (~1/4-inch). That's about 3/4 of the original 100-cal SKU, or 1/2 of the newer 140-cal SKU.", image: "/images/high-protein-muffin-cup-powerup/step-06-chop-chormbles-polished.webp" },
+      { text: "FOLD IN: Sprinkle the chopped Chormbles over the batter. Fold gently with the spoon to distribute. Don't overmix — visible chunks are the point.", image: "/images/high-protein-muffin-cup-powerup/step-07-fold-in-chunks-polished.webp" },
       "MICROWAVE: 1 minute on high. If your microwave runs hot, start at 50 sec + add 10-sec bursts. Top should set but center stays slightly soft.",
       "REST + EAT: 30 sec rest (keeps setting as it cools). Optional Fairlife splash on top for softer texture. Spoon, straight from the cup.",
     ],
