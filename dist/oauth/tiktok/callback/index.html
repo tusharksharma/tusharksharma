@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Connecting TikTok…</title>
+  <style>
+    body { background:#0a0a0a; color:#e5e5e5; font-family:system-ui,-apple-system,sans-serif;
+           display:flex; align-items:center; justify-content:center; min-height:100vh; margin:0; }
+    .card { max-width:420px; text-align:center; padding:32px; }
+    h1 { color:#fbbf24; font-size:20px; margin:0 0 12px; }
+    p { color:#a3a3a3; font-size:14px; line-height:1.5; margin:8px 0; }
+    code { color:#fbbf24; background:#1a1a1a; padding:2px 6px; border-radius:6px; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Connecting TikTok…</h1>
+    <p id="msg">Handing the authorization back to the Split Plate Poster running on your computer…</p>
+    <p id="manual" style="display:none">
+      If this page doesn't redirect automatically, make sure the tool is running
+      (<code>npm run setup:tiktok</code>) and then
+      <a id="manualLink" href="#" style="color:#fbbf24">click here</a>.
+    </p>
+  </div>
+  <script>
+    // TikTok bans localhost redirect URIs, so it sends the OAuth result here
+    // (on the verified public domain). We forward the exact query string —
+    // code + state, or an error — to the local tool listening on port 3000.
+    (function () {
+      var qs = window.location.search || "";
+      var target = "http://localhost:3000/oauth/tiktok/callback" + qs;
+      var link = document.getElementById("manualLink");
+      link.href = target;
+      document.getElementById("manual").style.display = "block";
+      window.location.replace(target);
+    })();
+  </script>
+</body>
+</html>
