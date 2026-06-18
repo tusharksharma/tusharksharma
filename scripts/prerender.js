@@ -66,6 +66,7 @@ const routes = [
   { path: "/social", title: "Social Carousels — The Split Plate", description: "Private index of carousel pages for Instagram posting.", noindex: true },
   { path: "/privacy", title: "Privacy Policy — The Split Plate", description: "How The Split Plate handles your data — what we collect, what we don't, and how the Split Plate posting tool uses social account access." },
   { path: "/terms", title: "Terms of Service — The Split Plate", description: "The terms for using The Split Plate website and the Split Plate posting tool." },
+  { path: "/studio", title: "Studio — The Split Plate", description: "Private caption composer.", noindex: true },
   ...recipes.map((r) => {
     const idx = recipesRaw.indexOf(`slug: "${r.slug}"`);
     const ingredients = idx > -1 ? extractIngredients(recipesRaw, idx) : [];

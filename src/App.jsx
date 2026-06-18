@@ -16,6 +16,7 @@ const SocialIndexPage = lazy(() => import("./pages/SocialIndexPage"));
 const LeftoversPage = lazy(() => import("./pages/LeftoversPage"));
 const PrivacyPage = lazy(() => import("./pages/PrivacyPage"));
 const TermsPage = lazy(() => import("./pages/TermsPage"));
+const StudioPage = lazy(() => import("./pages/StudioPage"));
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -63,6 +64,7 @@ function App() {
           <Route path="/social/:slug" element={<SocialPage />} />
           <Route path="/privacy" element={<PrivacyPage />} />
           <Route path="/terms" element={<TermsPage />} />
+          <Route path="/studio" element={<StudioPage />} />
         </Routes>
       </Suspense>
       <InstallPrompt />
