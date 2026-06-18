@@ -22,6 +22,12 @@ dist-ssr
 *.sln
 *.sw?
 .vercel
+
+# Split Plate Poster tool — secrets & runtime (never commit; repo is public)
+tools/split-plate-poster/.env
+tools/split-plate-poster/uploads/*
+!tools/split-plate-poster/uploads/.gitkeep
+
 src/assets/hero.png
 src/assets/react.svg
 src/assets/vite.svg

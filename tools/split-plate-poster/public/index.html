@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Split Plate Poster</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="card">
+    <header>
+      <h1>Split Plate Poster</h1>
+      <p class="subtitle">One video, three platforms.</p>
+    </header>
+
+    <form id="postForm">
+      <label class="dropzone" id="dropzone" for="videoInput">
+        <input type="file" id="videoInput" name="video" accept="video/*" hidden />
+        <span id="dropzoneText">Drop a video here, or tap to choose one</span>
+        <video id="preview" hidden controls></video>
+      </label>
+
+      <label class="field">
+        Base caption
+        <textarea id="caption" name="caption" rows="4" placeholder="Write once. Tag brands with {raos}, {danos}, etc. — each platform below gets the right @ handle. Edit any platform individually."></textarea>
+      </label>
+
+      <details class="brand-help">
+        <summary>Brand tags — type <code>{slug}</code> to @-mention per platform</summary>
+        <div id="brandList" class="brand-list"></div>
+      </details>
+
+      <div class="platform-captions">
+        <div class="pc-card">
+          <div class="pc-head">
+            <span class="pc-label yt">YouTube</span>
+            <span class="pc-meta"><span class="pc-count" id="countYoutube">0</span><button type="button" class="pc-reset" id="resetYoutube" hidden>↻ reset</button></span>
+          </div>
+          <textarea id="capYoutube" rows="4"></textarea>
+        </div>
+        <div class="pc-card">
+          <div class="pc-head">
+            <span class="pc-label ig">Instagram</span>
+            <span class="pc-meta"><span class="pc-count" id="countInstagram">0</span><button type="button" class="pc-reset" id="resetInstagram" hidden>↻ reset</button></span>
+          </div>
+          <textarea id="capInstagram" rows="4"></textarea>
+        </div>
+        <div class="pc-card">
+          <div class="pc-head">
+            <span class="pc-label tt">TikTok</span>
+            <span class="pc-meta"><span class="pc-count" id="countTiktok">0</span><button type="button" class="pc-reset" id="resetTiktok" hidden>↻ reset</button></span>
+          </div>
+          <textarea id="capTiktok" rows="4"></textarea>
+        </div>
+      </div>
+
+      <fieldset class="platforms">
+        <label class="platform-option">
+          <input type="checkbox" name="platform" value="youtube" checked />
+          <span>YouTube Shorts</span>
+        </label>
+        <label class="platform-option">
+          <input type="checkbox" name="platform" value="instagram" checked />
+          <span>Instagram Reels</span>
+        </label>
+        <label class="platform-option">
+          <input type="checkbox" name="platform" value="tiktok" checked />
+          <span>TikTok</span>
+          <span class="badge" title="Posts privately until your TikTok app passes their content audit">private for now</span>
+        </label>
+      </fieldset>
+
+      <button type="submit" id="postButton">Post everywhere</button>
+    </form>
+
+    <section id="results" hidden>
+      <h2>Results</h2>
+      <ul id="resultsList"></ul>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
