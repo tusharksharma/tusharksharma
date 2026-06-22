@@ -1833,6 +1833,61 @@ export const desserts = [
       reheat: "None. Eat cold straight from the fridge — that's the format.",
     },
   },
+  {
+    id: "high-protein-brownie-ice-cream-bowl",
+    title: "High-Protein Brownie Ice Cream Bowl",
+    tagline: "330 cal / 33g protein dessert hack. 1 Prime Bites brownie warmed 20 sec + 1/3 pint Frozen One Chocolate protein ice cream. Eats in 2 min.",
+    heroImage: "/images/high-protein-brownie-ice-cream-bowl/hero-brownie-ice-cream-bowl.webp",
+    prepImage: "/images/high-protein-brownie-ice-cream-bowl/context-protein-brownie-square.webp",
+    // Polished-only carousel — first commit ships raw stills; Path A polish
+    // prompts queued for follow-up swap. Narrative: brownie reveal → ice
+    // cream reveal → warm brownie → final scoop on top.
+    socialImages: [
+      "/images/high-protein-brownie-ice-cream-bowl/context-protein-brownie-square.webp",
+      "/images/high-protein-brownie-ice-cream-bowl/context-frozen-one-dutch-chocolate.webp",
+      "/images/high-protein-brownie-ice-cream-bowl/step-01-brownie-in-bowl.webp",
+      "/images/high-protein-brownie-ice-cream-bowl/step-02-microwave-brownie.webp",
+      "/images/high-protein-brownie-ice-cream-bowl/step-03-add-ice-cream.webp",
+    ],
+    flavorProfile: "Warm fudgy brownie + cold creamy chocolate protein ice cream = textural contrast + the melting moment where the ice cream starts to sink into the warm brownie. Reads as dessert, lands as a macro snack.",
+    calories: 330,
+    caloriesPerServing: 330,
+    protein: 33,
+    proteinPerServing: 33,
+    servings: 1,
+    time: "2 min",
+    bestFor: ["Dessert", "Snack", "Powerup", "High protein", "Microwave", "Sweet craving", "Macro-friendly"],
+    useThisWhen: "The 2-minute sweet-craving fix that doesn't blow the macro day. 1 Prime Bites brownie + 1/3 pint chocolate protein ice cream = 330 cal / 33g protein. Sibling recipe to the [Chocolate Protein Brownie Bowl](/cookbook/chocolate-protein-brownie-bowl) — same Prime Bites base, swap the Bootylicious muffin cup for cold ice cream. Adult-only macro dessert; not designed for kids.",
+    flavorTarget: "Brownie should be WARM (not hot, not room-temp) so the bottom of the ice cream just starts to soften on contact. 20 sec at 1000W microwave is the sweet spot — long enough to soften the brownie's interior, short enough that the top doesn't dry out. Cold ice cream on warm brownie creates the temperature delta that makes this read as restaurant dessert, not 'health bar with ice cream'.",
+    coreRatio: "1 Prime Bites brownie + 1/3 of a pint of any chocolate protein ice cream that hits at least 1g protein per 10 cal (Frozen One Chocolate, Protein Pints Chocolate, etc.). This is the system — the ≥1g/10cal density rule is what locks the macro profile at 330 cal / 33g protein.",
+    ingredients: [
+      "1 Prime Bites Protein Brownie (any flavor — S'mores, Cookie Dough, Chocolate Glazed Donut, Birthday Cake, Mint Chocolate, etc. ~180-220 cal / 19g protein per brownie)",
+      "1/3 pint Frozen One Chocolate Protein Ice Cream (or any chocolate protein ice cream with ≥1g protein per 10 cal — Protein Pints Chocolate works too; see substitutions)",
+    ],
+    steps: [
+      { text: "BROWNIE INTO BOWL: Unwrap 1 Prime Bites brownie. Drop the brownie square into a microwave-safe bowl (small ceramic bowl ~12 oz is ideal — leaves room for the ice cream scoop on top).", image: "/images/high-protein-brownie-ice-cream-bowl/step-01-brownie-in-bowl.webp" },
+      { text: "MICROWAVE 20 SEC: On high. 20 seconds at ~1000W is the sweet spot — brownie's interior softens + warms without the top drying out. If your microwave is lower power, try 25 sec; if it runs hot, 15 sec + check.", image: "/images/high-protein-brownie-ice-cream-bowl/step-02-microwave-brownie.webp" },
+      { text: "ADD ICE CREAM: While the brownie is warm, scoop ~1/3 pint (≈140g, about 2 generous scoops) of Frozen One Chocolate protein ice cream directly on top of the warm brownie. The cold-on-warm contrast is the entire dessert moment.", image: "/images/high-protein-brownie-ice-cream-bowl/step-03-add-ice-cream.webp" },
+      "EAT IMMEDIATELY: The ice cream starts melting into the warm brownie within 30-60 seconds. Eat while the brownie is warm + the ice cream is still scoopable but partially softening on the bottom. Don't let it sit — it loses the textural contrast that makes it work.",
+    ],
+    troubleshooting: [
+      { problem: "Brownie came out dry / overcooked on top", fix: "20 sec was too long for your microwave. Drop to 15 sec next time. Rescue: pour 1 tsp Fairlife milk over the brownie before adding the ice cream — softens the top + the milk integrates with the melting ice cream." },
+      { problem: "Brownie still feels cold-firm after microwave", fix: "Microwave is lower-watt than 1000W (some compact units are 700-800W). Add 5 sec + check. Should feel warm to the touch + slightly soft in the center, not piping hot." },
+      { problem: "Ice cream rock-hard out of the freezer", fix: "Let the pint sit at room temp 2-3 min before scooping. Frozen One + Protein Pints both freeze harder than dairy ice cream (no air whipped in to lighten). Or run the scoop under warm water." },
+      { problem: "Macros came in higher than 330 / 33", fix: "Most likely cause: (1) over-scooped the ice cream (1/3 pint = ~140g, not half the pint), (2) used a higher-cal Prime Bites flavor (Chocolate Glazed Donut is ~220 cal vs Mint Chocolate at ~180), or (3) added a topping (don't — the recipe is just brownie + ice cream). Stick to 1 brownie + 1/3 pint." },
+      { problem: "Subbed a different protein ice cream — macros don't line up", fix: "The ≥1g protein per 10 cal rule is the brand-selection lock. Halo Top Protein hits it; regular Halo Top doesn't. Ninja Creami homemade hits it if you build it right. Most premium 'protein ice cream' brands hit it (Frozen One, Protein Pints, Wink, Magic Spoon Ice Cream). If your pint is 280 cal / 20g protein, that's only 0.7g/10cal — drops the combo to ~310 cal / 26g protein." },
+    ],
+    brands: [
+      { name: "Prime Bites", item: "Protein Brownie (any flavor — 19g protein, 5g collagen, low sugar, 12-pack variety; ~180-220 cal per 65g brownie depending on flavor)", why: "Individually-wrapped protein brownie that actually tastes like brownie (not protein bar). The warm-bake step IS the magic — Prime Bites holds up to 20 sec microwave without falling apart. Cross-recipe with the Chocolate Protein Brownie Bowl in the cookbook. Any flavor works.", image: "/images/brands/prime-bites-smores-brownie.png", url: "https://primebites.com/" },
+      { name: "Frozen One", item: "Chocolate Protein Ice Cream (1 pt — 405 cal / 40g protein per pint, ~1g protein per 10 cal density)", why: "Real ice cream texture with the protein density that makes the combo math work. Other flavors (Peanut Butter Chip, Apple Pie) work too but chocolate is the canonical pairing. Sub Protein Pints Chocolate or any chocolate protein ice cream hitting ≥1g protein per 10 cal.", image: "/images/brands/frozen-one-chocolate-protein-ice-cream.png", url: "https://www.frozen-one.com/flavors" },
+    ],
+    macroHonesty: "Per bowl (~330 cal / 33g protein) MacroFactor-tracked. Component breakdown: 1 Prime Bites brownie (mid-range, ~200 cal / 19g protein — actual range 180-220 cal depending on flavor) + 1/3 pint Frozen One Chocolate (~135 cal / 13.3g protein per 1/3 of 405 cal / 40g pint) = ~335 cal / 32.3g protein. Headline 330 / 33 rounded. Flagged estimated because (1) Prime Bites flavor lot varies cal slightly (180-220), (2) scoop weight varies, (3) microwave timing affects nothing macro-wise but the textural anchor. The ≥1g protein per 10 cal rule for ice cream is the brand-selection lock that holds the macro at 33g — any chocolate protein ice cream meeting the density floor will land in the 32-34g protein range with this BOM.",
+    mealPrep: {
+      storage: "N/A — make per serving. Both brownie + ice cream are shelf/freezer stable individually for weeks/months.",
+      lasts: "Prime Bites brownies: months at room temp (per package date). Frozen One pints: months in the freezer (per package date). The assembled bowl doesn't store — eat immediately.",
+      reheat: "N/A — make fresh. The cold-on-warm temperature contrast IS the dessert; reheating a leftover bowl wrecks it.",
+    },
+  },
 ];
 
 // Bases — utility recipes that power other meals. The modular building blocks
