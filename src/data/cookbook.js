@@ -647,19 +647,18 @@ export const sauces = [
     id: "grillos-pickle-dip-protein-style",
     title: "High-Protein Grillo's Pickle Dip",
     tagline: "Viral Grillo's pickle dip, rebuilt protein-style. 10 servings, 110 cal / 16g protein per scoop. Packed back into the pickle tub for serving.",
-    heroImage: "/images/grillos-pickle-dip-protein-style/hero-finished-dip-with-wilde.webp",
-    prepImage: "/images/grillos-pickle-dip-protein-style/context-grillos-pickle-chips.webp",
-    // Polished-only carousel — first commit ships raw stills; Path A polish
-    // prompts queued for follow-up swap. Narrative: brand → base → pickle
-    // brine → ranch seasoning → bacon → fill tub.
+    heroImage: "/images/grillos-pickle-dip-protein-style/hero-finished-dip-with-wilde-polished.webp",
+    prepImage: "/images/grillos-pickle-dip-protein-style/context-grillos-pickle-chips-polished.webp",
+    // Polished-only carousel — 9 image-model-generated outputs swapped in.
+    // Narrative: brand → base → pickle brine → ranch seasoning → bacon → fill tub.
     socialImages: [
-      "/images/grillos-pickle-dip-protein-style/context-grillos-pickle-chips.webp",
-      "/images/grillos-pickle-dip-protein-style/step-01-cottage-cheese-base.webp",
-      "/images/grillos-pickle-dip-protein-style/step-02-blend-base.webp",
-      "/images/grillos-pickle-dip-protein-style/step-03-pickle-brine.webp",
-      "/images/grillos-pickle-dip-protein-style/step-04-ranch-protein-seasoning.webp",
-      "/images/grillos-pickle-dip-protein-style/step-05-fold-bacon-bits.webp",
-      "/images/grillos-pickle-dip-protein-style/step-06-fill-grillos-tub.webp",
+      "/images/grillos-pickle-dip-protein-style/context-grillos-pickle-chips-polished.webp",
+      "/images/grillos-pickle-dip-protein-style/step-01-cottage-cheese-base-polished.webp",
+      "/images/grillos-pickle-dip-protein-style/step-02-blend-base-polished.webp",
+      "/images/grillos-pickle-dip-protein-style/step-03-pickle-brine-polished.webp",
+      "/images/grillos-pickle-dip-protein-style/step-04-ranch-protein-seasoning-polished.webp",
+      "/images/grillos-pickle-dip-protein-style/step-05-fold-bacon-bits-polished.webp",
+      "/images/grillos-pickle-dip-protein-style/step-06-fill-grillos-tub-polished.webp",
     ],
     flavorProfile: "Creamy + tangy + ranchy + briny + smoky bacon hits. Pickle-forward but balanced by ranch herbs + sour-cream skyr. Reads like a party dip, eats like a protein vehicle.",
     calories: 1100,
@@ -683,13 +682,13 @@ export const sauces = [
       "A few pieces of garlic + sprigs of dill from the Grillo's tub",
     ],
     steps: [
-      { text: "DRAIN + RESERVE: Open the Grillo's tub. Pour off the brine into a small measuring cup (reserve 2 tbsp for the dip — the rest can go back in or be saved for other uses). Save the empty tub — that's the serving vessel.", image: "/images/grillos-pickle-dip-protein-style/context-grillos-pickle-chips.webp" },
-      { text: "BLEND COTTAGE CHEESE: 450g Mulu cottage cheese into a food processor. Blend 30-45 sec until completely smooth — no curds visible. This is the move that turns the dip from chunky into creamy.", image: "/images/grillos-pickle-dip-protein-style/step-01-cottage-cheese-base.webp" },
-      { text: "TO BOWL: Transfer the blended cottage cheese to a mixing bowl. Should look like thick yogurt at this point.", image: "/images/grillos-pickle-dip-protein-style/step-02-blend-base.webp" },
-      { text: "BUILD THE PICKLE-RANCH MIX: Back into the (now-empty) food processor — 1/2 cup Siggi's 0% Plain Skyr + 4 Laughing Cow Light wedges + 2 tbsp reserved Grillo's brine + 8 pickle chips + a few pieces of garlic + sprigs of dill from the tub + 5 tbsp Build the Body Ranch Protein Seasoning. Blend until creamy but still pickle-forward (~30 sec). Should have visible pickle flecks but read as a sauce, not a chunky relish.", image: "/images/grillos-pickle-dip-protein-style/step-03-pickle-brine.webp" },
-      { text: "COMBINE: Pour the blended pickle-ranch mix into the bowl with the cottage cheese base. Fold gently with a spatula until fully combined and uniform.", image: "/images/grillos-pickle-dip-protein-style/step-04-ranch-protein-seasoning.webp" },
-      { text: "FOLD IN BACON: 3 oz Epic Hickory Smoked Bacon Bits into the bowl. Fold gently — visible chunks should remain (don't pulverize). Bacon is the salt + smoke + crunch finish.", image: "/images/grillos-pickle-dip-protein-style/step-05-fold-bacon-bits.webp" },
-      { text: "PACK BACK INTO TUB: Spoon the finished dip back into the empty Grillo's tub. This is the visual hook — the dip lives in the original pickle tub. Smooth the top with the back of a spoon.", image: "/images/grillos-pickle-dip-protein-style/step-06-fill-grillos-tub.webp" },
+      { text: "DRAIN + RESERVE: Open the Grillo's tub. Pour off the brine into a small measuring cup (reserve 2 tbsp for the dip — the rest can go back in or be saved for other uses). Save the empty tub — that's the serving vessel.", image: "/images/grillos-pickle-dip-protein-style/context-grillos-pickle-chips-polished.webp" },
+      { text: "BLEND COTTAGE CHEESE: 450g Mulu cottage cheese into a food processor. Blend 30-45 sec until completely smooth — no curds visible. This is the move that turns the dip from chunky into creamy.", image: "/images/grillos-pickle-dip-protein-style/step-01-cottage-cheese-base-polished.webp" },
+      { text: "TO BOWL: Transfer the blended cottage cheese to a mixing bowl. Should look like thick yogurt at this point.", image: "/images/grillos-pickle-dip-protein-style/step-02-blend-base-polished.webp" },
+      { text: "BUILD THE PICKLE-RANCH MIX: Back into the (now-empty) food processor — 1/2 cup Siggi's 0% Plain Skyr + 4 Laughing Cow Light wedges + 2 tbsp reserved Grillo's brine + 8 pickle chips + a few pieces of garlic + sprigs of dill from the tub + 5 tbsp Build the Body Ranch Protein Seasoning. Blend until creamy but still pickle-forward (~30 sec). Should have visible pickle flecks but read as a sauce, not a chunky relish.", image: "/images/grillos-pickle-dip-protein-style/step-03-pickle-brine-polished.webp" },
+      { text: "COMBINE: Pour the blended pickle-ranch mix into the bowl with the cottage cheese base. Fold gently with a spatula until fully combined and uniform.", image: "/images/grillos-pickle-dip-protein-style/step-04-ranch-protein-seasoning-polished.webp" },
+      { text: "FOLD IN BACON: 3 oz Epic Hickory Smoked Bacon Bits into the bowl. Fold gently — visible chunks should remain (don't pulverize). Bacon is the salt + smoke + crunch finish.", image: "/images/grillos-pickle-dip-protein-style/step-05-fold-bacon-bits-polished.webp" },
+      { text: "PACK BACK INTO TUB: Spoon the finished dip back into the empty Grillo's tub. This is the visual hook — the dip lives in the original pickle tub. Smooth the top with the back of a spoon.", image: "/images/grillos-pickle-dip-protein-style/step-06-fill-grillos-tub-polished.webp" },
       "SERVE: Straight from the Grillo's tub. Pair with Wilde Protein Chips for the high-protein combo (270 cal / 27g protein per serving), or use regular tortilla chips, carrots, celery, cucumber slices, or any crunchy dipper. Refrigerate leftovers in the tub with the lid back on; eat within 3-4 days.",
     ],
     troubleshooting: [
@@ -1459,15 +1458,15 @@ export const quickLunches = [
     id: "grillos-pickle-dip-wilde-combo",
     title: "Grillo's Pickle Dip + Wilde Chips Combo",
     tagline: "270 cal / 27g protein snack — the dip (110/16) + a bag of Wilde Spicy Queso Protein Chips (160/11). Macro-coded combo of the viral pickle dip remix.",
-    heroImage: "/images/grillos-pickle-dip-protein-style/context-wilde-chip-dip.webp",
-    prepImage: "/images/grillos-pickle-dip-protein-style/hero-finished-dip-with-wilde.webp",
+    heroImage: "/images/grillos-pickle-dip-protein-style/context-wilde-chip-dip-polished.webp",
+    prepImage: "/images/grillos-pickle-dip-protein-style/hero-finished-dip-with-wilde-polished.webp",
     // Polished-only carousel — shares the same image folder as the parent dip
     // entry. Carousel here leans on the combo framing: chip-in-dip moment +
     // brand reveal + finished bowl.
     socialImages: [
-      "/images/grillos-pickle-dip-protein-style/context-wilde-chip-dip.webp",
-      "/images/grillos-pickle-dip-protein-style/hero-finished-dip-with-wilde.webp",
-      "/images/grillos-pickle-dip-protein-style/step-06-fill-grillos-tub.webp",
+      "/images/grillos-pickle-dip-protein-style/context-wilde-chip-dip-polished.webp",
+      "/images/grillos-pickle-dip-protein-style/hero-finished-dip-with-wilde-polished.webp",
+      "/images/grillos-pickle-dip-protein-style/step-06-fill-grillos-tub-polished.webp",
     ],
     flavorProfile: "Spicy queso chicken-chip crunch dunked in creamy pickle-ranch dip. Heat from Wilde + tang from the dip = the combo flavor lock.",
     calories: 270,
@@ -1485,9 +1484,9 @@ export const quickLunches = [
       "1 bag (1.34 oz / ~30 chips) Wilde Spicy Queso Protein Chips",
     ],
     steps: [
-      { text: "MAKE THE DIP (one-time, ahead): Follow the [parent dip recipe](/cookbook/grillos-pickle-dip-protein-style) to make a 10-serving batch. Store in the Grillo's tub in the fridge. Each scoop = 110 cal / 16g protein. Skip this step if the dip is already in your fridge.", image: "/images/grillos-pickle-dip-protein-style/step-06-fill-grillos-tub.webp" },
-      { text: "ASSEMBLE THE COMBO: Pull the Grillo's tub from the fridge. Open 1 bag of Wilde Spicy Queso Protein Chips. Dunk chips, eat. One scoop of dip from the tub = the right portion for the macro log.", image: "/images/grillos-pickle-dip-protein-style/context-wilde-chip-dip.webp" },
-      { text: "STORE: Lid back on the dip tub, sealed clip on the chip bag. The dip holds 3-4 days; chips hold ~3 weeks sealed. Repeat the combo as often as you want — each repeat is 270 / 27.", image: "/images/grillos-pickle-dip-protein-style/hero-finished-dip-with-wilde.webp" },
+      { text: "MAKE THE DIP (one-time, ahead): Follow the [parent dip recipe](/cookbook/grillos-pickle-dip-protein-style) to make a 10-serving batch. Store in the Grillo's tub in the fridge. Each scoop = 110 cal / 16g protein. Skip this step if the dip is already in your fridge.", image: "/images/grillos-pickle-dip-protein-style/step-06-fill-grillos-tub-polished.webp" },
+      { text: "ASSEMBLE THE COMBO: Pull the Grillo's tub from the fridge. Open 1 bag of Wilde Spicy Queso Protein Chips. Dunk chips, eat. One scoop of dip from the tub = the right portion for the macro log.", image: "/images/grillos-pickle-dip-protein-style/context-wilde-chip-dip-polished.webp" },
+      { text: "STORE: Lid back on the dip tub, sealed clip on the chip bag. The dip holds 3-4 days; chips hold ~3 weeks sealed. Repeat the combo as often as you want — each repeat is 270 / 27.", image: "/images/grillos-pickle-dip-protein-style/hero-finished-dip-with-wilde-polished.webp" },
     ],
     troubleshooting: [
       { problem: "Macros came in higher than 270 cal", fix: "Over-scooped the dip. 1/10 of the 10-serving batch is the budget — eyeball-divide the tub into 10 if you're tracking close. Or use a kitchen scale (1 scoop ≈ 50g of dip)." },
@@ -1497,7 +1496,7 @@ export const quickLunches = [
       { problem: "Don't have Wilde chips", fix: "The dip works with regular tortilla chips, carrots, celery, cucumber slices, or pita chips — just lose the 27g protein anchor. With a 1-oz portion of tortilla chips, the combo lands ~250 cal / 18g protein. Still a strong macro snack." },
     ],
     brands: [
-      { name: "High-Protein Grillo's Pickle Dip", item: "Parent dip recipe — 10 servings per batch, 110 cal / 16g protein per scoop", why: "Make the 10-serving batch via the parent recipe ([Grillo's Pickle Dip Protein Style](/cookbook/grillos-pickle-dip-protein-style)). Stores 3-4 days in the original Grillo's tub. One batch supports ~10 combos.", image: "/images/grillos-pickle-dip-protein-style/hero-finished-dip-with-wilde.webp", url: "/cookbook/grillos-pickle-dip-protein-style" },
+      { name: "High-Protein Grillo's Pickle Dip", item: "Parent dip recipe — 10 servings per batch, 110 cal / 16g protein per scoop", why: "Make the 10-serving batch via the parent recipe ([Grillo's Pickle Dip Protein Style](/cookbook/grillos-pickle-dip-protein-style)). Stores 3-4 days in the original Grillo's tub. One batch supports ~10 combos.", image: "/images/grillos-pickle-dip-protein-style/hero-finished-dip-with-wilde-polished.webp", url: "/cookbook/grillos-pickle-dip-protein-style" },
       { name: "Wilde Brands", item: "Spicy Queso Protein Chips (1.34 oz bag — 160 cal / 11g protein / 4g net carbs per bag; 4 oz bigger bag also available)", why: "Real chicken breast + egg whites + bone broth chips, NOT potato chips. 10g protein per 1 oz serving. Spicy Queso variant has aged cheddar + smoked chipotle + roasted jalapeño — pairs cleanly with the pickle dip's tang. The combo IS the macro anchor for this entry.", image: "/images/brands/wilde-spicy-queso-chips.png", url: "https://www.wildebrands.com/products/spicy-queso" },
     ],
     macroHonesty: "Per combo (270 cal / 27g protein) is straight math: 1 scoop dip (110 cal / 16g protein, per parent-recipe macroHonesty) + 1 bag Wilde Spicy Queso (160 cal / 11g protein, per label) = 270 cal / 27g protein. Wilde's per-bag macros are package-label values. Dip macros are MacroFactor-tracked from the parent recipe. The 270 / 27 anchor holds as long as the dip portion is 1/10 of the batch and the chips are a single full bag.",
