@@ -1960,23 +1960,19 @@ export const desserts = [
     tagline: "Viral dot cake, protein version. 3 ramekin cakes per batch, 250 cal / 25g protein each (base 170/19 + cheesecake frosting + sprinkles).",
     heroImage: "/images/high-protein-viral-dot-cake/hero-finished-dot-cakes-polished.webp",
     prepImage: "/images/high-protein-viral-dot-cake/context-pescience-vanilla-polished.webp",
-    // Polished-only carousel — PAYOFF-FIRST ordering per
-    // [feedback-social-images-payoff-first] standing rule. The visual
-    // moneyshots (sprinkle pour, final scoop, frosting) lead because the
-    // carousel-truncation tail drops the LAST entries, and the brand
-    // reveals are the most expendable. End card preserved by the
-    // SocialPage card-composition fix; only the brand-reveal tail trims.
+    // Polished-only carousel — STEP-ORDER (matches cookbook detail page
+    // reading order). Build-to-payoff arc: wet mix → fill → bake → frost
+    // → sprinkle dip → scoop. Sized to 6 entries so all fit the cookbook
+    // carousel cap (Hero + Macros + 6 process + BestFor + End = 10).
+    // Brand reveals + dry-mix shots dropped because they ate process
+    // slots that the payoff needed.
     socialImages: [
-      "/images/high-protein-viral-dot-cake/step-sprinkle-pour-polished.webp",
-      "/images/high-protein-viral-dot-cake/step-cheesecake-frosting-polished.webp",
-      "/images/high-protein-viral-dot-cake/step-final-scoop-polished.webp",
-      "/images/high-protein-viral-dot-cake/step-baked-cakes-polished.webp",
-      "/images/high-protein-viral-dot-cake/step-mix-batter-polished.webp",
-      "/images/high-protein-viral-dot-cake/step-fill-ramekins-polished.webp",
-      "/images/high-protein-viral-dot-cake/context-pescience-vanilla-polished.webp",
       "/images/high-protein-viral-dot-cake/context-happy-egg-polished.webp",
-      "/images/high-protein-viral-dot-cake/context-fairlife-fat-free-milk-polished.webp",
-      "/images/high-protein-viral-dot-cake/step-baking-powder-polished.webp",
+      "/images/high-protein-viral-dot-cake/step-fill-ramekins-polished.webp",
+      "/images/high-protein-viral-dot-cake/step-baked-cakes-polished.webp",
+      "/images/high-protein-viral-dot-cake/step-cheesecake-frosting-polished.webp",
+      "/images/high-protein-viral-dot-cake/step-sprinkle-pour-polished.webp",
+      "/images/high-protein-viral-dot-cake/step-final-scoop-polished.webp",
     ],
     flavorProfile: "Soft golden vanilla protein snack cake with a creamy cheesecake-frosting top and crunchy rainbow nonpareil sprinkle coat. The cake center stays slightly liquidy (intentional — molten center is the viral dot cake signature). Reads as funfetti birthday cake; eats as a macro-friendly dessert.",
     calories: 750,
