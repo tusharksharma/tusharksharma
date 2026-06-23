@@ -63,13 +63,17 @@ function titleHashtag(title, maxWords = 4) {
 
 // Extract a use-case hashtag from a cookbook bestFor[] line. First entry
 // usually names the canonical dish ("Steak", "Tacos", "Rice bowls"). Convert
-// to "#SteakSauce", "#TacoSauce", etc.
+// to "#SteakSauce", "#TacoSauce", etc. If the first word already equals the
+// suffix ("Dessert" + "Dessert" → would produce "#DessertDessert"), drop the
+// suffix and return the bare word as a hashtag.
 function bestForHashtag(item, suffix = "Sauce") {
   const first = (item.bestFor || [])[0];
   if (!first) return null;
   const word = first.split(/\s+/)[0].replace(/[^a-zA-Z]/g, "");
   if (word.length < 3) return null;
-  return `#${word[0].toUpperCase()}${word.slice(1).toLowerCase()}${suffix}`;
+  const cap = `${word[0].toUpperCase()}${word.slice(1).toLowerCase()}`;
+  if (cap.toLowerCase() === suffix.toLowerCase()) return `#${cap}`;
+  return `#${cap}${suffix}`;
 }
 
 // Generate exactly 5 content-specific hashtags. Same generator for both TikTok
@@ -120,60 +124,6 @@ function hashtagsFor(recipe) {
   tags.add("#TheSplitPlate");
 
   return Array.from(tags).slice(0, 5);
-}
-
-// Per-brand handles for Instagram (`ig`) and TikTok (`tiktok`). TikTok handles
-// are verified via web search — many brands have DIFFERENT @ on TikTok vs IG.
-// If a brand has no verified TikTok handle, omit `tiktok` and it's silently
-// dropped from the TikTok caption (avoids posting a fake @).
-const KNOWN_HANDLES = {
-  "Dan-O's": { ig: "@danosseasoning", tiktok: "@danosseasoning" },
-  "Kirkland Signature": { ig: "@kirklandsignature_costco" },
-  "Kirkland": { ig: "@kirklandsignature_costco" },
-  "Laughing Cow": { ig: "@thelaughingcow", tiktok: "@thelaughingcowus" },
-  "Lea & Perrins": { ig: "@leaandperrins", tiktok: "@lea_and_perrins" },
-  "Smash Kitchen": { ig: "@smashkitchenco", tiktok: "@getsmashkitchen" },
-  "Kikkoman": { ig: "@kikkoman_usa", tiktok: "@kikkomankitchen" },
-  "General Mills": { ig: "@generalmills", tiktok: "@generalmills" },
-  "Lee Kum Kee": { ig: "@leekumkeeusa", tiktok: "@leekumkeeusa" },
-  "Verka": { ig: "@verkadairy" },
-  "Red Boat": { ig: "@redboatfishsauce", tiktok: "@redboatfishsauce" },
-  "Tanimura & Antle": { ig: "@tanimuraantle" },
-  "Chosen Foods": { ig: "@chosenfoods", tiktok: "@chosenfoods" },
-  "Herdez": { ig: "@herdez", tiktok: "@herdezbrand" },
-  "Daisy": { ig: "@daisybrand", tiktok: "@daisysourcreamofficial" },
-  "Fage": { ig: "@fage", tiktok: "@fage" },
-  "Philadelphia": { ig: "@philadelphia", tiktok: "@philadelphia" },
-  "Whole Earth": { ig: "@wholeearthsweetener", tiktok: "@wholeearthsweetener" },
-  "Ghirardelli": { ig: "@ghirardelli", tiktok: "@officalghirardelli" },
-  "Nescafé": { ig: "@nescafe_usa", tiktok: "@nescafe.usa" },
-  "HighKey": { ig: "@highkeysnacks", tiktok: "@highkeysnacks" },
-  "PEScience": { ig: "@pescience", tiktok: "@pescience" },
-  "Little Potato Co.": { ig: "@littlepotatoco", tiktok: "@littlepotatoco" },
-  "NY Style Sausage Co.": { ig: "@nystylesausage" },
-  "Dynasty": { ig: "@dynasty.foods" },
-  "Bare Bones": { ig: "@barebonesbroth" },
-  "Anthony's": { ig: "@anthonys.organic" },
-  "Lily's": { ig: "@lilyssweets" },
-  "Thrive Market": { ig: "@thrivemarket", tiktok: "@thrivemarket" },
-  "Fairlife": { ig: "@fairlife", tiktok: "@fairlifeofficial" },
-  "Nakano": { ig: "@nakanorice" },
-  "Taste Flavor Co.": { ig: "@tasteflavorco" },
-  "Opportuniteas": { ig: "@opportuniteas" },
-  "Bob's Red Mill": { ig: "@bobsredmill", tiktok: "@bobsredmill" },
-  "Marketside (Walmart)": { ig: "@marketside" },
-  "Pete's Pasta": { ig: "@petespasta" },
-  "Rao's": { ig: "@raoshomemade", tiktok: "@raoshomemade" },
-  "Barilla": { ig: "@barillaus", tiktok: "@barilla" },
-  "Falls Brand": { ig: "@fallsbrand" },
-  "365 Whole Foods": { ig: "@wholefoods" },
-  "Godshall's": { ig: "@godshalls", tiktok: "@godshalls" },
-};
-
-function brandHandles(recipe, platform = "ig") {
-  return (recipe.brands || [])
-    .map((b) => KNOWN_HANDLES[b.name]?.[platform])
-    .filter(Boolean);
 }
 
 // Both TikTok and Instagram cap at 5 specific hashtags (per Tushar — generic
@@ -922,7 +872,6 @@ function flattenIngredients(arr) {
 }
 
 function longCaption(recipe, components, platform = "tiktok") {
-  const handles = brandHandles(recipe, platform);
   const tags = platform === "tiktok" ? tiktokHashtagsFor(recipe) : hashtagsFor(recipe);
   const lines = [];
   const m = recipe.meta?.macros || {};
@@ -936,7 +885,9 @@ function longCaption(recipe, components, platform = "tiktok") {
   lines.push(`✓ ~${m.calories || recipe.calories} cal per serving`);
   if (m.netCarbs != null) lines.push(`✓ ~${m.netCarbs}g net carbs`);
   lines.push(`✓ ${recipe.time} · ${recipe.servings} servings`);
-  lines.push(`✓ One cook, two plates (adult + kid)`);
+  // "One cook, two plates" is the dinner-only split-plate stat. Cookbook
+  // items (sauce / breakfast / dessert / etc.) don't have a kid version.
+  if (recipe.splitCook) lines.push(`✓ One cook, two plates (adult + kid)`);
   lines.push("");
 
   // SPLIT
@@ -984,24 +935,16 @@ function longCaption(recipe, components, platform = "tiktok") {
     lines.push("");
   }
 
-  // COMPONENTS (cross-linked sauces / sides)
+  // COMPONENTS (cross-linked sauces / sides) — bare titles, no URLs.
+  // External-URL CTAs trip IG/TikTok caption policy enforcement; the
+  // bio link covers discovery.
   if (components.length) {
     lines.push("BUILT WITH");
-    components.forEach((c) => lines.push(`• ${c.title} — thesplitplate.com/cookbook/${c.id}`));
+    components.forEach((c) => lines.push(`• ${c.title}`));
     lines.push("");
   }
 
-  // CTA
-  lines.push(`Full recipe → thesplitplate.com${recipe.recipePath || `/recipes/${recipe.slug}`}`);
-  lines.push("");
-
-  // BRAND TAGS
-  if (handles.length) {
-    lines.push(handles.join(" "));
-    lines.push("");
-  }
-
-  // HASHTAGS
+  // HASHTAGS — no @ handles (brand-tag policy), no external URL CTA.
   lines.push(tags.join(" "));
 
   return lines.join("\n");
@@ -1273,7 +1216,7 @@ export default function SocialPage() {
         </div>
 
         <details className="mt-4 bg-neutral-800/50 border border-neutral-700 rounded-lg p-3 text-xs" open>
-          <summary className="text-pink-400 cursor-pointer font-semibold">TikTok caption · long-form · TikTok @ handles · 5 hashtags</summary>
+          <summary className="text-pink-400 cursor-pointer font-semibold">TikTok caption · long-form · 5 hashtags</summary>
           <div className="mt-3 space-y-2">
             <button
               onClick={() => {
@@ -1289,7 +1232,7 @@ export default function SocialPage() {
         </details>
 
         <details className="mt-3 bg-neutral-800/50 border border-neutral-700 rounded-lg p-3 text-xs" open>
-          <summary className="text-orange-400 cursor-pointer font-semibold">Instagram caption · long-form · IG @ handles · 5 content hashtags</summary>
+          <summary className="text-orange-400 cursor-pointer font-semibold">Instagram caption · long-form · 5 content hashtags</summary>
           <div className="mt-3 space-y-2">
             <button
               onClick={() => {
