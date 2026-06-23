@@ -1181,18 +1181,28 @@ export default function SocialPage() {
     ? { id: "bestfor", kind: "bestfor", label: "Card · Best For", filename: `${slugForFiles}-bestfor`, item: cookbookItem, render: <BestForCardInner item={cookbookItem} /> }
     : { id: "split", kind: "split", label: "Card · Split", filename: `${slugForFiles}-split`, recipe, render: <SplitCardInner recipe={recipe} /> };
 
-  const allCards = [
-    { id: "hero", kind: "hero", label: "Card · Hero", filename: `${slugForFiles}-1-hero`, recipe, render: <HeroCardInner recipe={recipe} /> },
-    { id: "macros", kind: "macros", label: "Card · Macros", filename: `${slugForFiles}-2-macros`, recipe, render: <MacroCardInner recipe={recipe} /> },
-    ...(processCards[0] ? [processCards[0]] : []),
+  const heroCard = { id: "hero", kind: "hero", label: "Card · Hero", filename: `${slugForFiles}-1-hero`, recipe, render: <HeroCardInner recipe={recipe} /> };
+  const macrosCard = { id: "macros", kind: "macros", label: "Card · Macros", filename: `${slugForFiles}-2-macros`, recipe, render: <MacroCardInner recipe={recipe} /> };
+  const endCard = { id: "end", kind: "end", label: "Card · End / Recipe Link", filename: `${slugForFiles}-end`, recipe, render: <EndCardInner recipe={recipe} /> };
+
+  // Instagram carousel max = 10 cards. Reserved slots: Hero + Macros +
+  // middleCard + End + componentCards = 4 + N components. Remaining slots
+  // go to process images. When socialImages count pushes the total over 10,
+  // drop excess PROCESS cards — never the End card (broke the recipe-link
+  // close on dot cake which had 10 socialImages).
+  const reservedCount = 4 + componentCards.length;
+  const maxProcess = Math.max(0, 10 - reservedCount);
+  const trimmedProcessCards = processCards.slice(0, maxProcess);
+
+  const cards = [
+    heroCard,
+    macrosCard,
+    ...(trimmedProcessCards[0] ? [trimmedProcessCards[0]] : []),
     middleCard,
     ...componentCards,
-    ...processCards.slice(1),
-    { id: "end", kind: "end", label: "Card · End / Recipe Link", filename: `${slugForFiles}-end`, recipe, render: <EndCardInner recipe={recipe} /> },
+    ...trimmedProcessCards.slice(1),
+    endCard,
   ];
-  // Instagram carousel max = 10 cards. If we go over, drop the last process
-  // images (preserve hero, macros, split, components, end).
-  const cards = allCards.slice(0, 10);
 
   async function saveAll() {
     if (saveAllBusy) return;
