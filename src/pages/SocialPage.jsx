@@ -120,9 +120,8 @@ function hashtagsFor(recipe) {
     else tags.add("#FamilyDinner");
   }
 
-  // 5. Brand anchor — ONE slot, not two. Discoverable for the audience.
-  tags.add("#TheSplitPlate");
-
+  // No brand anchor. Audience already knows the account; spending a tag
+  // slot on `#TheSplitPlate` costs one of 5 content-discovery slots.
   return Array.from(tags).slice(0, 5);
 }
 
