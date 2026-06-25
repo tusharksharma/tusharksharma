@@ -2380,21 +2380,20 @@ export const powerups = [
     id: "electrolyte-watermelon-limeade",
     title: "Electrolyte Watermelon Limeade",
     tagline: "Salty-sour summer hydration — blend a mini watermelon with lime + LMNT, strain smooth, drink cold.",
-    heroImage: "/images/electrolyte-watermelon-limeade/hero-finished-watermelon-limeade.webp",
-    prepImage: "/images/electrolyte-watermelon-limeade/context-lmnt-electrolyte-packet.webp",
-    // socialImages — raw paths for now; swap to -polished.webp after the
-    // Path A polish run lands. Step-execution order per
+    heroImage: "/images/electrolyte-watermelon-limeade/hero-finished-watermelon-limeade-polished.webp",
+    prepImage: "/images/electrolyte-watermelon-limeade/context-lmnt-electrolyte-packet-polished.webp",
+    // socialImages — Path A polished. Step-execution order per
     // [feedback-social-images-step-order]: blender → lime → LMNT → blend
     // → strain → pour. Payoff (carafe pour) at the tail. Sized to 6
     // entries — fits the cookbook carousel cap exactly. `final-glass`
     // dropped as a near-duplicate of the hero.
     socialImages: [
-      "/images/electrolyte-watermelon-limeade/step-01-watermelon-in-blender.webp",
-      "/images/electrolyte-watermelon-limeade/step-02-lime-juice.webp",
-      "/images/electrolyte-watermelon-limeade/context-lmnt-electrolyte-packet.webp",
-      "/images/electrolyte-watermelon-limeade/step-04-blend-smooth.webp",
-      "/images/electrolyte-watermelon-limeade/step-05-strain-limeade.webp",
-      "/images/electrolyte-watermelon-limeade/step-06-pour-into-carafe.webp",
+      "/images/electrolyte-watermelon-limeade/step-01-watermelon-in-blender-polished.webp",
+      "/images/electrolyte-watermelon-limeade/step-02-lime-juice-polished.webp",
+      "/images/electrolyte-watermelon-limeade/context-lmnt-electrolyte-packet-polished.webp",
+      "/images/electrolyte-watermelon-limeade/step-04-blend-smooth-polished.webp",
+      "/images/electrolyte-watermelon-limeade/step-05-strain-limeade-polished.webp",
+      "/images/electrolyte-watermelon-limeade/step-06-pour-into-carafe-polished.webp",
     ],
     flavorProfile: "Fresh watermelon, tart lime, salty electrolyte finish. Drinks like a juice, not a smoothie. Salty by design — adjust LMNT down if you're not actually sweating.",
     calories: 320,
@@ -2421,12 +2420,12 @@ export const powerups = [
       "Ice, optional for serving",
     ],
     steps: [
-      { text: "BLENDER: Add the watermelon chunks to a blender.", image: "/images/electrolyte-watermelon-limeade/step-01-watermelon-in-blender.webp" },
-      { text: "LIME: Squeeze in the juice from 2 limes.", image: "/images/electrolyte-watermelon-limeade/step-02-lime-juice.webp" },
-      { text: "LMNT: Tear in 2 LMNT packets.", image: "/images/electrolyte-watermelon-limeade/context-lmnt-electrolyte-packet.webp" },
-      { text: "BLEND: Blend until completely smooth.", image: "/images/electrolyte-watermelon-limeade/step-04-blend-smooth.webp" },
-      { text: "STRAIN: Strain through a fine-mesh strainer into a bowl or pitcher. The pulp stays behind so it drinks like juice, not a smoothie.", image: "/images/electrolyte-watermelon-limeade/step-05-strain-limeade.webp" },
-      { text: "POUR + SERVE: Pour into a carafe or glass and serve cold, over ice if you want.", image: "/images/electrolyte-watermelon-limeade/step-06-pour-into-carafe.webp" },
+      { text: "BLENDER: Add the watermelon chunks to a blender.", image: "/images/electrolyte-watermelon-limeade/step-01-watermelon-in-blender-polished.webp" },
+      { text: "LIME: Squeeze in the juice from 2 limes.", image: "/images/electrolyte-watermelon-limeade/step-02-lime-juice-polished.webp" },
+      { text: "LMNT: Tear in 2 LMNT packets.", image: "/images/electrolyte-watermelon-limeade/context-lmnt-electrolyte-packet-polished.webp" },
+      { text: "BLEND: Blend until completely smooth.", image: "/images/electrolyte-watermelon-limeade/step-04-blend-smooth-polished.webp" },
+      { text: "STRAIN: Strain through a fine-mesh strainer into a bowl or pitcher. The pulp stays behind so it drinks like juice, not a smoothie.", image: "/images/electrolyte-watermelon-limeade/step-05-strain-limeade-polished.webp" },
+      { text: "POUR + SERVE: Pour into a carafe or glass and serve cold, over ice if you want.", image: "/images/electrolyte-watermelon-limeade/step-06-pour-into-carafe-polished.webp" },
     ],
     brands: [
       { name: "LMNT", item: "Recharge Electrolyte Drink Mix (1,000mg sodium / 200mg potassium / 60mg magnesium per stick)", why: "The electrolyte spine. Zero sugar, no artificial sweeteners. Two packets per batch = 500mg sodium per serving — enough for an actual hot-day workout, not a token sprinkle. Watermelon + lime carry the flavor; LMNT carries the math.", image: "/images/brands/lmnt-recharge.png", url: "https://drinklmnt.com/products/lmnt-recharge-electrolyte-drink" },
