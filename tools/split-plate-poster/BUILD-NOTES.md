@@ -39,10 +39,8 @@ Instagram needs no `setup:*` step — its token is generated in the Meta dashboa
 | `public/` | Single-page UI: base caption + 3 editable per-platform caption boxes + brand chips. |
 
 ### Posting model
-You write **one base caption** (with optional `{slug}` brand tokens). The UI shows
-**three editable boxes** — YouTube / Instagram / TikTok — each pre-filled by
-expanding the base for that platform, and individually editable. On submit, each
-selected platform receives **its own** caption.
+You write **one caption**; it's sent to every selected platform as-is. (YouTube's
+title is the caption's first line, capped at 100 chars.)
 
 ---
 
@@ -139,18 +137,3 @@ PORT=3000
 
 > `.env` is gitignored and must never be committed — it holds live tokens, and this
 > repo is public.
-
----
-
-## Brand tagging
-
-Write `{slug}` tokens in a caption (e.g. `made with {raos} marinara`). At post time
-each platform's caption resolves the token to that platform's handle. Map lives in
-`lib/brands.js` (and `src/data/brandHandles.js` for `/studio`). Fallbacks ensure a
-**fake `@` is never posted**:
-
-- brand known + handle for that platform → `@handle`
-- brand known + handle missing for that platform → brand's plain name
-- token not in the map → the slug text, unbraced
-
-Add YouTube handles / new brands by editing the `BRANDS` object in both files.

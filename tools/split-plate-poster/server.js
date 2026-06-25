@@ -8,7 +8,6 @@ const multer = require('multer');
 const youtube = require('./lib/youtube');
 const instagram = require('./lib/instagram');
 const tiktok = require('./lib/tiktok');
-const { BRANDS, expandCaption } = require('./lib/brands');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -20,29 +19,9 @@ const upload = multer({
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Brand token reference for the UI (slug + display name + which platforms have a handle).
-app.get('/api/brands', (req, res) => {
-  const list = Object.entries(BRANDS).map(([slug, b]) => ({
-    slug,
-    name: b.name,
-    yt: b.yt || null,
-    ig: b.ig || null,
-    tt: b.tt || null,
-    platforms: ['yt', 'ig', 'tt'].filter((f) => b[f])
-  }));
-  res.json({ brands: list });
-});
-
 app.post('/api/post', upload.single('video'), async (req, res) => {
   const file = req.file;
-  const {
-    caption = '',
-    title = '',
-    captionYoutube,
-    captionInstagram,
-    captionTiktok,
-    platforms = '[]'
-  } = req.body;
+  const { caption = '', title = '', platforms = '[]' } = req.body;
 
   if (!file) {
     return res.status(400).json({ error: 'No video file received.' });
@@ -55,35 +34,28 @@ app.post('/api/post', upload.single('video'), async (req, res) => {
     selectedPlatforms = [];
   }
 
-  // Each platform posts its OWN caption. Prefer the per-platform text sent by the
-  // UI (where the user may have hand-edited it); fall back to expanding the base
-  // caption's {slug} brand tokens for that platform if no override was provided.
-  const captionFor = (platform, override) =>
-    (override != null && override !== '') ? override : expandCaption(caption, platform);
-
-  const ytCaption = captionFor('youtube', captionYoutube);
-  // YouTube title: explicit field, else the caption's first line, capped at 100.
-  const ytTitle = (title.trim() || ytCaption.split('\n')[0].trim().slice(0, 100) || 'Split Plate');
+  // One caption goes to every selected platform.
+  const finalTitle = title.trim() || caption.trim().split('\n')[0].slice(0, 100) || 'Split Plate';
 
   const jobs = [];
   if (selectedPlatforms.includes('youtube')) {
     jobs.push(
       youtube
-        .uploadShort(file.path, ytTitle, ytCaption)
+        .uploadShort(file.path, finalTitle, caption)
         .catch((err) => ({ platform: 'youtube', status: 'error', message: errorMessage(err) }))
     );
   }
   if (selectedPlatforms.includes('instagram')) {
     jobs.push(
       instagram
-        .uploadReel(file.path, captionFor('instagram', captionInstagram))
+        .uploadReel(file.path, caption)
         .catch((err) => ({ platform: 'instagram', status: 'error', message: errorMessage(err) }))
     );
   }
   if (selectedPlatforms.includes('tiktok')) {
     jobs.push(
       tiktok
-        .uploadVideo(file.path, captionFor('tiktok', captionTiktok))
+        .uploadVideo(file.path, caption)
         .catch((err) => ({ platform: 'tiktok', status: 'error', message: errorMessage(err) }))
     );
   }
