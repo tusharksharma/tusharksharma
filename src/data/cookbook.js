@@ -1241,6 +1241,68 @@ export const breakfasts = [
       reheat: "N/A — eggs reheat poorly. If you must: 30 sec microwave covered, but expect rubbery whites and over-set yolks.",
     },
   },
+  {
+    id: "salmon-cream-cheese-bagel",
+    title: "Salmon Cream Cheese Bagel",
+    tagline: "5-minute smoked salmon cream cheese bagel — 250 cal / 30g protein on a Sola high-protein bagel. No deli build, no toast.",
+    heroImage: "/images/salmon-cream-cheese-bagel/hero-loaded-salmon-cream-cheese-bagel.webp",
+    prepImage: "/images/salmon-cream-cheese-bagel/context-smoked-salmon.webp",
+    // socialImages — raw paths for now; swap to -polished.webp after the
+    // Path A polish run lands. Step-execution order per
+    // [feedback-social-images-step-order]: salmon on board → cream
+    // cheese → chop → bagel reveal → load. Payoff (loaded bagel) at the
+    // tail. Sized to 6 entries — fits cookbook carousel cap exactly.
+    // `final-salmon-cream-cheese-bagel.webp` dropped as a near-duplicate
+    // of the hero (same board, same loaded half).
+    socialImages: [
+      "/images/salmon-cream-cheese-bagel/context-smoked-salmon.webp",
+      "/images/salmon-cream-cheese-bagel/step-02-add-cream-cheese.webp",
+      "/images/salmon-cream-cheese-bagel/step-03-chop-salmon-cream-cheese.webp",
+      "/images/salmon-cream-cheese-bagel/context-sola-bagel.webp",
+      "/images/salmon-cream-cheese-bagel/step-05-load-bagel.webp",
+      "/images/salmon-cream-cheese-bagel/hero-loaded-salmon-cream-cheese-bagel.webp",
+    ],
+    flavorProfile: "Smoky salmon, tangy cream cheese, soft high-protein Sola bagel. Chunky spread, not whipped — salmon stays visible.",
+    calories: 250,
+    caloriesPerServing: 250,
+    protein: 30,
+    proteinPerServing: 30,
+    servings: 1,
+    time: "5 min",
+    bestFor: [
+      "Breakfast",
+      "Lunch",
+      "High protein",
+      "No cook",
+      "Quick meal",
+      "Deli style",
+    ],
+    useThisWhen: "You want a smoked salmon bagel without a full deli build. 5 minutes, one cutting board, three ingredients. Hits 30g protein at 250 cal — solid for breakfast or a small lunch, especially if dinner is going to be heavy.",
+    flavorTarget: "Chunky salmon cream cheese spread that holds together when you bite, salmon visible in small pieces. The Sola bagel is a quiet protein boost — most of the macro lift comes from the bagel itself (15g protein) + the smoked salmon (12g).",
+    ingredients: [
+      "1 Sola Mini Bagel (full, both halves)",
+      "1 serving smoked salmon (~2 oz / 56g)",
+      "2 tbsp cream cheese (~30g)",
+    ],
+    steps: [
+      { text: "SALMON: Add the smoked salmon to a cutting board.", image: "/images/salmon-cream-cheese-bagel/context-smoked-salmon.webp" },
+      { text: "CREAM CHEESE: Drop 2 tbsp cream cheese on top of the salmon.", image: "/images/salmon-cream-cheese-bagel/step-02-add-cream-cheese.webp" },
+      { text: "CHOP: Chop the salmon and cream cheese together with a chef's knife into a chunky spread. Don't whip it smooth — salmon should stay visible in small pieces.", image: "/images/salmon-cream-cheese-bagel/step-03-chop-salmon-cream-cheese.webp" },
+      { text: "OPEN: Halve the Sola bagel.", image: "/images/salmon-cream-cheese-bagel/context-sola-bagel.webp" },
+      { text: "LOAD: Spread the chunky salmon cream cheese onto both bagel halves.", image: "/images/salmon-cream-cheese-bagel/step-05-load-bagel.webp" },
+      { text: "EAT: Eat immediately — bagel toasts in the spread's residual fat if you want a quick pan-warm.", image: "/images/salmon-cream-cheese-bagel/hero-loaded-salmon-cream-cheese-bagel.webp" },
+    ],
+    brands: [
+      { name: "Sola", item: "Mini Bagel (per bagel: ~110 cal / 15g protein / 5g net carbs)", why: "The macro spine. 15g protein PER BAGEL is the highest-protein bagel on the shelf and the reason 30g protein lands at only 250 cal total. Cross-recipe candidate for sandwich + breakfast builds.", image: "/images/brands/sola-bagel.png", url: "https://solasweet.com/products/bagels/" },
+      { name: "Smoked Salmon", item: "1 serving (~2 oz / 56g — ~80 cal / 12g protein)", why: "Pre-cooked, no prep. The Atlantic / Norwegian cold-smoked variety holds best in a chunky chop — don't sub hot-smoked, the texture turns to flake.", image: "/images/brands/smoked-salmon-generic.png" },
+    ],
+    macroHonesty: "250 cal / 30g protein per loaded bagel, confirmed by Tushar from the labeled macros: Sola bagel (110 cal / 15g protein) + 2 oz smoked salmon (~80 cal / 12g protein) + 2 tbsp cream cheese (60 cal / 2g protein) = ~250 / ~29g. The 30g protein claim rounds up on the salmon serving — within typical labeling variance.",
+    mealPrep: {
+      storage: "Best assembled fresh. The salmon-cream-cheese spread can be made ahead and held in a sealed container in the fridge.",
+      lasts: "1 day for best texture — fresh cream cheese softens after the chop and turns to paste by day 2.",
+      reheat: "Don't heat. Spread cold, eat cold, or pan-warm the loaded bagel face-down for 30 sec to crisp.",
+    },
+  },
 ];
 
 export const quickLunches = [
