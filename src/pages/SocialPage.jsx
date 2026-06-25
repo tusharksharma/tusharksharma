@@ -4,7 +4,7 @@ import { liveRecipes } from "../data/recipes";
 import { sauces, bases, breakfasts, desserts, quickLunches, powerups } from "../data/cookbook";
 import useMeta from "../hooks/useMeta";
 
-const ALL_COOKBOOK = [...sauces, ...bases, ...breakfasts, ...desserts, ...quickLunches];
+const ALL_COOKBOOK = [...sauces, ...bases, ...breakfasts, ...desserts, ...quickLunches, ...powerups];
 
 // Words we deliberately filter out of title-derived hashtags.
 // Either too generic (#The, #With) or already brand-encoded (#Plate, #Cook).
