@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { liveRecipes } from "../data/recipes";
-import { sauces, bases, breakfasts, desserts, quickLunches } from "../data/cookbook";
+import { sauces, bases, breakfasts, desserts, quickLunches, powerups } from "../data/cookbook";
 import useMeta from "../hooks/useMeta";
 
 const ALL_COOKBOOK = [...sauces, ...bases, ...breakfasts, ...desserts, ...quickLunches];
@@ -42,6 +42,7 @@ const COOKBOOK_KIND_HASHTAGS = {
   "Breakfast": "#HighProteinBreakfast",
   "Dessert": "#ProteinDessert",
   "Quick Lunch": "#QuickLunch",
+  "Powerup": "#Powerup",
 };
 
 // Combine 2-4 significant words from a title into a single CamelCase hashtag.
@@ -98,12 +99,15 @@ function hashtagsFor(recipe) {
     const suffix = recipe.__cookbookKind === "Sauce" ? "Sauce"
       : recipe.__cookbookKind === "Side / Base" ? "Side"
       : recipe.__cookbookKind === "Dessert" ? "Dessert"
+      : recipe.__cookbookKind === "Powerup" ? "Powerup"
       : "Recipe";
     const useTag = bestForHashtag({ bestFor: recipe.bestFor }, suffix);
     if (useTag) tags.add(useTag);
 
-    // 4. Macro signal — cookbook items rarely have carbLevel, so use protein density
-    if ((recipe.protein || 0) >= 20) tags.add("#HighProtein");
+    // 4. Macro / discovery signal — protein density for food, hydration
+    // for drinks/powerups (high-protein label is dishonest on a 0g recipe).
+    if (recipe.__cookbookKind === "Powerup") tags.add("#Hydration");
+    else if ((recipe.protein || 0) >= 20) tags.add("#HighProtein");
     else tags.add("#MealPrep");
   } else {
     // 2. Protein anchor (dinner-specific)
@@ -955,6 +959,7 @@ function classifyCookbook(item) {
   if (breakfasts.includes(item)) return "Breakfast";
   if (desserts.includes(item)) return "Dessert";
   if (quickLunches.includes(item)) return "Quick Lunch";
+  if (powerups.includes(item)) return "Powerup";
   return "Component";
 }
 

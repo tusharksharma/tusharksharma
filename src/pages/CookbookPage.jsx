@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import useMeta from "../hooks/useMeta";
-import { sauces, quickLunches, desserts, breakfasts, bases } from "../data/cookbook";
+import { sauces, quickLunches, desserts, breakfasts, bases, powerups } from "../data/cookbook";
 
 const TABS = [
   ...(bases.length > 0 ? ["Bases"] : []),
@@ -9,6 +9,7 @@ const TABS = [
   ...(breakfasts.length > 0 ? ["Breakfast"] : []),
   ...(desserts.length > 0 ? ["Desserts"] : []),
   ...(quickLunches.length > 0 ? ["Quick Lunches"] : []),
+  ...(powerups.length > 0 ? ["Powerups"] : []),
 ];
 
 function netCarbColor(nc) {
@@ -201,6 +202,19 @@ export default function CookbookPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {filterItems(quickLunches).map((q) => (
                 <RecipeCard key={q.id} item={q} />
+              ))}
+            </div>
+          </div>
+        )}
+
+        {tab === "Powerups" && powerups.length > 0 && (
+          <div>
+            <p className="text-neutral-500 text-xs mb-4">
+              Hydration drinks + electrolyte fuel. Hot day, pre-workout, during a long sweat — fresh produce + LMNT math, no sugar bombs.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {filterItems(powerups).map((p) => (
+                <RecipeCard key={p.id} item={p} />
               ))}
             </div>
           </div>

@@ -2370,3 +2370,76 @@ export const bases = [
     },
   },
 ];
+
+// Powerups — hydration drinks, electrolyte mixes, and pre/post-workout fuel.
+// Distinct from breakfasts (eaten on hot days, before/during/after workouts,
+// not tied to a meal slot) and distinct from desserts (functional, not
+// indulgent). Built around fresh produce + electrolyte mixes.
+export const powerups = [
+  {
+    id: "electrolyte-watermelon-limeade",
+    title: "Electrolyte Watermelon Limeade",
+    tagline: "Salty-sour summer hydration — blend a mini watermelon with lime + LMNT, strain smooth, drink cold.",
+    heroImage: "/images/electrolyte-watermelon-limeade/hero-finished-watermelon-limeade.webp",
+    prepImage: "/images/electrolyte-watermelon-limeade/context-lmnt-electrolyte-packet.webp",
+    // socialImages — raw paths for now; swap to -polished.webp after the
+    // Path A polish run lands. Step-execution order per
+    // [feedback-social-images-step-order]: blender → lime → LMNT → blend
+    // → strain → pour. Payoff (carafe pour) at the tail. Sized to 6
+    // entries — fits the cookbook carousel cap exactly. `final-glass`
+    // dropped as a near-duplicate of the hero.
+    socialImages: [
+      "/images/electrolyte-watermelon-limeade/step-01-watermelon-in-blender.webp",
+      "/images/electrolyte-watermelon-limeade/step-02-lime-juice.webp",
+      "/images/electrolyte-watermelon-limeade/context-lmnt-electrolyte-packet.webp",
+      "/images/electrolyte-watermelon-limeade/step-04-blend-smooth.webp",
+      "/images/electrolyte-watermelon-limeade/step-05-strain-limeade.webp",
+      "/images/electrolyte-watermelon-limeade/step-06-pour-into-carafe.webp",
+    ],
+    flavorProfile: "Fresh watermelon, tart lime, salty electrolyte finish. Drinks like a juice, not a smoothie. Salty by design — adjust LMNT down if you're not actually sweating.",
+    calories: 320,
+    caloriesPerServing: 80,
+    protein: 0,
+    proteinPerServing: 0,
+    servings: 4,
+    time: "10 min",
+    bestFor: [
+      "Hot day",
+      "Pre-workout",
+      "During workout",
+      "Post-workout recovery",
+      "Hydration",
+      "Summer drink",
+      "No cook",
+    ],
+    useThisWhen: "Hot day, before a workout, during a long workout, or after a sweaty walk — when you want flavor + real electrolytes without a sugar bomb. Two LMNT packets per batch = 500mg sodium per serving; back off to one packet if you're not sweating it out.",
+    flavorTarget: "Smooth strained watermelon limeade. Juicy, not smoothie-thick. Salty-sour with a watermelon backbone — should drink like a fresh juice you actually finish.",
+    ingredients: [
+      "1 mini watermelon, rind removed and flesh cut into chunks",
+      "2 limes, juiced",
+      "2 packets LMNT electrolyte drink mix",
+      "Ice, optional for serving",
+    ],
+    steps: [
+      { text: "BLENDER: Add the watermelon chunks to a blender.", image: "/images/electrolyte-watermelon-limeade/step-01-watermelon-in-blender.webp" },
+      { text: "LIME: Squeeze in the juice from 2 limes.", image: "/images/electrolyte-watermelon-limeade/step-02-lime-juice.webp" },
+      { text: "LMNT: Tear in 2 LMNT packets.", image: "/images/electrolyte-watermelon-limeade/context-lmnt-electrolyte-packet.webp" },
+      { text: "BLEND: Blend until completely smooth.", image: "/images/electrolyte-watermelon-limeade/step-04-blend-smooth.webp" },
+      { text: "STRAIN: Strain through a fine-mesh strainer into a bowl or pitcher. The pulp stays behind so it drinks like juice, not a smoothie.", image: "/images/electrolyte-watermelon-limeade/step-05-strain-limeade.webp" },
+      { text: "POUR + SERVE: Pour into a carafe or glass and serve cold, over ice if you want.", image: "/images/electrolyte-watermelon-limeade/step-06-pour-into-carafe.webp" },
+    ],
+    brands: [
+      { name: "LMNT", item: "Recharge Electrolyte Drink Mix (1,000mg sodium / 200mg potassium / 60mg magnesium per stick)", why: "The electrolyte spine. Zero sugar, no artificial sweeteners. Two packets per batch = 500mg sodium per serving — enough for an actual hot-day workout, not a token sprinkle. Watermelon + lime carry the flavor; LMNT carries the math.", image: "/images/brands/lmnt-recharge.png", url: "https://drinklmnt.com/products/lmnt-recharge-electrolyte-drink" },
+    ],
+    macroHonesty: "Calories estimated: 70-90 per 8-10 fl oz serving across 4 servings, depending on the edible yield from one mini watermelon (typically 900-1,100g flesh). Watermelon + lime contribute negligible electrolytes vs LMNT — the 500mg sodium / 100mg potassium / 30mg magnesium per serving is LMNT-only math.",
+    electrolytes: {
+      perServing: { sodiumMg: 500, potassiumMg: 100, magnesiumMg: 30 },
+      perBatch: { sodiumMg: 2000, potassiumMg: 400, magnesiumMg: 120 },
+    },
+    mealPrep: {
+      storage: "Refrigerate in a sealed jar or pitcher.",
+      lasts: "2 days. Best within 24 hours — fresh juice oxidizes after that and the watermelon flavor flattens.",
+      reheat: "Don't — serve cold. Stir or shake before pouring; fresh watermelon juice naturally separates.",
+    },
+  },
+];
