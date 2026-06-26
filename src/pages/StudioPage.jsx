@@ -184,7 +184,9 @@ function Composer() {
 
 export default function StudioPage() {
   useMeta({ title: "Studio", description: "Private caption composer." });
-  const [unlocked, setUnlocked] = useState(false);
+  const [unlocked, setUnlocked] = useState(() =>
+    typeof window !== "undefined" && sessionStorage.getItem(SESSION_KEY) === "1"
+  );
 
   // noindex — never let this surface in search.
   useEffect(() => {
@@ -193,10 +195,6 @@ export default function StudioPage() {
     el.setAttribute("content", "noindex, nofollow");
     document.head.appendChild(el);
     return () => { document.head.removeChild(el); };
-  }, []);
-
-  useEffect(() => {
-    if (sessionStorage.getItem(SESSION_KEY) === "1") setUnlocked(true);
   }, []);
 
   return unlocked ? <Composer /> : <Gate onUnlock={() => setUnlocked(true)} />;

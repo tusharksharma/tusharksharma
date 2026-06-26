@@ -175,7 +175,7 @@ const EXPORT_SIZE = 1080;
 //
 // Replaces the prior hardcoded "Card 1" / "Card 2" labels that were
 // rendering as text overlays on exported social cards.
-function captionForSocialImage(src, _recipe) {
+function captionForSocialImage(src) {
   if (!src) return "";
   return src
     .split("/")
@@ -1078,7 +1078,7 @@ export default function SocialPage() {
   let processImages;
   if (Array.isArray(recipe.socialImages) && recipe.socialImages.length > 0) {
     processImages = recipe.socialImages
-      .map((src) => ({ src, caption: captionForSocialImage(src, recipe) }))
+      .map((src) => ({ src, caption: captionForSocialImage(src) }))
       .filter((p) => {
         if (!p.src || p.src === recipe.image || seen.has(p.src)) return false;
         seen.add(p.src);

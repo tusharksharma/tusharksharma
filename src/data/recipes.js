@@ -5228,16 +5228,26 @@ const recipes = [
     carbLevel: "medium",
     meta: {
       macros: { protein: 50, calories: 550, fat: 22, carbs: 36, netCarbs: 34, estimated: true },
-      allergens: [],
+      // Dairy: Trader Joe's Shawarma Chicken Thighs marinade is yogurt-based
+      // (confirmed in the recipe copy + the DIY-sub note below). The kid
+      // toum-mellow trick also uses yogurt. Soy: TJ Shawarma Chicken Thigh
+      // package label includes soy (likely in the seasoning blend / soy
+      // lecithin). Both allergens must be declared.
+      allergens: ["dairy", "soy"],
       warnings: ["spicy-adult-version"],
-      dietTags: ["gluten-free", "dairy-free-option", "egg-free", "soy-free", "nut-free", "pork-free", "halal"],
+      // "halal" dropped from dietTags — TJ Shawarma Chicken Thighs and
+      // Kirkland Sipping Bone Broth aren't halal-certified. Cuisine
+      // descriptor lives in `effortTags`/`tags` as "halal-style" + the
+      // "halal-cart" dish name. A certified-halal swap is in
+      // substitutionNotes for anyone who needs religious certification.
+      dietTags: ["gluten-free", "egg-free", "nut-free", "pork-free"],
       proteinTags: ["chicken"],
       splitAxes: ["plating", "sauce"],
-      effortTags: ["weeknight", "one-pan-protein", "halal", "shawarma"],
+      effortTags: ["weeknight", "one-pan-protein", "halal-style", "shawarma"],
       costTier: "moderate",
       costPerServing: "$5.50",
       substitutionNotes: [
-        "Trader Joe's Shawarma-Style Chicken Thighs (T1 fast-protein anchor — pre-marinated, no overnight prep). 1.5 lb total for 4 servings = 8 oz adult / 4 oz kid. Sub the DIY shawarma marinade below if TJ isn't accessible (Greek yogurt + lemon + olive oil + garlic/onion/cumin/paprika/turmeric/coriander + salt + pepper, marinate 30+ min).",
+        "Trader Joe's Shawarma-Style Chicken Thighs (T1 fast-protein anchor — pre-marinated, no overnight prep). 1.5 lb total for 4 servings = 8 oz adult / 4 oz kid. Sub the DIY shawarma marinade below if TJ isn't accessible (Greek yogurt + lemon + olive oil + garlic/onion/cumin/paprika/turmeric/coriander + salt + pepper, marinate 30+ min). NOT halal-certified — for certified halal, swap to Crescent Foods, Saffron Road, or Honest Chops boneless skinless thighs (1.5 lb total) + the DIY marinade above + sub a certified-halal chicken broth (Saffron Road) for the Kirkland Sipping Bone Broth.",
         "Mezete Toum (T1 sauce anchor — Middle Eastern garlic aioli, plant-based, shelf-stable). The white sauce on BOTH plates — kids actually love it. ~315g squeeze bottle is ~70 cal / 7g fat per 2 tbsp. Sub a homemade toum (garlic + olive oil + lemon + salt emulsified in a food processor) or any garlic aioli — Stonemill, Cedar's, generic store-brand garlic sauce.",
         "Shuug Original Harissa Hot Sauce (T1 adult-only heat layer — roasted red pepper + chili + cumin). 9 oz bottle. The macro-light kick (~15 cal / 1g fat per tbsp). NEVER on the kid plate. Sub any harissa (NY Shuk, Mina, Trader Joe's) or skip — toum alone carries the adult bowl too.",
         "Bare Bones Instant Bone Broth Powder (chicken, 15g stick — 45 cal / 10g protein / 0g fat). Mixed into the rice cooking liquid alongside Kirkland Sipping Bone Broth — gives the rice a deeper savory base + a free protein bump. Sub a second tbsp of Spiceology spice blend if you don't have the powder; the rice loses ~10g protein and ~50 cal but still tastes right.",
@@ -5267,7 +5277,7 @@ const recipes = [
     title: "High-Protein Halal Cart Chicken Rice Bowls",
     category: "Core Signatures",
     pillar: "Protein Meals",
-    tags: ["chicken", "rice-bowl", "halal", "shawarma", "split-cook", "weeknight", "high-protein", "halal-cart", "gluten-free", "middle-eastern"],
+    tags: ["chicken", "rice-bowl", "halal-style", "shawarma", "split-cook", "weeknight", "high-protein", "halal-cart", "gluten-free", "middle-eastern"],
     time: "40 min",
     servings: 4,
     protein: 50,

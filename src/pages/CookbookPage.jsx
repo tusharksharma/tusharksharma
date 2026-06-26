@@ -127,12 +127,12 @@ export default function CookbookPage() {
         </div>
 
         {TABS.length > 1 && (
-          <div className="flex gap-2 mb-8">
+          <div className="flex flex-wrap gap-2 mb-8">
             {TABS.map((t) => (
               <button
                 key={t}
                 onClick={() => setTab(t)}
-                className={`px-4 py-2 rounded-lg text-xs font-bold transition-all cursor-pointer ${
+                className={`px-4 py-2 rounded-lg text-xs font-bold transition-all cursor-pointer whitespace-nowrap ${
                   tab === t ? "bg-amber-500 text-black" : "bg-neutral-800 text-neutral-400 hover:bg-neutral-700"
                 }`}
               >

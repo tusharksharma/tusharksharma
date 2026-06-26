@@ -1292,8 +1292,8 @@ export const breakfasts = [
       { text: "EAT: Eat immediately — bagel toasts in the spread's residual fat if you want a quick pan-warm.", image: "/images/salmon-cream-cheese-bagel/hero-loaded-salmon-cream-cheese-bagel-polished.webp" },
     ],
     brands: [
-      { name: "Sola", item: "Mini Bagel (per bagel: ~110 cal / 15g protein / 5g net carbs)", why: "The macro spine. 15g protein PER BAGEL is the highest-protein bagel on the shelf and the reason 30g protein lands at only 250 cal total. Cross-recipe candidate for sandwich + breakfast builds.", image: "/images/brands/sola-bagel.png", url: "https://solasweet.com/products/bagels/" },
-      { name: "Smoked Salmon", item: "1 serving (~2 oz / 56g — ~80 cal / 12g protein)", why: "Pre-cooked, no prep. The Atlantic / Norwegian cold-smoked variety holds best in a chunky chop — don't sub hot-smoked, the texture turns to flake.", image: "/images/brands/smoked-salmon-generic.png" },
+      { name: "Sola", item: "Mini Bagel (per bagel: ~110 cal / 15g protein / 5g net carbs)", why: "The macro spine. 15g protein PER BAGEL is the highest-protein bagel on the shelf and the reason 30g protein lands at only 250 cal total. Cross-recipe candidate for sandwich + breakfast builds.", image: "/images/brands/sola-plain-bagels.png", url: "https://solasweet.com/products/bagels/" },
+      { name: "Smoked Salmon", item: "1 serving (~2 oz / 56g — ~80 cal / 12g protein)", why: "Pre-cooked, no prep. The Atlantic / Norwegian cold-smoked variety holds best in a chunky chop — don't sub hot-smoked, the texture turns to flake." },
     ],
     macroHonesty: "250 cal / 30g protein per loaded bagel, confirmed by Tushar from the labeled macros: Sola bagel (110 cal / 15g protein) + 2 oz smoked salmon (~80 cal / 12g protein) + 2 tbsp cream cheese (60 cal / 2g protein) = ~250 / ~29g. The 30g protein claim rounds up on the salmon serving — within typical labeling variance.",
     mealPrep: {
@@ -2489,7 +2489,7 @@ export const powerups = [
       { text: "POUR + SERVE: Pour into a carafe or glass and serve cold, over ice if you want.", image: "/images/electrolyte-watermelon-limeade/step-06-pour-into-carafe-polished.webp" },
     ],
     brands: [
-      { name: "LMNT", item: "Recharge Electrolyte Drink Mix (1,000mg sodium / 200mg potassium / 60mg magnesium per stick)", why: "The electrolyte spine. Zero sugar, no artificial sweeteners. Two packets per batch = 500mg sodium per serving — enough for an actual hot-day workout, not a token sprinkle. Watermelon + lime carry the flavor; LMNT carries the math.", image: "/images/brands/lmnt-recharge.png", url: "https://drinklmnt.com/products/lmnt-recharge-electrolyte-drink" },
+      { name: "LMNT", item: "Recharge Electrolyte Drink Mix (1,000mg sodium / 200mg potassium / 60mg magnesium per stick)", why: "The electrolyte spine. Zero sugar, no artificial sweeteners. Two packets per batch = 500mg sodium per serving — enough for an actual hot-day workout, not a token sprinkle. Watermelon + lime carry the flavor; LMNT carries the math.", url: "https://drinklmnt.com/products/lmnt-recharge-electrolyte-drink" },
     ],
     macroHonesty: "Calories estimated: 70-90 per 8-10 fl oz serving across 4 servings, depending on the edible yield from one mini watermelon (typically 900-1,100g flesh). Watermelon + lime contribute negligible electrolytes vs LMNT — the 500mg sodium / 100mg potassium / 30mg magnesium per serving is LMNT-only math.",
     electrolytes: {
