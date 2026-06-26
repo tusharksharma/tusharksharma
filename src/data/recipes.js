@@ -5454,6 +5454,208 @@ const recipes = [
       lasts: "Cooked rice + chicken: 3-4 days fridge. Mezete Toum: 18 months shelf-stable, opened bottle 30 days fridge. Shuug Harissa: per bottle date, usually 30+ days opened in fridge. Iceberg + Roma: 2-3 days max. Best lunch-the-next-day recipe — pack rice + chicken + sauce in separate containers, assemble at the office.",
     },
   },
+  {
+    id: 45,
+    status: "live",
+    carbLevel: "medium",
+    meta: {
+      macros: { protein: 30, calories: 350, fat: 14, carbs: 28, netCarbs: 25, estimated: true },
+      // Dairy: Dan-O's Cheesoning is parmesan-forward (in the rub on every
+      // drumstick — adult AND kid). Smoky Chipotle Crema is yogurt-based.
+      // Eggs: Chosen Foods Classic Mayo (kid plate finish).
+      allergens: ["dairy", "eggs"],
+      warnings: [],
+      // No dairy-free-option — the rub is built on parmesan; no clean swap.
+      // No egg-free-option without dropping the kid mayo entirely.
+      dietTags: ["gluten-free", "soy-free", "nut-free", "pork-free"],
+      proteinTags: ["chicken"],
+      splitAxes: ["plating", "sauce", "portion"],
+      effortTags: ["weeknight", "sheet-pan", "one-cook"],
+      costTier: "low",
+      costPerServing: "$2.50",
+      substitutionNotes: [
+        "Chicken drumsticks (T1 protein anchor — bone-in skin-on, 6 drumsticks for 4 servings = 2 per adult / 1 per kid). Sub bone-in thighs (4-6 thighs total) — needs ~5 min less in the oven; check temp at 35 min. Boneless skinless chicken doesn't crisp the same way; don't sub.",
+        "Dan-O's Cheesoning (T1 rub anchor — parmesan + Italian herbs + dried garlic). 2 tbsp for the whole batch. Sub homemade garlic-parm rub: 2 tbsp grated parmesan + 1 tsp dried basil + 1 tsp dried oregano + 1 tsp garlic powder + 1 tsp onion powder. Cross-Dan-O's-family with id 40 Caesar Crunch.",
+        "Clabber Girl Baking Powder (T2 crisp-up agent — 1 tbsp for the whole batch). The drumstick skin browns + crisps because baking powder raises the surface pH and dries the skin in the oven. Sub any aluminum-free baking powder. Don't skip — water-only-rub drumsticks come out soft.",
+        "Corn on the cob (T1 carb anchor — 3 ears for 4 plates = 1 full ear adult / 1/2 ear kid). Shucked, no boil needed; roasts on the same sheet pan. Sub frozen corn-on-the-cob (Costco), or 1.5 cups frozen kernels tossed on a separate sheet (kernels need 20 min not 40).",
+        "Cucumber sticks (T2 kid cold side). Persian or English cucumber, sliced into sticks. Sub any crunchy raw veg the kid will actually eat — carrot sticks, snap peas.",
+        "Chosen Foods Classic Mayo with avocado oil (T2 kid sauce — mild, neutral, avocado-oil base). 1 tbsp total for 2 kids. Sub any plain mayo (Duke's, Hellmann's) or skip if the kid doesn't want sauce.",
+        "Smoky Chipotle Crema (T1 adult sauce — see /cookbook/smoky-chipotle-crema for the recipe). 2 tbsp total for 2 adults. Sub a store-bought chipotle sauce or skip — the adult plate still works on the parmesan rub alone, just less heat.",
+      ],
+    },
+    slug: "garlic-parmesan-chicken-drumsticks-chipotle-corn",
+    // socialImages — raw paths for now; swap to -polished.webp after the
+    // Path A polish run lands. Step-execution order per
+    // [feedback-social-images-step-order]: season → rack → oven → final
+    // plate (payoff at tail). 4 process cards. Combined with Hero (split
+    // plate) + Macros + Split-card + 1 component card (smoky chipotle
+    // crema cross-link) + End = 9 cards in the carousel.
+    // hero `recipe.image` lives at split-adult-kid-plates per the
+    // [feedback-dinner-hero-split-plate] rule, NOT in socialImages.
+    socialImages: [
+      "/images/garlic-parmesan-chicken-drumsticks-chipotle-corn/step-season-drumsticks.webp",
+      "/images/garlic-parmesan-chicken-drumsticks-chipotle-corn/step-rack-chicken-corn.webp",
+      "/images/garlic-parmesan-chicken-drumsticks-chipotle-corn/step-oven-roast.webp",
+      "/images/garlic-parmesan-chicken-drumsticks-chipotle-corn/hero-final-plate.webp",
+    ],
+    proteinAnchor: "chicken",
+    mealType: "sheet-pan",
+    flavorDirection: "american-comfort",
+    splitFriendly: "full",
+    title: "Garlic Parmesan Chicken Drumsticks + Chipotle Corn",
+    category: "Core Signatures",
+    pillar: "Protein Meals",
+    tags: ["chicken", "drumsticks", "sheet-pan", "split-cook", "weeknight", "high-protein", "garlic-parm", "corn", "gluten-free", "kid-friendly"],
+    time: "50 min",
+    servings: 4,
+    protein: 30,
+    calories: 350,
+    image: "/images/garlic-parmesan-chicken-drumsticks-chipotle-corn/split-adult-kid-plates.webp",
+    role: "The 50-Minute Sheet-Pan Plate (Garlic-Parm Drumsticks + Roasted Corn, Adult Chipotle Crema vs Kid Mayo + Cucumber)",
+    makeThisWhen: "You want a weeknight dinner with zero stovetop time. 6 drumsticks + 3 ears of corn on one rack-over-sheet-pan, one 425°F oven, 40 minutes hands-off. Adults get smoky chipotle crema on the corn, kids get mild mayo + cucumber sticks alongside.",
+    hook: "Baking powder + dry rub is the crispy-skin shortcut — no frying, no flour. The same pan cooks drumsticks AND corn; sauce splits at the plate (chipotle adult / mayo kid). 350 cal / 30g protein per adult plate.",
+    description: "350 cal / 30g protein per adult plate, 4 servings (2 adults at 2 drumsticks + 1 full ear corn; 2 kids at 1 drumstick + 1/2 ear corn + cucumber). 6 chicken drumsticks dry-rubbed with Dan-O's Cheesoning + baking powder + garlic powder + salt + paprika. 3 ears shucked corn roasted on the same wire-rack-over-sheet-pan setup. 425°F for ~40 min until drumsticks hit 175°F+ for tenderness and the skin is crisp-brown. Adult plate: 2 drumsticks + 1 full ear corn + 1 tbsp Smoky Chipotle Crema drizzle on the corn. Kid plate: 1 drumstick + 1/2 ear corn + cucumber sticks + 1/2 tbsp Chosen Foods mayo on the side.",
+    whyMostFail: [
+      "Skip the baking powder. The crispy skin happens because baking powder raises the surface pH + draws moisture out. Without it you get soft, pale drumsticks — even at 425°F.",
+      "Don't pat the drumsticks dry first. Wet skin steams instead of browning. Paper-towel the drumsticks aggressively before the rub goes on.",
+      "Put the chicken straight on the sheet pan. The bottom side stays in contact with rendered fat + steams instead of browning. Use a wire rack — both sides get airflow.",
+      "Crowd the pan. Drumsticks need 1-inch gaps between pieces for the convection currents to crisp every side. If they're touching, the touching faces are pale and rubbery.",
+      "Sauce both plates with chipotle crema. The whole split-cook point is adult-only heat — sauce at the plate, not on the pan. Mayo for the kid, chipotle crema for the adult, applied AFTER cooking.",
+      "Pull the chicken at 165°F internal. 165°F is the safety floor for breast meat; drumsticks are dark meat and need to go to 175-185°F for the connective tissue to break down. At 165°F drumsticks are technically safe but chewy. Aim 175°F+.",
+      "Forget the corn. The whole hack is that the corn roasts on the same pan with no extra effort. Don't boil corn on the side — you've already got the oven going.",
+    ],
+    whyThisWorks: [
+      "Baking powder + dry rub is the macro-honest crispy-skin shortcut. No flour (gluten-free stays clean), no frying (~150 cal saved per drumstick vs fried), no deep fryer cleanup. The 1 tbsp of baking powder across 6 drumsticks adds 0 measurable cal.",
+      "Dan-O's Cheesoning is the speed unlock for the rub flavor. Parmesan + Italian herbs + dried garlic in one shake — no measuring 5 spices. 2 tbsp across the batch = ~10 cal per drumstick from the parmesan. Cross-Dan-O's-family with id 40 Caesar Crunch.",
+      "One-pan, one-temp, one-cook. Drumsticks + corn share the same rack at 425°F for 40 min. No stovetop, no second sheet pan, no parallel timers. The kind of weeknight cook that survives a chaotic 5 PM.",
+      "Sauce-at-the-plate split is the cleanest split-cook lever in the kitchen. Chipotle crema (adult) and mayo (kid) never touch the cooking surface — pour from the squeeze bottle / drizzle from the spoon at plating. Same drumstick, different finish.",
+      "Smoky Chipotle Crema is already an indexed cookbook sauce. The adult plate cross-links to /cookbook/smoky-chipotle-crema — the same crema that anchors id 22 Smash Tacos and id 27 Chipotle Chicken Quesadillas. One sauce, three recipes.",
+      "Kid plate adds cucumber sticks instead of more cooked side. Raw cucumber resets the palate between bites of warm chicken + corn — and the crunch is what kids actually want when the protein is heavy.",
+    ],
+    executionRules: [
+      "PAT DRY FIRST. Paper-towel every drumstick before the rub touches it. Wet skin = soft skin.",
+      "DRY RUB ALL SIDES. The baking powder + spices need to coat the whole surface — top, bottom, sides, ends. Use your hands, get under any loose skin flaps.",
+      "RACK + SHEET. Wire rack over rimmed sheet pan. Drippings hit the pan, air circulates around the drumsticks + corn. Don't put chicken straight on the pan.",
+      "1-INCH SPACING. Drumsticks at least 1 inch apart on the rack. Corn ears alongside, also spaced. If you've got crowding, use TWO racks instead.",
+      "425°F · 40 MIN · NO FLIPPING. The drumsticks crisp from radiated heat + convection — flipping reduces the bottom contact-sear that develops on the rack lines. Resist the urge.",
+      "TEMP CHECK AT 35 MIN. Probe the thickest drumstick at the bone. 175°F+ is the target — pull then, not at 165°F. At 175°F+ the dark meat is tender and falls off the bone.",
+      "SAUCE AT THE PLATE. Chipotle crema drizzled on the adult corn (1 tbsp per adult). Mayo on the side of the kid plate (1/2 tbsp per kid, alongside cucumber sticks). Don't sauce the pan.",
+    ],
+    troubleshooting: [
+      { problem: "Drumstick skin is soft / pale at 40 min", fix: "Either (1) skin was wet going in — pat aggressively next time, (2) baking powder skipped — the 1 tbsp is non-negotiable, (3) drumsticks were touching — space them out. Quick rescue: broiler on high for 2-3 min watching like a hawk." },
+      { problem: "Rub clumps in some spots, bald in others", fix: "Mix the rub in a small bowl FIRST, then sprinkle from a few inches up — gravity distributes more evenly than dumping. Pat the rub into any bald spots with your fingertips." },
+      { problem: "Corn is shriveled / dried out", fix: "Corn dries faster than chicken at 425°F. Shuck right before roasting (not hours ahead) and brush the ears lightly with avocado oil before they go on the rack. Pull the corn at 30 min if it looks ready; chicken can finish without it." },
+      { problem: "Kid won't touch the corn", fix: "Cut the corn off the cob into kernels and serve in a small bowl with the mayo. Off-the-cob kernels are a different texture experience — same flavor, fewer rejections. Save the cob for the adult plate." },
+      { problem: "Drumsticks done before corn", fix: "Tent the drumsticks loosely with foil on a separate plate while corn finishes. Drumsticks hold heat 10+ min covered — chicken won't dry out, corn gets the time it needs." },
+      { problem: "Adult plate tastes flat", fix: "More Smoky Chipotle Crema (~1.5 tbsp instead of 1) on the corn — the chipotle heat is the whole adult flavor lever. If the crema is too thin, stir in 1 tsp lime juice + a pinch of salt to wake it up." },
+    ],
+    splitCook: {
+      splitRatio: "2 adult plates (2 drumsticks + 1 full ear corn + 1 tbsp Smoky Chipotle Crema, plated on big white plates) / 2 kid plates (1 drumstick + 1/2 ear corn + cucumber sticks + 1/2 tbsp Chosen Foods mayo on the side).",
+      splitPoint: "AT THE PLATE — sauce + portion + side veg. Same drumsticks, same corn, same oven cook. The ONLY split levers are: (1) portion (2 drums + full ear adult vs 1 drum + 1/2 ear kid), (2) sauce (chipotle crema adult vs mayo kid), (3) cold veg (cucumber sticks added to the kid plate only).",
+      sharedIngredients: [
+        "--- PROTEIN ---",
+        "6 chicken drumsticks (bone-in, skin-on)",
+        "--- DRY RUB ---",
+        "1 tbsp Clabber Girl Baking Powder",
+        "1 tsp garlic powder",
+        "1 tsp kosher salt",
+        "1 tsp paprika",
+        "2 tbsp Dan-O's Cheesoning",
+        "--- SIDE ---",
+        "3 ears corn, shucked",
+      ],
+      sharedSteps: [
+        { text: "PREHEAT + RACK: Oven to 425°F. Set a wire rack over a rimmed sheet pan.", images: [] },
+        { text: "PAT + RUB: Pat all 6 drumsticks dry with paper towels — get the skin as dry as possible. In a small bowl mix the baking powder + garlic powder + salt + paprika + Dan-O's Cheesoning. Sprinkle the rub from a few inches up over the drumsticks, then pat it into the skin on all sides. Use your hands.", images: ["/images/garlic-parmesan-chicken-drumsticks-chipotle-corn/step-season-drumsticks.webp"] },
+        { text: "RACK THE PAN: Place drumsticks on the wire rack 1 inch apart. Tuck the 3 ears of shucked corn alongside on the same rack. Don't crowd — every piece needs airflow.", images: ["/images/garlic-parmesan-chicken-drumsticks-chipotle-corn/step-rack-chicken-corn.webp"] },
+        { text: "ROAST 425°F · 40 MIN — NO FLIPPING: Slide the pan into the middle rack. Don't open the oven for 35 minutes. At 35 min, probe the thickest drumstick at the bone — target 175°F+ for fall-off-bone tenderness (not 165°F). If under, give it 5 more minutes.", images: ["/images/garlic-parmesan-chicken-drumsticks-chipotle-corn/step-oven-roast.webp"] },
+      ],
+      adult: {
+        label: "Adult — Big Plate, Chipotle Crema on Corn",
+        protein: 30,
+        calories: 350,
+        extraIngredients: [
+          "--- ADULT FORMAT ---",
+          "1 big white plate per adult",
+          "--- ADULT SAUCE ---",
+          "1 tbsp Smoky Chipotle Crema per adult (drizzled over the corn)",
+        ],
+        steps: [
+          { text: "ADULT PLATE: White plate. 2 drumsticks + 1 full ear of corn. Drizzle 1 tbsp Smoky Chipotle Crema over the corn (NOT on the chicken — the parm rub is already loud).", images: ["/images/garlic-parmesan-chicken-drumsticks-chipotle-corn/hero-final-plate.webp"] },
+          { text: "EAT WHILE HOT: Drumsticks are crispy at 5 min off the oven, chewy at 15 min. Don't let the plate sit. The chipotle crema is room-temp — pour cold straight from the squeeze bottle.", images: [] },
+        ],
+      },
+      kid: {
+        label: "Kid — Smaller Plate, Mayo + Cucumber",
+        protein: 16,
+        calories: 200,
+        extraIngredients: [
+          "--- KID FORMAT ---",
+          "1 small plate per child",
+          "--- KID SAUCE + SIDE ---",
+          "1/2 tbsp Chosen Foods Classic Mayo per kid (on the side, not on the chicken)",
+          "Cucumber sticks (1/2 small cucumber per kid, sliced into spears)",
+        ],
+        variants: [
+          {
+            name: "Standard — Drumstick + Half-Ear + Cucumber + Mayo Side",
+            description: "1 drumstick + 1/2 ear corn + cucumber sticks alongside, with a small puddle of mayo on the plate for dipping. No chipotle.",
+            steps: [
+              { text: "KID PLATE: Small plate. 1 drumstick + 1/2 ear of corn (cut the ear in half crosswise — easier for small hands). Cucumber sticks alongside. Small puddle of 1/2 tbsp mayo on the plate for dipping.", images: [] },
+              { text: "ASSEMBLY (kid leads): Most kids eat the drumstick first, graze the corn, dip cucumber in the mayo. Some skip the corn — that's fine. Cucumber sticks are the reset palate.", images: [] },
+            ],
+          },
+          {
+            name: "Older Kid — Full Portion",
+            description: "Older kids who eat adult portions: bump to 2 drumsticks + 1 full ear corn + cucumber + mayo on the side. Still skip the chipotle crema unless they like heat.",
+            steps: [
+              { text: "Same plate format as the standard kid plate, scaled to adult portion size. Mayo still on the side (not the chipotle crema). For kids who want heat, offer a small dollop of chipotle crema separately." },
+            ],
+          },
+        ],
+      },
+    },
+    ingredients: [
+      "--- PROTEIN ---",
+      "6 chicken drumsticks (bone-in, skin-on)",
+      "--- DRY RUB ---",
+      "1 tbsp Clabber Girl Baking Powder",
+      "1 tsp garlic powder",
+      "1 tsp kosher salt",
+      "1 tsp paprika",
+      "2 tbsp Dan-O's Cheesoning",
+      "--- SIDE ---",
+      "3 ears corn, shucked",
+      "--- ADULT SAUCE ---",
+      { text: "2 tbsp Smoky Chipotle Crema total (1 tbsp per adult plate, drizzled over corn)", link: "/cookbook/smoky-chipotle-crema" },
+      "--- KID SAUCE + SIDE ---",
+      "1 tbsp Chosen Foods Classic Mayo total (1/2 tbsp per kid plate, on the side)",
+      "1 small Persian or English cucumber, sliced into sticks (kid plates only)",
+    ],
+    steps: [
+      { text: "PREHEAT + RACK: Oven to 425°F. Wire rack set over a rimmed sheet pan.", images: [] },
+      { text: "PAT DRY: Paper-towel all 6 drumsticks aggressively — the drier the skin, the crispier the result. Wet skin steams.", images: [] },
+      { text: "MIX RUB: In a small bowl combine 1 tbsp baking powder + 1 tsp garlic powder + 1 tsp salt + 1 tsp paprika + 2 tbsp Dan-O's Cheesoning. Stir.", images: [] },
+      { text: "SEASON: Sprinkle the rub from a few inches above the drumsticks, then pat it into every side with your hands. Coat top, bottom, and the ends. No bald spots.", images: ["/images/garlic-parmesan-chicken-drumsticks-chipotle-corn/step-season-drumsticks.webp"] },
+      { text: "RACK THE PAN: Drumsticks on the wire rack, 1 inch apart. Tuck the 3 ears of shucked corn alongside on the same rack. Don't crowd.", images: ["/images/garlic-parmesan-chicken-drumsticks-chipotle-corn/step-rack-chicken-corn.webp"] },
+      { text: "ROAST · 425°F · 40 MIN — NO FLIPPING: Middle rack. Don't open the oven for 35 min. At 35 min probe the thickest drumstick at the bone; pull at 175°F+ for fall-off-bone tenderness.", images: ["/images/garlic-parmesan-chicken-drumsticks-chipotle-corn/step-oven-roast.webp"] },
+      { text: "ADULT PLATE: 2 drumsticks + 1 full ear of corn. Drizzle 1 tbsp Smoky Chipotle Crema over the corn.", images: ["/images/garlic-parmesan-chicken-drumsticks-chipotle-corn/hero-final-plate.webp"] },
+      { text: "KID PLATE: 1 drumstick + 1/2 ear of corn (cut crosswise) + cucumber sticks. Small puddle of 1/2 tbsp Chosen Foods mayo on the side. NO chipotle crema.", images: [] },
+      { text: "EAT WHILE HOT: Drumsticks are crispiest in the first 5 min off the oven. Don't let the plate sit.", images: [] },
+    ],
+    brands: [
+      { name: "Dan-O's", item: "Cheesoning Seasoning (2.6 oz — parmesan + Italian herbs + dried garlic)", why: "The garlic-parm flavor shortcut. 2 tbsp across 6 drumsticks adds ~60 cal of parmesan total + the spice rack you'd otherwise measure 5 jars for. Cross-Dan-O's-family with id 40 Caesar Crunch + the broader Dan-O's lineup." },
+      { name: "Chosen Foods", item: "Classic Mayo made with Avocado Oil (8 fl oz squeeze)", why: "Mild kid-friendly creamy option. Avocado-oil base is cleaner than soybean-oil mayo, and the squeeze bottle controls the kid portion (1/2 tbsp per plate). Egg-based — the only egg allergen in the recipe." },
+      { name: "Clabber Girl", item: "Double-Acting Baking Powder (8.1 oz)", why: "The crispy-skin enabler. 1 tbsp raises the surface pH and draws moisture out so the drumstick skin browns + crackles in a dry oven — no flour, no frying. Aluminum-free." },
+      { name: "The Split Plate", item: "Smoky Chipotle Crema (indexed cookbook sauce — see /cookbook/smoky-chipotle-crema)", why: "Adult corn finish. Yogurt + chipotle + lime = adult heat without a sugar bomb. Cross-recipe candidate with id 22 Smash Tacos + id 27 Chipotle Chicken Quesadillas. Plant-protein optional sub: any store-bought chipotle sauce." },
+    ],
+    macroHonesty: "Per adult plate (~350 cal / 30g protein / 14g fat / 28g total carbs / 25g net carbs / 3g fiber) estimated from logged ingredients. Adult plate config: 2 chicken drumsticks (bone-in, skin-on, ~3.5 oz each cooked, ~180 cal / 22g protein / 9g fat / 0C × 2 = 360 cal / 44P / 18F — drops to ~300 cal / 28P / 12F after factoring rendered fat into the pan) + 1 ear corn (~80 cal / 3P / 1F / 19C / 2 fiber) + 1 tbsp Smoky Chipotle Crema (~20 cal / 1P / 1F / 1C) + ghee/rub trace (~10 cal). Total: ~350 cal / ~30P / ~14F / ~25C net. Atwater check: 30×4 + 25×4 + 14×9 = 120+100+126 = 346 ≈ 350 ✓. Kid plate (1 drumstick + 1/2 ear corn + cucumber + 1/2 tbsp mayo) ≈ ~200 cal / ~16P / ~9F / ~13C net. Flagged estimated because (1) drumstick rendered-fat varies +/- 15%, (2) Smoky Chipotle Crema portion is eyeball-drizzled, (3) corn ear size varies. The 6 drumsticks / 3 ears budget is the anchor.",
+    mealPrep: {
+      storage: "Best fresh — drumstick skin loses its crisp in the fridge. Cooked drumsticks hold 3-4 days in an airtight container; cooked corn 2-3 days. Don't pre-build the plates — cucumber gets watery, mayo separates. Assemble at meal time.",
+      reheat: "Drumsticks: 400°F oven on a rack 8-10 min to re-crisp the skin (microwave makes them rubbery — don't). Corn: microwave 30-60 sec covered with a splash of water OR re-roast at 400°F 5 min. Smoky Chipotle Crema + mayo: room-temp from the fridge.",
+      lasts: "Cooked drumsticks: 3-4 days fridge, 2 months frozen. Corn: 2-3 days fridge. Cucumber: 5-7 days whole, 1-2 days sliced. Smoky Chipotle Crema: per the cookbook page, ~5 days fridge. Chosen Foods Mayo: per bottle date, 2 months opened in the fridge.",
+    },
+  },
 ];
 
 export default recipes;
