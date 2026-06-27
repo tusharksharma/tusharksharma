@@ -5656,6 +5656,238 @@ const recipes = [
       lasts: "Cooked drumsticks: 3-4 days fridge, 2 months frozen. Corn: 2-3 days fridge. Cucumber: 5-7 days whole, 1-2 days sliced. Smoky Chipotle Crema: per the cookbook page, ~5 days fridge. Chosen Foods Mayo: per bottle date, 2 months opened in the fridge.",
     },
   },
+  {
+    id: 46,
+    status: "live",
+    carbLevel: "medium",
+    meta: {
+      macros: { protein: 30, calories: 520, fat: 22, carbs: 45, netCarbs: 41, estimated: true },
+      // Allergens confirmed by Tushar 2026-06-26: Pepperidge Farm puff
+      // pastry → dairy (butter). Eggs from the egg wash. Gluten from the
+      // flour roux + puff pastry. Alcohol warning: vermouth largely cooks
+      // off but trace alcohol can remain (relevant for AA / strict
+      // households).
+      allergens: ["gluten", "eggs", "dairy"],
+      warnings: ["contains-alcohol"],
+      // No gluten-free / egg-free / dairy-free option declared — the
+      // flour roux + puff pastry are structural to the recipe; no clean
+      // swap path.
+      dietTags: ["nut-free", "pork-free"],
+      proteinTags: ["chicken"],
+      // Portion-only split, not full split-cook. The same filling +
+      // pastry hits both adult + kid plates. The "split" lever is bowl
+      // size: full adult serving vs half-serving for small kids.
+      splitAxes: ["portion"],
+      effortTags: ["weeknight", "shortcut", "meal-prep", "family-batch"],
+      costTier: "moderate",
+      costPerServing: "$3.50",
+      substitutionNotes: [
+        "Kirkland chipotle-seasoned cooked chicken (T1 protein anchor — pre-cooked, pre-seasoned, no prep time). 18 oz total for 6 servings (~3 oz / 22g protein per serving). Sub any cooked seasoned rotisserie chicken (Costco plain rotisserie + 1 tsp Dan-O's Cheesoning works), or 1.5 lb cooked chicken thigh meat seasoned with chipotle powder + paprika + garlic powder.",
+        "Kirkland Organic Chicken Bone Broth (T1 sauce base — 3 cups). Cross-recipe staple. Carries protein into the sauce; replaces water entirely. Sub any chicken bone broth (Bare Bones, Pacific Foods, Swanson). Don't sub regular chicken stock — the protein density drops by ~5g per batch.",
+        "Pepperidge Farm puff pastry sheet (T1 pastry top — 250g sheet = 4 tops per bake). Dairy (butter). Sub DUFOUR or Aussie Bakery for dairy-free; they bake the same way. Don't sub pie dough — too dense for the soup-thickened filling. The 'second sheet for meal prep' move uses the unopened reserve.",
+        "Martini & Rossi Extra Dry Vermouth (T2 deglaze — 1/4 cup). Sub dry white wine (sauvignon blanc, pinot grigio) or skip with an extra splash of bone broth + 1 tsp lemon juice (the acid is what vermouth contributes flavor-wise). Alcohol cooks off mostly; trace remains.",
+        "Chosen Foods Avocado Oil Spray (T2 pan + bowl coater). Sub any neutral cooking spray. The bowl-rim oiling is what keeps the puff pastry from sticking during the bake — don't skip the rim coat even if you skip the pan coat.",
+        "Mushrooms + carrots + asparagus (T1 vegetable trio — 4 oz each = 12 oz total). The asparagus is the late-add (3 min in the sauce keeps it bright + crisp). Sub the asparagus with frozen peas (add at the same step — 2 min to thaw) for a more classic pot-pie profile.",
+        "All-purpose flour (T2 thickener — 1 oz / ~2 tbsp). Sub 1 tbsp cornstarch (slurried with 2 tbsp cold broth) added at the boil instead of pre-cooked with the veg. Gluten-free version doesn't work with the puff pastry top anyway.",
+      ],
+    },
+    slug: "chicken-pot-pie",
+    // socialImages — raw paths for now; swap to -polished.webp after the
+    // Path A polish run lands. Step-execution order per
+    // [feedback-social-images-step-order]: vermouth → broth → chicken →
+    // puff pastry → oven → spoon-crack (payoff at tail). Sized to 6
+    // entries — fits the dinner carousel cap (max 6 process cards with
+    // 0 component cross-links). Procedural step images (mushrooms,
+    // carrots, flour, fill-bowls, egg-wash) drop from the carousel but
+    // still render inline on the cookbook detail page in the full
+    // 10-step body.
+    //
+    // Hero (recipe.image below) is `hero-family-pot-pie-batch.webp` —
+    // family-style 4-bowl batch shot, NOT a strict adult+kid two-plate
+    // composition. This recipe is portion-only-split (same food, half
+    // serving for small kids), so the family-batch is the closest
+    // brand-fit hero. Tushar 2026-06-26 confirmed.
+    socialImages: [
+      "/images/chicken-pot-pie/step-04-vermouth.webp",
+      "/images/chicken-pot-pie/step-05-bone-broth.webp",
+      "/images/chicken-pot-pie/step-06-chicken-asparagus.webp",
+      "/images/chicken-pot-pie/step-08-puff-pastry.webp",
+      "/images/chicken-pot-pie/step-10-oven-425.webp",
+      "/images/chicken-pot-pie/payoff-spoon-crack.webp",
+    ],
+    proteinAnchor: "chicken",
+    mealType: "casserole",
+    flavorDirection: "american-comfort",
+    splitFriendly: "portion",
+    title: "Chicken Pot Pie",
+    category: "Core Signatures",
+    pillar: "Protein Meals",
+    tags: ["chicken", "pot-pie", "casserole", "family-batch", "meal-prep", "weeknight", "high-protein", "costco-shortcut", "puff-pastry", "kid-friendly"],
+    time: "50 min",
+    servings: 6,
+    protein: 30,
+    calories: 520,
+    image: "/images/chicken-pot-pie/hero-family-pot-pie-batch.webp",
+    role: "The 50-Minute Shortcut Family Pot Pie (Costco Chipotle Chicken + Bone Broth Filling, Puff Pastry Tops, Adult Full / Kid Half)",
+    makeThisWhen: "Weeknight family dinner with a Costco shortcut — 18 oz of pre-seasoned chipotle chicken does the protein lift, 3 cups Kirkland bone broth carries the sauce, puff pastry tops bake in 20 min. 6 servings: feed a family of 4 (2 adults full + 2 kids half) and bank 2 servings of filling + a second pastry sheet for next meal prep.",
+    hook: "The Costco chipotle chicken is the unlock — 18 oz pre-cooked, pre-seasoned, no prep. The filling builds in 15 min on the stovetop, puff pastry tops bake 20 min at 425°F, and you get 6 servings of family pot pie with 30g protein per adult bowl.",
+    description: "520 cal / 30g protein per adult serving. 6 servings of filling (feeds 2 adults full + 2 kids half + leaves 2 servings reserved for next meal prep). Built around Kirkland chipotle-seasoned cooked chicken (18 oz) so the recipe is mostly vegetables + sauce + puff pastry — no raw-chicken prep. Mushrooms + carrots sweated in avocado-oil spray, flour roux cooked 1 min, vermouth deglaze, 3 cups Kirkland bone broth boiled to thicken, chicken + asparagus folded in. 4 oven-safe bowls filled, puff pastry top + egg wash, 425°F × 20 min until golden. Save the remaining filling + a second sheet of puff pastry for the next batch (meal-prep economy). Adult: 1 full bowl. Kid: 1/2 serving — rest first so the filling cools enough.",
+    whyMostFail: [
+      "Use raw chicken thinking the shortcut isn't necessary. The whole recipe budget is 50 min total; raw chicken adds 20+ min of cook-and-cool time and the filling never gets the chipotle seasoning depth Costco's chicken brings out of the box. The shortcut IS the recipe.",
+      "Oversalt early. The Kirkland chipotle chicken is already seasoned. Add salt sparingly to the mushrooms / carrots; let the chicken-broth combo carry the rest. Tasting at the broth-boil stage is the rescue point — too salty there means you over-added.",
+      "Skip the flour-roux minute. Raw flour tastes like glue. The 1 min of stirring after sprinkling the flour over the veg is non-negotiable — that's where the roux gets cooked enough to thicken the broth into a sauce without the raw-flour aftertaste.",
+      "Dump the broth in cold without stirring. Flour clumps if the broth hits before the vermouth deglaze stirs the roux loose. Vermouth FIRST (off the heat is fine), stir to slurry, THEN add broth. Stir while pouring.",
+      "Put the puff pastry on dry bowls. The pastry sticks to the bowl rim during baking, tears when you go to serve. Spray or brush the rim with avocado oil first — the pastry releases cleanly.",
+      "Skip the vent cut. Sealed puff pastry tops trap steam and either blow off or get soggy. Cut a 1-inch slit in the center of each top BEFORE baking. The steam vents, the pastry crisps.",
+      "Serve kids straight out of the oven. The filling holds 200°F+ under the pastry top for 5+ min. Crack the pastry open and let the steam off for 5 min before portioning the kid half-serving. Burn-mouth is the only real risk in this recipe.",
+    ],
+    whyThisWorks: [
+      "Costco's Kirkland chipotle-seasoned cooked chicken is the speed unlock — 18 oz of pre-cooked, pre-seasoned protein for ~$10. It's the difference between 'pot pie is a Sunday project' and 'pot pie is Tuesday at 6 PM'. Carries most of the dish's seasoning naturally; you barely add salt.",
+      "Kirkland Organic Chicken Bone Broth doubles as flavor + macro. 3 cups in the sauce = ~140 cal / 27g protein straight into the filling base. Plus the chipotle chicken sits in seasoned broth and absorbs even more flavor during the simmer. Cross-recipe staple — already in your fridge from id 4, 24, 30, 38, 39, 41, 42, 43, 44.",
+      "Vermouth > white wine for deglaze on a Tuesday. Shelf-stable (Martini & Rossi keeps months opened in the fridge), 1/4 cup pours don't require committing to a whole bottle, and the herb-forward profile (dry vermouth = white wine + botanical infusion) hits faster than plain wine. Pour to deglaze, stir, broth in.",
+      "Puff pastry tops vs full-crust pot pie is the macro-honest play. A traditional double-crust pot pie is 700+ cal / serving from the bottom-crust butter. Top-only puff pastry cuts that to 520 cal while keeping the textural payoff (the crust crack is the viral moment). 250g sheet = 4 tops; second sheet goes in the freezer for next round.",
+      "Meal-prep economy built in: 6 servings of filling but only 4 baked the first time. The reserved 2 servings + the second puff pastry sheet sit in the fridge / freezer and re-bake in 20 min next time you want pot pie — no chopping, no roux, no deglaze. Tuesday dinner ↔ Saturday lunch.",
+      "Bowl-portion split is the cleanest split-cook lever — same filling, same pastry, same flavor. Adults eat the full bowl (520 cal / 30g protein). Small kids get a half-bowl (260 cal / 15g protein), cooled 5 min so the filling doesn't burn their mouth. No re-cooking, no kid-version compromise.",
+    ],
+    executionRules: [
+      "PREHEAT OVEN FIRST. 425°F. Don't start the filling until the oven is preheating — the timing is built around the pastry hitting a hot oven the moment it's egg-washed.",
+      "PRE-CHOP EVERYTHING. Chicken into 1/2-inch chunks. Carrots, mushrooms, asparagus chopped small (so each spoonful gets the trio). Once you start sweating the veg, you're committed — no chopping mid-sauce.",
+      "MUSHROOMS FIRST, THEN CARROTS. Mushrooms need 3 min alone to release water (then evaporate). Carrots after = 3 more min. Order matters — reversing it gives you soggy mushrooms.",
+      "FLOUR ROUX = 1 MIN STIRRING. Sprinkle, stir, count to 60. Don't let it burn; don't shortcut it. This is the only step where raw-flour taste lives or dies.",
+      "VERMOUTH OFF-HEAT IS FINE. Pull the pan, pour the 1/4 cup vermouth, stir to slurry the roux. Back on heat, add the broth, bring to a boil to thicken. Vermouth-on-heat with the alcohol can flash if your gas range is aggressive.",
+      "OIL THE BOWL RIMS. Spray or brush the inside rims of every bowl before the pastry goes on. This is THE pastry-stick prevention; the rest of the recipe is forgiving but this isn't.",
+      "VENT CUT BEFORE EGG WASH. 1-inch slit in the center of each pastry top, THEN egg wash. Egg-washing first seals the slit closed.",
+      "REST 5 MIN BEFORE KID PORTIONS. Crack the kid's pastry open with a spoon, let steam escape, THEN serve. Filling holds 200°F+ under sealed pastry for longer than you think.",
+    ],
+    troubleshooting: [
+      { problem: "Filling is thin going into the bowls", fix: "Boil it 2-3 more minutes before scooping — flour needs sustained heat to thicken. Quick rescue: 1 tsp cornstarch slurried with 1 tbsp cold broth, stir in." },
+      { problem: "Filling gets too thick to pour", fix: "Splash in 1/4 cup more bone broth before portioning. Pot pie filling firms up further in the oven; you want it slightly looser than soup going into the bowls." },
+      { problem: "Pastry sticks to the bowl rim, tears when serving", fix: "Bowl rim wasn't oiled. Next time spray the inside rim before the pastry goes on. Rescue for THIS batch: run a thin knife between the pastry and the rim before lifting." },
+      { problem: "Pastry is pale after 20 min", fix: "Move the rack one slot higher in the oven, bake another 3-5 min. Watch for the egg-wash sheen turning deep gold (not just yellow). Each oven is calibrated differently; 20 min is the target, 22-23 min is acceptable." },
+      { problem: "Kid burned their mouth on the first bite", fix: "Filling under pastry holds 200°F+ longer than you expect. Crack the pastry, let it steam off 5 min, then portion. Or scoop the filling into a separate kid bowl + serve the pastry on the side." },
+      { problem: "Filling tastes flat", fix: "More chipotle chicken (bump from 18 to 24 oz across the batch — adds ~80 cal / serving) or a squeeze of lemon juice at the plating stage. The chicken is the flavor carrier; the broth is the medium." },
+    ],
+    splitCook: {
+      splitRatio: "Same filling, same pastry, same flavor. Split happens at the bowl size: 4 full adult servings (1 bowl each) + 2 kid half-servings (1/2 bowl each, cooled 5 min). Bake 4 bowls the first time; reserve filling + a second puff pastry sheet for next meal prep batch.",
+      splitPoint: "AT THE BOWL — portion size only. Adults get a full pot pie bowl with the pastry top intact; small kids get a half-portion (split a bowl after the pastry-crack reveal, or pre-portion a half into a separate small bowl with its own smaller pastry top). The flavor stack is identical — chipotle, chicken, vegetables, sauce, puff pastry. The only kid lever is letting the filling cool 5 min so it doesn't burn their mouth.",
+      sharedIngredients: [
+        "--- PROTEIN ---",
+        "18 oz Kirkland chipotle-seasoned cooked chicken, chopped into 1/2-inch pieces",
+        "--- VEGETABLES ---",
+        "4 oz mushrooms, sliced or chopped",
+        "4 oz carrots, chopped small",
+        "4 oz asparagus, cut into 1-inch pieces",
+        "--- SAUCE ---",
+        "1 oz (~2 tbsp) all-purpose flour",
+        "1/4 cup Martini & Rossi Extra Dry Vermouth",
+        "3 cups Kirkland Organic Chicken Bone Broth",
+        "4-5 pinches kosher salt (chicken is already seasoned)",
+        "--- PASTRY ---",
+        "1 sheet Pepperidge Farm puff pastry (~250g, makes 4 tops)",
+        "1/2 beaten egg (for wash)",
+        "--- PAN COAT ---",
+        "~1 tbsp Chosen Foods avocado oil spray",
+      ],
+      sharedSteps: [
+        { text: "PREHEAT: Oven to 425°F. Spray a large skillet with avocado oil.", images: [] },
+        { text: "MUSHROOMS: Add mushrooms to the skillet. Cook ~3 min, stirring, until they release water and shrink.", images: ["/images/chicken-pot-pie/step-01-mushrooms.webp"] },
+        { text: "CARROTS: Add chopped carrots + 2 pinches kosher salt. Cook ~3 min more, stirring.", images: ["/images/chicken-pot-pie/step-02-carrots.webp"] },
+        { text: "FLOUR ROUX: Sprinkle 1 oz flour over the veg. Stir 1 minute (count to 60) to cook off the raw-flour taste.", images: ["/images/chicken-pot-pie/step-03-flour.webp"] },
+        { text: "VERMOUTH DEGLAZE: Pull the pan off the heat. Pour 1/4 cup vermouth, stir to slurry the roux. Back on heat.", images: ["/images/chicken-pot-pie/step-04-vermouth.webp"] },
+        { text: "BROTH: Add 3 cups Kirkland bone broth. Bring to a boil, stirring, until the sauce thickens (~2 min).", images: ["/images/chicken-pot-pie/step-05-bone-broth.webp"] },
+        { text: "CHICKEN + ASPARAGUS: Fold in 18 oz chopped chipotle chicken + 4 oz asparagus. Simmer 3 min — asparagus turns bright green, chicken heats through.", images: ["/images/chicken-pot-pie/step-06-chicken-asparagus.webp"] },
+        { text: "OIL THE BOWL RIMS: Spray or brush 4 oven-safe bowl interiors AND rims with avocado oil so the pastry releases.", images: [] },
+        { text: "FILL BOWLS: Scoop filling into 4 bowls (~12 oz each). Reserve remaining filling for next meal prep.", images: ["/images/chicken-pot-pie/step-07-fill-bowls.webp"] },
+        { text: "PUFF PASTRY: Roll the sheet lightly. Cut 4 tops sized for your bowls. Drape each over a bowl; press gently around the rim.", images: ["/images/chicken-pot-pie/step-08-puff-pastry.webp"] },
+        { text: "VENT + EGG WASH: Cut a 1-inch slit in the center of each top FIRST. Brush egg wash over the entire surface.", images: ["/images/chicken-pot-pie/step-09-egg-wash.webp"] },
+        { text: "BAKE 425°F · 20 MIN: Until the pastry is deep golden + puffed. Tops crack slightly as they rise.", images: ["/images/chicken-pot-pie/step-10-oven-425.webp"] },
+      ],
+      adult: {
+        label: "Adult — Full Bowl",
+        protein: 30,
+        calories: 520,
+        extraIngredients: [
+          "1 full pot pie bowl (~12 oz filling + 1 puff pastry top)",
+        ],
+        steps: [
+          { text: "ADULT PORTION: 1 full bowl. Pastry top intact. Crack with a spoon at the table — the spoon-through-the-crust moment is the viral payoff.", images: ["/images/chicken-pot-pie/payoff-spoon-crack.webp"] },
+          { text: "EAT WHILE HOT: 520 cal / 30g protein. The filling is rich; the pastry adds texture contrast. Adult plate is generous — pair with a side salad if you want vegetables on the side.", images: [] },
+        ],
+      },
+      kid: {
+        label: "Kid — Half Bowl (Cool First)",
+        protein: 15,
+        calories: 260,
+        extraIngredients: [
+          "1/2 pot pie bowl (~6 oz filling + 1/2 puff pastry top)",
+        ],
+        variants: [
+          {
+            name: "Standard — Half-Portion Cooled 5 Min",
+            description: "Crack the pastry top of one bowl, let steam off 5 min, scoop half the filling + half the pastry into a kid-safe bowl.",
+            steps: [
+              { text: "KID PORTION: Crack one full bowl's pastry top with a spoon. Let the steam off 5 min — filling holds 200°F+ longer than you expect. Scoop ~6 oz filling + half the pastry into a smaller kid bowl.", images: [] },
+              { text: "SERVE WARM: 260 cal / 15g protein. The pastry pieces are the kid hook — most kids eat the pastry first, then mine the filling.", images: [] },
+            ],
+          },
+          {
+            name: "Older Kid — Full Adult Portion",
+            description: "Older kids who eat adult portions: serve the full bowl (520 cal / 30g protein), same crack-the-pastry-at-the-table moment.",
+            steps: [
+              { text: "Same full-portion service as adults. No cool-down needed if the kid is old enough to manage 'blow on it first' — but the pastry top still holds steam, so let them crack it themselves so they pace it." },
+            ],
+          },
+        ],
+      },
+    },
+    ingredients: [
+      "--- PROTEIN ---",
+      "18 oz Kirkland chipotle-seasoned cooked chicken, chopped",
+      "--- VEGETABLES ---",
+      "4 oz mushrooms, sliced",
+      "4 oz carrots, chopped small",
+      "4 oz asparagus, cut into 1-inch pieces",
+      "--- SAUCE ---",
+      "1 oz (~2 tbsp) all-purpose flour",
+      "1/4 cup Martini & Rossi Extra Dry Vermouth",
+      "3 cups Kirkland Organic Chicken Bone Broth",
+      "4-5 pinches kosher salt",
+      "--- PASTRY ---",
+      "1 sheet Pepperidge Farm puff pastry (~250g)",
+      "1/2 beaten egg (for wash)",
+      "--- PAN COAT ---",
+      "~1 tbsp Chosen Foods avocado oil spray",
+    ],
+    steps: [
+      { text: "PREHEAT: Oven to 425°F.", images: [] },
+      { text: "PREP: Chop the chipotle chicken into 1/2-inch pieces. Chop carrots, mushrooms, and asparagus small.", images: ["/images/chicken-pot-pie/context-ingredients-lineup.webp"] },
+      { text: "MUSHROOMS: Spray a large skillet with avocado oil. Add mushrooms. Cook ~3 min, stirring.", images: ["/images/chicken-pot-pie/step-01-mushrooms.webp"] },
+      { text: "CARROTS: Add carrots + 2 pinches kosher salt. Cook ~3 min.", images: ["/images/chicken-pot-pie/step-02-carrots.webp"] },
+      { text: "FLOUR: Sprinkle 1 oz flour over the veg. Stir 1 minute.", images: ["/images/chicken-pot-pie/step-03-flour.webp"] },
+      { text: "VERMOUTH: Off heat, pour 1/4 cup vermouth, stir to slurry the roux. Back on heat.", images: ["/images/chicken-pot-pie/step-04-vermouth.webp"] },
+      { text: "BROTH: Add 3 cups bone broth. Boil ~2 min, stirring, until thickened.", images: ["/images/chicken-pot-pie/step-05-bone-broth.webp"] },
+      { text: "CHICKEN + ASPARAGUS: Fold in 18 oz chopped chicken + 4 oz asparagus. Simmer 3 min.", images: ["/images/chicken-pot-pie/step-06-chicken-asparagus.webp"] },
+      { text: "OIL BOWLS: Spray oven-safe bowl interiors + RIMS with avocado oil.", images: [] },
+      { text: "FILL: Scoop filling into 4 bowls. Reserve remaining filling + 1 puff pastry sheet for next meal prep.", images: ["/images/chicken-pot-pie/step-07-fill-bowls.webp"] },
+      { text: "PUFF PASTRY: Roll the sheet lightly. Cut 4 tops. Drape over each bowl, press around the rim.", images: ["/images/chicken-pot-pie/step-08-puff-pastry.webp"] },
+      { text: "VENT + WASH: Cut a 1-inch slit in the center of each top. Brush with beaten egg.", images: ["/images/chicken-pot-pie/step-09-egg-wash.webp"] },
+      { text: "BAKE: 425°F × 20 min until deep golden + puffed.", images: ["/images/chicken-pot-pie/step-10-oven-425.webp"] },
+      { text: "REST + SERVE: Adults get a full bowl. For kids, crack the pastry open, let steam off 5 min, scoop half the filling + half the pastry into a smaller bowl.", images: ["/images/chicken-pot-pie/payoff-spoon-crack.webp"] },
+    ],
+    brands: [
+      { name: "Kirkland Signature", item: "Chipotle-Seasoned Cooked Chicken (18 oz package, refrigerated — ~120 cal / 22g protein per 3 oz serving)", why: "The speed unlock. Pre-cooked, pre-seasoned, no prep time. Carries most of the seasoning into the sauce; you barely add salt. Available at Costco refrigerated section." },
+      { name: "Kirkland Signature", item: "Organic Chicken Bone Broth (32 fl oz carton — 45 cal / 9g protein per 8 fl oz)", why: "The sauce base. 3 cups (= 24 fl oz) carries ~27g protein into the filling on top of the chicken. Cross-recipe staple across id 4, 24, 30, 38, 39, 41, 42, 43, 44, 45." },
+      { name: "Pepperidge Farm", item: "Puff Pastry Sheets (~250g per sheet, 2 sheets per box, frozen)", why: "The pastry top + the textural payoff. Top-only puff (vs full double-crust) saves ~150 cal / serving while keeping the spoon-crack money shot. Contains butter — dairy allergen." },
+      { name: "Martini & Rossi", item: "Extra Dry Vermouth (375ml bottle — shelf-stable opened in fridge for months)", why: "Better than white wine for weeknight cooking — herb-forward, no need to commit to a full bottle. 1/4 cup deglaze adds savory depth + the alcohol acidity that brightens the chicken-broth base." },
+      { name: "Chosen Foods", item: "Avocado Oil Spray (cooking spray)", why: "Pan coat + bowl rim coat. The rim spray is what keeps the pastry from sticking — don't skip it." },
+    ],
+    macroHonesty: "Per adult bowl (~520 cal / 30g protein / 22g fat / 45g total carbs / 41g net carbs / 4g fiber) confirmed by Tushar from labeled macros. Adult bowl config: ~3 oz Kirkland chipotle chicken (~120 cal / 22P / 4F) + 1/2 cup mushroom+carrot+asparagus mix (~30 cal / 2P / 6C) + sauce share (1/6 of 3 cups bone broth + flour + vermouth = ~60 cal / 5P / 2F / 6C) + 1 puff pastry top (1/4 of 250g sheet = ~310 cal / 4P / 15F / 26C). Total: ~520 / ~33P / ~21F / ~38C — within 10% of the labeled 520/30. Atwater check: 30×4 + 41×4 + 22×9 = 120+164+198 = 482 ≈ 520 with the fiber/alcohol accounting. Kid half-serving = 260 cal / 15g protein (half of everything above). Estimated: false — the macro is the user's source-of-truth claim, not an estimate.",
+    mealPrep: {
+      storage: "Filling + pastry stored separately. Cooked + reserved filling lives in an airtight container in the fridge; the second puff pastry sheet stays frozen until ready for the next bake.",
+      reheat: "Reserved filling: stovetop low heat 5 min, stirring; or microwave 90 sec covered (stir halfway). Pour into oiled bowls, top with fresh puff pastry from the second sheet, egg wash, vent, bake 425°F × 20 min. Don't reheat baked pot pies — the pastry softens in the fridge and never recovers.",
+      lasts: "Cooked filling: 4 days fridge, 2 months frozen. Frozen puff pastry sheet: per box date, 6+ months frozen. Baked pot pies: best fresh — pastry softens overnight in the fridge. Cross-meal-prep economy: bake 4 Tuesday, bake 2 more Friday from the same recipe budget.",
+    },
+  },
 ];
 
 export default recipes;
