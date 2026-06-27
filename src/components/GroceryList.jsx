@@ -48,40 +48,43 @@ const GROCERY_BY_WEEK = {
       { name: "Regular chips", baseQty: 1, unit: "bag", meal: "Wed kid" },
     ],
   },
-  // Week 2: Mon=Stir-fry(4), Wed=Tri-tip Penne(2), Fri=Rice Bowl(24)
+  // Week 2: Mon=Bavette Steak(25), Wed=Tri-tip Penne(2), Fri=Rice Bowl(24)
   2: {
     "Protein": [
-      { name: "Ground beef or sirloin", baseQty: 1.25, unit: "lb", meal: "Mon" },
+      { name: "Bavette steak (or skirt)", baseQty: 1.25, unit: "lb", meal: "Mon adult" },
+      { name: "Pork patties (kid swap)", baseQty: 4, unit: "patties", meal: "Mon kid" },
       { name: "Tri-tip steak", baseQty: 1.25, unit: "lb", meal: "Wed" },
       { name: "Gary's QuickSteak Sirloin", baseQty: 1, unit: "pack", meal: "Fri" },
-      { name: "Earth's Best mini meatballs", baseQty: 1, unit: "bag", meal: "Kid swap" },
+      { name: "Earth's Best mini meatballs", baseQty: 1, unit: "bag", meal: "Wed kid swap" },
     ],
     "Carbs": [
-      { name: "Rice", baseQty: 14, unit: "oz dry", meal: "Mon + Fri" },
+      { name: "Rice", baseQty: 8, unit: "oz dry", meal: "Fri" },
       { name: "Penne pasta", baseQty: 8, unit: "oz", meal: "Wed" },
+      { name: "Frozen fries (air fryer)", baseQty: 1, unit: "bag", meal: "Mon" },
     ],
     "Vegetables": [
-      { name: "Broccoli", baseQty: 12, unit: "oz", meal: "Mon" },
       { name: "Spinach", baseQty: 3, unit: "oz", meal: "Wed" },
+      { name: "Fresh parsley + cilantro (for chimichurri)", baseQty: 1, unit: "bunch", meal: "Mon adult" },
+      { name: "Carrots (kid side)", baseQty: 2, unit: "", meal: "Mon kid" },
       { name: "Onion", baseQty: 1, unit: "large", meal: "All" },
       { name: "Garlic", qty: "1 head", meal: "All" },
     ],
     "Sauce & Flavor": [
-      { name: "Soy sauce or tamari", qty: "pantry", meal: "Mon" },
-      { name: "Sesame oil", qty: "pantry", meal: "Mon" },
-      { name: "Roli Roti bone broth", baseQty: 32, unit: "oz", meal: "Mon + Wed" },
+      { name: "Spiceology Chimichurri Blend", qty: "pantry", meal: "Mon adult" },
+      { name: "Olive oil + red wine vinegar (chimichurri base)", qty: "pantry", meal: "Mon adult" },
+      { name: "Roli Roti bone broth", baseQty: 32, unit: "oz", meal: "Wed" },
       { name: "Chicken bone broth", baseQty: 3, unit: "cups", meal: "Fri" },
       { name: "Kirkland Organic Ghee", qty: "pantry", meal: "Fri" },
       { name: "Turmeric", qty: "pantry", meal: "Fri" },
       { name: "Liquid Chipotle Sauce", baseQty: 4, unit: "servings", meal: "Fri" },
-      { name: "Chili oil or sriracha", qty: "pantry", meal: "All" },
+      { name: "Dan-O's Original (Wed kid pasta)", qty: "pantry", meal: "Wed kid" },
     ],
     "Creamy Base": [
       { name: "Cottage cheese", baseQty: 12, unit: "oz", meal: "Wed" },
-      { name: "Fairlife fat-free milk", qty: "pantry", meal: "Sauce base" },
+      { name: "Fairlife fat-free milk", qty: "pantry", meal: "Wed sauce base" },
     ],
     "Kid Mode": [
-      { name: "Shredded mild cheese", qty: "pantry", meal: "Kid topping" },
+      { name: "Shredded mild cheese", qty: "pantry", meal: "Wed kid topping" },
     ],
   },
   // Week 3: Mon=Gnocchi(1), Wed=Sandwiches(23), Fri=Quesadillas(27)

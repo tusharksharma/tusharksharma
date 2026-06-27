@@ -23,10 +23,10 @@ const WEEKS = {
   },
   2: {
     label: "Week 2",
-    description: "Hearty comfort food. All beef/steak. Every meal reheats.",
-    subtitle: "Stir-fry, Tri-tip Penne, Golden Rice Bowl",
+    description: "Hearty all-beef week. Bavette Monday opens with a low-carb showstopper, creamy tri-tip penne midweek, golden rice + steak Friday. Every meal reheats. Carb mix: low + high + high.",
+    subtitle: "Bavette + Fries, Tri-tip Penne, Golden Rice Bowl",
     cookDays: [
-      { day: "Monday", label: "Fast Win", vibe: "Start easy — lowest friction dinner of the week", id: 4, time: "25 min", reheats: true, adult: "Spicy soy-sesame, charred broccoli, chili oil", kid: "Mild soy, broccoli on side, meatballs", needs: ["Beef", "Broccoli", "Rice", "Soy sauce", "Bone broth"], carbLevel: "high" },
+      { day: "Monday", label: "Steak Night", vibe: "Bavette + chimichurri + air fryer fries — start strong with a low-carb showstopper", id: 25, time: "20 min", reheats: false, adult: "Bavette steak, chimichurri, fries", kid: "Pork patties, fries, carrots", needs: ["Bavette", "Fries", "Spiceology Chimichurri", "Pork patties"], carbLevel: "low" },
       { day: "Wednesday", label: "Cook Once, Win Twice", vibe: "Midweek — creamy pasta, weekend is handled", id: 2, time: "35 min", reheats: true, adult: "Chili cream sauce, Dan-O's, sliced tri-tip", kid: "Mild creamy penne, meatballs, cheese", needs: ["Tri-tip", "Penne", "Spinach", "Cottage cheese", "Beef broth"], carbLevel: "high" },
       { day: "Friday", label: "System Meal", vibe: "Golden rice reheats all week, steak is fresh in 10 min", id: 24, time: "25 min", reheats: true, adult: "Golden turmeric rice, seared steak, chipotle drizzle", kid: "Rice + steak, no sauce — rice already has flavor", needs: ["Rice", "Bone broth", "Gary's QuickSteak", "Ghee", "Turmeric"], carbLevel: "high" },
     ],
