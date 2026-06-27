@@ -114,6 +114,37 @@ for (const u of usedUnits) {
   }
 }
 
+// Coverage: every live dinner must appear in at least one weekly-planner slot.
+// Catches the failure mode where a new recipe ships but never lands on the
+// planner — i.e. the "I don't see pot pie" bug from 2026-06-27.
+//
+// Intentional exemption: recipes that are chained off another week's leftover
+// rather than being a primary slot. Add their ids to KNOWN_LEFTOVER_CHAINS.
+const KNOWN_LEFTOVER_CHAINS = new Set([
+  32, // Split Plate Next-Day Chicken Tacos — chained off id 31 Friday's leftover thighs.
+]);
+
+const recipesSrc = readFileSync("src/data/recipes.js", "utf-8");
+const liveDinnerIds = new Set();
+for (const m of recipesSrc.matchAll(/^    id: (\d+),\s*\n\s*status: "live"/gm)) {
+  liveDinnerIds.add(Number(m[1]));
+}
+
+const plannerIds = new Set();
+for (const m of plannerSrc.matchAll(/id:\s*(\d+)/g)) {
+  plannerIds.add(Number(m[1]));
+}
+
+const uncovered = [...liveDinnerIds].filter((id) => !plannerIds.has(id) && !KNOWN_LEFTOVER_CHAINS.has(id));
+if (uncovered.length > 0) {
+  for (const id of uncovered.sort((a, b) => a - b)) {
+    const titleMatch = recipesSrc.match(new RegExp(`^    id: ${id},[\\s\\S]*?title: "([^"]+)"`, "m"));
+    const title = titleMatch ? titleMatch[1] : "(unknown title)";
+    console.error(`ERROR: live dinner id=${id} "${title}" has NO weekly-planner slot. Add it to a week in YourWeek.jsx WEEKS, or — if it's intentionally a leftover-chain recipe — add the id to KNOWN_LEFTOVER_CHAINS in this validator.`);
+    errors++;
+  }
+}
+
 if (errors > 0) {
   throw new Error(`Validation failed with ${errors} error(s). Fix planner/grocery sync.`);
 } else {
