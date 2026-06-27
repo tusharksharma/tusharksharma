@@ -661,6 +661,45 @@ const GROCERY_BY_WEEK = {
       { name: "Daisy Low-Fat Cottage Cheese (16 oz tub)", baseQty: 1, unit: "tub", meal: "Fri" },
     ],
   },
+  // Week 17: Mon=Chicken Pot Pie(46), Wed=Creamy Beef Bacon Pasta(41), Fri=Garlic Parm Drumsticks + Chipotle Corn(45)
+  17: {
+    "Protein": [
+      { name: "Kirkland chipotle-seasoned cooked chicken (18 oz)", baseQty: 1, unit: "pack", meal: "Mon" },
+      { name: "Godshall's Beef Bacon (2 packs = 20 slices)", baseQty: 2, unit: "packs", meal: "Wed" },
+      { name: "Chicken drumsticks (bone-in, skin-on)", baseQty: 6, unit: "", meal: "Fri" },
+    ],
+    "Carbs": [
+      { name: "Pepperidge Farm Puff Pastry (250g sheet)", baseQty: 1, unit: "sheet", meal: "Mon" },
+      { name: "Carbe Diem Penne (adult)", baseQty: 1, unit: "box", meal: "Wed adult" },
+      { name: "Regular wheat penne (kid)", baseQty: 1, unit: "box", meal: "Wed kid" },
+      { name: "Corn on the cob, shucked", baseQty: 3, unit: "ears", meal: "Fri" },
+    ],
+    "Vegetables": [
+      { name: "Mushrooms (sliced or chopped)", baseQty: 4, unit: "oz", meal: "Mon" },
+      { name: "Carrots", baseQty: 4, unit: "oz", meal: "Mon" },
+      { name: "Asparagus", baseQty: 4, unit: "oz", meal: "Mon" },
+      { name: "Fresh parsley", baseQty: 1, unit: "bunch", meal: "Wed adult" },
+      { name: "Persian or English cucumber", baseQty: 1, unit: "", meal: "Fri kid" },
+    ],
+    "Sauce & Flavor": [
+      { name: "Martini & Rossi Extra Dry Vermouth (1/4 cup)", baseQty: 1, unit: "bottle", meal: "Mon" },
+      { name: "Kirkland Organic Chicken Bone Broth", qty: "pantry", meal: "Mon + Wed" },
+      { name: "All-purpose flour (1 oz / 2 tbsp)", qty: "pantry", meal: "Mon" },
+      { name: "Egg (for wash, 1 large)", baseQty: 1, unit: "", meal: "Mon" },
+      { name: "Chosen Foods avocado oil spray", qty: "pantry", meal: "Mon + Fri" },
+      { name: "Rao's Homemade Alfredo", baseQty: 1, unit: "jar", meal: "Wed kid" },
+      { name: "Black pepper, kosher salt", qty: "pantry", meal: "Wed + Fri" },
+      { name: "Dan-O's Cheesoning (2 tbsp for the rub)", qty: "pantry", meal: "Fri" },
+      { name: "Clabber Girl Baking Powder (1 tbsp for the rub)", qty: "pantry", meal: "Fri" },
+      { name: "Garlic powder, paprika", qty: "pantry", meal: "Fri" },
+      { name: "Smoky Chipotle Crema (2 tbsp — cookbook sauce)", qty: "pantry", meal: "Fri adult" },
+      { name: "Chosen Foods Classic Mayo (1 tbsp)", qty: "pantry", meal: "Fri kid" },
+    ],
+    "Creamy Base": [
+      { name: "Daisy Low-Fat Cottage Cheese (16 oz tub)", baseQty: 1, unit: "tub", meal: "Wed adult" },
+      { name: "Laughing Cow Light wedges", baseQty: 1, unit: "container", meal: "Wed adult" },
+    ],
+  },
 };
 
 function getGrocery(week) { return GROCERY_BY_WEEK[week] || GROCERY_BY_WEEK[1]; }
@@ -680,6 +719,7 @@ const WHOLE_UNITS = new Set([
   "tray", "trays",
   "wedge", "wedges",
   "buns", "fillets", "rolls", "tortillas", "slices", "pieces", "patties", "thighs", "chops", "kababs", "drumsticks", "wings",
+  "ears", "sheet", "sheets",
   "servings",
   "lemon", "lemons", "lime", "limes", "cucumber", "cucumbers", "onion", "onions",
   "cup", "cups",
