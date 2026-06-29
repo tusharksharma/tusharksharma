@@ -70,12 +70,14 @@ const routes = [
   ...recipes.map((r) => {
     const idx = recipesRaw.indexOf(`slug: "${r.slug}"`);
     const ingredients = idx > -1 ? extractIngredients(recipesRaw, idx) : [];
+    const steps = idx > -1 ? extractSteps(recipesRaw, idx) : [];
+    const tags = idx > -1 ? extractTags(recipesRaw, idx) : [];
     return {
       path: `/recipes/${r.slug}`,
       title: `${r.title} — The Split Plate`,
       description: r.description || `${r.title} — ${r.protein}g protein, ${r.calories} cal, ${r.time}.`,
       image: r.image,
-      schema: buildRecipeSchema(r, ingredients),
+      schema: buildRecipeSchema(r, ingredients, steps, tags),
     };
   }),
   ...recipes.map((r) => ({
@@ -126,7 +128,53 @@ function extractIngredients(src, startIdx) {
   return items;
 }
 
-function buildRecipeSchema(r, ingredients) {
+// Pull top-level `steps: [...]` (NOT splitCook.sharedSteps / adult.steps /
+// kid.steps — those are nested below `splitCook:`). Returns the text of each
+// step, splittable into name + body via the leading "LABEL:" pattern.
+function extractSteps(src, startIdx) {
+  const after = src.slice(startIdx, startIdx + 50000);
+  const block = after.match(/\n {4}steps:\s*\[([\s\S]*?)\n {4}\],/);
+  if (!block) return [];
+  // Each step is `{ text: "...", images: [...] }` — grab the text strings.
+  const steps = [];
+  for (const m of block[1].matchAll(/text:\s*"((?:[^"\\]|\\.)*)"/g)) {
+    // Un-escape JS string literals (\" → ", \\ → \).
+    steps.push(m[1].replace(/\\"/g, '"').replace(/\\\\/g, "\\"));
+  }
+  return steps;
+}
+
+// Pull `tags: [...]` strings. Used as `keywords` (Google's hint for relevant
+// query matching). Skip section-header tokens and url-like values.
+function extractTags(src, startIdx) {
+  const after = src.slice(startIdx, startIdx + 50000);
+  const block = after.match(/\n {4}tags:\s*\[([\s\S]*?)\],/);
+  if (!block) return [];
+  const tags = [];
+  for (const m of block[1].matchAll(/"([^"]+)"/g)) {
+    const t = m[1];
+    if (t.startsWith("---") || t.startsWith("/")) continue;
+    tags.push(t);
+  }
+  return tags;
+}
+
+// Convert "PREHEAT + RACK: Oven to 425°F." → {name: "Preheat + Rack", text: "Oven to 425°F."}
+// Step text without a colon-prefix label just gets `text`, no `name`.
+function toHowToStep(text) {
+  const colonIdx = text.indexOf(":");
+  if (colonIdx > 0 && colonIdx < 40) {
+    const label = text.slice(0, colonIdx).trim();
+    const body = text.slice(colonIdx + 1).trim();
+    if (body) return { "@type": "HowToStep", name: titleCase(label), text: body };
+  }
+  return { "@type": "HowToStep", text };
+}
+function titleCase(s) {
+  return s.split(/\s+/).map((w) => w.length > 2 ? w[0].toUpperCase() + w.slice(1).toLowerCase() : w.toLowerCase()).join(" ");
+}
+
+function buildRecipeSchema(r, ingredients, steps, tags) {
   const schema = {
     "@context": "https://schema.org",
     "@type": "Recipe",
@@ -147,6 +195,12 @@ function buildRecipeSchema(r, ingredients) {
   };
   if (ingredients && ingredients.length > 0) {
     schema.recipeIngredient = ingredients;
+  }
+  if (steps && steps.length > 0) {
+    schema.recipeInstructions = steps.map(toHowToStep);
+  }
+  if (tags && tags.length > 0) {
+    schema.keywords = tags.join(", ");
   }
   return JSON.stringify(schema);
 }
