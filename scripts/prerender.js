@@ -101,9 +101,18 @@ const routes = [
 ];
 
 function extractIngredients(src, startIdx) {
-  // Extract ingredient strings from recipe source starting near startIdx
-  const after = src.slice(startIdx, startIdx + 8000);
-  const ingredBlock = after.match(/ingredients:\s*\[([\s\S]*?)\],/);
+  // Extract ingredient strings from recipe source starting at the recipe's slug.
+  // Long entries (splitCook + whyMostFail + whyThisWorks + troubleshooting +
+  // shared/adult/kid step trees) push the `ingredients: [...]` field 30k+ chars
+  // past `slug:`. The window must be generous — under-sizing here causes the
+  // schema.recipeIngredient field to drop silently and Google Search Console
+  // flags it as a Recipes structured-data issue. 50k covers every live entry
+  // including halal cart (id 44) and pot pie (id 46).
+  const after = src.slice(startIdx, startIdx + 50000);
+  // Skip past `sharedIngredients:` (splitCook nested ingredient list) — the
+  // top-level `ingredients:` field is what schema.org Recipe expects.
+  // Use \b boundary so `sharedIngredients` doesn't match.
+  const ingredBlock = after.match(/\bingredients:\s*\[([\s\S]*?)\n {4}\],/);
   if (!ingredBlock) return [];
   const raw = ingredBlock[1];
   const items = [];
