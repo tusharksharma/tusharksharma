@@ -25,9 +25,9 @@ export default function RecipeDetail({ recipe }) {
 
   return (
     <div className="min-h-screen bg-neutral-950 text-neutral-100">
-      {/* Back nav */}
-      <div className="border-b border-neutral-800 sticky top-0 z-10 bg-neutral-950/90 backdrop-blur-sm">
-        <div className="max-w-3xl mx-auto px-4 py-4 flex items-center justify-between">
+      {/* Back nav — hidden in print */}
+      <div className="border-b border-neutral-800 sticky top-0 z-10 bg-neutral-950/90 backdrop-blur-sm print:hidden">
+        <div className="max-w-3xl mx-auto px-4 py-4 flex items-center justify-between gap-3">
           <Link
             to="/"
             className="flex items-center gap-2 text-neutral-500 hover:text-amber-400 transition-colors text-sm font-semibold"
@@ -35,13 +35,23 @@ export default function RecipeDetail({ recipe }) {
             <img src="/images/favicon.png" alt="" className="w-5 h-5" />
             The Split Plate
           </Link>
-          <span
-            className={`text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full border ${
-              pillarColors[recipe.pillar] || ""
-            }`}
-          >
-            {recipe.pillar}
-          </span>
+          <div className="flex items-center gap-2">
+            <button
+              type="button"
+              onClick={() => { track("recipe_print", { recipe: recipe.title, slug: recipe.slug }); window.print(); }}
+              className="text-xs font-semibold text-neutral-400 hover:text-amber-400 transition-colors border border-neutral-700 hover:border-amber-500/40 rounded-full px-3 py-1 cursor-pointer"
+              title="Print this recipe"
+            >
+              Print
+            </button>
+            <span
+              className={`text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full border ${
+                pillarColors[recipe.pillar] || ""
+              }`}
+            >
+              {recipe.pillar}
+            </span>
+          </div>
         </div>
       </div>
 
@@ -389,10 +399,14 @@ export default function RecipeDetail({ recipe }) {
         )}
 
         {/* Leftovers Panel — cross-recipe pairs that share brands/ingredients */}
-        <LeftoversPanel recipe={recipe} />
+        <div className="print:hidden">
+          <LeftoversPanel recipe={recipe} />
+        </div>
 
         {/* Related Recipes */}
-        <RelatedRecipes current={recipe} />
+        <div className="print:hidden">
+          <RelatedRecipes current={recipe} />
+        </div>
 
         {/* Meal Prep */}
         {recipe.mealPrep && (

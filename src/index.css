@@ -1,1 +1,47 @@
 @import "tailwindcss";
+
+/*
+ * Print styles. Only active when the user hits browser Print.
+ * - Force white background + black text so ink use is sane on paper.
+ * - Avoid mid-section page breaks on ingredient/step blocks so a step doesn't
+ *   split awkwardly across pages.
+ * Elements meant to disappear entirely (nav, LeftoversPanel, RelatedRecipes,
+ * Print button itself) use Tailwind's `print:hidden` at the JSX level.
+ */
+@media print {
+  html, body {
+    background: #fff !important;
+    color: #111 !important;
+  }
+  /* Neutral dark surfaces → white; borders soften to gray */
+  .bg-neutral-950, .bg-neutral-900, .bg-neutral-800,
+  [class*="bg-neutral-900\\/"], [class*="bg-neutral-800\\/"] {
+    background: #fff !important;
+    border-color: #ddd !important;
+  }
+  .text-white, .text-neutral-100, .text-neutral-200, .text-neutral-300,
+  .text-neutral-400, .text-neutral-500, .text-neutral-600 {
+    color: #111 !important;
+  }
+  .text-amber-500, .text-amber-400, .text-amber-300,
+  [class*="text-amber-100"] {
+    color: #a16207 !important;
+  }
+  .border-neutral-800, .border-neutral-700, .border-neutral-600 {
+    border-color: #ddd !important;
+  }
+  h1, h2, h3 { color: #000 !important; }
+  /* Keep step + ingredient blocks together on the page */
+  section, article > div, li {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  /* Hero image capped at 3in so it doesn't dominate paper */
+  article > img {
+    max-height: 3in !important;
+    object-fit: cover;
+  }
+  /* Kill sticky + backdrop-blur which don't survive print */
+  .sticky { position: static !important; }
+  .backdrop-blur-sm { backdrop-filter: none !important; }
+}
