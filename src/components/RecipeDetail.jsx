@@ -55,7 +55,11 @@ export default function RecipeDetail({ recipe }) {
         </div>
       </div>
 
-      <article className="max-w-3xl mx-auto px-4 py-8">
+      {/* Compact print-only recipe card (2 pages max). Screen users see the
+          full article below; print rendering swaps to this stripped view. */}
+      <PrintCard recipe={recipe} />
+
+      <article className="max-w-3xl mx-auto px-4 py-8 print:hidden">
         {/* Hero image */}
         <img
           src={recipe.image}
@@ -399,14 +403,10 @@ export default function RecipeDetail({ recipe }) {
         )}
 
         {/* Leftovers Panel — cross-recipe pairs that share brands/ingredients */}
-        <div className="print:hidden">
-          <LeftoversPanel recipe={recipe} />
-        </div>
+        <LeftoversPanel recipe={recipe} />
 
         {/* Related Recipes */}
-        <div className="print:hidden">
-          <RelatedRecipes current={recipe} />
-        </div>
+        <RelatedRecipes current={recipe} />
 
         {/* Meal Prep */}
         {recipe.mealPrep && (
@@ -826,6 +826,51 @@ function Stat({ label, value, highlight, estimated }) {
         {label}
         {estimated && <span className="text-amber-500/60 ml-1 normal-case font-semibold">· est.</span>}
       </div>
+    </div>
+  );
+}
+
+// Print-only 2-page recipe card. Hidden on screen (`hidden`), visible when
+// printing (`print:block`). Renders title + one-line macros + ingredients
+// (with section headers) + numbered steps. Skips whyMostFail, whyThisWorks,
+// executionRules, troubleshooting, brands, mealPrep, splitCook adult/kid
+// branches — those live only on the screen article.
+function PrintCard({ recipe }) {
+  const isSectionHeader = (s) => typeof s === "string" && s.startsWith("---");
+  const ingredientText = (item) => typeof item === "string" ? item : (item?.text || "");
+  const stepText = (step) => typeof step === "string" ? step : (step?.text || "");
+
+  return (
+    <div className="hidden print:block max-w-3xl mx-auto px-6 py-4">
+      <div className="flex items-baseline justify-between mb-3 pb-2 border-b border-neutral-300">
+        <h1 className="text-2xl font-black text-black">{recipe.title}</h1>
+        <span className="text-[10px] text-neutral-600">thesplitplate.com/recipes/{recipe.slug}</span>
+      </div>
+      <p className="text-sm text-neutral-800 mb-3">
+        <strong>{recipe.time}</strong> · <strong>{recipe.servings} servings</strong> · <strong>{recipe.protein}g protein</strong> · <strong>{recipe.calories} cal</strong> per serving
+      </p>
+      {recipe.splitCook && (
+        <p className="text-xs text-neutral-700 mb-3 italic">
+          Split: {recipe.splitCook.adult?.label || "Adult"} · {recipe.splitCook.kid?.label || "Kid"}
+        </p>
+      )}
+
+      <h2 className="text-xs font-black uppercase tracking-wider text-black mt-4 mb-1 border-b border-neutral-300 pb-0.5">Ingredients</h2>
+      <ul className="text-[11px] text-neutral-900 space-y-0.5 leading-snug">
+        {(recipe.ingredients || []).map((item, i) => {
+          if (isSectionHeader(item)) {
+            return <li key={i} className="font-bold uppercase text-[10px] text-neutral-600 mt-1.5 list-none">{item.replace(/-/g, "").trim()}</li>;
+          }
+          return <li key={i} className="pl-3 -indent-3">• {ingredientText(item)}</li>;
+        })}
+      </ul>
+
+      <h2 className="text-xs font-black uppercase tracking-wider text-black mt-4 mb-1 border-b border-neutral-300 pb-0.5">Method</h2>
+      <ol className="text-[11px] text-neutral-900 space-y-1 leading-snug list-decimal ml-4">
+        {(recipe.steps || []).map((step, i) => (
+          <li key={i}>{stepText(step)}</li>
+        ))}
+      </ol>
     </div>
   );
 }

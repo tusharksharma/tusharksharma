@@ -9,9 +9,14 @@
  * Print button itself) use Tailwind's `print:hidden` at the JSX level.
  */
 @media print {
+  /* Tight page margins so a ~30-step, ~20-ingredient recipe fits 2 pages */
+  @page {
+    margin: 0.5in 0.6in;
+  }
   html, body {
     background: #fff !important;
     color: #111 !important;
+    font-size: 11pt;
   }
   /* Neutral dark surfaces → white; borders soften to gray */
   .bg-neutral-950, .bg-neutral-900, .bg-neutral-800,
