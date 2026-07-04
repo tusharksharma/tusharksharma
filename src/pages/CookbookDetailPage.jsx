@@ -1,11 +1,11 @@
 import { useParams, Link } from "react-router-dom";
-import { sauces, desserts, breakfasts, quickLunches, bases, powerups } from "../data/cookbook";
+import { sauces, desserts, breakfasts, quickLunches, bases, powerups, snackBoxes } from "../data/cookbook";
 import { liveRecipes } from "../data/recipes";
 import useMeta from "../hooks/useMeta";
 import track from "../hooks/useTrack";
 import ZoomableImage from "../components/ZoomableImage";
 
-const allItems = [...bases, ...sauces, ...breakfasts, ...desserts, ...quickLunches, ...powerups];
+const allItems = [...bases, ...sauces, ...breakfasts, ...desserts, ...quickLunches, ...powerups, ...snackBoxes];
 
 export default function CookbookDetailPage() {
   const { id } = useParams();

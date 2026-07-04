@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import useMeta from "../hooks/useMeta";
-import { sauces, quickLunches, desserts, breakfasts, bases, powerups } from "../data/cookbook";
+import { sauces, quickLunches, desserts, breakfasts, bases, powerups, snackBoxes } from "../data/cookbook";
 
 const TABS = [
   ...(bases.length > 0 ? ["Bases"] : []),
@@ -10,6 +10,7 @@ const TABS = [
   ...(desserts.length > 0 ? ["Desserts"] : []),
   ...(quickLunches.length > 0 ? ["Quick Lunches"] : []),
   ...(powerups.length > 0 ? ["Powerups"] : []),
+  ...(snackBoxes.length > 0 ? ["Snack Boxes"] : []),
 ];
 
 function netCarbColor(nc) {
@@ -215,6 +216,19 @@ export default function CookbookPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {filterItems(powerups).map((p) => (
                 <RecipeCard key={p.id} item={p} />
+              ))}
+            </div>
+          </div>
+        )}
+
+        {tab === "Snack Boxes" && snackBoxes.length > 0 && (
+          <div>
+            <p className="text-neutral-500 text-xs mb-4">
+              Kid-first snack boxes with familiar flavors + higher-protein swaps. Divided compartments, no sauce in the box, meal-prep-friendly for weekday snacks.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {filterItems(snackBoxes).map((s) => (
+                <RecipeCard key={s.id} item={s} />
               ))}
             </div>
           </div>

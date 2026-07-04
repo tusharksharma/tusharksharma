@@ -2503,3 +2503,87 @@ export const powerups = [
     },
   },
 ];
+
+// Snack Boxes — kid-first cookbook items. Divided prep boxes with familiar
+// flavors (pizza, taco, etc.) + higher-protein swaps. Distinct from
+// breakfasts (meal-slot-specific) and quickLunches (adult-lunch-oriented).
+// The Split Plate Snack Box series — first entry is the pizza snack box.
+// Kid-first framing is intentional; the existing [feedback-cookbook-adult-default]
+// rule only says cookbook items skip splitNote unless the kid swap is meaningful.
+// Snack boxes are the exception: they're single-audience (kid), no split.
+export const snackBoxes = [
+  {
+    id: "split-plate-pizza-snack-box",
+    title: "Split Plate Pizza Snack Box",
+    tagline: "No-cook pizza-inspired kid snack box — turkey pepperoni, cubed cheese stick, Triscuit Thin Crisps, cucumber. Higher-protein without turning snack into diet food.",
+    heroImage: "/images/split-plate-pizza-snack-box/hero-final-snack-box.webp",
+    // prepImage — swapped from handoff's `final-stacked-snack-boxes` (payoff
+    // shot) to the Sargento colby-jack context shot (mise-style brand
+    // reveal, standard cookbook prepImage pattern).
+    prepImage: "/images/split-plate-pizza-snack-box/context-sargento-colby-jack.webp",
+    // socialImages — raw paths for now; swap to -polished.webp after
+    // Path A transform run. Step-execution order per
+    // [feedback-social-images-step-order]: pepperoni → cheese → crackers
+    // → cucumber → stacked-boxes (payoff at tail). Sized to 5 entries —
+    // fits cookbook carousel cap easily. Hero deliberately NOT in
+    // socialImages (no self-duplication with recipe.image). Brand-context
+    // reveals (Sargento, Triscuit) NOT in the carousel per the
+    // no-brand-reveal-in-carousel rule.
+    socialImages: [
+      "/images/split-plate-pizza-snack-box/step-01-add-turkey-pepperoni.webp",
+      "/images/split-plate-pizza-snack-box/step-02-cheese-stick-cubes.webp",
+      "/images/split-plate-pizza-snack-box/step-03-add-thin-crisps.webp",
+      "/images/split-plate-pizza-snack-box/step-04-cucumber-to-fill.webp",
+      "/images/split-plate-pizza-snack-box/final-stacked-snack-boxes.webp",
+    ],
+    flavorProfile: "Pizza-inspired: cheesy, savory, crunchy, fresh. Familiar kid flavors on a snack-box grid without the sauce mess.",
+    calories: 880,
+    caloriesPerServing: 220,
+    protein: 60,
+    proteinPerServing: 15,
+    servings: 4,
+    time: "10 min",
+    bestFor: [
+      "Kid snack",
+      "Snack box",
+      "Post-lunch snack",
+      "Weekend post-breakfast",
+      "No-cook prep",
+      "Higher-protein snack",
+    ],
+    useThisWhen: "You want a kid snack box that tastes like pizza night without the mess, and lands at ~220 cal / 15g protein per box. Make 4 boxes once, feeds 2 kids across 2 snack rounds. No cook, no assembly-line — 10 min flat.",
+    flavorTarget: "Cheesy turkey pepperoni + creamy cubed colby-jack + crackly Triscuit crunch + cold cucumber crisp. Pizza-flavor without any of the sauce mess in the packed box.",
+    ingredients: [
+      "3-4 servings turkey pepperoni (Hormel or Applegate — 3/4 to 1 serving per box)",
+      "4 cheese sticks (1 per box, cubed) — Sargento Colby-Jack shown",
+      "2 servings Triscuit Thin Crisps (1/2 serving per box)",
+      "1 large cucumber (sliced or chopped, to fill each box)",
+      "Optional at-home side: marinara for dipping (skip in the packed box to avoid mess)",
+    ],
+    steps: [
+      { text: "SET UP: Line up 4 divided snack boxes (any brand with 3-4 compartments — the pastel Bento-style boxes shown work great).", image: "/images/split-plate-pizza-snack-box/hero-final-snack-box.webp" },
+      { text: "TURKEY PEPPERONI: Add 3/4 to 1 serving of turkey pepperoni to one compartment of each box. Kid appetite determines the exact count — small kids get ~5-6 slices, bigger kids get the full serving.", image: "/images/split-plate-pizza-snack-box/step-01-add-turkey-pepperoni.webp" },
+      { text: "CHEESE STICK CUBES: Cube 1 cheese stick per box (Sargento Colby-Jack shown — mozzarella, sharp cheddar, or Monterey Jack also work). Add cubes to the next compartment.", image: "/images/split-plate-pizza-snack-box/step-02-cheese-stick-cubes.webp" },
+      { text: "THIN CRISPS: Add 1/2 serving Triscuit Thin Crisps per box for the crackly pizza-crust texture. Any small savory cracker works if Triscuits aren't available.", image: "/images/split-plate-pizza-snack-box/step-03-add-thin-crisps.webp" },
+      { text: "CUCUMBER TO FILL: Slice or chop cucumber and pack it into the remaining space in each box. Fresh crunch balances the salty savory side.", image: "/images/split-plate-pizza-snack-box/step-04-cucumber-to-fill.webp" },
+      { text: "LID + CHILL: Snap lids on, refrigerate until snack time. Serve cold. If serving at home, marinara on the side for dipping — keep it OUT of the packed box to avoid soggy crackers + messy cleanup.", image: "/images/split-plate-pizza-snack-box/final-stacked-snack-boxes.webp" },
+    ],
+    brands: [
+      { name: "Hormel", item: "Turkey Pepperoni (5 oz bag — ~70 cal / 9g protein per 17-slice serving)", why: "The macro spine of the snack box. Turkey pepperoni is ~half the calories of regular pork pepperoni + the same familiar pizza flavor. 3/4 to 1 serving per box = ~7g protein from the meat alone.", url: "https://www.hormel.com/brands/pepperoni/turkey-pepperoni/" },
+      { name: "Applegate", item: "Natural Uncured Turkey Pepperoni (5 oz — same macro profile, cleaner label if you're brand-conscious)", why: "Cleaner-label alternative to Hormel. No nitrates/nitrites added, humanely raised. Similar ~70 cal / 9g protein per serving. Sub freely — the recipe is brand-flexible.", url: "https://applegate.com/products/natural-uncured-turkey-pepperoni" },
+      { name: "Sargento", item: "Colby-Jack Cheese Sticks (12-pack — ~80 cal / 6g protein per stick)", why: "Kid-familiar cheese in a stick format that cubes easily. 1 stick per box = 6g protein from the cheese layer alone. Cross-brand candidate: any string cheese or Bel Kaukauna singles.", url: "https://www.sargento.com/our-products/cheese-snacks/sticks/natural-colby-jack-cheese-snack-sticks" },
+      { name: "Triscuit", item: "Thin Crisps (7.1 oz box — Original variety; ~130 cal / 3g protein per 30-cracker serving)", why: "The crunch layer. Wheat-based, thinner than classic Triscuits so kid mouths handle them better. 1/2 serving per box = ~65 cal / 15 crackers.", url: "https://www.triscuit.com/thin-crisps/original" },
+    ],
+    macroHonesty: "~220 cal / 15g protein per snack box, approximate. Component breakdown: 3/4 serving turkey pepperoni (~50 cal / 7g protein) + 1 cheese stick (~80 cal / 6g protein) + 1/2 serving Triscuit Thin Crisps (~65 cal / 1g protein) + cucumber (~20 cal / 1g protein — varies by fill amount). Total: ~215 cal / ~15g protein. Marked estimated because turkey pepperoni servings per kid vary from 3/4 to 1 full serving. Snack Box series treats macros as approximate — per-brand label lookup for exact publish-worthy nutrition.",
+    seriesInfo: {
+      series: "Split Plate Snack Box",
+      framing: "Higher-protein kid snack boxes with familiar flavors + better-for-you swaps. Kid-first, but macro-friendly enough that parents may want one too. Make-once-eat-twice for 2-kid households.",
+      sauceRule: "No sauce in the packed box — soggy crackers + mess. Marinara or other dips serve at home on the side only.",
+    },
+    mealPrep: {
+      storage: "Refrigerate covered snack boxes.",
+      lasts: "Best within 2 days. Cucumber softens + Triscuits start to soften from ambient moisture past that point.",
+      reheat: "Don't — serve cold. That's the whole snack-box format.",
+    },
+  },
+];

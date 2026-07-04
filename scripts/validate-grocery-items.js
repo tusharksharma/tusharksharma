@@ -23,9 +23,9 @@
  */
 import { readFileSync } from "fs";
 import recipes from "../src/data/recipes.js";
-import { sauces, breakfasts, desserts, quickLunches, bases, powerups } from "../src/data/cookbook.js";
+import { sauces, breakfasts, desserts, quickLunches, bases, powerups, snackBoxes } from "../src/data/cookbook.js";
 
-const allCookbook = [...sauces, ...breakfasts, ...desserts, ...quickLunches, ...bases, ...powerups];
+const allCookbook = [...sauces, ...breakfasts, ...desserts, ...quickLunches, ...bases, ...powerups, ...snackBoxes];
 const cookbookById = new Map(allCookbook.map((c) => [c.id, c]));
 const recipesById = new Map(recipes.map((r) => [r.id, r]));
 

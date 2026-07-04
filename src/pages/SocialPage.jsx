@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { liveRecipes } from "../data/recipes";
-import { sauces, bases, breakfasts, desserts, quickLunches, powerups } from "../data/cookbook";
+import { sauces, bases, breakfasts, desserts, quickLunches, powerups, snackBoxes } from "../data/cookbook";
 import useMeta from "../hooks/useMeta";
 
-const ALL_COOKBOOK = [...sauces, ...bases, ...breakfasts, ...desserts, ...quickLunches, ...powerups];
+const ALL_COOKBOOK = [...sauces, ...bases, ...breakfasts, ...desserts, ...quickLunches, ...powerups, ...snackBoxes];
 
 // Words we deliberately filter out of title-derived hashtags.
 // Either too generic (#The, #With) or already brand-encoded (#Plate, #Cook).
@@ -43,6 +43,7 @@ const COOKBOOK_KIND_HASHTAGS = {
   "Dessert": "#ProteinDessert",
   "Quick Lunch": "#QuickLunch",
   "Powerup": "#Powerup",
+  "Snack Box": "#SnackBox",
 };
 
 // Combine 2-4 significant words from a title into a single CamelCase hashtag.
@@ -100,13 +101,17 @@ function hashtagsFor(recipe) {
       : recipe.__cookbookKind === "Side / Base" ? "Side"
       : recipe.__cookbookKind === "Dessert" ? "Dessert"
       : recipe.__cookbookKind === "Powerup" ? "Powerup"
+      : recipe.__cookbookKind === "Snack Box" ? "Snack"
       : "Recipe";
     const useTag = bestForHashtag({ bestFor: recipe.bestFor }, suffix);
     if (useTag) tags.add(useTag);
 
     // 4. Macro / discovery signal — protein density for food, hydration
-    // for drinks/powerups (high-protein label is dishonest on a 0g recipe).
+    // for drinks/powerups, kid-snack signal for snack boxes (high-protein
+    // label is dishonest at 15g on a kid snack, meal-prep misses the
+    // audience).
     if (recipe.__cookbookKind === "Powerup") tags.add("#Hydration");
+    else if (recipe.__cookbookKind === "Snack Box") tags.add("#KidSnack");
     else if ((recipe.protein || 0) >= 20) tags.add("#HighProtein");
     else tags.add("#MealPrep");
   } else {
@@ -960,6 +965,7 @@ function classifyCookbook(item) {
   if (desserts.includes(item)) return "Dessert";
   if (quickLunches.includes(item)) return "Quick Lunch";
   if (powerups.includes(item)) return "Powerup";
+  if (snackBoxes.includes(item)) return "Snack Box";
   return "Component";
 }
 

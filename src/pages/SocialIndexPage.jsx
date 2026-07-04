@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { liveRecipes } from "../data/recipes";
-import { sauces, bases, breakfasts, desserts, quickLunches, powerups } from "../data/cookbook";
+import { sauces, bases, breakfasts, desserts, quickLunches, powerups, snackBoxes } from "../data/cookbook";
 import useMeta from "../hooks/useMeta";
 
 const COOKBOOK_SECTIONS = [
@@ -11,6 +11,7 @@ const COOKBOOK_SECTIONS = [
   { label: "Desserts", items: desserts },
   { label: "Quick Lunches", items: quickLunches },
   { label: "Powerups", items: powerups },
+  { label: "Snack Boxes", items: snackBoxes },
 ];
 
 // ⚠️ CLIENT-SIDE GATE — not cryptographically secure.
