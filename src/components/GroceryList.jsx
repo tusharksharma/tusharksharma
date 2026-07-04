@@ -703,6 +703,48 @@ const GROCERY_BY_WEEK = {
       { name: "Laughing Cow Light wedges", baseQty: 1, unit: "container", meal: "Wed adult" },
     ],
   },
+  // Week 18: Mon=Smash Burgers(47), Wed=Pizza Night(40), Fri=Air Fryer Chicken(21)
+  18: {
+    "Protein": [
+      { name: "93/7 ground beef (adult smash)", baseQty: 12, unit: "oz", meal: "Mon adult" },
+      { name: "80/20 ground beef (kid slider)", baseQty: 6, unit: "oz", meal: "Mon kid" },
+      { name: "Soules Kitchen Fajita Chicken", baseQty: 2, unit: "packs", meal: "Wed adult" },
+      { name: "Boneless chicken thighs", baseQty: 1.25, unit: "lb", meal: "Fri" },
+    ],
+    "Carbs": [
+      { name: "Bettergoods Keto Friendly Hamburger Buns", baseQty: 2, unit: "buns", meal: "Mon adult" },
+      { name: "Marketside Brioche Slider Rolls", baseQty: 2, unit: "rolls", meal: "Mon kid" },
+      { name: "Rally's Famous Fries (frozen)", baseQty: 1, unit: "bag", meal: "Mon" },
+      { name: "Bettergoods Italian Wood-Fired Margherita Pizza", baseQty: 1, unit: "pack", meal: "Wed adult" },
+      { name: "Red Baron Deep Dish Singles (Pepperoni or Four Cheese)", baseQty: 2, unit: "pack", meal: "Wed kid" },
+      { name: "Dinner rolls (kid)", baseQty: 4, unit: "rolls", meal: "Fri kid" },
+    ],
+    "Vegetables": [
+      { name: "Broccoli (florets or crown)", baseQty: 12, unit: "oz", meal: "Fri" },
+      { name: "Tanimura & Antle Sweet Gem lettuce", baseQty: 1, unit: "pack", meal: "Wed" },
+      { name: "Dill pickles (jar) + chopped for spread", baseQty: 1, unit: "jar", meal: "Mon adult" },
+    ],
+    "Sauce & Flavor": [
+      { name: "Velveeta Original slices (6-count)", baseQty: 1, unit: "pack", meal: "Mon" },
+      { name: "Yellow mustard", qty: "pantry", meal: "Mon adult" },
+      { name: "Light mayo (Chosen or Kraft)", qty: "pantry", meal: "Mon adult" },
+      { name: "Ketchup", qty: "pantry", meal: "Mon" },
+      { name: "Pickle juice (from jar)", qty: "pantry", meal: "Mon adult" },
+      { name: "Shuug Original Harissa Hot Sauce", qty: "pantry", meal: "Mon adult" },
+      { name: "Bottled secret sauce (Heinz Special or similar)", baseQty: 1, unit: "bottle", meal: "Mon kid" },
+      { name: "Kosher salt, cooking spray, beef tallow", qty: "pantry", meal: "Mon" },
+      { name: "Bolthouse Farms Creamy Caesar Parmigiano", baseQty: 1, unit: "bottle", meal: "Wed" },
+      { name: "Quest Hot & Spicy Protein Chips", baseQty: 1, unit: "bag", meal: "Wed adult" },
+      { name: "Dan-O's Jalapeño Cheesoning", qty: "pantry", meal: "Wed adult" },
+      { name: "Smoky Chipotle Crema (optional cookbook sauce)", qty: "pantry", meal: "Wed adult" },
+      { name: "Dan-O's Outlaw Blackened", qty: "pantry", meal: "Fri adult" },
+      { name: "Dan-O's Original", qty: "pantry", meal: "Fri kid" },
+      { name: "Money Mustard", qty: "pantry", meal: "Fri adult" },
+    ],
+    "Creamy Base": [
+      { name: "Cheddar or cheese sauce (for broccoli)", baseQty: 1, unit: "container", meal: "Fri" },
+    ],
+  },
 };
 
 function getGrocery(week) { return GROCERY_BY_WEEK[week] || GROCERY_BY_WEEK[1]; }
