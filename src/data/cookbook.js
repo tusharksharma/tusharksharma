@@ -2516,11 +2516,11 @@ export const snackBoxes = [
     id: "split-plate-pizza-snack-box",
     title: "Split Plate Pizza Snack Box",
     tagline: "No-cook pizza-inspired kid snack box — turkey pepperoni, cubed cheese stick, Triscuit Thin Crisps, cucumber. Higher-protein without turning snack into diet food.",
-    heroImage: "/images/split-plate-pizza-snack-box/hero-final-snack-box.webp",
+    heroImage: "/images/split-plate-pizza-snack-box/hero-final-snack-box-polished.webp",
     // prepImage — swapped from handoff's `final-stacked-snack-boxes` (payoff
     // shot) to the Sargento colby-jack context shot (mise-style brand
     // reveal, standard cookbook prepImage pattern).
-    prepImage: "/images/split-plate-pizza-snack-box/context-sargento-colby-jack.webp",
+    prepImage: "/images/split-plate-pizza-snack-box/context-sargento-colby-jack-polished.webp",
     // socialImages — raw paths for now; swap to -polished.webp after
     // Path A transform run. Step-execution order per
     // [feedback-social-images-step-order]: pepperoni → cheese → crackers
@@ -2530,10 +2530,10 @@ export const snackBoxes = [
     // reveals (Sargento, Triscuit) NOT in the carousel per the
     // no-brand-reveal-in-carousel rule.
     socialImages: [
-      "/images/split-plate-pizza-snack-box/step-01-add-turkey-pepperoni.webp",
-      "/images/split-plate-pizza-snack-box/step-02-cheese-stick-cubes.webp",
-      "/images/split-plate-pizza-snack-box/step-03-add-thin-crisps.webp",
-      "/images/split-plate-pizza-snack-box/step-04-cucumber-to-fill.webp",
+      "/images/split-plate-pizza-snack-box/step-01-add-turkey-pepperoni-polished.webp",
+      "/images/split-plate-pizza-snack-box/step-02-cheese-stick-cubes-polished.webp",
+      "/images/split-plate-pizza-snack-box/step-03-add-thin-crisps-polished.webp",
+      "/images/split-plate-pizza-snack-box/step-04-cucumber-to-fill-polished.webp",
       "/images/split-plate-pizza-snack-box/final-stacked-snack-boxes.webp",
     ],
     flavorProfile: "Pizza-inspired: cheesy, savory, crunchy, fresh. Familiar kid flavors on a snack-box grid without the sauce mess.",
@@ -2561,11 +2561,11 @@ export const snackBoxes = [
       "Optional at-home side: marinara for dipping (skip in the packed box to avoid mess)",
     ],
     steps: [
-      { text: "SET UP: Line up 4 divided snack boxes (any brand with 3-4 compartments — the pastel Bento-style boxes shown work great).", image: "/images/split-plate-pizza-snack-box/hero-final-snack-box.webp" },
-      { text: "TURKEY PEPPERONI: Add 3/4 to 1 serving of turkey pepperoni to one compartment of each box. Kid appetite determines the exact count — small kids get ~5-6 slices, bigger kids get the full serving.", image: "/images/split-plate-pizza-snack-box/step-01-add-turkey-pepperoni.webp" },
-      { text: "CHEESE STICK CUBES: Cube 1 cheese stick per box (Sargento Colby-Jack shown — mozzarella, sharp cheddar, or Monterey Jack also work). Add cubes to the next compartment.", image: "/images/split-plate-pizza-snack-box/step-02-cheese-stick-cubes.webp" },
-      { text: "THIN CRISPS: Add 1/2 serving Triscuit Thin Crisps per box for the crackly pizza-crust texture. Any small savory cracker works if Triscuits aren't available.", image: "/images/split-plate-pizza-snack-box/step-03-add-thin-crisps.webp" },
-      { text: "CUCUMBER TO FILL: Slice or chop cucumber and pack it into the remaining space in each box. Fresh crunch balances the salty savory side.", image: "/images/split-plate-pizza-snack-box/step-04-cucumber-to-fill.webp" },
+      { text: "SET UP: Line up 4 divided snack boxes (any brand with 3-4 compartments — the pastel Bento-style boxes shown work great).", image: "/images/split-plate-pizza-snack-box/hero-final-snack-box-polished.webp" },
+      { text: "TURKEY PEPPERONI: Add 3/4 to 1 serving of turkey pepperoni to one compartment of each box. Kid appetite determines the exact count — small kids get ~5-6 slices, bigger kids get the full serving.", image: "/images/split-plate-pizza-snack-box/step-01-add-turkey-pepperoni-polished.webp" },
+      { text: "CHEESE STICK CUBES: Cube 1 cheese stick per box (Sargento Colby-Jack shown — mozzarella, sharp cheddar, or Monterey Jack also work). Add cubes to the next compartment.", image: "/images/split-plate-pizza-snack-box/step-02-cheese-stick-cubes-polished.webp" },
+      { text: "THIN CRISPS: Add 1/2 serving Triscuit Thin Crisps per box for the crackly pizza-crust texture. Any small savory cracker works if Triscuits aren't available.", image: "/images/split-plate-pizza-snack-box/step-03-add-thin-crisps-polished.webp" },
+      { text: "CUCUMBER TO FILL: Slice or chop cucumber and pack it into the remaining space in each box. Fresh crunch balances the salty savory side.", image: "/images/split-plate-pizza-snack-box/step-04-cucumber-to-fill-polished.webp" },
       { text: "LID + CHILL: Snap lids on, refrigerate until snack time. Serve cold. If serving at home, marinara on the side for dipping — keep it OUT of the packed box to avoid soggy crackers + messy cleanup.", image: "/images/split-plate-pizza-snack-box/final-stacked-snack-boxes.webp" },
     ],
     brands: [
