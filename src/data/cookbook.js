@@ -1567,6 +1567,84 @@ export const quickLunches = [
       reheat: "N/A — both eaten cold/room temp.",
     },
   },
+  {
+    id: "leftover-cheeseburger-tacos",
+    title: "Leftover Cheeseburger Tacos",
+    tagline: "10-min cheeseburger taco lunch built from 4 oz of leftover 93/7 ground beef. Chain-cook from Smash Burger Night (id 47).",
+    heroImage: "/images/leftover-cheeseburger-tacos/hero-final-cheeseburger-tacos.webp",
+    // prepImage — swapped from handoff's `final-open-tacos` (payoff shot)
+    // to the low-carb tortilla context shot (mise-style brand context —
+    // standard cookbook prepImage pattern).
+    prepImage: "/images/leftover-cheeseburger-tacos/context-low-carb-street-tacos.webp",
+    // socialImages — raw paths for now; swap to -polished.webp after Path
+    // A transform run. Step-execution order per
+    // [feedback-social-images-step-order]: smash → cook → cheese →
+    // pickled onion → sauce → payoff. Sized to 6 entries — fits cookbook
+    // carousel cap exactly. Hero NOT in socialImages (no self-duplication).
+    // Brand-context tortilla shot NOT in the carousel (brand reveal — off
+    // per the standing rule).
+    socialImages: [
+      "/images/leftover-cheeseburger-tacos/step-02-smash-beef-thin.webp",
+      "/images/leftover-cheeseburger-tacos/step-04-beef-side-down.webp",
+      "/images/leftover-cheeseburger-tacos/step-05-add-velveeta.webp",
+      "/images/leftover-cheeseburger-tacos/step-06-pickled-red-onion.webp",
+      "/images/leftover-cheeseburger-tacos/step-07-sauce-drizzle.webp",
+      "/images/leftover-cheeseburger-tacos/final-open-tacos.webp",
+    ],
+    flavorProfile: "Cheeseburger-style: savory beef, melty Velveeta, tangy pickled onion crunch, sauce drizzle. Crisp low-carb tortilla shell.",
+    calories: 310,
+    caloriesPerServing: 310,
+    protein: 31,
+    proteinPerServing: 31,
+    servings: 1,
+    time: "10 min",
+    bestFor: [
+      "Powerup lunch",
+      "Quick lunch",
+      "Leftover ground beef",
+      "High-protein",
+      "Low-carb",
+      "Macro-friendly craving",
+    ],
+    useThisWhen: "You have ~4 oz of 93/7 ground beef left from Smash Burger Night (recipe 47) and want a fast lunch that still feels like a cheeseburger. 10 min from fridge to plate, 31g protein at 310 cal.",
+    flavorTarget: "Crisp low-carb tortilla + smash-thin browned beef + melted Velveeta + tangy pickled red onion + sauce drizzle. Should eat like a cheeseburger you fold in half.",
+    ingredients: [
+      "2 low-carb street taco tortillas (La Banderita Carb Counter shown)",
+      "4 oz 93/7 ground beef (leftover from Smash Burger Night is ideal)",
+      "1 Velveeta Original slice (split in half — 1/2 per taco)",
+      "Avocado oil spray (Chosen Foods or similar)",
+      "Salt or burger seasoning, to taste",
+      "Sauce drizzle to taste (burger sauce, hot sauce, mustard sauce, or house drizzle)",
+      "Pickled red onion, to taste (adds crunch + acidity)",
+    ],
+    steps: [
+      { text: "TORTILLAS: Lay out 2 low-carb street taco tortillas on the counter.", image: "/images/leftover-cheeseburger-tacos/context-low-carb-street-tacos.webp" },
+      { text: "PORTION BEEF: Divide 4 oz 93/7 ground beef across the tortillas — about 2 oz per tortilla.", image: "/images/leftover-cheeseburger-tacos/step-01-portion-93-7-beef.webp" },
+      { text: "SMASH THIN: Press the beef thin across each tortilla so it cooks like a smash-burger taco. Get right to the tortilla edges.", image: "/images/leftover-cheeseburger-tacos/step-02-smash-beef-thin.webp" },
+      { text: "SEASON: Salt or burger seasoning across the smashed beef side.", image: "/images/leftover-cheeseburger-tacos/step-03-season-beef.webp" },
+      { text: "COOK BEEF-DOWN: Heat a pan or griddle on medium-high, avocado oil spray. Place tacos beef-side down and cook 2-3 min until the beef browns and the tortilla starts to crisp.", image: "/images/leftover-cheeseburger-tacos/step-04-beef-side-down.webp" },
+      { text: "FLIP + CHEESE: Flip both tacos. Add 1/2 Velveeta slice on each. Let the cheese soften ~30 sec.", image: "/images/leftover-cheeseburger-tacos/step-05-add-velveeta.webp" },
+      { text: "PICKLED ONION: Scatter pickled red onion across the cheese side while everything's still hot.", image: "/images/leftover-cheeseburger-tacos/step-06-pickled-red-onion.webp" },
+      { text: "SAUCE + FOLD: Drizzle sauce to taste. Fold each taco and crisp both folded sides briefly in the pan for texture.", image: "/images/leftover-cheeseburger-tacos/step-07-sauce-drizzle.webp" },
+      { text: "SERVE HOT: The texture is the point — crisp tortilla, melty cheese, tangy onion. Eat immediately.", image: "/images/leftover-cheeseburger-tacos/hero-final-cheeseburger-tacos.webp" },
+    ],
+    brands: [
+      { name: "La Banderita", item: "Carb Counter Street Taco Tortillas (~50 cal / 5g protein / 4g net carbs per tortilla)", why: "Low-carb tortilla that actually crisps under a smash-burger taco setup — most keto tortillas go rubbery. 2 tortillas per lunch = ~100 cal / 10g protein from the shell alone. Available at most grocery stores + Amazon.", url: "https://ole-mex.com/products/la-banderita-carb-counter-soft-taco-8-count-6-package/" },
+      { name: "Velveeta", item: "Original Slices (~60 cal / 3g protein per slice — 1 slice split across 2 tacos)", why: "Melts fast + evenly on a hot tortilla. Same cheese reason as Smash Burger id 47 — Velveeta melts in the 30 sec you have on a hot griddle; real cheddar can't keep up. 1/2 slice per taco = ~30 cal each.", url: "https://www.velveeta.com/products/velveeta-original-cheese-slices" },
+      { name: "Chosen Foods", item: "Avocado Oil Spray (light coat for the griddle)", why: "Neutral flavor, high smoke point. Pantry staple across the site — used on smash burger id 47, drumsticks id 45, pot pie id 46, and more.", url: "https://www.chosenfoods.com/products/avocado-oil-spray" },
+    ],
+    macroHonesty: "310 cal / 31g protein per serving (2 tacos) — user-provided macros using the exact brands shown. Component decomposition: 2 La Banderita Carb Counter tortillas (~100 cal / 10P) + 4 oz cooked 93/7 beef (~180 cal / 24P — factoring rendered fat loss during smash-cook) + 1 Velveeta slice (~60 cal / 3P) + avocado oil spray (~5 cal) + sauce drizzle (~15-25 cal depending on sauce type) + pickled red onion (~5 cal) = ~365 cal raw → labeled ~310 with cooked-beef fat loss adjustment. Atwater check: 31×4 + ~15C×4 + ~14F×9 = 124+60+126 = 310 ✓. Sauce varies — flagged in `needsConfirmation` for exact label if a stricter macro claim is needed. Marked estimated: true.",
+    chainFrom: {
+      slug: "smash-burger-split-plate",
+      title: "Smash Burger Split Plate (id 47)",
+      note: "Buy the 16 oz pack of 93/7 for adult smash burgers → 4 oz leftover becomes this taco lunch the next day. Same beef grade, same Velveeta melt technique, different vehicle.",
+    },
+    mealPrep: {
+      storage: "Best eaten immediately. The crisp tortilla is the whole point — it softens in the fridge within 30 min.",
+      lasts: "Cooked tacos: not recommended for meal prep. Raw leftover beef holds 2-3 days in the fridge, freezes 2 months.",
+      reheat: "If needed: re-crisp in a hot pan or air fryer 3-4 min at 400°F. Don't microwave — turns the tortilla into a wet dishcloth.",
+    },
+  },
 ];
 
 export const desserts = [

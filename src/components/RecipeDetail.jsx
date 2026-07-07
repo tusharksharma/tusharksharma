@@ -420,7 +420,10 @@ export default function RecipeDetail({ recipe }) {
               <p><span className="text-neutral-500 font-semibold">Lasts:</span> {recipe.mealPrep.lasts}</p>
             </div>
             {recipe.mealPrep.chainTo && (
-              <Link to={`/recipes/${recipe.mealPrep.chainTo.slug}`} className="mt-4 flex items-center gap-3 px-4 py-3 bg-amber-500/10 border border-amber-500/30 rounded-lg hover:bg-amber-500/15 transition-colors group">
+              <Link
+                to={recipe.mealPrep.chainTo.href || `/recipes/${recipe.mealPrep.chainTo.slug}`}
+                className="mt-4 flex items-center gap-3 px-4 py-3 bg-amber-500/10 border border-amber-500/30 rounded-lg hover:bg-amber-500/15 transition-colors group"
+              >
                 <span className="text-[10px] font-black uppercase tracking-wider text-amber-500 flex-shrink-0">Meal Chain</span>
                 <span className="text-xs text-neutral-200">
                   <span className="font-bold text-amber-400 group-hover:underline">Reinvent as {recipe.mealPrep.chainTo.title}</span>

@@ -6114,6 +6114,11 @@ const recipes = [
       storage: "Best fresh — smash burgers lose their crust fast in the fridge. Sauce holds separately (see below).",
       reheat: "Don't reheat baked burgers — the crust turns to leather. Cook patties fresh. Spread lives 5 days in the fridge; sauce quality is best within 3.",
       lasts: "In-N-Out-style spread: 5 days fridge in a sealed jar (pickle juice + acid is the preservative). Raw ground beef: use within 24 hr of purchase, or freeze at portion size. Velveeta: per box date, sealed. Buns: keto bun 3-5 days at room temp, brioche 3 days.",
+      chainTo: {
+        href: "/cookbook/leftover-cheeseburger-tacos",
+        title: "Leftover Cheeseburger Tacos",
+        note: "16 oz pack of 93/7 → 12 oz for adult smash + 4 oz leftover → 10-min cheeseburger taco lunch the next day. Same Velveeta melt, different vehicle.",
+      },
     },
   },
 ];
