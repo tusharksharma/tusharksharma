@@ -1619,7 +1619,7 @@ export const quickLunches = [
     ],
     steps: [
       { text: "TORTILLAS: Lay out 2 low-carb street taco tortillas on the counter.", image: "/images/leftover-cheeseburger-tacos/context-low-carb-street-tacos.webp" },
-      { text: "PORTION BEEF: Divide 4 oz 93/7 ground beef across the tortillas — about 2 oz per tortilla.", image: "/images/leftover-cheeseburger-tacos/step-01-portion-93-7-beef.webp" },
+      { text: "PORTION BEEF: Divide 4 oz 93/7 ground beef across the tortillas — about 2 oz per tortilla.", image: "/images/leftover-cheeseburger-tacos/step-01-portion-lean-beef.webp" },
       { text: "SMASH THIN: Press the beef thin across each tortilla so it cooks like a smash-burger taco. Get right to the tortilla edges.", image: "/images/leftover-cheeseburger-tacos/step-02-smash-beef-thin.webp" },
       { text: "SEASON: Salt or burger seasoning across the smashed beef side.", image: "/images/leftover-cheeseburger-tacos/step-03-season-beef.webp" },
       { text: "COOK BEEF-DOWN: Heat a pan or griddle on medium-high, avocado oil spray. Place tacos beef-side down and cook 2-3 min until the beef browns and the tortilla starts to crisp.", image: "/images/leftover-cheeseburger-tacos/step-04-beef-side-down.webp" },
