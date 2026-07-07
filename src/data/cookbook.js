@@ -1571,7 +1571,7 @@ export const quickLunches = [
     id: "leftover-cheeseburger-tacos",
     title: "Leftover Cheeseburger Tacos",
     tagline: "10-min cheeseburger taco lunch built from 4 oz of leftover 93/7 ground beef. Chain-cook from Smash Burger Night (id 47).",
-    heroImage: "/images/leftover-cheeseburger-tacos/hero-final-cheeseburger-tacos.webp",
+    heroImage: "/images/leftover-cheeseburger-tacos/hero-final-cheeseburger-tacos-polished.webp",
     // prepImage — swapped from handoff's `final-open-tacos` (payoff shot)
     // to the low-carb tortilla context shot (mise-style brand context —
     // standard cookbook prepImage pattern).
@@ -1584,12 +1584,12 @@ export const quickLunches = [
     // Brand-context tortilla shot NOT in the carousel (brand reveal — off
     // per the standing rule).
     socialImages: [
-      "/images/leftover-cheeseburger-tacos/step-02-smash-beef-thin.webp",
-      "/images/leftover-cheeseburger-tacos/step-04-beef-side-down.webp",
-      "/images/leftover-cheeseburger-tacos/step-05-add-velveeta.webp",
-      "/images/leftover-cheeseburger-tacos/step-06-pickled-red-onion.webp",
-      "/images/leftover-cheeseburger-tacos/step-07-sauce-drizzle.webp",
-      "/images/leftover-cheeseburger-tacos/final-open-tacos.webp",
+      "/images/leftover-cheeseburger-tacos/step-02-smash-beef-thin-polished.webp",
+      "/images/leftover-cheeseburger-tacos/step-04-beef-side-down-polished.webp",
+      "/images/leftover-cheeseburger-tacos/step-05-add-velveeta-polished.webp",
+      "/images/leftover-cheeseburger-tacos/step-06-pickled-red-onion-polished.webp",
+      "/images/leftover-cheeseburger-tacos/step-07-sauce-drizzle-polished.webp",
+      "/images/leftover-cheeseburger-tacos/final-open-tacos-polished.webp",
     ],
     flavorProfile: "Cheeseburger-style: savory beef, melty Velveeta, tangy pickled onion crunch, sauce drizzle. Crisp low-carb tortilla shell.",
     calories: 310,
@@ -1620,13 +1620,13 @@ export const quickLunches = [
     steps: [
       { text: "TORTILLAS: Lay out 2 low-carb street taco tortillas on the counter.", image: "/images/leftover-cheeseburger-tacos/context-low-carb-street-tacos.webp" },
       { text: "PORTION BEEF: Divide 4 oz 93/7 ground beef across the tortillas — about 2 oz per tortilla.", image: "/images/leftover-cheeseburger-tacos/step-01-portion-lean-beef.webp" },
-      { text: "SMASH THIN: Press the beef thin across each tortilla so it cooks like a smash-burger taco. Get right to the tortilla edges.", image: "/images/leftover-cheeseburger-tacos/step-02-smash-beef-thin.webp" },
+      { text: "SMASH THIN: Press the beef thin across each tortilla so it cooks like a smash-burger taco. Get right to the tortilla edges.", image: "/images/leftover-cheeseburger-tacos/step-02-smash-beef-thin-polished.webp" },
       { text: "SEASON: Salt or burger seasoning across the smashed beef side.", image: "/images/leftover-cheeseburger-tacos/step-03-season-beef.webp" },
-      { text: "COOK BEEF-DOWN: Heat a pan or griddle on medium-high, avocado oil spray. Place tacos beef-side down and cook 2-3 min until the beef browns and the tortilla starts to crisp.", image: "/images/leftover-cheeseburger-tacos/step-04-beef-side-down.webp" },
-      { text: "FLIP + CHEESE: Flip both tacos. Add 1/2 Velveeta slice on each. Let the cheese soften ~30 sec.", image: "/images/leftover-cheeseburger-tacos/step-05-add-velveeta.webp" },
-      { text: "PICKLED ONION: Scatter pickled red onion across the cheese side while everything's still hot.", image: "/images/leftover-cheeseburger-tacos/step-06-pickled-red-onion.webp" },
-      { text: "SAUCE + FOLD: Drizzle sauce to taste. Fold each taco and crisp both folded sides briefly in the pan for texture.", image: "/images/leftover-cheeseburger-tacos/step-07-sauce-drizzle.webp" },
-      { text: "SERVE HOT: The texture is the point — crisp tortilla, melty cheese, tangy onion. Eat immediately.", image: "/images/leftover-cheeseburger-tacos/hero-final-cheeseburger-tacos.webp" },
+      { text: "COOK BEEF-DOWN: Heat a pan or griddle on medium-high, avocado oil spray. Place tacos beef-side down and cook 2-3 min until the beef browns and the tortilla starts to crisp.", image: "/images/leftover-cheeseburger-tacos/step-04-beef-side-down-polished.webp" },
+      { text: "FLIP + CHEESE: Flip both tacos. Add 1/2 Velveeta slice on each. Let the cheese soften ~30 sec.", image: "/images/leftover-cheeseburger-tacos/step-05-add-velveeta-polished.webp" },
+      { text: "PICKLED ONION: Scatter pickled red onion across the cheese side while everything's still hot.", image: "/images/leftover-cheeseburger-tacos/step-06-pickled-red-onion-polished.webp" },
+      { text: "SAUCE + FOLD: Drizzle sauce to taste. Fold each taco and crisp both folded sides briefly in the pan for texture.", image: "/images/leftover-cheeseburger-tacos/step-07-sauce-drizzle-polished.webp" },
+      { text: "SERVE HOT: The texture is the point — crisp tortilla, melty cheese, tangy onion. Eat immediately.", image: "/images/leftover-cheeseburger-tacos/hero-final-cheeseburger-tacos-polished.webp" },
     ],
     brands: [
       { name: "La Banderita", item: "Carb Counter Street Taco Tortillas (~50 cal / 5g protein / 4g net carbs per tortilla)", why: "Low-carb tortilla that actually crisps under a smash-burger taco setup — most keto tortillas go rubbery. 2 tortillas per lunch = ~100 cal / 10g protein from the shell alone. Available at most grocery stores + Amazon.", url: "https://ole-mex.com/products/la-banderita-carb-counter-soft-taco-8-count-6-package/" },
