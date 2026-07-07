@@ -2668,12 +2668,12 @@ export const snackBoxes = [
     id: "split-plate-apple-pie-snack-box",
     title: "Split Plate Apple Pie Snack Box",
     tagline: "Snack Box Series Ep. 2 — kid-friendly apple pie energy without the dessert plate. Jerky + apple + Oikos Triple Zero + Simple Mills cookies. ~240 cal / 18g protein per box.",
-    heroImage: "/images/split-plate-apple-pie-snack-box/hero-final-apple-pie-snack-box.webp",
+    heroImage: "/images/split-plate-apple-pie-snack-box/hero-final-apple-pie-snack-box-polished.webp",
     // prepImage — swapped from handoff's `final-stacked-snack-boxes`
     // (payoff shot) to `context-rocket-apple` (theme-signature Rocket
     // apple mise-style, matches the pizza snack box's Sargento prepImage
     // pattern).
-    prepImage: "/images/split-plate-apple-pie-snack-box/context-rocket-apple.webp",
+    prepImage: "/images/split-plate-apple-pie-snack-box/context-rocket-apple-polished.webp",
     // socialImages — raw paths for now; swap to -polished.webp after
     // Path A transform run. Step-execution order per
     // [feedback-social-images-step-order]: jerky → apple → yogurt dip →
@@ -2683,11 +2683,11 @@ export const snackBoxes = [
     // reveals (Archer / Rocket / Oikos / Simple Mills) NOT in the
     // carousel per the no-brand-reveal-in-carousel rule.
     socialImages: [
-      "/images/split-plate-apple-pie-snack-box/step-01-add-jerky.webp",
-      "/images/split-plate-apple-pie-snack-box/step-02-add-apple.webp",
-      "/images/split-plate-apple-pie-snack-box/step-03-add-oikos-dip.webp",
-      "/images/split-plate-apple-pie-snack-box/step-04-add-cookies.webp",
-      "/images/split-plate-apple-pie-snack-box/final-stacked-snack-boxes.webp",
+      "/images/split-plate-apple-pie-snack-box/step-01-add-jerky-polished.webp",
+      "/images/split-plate-apple-pie-snack-box/step-02-add-apple-polished.webp",
+      "/images/split-plate-apple-pie-snack-box/step-03-add-oikos-dip-polished.webp",
+      "/images/split-plate-apple-pie-snack-box/step-04-add-cookies-polished.webp",
+      "/images/split-plate-apple-pie-snack-box/final-stacked-snack-boxes-polished.webp",
     ],
     flavorProfile: "Sweet, creamy, salty, chewy, cookie-crunchy. Apple pie flavor split across 4 compartments so the yogurt stays creamy + the cookies stay crunchy.",
     calories: 240,
@@ -2714,12 +2714,12 @@ export const snackBoxes = [
       "2 Simple Mills chocolate chip cookies (~70 cal / 1g protein for 2)",
     ],
     steps: [
-      { text: "SET UP: 1 divided snack box (any 4-compartment Bento-style — same boxes as Snack Box Series Ep. 1).", image: "/images/split-plate-apple-pie-snack-box/hero-final-apple-pie-snack-box.webp" },
-      { text: "JERKY: Drop 1 jerky stick or 2 Archer Minis in the first compartment. Adjust by kid appetite — 1 regular = 2 minis roughly.", image: "/images/split-plate-apple-pie-snack-box/step-01-add-jerky.webp" },
-      { text: "APPLE: Cut 1 Rocket apple (or 1/2 regular apple) into kid-friendly wedges. Add to the next compartment. Rocket apples are small + naturally kid-portion-sized, no waste.", image: "/images/split-plate-apple-pie-snack-box/step-02-add-apple.webp" },
-      { text: "YOGURT DIP: Spoon 1/2 container of Oikos Triple Zero into the third compartment as the apple dip. Vanilla or plain — no flavor with fake sweetness.", image: "/images/split-plate-apple-pie-snack-box/step-03-add-oikos-dip.webp" },
-      { text: "COOKIES: Add 2 Simple Mills chocolate chip cookies to the last compartment. The cookies are intentional — this is a snack box, not diet food.", image: "/images/split-plate-apple-pie-snack-box/step-04-add-cookies.webp" },
-      { text: "LID + CHILL: Snap lid on. Refrigerate or pack with an ice pack until snack time. Serve chilled — the Oikos dip is best cold.", image: "/images/split-plate-apple-pie-snack-box/final-stacked-snack-boxes.webp" },
+      { text: "SET UP: 1 divided snack box (any 4-compartment Bento-style — same boxes as Snack Box Series Ep. 1).", image: "/images/split-plate-apple-pie-snack-box/hero-final-apple-pie-snack-box-polished.webp" },
+      { text: "JERKY: Drop 1 jerky stick or 2 Archer Minis in the first compartment. Adjust by kid appetite — 1 regular = 2 minis roughly.", image: "/images/split-plate-apple-pie-snack-box/step-01-add-jerky-polished.webp" },
+      { text: "APPLE: Cut 1 Rocket apple (or 1/2 regular apple) into kid-friendly wedges. Add to the next compartment. Rocket apples are small + naturally kid-portion-sized, no waste.", image: "/images/split-plate-apple-pie-snack-box/step-02-add-apple-polished.webp" },
+      { text: "YOGURT DIP: Spoon 1/2 container of Oikos Triple Zero into the third compartment as the apple dip. Vanilla or plain — no flavor with fake sweetness.", image: "/images/split-plate-apple-pie-snack-box/step-03-add-oikos-dip-polished.webp" },
+      { text: "COOKIES: Add 2 Simple Mills chocolate chip cookies to the last compartment. The cookies are intentional — this is a snack box, not diet food.", image: "/images/split-plate-apple-pie-snack-box/step-04-add-cookies-polished.webp" },
+      { text: "LID + CHILL: Snap lid on. Refrigerate or pack with an ice pack until snack time. Serve chilled — the Oikos dip is best cold.", image: "/images/split-plate-apple-pie-snack-box/final-stacked-snack-boxes-polished.webp" },
     ],
     brands: [
       { name: "Archer", item: "Grass-Fed Beef Mini Jerky (5-pack — ~50 cal / 5g protein per mini). 2 minis per box ≈ 10g protein.", why: "Clean-label protein anchor. Grass-fed, no MSG, no nitrates. Cross-recipe candidate for any kid snack box needing a chewy protein hit.", url: "https://eatarcher.com/products/mini-grass-fed-beef" },
