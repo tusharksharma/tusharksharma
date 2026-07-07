@@ -2664,4 +2664,80 @@ export const snackBoxes = [
       reheat: "Don't — serve cold. That's the whole snack-box format.",
     },
   },
+  {
+    id: "split-plate-apple-pie-snack-box",
+    title: "Split Plate Apple Pie Snack Box",
+    tagline: "Snack Box Series Ep. 2 — kid-friendly apple pie energy without the dessert plate. Jerky + apple + Oikos Triple Zero + Simple Mills cookies. ~240 cal / 18g protein per box.",
+    heroImage: "/images/split-plate-apple-pie-snack-box/hero-final-apple-pie-snack-box.webp",
+    // prepImage — swapped from handoff's `final-stacked-snack-boxes`
+    // (payoff shot) to `context-rocket-apple` (theme-signature Rocket
+    // apple mise-style, matches the pizza snack box's Sargento prepImage
+    // pattern).
+    prepImage: "/images/split-plate-apple-pie-snack-box/context-rocket-apple.webp",
+    // socialImages — raw paths for now; swap to -polished.webp after
+    // Path A transform run. Step-execution order per
+    // [feedback-social-images-step-order]: jerky → apple → yogurt dip →
+    // cookies → stacked boxes (payoff at tail). Sized to 5 entries —
+    // fits cookbook carousel cap. Hero deliberately NOT in socialImages
+    // (no self-duplication with recipe.image). Four brand-context
+    // reveals (Archer / Rocket / Oikos / Simple Mills) NOT in the
+    // carousel per the no-brand-reveal-in-carousel rule.
+    socialImages: [
+      "/images/split-plate-apple-pie-snack-box/step-01-add-jerky.webp",
+      "/images/split-plate-apple-pie-snack-box/step-02-add-apple.webp",
+      "/images/split-plate-apple-pie-snack-box/step-03-add-oikos-dip.webp",
+      "/images/split-plate-apple-pie-snack-box/step-04-add-cookies.webp",
+      "/images/split-plate-apple-pie-snack-box/final-stacked-snack-boxes.webp",
+    ],
+    flavorProfile: "Sweet, creamy, salty, chewy, cookie-crunchy. Apple pie flavor split across 4 compartments so the yogurt stays creamy + the cookies stay crunchy.",
+    calories: 240,
+    caloriesPerServing: 240,
+    protein: 18,
+    proteinPerServing: 18,
+    servings: 1,
+    time: "5 min",
+    bestFor: [
+      "Kid snack",
+      "Snack box",
+      "Post-lunch snack",
+      "Weekend post-breakfast",
+      "Busy-parent snack prep",
+      "Higher-protein snack",
+      "No cook",
+    ],
+    useThisWhen: "Kid wants an apple pie vibe as a snack but you don't want to hand them a dessert plate. Jerky covers the protein (10g), Oikos Triple Zero doubles as the yogurt-dip (7g), Simple Mills chocolate chip cookies bring the treat energy without a sugar bomb, apple slices are the vehicle. 5 min to assemble, no cook.",
+    flavorTarget: "Creamy yogurt-dip apple bites + salty chewy jerky + soft-crisp cookie crunch. Reads as apple pie in a snack-box format, no baking, no sauce mess.",
+    ingredients: [
+      "1 jerky stick or 2 mini jerkies (Archer Minis shown — ~90-100 cal / 10g protein target)",
+      "1 Rocket apple (or 1/2 regular apple), cut into kid-friendly pieces",
+      "1/2 container Oikos Triple Zero yogurt (used as the apple dip — vanilla or plain flavor works)",
+      "2 Simple Mills chocolate chip cookies (~70 cal / 1g protein for 2)",
+    ],
+    steps: [
+      { text: "SET UP: 1 divided snack box (any 4-compartment Bento-style — same boxes as Snack Box Series Ep. 1).", image: "/images/split-plate-apple-pie-snack-box/hero-final-apple-pie-snack-box.webp" },
+      { text: "JERKY: Drop 1 jerky stick or 2 Archer Minis in the first compartment. Adjust by kid appetite — 1 regular = 2 minis roughly.", image: "/images/split-plate-apple-pie-snack-box/step-01-add-jerky.webp" },
+      { text: "APPLE: Cut 1 Rocket apple (or 1/2 regular apple) into kid-friendly wedges. Add to the next compartment. Rocket apples are small + naturally kid-portion-sized, no waste.", image: "/images/split-plate-apple-pie-snack-box/step-02-add-apple.webp" },
+      { text: "YOGURT DIP: Spoon 1/2 container of Oikos Triple Zero into the third compartment as the apple dip. Vanilla or plain — no flavor with fake sweetness.", image: "/images/split-plate-apple-pie-snack-box/step-03-add-oikos-dip.webp" },
+      { text: "COOKIES: Add 2 Simple Mills chocolate chip cookies to the last compartment. The cookies are intentional — this is a snack box, not diet food.", image: "/images/split-plate-apple-pie-snack-box/step-04-add-cookies.webp" },
+      { text: "LID + CHILL: Snap lid on. Refrigerate or pack with an ice pack until snack time. Serve chilled — the Oikos dip is best cold.", image: "/images/split-plate-apple-pie-snack-box/final-stacked-snack-boxes.webp" },
+    ],
+    brands: [
+      { name: "Archer", item: "Grass-Fed Beef Mini Jerky (5-pack — ~50 cal / 5g protein per mini). 2 minis per box ≈ 10g protein.", why: "Clean-label protein anchor. Grass-fed, no MSG, no nitrates. Cross-recipe candidate for any kid snack box needing a chewy protein hit.", url: "https://eatarcher.com/products/mini-grass-fed-beef" },
+      { name: "Rocket Farms", item: "Rocket Apples (small variety — ~40 cal / 0g protein each). 1 per box.", why: "Kid-portion-sized apples — the whole apple fits a snack-box compartment without cutting waste. Naturally sweet, crunchy. Sub 1/2 a regular Honeycrisp / Gala if Rocket isn't stocked locally.", url: "https://rocketfarms.com/" },
+      { name: "Oikos", item: "Triple Zero yogurt (5.3 oz cup — 100 cal / 15g protein / 0g added sugar per cup). 1/2 cup per box = ~50 cal / 7g protein.", why: "The dip. Triple Zero = 0 added sugar, 0 artificial sweeteners, 0 fat. 15g protein per cup is the macro anchor for the yogurt slot; splitting across 2 boxes stretches the container.", url: "https://www.oikosyogurt.com/products/oikos-triple-zero/" },
+      { name: "Simple Mills", item: "Soft-Baked Chocolate Chip Cookies (~35 cal / 0.5g protein per cookie). 2 cookies per box = ~70 cal / 1g protein.", why: "Clean-label cookie option. Almond-flour base, no cane sugar, no palm oil, no soy. Contains tree nuts (almond flour + coconut) — flagged in allergens.", url: "https://www.simplemills.com/collections/soft-baked-cookies" },
+    ],
+    macroHonesty: "~240 cal / 18g protein per snack box, approximate. Component breakdown: 2 Archer Minis (~100 cal / 10g protein) + 1/2 Oikos Triple Zero (~50 cal / 7g protein) + 2 Simple Mills chocolate chip cookies (~70 cal / 1g protein) + 1 Rocket apple (~40 cal / 0g protein). Total: ~260 cal / ~18g protein. Marked estimated because jerky serving flexes per kid appetite (1 regular vs 2 minis), apple size varies, and Simple Mills cookie serving is per-cookie estimate — labels vary by run.",
+    seriesInfo: {
+      series: "Split Plate Snack Box",
+      episode: 2,
+      priorEpisode: { slug: "split-plate-pizza-snack-box", title: "Split Plate Pizza Snack Box" },
+      framing: "Higher-protein kid snack boxes with familiar flavors + better-for-you swaps. Kid-first, but macro-friendly enough that parents may want one too. Make-once-eat-twice for 2-kid households.",
+    },
+    mealPrep: {
+      storage: "Refrigerate covered snack boxes, or pack with an ice pack for lunchbox use.",
+      lasts: "Best same day — apple slices oxidize + brown after ~4 hours cut. Toss with lemon juice if packing for later.",
+      reheat: "Don't — serve chilled. Oikos dip is the whole texture play.",
+    },
+  },
 ];
