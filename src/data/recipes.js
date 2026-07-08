@@ -1644,7 +1644,7 @@ const recipes = [
     servings: 4,
     protein: 45,
     calories: 520,
-    image: "/images/garlic-rice-bowl/step5-split-plate.webp",
+    image: "/images/garlic-rice-bowl/hero-split-plate-polished.webp",
     role: "The Repeatable System Meal",
     makeThisWhen: "You want a high-flavor bowl that scales for the whole family — make the rice once, cook steak fresh each time, rotate sauces across meals.",
     hook: "This is not a one-off recipe. It's a system meal. ~45g protein, ~520 cal. Golden turmeric rice cooked in bone broth, fresh-seared steak, and a controlled sauce drizzle. Make the rice once, eat it 2-3 times. Cook steak fresh in 10 minutes. Same base, different sauces, zero boredom.",
