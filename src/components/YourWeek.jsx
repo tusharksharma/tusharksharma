@@ -191,6 +191,16 @@ const WEEKS = {
       { day: "Friday", label: "Hands-Off Win", vibe: "25 min — air fryer does the work, you don't. Outlaw Blackened for adults, Original seasoned for kids, cheesy broccoli side.", id: 21, time: "25 min", reheats: true, adult: "Outlaw Blackened chicken, cheesy broccoli, Money Mustard", kid: "Original seasoned chicken, broccoli, dinner roll", needs: ["Chicken thighs", "Broccoli", "Dan-O's", "Dinner rolls"], carbLevel: "none" },
     ],
   },
+  19: {
+    label: "Week 19",
+    description: "Grill-anchored week with three proteins + three carb levels. Fire-Grilled chicken thighs open Monday with a freezer-staple side (no chopping), creamy steak noodles midweek, herb-garlic pork chops close Friday with the Cowboy Butter drizzle. Chicken/beef/pork + medium/high/low.",
+    subtitle: "Fire-Grilled Thighs, Creamy Steak Noodles, Pork Chops",
+    cookDays: [
+      { day: "Monday", label: "Grill Night", vibe: "25 min — 6 boneless thighs, one dry rub, one grill session. Frozen veggie side (Birds Eye Garlic Herb baby potato + green bean blend) — no chopping. Adults get 2 thighs + veggies (460 cal / 45g protein). Kids get 1 thigh + veggies + bread + dip.", id: 48, time: "25 min", reheats: true, adult: "2 grilled thighs + 1 serving frozen veggies (garlic-herb potato + green bean blend)", kid: "1 chopped thigh + 1/2 serving veggies + bread + dip (garlic mayo / Alfredo / Smoky Chipotle Crema / bottled)", needs: ["Boneless skinless chicken thighs (6)", "Frozen vegetable blend (Birds Eye Blue Endeavors Garlic Herb or any)", "Bread or dinner rolls (kid)", "Dip (garlic mayo, Alfredo, Smoky Chipotle Crema, Money Mustard, or bottled)", "Paprika", "Garlic powder", "Onion powder", "Dried oregano", "Cumin", "Salt", "Brown sugar", "Cayenne", "Avocado oil spray"], carbLevel: "medium" },
+      { day: "Wednesday", label: "Comfort Bowl", vibe: "Creamy steak noodles — cottage cheese sauce, no cream, 31g protein", id: 30, time: "30 min", reheats: true, adult: "Chili flakes + parsley finish", kid: "Plain creamy noodles, optional butter", needs: ["Steak", "Egg noodles", "Cottage cheese", "Beef broth", "Fairlife"], carbLevel: "high" },
+      { day: "Friday", label: "Chops Night", vibe: "Herb-marinated pork chops + Parmesan Corn Chex snap peas + Cowboy Butter drizzle — restaurant-grade weeknight", id: 39, time: "30 min", reheats: true, adult: "Sliced chop + crusted snap peas + Cowboy Butter (herb-folded)", kid: "Diced chop + same snap peas + plain Cowboy Butter in dip well (3-compartment tray)", needs: ["Boneless pork loin chops", "Fresh rosemary", "Fresh thyme", "Garlic", "Kikkoman soy", "Lea & Perrins Worcestershire", "Smash Kitchen Dijon", "Smoked paprika", "Chili flakes", "Lemon", "Snap peas", "Kirkland Parmigiano Stravecchio", "Corn Chex", "Laughing Cow Light", "Kirkland bone broth", "Kirkland butter", "Fresh parsley", "Fresh chives"], carbLevel: "low" },
+    ],
+  },
 };
 
 function getLeftoverMsg(hasLeftovers) {

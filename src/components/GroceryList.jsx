@@ -745,6 +745,55 @@ const GROCERY_BY_WEEK = {
       { name: "Cheddar or cheese sauce (for broccoli)", baseQty: 1, unit: "container", meal: "Fri" },
     ],
   },
+  // Week 19: Mon=Fire-Grilled Chicken Thighs(48), Wed=Creamy Steak Noodles(30), Fri=Pork Chops(39)
+  19: {
+    "Protein": [
+      { name: "Boneless skinless chicken thighs", baseQty: 6, unit: "thighs", meal: "Mon" },
+      { name: "Sirloin or flank steak", baseQty: 1, unit: "lb", meal: "Wed" },
+      { name: "Boneless pork loin chops", baseQty: 4, unit: "chops", meal: "Fri" },
+    ],
+    "Carbs": [
+      { name: "Frozen vegetable blend (Birds Eye Blue Endeavors Garlic Herb or any potato + green bean)", baseQty: 1, unit: "bag", meal: "Mon" },
+      { name: "Bread or dinner rolls (kid)", baseQty: 4, unit: "rolls", meal: "Mon kid" },
+      { name: "Wide egg noodles", baseQty: 12, unit: "oz", meal: "Wed" },
+      { name: "Snap peas", baseQty: 12, unit: "oz", meal: "Fri" },
+      { name: "Corn Chex", baseQty: 1, unit: "box", meal: "Fri adult" },
+    ],
+    "Vegetables": [
+      { name: "Fresh rosemary", baseQty: 1, unit: "bunch", meal: "Fri" },
+      { name: "Fresh thyme", baseQty: 1, unit: "bunch", meal: "Fri" },
+      { name: "Fresh parsley", baseQty: 1, unit: "bunch", meal: "Fri" },
+      { name: "Fresh chives", baseQty: 1, unit: "bunch", meal: "Fri" },
+      { name: "Garlic", baseQty: 1, unit: "head", meal: "Fri" },
+      { name: "Lemon", baseQty: 2, unit: "lemons", meal: "Fri" },
+    ],
+    "Sauce & Flavor": [
+      { name: "Paprika", qty: "pantry", meal: "Mon" },
+      { name: "Garlic powder", qty: "pantry", meal: "Mon" },
+      { name: "Onion powder", qty: "pantry", meal: "Mon" },
+      { name: "Dried oregano", qty: "pantry", meal: "Mon" },
+      { name: "Cumin", qty: "pantry", meal: "Mon" },
+      { name: "Brown sugar", qty: "pantry", meal: "Mon" },
+      { name: "Cayenne", qty: "pantry", meal: "Mon" },
+      { name: "Kid dip (garlic mayo / Alfredo / Smoky Chipotle Crema / bottled)", baseQty: 1, unit: "jar", meal: "Mon kid" },
+      { name: "Avocado oil spray", qty: "pantry", meal: "Mon" },
+      { name: "Kikkoman soy sauce", qty: "pantry", meal: "Fri adult" },
+      { name: "Lea & Perrins Worcestershire", qty: "pantry", meal: "Fri adult" },
+      { name: "Smash Kitchen Dijon", qty: "pantry", meal: "Fri adult" },
+      { name: "Smoked paprika", qty: "pantry", meal: "Fri" },
+      { name: "Chili flakes", qty: "pantry", meal: "Fri" },
+      { name: "Kirkland Parmigiano Stravecchio", baseQty: 1, unit: "wedge", meal: "Fri adult" },
+      { name: "Laughing Cow Light wedges", baseQty: 1, unit: "container", meal: "Fri" },
+      { name: "Kirkland unsalted butter", baseQty: 1, unit: "pack", meal: "Fri" },
+      { name: "Salt", qty: "pantry", meal: "Mon" },
+    ],
+    "Creamy Base": [
+      { name: "Daisy Low-Fat Cottage Cheese (16 oz tub)", baseQty: 1, unit: "tub", meal: "Wed adult" },
+      { name: "Fairlife 2% milk", baseQty: 1, unit: "container", meal: "Wed adult" },
+      { name: "Beef broth (Kirkland or similar)", baseQty: 1, unit: "container", meal: "Wed" },
+      { name: "Chicken bone broth (Kirkland)", baseQty: 1, unit: "container", meal: "Fri" },
+    ],
+  },
 };
 
 function getGrocery(week) { return GROCERY_BY_WEEK[week] || GROCERY_BY_WEEK[1]; }
