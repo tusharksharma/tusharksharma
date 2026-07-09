@@ -2744,7 +2744,7 @@ export const snackBoxes = [
     id: "split-plate-berry-power-up-snack-box",
     title: "Split Plate Berry Power-Up Snack Box",
     tagline: "Snack Box Series Ep. 3 — no-cook kid snack with protein, fruit, cheese, and crunch. Beef stick + blueberries + Babybel + pistachios. ~260 cal / 18g protein per box.",
-    heroImage: "/images/split-plate-berry-power-up-snack-box/hero-final-berry-power-up-box.webp",
+    heroImage: "/images/split-plate-berry-power-up-snack-box/hero-final-berry-power-up-box-polished.webp",
     // prepImage — swapped from handoff's `final-stacked-snack-boxes` (payoff
     // shot) to `context-blueberries` (theme-signature blueberry mise-style,
     // matches Ep. 2's Rocket-apple prepImage pattern and Ep. 1's Sargento
@@ -2758,11 +2758,11 @@ export const snackBoxes = [
     // recipe.image). Four brand-context reveals (Chomps / blueberries /
     // Babybel / pistachios) NOT in the carousel per no-brand-reveal rule.
     socialImages: [
-      "/images/split-plate-berry-power-up-snack-box/step-01-add-beef-stick.webp",
-      "/images/split-plate-berry-power-up-snack-box/step-02-add-blueberries.webp",
-      "/images/split-plate-berry-power-up-snack-box/step-03-add-babybel.webp",
-      "/images/split-plate-berry-power-up-snack-box/step-04-add-pistachios.webp",
-      "/images/split-plate-berry-power-up-snack-box/final-stacked-snack-boxes.webp",
+      "/images/split-plate-berry-power-up-snack-box/step-01-add-beef-stick-polished.webp",
+      "/images/split-plate-berry-power-up-snack-box/step-02-add-blueberries-polished.webp",
+      "/images/split-plate-berry-power-up-snack-box/step-03-add-babybel-polished.webp",
+      "/images/split-plate-berry-power-up-snack-box/step-04-add-pistachios-polished.webp",
+      "/images/split-plate-berry-power-up-snack-box/final-stacked-snack-boxes-polished.webp",
     ],
     flavorProfile: "Sweet blueberries + salty pistachios + creamy Babybel + chewy savory beef stick. Four textures in four compartments — no single flavor blends into another.",
     calories: 260,
@@ -2790,12 +2790,12 @@ export const snackBoxes = [
       "28g shelled pistachios (~160 cal / 6g protein — see notes: for kids over 4 only)",
     ],
     steps: [
-      { text: "SET UP: 1 divided snack box (4-compartment Bento-style — same boxes as Snack Box Series Ep. 1 + Ep. 2).", image: "/images/split-plate-berry-power-up-snack-box/hero-final-berry-power-up-box.webp" },
-      { text: "BEEF STICK: Slice 1 beef stick into kid-friendly bite-size pieces. Drop into the first compartment.", image: "/images/split-plate-berry-power-up-snack-box/step-01-add-beef-stick.webp" },
-      { text: "BLUEBERRIES: Rinse a handful of blueberries. Fill the second compartment.", image: "/images/split-plate-berry-power-up-snack-box/step-02-add-blueberries.webp" },
-      { text: "BABYBEL: Unwrap 1 Babybel Original wedge. Drop into the third compartment (wax off, or leave wax on if the kid opens their own).", image: "/images/split-plate-berry-power-up-snack-box/step-03-add-babybel.webp" },
-      { text: "PISTACHIOS: Measure 28g shelled pistachios (~1/4 cup). Add to the final compartment. FOR KIDS OVER 4 ONLY — see notes.", image: "/images/split-plate-berry-power-up-snack-box/step-04-add-pistachios.webp" },
-      { text: "LID + CHILL: Snap lid on. Refrigerate or pack with an ice pack until snack time. Serve chilled — Babybel and blueberries are best cold.", image: "/images/split-plate-berry-power-up-snack-box/final-stacked-snack-boxes.webp" },
+      { text: "SET UP: 1 divided snack box (4-compartment Bento-style — same boxes as Snack Box Series Ep. 1 + Ep. 2).", image: "/images/split-plate-berry-power-up-snack-box/hero-final-berry-power-up-box-polished.webp" },
+      { text: "BEEF STICK: Slice 1 beef stick into kid-friendly bite-size pieces. Drop into the first compartment.", image: "/images/split-plate-berry-power-up-snack-box/step-01-add-beef-stick-polished.webp" },
+      { text: "BLUEBERRIES: Rinse a handful of blueberries. Fill the second compartment.", image: "/images/split-plate-berry-power-up-snack-box/step-02-add-blueberries-polished.webp" },
+      { text: "BABYBEL: Unwrap 1 Babybel Original wedge. Drop into the third compartment (wax off, or leave wax on if the kid opens their own).", image: "/images/split-plate-berry-power-up-snack-box/step-03-add-babybel-polished.webp" },
+      { text: "PISTACHIOS: Measure 28g shelled pistachios (~1/4 cup). Add to the final compartment. FOR KIDS OVER 4 ONLY — see notes.", image: "/images/split-plate-berry-power-up-snack-box/step-04-add-pistachios-polished.webp" },
+      { text: "LID + CHILL: Snap lid on. Refrigerate or pack with an ice pack until snack time. Serve chilled — Babybel and blueberries are best cold.", image: "/images/split-plate-berry-power-up-snack-box/final-stacked-snack-boxes-polished.webp" },
     ],
     notes: [
       "Pistachios: for kids over 4 only. Under 4, swap the pistachios for any other nut they safely eat (or skip the pistachio slot entirely and add extra blueberries / Babybel).",
