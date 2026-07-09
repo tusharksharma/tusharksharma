@@ -6156,11 +6156,11 @@ const recipes = [
     // oiled pan) — off-carousel per feedback-polish-scope brand/off-carousel
     // rule. They stay in step images on the detail page, out of the carousel.
     socialImages: [
-      "/images/fire-grilled-chicken-thighs-frozen-veggies/step-01-season-chicken.webp",
-      "/images/fire-grilled-chicken-thighs-frozen-veggies/hook-grill-fire.webp",
-      "/images/fire-grilled-chicken-thighs-frozen-veggies/step-04-grill-chicken.webp",
-      "/images/fire-grilled-chicken-thighs-frozen-veggies/step-05-slice-chicken.webp",
-      "/images/fire-grilled-chicken-thighs-frozen-veggies/final-adult-kid-plates.webp",
+      "/images/fire-grilled-chicken-thighs-frozen-veggies/step-01-season-chicken-polished.webp",
+      "/images/fire-grilled-chicken-thighs-frozen-veggies/hook-grill-fire-polished.webp",
+      "/images/fire-grilled-chicken-thighs-frozen-veggies/step-04-grill-chicken-polished.webp",
+      "/images/fire-grilled-chicken-thighs-frozen-veggies/step-05-slice-chicken-polished.webp",
+      "/images/fire-grilled-chicken-thighs-frozen-veggies/final-adult-kid-plates-polished.webp",
     ],
     proteinAnchor: "chicken",
     mealType: "grill",
@@ -6174,7 +6174,7 @@ const recipes = [
     servings: 4,
     protein: 45,
     calories: 460,
-    image: "/images/fire-grilled-chicken-thighs-frozen-veggies/hero-split-adult-kid-plates.webp",
+    image: "/images/fire-grilled-chicken-thighs-frozen-veggies/hero-split-adult-kid-plates-polished.webp",
     role: "The Freezer-Staple Grill Night (Adult: 2 Thighs + Frozen Veggies / Kid: 1 Thigh + Veggies + Bread + Dip)",
     makeThisWhen: "You need a fast family dinner and you don't want to chop fresh sides. Keep a bag of frozen veggie blend in the freezer at all times. One grill session, two plate styles, ~25 min end-to-end.",
     hook: "One dry rub. One grill. Adult plate = 460 cal / 45g protein with 2 charred thighs and a hot-skillet frozen veggie side. Kid plate = same chicken with bread + dip. The frozen veggie IS the point — no chopping, no waste, weeknight leverage.",
@@ -6231,12 +6231,12 @@ const recipes = [
         "1/2 tsp cayenne",
       ],
       sharedSteps: [
-        { text: "MIX RUB: Combine paprika + garlic powder + onion powder + oregano + cumin + salt + brown sugar + cayenne in a small bowl. Makes ~3 tbsp = enough for 6 thighs.", images: ["/images/fire-grilled-chicken-thighs-frozen-veggies/step-01-season-chicken.webp"] },
+        { text: "MIX RUB: Combine paprika + garlic powder + onion powder + oregano + cumin + salt + brown sugar + cayenne in a small bowl. Makes ~3 tbsp = enough for 6 thighs.", images: ["/images/fire-grilled-chicken-thighs-frozen-veggies/step-01-season-chicken-polished.webp"] },
         { text: "SEASON THIGHS: Pat 6 thighs dry with paper towel. Light spray of avocado oil. Sprinkle rub over both sides + edges. Rub in with gloved hands.", images: ["/images/fire-grilled-chicken-thighs-frozen-veggies/step-02-rub-chicken.webp"] },
-        { text: "PREHEAT GRILL: Full-flame preheat 5-10 min until grates hit 500°F+. Oil the grates lightly with spray.", images: ["/images/fire-grilled-chicken-thighs-frozen-veggies/hook-grill-fire.webp"] },
+        { text: "PREHEAT GRILL: Full-flame preheat 5-10 min until grates hit 500°F+. Oil the grates lightly with spray.", images: ["/images/fire-grilled-chicken-thighs-frozen-veggies/hook-grill-fire-polished.webp"] },
         { text: "COOK VEGGIES: Preheat a skillet with 1 tbsp oil on medium-high 2 min. Dump the frozen blend in — no thawing. 6-8 min until hot + lightly browned. Season lightly if the blend is plain.", images: ["/images/fire-grilled-chicken-thighs-frozen-veggies/context-frozen-veggies.webp", "/images/fire-grilled-chicken-thighs-frozen-veggies/step-03-cook-frozen-veggies.webp"] },
-        { text: "GRILL CHICKEN: Thighs onto the hot grill. 5-6 min per side, one flip. Chase char lines — visible dark grill marks + juices sizzling on the top surface.", images: ["/images/fire-grilled-chicken-thighs-frozen-veggies/step-04-grill-chicken.webp"] },
-        { text: "REST + SLICE: Off the grill onto a cutting board, tent loosely with foil 3-5 min. Then slice against the grain into strips.", images: ["/images/fire-grilled-chicken-thighs-frozen-veggies/step-05-slice-chicken.webp"] },
+        { text: "GRILL CHICKEN: Thighs onto the hot grill. 5-6 min per side, one flip. Chase char lines — visible dark grill marks + juices sizzling on the top surface.", images: ["/images/fire-grilled-chicken-thighs-frozen-veggies/step-04-grill-chicken-polished.webp"] },
+        { text: "REST + SLICE: Off the grill onto a cutting board, tent loosely with foil 3-5 min. Then slice against the grain into strips.", images: ["/images/fire-grilled-chicken-thighs-frozen-veggies/step-05-slice-chicken-polished.webp"] },
       ],
       adult: {
         label: "Adult — 2 Thighs + Frozen Veggies",
@@ -6244,7 +6244,7 @@ const recipes = [
         calories: 460,
         extraIngredients: [],
         steps: [
-          { text: "ADULT PLATE: 2 sliced thighs + 1 serving frozen veggies. Bare — the rub + char is the flavor. Optional squeeze of lemon if you have one.", images: ["/images/fire-grilled-chicken-thighs-frozen-veggies/final-adult-kid-plates.webp"] },
+          { text: "ADULT PLATE: 2 sliced thighs + 1 serving frozen veggies. Bare — the rub + char is the flavor. Optional squeeze of lemon if you have one.", images: ["/images/fire-grilled-chicken-thighs-frozen-veggies/final-adult-kid-plates-polished.webp"] },
         ],
       },
       kid: {
@@ -6290,13 +6290,13 @@ const recipes = [
       "1/2 tsp cayenne",
     ],
     steps: [
-      { text: "MIX RUB: Combine paprika + garlic powder + onion powder + oregano + cumin + salt + brown sugar + cayenne in a small bowl.", images: ["/images/fire-grilled-chicken-thighs-frozen-veggies/step-01-season-chicken.webp"] },
+      { text: "MIX RUB: Combine paprika + garlic powder + onion powder + oregano + cumin + salt + brown sugar + cayenne in a small bowl.", images: ["/images/fire-grilled-chicken-thighs-frozen-veggies/step-01-season-chicken-polished.webp"] },
       { text: "SEASON: Pat 6 thighs dry. Spray with avocado oil. Sprinkle the rub over — both sides + edges. Rub in.", images: ["/images/fire-grilled-chicken-thighs-frozen-veggies/step-02-rub-chicken.webp"] },
-      { text: "PREHEAT GRILL: Full flame 5-10 min. Oil the grates.", images: ["/images/fire-grilled-chicken-thighs-frozen-veggies/hook-grill-fire.webp"] },
+      { text: "PREHEAT GRILL: Full flame 5-10 min. Oil the grates.", images: ["/images/fire-grilled-chicken-thighs-frozen-veggies/hook-grill-fire-polished.webp"] },
       { text: "COOK VEGGIES: Skillet + 1 tbsp oil, preheat 2 min. Dump frozen veggies in. 6-8 min, hot + lightly browned.", images: ["/images/fire-grilled-chicken-thighs-frozen-veggies/step-03-cook-frozen-veggies.webp"] },
-      { text: "GRILL CHICKEN: Thighs on the hot grill. 5-6 min per side, one flip.", images: ["/images/fire-grilled-chicken-thighs-frozen-veggies/step-04-grill-chicken.webp"] },
-      { text: "REST + SLICE: 3-5 min tent, then slice against the grain.", images: ["/images/fire-grilled-chicken-thighs-frozen-veggies/step-05-slice-chicken.webp"] },
-      { text: "ADULT PLATE: 2 sliced thighs + 1 serving veggies. Bare — the rub + char is the flavor.", images: ["/images/fire-grilled-chicken-thighs-frozen-veggies/final-adult-kid-plates.webp"] },
+      { text: "GRILL CHICKEN: Thighs on the hot grill. 5-6 min per side, one flip.", images: ["/images/fire-grilled-chicken-thighs-frozen-veggies/step-04-grill-chicken-polished.webp"] },
+      { text: "REST + SLICE: 3-5 min tent, then slice against the grain.", images: ["/images/fire-grilled-chicken-thighs-frozen-veggies/step-05-slice-chicken-polished.webp"] },
+      { text: "ADULT PLATE: 2 sliced thighs + 1 serving veggies. Bare — the rub + char is the flavor.", images: ["/images/fire-grilled-chicken-thighs-frozen-veggies/final-adult-kid-plates-polished.webp"] },
       { text: "KID PLATE: 1 thigh chopped small + 1/2 serving veggies + bread + dip.", images: [] },
     ],
     brands: [
