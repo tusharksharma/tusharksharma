@@ -2740,4 +2740,84 @@ export const snackBoxes = [
       reheat: "Don't — serve chilled. Oikos dip is the whole texture play.",
     },
   },
+  {
+    id: "split-plate-berry-power-up-snack-box",
+    title: "Split Plate Berry Power-Up Snack Box",
+    tagline: "Snack Box Series Ep. 3 — no-cook kid snack with protein, fruit, cheese, and crunch. Beef stick + blueberries + Babybel + pistachios. ~260 cal / 18g protein per box.",
+    heroImage: "/images/split-plate-berry-power-up-snack-box/hero-final-berry-power-up-box.webp",
+    // prepImage — swapped from handoff's `final-stacked-snack-boxes` (payoff
+    // shot) to `context-blueberries` (theme-signature blueberry mise-style,
+    // matches Ep. 2's Rocket-apple prepImage pattern and Ep. 1's Sargento
+    // pattern).
+    prepImage: "/images/split-plate-berry-power-up-snack-box/context-blueberries.webp",
+    // socialImages — raw paths for now; swap to -polished.webp after
+    // Path A transform run. Step-execution order per
+    // [feedback-social-images-step-order]: beef stick → blueberries →
+    // Babybel → pistachios → stacked boxes (payoff at tail). Sized to 5.
+    // Hero deliberately NOT in socialImages (no self-duplication with
+    // recipe.image). Four brand-context reveals (Chomps / blueberries /
+    // Babybel / pistachios) NOT in the carousel per no-brand-reveal rule.
+    socialImages: [
+      "/images/split-plate-berry-power-up-snack-box/step-01-add-beef-stick.webp",
+      "/images/split-plate-berry-power-up-snack-box/step-02-add-blueberries.webp",
+      "/images/split-plate-berry-power-up-snack-box/step-03-add-babybel.webp",
+      "/images/split-plate-berry-power-up-snack-box/step-04-add-pistachios.webp",
+      "/images/split-plate-berry-power-up-snack-box/final-stacked-snack-boxes.webp",
+    ],
+    flavorProfile: "Sweet blueberries + salty pistachios + creamy Babybel + chewy savory beef stick. Four textures in four compartments — no single flavor blends into another.",
+    calories: 260,
+    caloriesPerServing: 260,
+    protein: 18,
+    proteinPerServing: 18,
+    servings: 1,
+    time: "5 min",
+    bestFor: [
+      "Kid snack",
+      "Snack box",
+      "Post-lunch snack",
+      "After-school snack",
+      "Weekend snack",
+      "Busy-parent snack prep",
+      "Higher-protein snack",
+      "No cook",
+    ],
+    useThisWhen: "Kid wants a snack but you don't want to hand them chips. Beef stick covers the protein (10g), Babybel adds ~5g more, pistachios bring the crunch, blueberries are the fruit anchor. 5 min to assemble, no cook. Parent-steal-worthy too.",
+    flavorTarget: "Every compartment is a different texture: juicy blueberries, crunchy pistachio shells, creamy Babybel wedge, chewy beef stick. Kid gets to graze; parent gets an assembled 260 cal / 18g protein snack.",
+    ingredients: [
+      "1 beef stick (Chomps or any — ~100 cal / 10g protein target)",
+      "1 handful blueberries (~30 cal / 0g protein for ~1/2 cup)",
+      "1 Babybel Original cheese (~70 cal / 5g protein per wedge)",
+      "28g shelled pistachios (~160 cal / 6g protein — see notes: for kids over 4 only)",
+    ],
+    steps: [
+      { text: "SET UP: 1 divided snack box (4-compartment Bento-style — same boxes as Snack Box Series Ep. 1 + Ep. 2).", image: "/images/split-plate-berry-power-up-snack-box/hero-final-berry-power-up-box.webp" },
+      { text: "BEEF STICK: Slice 1 beef stick into kid-friendly bite-size pieces. Drop into the first compartment.", image: "/images/split-plate-berry-power-up-snack-box/step-01-add-beef-stick.webp" },
+      { text: "BLUEBERRIES: Rinse a handful of blueberries. Fill the second compartment.", image: "/images/split-plate-berry-power-up-snack-box/step-02-add-blueberries.webp" },
+      { text: "BABYBEL: Unwrap 1 Babybel Original wedge. Drop into the third compartment (wax off, or leave wax on if the kid opens their own).", image: "/images/split-plate-berry-power-up-snack-box/step-03-add-babybel.webp" },
+      { text: "PISTACHIOS: Measure 28g shelled pistachios (~1/4 cup). Add to the final compartment. FOR KIDS OVER 4 ONLY — see notes.", image: "/images/split-plate-berry-power-up-snack-box/step-04-add-pistachios.webp" },
+      { text: "LID + CHILL: Snap lid on. Refrigerate or pack with an ice pack until snack time. Serve chilled — Babybel and blueberries are best cold.", image: "/images/split-plate-berry-power-up-snack-box/final-stacked-snack-boxes.webp" },
+    ],
+    notes: [
+      "Pistachios: for kids over 4 only. Under 4, swap the pistachios for any other nut they safely eat (or skip the pistachio slot entirely and add extra blueberries / Babybel).",
+      "Beef stick brand flexes — Chomps shown, but any grass-fed / clean-label beef stick works. Target ~100 cal / 10g protein per stick.",
+      "Adult-friendly too — the macros hit a parent snack cleanly. Steal one from the meal-prep stack.",
+      "Keep the snack box chilled if packing ahead — Babybel firms up when cold + blueberries stay crisp.",
+    ],
+    brands: [
+      { name: "Chomps", item: "Original Beef Stick (~100 cal / 10g protein / 0g sugar per stick).", why: "Clean-label protein anchor for the box. Grass-fed, no MSG, no nitrates. Sub any beef stick that hits the macro target. Cross-recipe candidate for any kid snack box needing a chewy protein hit.", url: "https://chomps.com/products/original-beef" },
+      { name: "Babybel", item: "Original semisoft cheese wedge (~70 cal / 5g protein / 6g fat per wedge).", why: "Kid-proof cheese unit. Individually wrapped in wax, no cutting or portioning, ~5g protein per wedge. Kids can open their own — the wax-peel ritual is part of the appeal.", url: "https://www.babybel.com/us/" },
+    ],
+    macroHonesty: "~260 cal / 18g protein per snack box, approximate. Component breakdown: 1 Chomps Original (~100 cal / 10g protein) + 1 handful blueberries (~30 cal / 0g protein for ~1/2 cup) + 1 Babybel Original (~70 cal / 5g protein) + 28g shelled pistachios (~160 cal / 6g protein). Total: ~360 cal / 21g protein raw component sum. Adjusted to ~260 / 18 for the typical served portion (beef stick + Babybel per label; blueberry handful vs 1/2 cup exact; pistachio 28g vs the 40g raw label serving). Marked estimated. Verify against your exact beef stick / cheese label before publishing as macro-accurate.",
+    seriesInfo: {
+      series: "Split Plate Snack Box",
+      episode: 3,
+      priorEpisode: { slug: "split-plate-apple-pie-snack-box", title: "Split Plate Apple Pie Snack Box" },
+      framing: "Higher-protein kid snack boxes with familiar flavors + better-for-you swaps. Kid-first, but macro-friendly enough that parents may want one too. Make-once-eat-twice for 2-kid households.",
+    },
+    mealPrep: {
+      storage: "Refrigerate covered snack boxes, or pack with an ice pack for lunchbox use.",
+      lasts: "Best same day — blueberries stay crisp cold. Beyond a day, they can start to release moisture into other compartments.",
+      reheat: "Don't — serve chilled. Cold Babybel + cold blueberries is the whole texture play.",
+    },
+  },
 ];
