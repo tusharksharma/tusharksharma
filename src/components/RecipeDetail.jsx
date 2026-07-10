@@ -846,7 +846,7 @@ function PrintCard({ recipe }) {
   return (
     <div className="hidden print:block max-w-3xl mx-auto px-6 py-4">
       <div className="flex items-baseline justify-between mb-3 pb-2 border-b border-neutral-300">
-        <h1 className="text-2xl font-black text-black">{recipe.title}</h1>
+        <h2 className="text-2xl font-black text-black">{recipe.title}</h2>
         <span className="text-[10px] text-neutral-600">thesplitplate.com/recipes/{recipe.slug}</span>
       </div>
       <p className="text-sm text-neutral-800 mb-3">

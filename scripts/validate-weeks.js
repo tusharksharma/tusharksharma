@@ -126,7 +126,7 @@ const KNOWN_LEFTOVER_CHAINS = new Set([
 
 const recipesSrc = readFileSync("src/data/recipes.js", "utf-8");
 const liveDinnerIds = new Set();
-for (const m of recipesSrc.matchAll(/^    id: (\d+),\s*\n\s*status: "live"/gm)) {
+for (const m of recipesSrc.matchAll(/^ {4}id: (\d+),\s*\n\s*status: "live"/gm)) {
   liveDinnerIds.add(Number(m[1]));
 }
 

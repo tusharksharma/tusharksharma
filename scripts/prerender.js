@@ -279,9 +279,10 @@ for (const route of routes) {
 }
 
 // Auto-generate sitemap — omit lastmod (same date on every URL is noise)
+const sitemapRoutes = routes.filter((r) => !r.noindex && !r.path.startsWith("/social"));
 const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${routes.filter((r) => !r.noindex && !r.path.startsWith("/social")).map((r) => {
+${sitemapRoutes.map((r) => {
   const priority = r.path === "/" ? "1.0" : r.path.startsWith("/recipes/") ? "0.8" : r.path.startsWith("/cookbook/") && r.path !== "/cookbook" ? "0.7" : "0.9";
   return `  <url><loc>${DOMAIN}${r.path}</loc><priority>${priority}</priority></url>`;
 }).join("\n")}
@@ -289,4 +290,4 @@ ${routes.filter((r) => !r.noindex && !r.path.startsWith("/social")).map((r) => {
 `;
 writeFileSync(join(DIST, "sitemap.xml"), sitemapXml);
 
-console.log(`Prerendered ${count} routes. Sitemap: ${routes.length} URLs.`);
+console.log(`Prerendered ${count} routes. Sitemap: ${sitemapRoutes.length} URLs.`);

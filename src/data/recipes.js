@@ -5206,7 +5206,7 @@ const recipes = [
       { text: "EAT IMMEDIATELY. Adults: scoop through all layers with a spoon (chip + beef + lettuce + guac in one bite). Kids: chip + beef + guac at the table, build-your-own.", images: ["/images/high-protein-taco-bowls/step-09-final-adult-bowl-video.webp"] },
     ],
     brands: [
-      { name: "93/7 Lean Ground Beef", item: "1.25 lb pack (Kirkland Signature 93/7 from Costco, or any 93/7 lean ground beef — 255 cal / 42g protein / 9g fat per 6 oz cooked)", why: "The macro architecture is built on the leanness — 93/7 lets the bowl carry full-fat-equivalent cheddar and guacamole without exceeding the 500-cal budget. 80/20 adds ~100 cal per plate and breaks the high-protein/low-fat lane. The drain step isn't needed.", image: "/images/brands/kirkland-organic-chicken-bone-broth.jpg", url: "https://www.costco.com/" },
+      { name: "93/7 Lean Ground Beef", item: "1.25 lb pack (Kirkland Signature 93/7 from Costco, or any 93/7 lean ground beef — 255 cal / 42g protein / 9g fat per 6 oz cooked)", why: "The macro architecture is built on the leanness — 93/7 lets the bowl carry full-fat-equivalent cheddar and guacamole without exceeding the 500-cal budget. 80/20 adds ~100 cal per plate and breaks the high-protein/low-fat lane. The drain step isn't needed.", url: "https://www.costco.com/" },
       { name: "Spiceology", item: "Taco Seasoning Blend (22 oz jar — ~2 tbsp per 1.25 lb beef, 5 cal per tsp)", why: "Real ground chili peppers + smoked paprika + brown sugar + no fillers + no MSG. The flavor anchor of the recipe. Cross-recipe candidate with any Mexican/Tex-Mex dinner.", image: "/images/brands/spiceology-taco-seasoning.png", url: "https://spiceology.com/products/taco-seasoning" },
       { name: "Quest Nutrition", item: "Loaded Taco Tortilla-Style Protein Chips (1.1 oz bag — 140 cal / 19g protein / 4g net carbs)", why: "The macro lever — chips that contribute 19g protein instead of zero. Turns the carb slot into a second protein slot. Baked, not fried. The whole recipe is built around this SKU on the adult side.", image: "/images/brands/quest-loaded-taco-chips.png", url: "https://www.questnutrition.com/products/loaded-taco-protein-chips" },
       { name: "Kraft", item: "Fat-Free Shredded Cheddar Cheese (7 oz pouch — 45 cal / 9g protein / 0g fat per oz)", why: "The adult-side macro saver. Same melt + similar flavor as full-fat sharp cheddar (with the bone-broth braise), but 65 cal lower + 9g fat lower per oz. Save the calorie + fat delta for the guacamole.", image: "/images/brands/kraft-fat-free-cheddar-shredded.jpg", url: "https://kraftnaturalcheese.com/product/shredded-cheese/cheddar-fat-free/" },
@@ -6134,9 +6134,9 @@ const recipes = [
       allergens: ["gluten", "dairy"],
       warnings: [],
       dietTags: ["nut-free", "gluten-free-option", "dairy-free-option"],
-      proteinTags: ["chicken", "thighs"],
+      proteinTags: ["chicken"],
       splitAxes: ["portion", "carb", "sauce"],
-      effortTags: ["weeknight", "grill", "freezer-staple", "kid-approved"],
+      effortTags: ["weeknight", "grill", "freezer-staple", "kid-approved", "thighs"],
       costTier: "moderate",
       costPerServing: "$3.50",
       substitutionNotes: [
