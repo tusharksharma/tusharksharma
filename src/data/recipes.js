@@ -6337,18 +6337,18 @@ const recipes = [
       ],
     },
     slug: "high-protein-philly-cheesesteak-sliders",
-    // socialImages — raw paths for now; swap to -polished.webp after Path A.
-    // Step-execution order per [feedback-social-images-step-order]: filling
-    // action → combined filling → split-sauce build (the split moment) → beef
-    // layer → baked payoff pan → bite tail. 6 entries. Drop hero (already
-    // recipe.image) + context-garys-quicksteak-beef (brand context — off-
-    // carousel per feedback-polish-scope) + final-plated-sliders (single-plate
-    // duplicate of bite shot). All 12 step files stay on the detail page.
+    // socialImages — step-execution order per [feedback-social-images-step-
+    // order]: cook → combined filling → bread build (split visual) → sauce
+    // split → baked payoff pan → bite tail. 6 entries. Drop hero
+    // (final-plated is now recipe.image), context-garys-quicksteak-beef
+    // (brand context — off-carousel), step-08-beef-filling-layer (structural
+    // duplicate of bread-build + sauce-split assembly shots). All 12 step
+    // files stay on the detail page.
     socialImages: [
       "/images/high-protein-philly-cheesesteak-sliders/step-03-peppers-onions-polished.webp",
       "/images/high-protein-philly-cheesesteak-sliders/step-05-one-pan-filling-polished.webp",
+      "/images/high-protein-philly-cheesesteak-sliders/split-adult-kid-bread-build-polished.webp",
       "/images/high-protein-philly-cheesesteak-sliders/step-06-bottom-sauces-polished.webp",
-      "/images/high-protein-philly-cheesesteak-sliders/step-08-beef-filling-layer-polished.webp",
       "/images/high-protein-philly-cheesesteak-sliders/step-12-baked-covered-result-polished.webp",
       "/images/high-protein-philly-cheesesteak-sliders/hero-bite-cheesesteak-slider-polished.webp",
     ],
@@ -6364,7 +6364,7 @@ const recipes = [
     servings: 4,
     protein: 40,
     calories: 470,
-    image: "/images/high-protein-philly-cheesesteak-sliders/split-adult-kid-bread-build-polished.webp",
+    image: "/images/high-protein-philly-cheesesteak-sliders/final-plated-sliders-polished.webp",
     role: "The One-Pan Cheesesteak Slider Night (Adult: 3 Sola Sliders + Chipotle Crema / Kid: 3 Regular Sliders + Secret Sauce)",
     makeThisWhen: "You want cheesesteak comfort food that doesn't blow up macros. One pan of Gary's QuickSteak + peppers + onions turns into two slider builds — adults on Sola rolls with smoky chipotle crema, kids on regular slider rolls with mayo + secret sauce. Same dinner, different needs, one tray.",
     hook: "One pan of filling. Two bread builds. Adult plate = 470 cal / 40g protein for 3 Sola sliders with smoky chipotle crema. Kid plate = 3 regular slider rolls with mayo + secret sauce. Same beef, same peppers, same onions — the split happens at the bread, cheese, and sauce layer.",
