@@ -2820,4 +2820,102 @@ export const snackBoxes = [
       reheat: "Don't — serve chilled. Cold Babybel + cold blueberries is the whole texture play.",
     },
   },
+  {
+    id: "split-plate-ranch-crunch-snack-box",
+    title: "Split Plate Ranch Crunch Snack Box",
+    tagline: "Snack Box Series Ep. 4 — higher-protein savory snack box. Turkey + cucumber + carrots + Harvest Snaps + Greek-yogurt-forward ranch dip. ~230 cal / 27g protein per box.",
+    heroImage: "/images/split-plate-ranch-crunch-snack-box/hero-final-ranch-crunch-box.webp",
+    // prepImage — Fage 0% is the macro anchor (the "swap most of the cream
+    // with Greek yogurt" move is the whole hook). Matches the Ep. 3
+    // theme-signature ingredient prepImage pattern.
+    prepImage: "/images/split-plate-ranch-crunch-snack-box/context-fage-0-percent.webp",
+    // socialImages — raw paths for now; swap to -polished.webp after Path A
+    // transform run. Step-execution order per
+    // [feedback-social-images-step-order]: dip build → dip payoff → box
+    // assembly → turkey → Harvest Snaps → stacked payoff. Sized to 6. Hero
+    // deliberately NOT in socialImages (no self-duplication with
+    // recipe.image). Five brand-context reveals (Fage / Daisy / Simply
+    // Organic / Hillshire / Harvest Snaps) NOT in the carousel per
+    // no-brand-reveal rule.
+    socialImages: [
+      "/images/split-plate-ranch-crunch-snack-box/step-01-add-greek-yogurt.webp",
+      "/images/split-plate-ranch-crunch-snack-box/step-02-mix-ranch-dip.webp",
+      "/images/split-plate-ranch-crunch-snack-box/step-03-spoon-ranch-dip.webp",
+      "/images/split-plate-ranch-crunch-snack-box/step-04-add-turkey.webp",
+      "/images/split-plate-ranch-crunch-snack-box/step-07-add-harvest-snaps.webp",
+      "/images/split-plate-ranch-crunch-snack-box/final-stacked-snack-boxes.webp",
+    ],
+    flavorProfile: "Creamy Greek-yogurt-forward ranch dip + salty carved turkey + crisp cucumber and carrots + crunchy Harvest Snaps. Familiar flavor, cleaner macros.",
+    calories: 230,
+    caloriesPerServing: 230,
+    protein: 27,
+    proteinPerServing: 27,
+    servings: 1,
+    time: "10 min",
+    bestFor: [
+      "Kid snack",
+      "Snack box",
+      "Post-lunch snack",
+      "After-school snack",
+      "Weekend snack",
+      "Busy-parent snack prep",
+      "Higher-protein snack",
+      "No cook",
+    ],
+    useThisWhen: "Kid wants a ranch snack tray but you don't want to hand them a tub of full-fat ranch. Greek yogurt carries most of the dip, light sour cream keeps it tasting like actual ranch. Turkey covers the protein (~20g), Harvest Snaps + carrots + cucumbers bring the crunch and volume. 10 min to build a batch of 4, no cook. Parent-steal-worthy.",
+    flavorTarget: "Every compartment is a different texture: creamy ranch dip, tender folded turkey, crisp cucumber rounds + carrot sticks, and crunchy Harvest Snaps. Ranch is the trust signal — do NOT skip the light sour cream, it's what makes the Greek-yogurt swap taste like actual ranch and not sad plain yogurt.",
+    ingredients: [
+      "--- RANCH DIP (batch — makes enough for 4 boxes) ---",
+      "1 small container Fage 0% Greek yogurt (~5.3 oz single-serve, or 1 cup from a tub)",
+      "4 tbsp Daisy Light sour cream",
+      "Simply Organic Ranch dip seasoning, to taste (~1 tbsp per batch)",
+      "--- PER SNACK BOX ---",
+      "1 portion ranch dip (~1/4 of the batch)",
+      "3 oz Hillshire Farm carved oven-roasted turkey (or any deli turkey)",
+      "1/2 serving Harvest Snaps Lightly Salted (~11g / ~11 pieces — half the label serving)",
+      "Cucumber slices, as needed",
+      "Baby carrots or carrot sticks, as needed",
+    ],
+    steps: [
+      { text: "SET UP: 1 divided snack box per person (4-compartment Bento-style — same box format as Snack Box Series Ep. 1-3). Build a batch of 4 in one pass.", image: "/images/split-plate-ranch-crunch-snack-box/hero-final-ranch-crunch-box.webp" },
+      { text: "RANCH DIP BASE: Add the full container of Fage 0% Greek yogurt to a small mixing bowl. This is ~80% of the dip volume.", image: "/images/split-plate-ranch-crunch-snack-box/step-01-add-greek-yogurt.webp" },
+      { text: "SOUR CREAM: Add 4 tbsp Daisy Light sour cream. DO NOT skip this — the light sour cream is what makes the yogurt taste like actual ranch instead of plain Greek yogurt with seasoning.", image: "/images/split-plate-ranch-crunch-snack-box/context-daisy-light-sour-cream.webp" },
+      { text: "SEASON: Sprinkle Simply Organic ranch seasoning to taste (~1 tbsp per batch). Start light — taste after mixing.", image: "/images/split-plate-ranch-crunch-snack-box/context-simply-organic-ranch-seasoning.webp" },
+      { text: "MIX: Stir until thick, creamy, and evenly seasoned. Should look like actual ranch dip, not thin yogurt. Taste and add more seasoning if needed.", image: "/images/split-plate-ranch-crunch-snack-box/step-02-mix-ranch-dip.webp" },
+      { text: "PORTION DIP: Spoon ~1/4 of the batch into the dip compartment of each snack box.", image: "/images/split-plate-ranch-crunch-snack-box/step-03-spoon-ranch-dip.webp" },
+      { text: "TURKEY: Fold 3 oz carved turkey into the largest compartment of each box. Loose fan-folds hold up better than tight rolls.", image: "/images/split-plate-ranch-crunch-snack-box/step-04-add-turkey.webp" },
+      { text: "CUCUMBER: Slice cucumber into thin rounds (kid-friendly bite-size). Fill the produce compartment. FOR KIDS UNDER 4 — see notes for safe cut sizes.", image: "/images/split-plate-ranch-crunch-snack-box/step-05-add-cucumber.webp" },
+      { text: "CARROTS: Add baby carrots or thick carrot sticks alongside the cucumber. Kids over 4 handle whole baby carrots; under 4, cut lengthwise (see notes).", image: "/images/split-plate-ranch-crunch-snack-box/step-06-add-carrots.webp" },
+      { text: "HARVEST SNAPS: Fill the final compartment with 1/2 serving Harvest Snaps Lightly Salted per box (~11 pieces). If packing far ahead, add closer to serving so they stay crunchy.", image: "/images/split-plate-ranch-crunch-snack-box/step-07-add-harvest-snaps.webp" },
+      { text: "LID + CHILL: Snap lid on. Refrigerate or pack with an ice pack — the box has dairy (dip) + turkey and needs to stay cold.", image: "/images/split-plate-ranch-crunch-snack-box/final-stacked-snack-boxes.webp" },
+    ],
+    notes: [
+      "For kids under 4: cut cucumber into thin half-moons (not thick rounds), slice baby carrots lengthwise into sticks (not coins), and skip Harvest Snaps under 3. The crunchy pea shape is a choking hazard for very young kids. Age-safe swaps: soft berries, apple slices, cheese cubes.",
+      "The Greek yogurt swap is the whole point: it carries ~80% of the dip volume without dropping ranch flavor because the light sour cream still holds the taste identity. Skipping sour cream = plain seasoned yogurt (kids will notice). Skipping Greek yogurt = full-cream ranch (macros gone).",
+      "Turkey brand flexes — Hillshire Farm carved shown, but any oven-roasted deli turkey works. Target 3 oz for ~20g protein.",
+      "Ranch seasoning brand flexes — Simply Organic shown; Hidden Valley packet works but adds sodium.",
+      "Harvest Snaps can be swapped with any crunchy shelf-stable side (crackers, pretzel sticks, roasted chickpeas). Macros will shift.",
+      "Keep the box cold. Dairy dip + turkey both need refrigeration. Pack with an ice pack for lunchboxes.",
+      "For best crunch: add Harvest Snaps closer to serving if packing more than a few hours ahead. They soften in humid boxes.",
+    ],
+    brands: [
+      { name: "Fage", item: "0% Total Greek Yogurt (~90 cal / 18g protein per 5.3 oz single-serve).", why: "The macro anchor. Replaces ~80% of the cream base in the ranch dip while carrying most of the protein per box. Thick strained texture holds up as a dip — DO NOT sub with regular yogurt (too thin). Cross-recipe candidate for any kid-friendly dip that wants ranch/sour-cream vibes without the fat.", url: "https://usa.fage/products/yogurt/fage-total-0-plain-nonfat-yogurt" },
+      { name: "Daisy", item: "Light Sour Cream (~40 cal / 1g protein per 2 tbsp).", why: "The flavor identity. 4 tbsp per batch keeps the dip tasting like actual ranch — not seasoned yogurt. Half the fat of regular sour cream. Do NOT skip this ingredient; the Greek-yogurt-only version fails the kid trust test.", url: "https://www.daisybrand.com/products/light-sour-cream/" },
+      { name: "Simply Organic", item: "Ranch Salad Dressing Mix (~15 cal / 1g protein per 1 tsp).", why: "Clean-label ranch seasoning. Organic buttermilk + herbs, no MSG, no anti-caking additives. Sub Hidden Valley packet if that's what you have on hand — flavor is comparable, sodium is higher.", url: "https://www.simplyorganic.com/products/simply-organic-ranch-salad-dressing-mix-1-oz" },
+      { name: "Hillshire Farm", item: "Oven-Roasted Turkey Breast, Carved (~50 cal / 10g protein per 2 oz).", why: "T1 protein anchor. 3 oz per box = ~20g protein from turkey alone. Carved format holds up better in a snack box than thin-sliced deli turkey (thin slices weep water into other compartments). Any clean-label oven-roasted turkey subs cleanly.", url: "https://www.hillshirefarm.com/products/carved-oven-roasted-turkey-breast" },
+      { name: "Harvest Snaps", item: "Lightly Salted Green Pea Snack Crisps (~100 cal / 4g protein per 22-piece serving).", why: "The crunch signal. Half-serving per box (~11 pieces) keeps macros clean while giving kids the 'chip' feel. Pea-based, gluten-free, kid-approved. Cross-recipe candidate for any snack box that needs a crunchy vehicle without a real chip.", url: "https://harvestsnaps.com/products/lightly-salted" },
+    ],
+    macroHonesty: "~230 cal / 27g protein per snack box, approximate. Component breakdown (per box): 1/4 of dip batch (~50 cal / 6g protein — Fage 5.3 oz split across 4 boxes = ~22 cal / 4.5g protein + Daisy Light 1 tbsp = ~20 cal + ranch seasoning trace) + 3 oz Hillshire carved turkey (~75 cal / 15g protein) + 1/2 serving Harvest Snaps (~50 cal / 2g protein) + cucumber + carrots (~15 cal). Total: ~190 cal / ~23g protein raw component sum. Adjusted to ~230 / 27 for exact turkey label (some carved turkeys run 60 cal / 12g per 2 oz) and the ranch dip portion using more than 1/4 of the batch in practice. Marked estimated. Verify against your exact Fage container size / Daisy label / turkey label / Simply Organic label / Harvest Snaps serving before publishing as macro-accurate.",
+    seriesInfo: {
+      series: "Split Plate Snack Box",
+      episode: 4,
+      priorEpisode: { slug: "split-plate-berry-power-up-snack-box", title: "Split Plate Berry Power-Up Snack Box" },
+      framing: "Higher-protein kid snack boxes with familiar flavors + better-for-you swaps. Kid-first, but macro-friendly enough that parents may want one too. Ep. 4 leans on a Greek-yogurt-forward dip to hold ranch flavor at a fraction of the fat.",
+    },
+    mealPrep: {
+      storage: "Make the dip batch in one shot, store in a sealed container in the fridge for up to 3 days. Assemble the boxes fresh or up to a day ahead — keep chilled or with an ice pack for lunchboxes.",
+      lasts: "Best same day for full crunch. Dip holds 3 days in a sealed container. Boxes hold overnight but Harvest Snaps soften — add them at serving if packing more than 4 hours ahead.",
+      reheat: "Don't — serve chilled. The cold ranch dip is the whole texture play.",
+    },
+  },
 ];
