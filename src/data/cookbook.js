@@ -2824,7 +2824,7 @@ export const snackBoxes = [
     id: "split-plate-ranch-crunch-snack-box",
     title: "Split Plate Ranch Crunch Snack Box",
     tagline: "Snack Box Series Ep. 4 — higher-protein savory snack box. Turkey + cucumber + carrots + Harvest Snaps + Greek-yogurt-forward ranch dip. ~230 cal / 27g protein per box.",
-    heroImage: "/images/split-plate-ranch-crunch-snack-box/hero-final-ranch-crunch-box.webp",
+    heroImage: "/images/split-plate-ranch-crunch-snack-box/hero-final-ranch-crunch-box-polished.webp",
     // prepImage — Fage 0% is the macro anchor (the "swap most of the cream
     // with Greek yogurt" move is the whole hook). Matches the Ep. 3
     // theme-signature ingredient prepImage pattern.
@@ -2838,12 +2838,12 @@ export const snackBoxes = [
     // Organic / Hillshire / Harvest Snaps) NOT in the carousel per
     // no-brand-reveal rule.
     socialImages: [
-      "/images/split-plate-ranch-crunch-snack-box/step-01-add-greek-yogurt.webp",
-      "/images/split-plate-ranch-crunch-snack-box/step-02-mix-ranch-dip.webp",
-      "/images/split-plate-ranch-crunch-snack-box/step-03-spoon-ranch-dip.webp",
-      "/images/split-plate-ranch-crunch-snack-box/step-04-add-turkey.webp",
-      "/images/split-plate-ranch-crunch-snack-box/step-07-add-harvest-snaps.webp",
-      "/images/split-plate-ranch-crunch-snack-box/final-stacked-snack-boxes.webp",
+      "/images/split-plate-ranch-crunch-snack-box/step-01-add-greek-yogurt-polished.webp",
+      "/images/split-plate-ranch-crunch-snack-box/step-02-mix-ranch-dip-polished.webp",
+      "/images/split-plate-ranch-crunch-snack-box/step-03-spoon-ranch-dip-polished.webp",
+      "/images/split-plate-ranch-crunch-snack-box/step-04-add-turkey-polished.webp",
+      "/images/split-plate-ranch-crunch-snack-box/step-07-add-harvest-snaps-polished.webp",
+      "/images/split-plate-ranch-crunch-snack-box/final-stacked-snack-boxes-polished.webp",
     ],
     flavorProfile: "Creamy Greek-yogurt-forward ranch dip + salty carved turkey + crisp cucumber and carrots + crunchy Harvest Snaps. Familiar flavor, cleaner macros.",
     calories: 230,
@@ -2877,17 +2877,17 @@ export const snackBoxes = [
       "Baby carrots or carrot sticks, as needed",
     ],
     steps: [
-      { text: "SET UP: 1 divided snack box per person (4-compartment Bento-style — same box format as Snack Box Series Ep. 1-3). Build a batch of 4 in one pass.", image: "/images/split-plate-ranch-crunch-snack-box/hero-final-ranch-crunch-box.webp" },
-      { text: "RANCH DIP BASE: Add the full container of Fage 0% Greek yogurt to a small mixing bowl. This is ~80% of the dip volume.", image: "/images/split-plate-ranch-crunch-snack-box/step-01-add-greek-yogurt.webp" },
+      { text: "SET UP: 1 divided snack box per person (4-compartment Bento-style — same box format as Snack Box Series Ep. 1-3). Build a batch of 4 in one pass.", image: "/images/split-plate-ranch-crunch-snack-box/hero-final-ranch-crunch-box-polished.webp" },
+      { text: "RANCH DIP BASE: Add the full container of Fage 0% Greek yogurt to a small mixing bowl. This is ~80% of the dip volume.", image: "/images/split-plate-ranch-crunch-snack-box/step-01-add-greek-yogurt-polished.webp" },
       { text: "SOUR CREAM: Add 4 tbsp Daisy Light sour cream. DO NOT skip this — the light sour cream is what makes the yogurt taste like actual ranch instead of plain Greek yogurt with seasoning.", image: "/images/split-plate-ranch-crunch-snack-box/context-daisy-light-sour-cream.webp" },
       { text: "SEASON: Sprinkle Simply Organic ranch seasoning to taste (~1 tbsp per batch). Start light — taste after mixing.", image: "/images/split-plate-ranch-crunch-snack-box/context-simply-organic-ranch-seasoning.webp" },
-      { text: "MIX: Stir until thick, creamy, and evenly seasoned. Should look like actual ranch dip, not thin yogurt. Taste and add more seasoning if needed.", image: "/images/split-plate-ranch-crunch-snack-box/step-02-mix-ranch-dip.webp" },
-      { text: "PORTION DIP: Spoon ~1/4 of the batch into the dip compartment of each snack box.", image: "/images/split-plate-ranch-crunch-snack-box/step-03-spoon-ranch-dip.webp" },
-      { text: "TURKEY: Fold 3 oz carved turkey into the largest compartment of each box. Loose fan-folds hold up better than tight rolls.", image: "/images/split-plate-ranch-crunch-snack-box/step-04-add-turkey.webp" },
-      { text: "CUCUMBER: Slice cucumber into thin rounds (kid-friendly bite-size). Fill the produce compartment. FOR KIDS UNDER 4 — see notes for safe cut sizes.", image: "/images/split-plate-ranch-crunch-snack-box/step-05-add-cucumber.webp" },
+      { text: "MIX: Stir until thick, creamy, and evenly seasoned. Should look like actual ranch dip, not thin yogurt. Taste and add more seasoning if needed.", image: "/images/split-plate-ranch-crunch-snack-box/step-02-mix-ranch-dip-polished.webp" },
+      { text: "PORTION DIP: Spoon ~1/4 of the batch into the dip compartment of each snack box.", image: "/images/split-plate-ranch-crunch-snack-box/step-03-spoon-ranch-dip-polished.webp" },
+      { text: "TURKEY: Fold 3 oz carved turkey into the largest compartment of each box. Loose fan-folds hold up better than tight rolls.", image: "/images/split-plate-ranch-crunch-snack-box/step-04-add-turkey-polished.webp" },
+      { text: "CUCUMBER: Slice cucumber into thin rounds (kid-friendly bite-size). Fill the produce compartment. FOR KIDS UNDER 4 — see notes for safe cut sizes.", image: "/images/split-plate-ranch-crunch-snack-box/step-05-add-cucumber-polished.webp" },
       { text: "CARROTS: Add baby carrots or thick carrot sticks alongside the cucumber. Kids over 4 handle whole baby carrots; under 4, cut lengthwise (see notes).", image: "/images/split-plate-ranch-crunch-snack-box/step-06-add-carrots.webp" },
-      { text: "HARVEST SNAPS: Fill the final compartment with 1/2 serving Harvest Snaps Lightly Salted per box (~11 pieces). If packing far ahead, add closer to serving so they stay crunchy.", image: "/images/split-plate-ranch-crunch-snack-box/step-07-add-harvest-snaps.webp" },
-      { text: "LID + CHILL: Snap lid on. Refrigerate or pack with an ice pack — the box has dairy (dip) + turkey and needs to stay cold.", image: "/images/split-plate-ranch-crunch-snack-box/final-stacked-snack-boxes.webp" },
+      { text: "HARVEST SNAPS: Fill the final compartment with 1/2 serving Harvest Snaps Lightly Salted per box (~11 pieces). If packing far ahead, add closer to serving so they stay crunchy.", image: "/images/split-plate-ranch-crunch-snack-box/step-07-add-harvest-snaps-polished.webp" },
+      { text: "LID + CHILL: Snap lid on. Refrigerate or pack with an ice pack — the box has dairy (dip) + turkey and needs to stay cold.", image: "/images/split-plate-ranch-crunch-snack-box/final-stacked-snack-boxes-polished.webp" },
     ],
     notes: [
       "For kids under 4: cut cucumber into thin half-moons (not thick rounds), slice baby carrots lengthwise into sticks (not coins), and skip Harvest Snaps under 3. The crunchy pea shape is a choking hazard for very young kids. Age-safe swaps: soft berries, apple slices, cheese cubes.",
