@@ -2921,7 +2921,7 @@ export const snackBoxes = [
   {
     id: "marbled-stuffed-cheesecake-creami",
     title: "Marbled Stuffed Cheesecake Creami",
-    tagline: "CrumblCreamiCut Ep. 1 — two-freeze marbled chocolate + vanilla protein Creami pint, stuffed with frozen cheesecake frosting + Lily's chips + Teddy Graham finish. 335 cal / 45g protein whole pint.",
+    tagline: "CrumblCreamiCut Week 1, Flavor 1 — two-freeze marbled chocolate + vanilla protein Creami pint, stuffed with frozen cheesecake frosting + Lily's chips + Teddy Graham finish. 335 cal / 45g protein whole pint.",
     heroImage: "/images/marbled-stuffed-cheesecake-creami/hero-finished-marbled-stuffed-cheesecake-creami-polished.webp",
     // prepImage — the frozen marbled layers shot (step-04) IS the visual
     // identity of this recipe (the two-freeze technique is the whole story).
@@ -3019,13 +3019,134 @@ export const snackBoxes = [
     macroHonesty: "~335 cal / 45g protein per whole finished pint (single serving). Component breakdown: 1 cup Fairlife 2% (~120 cal / 13g protein) + 1 serving unflavored whey isolate (~110 cal / 25g protein — varies by brand) + 15g Protein Cheesecake Frosting (~30 cal / 3g protein) + 7g Lily's milk chocolate chips (~35 cal / 0.5g protein) + 7g Teddy Grahams (~30 cal / 0.5g protein) + trace from monk fruit + guar gum + salt + cocoa = ~325 cal / 42g protein raw component sum. Rounds to the creator-provided 335 / 45 target — the delta comes from exact whey brand + Fairlife label version. Marked estimated. Verify exact Fairlife / whey isolate / Lily's / Teddy Grahams labels + the linked Protein Cheesecake Frosting macros before publishing as label-verified.",
     seriesInfo: {
       series: "CrumblCreamiCut",
+      week: 1,
+      flavor: 1,
       episode: 1,
-      framing: "Reverse-engineered Crumbl Cookie flavors as high-protein Ninja Creami pints. Each episode takes a viral Crumbl flavor and rebuilds it in ice-cream form using techniques (two-freeze marbling, stuffed mix-ins, textural finishes) that hit the flavor cue without the sugar bomb. Ep. 1 kicks it off with the marbled stuffed cheesecake — the two-freeze marble is the technique that unlocks the whole series.",
+      framing: "Reverse-engineered Crumbl Cookie flavors as high-protein Ninja Creami pints. Batched by week: each Crumbl weekly menu drop = one CrumblCreamiCut week, with multiple flavors reverse-engineered per drop. Techniques vary by flavor — two-freeze marbling, stuffed mix-ins, textural finishes — the goal is to hit the flavor cue without the sugar bomb. Week 1 Flavor 1 is the marbled stuffed cheesecake, the two-freeze marble that unlocks the whole series playbook.",
     },
     mealPrep: {
       storage: "Store the layered pint frozen + level. Keep the reserved vanilla base refrigerated (covered) during the first 24-hour freeze window. Once spun, eat immediately — protein Creami doesn't refreeze cleanly.",
       lasts: "Frozen pint (pre-spin) keeps 1 week. Spun Creami with mix-ins doesn't refreeze well — the texture goes icy. Batch multiple pints if you want a week of dessert; process them one at a time.",
       reheat: "N/A — serve immediately after Mix-In. If you must refreeze leftovers, level the surface first and reprocess only when the frozen top is flat.",
+    },
+  },
+  {
+    id: "caramel-shortbread-creami-with-twix",
+    title: "Caramel Shortbread Creami with Twix",
+    tagline: "CrumblCreamiCut Week 1, Flavor 2 — single-freeze protein Creami with brown butter + vanilla base, Lily's chips through Respin (not Mix-In), zero-cal salted caramel drizzle, and chopped Twix pieces for the shortbread crunch. 350 cal / 42g protein whole pint.",
+    heroImage: "/images/caramel-shortbread-creami-with-twix/hero-finished-caramel-shortbread-creami.webp",
+    // prepImage — first-spin texture shot IS the technique identity of this
+    // recipe (the counter-rest + Respin shortcut replaces the warm-water pass
+    // and Mix-In cycle from Ep. 1 W1F1). Showing the first-spin texture is the
+    // visual proof the shortcut works.
+    prepImage: "/images/caramel-shortbread-creami-with-twix/step-03-first-spin.webp",
+    // socialImages — raw paths for now; swap to -polished.webp after Path A.
+    // Step-execution order per [feedback-social-images-step-order]: blend base
+    // → frozen pint → first spin → add Lily's → caramel drizzle → add Twix.
+    // Build-to-payoff at tail (Twix reveal). Hero deliberately NOT in
+    // socialImages (no self-duplication). Brand-context bottles + macro card
+    // slot from the handoff NOT in the carousel per polish-scope + no-brand-
+    // reveal rules. Site doesn't render text-only macro cards.
+    socialImages: [
+      "/images/caramel-shortbread-creami-with-twix/step-01-blend-base.webp",
+      "/images/caramel-shortbread-creami-with-twix/step-02-frozen-base.webp",
+      "/images/caramel-shortbread-creami-with-twix/step-03-first-spin.webp",
+      "/images/caramel-shortbread-creami-with-twix/step-04-add-lilys.webp",
+      "/images/caramel-shortbread-creami-with-twix/step-05-caramel-drizzle.webp",
+      "/images/caramel-shortbread-creami-with-twix/step-06-add-twix.webp",
+    ],
+    flavorProfile: "Brown-butter shortbread + vanilla ice cream, milk-chocolate chip pockets from Lily's, glossy zero-cal salted caramel drizzle on top, chopped Twix pieces for the shortbread crunch and caramel bite. Reads like a Crumbl Twix cookie melted into a whole ice-cream pint.",
+    calories: 350,
+    caloriesPerServing: 350,
+    protein: 42,
+    proteinPerServing: 42,
+    servings: 1,
+    time: "10 min active + 24 hr freeze + 5 min counter rest",
+    bestFor: [
+      "Dessert",
+      "High-protein dessert",
+      "Power-Ups",
+      "Ninja Creami",
+      "Crumbl-inspired",
+      "Whole-pint dessert",
+      "Make-ahead",
+    ],
+    useThisWhen: "You want a caramel-shortbread protein dessert with less technique commitment than the W1F1 marble. Single 24-hour freeze, one machine cycle + Respin, Twix does the shortbread heavy lifting. Ep. 2 of CrumblCreamiCut and the standard-base variation the rest of the series will remix.",
+    priorEpisode: "/cookbook/marbled-stuffed-cheesecake-creami",
+    flavorTarget: "First scoop: brown-butter vanilla base with visible chocolate-chip pockets. Middle: chewy caramel drizzle threading through. Top: crunchy Twix pieces landing like cookie chunks. Reads indulgent, hits at 350 cal / 42g protein.",
+    splitNote: {
+      adult: "Full recipe as written — whole pint = 1 adult serving at 350 cal / 42g protein.",
+      kid: "Same base works for kids as a smaller portion. Skip the caramel drizzle for younger kids (sugar alcohols in most zero-cal caramels can hit stomachs hard) — Twix pieces alone are plenty. Cut Twix small for under-4s per safety pattern from prior recipes.",
+    },
+    ingredients: [
+      "--- CREAMI BASE ---",
+      "1 cup Fairlife 2% ultra-filtered milk",
+      "2 tbsp monk fruit / erythritol sweetener",
+      "1 serving unflavored whey isolate (~28g protein — adjust by brand)",
+      "1/8 tsp guar gum (level measure)",
+      "1 pinch salt",
+      "--- FLAVOR ADD-INS ---",
+      "1 tsp LorAnn Brown Butter Bakery Emulsion",
+      "1 tsp vanilla extract",
+      "--- MIX-IN (added after Regular Ice Cream cycle) ---",
+      "7g Lily's milk-chocolate-style baking chips",
+      "--- FINISH (added after Respin) ---",
+      "Skinny Syrups Sugar Free Salted Caramel (drizzle to taste — 0 cal / 0 sugar)",
+      "~75 cal Twix pieces (~15g / roughly 1/2 fun-size bar), chopped",
+    ],
+    steps: [
+      { text: "BLEND BASE: Combine Fairlife 2% milk + monk fruit + whey isolate + guar gum + salt in the Creami pint or a blending vessel. Immersion blender until completely smooth. Zero lumps.", image: "/images/caramel-shortbread-creami-with-twix/step-01-blend-base.webp" },
+      { text: "ADD FLAVOR: Add 1 tsp LorAnn brown-butter emulsion + 1 tsp vanilla. Blend again just until evenly incorporated — don't overmix.", image: "/images/caramel-shortbread-creami-with-twix/step-01-blend-base.webp" },
+      { text: "FREEZE (24 HR): Pour into a Creami pint without exceeding the max-fill line. Freeze upright on a level surface for a full 24 hours.", image: "/images/caramel-shortbread-creami-with-twix/step-02-frozen-base.webp" },
+      { text: "REST + SPIN: Pull pint from freezer, rest at ROOM TEMPERATURE for 5 minutes (no warm-water step for this one). Process on Regular Ice Cream, NOT Lite. If it comes out powdery, that's expected — the Respin fixes it.", image: "/images/caramel-shortbread-creami-with-twix/step-03-first-spin.webp" },
+      { text: "ADD LILY'S + RESPIN: Make a narrow center well in the spun ice cream. Drop in 7g Lily's chips. Run RESPIN (not Mix-In) — this is the creator's preferred shortcut after the counter rest.", image: "/images/caramel-shortbread-creami-with-twix/step-04-add-lilys.webp" },
+      { text: "CARAMEL DRIZZLE: Scoop into a bowl. Drizzle Skinny Syrups Sugar Free Salted Caramel over the top to taste. Zero cal, zero sugar — go heavy without wrecking macros.", image: "/images/caramel-shortbread-creami-with-twix/step-05-caramel-drizzle.webp" },
+      { text: "FINISH WITH TWIX: Chop ~15g Twix pieces (~75 cal, roughly 1/2 a fun-size bar). Sprinkle over the top AFTER caramel drizzle so the shortbread stays crunchy. Eat immediately.", image: "/images/caramel-shortbread-creami-with-twix/step-06-add-twix.webp" },
+    ],
+    executionRules: [
+      "Use Fairlife 2%, not fat-free. The small amount of fat = creamier texture. Ep. 1 W1F1 rule carries.",
+      "Level 1/8 tsp guar gum. Heaped = gummy texture.",
+      "Freeze the pint upright and level for the full 24 hours. No shortcuts.",
+      "Rest 5 minutes at ROOM TEMPERATURE — this version does NOT use a warm-water pass. Different from W1F1.",
+      "Regular Ice Cream cycle, NOT Lite. Lite hits a different texture profile.",
+      "Lily's chips go in a NARROW center well so Respin distributes them through the pint (not just the top).",
+      "RESPIN, not Mix-In. This is intentionally different from a standard mix-in cycle — creator's preferred shortcut for standard-base Creamis in this series.",
+      "Add Twix ONLY AFTER all machine processing. Running Twix through Respin turns the shortbread to paste.",
+    ],
+    troubleshooting: [
+      { problem: "Powdery after first spin", fix: "Expected — proceed with the planned Respin after adding the Lily's chips. The Respin is what finishes the texture." },
+      { problem: "Too soft after Respin", fix: "Room-temp rest was too long. Shorten to 3-4 minutes next time (5 min is the max for a well-frozen pint)." },
+      { problem: "Too icy", fix: "Verify Fairlife 2% (not fat-free), measure guar gum accurately (level 1/8 tsp), and confirm the full 24-hour freeze happened on a level surface." },
+      { problem: "Gummy texture", fix: "Guar gum was heaped. Use a LEVEL 1/8 tsp. Also check whey isolate brand — some are grittier than others." },
+      { problem: "Chips collect near the bottom", fix: "Cut a NARROWER, DEEPER center well before Respin. Shallow additions sink." },
+      { problem: "Twix loses its crunch", fix: "You added it before Respin or too far ahead of eating. Add only after all machine cycles + immediately before serving." },
+    ],
+    substitutions: [
+      { insteadOf: "LorAnn Brown Butter Bakery Emulsion", use: "Real brown butter (cool completely) or a mix of vanilla + butter extract", note: "LorAnn is the shortcut — the actual brown-butter emulsion carries the shortbread flavor cue without adding calories. Real brown butter works but bumps fat + calories." },
+      { insteadOf: "Skinny Syrups Sugar Free Salted Caramel", use: "ChocZero Sea Salt Caramel Syrup or Jordan's Skinny Mixes Salted Caramel", note: "Any zero-cal salted caramel syrup works. ChocZero is thicker (more of a drizzle vibe), Jordan's is thinner (more syrup-like). Skinny Syrups is the middle ground." },
+      { insteadOf: "Twix pieces", use: "Any protein cookie chunks, crushed graham crackers, or shortbread crumble (~75 cal worth)", note: "Twix is the flavor cue for the Crumbl caramel-shortbread cookie. Sub is fine if you want to skip candy — aim for the same 75-calorie budget." },
+      { insteadOf: "Lily's chips", use: "Any sugar-free chocolate chip (ChocZero, Lakanto)", note: "Lily's is the standard low-cal chip. Any sugar-free version works — check the label for ~50 cal per 14 chips." },
+    ],
+    brands: [
+      { name: "Fairlife", item: "2% Ultra-Filtered Milk", why: "Same base as W1F1 — high-protein milk with enough fat to support a creamier Creami texture. The 1 cup + 1 serving whey isolate combo is the standard base the whole CrumblCreamiCut series uses.", image: "/images/marbled-stuffed-cheesecake-creami/context-fairlife-2-percent.webp", url: "https://fairlife.com/ultra-filtered-milk/2-percent-reduced-fat-milk/" },
+      { name: "LorAnn", item: "Brown Butter Bakery Emulsion", why: "The shortcut that carries the brown-butter shortbread flavor cue in the base without adding calories. Emulsion (not extract) means the flavor holds through freezing.", url: "https://www.lorannoils.com/brown-butter-bakery-emulsion" },
+      { name: "Lily's", item: "Milk Chocolate Style Baking Chips (~50 cal / 1g protein per 14 chips)", why: "Adds small milk-chocolate pockets without wrecking the whole-pint macro target. Stevia-sweetened, no sugar spike. Same chip Ep. 1 W1F1 used.", image: "/images/marbled-stuffed-cheesecake-creami/context-lilys-milk-chocolate-chips.webp", url: "https://lilys.com/products/milk-chocolate-baking-chips" },
+      { name: "Skinny Syrups", item: "Sugar Free Salted Caramel Syrup (0 cal / 0 sugar / 0 carbs)", why: "Zero-calorie drizzle carries the caramel flavor cue without touching the macro target. Naturally sweetened, keto-friendly. Best-selling flavor in the Skinny Mixes lineup.", image: "/images/caramel-shortbread-creami-with-twix/context-skinny-syrups-salted-caramel.webp", url: "https://www.skinnymixes.com/products/sugar-free-salted-caramel-syrup" },
+      { name: "Twix", item: "Fun-size or regular bars (~75 cal / ~15g per portion)", why: "The Crumbl Twix-cookie inspiration is right there in the ingredient. Twix supplies chocolate + caramel + shortbread in one add-in — 3 flavor cues from one 75-cal budget. Added AFTER Respin to keep the shortbread crunchy.", url: "https://www.twix.com/" },
+    ],
+    macroHonesty: "~350 cal / 42g protein per whole finished pint (single serving). Component breakdown: 1 cup Fairlife 2% (~120 cal / 13g protein) + 1 serving unflavored whey isolate (~110 cal / 25g protein — varies by brand) + 7g Lily's milk chocolate chips (~35 cal / 0.5g protein) + ~15g Twix (~75 cal / ~1g protein) + trace from monk fruit + guar gum + LorAnn emulsion + vanilla + salt + zero-cal Skinny Syrups caramel = ~340 cal / 40g protein raw component sum. Rounds to the creator-provided 350 / 42 target — the delta comes from exact whey brand + Twix portion weight. Marked estimated. Verify exact Fairlife / whey isolate / Lily's / Twix labels + Skinny Syrups caramel (should be 0 cal per drizzle serving) before publishing as label-verified.",
+    seriesInfo: {
+      series: "CrumblCreamiCut",
+      week: 1,
+      flavor: 2,
+      episode: 2,
+      priorEpisode: "/cookbook/marbled-stuffed-cheesecake-creami",
+      framing: "CrumblCreamiCut Week 1's second flavor — the standard-base variation. Where W1F1 (Marbled Stuffed Cheesecake) used a two-freeze marble technique to unlock the series, W1F2 uses the standard single-freeze base with a flavor + finish twist. Same 1 cup Fairlife + whey + guar gum + salt foundation, then brown-butter emulsion + vanilla in the base, Lily's chips via Respin (not Mix-In), Skinny Syrups caramel drizzle, chopped Twix on top. This is the template the rest of the series will remix.",
+    },
+    mealPrep: {
+      storage: "Store the frozen pint upright and level in the freezer for up to 1 week pre-spin. Once spun + drizzled + topped, eat immediately — protein Creami doesn't refreeze cleanly with mix-ins.",
+      lasts: "Frozen pint (pre-spin) keeps 1 week. Spun Creami with drizzle + Twix doesn't refreeze well — the caramel goes tacky and Twix loses its crunch. Batch multiple pints if you want a week of dessert; process them one at a time.",
+      reheat: "N/A — serve immediately after Respin + finish. If leftovers must refreeze, level the surface first, skip the Twix, and reprocess only when the frozen top is flat.",
     },
   },
 ];
