@@ -2918,4 +2918,114 @@ export const snackBoxes = [
       reheat: "Don't — serve chilled. The cold ranch dip is the whole texture play.",
     },
   },
+  {
+    id: "marbled-stuffed-cheesecake-creami",
+    title: "Marbled Stuffed Cheesecake Creami",
+    tagline: "CrumblCreamiCut Ep. 1 — two-freeze marbled chocolate + vanilla protein Creami pint, stuffed with frozen cheesecake frosting + Lily's chips + Teddy Graham finish. 335 cal / 45g protein whole pint.",
+    heroImage: "/images/marbled-stuffed-cheesecake-creami/hero-finished-marbled-stuffed-cheesecake-creami.webp",
+    // prepImage — the frozen marbled layers shot (step-04) IS the visual
+    // identity of this recipe (the two-freeze technique is the whole story).
+    // Matches the Ep. 3 Berry Power-Up theme-signature prepImage pattern.
+    prepImage: "/images/marbled-stuffed-cheesecake-creami/step-04-frozen-marbled-layers.webp",
+    // socialImages — raw paths for now; swap to -polished.webp after Path A.
+    // Step-execution order per [feedback-social-images-step-order]: blend
+    // base → chocolate layer → vanilla layer → frozen marbled layers (the
+    // technique reveal) → frozen frosting chop → mix-in stuffing. 6 entries.
+    // Hero deliberately NOT in socialImages (no self-duplication with
+    // recipe.image). Three brand-context reveals (Fairlife / Lily's / Teddy
+    // Grahams) NOT in the carousel per no-brand-reveal rule.
+    socialImages: [
+      "/images/marbled-stuffed-cheesecake-creami/step-01-blend-base.webp",
+      "/images/marbled-stuffed-cheesecake-creami/step-02-add-black-cocoa.webp",
+      "/images/marbled-stuffed-cheesecake-creami/step-03-add-vanilla-layer.webp",
+      "/images/marbled-stuffed-cheesecake-creami/step-04-frozen-marbled-layers.webp",
+      "/images/marbled-stuffed-cheesecake-creami/step-05-chop-cheesecake-frosting.webp",
+      "/images/marbled-stuffed-cheesecake-creami/step-06-add-mix-ins.webp",
+    ],
+    flavorProfile: "Chocolate + vanilla cheesecake marble with milk-chocolate pockets, soft frozen cheesecake-frosting bites, and crisp graham-cracker crust finish. Reads like a stuffed Crumbl cookie in ice cream form.",
+    calories: 335,
+    caloriesPerServing: 335,
+    protein: 45,
+    proteinPerServing: 45,
+    servings: 1,
+    time: "15 min active + 48 hr freeze (2 × 24 hr layers)",
+    bestFor: [
+      "Dessert",
+      "High-protein dessert",
+      "Power-Ups",
+      "Ninja Creami",
+      "Crumbl-inspired",
+      "Whole-pint dessert",
+      "Make-ahead",
+    ],
+    useThisWhen: "You want a visually distinct whole-pint protein dessert and can plan for two separate 24-hour freezes. This is a Ninja Creami technique showcase — the marble comes from two freezes, not from swirling. Ep. 1 of the CrumblCreamiCut series: reverse-engineered Crumbl flavors as Creami pints.",
+    flavorTarget: "First scoop: chocolate and vanilla in the same bite, visibly marbled. Middle: soft frozen cheesecake-frosting pocket + a milk-chocolate chip. Top: crisp Teddy Graham crumble that hits like a cheesecake crust. Reads indulgent, hits at 335 cal / 45g protein.",
+    splitNote: {
+      adult: "Full recipe as written — whole pint = 1 adult serving at 335 cal / 45g protein.",
+      kid: "Same base works for kids. Skip the two-freeze technique and do a single-color pint (just chocolate or just vanilla) with the same mix-ins for simplicity — kids don't care about marbling, they care about the graham crunch.",
+    },
+    ingredients: [
+      "--- CREAMI BASE (blended, then split for two-freeze marble) ---",
+      "1 cup Fairlife 2% ultra-filtered milk",
+      "2 tbsp monk fruit / erythritol sweetener",
+      "1 serving unflavored whey isolate (~28g protein — adjust by brand)",
+      "1/8 tsp guar gum (level measure)",
+      "1 pinch salt",
+      "--- CHOCOLATE LAYER ADD-IN ---",
+      "1/2 tbsp black cocoa",
+      "--- STUFFED MIX-INS (added after processing) ---",
+      "15g Protein Cheesecake Frosting (~1/2 serving; freeze firm and chop — cross-recipe /cookbook/protein-cheesecake-frosting)",
+      "7g Lily's milk-chocolate-style baking chips",
+      "--- FINISH (added after Mix-In cycle) ---",
+      "7g Teddy Grahams (crushed)",
+    ],
+    steps: [
+      { text: "BLEND BASE: Combine Fairlife 2% milk + monk fruit + whey isolate + guar gum + salt. Immersion blender until completely smooth. Zero lumps — Creami texture depends on this.", image: "/images/marbled-stuffed-cheesecake-creami/step-01-blend-base.webp" },
+      { text: "SPLIT + CHOCOLATE HALF: Divide the base evenly into two portions. Blend 1/2 tbsp black cocoa into ONE half. Keep the vanilla half in a covered container.", image: "/images/marbled-stuffed-cheesecake-creami/step-02-add-black-cocoa.webp" },
+      { text: "FREEZE #1 (24 HR): Pour the chocolate half into a level Creami pint. Freeze upright for 24 hours. Keep the reserved vanilla half covered + refrigerated during this window.", image: "/images/marbled-stuffed-cheesecake-creami/step-02-add-black-cocoa.webp" },
+      { text: "FREEZE #2 (24 HR): Pour the vanilla half OVER the fully-frozen chocolate layer. Freeze upright for another 24 hours. Two layers, two freezes — this is the marbling technique.", image: "/images/marbled-stuffed-cheesecake-creami/step-03-add-vanilla-layer.webp" },
+      { text: "PREP FROSTING: While the pint finishes freezing, freeze 15g [Protein Cheesecake Frosting](/cookbook/protein-cheesecake-frosting) until firm (~30 min in the freezer). Chop into small mix-in pieces.", image: "/images/marbled-stuffed-cheesecake-creami/step-05-chop-cheesecake-frosting.webp" },
+      { text: "SPIN: Briefly run warm water over the OUTSIDE of the frozen pint to release the layers. Process on Regular Ice Cream (NOT Lite). Use Respin if the first spin comes out powdery.", image: "/images/marbled-stuffed-cheesecake-creami/step-04-frozen-marbled-layers.webp" },
+      { text: "MIX-IN: Make a narrow center well in the spun ice cream. Drop in the chopped frozen frosting pieces + 7g Lily's chips. Run the Mix-In cycle.", image: "/images/marbled-stuffed-cheesecake-creami/step-06-add-mix-ins.webp" },
+      { text: "FINISH + SERVE: Scoop into a bowl. Top with 7g crushed Teddy Grahams — added AFTER all machine cycles so they stay crisp. Eat immediately.", image: "/images/marbled-stuffed-cheesecake-creami/hero-finished-marbled-stuffed-cheesecake-creami.webp" },
+    ],
+    executionRules: [
+      "Freeze each layer for a full 24 hours on a level surface — no shortcuts. The chocolate layer must be SOLID before the vanilla goes on top or they blend instead of marble.",
+      "Keep the reserved vanilla base covered + refrigerated during the first 24-hour freeze. Room-temp separation lets the whey settle.",
+      "Use Regular Ice Cream, not Lite Ice Cream. Lite hits a different texture profile that fights the marbling.",
+      "Level 1/8 tsp guar gum. Heaped = gummy texture.",
+      "A brief warm-water pass on the OUTSIDE of the pint replaces the need for a Respin — do NOT melt the pint through. 15-30 seconds max.",
+      "Add Teddy Grahams ONLY AFTER all machine cycles are complete. Running them through Mix-In turns them into paste.",
+    ],
+    troubleshooting: [
+      { problem: "The layers blend instead of forming a marble", fix: "Freeze the chocolate layer SOLID for the full first 24 hours. If you pour the vanilla on top of a soft chocolate layer, they mix. Keep the pint level in the freezer." },
+      { problem: "The first spin is powdery", fix: "Use Respin. Or brief warm-water pass on the OUTSIDE of the pint before spinning — 15-30 sec." },
+      { problem: "The result is too soft", fix: "Warm-water pass was too long. Only the OUTSIDE of the pint needs to release — you didn't want a full melt." },
+      { problem: "Texture is gummy", fix: "Guar gum was heaped, not level. Use a LEVEL 1/8 tsp. Also check whey isolate brand — some are grittier than others." },
+      { problem: "Mix-ins collect at the bottom", fix: "Cut the frozen frosting smaller and add to a NARROW center well before running Mix-In. Wide + shallow additions sink." },
+      { problem: "Graham topping softens", fix: "You added them before Mix-In. Add ONLY after all machine cycles + immediately before serving." },
+    ],
+    substitutions: [
+      { insteadOf: "Protein Cheesecake Frosting", use: "Cream cheese sweetened with monk fruit + frozen in small pieces", note: "Recalculate macros — the 335 cal / 45g protein total assumes the cookbook frosting version. Cream cheese substitution shifts fat + protein." },
+      { insteadOf: "Black cocoa", use: "Regular unsweetened cocoa (Ghirardelli 100% Dutch-process)", note: "Regular cocoa reads brown-brown instead of chocolate-black — marbling contrast will be softer but flavor stays." },
+      { insteadOf: "Teddy Grahams", use: "Any crushed graham cracker or protein cookie", note: "Aim for 7g finished weight, added after Mix-In." },
+    ],
+    brands: [
+      { name: "Fairlife", item: "2% Ultra-Filtered Milk", why: "Supplies the high-protein milk base with enough fat to support a creamier Creami texture. Fat-free version works but the pint reads thinner. 1 cup + whey isolate = the whole protein + creaminess story.", image: "/images/marbled-stuffed-cheesecake-creami/context-fairlife-2-percent.webp", url: "https://fairlife.com/ultra-filtered-milk/2-percent-reduced-fat-milk/" },
+      { name: "Lily's", item: "Milk Chocolate Style Baking Chips (~50 cal / 1g protein per 14 chips)", why: "Adds small milk-chocolate pockets without wrecking the whole-pint macro target. Sweetened with stevia — no sugar spike, still tastes like real chocolate.", image: "/images/marbled-stuffed-cheesecake-creami/context-lilys-milk-chocolate-chips.webp", url: "https://lilys.com/products/milk-chocolate-baking-chips" },
+      { name: "Teddy Grahams", item: "Honey Graham Snacks (~5 cal / 0.2g protein per teddy — 7g = ~4-5 teddies)", why: "The cheesecake-crust finish. Stays crisp because it's added AFTER all machine cycles. Sub any graham cracker crumble but Teddy Grahams' tiny size = perfect topping shape.", image: "/images/marbled-stuffed-cheesecake-creami/context-teddy-grahams.webp" },
+      { name: "The Split Plate", item: "Protein Cheesecake Frosting (~30 cal / 3g protein per 15g)", why: "Freezes into the stuffed cheesecake mix-in bites. Batch it once and use it here + on the viral dot cake + as a general frosting anywhere.", link: "/cookbook/protein-cheesecake-frosting" },
+    ],
+    macroHonesty: "~335 cal / 45g protein per whole finished pint (single serving). Component breakdown: 1 cup Fairlife 2% (~120 cal / 13g protein) + 1 serving unflavored whey isolate (~110 cal / 25g protein — varies by brand) + 15g Protein Cheesecake Frosting (~30 cal / 3g protein) + 7g Lily's milk chocolate chips (~35 cal / 0.5g protein) + 7g Teddy Grahams (~30 cal / 0.5g protein) + trace from monk fruit + guar gum + salt + cocoa = ~325 cal / 42g protein raw component sum. Rounds to the creator-provided 335 / 45 target — the delta comes from exact whey brand + Fairlife label version. Marked estimated. Verify exact Fairlife / whey isolate / Lily's / Teddy Grahams labels + the linked Protein Cheesecake Frosting macros before publishing as label-verified.",
+    seriesInfo: {
+      series: "CrumblCreamiCut",
+      episode: 1,
+      framing: "Reverse-engineered Crumbl Cookie flavors as high-protein Ninja Creami pints. Each episode takes a viral Crumbl flavor and rebuilds it in ice-cream form using techniques (two-freeze marbling, stuffed mix-ins, textural finishes) that hit the flavor cue without the sugar bomb. Ep. 1 kicks it off with the marbled stuffed cheesecake — the two-freeze marble is the technique that unlocks the whole series.",
+    },
+    mealPrep: {
+      storage: "Store the layered pint frozen + level. Keep the reserved vanilla base refrigerated (covered) during the first 24-hour freeze window. Once spun, eat immediately — protein Creami doesn't refreeze cleanly.",
+      lasts: "Frozen pint (pre-spin) keeps 1 week. Spun Creami with mix-ins doesn't refreeze well — the texture goes icy. Batch multiple pints if you want a week of dessert; process them one at a time.",
+      reheat: "N/A — serve immediately after Mix-In. If you must refreeze leftovers, level the surface first and reprocess only when the frozen top is flat.",
+    },
+  },
 ];
