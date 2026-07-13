@@ -2922,11 +2922,11 @@ export const snackBoxes = [
     id: "marbled-stuffed-cheesecake-creami",
     title: "Marbled Stuffed Cheesecake Creami",
     tagline: "CrumblCreamiCut Ep. 1 — two-freeze marbled chocolate + vanilla protein Creami pint, stuffed with frozen cheesecake frosting + Lily's chips + Teddy Graham finish. 335 cal / 45g protein whole pint.",
-    heroImage: "/images/marbled-stuffed-cheesecake-creami/hero-finished-marbled-stuffed-cheesecake-creami.webp",
+    heroImage: "/images/marbled-stuffed-cheesecake-creami/hero-finished-marbled-stuffed-cheesecake-creami-polished.webp",
     // prepImage — the frozen marbled layers shot (step-04) IS the visual
     // identity of this recipe (the two-freeze technique is the whole story).
     // Matches the Ep. 3 Berry Power-Up theme-signature prepImage pattern.
-    prepImage: "/images/marbled-stuffed-cheesecake-creami/step-04-frozen-marbled-layers.webp",
+    prepImage: "/images/marbled-stuffed-cheesecake-creami/step-04-frozen-marbled-layers-polished.webp",
     // socialImages — raw paths for now; swap to -polished.webp after Path A.
     // Step-execution order per [feedback-social-images-step-order]: blend
     // base → chocolate layer → vanilla layer → frozen marbled layers (the
@@ -2935,12 +2935,12 @@ export const snackBoxes = [
     // recipe.image). Three brand-context reveals (Fairlife / Lily's / Teddy
     // Grahams) NOT in the carousel per no-brand-reveal rule.
     socialImages: [
-      "/images/marbled-stuffed-cheesecake-creami/step-01-blend-base.webp",
-      "/images/marbled-stuffed-cheesecake-creami/step-02-add-black-cocoa.webp",
-      "/images/marbled-stuffed-cheesecake-creami/step-03-add-vanilla-layer.webp",
-      "/images/marbled-stuffed-cheesecake-creami/step-04-frozen-marbled-layers.webp",
-      "/images/marbled-stuffed-cheesecake-creami/step-05-chop-cheesecake-frosting.webp",
-      "/images/marbled-stuffed-cheesecake-creami/step-06-add-mix-ins.webp",
+      "/images/marbled-stuffed-cheesecake-creami/step-01-blend-base-polished.webp",
+      "/images/marbled-stuffed-cheesecake-creami/step-02-add-black-cocoa-polished.webp",
+      "/images/marbled-stuffed-cheesecake-creami/step-03-add-vanilla-layer-polished.webp",
+      "/images/marbled-stuffed-cheesecake-creami/step-04-frozen-marbled-layers-polished.webp",
+      "/images/marbled-stuffed-cheesecake-creami/step-05-chop-cheesecake-frosting-polished.webp",
+      "/images/marbled-stuffed-cheesecake-creami/step-06-add-mix-ins-polished.webp",
     ],
     flavorProfile: "Chocolate + vanilla cheesecake marble with milk-chocolate pockets, soft frozen cheesecake-frosting bites, and crisp graham-cracker crust finish. Reads like a stuffed Crumbl cookie in ice cream form.",
     calories: 335,
@@ -2980,14 +2980,14 @@ export const snackBoxes = [
       "7g Teddy Grahams (crushed)",
     ],
     steps: [
-      { text: "BLEND BASE: Combine Fairlife 2% milk + monk fruit + whey isolate + guar gum + salt. Immersion blender until completely smooth. Zero lumps — Creami texture depends on this.", image: "/images/marbled-stuffed-cheesecake-creami/step-01-blend-base.webp" },
-      { text: "SPLIT + CHOCOLATE HALF: Divide the base evenly into two portions. Blend 1/2 tbsp black cocoa into ONE half. Keep the vanilla half in a covered container.", image: "/images/marbled-stuffed-cheesecake-creami/step-02-add-black-cocoa.webp" },
-      { text: "FREEZE #1 (24 HR): Pour the chocolate half into a level Creami pint. Freeze upright for 24 hours. Keep the reserved vanilla half covered + refrigerated during this window.", image: "/images/marbled-stuffed-cheesecake-creami/step-02-add-black-cocoa.webp" },
-      { text: "FREEZE #2 (24 HR): Pour the vanilla half OVER the fully-frozen chocolate layer. Freeze upright for another 24 hours. Two layers, two freezes — this is the marbling technique.", image: "/images/marbled-stuffed-cheesecake-creami/step-03-add-vanilla-layer.webp" },
-      { text: "PREP FROSTING: While the pint finishes freezing, freeze 15g [Protein Cheesecake Frosting](/cookbook/protein-cheesecake-frosting) until firm (~30 min in the freezer). Chop into small mix-in pieces.", image: "/images/marbled-stuffed-cheesecake-creami/step-05-chop-cheesecake-frosting.webp" },
-      { text: "SPIN: Briefly run warm water over the OUTSIDE of the frozen pint to release the layers. Process on Regular Ice Cream (NOT Lite). Use Respin if the first spin comes out powdery.", image: "/images/marbled-stuffed-cheesecake-creami/step-04-frozen-marbled-layers.webp" },
-      { text: "MIX-IN: Make a narrow center well in the spun ice cream. Drop in the chopped frozen frosting pieces + 7g Lily's chips. Run the Mix-In cycle.", image: "/images/marbled-stuffed-cheesecake-creami/step-06-add-mix-ins.webp" },
-      { text: "FINISH + SERVE: Scoop into a bowl. Top with 7g crushed Teddy Grahams — added AFTER all machine cycles so they stay crisp. Eat immediately.", image: "/images/marbled-stuffed-cheesecake-creami/hero-finished-marbled-stuffed-cheesecake-creami.webp" },
+      { text: "BLEND BASE: Combine Fairlife 2% milk + monk fruit + whey isolate + guar gum + salt. Immersion blender until completely smooth. Zero lumps — Creami texture depends on this.", image: "/images/marbled-stuffed-cheesecake-creami/step-01-blend-base-polished.webp" },
+      { text: "SPLIT + CHOCOLATE HALF: Divide the base evenly into two portions. Blend 1/2 tbsp black cocoa into ONE half. Keep the vanilla half in a covered container.", image: "/images/marbled-stuffed-cheesecake-creami/step-02-add-black-cocoa-polished.webp" },
+      { text: "FREEZE #1 (24 HR): Pour the chocolate half into a level Creami pint. Freeze upright for 24 hours. Keep the reserved vanilla half covered + refrigerated during this window.", image: "/images/marbled-stuffed-cheesecake-creami/step-02-add-black-cocoa-polished.webp" },
+      { text: "FREEZE #2 (24 HR): Pour the vanilla half OVER the fully-frozen chocolate layer. Freeze upright for another 24 hours. Two layers, two freezes — this is the marbling technique.", image: "/images/marbled-stuffed-cheesecake-creami/step-03-add-vanilla-layer-polished.webp" },
+      { text: "PREP FROSTING: While the pint finishes freezing, freeze 15g [Protein Cheesecake Frosting](/cookbook/protein-cheesecake-frosting) until firm (~30 min in the freezer). Chop into small mix-in pieces.", image: "/images/marbled-stuffed-cheesecake-creami/step-05-chop-cheesecake-frosting-polished.webp" },
+      { text: "SPIN: Briefly run warm water over the OUTSIDE of the frozen pint to release the layers. Process on Regular Ice Cream (NOT Lite). Use Respin if the first spin comes out powdery.", image: "/images/marbled-stuffed-cheesecake-creami/step-04-frozen-marbled-layers-polished.webp" },
+      { text: "MIX-IN: Make a narrow center well in the spun ice cream. Drop in the chopped frozen frosting pieces + 7g Lily's chips. Run the Mix-In cycle.", image: "/images/marbled-stuffed-cheesecake-creami/step-06-add-mix-ins-polished.webp" },
+      { text: "FINISH + SERVE: Scoop into a bowl. Top with 7g crushed Teddy Grahams — added AFTER all machine cycles so they stay crisp. Eat immediately.", image: "/images/marbled-stuffed-cheesecake-creami/hero-finished-marbled-stuffed-cheesecake-creami-polished.webp" },
     ],
     executionRules: [
       "Freeze each layer for a full 24 hours on a level surface — no shortcuts. The chocolate layer must be SOLID before the vanilla goes on top or they blend instead of marble.",
