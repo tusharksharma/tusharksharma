@@ -211,6 +211,16 @@ const WEEKS = {
       { day: "Friday", label: "Chops Night", vibe: "Herb-marinated pork chops + Parmesan Corn Chex snap peas + Cowboy Butter drizzle — restaurant-grade weeknight", id: 39, time: "30 min", reheats: true, adult: "Sliced chop + crusted snap peas + Cowboy Butter (herb-folded)", kid: "Diced chop + same snap peas + plain Cowboy Butter in dip well (3-compartment tray)", needs: ["Boneless pork loin chops", "Fresh rosemary", "Fresh thyme", "Garlic", "Kikkoman soy", "Lea & Perrins Worcestershire", "Smash Kitchen Dijon", "Smoked paprika", "Chili flakes", "Lemon", "Snap peas", "Kirkland Parmigiano Stravecchio", "Corn Chex", "Laughing Cow Light", "Kirkland bone broth", "Kirkland butter", "Fresh parsley", "Fresh chives"], carbLevel: "low" },
     ],
   },
+  21: {
+    label: "Week 21",
+    description: "Busy-day emergency dinner Monday (adult Carb Counter tacos / kid Wholly Guac + regular tortillas), Halal Cart chicken bowls Wednesday, Carnitas Taco Plates Friday. Beef / chicken / pork + low / low / medium.",
+    subtitle: "Busy-Day Taco Plates, Halal Cart Bowls, Carnitas Tacos",
+    cookDays: [
+      { day: "Monday", label: "Emergency Dinner", vibe: "10 min — Soules Kitchen family pack + 1/4 cup broth reheat = adult Carb Counter tacos with salsa roja + Khloud chips (420 cal / 40g protein) / kid regular tortillas + Wholly Guac + regular chips (deconstructed). One skillet, zero prep, cheaper than DoorDash.", id: 50, time: "10 min", reheats: true, adult: "3 La Banderita Carb Counter tacos + salsa roja + 1/2 serving Khloud protein chips", kid: "2 Mission regular tortillas + Wholly Guacamole mini + 1/2 serving regular chips (deconstructed tray)", needs: ["Soules Kitchen Street Taco Steak family pack (22 oz)", "La Banderita Carb Counter Street Taco tortillas (6)", "Mission regular Street Taco flour tortillas (4)", "Wholly Guacamole minis (2)", "Khloud Nacho Protein Chips (1 serving)", "Regular tortilla chips (1 serving)", "Chicken bone broth (1/4 cup)"], carbLevel: "low" },
+      { day: "Wednesday", label: "Halal Cart Night", vibe: "40 min — yellow rice + shawarma chicken, adult bowl + kid compartment tray, white sauce + hot sauce split", id: 44, time: "40 min", reheats: true, adult: "Yellow rice bowl + shawarma chicken + white sauce + hot sauce", kid: "Deconstructed compartment tray + white sauce dip only", needs: ["Chicken thighs", "Basmati rice", "Turmeric", "White sauce base"], carbLevel: "low" },
+      { day: "Friday", label: "Carnitas Night", vibe: "Carnitas taco plate — pork shoulder shredded + salsa verde + kid mild build", id: 42, time: "30 min", reheats: true, adult: "Carnitas + salsa verde + Carb Counter tortillas", kid: "Carnitas + plain tortillas + mild sauce", needs: ["Pork shoulder or Trader Joe's carnitas", "Salsa verde", "Tortillas"], carbLevel: "medium" },
+    ],
+  },
 };
 
 function getLeftoverMsg(hasLeftovers) {

@@ -848,6 +848,38 @@ const GROCERY_BY_WEEK = {
       { name: "Chicken bone broth (Kirkland)", baseQty: 1, unit: "container", meal: "Fri" },
     ],
   },
+  // Week 21: Mon=Busy-Day Steak Taco Plates(50), Wed=Halal Cart(44), Fri=Carnitas Taco Plate(42)
+  21: {
+    "Protein": [
+      { name: "Soules Kitchen Street Taco Steak family pack (22 oz)", baseQty: 1, unit: "pack", meal: "Mon" },
+      { name: "Chicken thighs", baseQty: 1, unit: "pack", meal: "Wed" },
+      { name: "Pork shoulder or Trader Joe's carnitas", baseQty: 1, unit: "pack", meal: "Fri" },
+    ],
+    "Carbs": [
+      { name: "La Banderita Carb Counter Street Taco tortillas (adult)", baseQty: 6, unit: "tortillas", meal: "Mon adult" },
+      { name: "Mission regular Street Taco flour tortillas (kid)", baseQty: 4, unit: "tortillas", meal: "Mon kid" },
+      { name: "Basmati rice", baseQty: 1, unit: "bag", meal: "Wed" },
+      { name: "Carb Counter or regular tortillas (Fri)", baseQty: 8, unit: "tortillas", meal: "Fri" },
+    ],
+    "Chips + Snacks": [
+      { name: "Khloud Nacho Protein Chips (adult)", baseQty: 1, unit: "bag", meal: "Mon adult" },
+      { name: "Regular tortilla chips (kid + Fri)", baseQty: 1, unit: "bag", meal: "Mon kid" },
+    ],
+    "Sauces": [
+      { name: "Wholly Guacamole minis (kid)", baseQty: 2, unit: "packs", meal: "Mon kid" },
+      { name: "Salsa verde", baseQty: 1, unit: "jar", meal: "Fri" },
+      { name: "White sauce base ingredients (yogurt / mayo / garlic)", qty: "pantry", meal: "Wed" },
+      { name: "Hot sauce", qty: "pantry", meal: "Wed adult" },
+    ],
+    "Spice + Aromatic": [
+      { name: "Turmeric", qty: "pantry", meal: "Wed" },
+      { name: "Garlic", baseQty: 1, unit: "head", meal: "Wed" },
+      { name: "Salt", qty: "pantry", meal: "Mon" },
+    ],
+    "Broth": [
+      { name: "Chicken bone broth (Kirkland) — Mon reheat + Wed rice", baseQty: 1, unit: "container", meal: "Mon" },
+    ],
+  },
 };
 
 function getGrocery(week) { return GROCERY_BY_WEEK[week] || GROCERY_BY_WEEK[1]; }
