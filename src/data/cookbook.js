@@ -2835,7 +2835,7 @@ export const bases = [
     id: "hot-dog-chili-base",
     title: "Hot Dog Chili Base",
     tagline: "12-serving no-bean beef chili — thick enough to stay on a hot dog. One cook covers a chili dog dinner plus a later chili mac / baked-potato / fries night.",
-    heroImage: "/images/chili-hot-dogs/component-hot-dog-chili-base.webp",
+    heroImage: "/images/chili-hot-dogs/component-hot-dog-chili-base-polished.webp",
     flavorProfile: "Smoky beef-forward chili, tangy Dijon + Worcestershire, deep tomato-paste umami, bone-broth body. No beans. Thick enough to cling to a bun.",
     calories: 2100,
     caloriesPerServing: 175,
@@ -2878,12 +2878,12 @@ export const bases = [
     },
     steps: [
       { text: "BROWN THE BEEF: Add 2 lb 93/7 ground beef to a wide hot pan and break into small crumbles as it browns.", image: "/images/chili-hot-dogs/step-01-brown-beef.webp" },
-      { text: "SEASON: 3 tbsp Spiceology Beef-Infused BBQ Rub. Or, if using the alternative, add 2 tsp each of paprika, garlic powder, onion powder, and salt. Stir to coat.", image: "/images/chili-hot-dogs/step-02-season-beef.webp" },
+      { text: "SEASON: 3 tbsp Spiceology Beef-Infused BBQ Rub. Or, if using the alternative, add 2 tsp each of paprika, garlic powder, onion powder, and salt. Stir to coat.", image: "/images/chili-hot-dogs/step-02-season-beef-polished.webp" },
       { text: "DIJON + WORCESTERSHIRE: 1 tbsp Dijon mustard + 1 tbsp Worcestershire sauce. Stir into the beef.", image: "/images/chili-hot-dogs/step-03-add-dijon.webp" },
       { text: "TOMATO PASTE: 6 oz. Stir until the paste coats the beef evenly.", image: "/images/chili-hot-dogs/step-05-add-tomato-paste.webp" },
       { text: "BONE BROTH: 1 cup chicken bone broth. Combine thoroughly.", image: "/images/chili-hot-dogs/step-06-add-bone-broth.webp" },
       { text: "REDUCE: Cook uncovered, stirring occasionally, until the visible liquid is gone and the chili is thick and spoonable. Taste. Add salt only if needed — the rub already carries salt.", image: "/images/chili-hot-dogs/step-07-reduce-chili.webp" },
-      { text: "DIVIDE: 12 equal servings. Use 1 serving per hot dog. Refrigerate or freeze the rest promptly (within 2 hours per USDA leftovers guidance).", image: "/images/chili-hot-dogs/component-hot-dog-chili-base.webp" },
+      { text: "DIVIDE: 12 equal servings. Use 1 serving per hot dog. Refrigerate or freeze the rest promptly (within 2 hours per USDA leftovers guidance).", image: "/images/chili-hot-dogs/component-hot-dog-chili-base-polished.webp" },
     ],
     troubleshooting: [
       { problem: "Chili is soupy / liquid still visible", fix: "Didn't reduce enough. Uncover, medium-high heat, stir until the visible liquid is gone. This is the difference between chili that stays on a dog and chili that soaks a bun." },
