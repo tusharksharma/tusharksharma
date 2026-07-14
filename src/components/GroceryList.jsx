@@ -880,6 +880,50 @@ const GROCERY_BY_WEEK = {
       { name: "Chicken bone broth (Kirkland) — Mon reheat + Wed rice", baseQty: 1, unit: "container", meal: "Mon" },
     ],
   },
+  // Week 22: Mon=Creamy Sausage Spinach Pasta(36), Wed=Tandoori Drumsticks(26), Fri=Chili Hot Dogs(51)
+  22: {
+    "Protein": [
+      { name: "Falls Brand mild Italian sausage (3 lb)", baseQty: 1, unit: "pack", meal: "Mon" },
+      { name: "Chicken drumsticks", baseQty: 1, unit: "pack", meal: "Wed" },
+      { name: "Beef hot dogs (Nathan's / Ball Park Angus / Kirkland uncured)", baseQty: 6, unit: "", meal: "Fri" },
+      { name: "93/7 grass-fed ground beef (chili base)", baseQty: 2, unit: "lb", meal: "Fri" },
+    ],
+    "Carbs": [
+      { name: "Pete's Pasta Rotini (adult)", baseQty: 1, unit: "box", meal: "Mon adult" },
+      { name: "Barilla Mini Penne (kid)", baseQty: 1, unit: "box", meal: "Mon kid" },
+      { name: "Nature's Own Keto Hot Dog Buns (adult)", baseQty: 3, unit: "buns", meal: "Fri adult" },
+      { name: "Ball Park regular hot dog buns (kid)", baseQty: 2, unit: "buns", meal: "Fri kid" },
+    ],
+    "Dairy": [
+      { name: "Rao's Homemade Alfredo", baseQty: 2, unit: "jars", meal: "Mon" },
+      { name: "Full-fat Greek yogurt (tandoori marinade)", baseQty: 1, unit: "container", meal: "Wed" },
+      { name: "Velveeta Original slices (3 slices, half per dog)", baseQty: 1, unit: "pack", meal: "Fri" },
+    ],
+    "Produce": [
+      { name: "Marketside baby spinach", baseQty: 1, unit: "bag", meal: "Mon adult" },
+      { name: "Lemon", baseQty: 2, unit: "lemons", meal: "Wed" },
+      { name: "Cucumber", baseQty: 1, unit: "cucumber", meal: "Wed" },
+      { name: "Red onion (chili dog toppings + tandoori side)", baseQty: 2, unit: "onions", meal: "Wed + Fri adult" },
+      { name: "Banana peppers (sliced, jarred)", baseQty: 1, unit: "jar", meal: "Fri adult" },
+    ],
+    "Sauces": [
+      { name: "Dijon mustard (chili base)", qty: "pantry", meal: "Fri" },
+      { name: "Worcestershire sauce (chili base)", qty: "pantry", meal: "Fri" },
+      { name: "Tomato paste (6 oz, chili base)", baseQty: 1, unit: "container", meal: "Fri" },
+      { name: "Yellow mustard (kid, optional)", qty: "pantry", meal: "Fri kid" },
+    ],
+    "Spice + Aromatic": [
+      { name: "Chili flakes", qty: "pantry", meal: "Mon adult" },
+      { name: "Italian seasoning", qty: "pantry", meal: "Mon adult" },
+      { name: "Shan Tandoori Masala (adult)", baseQty: 1, unit: "packet", meal: "Wed adult" },
+      { name: "Lawry's seasoning (kid tandoori)", qty: "pantry", meal: "Wed kid" },
+      { name: "Spiceology Beef-Infused BBQ Rub (or paprika + garlic powder + onion powder + salt alternative)", qty: "pantry", meal: "Fri" },
+      { name: "Salt", qty: "pantry", meal: "Fri" },
+    ],
+    "Broth": [
+      { name: "Chicken bone broth (Kirkland) — Mon pasta + Fri chili base", baseQty: 1, unit: "container", meal: "Mon + Fri" },
+    ],
+  },
 };
 
 function getGrocery(week) { return GROCERY_BY_WEEK[week] || GROCERY_BY_WEEK[1]; }

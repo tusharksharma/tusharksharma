@@ -221,6 +221,16 @@ const WEEKS = {
       { day: "Friday", label: "Carnitas Night", vibe: "Carnitas taco plate — pork shoulder shredded + salsa verde + kid mild build", id: 42, time: "30 min", reheats: true, adult: "Carnitas + salsa verde + Carb Counter tortillas", kid: "Carnitas + plain tortillas + mild sauce", needs: ["Pork shoulder or Trader Joe's carnitas", "Salsa verde", "Tortillas"], carbLevel: "medium" },
     ],
   },
+  22: {
+    label: "Week 22",
+    description: "Meal-prep pasta Monday (Pete's rotini + Italian sausage + spinach), tandoori drumsticks midweek (marinated overnight, grilled in 30 min), split-plate chili hot dogs Friday with a 12-serving chili base that also anchors a later chili mac / baked-potato night. Pork / chicken / beef + high / none / low.",
+    subtitle: "Creamy Sausage Pasta, Tandoori Drumsticks, Chili Hot Dogs",
+    cookDays: [
+      { day: "Monday", label: "Pasta Meal Prep", vibe: "Cook once, 8 meal-prep containers. Pete's rotini + Italian sausage + spinach for adults; Barilla mini penne + sausage only for kids", id: 36, time: "35 min", reheats: true, adult: "Pete's protein rotini + sausage-Alfredo + spinach + chili flakes + Italian seasoning", kid: "Barilla mini penne + sausage-Alfredo (no spinach, no spice)", needs: ["Falls Brand mild Italian sausage (3 lb)", "Pete's Pasta Rotini", "Barilla Mini Penne", "Rao's Homemade Alfredo (2 jars)", "Marketside baby spinach", "Chicken bone broth", "Chili flakes", "Italian seasoning"], carbLevel: "high" },
+      { day: "Wednesday", label: "Grill Night", vibe: "Tandoori drumsticks — marinated overnight, grilled in 30 min", id: 26, time: "30 min", reheats: true, adult: "Shan tandoori drumsticks, onion salad, cucumber", kid: "Lawry's mild drumstick, cucumber, naan", needs: ["Drumsticks", "Greek yogurt", "Shan Tandoori Masala", "Lawry's", "Lemon"], carbLevel: "none" },
+      { day: "Friday", label: "Chili Dog Night", vibe: "45 min — 6 beef dogs + 12-serving chili base = 2 loaded adult chili dogs on keto buns (510 cal / 58g protein) + 2 deconstructed kid trays on regular buns. Cook once, reserve 6 chili servings for chili mac / baked potatoes later.", id: 51, time: "45 min", reheats: true, adult: "1.5 loaded chili dogs on Nature's Own keto buns + red onion + banana peppers + 1/2 Velveeta slice per dog", kid: "1 deconstructed chili dog on a Ball Park regular bun + 0.5 dog on the side + optional yellow mustard, plated on a divided tray", needs: ["Beef hot dogs (6)", "Nature's Own keto hot dog buns (3 adult)", "Ball Park regular hot dog buns (2 kid)", "Velveeta Original slices (3)", "93/7 grass-fed ground beef (2 lb)", "Spiceology Beef-Infused BBQ Rub (or paprika + garlic powder + onion powder + salt alternative)", "Dijon mustard", "Worcestershire sauce", "Tomato paste (6 oz)", "Chicken bone broth (1 cup)", "Red onion", "Banana peppers", "Yellow mustard (kid, optional)"], carbLevel: "low", chainTo: { slug: "hot-dog-chili-base", title: "Hot Dog Chili Base", note: "This dinner uses 6 of the 12-serving chili base. Save 6 for chili mac, baked potatoes, fries, or another chili dog night." } },
+    ],
+  },
 };
 
 function getLeftoverMsg(hasLeftovers) {
