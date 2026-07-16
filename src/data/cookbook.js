@@ -3412,8 +3412,8 @@ export const snackBoxes = [
     id: "split-plate-vineyard-picnic-snack-box",
     title: "Split Plate Vineyard Picnic Snack Box",
     tagline: "No-cook 4-box snack prep — grapes, sliced beef stick, cubed cheddar, and pistachios. About 280 cal / 19g protein per box. The kids help fill the compartments.",
-    heroImage: "/images/split-plate-vineyard-picnic-snack-box/hero-vineyard-picnic-snack-box.webp",
-    prepImage: "/images/split-plate-vineyard-picnic-snack-box/final-stacked-snack-boxes.webp",
+    heroImage: "/images/split-plate-vineyard-picnic-snack-box/hero-vineyard-picnic-snack-box-polished.webp",
+    prepImage: "/images/split-plate-vineyard-picnic-snack-box/final-stacked-snack-boxes-polished.webp",
     prepImageCaption: "Four boxes at once — make once, snack twice. Refrigerate immediately; best within 2 days.",
     video: "/videos/split-plate-vineyard-picnic-snack-box/split-plate-vineyard-picnic-snack-box-280cal-19protein-marcus-voiceover.mp4",
     // socialImages — 6-cap, step-order per [feedback-social-images-step-order].
@@ -3422,12 +3422,12 @@ export const snackBoxes = [
     // make-once payoff tail. Raw for now; swap to -polished.webp after
     // Path A pass.
     socialImages: [
-      "/images/split-plate-vineyard-picnic-snack-box/step-01-kids-add-grapes.webp",
-      "/images/split-plate-vineyard-picnic-snack-box/step-02-add-grapes.webp",
-      "/images/split-plate-vineyard-picnic-snack-box/step-03-add-beef-stick.webp",
-      "/images/split-plate-vineyard-picnic-snack-box/step-04-add-cheddar.webp",
-      "/images/split-plate-vineyard-picnic-snack-box/step-05-add-pistachios.webp",
-      "/images/split-plate-vineyard-picnic-snack-box/final-stacked-snack-boxes.webp",
+      "/images/split-plate-vineyard-picnic-snack-box/step-01-kids-add-grapes-polished.webp",
+      "/images/split-plate-vineyard-picnic-snack-box/step-02-add-grapes-polished.webp",
+      "/images/split-plate-vineyard-picnic-snack-box/step-03-add-beef-stick-polished.webp",
+      "/images/split-plate-vineyard-picnic-snack-box/step-04-add-cheddar-polished.webp",
+      "/images/split-plate-vineyard-picnic-snack-box/step-05-add-pistachios-polished.webp",
+      "/images/split-plate-vineyard-picnic-snack-box/final-stacked-snack-boxes-polished.webp",
     ],
     flavorProfile: "Sweet grapes + savory beef-stick coins + creamy sharp cheddar cubes + lightly salted pistachios. Reads picnic-plate energy at a kid snack scale — no cook, no assembly weight, ready for a busy afternoon.",
     calories: 280,
@@ -3465,12 +3465,12 @@ export const snackBoxes = [
       "2 label servings pistachios total",
     ],
     steps: [
-      { text: "SET UP: Set out four divided snack boxes (4-compartment Bento-style — same format as Snack Box Series Ep. 1-5). Invite the kids to help with the age-appropriate parts of the assembly.", image: "/images/split-plate-vineyard-picnic-snack-box/step-01-kids-add-grapes.webp" },
-      { text: "GRAPES: Divide 1 small handful of prepared grapes into one compartment of each box. FOR KIDS UNDER 4 — quarter lengthwise (see notes). Over 4 with confident chewing = whole grapes fine, supervise first few bites.", image: "/images/split-plate-vineyard-picnic-snack-box/step-02-add-grapes.webp" },
-      { text: "BEEF STICK: Slice one beef stick per box into coins and divide into the next compartment. Coin slices > whole stick for kids (easier bites, less pressure to chew through a length).", image: "/images/split-plate-vineyard-picnic-snack-box/step-03-add-beef-stick.webp" },
-      { text: "CHEDDAR: Cube one cheddar cheese stick per box and add to the third compartment. Cube size = 1/2-inch or smaller for young kids. Creamy calcium + kid-familiar cheese flavor.", image: "/images/split-plate-vineyard-picnic-snack-box/step-04-add-cheddar.webp" },
-      { text: "PISTACHIOS: Add 1/2 label serving pistachios to the final compartment. FOR KIDS UNDER 4 — omit whole nuts entirely; sub a soft alternative (soft berries, banana slices, apple slices). Over 4 with good chewing = shell-off pistachios only, and supervise first few bites.", image: "/images/split-plate-vineyard-picnic-snack-box/step-05-add-pistachios.webp" },
-      { text: "LID + CHILL: Snap lid on each box. Refrigerate immediately — beef stick + cheddar both need cold storage. For lunchboxes, pack with an ice pack. Add pistachios closer to serving if maximum crunch matters.", image: "/images/split-plate-vineyard-picnic-snack-box/final-stacked-snack-boxes.webp" },
+      { text: "SET UP: Set out four divided snack boxes (4-compartment Bento-style — same format as Snack Box Series Ep. 1-5). Invite the kids to help with the age-appropriate parts of the assembly.", image: "/images/split-plate-vineyard-picnic-snack-box/step-01-kids-add-grapes-polished.webp" },
+      { text: "GRAPES: Divide 1 small handful of prepared grapes into one compartment of each box. FOR KIDS UNDER 4 — quarter lengthwise (see notes). Over 4 with confident chewing = whole grapes fine, supervise first few bites.", image: "/images/split-plate-vineyard-picnic-snack-box/step-02-add-grapes-polished.webp" },
+      { text: "BEEF STICK: Slice one beef stick per box into coins and divide into the next compartment. Coin slices > whole stick for kids (easier bites, less pressure to chew through a length).", image: "/images/split-plate-vineyard-picnic-snack-box/step-03-add-beef-stick-polished.webp" },
+      { text: "CHEDDAR: Cube one cheddar cheese stick per box and add to the third compartment. Cube size = 1/2-inch or smaller for young kids. Creamy calcium + kid-familiar cheese flavor.", image: "/images/split-plate-vineyard-picnic-snack-box/step-04-add-cheddar-polished.webp" },
+      { text: "PISTACHIOS: Add 1/2 label serving pistachios to the final compartment. FOR KIDS UNDER 4 — omit whole nuts entirely; sub a soft alternative (soft berries, banana slices, apple slices). Over 4 with good chewing = shell-off pistachios only, and supervise first few bites.", image: "/images/split-plate-vineyard-picnic-snack-box/step-05-add-pistachios-polished.webp" },
+      { text: "LID + CHILL: Snap lid on each box. Refrigerate immediately — beef stick + cheddar both need cold storage. For lunchboxes, pack with an ice pack. Add pistachios closer to serving if maximum crunch matters.", image: "/images/split-plate-vineyard-picnic-snack-box/final-stacked-snack-boxes-polished.webp" },
     ],
     executionRules: [
       "Prepare grapes to the child's chewing ability BEFORE plating. Under 4 = quarter lengthwise. Never serve whole spherical grapes to very young kids.",
