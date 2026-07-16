@@ -924,6 +924,60 @@ const GROCERY_BY_WEEK = {
       { name: "Chicken bone broth (Kirkland) — Mon pasta + Fri chili base", baseQty: 1, unit: "container", meal: "Mon + Fri" },
     ],
   },
+  // Week 23: Mon=Chicken Pot Pie(46), Wed=Herb-Garlic Pork Chops(39), Fri=Weeknight Picanha(52)
+  23: {
+    "Protein": [
+      { name: "Kirkland chipotle-seasoned cooked chicken (Costco)", baseQty: 18, unit: "oz", meal: "Mon" },
+      { name: "Boneless pork loin chops (6 oz each)", baseQty: 4, unit: "chops", meal: "Wed" },
+      { name: "Picanha steaks", baseQty: 12, unit: "oz", meal: "Fri adult" },
+      { name: "Amylu chicken breakfast patties (fully cooked, kid)", baseQty: 4, unit: "patties", meal: "Fri kid" },
+    ],
+    "Carbs": [
+      { name: "Pepperidge Farm puff pastry (adult + kid same top)", baseQty: 1, unit: "sheet", meal: "Mon" },
+      { name: "Corn Chex (snap-pea crust)", baseQty: 4, unit: "tbsp", meal: "Wed" },
+      { name: "Slider buns (kid, split + toasted)", baseQty: 2, unit: "buns", meal: "Fri kid" },
+    ],
+    "Dairy": [
+      { name: "Egg (puff pastry wash)", baseQty: 1, unit: "", meal: "Mon" },
+      { name: "Kirkland Parmigiano Stravecchio (snap-pea crust)", baseQty: 2, unit: "tbsp", meal: "Wed" },
+      { name: "Laughing Cow Light (Cowboy Butter base)", baseQty: 4, unit: "wedges", meal: "Wed" },
+      { name: "Kirkland butter (Cowboy Butter finish)", qty: "pantry", meal: "Wed" },
+    ],
+    "Produce": [
+      { name: "Mushrooms", baseQty: 4, unit: "oz", meal: "Mon" },
+      { name: "Carrots", baseQty: 4, unit: "oz", meal: "Mon" },
+      { name: "Asparagus", baseQty: 4, unit: "oz", meal: "Mon" },
+      { name: "Snap peas", baseQty: 12, unit: "oz", meal: "Wed" },
+      { name: "Fresh rosemary (pork marinade)", baseQty: 1, unit: "bunch", meal: "Wed" },
+      { name: "Fresh thyme (pork marinade)", baseQty: 1, unit: "bunch", meal: "Wed" },
+      { name: "Fresh parsley (Cowboy Butter adult fold)", baseQty: 1, unit: "bunch", meal: "Wed" },
+      { name: "Fresh chives (Cowboy Butter adult fold)", baseQty: 1, unit: "bunch", meal: "Wed" },
+      { name: "Garlic", qty: "1 head", meal: "Wed" },
+      { name: "Lemon", baseQty: 1, unit: "lemon", meal: "Wed" },
+    ],
+    "Frozen": [
+      { name: "Whole Foods European Greens with Basil & Garlic Sauce", baseQty: 3, unit: "servings", meal: "Fri" },
+    ],
+    "Sauces": [
+      { name: "Fotis Fine Foods Chimichurri (Costco, refrigerated)", baseQty: 2, unit: "servings", meal: "Fri adult" },
+      { name: "Martini & Rossi Extra Dry Vermouth (pot-pie deglaze)", baseQty: 0.25, unit: "cup", meal: "Mon" },
+      { name: "Kikkoman soy (pork marinade)", qty: "pantry", meal: "Wed" },
+      { name: "Lea & Perrins Worcestershire (pork marinade + Cowboy Butter)", qty: "pantry", meal: "Wed" },
+      { name: "Smash Kitchen Dijon (pork marinade + Cowboy Butter)", qty: "pantry", meal: "Wed" },
+    ],
+    "Spice + Aromatic": [
+      { name: "All-purpose flour (pot-pie roux)", baseQty: 1, unit: "oz", meal: "Mon" },
+      { name: "Smoked paprika (pork marinade)", qty: "pantry", meal: "Wed" },
+      { name: "Chili flakes (Cowboy Butter adult fold)", qty: "pantry", meal: "Wed" },
+      { name: "Salt (picanha)", qty: "pantry", meal: "Fri" },
+    ],
+    "Broth": [
+      { name: "Kirkland chicken bone broth (Mon pot-pie sauce + Wed Cowboy Butter)", baseQty: 1, unit: "container", meal: "Mon + Wed" },
+    ],
+    "Pan Oil": [
+      { name: "Chosen Foods avocado oil spray", qty: "pantry", meal: "Mon + Fri" },
+    ],
+  },
 };
 
 function getGrocery(week) { return GROCERY_BY_WEEK[week] || GROCERY_BY_WEEK[1]; }
