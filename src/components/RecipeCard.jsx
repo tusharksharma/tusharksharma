@@ -13,7 +13,6 @@ const splitLabels = {
 };
 
 export default function RecipeCard({ recipe }) {
-  const ppc = ((recipe.protein * 4 / recipe.calories) * 100).toFixed(0);
   const splitText = splitLabels[recipe.splitFriendly];
   const isComingSoon = recipe.status === "coming-soon";
 
@@ -77,7 +76,7 @@ export default function RecipeCard({ recipe }) {
           <span className="text-neutral-700">|</span>
           <span>{recipe.protein}g protein</span>
           <span className="text-neutral-700">|</span>
-          <span className="text-amber-500 font-bold">{ppc}% PPC</span>
+          <span>{recipe.servings} servings</span>
         </div>
       </div>
     </article>

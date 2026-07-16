@@ -1,4 +1,4 @@
-const CACHE_NAME = "splitplate-v2";
+const CACHE_NAME = "splitplate-v3";
 const OFFLINE_URL = "/";
 
 // On install, precache the app shell. The JS/CSS hashes change per build,
@@ -47,8 +47,11 @@ self.addEventListener("fetch", (event) => {
   }
 
   // JS/CSS bundles — cache on first fetch, serve from cache after.
-  // This ensures the hashed bundle files are available offline after first visit.
-  if (request.url.match(/\/assets\/index-[A-Za-z0-9_-]+\.(js|css)$/)) {
+  // Catches every emitted /assets/ chunk (main index + lazy-loaded routes/data
+  // like RecipePage-*, CookbookPage-*, recipes-*). Route-split chunks weren't
+  // cached under the old index-only regex, breaking offline navigation past
+  // the entry route.
+  if (request.url.match(/\/assets\/[A-Za-z0-9_-]+\.(js|css)$/)) {
     event.respondWith(
       caches.match(request).then((cached) => {
         if (cached) return cached;

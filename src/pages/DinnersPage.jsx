@@ -17,7 +17,25 @@ const NET_CARB_OPTIONS = [
 const EFFORT_OPTIONS = [...new Set(liveRecipes.flatMap((r) => r.meta?.effortTags || []))].sort();
 const SPLIT_OPTIONS = [...new Set(liveRecipes.flatMap((r) => r.meta?.splitAxes || []))].sort();
 const COST_OPTIONS = ["budget", "moderate", "premium"];
-const DIET_OPTIONS = [...new Set(liveRecipes.flatMap((r) => r.meta?.dietTags || []))].sort();
+// Diet filter is a dietary-constraint surface, not a marketing surface.
+// Marketing / use-case tags (high-protein, family-dinner, kid-approved,
+// busy-parent, split-plate, batch-cook, etc.) that historically leaked into
+// meta.dietTags do NOT render as Diet chips. Add a value here to expose it.
+const CANONICAL_DIET_TAGS = new Set([
+  "halal", "kosher",
+  "gluten-free", "gluten-free-option",
+  "dairy-free", "dairy-free-option",
+  "egg-free", "egg-free-option", "egg-free-kid-version",
+  "soy-free", "soy-free-option",
+  "nut-free",
+  "pork-free",
+  "low-carb", "keto", "keto-option",
+  "paleo", "whole30", "mediterranean",
+  "vegetarian", "vegan",
+]);
+const DIET_OPTIONS = [...new Set(liveRecipes.flatMap((r) => r.meta?.dietTags || []))]
+  .filter((t) => CANONICAL_DIET_TAGS.has(t))
+  .sort();
 const ALLERGEN_OPTIONS = [...new Set(liveRecipes.flatMap((r) => r.meta?.allergens || []))].sort();
 
 // Build searchable text per recipe once
