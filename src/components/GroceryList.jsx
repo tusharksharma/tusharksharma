@@ -979,6 +979,56 @@ const GROCERY_BY_WEEK = {
       { name: "Chosen Foods avocado oil spray", qty: "pantry", meal: "Mon + Fri" },
     ],
   },
+  // Week 24: Mon=Chili Mac(53), Wed=Indo-Chinese Chili Chicken(28), Fri=Pork Mince Lettuce Wraps(38)
+  24: {
+    "Protein": [
+      { name: "Hot Dog Chili Base (6 reserved servings from Chili Hot Dogs)", qty: "from chili-hot-dogs reserve", meal: "Mon" },
+      { name: "Breaded chicken breast strips or nuggets", baseQty: 1, unit: "pack", meal: "Wed" },
+      { name: "NY Style 95% lean ground pork", baseQty: 1, unit: "pack", meal: "Fri" },
+    ],
+    "Carbs": [
+      { name: "Carbe Diem higher-fiber elbows (adult)", baseQty: 8, unit: "oz dry", meal: "Mon adult" },
+      { name: "Barilla regular elbows (kid)", baseQty: 6, unit: "oz dry", meal: "Mon kid" },
+      { name: "Dinner slider rolls (Fri kid option)", baseQty: 2, unit: "rolls", meal: "Fri kid" },
+    ],
+    "Dairy": [
+      { name: "Cottage cheese (~300 g)", baseQty: 1, unit: "container", meal: "Mon" },
+      { name: "Fairlife fat-free ultra-filtered milk", baseQty: 0.5, unit: "cup", meal: "Mon" },
+      { name: "Velveeta Original slices (3 oz — 2 adult pot + 1 kid pot)", baseQty: 1, unit: "pack", meal: "Mon" },
+    ],
+    "Produce": [
+      { name: "Tanimura & Antle Sweet Gem lettuce", baseQty: 1, unit: "pack", meal: "Fri" },
+      { name: "Green onions", baseQty: 1, unit: "bunch", meal: "Wed + Fri" },
+      { name: "Fresh red Thai chilies", baseQty: 1, unit: "pack", meal: "Wed adult + Fri adult" },
+      { name: "Ginger (Wed) + Verka ginger garlic paste (Fri)", baseQty: 1, unit: "pack", meal: "Wed + Fri" },
+      { name: "Garlic", qty: "1 head", meal: "Wed" },
+      { name: "Lemon (Fri sub for ReaLemon)", baseQty: 1, unit: "lemon", meal: "Fri" },
+    ],
+    "Sauces": [
+      { name: "Kikkoman soy sauce (Wed + Fri)", qty: "pantry", meal: "Wed + Fri" },
+      { name: "Rice vinegar (Wed Indo-Chinese)", qty: "pantry", meal: "Wed" },
+      { name: "Red Boat fish sauce (Fri adult)", qty: "pantry", meal: "Fri adult" },
+      { name: "Dynasty sesame chili oil (Fri adult)", qty: "pantry", meal: "Fri adult" },
+      { name: "Sesame oil (Wed)", qty: "pantry", meal: "Wed" },
+      { name: "Herdez Avocado Cilantro (Fri kid crema)", baseQty: 1, unit: "jar", meal: "Fri kid" },
+      { name: "ReaLemon (Fri, optional sub for fresh)", qty: "pantry", meal: "Fri" },
+    ],
+    "Spice + Aromatic": [
+      { name: "Nutritional yeast (Mon sauce)", qty: "pantry", meal: "Mon" },
+      { name: "Cheddar cheese powder (Mon sauce)", qty: "pantry", meal: "Mon" },
+      { name: "Cornstarch (Wed slurry)", qty: "pantry", meal: "Wed" },
+      { name: "Deep Coriander (Fri adult)", qty: "pantry", meal: "Fri adult" },
+      { name: "Dan-O's SPG (Fri)", qty: "pantry", meal: "Fri" },
+      { name: "Salt (pasta water)", qty: "pantry", meal: "Mon" },
+    ],
+    "Broth": [
+      { name: "Kirkland chicken bone broth — Mon sauce loosener + Fri kid crema", baseQty: 1, unit: "container", meal: "Mon + Fri" },
+    ],
+    "Pan Oil": [
+      { name: "Chosen Foods avocado oil spray", qty: "pantry", meal: "Wed + Fri" },
+      { name: "Olive oil (Fri kid crema)", qty: "pantry", meal: "Fri kid" },
+    ],
+  },
 };
 
 function getGrocery(week) { return GROCERY_BY_WEEK[week] || GROCERY_BY_WEEK[1]; }
