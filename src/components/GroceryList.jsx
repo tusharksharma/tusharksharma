@@ -1029,6 +1029,54 @@ const GROCERY_BY_WEEK = {
       { name: "Olive oil (Fri kid crema)", qty: "pantry", meal: "Fri kid" },
     ],
   },
+  // Week 25: Mon=Freezer Kebab Pitas(54), Wed=Air Fryer Chicken Thighs + Cheesy Broccoli(21), Fri=Steak & Fries with Chimichurri(25)
+  25: {
+    "Protein": [
+      { name: "Fully cooked Mediterranean beef kebabs (+ up to 2 spare for hungrier kids)", baseQty: 8, unit: "kebabs", meal: "Mon" },
+      { name: "Chicken thighs (boneless skinless)", baseQty: 8, unit: "thighs", meal: "Wed" },
+      { name: "Bavette steak (6 oz per adult)", baseQty: 12, unit: "oz", meal: "Fri adult" },
+      { name: "Great Value pork breakfast patties (1.5 per kid)", baseQty: 3, unit: "patties", meal: "Fri kid" },
+    ],
+    "Carbs": [
+      { name: "Pita bread", baseQty: 4, unit: "pitas", meal: "Mon" },
+      { name: "Dinner rolls (1 per kid)", baseQty: 2, unit: "rolls", meal: "Wed kid" },
+      { name: "Checkers/Rally's frozen fries (1 serving per person)", baseQty: 4, unit: "servings", meal: "Fri" },
+    ],
+    "Dairy": [
+      { name: "Plain 0% Greek yogurt (5.3 oz / 150g container)", baseQty: 1, unit: "container", meal: "Mon" },
+    ],
+    "Produce": [
+      { name: "Cucumber (Mon tzatziki, drained thoroughly)", baseQty: 0.5, unit: "cucumber", meal: "Mon" },
+      { name: "Iceberg lettuce (shredded, Mon pita build)", baseQty: 2, unit: "cups", meal: "Mon" },
+      { name: "Cherry or grape tomatoes (Mon pita build)", baseQty: 1, unit: "cup", meal: "Mon" },
+      { name: "Frozen broccoli florets (Wed side)", baseQty: 1, unit: "bag", meal: "Wed" },
+      { name: "Raw carrots (baby or sticks, Fri kid side)", baseQty: 1, unit: "bag", meal: "Fri kid" },
+      { name: "Lemon (Mon tzatziki)", baseQty: 1, unit: "lemon", meal: "Mon" },
+    ],
+    "Aromatics": [
+      { name: "Frozen garlic cubes (Mon tzatziki — thaw 3-4 cloves' worth)", qty: "pantry", meal: "Mon" },
+    ],
+    "Sauces + Condiments": [
+      { name: "Pickled red onions (Mon adult pita build)", baseQty: 1, unit: "jar", meal: "Mon adult" },
+      { name: "Prepared hummus (Mon kid tray, ~2 tbsp per kid)", baseQty: 1, unit: "container", meal: "Mon kid" },
+      { name: "Shuug Original Harissa Hot Sauce (Mon adult finish)", qty: "pantry", meal: "Mon adult" },
+      { name: "Money Mustard (Wed adult, optional)", qty: "pantry", meal: "Wed adult" },
+      { name: "Spiceology Chimichurri Blend (Fri adult sauce)", qty: "pantry", meal: "Fri adult" },
+      { name: "O California organic extra virgin olive oil (Fri chimichurri)", qty: "pantry", meal: "Fri adult" },
+      { name: "Napa Valley Naturals organic red wine vinegar (Fri chimichurri)", qty: "pantry", meal: "Fri adult" },
+    ],
+    "Spice + Aromatic": [
+      { name: "Dan-O's Original (Wed kid seasoning)", qty: "pantry", meal: "Wed kid" },
+      { name: "Dan-O's Outlaw Blackened Bloody Mary (Wed adult seasoning)", qty: "pantry", meal: "Wed adult" },
+      { name: "Dan-O's Cheesoning (Wed broccoli finisher — sprinkle on hot veg)", qty: "pantry", meal: "Wed" },
+      { name: "SPG seasoning — salt/pepper/garlic (Fri steak)", qty: "pantry", meal: "Fri adult" },
+      { name: "Chili flakes (Fri chimichurri)", qty: "pantry", meal: "Fri adult" },
+      { name: "Salt (Wed broccoli)", qty: "pantry", meal: "Wed" },
+    ],
+    "Pan Oil": [
+      { name: "Chosen Foods avocado oil spray (Mon pita warm + Wed air fryer + Fri sear)", qty: "pantry", meal: "Mon + Wed + Fri" },
+    ],
+  },
 };
 
 function getGrocery(week) { return GROCERY_BY_WEEK[week] || GROCERY_BY_WEEK[1]; }
@@ -1047,7 +1095,7 @@ const WHOLE_UNITS = new Set([
   "tub", "tubs",
   "tray", "trays",
   "wedge", "wedges",
-  "buns", "fillets", "rolls", "tortillas", "slices", "pieces", "patties", "thighs", "chops", "kababs", "drumsticks", "wings", "pucks",
+  "buns", "fillets", "rolls", "tortillas", "slices", "pieces", "patties", "thighs", "chops", "kababs", "kebabs", "pitas", "drumsticks", "wings", "pucks",
   "ears", "sheet", "sheets",
   "servings",
   "lemon", "lemons", "lime", "limes", "cucumber", "cucumbers", "onion", "onions",
