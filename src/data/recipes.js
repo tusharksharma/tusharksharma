@@ -7364,12 +7364,12 @@ const recipes = [
     // base tzatziki intermediates (step-01 yogurt, step-02 cucumber, step-03
     // lemon+garlic) + context-beef-kebabs. Raw for now; Path A pass follows.
     socialImages: [
-      "/images/freezer-shortcut-beef-kebab-pitas/context-frozen-garlic.webp",
-      "/images/freezer-shortcut-beef-kebab-pitas/step-04-mix-quick-tzatziki.webp",
-      "/images/freezer-shortcut-beef-kebab-pitas/step-05-air-fry-beef-kebabs.webp",
-      "/images/freezer-shortcut-beef-kebab-pitas/step-06-build-adult-pita.webp",
-      "/images/freezer-shortcut-beef-kebab-pitas/step-07-build-kid-tray.webp",
-      "/images/freezer-shortcut-beef-kebab-pitas/payoff-adult-beef-kebab-pita.webp",
+      "/images/freezer-shortcut-beef-kebab-pitas/context-frozen-garlic-polished.webp",
+      "/images/freezer-shortcut-beef-kebab-pitas/step-04-mix-quick-tzatziki-polished.webp",
+      "/images/freezer-shortcut-beef-kebab-pitas/step-05-air-fry-beef-kebabs-polished.webp",
+      "/images/freezer-shortcut-beef-kebab-pitas/step-06-build-adult-pita-polished.webp",
+      "/images/freezer-shortcut-beef-kebab-pitas/step-07-build-kid-tray-polished.webp",
+      "/images/freezer-shortcut-beef-kebab-pitas/payoff-adult-beef-kebab-pita-polished.webp",
     ],
     proteinAnchor: "beef",
     mealType: "air-fryer",
@@ -7383,8 +7383,8 @@ const recipes = [
     servings: 4,
     protein: 30,
     calories: 400,
-    image: "/images/freezer-shortcut-beef-kebab-pitas/hero-split-adult-kid-plates.webp",
-    prepImage: "/images/freezer-shortcut-beef-kebab-pitas/payoff-adult-beef-kebab-pita.webp",
+    image: "/images/freezer-shortcut-beef-kebab-pitas/hero-split-adult-kid-plates-polished.webp",
+    prepImage: "/images/freezer-shortcut-beef-kebab-pitas/payoff-adult-beef-kebab-pita-polished.webp",
     prepImageCaption: "Adult plate — loaded pita with quick tzatziki, iceberg, tomato, pickled red onion, 2 fully-cooked beef kebabs air-fried 7-8 min, Shuug harissa hot sauce. ~400 cal / 30g protein. Kid plate deconstructs the same components with hummus in place of Shuug.",
     video: "/videos/freezer-shortcut-beef-kebab-pitas/freezer-shortcut-beef-kebab-pitas-marcus-voiceover.mp4",
     originalSoundVideo: "/videos/freezer-shortcut-beef-kebab-pitas/freezer-shortcut-beef-kebab-pitas-original-sound.mp4",
@@ -7449,12 +7449,12 @@ const recipes = [
         "Avocado oil spray (kebab air-fry + pita warm)",
       ],
       sharedSteps: [
-        { text: "THAW: Thaw the sealed kebab pouch overnight in the fridge (do this the night before — day-of shortcut works for the tzatziki and assembly, not for the frozen protein).", images: ["/images/freezer-shortcut-beef-kebab-pitas/context-beef-kebabs.webp"] },
+        { text: "THAW: Thaw the sealed kebab pouch overnight in the fridge (do this the night before — day-of shortcut works for the tzatziki and assembly, not for the frozen protein).", images: ["/images/freezer-shortcut-beef-kebab-pitas/context-beef-kebabs-polished.webp"] },
         { text: "TZATZIKI — YOGURT: Empty the 5.3 oz Greek yogurt container into a bowl.", images: ["/images/freezer-shortcut-beef-kebab-pitas/step-01-add-greek-yogurt.webp"] },
         { text: "TZATZIKI — CUCUMBER: Shred 1/2 cucumber, salt lightly, wait 5 min, then wring VERY dry in a clean tea towel. Add to the yogurt.", images: ["/images/freezer-shortcut-beef-kebab-pitas/step-02-add-drained-cucumber.webp"] },
         { text: "TZATZIKI — LEMON + GARLIC: Add 1 tbsp lemon juice + 3-4 frozen garlic cubes (thawed) + salt to taste.", images: ["/images/freezer-shortcut-beef-kebab-pitas/step-03-add-lemon-and-garlic.webp"] },
-        { text: "TZATZIKI — MIX: Stir until thick and evenly combined. Refrigerate until plating.", images: ["/images/freezer-shortcut-beef-kebab-pitas/step-04-mix-quick-tzatziki.webp"] },
-        { text: "AIR FRY THE KEBABS: Lightly mist the (thawed) kebabs with avocado oil and air fry 7-8 min per the CURRENT PACKAGE TEMPERATURE (physical package = source of truth; brands vary). Kebabs should be thoroughly hot with a light char at 8 min.", images: ["/images/freezer-shortcut-beef-kebab-pitas/step-05-air-fry-beef-kebabs.webp"] },
+        { text: "TZATZIKI — MIX: Stir until thick and evenly combined. Refrigerate until plating.", images: ["/images/freezer-shortcut-beef-kebab-pitas/step-04-mix-quick-tzatziki-polished.webp"] },
+        { text: "AIR FRY THE KEBABS: Lightly mist the (thawed) kebabs with avocado oil and air fry 7-8 min per the CURRENT PACKAGE TEMPERATURE (physical package = source of truth; brands vary). Kebabs should be thoroughly hot with a light char at 8 min.", images: ["/images/freezer-shortcut-beef-kebab-pitas/step-05-air-fry-beef-kebabs-polished.webp"] },
         { text: "WARM THE PITAS: Lightly mist and warm the pitas 20-30 sec per side (dry pan or air fryer). Cut 2 pitas into wedges for the kids' trays.", images: [] },
       ],
       adult: {
@@ -7466,7 +7466,7 @@ const recipes = [
           "Shuug Original Harissa Hot Sauce, to taste",
         ],
         steps: [
-          { text: "BUILD THE ADULT PITA: Warm pita → generous smear of tzatziki → shredded iceberg → halved cherry tomatoes → pickled red onion → 2 air-fried beef kebabs → drizzle of Shuug to taste. Half-fold and eat immediately.", images: ["/images/freezer-shortcut-beef-kebab-pitas/step-06-build-adult-pita.webp", "/images/freezer-shortcut-beef-kebab-pitas/payoff-adult-beef-kebab-pita.webp"] },
+          { text: "BUILD THE ADULT PITA: Warm pita → generous smear of tzatziki → shredded iceberg → halved cherry tomatoes → pickled red onion → 2 air-fried beef kebabs → drizzle of Shuug to taste. Half-fold and eat immediately.", images: ["/images/freezer-shortcut-beef-kebab-pitas/step-06-build-adult-pita-polished.webp", "/images/freezer-shortcut-beef-kebab-pitas/payoff-adult-beef-kebab-pita-polished.webp"] },
         ],
       },
       kid: {
@@ -7483,7 +7483,7 @@ const recipes = [
             name: "Standard — Deconstructed Kid Tray",
             description: "Pita wedges + shredded iceberg + tomato + hummus in separate compartments + 1 kebab to start. Offer another kebab based on appetite — the photographed 7-year-old asked for a second. NO Shuug (adult-only harissa). Kid macros intentionally not published: hummus quantity + kid appetite vary meaningfully across households.",
             steps: [
-              { text: "BUILD THE KID TRAY: Warmed pita cut into wedges → shredded iceberg → halved cherry tomatoes → ~2 tbsp hummus in a separate compartment → 1 kebab to the side. Offer a second kebab per appetite.", images: ["/images/freezer-shortcut-beef-kebab-pitas/step-07-build-kid-tray.webp"] },
+              { text: "BUILD THE KID TRAY: Warmed pita cut into wedges → shredded iceberg → halved cherry tomatoes → ~2 tbsp hummus in a separate compartment → 1 kebab to the side. Offer a second kebab per appetite.", images: ["/images/freezer-shortcut-beef-kebab-pitas/step-07-build-kid-tray-polished.webp"] },
               { text: "OFFER MORE ON HUNGER: Keep 2 more warm kebabs available (8 total from the 24 oz Costco pack) in case kids want seconds. The photographed 7-year-old asked for a second — real appetite data.", images: [] },
             ],
           },
