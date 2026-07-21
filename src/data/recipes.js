@@ -1659,8 +1659,8 @@ const recipes = [
     servings: 8,
     protein: 45,
     calories: 520,
-    image: "/images/golden-garlic-rice-bowl-steak/hero-split-family-bowls.webp",
-    prepImage: "/images/golden-garlic-rice-bowl-steak/step-06-portion-eight-rice-servings.webp",
+    image: "/images/golden-garlic-rice-bowl-steak/hero-split-family-bowls-polished.webp",
+    prepImage: "/images/golden-garlic-rice-bowl-steak/step-06-portion-eight-rice-servings-polished.webp",
     prepImageCaption: "Eight bowls at once — 4 adult + 4 kid, split across TWO family dinners (make once, eat twice). Same rice portion for everyone; adults get 6 oz steak + 2 tsp Tari, kids get 3 oz steak + 2 tsp toum. Sauce goes on at serve, never in storage.",
     video: "/videos/golden-garlic-rice-bowl-steak/golden-garlic-rice-bowl-steak-520cal-45protein-marcus.mp4",
     // socialImages — 6-cap step-order per [feedback-social-images-step-order].
@@ -1669,12 +1669,12 @@ const recipes = [
     // → adult Tari finish. Closes with BOTH sauces as the split-plate payoff.
     // Skips aromatic prep (step-01/02/03) — off-carousel prep intermediates.
     socialImages: [
-      "/images/golden-garlic-rice-bowl-steak/step-04-season-golden-rice.webp",
-      "/images/golden-garlic-rice-bowl-steak/step-06-portion-eight-rice-servings.webp",
-      "/images/golden-garlic-rice-bowl-steak/step-07-sear-frozen-steak.webp",
-      "/images/golden-garlic-rice-bowl-steak/step-09-portion-adult-kid-steak.webp",
-      "/images/golden-garlic-rice-bowl-steak/step-10-kid-toum.webp",
-      "/images/golden-garlic-rice-bowl-steak/step-11-adult-tari.webp",
+      "/images/golden-garlic-rice-bowl-steak/step-04-season-golden-rice-polished.webp",
+      "/images/golden-garlic-rice-bowl-steak/step-06-portion-eight-rice-servings-polished.webp",
+      "/images/golden-garlic-rice-bowl-steak/step-07-sear-frozen-steak-polished.webp",
+      "/images/golden-garlic-rice-bowl-steak/step-09-portion-adult-kid-steak-polished.webp",
+      "/images/golden-garlic-rice-bowl-steak/step-10-kid-toum-polished.webp",
+      "/images/golden-garlic-rice-bowl-steak/step-11-adult-tari-polished.webp",
     ],
     role: "The Make-Once-Eat-Twice Family Batch",
     makeThisWhen: "You want ONE 35-min cook to cover two family dinners (2 adults + 2 kids × 2 nights = 8 bowls). Same rice for everyone; the split is at the plate — adults get 6 oz steak + 2 tsp Tari heat, kids get 3 oz steak + 2 tsp mild toum. The updated framing came from the kids asking for the adult rice portion after the last cook.",
@@ -1740,13 +1740,13 @@ const recipes = [
         { text: "PULSE AROMATICS: Pulse ~30g frozen garlic cubes + ~60g frozen baby onions in a food processor 5-7 times until finely chopped but NOT pureed.", images: ["/images/golden-garlic-rice-bowl-steak/step-01-pulse-frozen-aromatics.webp"] },
         { text: "SAUTÉ IN GHEE: Melt 3 tbsp Kirkland ghee in a large pot over medium heat. Add the pulsed aromatics, cook until soft and fragrant (~2-3 min).", images: ["/images/golden-garlic-rice-bowl-steak/step-02-cook-aromatics-in-ghee.webp"] },
         { text: "ADD BROTH: Pour in 4 cups chicken bone broth.", images: ["/images/golden-garlic-rice-bowl-steak/step-03-add-bone-broth.webp"] },
-        { text: "BLOOM TURMERIC + SEASON: Add 1.5 tsp turmeric + 1.5 tsp salt. Stir until evenly golden — this is the golden-rice color moment.", images: ["/images/golden-garlic-rice-bowl-steak/step-04-season-golden-rice.webp"] },
+        { text: "BLOOM TURMERIC + SEASON: Add 1.5 tsp turmeric + 1.5 tsp salt. Stir until evenly golden — this is the golden-rice color moment.", images: ["/images/golden-garlic-rice-bowl-steak/step-04-season-golden-rice-polished.webp"] },
         { text: "ADD RINSED RICE: Stir in 2 cups rinsed basmati and bring to a boil.", images: ["/images/golden-garlic-rice-bowl-steak/step-05-add-rinsed-rice.webp"] },
         { text: "COOK RICE: Reduce to low, cover, cook ~15 min (or per the rice package). Rest covered 5 min after cook, then fluff.", images: [] },
-        { text: "PORTION 8 EQUAL RICE SERVINGS: Divide the cooked rice evenly across 8 shallow containers — ~3/4 cup cooked rice per container. Same portion for adults + kids (the kid-request insight from the updated version).", images: ["/images/golden-garlic-rice-bowl-steak/step-06-portion-eight-rice-servings.webp"] },
-        { text: "SEAR STEAK PUCKS: Heat an uncrowded skillet very hot. Sear the frozen sirloin pucks — let each side brown before breaking the meat into ribbons. 5-6 min per batch, uncrowded. Salt to taste.", images: ["/images/golden-garlic-rice-bowl-steak/step-07-sear-frozen-steak.webp"] },
-        { text: "BREAK APART: Once both sides brown, break each puck into thin ribbons in the pan. Pull as soon as fully cooked — don't over-sear.", images: ["/images/golden-garlic-rice-bowl-steak/step-08-break-apart-steak.webp"] },
-        { text: "PORTION STEAK: 1 puck (6 oz) per adult bowl. 2 pucks split across the 4 kid bowls (~3 oz each). Place steak on top of rice in each container.", images: ["/images/golden-garlic-rice-bowl-steak/step-09-portion-adult-kid-steak.webp"] },
+        { text: "PORTION 8 EQUAL RICE SERVINGS: Divide the cooked rice evenly across 8 shallow containers — ~3/4 cup cooked rice per container. Same portion for adults + kids (the kid-request insight from the updated version).", images: ["/images/golden-garlic-rice-bowl-steak/step-06-portion-eight-rice-servings-polished.webp"] },
+        { text: "SEAR STEAK PUCKS: Heat an uncrowded skillet very hot. Sear the frozen sirloin pucks — let each side brown before breaking the meat into ribbons. 5-6 min per batch, uncrowded. Salt to taste.", images: ["/images/golden-garlic-rice-bowl-steak/step-07-sear-frozen-steak-polished.webp"] },
+        { text: "BREAK APART: Once both sides brown, break each puck into thin ribbons in the pan. Pull as soon as fully cooked — don't over-sear.", images: ["/images/golden-garlic-rice-bowl-steak/step-08-break-apart-steak-polished.webp"] },
+        { text: "PORTION STEAK: 1 puck (6 oz) per adult bowl. 2 pucks split across the 4 kid bowls (~3 oz each). Place steak on top of rice in each container.", images: ["/images/golden-garlic-rice-bowl-steak/step-09-portion-adult-kid-steak-polished.webp"] },
       ],
       adult: {
         label: "Adult — 6 oz Steak + 2 tsp Tari",
@@ -1758,7 +1758,7 @@ const recipes = [
           "(Tari carries egg / soy / mustard per current label — adult-only, verify label before publishing allergen-cleared claims)",
         ],
         steps: [
-          { text: "SAUCE AT SERVE: Drizzle 2 tsp Tari over the hot adult bowl right before eating. Never fold into rice storage — Tari waters out overnight.", images: ["/images/golden-garlic-rice-bowl-steak/step-11-adult-tari.webp"] },
+          { text: "SAUCE AT SERVE: Drizzle 2 tsp Tari over the hot adult bowl right before eating. Never fold into rice storage — Tari waters out overnight.", images: ["/images/golden-garlic-rice-bowl-steak/step-11-adult-tari-polished.webp"] },
         ],
       },
       kid: {
@@ -1775,7 +1775,7 @@ const recipes = [
             name: "Standard — Toum Drizzle",
             description: "Same rice portion as adult (per the kid-request insight from the updated version). 3 oz steak — half the adult puck. 2 tsp Mezete Toum drizzled on at serve. Kids picked toum on the filmed dinner; skip the sauce entirely if the kid prefers plain — the golden rice carries the flavor.",
             steps: [
-              { text: "SAUCE AT SERVE: Drizzle 2 tsp toum over the hot kid bowl right before eating. Skip if the kid prefers plain — the rice stands on its own. Never fold into rice storage.", images: ["/images/golden-garlic-rice-bowl-steak/step-10-kid-toum.webp"] },
+              { text: "SAUCE AT SERVE: Drizzle 2 tsp toum over the hot kid bowl right before eating. Skip if the kid prefers plain — the rice stands on its own. Never fold into rice storage.", images: ["/images/golden-garlic-rice-bowl-steak/step-10-kid-toum-polished.webp"] },
             ],
           },
         ],
