@@ -3976,12 +3976,12 @@ export const snackBoxes = [
     id: "split-plate-tropical-chicken-snack-box",
     title: "Split Plate Tropical Chicken Snack Box",
     tagline: "Snack Box Series Ep. 7 — the first hot-protein box in the series. Fully cooked fajita chicken + fresh mango + cubed Colby Jack + lightly salted cashews. About 250 cal / 21g protein per box. Make four at once for post-lunch or after-school hunger.",
-    heroImage: "/images/split-plate-tropical-chicken-snack-box/hero-tropical-chicken-snack-box.webp",
+    heroImage: "/images/split-plate-tropical-chicken-snack-box/hero-tropical-chicken-snack-box-polished.webp",
     // prepImage — first hot-protein box in the series, so the fajita-chicken
     // context frame anchors what's different vs Ep. 1-6 (all shelf-stable
     // proteins). Matches the Ep. 1 Sargento + Ep. 2 Rocket-apple context-
     // prepImage pattern. Raw for now; swap to -polished.webp after Path A pass.
-    prepImage: "/images/split-plate-tropical-chicken-snack-box/context-fully-cooked-fajita-chicken.webp",
+    prepImage: "/images/split-plate-tropical-chicken-snack-box/context-fully-cooked-fajita-chicken-polished.webp",
     prepImageCaption: "Fully cooked fajita chicken is what makes this box unlike the six before it — first hot-protein snack box in the series. Any fully-cooked seasoned chicken flexes (Soules Kitchen shown); the physical package is source of truth for storage and reheat guidance.",
     video: "/videos/split-plate-tropical-chicken-snack-box/tropical-chicken-snack-box-250cal-21protein-marcus.mp4",
     // socialImages — 6-cap step-order per [feedback-social-images-step-order].
@@ -3989,12 +3989,12 @@ export const snackBoxes = [
     // final-stacked payoff. Hero reserved for heroImage. Raw for now; swap
     // to -polished.webp after Path A pass.
     socialImages: [
-      "/images/split-plate-tropical-chicken-snack-box/context-fully-cooked-fajita-chicken.webp",
-      "/images/split-plate-tropical-chicken-snack-box/step-01-divide-chicken.webp",
-      "/images/split-plate-tropical-chicken-snack-box/step-02-add-mango.webp",
-      "/images/split-plate-tropical-chicken-snack-box/step-03-add-colby-jack.webp",
-      "/images/split-plate-tropical-chicken-snack-box/step-04-add-cashews.webp",
-      "/images/split-plate-tropical-chicken-snack-box/final-stacked-snack-boxes.webp",
+      "/images/split-plate-tropical-chicken-snack-box/context-fully-cooked-fajita-chicken-polished.webp",
+      "/images/split-plate-tropical-chicken-snack-box/step-01-divide-chicken-polished.webp",
+      "/images/split-plate-tropical-chicken-snack-box/step-02-add-mango-polished.webp",
+      "/images/split-plate-tropical-chicken-snack-box/step-03-add-colby-jack-polished.webp",
+      "/images/split-plate-tropical-chicken-snack-box/step-04-add-cashews-polished.webp",
+      "/images/split-plate-tropical-chicken-snack-box/final-stacked-snack-boxes-polished.webp",
     ],
     flavorProfile: "Fully-cooked fajita chicken (savory + warm spice) + fresh mango (sweet + tropical) + cubed Colby Jack (creamy + mild) + lightly salted cashews (buttery crunch). Reads tropical-plate energy at snack-box scale. First cooked-protein episode in the series — sweet-savory contrast that shelf-stable boxes can't hit.",
     calories: 250,
@@ -4032,12 +4032,12 @@ export const snackBoxes = [
       "56g lightly salted cashews (~2 label servings)",
     ],
     steps: [
-      { text: "SET UP: Set out four divided snack boxes (4-compartment Bento-style — same format as Snack Box Series Ep. 1-6). Fully cooked chicken means no stovetop or oven; the physical chicken package is source of truth if reheating before packing.", image: "/images/split-plate-tropical-chicken-snack-box/hero-tropical-chicken-snack-box.webp" },
-      { text: "CHICKEN: Divide 2 oz fully cooked fajita chicken into one compartment of each box, chopped for the child's chewing ability. Any brand of fully-cooked seasoned chicken works (Soules Kitchen shown). If reheating, heat to 165°F and cool promptly before packing.", image: "/images/split-plate-tropical-chicken-snack-box/step-01-divide-chicken.webp" },
-      { text: "MANGO: Peel and cut 1.5 mangoes total across the 4 boxes (3/8 mango each), age-appropriate pieces. The sweet-fresh anchor + the tropical hook. Any ripe mango variety (Ataulfo / Kent / Tommy Atkins) flexes.", image: "/images/split-plate-tropical-chicken-snack-box/step-02-add-mango.webp" },
-      { text: "COLBY JACK: Cube one Colby Jack cheese stick per box and add to the third compartment. Cube size = 1/2-inch or smaller for young kids. Colby Jack is milder than sharp cheddar — kid-friendly by default.", image: "/images/split-plate-tropical-chicken-snack-box/step-03-add-colby-jack.webp" },
-      { text: "CASHEWS: Add 14g lightly salted cashews (~1/2 label serving) to the final compartment. FOR KIDS UNDER 4 — omit whole cashews entirely; sub a soft alternative (soft berries, banana slices, or diced apple). Over 4 with good chewing = whole cashews only if supervised. The filmed brand contains cashews + peanut oil and may contain peanuts and other tree nuts.", image: "/images/split-plate-tropical-chicken-snack-box/step-04-add-cashews.webp" },
-      { text: "LID + CHILL: Snap lids on and refrigerate immediately — cooked chicken + fresh mango + cheese all need cold storage. Assembled boxes best within 2 days. For lunchboxes, pack with an ice pack. Add cashews closer to serving if maximum crunch matters (they soften in a sealed compartment after 24 hr).", image: "/images/split-plate-tropical-chicken-snack-box/final-stacked-snack-boxes.webp" },
+      { text: "SET UP: Set out four divided snack boxes (4-compartment Bento-style — same format as Snack Box Series Ep. 1-6). Fully cooked chicken means no stovetop or oven; the physical chicken package is source of truth if reheating before packing.", image: "/images/split-plate-tropical-chicken-snack-box/hero-tropical-chicken-snack-box-polished.webp" },
+      { text: "CHICKEN: Divide 2 oz fully cooked fajita chicken into one compartment of each box, chopped for the child's chewing ability. Any brand of fully-cooked seasoned chicken works (Soules Kitchen shown). If reheating, heat to 165°F and cool promptly before packing.", image: "/images/split-plate-tropical-chicken-snack-box/step-01-divide-chicken-polished.webp" },
+      { text: "MANGO: Peel and cut 1.5 mangoes total across the 4 boxes (3/8 mango each), age-appropriate pieces. The sweet-fresh anchor + the tropical hook. Any ripe mango variety (Ataulfo / Kent / Tommy Atkins) flexes.", image: "/images/split-plate-tropical-chicken-snack-box/step-02-add-mango-polished.webp" },
+      { text: "COLBY JACK: Cube one Colby Jack cheese stick per box and add to the third compartment. Cube size = 1/2-inch or smaller for young kids. Colby Jack is milder than sharp cheddar — kid-friendly by default.", image: "/images/split-plate-tropical-chicken-snack-box/step-03-add-colby-jack-polished.webp" },
+      { text: "CASHEWS: Add 14g lightly salted cashews (~1/2 label serving) to the final compartment. FOR KIDS UNDER 4 — omit whole cashews entirely; sub a soft alternative (soft berries, banana slices, or diced apple). Over 4 with good chewing = whole cashews only if supervised. The filmed brand contains cashews + peanut oil and may contain peanuts and other tree nuts.", image: "/images/split-plate-tropical-chicken-snack-box/step-04-add-cashews-polished.webp" },
+      { text: "LID + CHILL: Snap lids on and refrigerate immediately — cooked chicken + fresh mango + cheese all need cold storage. Assembled boxes best within 2 days. For lunchboxes, pack with an ice pack. Add cashews closer to serving if maximum crunch matters (they soften in a sealed compartment after 24 hr).", image: "/images/split-plate-tropical-chicken-snack-box/final-stacked-snack-boxes-polished.webp" },
     ],
     executionRules: [
       "The photographed chicken is FULLY COOKED. If reheating before packing, heat to 165°F and cool promptly. Never pack warm chicken into a sealed cold-storage box.",
