@@ -2856,24 +2856,24 @@ export const desserts = [
     id: "mallow-sandwich-cookie-creami",
     title: "Mallow Sandwich Cookie Creami",
     tagline: "CrumblCreamiCut Week 3, Flavor 1 — black-cocoa protein Creami pint, protein-brownie Respin, and a post-scoop marshmallow ribbon. ~370 cal / 48g protein whole pint vs 970 cal for the Crumbl Mallow Sandwich Cookie ft. OREO on the current Crumbl UT/American Fork nutrition listing.",
-    heroImage: "/images/mallow-sandwich-cookie-creami/hero-marshmallow-ribbon.webp",
+    heroImage: "/images/mallow-sandwich-cookie-creami/hero-marshmallow-ribbon-polished.webp",
     // prepImage — matches the W2 pattern (Key Lime W2F3 used step-13-respin
     // as prep). Step-07-respin-result anchors the mid-technique moment right
     // after the brownie mix-in gets distributed. Raw for now; swap to
     // -polished.webp after Path A pass.
-    prepImage: "/images/mallow-sandwich-cookie-creami/step-07-respin-result.webp",
+    prepImage: "/images/mallow-sandwich-cookie-creami/step-07-respin-result-polished.webp",
     // socialImages — 6-cap step-order per [feedback-social-images-step-order].
     // Mirrors Key Lime W2F3 arc exactly (blend → first spin → mix-in → respin
     // → scoop → final). Marshmallow ribbon prep (step-10) is a thin visual
     // moment — closes on the final drizzled bowl instead. Raw for now;
     // Path A polish swap follows.
     socialImages: [
-      "/images/mallow-sandwich-cookie-creami/step-02-blend-black-cocoa-base.webp",
-      "/images/mallow-sandwich-cookie-creami/step-04-first-spin-result.webp",
-      "/images/mallow-sandwich-cookie-creami/step-06-add-brownie.webp",
-      "/images/mallow-sandwich-cookie-creami/step-07-respin-result.webp",
-      "/images/mallow-sandwich-cookie-creami/step-08-scoop-creami.webp",
-      "/images/mallow-sandwich-cookie-creami/final-mallow-sandwich-creami.webp",
+      "/images/mallow-sandwich-cookie-creami/step-02-blend-black-cocoa-base-polished.webp",
+      "/images/mallow-sandwich-cookie-creami/step-04-first-spin-result-polished.webp",
+      "/images/mallow-sandwich-cookie-creami/step-06-add-brownie-polished.webp",
+      "/images/mallow-sandwich-cookie-creami/step-07-respin-result-polished.webp",
+      "/images/mallow-sandwich-cookie-creami/step-08-scoop-creami-polished.webp",
+      "/images/mallow-sandwich-cookie-creami/final-mallow-sandwich-creami-polished.webp",
     ],
     videoSrc: "/videos/mallow-sandwich-cookie-creami/mallow-sandwich-cookie-creami-370cal-48protein-marcus.mp4",
     flavorProfile: "Deep-dark black-cocoa protein Creami pint carrying an OREO-like bittersweet chocolate note through the whole scoop. Small pieces of Prime Bites Cookie Monster protein brownie Respun through the pint hit as fudgy chocolate pockets. Post-scoop marshmallow ribbon (marshmallow creme loosened with 1/2 tbsp 2% milk until glossy + pourable) drizzled over the top delivers the sandwich-cookie filling identity. Reads as an OREO ice-cream cone / mallow sandwich translated into a whole-pint Creami — bittersweet cocoa base + fudgy brownie pockets + creamy marshmallow ribbon, one bowl.",
@@ -2923,17 +2923,17 @@ export const desserts = [
       { text: "ADD WHEY ISOLATE: 1 serving unflavored whey isolate.", image: "" },
       { text: "ADD GUAR GUM: 1/8 tsp guar gum, LEVEL measure. Heaped = gummy.", image: "" },
       { text: "ADD SALT: 1 pinch salt.", image: "" },
-      { text: "ADD BLACK COCOA: 1 tbsp black cocoa powder. Black cocoa (Dutch-processed, extra-dark) is the OREO-adjacent flavor carrier — regular cocoa reads as milk chocolate, black cocoa reads as bittersweet sandwich-cookie chocolate. Series-first: no prior CCC episode used black cocoa.", image: "/images/mallow-sandwich-cookie-creami/step-01-add-black-cocoa.webp" },
-      { text: "BLEND SMOOTH: Immersion blender until completely smooth and evenly dark. Zero lumps, zero visible whey, uniform deep-brown-to-near-black color from the black cocoa.", image: "/images/mallow-sandwich-cookie-creami/step-02-blend-black-cocoa-base.webp" },
+      { text: "ADD BLACK COCOA: 1 tbsp black cocoa powder. Black cocoa (Dutch-processed, extra-dark) is the OREO-adjacent flavor carrier — regular cocoa reads as milk chocolate, black cocoa reads as bittersweet sandwich-cookie chocolate. Series-first: no prior CCC episode used black cocoa.", image: "/images/mallow-sandwich-cookie-creami/step-01-add-black-cocoa-polished.webp" },
+      { text: "BLEND SMOOTH: Immersion blender until completely smooth and evenly dark. Zero lumps, zero visible whey, uniform deep-brown-to-near-black color from the black cocoa.", image: "/images/mallow-sandwich-cookie-creami/step-02-blend-black-cocoa-base-polished.webp" },
       { text: "POUR + FREEZE (24 HR): Transfer to a Creami pint if you didn't build in the pint. Freeze upright and level for a full 24 hours. Do not exceed the max-fill line.", image: "/images/mallow-sandwich-cookie-creami/step-03-frozen-base.webp" },
-      { text: "REST 5 MIN + FIRST SPIN: Pull the pint from the freezer, rest at ROOM TEMPERATURE for 5 minutes — NO hot-water bath. Process on Regular Ice Cream, NOT Lite. The first spin may look grainy; expected because the Respin (with brownie pieces) finishes the texture.", image: "/images/mallow-sandwich-cookie-creami/step-04-first-spin-result.webp" },
+      { text: "REST 5 MIN + FIRST SPIN: Pull the pint from the freezer, rest at ROOM TEMPERATURE for 5 minutes — NO hot-water bath. Process on Regular Ice Cream, NOT Lite. The first spin may look grainy; expected because the Respin (with brownie pieces) finishes the texture.", image: "/images/mallow-sandwich-cookie-creami/step-04-first-spin-result-polished.webp" },
       { text: "CUT BROWNIE: Cut 1/3 of a Prime Bites Cookie Monster protein brownie into small pieces (~1/4 inch cubes). ~75 cal of brownie is the target — verify the current package weight and adjust the portion if the brownie size has changed.", image: "/images/mallow-sandwich-cookie-creami/step-05-cut-brownie.webp" },
-      { text: "ADD BROWNIE + RESPIN: Poke the brownie pieces into the surface of the first-spin pint (better distribution than piling on top). Run one Respin cycle. Respin distributes the brownie pieces AND finishes the grainy texture from the first spin. Same technique family as W2F2 Beach Bum and W2F3 Key Lime — different mix-in.", image: "/images/mallow-sandwich-cookie-creami/step-06-add-brownie.webp" },
-      { text: "RESPIN RESULT: The finished Respin should show visible brownie pieces distributed through the pint with a smooth, non-grainy Creami texture. If the texture still reads powdery, run a second Respin.", image: "/images/mallow-sandwich-cookie-creami/step-07-respin-result.webp" },
-      { text: "SCOOP: Scoop the finished pint into a bowl. Deep-dark chocolate Creami with visible brownie pockets pulled through.", image: "/images/mallow-sandwich-cookie-creami/step-08-scoop-creami.webp" },
+      { text: "ADD BROWNIE + RESPIN: Poke the brownie pieces into the surface of the first-spin pint (better distribution than piling on top). Run one Respin cycle. Respin distributes the brownie pieces AND finishes the grainy texture from the first spin. Same technique family as W2F2 Beach Bum and W2F3 Key Lime — different mix-in.", image: "/images/mallow-sandwich-cookie-creami/step-06-add-brownie-polished.webp" },
+      { text: "RESPIN RESULT: The finished Respin should show visible brownie pieces distributed through the pint with a smooth, non-grainy Creami texture. If the texture still reads powdery, run a second Respin.", image: "/images/mallow-sandwich-cookie-creami/step-07-respin-result-polished.webp" },
+      { text: "SCOOP: Scoop the finished pint into a bowl. Deep-dark chocolate Creami with visible brownie pockets pulled through.", image: "/images/mallow-sandwich-cookie-creami/step-08-scoop-creami-polished.webp" },
       { text: "LOOSEN MARSHMALLOW CREME: In a small bowl, add 2 tbsp marshmallow creme + 1/2 tbsp Fairlife 2% milk. Stir until glossy and pourable — this converts stiff marshmallow creme into a ribbon consistency without cooking or heating. The 1/2 tbsp milk is the exact ratio; more will thin it too much.", image: "/images/mallow-sandwich-cookie-creami/step-09-add-milk-to-marshmallow.webp" },
       { text: "STIR TO RIBBON: Continue stirring until the marshmallow-and-milk mixture is uniformly glossy with no dry pockets. Should pour off the spoon in a slow ribbon, not a fast drizzle.", image: "/images/mallow-sandwich-cookie-creami/step-10-stir-marshmallow-filling.webp" },
-      { text: "RIBBON + SERVE: Drizzle the marshmallow ribbon over the scoops. The ribbon is a POST-SCOOP GARNISH — not a machine mix-in. Adding marshmallow to the pint before Respin turns the whole pint gummy; keeping it as a final drizzle preserves the ice-cream texture underneath and the glossy marshmallow filling identity on top. Serve immediately — marshmallow starts to firm back up as it cools.", image: "/images/mallow-sandwich-cookie-creami/final-mallow-sandwich-creami.webp" },
+      { text: "RIBBON + SERVE: Drizzle the marshmallow ribbon over the scoops. The ribbon is a POST-SCOOP GARNISH — not a machine mix-in. Adding marshmallow to the pint before Respin turns the whole pint gummy; keeping it as a final drizzle preserves the ice-cream texture underneath and the glossy marshmallow filling identity on top. Serve immediately — marshmallow starts to firm back up as it cools.", image: "/images/mallow-sandwich-cookie-creami/final-mallow-sandwich-creami-polished.webp" },
     ],
     executionRules: [
       "Standard base is series infrastructure — Fairlife 2%, not fat-free. Some milk fat is intentional for texture.",
