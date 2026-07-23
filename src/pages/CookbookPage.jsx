@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import useMeta from "../hooks/useMeta";
 import { sauces, quickLunches, desserts, breakfasts, bases, powerups, snackBoxes } from "../data/cookbook";
 
@@ -12,6 +12,17 @@ const TABS = [
   ...(powerups.length > 0 ? ["Powerups"] : []),
   ...(snackBoxes.length > 0 ? ["Snack Boxes"] : []),
 ];
+
+const TAB_SLUG = {
+  "Bases": "bases",
+  "Sauces": "sauces",
+  "Breakfast": "breakfast",
+  "Desserts": "desserts",
+  "Quick Lunches": "quick-lunches",
+  "Powerups": "powerups",
+  "Snack Boxes": "snack-boxes",
+};
+const SLUG_TAB = Object.fromEntries(Object.entries(TAB_SLUG).map(([k, v]) => [v, k]));
 
 function netCarbColor(nc) {
   if (nc == null) return "bg-neutral-800 text-neutral-500";
@@ -68,9 +79,23 @@ function RecipeCard({ item }) {
 }
 
 export default function CookbookPage() {
-  useMeta({ title: "Power-Ups", description: "Sauces, breakfasts, desserts, and quick meals — high-protein upgrades that take 10 minutes or less." });
-  const [tab, setTab] = useState(TABS[0] || "Sauces");
+  const [searchParams, setSearchParams] = useSearchParams();
+  const tabParam = searchParams.get("tab");
+  const paramTab = tabParam ? SLUG_TAB[tabParam] : null;
+  const tab = paramTab && TABS.includes(paramTab) ? paramTab : (TABS[0] || "Sauces");
+  const setTab = (t) => {
+    const slug = TAB_SLUG[t];
+    if (!slug) return;
+    const next = new URLSearchParams(searchParams);
+    next.set("tab", slug);
+    setSearchParams(next, { replace: false });
+  };
   const [cookbookSearch, setCookbookSearch] = useState("");
+
+  useMeta({
+    title: tab === (TABS[0] || "Sauces") ? "Power-Ups" : `${tab} — Power-Ups`,
+    description: `${tab} — high-protein upgrades from The Split Plate. Sauces, breakfasts, desserts, and quick meals in 10 minutes or less.`,
+  });
 
   const filterItems = (items) => {
     if (!cookbookSearch) return items;
