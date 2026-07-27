@@ -3136,12 +3136,12 @@ export const desserts = [
     id: "red-velvet-cookie-thins-creami",
     title: "Red Velvet Cookie Thins Creami",
     tagline: "CrumblCreamiCut Week 3, Flavor 3 — Week 3 finale. Rose-mauve red velvet protein Creami with fudgy protein-brownie pockets Respun through the pint and a POST-SCOOP white-chocolate drizzle. ~370 cal / 48g protein whole pint — original Creami adaptation inspired by the Crumbl Red Velvet Cookie Thins (Set of 2).",
-    heroImage: "/images/red-velvet-cookie-thins-creami/hero-finished-red-velvet-creami.webp",
+    heroImage: "/images/red-velvet-cookie-thins-creami/hero-finished-red-velvet-creami-polished.webp",
     // prepImage — series pattern is a mid-technique moment. Step-08 shows
     // the finished Respun pint (post-brownie mix-in) with visible brownie
     // pockets before the drizzle goes on. Matches W3F1 Mallow + W3F2 Dubai
     // prep-image conventions. Raw for now; -polished swap follows.
-    prepImage: "/images/red-velvet-cookie-thins-creami/step-08-respin-result.webp",
+    prepImage: "/images/red-velvet-cookie-thins-creami/step-08-respin-result-polished.webp",
     // socialImages — 6-cap step-order per [feedback-social-images-step-order].
     // Handoff proposed 12 frames including hero + macro. Site convention: 6
     // post-order frames, no hero, no macro card. Arc: base identity blend →
@@ -3149,12 +3149,12 @@ export const desserts = [
     // with brownie pockets visible → final drizzled payoff. Step-09
     // (white-chocolate-finish drizzle prep) becomes the +1 polish spare.
     socialImages: [
-      "/images/red-velvet-cookie-thins-creami/step-03-blend-red-velvet-base.webp",
-      "/images/red-velvet-cookie-thins-creami/step-06-chop-brownie.webp",
-      "/images/red-velvet-cookie-thins-creami/step-07-add-brownie.webp",
-      "/images/red-velvet-cookie-thins-creami/step-08-respin-result.webp",
-      "/images/red-velvet-cookie-thins-creami/step-10-scoop-creami.webp",
-      "/images/red-velvet-cookie-thins-creami/final-white-chocolate-drizzle.webp",
+      "/images/red-velvet-cookie-thins-creami/step-03-blend-red-velvet-base-polished.webp",
+      "/images/red-velvet-cookie-thins-creami/step-06-chop-brownie-polished.webp",
+      "/images/red-velvet-cookie-thins-creami/step-07-add-brownie-polished.webp",
+      "/images/red-velvet-cookie-thins-creami/step-08-respin-result-polished.webp",
+      "/images/red-velvet-cookie-thins-creami/step-10-scoop-creami-polished.webp",
+      "/images/red-velvet-cookie-thins-creami/final-white-chocolate-drizzle-polished.webp",
     ],
     videoSrc: "/videos/red-velvet-cookie-thins-creami/red-velvet-cookie-thins-creami-370cal-48protein-marcus.mp4",
     flavorProfile: "Rose-mauve red velvet protein Creami reading as chocolate-adjacent — subtle Dutch-cocoa depth from a light 1/2 tbsp cocoa charge paired with a full 1 tsp red velvet emulsion. Fudgy red velvet protein-brownie pieces Respun through the pint hit as chocolate-cream-cheese cookie pockets. Post-scoop white-chocolate drizzle (microwave-melted with fat-free milk until pourable) coats the scoops and delivers the cream-cheese-frosting cue that a red velvet dessert lives or dies by. Sits between chocolate and its own thing — the recipe leans into the 'is red velvet chocolate?' tension rather than picking a side.",
@@ -3205,15 +3205,15 @@ export const desserts = [
       { text: "ADD SALT: 1 pinch salt.", image: "" },
       { text: "ADD DUTCH COCOA: 1/2 tbsp Dutch-process cocoa powder. HALF the Mallow/Dubai charge (both used 1 tbsp) — the reduced cocoa lets the red velvet emulsion + white-chocolate drizzle carry the identity, not the cocoa. Straight cocoa charge would make it read as 'plain chocolate ice cream with red dye', which misses the red velvet cream-cheese identity.", image: "/images/red-velvet-cookie-thins-creami/step-02-dutch-cocoa.webp" },
       { text: "ADD RED VELVET EMULSION: 1 tsp red velvet emulsion. Full dose (not publish-corrected like W3F2 Dubai's 1/2 tsp pistachio emulsion). Red velvet emulsion is the identity carrier across the whole pint since there's no strong topping identity like Dubai's kataifi crunch — the emulsion has to do more work in the base here. LorAnn is the most common food-grade red velvet emulsion; also colors the base a rose-mauve tone from the natural red pigment.", image: "" },
-      { text: "BLEND SMOOTH: Immersion blender until completely smooth. Base should be a uniform rose-mauve tone — the Dutch cocoa + red velvet emulsion together read as a warm pink-brown, NOT deep chocolate and NOT bright red. Zero lumps, zero visible whey.", image: "/images/red-velvet-cookie-thins-creami/step-03-blend-red-velvet-base.webp" },
+      { text: "BLEND SMOOTH: Immersion blender until completely smooth. Base should be a uniform rose-mauve tone — the Dutch cocoa + red velvet emulsion together read as a warm pink-brown, NOT deep chocolate and NOT bright red. Zero lumps, zero visible whey.", image: "/images/red-velvet-cookie-thins-creami/step-03-blend-red-velvet-base-polished.webp" },
       { text: "POUR + FREEZE (24 HR): Transfer to a Creami pint if you didn't build in the pint. Freeze upright and level for a full 24 hours. Do not exceed the max-fill line.", image: "/images/red-velvet-cookie-thins-creami/step-04-frozen-pint.webp" },
       { text: "REST 5 MIN + FIRST SPIN: Pull the frozen pint from the freezer, rest at ROOM TEMPERATURE for 5 minutes — NO hot-water bath. Process on Regular Ice Cream, NOT Lite. The first spin may look powdery; expected because the Respin (with brownie pieces) finishes the texture.", image: "/images/red-velvet-cookie-thins-creami/step-05-regular-ice-cream.webp" },
-      { text: "CHOP BROWNIE: Chop 1/3 of a red velvet protein brownie into small pieces (~1/4 inch cubes). ~75 cal of brownie is the target — verify the current package weight and adjust the portion if the bar size has changed. Same technique family as W3F1 Mallow (which used the Cookie Monster Prime Bites brownie); this ep uses a RED VELVET protein brownie for flavor continuity with the base emulsion.", image: "/images/red-velvet-cookie-thins-creami/step-06-chop-brownie.webp" },
-      { text: "ADD BROWNIE + RESPIN: Make a well in the center of the first-spin pint and press the brownie pieces down into the well (better distribution than piling on top). Run one Respin cycle. Respin distributes the brownie pieces AND finishes the powdery texture from the first spin. Same technique family as W3F1 Mallow — different brownie flavor.", image: "/images/red-velvet-cookie-thins-creami/step-07-add-brownie.webp" },
-      { text: "RESPIN RESULT: The finished Respin should show visible red velvet brownie pieces distributed through the pint with a smooth, non-powdery Creami texture. If the texture still reads powdery, run a second Respin.", image: "/images/red-velvet-cookie-thins-creami/step-08-respin-result.webp" },
-      { text: "MELT WHITE CHOCOLATE + FF MILK: In a small microwave-safe bowl, combine 1 tbsp white chocolate chips + 1 tbsp Fairlife FAT-FREE ultra-filtered milk (NOT 2% — fat-free thins the drizzle to a pourable consistency; 2% would set thicker). Microwave in 10-15 second bursts, stirring between each, until fully smooth. Do not overheat — white chocolate seizes fast if boiled. Series-first: no prior CCC ep used a melted-white-chocolate drizzle finish.", image: "/images/red-velvet-cookie-thins-creami/step-09-white-chocolate-finish.webp" },
-      { text: "SCOOP: Scoop the finished pint into a bowl. Rose-mauve Creami with visible red velvet brownie pockets pulled through the scoops.", image: "/images/red-velvet-cookie-thins-creami/step-10-scoop-creami.webp" },
-      { text: "DRIZZLE + SERVE: Pour the warm white-chocolate mixture over the scoops in a slow ribbon. The drizzle is a POST-SCOOP GARNISH — not a machine mix-in. Adding white chocolate to the pint before Respin would set into hard chunks that shatter unpleasantly against cold Creami. Keeping it as a post-scoop drizzle preserves the smooth ribbon and the cream-frosting identity moment. Serve immediately — the drizzle starts to firm as it cools against the cold pint.", image: "/images/red-velvet-cookie-thins-creami/final-white-chocolate-drizzle.webp" },
+      { text: "CHOP BROWNIE: Chop 1/3 of a red velvet protein brownie into small pieces (~1/4 inch cubes). ~75 cal of brownie is the target — verify the current package weight and adjust the portion if the bar size has changed. Same technique family as W3F1 Mallow (which used the Cookie Monster Prime Bites brownie); this ep uses a RED VELVET protein brownie for flavor continuity with the base emulsion.", image: "/images/red-velvet-cookie-thins-creami/step-06-chop-brownie-polished.webp" },
+      { text: "ADD BROWNIE + RESPIN: Make a well in the center of the first-spin pint and press the brownie pieces down into the well (better distribution than piling on top). Run one Respin cycle. Respin distributes the brownie pieces AND finishes the powdery texture from the first spin. Same technique family as W3F1 Mallow — different brownie flavor.", image: "/images/red-velvet-cookie-thins-creami/step-07-add-brownie-polished.webp" },
+      { text: "RESPIN RESULT: The finished Respin should show visible red velvet brownie pieces distributed through the pint with a smooth, non-powdery Creami texture. If the texture still reads powdery, run a second Respin.", image: "/images/red-velvet-cookie-thins-creami/step-08-respin-result-polished.webp" },
+      { text: "MELT WHITE CHOCOLATE + FF MILK: In a small microwave-safe bowl, combine 1 tbsp white chocolate chips + 1 tbsp Fairlife FAT-FREE ultra-filtered milk (NOT 2% — fat-free thins the drizzle to a pourable consistency; 2% would set thicker). Microwave in 10-15 second bursts, stirring between each, until fully smooth. Do not overheat — white chocolate seizes fast if boiled. Series-first: no prior CCC ep used a melted-white-chocolate drizzle finish.", image: "/images/red-velvet-cookie-thins-creami/step-09-white-chocolate-finish-polished.webp" },
+      { text: "SCOOP: Scoop the finished pint into a bowl. Rose-mauve Creami with visible red velvet brownie pockets pulled through the scoops.", image: "/images/red-velvet-cookie-thins-creami/step-10-scoop-creami-polished.webp" },
+      { text: "DRIZZLE + SERVE: Pour the warm white-chocolate mixture over the scoops in a slow ribbon. The drizzle is a POST-SCOOP GARNISH — not a machine mix-in. Adding white chocolate to the pint before Respin would set into hard chunks that shatter unpleasantly against cold Creami. Keeping it as a post-scoop drizzle preserves the smooth ribbon and the cream-frosting identity moment. Serve immediately — the drizzle starts to firm as it cools against the cold pint.", image: "/images/red-velvet-cookie-thins-creami/final-white-chocolate-drizzle-polished.webp" },
     ],
     executionRules: [
       "Standard base is series infrastructure — Fairlife 2%, not fat-free. Some milk fat is intentional for texture.",
