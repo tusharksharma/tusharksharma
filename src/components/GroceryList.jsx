@@ -1077,6 +1077,39 @@ const GROCERY_BY_WEEK = {
       { name: "Chosen Foods avocado oil spray (Mon pita warm + Wed air fryer + Fri sear)", qty: "pantry", meal: "Mon + Wed + Fri" },
     ],
   },
+  // Week 26: Mon=15-Min Chicken Tikka Masala Split-Plate(55), Wed=Emergency Kebab Night(34), Fri=Soules Kitchen Emergency Tacos(50) — Emergency Shortcut Week
+  26: {
+    "Protein": [
+      { name: "Sukhi's Costco chicken tikka masala twin-pack (36 oz / 2 x 18 oz pouches, ~7 servings)", baseQty: 1, unit: "pack", meal: "Mon" },
+      { name: "Colonel Kababz Chicken Seekh (Wed adult)", baseQty: 1, unit: "pack", meal: "Wed adult" },
+      { name: "Colonel Kababz Beef Seekh (Wed kid)", baseQty: 1, unit: "pack", meal: "Wed kid" },
+      { name: "Soules Kitchen Street Taco Steak family pack (22 oz)", baseQty: 1, unit: "pack", meal: "Fri" },
+    ],
+    "Carbs": [
+      { name: "Vadilal frozen rumali rotis (Mon 7 rotis + Wed 4 more; keep a full pack in the freezer)", baseQty: 1, unit: "pack", meal: "Mon + Wed" },
+      { name: "La Banderita Carb Counter Street Taco tortillas (Fri adult, 6)", baseQty: 6, unit: "tortillas", meal: "Fri adult" },
+      { name: "Mission regular Street Taco flour tortillas (Fri kid, 4)", baseQty: 4, unit: "tortillas", meal: "Fri kid" },
+    ],
+    "Produce": [
+      { name: "Red onion (Wed emergency-kebab salad)", baseQty: 1, unit: "onion", meal: "Wed" },
+      { name: "Cucumber (Wed adult salad + kid sticks)", baseQty: 1, unit: "cucumber", meal: "Wed" },
+    ],
+    "Sauces + Condiments": [
+      { name: "Green chutney (Wed adult salad)", baseQty: 1, unit: "jar", meal: "Wed adult" },
+      { name: "Wholly Guacamole Classic Minis (Fri kid, 2)", baseQty: 2, unit: "containers", meal: "Fri kid" },
+      { name: "Salsa roja (Fri adult tacos)", qty: "pantry", meal: "Fri adult" },
+    ],
+    "Snacks + Chips": [
+      { name: "Khloud Nacho Protein Chips (Fri adult side, 1 serving)", baseQty: 1, unit: "servings", meal: "Fri adult" },
+      { name: "Regular tortilla chips (Fri kid side, 1 serving)", baseQty: 1, unit: "servings", meal: "Fri kid" },
+    ],
+    "Spice + Aromatic": [
+      { name: "Kashmiri chili powder (Mon adult finish, 1 tsp)", qty: "pantry", meal: "Mon adult" },
+    ],
+    "Pantry": [
+      { name: "Kirkland Sipping Bone Broth (Fri Soules skillet reheat, 1/4 cup)", qty: "pantry", meal: "Fri" },
+    ],
+  },
 };
 
 function getGrocery(week) { return GROCERY_BY_WEEK[week] || GROCERY_BY_WEEK[1]; }
