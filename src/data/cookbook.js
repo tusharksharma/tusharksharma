@@ -4767,12 +4767,12 @@ export const snackBoxes = [
     id: "sunshine-snack-box",
     title: "Sunshine Snack Box",
     tagline: "Snack Box Series Ep. 9 — a warm-color palette snack box named for the yolk-yellow / strawberry-red / cheese-cream / peanut-tan color story. Boiled egg + dried strawberries + light cheese wedge + salted peanuts. About 280 cal / 16g protein per box. Make four for 2 kids × 2 days.",
-    heroImage: "/images/sunshine-snack-box/hero-sunshine-snack-box.webp",
+    heroImage: "/images/sunshine-snack-box/hero-sunshine-snack-box-polished.webp",
     // prepImage — final-four shows the completed lineup with the warm-color
     // sunshine palette on display. Matches Ep. 8's fridge-ready pose but
     // the color story is the identity here. Raw for now; swap to
     // -polished.webp after Path A pass.
-    prepImage: "/images/sunshine-snack-box/final-four-sunshine-snack-boxes.webp",
+    prepImage: "/images/sunshine-snack-box/final-four-sunshine-snack-boxes-polished.webp",
     prepImageCaption: "Four completed Sunshine boxes — the yolk-yellow + strawberry-red + cheese-cream + peanut-tan warm-color palette is the visual identity. Named 'Sunshine' for the warm-tone story across all four compartments, not for a specific flavor axis. Ep. 9's flavor gamble is peanuts — kids either love them or reject them hard.",
     videoSrc: "/videos/sunshine-snack-box/sunshine-snack-box-episode-9-280cal-16protein-marcus.mp4",
     // socialImages — 6-cap step-order per [feedback-social-images-step-order].
@@ -4782,12 +4782,12 @@ export const snackBoxes = [
     // → add cheese → add peanuts → final-four payoff. Raw for now; swap to
     // -polished.webp after Path A pass.
     socialImages: [
-      "/images/sunshine-snack-box/step-01-slice-boiled-eggs.webp",
-      "/images/sunshine-snack-box/step-02-add-boiled-eggs.webp",
-      "/images/sunshine-snack-box/step-03-add-dried-strawberries.webp",
-      "/images/sunshine-snack-box/step-04-add-cheese-wedges.webp",
-      "/images/sunshine-snack-box/step-05-add-salted-peanuts.webp",
-      "/images/sunshine-snack-box/final-four-sunshine-snack-boxes.webp",
+      "/images/sunshine-snack-box/step-01-slice-boiled-eggs-polished.webp",
+      "/images/sunshine-snack-box/step-02-add-boiled-eggs-polished.webp",
+      "/images/sunshine-snack-box/step-03-add-dried-strawberries-polished.webp",
+      "/images/sunshine-snack-box/step-04-add-cheese-wedges-polished.webp",
+      "/images/sunshine-snack-box/step-05-add-salted-peanuts-polished.webp",
+      "/images/sunshine-snack-box/final-four-sunshine-snack-boxes-polished.webp",
     ],
     flavorProfile: "Warm-color palette snack box — yolk-yellow boiled egg + strawberry-red dried fruit + cheese-cream light wedge + peanut-tan roasted nuts. The Sunshine name is the visual identity: every compartment sits in the warm-tone family (no green, no cool colors), reading as a sunny meal-prep box on the fridge shelf. Flavor-wise, it's savory + sweet + creamy + crunchy across four compartments — protein-anchored by boiled egg, sweet-hit by dried strawberries, calcium + fat by cheese wedge, crunch + healthy fat by peanuts. Ep. 9's flavor gamble is the peanuts — kids either love them or reject them hard, which is where the caption 'which compartment disappears first' engagement hook comes from.",
     calories: 280,
@@ -4826,13 +4826,13 @@ export const snackBoxes = [
       "3 oz salted peanuts",
     ],
     steps: [
-      { text: "SET UP: Set out four divided snack boxes (4-compartment Bento-style — same format as Snack Box Series Ep. 1-8). Have peeled hard-boiled eggs ready (make ahead — 4 large eggs boiled, ice-bathed, peeled — 10 min active + 12 min cook / cool). Ep. 9 continues the shelf-stable-protein pattern from Ep. 8: cook once, chill, hold.", image: "/images/sunshine-snack-box/hero-sunshine-snack-box.webp" },
-      { text: "SLICE EGGS: Slice each peeled hard-boiled egg in half (over-4s) or into age-appropriate small pieces (under-4s). Yolk-yellow is the warm-color anchor for the whole box; keep the yolk exposed on top for the visual identity. 4 eggs across 4 boxes = 1 egg per box.", image: "/images/sunshine-snack-box/step-01-slice-boiled-eggs.webp" },
-      { text: "ADD EGGS: Place 1 sliced egg into the first compartment of each box, yolk-side up when possible for the sunshine identity moment. Boiled egg is the ~6g protein anchor per box.", image: "/images/sunshine-snack-box/step-02-add-boiled-eggs.webp" },
-      { text: "STRAWBERRIES: Add one 60-calorie portion of dried strawberries to the second compartment of each box. Dried strawberries are the sweet-hit + warm-red color anchor. Any brand of freeze-dried or dehydrated strawberries flexes — measure by label serving, not by handful, since portion size drives ~60 cal / portion.", image: "/images/sunshine-snack-box/step-03-add-dried-strawberries.webp" },
-      { text: "CHEESE WEDGE: Add 1 wrapped light cheese wedge to the third compartment of each box (Laughing Cow-style — creamy spreadable wedge, ~35-50 cal / 2-3g protein). Cheese-cream color completes the warm palette. Wrapped wedge stays clean in the box; kids can help unwrap at snack time.", image: "/images/sunshine-snack-box/step-04-add-cheese-wedges.webp" },
-      { text: "PEANUTS: Weigh 0.75 oz salted peanuts into the final compartment of each box (about a small handful — measure by weight, not by feel). Peanut-tan color completes the sunshine palette + adds crunch, fat, and a bit more protein. FOR KIDS UNDER 4 — omit whole peanuts entirely; sub a soft alternative (soft berries, banana slices, or diced apple). Over 4 with good chewing = whole peanuts only if supervised.", image: "/images/sunshine-snack-box/step-05-add-salted-peanuts.webp" },
-      { text: "LID + CHILL: Snap lids on and refrigerate promptly. Serve within 2 days. Dried strawberries + peanuts may soften slightly in the sealed box's humidity — add peanuts closer to serving if maximum crunch matters (they hold OK for 2 days but the first-day crunch is best).", image: "/images/sunshine-snack-box/final-four-sunshine-snack-boxes.webp" },
+      { text: "SET UP: Set out four divided snack boxes (4-compartment Bento-style — same format as Snack Box Series Ep. 1-8). Have peeled hard-boiled eggs ready (make ahead — 4 large eggs boiled, ice-bathed, peeled — 10 min active + 12 min cook / cool). Ep. 9 continues the shelf-stable-protein pattern from Ep. 8: cook once, chill, hold.", image: "/images/sunshine-snack-box/hero-sunshine-snack-box-polished.webp" },
+      { text: "SLICE EGGS: Slice each peeled hard-boiled egg in half (over-4s) or into age-appropriate small pieces (under-4s). Yolk-yellow is the warm-color anchor for the whole box; keep the yolk exposed on top for the visual identity. 4 eggs across 4 boxes = 1 egg per box.", image: "/images/sunshine-snack-box/step-01-slice-boiled-eggs-polished.webp" },
+      { text: "ADD EGGS: Place 1 sliced egg into the first compartment of each box, yolk-side up when possible for the sunshine identity moment. Boiled egg is the ~6g protein anchor per box.", image: "/images/sunshine-snack-box/step-02-add-boiled-eggs-polished.webp" },
+      { text: "STRAWBERRIES: Add one 60-calorie portion of dried strawberries to the second compartment of each box. Dried strawberries are the sweet-hit + warm-red color anchor. Any brand of freeze-dried or dehydrated strawberries flexes — measure by label serving, not by handful, since portion size drives ~60 cal / portion.", image: "/images/sunshine-snack-box/step-03-add-dried-strawberries-polished.webp" },
+      { text: "CHEESE WEDGE: Add 1 wrapped light cheese wedge to the third compartment of each box (Laughing Cow-style — creamy spreadable wedge, ~35-50 cal / 2-3g protein). Cheese-cream color completes the warm palette. Wrapped wedge stays clean in the box; kids can help unwrap at snack time.", image: "/images/sunshine-snack-box/step-04-add-cheese-wedges-polished.webp" },
+      { text: "PEANUTS: Weigh 0.75 oz salted peanuts into the final compartment of each box (about a small handful — measure by weight, not by feel). Peanut-tan color completes the sunshine palette + adds crunch, fat, and a bit more protein. FOR KIDS UNDER 4 — omit whole peanuts entirely; sub a soft alternative (soft berries, banana slices, or diced apple). Over 4 with good chewing = whole peanuts only if supervised.", image: "/images/sunshine-snack-box/step-05-add-salted-peanuts-polished.webp" },
+      { text: "LID + CHILL: Snap lids on and refrigerate promptly. Serve within 2 days. Dried strawberries + peanuts may soften slightly in the sealed box's humidity — add peanuts closer to serving if maximum crunch matters (they hold OK for 2 days but the first-day crunch is best).", image: "/images/sunshine-snack-box/final-four-sunshine-snack-boxes-polished.webp" },
     ],
     executionRules: [
       "PEANUT ALLERGY = SCHOOL-FORBIDDEN #1. Do NOT label this box school-safe. Peanuts are the most-restricted allergen in schools and childcare — check the specific school's nut/peanut policy BEFORE packing outside the home. This is Ep. 9's headline rule.",
