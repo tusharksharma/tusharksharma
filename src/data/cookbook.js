@@ -3857,20 +3857,20 @@ export const powerups = [
     id: "cookie-butter-iced-proffee",
     title: "Cookie Butter Iced Proffee",
     tagline: "Proffee Episode 2 — Ep 1's concentrate-first technique now carries cookie butter and Biscoff. 210 cal / 22g protein per glass (1:9.5 protein-to-cal), 5-minute build. Whey blends into a hot coffee concentrate with a crushed Biscoff cookie, then ice + fat-free ultra-filtered milk + cookie-butter rim + whipped topping + a second Biscoff crumble finish.",
-    heroImage: "/images/cookie-butter-iced-proffee/hero-cookie-butter-iced-proffee.webp",
+    heroImage: "/images/cookie-butter-iced-proffee/hero-cookie-butter-iced-proffee-polished.webp",
     // prepImage = the blended concentrate moment (matches Ep 1's convention of
     // showing the concentrate as the technique center of the recipe).
-    prepImage: "/images/cookie-butter-iced-proffee/step-06-blend-smooth.webp",
+    prepImage: "/images/cookie-butter-iced-proffee/step-06-blend-smooth-polished.webp",
     // socialImages — 6-cap step-order per [feedback-social-images-step-order].
     // Handoff proposed 10 (including whey + water + hero). Trimmed to the arc
     // that goes crush → concentrate → milk → rim → topping → payoff.
     socialImages: [
-      "/images/cookie-butter-iced-proffee/step-01-crush-biscoff.webp",
-      "/images/cookie-butter-iced-proffee/step-06-blend-smooth.webp",
-      "/images/cookie-butter-iced-proffee/step-08-add-milk.webp",
-      "/images/cookie-butter-iced-proffee/step-09-cookie-butter-rim.webp",
-      "/images/cookie-butter-iced-proffee/step-10-whipped-topping.webp",
-      "/images/cookie-butter-iced-proffee/step-11-biscoff-garnish.webp",
+      "/images/cookie-butter-iced-proffee/step-01-crush-biscoff-polished.webp",
+      "/images/cookie-butter-iced-proffee/step-06-blend-smooth-polished.webp",
+      "/images/cookie-butter-iced-proffee/step-08-add-milk-polished.webp",
+      "/images/cookie-butter-iced-proffee/step-09-cookie-butter-rim-polished.webp",
+      "/images/cookie-butter-iced-proffee/step-10-whipped-topping-polished.webp",
+      "/images/cookie-butter-iced-proffee/step-11-biscoff-garnish-polished.webp",
     ],
     videoSrc: "/videos/cookie-butter-iced-proffee/cookie-butter-iced-proffee-25s-22protein-asmr.mp4",
     flavorProfile: "Iced protein coffee that sits between coffee and dessert — the caption asks the audience to settle it. Cookie butter on the rim gives the first sip a caramelized-spiced note that reads instantly as Biscoff. The blended concentrate carries a crushed Biscoff cookie for spice depth inside the drink, not just on top. Fat-free ultra-filtered milk keeps the mouthfeel smooth without stacking cream. Sugar-free whipped topping + a second Biscoff crumble finish delivers the visual dessert-drink identity. Ep 1's clean iced-coffee foundation, dressed up as a Biscoff dessert.",
@@ -3913,14 +3913,14 @@ export const powerups = [
       "1 Biscoff cookie, crushed (garnish over the whipped topping)",
     ],
     steps: [
-      { text: "CRUSH FIRST BISCOFF: Crush 1 Biscoff cookie into the bottom of a tall blending cup. This cookie goes INSIDE the concentrate for spice depth throughout the drink; the second cookie stays whole for the garnish at the end.", image: "/images/cookie-butter-iced-proffee/step-01-crush-biscoff.webp" },
+      { text: "CRUSH FIRST BISCOFF: Crush 1 Biscoff cookie into the bottom of a tall blending cup. This cookie goes INSIDE the concentrate for spice depth throughout the drink; the second cookie stays whole for the garnish at the end.", image: "/images/cookie-butter-iced-proffee/step-01-crush-biscoff-polished.webp" },
       { text: "ADD COFFEE + WHEY + SWEETENER: 1/2 tbsp instant coffee, 1/2 serving unflavored whey isolate, and 2 tsp monk fruit sweetener into the blending cup with the crushed Biscoff.", image: "/images/cookie-butter-iced-proffee/step-03-add-whey.webp" },
       { text: "ADD HOT WATER: 2 tbsp hot (NOT boiling) water. Start with 2 tbsp; add the third only if the concentrate needs help moving. Hot water pulls flavor from the crushed Biscoff and dissolves the coffee faster than cold; not-quite-boiling protects the whey from denaturing.", image: "/images/cookie-butter-iced-proffee/step-05-add-hot-water.webp" },
-      { text: "BLEND SMOOTH: Submerge the immersion-blender head BEFORE turning it on (splatter control). Blend until the concentrate is smooth with zero visible protein clumps or Biscoff chunks. This is the Proffee-series technique differentiator — whey dissolves into the hot concentrate NOW, not into cold milk later.", image: "/images/cookie-butter-iced-proffee/step-06-blend-smooth.webp" },
-      { text: "RIM THE SERVING GLASS (recommended): Spread 1 tsp cookie butter around the rim of the SERVING glass while it's still empty — much cleaner than rimming a full drink. The filmed video builds the entire drink in one cup, which works but is harder to keep tidy. If following the video's one-cup method, rim carefully with the drink already in place.", image: "/images/cookie-butter-iced-proffee/step-09-cookie-butter-rim.webp" },
-      { text: "ADD ICE + MILK: Fill the rimmed serving glass with ice. Pour the concentrate over the ice, then add 1/2 cup Fairlife fat-free ultra-filtered milk. Fat-free is the macro-honesty pick — 2% pushes calories without adding protein.", image: "/images/cookie-butter-iced-proffee/step-08-add-milk.webp" },
-      { text: "TOP WITH WHIPPED TOPPING: Add 1 tbsp sugar-free whipped topping in a swirl over the drink.", image: "/images/cookie-butter-iced-proffee/step-10-whipped-topping.webp" },
-      { text: "GARNISH + SERVE: Crush the second Biscoff cookie over the whipped topping. Serve immediately — the whipped topping softens against the cold drink after 1-2 minutes.", image: "/images/cookie-butter-iced-proffee/step-11-biscoff-garnish.webp" },
+      { text: "BLEND SMOOTH: Submerge the immersion-blender head BEFORE turning it on (splatter control). Blend until the concentrate is smooth with zero visible protein clumps or Biscoff chunks. This is the Proffee-series technique differentiator — whey dissolves into the hot concentrate NOW, not into cold milk later.", image: "/images/cookie-butter-iced-proffee/step-06-blend-smooth-polished.webp" },
+      { text: "RIM THE SERVING GLASS (recommended): Spread 1 tsp cookie butter around the rim of the SERVING glass while it's still empty — much cleaner than rimming a full drink. The filmed video builds the entire drink in one cup, which works but is harder to keep tidy. If following the video's one-cup method, rim carefully with the drink already in place.", image: "/images/cookie-butter-iced-proffee/step-09-cookie-butter-rim-polished.webp" },
+      { text: "ADD ICE + MILK: Fill the rimmed serving glass with ice. Pour the concentrate over the ice, then add 1/2 cup Fairlife fat-free ultra-filtered milk. Fat-free is the macro-honesty pick — 2% pushes calories without adding protein.", image: "/images/cookie-butter-iced-proffee/step-08-add-milk-polished.webp" },
+      { text: "TOP WITH WHIPPED TOPPING: Add 1 tbsp sugar-free whipped topping in a swirl over the drink.", image: "/images/cookie-butter-iced-proffee/step-10-whipped-topping-polished.webp" },
+      { text: "GARNISH + SERVE: Crush the second Biscoff cookie over the whipped topping. Serve immediately — the whipped topping softens against the cold drink after 1-2 minutes.", image: "/images/cookie-butter-iced-proffee/step-11-biscoff-garnish-polished.webp" },
     ],
     executionRules: [
       "Blend whey into the HOT concentrate before adding ice or milk — Proffee-series spine, carries from Ep 1.",
