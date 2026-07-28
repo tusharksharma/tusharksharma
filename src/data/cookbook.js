@@ -4640,12 +4640,12 @@ export const snackBoxes = [
     id: "deli-dill-snack-box",
     title: "Deli Dill Snack Box",
     tagline: "Snack Box Series Ep. 8 — deli-plate energy at snack-box scale. 2.5 oz deli turkey + cubed Colby Jack + petite dill pickles + pretzel crisps. About 250 cal / 20g protein per box. Ep. 8 returns to shelf-stable proteins after Ep. 7's first-hot-protein Tropical Chicken. Make four at once for 2 kids × 2 days.",
-    heroImage: "/images/deli-dill-snack-box/hero-deli-dill-snack-box.webp",
+    heroImage: "/images/deli-dill-snack-box/hero-deli-dill-snack-box-polished.webp",
     // prepImage — final-stacked shows all four boxes in the fridge-ready
     // pose that anchors the make-once, snack-four-times payoff. Series-
     // consistent with Ep. 7 prepImage energy. Raw for now; swap to
     // -polished.webp after Path A pass.
-    prepImage: "/images/deli-dill-snack-box/final-stacked-snack-boxes.webp",
+    prepImage: "/images/deli-dill-snack-box/final-stacked-snack-boxes-polished.webp",
     prepImageCaption: "Four boxes stacked, fridge-ready — the make-once, snack-four-times payoff. Ep. 8 returns to shelf-stable proteins (deli turkey) after Ep. 7's cooked-fajita-chicken exception; cold-chain rules still apply but with wider tolerance than a cooked-protein box.",
     videoSrc: "/videos/deli-dill-snack-box/deli-dill-snack-box-250cal-20protein-marcus.mp4",
     // socialImages — 6-cap step-order per [feedback-social-images-step-order].
@@ -4655,12 +4655,12 @@ export const snackBoxes = [
     // → final-stacked payoff. Raw for now; swap to -polished.webp after
     // Path A pass.
     socialImages: [
-      "/images/deli-dill-snack-box/step-01-divide-turkey.webp",
-      "/images/deli-dill-snack-box/step-02-add-colby-jack.webp",
-      "/images/deli-dill-snack-box/step-03-add-pickles.webp",
-      "/images/deli-dill-snack-box/step-04-add-pretzels.webp",
-      "/images/deli-dill-snack-box/final-four-snack-boxes.webp",
-      "/images/deli-dill-snack-box/final-stacked-snack-boxes.webp",
+      "/images/deli-dill-snack-box/step-01-divide-turkey-polished.webp",
+      "/images/deli-dill-snack-box/step-02-add-colby-jack-polished.webp",
+      "/images/deli-dill-snack-box/step-03-add-pickles-polished.webp",
+      "/images/deli-dill-snack-box/step-04-add-pretzels-polished.webp",
+      "/images/deli-dill-snack-box/final-four-snack-boxes-polished.webp",
+      "/images/deli-dill-snack-box/final-stacked-snack-boxes-polished.webp",
     ],
     flavorProfile: "Deli-plate energy at snack-box scale. Sliced deli turkey (savory + light) + cubed Colby Jack (creamy + mild) + petite dill pickles (bright briny) + pretzel crisps (salty crunch). Reads classic-American-snack-plate — the kind of kid + adult-friendly build that assembles like a lunchable but eats like a real deli plate. Ep. 8 returns to shelf-stable proteins (deli turkey vs Ep. 7's cooked fajita chicken) — wider cold-chain tolerance, easier to pack.",
     calories: 250,
@@ -4699,12 +4699,12 @@ export const snackBoxes = [
       "3 oz pretzel crisps",
     ],
     steps: [
-      { text: "SET UP: Set out four divided snack boxes (4-compartment Bento-style — same format as Snack Box Series Ep. 1-7). Deli turkey is shelf-stable pre-open; no cooking needed. Ep. 8 returns to shelf-stable proteins after Ep. 7's cooked-fajita-chicken exception.", image: "/images/deli-dill-snack-box/hero-deli-dill-snack-box.webp" },
-      { text: "TURKEY: Divide 10 oz deli turkey into 4 boxes — 2.5 oz per box. Any oven-roasted deli turkey works (Hillshire Farm Premium Carved shown; brand-neutral by default). For hungrier kids or adult mini-meal, bump to 3 oz per box (12 oz total).", image: "/images/deli-dill-snack-box/step-01-divide-turkey.webp" },
-      { text: "COLBY JACK: Cube one Colby Jack cheese stick per box and add to the second compartment. Cube size = 1/2-inch or smaller for young kids. Colby Jack is milder than sharp cheddar — kid-friendly by default. Uniform cube size = no compartment ends up with awkward pieces.", image: "/images/deli-dill-snack-box/step-02-add-colby-jack.webp" },
-      { text: "PICKLES: Add 3-4 petite dill pickles per box to the third compartment (Mt. Olive Kosher Dill Petites shown). This is the flavor-identity moment — kids either love it or reject it, which is the caption's engagement hook. For under-4s, slice petites lengthwise to reduce choking risk; over 4s handle whole petites fine with supervision.", image: "/images/deli-dill-snack-box/step-03-add-pickles.webp" },
-      { text: "PRETZELS: Add 0.75 oz pretzel crisps (Snack Factory Original shown) to the DRY compartment — critical to keep pretzels away from pickle moisture, else they soften in the sealed box within hours. Pretzel crisps are flat and thin so they hold better than round hard pretzels, but still separate compartments.", image: "/images/deli-dill-snack-box/step-04-add-pretzels.webp" },
-      { text: "LID + CHILL: Snap lids on and refrigerate immediately. Assembled boxes hold up to 3 days for the turkey + cheese (deli turkey has wider cold-chain tolerance than Ep. 7's cooked chicken). Pretzels stay crunchy for 2-3 days if separated from pickle moisture in the box. For lunchboxes, pack with an ice pack.", image: "/images/deli-dill-snack-box/final-stacked-snack-boxes.webp" },
+      { text: "SET UP: Set out four divided snack boxes (4-compartment Bento-style — same format as Snack Box Series Ep. 1-7). Deli turkey is shelf-stable pre-open; no cooking needed. Ep. 8 returns to shelf-stable proteins after Ep. 7's cooked-fajita-chicken exception.", image: "/images/deli-dill-snack-box/hero-deli-dill-snack-box-polished.webp" },
+      { text: "TURKEY: Divide 10 oz deli turkey into 4 boxes — 2.5 oz per box. Any oven-roasted deli turkey works (Hillshire Farm Premium Carved shown; brand-neutral by default). For hungrier kids or adult mini-meal, bump to 3 oz per box (12 oz total).", image: "/images/deli-dill-snack-box/step-01-divide-turkey-polished.webp" },
+      { text: "COLBY JACK: Cube one Colby Jack cheese stick per box and add to the second compartment. Cube size = 1/2-inch or smaller for young kids. Colby Jack is milder than sharp cheddar — kid-friendly by default. Uniform cube size = no compartment ends up with awkward pieces.", image: "/images/deli-dill-snack-box/step-02-add-colby-jack-polished.webp" },
+      { text: "PICKLES: Add 3-4 petite dill pickles per box to the third compartment (Mt. Olive Kosher Dill Petites shown). This is the flavor-identity moment — kids either love it or reject it, which is the caption's engagement hook. For under-4s, slice petites lengthwise to reduce choking risk; over 4s handle whole petites fine with supervision.", image: "/images/deli-dill-snack-box/step-03-add-pickles-polished.webp" },
+      { text: "PRETZELS: Add 0.75 oz pretzel crisps (Snack Factory Original shown) to the DRY compartment — critical to keep pretzels away from pickle moisture, else they soften in the sealed box within hours. Pretzel crisps are flat and thin so they hold better than round hard pretzels, but still separate compartments.", image: "/images/deli-dill-snack-box/step-04-add-pretzels-polished.webp" },
+      { text: "LID + CHILL: Snap lids on and refrigerate immediately. Assembled boxes hold up to 3 days for the turkey + cheese (deli turkey has wider cold-chain tolerance than Ep. 7's cooked chicken). Pretzels stay crunchy for 2-3 days if separated from pickle moisture in the box. For lunchboxes, pack with an ice pack.", image: "/images/deli-dill-snack-box/final-stacked-snack-boxes-polished.webp" },
     ],
     executionRules: [
       "PRETZELS GO IN THE DRY COMPARTMENT — separated from pickle moisture. Pretzel + pickle contact = soft mush within hours. This is Ep. 8's most texture-critical rule.",
