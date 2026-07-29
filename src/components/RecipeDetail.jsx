@@ -12,12 +12,20 @@ const pillarColors = {
 
 export default function RecipeDetail({ recipe }) {
   const [searchParams] = useSearchParams();
-  const [mode, setMode] = useState("adult");
+  const hasSplit = !!recipe.splitCook;
+  // Default to split mode when splitCook is present — these recipes typically
+  // don't carry top-level `steps`, so rendering the standard view would crash
+  // on `recipe.steps.map`. Users can still toggle to Adult Mode, but the split
+  // fallback below keeps SplitCookView as the render for split recipes without
+  // top-level steps.
+  const [mode, setMode] = useState(hasSplit ? "split" : "adult");
   const [adults, setAdults] = useState(() => { const v = searchParams.get("adults"); return v !== null ? Number(v) || 1 : 2; });
   const [kids, setKids] = useState(() => { const v = searchParams.get("kids"); return v !== null ? Number(v) : 2; });
   const [leftovers, setLeftovers] = useState(() => searchParams.get("leftovers") === "1");
-  const hasSplit = !!recipe.splitCook;
   const isSplit = hasSplit && mode === "split";
+  // Split recipes without top-level steps must render SplitCookView regardless
+  // of mode — the standard view expects recipe.steps to exist.
+  const forceSplitView = hasSplit && !Array.isArray(recipe.steps);
   const baseServings = recipe.servings || 4;
   const totalServings = adults + kids;
   const scale = (totalServings / baseServings) * (leftovers ? 2 : 1);
@@ -280,7 +288,7 @@ export default function RecipeDetail({ recipe }) {
         )}
 
         {/* ═══ SPLIT COOK VIEW ═══ */}
-        {isSplit ? (
+        {isSplit || forceSplitView ? (
           <SplitCookView recipe={recipe} scale={scale} />
         ) : (
           /* ═══ STANDARD VIEW ═══ */
