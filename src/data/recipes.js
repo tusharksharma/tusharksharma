@@ -1328,13 +1328,13 @@ const recipes = [
     servings: 4,
     protein: 42,
     calories: 380,
-    image: "/images/air-fryer-chicken-thighs-cheesy-broccoli/hero-split-adult-kid-plates.webp",
-    prepImage: "/images/air-fryer-chicken-thighs-cheesy-broccoli/step-05-load-air-fryers.webp",
+    image: "/images/air-fryer-chicken-thighs-cheesy-broccoli/hero-split-adult-kid-plates-polished.webp",
+    prepImage: "/images/air-fryer-chicken-thighs-cheesy-broccoli/step-05-load-air-fryers-polished.webp",
     socialImages: [
-      "/images/air-fryer-chicken-thighs-cheesy-broccoli/step-02-season-two-ways.webp",
-      "/images/air-fryer-chicken-thighs-cheesy-broccoli/step-04-season-frozen-broccoli.webp",
-      "/images/air-fryer-chicken-thighs-cheesy-broccoli/step-05-load-air-fryers.webp",
-      "/images/air-fryer-chicken-thighs-cheesy-broccoli/step-09-slice-adult-chicken.webp",
+      "/images/air-fryer-chicken-thighs-cheesy-broccoli/step-02-season-two-ways-polished.webp",
+      "/images/air-fryer-chicken-thighs-cheesy-broccoli/step-04-season-frozen-broccoli-polished.webp",
+      "/images/air-fryer-chicken-thighs-cheesy-broccoli/step-05-load-air-fryers-polished.webp",
+      "/images/air-fryer-chicken-thighs-cheesy-broccoli/step-09-slice-adult-chicken-polished.webp",
     ],
     video: "/videos/air-fryer-chicken-thighs-cheesy-broccoli/air-fryer-chicken-thighs-cheesy-broccoli-380cal-42protein-updated-marcus.mp4",
     role: "The Hands-Off Winner",
@@ -1384,7 +1384,7 @@ const recipes = [
         },
         {
           text: "SEASON SPLIT: Season the 2 kid thighs with Dan-O's Original (mild). Season the 4 adult thighs with Outlaw Blackened Bloody Mary (bold). Light avocado oil spray on both portions, toss.",
-          images: ["/images/air-fryer-chicken-thighs-cheesy-broccoli/step-02-season-two-ways.webp"],
+          images: ["/images/air-fryer-chicken-thighs-cheesy-broccoli/step-02-season-two-ways-polished.webp"],
         },
         {
           text: "REST: Cover both bowls and refrigerate a couple of hours so the seasoning grabs.",
@@ -1392,11 +1392,11 @@ const recipes = [
         },
         {
           text: "PREP BROCCOLI: Toss 12 oz frozen broccoli with light avocado oil spray + salt. Do NOT thaw. Cheesoning goes on AFTER cooking, not before.",
-          images: ["/images/air-fryer-chicken-thighs-cheesy-broccoli/step-04-season-frozen-broccoli.webp"],
+          images: ["/images/air-fryer-chicken-thighs-cheesy-broccoli/step-04-season-frozen-broccoli-polished.webp"],
         },
         {
           text: "LOAD BOTH AIR FRYERS: Mild thighs in one basket, blackened thighs in the other (or use one basket with a divider). Broccoli goes in a third basket / vessel. Two-air-fryer setup is the personal favorite here — but any air fryer with enough separated capacity works.",
-          images: ["/images/air-fryer-chicken-thighs-cheesy-broccoli/step-05-load-air-fryers.webp"],
+          images: ["/images/air-fryer-chicken-thighs-cheesy-broccoli/step-05-load-air-fryers-polished.webp"],
         },
         {
           text: "COOK CHICKEN: 375°F, 20 min, flip halfway. Verify 165°F internal on the thickest piece.",
@@ -1419,7 +1419,7 @@ const recipes = [
           "Extra Cheesoning",
         ],
         steps: [
-          { text: "SLICE + PLATE: Slice 2 blackened thighs per adult. Add one-quarter of the cheesy broccoli. No bread on the adult plate.", images: ["/images/air-fryer-chicken-thighs-cheesy-broccoli/step-09-slice-adult-chicken.webp"] },
+          { text: "SLICE + PLATE: Slice 2 blackened thighs per adult. Add one-quarter of the cheesy broccoli. No bread on the adult plate.", images: ["/images/air-fryer-chicken-thighs-cheesy-broccoli/step-09-slice-adult-chicken-polished.webp"] },
         ],
       },
       kid: {
@@ -1464,7 +1464,7 @@ const recipes = [
     steps: [
       { text: "PREP: Pat chicken dry. Avocado oil spray. Season with Outlaw Blackened Bloody Mary.", images: ["/images/air-fryer-chicken-thighs-cheesy-broccoli/step-01-divide-dry-thighs.webp"] },
       { text: "COOK CHICKEN: Air fryer 375°F, 20 min, flip halfway. Pull at 165°F.", images: ["/images/air-fryer-chicken-thighs-cheesy-broccoli/step-06-flip-chicken.webp"] },
-      { text: "PREP BROCCOLI: Toss frozen broccoli with avocado oil spray + salt. Do NOT thaw. Single layer.", images: ["/images/air-fryer-chicken-thighs-cheesy-broccoli/step-04-season-frozen-broccoli.webp"] },
+      { text: "PREP BROCCOLI: Toss frozen broccoli with avocado oil spray + salt. Do NOT thaw. Single layer.", images: ["/images/air-fryer-chicken-thighs-cheesy-broccoli/step-04-season-frozen-broccoli-polished.webp"] },
       { text: "COOK BROCCOLI: Air fryer 400°F, 15 min, shake halfway. Charred edges." },
       { text: "CHEESONING: Sprinkle Dan-O's Cheesoning on hot broccoli immediately. Toss." },
       { text: "PLATE: Slice chicken + cheesy broccoli. Bold flavor from the Blackened Bloody Mary carries the plate.", images: ["/images/air-fryer-chicken-thighs-cheesy-broccoli/hero-adult-chicken-broccoli.webp"] },
