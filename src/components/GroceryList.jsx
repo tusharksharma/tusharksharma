@@ -618,7 +618,7 @@ const GROCERY_BY_WEEK = {
       { name: "Tillamook Medium Cheddar Shredded (8 oz)", baseQty: 1, unit: "container", meal: "Mon kid" },
     ],
   },
-  // Week 16: Mon=Halal Cart Chicken Rice Bowls(44), Wed=Herb-Garlic Pork Chops(39), Fri=Chili Cream Tri-Tip Penne(2)
+  // Week 16: Mon=Halal Cart Chicken Rice Bowls(44), Wed=Herb-Garlic Pork Chops(39), Fri=Split-Protein Creamy Spinach Pasta(2)
   16: {
     "Protein": [
       { name: "Trader Joe's Shawarma-Style Chicken Thighs (1.5 lb pack)", baseQty: 1, unit: "pack", meal: "Mon" },
@@ -627,7 +627,7 @@ const GROCERY_BY_WEEK = {
     ],
     "Carbs": [
       { name: "Basmati rice (1 cup uncooked for the batch)", baseQty: 1, unit: "cup", meal: "Mon" },
-      { name: "Barilla Penne (or any penne)", baseQty: 1, unit: "box", meal: "Fri" },
+      { name: "Regular pasta (any brand — 4 package servings)", baseQty: 1, unit: "box", meal: "Fri" },
     ],
     "Vegetables": [
       { name: "Iceberg lettuce", baseQty: 1, unit: "head", meal: "Mon" },
