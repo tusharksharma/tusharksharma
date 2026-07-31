@@ -248,15 +248,15 @@ const recipes = [
     servings: 4,
     protein: 38,
     calories: 460,
-    image: "/images/split-protein-creamy-spinach-pasta/hero-split-adult-kid-plates.webp",
-    prepImage: "/images/split-protein-creamy-spinach-pasta/step-06-portion-bulk-sauce.webp",
+    image: "/images/split-protein-creamy-spinach-pasta/hero-split-adult-kid-plates-polished.webp",
+    prepImage: "/images/split-protein-creamy-spinach-pasta/step-06-portion-bulk-sauce-polished.webp",
     socialImages: [
-      "/images/split-protein-creamy-spinach-pasta/step-01-blanch-spinach.webp",
-      "/images/split-protein-creamy-spinach-pasta/step-05-blend-green-sauce.webp",
-      "/images/split-protein-creamy-spinach-pasta/step-06-portion-bulk-sauce.webp",
-      "/images/split-protein-creamy-spinach-pasta/step-08-kid-meatballs-alfredo.webp",
-      "/images/split-protein-creamy-spinach-pasta/step-12-slice-tri-tip.webp",
-      "/images/split-protein-creamy-spinach-pasta/step-13-plate-two-ways.webp",
+      "/images/split-protein-creamy-spinach-pasta/step-01-blanch-spinach-polished.webp",
+      "/images/split-protein-creamy-spinach-pasta/step-05-blend-green-sauce-polished.webp",
+      "/images/split-protein-creamy-spinach-pasta/step-06-portion-bulk-sauce-polished.webp",
+      "/images/split-protein-creamy-spinach-pasta/step-08-kid-meatballs-alfredo-polished.webp",
+      "/images/split-protein-creamy-spinach-pasta/step-12-slice-tri-tip-polished.webp",
+      "/images/split-protein-creamy-spinach-pasta/step-13-plate-two-ways-polished.webp",
     ],
     video: "/videos/split-protein-creamy-spinach-pasta/split-protein-creamy-spinach-pasta-460cal-38protein-marcus.mp4",
     originalSoundVideo: "/videos/split-protein-creamy-spinach-pasta/split-protein-creamy-spinach-pasta-text-original-sound.mp4",
@@ -309,7 +309,7 @@ const recipes = [
       sharedSteps: [
         {
           text: "BLANCH SPINACH: Bring a pot of water to a boil. Add the 9 oz bag of spinach and blanch briefly, just until fully wilted.",
-          images: ["/images/split-protein-creamy-spinach-pasta/step-01-blanch-spinach.webp"],
+          images: ["/images/split-protein-creamy-spinach-pasta/step-01-blanch-spinach-polished.webp"],
         },
         {
           text: "ICE BATH + SQUEEZE: Immediately transfer spinach to ice water to stop the cooking. Drain thoroughly and squeeze out excess water \u2014 residual water thins the sauce.",
@@ -321,11 +321,11 @@ const recipes = [
         },
         {
           text: "BLEND SMOOTH: Blend until completely smooth and pale green.",
-          images: ["/images/split-protein-creamy-spinach-pasta/step-05-blend-green-sauce.webp"],
+          images: ["/images/split-protein-creamy-spinach-pasta/step-05-blend-green-sauce-polished.webp"],
         },
         {
           text: "PORTION BULK SAUCE: Set aside enough sauce to lightly coat four pasta servings. Portion the remainder into family-dinner containers \u2014 creator reports the batch covers ~6 family dinners in total.",
-          images: ["/images/split-protein-creamy-spinach-pasta/step-06-portion-bulk-sauce.webp"],
+          images: ["/images/split-protein-creamy-spinach-pasta/step-06-portion-bulk-sauce-polished.webp"],
         },
         {
           text: "COOK + TOSS PASTA: Cook four package servings of regular pasta per the package. Drain, return to the pot, and toss with only enough green sauce to coat the pasta.",
@@ -385,15 +385,15 @@ const recipes = [
       "prepared Alfredo sauce, enough to lightly coat",
     ],
     steps: [
-      { text: "BLANCH SPINACH: Bring a pot of water to a boil. Add the 9 oz bag of spinach and blanch briefly, just until fully wilted.", images: ["/images/split-protein-creamy-spinach-pasta/step-01-blanch-spinach.webp"] },
+      { text: "BLANCH SPINACH: Bring a pot of water to a boil. Add the 9 oz bag of spinach and blanch briefly, just until fully wilted.", images: ["/images/split-protein-creamy-spinach-pasta/step-01-blanch-spinach-polished.webp"] },
       { text: "ICE BATH + SQUEEZE: Immediately transfer to ice water. Drain thoroughly and squeeze out excess water \u2014 residual water thins the sauce.", images: ["/images/split-protein-creamy-spinach-pasta/step-02-ice-bath-spinach.webp"] },
-      { text: "BLEND SAUCE: Add cottage cheese, ultra-filtered milk, bone broth, and cooled spinach to a blender. Blend until completely smooth and pale green.", images: ["/images/split-protein-creamy-spinach-pasta/step-03-add-cottage-cheese.webp", "/images/split-protein-creamy-spinach-pasta/step-04-add-spinach-to-blender.webp", "/images/split-protein-creamy-spinach-pasta/step-05-blend-green-sauce.webp"] },
-      { text: "PORTION BULK SAUCE: Reserve enough to lightly coat 4 pasta servings for the current dinner. Portion the remainder into family-dinner containers for ~6 future dinners (creator-reported yield).", images: ["/images/split-protein-creamy-spinach-pasta/step-06-portion-bulk-sauce.webp"] },
+      { text: "BLEND SAUCE: Add cottage cheese, ultra-filtered milk, bone broth, and cooled spinach to a blender. Blend until completely smooth and pale green.", images: ["/images/split-protein-creamy-spinach-pasta/step-03-add-cottage-cheese.webp", "/images/split-protein-creamy-spinach-pasta/step-04-add-spinach-to-blender.webp", "/images/split-protein-creamy-spinach-pasta/step-05-blend-green-sauce-polished.webp"] },
+      { text: "PORTION BULK SAUCE: Reserve enough to lightly coat 4 pasta servings for the current dinner. Portion the remainder into family-dinner containers for ~6 future dinners (creator-reported yield).", images: ["/images/split-protein-creamy-spinach-pasta/step-06-portion-bulk-sauce-polished.webp"] },
       { text: "COOK + TOSS PASTA: Cook 4 package servings of regular pasta per package. Drain and toss with only enough green sauce to coat \u2014 not to drown.", images: ["/images/split-protein-creamy-spinach-pasta/step-07-toss-pasta.webp"] },
-      { text: "KID PROTEIN (parallel): Heat 4 oz bite-sized beef meatballs per package. Coat lightly with Alfredo (do NOT pool). Divide into two 2 oz kid portions.", images: ["/images/split-protein-creamy-spinach-pasta/step-08-kid-meatballs-alfredo.webp"] },
+      { text: "KID PROTEIN (parallel): Heat 4 oz bite-sized beef meatballs per package. Coat lightly with Alfredo (do NOT pool). Divide into two 2 oz kid portions.", images: ["/images/split-protein-creamy-spinach-pasta/step-08-kid-meatballs-alfredo-polished.webp"] },
       { text: "ADULT PROTEIN \u2014 SEASON + SEAR: Season tri-tip on all sides. Heat a large skillet with a small amount of ghee, then sear the tri-tip until deeply browned.", images: ["/images/split-protein-creamy-spinach-pasta/step-09-season-tri-tip.webp", "/images/split-protein-creamy-spinach-pasta/step-10-sear-tri-tip.webp"] },
-      { text: "REST + SLICE: Cook to preferred doneness (creator: medium-rare). Rest at least 5 minutes, then slice thin against the grain and cube. USDA FSIS: whole beef cuts should reach 145\u00b0F with a 3-minute rest \u2014 see executionRules.", images: ["/images/split-protein-creamy-spinach-pasta/step-11-rest-tri-tip.webp", "/images/split-protein-creamy-spinach-pasta/step-12-slice-tri-tip.webp"] },
-      { text: "PLATE TWO WAYS: Adult plates get green pasta + one tri-tip portion each. Kid plates get the same green pasta + 2 oz Alfredo-coated meatballs each. One cook, two proteins.", images: ["/images/split-protein-creamy-spinach-pasta/step-13-plate-two-ways.webp"] },
+      { text: "REST + SLICE: Cook to preferred doneness (creator: medium-rare). Rest at least 5 minutes, then slice thin against the grain and cube. USDA FSIS: whole beef cuts should reach 145\u00b0F with a 3-minute rest \u2014 see executionRules.", images: ["/images/split-protein-creamy-spinach-pasta/step-11-rest-tri-tip.webp", "/images/split-protein-creamy-spinach-pasta/step-12-slice-tri-tip-polished.webp"] },
+      { text: "PLATE TWO WAYS: Adult plates get green pasta + one tri-tip portion each. Kid plates get the same green pasta + 2 oz Alfredo-coated meatballs each. One cook, two proteins.", images: ["/images/split-protein-creamy-spinach-pasta/step-13-plate-two-ways-polished.webp"] },
     ],
     brands: [
       { name: "Fairlife", item: "Fat-free ultra-filtered milk", why: "Ultra-filtered milk keeps the sauce creamy without stacking cream-sauce calories. Not sponsored.", image: "/images/brands/fairlife-milk.png", url: "https://fairlife.com/ultra-filtered-milk/fat-free-skim-milk/" },
