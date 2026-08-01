@@ -147,7 +147,7 @@ export const products = {
     bestFor: "The crunch compartment in a kid snack box when you want a gluten-free chip that isn't seed-oil heavy.",
     whatToKnow: "Ghee-based means dairy — flagged in allergens. Pricier per bag than mainstream tortilla chips. Grocery availability varies; Amazon is the easier reorder path.",
     badges: ["PURCHASED OURS", "USED 6 MONTHS", "KIDS + ADULTS"],
-    image: null,
+    image: "/images/brands/gheelish-original-tortilla-dip-chips.png",
     amazonUrl: amznSearch("gheelish tortilla dip chips"),
     amazonCtaLabel: null,
     brandUrl: "https://www.gheelish.com/",
