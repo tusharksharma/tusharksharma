@@ -67,7 +67,11 @@ const routes = [
   { path: "/privacy", title: "Privacy Policy — The Split Plate", description: "How The Split Plate handles your data — what we collect, what we don't, and how the Split Plate posting tool uses social account access." },
   { path: "/terms", title: "Terms of Service — The Split Plate", description: "The terms for using The Split Plate website and the Split Plate posting tool." },
   { path: "/studio", title: "Studio — The Split Plate", description: "Private caption composer.", noindex: true },
-  { path: "/favorites", title: "Favorites — The Split Plate", description: "The tools, pantry staples, and brands we actually use on The Split Plate. Curated kitchen favorites, not sponsored placements." },
+  { path: "/favorites", title: "Favorites — The Split Plate", description: "Products that earned a permanent place in our kitchen. Curated favorites — purchased, used, and we'd buy them again. Non-affiliate on launch.", image: "/images/deli-dill-snack-box/hero-polished.webp" },
+  { path: "/favorites/snack-box-essentials", title: "Snack Box Essentials — Favorites", description: "The gear and staples behind our Snack Box Series — the containers we've used for two years plus the swaps that keep kid snacks high-protein.", image: "/images/deli-dill-snack-box/hero-polished.webp" },
+  { path: "/favorites/creami-essentials", title: "Creami Essentials — Favorites", description: "The Ninja Creami + the saved 4-line base. Everything that runs across the CrumblCreamiCut series on The Split Plate.", image: "/images/white-drop-cookies-n-creme-creami/hero-polished.webp" },
+  { path: "/favorites/proffee-gear", title: "Proffee Gear — Favorites", description: "The 100-calorie iced protein coffee build — dairy base, instant coffee, sugar-free syrup. What we buy for daily proffee.", image: "/images/100-calorie-iced-protein-coffee/hero-polished.webp" },
+  { path: "/favorites/freezer-weeknight", title: "Freezer & Weeknight Shortcuts — Favorites", description: "The pantry and freezer staples that keep a 30-minute dinner actually 30 minutes. Kirkland ghee, Bare Bones broth, Dan-O's, TJ shawarma chicken.", image: "/images/split-protein-creamy-spinach-pasta/hero-split-adult-kid-plates-polished.webp" },
   ...recipes.map((r) => {
     const idx = recipesRaw.indexOf(`slug: "${r.slug}"`);
     const ingredients = idx > -1 ? extractIngredients(recipesRaw, idx) : [];

@@ -67,6 +67,7 @@ function App() {
           <Route path="/terms" element={<TermsPage />} />
           <Route path="/studio" element={<StudioPage />} />
           <Route path="/favorites" element={<FavoritesPage />} />
+          <Route path="/favorites/:collectionSlug" element={<FavoritesPage />} />
         </Routes>
       </Suspense>
       <InstallPrompt />
