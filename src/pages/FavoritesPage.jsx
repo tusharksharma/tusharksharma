@@ -35,17 +35,18 @@ function ProductCard({ product, collection }) {
   const extraCount = Math.max(0, sources.length - 2);
   const shown = sources.slice(0, 2);
   const isEditorial = product.productType === "editorial";
-  const primaryCta = product.ctaLabel || (product.url ? `Shop at ${product.brand}` : null);
-  const affiliateLabel = product.affiliateStatus === "affiliate" ? "affiliate link" : "non-affiliate";
+  const hasAmazon = !isEditorial && !!product.amazonUrl;
+  const hasBrand = !isEditorial && !!product.brandUrl;
+  const affiliateLabel = hasAmazon ? "affiliate link" : "non-affiliate";
 
-  const handleClick = () => {
+  const handleClick = (retailer, url, position) => () => {
     trackOutboundClick({
       productId: product.id,
       collection: collection.slug,
-      url: product.url,
-      affiliateStatus: product.affiliateStatus,
+      url: url,
+      affiliateStatus: retailer === "amazon" ? "affiliate" : "non-affiliate",
       sourceRecipeId: product.sourceRecipeIds?.[0] || null,
-      ctaPosition: "product_card_primary",
+      ctaPosition: position,
     });
   };
 
@@ -108,18 +109,34 @@ function ProductCard({ product, collection }) {
 
         <div className="flex items-center justify-between text-[11px] text-neutral-600 border-t border-neutral-800 pt-3 mt-auto">
           <span>Last checked {product.lastLinkCheck}</span>
-          <span className={product.affiliateStatus === "affiliate" ? "text-amber-500/70" : "text-neutral-500"}>{affiliateLabel}</span>
+          <span className={hasAmazon ? "text-amber-500/70" : "text-neutral-500"}>{affiliateLabel}</span>
         </div>
 
-        {!isEditorial && product.url && primaryCta && (
+        {hasAmazon && (
           <a
-            href={product.url}
+            href={product.amazonUrl}
             target="_blank"
-            rel="noopener noreferrer"
-            onClick={handleClick}
+            rel="noopener noreferrer sponsored"
+            onClick={handleClick("amazon", product.amazonUrl, "product_card_amazon_primary")}
             className="text-center bg-amber-500 hover:bg-amber-400 text-black text-sm font-black px-3 py-2.5 rounded-lg transition-colors"
           >
-            {primaryCta} &rarr;
+            {product.amazonCtaLabel || "Buy on Amazon"} &rarr;
+          </a>
+        )}
+
+        {hasBrand && (
+          <a
+            href={product.brandUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={handleClick("brand", product.brandUrl, hasAmazon ? "product_card_brand_secondary" : "product_card_brand_primary")}
+            className={
+              hasAmazon
+                ? "text-center text-neutral-400 hover:text-amber-400 text-xs font-bold underline decoration-neutral-700 hover:decoration-amber-500/60 transition-colors"
+                : "text-center bg-amber-500 hover:bg-amber-400 text-black text-sm font-black px-3 py-2.5 rounded-lg transition-colors"
+            }
+          >
+            {product.brandCtaLabel || `Shop at ${product.brand}`} {hasAmazon ? "" : "→"}
           </a>
         )}
       </div>
@@ -158,7 +175,7 @@ export default function FavoritesPage() {
         </div>
 
         <div className="mb-6 bg-neutral-900/60 border border-neutral-800 rounded-lg px-4 py-3 text-sm text-neutral-300 leading-relaxed">
-          <span className="text-white font-bold">Disclosure:</span> Every product here was purchased and used in our kitchen. Some links are affiliate links (Amazon Associates), which means we may earn a commission at no additional cost to you. Affiliate availability never determines what appears here.
+          <span className="text-white font-bold">Disclosure:</span> Every product here was purchased and used in our kitchen. The primary "Buy on Amazon" links are affiliate links (Amazon Associates) — we may earn a small commission at no additional cost to you. Direct-to-brand links are currently non-affiliate. Affiliate availability never determines what appears here.
         </div>
 
         {collections.length > 1 && (

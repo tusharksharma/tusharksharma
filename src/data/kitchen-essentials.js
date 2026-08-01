@@ -2,36 +2,58 @@
 //
 // Positioning: "Products that earned a permanent place in our kitchen."
 // Every product on this page has been purchased and used by us. Nothing is
-// sponsored. Amazon Associates tag `tusharksharma-20` is active as of
-// 2026-07-31 — the 4 Amazon-hosted products (Buluker containers + 3 category
-// searches) are `affiliateStatus: "affiliate"`. All 18 brand-DTC products
-// remain `non-affiliate` until we get accepted into brand programs
-// (Impact/ShareASale/CJ/Rakuten). Flip per product as they land.
+// sponsored.
 //
-// Field contract:
+// CTA STRATEGY (as of 2026-07-31): Amazon-first, brand-DTC as a secondary
+// link on the same card.
+//
+// - `amazonUrl`  — Amazon URL with `?tag=tusharksharma-20` (or null).
+//                  Renders as the PRIMARY CTA (amber button).
+// - `brandUrl`   — brand DTC URL (or null). Renders as a subtle SECONDARY
+//                  link below the Amazon button when both are present, or
+//                  as the primary CTA when Amazon isn't offered.
+//
+// Rationale: Amazon Associates is approved TODAY (~3% commission, ~24-hour
+// tracking cookie). Brand-direct programs (ShareASale / Impact / CJ / Rakuten)
+// pay 6-12% but each requires per-brand approval that takes days-to-weeks.
+// Users still get the brand-direct option in the card, but the default click
+// path earns commission from day one.
+//
+// Products where we deliberately skip `amazonUrl`:
+//   - Refrigerated dairy (Grillo's, Babybel, Sargento, Fairlife) — Amazon
+//     experience requires Fresh membership. Bad default.
+//   - Frozen meatballs (Earth's Best) — same reason.
+//   - Retailer-exclusive (Kirkland ghee → Costco; TJ shawarma → Trader Joe's).
+//     No Amazon listing exists.
+//
+// Affiliate status shown on the card footer is derived from `amazonUrl`
+// presence — no separate field. When we get accepted into a brand program,
+// swap that product's `brandUrl` for its tagged variant (Impact/ShareASale/etc.
+// URLs already embed the tag) and the footer will show "affiliate" for both
+// paths.
+//
+// Field contract for the rest:
 // - `brand`             — brand name, shown as the top-line tag
 // - `name`              — product name
-// - `why`               — first-person, ties the product to the split-plate
-//                         kitchen (no vague nutrition claims — cite actual
-//                         label facts or say "in our house")
+// - `why`               — first-person; cite label facts, not vague claims
 // - `bestFor`           — what to use it for (concrete)
 // - `whatToKnow`        — honest limitation; every product MUST have one
-// - `badges`            — small chips shown on the card
-//                         ("PURCHASED OURS", "USED 2 YEARS", "KIDS + ADULTS")
-// - `usedFor`           — string used inside the badge stack (see badges above)
+// - `badges`            — chips shown on the card (["PURCHASED OURS", ...])
 // - `image`             — /images/... path or null (null = text tile fallback)
-// - `url`               — outbound destination. Prefer the exact product page;
-//                         if it's a category/homepage, set `ctaLabel` honestly
-//                         ("Browse at Costco", "Search on Amazon", etc.)
-// - `ctaLabel`          — overrides "Shop at {brand}" button text
-// - `affiliateStatus`   — "non-affiliate" | "affiliate"
+// - `amazonCtaLabel`    — optional override for Amazon button text
+// - `brandCtaLabel`     — optional override for brand button text
 // - `lastLinkCheck`     — YYYY-MM-DD, when the URL was last verified live
 // - `sourceRecipeIds`   — `recipe:N` (recipes.js id) or `cookbook:slug`
 //                         (cookbook.js id). Powers "Used in ..." attribution.
-// - `productType`       — "product" | "editorial" — editorial cards have no
-//                         CTA (generic recommendations like "frozen veg")
+// - `productType`       — "product" | "editorial" — editorial cards have no CTA
 
 const TODAY = "2026-07-31";
+const AMZN_TAG = "tusharksharma-20";
+
+// URL helpers — keep Amazon tag application in one place so future tag
+// changes touch one line.
+const amznDp = (asin) => `https://www.amazon.com/dp/${asin}?tag=${AMZN_TAG}`;
+const amznSearch = (q) => `https://www.amazon.com/s?k=${encodeURIComponent(q)}&tag=${AMZN_TAG}`;
 
 export const collections = [
   {
@@ -107,9 +129,10 @@ export const products = {
     whatToKnow: "Nothing has leaked during our normal use, but we avoid loose sauces and liquids because the inside of the lid gets messy and children do not always open containers carefully. I would prefer one larger compartment and one smaller compartment instead of four equal sections.",
     badges: ["PURCHASED OURS", "USED 2 YEARS", "KIDS + ADULTS"],
     image: null,
-    url: "https://www.amazon.com/dp/B0BZHTKXCB?tag=tusharksharma-20",
-    ctaLabel: "Check availability on Amazon",
-    affiliateStatus: "affiliate",
+    amazonUrl: amznDp("B0BZHTKXCB"),
+    amazonCtaLabel: "Check availability on Amazon",
+    brandUrl: null,
+    brandCtaLabel: null,
     lastLinkCheck: TODAY,
     sourceRecipeIds: ["cookbook:deli-dill-snack-box", "cookbook:ham-cheese-power-melt"],
     productType: "product",
@@ -124,9 +147,10 @@ export const products = {
     whatToKnow: "Flavor is close to a real chip but not identical — adults notice the chicken chew, kids don't seem to. A single bag runs about $6, which adds up quickly if it becomes a daily habit.",
     badges: ["PURCHASED OURS", "USED 1+ YEAR", "KIDS + ADULTS"],
     image: "/images/brands/wilde-spicy-queso-chips.png",
-    url: "https://wildebrands.com/collections/chicken-chips",
-    ctaLabel: "Browse chicken chips at Wilde",
-    affiliateStatus: "non-affiliate",
+    amazonUrl: amznSearch("wilde brands chicken chips"),
+    amazonCtaLabel: null,
+    brandUrl: "https://wildebrands.com/collections/chicken-chips",
+    brandCtaLabel: "Or browse direct at Wilde",
     lastLinkCheck: TODAY,
     sourceRecipeIds: ["cookbook:deli-dill-snack-box", "cookbook:ham-cheese-power-melt"],
     productType: "product",
@@ -141,9 +165,10 @@ export const products = {
     whatToKnow: "Refrigerator-only — takes up fridge shelf space and can't be pantry-stashed like shelf-stable pickles. Shorter open-jar shelf life than shelf-stable brands.",
     badges: ["PURCHASED OURS", "USED 2+ YEARS", "KIDS + ADULTS"],
     image: "/images/brands/grillos-classic-dill-pickle-chips.jpg",
-    url: "https://grillospickles.com/products/italian-dill-spears",
-    ctaLabel: "Shop Italian Dill Spears at Grillo's",
-    affiliateStatus: "non-affiliate",
+    amazonUrl: null,
+    amazonCtaLabel: null,
+    brandUrl: "https://grillospickles.com/products/italian-dill-spears",
+    brandCtaLabel: "Shop Italian Dill Spears at Grillo's",
     lastLinkCheck: TODAY,
     sourceRecipeIds: ["cookbook:deli-dill-snack-box", "cookbook:grillos-pickle-dip-protein-style", "cookbook:grillos-pickle-dip-wilde-combo"],
     productType: "product",
@@ -158,9 +183,10 @@ export const products = {
     whatToKnow: "Thin stick — one is a snack, not a meal. Priced high per gram of protein compared to a jerky bag or plain deli meat.",
     badges: ["PURCHASED OURS", "USED 1+ YEAR", "KIDS + ADULTS"],
     image: null,
-    url: "https://gochomps.com/collections/beef-sticks",
-    ctaLabel: "Browse beef sticks at Chomps",
-    affiliateStatus: "non-affiliate",
+    amazonUrl: amznSearch("chomps original beef sticks"),
+    amazonCtaLabel: null,
+    brandUrl: "https://gochomps.com/collections/beef-sticks",
+    brandCtaLabel: "Or browse direct at Chomps",
     lastLinkCheck: TODAY,
     sourceRecipeIds: ["cookbook:deli-dill-snack-box"],
     productType: "product",
@@ -175,9 +201,10 @@ export const products = {
     whatToKnow: "Some people pick up a cooling aftertaste from the sweetener stack. Not a 1:1 body match for real honey — it's slightly thinner and less viscous.",
     badges: ["PURCHASED OURS", "USED 1+ YEAR", "ADULTS PRIMARILY"],
     image: "/images/brands/choczero-hot-honey.png",
-    url: "https://www.choczero.com/products/keto-hot-honey",
-    ctaLabel: "Shop Keto Hot Honey at ChocZero",
-    affiliateStatus: "non-affiliate",
+    amazonUrl: amznSearch("choczero keto hot honey"),
+    amazonCtaLabel: null,
+    brandUrl: "https://www.choczero.com/products/keto-hot-honey",
+    brandCtaLabel: "Or shop direct at ChocZero",
     lastLinkCheck: TODAY,
     sourceRecipeIds: ["cookbook:money-mustard-hack", "cookbook:money-mustard"],
     productType: "product",
@@ -192,9 +219,10 @@ export const products = {
     whatToKnow: "Mild semisoft cheese, not shredded — you can't cook with it. The wax wrap adds a small waste stream per wheel.",
     badges: ["PURCHASED OURS", "USED 2+ YEARS", "KIDS + ADULTS"],
     image: null,
-    url: "https://www.babybel.com/us/en/products/original",
-    ctaLabel: "Shop Original Babybel",
-    affiliateStatus: "non-affiliate",
+    amazonUrl: null,
+    amazonCtaLabel: null,
+    brandUrl: "https://www.babybel.com/us/en/products/original",
+    brandCtaLabel: "Shop Original Babybel",
     lastLinkCheck: TODAY,
     sourceRecipeIds: ["cookbook:deli-dill-snack-box"],
     productType: "product",
@@ -209,9 +237,10 @@ export const products = {
     whatToKnow: "Tuned to a kid palate — mild, flat compared to a sharp cheddar block. Each stick is individually plastic-wrapped, one wrapper per snack.",
     badges: ["PURCHASED OURS", "USED 2+ YEARS", "KIDS PRIMARILY"],
     image: null,
-    url: "https://www.sargento.com/our-products/natural-cheese/cheese-snacks/",
-    ctaLabel: "Browse cheese snacks at Sargento",
-    affiliateStatus: "non-affiliate",
+    amazonUrl: null,
+    amazonCtaLabel: null,
+    brandUrl: "https://www.sargento.com/our-products/natural-cheese/cheese-snacks/",
+    brandCtaLabel: "Browse cheese snacks at Sargento",
     lastLinkCheck: TODAY,
     sourceRecipeIds: ["cookbook:ham-cheese-power-melt"],
     productType: "product",
@@ -228,9 +257,10 @@ export const products = {
     whatToKnow: "Loud during processing. Takes counter space. Only useful if you commit to the freeze-24-hour routine — if you'd Creami once a month it's not worth the shelf real estate.",
     badges: ["PURCHASED OURS", "USED 1+ YEAR", "ADULTS PRIMARILY"],
     image: null,
-    url: "https://www.ninjakitchen.com/creami",
-    ctaLabel: "Browse Creami models at Ninja",
-    affiliateStatus: "non-affiliate",
+    amazonUrl: amznSearch("ninja creami"),
+    amazonCtaLabel: null,
+    brandUrl: "https://www.ninjakitchen.com/creami",
+    brandCtaLabel: "Or browse Creami models at Ninja",
     lastLinkCheck: TODAY,
     sourceRecipeIds: ["cookbook:snickers-peanut-butter-cookie-creami", "cookbook:berry-limeade-cookie-nerds-creami", "cookbook:white-drop-cookies-n-creme-creami"],
     productType: "product",
@@ -245,9 +275,10 @@ export const products = {
     whatToKnow: "Ultra-filtered removes most of the lactose but changes the mouthfeel slightly — some people find it thicker than regular 2%. Costs noticeably more per gallon than store-brand milk.",
     badges: ["PURCHASED OURS", "USED 2+ YEARS", "KIDS + ADULTS"],
     image: "/images/marbled-stuffed-cheesecake-creami/context-fairlife-2-percent.webp",
-    url: "https://fairlife.com/products/2percent-reduced-fat-ultra-filtered-milk-52oz/",
-    ctaLabel: "Shop 2% Ultra-Filtered at Fairlife",
-    affiliateStatus: "non-affiliate",
+    amazonUrl: null,
+    amazonCtaLabel: null,
+    brandUrl: "https://fairlife.com/products/2percent-reduced-fat-ultra-filtered-milk-52oz/",
+    brandCtaLabel: "Shop 2% Ultra-Filtered at Fairlife",
     lastLinkCheck: TODAY,
     sourceRecipeIds: ["cookbook:berry-limeade-cookie-nerds-creami", "cookbook:white-drop-cookies-n-creme-creami", "cookbook:snickers-peanut-butter-cookie-creami"],
     productType: "product",
@@ -262,9 +293,10 @@ export const products = {
     whatToKnow: "Unflavored isn't tasteless — there's still a light dairy note that comes through in delicate flavors. Isolate costs more per pound than concentrate.",
     badges: ["PURCHASED OURS", "USED 2+ YEARS", "ADULTS PRIMARILY"],
     image: null,
-    url: "https://www.amazon.com/s?k=unflavored+whey+protein+isolate&tag=tusharksharma-20",
-    ctaLabel: "Search unflavored whey isolate on Amazon",
-    affiliateStatus: "affiliate",
+    amazonUrl: amznSearch("unflavored whey protein isolate"),
+    amazonCtaLabel: "Search unflavored whey isolate on Amazon",
+    brandUrl: null,
+    brandCtaLabel: null,
     lastLinkCheck: TODAY,
     sourceRecipeIds: ["cookbook:white-drop-cookies-n-creme-creami", "cookbook:100-calorie-iced-protein-coffee"],
     productType: "product",
@@ -279,9 +311,10 @@ export const products = {
     whatToKnow: "Erythritol has a slight cooling aftertaste — some people notice it more than others. Doesn't caramelize, so it's not a swap for browning recipes.",
     badges: ["PURCHASED OURS", "USED 1+ YEAR", "ADULTS PRIMARILY"],
     image: "/images/brands/whole-earth-monk-fruit-erythritol.webp",
-    url: "https://www.wholeearthsweetener.com/products/monk-fruit-erythritol/",
-    ctaLabel: "Shop Monk Fruit + Erythritol at Whole Earth",
-    affiliateStatus: "non-affiliate",
+    amazonUrl: amznSearch("whole earth monk fruit erythritol"),
+    amazonCtaLabel: null,
+    brandUrl: "https://www.wholeearthsweetener.com/products/monk-fruit-erythritol/",
+    brandCtaLabel: "Or shop direct at Whole Earth",
     lastLinkCheck: TODAY,
     sourceRecipeIds: ["cookbook:white-drop-cookies-n-creme-creami", "cookbook:berry-limeade-cookie-nerds-creami"],
     productType: "product",
@@ -296,9 +329,10 @@ export const products = {
     whatToKnow: "Only useful if you already own a Creami — it does nothing for stovetop or oven cooking. Level 1/8 tsp is a hard limit; heaped goes gummy.",
     badges: ["PURCHASED OURS", "USED 1+ YEAR", "ADULTS PRIMARILY"],
     image: "/images/brands/bobs-redmill-guar-gum.jpg",
-    url: "https://www.amazon.com/s?k=bobs+red+mill+guar+gum&tag=tusharksharma-20",
-    ctaLabel: "Search guar gum on Amazon",
-    affiliateStatus: "affiliate",
+    amazonUrl: amznSearch("bobs red mill guar gum"),
+    amazonCtaLabel: "Search guar gum on Amazon",
+    brandUrl: null,
+    brandCtaLabel: null,
     lastLinkCheck: TODAY,
     sourceRecipeIds: ["cookbook:white-drop-cookies-n-creme-creami"],
     productType: "product",
@@ -313,9 +347,10 @@ export const products = {
     whatToKnow: "Pricier than a regular chocolate bar per gram. Some flavors read chalky — the Cookies & Cream is on the smoother end but still not a Hershey's dupe. Milk allergen; verify the current cross-contact statement.",
     badges: ["PURCHASED OURS", "USED 6 MONTHS", "ADULTS PRIMARILY"],
     image: "/images/white-drop-cookies-n-creme-creami/context-cookies-creme-protein-chocolate.webp",
-    url: "https://hormbles.com/",
-    ctaLabel: "Browse at Hormbles Chormbles",
-    affiliateStatus: "non-affiliate",
+    amazonUrl: amznSearch("hormbles chormbles cookies and cream"),
+    amazonCtaLabel: null,
+    brandUrl: "https://hormbles.com/",
+    brandCtaLabel: "Or browse direct at Hormbles Chormbles",
     lastLinkCheck: TODAY,
     sourceRecipeIds: ["cookbook:white-drop-cookies-n-creme-creami"],
     productType: "product",
@@ -332,9 +367,10 @@ export const products = {
     whatToKnow: "Fat-free reads thinner than 2% — noticeable if you go back and forth. Some people don't tolerate ultra-filtered milk perfectly despite the reduced lactose.",
     badges: ["PURCHASED OURS", "USED 2+ YEARS", "ADULTS PRIMARILY"],
     image: "/images/brands/fairlife-milk.png",
-    url: "https://fairlife.com/products/fat-free-ultra-filtered-milk-52oz/",
-    ctaLabel: "Shop Fat-Free Ultra-Filtered at Fairlife",
-    affiliateStatus: "non-affiliate",
+    amazonUrl: null,
+    amazonCtaLabel: null,
+    brandUrl: "https://fairlife.com/products/fat-free-ultra-filtered-milk-52oz/",
+    brandCtaLabel: "Shop Fat-Free Ultra-Filtered at Fairlife",
     lastLinkCheck: TODAY,
     sourceRecipeIds: ["cookbook:100-calorie-iced-protein-coffee"],
     productType: "product",
@@ -349,9 +385,10 @@ export const products = {
     whatToKnow: "Flavor won't match a fresh brewed cup you like — that's the trade for the no-water-down behavior. Some brands are noticeably bitter; test one before buying multiples.",
     badges: ["PURCHASED OURS", "USED 1+ YEAR", "ADULTS PRIMARILY"],
     image: null,
-    url: "https://www.amazon.com/s?k=instant+coffee&tag=tusharksharma-20",
-    ctaLabel: "Search instant coffee on Amazon",
-    affiliateStatus: "affiliate",
+    amazonUrl: amznSearch("instant coffee"),
+    amazonCtaLabel: "Search instant coffee on Amazon",
+    brandUrl: null,
+    brandCtaLabel: null,
     lastLinkCheck: TODAY,
     sourceRecipeIds: ["cookbook:100-calorie-iced-protein-coffee"],
     productType: "product",
@@ -366,9 +403,10 @@ export const products = {
     whatToKnow: "Sucralose base — some people pick up a chemical aftertaste. ChocZero avoids sucralose but costs more per bottle.",
     badges: ["PURCHASED OURS", "USED 1+ YEAR", "ADULTS PRIMARILY"],
     image: null,
-    url: "https://www.skinnymixes.com/collections/skinny-syrups",
-    ctaLabel: "Browse Skinny Syrups",
-    affiliateStatus: "non-affiliate",
+    amazonUrl: amznSearch("skinny syrups sugar free vanilla"),
+    amazonCtaLabel: null,
+    brandUrl: "https://www.skinnymixes.com/collections/skinny-syrups",
+    brandCtaLabel: "Or browse direct at Skinny Syrups",
     lastLinkCheck: TODAY,
     sourceRecipeIds: ["cookbook:100-calorie-iced-protein-coffee", "cookbook:cookie-butter-iced-proffee"],
     productType: "product",
@@ -385,9 +423,10 @@ export const products = {
     whatToKnow: "Costco-only in our experience — hard to find consistently outside a Costco run. Once opened, keep it sealed; clarified butter still oxidizes over months.",
     badges: ["PURCHASED OURS", "USED 2+ YEARS", "ADULTS PRIMARILY"],
     image: "/images/brands/kirkland-ghee.jpg",
-    url: "https://www.costco.com/CatalogSearch?dept=All&keyword=kirkland+ghee",
-    ctaLabel: "Browse at Costco",
-    affiliateStatus: "non-affiliate",
+    amazonUrl: null,
+    amazonCtaLabel: null,
+    brandUrl: "https://www.costco.com/CatalogSearch?dept=All&keyword=kirkland+ghee",
+    brandCtaLabel: "Browse at Costco",
     lastLinkCheck: TODAY,
     sourceRecipeIds: ["recipe:24"],
     productType: "product",
@@ -402,9 +441,10 @@ export const products = {
     whatToKnow: "Texture is softer than fresh meatballs — tuned for kid palates, not adult ones. Not a swap for a scratch meatball dish where texture is the point.",
     badges: ["PURCHASED OURS", "USED 6 MONTHS", "KIDS PRIMARILY"],
     image: "/images/brands/earths-best-meatballs.webp",
-    url: "https://www.earthsbest.com/products/mini-beef-meatballs-toddler",
-    ctaLabel: "Shop Mini Meatballs at Earth's Best",
-    affiliateStatus: "non-affiliate",
+    amazonUrl: null,
+    amazonCtaLabel: null,
+    brandUrl: "https://www.earthsbest.com/products/mini-beef-meatballs-toddler",
+    brandCtaLabel: "Shop Mini Meatballs at Earth's Best",
     lastLinkCheck: TODAY,
     sourceRecipeIds: ["recipe:2"],
     productType: "product",
@@ -419,9 +459,10 @@ export const products = {
     whatToKnow: "Real bone broth is thicker than boxed stock — throws off recipes that expect a thin base. 1 L cartons don't refrigerate long once opened; freeze what you don't use within about 5 days.",
     badges: ["PURCHASED OURS", "USED 2+ YEARS", "KIDS + ADULTS"],
     image: "/images/brands/bare-bones-chicken-broth.png",
-    url: "https://barebonesbroth.com/collections/all",
-    ctaLabel: "Browse at Bare Bones",
-    affiliateStatus: "non-affiliate",
+    amazonUrl: amznSearch("bare bones bone broth"),
+    amazonCtaLabel: null,
+    brandUrl: "https://barebonesbroth.com/collections/all",
+    brandCtaLabel: "Or browse direct at Bare Bones",
     lastLinkCheck: TODAY,
     sourceRecipeIds: ["recipe:2", "cookbook:bone-broth-rice"],
     productType: "product",
@@ -436,9 +477,10 @@ export const products = {
     whatToKnow: "Salt-forward — light on paprika and heat compared to a BBQ rub. If you want deeper flavor, Original + Spicy stacked works better than Original alone.",
     badges: ["PURCHASED OURS", "USED 1+ YEAR", "KIDS + ADULTS"],
     image: "/images/brands/danos-outlaw.png",
-    url: "https://danosseasoning.com/collections/all-products",
-    ctaLabel: "Browse Dan-O's",
-    affiliateStatus: "non-affiliate",
+    amazonUrl: amznSearch("danos seasoning original spicy"),
+    amazonCtaLabel: null,
+    brandUrl: "https://danosseasoning.com/collections/all-products",
+    brandCtaLabel: "Or browse direct at Dan-O's",
     lastLinkCheck: TODAY,
     sourceRecipeIds: ["recipe:31", "recipe:37"],
     productType: "product",
@@ -453,9 +495,10 @@ export const products = {
     whatToKnow: "Trader Joe's only — no online delivery, no direct substitute at other grocery stores. Rotates in and out of stock; don't build a menu around it if you can't verify availability. Pre-seasoning means you can't adjust the salt or heat level.",
     badges: ["PURCHASED OURS", "USED 1+ YEAR", "ADULTS PRIMARILY"],
     image: null,
-    url: "https://www.traderjoes.com/home/products/pdp/shawarma-style-chicken-thighs-071842",
-    ctaLabel: "View at Trader Joe's",
-    affiliateStatus: "non-affiliate",
+    amazonUrl: null,
+    amazonCtaLabel: null,
+    brandUrl: "https://www.traderjoes.com/home/products/pdp/shawarma-style-chicken-thighs-071842",
+    brandCtaLabel: "View at Trader Joe's",
     lastLinkCheck: TODAY,
     sourceRecipeIds: ["recipe:44"],
     productType: "product",
@@ -470,9 +513,10 @@ export const products = {
     whatToKnow: "Frozen vegetables lose some crunch versus fresh — the trade for zero prep and long shelf life. Steam-in-bag options can go mushy if you overcook them; pull them at the earliest listed time.",
     badges: ["PURCHASED OURS", "USED 2+ YEARS", "KIDS + ADULTS"],
     image: null,
-    url: null,
-    ctaLabel: null,
-    affiliateStatus: "non-affiliate",
+    amazonUrl: null,
+    amazonCtaLabel: null,
+    brandUrl: null,
+    brandCtaLabel: null,
     lastLinkCheck: TODAY,
     sourceRecipeIds: ["recipe:21"],
     productType: "editorial",
