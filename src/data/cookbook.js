@@ -4423,7 +4423,7 @@ export const snackBoxes = [
     id: "fiesta-snack-box",
     title: "Fiesta Snack Box",
     tagline: "Snack Box Series Ep. 10 — colorful post-lunch box with 365 Black Forest ham, Colby cheese, Gheelish tortilla dip chips, and mini sweet peppers. ~210 cal / 13g protein per box.",
-    heroImage: "/images/fiesta-snack-box/hero-fiesta-snack-box.webp",
+    heroImage: "/images/fiesta-snack-box/hero-fiesta-snack-box-polished.webp",
     // prepImage — mise-style brand-context shot (the 365 ham) matching the
     // pizza / apple-pie snack box's brand-context prepImage pattern.
     prepImage: "/images/fiesta-snack-box/context-deli-ham.webp",
@@ -4434,11 +4434,11 @@ export const snackBoxes = [
     // ingredient-context shots (ham/cheese/peppers) stay off-carousel per the
     // no-brand-reveal-in-carousel rule.
     socialImages: [
-      "/images/fiesta-snack-box/step-01-add-ham.webp",
-      "/images/fiesta-snack-box/step-02-cube-colby-cheese.webp",
-      "/images/fiesta-snack-box/step-03-add-sweet-peppers.webp",
-      "/images/fiesta-snack-box/step-04-add-tortilla-dip-chips.webp",
-      "/images/fiesta-snack-box/final-four-fiesta-snack-boxes.webp",
+      "/images/fiesta-snack-box/step-01-add-ham-polished.webp",
+      "/images/fiesta-snack-box/step-02-cube-colby-cheese-polished.webp",
+      "/images/fiesta-snack-box/step-03-add-sweet-peppers-polished.webp",
+      "/images/fiesta-snack-box/step-04-add-tortilla-dip-chips-polished.webp",
+      "/images/fiesta-snack-box/final-four-fiesta-snack-boxes-polished.webp",
     ],
     videoSrc: "/videos/fiesta-snack-box/fiesta-snack-box-episode-10-210cal-13protein-marcus.mp4",
     flavorProfile: "Salty deli ham, creamy Colby cubes, sweet crunchy peppers, light tortilla-chip crunch. Kid-safe color story plus adult-friendly macros.",
@@ -4466,12 +4466,12 @@ export const snackBoxes = [
       "Mini sweet peppers (red / yellow / orange mix) — seeded and cut into age-appropriate strips to fill each box",
     ],
     steps: [
-      { text: "SET UP: Line up 4 divided snack boxes. Buluker pastel 4-compartment boxes shown — the same set featured on Favorites → Snack Box Essentials.", image: "/images/fiesta-snack-box/hero-fiesta-snack-box.webp" },
-      { text: "HAM: Fold or cut 2 slices of 365 Black Forest deli ham into one compartment of each box (~5 1/3 oz total across all 4 boxes).", image: "/images/fiesta-snack-box/step-01-add-ham.webp" },
-      { text: "COLBY CUBES: Cut each Sargento Natural Colby-Jack cheese stick into bite-size cubes and drop 1 stick's worth into the next compartment of each box.", image: "/images/fiesta-snack-box/step-02-cube-colby-cheese.webp" },
-      { text: "SWEET PEPPERS: Seed and slice mini sweet peppers (red / yellow / orange) into age-appropriate strips. Fill one compartment of each box — the color story of the fiesta box.", image: "/images/fiesta-snack-box/step-03-add-sweet-peppers.webp" },
-      { text: "TORTILLA DIP CHIPS: Weigh 0.75 oz Gheelish Original tortilla dip chips into the remaining compartment of each box. Portion just before serving if you want maximum crunch — the chip compartment stays driest that way.", image: "/images/fiesta-snack-box/step-04-add-tortilla-dip-chips.webp" },
-      { text: "SEAL + CHILL: Snap lids on and refrigerate. Serve within 2 days. Transport with an ice pack for lunchbox use.", image: "/images/fiesta-snack-box/final-four-fiesta-snack-boxes.webp" },
+      { text: "SET UP: Line up 4 divided snack boxes. Buluker pastel 4-compartment boxes shown — the same set featured on Favorites → Snack Box Essentials.", image: "/images/fiesta-snack-box/hero-fiesta-snack-box-polished.webp" },
+      { text: "HAM: Fold or cut 2 slices of 365 Black Forest deli ham into one compartment of each box (~5 1/3 oz total across all 4 boxes).", image: "/images/fiesta-snack-box/step-01-add-ham-polished.webp" },
+      { text: "COLBY CUBES: Cut each Sargento Natural Colby-Jack cheese stick into bite-size cubes and drop 1 stick's worth into the next compartment of each box.", image: "/images/fiesta-snack-box/step-02-cube-colby-cheese-polished.webp" },
+      { text: "SWEET PEPPERS: Seed and slice mini sweet peppers (red / yellow / orange) into age-appropriate strips. Fill one compartment of each box — the color story of the fiesta box.", image: "/images/fiesta-snack-box/step-03-add-sweet-peppers-polished.webp" },
+      { text: "TORTILLA DIP CHIPS: Weigh 0.75 oz Gheelish Original tortilla dip chips into the remaining compartment of each box. Portion just before serving if you want maximum crunch — the chip compartment stays driest that way.", image: "/images/fiesta-snack-box/step-04-add-tortilla-dip-chips-polished.webp" },
+      { text: "SEAL + CHILL: Snap lids on and refrigerate. Serve within 2 days. Transport with an ice pack for lunchbox use.", image: "/images/fiesta-snack-box/final-four-fiesta-snack-boxes-polished.webp" },
     ],
     brands: [
       { name: "365 by Whole Foods Market", item: "Black Forest Deli Ham (~5 1/3 oz pack of 8 slices; 2 slices ≈ 40 cal per portion).", why: "Whole Foods house brand — kid-familiar ham without the additive stack you find on most sliced deli meats. 2 slices per box lands the ~40 cal / ~5g protein anchor from the meat layer.", url: "https://www.wholefoodsmarket.com/search?text=365%20black%20forest%20ham" },
