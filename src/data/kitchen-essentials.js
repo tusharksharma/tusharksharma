@@ -1,0 +1,292 @@
+// Kitchen Essentials — curated favorites shown on /favorites.
+//
+// Design intent:
+// - Products here are already used in recipes.js / cookbook.js (image + url
+//   pulled from those brand entries when possible — keeps the shop synced with
+//   the corpus)
+// - Every product gets a primary CTA to the brand DTC site per
+//   [[feedback_recipes_brand_urls]] (brand site first, never affiliate-only)
+// - `amazonUrl` is optional and starts null. When we add an Amazon Associates
+//   tag, populate here — outbound-link component appends `?tag=...` at render.
+// - `sourceRecipeIds` powers the "Used in" attribution links back into the site
+//   (recipe id from recipes.js OR cookbook.js slug). Format: `recipe:N` or
+//   `cookbook:slug`.
+// - Collections are ordered as they appear on the page; products within a
+//   collection follow the order of their `productIds` list.
+
+export const collections = [
+  {
+    id: "snack-box-essentials",
+    slug: "snack-boxes",
+    title: "Snack Box Essentials",
+    tagline: "The staples behind our high-protein snack boxes — Deli Dill, Ham & Cheese, all the kid-approved variants.",
+    productIds: [
+      "wilde-chicken-chips",
+      "grillos-pickles",
+      "chomps-beef-sticks",
+      "choczero-hot-honey",
+      "babybel-cheese",
+      "sargento-cheese-sticks",
+    ],
+  },
+  {
+    id: "creami-essentials",
+    slug: "creami",
+    title: "Creami Essentials",
+    tagline: "The saved 4-line base + the machine. Everything we use across the CrumblCreamiCut series.",
+    productIds: [
+      "ninja-creami",
+      "fairlife-2-percent-milk",
+      "unflavored-whey-isolate",
+      "whole-earth-monk-fruit",
+      "guar-gum",
+      "hormbles-chormbles-protein-chocolate",
+    ],
+  },
+  {
+    id: "proffee-gear",
+    slug: "proffee",
+    title: "Proffee Gear",
+    tagline: "The 100-calorie iced protein coffee build — dairy base, coffee, sweetener, done.",
+    productIds: [
+      "fairlife-fat-free-milk",
+      "any-instant-coffee",
+      "unflavored-whey-isolate",
+      "sugar-free-syrup",
+    ],
+  },
+  {
+    id: "freezer-weeknight-shortcuts",
+    slug: "freezer-weeknight",
+    title: "Freezer & Weeknight Shortcuts",
+    tagline: "The pantry + freezer staples that make a 30-min dinner actually 30 min. High-protein, no scratch cooking penalty.",
+    productIds: [
+      "kirkland-ghee",
+      "earths-best-mini-meatballs",
+      "bare-bones-bone-broth",
+      "danos-seasoning",
+      "trader-joes-shawarma-chicken",
+      "birds-eye-frozen-veg",
+    ],
+  },
+];
+
+export const products = {
+  // ─── Snack Box Essentials ───────────────────────────────────────────
+  "wilde-chicken-chips": {
+    id: "wilde-chicken-chips",
+    brand: "Wilde Brands",
+    name: "Chicken Chips (multiple flavors)",
+    why: "Baked chicken-breast chips — ~10g protein and ~150 cal per bag. The high-protein crunch layer in most of our snack boxes; sub for pretzels or crackers without losing the eating experience.",
+    image: "/images/brands/wilde-spicy-queso-chips.png",
+    url: "https://wildebrands.com/collections/all",
+    amazonUrl: null,
+    sourceRecipeIds: ["cookbook:deli-dill-snack-box", "cookbook:ham-cheese-power-melt"],
+  },
+  "grillos-pickles": {
+    id: "grillos-pickles",
+    brand: "Grillo's Pickles",
+    name: "Italian Dill Spears (or Chips)",
+    why: "Fresh-refrigerated pickles with a clean brine — no yellow food coloring, no shelf-stable slime. The anchor flavor of the Deli Dill snack box and the pickle-dip series.",
+    image: "/images/brands/grillos-classic-dill-pickle-chips.jpg",
+    url: "https://grillospickles.com/",
+    amazonUrl: null,
+    sourceRecipeIds: ["cookbook:deli-dill-snack-box", "cookbook:grillos-pickle-dip-protein-style", "cookbook:grillos-pickle-dip-wilde-combo"],
+  },
+  "chomps-beef-sticks": {
+    id: "chomps-beef-sticks",
+    brand: "Chomps",
+    name: "Original Beef Sticks (or Turkey)",
+    why: "9g protein and ~100 cal per stick. Grass-fed beef, no sugar, no seed oils. The shelf-stable protein bar of snack boxes — kids treat it as a treat.",
+    image: null,
+    url: "https://gochomps.com/",
+    amazonUrl: null,
+    sourceRecipeIds: ["cookbook:deli-dill-snack-box"],
+  },
+  "choczero-hot-honey": {
+    id: "choczero-hot-honey",
+    brand: "ChocZero",
+    name: "Keto Hot Honey (sugar-free)",
+    why: "Sugar-free honey with habanero heat — soluble corn fiber + monk fruit + real chili. 1:1 sub for traditional hot honey. Powers Money Mustard Hack and the sauce shelf.",
+    image: "/images/brands/choczero-hot-honey.png",
+    url: "https://www.choczero.com/products/keto-hot-honey",
+    amazonUrl: null,
+    sourceRecipeIds: ["cookbook:money-mustard-hack", "cookbook:money-mustard"],
+  },
+  "babybel-cheese": {
+    id: "babybel-cheese",
+    brand: "Babybel",
+    name: "Original Semisoft Cheese Wheels",
+    why: "6g protein per wheel, 70 cal, wax-wrapped so kids feel like they're unboxing a treat. Every snack box gets one — no plate, no knife, kids just open and eat.",
+    image: null,
+    url: "https://www.babybel.com/us/en/products/original",
+    amazonUrl: null,
+    sourceRecipeIds: ["cookbook:deli-dill-snack-box"],
+  },
+  "sargento-cheese-sticks": {
+    id: "sargento-cheese-sticks",
+    brand: "Sargento",
+    name: "Colby Jack or Cheddar Cheese Sticks",
+    why: "7g protein, ~80 cal. Individually wrapped for portion control and lunchbox durability. Kid-familiar mild cheese that doesn't need dressing.",
+    image: null,
+    url: "https://www.sargento.com/our-products/natural-cheese/cheese-snacks/",
+    amazonUrl: null,
+    sourceRecipeIds: ["cookbook:ham-cheese-power-melt"],
+  },
+
+  // ─── Creami Essentials ──────────────────────────────────────────────
+  "ninja-creami": {
+    id: "ninja-creami",
+    brand: "Ninja",
+    name: "Creami (any current model)",
+    why: "The machine the entire CrumblCreamiCut series runs on. Regular Ice Cream + Respin cycles are the workhorse combo — no other appliance replicates the texture. Not sponsored.",
+    image: null,
+    url: "https://www.ninjakitchen.com/creami",
+    amazonUrl: null,
+    sourceRecipeIds: ["cookbook:snickers-peanut-butter-cookie-creami", "cookbook:berry-limeade-cookie-nerds-creami", "cookbook:white-drop-cookies-n-creme-creami"],
+  },
+  "fairlife-2-percent-milk": {
+    id: "fairlife-2-percent-milk",
+    brand: "Fairlife",
+    name: "2% Ultra-Filtered Milk",
+    why: "The base for the entire CCC series. 1 cup + whey isolate + monk fruit = the saved 4-line Creami base. Not fat-free — the milk fat is intentional for texture. Not sponsored.",
+    image: "/images/marbled-stuffed-cheesecake-creami/context-fairlife-2-percent.webp",
+    url: "https://fairlife.com/ultra-filtered-milk/2-percent-reduced-fat-milk/",
+    amazonUrl: null,
+    sourceRecipeIds: ["cookbook:berry-limeade-cookie-nerds-creami", "cookbook:white-drop-cookies-n-creme-creami", "cookbook:snickers-peanut-butter-cookie-creami"],
+  },
+  "unflavored-whey-isolate": {
+    id: "unflavored-whey-isolate",
+    brand: "Unflavored Whey Isolate",
+    name: "Any clean-tasting brand — ~28g protein per serving",
+    why: "The protein spine across CCC + Proffee. Isolate (not concentrate) blends smoother, has less lactose. Verify the label for artificial sweeteners you don't want.",
+    image: null,
+    url: "https://www.amazon.com/s?k=unflavored+whey+isolate",
+    amazonUrl: null,
+    sourceRecipeIds: ["cookbook:white-drop-cookies-n-creme-creami", "cookbook:100-calorie-iced-protein-coffee"],
+  },
+  "whole-earth-monk-fruit": {
+    id: "whole-earth-monk-fruit",
+    brand: "Whole Earth",
+    name: "Monk Fruit + Erythritol Sweetener",
+    why: "2 tbsp per Creami pint. Zero-calorie 1:1 sugar sub with no bitter aftertaste. The single sweetener across the CCC series.",
+    image: "/images/brands/whole-earth-monk-fruit-erythritol.webp",
+    url: "https://www.wholeearthsweetener.com/products/monk-fruit-erythritol/",
+    amazonUrl: null,
+    sourceRecipeIds: ["cookbook:white-drop-cookies-n-creme-creami", "cookbook:berry-limeade-cookie-nerds-creami"],
+  },
+  "guar-gum": {
+    id: "guar-gum",
+    brand: "Any brand",
+    name: "Guar Gum (1/8 tsp per pint)",
+    why: "The texture unlock in the CCC base. Level 1/8 tsp per pint — LEVEL, not heaped (heaped = gummy). One bag lasts a year.",
+    image: null,
+    url: "https://www.amazon.com/s?k=guar+gum",
+    amazonUrl: null,
+    sourceRecipeIds: ["cookbook:white-drop-cookies-n-creme-creami"],
+  },
+  "hormbles-chormbles-protein-chocolate": {
+    id: "hormbles-chormbles-protein-chocolate",
+    brand: "Hormbles Chormbles",
+    name: "Cookies & Cream Protein Chocolate Bar",
+    why: "The post-scoop topping in the White Drop Creami. ~50 cal per half-bar, 5g protein. Chopped on top only — never machine-processed. Milk allergen; verify current cross-contact statement.",
+    image: "/images/white-drop-cookies-n-creme-creami/context-cookies-creme-protein-chocolate.webp",
+    url: "https://hormbles.com/",
+    amazonUrl: null,
+    sourceRecipeIds: ["cookbook:white-drop-cookies-n-creme-creami"],
+  },
+
+  // ─── Proffee Gear ───────────────────────────────────────────────────
+  "fairlife-fat-free-milk": {
+    id: "fairlife-fat-free-milk",
+    brand: "Fairlife",
+    name: "Fat-Free Ultra-Filtered Milk",
+    why: "The 100-Calorie Iced Protein Coffee dairy base. 13g protein and 90 cal per cup. Ultra-filtered so it holds up in cold coffee without going watery.",
+    image: "/images/brands/fairlife-milk.png",
+    url: "https://fairlife.com/ultra-filtered-milk/fat-free-skim-milk/",
+    amazonUrl: null,
+    sourceRecipeIds: ["cookbook:100-calorie-iced-protein-coffee"],
+  },
+  "any-instant-coffee": {
+    id: "any-instant-coffee",
+    brand: "Any Instant Coffee",
+    name: "Nescafé Gold, Bustelo, whatever's on hand",
+    why: "Instant beats brewed for iced proffee — no watering-down when it hits ice. 1 heaped tsp per drink. The coffee brand doesn't matter as much as the ratio.",
+    image: null,
+    url: "https://www.amazon.com/s?k=instant+coffee",
+    amazonUrl: null,
+    sourceRecipeIds: ["cookbook:100-calorie-iced-protein-coffee"],
+  },
+  "sugar-free-syrup": {
+    id: "sugar-free-syrup",
+    brand: "Skinny Syrups / ChocZero / Torani sugar-free",
+    name: "Sugar-Free Flavored Syrup (vanilla, caramel, hazelnut)",
+    why: "The flavor unlock. 1 pump per proffee. Skinny Syrups vanilla is the daily driver; ChocZero syrups if you want the cleaner sweetener stack.",
+    image: null,
+    url: "https://www.skinnymixes.com/collections/skinny-syrups",
+    amazonUrl: null,
+    sourceRecipeIds: ["cookbook:100-calorie-iced-protein-coffee", "cookbook:cookie-butter-iced-proffee"],
+  },
+
+  // ─── Freezer & Weeknight Shortcuts ──────────────────────────────────
+  "kirkland-ghee": {
+    id: "kirkland-ghee",
+    brand: "Kirkland Signature",
+    name: "Organic Ghee",
+    why: "Nutty finish + high smoke point for searing. 3 tbsp across 2 cups rice for the golden garlic bowls — measured, not eyeballed. Butter alone breaks down at sear temp; ghee holds.",
+    image: "/images/brands/kirkland-ghee.jpg",
+    url: "https://www.costco.com",
+    amazonUrl: null,
+    sourceRecipeIds: ["recipe:24"],
+  },
+  "earths-best-mini-meatballs": {
+    id: "earths-best-mini-meatballs",
+    brand: "Earth's Best",
+    name: "Mini Beef Meatballs (kid protein)",
+    why: "Bite-sized, fully-cooked, kid-familiar. 2 oz per kid on the Split-Protein Creamy Spinach Pasta — the swap that keeps everyone at the same dinner. Any equivalent bite-sized beef meatball works.",
+    image: "/images/brands/earths-best-meatballs.webp",
+    url: "https://www.earthsbest.com/products/mini-beef-meatballs-toddler",
+    amazonUrl: null,
+    sourceRecipeIds: ["recipe:2"],
+  },
+  "bare-bones-bone-broth": {
+    id: "bare-bones-bone-broth",
+    brand: "Bare Bones",
+    name: "Bone Broth (chicken or beef) — 1L cartons or Instant Sticks",
+    why: "Higher protein and cleaner sodium than boxed stock. Powers Bone Broth Rice and the Creamy Spinach sauce. Instant sticks travel with you; cartons live in the pantry.",
+    image: "/images/brands/bare-bones-chicken-broth.png",
+    url: "https://barebonesbroth.com/collections/all",
+    amazonUrl: null,
+    sourceRecipeIds: ["recipe:2", "cookbook:bone-broth-rice"],
+  },
+  "danos-seasoning": {
+    id: "danos-seasoning",
+    brand: "Dan-O's",
+    name: "Original / Spicy / Outlaw Seasoning",
+    why: "The all-purpose spice rack in a bottle. Original for kid plates, Spicy for adult upgrades. Kid-plates + adult-plates in the same cook with just a seasoning swap.",
+    image: "/images/brands/danos-outlaw.png",
+    url: "https://danosseasoning.com/",
+    amazonUrl: null,
+    sourceRecipeIds: ["recipe:31", "recipe:37"],
+  },
+  "trader-joes-shawarma-chicken": {
+    id: "trader-joes-shawarma-chicken",
+    brand: "Trader Joe's",
+    name: "Shawarma-Style Chicken Thighs (1.5 lb pack)",
+    why: "Pre-seasoned, boneless, skinless. 15-min pan sear straight from the fridge = Halal Cart Chicken Rice Bowls. The shortcut that beats marinating for 4 hr.",
+    image: null,
+    url: "https://www.traderjoes.com/home/products/pdp/shawarma-style-chicken-thighs-071842",
+    amazonUrl: null,
+    sourceRecipeIds: ["recipe:44"],
+  },
+  "birds-eye-frozen-veg": {
+    id: "birds-eye-frozen-veg",
+    brand: "Birds Eye / Good & Gather",
+    name: "Frozen Mixed Vegetables / Broccoli Florets / Green Beans",
+    why: "The 30-second microwavable veg side that saves the weeknight. Frozen beats fresh for weeknight speed — no chop, no drain, no prep.",
+    image: null,
+    url: "https://www.birdseye.com/",
+    amazonUrl: null,
+    sourceRecipeIds: ["recipe:21"],
+  },
+};

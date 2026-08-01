@@ -67,6 +67,7 @@ const routes = [
   { path: "/privacy", title: "Privacy Policy — The Split Plate", description: "How The Split Plate handles your data — what we collect, what we don't, and how the Split Plate posting tool uses social account access." },
   { path: "/terms", title: "Terms of Service — The Split Plate", description: "The terms for using The Split Plate website and the Split Plate posting tool." },
   { path: "/studio", title: "Studio — The Split Plate", description: "Private caption composer.", noindex: true },
+  { path: "/favorites", title: "Favorites — The Split Plate", description: "The tools, pantry staples, and brands we actually use on The Split Plate. Curated kitchen favorites, not sponsored placements." },
   ...recipes.map((r) => {
     const idx = recipesRaw.indexOf(`slug: "${r.slug}"`);
     const ingredients = idx > -1 ? extractIngredients(recipesRaw, idx) : [];

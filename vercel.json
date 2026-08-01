@@ -4,6 +4,9 @@
   "installCommand": "",
   "trailingSlash": false,
   "cleanUrls": true,
+  "redirects": [
+    { "source": "/shop", "destination": "/favorites", "permanent": true }
+  ],
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
   ],

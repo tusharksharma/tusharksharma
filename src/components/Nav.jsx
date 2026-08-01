@@ -7,6 +7,7 @@ export default function Nav() {
   const isCookbook = pathname.startsWith("/cookbook");
   const isLeftovers = pathname.startsWith("/leftovers");
   const isFan = pathname === "/fan";
+  const isFavorites = pathname.startsWith("/favorites");
 
   return (
     <nav className="border-b border-neutral-800 bg-neutral-950/90 backdrop-blur-sm sticky top-0 z-20">
@@ -55,6 +56,14 @@ export default function Nav() {
             }`}
           >
             The Fan
+          </Link>
+          <Link
+            to="/favorites"
+            className={`px-3 sm:px-4 py-1.5 rounded-lg text-xs font-bold transition-colors ${
+              isFavorites ? "bg-amber-500 text-black" : "text-neutral-400 hover:text-white"
+            }`}
+          >
+            Favorites
           </Link>
         </div>
       </div>
