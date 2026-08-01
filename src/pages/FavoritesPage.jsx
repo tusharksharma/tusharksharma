@@ -158,7 +158,7 @@ export default function FavoritesPage() {
         </div>
 
         <div className="mb-6 bg-neutral-900/60 border border-neutral-800 rounded-lg px-4 py-3 text-sm text-neutral-300 leading-relaxed">
-          <span className="text-white font-bold">Disclosure:</span> Every product here was purchased by us and used in our kitchen. Nothing is sponsored, and the current product links are non-affiliate. Products only make this page if we would buy them again.
+          <span className="text-white font-bold">Disclosure:</span> Every product here was purchased and used in our kitchen. Some links are affiliate links (Amazon Associates), which means we may earn a commission at no additional cost to you. Affiliate availability never determines what appears here.
         </div>
 
         {collections.length > 1 && (

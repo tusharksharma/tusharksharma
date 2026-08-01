@@ -2,9 +2,11 @@
 //
 // Positioning: "Products that earned a permanent place in our kitchen."
 // Every product on this page has been purchased and used by us. Nothing is
-// sponsored. Currently no links are affiliate — the schema supports it so the
-// day we monetize, we flip `affiliateStatus` per product and the card + CTA
-// label update automatically.
+// sponsored. Amazon Associates tag `tusharksharma-20` is active as of
+// 2026-07-31 — the 4 Amazon-hosted products (Buluker containers + 3 category
+// searches) are `affiliateStatus: "affiliate"`. All 18 brand-DTC products
+// remain `non-affiliate` until we get accepted into brand programs
+// (Impact/ShareASale/CJ/Rakuten). Flip per product as they land.
 //
 // Field contract:
 // - `brand`             — brand name, shown as the top-line tag
@@ -105,9 +107,9 @@ export const products = {
     whatToKnow: "Nothing has leaked during our normal use, but we avoid loose sauces and liquids because the inside of the lid gets messy and children do not always open containers carefully. I would prefer one larger compartment and one smaller compartment instead of four equal sections.",
     badges: ["PURCHASED OURS", "USED 2 YEARS", "KIDS + ADULTS"],
     image: null,
-    url: "https://www.amazon.com/dp/B0BZHTKXCB",
+    url: "https://www.amazon.com/dp/B0BZHTKXCB?tag=tusharksharma-20",
     ctaLabel: "Check availability on Amazon",
-    affiliateStatus: "non-affiliate",
+    affiliateStatus: "affiliate",
     lastLinkCheck: TODAY,
     sourceRecipeIds: ["cookbook:deli-dill-snack-box", "cookbook:ham-cheese-power-melt"],
     productType: "product",
@@ -260,9 +262,9 @@ export const products = {
     whatToKnow: "Unflavored isn't tasteless — there's still a light dairy note that comes through in delicate flavors. Isolate costs more per pound than concentrate.",
     badges: ["PURCHASED OURS", "USED 2+ YEARS", "ADULTS PRIMARILY"],
     image: null,
-    url: "https://www.amazon.com/s?k=unflavored+whey+protein+isolate",
+    url: "https://www.amazon.com/s?k=unflavored+whey+protein+isolate&tag=tusharksharma-20",
     ctaLabel: "Search unflavored whey isolate on Amazon",
-    affiliateStatus: "non-affiliate",
+    affiliateStatus: "affiliate",
     lastLinkCheck: TODAY,
     sourceRecipeIds: ["cookbook:white-drop-cookies-n-creme-creami", "cookbook:100-calorie-iced-protein-coffee"],
     productType: "product",
@@ -294,9 +296,9 @@ export const products = {
     whatToKnow: "Only useful if you already own a Creami — it does nothing for stovetop or oven cooking. Level 1/8 tsp is a hard limit; heaped goes gummy.",
     badges: ["PURCHASED OURS", "USED 1+ YEAR", "ADULTS PRIMARILY"],
     image: "/images/brands/bobs-redmill-guar-gum.jpg",
-    url: "https://www.amazon.com/s?k=bobs+red+mill+guar+gum",
+    url: "https://www.amazon.com/s?k=bobs+red+mill+guar+gum&tag=tusharksharma-20",
     ctaLabel: "Search guar gum on Amazon",
-    affiliateStatus: "non-affiliate",
+    affiliateStatus: "affiliate",
     lastLinkCheck: TODAY,
     sourceRecipeIds: ["cookbook:white-drop-cookies-n-creme-creami"],
     productType: "product",
@@ -347,9 +349,9 @@ export const products = {
     whatToKnow: "Flavor won't match a fresh brewed cup you like — that's the trade for the no-water-down behavior. Some brands are noticeably bitter; test one before buying multiples.",
     badges: ["PURCHASED OURS", "USED 1+ YEAR", "ADULTS PRIMARILY"],
     image: null,
-    url: "https://www.amazon.com/s?k=instant+coffee",
+    url: "https://www.amazon.com/s?k=instant+coffee&tag=tusharksharma-20",
     ctaLabel: "Search instant coffee on Amazon",
-    affiliateStatus: "non-affiliate",
+    affiliateStatus: "affiliate",
     lastLinkCheck: TODAY,
     sourceRecipeIds: ["cookbook:100-calorie-iced-protein-coffee"],
     productType: "product",
