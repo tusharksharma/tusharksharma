@@ -63,6 +63,7 @@ export const collections = [
     tagline: "The gear + staples behind our Snack Box Series — the same containers we've packed for two years, plus the swaps that keep kid snacks high-protein.",
     productIds: [
       "buluker-snack-containers",
+      "gheelish-tortilla-dip-chips",
       "wilde-chicken-chips",
       "grillos-pickles",
       "chomps-beef-sticks",
@@ -135,6 +136,24 @@ export const products = {
     brandCtaLabel: null,
     lastLinkCheck: TODAY,
     sourceRecipeIds: ["cookbook:deli-dill-snack-box", "cookbook:ham-cheese-power-melt"],
+    productType: "product",
+  },
+
+  "gheelish-tortilla-dip-chips": {
+    id: "gheelish-tortilla-dip-chips",
+    brand: "Gheelish",
+    name: "Original Tortilla Dip Chips (gluten-free, ghee-based)",
+    why: "The crunch layer in the Fiesta Snack Box. Gluten-free, no seed oils, ghee-based flavor. 0.75 oz per box lands ~80 cal in the chip compartment without turning the snack box into a chip bowl.",
+    bestFor: "The crunch compartment in a kid snack box when you want a gluten-free chip that isn't seed-oil heavy.",
+    whatToKnow: "Ghee-based means dairy — flagged in allergens. Pricier per bag than mainstream tortilla chips. Grocery availability varies; Amazon is the easier reorder path.",
+    badges: ["PURCHASED OURS", "USED 6 MONTHS", "KIDS + ADULTS"],
+    image: null,
+    amazonUrl: amznSearch("gheelish tortilla dip chips"),
+    amazonCtaLabel: null,
+    brandUrl: "https://www.gheelish.com/",
+    brandCtaLabel: "Or shop direct at Gheelish",
+    lastLinkCheck: "2026-08-01",
+    sourceRecipeIds: ["cookbook:fiesta-snack-box"],
     productType: "product",
   },
 

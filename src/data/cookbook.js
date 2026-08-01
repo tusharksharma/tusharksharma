@@ -4420,6 +4420,80 @@ export const powerups = [
 // Snack boxes are the exception: they're single-audience (kid), no split.
 export const snackBoxes = [
   {
+    id: "fiesta-snack-box",
+    title: "Fiesta Snack Box",
+    tagline: "Snack Box Series Ep. 10 — colorful post-lunch box with 365 Black Forest ham, Colby cheese, Gheelish tortilla dip chips, and mini sweet peppers. ~210 cal / 13g protein per box.",
+    heroImage: "/images/fiesta-snack-box/hero-fiesta-snack-box.webp",
+    // prepImage — mise-style brand-context shot (the 365 ham) matching the
+    // pizza / apple-pie snack box's brand-context prepImage pattern.
+    prepImage: "/images/fiesta-snack-box/context-deli-ham.webp",
+    // socialImages — 5 entries following the pizza / apple-pie carousel cap
+    // per [[feedback-recipes-social-carousel]] + [[feedback-social-images-step-order]].
+    // Order: 4 build steps → payoff (seal-and-chill). Hero deliberately NOT in
+    // socialImages (no self-duplication with recipe.image). The three
+    // ingredient-context shots (ham/cheese/peppers) stay off-carousel per the
+    // no-brand-reveal-in-carousel rule.
+    socialImages: [
+      "/images/fiesta-snack-box/step-01-add-ham.webp",
+      "/images/fiesta-snack-box/step-02-cube-colby-cheese.webp",
+      "/images/fiesta-snack-box/step-03-add-sweet-peppers.webp",
+      "/images/fiesta-snack-box/step-04-add-tortilla-dip-chips.webp",
+      "/images/fiesta-snack-box/final-four-fiesta-snack-boxes.webp",
+    ],
+    videoSrc: "/videos/fiesta-snack-box/fiesta-snack-box-episode-10-210cal-13protein-marcus.mp4",
+    flavorProfile: "Salty deli ham, creamy Colby cubes, sweet crunchy peppers, light tortilla-chip crunch. Kid-safe color story plus adult-friendly macros.",
+    calories: 840,
+    caloriesPerServing: 210,
+    protein: 52,
+    proteinPerServing: 13,
+    servings: 4,
+    time: "12 min",
+    bestFor: [
+      "Kid snack",
+      "Snack box",
+      "After-school snack",
+      "Post-lunch snack",
+      "Batch snack prep",
+      "Higher-protein snack",
+      "No cook",
+    ],
+    useThisWhen: "You want a colorful after-school or post-lunch snack box for the kids and you're making 4 at once — 2 kids covered for 2 days. Ham plus Colby anchors ~13g protein, sweet peppers add fresh crunch, Gheelish tortilla dip chips bring the fun. 12 min flat, no cook.",
+    flavorTarget: "Salty 365 Black Forest ham + creamy Colby cubes + sweet crunchy mini-pepper strips + light tortilla-chip crunch. Reads like a fiesta plate scaled down to a snack-box grid.",
+    ingredients: [
+      "8 slices (~5 1/3 oz) 365 Black Forest deli ham — 2 slices per box, ~40 cal per portion",
+      "4 Colby cheese sticks — 1 stick cubed per box, ~80 cal per portion",
+      "3 oz Gheelish Original tortilla dip chips — 0.75 oz per box, ~80 cal per portion",
+      "Mini sweet peppers (red / yellow / orange mix) — seeded and cut into age-appropriate strips to fill each box",
+    ],
+    steps: [
+      { text: "SET UP: Line up 4 divided snack boxes. Buluker pastel 4-compartment boxes shown — the same set featured on Favorites → Snack Box Essentials.", image: "/images/fiesta-snack-box/hero-fiesta-snack-box.webp" },
+      { text: "HAM: Fold or cut 2 slices of 365 Black Forest deli ham into one compartment of each box (~5 1/3 oz total across all 4 boxes).", image: "/images/fiesta-snack-box/step-01-add-ham.webp" },
+      { text: "COLBY CUBES: Cut each Colby cheese stick into bite-size cubes and drop 1 stick's worth into the next compartment of each box.", image: "/images/fiesta-snack-box/step-02-cube-colby-cheese.webp" },
+      { text: "SWEET PEPPERS: Seed and slice mini sweet peppers (red / yellow / orange) into age-appropriate strips. Fill one compartment of each box — the color story of the fiesta box.", image: "/images/fiesta-snack-box/step-03-add-sweet-peppers.webp" },
+      { text: "TORTILLA DIP CHIPS: Weigh 0.75 oz Gheelish Original tortilla dip chips into the remaining compartment of each box. Portion just before serving if you want maximum crunch — the chip compartment stays driest that way.", image: "/images/fiesta-snack-box/step-04-add-tortilla-dip-chips.webp" },
+      { text: "SEAL + CHILL: Snap lids on and refrigerate. Serve within 2 days. Transport with an ice pack for lunchbox use.", image: "/images/fiesta-snack-box/final-four-fiesta-snack-boxes.webp" },
+    ],
+    brands: [
+      { name: "365 by Whole Foods Market", item: "Black Forest Deli Ham (~5 1/3 oz pack of 8 slices; 2 slices ≈ 40 cal per portion).", why: "Whole Foods house brand — kid-familiar ham without the additive stack you find on most sliced deli meats. 2 slices per box lands the ~40 cal / ~5g protein anchor from the meat layer.", url: "https://www.wholefoodsmarket.com/search?text=365%20black%20forest%20ham" },
+      { name: "Colby Cheese Sticks", item: "Any brand of Colby cheese sticks (~80 cal / 6–7g protein per stick). 1 stick cubed per box.", why: "Cubing the stick gives a kid-friendly finger-food shape without needing a knife at snack time. Colby is milder than sharp cheddar — an easier flavor for kids who don't love strong cheese.", url: null },
+      { name: "Gheelish", item: "Original Tortilla Dip Chips (gluten-free, made with ghee). 0.75 oz per box ≈ 80 cal.", why: "The crunch layer. Ghee-based tortilla dip chip — gluten-free, no seed oils. 0.75 oz is enough to fill a compartment without turning the snack box into a chip bowl. See Favorites → Snack Box Essentials for the exact SKU + honest what-to-know.", url: "https://www.gheelish.com/" },
+      { name: "Mini Sweet Peppers", item: "Sunset / Bailey Farms / any brand of mini sweet peppers (red / yellow / orange mix). ~30 cal per full box of pepper strips.", why: "The color story of the fiesta box + fresh crunch that balances the salty savory sides. Sweet peppers (not spicy) — kid-safe flavor. Any grocery brand works.", url: null },
+      { name: "Buluker Snack Containers", item: "Four-compartment pastel snack boxes (the exact set shown across the Snack Box Series).", why: "Same 4-compartment containers used across every Snack Box Series entry. Cubed cheese, ham, peppers, and chips each get their own compartment so nothing goes soggy. See Favorites → Snack Box Essentials for the honest what-to-know.", url: "/favorites/snack-box-essentials" },
+    ],
+    macroHonesty: "~210 cal / 13g protein per snack box, approximate. Component breakdown: 2 slices 365 Black Forest deli ham (~40 cal / ~5g protein) + 1 Colby cheese stick cubed (~80 cal / 6g protein) + 0.75 oz Gheelish Original tortilla dip chips (~80 cal / 1g protein) + mini sweet peppers to fill (~10 cal / <1g protein). Total: ~210 cal / ~13g protein. Marked estimated — values vary by deli meat brand, cheese brand, chip weight, and pepper fill. Confirm exact numbers off the labels of the specific brands you pick.",
+    seriesInfo: {
+      series: "Split Plate Snack Box",
+      episode: 10,
+      framing: "Higher-protein kid snack boxes with familiar flavors + better-for-you swaps. Kid-first, but macro-friendly enough that parents may want one too. Make-once-eat-twice for 2-kid households.",
+      sauceRule: "No sauce in the packed box — soggy chips + mess. Any dips serve at home on the side only.",
+    },
+    mealPrep: {
+      storage: "Refrigerate covered. Transport with an ice pack for lunchbox use.",
+      lasts: "Best within 2 days. Peppers stay crunchy that long; chips are firmest if portioned just before serving.",
+      reheat: "Don't — serve cold. That's the whole snack-box format.",
+    },
+  },
+  {
     id: "split-plate-pizza-snack-box",
     title: "Split Plate Pizza Snack Box",
     tagline: "No-cook pizza-inspired kid snack box — turkey pepperoni, cubed cheese stick, Triscuit Thin Crisps, cucumber. Higher-protein without turning snack into diet food.",
