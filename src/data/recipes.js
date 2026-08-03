@@ -3250,7 +3250,7 @@ const recipes = [
     servings: 4,
     protein: 44,
     calories: 540,
-    image: "/images/buffalo-wing-night/hero-split-plate.webp",
+    image: "/images/buffalo-wing-night/hero-split-wing-night.webp",
     role: "The High-Protein Comfort Night",
     makeThisWhen: "Friday night, kids want comfort food, you want something that feels indulgent without being a wreck. Frozen wings + a real protein crema = junk dinner becomes high-protein comfort. 25 min, one air fryer, zero pretending.",
     hook: "Frozen wings + protein blue cheese crema = junk dinner becomes high-protein comfort food. The crema does the leverage work — adds protein, satiation, mouthfeel, and turns 'okay frozen wings' into 'restaurant Friday night'.",
@@ -3300,7 +3300,7 @@ const recipes = [
       ],
       sharedSteps: [
         { text: "MAKE THE CREMA AHEAD: 5 min prep + 10 min rest. Cottage cheese + 365 blue cheese + Fairlife + lemon + SPG → blend smooth → fold in chives + chunks. Fridge until serving. (See Protein Blue Cheese Crema in Cookbook.)", images: [] },
-        { text: "AIR FRY WINGS: From frozen, 400°F for 18-22 min. Single layer, shake basket halfway. Crispy = goal. Soggy = overcrowded.", images: [] },
+        { text: "AIR FRY WINGS: From frozen, 400°F for 18-22 min. Single layer, shake basket halfway. Crispy = goal. Soggy = overcrowded.", images: ["/images/buffalo-wing-night/step-frozen-wings-on-rack.webp", "/images/buffalo-wing-night/step-extra-crispy-wings.webp"] },
         { text: "TOAST THE BREAD: Last 6-7 min of the wing cook, slide Rudi's Three Cheese Texas Toast into a toaster oven or air fryer at 400°F. Pull when cheese is melted and edges are golden.", images: [] },
         { text: "REST: Wings to a clean bowl. 1 minute. DO NOT skip — this is the move that prevents soggy sauced wings.", images: [] },
       ],
@@ -3317,8 +3317,8 @@ const recipes = [
         ],
         steps: [
           { text: "PULL KID WINGS FIRST: Move 4-5 wings to kid tray BEFORE saucing. No going back once they're sauced.", images: [] },
-          { text: "TOSS AGGRESSIVELY: Adult wings in a bowl. Pour the included Kinder's buffalo sauce over. Tongs, toss HARD until every wing is glossy. This is not a delicate move.", images: [] },
-          { text: "PLATE: Sauced wings on a round plate. Square ramekin of Protein Blue Cheese Crema beside. Pile of baby carrots. Chives scattered over the wings — the green is the fix.", images: ["/images/buffalo-wing-night/hero-split-plate.webp"] },
+          { text: "TOSS AGGRESSIVELY: Adult wings in a bowl. Pour the included Kinder's buffalo sauce over. Tongs, toss HARD until every wing is glossy. This is not a delicate move.", images: ["/images/buffalo-wing-night/context-hot-wing-sauces.webp", "/images/buffalo-wing-night/step-buffalo-sauce-drizzle.webp", "/images/buffalo-wing-night/step-toss-glossy-wings.webp"] },
+          { text: "PLATE: Sauced wings on a round plate. Square ramekin of Protein Blue Cheese Crema beside. Pile of baby carrots. Chives scattered over the wings — the green is the fix.", images: ["/images/buffalo-wing-night/hero-adult-wing-closeup.webp", "/images/buffalo-wing-night/final-adult-wing-plate.webp", "/images/buffalo-wing-night/context-hoppy-refresher.webp"] },
         ],
       },
       kid: {
@@ -3336,7 +3336,7 @@ const recipes = [
             name: "Standard — Unsauced + Dip-Optional",
             description: "Divided tray: 4-5 naked wings in one section, baby carrots + small ramekin of crema as optional dip, slice of Rudi's Three Cheese Texas Toast.",
             steps: [
-              { text: "PLATE: Divided tray. Unsauced wings in main section, carrots + crema dip ramekin in the side compartment, toasted Rudi's Three Cheese in the bottom compartment. Don't pre-dip. Don't pre-sauce. Don't pre-fold. They commit at their own pace.", images: [] },
+              { text: "PLATE: Divided tray. Unsauced wings in main section, carrots + crema dip ramekin in the side compartment, toasted Rudi's Three Cheese in the bottom compartment. Don't pre-dip. Don't pre-sauce. Don't pre-fold. They commit at their own pace.", images: ["/images/buffalo-wing-night/context-mild-wing-sauces.webp"] },
             ],
           },
           {
@@ -3368,7 +3368,7 @@ const recipes = [
       { text: "REST: Wings to a clean bowl. 1 minute. NON-NEGOTIABLE — this prevents soggy sauced wings." },
       { text: "PULL KID PORTION FIRST: 4-5 wings to the kid tray BEFORE saucing. No sauce." },
       { text: "TOSS ADULT WINGS: Pour the included Kinder's buffalo sauce over the remaining wings. Tongs, toss HARD until glossy. Aggressive = correct." },
-      { text: "PLATE: Adult round plate — sauced wings + carrots + ramekin of crema + chives scattered over. Kid divided tray — naked wings + carrots + crema dip ramekin + toasted Rudi's Three Cheese.", images: ["/images/buffalo-wing-night/hero-split-plate.webp"] },
+      { text: "PLATE: Adult round plate — sauced wings + carrots + ramekin of crema + chives scattered over. Kid divided tray — naked wings + carrots + crema dip ramekin + toasted Rudi's Three Cheese.", images: ["/images/buffalo-wing-night/hero-split-wing-night.webp"] },
     ],
     brands: [
       { name: "Kinder's", item: "Buttery Buffalo Party Wings (19 oz frozen)", why: "Pre-cooked, pre-seasoned wings with the buffalo sauce packet included. Anaheim chilis + red jalapeño + garlic in the sauce = real buffalo flavor, not gas-station mild. The leverage move: frozen wings that don't taste frozen.", image: "/images/brands/kinders-buttery-buffalo-wings.png", url: "https://www.kinders.com/products/buttery-buffalo-party-wings" },
