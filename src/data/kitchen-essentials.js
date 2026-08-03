@@ -126,7 +126,7 @@ export const collections = [
       "bilinskis-cajun-andouille",
       "tony-chacheres-creole",
     ],
-    ogImage: "/images/runny-sunny-eggs-chicken-sausage/hero-runny-sunny-eggs-chicken-sausage.webp",
+    ogImage: "/images/runny-sunny-eggs-chicken-sausage/hero-runny-sunny-eggs-chicken-sausage-polished.webp",
   },
 ];
 

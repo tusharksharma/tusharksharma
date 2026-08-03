@@ -1306,18 +1306,18 @@ export const breakfasts = [
     id: "7-minute-runny-sunny-eggs-chicken-sausage",
     title: "7-Minute Jammy Eggs & Cajun Chicken Sausage",
     tagline: "Rest-day breakfast: 3 jammy 7-min eggs + 2 Cajun chicken sausages. ~370 cal / 44g protein. Filmed brunch shown is 4+3.",
-    heroImage: "/images/runny-sunny-eggs-chicken-sausage/hero-runny-sunny-eggs-chicken-sausage.webp",
+    heroImage: "/images/runny-sunny-eggs-chicken-sausage/hero-runny-sunny-eggs-chicken-sausage-polished.webp",
     prepImage: "/images/runny-sunny-eggs-chicken-sausage/context-happy-egg-blue.webp",
     prepImageCaption: "Happy Egg Heritage Breed — blue carton (creator's default)",
-    // socialImages — raw paths for now; swap to -polished.webp after Path A pass.
-    // Order per handoff: build-to-payoff — lower eggs → ice bath → sausage → halve reveal → brunch payoff.
-    // Hero deliberately NOT in socialImages (already the recipe.image / detail-page hero).
+    // socialImages — Path A polished. Order per handoff: build-to-payoff —
+    // lower eggs → ice bath → sausage → halve reveal → brunch payoff. Hero
+    // deliberately NOT in socialImages (already the recipe.image / detail-page hero).
     socialImages: [
-      "/images/runny-sunny-eggs-chicken-sausage/step-01-lower-eggs.webp",
-      "/images/runny-sunny-eggs-chicken-sausage/step-02-ice-bath.webp",
-      "/images/runny-sunny-eggs-chicken-sausage/step-03-cook-sausage.webp",
-      "/images/runny-sunny-eggs-chicken-sausage/step-05-halve-runny-eggs.webp",
-      "/images/runny-sunny-eggs-chicken-sausage/final-brunch-plate.webp",
+      "/images/runny-sunny-eggs-chicken-sausage/step-01-lower-eggs-polished.webp",
+      "/images/runny-sunny-eggs-chicken-sausage/step-02-ice-bath-polished.webp",
+      "/images/runny-sunny-eggs-chicken-sausage/step-03-cook-sausage-polished.webp",
+      "/images/runny-sunny-eggs-chicken-sausage/step-05-halve-runny-eggs-polished.webp",
+      "/images/runny-sunny-eggs-chicken-sausage/final-brunch-plate-polished.webp",
     ],
     flavorProfile: "Jammy warm yolks, Cajun-seasoned chicken sausage, finishing hit of Creole spice. Not hard-boiled — the yolk is the payoff.",
     calories: 370,
@@ -1339,14 +1339,14 @@ export const breakfasts = [
       { text: "BRUNCH VARIATION (shown in the video, ~520 cal / 63g protein): add 1 more egg and 1 more sausage. Same method." },
     ],
     steps: [
-      { text: "ICE BATH FIRST: Fill a bowl with ice and cold water and set it right next to the stove. Do this before the water boils so it's ready.", image: "/images/runny-sunny-eggs-chicken-sausage/step-02-ice-bath.webp" },
+      { text: "ICE BATH FIRST: Fill a bowl with ice and cold water and set it right next to the stove. Do this before the water boils so it's ready.", image: "/images/runny-sunny-eggs-chicken-sausage/step-02-ice-bath-polished.webp" },
       { text: "BOIL: Bring enough water to fully submerge the eggs to a steady boil.", image: null },
-      { text: "LOWER + 7 MIN: Carefully lower cold eggs into boiling water. Set a timer for exactly 7 minutes. Keep the boil steady the whole time.", image: "/images/runny-sunny-eggs-chicken-sausage/step-01-lower-eggs.webp" },
-      { text: "SAUSAGE IN PARALLEL: While the eggs are on their timer, cook the chicken sausage per its package (air fryer, skillet, or oven — no universal time). It's fully cooked, so you're heating + browning.", image: "/images/runny-sunny-eggs-chicken-sausage/step-03-cook-sausage.webp" },
+      { text: "LOWER + 7 MIN: Carefully lower cold eggs into boiling water. Set a timer for exactly 7 minutes. Keep the boil steady the whole time.", image: "/images/runny-sunny-eggs-chicken-sausage/step-01-lower-eggs-polished.webp" },
+      { text: "SAUSAGE IN PARALLEL: While the eggs are on their timer, cook the chicken sausage per its package (air fryer, skillet, or oven — no universal time). It's fully cooked, so you're heating + browning.", image: "/images/runny-sunny-eggs-chicken-sausage/step-03-cook-sausage-polished.webp" },
       { text: "ICE 5 MIN: At exactly 7 min, transfer eggs straight to the ice bath. Leave 5 minutes — this stops the cook and loosens the shell.", image: null },
       { text: "PEEL: Gently peel the eggs. Runny center, so handle carefully.", image: "/images/runny-sunny-eggs-chicken-sausage/step-04-peel-eggs.webp" },
-      { text: "HALVE + PLATE: Halve each egg lengthwise with a sharp knife. Plate with the hot sausage.", image: "/images/runny-sunny-eggs-chicken-sausage/step-05-halve-runny-eggs.webp" },
-      { text: "SEASON + EAT: Finish with Creole seasoning to taste. Serve immediately while the yolks are still warm.", image: "/images/runny-sunny-eggs-chicken-sausage/step-06-creole-seasoning.webp" },
+      { text: "HALVE + PLATE: Halve each egg lengthwise with a sharp knife. Plate with the hot sausage.", image: "/images/runny-sunny-eggs-chicken-sausage/step-05-halve-runny-eggs-polished.webp" },
+      { text: "SEASON + EAT: Finish with Creole seasoning to taste. Serve immediately while the yolks are still warm.", image: "/images/runny-sunny-eggs-chicken-sausage/step-06-creole-seasoning-polished.webp" },
     ],
     troubleshooting: [
       { problem: "Yolks fully set", fix: "Boil wasn't steady, or you left them past 7 minutes. Keep the boil steady the whole time and pull at exactly 7 min. Ice bath must happen immediately." },
