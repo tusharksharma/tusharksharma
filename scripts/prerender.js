@@ -72,6 +72,7 @@ const routes = [
   { path: "/favorites/creami-essentials", title: "Creami Essentials — Favorites", description: "The Ninja Creami + the saved 4-line base. Everything that runs across the CrumblCreamiCut series on The Split Plate.", image: "/images/white-drop-cookies-n-creme-creami/hero-polished.webp" },
   { path: "/favorites/proffee-gear", title: "Proffee Gear — Favorites", description: "The 100-calorie iced protein coffee build — dairy base, instant coffee, sugar-free syrup. What we buy for daily proffee.", image: "/images/100-calorie-iced-protein-coffee/hero-polished.webp" },
   { path: "/favorites/freezer-weeknight", title: "Freezer & Weeknight Shortcuts — Favorites", description: "The pantry and freezer staples that keep a 30-minute dinner actually 30 minutes. Kirkland ghee, Bare Bones broth, Dan-O's, TJ shawarma chicken.", image: "/images/split-protein-creamy-spinach-pasta/hero-split-adult-kid-plates-polished.webp" },
+  { path: "/favorites/breakfast-powerups", title: "Breakfast Powerups — Favorites", description: "The fast, protein-forward breakfasts we default to on rest days. Happy Egg heritage-breed eggs, Bilinski's Cajun chicken sausage, Tony Chachere's Creole seasoning.", image: "/images/runny-sunny-eggs-chicken-sausage/hero-runny-sunny-eggs-chicken-sausage.webp" },
   ...recipes.map((r) => {
     const idx = recipesRaw.indexOf(`slug: "${r.slug}"`);
     const ingredients = idx > -1 ? extractIngredients(recipesRaw, idx) : [];

@@ -1302,6 +1302,72 @@ export const breakfasts = [
       reheat: "Don't heat. Spread cold, eat cold, or pan-warm the loaded bagel face-down for 30 sec to crisp.",
     },
   },
+  {
+    id: "7-minute-runny-sunny-eggs-chicken-sausage",
+    title: "7-Minute Jammy Eggs & Cajun Chicken Sausage",
+    tagline: "Rest-day breakfast: 3 jammy 7-min eggs + 2 Cajun chicken sausages. ~370 cal / 44g protein. Filmed brunch shown is 4+3.",
+    heroImage: "/images/runny-sunny-eggs-chicken-sausage/hero-runny-sunny-eggs-chicken-sausage.webp",
+    prepImage: "/images/runny-sunny-eggs-chicken-sausage/context-happy-egg-blue.webp",
+    prepImageCaption: "Happy Egg Heritage Breed — blue carton (creator's default)",
+    // socialImages — raw paths for now; swap to -polished.webp after Path A pass.
+    // Order per handoff: build-to-payoff — lower eggs → ice bath → sausage → halve reveal → brunch payoff.
+    // Hero deliberately NOT in socialImages (already the recipe.image / detail-page hero).
+    socialImages: [
+      "/images/runny-sunny-eggs-chicken-sausage/step-01-lower-eggs.webp",
+      "/images/runny-sunny-eggs-chicken-sausage/step-02-ice-bath.webp",
+      "/images/runny-sunny-eggs-chicken-sausage/step-03-cook-sausage.webp",
+      "/images/runny-sunny-eggs-chicken-sausage/step-05-halve-runny-eggs.webp",
+      "/images/runny-sunny-eggs-chicken-sausage/final-brunch-plate.webp",
+    ],
+    flavorProfile: "Jammy warm yolks, Cajun-seasoned chicken sausage, finishing hit of Creole spice. Not hard-boiled — the yolk is the payoff.",
+    calories: 370,
+    caloriesPerServing: 370,
+    protein: 44,
+    proteinPerServing: 44,
+    servings: 1,
+    time: "15 min",
+    bestFor: ["Breakfast", "High protein", "Rest day", "Pork-free", "Jammy egg"],
+    useThisWhen: "You want a fast, protein-forward breakfast on a morning without pre-lift carbs. Standard plate is 3 eggs + 2 sausages (~370 cal / 44g protein). The filmed brunch variation adds one of each for a hungrier ~520 cal / 63g protein plate — same method, more food.",
+    flavorTarget: "The whole point is the yolk. Seven minutes in, five minutes iced — the white sets, the center stays warm and runny. Cajun chicken sausage adds heat and finish, Creole seasoning ties both together.",
+    ingredients: [
+      { text: "STANDARD (~370 cal / 44g protein):" },
+      "3 large eggs (Happy Egg Heritage Breed blue carton used)",
+      "2 fully cooked Cajun chicken sausages (Bilinski's Organic Cajun Style Andouille used)",
+      "Creole seasoning to taste (Tony Chachere's in the footage)",
+      "Water — enough to submerge the eggs",
+      "Ice + cold water for the ice bath",
+      { text: "BRUNCH VARIATION (shown in the video, ~520 cal / 63g protein): add 1 more egg and 1 more sausage. Same method." },
+    ],
+    steps: [
+      { text: "ICE BATH FIRST: Fill a bowl with ice and cold water and set it right next to the stove. Do this before the water boils so it's ready.", image: "/images/runny-sunny-eggs-chicken-sausage/step-02-ice-bath.webp" },
+      { text: "BOIL: Bring enough water to fully submerge the eggs to a steady boil.", image: null },
+      { text: "LOWER + 7 MIN: Carefully lower cold eggs into boiling water. Set a timer for exactly 7 minutes. Keep the boil steady the whole time.", image: "/images/runny-sunny-eggs-chicken-sausage/step-01-lower-eggs.webp" },
+      { text: "SAUSAGE IN PARALLEL: While the eggs are on their timer, cook the chicken sausage per its package (air fryer, skillet, or oven — no universal time). It's fully cooked, so you're heating + browning.", image: "/images/runny-sunny-eggs-chicken-sausage/step-03-cook-sausage.webp" },
+      { text: "ICE 5 MIN: At exactly 7 min, transfer eggs straight to the ice bath. Leave 5 minutes — this stops the cook and loosens the shell.", image: null },
+      { text: "PEEL: Gently peel the eggs. Runny center, so handle carefully.", image: "/images/runny-sunny-eggs-chicken-sausage/step-04-peel-eggs.webp" },
+      { text: "HALVE + PLATE: Halve each egg lengthwise with a sharp knife. Plate with the hot sausage.", image: "/images/runny-sunny-eggs-chicken-sausage/step-05-halve-runny-eggs.webp" },
+      { text: "SEASON + EAT: Finish with Creole seasoning to taste. Serve immediately while the yolks are still warm.", image: "/images/runny-sunny-eggs-chicken-sausage/step-06-creole-seasoning.webp" },
+    ],
+    troubleshooting: [
+      { problem: "Yolks fully set", fix: "Boil wasn't steady, or you left them past 7 minutes. Keep the boil steady the whole time and pull at exactly 7 min. Ice bath must happen immediately." },
+      { problem: "Shells stuck to the whites", fix: "Ice bath wasn't long enough. 5 minutes minimum. The temperature shock is what separates the membrane from the white." },
+      { problem: "Yolks too runny for your comfort", fix: "Add 30–60 seconds. 7:30 or 8:00 firms the yolk while keeping it jammy. Don't go past 9 min or you're in hard-boiled territory." },
+      { problem: "Sausage is dry", fix: "You overcooked it. It's already fully cooked — you're heating and browning, not cooking through. 3–4 min in an air fryer at 375°F usually plenty." },
+      { problem: "Not enough food", fix: "Move to the brunch variation (4 eggs + 3 sausages). Same method, ~150 cal and 19g protein more." },
+    ],
+    brands: [
+      { name: "Happy Egg Co.", item: "Heritage Breed Eggs (blue carton)", why: "Richer yolks than commodity eggs — the whole point of a jammy 7-min egg is the yolk, so the input matters. Blue carton = free-range heritage breed.", image: "/images/runny-sunny-eggs-chicken-sausage/context-happy-egg-blue.webp", url: "/favorites/breakfast-powerups" },
+      { name: "Bilinski's", item: "Organic Cajun Style Andouille (fully cooked)", why: "Pre-cooked chicken sausage — just heat and brown. Cajun seasoning already baked in. Pork-free. About 130 cal / 14g protein per link.", image: "/images/runny-sunny-eggs-chicken-sausage/context-bilinskis-cajun-andouille.webp", url: "/favorites/breakfast-powerups" },
+      { name: "Tony Chachere's", item: "Original Creole Seasoning", why: "Cheap, universal, adds Creole heat + salt in one shake. Finishes the plate.", url: "/favorites/breakfast-powerups" },
+    ],
+    macroHonesty: "Standard plate: ~370 cal / 44g protein — 3 large eggs (~210 / 18g) + 2 Bilinski's Cajun Andouille links (~130 / 28g when 2×~14g). Rounded to creator's estimate. Brunch variation: ~520 cal / 63g protein for 4 eggs + 3 sausages. Brand substitutions change macros. These are creator-provided estimates; if you use different sausage or a different egg size, recalculate.",
+    mealPrep: {
+      storage: "Best fresh — the whole appeal is the warm, runny yolk. Don't make this ahead.",
+      lasts: "Eat the eggs immediately. Sausage leftovers per package storage instructions.",
+      reheat: "Don't reheat jammy eggs — the yolks will over-set. Cook per serving.",
+    },
+    videoSrc: "/videos/runny-sunny-eggs-chicken-sausage/7-minute-runny-sunny-eggs-chicken-sausage-marcus.mp4",
+  },
 ];
 
 export const quickLunches = [

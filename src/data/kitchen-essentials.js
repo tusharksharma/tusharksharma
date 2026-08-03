@@ -116,6 +116,18 @@ export const collections = [
     ],
     ogImage: "/images/split-protein-creamy-spinach-pasta/hero-split-adult-kid-plates-polished.webp",
   },
+  {
+    id: "breakfast-powerups",
+    slug: "breakfast-powerups",
+    title: "Breakfast Powerups",
+    tagline: "The fast, protein-forward breakfasts we default to when the morning doesn't need a carb-heavy pre-lift plate. Eggs, chicken sausage, Creole seasoning — 15 minutes and done.",
+    productIds: [
+      "happy-egg-heritage-breed",
+      "bilinskis-cajun-andouille",
+      "tony-chacheres-creole",
+    ],
+    ogImage: "/images/runny-sunny-eggs-chicken-sausage/hero-runny-sunny-eggs-chicken-sausage.webp",
+  },
 ];
 
 export const products = {
@@ -538,6 +550,62 @@ export const products = {
     brandCtaLabel: "Browse 365 frozen at Whole Foods",
     lastLinkCheck: TODAY,
     sourceRecipeIds: ["recipe:21"],
+    productType: "product",
+  },
+
+  // ─── Breakfast Powerups ─────────────────────────────────────────────
+
+  "happy-egg-heritage-breed": {
+    id: "happy-egg-heritage-breed",
+    brand: "Happy Egg Co.",
+    name: "Heritage Breed Eggs (blue carton)",
+    why: "The whole point of a 7-minute jammy egg is the yolk. Heritage-breed hens lay richer, deeper-yolked eggs than commodity cartons. The blue Happy Egg carton is the one we reach for at the grocery store — free-range heritage breed, consistently rich yolks.",
+    bestFor: "Any egg-forward recipe where the yolk is the payoff — jammy eggs, sunny-side, poached, custards.",
+    whatToKnow: "Refrigerated — Amazon Fresh only in select regions, so we route to the Happy Egg store locator by default. Costs about 2× a commodity dozen. Yolk color varies with the hen's diet and season, so a specific carton may look darker or paler than the last.",
+    badges: ["PURCHASED OURS", "USED 1+ YEAR", "ADULTS PRIMARILY"],
+    image: "/images/runny-sunny-eggs-chicken-sausage/context-happy-egg-blue.webp",
+    amazonUrl: null,
+    amazonCtaLabel: null,
+    brandUrl: "https://happyegg.com/products/heritage-breed",
+    brandCtaLabel: "Find Heritage Breed at Happy Egg",
+    lastLinkCheck: TODAY,
+    sourceRecipeIds: ["cookbook:7-minute-runny-sunny-eggs-chicken-sausage"],
+    productType: "product",
+  },
+
+  "bilinskis-cajun-andouille": {
+    id: "bilinskis-cajun-andouille",
+    brand: "Bilinski's",
+    name: "Organic Cajun Style Andouille Chicken Sausage (fully cooked)",
+    why: "Pre-cooked chicken sausage with Cajun seasoning already baked in — you're heating and browning, not cooking through. About 130 cal and 14g protein per link on the label. Pork-free, so it works for households avoiding pork without giving up the andouille profile.",
+    bestFor: "Fast breakfasts where the protein needs to land in under 5 minutes — pair with jammy eggs, breakfast tacos, rice bowls.",
+    whatToKnow: "Refrigerated (short shelf life once opened) — Amazon Fresh only in select regions, so we route to Bilinski's store locator. Cajun andouille reads spicier than the sweet-Italian or mild Bilinski's variants; heat-sensitive eaters should try the mild first. Not a swap for a pork andouille if you're chasing a specific gumbo profile.",
+    badges: ["PURCHASED OURS", "USED 1+ YEAR", "ADULTS PRIMARILY"],
+    image: "/images/runny-sunny-eggs-chicken-sausage/context-bilinskis-cajun-andouille.webp",
+    amazonUrl: null,
+    amazonCtaLabel: null,
+    brandUrl: "https://bilinskis.com/product/organic-cajun-style-andouille/",
+    brandCtaLabel: "Find Cajun Andouille at Bilinski's",
+    lastLinkCheck: TODAY,
+    sourceRecipeIds: ["cookbook:7-minute-runny-sunny-eggs-chicken-sausage"],
+    productType: "product",
+  },
+
+  "tony-chacheres-creole": {
+    id: "tony-chacheres-creole",
+    brand: "Tony Chachere's",
+    name: "Original Creole Seasoning",
+    why: "Cheap, universal, one shake adds Creole heat and salt at once. The finishing seasoning on the 7-minute jammy egg plate. Also cross-utility for rice, chicken, fries.",
+    bestFor: "Finishing seasoning on eggs, chicken, fries, or anywhere Creole heat + salt should land in one pass.",
+    whatToKnow: "Salt-forward — one heavy shake can push a plate too salty. Start light and taste. Contains soybean oil derivatives in the anti-caking mix; check the label if you're avoiding it.",
+    badges: ["PURCHASED OURS", "USED 2+ YEARS", "ADULTS PRIMARILY"],
+    image: null,
+    amazonUrl: amznSearch("tony chacheres original creole seasoning"),
+    amazonCtaLabel: null,
+    brandUrl: "https://tonychachere.com/product/original-creole-seasoning/",
+    brandCtaLabel: "Or shop direct at Tony Chachere's",
+    lastLinkCheck: TODAY,
+    sourceRecipeIds: ["cookbook:7-minute-runny-sunny-eggs-chicken-sausage"],
     productType: "product",
   },
 };
