@@ -4479,18 +4479,18 @@ export const powerups = [
     id: "salted-caramel-pretzel-iced-proffee",
     title: "Salted Caramel Pretzel Iced Proffee",
     tagline: "Proffee Episode 3 — Ep 1's concentrate technique with a Snyder's pretzel + Skinny Syrups salted caramel rim, LorAnn caramel emulsion in the concentrate, and Reddi-wip Zero Sugar on top. 140 cal / 21g protein per glass, 5-minute build.",
-    heroImage: "/images/salted-caramel-pretzel-iced-proffee/hero-salted-caramel-pretzel-iced-proffee.webp",
-    prepImage: "/images/salted-caramel-pretzel-iced-proffee/step-08-blend-concentrate.webp",
-    // socialImages — 6-cap per [feedback-social-images-step-order].
-    // Trimmed from handoff's 10 to the arc: rim setup → concentrate flavor →
-    // blended concentrate → milk dilution → garnish → hero payoff.
+    heroImage: "/images/salted-caramel-pretzel-iced-proffee/hero-salted-caramel-pretzel-iced-proffee-polished.webp",
+    prepImage: "/images/salted-caramel-pretzel-iced-proffee/step-08-blend-concentrate-polished.webp",
+    // socialImages — Path A polished, 6-cap per [feedback-social-images-step-order].
+    // Order: rim setup → concentrate flavor → blended concentrate → milk
+    // dilution → garnish → hero payoff.
     socialImages: [
-      "/images/salted-caramel-pretzel-iced-proffee/step-02-pretzel-rim.webp",
-      "/images/salted-caramel-pretzel-iced-proffee/step-06-add-caramel-emulsion.webp",
-      "/images/salted-caramel-pretzel-iced-proffee/step-08-blend-concentrate.webp",
-      "/images/salted-caramel-pretzel-iced-proffee/step-10-add-milk.webp",
-      "/images/salted-caramel-pretzel-iced-proffee/step-12-pretzel-garnish.webp",
-      "/images/salted-caramel-pretzel-iced-proffee/hero-salted-caramel-pretzel-iced-proffee.webp",
+      "/images/salted-caramel-pretzel-iced-proffee/step-02-pretzel-rim-polished.webp",
+      "/images/salted-caramel-pretzel-iced-proffee/step-06-add-caramel-emulsion-polished.webp",
+      "/images/salted-caramel-pretzel-iced-proffee/step-08-blend-concentrate-polished.webp",
+      "/images/salted-caramel-pretzel-iced-proffee/step-10-add-milk-polished.webp",
+      "/images/salted-caramel-pretzel-iced-proffee/step-12-pretzel-garnish-polished.webp",
+      "/images/salted-caramel-pretzel-iced-proffee/hero-salted-caramel-pretzel-iced-proffee-polished.webp",
     ],
     videoSrc: "/videos/salted-caramel-pretzel-iced-proffee/salted-caramel-pretzel-iced-proffee-episode-3-asmr-magic-cuts.mp4",
     flavorProfile: "Iced protein coffee with a salted-caramel-pretzel rim. First sip: crushed Snyder's pretzels + Skinny Syrups salted caramel hit the palate — sweet, salty, crunchy. Middle sips: LorAnn caramel emulsion carries buttery caramel through the drink without the sugar of a syrup base. Finish: Reddi-wip Zero Sugar + a second pretzel crumble delivers dessert-drink identity at 140 cal.",
@@ -4537,11 +4537,11 @@ export const powerups = [
     ],
     steps: [
       { text: "CRUSH + DIVIDE PRETZELS: 0.25 oz Snyder's mini pretzels crushed into small pieces. Reserve part for the finish; the rest goes on the rim.", image: "/images/salted-caramel-pretzel-iced-proffee/context-crushed-pretzels.webp" },
-      { text: "RIM THE EMPTY GLASS: Pour a shallow layer of Skinny Syrups salted caramel into a small bowl. Dip the rim of the tall serving glass in the caramel, then press it into the crushed pretzels. Rim the glass empty so caramel doesn't run down a full drink.", image: "/images/salted-caramel-pretzel-iced-proffee/step-02-pretzel-rim.webp" },
-      { text: "BUILD CONCENTRATE (into the rimmed glass, keep rim undisturbed): 1/2 tbsp instant coffee + 1/2 serving unflavored whey isolate + 2 tsp monk fruit + 1/2 tsp LorAnn caramel emulsion.", image: "/images/salted-caramel-pretzel-iced-proffee/step-06-add-caramel-emulsion.webp" },
-      { text: "ADD HOT WATER + BLEND: 2 tbsp hot (not boiling) water. Submerge the immersion-blender head BEFORE turning it on. Blend smooth. Add the third tbsp only if the concentrate needs help moving.", image: "/images/salted-caramel-pretzel-iced-proffee/step-08-blend-concentrate.webp" },
-      { text: "ADD ICE + MILK: Ice to the level you want, then 1/2 cup Fairlife fat-free ultra-filtered milk over the ice. Stir gently — don't disturb the pretzel rim.", image: "/images/salted-caramel-pretzel-iced-proffee/step-10-add-milk.webp" },
-      { text: "FINISH + SERVE: 1 tbsp Reddi-wip Zero Sugar on top, drizzle with Skinny Syrups salted caramel, garnish with the reserved pretzel pieces. Stir and serve immediately.", image: "/images/salted-caramel-pretzel-iced-proffee/step-12-pretzel-garnish.webp" },
+      { text: "RIM THE EMPTY GLASS: Pour a shallow layer of Skinny Syrups salted caramel into a small bowl. Dip the rim of the tall serving glass in the caramel, then press it into the crushed pretzels. Rim the glass empty so caramel doesn't run down a full drink.", image: "/images/salted-caramel-pretzel-iced-proffee/step-02-pretzel-rim-polished.webp" },
+      { text: "BUILD CONCENTRATE (into the rimmed glass, keep rim undisturbed): 1/2 tbsp instant coffee + 1/2 serving unflavored whey isolate + 2 tsp monk fruit + 1/2 tsp LorAnn caramel emulsion.", image: "/images/salted-caramel-pretzel-iced-proffee/step-06-add-caramel-emulsion-polished.webp" },
+      { text: "ADD HOT WATER + BLEND: 2 tbsp hot (not boiling) water. Submerge the immersion-blender head BEFORE turning it on. Blend smooth. Add the third tbsp only if the concentrate needs help moving.", image: "/images/salted-caramel-pretzel-iced-proffee/step-08-blend-concentrate-polished.webp" },
+      { text: "ADD ICE + MILK: Ice to the level you want, then 1/2 cup Fairlife fat-free ultra-filtered milk over the ice. Stir gently — don't disturb the pretzel rim.", image: "/images/salted-caramel-pretzel-iced-proffee/step-10-add-milk-polished.webp" },
+      { text: "FINISH + SERVE: 1 tbsp Reddi-wip Zero Sugar on top, drizzle with Skinny Syrups salted caramel, garnish with the reserved pretzel pieces. Stir and serve immediately.", image: "/images/salted-caramel-pretzel-iced-proffee/step-12-pretzel-garnish-polished.webp" },
     ],
     executionRules: [
       "Rim the glass EMPTY. Caramel runs on a full glass and drips down the outside.",
