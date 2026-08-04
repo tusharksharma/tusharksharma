@@ -2439,7 +2439,7 @@ const recipes = [
     servingNote: "2 adults + 2 kids",
     protein: 35,
     calories: 400,
-    image: "/images/indo-chinese-chili-chicken/hero-split-adult-kid-plates.webp",
+    image: "/images/indo-chinese-chili-chicken/hero-split-adult-kid-plates-polished.webp",
     videoSrc: "/videos/indo-chinese-chili-chicken/indo-chinese-chili-chicken-400cal-35protein-marcus.mp4",
     role: "The Restaurant Flex",
     makeThisWhen: "You want Indo-Chinese takeout flavor at home — glossy, spicy, crispy chili chicken with charred peppers and onions. Kids get plain air-fried chicken with cucumber, garlic bread, and mustard. One crispy batch, two finishes.",
@@ -2480,7 +2480,7 @@ const recipes = [
         "Avocado oil spray (as needed)",
       ],
       sharedSteps: [
-        { text: "AIR FRY: All 21 oz chicken at 400°F for 10-12 min (or follow the package). Shake halfway. Goal: crispy and hot through.", images: ["/images/indo-chinese-chili-chicken/step-01-air-fry-chicken.webp", "/images/indo-chinese-chili-chicken/context-chicken-chunks.webp"] },
+        { text: "AIR FRY: All 21 oz chicken at 400°F for 10-12 min (or follow the package). Shake halfway. Goal: crispy and hot through.", images: ["/images/indo-chinese-chili-chicken/step-01-air-fry-chicken-polished.webp", "/images/indo-chinese-chili-chicken/context-chicken-chunks.webp"] },
         { text: "RESERVE KID CHICKEN: Set aside 7 oz plain chunks (about 3.5 oz per child) BEFORE any seasoning, veg, or sauce. Everything after this point is adult-only." },
       ],
       adult: {
@@ -2500,12 +2500,12 @@ const recipes = [
           "1/2 tbsp Lao Gan Ma Fried Chili in Oil",
         ],
         steps: [
-          { text: "CHAR VEG: Wok on high, light avocado spray. Cook peppers + onions 3-5 min until charred but still crisp.", images: ["/images/indo-chinese-chili-chicken/step-02-char-vegetables.webp"] },
+          { text: "CHAR VEG: Wok on high, light avocado spray. Cook peppers + onions 3-5 min until charred but still crisp.", images: ["/images/indo-chinese-chili-chicken/step-02-char-vegetables-polished.webp"] },
           { text: "SEASON VEG: Add 1/2 tbsp Umami Punch to the charred veg. Toss briefly.", images: ["/images/indo-chinese-chili-chicken/step-03-season-vegetables.webp"] },
           { text: "ADD ADULT CHICKEN: Add the remaining 14 oz air-fried chicken to the wok. Sprinkle with the remaining 1/2 tbsp Umami Punch.", images: ["/images/indo-chinese-chili-chicken/step-04-add-adult-chicken.webp"] },
-          { text: "POUR SAUCE: Pour the prepared six-ingredient sauce over the chicken + veg. No slurry.", images: ["/images/indo-chinese-chili-chicken/step-05-pour-sauce.webp", "/images/indo-chinese-chili-chicken/context-six-ingredient-sauce.webp"] },
-          { text: "TOSS UNTIL GLOSSY: Aggressive toss for 45-75 sec, just until everything is coated and shiny. Kill the heat the second it clings — do NOT simmer.", images: ["/images/indo-chinese-chili-chicken/step-06-toss-until-glossy.webp"] },
-          { text: "PLATE ADULTS: 7 oz glossy chili chicken with veg per adult. Serve immediately.", images: ["/images/indo-chinese-chili-chicken/step-08-build-adult-plates.webp", "/images/indo-chinese-chili-chicken/hero-adult-chili-chicken.webp"] },
+          { text: "POUR SAUCE: Pour the prepared six-ingredient sauce over the chicken + veg. No slurry.", images: ["/images/indo-chinese-chili-chicken/step-05-pour-sauce-polished.webp", "/images/indo-chinese-chili-chicken/context-six-ingredient-sauce.webp"] },
+          { text: "TOSS UNTIL GLOSSY: Aggressive toss for 45-75 sec, just until everything is coated and shiny. Kill the heat the second it clings — do NOT simmer.", images: ["/images/indo-chinese-chili-chicken/step-06-toss-until-glossy-polished.webp"] },
+          { text: "PLATE ADULTS: 7 oz glossy chili chicken with veg per adult. Serve immediately.", images: ["/images/indo-chinese-chili-chicken/step-08-build-adult-plates-polished.webp", "/images/indo-chinese-chili-chicken/hero-adult-chili-chicken-polished.webp"] },
         ],
       },
       kid: {
@@ -2523,7 +2523,7 @@ const recipes = [
             name: "Standard kid plate",
             description: "Plain air-fried chicken + cucumber + garlic bread + mustard",
             steps: [
-              { text: "PLATE KIDS: Reserved plain chicken, cucumber slices, warm garlic bread, and a puddle of yellow mustard for dipping. Adjust portions to appetite.", images: ["/images/indo-chinese-chili-chicken/step-07-build-kid-plates.webp"] },
+              { text: "PLATE KIDS: Reserved plain chicken, cucumber slices, warm garlic bread, and a puddle of yellow mustard for dipping. Adjust portions to appetite.", images: ["/images/indo-chinese-chili-chicken/step-07-build-kid-plates-polished.webp"] },
             ],
           },
         ],
@@ -2544,13 +2544,13 @@ const recipes = [
       "Yellow mustard for dipping",
     ],
     steps: [
-      { text: "AIR FRY: All 21 oz chicken at 400°F, 10-12 min. Shake halfway.", images: ["/images/indo-chinese-chili-chicken/step-01-air-fry-chicken.webp"] },
+      { text: "AIR FRY: All 21 oz chicken at 400°F, 10-12 min. Shake halfway.", images: ["/images/indo-chinese-chili-chicken/step-01-air-fry-chicken-polished.webp"] },
       { text: "RESERVE KIDS: Set aside 7 oz plain chunks before seasoning or sauce." },
       { text: "MIX SAUCE: Combine the six adult sauce ingredients in a glass. No slurry.", images: ["/images/indo-chinese-chili-chicken/context-six-ingredient-sauce.webp"] },
-      { text: "CHAR VEG: High-heat wok, peppers + onions 3-5 min until charred. Add 1/2 tbsp Umami Punch.", images: ["/images/indo-chinese-chili-chicken/step-02-char-vegetables.webp", "/images/indo-chinese-chili-chicken/step-03-season-vegetables.webp"] },
+      { text: "CHAR VEG: High-heat wok, peppers + onions 3-5 min until charred. Add 1/2 tbsp Umami Punch.", images: ["/images/indo-chinese-chili-chicken/step-02-char-vegetables-polished.webp", "/images/indo-chinese-chili-chicken/step-03-season-vegetables.webp"] },
       { text: "ADD CHICKEN + SEASON: Add remaining 14 oz chicken, sprinkle with the remaining 1/2 tbsp Umami Punch.", images: ["/images/indo-chinese-chili-chicken/step-04-add-adult-chicken.webp"] },
-      { text: "POUR SAUCE + TOSS: Pour prepared sauce, toss aggressively 45-75 sec until glossy, kill heat.", images: ["/images/indo-chinese-chili-chicken/step-05-pour-sauce.webp", "/images/indo-chinese-chili-chicken/step-06-toss-until-glossy.webp"] },
-      { text: "PLATE: Kid plates get plain chicken + cucumber + garlic bread + mustard. Adult plates get the glossy chili chicken with veg.", images: ["/images/indo-chinese-chili-chicken/step-07-build-kid-plates.webp", "/images/indo-chinese-chili-chicken/step-08-build-adult-plates.webp"] },
+      { text: "POUR SAUCE + TOSS: Pour prepared sauce, toss aggressively 45-75 sec until glossy, kill heat.", images: ["/images/indo-chinese-chili-chicken/step-05-pour-sauce-polished.webp", "/images/indo-chinese-chili-chicken/step-06-toss-until-glossy-polished.webp"] },
+      { text: "PLATE: Kid plates get plain chicken + cucumber + garlic bread + mustard. Adult plates get the glossy chili chicken with veg.", images: ["/images/indo-chinese-chili-chicken/step-07-build-kid-plates-polished.webp", "/images/indo-chinese-chili-chicken/step-08-build-adult-plates-polished.webp"] },
     ],
     brands: [
       { name: "Kirkland", item: "Lightly Breaded Chicken Chunks", why: "Air fries crispy, holds up to the wok toss — the shared base", image: "/images/brands/kirkland-chicken-chunks.jpg", url: "https://www.costco.com/p/-/kirkland-signature-lightly-breaded-chicken-breast-chunks-4-lbs/4000202951" },
