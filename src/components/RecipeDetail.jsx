@@ -68,12 +68,25 @@ export default function RecipeDetail({ recipe }) {
       <PrintCard recipe={recipe} />
 
       <article className="max-w-3xl mx-auto px-4 py-8 print:hidden">
-        {/* Hero image */}
-        <img
-          src={recipe.image}
-          alt={recipe.title}
-          className="w-full h-64 sm:h-80 object-cover rounded-2xl"
-        />
+        {/* Hero video (falls back to hero image if no video) */}
+        {recipe.videoSrc ? (
+          <div className="rounded-2xl overflow-hidden bg-black aspect-[9/16] sm:aspect-video max-h-[520px] mx-auto">
+            <video
+              src={recipe.videoSrc}
+              poster={recipe.image}
+              controls
+              playsInline
+              preload="metadata"
+              className="w-full h-full object-contain"
+            />
+          </div>
+        ) : (
+          <img
+            src={recipe.image}
+            alt={recipe.title}
+            className="w-full h-64 sm:h-80 object-cover rounded-2xl"
+          />
+        )}
 
         {/* Title block */}
         <div className="mt-6">
