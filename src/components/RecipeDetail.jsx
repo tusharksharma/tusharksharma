@@ -761,14 +761,15 @@ function formatNum(n) {
 
 function scaleIngredientText(text, scale) {
   if (scale === 1) return text;
-  // Match leading quantities: "24", "1.25", "2-2.5", "1/2", "3/4"
-  return text.replace(/^(\d+\/\d+|\d+(?:\.\d+)?(?:\s*[-–]\s*(?:\d+\/\d+|\d+(?:\.\d+)?))?)/g, (match) => {
+  // Match leading quantities: "24", "1.25", "2-2.5", "1/2", "3/4",
+  // optionally prefixed with "~" for creator estimates ("~300 g cottage cheese").
+  return text.replace(/^(~?)(\d+\/\d+|\d+(?:\.\d+)?(?:\s*[-–]\s*(?:\d+\/\d+|\d+(?:\.\d+)?))?)/g, (_match, tilde, num) => {
     // Handle ranges like "2-2.5" or "1/2-3/4"
-    if (/[-–]/.test(match) && !match.startsWith("-")) {
-      const parts = match.split(/\s*[-–]\s*/).map((p) => formatNum(parseFrac(p) * scale));
-      return parts.join("–");
+    if (/[-–]/.test(num) && !num.startsWith("-")) {
+      const parts = num.split(/\s*[-–]\s*/).map((p) => formatNum(parseFrac(p) * scale));
+      return tilde + parts.join("–");
     }
-    return formatNum(parseFrac(match) * scale);
+    return tilde + formatNum(parseFrac(num) * scale);
   });
 }
 
