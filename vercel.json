@@ -1,7 +1,8 @@
 {
+  "framework": null,
   "outputDirectory": "dist",
-  "buildCommand": "",
-  "installCommand": "",
+  "buildCommand": "echo 'skip: dist/ is committed'",
+  "installCommand": "echo 'skip: no deps to install'",
   "trailingSlash": false,
   "cleanUrls": true,
   "redirects": [
