@@ -33,8 +33,7 @@
 //     the method card that describes the action.
 
 import React from "react";
-import { buildServingLayout, resolveGroup } from "./structuredCard";
-import StructuredCardInner from "./StructuredCardInner";
+import { resolveGroup } from "./structuredCard";
 import { buildHeroLayout, HeroStructuredInner } from "./hero.jsx";
 import { buildEndLayout, EndStructuredInner } from "./end.jsx";
 import { paginateIngredientCards, paginateMethodCards } from "./recipeCard";
@@ -78,10 +77,12 @@ export function buildStructuredCards(recipe, opts) {
   const ingredientCardSectionSets = paginateIngredientCards(ingredientSections, {
     maxCards: MAX_INGREDIENT_CARDS,
     perCard: INGREDIENTS_PER_CARD,
+    recipeName: recipe.title,
   });
   const methodCardSectionSets = paginateMethodCards(methodSections, {
     maxCards: MAX_METHOD_CARDS,
     perCard: STEPS_PER_METHOD_CARD,
+    recipeName: recipe.title,
   });
 
   // Photo pool: curated arrays win, else fall back to recipe.socialImages.
@@ -156,14 +157,26 @@ export function buildStructuredCards(recipe, opts) {
   });
 
   if (servingBlocks && servingBlocks.length > 0) {
+    // Serving card uses the same 58/42 recipe-card layout so the visual
+    // system stays consistent across the carousel. Photo alternates with
+    // the method cards; engagementQuestion is intentionally NOT rendered
+    // here — it lives only on the final End card.
+    const imageSide = alternate++ % 2 === 0 ? "right" : "left";
     cards.push({
       id: "serving",
-      kind: "serving",
+      kind: "recipe-serving",
       label: "Card · Serving",
       filename: `${slugForFiles}-serving`,
-      layout: buildServingLayout(recipe, { ...sc, servingGroups: servingBlocks, engagementQuestion: sc.engagementQuestion }, {
-        index: 0, total: 0, photoSrc: servingPhoto,
-      }),
+      layout: {
+        kind: "recipe-serving",
+        index: 0, total: 0,
+        recipeName: recipe.title || "",
+        label: "SERVE",
+        image: servingPhoto,
+        imageSide,
+        sections: servingBlocks,
+        footer: "thesplitplate.com",
+      },
     });
   }
 
@@ -212,7 +225,7 @@ function pickDroppableIndex(cards) {
   const kinds = cards.map((c) => c.kind);
   const component = kinds.indexOf("component");
   if (component !== -1) return component;
-  const lastServing = kinds.lastIndexOf("serving");
+  const lastServing = kinds.lastIndexOf("recipe-serving");
   if (lastServing !== -1) return lastServing;
   const firstMethod = kinds.indexOf("recipe-method");
   const lastMethod = kinds.lastIndexOf("recipe-method");
@@ -300,33 +313,20 @@ function deriveMethodSections(recipe) {
   return [{ accent: "amber", heading: "Method", items }];
 }
 
-// Legacy "AIR FRY: All 21 oz..." → { heading: "AIR FRY", body: "All 21 oz..." }.
-// Recipes without an ALL-CAPS prefix become one big body with a generic
-// heading; author is expected to curate methodGroups directly for the
-// carousel-quality version. The compact card only has room for ~one line
-// of body text, so we take the first sentence and hard-cap at 90 chars.
+// Legacy "AIR FRY: All 21 oz..." → { heading: "Air Fry", body: "All 21 oz..." }.
+// Recipes without an ALL-CAPS prefix keep the full step as body under a
+// generic "Step" heading; author is expected to curate short methodGroups
+// for a compact carousel — no truncation happens here.
 function splitActionHeading(text) {
   const t = String(text || "").trim();
   const m = t.match(/^([A-Z][A-Z\s]{1,20}):\s*(.*)$/);
   const heading = m ? titleCase(m[1].trim()) : "Step";
-  const rest = m ? m[2].trim() : t;
-  return { heading, body: firstSentence(rest, 90) };
+  const body = m ? m[2].trim() : t;
+  return { heading, body };
 }
 
 function titleCase(s) {
   return s.split(/\s+/).map((w) => w.charAt(0) + w.slice(1).toLowerCase()).join(" ");
-}
-
-function firstSentence(text, maxChars) {
-  const t = String(text || "").trim();
-  if (!t) return "";
-  // First sentence up to the first ". ", "! " or "? "
-  const m = t.match(/^[^.!?]*[.!?](?=\s|$)/);
-  let out = m ? m[0].trim() : t;
-  if (out.length > maxChars) {
-    out = out.slice(0, maxChars - 1).replace(/\s+\S*$/, "").trimEnd() + "…";
-  }
-  return out;
 }
 
 export function normalizeMethodSections(sections) {
@@ -393,10 +393,13 @@ function pickCardPhotos(curated, count, usedPhotos, fallbackPool) {
 function renderFor(card) {
   if (card.kind === "hero") return <HeroStructuredInner layout={card.layout} />;
   if (card.kind === "end") return <EndStructuredInner layout={card.layout} />;
-  if (card.kind === "recipe-ingredients" || card.kind === "recipe-method") {
+  if (
+    card.kind === "recipe-ingredients" ||
+    card.kind === "recipe-method" ||
+    card.kind === "recipe-serving"
+  ) {
     return <RecipeCardInner layout={card.layout} />;
   }
-  if (card.kind === "serving") return <StructuredCardInner layout={card.layout} />;
   // component gets its renderer patched in by SocialPage.jsx.
   return null;
 }

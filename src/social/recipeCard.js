@@ -38,6 +38,14 @@ export const RECIPE_CARD_METRICS = {
   dividerWidth: 72,
   dividerHeight: 3,
   dividerGap: 34,
+  // section heading (rendered before each section's items on ingredient
+  // and serving cards)
+  sectionHeadingSize: 18,
+  sectionHeadingLetterSpacing: 3,
+  sectionBarWidth: 32,
+  sectionBarHeight: 2,
+  sectionHeadingGap: 12,
+  sectionBottomGap: 22,
   // ingredient rows
   quantityColumnWidth: 148,
   quantityGutter: 18,
@@ -56,6 +64,9 @@ export const RECIPE_CARD_METRICS = {
   stepColumnGap: 24,
   stepNumberColumnWidth: 96,
   methodItemGap: 44,
+  // serving rows
+  servingBodySize: 25,
+  servingBodyLineHeight: 34,
   // footer
   footerSize: 18,
   footerBottomInset: 48,
@@ -138,7 +149,7 @@ function drawContent(ctx, layout, x) {
 
   ctx.fillStyle = T.text;
   ctx.font = fontSans(800, P.titleSize);
-  y = drawWrapped(ctx, layout.recipeName, innerX, y, innerW, P.titleLineHeight, 3);
+  y = drawWrapped(ctx, layout.recipeName, innerX, y, innerW, P.titleLineHeight);
   y += P.titleGap;
 
   ctx.fillStyle = T.amber;
@@ -147,6 +158,8 @@ function drawContent(ctx, layout, x) {
 
   if (layout.kind === "recipe-method") {
     drawMethodBody(ctx, layout, innerX, y, innerW);
+  } else if (layout.kind === "recipe-serving") {
+    drawServingBody(ctx, layout, innerX, y, innerW);
   } else {
     drawIngredientsBody(ctx, layout, innerX, y, innerW);
   }
@@ -154,30 +167,45 @@ function drawContent(ctx, layout, x) {
   drawFooter(ctx, layout, x);
 }
 
+function drawSectionHeading(ctx, section, x, y) {
+  const accent = accentColorFor(section.accent);
+  ctx.fillStyle = accent;
+  ctx.font = fontSans(800, P.sectionHeadingSize);
+  drawLetterSpaced(ctx, (section.heading || "").toUpperCase(), x, y, P.sectionHeadingLetterSpacing);
+  const barY = y + P.sectionHeadingSize + 8;
+  ctx.fillRect(x, barY, P.sectionBarWidth, P.sectionBarHeight);
+  return barY + P.sectionBarHeight + P.sectionHeadingGap;
+}
+
 function drawIngredientsBody(ctx, layout, x, startY, w) {
   let y = startY;
-  const items = flattenIngredientItems(layout);
-  for (const item of items) {
-    ctx.fillStyle = accentColorFor(item.accent);
-    ctx.font = fontSans(800, P.ingredientQuantitySize);
-    ctx.fillText(item.quantity || "", x, y);
+  const sections = layout.sections || [];
+  sections.forEach((section, si) => {
+    if (section.heading) y = drawSectionHeading(ctx, section, x, y);
+    const items = section.items || [];
+    items.forEach((item) => {
+      const accent = accentColorFor(item.accent || section.accent);
+      ctx.fillStyle = accent;
+      ctx.font = fontSans(800, P.ingredientQuantitySize);
+      ctx.fillText(item.quantity || "", x, y);
 
-    ctx.fillStyle = T.text;
-    ctx.font = fontSans(500, P.ingredientTextSize);
-    const textX = x + P.quantityColumnWidth + P.quantityGutter;
-    const textW = w - P.quantityColumnWidth - P.quantityGutter;
-    const textEnd = drawWrapped(ctx, item.text || "", textX, y, textW, P.ingredientLineHeight, 2);
-    let rowBottom = Math.max(y + P.ingredientLineHeight, textEnd);
+      ctx.fillStyle = T.text;
+      ctx.font = fontSans(500, P.ingredientTextSize);
+      const textX = x + P.quantityColumnWidth + P.quantityGutter;
+      const textW = w - P.quantityColumnWidth - P.quantityGutter;
+      const textEnd = drawWrapped(ctx, item.text || "", textX, y, textW, P.ingredientLineHeight);
+      let rowBottom = Math.max(y + P.ingredientLineHeight, textEnd);
 
-    if (item.note) {
-      ctx.fillStyle = T.muted;
-      ctx.font = fontSans(500, P.ingredientNoteSize);
-      const noteEnd = drawWrapped(ctx, item.note, textX, rowBottom + 2, textW, P.ingredientNoteLineHeight, 2);
-      rowBottom = noteEnd;
-    }
-
-    y = rowBottom + P.ingredientRowGap;
-  }
+      if (item.note) {
+        ctx.fillStyle = T.muted;
+        ctx.font = fontSans(500, P.ingredientNoteSize);
+        const noteEnd = drawWrapped(ctx, item.note, textX, rowBottom + 2, textW, P.ingredientNoteLineHeight);
+        rowBottom = noteEnd;
+      }
+      y = rowBottom + P.ingredientRowGap;
+    });
+    if (si < sections.length - 1) y += P.sectionBottomGap - P.ingredientRowGap;
+  });
 }
 
 function drawMethodBody(ctx, layout, x, startY, w) {
@@ -200,11 +228,26 @@ function drawMethodBody(ctx, layout, x, startY, w) {
     const bodyW = w - P.stepNumberColumnWidth - P.stepColumnGap;
     ctx.fillStyle = T.muted;
     ctx.font = fontSans(500, P.stepBodySize);
-    const bodyEnd = drawWrapped(ctx, item.body || item.text || "", headingX, bodyY, bodyW, P.stepBodyLineHeight, 3);
+    const bodyEnd = drawWrapped(ctx, item.body || item.text || "", headingX, bodyY, bodyW, P.stepBodyLineHeight);
 
     const numberBottom = y + P.stepNumberSize;
     y = Math.max(bodyEnd, numberBottom) + P.methodItemGap;
   }
+}
+
+function drawServingBody(ctx, layout, x, startY, w) {
+  let y = startY;
+  const sections = layout.sections || [];
+  sections.forEach((section, si) => {
+    if (section.heading) y = drawSectionHeading(ctx, section, x, y);
+    ctx.fillStyle = T.text;
+    ctx.font = fontSans(500, P.servingBodySize);
+    (section.items || []).forEach((item) => {
+      y = drawWrapped(ctx, item.text || "", x, y, w, P.servingBodyLineHeight);
+      y += 10;
+    });
+    if (si < sections.length - 1) y += P.sectionBottomGap;
+  });
 }
 
 function drawFooter(ctx, layout, x) {
@@ -258,14 +301,17 @@ export function flattenMethodItems(layout) {
 
 // ---------- pagination ----------
 
-// Ingredient sections → up to `maxCards` cards. Author can explicitly
-// assign each section a `card` index; otherwise we greedy-pack up to
-// `perCard` items per card.
-export function paginateIngredientCards(sections, { maxCards = 2, perCard = 6 } = {}) {
+// Ingredient sections → cards. Author can explicitly assign each section
+// a `card` index; otherwise we greedy-pack up to `perCard` items per card.
+// Never silently drops content: if authored content exceeds `maxCards`,
+// extra cards are still produced and a warning is logged for the author
+// to curate shorter copy.
+export function paginateIngredientCards(sections, { maxCards = 2, perCard = 6, recipeName = "" } = {}) {
   const list = sections || [];
   if (!list.length) return [];
 
   const explicit = list.every((s) => Number.isInteger(s.card));
+  let cards;
   if (explicit) {
     const buckets = new Map();
     for (const sec of list) {
@@ -273,40 +319,46 @@ export function paginateIngredientCards(sections, { maxCards = 2, perCard = 6 } 
       arr.push(sec);
       buckets.set(sec.card, arr);
     }
-    return [...buckets.entries()]
+    cards = [...buckets.entries()]
       .sort((a, b) => a[0] - b[0])
-      .slice(0, maxCards)
       .map(([, secs]) => secs);
+  } else {
+    cards = [];
+    let current = [];
+    let count = 0;
+    for (const sec of list) {
+      const n = (sec.items || []).length;
+      if (count + n > perCard && current.length) {
+        cards.push(current);
+        current = [];
+        count = 0;
+      }
+      current.push(sec);
+      count += n;
+    }
+    if (current.length) cards.push(current);
   }
 
-  const cards = [];
-  let current = [];
-  let count = 0;
-  for (const sec of list) {
-    const n = (sec.items || []).length;
-    if (count + n > perCard && current.length && cards.length < maxCards - 1) {
-      cards.push(current);
-      current = [];
-      count = 0;
-    }
-    current.push(sec);
-    count += n;
+  if (cards.length > maxCards) {
+    console.warn(`[recipe-card] "${recipeName}" produced ${cards.length} ingredient cards (soft cap ${maxCards}). Curate shorter copy or explicit \`card:\` indices.`);
   }
-  if (current.length) cards.push(current);
-  return cards.slice(0, maxCards);
+  return cards;
 }
 
-// Method sections → up to `maxCards` cards of `perCard` steps each. Steps
-// are flattened across sections and rebucketed.
-export function paginateMethodCards(sections, { maxCards = 2, perCard = 3 } = {}) {
+// Method sections → cards of up to `perCard` steps each. Same
+// paginate-not-truncate rule as ingredients.
+export function paginateMethodCards(sections, { maxCards = 2, perCard = 3, recipeName = "" } = {}) {
   const flat = [];
   for (const sec of sections || []) {
     for (const it of sec.items || []) flat.push({ ...it, accent: it.accent || sec.accent || "amber" });
   }
   const cards = [];
-  for (let i = 0; i < flat.length && cards.length < maxCards; i += perCard) {
+  for (let i = 0; i < flat.length; i += perCard) {
     const slice = flat.slice(i, i + perCard);
     cards.push([{ accent: "amber", heading: "", items: slice }]);
+  }
+  if (cards.length > maxCards) {
+    console.warn(`[recipe-card] "${recipeName}" produced ${cards.length} method cards (soft cap ${maxCards}). Curate shorter copy or fewer steps.`);
   }
   return cards;
 }
@@ -321,30 +373,23 @@ function drawLetterSpaced(ctx, text, x, y, spacing) {
   }
 }
 
-function drawWrapped(ctx, text, x, y, maxW, lineHeight, maxLines) {
+// Word-wrap and draw. Returns the y-cursor AFTER the last drawn line. Never
+// ellipsizes: recipes with long ingredient or instruction copy should be
+// curated shorter or paginated, not silently clipped.
+function drawWrapped(ctx, text, x, y, maxW, lineHeight) {
   const words = String(text || "").split(/\s+/).filter(Boolean);
   const lines = [];
   let current = "";
-  let consumed = 0;
-  for (let i = 0; i < words.length; i++) {
-    const test = current ? current + " " + words[i] : words[i];
+  for (const word of words) {
+    const test = current ? current + " " + word : word;
     if (ctx.measureText(test).width > maxW && current) {
       lines.push(current);
-      if (lines.length === maxLines) break;
-      current = words[i];
-      consumed = i;
+      current = word;
     } else {
       current = test;
     }
   }
-  if (current && lines.length < maxLines) lines.push(current);
-  if (consumed && lines.length === maxLines && lines.join(" ").split(/\s+/).length < words.length) {
-    let last = lines[maxLines - 1];
-    while (ctx.measureText(last + "…").width > maxW && last.length > 1) {
-      last = last.slice(0, -1);
-    }
-    lines[maxLines - 1] = last + "…";
-  }
+  if (current) lines.push(current);
   let cursor = y;
   for (const line of lines) {
     ctx.fillText(line, x, cursor);

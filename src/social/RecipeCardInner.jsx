@@ -1,17 +1,19 @@
 // DOM preview for a dark visual-first recipe card. Mirrors
-// drawRecipeCard(ctx, layout) in ./recipeCard.js — same theme, same
-// metrics, same 58/42 grid, same alternating imageSide — so canvas export
-// and on-screen preview cannot drift.
+// drawRecipeCard(ctx, layout) in ./recipeCard.js — same theme, metrics,
+// 58/42 grid, alternating imageSide, and section-heading rendering — so
+// canvas export and on-screen preview cannot drift.
 //
 // Screen renders at 540x540; canvas exports at 1080x1080. All metrics
 // scale by S = 0.5 for DOM.
+//
+// No text clipping: no line-clamps, no ellipses. Recipes with too much
+// copy should be curated shorter or paginated across more cards, per
+// paginateIngredientCards / paginateMethodCards in ./recipeCard.js.
 
 import {
   RECIPE_CARD_METRICS,
   RECIPE_CARD_THEME,
   accentColorFor,
-  flattenIngredientItems,
-  flattenMethodItems,
 } from "./recipeCard";
 
 const T = RECIPE_CARD_THEME;
@@ -39,7 +41,7 @@ export default function RecipeCardInner({ layout }) {
       }}
     >
       {imageOnLeft && <RecipeImage layout={layout} imageOnLeft />}
-      <RecipeContent layout={layout} imageOnLeft={imageOnLeft} />
+      <RecipeContent layout={layout} />
       {!imageOnLeft && <RecipeImage layout={layout} />}
     </div>
   );
@@ -99,6 +101,8 @@ function RecipeContent({ layout }) {
       <div style={{ marginTop: `${P.dividerGap * S}px` }}>
         {layout.kind === "recipe-method" ? (
           <MethodList layout={layout} />
+        ) : layout.kind === "recipe-serving" ? (
+          <ServingList layout={layout} />
         ) : (
           <IngredientList layout={layout} />
         )}
@@ -131,10 +135,6 @@ function Header({ layout }) {
           fontSize: `${P.titleSize * S}px`,
           lineHeight: `${P.titleLineHeight * S}px`,
           color: T.text,
-          display: "-webkit-box",
-          WebkitLineClamp: 3,
-          WebkitBoxOrient: "vertical",
-          overflow: "hidden",
         }}
       >
         {layout.recipeName}
@@ -157,12 +157,48 @@ function Divider() {
   );
 }
 
-function IngredientList({ layout }) {
-  const items = flattenIngredientItems(layout);
+function SectionHeading({ section }) {
+  const accent = accentColorFor(section.accent);
   return (
-    <div style={{ display: "flex", flexDirection: "column", gap: `${P.ingredientRowGap * S}px` }}>
-      {items.map((it, i) => (
-        <IngredientRow key={i} item={it} />
+    <div style={{ marginBottom: `${P.sectionHeadingGap * S}px` }}>
+      <div
+        style={{
+          fontFamily: FONT_SANS,
+          fontWeight: 800,
+          fontSize: `${P.sectionHeadingSize * S}px`,
+          letterSpacing: `${P.sectionHeadingLetterSpacing * S}px`,
+          textTransform: "uppercase",
+          color: accent,
+        }}
+      >
+        {section.heading}
+      </div>
+      <div
+        aria-hidden
+        style={{
+          marginTop: `${8 * S}px`,
+          width: `${P.sectionBarWidth * S}px`,
+          height: `${P.sectionBarHeight * S}px`,
+          background: accent,
+        }}
+      />
+    </div>
+  );
+}
+
+function IngredientList({ layout }) {
+  const sections = layout.sections || [];
+  return (
+    <div style={{ display: "flex", flexDirection: "column", gap: `${P.sectionBottomGap * S}px` }}>
+      {sections.map((section, si) => (
+        <div key={si}>
+          {section.heading && <SectionHeading section={section} />}
+          <div style={{ display: "flex", flexDirection: "column", gap: `${P.ingredientRowGap * S}px` }}>
+            {(section.items || []).map((it, i) => (
+              <IngredientRow key={i} item={{ ...it, accent: it.accent || section.accent }} />
+            ))}
+          </div>
+        </div>
       ))}
     </div>
   );
@@ -184,14 +220,11 @@ function IngredientRow({ item }) {
           fontSize: `${P.ingredientQuantitySize * S}px`,
           lineHeight: `${P.ingredientLineHeight * S}px`,
           color: accentColorFor(item.accent),
-          overflow: "hidden",
-          textOverflow: "ellipsis",
-          whiteSpace: "nowrap",
         }}
       >
         {item.quantity}
       </div>
-      <div style={{ minWidth: 0 }}>
+      <div>
         <div
           style={{
             fontFamily: FONT_SANS,
@@ -199,10 +232,6 @@ function IngredientRow({ item }) {
             fontSize: `${P.ingredientTextSize * S}px`,
             lineHeight: `${P.ingredientLineHeight * S}px`,
             color: T.text,
-            display: "-webkit-box",
-            WebkitLineClamp: 2,
-            WebkitBoxOrient: "vertical",
-            overflow: "hidden",
           }}
         >
           {item.text}
@@ -216,10 +245,6 @@ function IngredientRow({ item }) {
               fontSize: `${P.ingredientNoteSize * S}px`,
               lineHeight: `${P.ingredientNoteLineHeight * S}px`,
               color: T.muted,
-              display: "-webkit-box",
-              WebkitLineClamp: 2,
-              WebkitBoxOrient: "vertical",
-              overflow: "hidden",
             }}
           >
             {item.note}
@@ -231,7 +256,10 @@ function IngredientRow({ item }) {
 }
 
 function MethodList({ layout }) {
-  const items = flattenMethodItems(layout);
+  const items = [];
+  for (const sec of layout.sections || []) {
+    for (const it of sec.items || []) items.push({ ...it, accent: it.accent || sec.accent || "amber" });
+  }
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: `${P.methodItemGap * S}px` }}>
       {items.map((it, i) => (
@@ -262,7 +290,7 @@ function MethodRow({ item }) {
       >
         {nn}
       </div>
-      <div style={{ minWidth: 0 }}>
+      <div>
         <div
           style={{
             fontFamily: FONT_SANS,
@@ -272,9 +300,6 @@ function MethodRow({ item }) {
             textTransform: "uppercase",
             color: T.text,
             marginTop: `${8 * S}px`,
-            overflow: "hidden",
-            textOverflow: "ellipsis",
-            whiteSpace: "nowrap",
           }}
         >
           {item.heading}
@@ -287,15 +312,40 @@ function MethodRow({ item }) {
             fontSize: `${P.stepBodySize * S}px`,
             lineHeight: `${P.stepBodyLineHeight * S}px`,
             color: T.muted,
-            display: "-webkit-box",
-            WebkitLineClamp: 3,
-            WebkitBoxOrient: "vertical",
-            overflow: "hidden",
           }}
         >
           {item.body}
         </div>
       </div>
+    </div>
+  );
+}
+
+function ServingList({ layout }) {
+  const sections = layout.sections || [];
+  return (
+    <div style={{ display: "flex", flexDirection: "column", gap: `${P.sectionBottomGap * S}px` }}>
+      {sections.map((section, si) => (
+        <div key={si}>
+          {section.heading && <SectionHeading section={section} />}
+          <div style={{ display: "flex", flexDirection: "column", gap: `${10 * S}px` }}>
+            {(section.items || []).map((it, i) => (
+              <div
+                key={i}
+                style={{
+                  fontFamily: FONT_SANS,
+                  fontWeight: 500,
+                  fontSize: `${P.servingBodySize * S}px`,
+                  lineHeight: `${P.servingBodyLineHeight * S}px`,
+                  color: T.text,
+                }}
+              >
+                {it.text}
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
     </div>
   );
 }

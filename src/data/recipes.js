@@ -2453,13 +2453,27 @@ const recipes = [
       // Ingredient cards for the /social carousel — shortened, brand names
       // dropped, split into two cards via `card` index. Full brand+detail
       // stays on the website ingredients list below.
+      //
+      // Card 1: SHARED BASE + ADULT FINISH (veg) + SMALLER PLATE — the
+      // "cook and split" side, paired with a smaller-plate action photo.
+      // Card 2: ADULT FINISH (sauce only) — the "adult glossy" side,
+      // paired with the six-ingredient sauce photo.
       ingredientGroups: [
         {
           card: 1,
           accent: "amber",
-          heading: "Shared",
+          heading: "Shared Base",
           items: [
             { quantity: "21 oz", text: "Breaded chicken chunks" },
+          ],
+        },
+        {
+          card: 1,
+          accent: "coral",
+          heading: "Adult Finish",
+          items: [
+            { quantity: "8 oz", text: "Peppers + red onion" },
+            { quantity: "1 tbsp", text: "Umami seasoning" },
           ],
         },
         {
@@ -2476,8 +2490,6 @@ const recipes = [
           accent: "coral",
           heading: "Adult Finish",
           items: [
-            { quantity: "8 oz", text: "Peppers + red onion" },
-            { quantity: "1 tbsp", text: "Umami seasoning" },
             { quantity: "1 tbsp ea", text: "Soy sauce, red chili sauce, rice vinegar" },
             { quantity: "1/2 tbsp ea", text: "Thai chili, sesame oil, fried chili oil" },
           ],
@@ -2502,8 +2514,10 @@ const recipes = [
       // One curated photo per ingredient / method card. Right / left / right
       // / left alternation is applied by the generator; index 0 = first
       // ingredient card, index 1 = second, etc.
+      // Card 1 photo swapped to the plated smaller-plate — carries the
+      // split-plate story without the package/brand foreground.
       ingredientCardPhotos: [
-        "/images/indo-chinese-chili-chicken/context-chicken-chunks.webp",
+        "/images/indo-chinese-chili-chicken/step-07-build-kid-plates-polished.webp",
         "/images/indo-chinese-chili-chicken/context-six-ingredient-sauce.webp",
       ],
       methodCardPhotos: [
@@ -2515,21 +2529,14 @@ const recipes = [
           accent: "coral",
           heading: "Adult Plate",
           items: [
-            { text: "7 oz glossy chili chicken + charred peppers/onions per plate." },
+            { text: "7 oz glossy chili chicken with charred peppers and onions." },
           ],
         },
         {
           accent: "green",
           heading: "Smaller Plate",
           items: [
-            { text: "Reserved plain chicken + cucumber + garlic bread + yellow mustard for dipping." },
-          ],
-        },
-        {
-          accent: "neutral",
-          heading: "Storage",
-          items: [
-            { text: "Best fresh. Store adult and plain chicken separately; reheat in the air fryer at 375°F for 3-4 min." },
+            { text: "Plain chicken, cucumber, garlic bread, mustard for dipping." },
           ],
         },
       ],
