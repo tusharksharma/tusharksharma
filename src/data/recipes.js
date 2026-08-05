@@ -7115,6 +7115,80 @@ const recipes = [
       ],
     },
     slug: "weeknight-picanha-chimichurri-frozen-greens",
+    socialCarousel: {
+      heroBadge: "Split Plate Dinner",
+      hook: "Salt-seared picanha, frozen basil-garlic greens, Costco chimichurri. 480 cal / 40g protein per adult plate.",
+      heroPhoto: "/images/weeknight-picanha-chimichurri-frozen-greens/hero-split-adult-kid-plates-polished.webp",
+      servingPhoto: "/images/weeknight-picanha-chimichurri-frozen-greens/final-moving-split-plates-polished.webp",
+      ingredientGroups: [
+        {
+          card: 1,
+          accent: "amber",
+          heading: "Shared Base",
+          items: [
+            { quantity: "3 servings", text: "Frozen basil-garlic greens" },
+          ],
+        },
+        {
+          card: 1,
+          accent: "coral",
+          heading: "Adult Finish",
+          items: [
+            { quantity: "12 oz", text: "Picanha steaks" },
+            { quantity: "to taste", text: "Kosher salt" },
+            { quantity: "2 tbsp", text: "Prepared chimichurri" },
+          ],
+        },
+        {
+          card: 2,
+          accent: "green",
+          heading: "Smaller Plate",
+          items: [
+            { quantity: "4", text: "Chicken breakfast patties" },
+            { quantity: "2", text: "Slider buns", note: "Toasted in the steak skillet" },
+          ],
+        },
+      ],
+      methodGroups: [
+        {
+          accent: "amber",
+          heading: "Method",
+          items: [
+            { number: 1, heading: "Salt", body: "Picanha both sides. No pepper, no rub — chimichurri carries the rest." },
+            { number: 2, heading: "Sear", body: "Hot skillet, hard sear both sides to your pull temp." },
+            { number: 3, heading: "Greens", body: "Second skillet on medium, sauce simmering." },
+            { number: 4, heading: "Rest", body: "Steak off heat, rest 5+ min. Reheat patties + toast buns in the steak skillet." },
+            { number: 5, heading: "Slice", body: "Cross-grain slices, thin." },
+            { number: 6, heading: "Plate", body: "Adult: picanha + greens + spoon of chimichurri. Kid: patties + half greens + toasted bun.", accent: "coral" },
+          ],
+        },
+      ],
+      ingredientCardPhotos: [
+        "/images/weeknight-picanha-chimichurri-frozen-greens/step-02-add-frozen-greens-polished.webp",
+        "/images/weeknight-picanha-chimichurri-frozen-greens/step-04-cook-kid-chicken-patties-polished.webp",
+      ],
+      methodCardPhotos: [
+        "/images/weeknight-picanha-chimichurri-frozen-greens/step-01-salt-picanha-polished.webp",
+        "/images/weeknight-picanha-chimichurri-frozen-greens/step-06-slice-picanha-polished.webp",
+      ],
+      servingGroups: [
+        {
+          accent: "coral",
+          heading: "Adult Plate",
+          items: [
+            { text: "6 oz picanha, basil-garlic greens, spoon of chimichurri." },
+          ],
+        },
+        {
+          accent: "green",
+          heading: "Smaller Plate",
+          items: [
+            { text: "Two chicken patties, half greens, toasted slider bun." },
+          ],
+        },
+      ],
+      engagementQuestion: "What frozen veg brand runs your weeknight?",
+    },
     // socialImages — 6-cap step-order per [feedback-social-images-step-order].
     // Selected via user AskUserQuestion: Salt → Frozen greens → Press → Kid
     // patties → Slice → Final split. Drops both brand-context shots (moved to
