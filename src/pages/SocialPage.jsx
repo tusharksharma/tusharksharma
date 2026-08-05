@@ -639,7 +639,7 @@ async function renderSocialCardToBlob(card) {
   // Structured pipeline (kinds carry a `layout` object).
   if (card.layout && card.kind === "hero") await drawStructuredHero(ctx, card.layout);
   else if (card.layout && card.kind === "end") drawStructuredEnd(ctx, card.layout);
-  else if (card.layout && (card.kind === "recipe-ingredients" || card.kind === "recipe-method")) drawRecipeCard(ctx, card.layout);
+  else if (card.layout && (card.kind === "recipe-ingredients" || card.kind === "recipe-method")) await drawRecipeCard(ctx, card.layout);
   else if (card.layout && card.kind === "serving") await drawStructuredCard(ctx, card.layout);
   // Legacy image-first pipeline (kinds carry `recipe` / `item` / `src`).
   else if (card.kind === "process") await drawProcessCard(ctx, card.src, card.caption);

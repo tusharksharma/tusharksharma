@@ -1,239 +1,200 @@
-// DOM preview for a printed recipe card (kinds: recipe-ingredients, recipe-method).
+// DOM preview for a dark visual-first recipe card. Mirrors
+// drawRecipeCard(ctx, layout) in ./recipeCard.js — same theme, same
+// metrics, same 58/42 grid, same alternating imageSide — so canvas export
+// and on-screen preview cannot drift.
 //
-// Mirrors drawRecipeCard(ctx, layout) in ./recipeCard.js — same theme, same
-// metrics, same column layout — so canvas export and on-screen preview
-// cannot drift.
-//
-// Screen is rendered at 540×540; canvas exports at 1080×1080. All metrics
-// from RECIPE_CARD_METRICS are scaled by S = 0.5 for DOM.
+// Screen renders at 540x540; canvas exports at 1080x1080. All metrics
+// scale by S = 0.5 for DOM.
 
-import { RECIPE_CARD_METRICS, RECIPE_CARD_THEME, accentColorFor } from "./recipeCard";
+import {
+  RECIPE_CARD_METRICS,
+  RECIPE_CARD_THEME,
+  accentColorFor,
+  flattenIngredientItems,
+  flattenMethodItems,
+} from "./recipeCard";
 
 const T = RECIPE_CARD_THEME;
 const P = RECIPE_CARD_METRICS;
 const SCREEN = 540;
 const S = SCREEN / P.width;
 
-const FONT_SANS = 'ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
-const FONT_SERIF = '"Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif';
+const FONT_SANS =
+  'ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif';
 
 export default function RecipeCardInner({ layout }) {
-  const meta = layout.meta || {};
-  const metaBits = [
-    meta.servings ? `${meta.servings} servings` : null,
-    meta.time || null,
-    meta.calories ? `${meta.calories} cal` : null,
-    meta.protein ? `${meta.protein} protein` : null,
-  ].filter(Boolean);
+  const imageOnLeft = layout.imageSide === "left";
+  const cols = imageOnLeft
+    ? `${P.photoWidth * S}px ${P.contentWidth * S}px`
+    : `${P.contentWidth * S}px ${P.photoWidth * S}px`;
 
   return (
     <div
       className="relative w-full h-full overflow-hidden"
-      style={{ background: T.paper, color: T.ink }}
+      style={{
+        background: T.background,
+        color: T.text,
+        display: "grid",
+        gridTemplateColumns: cols,
+      }}
     >
-      {/* Double border */}
-      <div
-        aria-hidden
-        style={{
-          position: "absolute",
-          top: 24 * S, left: 24 * S, right: 24 * S, bottom: 24 * S,
-          border: `${3 * S}px solid ${T.ink}`,
-          pointerEvents: "none",
-        }}
-      />
-      <div
-        aria-hidden
-        style={{
-          position: "absolute",
-          top: 30 * S, left: 30 * S, right: 30 * S, bottom: 30 * S,
-          border: `${1 * S}px solid ${T.amber}`,
-          pointerEvents: "none",
-        }}
-      />
-
-      <div style={{ padding: `${P.margin * S}px ${P.margin * S}px ${P.footerBottomInset * S}px` }}>
-        {/* Brand + counter */}
-        <div className="flex items-center justify-between">
-          <span
-            style={{
-              fontFamily: FONT_SANS,
-              fontWeight: 800,
-              fontSize: `${P.footerSize * S}px`,
-              letterSpacing: `${3 * S}px`,
-              color: T.amber,
-            }}
-          >
-            THE SPLIT PLATE
-          </span>
-          <span
-            style={{
-              fontFamily: FONT_SANS,
-              fontWeight: 700,
-              fontSize: `${P.footerSize * S}px`,
-              color: T.muted,
-            }}
-          >
-            {layout.index} / {layout.total}
-          </span>
-        </div>
-
-        {/* Eyebrow */}
-        <div
-          style={{
-            marginTop: P.headerGap * S,
-            fontFamily: FONT_SANS,
-            fontWeight: 800,
-            fontSize: `${P.sectionSize * S}px`,
-            letterSpacing: `${2 * S}px`,
-            color: T.muted,
-            textTransform: "uppercase",
-          }}
-        >
-          {layout.eyebrow}
-        </div>
-
-        {/* Title */}
-        <div
-          style={{
-            marginTop: P.titleGap * S,
-            fontFamily: FONT_SERIF,
-            fontWeight: 900,
-            fontSize: `${P.titleSize * S}px`,
-            lineHeight: 1.05,
-            color: T.ink,
-          }}
-        >
-          {layout.recipeName}
-        </div>
-
-        {/* Meta chip row */}
-        <div
-          style={{
-            marginTop: P.metaGap * S,
-            fontFamily: FONT_SANS,
-            fontWeight: 500,
-            fontSize: `${P.footerSize * S}px`,
-            color: T.muted,
-          }}
-        >
-          {metaBits.join("  ·  ")}
-        </div>
-
-        {/* Amber divider */}
-        <div
-          aria-hidden
-          style={{
-            marginTop: P.ruleGap * S,
-            height: `${2 * S}px`,
-            background: T.amber,
-          }}
-        />
-
-        {/* Body columns */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            gap: `${P.columnGap * S}px`,
-            marginTop: P.bodyGap * S,
-          }}
-        >
-          {(layout.columns || []).map((col, i) => (
-            <Column key={i} col={col} kind={layout.kind} />
-          ))}
-        </div>
-      </div>
-
-      {/* Footer URL (bottom-left, aligned with card margin) */}
-      <div
-        style={{
-          position: "absolute",
-          left: P.margin * S,
-          bottom: P.footerBottomInset * S,
-          fontFamily: FONT_SANS,
-          fontWeight: 500,
-          fontSize: `${P.footerSize * S}px`,
-          color: T.muted,
-        }}
-      >
-        {layout.footer || "thesplitplate.com"}
-      </div>
+      {imageOnLeft && <RecipeImage layout={layout} imageOnLeft />}
+      <RecipeContent layout={layout} imageOnLeft={imageOnLeft} />
+      {!imageOnLeft && <RecipeImage layout={layout} />}
     </div>
   );
 }
 
-function Column({ col, kind }) {
+function RecipeImage({ layout, imageOnLeft }) {
+  const seamW = P.seamGradientWidth * S;
+  const gradient = imageOnLeft
+    ? `linear-gradient(to left, ${T.background}, rgba(17,17,15,0))`
+    : `linear-gradient(to right, ${T.background}, rgba(17,17,15,0))`;
+
   return (
-    <div style={{ display: "flex", flexDirection: "column", gap: `${P.sectionGap * S}px` }}>
-      {(col.sections || []).map((section, i) => (
-        <Section key={i} section={section} kind={kind} />
+    <div style={{ position: "relative", overflow: "hidden" }}>
+      {layout.image ? (
+        <img
+          src={layout.image}
+          alt=""
+          style={{
+            position: "absolute",
+            inset: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            objectPosition: "center",
+          }}
+        />
+      ) : (
+        <div style={{ position: "absolute", inset: 0, background: T.surface }} />
+      )}
+      <div
+        aria-hidden
+        style={{
+          position: "absolute",
+          top: 0,
+          bottom: 0,
+          width: `${seamW}px`,
+          background: gradient,
+          [imageOnLeft ? "right" : "left"]: 0,
+          pointerEvents: "none",
+        }}
+      />
+    </div>
+  );
+}
+
+function RecipeContent({ layout }) {
+  const pad = P.contentMargin * S;
+  return (
+    <div
+      style={{
+        position: "relative",
+        padding: `${(P.contentMargin + 22) * S}px ${pad}px ${P.footerBottomInset * S}px`,
+      }}
+    >
+      <Header layout={layout} />
+      <Divider />
+      <div style={{ marginTop: `${P.dividerGap * S}px` }}>
+        {layout.kind === "recipe-method" ? (
+          <MethodList layout={layout} />
+        ) : (
+          <IngredientList layout={layout} />
+        )}
+      </div>
+      <Footer layout={layout} />
+    </div>
+  );
+}
+
+function Header({ layout }) {
+  return (
+    <>
+      <div
+        style={{
+          fontFamily: FONT_SANS,
+          fontWeight: 800,
+          fontSize: `${P.labelSize * S}px`,
+          letterSpacing: `${P.labelLetterSpacing * S}px`,
+          textTransform: "uppercase",
+          color: T.amber,
+        }}
+      >
+        {layout.label || ""}
+      </div>
+      <div
+        style={{
+          marginTop: `${P.labelGap * S}px`,
+          fontFamily: FONT_SANS,
+          fontWeight: 800,
+          fontSize: `${P.titleSize * S}px`,
+          lineHeight: `${P.titleLineHeight * S}px`,
+          color: T.text,
+        }}
+      >
+        {layout.recipeName}
+      </div>
+    </>
+  );
+}
+
+function Divider() {
+  return (
+    <div
+      aria-hidden
+      style={{
+        marginTop: `${P.titleGap * S}px`,
+        width: `${P.dividerWidth * S}px`,
+        height: `${P.dividerHeight * S}px`,
+        background: T.amber,
+      }}
+    />
+  );
+}
+
+function IngredientList({ layout }) {
+  const items = flattenIngredientItems(layout);
+  return (
+    <div style={{ display: "flex", flexDirection: "column", gap: `${P.ingredientRowGap * S}px` }}>
+      {items.map((it, i) => (
+        <IngredientRow key={i} item={it} />
       ))}
     </div>
   );
 }
 
-function Section({ section, kind }) {
-  const accent = accentColorFor(section.accent);
+function IngredientRow({ item }) {
   return (
-    <div>
+    <div
+      style={{
+        display: "grid",
+        gridTemplateColumns: `${P.quantityColumnWidth * S}px 1fr`,
+        columnGap: `${P.quantityGutter * S}px`,
+      }}
+    >
       <div
         style={{
           fontFamily: FONT_SANS,
           fontWeight: 800,
-          fontSize: `${P.sectionSize * S}px`,
-          letterSpacing: `${2 * S}px`,
-          textTransform: "uppercase",
-          color: accent,
+          fontSize: `${P.ingredientQuantitySize * S}px`,
+          lineHeight: `${P.ingredientLineHeight * S}px`,
+          color: accentColorFor(item.accent),
         }}
       >
-        {section.continued ? `${section.heading} (cont.)` : section.heading}
-      </div>
-      <div
-        style={{
-          marginTop: `${6 * S}px`,
-          height: `${1.5 * S}px`,
-          width: `${Math.min(120, 120) * S}px`,
-          background: accent,
-        }}
-      />
-      <div style={{ marginTop: `${12 * S}px`, display: "flex", flexDirection: "column", gap: `${P.itemGap * S}px` }}>
-        {(section.items || []).map((item, i) =>
-          kind === "recipe-method" ? (
-            <MethodItem key={i} item={item} />
-          ) : (
-            <IngredientItem key={i} item={item} />
-          )
-        )}
-      </div>
-    </div>
-  );
-}
-
-function IngredientItem({ item }) {
-  return (
-    <div style={{ display: "grid", gridTemplateColumns: `${(P.quantityColumnWidth) * S}px 1fr`, columnGap: `${P.quantityGutter * S}px` }}>
-      <div
-        style={{
-          fontFamily: FONT_SANS,
-          fontWeight: 800,
-          fontSize: `${P.bodySize * S}px`,
-          lineHeight: `${P.bodyLineHeight * S}px`,
-          color: T.ink,
-        }}
-      >
-        {item.quantity || ""}
+        {item.quantity}
       </div>
       <div>
         <div
           style={{
             fontFamily: FONT_SANS,
-            fontWeight: 600,
-            fontSize: `${P.bodySize * S}px`,
-            lineHeight: `${P.bodyLineHeight * S}px`,
-            color: T.ink,
+            fontWeight: 500,
+            fontSize: `${P.ingredientTextSize * S}px`,
+            lineHeight: `${P.ingredientLineHeight * S}px`,
+            color: T.text,
           }}
         >
-          {item.text || item.ingredient}
+          {item.text}
         </div>
         {item.note && (
           <div
@@ -241,8 +202,8 @@ function IngredientItem({ item }) {
               marginTop: `${4 * S}px`,
               fontFamily: FONT_SANS,
               fontWeight: 500,
-              fontSize: `${P.noteSize * S}px`,
-              lineHeight: `${P.noteLineHeight * S}px`,
+              fontSize: `${P.ingredientNoteSize * S}px`,
+              lineHeight: `${P.ingredientNoteLineHeight * S}px`,
               color: T.muted,
             }}
           >
@@ -254,52 +215,87 @@ function IngredientItem({ item }) {
   );
 }
 
-function MethodItem({ item }) {
+function MethodList({ layout }) {
+  const items = flattenMethodItems(layout);
   return (
-    <div>
-      {item.callout && (
+    <div style={{ display: "flex", flexDirection: "column", gap: `${P.methodItemGap * S}px` }}>
+      {items.map((it, i) => (
+        <MethodRow key={i} item={it} />
+      ))}
+    </div>
+  );
+}
+
+function MethodRow({ item }) {
+  const nn = String(item.number ?? "").padStart(2, "0");
+  return (
+    <div
+      style={{
+        display: "grid",
+        gridTemplateColumns: `${P.stepNumberColumnWidth * S}px 1fr`,
+        columnGap: `${P.stepColumnGap * S}px`,
+      }}
+    >
+      <div
+        style={{
+          fontFamily: FONT_SANS,
+          fontWeight: 900,
+          fontSize: `${P.stepNumberSize * S}px`,
+          lineHeight: 1,
+          color: accentColorFor(item.accent),
+        }}
+      >
+        {nn}
+      </div>
+      <div>
         <div
           style={{
-            display: "inline-block",
-            marginBottom: `${8 * S}px`,
-            padding: `${4 * S}px ${12 * S}px`,
-            borderRadius: `${8 * S}px`,
-            background: T.coralSoft,
-            color: T.coral,
             fontFamily: FONT_SANS,
             fontWeight: 800,
-            fontSize: `${P.noteSize * S}px`,
-            letterSpacing: `${2 * S}px`,
+            fontSize: `${P.stepHeadingSize * S}px`,
+            letterSpacing: `${P.stepHeadingLetterSpacing * S}px`,
             textTransform: "uppercase",
+            color: T.text,
+            marginTop: `${8 * S}px`,
           }}
         >
-          {item.callout}
-        </div>
-      )}
-      <div style={{ display: "grid", gridTemplateColumns: `${P.numberColumnWidth * S}px 1fr`, columnGap: `${P.numberGutter * S}px` }}>
-        <div
-          style={{
-            fontFamily: FONT_SERIF,
-            fontWeight: 900,
-            fontSize: `${P.bodySize * S}px`,
-            lineHeight: `${P.bodyLineHeight * S}px`,
-            color: T.amber,
-          }}
-        >
-          {(item.number ?? item.step ?? "")}.
+          {item.heading}
         </div>
         <div
           style={{
+            marginTop: `${16 * S}px`,
             fontFamily: FONT_SANS,
             fontWeight: 500,
-            fontSize: `${P.bodySize * S}px`,
-            lineHeight: `${P.bodyLineHeight * S}px`,
-            color: T.ink,
+            fontSize: `${P.stepBodySize * S}px`,
+            lineHeight: `${P.stepBodyLineHeight * S}px`,
+            color: T.muted,
           }}
         >
-          {item.text}
+          {item.body}
         </div>
       </div>
+    </div>
+  );
+}
+
+function Footer({ layout }) {
+  return (
+    <div
+      style={{
+        position: "absolute",
+        left: `${P.contentMargin * S}px`,
+        right: `${P.contentMargin * S}px`,
+        bottom: `${P.footerBottomInset * S}px`,
+        display: "flex",
+        justifyContent: "space-between",
+        fontFamily: FONT_SANS,
+        fontWeight: 500,
+        fontSize: `${P.footerSize * S}px`,
+        color: T.muted,
+      }}
+    >
+      <span>{layout.footer || "thesplitplate.com"}</span>
+      <span>{layout.index}/{layout.total}</span>
     </div>
   );
 }

@@ -4493,15 +4493,12 @@ export const powerups = [
           accent: "amber",
           heading: "Ingredients",
           items: [
-            { quantity: "0.25 oz", ingredient: "Snyder's mini pretzels", note: "crushed, split between rim + garnish" },
-            { quantity: "to taste", ingredient: "Skinny Syrups Sugar-Free Salted Caramel" },
-            { quantity: "1/2 tbsp", ingredient: "instant coffee" },
-            { quantity: "1/2 serving", ingredient: "unflavored whey isolate" },
-            { quantity: "2 tsp", ingredient: "monk fruit sweetener" },
-            { quantity: "1/2 tsp", ingredient: "LorAnn caramel bakery emulsion" },
-            { quantity: "2-3 tbsp", ingredient: "hot water" },
-            { quantity: "1/2 cup", ingredient: "fat-free ultra-filtered milk" },
-            { quantity: "1 tbsp", ingredient: "Reddi-wip Zero Sugar" },
+            { quantity: "0.25 oz", text: "Crushed pretzels", note: "Split between rim + garnish" },
+            { quantity: "1 tbsp", text: "Salted-caramel syrup" },
+            { quantity: "1/2 tbsp", text: "Instant coffee" },
+            { quantity: "1/2 scoop", text: "Unflavored whey" },
+            { quantity: "1/2 tsp", text: "Caramel emulsion" },
+            { quantity: "1/2 cup", text: "Fat-free milk + Reddi-wip" },
           ],
         },
       ],
@@ -4510,16 +4507,17 @@ export const powerups = [
           accent: "amber",
           heading: "Method",
           items: [
-            { number: 1, text: "Crush the pretzels; reserve part for the garnish. Dip the glass rim in Skinny Syrups salted caramel, then press into crushed pretzels." },
-            { number: 2, text: "Add instant coffee, whey, monk fruit, and LorAnn caramel emulsion to the rimmed glass. Pour in 2 tbsp hot water and immersion-blend smooth." },
-            { number: 3, text: "Add ice, then stream in 1/2 cup fat-free ultra-filtered milk. Top with Reddi-wip Zero Sugar, drizzle more caramel, finish with the reserved pretzel crumble." },
+            { number: 1, heading: "Rim", body: "Caramel syrup, press into crushed pretzels" },
+            { number: 2, heading: "Blend", body: "Coffee + whey + emulsion + 2 tbsp hot water, immersion-blend smooth" },
+            { number: 3, heading: "Finish", body: "Ice, milk, Reddi-wip, pretzel crumble on top" },
           ],
         },
       ],
-      processCards: [
-        { src: "/images/salted-caramel-pretzel-iced-proffee/step-02-pretzel-rim-polished.webp", caption: "PRETZEL RIM" },
-        { src: "/images/salted-caramel-pretzel-iced-proffee/step-08-blend-concentrate-polished.webp", caption: "BLEND CONCENTRATE" },
-        { src: "/images/salted-caramel-pretzel-iced-proffee/step-12-pretzel-garnish-polished.webp", caption: "GARNISH" },
+      ingredientCardPhotos: [
+        "/images/salted-caramel-pretzel-iced-proffee/context-crushed-pretzels.webp",
+      ],
+      methodCardPhotos: [
+        "/images/salted-caramel-pretzel-iced-proffee/step-08-blend-concentrate-polished.webp",
       ],
       servingGroups: [
         {
@@ -5534,20 +5532,10 @@ export const snackBoxes = [
           accent: "amber",
           heading: "Per Box",
           items: [
-            { quantity: "1", ingredient: "large hard-boiled egg", note: "peeled + sliced age-appropriate" },
-            { quantity: "~60 cal", ingredient: "dried strawberries", note: "1 label serving" },
-            { quantity: "1", ingredient: "light cheese wedge", note: "Laughing Cow-style, wrapped" },
-            { quantity: "0.75 oz", ingredient: "salted peanuts", note: "developmentally appropriate ages only" },
-          ],
-        },
-        {
-          accent: "neutral",
-          heading: "Four-Box Batch",
-          items: [
-            { quantity: "4", ingredient: "large hard-boiled eggs" },
-            { quantity: "4 portions", ingredient: "dried strawberries", note: "~240 cal total" },
-            { quantity: "4", ingredient: "wrapped light cheese wedges" },
-            { quantity: "3 oz", ingredient: "salted peanuts" },
+            { quantity: "1", text: "Hard-boiled egg", note: "Halved or sliced age-appropriate" },
+            { quantity: "~60 cal", text: "Dried strawberries" },
+            { quantity: "1 wedge", text: "Light cheese" },
+            { quantity: "0.75 oz", text: "Salted peanuts", note: "Age-appropriate only" },
           ],
         },
       ],
@@ -5556,17 +5544,17 @@ export const snackBoxes = [
           accent: "amber",
           heading: "Assembly",
           items: [
-            { number: 1, text: "Set out four 4-compartment Bento-style boxes on the counter. Eggs peeled + chilled ahead of time." },
-            { number: 2, text: "Halve each egg (over-4s) or slice small (under-4s). One egg per box, yolk-side up." },
-            { number: 3, text: "Add one ~60 cal portion of dried strawberries to compartment 2. Drop 1 wrapped cheese wedge into compartment 3." },
-            { number: 4, text: "Weigh 0.75 oz salted peanuts into compartment 4. Lid on, refrigerate promptly." },
+            { number: 1, heading: "Set", body: "Four bento boxes, eggs peeled + chilled" },
+            { number: 2, heading: "Egg", body: "Halve or slice, one per box" },
+            { number: 3, heading: "Fill", body: "Strawberries, cheese wedge, peanuts. Lid on, chill." },
           ],
         },
       ],
-      processCards: [
-        { src: "/images/sunshine-snack-box/step-02-add-boiled-eggs-polished.webp", caption: "PLACE EGGS" },
-        { src: "/images/sunshine-snack-box/step-04-add-cheese-wedges-polished.webp", caption: "CHEESE + FRUIT" },
-        { src: "/images/sunshine-snack-box/final-four-sunshine-snack-boxes-polished.webp", caption: "READY FOR THE FRIDGE" },
+      ingredientCardPhotos: [
+        "/images/sunshine-snack-box/step-02-add-boiled-eggs-polished.webp",
+      ],
+      methodCardPhotos: [
+        "/images/sunshine-snack-box/final-four-sunshine-snack-boxes-polished.webp",
       ],
       servingGroups: [
         {

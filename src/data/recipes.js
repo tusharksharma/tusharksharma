@@ -2450,58 +2450,65 @@ const recipes = [
       ingredientsPhoto: "/images/indo-chinese-chili-chicken/context-chicken-chunks.webp",
       methodPhoto: "/images/indo-chinese-chili-chicken/step-06-toss-until-glossy-polished.webp",
       servingPhoto: "/images/indo-chinese-chili-chicken/hero-adult-chili-chicken-polished.webp",
+      // Ingredient cards for the /social carousel — shortened, brand names
+      // dropped, split into two cards via `card` index. Full brand+detail
+      // stays on the website ingredients list below.
       ingredientGroups: [
         {
+          card: 1,
           accent: "amber",
-          heading: "Shared Base",
+          heading: "Shared",
           items: [
-            { quantity: "21 oz", ingredient: "lightly breaded chicken chunks", note: "14 oz adult + 7 oz smaller plate" },
-            { quantity: "as needed", ingredient: "avocado-oil spray" },
+            { quantity: "21 oz", text: "Breaded chicken chunks" },
           ],
         },
         {
-          accent: "coral",
-          heading: "Adult Finish",
-          items: [
-            { quantity: "8 oz", ingredient: "bell peppers + red onion", note: "large pieces" },
-            { quantity: "1 tbsp", ingredient: "Jet Tila's Umami Punch", note: "half on veg, half on adult chicken" },
-            { quantity: "1/2 tbsp", ingredient: "Kikkoman Thai-style chili sauce" },
-            { quantity: "1 tbsp", ingredient: "Ching's red chili sauce" },
-            { quantity: "1 tbsp", ingredient: "rice vinegar" },
-            { quantity: "1 tbsp", ingredient: "Kikkoman soy sauce" },
-            { quantity: "1/2 tbsp", ingredient: "sesame chili oil" },
-            { quantity: "1/2 tbsp", ingredient: "Lao Gan Ma fried chili in oil" },
-          ],
-        },
-        {
+          card: 1,
           accent: "green",
           heading: "Smaller Plate",
           items: [
-            { quantity: "7 oz", ingredient: "reserved plain chicken", note: "what I served my girls (~3.5 oz each). Adjust for age and appetite." },
-            { quantity: "as needed", ingredient: "cucumber" },
-            { quantity: "2 slices", ingredient: "garlic bread" },
-            { quantity: "as needed", ingredient: "yellow mustard" },
+            { quantity: "7 oz", text: "Reserved plain chicken", note: "Set aside before saucing" },
+            { quantity: "—", text: "Cucumber, garlic bread, yellow mustard" },
+          ],
+        },
+        {
+          card: 2,
+          accent: "coral",
+          heading: "Adult Finish",
+          items: [
+            { quantity: "8 oz", text: "Peppers + red onion" },
+            { quantity: "1 tbsp", text: "Umami seasoning" },
+            { quantity: "1 tbsp ea", text: "Soy sauce, red chili sauce, rice vinegar" },
+            { quantity: "1/2 tbsp ea", text: "Thai chili, sesame oil, fried chili oil" },
           ],
         },
       ],
+      // Method cards — action-headed. Body kept to one short line. The
+      // long form (with brand names) stays in splitCook below.
       methodGroups: [
         {
           accent: "amber",
           heading: "Method",
           items: [
-            { number: 1, text: "Air-fry all 21 oz chicken at 400°F for 10-12 min, shaking halfway." },
-            { number: 2, text: "Reserve 7 oz plain chicken for the smaller plates before any seasoning or sauce touches the wok.", callout: "SPLIT HERE" },
-            { number: 3, text: "Mix the six-ingredient adult sauce in a glass. No slurry." },
-            { number: 4, text: "Char 8 oz peppers + red onion on high heat 3-5 min. Season with 1/2 tbsp Umami Punch." },
-            { number: 5, text: "Add remaining 14 oz air-fried chicken. Sprinkle with the remaining 1/2 tbsp Umami Punch." },
-            { number: 6, text: "Pour the sauce, toss aggressively 45-75 seconds until glossy, kill the heat." },
+            { number: 1, heading: "Air Fry", body: "400°F · 10-12 min, shake halfway" },
+            { number: 2, heading: "Split", body: "Reserve 7 oz plain chicken before saucing", accent: "coral" },
+            { number: 3, heading: "Mix", body: "Stir the six-ingredient adult sauce" },
+            { number: 4, heading: "Char", body: "Peppers + onion, high heat 3-5 min" },
+            { number: 5, heading: "Add", body: "Adult chicken back in, sprinkle seasoning" },
+            { number: 6, heading: "Toss", body: "Pour sauce, 45-75s until glossy" },
           ],
         },
       ],
-      processCards: [
-        { src: "/images/indo-chinese-chili-chicken/step-01-air-fry-chicken-polished.webp", caption: "AIR FRY" },
-        { src: "/images/indo-chinese-chili-chicken/context-six-ingredient-sauce.webp", caption: "MIX THE SAUCE" },
-        { src: "/images/indo-chinese-chili-chicken/step-06-toss-until-glossy-polished.webp", caption: "TOSS UNTIL GLOSSY" },
+      // One curated photo per ingredient / method card. Right / left / right
+      // / left alternation is applied by the generator; index 0 = first
+      // ingredient card, index 1 = second, etc.
+      ingredientCardPhotos: [
+        "/images/indo-chinese-chili-chicken/context-chicken-chunks.webp",
+        "/images/indo-chinese-chili-chicken/context-six-ingredient-sauce.webp",
+      ],
+      methodCardPhotos: [
+        "/images/indo-chinese-chili-chicken/step-01-air-fry-chicken-polished.webp",
+        "/images/indo-chinese-chili-chicken/step-06-toss-until-glossy-polished.webp",
       ],
       servingGroups: [
         {

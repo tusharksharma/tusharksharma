@@ -1,47 +1,49 @@
 // Structured-carousel generator.
 //
-// Contract: buildStructuredCards(recipe, opts) returns an array of card objects
-// compatible with SocialPage.jsx's cards[] pipeline. Each card is:
+// Contract: buildStructuredCards(recipe, opts) returns an array of card
+// objects compatible with SocialPage.jsx's cards[] pipeline. Each card is:
 //   {
 //     id: string,
-//     kind: "hero" | "recipe-ingredients" | "recipe-method" | "process"
+//     kind: "hero" | "recipe-ingredients" | "recipe-method"
 //         | "serving" | "component" | "end",
 //     label: string,
 //     filename: string,
-//     layout?: object,               // consumed by drawRecipeCard / drawStructuredCard / drawStructuredHero / drawStructuredEnd / drawProcessCard
-//     render: React.ReactNode,       // DOM preview at 540×540
+//     layout?: object,   // consumed by drawRecipeCard / drawStructuredCard
+//                        //   / drawStructuredHero / drawStructuredEnd
+//     render: React.ReactNode,   // DOM preview at 540x540
 //   }
 //
-// Card sequence for a split-plate dinner (target 8):
+// Card sequence for a split-plate dinner (target 7):
 //   1. Hero (photo + title + macros)
-//   2. Recipe-ingredients card (paper background, two columns)  [1-2 cards]
-//   3. Recipe-method card (paper background, numbered)          [1-2 cards]
-//   4-6. Process cards (full-bleed action photos + short label) [2-3 cards]
-//   7. Serving (adult + smaller-plate labels)
-//   8. End
+//   2-3. Recipe-ingredients cards (dark, 58/42 with curated action photo)
+//   4-5. Recipe-method cards (same shape, alternating imageSide)
+//   6. Serving (adult + smaller-plate labels)
+//   7. End (save + visit)
 //
 // Rules:
 //   - Never exceed 10 cards total.
-//   - Never fragment ingredients past 2 cards; if content doesn't fit, curator
-//     must trim.
-//   - Never fragment methods past 2 cards; same rule.
-//   - Ingredients + method paginate by MEASURED height (recipeCard.js's
-//     paginateIntoRecipeCards). Fixed item caps are gone.
-//   - Process cards come from curated.processCards; auto-derive falls back to
-//     recipe.socialImages (skipping any that match hero, ingredients, method,
-//     or serving photos).
+//   - Max 2 ingredient cards, max 2 method cards. If content doesn't fit,
+//     curator must trim the copy.
+//   - Photos alternate right / left / right / left across cards 2-5.
+//   - Curated photos win: socialCarousel.ingredientCardPhotos and
+//     socialCarousel.methodCardPhotos are indexed arrays, one photo per
+//     card. Fallback pulls from recipe.socialImages, skipping the hero,
+//     serving, and any photo already used.
+//   - There is NO standalone process-card kind. The action photo lives on
+//     the method card that describes the action.
 
 import React from "react";
 import { buildServingLayout, resolveGroup } from "./structuredCard";
 import StructuredCardInner from "./StructuredCardInner";
 import { buildHeroLayout, HeroStructuredInner } from "./hero.jsx";
 import { buildEndLayout, EndStructuredInner } from "./end.jsx";
-import { paginateIntoRecipeCards } from "./recipeCard";
+import { paginateIngredientCards, paginateMethodCards } from "./recipeCard";
 import RecipeCardInner from "./RecipeCardInner.jsx";
 
 const MAX_INGREDIENT_CARDS = 2;
 const MAX_METHOD_CARDS = 2;
-const MAX_PROCESS_CARDS = 3;
+const INGREDIENTS_PER_CARD = 6;
+const STEPS_PER_METHOD_CARD = 3;
 
 export function buildStructuredCards(recipe, opts) {
   const {
@@ -54,11 +56,8 @@ export function buildStructuredCards(recipe, opts) {
   } = opts;
 
   const sc = recipe.socialCarousel || {};
-
   const heroPhoto = sc.heroPhoto || recipe.image || recipe.heroImage || null;
   const servingPhoto = sc.servingPhoto || heroPhoto;
-
-  // ---------- Build sections ----------
 
   const ingredientSections = normalizeIngredientSections(resolveGroup(
     sc.ingredientGroups,
@@ -76,16 +75,33 @@ export function buildStructuredCards(recipe, opts) {
     { required: false },
   );
 
-  // Recipe-card meta pulled once, embedded on every paginated card.
-  const meta = buildRecipeMeta(recipe);
+  const ingredientCardSectionSets = paginateIngredientCards(ingredientSections, {
+    maxCards: MAX_INGREDIENT_CARDS,
+    perCard: INGREDIENTS_PER_CARD,
+  });
+  const methodCardSectionSets = paginateMethodCards(methodSections, {
+    maxCards: MAX_METHOD_CARDS,
+    perCard: STEPS_PER_METHOD_CARD,
+  });
 
-  // ---------- Paginate into recipe cards ----------
+  // Photo pool: curated arrays win, else fall back to recipe.socialImages.
+  const usedPhotos = new Set([heroPhoto, servingPhoto].filter(Boolean));
+  const fallbackPool = collectFallbackPhotos(recipe, usedPhotos);
+  const ingredientPhotos = pickCardPhotos(
+    sc.ingredientCardPhotos,
+    ingredientCardSectionSets.length,
+    usedPhotos,
+    fallbackPool,
+  );
+  const methodPhotos = pickCardPhotos(
+    sc.methodCardPhotos,
+    methodCardSectionSets.length,
+    usedPhotos,
+    fallbackPool,
+  );
 
-  const ingredientRecipeCards = paginateIntoRecipeCards(ingredientSections, "recipe-ingredients", { maxCards: MAX_INGREDIENT_CARDS });
-  const methodRecipeCards = paginateIntoRecipeCards(methodSections, "recipe-method", { maxCards: MAX_METHOD_CARDS });
-
-  // ---------- Assembly ----------
   const cards = [];
+  let alternate = 0; // 0 = right, 1 = left, alternating across cards 2-5
 
   cards.push({
     id: "hero",
@@ -95,56 +111,47 @@ export function buildStructuredCards(recipe, opts) {
     layout: buildHeroLayout(recipe, sc, { index: 0, total: 0, isCookbook, isSnackBox, isPowerup }),
   });
 
-  ingredientRecipeCards.forEach((rc, i) => {
+  ingredientCardSectionSets.forEach((sections, i) => {
+    const imageSide = alternate++ % 2 === 0 ? "right" : "left";
     cards.push({
       id: `ingredients-${i + 1}`,
       kind: "recipe-ingredients",
-      label: ingredientRecipeCards.length === 1
+      label: ingredientCardSectionSets.length === 1
         ? "Card · Ingredients"
-        : `Card · Ingredients (${i + 1}/${ingredientRecipeCards.length})`,
+        : `Card · Ingredients (${i + 1}/${ingredientCardSectionSets.length})`,
       filename: `${slugForFiles}-ingredients-${i + 1}`,
       layout: {
         kind: "recipe-ingredients",
         index: 0, total: 0,
         recipeName: recipe.title || "",
-        eyebrow: ingredientRecipeCards.length === 1 ? "INGREDIENTS" : `INGREDIENTS (${i + 1}/${ingredientRecipeCards.length})`,
-        meta,
-        columns: rc.columns,
+        label: "WHAT YOU NEED",
+        image: ingredientPhotos[i] || null,
+        imageSide,
+        sections,
         footer: "thesplitplate.com",
       },
     });
   });
 
-  methodRecipeCards.forEach((rc, i) => {
+  methodCardSectionSets.forEach((sections, i) => {
+    const imageSide = alternate++ % 2 === 0 ? "right" : "left";
     cards.push({
       id: `method-${i + 1}`,
       kind: "recipe-method",
-      label: methodRecipeCards.length === 1
+      label: methodCardSectionSets.length === 1
         ? "Card · Method"
-        : `Card · Method (${i + 1}/${methodRecipeCards.length})`,
+        : `Card · Method (${i + 1}/${methodCardSectionSets.length})`,
       filename: `${slugForFiles}-method-${i + 1}`,
       layout: {
         kind: "recipe-method",
         index: 0, total: 0,
         recipeName: recipe.title || "",
-        eyebrow: methodRecipeCards.length === 1 ? "METHOD" : `METHOD (${i + 1}/${methodRecipeCards.length})`,
-        meta,
-        columns: rc.columns,
+        label: "HOW TO COOK",
+        image: methodPhotos[i] || null,
+        imageSide,
+        sections,
         footer: "thesplitplate.com",
       },
-    });
-  });
-
-  // Process cards — curated preferred, else auto-derived from socialImages.
-  const processImages = collectProcessImages(recipe, sc, { heroPhoto, servingPhoto });
-  processImages.slice(0, MAX_PROCESS_CARDS).forEach((p, i) => {
-    cards.push({
-      id: `process-${i + 1}`,
-      kind: "process",
-      label: `Card · Process ${i + 1}`,
-      filename: `${slugForFiles}-process-${i + 1}`,
-      src: p.src,
-      caption: p.caption,
     });
   });
 
@@ -183,14 +190,12 @@ export function buildStructuredCards(recipe, opts) {
     layout: buildEndLayout(recipe, sc, { index: 0, total: 0, isCookbook, slug: slug || recipe.id }),
   });
 
-  // ---------- 10-cap enforcement ----------
   while (cards.length > 10) {
     const dropIdx = pickDroppableIndex(cards);
     if (dropIdx === -1) break;
     cards.splice(dropIdx, 1);
   }
 
-  // ---------- Two-pass: fill index/total and attach React renderers ----------
   const total = cards.length;
   cards.forEach((c, i) => {
     if (c.layout) c.layout = { ...c.layout, index: i + 1, total };
@@ -205,14 +210,10 @@ export function buildStructuredCards(recipe, opts) {
 
 function pickDroppableIndex(cards) {
   const kinds = cards.map((c) => c.kind);
-  // Never drop hero (0) or end (last) or the first ingredients / first method.
-  // Priority: component → serving → last process → last method → last ingredients.
   const component = kinds.indexOf("component");
   if (component !== -1) return component;
   const lastServing = kinds.lastIndexOf("serving");
   if (lastServing !== -1) return lastServing;
-  const lastProcess = kinds.lastIndexOf("process");
-  if (lastProcess !== -1) return lastProcess;
   const firstMethod = kinds.indexOf("recipe-method");
   const lastMethod = kinds.lastIndexOf("recipe-method");
   if (lastMethod !== firstMethod) return lastMethod;
@@ -222,25 +223,23 @@ function pickDroppableIndex(cards) {
   return -1;
 }
 
-// ---------- INGREDIENT + METHOD SECTION BUILDERS ----------
+// ---------- SECTION BUILDERS ----------
 
 function deriveIngredientSections(recipe) {
   const split = recipe.splitCook;
   const sections = [];
-
   if (split && (split.sharedIngredients || split.adult?.extraIngredients || split.kid?.extraIngredients)) {
     if (split.sharedIngredients?.length) {
-      sections.push({ accent: "amber", heading: "Shared Base", items: parseIngredientLines(split.sharedIngredients) });
+      sections.push({ accent: "amber", heading: "Shared", items: parseIngredientLines(split.sharedIngredients) });
     }
     if (split.adult?.extraIngredients?.length) {
-      sections.push({ accent: "coral", heading: "Adult Finish", items: parseIngredientLines(split.adult.extraIngredients) });
+      sections.push({ accent: "coral", heading: "Adult", items: parseIngredientLines(split.adult.extraIngredients) });
     }
     if (split.kid?.extraIngredients?.length) {
       sections.push({ accent: "green", heading: "Smaller Plate", items: parseIngredientLines(split.kid.extraIngredients) });
     }
     if (sections.length) return sections;
   }
-
   return [{ accent: "amber", heading: "Ingredients", items: parseIngredientLines(recipe.ingredients || []) }];
 }
 
@@ -250,8 +249,6 @@ function parseIngredientLines(rawList) {
     const text = typeof raw === "object" ? raw.text : raw;
     if (!text || text.startsWith("---")) continue;
     const parsed = splitQuantity(text);
-    // Recipe-card model uses {quantity, text, note?}; keep parity with curated
-    // structure by mapping `ingredient` to `text` when auto-deriving.
     out.push({ quantity: parsed.quantity, text: parsed.ingredient });
   }
   return out;
@@ -265,8 +262,6 @@ function splitQuantity(text) {
   return { quantity: "", ingredient: text };
 }
 
-// Normalize curated ingredient items — some legacy carousels used
-// `ingredient` for the text field. Recipe-card renderer looks up `text`.
 export function normalizeIngredientSections(sections) {
   return sections.map((s) => ({
     ...s,
@@ -274,64 +269,58 @@ export function normalizeIngredientSections(sections) {
       quantity: it.quantity || "",
       text: it.text || it.ingredient || "",
       note: it.note,
+      accent: it.accent,
     })),
   }));
 }
 
 function deriveMethodSections(recipe) {
   const split = recipe.splitCook;
-  const firstImage = (s) => (s && s.images && s.images[0]) || (s && s.image) || null;
-
   if (split && (split.sharedSteps?.length || split.adult?.steps?.length)) {
     const items = [];
     let stepN = 1;
-    (split.sharedSteps || []).forEach((s, idx) => {
-      const isLastShared = idx === (split.sharedSteps.length - 1);
-      items.push({
-        number: stepN++,
-        text: cleanStepText(typeof s === "object" ? s.text : s),
-        image: firstImage(s),
-        // The last shared step is where the kid portion gets reserved →
-        // attach the SPLIT HERE callout.
-        callout: isLastShared ? "SPLIT HERE" : undefined,
-      });
+    (split.sharedSteps || []).forEach((s) => {
+      const raw = typeof s === "object" ? s.text : s;
+      const { heading, body } = splitActionHeading(raw);
+      items.push({ number: stepN++, heading, body });
     });
     (split.adult?.steps || []).forEach((s) => {
-      items.push({
-        number: stepN++,
-        text: cleanStepText(typeof s === "object" ? s.text : s),
-        image: firstImage(s),
-      });
+      const raw = typeof s === "object" ? s.text : s;
+      const { heading, body } = splitActionHeading(raw);
+      items.push({ number: stepN++, heading, body });
     });
     return [{ accent: "amber", heading: "Method", items }];
   }
-
-  const items = (recipe.steps || recipe.method || []).map((s, i) => ({
-    number: i + 1,
-    text: cleanStepText(typeof s === "object" ? (s.text || s.instruction) : s) || "",
-    image: firstImage(s),
-  }));
+  const rawSteps = recipe.steps || recipe.method || [];
+  const items = rawSteps.map((s, i) => {
+    const raw = typeof s === "object" ? (s.text || s.instruction) : s;
+    const { heading, body } = splitActionHeading(raw || "");
+    return { number: i + 1, heading, body };
+  });
   return [{ accent: "amber", heading: "Method", items }];
 }
 
-// Curated method items may use `step` (legacy) or `number` (new). Normalize
-// to `number` and preserve callout / image fields.
-function normalizeMethodSections(sections) {
+// Legacy "AIR FRY: All 21 oz..." → { heading: "AIR FRY", body: "All 21 oz..." }.
+// Recipes without an ALL-CAPS prefix become one big body with a generic
+// heading; author is expected to curate methodGroups directly for the
+// carousel-quality version.
+function splitActionHeading(text) {
+  const t = String(text || "").trim();
+  const m = t.match(/^([A-Z][A-Z\s]{1,20}):\s*(.*)$/);
+  if (m) return { heading: m[1].trim(), body: m[2].trim() };
+  return { heading: "Step", body: t };
+}
+
+export function normalizeMethodSections(sections) {
   return sections.map((s) => ({
     ...s,
     items: (s.items || []).map((it) => ({
       number: it.number ?? it.step ?? null,
-      text: it.text || "",
-      image: it.image,
-      callout: it.callout,
+      heading: it.heading || "",
+      body: it.body || it.text || "",
+      accent: it.accent,
     })),
   }));
-}
-
-function cleanStepText(text) {
-  return String(text || "")
-    .replace(/^([A-Z][A-Z\s]+):\s*/, "$1: ")
-    .trim();
 }
 
 function deriveServingBlocks(recipe) {
@@ -343,38 +332,40 @@ function deriveServingBlocks(recipe) {
   return items.length ? [{ accent: "neutral", heading: "Serving & Storage", items }] : null;
 }
 
-function buildRecipeMeta(recipe) {
-  return {
-    servings: recipe.servings || null,
-    time: recipe.time || null,
-    calories: recipe.meta?.macros?.calories || recipe.calories || recipe.caloriesPerServing || null,
-    protein: (recipe.meta?.macros?.protein || recipe.protein || recipe.proteinPerServing)
-      ? `${recipe.meta?.macros?.protein || recipe.protein || recipe.proteinPerServing}g`
-      : null,
-  };
-}
+// ---------- PHOTO SELECTION ----------
 
-// ---------- PROCESS CARDS ----------
-
-function collectProcessImages(recipe, sc, { heroPhoto, servingPhoto }) {
-  const used = new Set([heroPhoto, servingPhoto, sc.ingredientsPhoto, sc.methodPhoto].filter(Boolean));
-
-  // Curated wins.
-  if (Array.isArray(sc.processCards) && sc.processCards.length) {
-    return sc.processCards
-      .filter((p) => p && p.src && !used.has(p.src))
-      .filter((p, i, arr) => arr.findIndex((q) => q.src === p.src) === i) // dedupe
-      .map((p) => ({ src: p.src, caption: p.caption || "" }));
-  }
-
-  // Auto-derive: recipe.socialImages, filtered.
+function collectFallbackPhotos(recipe, alreadyUsed) {
   const raw = Array.isArray(recipe.socialImages) ? recipe.socialImages : [];
+  const seen = new Set(alreadyUsed);
   const out = [];
-  const seen = new Set(used);
   for (const src of raw) {
     if (!src || seen.has(src)) continue;
     seen.add(src);
-    out.push({ src, caption: "" });
+    out.push(src);
+  }
+  return out;
+}
+
+function pickCardPhotos(curated, count, usedPhotos, fallbackPool) {
+  const out = [];
+  const isValid = (src) => !!src && !usedPhotos.has(src);
+
+  for (let i = 0; i < count; i++) {
+    let pick = null;
+    if (Array.isArray(curated) && isValid(curated[i])) {
+      pick = curated[i];
+    } else {
+      while (fallbackPool.length && !pick) {
+        const candidate = fallbackPool.shift();
+        if (isValid(candidate)) pick = candidate;
+      }
+    }
+    if (pick) {
+      usedPhotos.add(pick);
+      out.push(pick);
+    } else {
+      out.push(null);
+    }
   }
   return out;
 }
@@ -387,10 +378,8 @@ function renderFor(card) {
   if (card.kind === "recipe-ingredients" || card.kind === "recipe-method") {
     return <RecipeCardInner layout={card.layout} />;
   }
-  if (card.kind === "serving") {
-    return <StructuredCardInner layout={card.layout} />;
-  }
-  // process + component get their renderers patched in by SocialPage.jsx.
+  if (card.kind === "serving") return <StructuredCardInner layout={card.layout} />;
+  // component gets its renderer patched in by SocialPage.jsx.
   return null;
 }
 
@@ -399,8 +388,8 @@ function renderFor(card) {
 export function validateCards(cards, recipe) {
   const errors = [];
   if (cards.length > 10) errors.push(`Card count ${cards.length} exceeds 10.`);
-  if (!cards.some((c) => c.kind === "recipe-ingredients")) errors.push(`No ingredients card produced for ${recipe.title || recipe.slug}.`);
-  if (!cards.some((c) => c.kind === "recipe-method")) errors.push(`No method card produced for ${recipe.title || recipe.slug}.`);
+  if (!cards.some((c) => c.kind === "recipe-ingredients")) errors.push(`No ingredients card for ${recipe.title || recipe.slug}.`);
+  if (!cards.some((c) => c.kind === "recipe-method")) errors.push(`No method card for ${recipe.title || recipe.slug}.`);
   if (cards.filter((c) => c.kind === "recipe-ingredients").length > MAX_INGREDIENT_CARDS) {
     errors.push(`More than ${MAX_INGREDIENT_CARDS} ingredient cards — trim curated card copy.`);
   }
@@ -409,7 +398,6 @@ export function validateCards(cards, recipe) {
   }
   if (cards[0]?.kind !== "hero") errors.push(`First card must be hero (got ${cards[0]?.kind}).`);
   if (cards[cards.length - 1]?.kind !== "end") errors.push(`Last card must be end (got ${cards[cards.length - 1]?.kind}).`);
-
   if (errors.length) {
     console.warn(`[social-carousel] validation issues for "${recipe.title}":\n- ${errors.join("\n- ")}`);
   }
