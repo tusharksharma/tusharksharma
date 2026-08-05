@@ -2489,20 +2489,19 @@ const recipes = [
           accent: "amber",
           heading: "Method",
           items: [
-            { step: 1, text: "Air-fry all 21 oz chicken at 400°F for 10-12 min, shaking halfway.", image: "/images/indo-chinese-chili-chicken/step-01-air-fry-chicken-polished.webp" },
-            { step: 2, text: "SPLIT HERE: reserve 7 oz plain chicken before any seasoning or sauce touches the wok.", accent: "coral" },
-            { step: 3, text: "Mix the six-ingredient adult sauce in a glass. No slurry.", image: "/images/indo-chinese-chili-chicken/context-six-ingredient-sauce.webp" },
+            { number: 1, text: "Air-fry all 21 oz chicken at 400°F for 10-12 min, shaking halfway." },
+            { number: 2, text: "Reserve 7 oz plain chicken for the smaller plates before any seasoning or sauce touches the wok.", callout: "SPLIT HERE" },
+            { number: 3, text: "Mix the six-ingredient adult sauce in a glass. No slurry." },
+            { number: 4, text: "Char 8 oz peppers + red onion on high heat 3-5 min. Season with 1/2 tbsp Umami Punch." },
+            { number: 5, text: "Add remaining 14 oz air-fried chicken. Sprinkle with the remaining 1/2 tbsp Umami Punch." },
+            { number: 6, text: "Pour the sauce, toss aggressively 45-75 seconds until glossy, kill the heat." },
           ],
         },
-        {
-          accent: "amber",
-          heading: "Method (Adult Wok)",
-          items: [
-            { step: 4, text: "Char peppers + red onion on high heat 3-5 min. Season with 1/2 tbsp Umami Punch.", image: "/images/indo-chinese-chili-chicken/step-02-char-vegetables-polished.webp" },
-            { step: 5, text: "Add remaining 14 oz chicken. Sprinkle with the remaining 1/2 tbsp Umami Punch.", image: "/images/indo-chinese-chili-chicken/step-04-add-adult-chicken.webp" },
-            { step: 6, text: "Pour sauce, toss aggressively 45-75 seconds until glossy, kill the heat.", image: "/images/indo-chinese-chili-chicken/step-06-toss-until-glossy-polished.webp" },
-          ],
-        },
+      ],
+      processCards: [
+        { src: "/images/indo-chinese-chili-chicken/step-01-air-fry-chicken-polished.webp", caption: "AIR FRY" },
+        { src: "/images/indo-chinese-chili-chicken/context-six-ingredient-sauce.webp", caption: "MIX THE SAUCE" },
+        { src: "/images/indo-chinese-chili-chicken/step-06-toss-until-glossy-polished.webp", caption: "TOSS UNTIL GLOSSY" },
       ],
       servingGroups: [
         {

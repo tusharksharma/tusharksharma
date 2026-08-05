@@ -7,6 +7,7 @@ import { buildStructuredCards } from "../social/generator.jsx";
 import { drawStructuredCard } from "../social/structuredCard";
 import { drawStructuredHero } from "../social/hero.jsx";
 import { drawStructuredEnd } from "../social/end.jsx";
+import { drawRecipeCard } from "../social/recipeCard";
 
 const ALL_COOKBOOK = [...sauces, ...bases, ...breakfasts, ...desserts, ...quickLunches, ...powerups, ...snackBoxes];
 
@@ -635,18 +636,18 @@ function drawBestForCard(ctx, item) {
 
 async function renderSocialCardToBlob(card) {
   const { canvas, ctx } = makeCanvas();
-  // New structured pipeline (kinds carry a `layout` object).
+  // Structured pipeline (kinds carry a `layout` object).
   if (card.layout && card.kind === "hero") await drawStructuredHero(ctx, card.layout);
   else if (card.layout && card.kind === "end") drawStructuredEnd(ctx, card.layout);
-  else if (card.layout && (card.kind === "ingredients" || card.kind === "method" || card.kind === "serving")) await drawStructuredCard(ctx, card.layout);
-  // Legacy pipeline (kinds carry `recipe` / `item` / `src`).
-  else if (card.kind === "hero") await drawHeroCard(ctx, card.recipe);
-  else if (card.kind === "macros") drawMacroCard(ctx, card.recipe);
+  else if (card.layout && (card.kind === "recipe-ingredients" || card.kind === "recipe-method")) drawRecipeCard(ctx, card.layout);
+  else if (card.layout && card.kind === "serving") await drawStructuredCard(ctx, card.layout);
+  // Legacy image-first pipeline (kinds carry `recipe` / `item` / `src`).
   else if (card.kind === "process") await drawProcessCard(ctx, card.src, card.caption);
+  else if (card.kind === "component") await drawComponentCard(ctx, card.item, card.componentKind);
+  // Deprecated but retained for a rollback safety net.
+  else if (card.kind === "macros") drawMacroCard(ctx, card.recipe);
   else if (card.kind === "split") drawSplitCard(ctx, card.recipe);
   else if (card.kind === "bestfor") drawBestForCard(ctx, card.item);
-  else if (card.kind === "component") await drawComponentCard(ctx, card.item, card.componentKind);
-  else if (card.kind === "end") drawEndCard(ctx, card.recipe);
   else throw new Error(`Unknown social card kind: ${card.kind}`);
   return canvasToBlob(canvas);
 }
@@ -1170,10 +1171,12 @@ export default function SocialPage() {
     isPowerup,
     components,
   });
-  // Attach DOM renderer for the component card kind (SocialPage owns the
-  // inner component; would circular-import if imported by generator).
+  // Attach DOM renderers for card kinds whose inner components live in
+  // SocialPage (would circular-import if imported by generator).
   cards.forEach((c) => {
-    if (c.kind === "component" && !c.render) {
+    if (c.kind === "process" && !c.render) {
+      c.render = <ProcessImageCardInner src={c.src} caption={c.caption} />;
+    } else if (c.kind === "component" && !c.render) {
       const kind = classifyCookbook(c.item);
       c.componentKind = kind;
       c.render = <ComponentCardInner item={c.item} kind={kind} />;
@@ -1182,6 +1185,10 @@ export default function SocialPage() {
   // Unused legacy accumulators kept in scope but not appended. See git history
   // for the pre-Phase-4 sequence if a rollback is needed.
   void heroCard; void macrosCard; void middleCard; void componentCards; void processCards; void endCard;
+  // drawHeroCard / drawEndCard are legacy photo-first hero + end renderers
+  // superseded by the structured drawStructuredHero + drawStructuredEnd
+  // pipeline. Retained for rollback; reference so the linter doesn't flag them.
+  void drawHeroCard; void drawEndCard;
 
   async function saveAll() {
     if (saveAllBusy) return;

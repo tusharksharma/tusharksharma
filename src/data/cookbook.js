@@ -4510,11 +4510,16 @@ export const powerups = [
           accent: "amber",
           heading: "Method",
           items: [
-            { step: 1, text: "Crush the pretzels; reserve part for the garnish. Dip the glass rim in Skinny Syrups salted caramel, then press into crushed pretzels.", image: "/images/salted-caramel-pretzel-iced-proffee/step-02-pretzel-rim-polished.webp" },
-            { step: 2, text: "Add instant coffee, whey, monk fruit, and LorAnn caramel emulsion to the rimmed glass. Pour in 2 tbsp hot water and immersion-blend smooth.", image: "/images/salted-caramel-pretzel-iced-proffee/step-08-blend-concentrate-polished.webp" },
-            { step: 3, text: "Add ice, then stream in 1/2 cup fat-free ultra-filtered milk. Top with Reddi-wip Zero Sugar, drizzle more caramel, finish with the reserved pretzel crumble.", image: "/images/salted-caramel-pretzel-iced-proffee/step-12-pretzel-garnish-polished.webp" },
+            { number: 1, text: "Crush the pretzels; reserve part for the garnish. Dip the glass rim in Skinny Syrups salted caramel, then press into crushed pretzels." },
+            { number: 2, text: "Add instant coffee, whey, monk fruit, and LorAnn caramel emulsion to the rimmed glass. Pour in 2 tbsp hot water and immersion-blend smooth." },
+            { number: 3, text: "Add ice, then stream in 1/2 cup fat-free ultra-filtered milk. Top with Reddi-wip Zero Sugar, drizzle more caramel, finish with the reserved pretzel crumble." },
           ],
         },
+      ],
+      processCards: [
+        { src: "/images/salted-caramel-pretzel-iced-proffee/step-02-pretzel-rim-polished.webp", caption: "PRETZEL RIM" },
+        { src: "/images/salted-caramel-pretzel-iced-proffee/step-08-blend-concentrate-polished.webp", caption: "BLEND CONCENTRATE" },
+        { src: "/images/salted-caramel-pretzel-iced-proffee/step-12-pretzel-garnish-polished.webp", caption: "GARNISH" },
       ],
       servingGroups: [
         {
@@ -5551,12 +5556,17 @@ export const snackBoxes = [
           accent: "amber",
           heading: "Assembly",
           items: [
-            { step: 1, text: "SET UP: Four 4-compartment Bento-style boxes on the counter. Eggs peeled + chilled (make ahead up to 1 week).", image: "/images/sunshine-snack-box/step-01-slice-boiled-eggs-polished.webp" },
-            { step: 2, text: "SLICE + PLACE EGGS: Halve each egg (over-4s) or slice small (under-4s). One egg per box, yolk-side up — the sunshine identity moment.", image: "/images/sunshine-snack-box/step-02-add-boiled-eggs-polished.webp" },
-            { step: 3, text: "STRAWBERRIES + WEDGE: Add one ~60 cal portion of dried strawberries to compartment 2. Drop 1 wrapped cheese wedge into compartment 3.", image: "/images/sunshine-snack-box/step-04-add-cheese-wedges-polished.webp" },
-            { step: 4, text: "PEANUTS + LID: Weigh 0.75 oz salted peanuts into compartment 4 (omit for under-4s; sub soft berries or banana). Lid on, refrigerate promptly.", image: "/images/sunshine-snack-box/step-05-add-salted-peanuts-polished.webp" },
+            { number: 1, text: "Set out four 4-compartment Bento-style boxes on the counter. Eggs peeled + chilled ahead of time." },
+            { number: 2, text: "Halve each egg (over-4s) or slice small (under-4s). One egg per box, yolk-side up." },
+            { number: 3, text: "Add one ~60 cal portion of dried strawberries to compartment 2. Drop 1 wrapped cheese wedge into compartment 3." },
+            { number: 4, text: "Weigh 0.75 oz salted peanuts into compartment 4. Lid on, refrigerate promptly." },
           ],
         },
+      ],
+      processCards: [
+        { src: "/images/sunshine-snack-box/step-02-add-boiled-eggs-polished.webp", caption: "PLACE EGGS" },
+        { src: "/images/sunshine-snack-box/step-04-add-cheese-wedges-polished.webp", caption: "CHEESE + FRUIT" },
+        { src: "/images/sunshine-snack-box/final-four-sunshine-snack-boxes-polished.webp", caption: "READY FOR THE FRIDGE" },
       ],
       servingGroups: [
         {
