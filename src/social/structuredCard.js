@@ -62,12 +62,14 @@ export const ACCENTS = {
 };
 
 // ---------- CANVAS PRIMITIVES ----------
+// Exported so /social/hero.js and /social/generator.js can share the same
+// text/image helpers; keeps one code path for word-wrap + image loading.
 
-function font(weight, size) {
+export function font(weight, size) {
   return `${weight} ${size}px ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif`;
 }
 
-function loadImage(src) {
+export function loadImage(src) {
   return new Promise((resolve, reject) => {
     if (!src) { resolve(null); return; }
     const img = new Image();
@@ -78,7 +80,7 @@ function loadImage(src) {
   });
 }
 
-function drawCover(ctx, img, x, y, w, h) {
+export function drawCover(ctx, img, x, y, w, h) {
   if (!img) return;
   const iw = img.naturalWidth || img.width;
   const ih = img.naturalHeight || img.height;
@@ -93,8 +95,8 @@ function drawCover(ctx, img, x, y, w, h) {
 // Word-wrap helper. Returns the y-cursor AFTER the last drawn line.
 // Never overflows `maxLines`; if it would, the last visible line is
 // ellipsed. Callers relying on overflow detection should pre-measure
-// instead (Phase 2 validation).
-function drawWrapped(ctx, text, x, y, maxWidth, { size, weight, color, lineHeight, maxLines }) {
+// instead (see validateLayoutFitsCard() in ./generator.js).
+export function drawWrapped(ctx, text, x, y, maxWidth, { size, weight, color, lineHeight, maxLines }) {
   ctx.font = font(weight, size);
   ctx.fillStyle = color;
   ctx.textAlign = "left";

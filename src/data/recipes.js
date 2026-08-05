@@ -2441,6 +2441,94 @@ const recipes = [
     calories: 400,
     image: "/images/indo-chinese-chili-chicken/hero-split-adult-kid-plates-polished.webp",
     videoSrc: "/videos/indo-chinese-chili-chicken/indo-chinese-chili-chicken-400cal-35protein-marcus.mp4",
+    // Curated /social carousel spec. Author-facing shape documented in
+    // src/social/structuredCard.js. Per-group fallback: `undefined` = auto-derive.
+    socialCarousel: {
+      heroBadge: "Split Plate Dinner",
+      hook: "One crispy air-fry batch, split before any sauce. 400 cal / 35g protein per adult plate.",
+      heroPhoto: "/images/indo-chinese-chili-chicken/hero-split-adult-kid-plates-polished.webp",
+      ingredientsPhoto: "/images/indo-chinese-chili-chicken/context-chicken-chunks.webp",
+      methodPhoto: "/images/indo-chinese-chili-chicken/step-06-toss-until-glossy-polished.webp",
+      servingPhoto: "/images/indo-chinese-chili-chicken/hero-adult-chili-chicken-polished.webp",
+      ingredientGroups: [
+        {
+          accent: "amber",
+          heading: "Shared Base",
+          items: [
+            { quantity: "21 oz", ingredient: "lightly breaded chicken chunks", note: "14 oz adult + 7 oz smaller plate" },
+            { quantity: "as needed", ingredient: "avocado-oil spray" },
+          ],
+        },
+        {
+          accent: "coral",
+          heading: "Adult Finish",
+          items: [
+            { quantity: "8 oz", ingredient: "bell peppers + red onion", note: "large pieces" },
+            { quantity: "1 tbsp", ingredient: "Jet Tila's Umami Punch", note: "half on veg, half on adult chicken" },
+            { quantity: "1/2 tbsp", ingredient: "Kikkoman Thai-style chili sauce" },
+            { quantity: "1 tbsp", ingredient: "Ching's red chili sauce" },
+            { quantity: "1 tbsp", ingredient: "rice vinegar" },
+            { quantity: "1 tbsp", ingredient: "Kikkoman soy sauce" },
+            { quantity: "1/2 tbsp", ingredient: "sesame chili oil" },
+            { quantity: "1/2 tbsp", ingredient: "Lao Gan Ma fried chili in oil" },
+          ],
+        },
+        {
+          accent: "green",
+          heading: "Smaller Plate",
+          items: [
+            { quantity: "7 oz", ingredient: "reserved plain chicken", note: "what I served my girls (~3.5 oz each). Adjust for age and appetite." },
+            { quantity: "as needed", ingredient: "cucumber" },
+            { quantity: "2 slices", ingredient: "garlic bread" },
+            { quantity: "as needed", ingredient: "yellow mustard" },
+          ],
+        },
+      ],
+      methodGroups: [
+        {
+          accent: "amber",
+          heading: "Method",
+          items: [
+            { step: 1, text: "Air-fry all 21 oz chicken at 400°F for 10-12 min, shaking halfway." },
+            { step: 2, text: "SPLIT HERE: reserve 7 oz plain chicken before any seasoning or sauce touches the wok.", accent: "coral" },
+            { step: 3, text: "Mix the six-ingredient adult sauce in a glass. No slurry." },
+          ],
+        },
+        {
+          accent: "amber",
+          heading: "Method (Adult Wok)",
+          items: [
+            { step: 4, text: "Char peppers + red onion on high heat 3-5 min. Season with 1/2 tbsp Umami Punch." },
+            { step: 5, text: "Add remaining 14 oz chicken. Sprinkle with the remaining 1/2 tbsp Umami Punch." },
+            { step: 6, text: "Pour sauce, toss aggressively 45-75 seconds until glossy, kill the heat." },
+          ],
+        },
+      ],
+      servingGroups: [
+        {
+          accent: "coral",
+          heading: "Adult Plate",
+          items: [
+            { text: "7 oz glossy chili chicken + charred peppers/onions per plate." },
+          ],
+        },
+        {
+          accent: "green",
+          heading: "Smaller Plate",
+          items: [
+            { text: "Reserved plain chicken + cucumber + garlic bread + yellow mustard for dipping." },
+          ],
+        },
+        {
+          accent: "neutral",
+          heading: "Storage",
+          items: [
+            { text: "Best fresh. Store adult and plain chicken separately; reheat in the air fryer at 375°F for 3-4 min." },
+          ],
+        },
+      ],
+      engagementQuestion: "What Indo-Chinese dish should I try next?",
+    },
     role: "The Restaurant Flex",
     makeThisWhen: "You want Indo-Chinese takeout flavor at home — glossy, spicy, crispy chili chicken with charred peppers and onions. Kids get plain air-fried chicken with cucumber, garlic bread, and mustard. One crispy batch, two finishes.",
     hook: "One 21 oz air-fryer batch, split before any seasoning. Kids get 3.5 oz plain per plate with cucumber, garlic bread, and mustard. Adults get 7 oz tossed with charred peppers, onions, and a six-ingredient glaze — no slurry, no simmer, just gloss.",

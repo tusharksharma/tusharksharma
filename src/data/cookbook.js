@@ -4480,6 +4480,60 @@ export const powerups = [
     title: "Salted Caramel Pretzel Iced Proffee",
     tagline: "Proffee Episode 3 — Ep 1's concentrate technique with a Snyder's pretzel + Skinny Syrups salted caramel rim, LorAnn caramel emulsion in the concentrate, and Reddi-wip Zero Sugar on top. 140 cal / 21g protein per glass, 5-minute build.",
     heroImage: "/images/salted-caramel-pretzel-iced-proffee/hero-salted-caramel-pretzel-iced-proffee-polished.webp",
+    socialCarousel: {
+      heroBadge: "Proffee · Episode 3",
+      heroAccent: "amber",
+      hook: "5-minute iced protein coffee with a salted-caramel-pretzel rim. 140 cal / 21g protein per glass.",
+      heroPhoto: "/images/salted-caramel-pretzel-iced-proffee/hero-salted-caramel-pretzel-iced-proffee-polished.webp",
+      ingredientsPhoto: "/images/salted-caramel-pretzel-iced-proffee/context-crushed-pretzels.webp",
+      methodPhoto: "/images/salted-caramel-pretzel-iced-proffee/step-08-blend-concentrate-polished.webp",
+      servingPhoto: "/images/salted-caramel-pretzel-iced-proffee/hero-salted-caramel-pretzel-iced-proffee-polished.webp",
+      ingredientGroups: [
+        {
+          accent: "amber",
+          heading: "Ingredients",
+          items: [
+            { quantity: "0.25 oz", ingredient: "Snyder's mini pretzels", note: "crushed, split between rim + garnish" },
+            { quantity: "to taste", ingredient: "Skinny Syrups Sugar-Free Salted Caramel" },
+            { quantity: "1/2 tbsp", ingredient: "instant coffee" },
+            { quantity: "1/2 serving", ingredient: "unflavored whey isolate" },
+            { quantity: "2 tsp", ingredient: "monk fruit sweetener" },
+            { quantity: "1/2 tsp", ingredient: "LorAnn caramel bakery emulsion" },
+            { quantity: "2-3 tbsp", ingredient: "hot water" },
+            { quantity: "1/2 cup", ingredient: "fat-free ultra-filtered milk" },
+            { quantity: "1 tbsp", ingredient: "Reddi-wip Zero Sugar" },
+          ],
+        },
+      ],
+      methodGroups: [
+        {
+          accent: "amber",
+          heading: "Method",
+          items: [
+            { step: 1, text: "Crush the pretzels; reserve part for the garnish. Dip the glass rim in Skinny Syrups salted caramel, then press into crushed pretzels." },
+            { step: 2, text: "Add instant coffee, whey, monk fruit, and LorAnn caramel emulsion to the rimmed glass. Pour in 2 tbsp hot water and immersion-blend smooth." },
+            { step: 3, text: "Add ice, then stream in 1/2 cup fat-free ultra-filtered milk. Top with Reddi-wip Zero Sugar, drizzle more caramel, finish with the reserved pretzel crumble." },
+          ],
+        },
+      ],
+      servingGroups: [
+        {
+          accent: "amber",
+          heading: "Serve",
+          items: [
+            { text: "Straight up, ice-cold, as one 140-cal / 21g-protein glass. Blend the whey INTO the concentrate before the milk hits to keep it clump-free." },
+          ],
+        },
+        {
+          accent: "neutral",
+          heading: "Storage",
+          items: [
+            { text: "Best served immediately. The blended concentrate can hold 24 hrs in the fridge (no ice, milk, rim, or toppings)." },
+          ],
+        },
+      ],
+      engagementQuestion: "What flavor should Proffee Episode 4 be?",
+    },
     prepImage: "/images/salted-caramel-pretzel-iced-proffee/step-08-blend-concentrate-polished.webp",
     // socialImages — Path A polished, 6-cap per [feedback-social-images-step-order].
     // Order: rim setup → concentrate flavor → blended concentrate → milk
@@ -5462,6 +5516,73 @@ export const snackBoxes = [
     title: "Sunshine Snack Box",
     tagline: "Snack Box Series Ep. 9 — a warm-color palette snack box named for the yolk-yellow / strawberry-red / cheese-cream / peanut-tan color story. Boiled egg + dried strawberries + light cheese wedge + salted peanuts. About 280 cal / 16g protein per box. Make four for 2 kids × 2 days.",
     heroImage: "/images/sunshine-snack-box/hero-sunshine-snack-box-polished.webp",
+    socialCarousel: {
+      heroBadge: "Snack Box · Episode 9",
+      heroAccent: "amber",
+      hook: "Warm-color palette snack box — boiled egg, dried strawberries, cheese wedge, salted peanuts. ~280 cal / 16g protein per box. Make four.",
+      heroPhoto: "/images/sunshine-snack-box/hero-sunshine-snack-box-polished.webp",
+      ingredientsPhoto: "/images/sunshine-snack-box/step-02-add-boiled-eggs-polished.webp",
+      methodPhoto: "/images/sunshine-snack-box/step-04-add-cheese-wedges-polished.webp",
+      servingPhoto: "/images/sunshine-snack-box/final-four-sunshine-snack-boxes-polished.webp",
+      ingredientGroups: [
+        {
+          accent: "amber",
+          heading: "Per Box",
+          items: [
+            { quantity: "1", ingredient: "large hard-boiled egg", note: "peeled + sliced age-appropriate" },
+            { quantity: "~60 cal", ingredient: "dried strawberries", note: "1 label serving" },
+            { quantity: "1", ingredient: "light cheese wedge", note: "Laughing Cow-style, wrapped" },
+            { quantity: "0.75 oz", ingredient: "salted peanuts", note: "developmentally appropriate ages only" },
+          ],
+        },
+        {
+          accent: "neutral",
+          heading: "Four-Box Batch",
+          items: [
+            { quantity: "4", ingredient: "large hard-boiled eggs" },
+            { quantity: "4 portions", ingredient: "dried strawberries", note: "~240 cal total" },
+            { quantity: "4", ingredient: "wrapped light cheese wedges" },
+            { quantity: "3 oz", ingredient: "salted peanuts" },
+          ],
+        },
+      ],
+      methodGroups: [
+        {
+          accent: "amber",
+          heading: "Assembly",
+          items: [
+            { step: 1, text: "SET UP: Four 4-compartment Bento-style boxes on the counter. Eggs peeled + chilled (make ahead up to 1 week)." },
+            { step: 2, text: "SLICE + PLACE EGGS: Halve each egg (over-4s) or slice small (under-4s). One egg per box, yolk-side up — the sunshine identity moment." },
+            { step: 3, text: "STRAWBERRIES + WEDGE: Add one ~60 cal portion of dried strawberries to compartment 2. Drop 1 wrapped cheese wedge into compartment 3." },
+            { step: 4, text: "PEANUTS + LID: Weigh 0.75 oz salted peanuts into compartment 4 (omit for under-4s; sub soft berries or banana). Lid on, refrigerate promptly." },
+          ],
+        },
+      ],
+      servingGroups: [
+        {
+          accent: "amber",
+          heading: "Serve",
+          items: [
+            { text: "Serve chilled from the box. ~280 cal / 16g protein per box — adult-friendly too; steal one from the meal-prep stack." },
+          ],
+        },
+        {
+          accent: "green",
+          heading: "Kid Safety",
+          items: [
+            { text: "Under 4: omit whole peanuts entirely and sub soft berries, banana slices, or diced apple. Slice egg small (halved is too big). Per CDC + AAP." },
+          ],
+        },
+        {
+          accent: "neutral",
+          heading: "Storage + School Safety",
+          items: [
+            { text: "Assembled boxes hold 2 days chilled. Add peanuts closer to serving for max crunch. NOT school-safe by default — peanuts are the #1 school-restricted allergen; check the school policy before packing outside the home." },
+          ],
+        },
+      ],
+      engagementQuestion: "Which compartment disappears first in your house?",
+    },
     // prepImage — final-four shows the completed lineup with the warm-color
     // sunshine palette on display. Matches Ep. 8's fridge-ready pose but
     // the color story is the identity here. Raw for now; swap to

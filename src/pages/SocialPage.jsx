@@ -3,6 +3,10 @@ import { useParams, Link } from "react-router-dom";
 import { liveRecipes } from "../data/recipes";
 import { sauces, bases, breakfasts, desserts, quickLunches, powerups, snackBoxes } from "../data/cookbook";
 import useMeta from "../hooks/useMeta";
+import { buildStructuredCards } from "../social/generator.jsx";
+import { drawStructuredCard } from "../social/structuredCard";
+import { drawStructuredHero } from "../social/hero.jsx";
+import { drawStructuredEnd } from "../social/end.jsx";
 
 const ALL_COOKBOOK = [...sauces, ...bases, ...breakfasts, ...desserts, ...quickLunches, ...powerups, ...snackBoxes];
 
@@ -631,7 +635,12 @@ function drawBestForCard(ctx, item) {
 
 async function renderSocialCardToBlob(card) {
   const { canvas, ctx } = makeCanvas();
-  if (card.kind === "hero") await drawHeroCard(ctx, card.recipe);
+  // New structured pipeline (kinds carry a `layout` object).
+  if (card.layout && card.kind === "hero") await drawStructuredHero(ctx, card.layout);
+  else if (card.layout && card.kind === "end") drawStructuredEnd(ctx, card.layout);
+  else if (card.layout && (card.kind === "ingredients" || card.kind === "method" || card.kind === "serving")) await drawStructuredCard(ctx, card.layout);
+  // Legacy pipeline (kinds carry `recipe` / `item` / `src`).
+  else if (card.kind === "hero") await drawHeroCard(ctx, card.recipe);
   else if (card.kind === "macros") drawMacroCard(ctx, card.recipe);
   else if (card.kind === "process") await drawProcessCard(ctx, card.src, card.caption);
   else if (card.kind === "split") drawSplitCard(ctx, card.recipe);
@@ -1138,24 +1147,25 @@ export default function SocialPage() {
   const macrosCard = { id: "macros", kind: "macros", label: "Card · Macros", filename: `${slugForFiles}-2-macros`, recipe, render: <MacroCardInner recipe={recipe} /> };
   const endCard = { id: "end", kind: "end", label: "Card · End / Recipe Link", filename: `${slugForFiles}-end`, recipe, render: <EndCardInner recipe={recipe} /> };
 
-  // Instagram carousel max = 10 cards. Reserved slots: Hero + Macros +
-  // middleCard + End + componentCards = 4 + N components. Remaining slots
-  // go to process images. When socialImages count pushes the total over 10,
-  // drop excess PROCESS cards — never the End card (broke the recipe-link
-  // close on dot cake which had 10 socialImages).
-  const reservedCount = 4 + componentCards.length;
-  const maxProcess = Math.max(0, 10 - reservedCount);
-  const trimmedProcessCards = processCards.slice(0, maxProcess);
-
-  const cards = [
-    heroCard,
-    macrosCard,
-    ...(trimmedProcessCards[0] ? [trimmedProcessCards[0]] : []),
-    middleCard,
-    ...componentCards,
-    ...trimmedProcessCards.slice(1),
-    endCard,
-  ];
+  // ---------- NEW STRUCTURED CAROUSEL GENERATOR (default post-Phase-4) ----------
+  // Every recipe now flows through the new generator. Recipes with a curated
+  // `socialCarousel` field get authored blocks; others auto-derive from
+  // ingredients/splitCook/steps/mealPrep. Legacy card kinds (hero/macros/
+  // split/process/component/end) remain available in the canvas dispatch and
+  // in the DOM components above, so any future opt-out is a one-line flip.
+  const isSnackBox = isCookbook && snackBoxes.some((sb) => sb.id === id);
+  const isPowerup = isCookbook && powerups.some((p) => p.id === id);
+  const cards = buildStructuredCards(recipe, {
+    slugForFiles,
+    slug: isCookbook ? id : slug,
+    isCookbook,
+    isSnackBox,
+    isPowerup,
+    cookbookItem,
+  });
+  // Unused legacy accumulators kept in scope but not appended. See git history
+  // for the pre-Phase-4 sequence if a rollback is needed.
+  void heroCard; void macrosCard; void middleCard; void componentCards; void processCards; void endCard;
 
   async function saveAll() {
     if (saveAllBusy) return;
