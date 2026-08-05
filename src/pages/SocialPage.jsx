@@ -1169,15 +1169,11 @@ export default function SocialPage() {
     isSnackBox,
     isPowerup,
     components,
-    processImages,
   });
-  // Attach DOM renderers for legacy card kinds the generator emits without a
-  // React node (process + component). SocialPage owns those components so we
-  // patch them here to avoid a circular import.
+  // Attach DOM renderer for the component card kind (SocialPage owns the
+  // inner component; would circular-import if imported by generator).
   cards.forEach((c) => {
-    if (c.kind === "process" && !c.render) {
-      c.render = <ProcessImageCardInner src={c.src} caption={c.caption} />;
-    } else if (c.kind === "component" && !c.render) {
+    if (c.kind === "component" && !c.render) {
       const kind = classifyCookbook(c.item);
       c.componentKind = kind;
       c.render = <ComponentCardInner item={c.item} kind={kind} />;

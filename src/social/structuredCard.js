@@ -41,11 +41,13 @@
 export const EXPORT_SIZE = 1080;
 export const SAFE_MARGIN = 72;
 
-// Photo-strip heights per card kind, from the design brief.
+// Photo-strip heights per card kind. Revised post-first-run: original 240/300
+// strips read as decorative thumbnails; bumping to 420/500/600 makes the card
+// feel photo-first while shrinking the text budget to the essentials.
 export const PHOTO_STRIP_HEIGHTS = {
-  ingredients: 240,
-  method: 300,
-  serving: 520,
+  ingredients: 420,
+  method: 500,
+  serving: 600,
 };
 
 // Accent palette. Matches the existing split-card colors in SocialPage.jsx

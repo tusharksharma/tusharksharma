@@ -36,10 +36,16 @@ import { buildEndLayout, EndStructuredInner } from "./end.jsx";
 
 // Soft cap for ITEMS on a single ingredient card. Groups stay whole when
 // they fit; if a single group exceeds this, its items are split into
-// two blocks with "(1/2)" / "(2/2)" suffixes.
-const INGREDIENT_ITEMS_PER_CARD = 9;
-// Method steps per card — brief says max 3.
-const METHOD_STEPS_PER_CARD = 3;
+// halves with "(1/2)" / "(2/2)" suffixes.
+const INGREDIENT_ITEMS_PER_CARD = 5;
+// Up to 3 ingredient cards when a recipe has too many items to fit under
+// the per-card cap. Fourth ingredient card would push past the 10-card total.
+const MAX_INGREDIENT_CARDS = 3;
+// Method steps per card — bumped photos leave room for only ~2 steps.
+const METHOD_STEPS_PER_CARD = 2;
+// Ceiling on method cards. Combined with the 10-card total, this caps the
+// worst case: 1 hero + 3 ingredients + 5 methods + 1 end = 10.
+const MAX_METHOD_CARDS = 5;
 
 export function buildStructuredCards(recipe, opts) {
   const {
@@ -50,7 +56,6 @@ export function buildStructuredCards(recipe, opts) {
     isPowerup,
     photoMap,          // { hero, ingredients, method, serving } — optional overrides from curated data
     components = [],   // linked cookbook components (dinner recipes only)
-    processImages = [],// polished process images from recipe.socialImages
   } = opts;
 
   const sc = recipe.socialCarousel || {};
@@ -135,20 +140,8 @@ export function buildStructuredCards(recipe, opts) {
     });
   }
 
-  // 6. Process card — up to 1. Uses first polished image not already assigned
-  //    to hero / ingredients / method / serving.
-  const usedPhotos = new Set([heroPhoto, ingredientsPhoto, methodPhoto, servingPhoto].filter(Boolean));
-  const processCandidate = (processImages || []).find((p) => p && p.src && !usedPhotos.has(p.src));
-  if (processCandidate) {
-    cards.push({
-      id: "process",
-      kind: "process",
-      label: "Card · Process",
-      filename: `${slugForFiles}-process`,
-      src: processCandidate.src,
-      caption: processCandidate.caption,
-    });
-  }
+  // 6. Process card intentionally removed — method cards now carry the action
+  //    photos in-flow, so a standalone process card would duplicate content.
 
   // 7. End — always last.
   cards.push({
@@ -185,20 +178,20 @@ export function buildStructuredCards(recipe, opts) {
 
 function pickDroppableIndex(cards) {
   // Never drop hero (0) or end (last) or the FIRST ingredient/method card.
-  // Priority: process → component → serving → 2nd ingredient → last method.
+  // Priority: component → serving → last method → last ingredient.
+  // Method drops before ingredients because a step can move to the caption;
+  // an ingredient cannot.
   const kinds = cards.map((c) => c.kind);
-  const process = kinds.indexOf("process");
-  if (process !== -1) return process;
   const component = kinds.indexOf("component");
   if (component !== -1) return component;
   const lastServing = kinds.lastIndexOf("serving");
   if (lastServing !== -1) return lastServing;
-  const firstIng = kinds.indexOf("ingredients");
-  const lastIng = kinds.lastIndexOf("ingredients");
-  if (lastIng !== firstIng) return lastIng;
   const firstMethod = kinds.indexOf("method");
   const lastMethod = kinds.lastIndexOf("method");
   if (lastMethod !== firstMethod) return lastMethod;
+  const firstIng = kinds.indexOf("ingredients");
+  const lastIng = kinds.lastIndexOf("ingredients");
+  if (lastIng !== firstIng) return lastIng;
   return -1;
 }
 
@@ -272,22 +265,33 @@ function splitQuantity(text) {
 
 // Auto-derive method blocks.
 // For split-plate recipes, weave a "SPLIT HERE" callout between shared and adult steps.
+// Attach per-step images from recipe.splitCook / recipe.steps so each method
+// card can pick up its own action photo.
 function deriveMethodBlocks(recipe) {
   const split = recipe.splitCook;
+  const firstImage = (s) => (s && s.images && s.images[0]) || (s && s.image) || null;
 
   if (split && (split.sharedSteps?.length || split.adult?.steps?.length)) {
     const items = [];
     let stepN = 1;
 
     (split.sharedSteps || []).forEach((s) => {
-      items.push({ step: stepN++, text: cleanStepText(typeof s === "object" ? s.text : s) });
+      items.push({
+        step: stepN++,
+        text: cleanStepText(typeof s === "object" ? s.text : s),
+        image: firstImage(s),
+      });
     });
 
     // SPLIT HERE marker as a pseudo-step (no number).
     items.push({ step: null, text: "SPLIT HERE — kid portion set aside; everything after this is the adult finish.", accent: "coral" });
 
     (split.adult?.steps || []).forEach((s) => {
-      items.push({ step: stepN++, text: cleanStepText(typeof s === "object" ? s.text : s) });
+      items.push({
+        step: stepN++,
+        text: cleanStepText(typeof s === "object" ? s.text : s),
+        image: firstImage(s),
+      });
     });
 
     return [{ accent: "amber", heading: "Method", items }];
@@ -297,6 +301,7 @@ function deriveMethodBlocks(recipe) {
   const items = (recipe.steps || recipe.method || []).map((s, i) => ({
     step: i + 1,
     text: cleanStepText(typeof s === "object" ? (s.text || s.instruction) : s) || "",
+    image: firstImage(s),
   }));
   return [{ accent: "amber", heading: "Method", items }];
 }
@@ -318,111 +323,135 @@ function deriveServingBlocks(recipe) {
 
 // ---------- CARD SPLITTERS ----------
 
-// Distribute ingredient blocks across ≤2 cards, respecting the 9-item cap.
+// Distribute ingredient blocks across ≤MAX_INGREDIENT_CARDS cards, each up to
+// INGREDIENT_ITEMS_PER_CARD items.
 // Rules:
 //   1. Count only items (headings render smaller than an item line).
-//   2. Preserve block boundaries when the block fits.
-//   3. If a single block exceeds the cap, split its items in two blocks with
-//      "(1/2)" / "(2/2)" heading suffixes.
-//   4. Fill card 1 greedily up to the cap; overflow → card 2.
-//   5. If card 2 also overflows, rebalance: aim for total/2 items per card.
+//   2. Fill each card greedily up to the cap; walk blocks in order.
+//   3. When a block bridges the boundary, split it: put what fits on the
+//      current card, remainder on the next. Split blocks get "(N/M)" suffix
+//      based on the number of sub-slices produced.
+//   4. Never exceed MAX_INGREDIENT_CARDS. If overflow remains, the last
+//      card absorbs it (validation will warn).
 function splitBlocksIntoIngredientCards(blocks, { slugForFiles, photoSrc, recipe }) {
-  // Step 1: split any oversized block into two.
-  const normalized = [];
-  for (const b of blocks) {
-    const items = b.items || [];
-    if (items.length <= INGREDIENT_ITEMS_PER_CARD) {
-      normalized.push(b);
-    } else {
-      const mid = Math.ceil(items.length / 2);
-      normalized.push({ ...b, heading: `${b.heading} (1/2)`, items: items.slice(0, mid) });
-      normalized.push({ ...b, heading: `${b.heading} (2/2)`, items: items.slice(mid), subhead: undefined });
-    }
-  }
+  const cardsGroups = [[]];
+  let currentItems = 0;
+  const cardIdx = () => cardsGroups.length - 1;
+  const partsOfBlock = new Map(); // heading → parts pushed so far, for (n/m) numbering later
 
-  const totalItems = normalized.reduce((sum, b) => sum + (b.items || []).length, 0);
+  const pushToCurrent = (block) => {
+    cardsGroups[cardIdx()].push(block);
+    currentItems += (block.items || []).length;
+    partsOfBlock.set(block.heading, (partsOfBlock.get(block.heading) || 0) + 1);
+  };
 
-  // Step 2: single card if it all fits.
-  if (totalItems <= INGREDIENT_ITEMS_PER_CARD) {
-    return [makeIngredientCard(normalized, 0, 1, { slugForFiles, photoSrc, recipe })];
-  }
+  const startNextCard = () => {
+    if (cardsGroups.length >= MAX_INGREDIENT_CARDS) return false;
+    cardsGroups.push([]);
+    currentItems = 0;
+    return true;
+  };
 
-  // Step 3: two-card split. Target ~half items per card; keep whole blocks
-  // when possible; if a block bridges the boundary, split it there.
-  const target = Math.ceil(totalItems / 2);
-  const groupsCard1 = [];
-  const groupsCard2 = [];
-  let card1Items = 0;
-  let boundaryCrossed = false;
-
-  for (const block of normalized) {
-    if (boundaryCrossed) {
-      groupsCard2.push(block);
-      continue;
-    }
+  for (const block of blocks) {
     const items = block.items || [];
-    if (card1Items + items.length <= target) {
-      groupsCard1.push(block);
-      card1Items += items.length;
-    } else {
-      const room = target - card1Items;
-      if (room >= 2 && items.length - room >= 2) {
-        // Split the block: put `room` items on card 1, rest on card 2.
-        groupsCard1.push({ ...block, heading: `${block.heading} (1/2)`, items: items.slice(0, room) });
-        groupsCard2.push({ ...block, heading: `${block.heading} (2/2)`, items: items.slice(room), subhead: undefined });
-      } else {
-        // Not worth splitting; push whole block to card 2.
-        groupsCard2.push(block);
+    let idx = 0;
+    while (idx < items.length) {
+      const room = INGREDIENT_ITEMS_PER_CARD - currentItems;
+      if (room <= 0) {
+        if (!startNextCard()) break;
+        continue;
       }
-      boundaryCrossed = true;
+      if (items.length - idx <= room) {
+        // Whole remaining block fits on the current card.
+        const slice = items.slice(idx);
+        pushToCurrent({ ...block, items: slice });
+        idx = items.length;
+      } else {
+        // Split: `room` items on current, rest on next card.
+        const slice = items.slice(idx, idx + room);
+        pushToCurrent({ ...block, items: slice });
+        idx += room;
+        if (!startNextCard()) {
+          // Ran out of cards — dump remainder on the last card.
+          cardsGroups[cardIdx()].push({ ...block, items: items.slice(idx) });
+          currentItems += items.length - idx;
+          idx = items.length;
+        }
+      }
     }
   }
 
-  return [
-    makeIngredientCard(groupsCard1, 0, 2, { slugForFiles, photoSrc, recipe }),
-    makeIngredientCard(groupsCard2, 1, 2, { slugForFiles, photoSrc, recipe }),
-  ];
-}
+  // Number split blocks. If a block appears once, keep its heading; if it
+  // appears twice, label them "Heading (1/2)" / "Heading (2/2)"; etc.
+  const totalParts = {};
+  cardsGroups.flat().forEach((b) => {
+    totalParts[b.heading] = (totalParts[b.heading] || 0) + 1;
+  });
+  const seenParts = {};
+  cardsGroups.forEach((groups) => {
+    groups.forEach((b, i) => {
+      const total = totalParts[b.heading];
+      if (total > 1) {
+        seenParts[b.heading] = (seenParts[b.heading] || 0) + 1;
+        groups[i] = { ...b, heading: `${b.heading} (${seenParts[b.heading]}/${total})` };
+      }
+    });
+  });
 
-function makeIngredientCard(groups, i, totalCards, { slugForFiles, photoSrc, recipe }) {
-  const label = totalCards === 1
-    ? "Card · Ingredients"
-    : `Card · Ingredients (${i + 1}/${totalCards})`;
-  return {
+  const totalCards = cardsGroups.length;
+  return cardsGroups.map((groups, i) => ({
     id: `ingredients-${i + 1}`,
     kind: "ingredients",
-    label,
+    label: totalCards === 1 ? "Card · Ingredients" : `Card · Ingredients (${i + 1}/${totalCards})`,
     filename: `${slugForFiles}-ingredients-${i + 1}`,
     layout: buildIngredientsLayout(recipe, { ingredientGroups: groups }, { index: 0, total: 0, photoSrc }),
-  };
+  }));
 }
 
-// Distribute method into ≤3 cards. Each card holds up to METHOD_STEPS_PER_CARD steps.
+// Distribute method into ≤MAX_METHOD_CARDS cards, each holding up to
+// METHOD_STEPS_PER_CARD steps. Each card takes its OWN photo from the first
+// item's `image` field, falling back to methodPhoto when no item image is set.
 function splitBlocksIntoMethodCards(blocks, { slugForFiles, photoSrc, recipe }) {
-  // We treat the derivation as one canonical flat block; ignore multi-block
-  // curated for now (Phase 2 test recipes are single-block methods).
+  // Flatten curated / auto-derived blocks. Items already carry a `step`,
+  // `text`, and optional `image` field (from curated data or auto-derive).
   const allItems = blocks.flatMap((b) => b.items || []);
-  const chunks = [];
+  let chunks = [];
   for (let i = 0; i < allItems.length; i += METHOD_STEPS_PER_CARD) {
     chunks.push(allItems.slice(i, i + METHOD_STEPS_PER_CARD));
   }
-  if (chunks.length > 3) {
-    // Overflow: merge tail into card 3, trimming any excess by tightening
-    // the split into 3 near-even chunks instead of chopping.
-    const perCard = Math.ceil(allItems.length / 3);
-    chunks.length = 0;
+  if (chunks.length > MAX_METHOD_CARDS) {
+    // Rebalance across MAX_METHOD_CARDS chunks instead of dropping steps.
+    const perCard = Math.ceil(allItems.length / MAX_METHOD_CARDS);
+    chunks = [];
     for (let i = 0; i < allItems.length; i += perCard) chunks.push(allItems.slice(i, i + perCard));
   }
 
-  return chunks.map((items, i) => ({
-    id: `method-${i + 1}`,
-    kind: "method",
-    label: chunks.length === 1 ? "Card · Method" : `Card · Method (${i + 1}/${chunks.length})`,
-    filename: `${slugForFiles}-method-${i + 1}`,
-    layout: buildMethodLayout(recipe, { methodGroups: [{ accent: "amber", heading: chunks.length === 1 ? "Method" : `Method (Part ${i + 1})`, items }] }, {
-      index: 0, total: 0, photoSrc,
-    }),
-  }));
+  return chunks.map((items, i) => {
+    const cardPhoto = pickMethodCardPhoto(items, recipe, i) || photoSrc;
+    return {
+      id: `method-${i + 1}`,
+      kind: "method",
+      label: chunks.length === 1 ? "Card · Method" : `Card · Method (${i + 1}/${chunks.length})`,
+      filename: `${slugForFiles}-method-${i + 1}`,
+      layout: buildMethodLayout(recipe, { methodGroups: [{ accent: "amber", heading: chunks.length === 1 ? "Method" : `Method (${i + 1}/${chunks.length})`, items }] }, {
+        index: 0, total: 0, photoSrc: cardPhoto,
+      }),
+    };
+  });
+}
+
+// Pick a photo for a method card. Priority:
+//   1. First item's `image` field (curated data can set this per-step)
+//   2. recipe.socialImages[cardIndex] if it looks like a step image
+//   3. null (caller falls back to shared methodPhoto)
+function pickMethodCardPhoto(items, recipe, cardIndex) {
+  for (const item of items) {
+    if (item && item.image) return item.image;
+  }
+  if (Array.isArray(recipe.socialImages) && recipe.socialImages[cardIndex]) {
+    return recipe.socialImages[cardIndex];
+  }
+  return null;
 }
 
 // ---------- REACT RENDERERS ----------
@@ -444,10 +473,9 @@ export function validateCards(cards, recipe) {
   if (cards.length > 10) errors.push(`Card count ${cards.length} exceeds 10.`);
   if (!cards.some((c) => c.kind === "ingredients")) errors.push(`No ingredient card produced for ${recipe.title || recipe.slug}.`);
   if (!cards.some((c) => c.kind === "method")) errors.push(`No method card produced for ${recipe.title || recipe.slug}.`);
-  if (cards.filter((c) => c.kind === "ingredients").length > 2) errors.push(`More than 2 ingredient cards.`);
-  if (cards.filter((c) => c.kind === "method").length > 3) errors.push(`More than 3 method cards.`);
+  if (cards.filter((c) => c.kind === "ingredients").length > MAX_INGREDIENT_CARDS) errors.push(`More than ${MAX_INGREDIENT_CARDS} ingredient cards.`);
+  if (cards.filter((c) => c.kind === "method").length > MAX_METHOD_CARDS) errors.push(`More than ${MAX_METHOD_CARDS} method cards.`);
   if (cards.filter((c) => c.kind === "component").length > 1) errors.push(`More than 1 component card.`);
-  if (cards.filter((c) => c.kind === "process").length > 1) errors.push(`More than 1 process card.`);
   if (cards[0]?.kind !== "hero") errors.push(`First card must be hero (got ${cards[0]?.kind}).`);
   if (cards[cards.length - 1]?.kind !== "end") errors.push(`Last card must be end (got ${cards[cards.length - 1]?.kind}).`);
 
