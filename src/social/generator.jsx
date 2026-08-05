@@ -303,12 +303,30 @@ function deriveMethodSections(recipe) {
 // Legacy "AIR FRY: All 21 oz..." → { heading: "AIR FRY", body: "All 21 oz..." }.
 // Recipes without an ALL-CAPS prefix become one big body with a generic
 // heading; author is expected to curate methodGroups directly for the
-// carousel-quality version.
+// carousel-quality version. The compact card only has room for ~one line
+// of body text, so we take the first sentence and hard-cap at 90 chars.
 function splitActionHeading(text) {
   const t = String(text || "").trim();
   const m = t.match(/^([A-Z][A-Z\s]{1,20}):\s*(.*)$/);
-  if (m) return { heading: m[1].trim(), body: m[2].trim() };
-  return { heading: "Step", body: t };
+  const heading = m ? titleCase(m[1].trim()) : "Step";
+  const rest = m ? m[2].trim() : t;
+  return { heading, body: firstSentence(rest, 90) };
+}
+
+function titleCase(s) {
+  return s.split(/\s+/).map((w) => w.charAt(0) + w.slice(1).toLowerCase()).join(" ");
+}
+
+function firstSentence(text, maxChars) {
+  const t = String(text || "").trim();
+  if (!t) return "";
+  // First sentence up to the first ". ", "! " or "? "
+  const m = t.match(/^[^.!?]*[.!?](?=\s|$)/);
+  let out = m ? m[0].trim() : t;
+  if (out.length > maxChars) {
+    out = out.slice(0, maxChars - 1).replace(/\s+\S*$/, "").trimEnd() + "…";
+  }
+  return out;
 }
 
 export function normalizeMethodSections(sections) {

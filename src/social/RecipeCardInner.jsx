@@ -131,6 +131,10 @@ function Header({ layout }) {
           fontSize: `${P.titleSize * S}px`,
           lineHeight: `${P.titleLineHeight * S}px`,
           color: T.text,
+          display: "-webkit-box",
+          WebkitLineClamp: 3,
+          WebkitBoxOrient: "vertical",
+          overflow: "hidden",
         }}
       >
         {layout.recipeName}
@@ -180,11 +184,14 @@ function IngredientRow({ item }) {
           fontSize: `${P.ingredientQuantitySize * S}px`,
           lineHeight: `${P.ingredientLineHeight * S}px`,
           color: accentColorFor(item.accent),
+          overflow: "hidden",
+          textOverflow: "ellipsis",
+          whiteSpace: "nowrap",
         }}
       >
         {item.quantity}
       </div>
-      <div>
+      <div style={{ minWidth: 0 }}>
         <div
           style={{
             fontFamily: FONT_SANS,
@@ -192,6 +199,10 @@ function IngredientRow({ item }) {
             fontSize: `${P.ingredientTextSize * S}px`,
             lineHeight: `${P.ingredientLineHeight * S}px`,
             color: T.text,
+            display: "-webkit-box",
+            WebkitLineClamp: 2,
+            WebkitBoxOrient: "vertical",
+            overflow: "hidden",
           }}
         >
           {item.text}
@@ -205,6 +216,10 @@ function IngredientRow({ item }) {
               fontSize: `${P.ingredientNoteSize * S}px`,
               lineHeight: `${P.ingredientNoteLineHeight * S}px`,
               color: T.muted,
+              display: "-webkit-box",
+              WebkitLineClamp: 2,
+              WebkitBoxOrient: "vertical",
+              overflow: "hidden",
             }}
           >
             {item.note}
@@ -247,7 +262,7 @@ function MethodRow({ item }) {
       >
         {nn}
       </div>
-      <div>
+      <div style={{ minWidth: 0 }}>
         <div
           style={{
             fontFamily: FONT_SANS,
@@ -257,6 +272,9 @@ function MethodRow({ item }) {
             textTransform: "uppercase",
             color: T.text,
             marginTop: `${8 * S}px`,
+            overflow: "hidden",
+            textOverflow: "ellipsis",
+            whiteSpace: "nowrap",
           }}
         >
           {item.heading}
@@ -269,6 +287,10 @@ function MethodRow({ item }) {
             fontSize: `${P.stepBodySize * S}px`,
             lineHeight: `${P.stepBodyLineHeight * S}px`,
             color: T.muted,
+            display: "-webkit-box",
+            WebkitLineClamp: 3,
+            WebkitBoxOrient: "vertical",
+            overflow: "hidden",
           }}
         >
           {item.body}
