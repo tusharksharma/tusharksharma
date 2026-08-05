@@ -36,7 +36,7 @@ import React from "react";
 import { resolveGroup } from "./structuredCard";
 import { buildHeroLayout, HeroStructuredInner } from "./hero.jsx";
 import { buildEndLayout, EndStructuredInner } from "./end.jsx";
-import { paginateIngredientCards, paginateMethodCards } from "./recipeCard";
+import { paginateIngredientCards, paginateMethodCards, paginateServingCards } from "./recipeCard";
 import RecipeCardInner from "./RecipeCardInner.jsx";
 
 const MAX_INGREDIENT_CARDS = 2;
@@ -157,26 +157,27 @@ export function buildStructuredCards(recipe, opts) {
   });
 
   if (servingBlocks && servingBlocks.length > 0) {
-    // Serving card uses the same 58/42 recipe-card layout so the visual
-    // system stays consistent across the carousel. Photo alternates with
-    // the method cards; engagementQuestion is intentionally NOT rendered
-    // here — it lives only on the final End card.
-    const imageSide = alternate++ % 2 === 0 ? "right" : "left";
-    cards.push({
-      id: "serving",
-      kind: "recipe-serving",
-      label: "Card · Serving",
-      filename: `${slugForFiles}-serving`,
-      layout: {
+    const servingCardSets = paginateServingCards(servingBlocks, { recipeName: recipe.title });
+    servingCardSets.forEach((sections, i) => {
+      const imageSide = alternate++ % 2 === 0 ? "right" : "left";
+      cards.push({
+        id: servingCardSets.length === 1 ? "serving" : `serving-${i + 1}`,
         kind: "recipe-serving",
-        index: 0, total: 0,
-        recipeName: recipe.title || "",
-        label: "SERVE",
-        image: servingPhoto,
-        imageSide,
-        sections: servingBlocks,
-        footer: "thesplitplate.com",
-      },
+        label: servingCardSets.length === 1
+          ? "Card · Serving"
+          : `Card · Serving (${i + 1}/${servingCardSets.length})`,
+        filename: `${slugForFiles}-serving${servingCardSets.length > 1 ? `-${i + 1}` : ""}`,
+        layout: {
+          kind: "recipe-serving",
+          index: 0, total: 0,
+          recipeName: recipe.title || "",
+          label: "SERVE",
+          image: i === 0 ? servingPhoto : null,
+          imageSide,
+          sections,
+          footer: "thesplitplate.com",
+        },
+      });
     });
   }
 
@@ -262,7 +263,7 @@ function parseIngredientLines(rawList) {
     const text = typeof raw === "object" ? raw.text : raw;
     if (!text || text.startsWith("---")) continue;
     const parsed = splitQuantity(text);
-    out.push({ quantity: parsed.quantity, text: parsed.ingredient });
+    out.push({ quantity: parsed.quantity, text: cleanIngredientName(parsed.ingredient) });
   }
   return out;
 }
@@ -273,6 +274,19 @@ function splitQuantity(text) {
   const m2 = text.match(/^(As needed|to taste|as required)\s+(.*)$/i);
   if (m2) return { quantity: m2[1], ingredient: m2[2] };
   return { quantity: "", ingredient: text };
+}
+
+// Drop editorial asides from an auto-derived ingredient name — parenthetical
+// clarifications, em-dash brand explainers, trailing state descriptors — so
+// the compact carousel row shows just the ingredient. Full brand + prep
+// notes live on the recipe page.
+function cleanIngredientName(text) {
+  return String(text || "")
+    .replace(/\s*\([^)]*\)/g, "")            // (14 oz adult + 7 oz kid)
+    .replace(/\s+[—–-]\s+.+$/, "")           // — brand aside
+    .replace(/,\s*(as needed|to taste|optional|large pieces|diced|shredded|thinly sliced|halved|split \+ toasted|per plate)\.?\s*$/i, "")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
 export function normalizeIngredientSections(sections) {
@@ -289,28 +303,36 @@ export function normalizeIngredientSections(sections) {
 
 function deriveMethodSections(recipe) {
   const split = recipe.splitCook;
-  if (split && (split.sharedSteps?.length || split.adult?.steps?.length)) {
-    const items = [];
-    let stepN = 1;
-    (split.sharedSteps || []).forEach((s) => {
-      const raw = typeof s === "object" ? s.text : s;
-      const { heading, body } = splitActionHeading(raw);
-      items.push({ number: stepN++, heading, body });
-    });
-    (split.adult?.steps || []).forEach((s) => {
-      const raw = typeof s === "object" ? s.text : s;
-      const { heading, body } = splitActionHeading(raw);
-      items.push({ number: stepN++, heading, body });
-    });
-    return [{ accent: "amber", heading: "Method", items }];
-  }
-  const rawSteps = recipe.steps || recipe.method || [];
-  const items = rawSteps.map((s, i) => {
-    const raw = typeof s === "object" ? (s.text || s.instruction) : s;
+  const items = [];
+  let n = 1;
+  const push = (raw) => {
     const { heading, body } = splitActionHeading(raw || "");
-    return { number: i + 1, heading, body };
-  });
+    items.push({ number: n++, heading, body: cleanMethodBody(body) });
+  };
+
+  if (split && (split.sharedSteps?.length || split.adult?.steps?.length)) {
+    (split.sharedSteps || []).forEach((s) => push(typeof s === "object" ? s.text : s));
+    (split.adult?.steps || []).forEach((s) => push(typeof s === "object" ? s.text : s));
+  } else if (Array.isArray(recipe.steps) && recipe.steps.length) {
+    recipe.steps.forEach((s) => push(typeof s === "object" ? (s.text || s.instruction) : s));
+  } else if (Array.isArray(recipe.method) && recipe.method.length) {
+    recipe.method.forEach((s) => push(typeof s === "object" ? (s.text || s.instruction) : s));
+  } else if (Array.isArray(recipe.executionRules) && recipe.executionRules.length) {
+    // Fallback for recipes whose "how to cook" lives in executionRules.
+    recipe.executionRules.forEach((s) => push(String(s)));
+  }
   return [{ accent: "amber", heading: "Method", items }];
+}
+
+// Drop editorial asides from an auto-derived step body — parentheticals,
+// em-dash "context" clauses, non-essential trailing sentences that just
+// reinforce the action. The FULL step text stays on the recipe page.
+function cleanMethodBody(text) {
+  return String(text || "")
+    .replace(/\s*\([^)]*\)/g, "")
+    .replace(/\s+—[^.!?]*(?=[.!?])/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
 // Legacy "AIR FRY: All 21 oz..." → { heading: "Air Fry", body: "All 21 oz..." }.
@@ -342,12 +364,43 @@ export function normalizeMethodSections(sections) {
 }
 
 function deriveServingBlocks(recipe) {
+  const split = recipe.splitCook;
+  // Split-plate recipes: pull Adult label + Kid label out of splitCook.
+  if (split && (split.adult?.label || split.kid?.label)) {
+    const blocks = [];
+    if (split.adult?.label) {
+      blocks.push({
+        accent: "coral",
+        heading: "Adult Plate",
+        items: [{ text: shortServingLine(split.adult.label) }],
+      });
+    }
+    if (split.kid?.label) {
+      blocks.push({
+        accent: "green",
+        heading: "Smaller Plate",
+        items: [{ text: shortServingLine(split.kid.label) }],
+      });
+    }
+    return blocks;
+  }
+  // Non-split recipes: fall back to mealPrep summary if present.
   const items = [];
   const mp = recipe.mealPrep || {};
   if (mp.storage) items.push({ text: mp.storage });
   if (mp.reheat) items.push({ text: `Reheat: ${mp.reheat}` });
   if (mp.lasts) items.push({ text: `Keeps: ${mp.lasts}` });
-  return items.length ? [{ accent: "neutral", heading: "Serving & Storage", items }] : null;
+  return items.length ? [{ accent: "neutral", heading: "Serving", items }] : null;
+}
+
+// Strip the "Adult — " / "Kid — " prefix and any bracketed macro tail
+// from a splitCook plate label so the serving card gets a clean, plate-
+// facing description.
+function shortServingLine(label) {
+  return String(label || "")
+    .replace(/^(Adult|Kid)\s*[—–-]\s*/i, "")
+    .replace(/\s*\([^)]*\)\s*$/, "")
+    .trim();
 }
 
 // ---------- PHOTO SELECTION ----------

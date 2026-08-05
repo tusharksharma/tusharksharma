@@ -159,6 +159,7 @@ function Divider() {
 
 function SectionHeading({ section }) {
   const accent = accentColorFor(section.accent);
+  const label = section.continued ? `${section.heading}  (cont.)` : section.heading;
   return (
     <div style={{ marginBottom: `${P.sectionHeadingGap * S}px` }}>
       <div
@@ -171,7 +172,7 @@ function SectionHeading({ section }) {
           color: accent,
         }}
       >
-        {section.heading}
+        {label}
       </div>
       <div
         aria-hidden

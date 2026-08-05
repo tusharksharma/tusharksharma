@@ -171,7 +171,10 @@ function drawSectionHeading(ctx, section, x, y) {
   const accent = accentColorFor(section.accent);
   ctx.fillStyle = accent;
   ctx.font = fontSans(800, P.sectionHeadingSize);
-  drawLetterSpaced(ctx, (section.heading || "").toUpperCase(), x, y, P.sectionHeadingLetterSpacing);
+  const label = section.continued
+    ? `${(section.heading || "").toUpperCase()}  (CONT.)`
+    : (section.heading || "").toUpperCase();
+  drawLetterSpaced(ctx, label, x, y, P.sectionHeadingLetterSpacing);
   const barY = y + P.sectionHeadingSize + 8;
   ctx.fillRect(x, barY, P.sectionBarWidth, P.sectionBarHeight);
   return barY + P.sectionBarHeight + P.sectionHeadingGap;
@@ -300,13 +303,83 @@ export function flattenMethodItems(layout) {
 }
 
 // ---------- pagination ----------
+//
+// Card layouts are height-budgeted rather than item-count-capped. Each
+// item's rendered height is estimated up-front (SSR-safe — no canvas
+// measureText, since prerender runs in Node) and packed greedily into
+// cards until the body budget runs out. This is the "paginate" branch
+// of the no-truncation rule: content spills into a new card, never gets
+// silently clipped.
 
-// Ingredient sections → cards. Author can explicitly assign each section
-// a `card` index; otherwise we greedy-pack up to `perCard` items per card.
-// Never silently drops content: if authored content exceeds `maxCards`,
-// extra cards are still produced and a warning is logged for the author
-// to curate shorter copy.
-export function paginateIngredientCards(sections, { maxCards = 2, perCard = 6, recipeName = "" } = {}) {
+// Rough per-line character capacities at the recipe-card metrics.
+// Sans at 24px averages ~13px per glyph → ~30 chars / line in the ~344px
+// ingredient text column, ~40 chars / line in the ~486px method body
+// column. Conservative to err on more-cards over overflow.
+const CHARS_INGREDIENT_TEXT = 30;
+const CHARS_INGREDIENT_NOTE = 36;
+const CHARS_METHOD_BODY = 42;
+const CHARS_SERVING_BODY = 34;
+const CHARS_TITLE = 20;
+
+// Vertical budget available for the body region between the title
+// divider and the footer, at the current metrics.
+const BODY_BUDGET_HEIGHT = 720;
+const SECTION_HEADING_BLOCK = P.sectionHeadingSize + 8 + P.sectionBarHeight + P.sectionHeadingGap;
+const SECTION_BOTTOM_GAP = P.sectionBottomGap;
+
+function estimateLines(text, charsPerLine) {
+  const t = String(text || "").trim();
+  if (!t) return 0;
+  const words = t.split(/\s+/);
+  let lines = 1;
+  let curLen = 0;
+  for (const word of words) {
+    const wLen = word.length;
+    if (wLen > charsPerLine) {
+      // Long unbroken token — count how many full lines it swallows plus
+      // the remainder. Actual wrap will break mid-word.
+      if (curLen) { lines++; curLen = 0; }
+      lines += Math.floor(wLen / charsPerLine);
+      curLen = wLen % charsPerLine;
+    } else if (curLen + wLen + (curLen ? 1 : 0) > charsPerLine) {
+      lines++;
+      curLen = wLen;
+    } else {
+      curLen += (curLen ? 1 : 0) + wLen;
+    }
+  }
+  return lines;
+}
+
+export function measureTitleLines(text) {
+  return Math.max(1, estimateLines(text, CHARS_TITLE));
+}
+
+function ingredientRowHeight(item) {
+  const textLines = Math.max(1, estimateLines(item.text || item.ingredient || "", CHARS_INGREDIENT_TEXT));
+  const noteLines = item.note ? estimateLines(item.note, CHARS_INGREDIENT_NOTE) : 0;
+  let h = textLines * P.ingredientLineHeight;
+  if (noteLines) h += 4 + noteLines * P.ingredientNoteLineHeight;
+  return h;
+}
+
+function methodRowHeight(item) {
+  const bodyLines = Math.max(1, estimateLines(item.body || item.text || "", CHARS_METHOD_BODY));
+  const contentColH = P.stepHeadingSize + 24 + bodyLines * P.stepBodyLineHeight;
+  return Math.max(P.stepNumberSize, contentColH);
+}
+
+function servingRowHeight(item) {
+  const lines = Math.max(1, estimateLines(item.text || "", CHARS_SERVING_BODY));
+  return lines * P.servingBodyLineHeight;
+}
+
+// Ingredient sections → cards, packed by height. Author can explicitly
+// assign each section a `card` index; otherwise items are placed onto
+// the current card until BODY_BUDGET_HEIGHT is exhausted, then flow
+// onto the next. Sections that span cards get their heading redrawn on
+// the continuation, with "(cont.)" appended.
+export function paginateIngredientCards(sections, { maxCards = 2, recipeName = "" } = {}) {
   const list = sections || [];
   if (!list.length) return [];
 
@@ -323,44 +396,110 @@ export function paginateIngredientCards(sections, { maxCards = 2, perCard = 6, r
       .sort((a, b) => a[0] - b[0])
       .map(([, secs]) => secs);
   } else {
-    cards = [];
-    let current = [];
-    let count = 0;
-    for (const sec of list) {
-      const n = (sec.items || []).length;
-      if (count + n > perCard && current.length) {
-        cards.push(current);
-        current = [];
-        count = 0;
-      }
-      current.push(sec);
-      count += n;
-    }
-    if (current.length) cards.push(current);
+    cards = packSectionsByHeight(list, ingredientRowHeight, P.ingredientRowGap);
   }
 
   if (cards.length > maxCards) {
-    console.warn(`[recipe-card] "${recipeName}" produced ${cards.length} ingredient cards (soft cap ${maxCards}). Curate shorter copy or explicit \`card:\` indices.`);
+    console.warn(`[recipe-card] "${recipeName}" paginated to ${cards.length} ingredient cards (soft cap ${maxCards}). Consider curating shorter copy.`);
   }
   return cards;
 }
 
-// Method sections → cards of up to `perCard` steps each. Same
-// paginate-not-truncate rule as ingredients.
-export function paginateMethodCards(sections, { maxCards = 2, perCard = 3, recipeName = "" } = {}) {
+// Method sections → cards, packed by height. Method items are flattened
+// across sections (a recipe usually has a single "Method" list) then
+// packed. Continuation cards drop the heading since the sequence carries
+// context on its own.
+export function paginateMethodCards(sections, { maxCards = 2, recipeName = "" } = {}) {
   const flat = [];
   for (const sec of sections || []) {
     for (const it of sec.items || []) flat.push({ ...it, accent: it.accent || sec.accent || "amber" });
   }
+
   const cards = [];
-  for (let i = 0; i < flat.length; i += perCard) {
-    const slice = flat.slice(i, i + perCard);
-    cards.push([{ accent: "amber", heading: "", items: slice }]);
+  let current = [];
+  let currentH = 0;
+  for (const item of flat) {
+    const h = methodRowHeight(item) + P.methodItemGap;
+    if (currentH + h > BODY_BUDGET_HEIGHT && current.length) {
+      cards.push([{ accent: "amber", heading: "", items: current }]);
+      current = [];
+      currentH = 0;
+    }
+    current.push(item);
+    currentH += h;
   }
+  if (current.length) cards.push([{ accent: "amber", heading: "", items: current }]);
+
   if (cards.length > maxCards) {
-    console.warn(`[recipe-card] "${recipeName}" produced ${cards.length} method cards (soft cap ${maxCards}). Curate shorter copy or fewer steps.`);
+    console.warn(`[recipe-card] "${recipeName}" paginated to ${cards.length} method cards (soft cap ${maxCards}). Consider fewer steps or shorter bodies.`);
   }
   return cards;
+}
+
+// Serving sections → single card. Serving always fits on one card for
+// realistic curator input; overflow paginates onto a second card so we
+// never clip.
+export function paginateServingCards(sections, { recipeName = "" } = {}) {
+  const list = sections || [];
+  if (!list.length) return [];
+  const cards = packSectionsByHeight(list, servingRowHeight, 10);
+  if (cards.length > 1) {
+    console.warn(`[recipe-card] "${recipeName}" serving text exceeded one card — trim to 1-2 lines per section.`);
+  }
+  return cards;
+}
+
+function packSectionsByHeight(sections, rowHeightFn, rowGap) {
+  const cards = [];
+  let current = [];
+  let currentH = 0;
+  let currentSectionOnCard = null;
+
+  const pushCurrent = () => {
+    if (current.length) cards.push(current);
+    current = [];
+    currentH = 0;
+    currentSectionOnCard = null;
+  };
+
+  for (const section of sections) {
+    const items = section.items || [];
+    for (const item of items) {
+      const itemH = rowHeightFn(item) + rowGap;
+      const isNewSectionOnCard = currentSectionOnCard !== section;
+      const headingCost = isNewSectionOnCard && section.heading ? SECTION_HEADING_BLOCK : 0;
+      const sectionGap = isNewSectionOnCard && currentSectionOnCard ? SECTION_BOTTOM_GAP : 0;
+      const totalCost = itemH + headingCost + sectionGap;
+
+      if (currentH + totalCost > BODY_BUDGET_HEIGHT && current.length) {
+        pushCurrent();
+      }
+
+      let carrier = current.length ? current[current.length - 1] : null;
+      if (!carrier || carrier._orig !== section) {
+        carrier = {
+          accent: section.accent,
+          heading: section.heading,
+          continued: currentSectionOnCard === null && cards.length > 0 && cards[cards.length - 1]?.some((s) => s._orig === section),
+          items: [],
+          _orig: section,
+        };
+        current.push(carrier);
+        if (section.heading) currentH += SECTION_HEADING_BLOCK;
+        if (currentSectionOnCard && current.length > 1) currentH += SECTION_BOTTOM_GAP;
+        currentSectionOnCard = section;
+      }
+      carrier.items.push(item);
+      currentH += itemH;
+    }
+  }
+  if (current.length) cards.push(current);
+
+  // Strip the internal `_orig` marker before returning.
+  return cards.map((secs) => secs.map((s) => {
+    const { _orig, ...rest } = s;
+    return rest;
+  }));
 }
 
 // ---------- canvas primitives ----------
