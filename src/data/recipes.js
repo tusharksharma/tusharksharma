@@ -400,7 +400,7 @@ const recipes = [
       { name: "Earth's Best", item: "Mini beef meatballs (kid protein)", why: "Bite-sized, fully-cooked, kid-preferred protein swap. Any equivalent bite-sized cooked meatballs work. Not sponsored.", image: "/images/brands/earths-best-meatballs.webp", url: "https://www.earthsbest.com/products/mini-beef-meatballs-toddler" },
     ],
     mealPrep: {
-      storage: "Cool and refrigerate the pasta, tri-tip, meatballs, and green sauce in SEPARATE airtight containers within 2 hours. Portion extra green sauce in family-dinner containers and freeze what won\'t be used within 3-4 days.",
+      storage: "Cool and refrigerate the pasta, tri-tip, meatballs, and green sauce in SEPARATE airtight containers within 2 hours. Portion extra green sauce in family-dinner containers and freeze what won't be used within 3-4 days.",
       reheat: "Warm the pasta gently with a small splash of milk or broth if needed. Air-fry or quickly sear the tri-tip separately until it reaches serving temperature \u2014 do not reheat with the pasta or the pasta will overcook while the meat warms. Reheat meatballs separately per their package.",
       lasts: "Cooked pasta, meat, and refrigerated sauce: use within 3-4 days. Frozen family-dinner sauce portions: thaw overnight in the refrigerator before reheating. USDA FSIS leftovers guidance: https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/leftovers-and-food-safety",
     },

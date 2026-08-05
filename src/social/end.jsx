@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 // End card — the final "Save this recipe" + URL + engagement-question card.
 //
 // Same "one Layout, two renderers" contract. Layout shape:

@@ -15,7 +15,9 @@ export default function Nav() {
   const [open, setOpen] = useState(false);
 
   // Close the drawer whenever the route changes (in-drawer link tap or
-  // back/forward navigation).
+  // back/forward navigation). Intentional cross-system sync from routing to
+  // component state; the drawer doesn't have a good "external subscribe" model.
+  // eslint-disable-next-line react-hooks/set-state-in-effect
   useEffect(() => { setOpen(false); }, [pathname]);
 
   return (

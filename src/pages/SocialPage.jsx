@@ -1035,6 +1035,13 @@ function adaptCookbookToRecipe(item, kind) {
     // only carousel by declaring this field (same convention as dinner recipes).
     // SocialPage's processImages logic prefers this list over step-flatten.
     socialImages: item.socialImages,
+    // Pass through the curated /social carousel spec. Without this, cookbook
+    // items fall through to auto-derived blocks and drop their curated
+    // Serving / hook / photo assignments.
+    socialCarousel: item.socialCarousel,
+    // Snack boxes / powerups need their mealPrep block for the auto-derive
+    // Serving fallback when socialCarousel.servingGroups is undefined.
+    mealPrep: item.mealPrep,
     // Keep originals around for the BestForCard
     bestFor: item.bestFor,
     carbLevel: undefined,
@@ -1161,7 +1168,20 @@ export default function SocialPage() {
     isCookbook,
     isSnackBox,
     isPowerup,
-    cookbookItem,
+    components,
+    processImages,
+  });
+  // Attach DOM renderers for legacy card kinds the generator emits without a
+  // React node (process + component). SocialPage owns those components so we
+  // patch them here to avoid a circular import.
+  cards.forEach((c) => {
+    if (c.kind === "process" && !c.render) {
+      c.render = <ProcessImageCardInner src={c.src} caption={c.caption} />;
+    } else if (c.kind === "component" && !c.render) {
+      const kind = classifyCookbook(c.item);
+      c.componentKind = kind;
+      c.render = <ComponentCardInner item={c.item} kind={kind} />;
+    }
   });
   // Unused legacy accumulators kept in scope but not appended. See git history
   // for the pre-Phase-4 sequence if a rollback is needed.

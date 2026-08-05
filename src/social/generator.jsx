@@ -34,9 +34,10 @@ import StructuredCardInner from "./StructuredCardInner";
 import { buildHeroLayout, HeroStructuredInner } from "./hero.jsx";
 import { buildEndLayout, EndStructuredInner } from "./end.jsx";
 
-// Line budget for a single ingredient card. Roughly 8 items (each 1-2 lines).
-// If a group exceeds this, the generator splits it across two ingredient cards.
-const INGREDIENT_LINES_PER_CARD = 9;
+// Soft cap for ITEMS on a single ingredient card. Groups stay whole when
+// they fit; if a single group exceeds this, its items are split into
+// two blocks with "(1/2)" / "(2/2)" suffixes.
+const INGREDIENT_ITEMS_PER_CARD = 9;
 // Method steps per card — brief says max 3.
 const METHOD_STEPS_PER_CARD = 3;
 
@@ -47,8 +48,9 @@ export function buildStructuredCards(recipe, opts) {
     isCookbook,
     isSnackBox,
     isPowerup,
-    cookbookItem,
     photoMap,          // { hero, ingredients, method, serving } — optional overrides from curated data
+    components = [],   // linked cookbook components (dinner recipes only)
+    processImages = [],// polished process images from recipe.socialImages
   } = opts;
 
   const sc = recipe.socialCarousel || {};
@@ -115,7 +117,40 @@ export function buildStructuredCards(recipe, opts) {
     });
   }
 
-  // 5. End — always last.
+  // 5. Component card — up to 1. Priority: curated criticalComponent by slug,
+  //    else the first extracted component. Skipped when SocialPage passes an
+  //    empty components list (cookbook items don't cross-link).
+  const criticalSlug = sc.criticalComponent;
+  const criticalComponent = criticalSlug
+    ? components.find((c) => c.id === criticalSlug) || components[0]
+    : components[0];
+  if (criticalComponent) {
+    cards.push({
+      id: `component-${criticalComponent.id}`,
+      kind: "component",
+      label: `Card · Component → ${criticalComponent.title}`,
+      filename: `${slugForFiles}-component-${criticalComponent.id}`,
+      item: criticalComponent,
+      componentKind: sc.criticalComponentKind || "Component",
+    });
+  }
+
+  // 6. Process card — up to 1. Uses first polished image not already assigned
+  //    to hero / ingredients / method / serving.
+  const usedPhotos = new Set([heroPhoto, ingredientsPhoto, methodPhoto, servingPhoto].filter(Boolean));
+  const processCandidate = (processImages || []).find((p) => p && p.src && !usedPhotos.has(p.src));
+  if (processCandidate) {
+    cards.push({
+      id: "process",
+      kind: "process",
+      label: "Card · Process",
+      filename: `${slugForFiles}-process`,
+      src: processCandidate.src,
+      caption: processCandidate.caption,
+    });
+  }
+
+  // 7. End — always last.
   cards.push({
     id: "end",
     kind: "end",
@@ -150,15 +185,17 @@ export function buildStructuredCards(recipe, opts) {
 
 function pickDroppableIndex(cards) {
   // Never drop hero (0) or end (last) or the FIRST ingredient/method card.
-  // Prefer dropping serving > 2nd-ingredient > 3rd-method.
+  // Priority: process → component → serving → 2nd ingredient → last method.
   const kinds = cards.map((c) => c.kind);
+  const process = kinds.indexOf("process");
+  if (process !== -1) return process;
+  const component = kinds.indexOf("component");
+  if (component !== -1) return component;
   const lastServing = kinds.lastIndexOf("serving");
   if (lastServing !== -1) return lastServing;
-  // Drop 2nd ingredient card if present
   const firstIng = kinds.indexOf("ingredients");
   const lastIng = kinds.lastIndexOf("ingredients");
   if (lastIng !== firstIng) return lastIng;
-  // Drop last method card (as long as ≥2 remain)
   const firstMethod = kinds.indexOf("method");
   const lastMethod = kinds.lastIndexOf("method");
   if (lastMethod !== firstMethod) return lastMethod;
@@ -281,47 +318,83 @@ function deriveServingBlocks(recipe) {
 
 // ---------- CARD SPLITTERS ----------
 
-// Distribute ingredient blocks across ≤2 cards. Each card holds up to
-// INGREDIENT_LINES_PER_CARD lines. Never merges the same block across cards.
+// Distribute ingredient blocks across ≤2 cards, respecting the 9-item cap.
+// Rules:
+//   1. Count only items (headings render smaller than an item line).
+//   2. Preserve block boundaries when the block fits.
+//   3. If a single block exceeds the cap, split its items in two blocks with
+//      "(1/2)" / "(2/2)" heading suffixes.
+//   4. Fill card 1 greedily up to the cap; overflow → card 2.
+//   5. If card 2 also overflows, rebalance: aim for total/2 items per card.
 function splitBlocksIntoIngredientCards(blocks, { slugForFiles, photoSrc, recipe }) {
-  const cards = [];
-  const groupsPerCard = [];
-  let current = [];
-  let lineCount = 0;
-
-  for (const block of blocks) {
-    const blockLines = (block.items || []).length + 2; // +2 for heading + subhead
-    if (current.length && lineCount + blockLines > INGREDIENT_LINES_PER_CARD) {
-      groupsPerCard.push(current);
-      current = [];
-      lineCount = 0;
+  // Step 1: split any oversized block into two.
+  const normalized = [];
+  for (const b of blocks) {
+    const items = b.items || [];
+    if (items.length <= INGREDIENT_ITEMS_PER_CARD) {
+      normalized.push(b);
+    } else {
+      const mid = Math.ceil(items.length / 2);
+      normalized.push({ ...b, heading: `${b.heading} (1/2)`, items: items.slice(0, mid) });
+      normalized.push({ ...b, heading: `${b.heading} (2/2)`, items: items.slice(mid), subhead: undefined });
     }
-    current.push(block);
-    lineCount += blockLines;
-  }
-  if (current.length) groupsPerCard.push(current);
-
-  // Cap at 2 cards; overflow blocks merge into card 2.
-  if (groupsPerCard.length > 2) {
-    const merged = groupsPerCard.slice(1).flat();
-    groupsPerCard.length = 2;
-    groupsPerCard[1] = merged;
   }
 
-  groupsPerCard.forEach((groups, i) => {
-    const label = groupsPerCard.length === 1
-      ? "Card · Ingredients"
-      : i === 0 ? "Card · Ingredients (Shared Base)" : "Card · Ingredients (Adult vs. Smaller Plate)";
-    cards.push({
-      id: `ingredients-${i + 1}`,
-      kind: "ingredients",
-      label,
-      filename: `${slugForFiles}-ingredients-${i + 1}`,
-      layout: buildIngredientsLayout(recipe, { ingredientGroups: groups }, { index: 0, total: 0, photoSrc }),
-    });
-  });
+  const totalItems = normalized.reduce((sum, b) => sum + (b.items || []).length, 0);
 
-  return cards;
+  // Step 2: single card if it all fits.
+  if (totalItems <= INGREDIENT_ITEMS_PER_CARD) {
+    return [makeIngredientCard(normalized, 0, 1, { slugForFiles, photoSrc, recipe })];
+  }
+
+  // Step 3: two-card split. Target ~half items per card; keep whole blocks
+  // when possible; if a block bridges the boundary, split it there.
+  const target = Math.ceil(totalItems / 2);
+  const groupsCard1 = [];
+  const groupsCard2 = [];
+  let card1Items = 0;
+  let boundaryCrossed = false;
+
+  for (const block of normalized) {
+    if (boundaryCrossed) {
+      groupsCard2.push(block);
+      continue;
+    }
+    const items = block.items || [];
+    if (card1Items + items.length <= target) {
+      groupsCard1.push(block);
+      card1Items += items.length;
+    } else {
+      const room = target - card1Items;
+      if (room >= 2 && items.length - room >= 2) {
+        // Split the block: put `room` items on card 1, rest on card 2.
+        groupsCard1.push({ ...block, heading: `${block.heading} (1/2)`, items: items.slice(0, room) });
+        groupsCard2.push({ ...block, heading: `${block.heading} (2/2)`, items: items.slice(room), subhead: undefined });
+      } else {
+        // Not worth splitting; push whole block to card 2.
+        groupsCard2.push(block);
+      }
+      boundaryCrossed = true;
+    }
+  }
+
+  return [
+    makeIngredientCard(groupsCard1, 0, 2, { slugForFiles, photoSrc, recipe }),
+    makeIngredientCard(groupsCard2, 1, 2, { slugForFiles, photoSrc, recipe }),
+  ];
+}
+
+function makeIngredientCard(groups, i, totalCards, { slugForFiles, photoSrc, recipe }) {
+  const label = totalCards === 1
+    ? "Card · Ingredients"
+    : `Card · Ingredients (${i + 1}/${totalCards})`;
+  return {
+    id: `ingredients-${i + 1}`,
+    kind: "ingredients",
+    label,
+    filename: `${slugForFiles}-ingredients-${i + 1}`,
+    layout: buildIngredientsLayout(recipe, { ingredientGroups: groups }, { index: 0, total: 0, photoSrc }),
+  };
 }
 
 // Distribute method into ≤3 cards. Each card holds up to METHOD_STEPS_PER_CARD steps.
@@ -387,11 +460,11 @@ export function validateCards(cards, recipe) {
     }
   });
 
-  // Ingredient line limits.
+  // Ingredient item limits.
   cards.filter((c) => c.kind === "ingredients").forEach((c, i) => {
-    const totalLines = (c.layout.blocks || []).reduce((s, b) => s + (b.items?.length || 0) + 2, 0);
-    if (totalLines > INGREDIENT_LINES_PER_CARD + 2) {
-      errors.push(`Ingredient card ${i + 1} has ~${totalLines} lines (soft limit ${INGREDIENT_LINES_PER_CARD}). Consider splitting.`);
+    const totalItems = (c.layout.blocks || []).reduce((s, b) => s + (b.items?.length || 0), 0);
+    if (totalItems > INGREDIENT_ITEMS_PER_CARD) {
+      errors.push(`Ingredient card ${i + 1} has ${totalItems} items (soft cap ${INGREDIENT_ITEMS_PER_CARD}).`);
     }
   });
 

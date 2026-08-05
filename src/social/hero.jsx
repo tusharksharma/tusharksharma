@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 // Structured hero card — the first card in every carousel.
 //
 // Follows the same "one Layout, two renderers" contract as structuredCard.js.
