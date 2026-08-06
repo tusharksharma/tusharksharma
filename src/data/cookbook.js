@@ -2030,6 +2030,17 @@ export const desserts = [
     prepImageCaption: "Seven brands. Build once Sunday, eat through Thursday.",
     actionImage: "/images/protein-tiramisu/cream-bowl.webp",
     actionImageCaption: "Cream blended thick — holds a soft peak, doesn't pour. Cottage cheese went in ALONE first; no curds survive.",
+    // Landscape hero — the narrow side column loses ~72% of it. Force
+    // band layout on carousel photos so the whole plate reads.
+    socialCarousel: {
+      ingredientCardPhotos: [
+        { src: "/images/protein-tiramisu/mise.webp", position: "50% 50%", zoom: 1, layout: "band" },
+      ],
+      methodCardPhotos: [
+        { src: "/images/protein-tiramisu/cream-bowl.webp", position: "50% 50%", zoom: 1, layout: "band" },
+      ],
+      servingPhoto: { src: "/images/protein-tiramisu/hero.webp", position: "50% 55%", zoom: 1, layout: "band" },
+    },
     flavorProfile: "Cheesecake-mousse cream over coffee-dipped HighKey wafers, finished with a heavy Ghirardelli cocoa snowfall. Tiramisu perception, no carb tax (~10g net carbs per serving — allulose + wafer fiber strip out most of the 22g total carb count).",
     calories: 944,
     caloriesPerServing: 236,
@@ -4513,11 +4524,24 @@ export const powerups = [
           ],
         },
       ],
+      // Ingredient photo swapped from the context-shot (dominated by
+      // person + counter in the narrow side column) to the pretzel-rim
+      // close-up, focus tight on the crumb.
       ingredientCardPhotos: [
-        "/images/salted-caramel-pretzel-iced-proffee/context-crushed-pretzels.webp",
+        {
+          src: "/images/salted-caramel-pretzel-iced-proffee/step-02-pretzel-rim-polished.webp",
+          position: "50% 45%",
+          zoom: 1.15,
+          layout: "side",
+        },
       ],
       methodCardPhotos: [
-        "/images/salted-caramel-pretzel-iced-proffee/step-08-blend-concentrate-polished.webp",
+        {
+          src: "/images/salted-caramel-pretzel-iced-proffee/step-08-blend-concentrate-polished.webp",
+          position: "50% 45%",
+          zoom: 1.1,
+          layout: "side",
+        },
       ],
       servingGroups: [
         {
@@ -5550,11 +5574,23 @@ export const snackBoxes = [
           ],
         },
       ],
+      // Snack-box overheads have a lot of empty wood grain around the
+      // boxes — zoom + focal-point crop tight around the food.
       ingredientCardPhotos: [
-        "/images/sunshine-snack-box/step-02-add-boiled-eggs-polished.webp",
+        {
+          src: "/images/sunshine-snack-box/step-02-add-boiled-eggs-polished.webp",
+          position: "50% 50%",
+          zoom: 1.35,
+          layout: "side",
+        },
       ],
       methodCardPhotos: [
-        "/images/sunshine-snack-box/final-four-sunshine-snack-boxes-polished.webp",
+        {
+          src: "/images/sunshine-snack-box/final-four-sunshine-snack-boxes-polished.webp",
+          position: "50% 50%",
+          zoom: 1.4,
+          layout: "side",
+        },
       ],
       servingGroups: [
         {

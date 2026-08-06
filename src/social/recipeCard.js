@@ -28,6 +28,11 @@ export const RECIPE_CARD_METRICS = {
   contentWidth: 626,
   contentMargin: 58,
   seamGradientWidth: 110,
+  // Band layout — photo full-width across the top, content below.
+  bandHeight: 380,
+  bandContentWidth: 1080,   // full width minus contentMargin either side
+  bandContentTopPad: 30,    // extra breathing room under the photo band
+  bandSeamGradientHeight: 90,
   // header
   labelSize: 22,
   labelLetterSpacing: 4,
@@ -94,25 +99,79 @@ export function accentColorFor(name) {
   }
 }
 
+// Normalize an image field. Author may pass a plain path string, or a
+// crop-controlled object:
+//   { src, position: "55% 65%", zoom: 1.15, layout: "band" }
+// - position: focal point in the source image (defaults center)
+// - zoom: multiplier on the base cover scale (>1 crops tighter)
+// - layout: "side" (58/42 column) or "band" (photo across the top,
+//   content full-width below) — used for wide/landscape photos where
+//   a side crop would erase most of the frame.
+export function resolveImage(image) {
+  if (!image) return null;
+  if (typeof image === "string") {
+    return { src: image, position: "50% 50%", zoom: 1, layout: "side" };
+  }
+  return {
+    src: image.src,
+    position: image.position || "50% 50%",
+    zoom: typeof image.zoom === "number" ? image.zoom : 1,
+    layout: image.layout === "band" ? "band" : "side",
+  };
+}
+
+export function parseFocalPoint(str) {
+  const parts = String(str || "50% 50%").split(/\s+/);
+  const parse = (v) => {
+    const m = /^(-?[\d.]+)%$/.exec(String(v).trim());
+    return m ? Math.max(0, Math.min(1, parseFloat(m[1]) / 100)) : 0.5;
+  };
+  return [parse(parts[0]), parse(parts[1] || parts[0])];
+}
+
 // ---------- CANVAS ----------
 
 export async function drawRecipeCard(ctx, layout) {
   ctx.fillStyle = T.background;
   ctx.fillRect(0, 0, P.width, P.height);
 
+  const resolvedImage = resolveImage(layout.image);
+  if (resolvedImage?.layout === "band") {
+    return drawRecipeCardBand(ctx, layout, resolvedImage);
+  }
+
   const photoX = layout.imageSide === "left" ? 0 : P.contentWidth;
   const contentX = layout.imageSide === "left" ? P.photoWidth : 0;
 
-  const img = layout.image ? await loadImage(layout.image).catch(() => null) : null;
+  const img = resolvedImage?.src ? await loadImage(resolvedImage.src).catch(() => null) : null;
   if (img) {
-    drawImageCover(ctx, img, photoX, 0, P.photoWidth, P.height);
+    drawImageCover(ctx, img, photoX, 0, P.photoWidth, P.height, resolvedImage);
   } else {
     ctx.fillStyle = T.surface;
     ctx.fillRect(photoX, 0, P.photoWidth, P.height);
   }
 
   drawSeamGradient(ctx, layout.imageSide);
-  drawContent(ctx, layout, contentX);
+  drawContent(ctx, layout, contentX, "side");
+}
+
+async function drawRecipeCardBand(ctx, layout, resolvedImage) {
+  const img = resolvedImage?.src ? await loadImage(resolvedImage.src).catch(() => null) : null;
+  if (img) {
+    drawImageCover(ctx, img, 0, 0, P.width, P.bandHeight, resolvedImage);
+  } else {
+    ctx.fillStyle = T.surface;
+    ctx.fillRect(0, 0, P.width, P.bandHeight);
+  }
+  // Downward-fading seam under the band so content underneath reads as one card.
+  const gy = P.bandHeight - P.bandSeamGradientHeight;
+  const g = ctx.createLinearGradient(0, gy, 0, P.bandHeight);
+  g.addColorStop(0, "rgba(17, 17, 15, 0)");
+  g.addColorStop(1, T.background);
+  ctx.fillStyle = g;
+  ctx.fillRect(0, gy, P.width, P.bandSeamGradientHeight);
+
+  drawContent(ctx, layout, 0, "band");
 }
 
 function drawSeamGradient(ctx, imageSide) {
@@ -134,10 +193,13 @@ function drawSeamGradient(ctx, imageSide) {
   }
 }
 
-function drawContent(ctx, layout, x) {
-  const innerX = x + P.contentMargin;
-  const innerW = P.contentWidth - 2 * P.contentMargin;
-  let y = P.contentMargin + 22;
+function drawContent(ctx, layout, x, mode = "side") {
+  const isBand = mode === "band";
+  const innerX = (isBand ? 0 : x) + P.contentMargin;
+  const innerW = (isBand ? P.width : P.contentWidth) - 2 * P.contentMargin;
+  let y = isBand
+    ? P.bandHeight + P.bandContentTopPad
+    : P.contentMargin + 22;
 
   ctx.textBaseline = "top";
   ctx.textAlign = "left";
@@ -164,7 +226,7 @@ function drawContent(ctx, layout, x) {
     drawIngredientsBody(ctx, layout, innerX, y, innerW);
   }
 
-  drawFooter(ctx, layout, x);
+  drawFooter(ctx, layout, isBand ? 0 : x, isBand);
 }
 
 function drawSectionHeading(ctx, section, x, y) {
@@ -253,9 +315,9 @@ function drawServingBody(ctx, layout, x, startY, w) {
   });
 }
 
-function drawFooter(ctx, layout, x) {
+function drawFooter(ctx, layout, x, isBand = false) {
   const innerX = x + P.contentMargin;
-  const innerW = P.contentWidth - 2 * P.contentMargin;
+  const innerW = (isBand ? P.width : P.contentWidth) - 2 * P.contentMargin;
   const y = P.height - P.footerBottomInset - P.footerSize;
   ctx.textBaseline = "top";
   ctx.fillStyle = T.muted;
@@ -321,11 +383,36 @@ const CHARS_METHOD_BODY = 42;
 const CHARS_SERVING_BODY = 34;
 const CHARS_TITLE = 20;
 
-// Vertical budget available for the body region between the title
-// divider and the footer, at the current metrics.
-const BODY_BUDGET_HEIGHT = 720;
+// Body-region height is derived from the actual title wrap and footer
+// position, not a fixed constant — a long two-line title on card 1 has
+// a smaller body budget than a one-line title. Keeps pagination honest
+// so long titles never squeeze the footer.
+const FOOTER_SAFETY_PAD = 24; // clearance between body baseline and footer
 const SECTION_HEADING_BLOCK = P.sectionHeadingSize + 8 + P.sectionBarHeight + P.sectionHeadingGap;
 const SECTION_BOTTOM_GAP = P.sectionBottomGap;
+
+// y at which the body region STARTS (label + title + divider consumed).
+export function bodyStartY(recipeName, mode = "side") {
+  const titleLines = measureTitleLines(recipeName || "");
+  const preTitleY = mode === "band"
+    ? P.bandHeight + P.bandContentTopPad
+    : P.contentMargin + 22;
+  return preTitleY
+    + P.labelSize + P.labelGap
+    + titleLines * P.titleLineHeight
+    + P.titleGap
+    + P.dividerHeight + P.dividerGap;
+}
+
+// y at which the footer STARTS (top edge of the footer text row).
+export function footerStartY() {
+  return P.height - P.footerBottomInset - P.footerSize;
+}
+
+// Available body height between title-divider and the footer safety pad.
+export function computeBodyBudget(recipeName, mode = "side") {
+  return footerStartY() - FOOTER_SAFETY_PAD - bodyStartY(recipeName, mode);
+}
 
 function estimateLines(text, charsPerLine) {
   const t = String(text || "").trim();
@@ -376,27 +463,20 @@ function servingRowHeight(item) {
 
 // Ingredient sections → cards, packed by height. Author can explicitly
 // assign each section a `card` index; otherwise items are placed onto
-// the current card until BODY_BUDGET_HEIGHT is exhausted, then flow
+// the current card until the dynamic body budget is exhausted, then flow
 // onto the next. Sections that span cards get their heading redrawn on
 // the continuation, with "(cont.)" appended.
-export function paginateIngredientCards(sections, { maxCards = 2, recipeName = "" } = {}) {
+export function paginateIngredientCards(sections, { maxCards = 2, recipeName = "", mode = "side" } = {}) {
   const list = sections || [];
   if (!list.length) return [];
 
+  const budget = computeBodyBudget(recipeName, mode);
   const explicit = list.every((s) => Number.isInteger(s.card));
   let cards;
   if (explicit) {
-    const buckets = new Map();
-    for (const sec of list) {
-      const arr = buckets.get(sec.card) || [];
-      arr.push(sec);
-      buckets.set(sec.card, arr);
-    }
-    cards = [...buckets.entries()]
-      .sort((a, b) => a[0] - b[0])
-      .map(([, secs]) => secs);
+    cards = bucketByCard(list);
   } else {
-    cards = packSectionsByHeight(list, ingredientRowHeight, P.ingredientRowGap);
+    cards = packSectionsByHeight(list, ingredientRowHeight, P.ingredientRowGap, budget);
   }
 
   if (cards.length > maxCards) {
@@ -405,30 +485,39 @@ export function paginateIngredientCards(sections, { maxCards = 2, recipeName = "
   return cards;
 }
 
-// Method sections → cards, packed by height. Method items are flattened
-// across sections (a recipe usually has a single "Method" list) then
-// packed. Continuation cards drop the heading since the sequence carries
-// context on its own.
-export function paginateMethodCards(sections, { maxCards = 2, recipeName = "" } = {}) {
-  const flat = [];
-  for (const sec of sections || []) {
-    for (const it of sec.items || []) flat.push({ ...it, accent: it.accent || sec.accent || "amber" });
-  }
+// Method sections → cards, packed by height. Author can force a split
+// via `card:` on each section (mirrors ingredients). Otherwise method
+// items are flattened across sections and packed against the dynamic
+// body budget.
+export function paginateMethodCards(sections, { maxCards = 2, recipeName = "", mode = "side" } = {}) {
+  const list = sections || [];
+  if (!list.length) return [];
 
-  const cards = [];
-  let current = [];
-  let currentH = 0;
-  for (const item of flat) {
-    const h = methodRowHeight(item) + P.methodItemGap;
-    if (currentH + h > BODY_BUDGET_HEIGHT && current.length) {
-      cards.push([{ accent: "amber", heading: "", items: current }]);
-      current = [];
-      currentH = 0;
+  const budget = computeBodyBudget(recipeName, mode);
+  const explicit = list.every((s) => Number.isInteger(s.card));
+  let cards;
+  if (explicit) {
+    cards = bucketByCard(list);
+  } else {
+    const flat = [];
+    for (const sec of list) {
+      for (const it of sec.items || []) flat.push({ ...it, accent: it.accent || sec.accent || "amber" });
     }
-    current.push(item);
-    currentH += h;
+    cards = [];
+    let current = [];
+    let currentH = 0;
+    for (const item of flat) {
+      const h = methodRowHeight(item) + P.methodItemGap;
+      if (currentH + h > budget && current.length) {
+        cards.push([{ accent: "amber", heading: "", items: current }]);
+        current = [];
+        currentH = 0;
+      }
+      current.push(item);
+      currentH += h;
+    }
+    if (current.length) cards.push([{ accent: "amber", heading: "", items: current }]);
   }
-  if (current.length) cards.push([{ accent: "amber", heading: "", items: current }]);
 
   if (cards.length > maxCards) {
     console.warn(`[recipe-card] "${recipeName}" paginated to ${cards.length} method cards (soft cap ${maxCards}). Consider fewer steps or shorter bodies.`);
@@ -439,17 +528,64 @@ export function paginateMethodCards(sections, { maxCards = 2, recipeName = "" } 
 // Serving sections → single card. Serving always fits on one card for
 // realistic curator input; overflow paginates onto a second card so we
 // never clip.
-export function paginateServingCards(sections, { recipeName = "" } = {}) {
+export function paginateServingCards(sections, { recipeName = "", mode = "side" } = {}) {
   const list = sections || [];
   if (!list.length) return [];
-  const cards = packSectionsByHeight(list, servingRowHeight, 10);
+  const budget = computeBodyBudget(recipeName, mode);
+  const cards = packSectionsByHeight(list, servingRowHeight, 10, budget);
   if (cards.length > 1) {
     console.warn(`[recipe-card] "${recipeName}" serving text exceeded one card — trim to 1-2 lines per section.`);
   }
   return cards;
 }
 
-function packSectionsByHeight(sections, rowHeightFn, rowGap) {
+// Given sections carrying an explicit numeric `card`, group them into
+// ordered per-card arrays. Sections without heading fall through, sort
+// is stable numeric.
+function bucketByCard(sections) {
+  const buckets = new Map();
+  for (const sec of sections) {
+    const arr = buckets.get(sec.card) || [];
+    arr.push(sec);
+    buckets.set(sec.card, arr);
+  }
+  return [...buckets.entries()]
+    .sort((a, b) => a[0] - b[0])
+    .map(([, secs]) => secs);
+}
+
+// Estimate the y-cursor the body would reach for a rendered card. Used
+// by validateCards to catch layouts where explicit card assignments
+// overflow into the footer safety zone.
+export function estimateBodyEndY(layout) {
+  const y0 = bodyStartY(layout.recipeName || "", resolveImage(layout.image)?.layout || "side");
+  const kind = layout.kind;
+  const rowHeightFn = kind === "recipe-method"
+    ? methodRowHeight
+    : kind === "recipe-serving"
+      ? servingRowHeight
+      : ingredientRowHeight;
+  const rowGap = kind === "recipe-method"
+    ? P.methodItemGap
+    : kind === "recipe-serving"
+      ? 10
+      : P.ingredientRowGap;
+
+  let y = y0;
+  const sections = layout.sections || [];
+  sections.forEach((section, si) => {
+    if (section.heading && kind !== "recipe-method") y += SECTION_HEADING_BLOCK;
+    for (const item of section.items || []) y += rowHeightFn(item) + rowGap;
+    if (si < sections.length - 1) y += SECTION_BOTTOM_GAP;
+  });
+  return y;
+}
+
+export function overflowsFooter(layout) {
+  return estimateBodyEndY(layout) > footerStartY() - FOOTER_SAFETY_PAD;
+}
+
+function packSectionsByHeight(sections, rowHeightFn, rowGap, budget) {
   const cards = [];
   let current = [];
   let currentH = 0;
@@ -471,7 +607,7 @@ function packSectionsByHeight(sections, rowHeightFn, rowGap) {
       const sectionGap = isNewSectionOnCard && currentSectionOnCard ? SECTION_BOTTOM_GAP : 0;
       const totalCost = itemH + headingCost + sectionGap;
 
-      if (currentH + totalCost > BODY_BUDGET_HEIGHT && current.length) {
+      if (currentH + totalCost > budget && current.length) {
         pushCurrent();
       }
 
@@ -537,13 +673,25 @@ function drawWrapped(ctx, text, x, y, maxW, lineHeight) {
   return cursor;
 }
 
-function drawImageCover(ctx, img, x, y, w, h) {
+// Cover-fit an image into a target rect, honoring an author-supplied
+// focal point + zoom. Emits a warning when the crop preserves less than
+// 55% of the source area — usually a sign the photo needs a "band"
+// layout (wide sources) or a tighter curated crop.
+function drawImageCover(ctx, img, x, y, w, h, resolved) {
   const iw = img.naturalWidth || img.width;
   const ih = img.naturalHeight || img.height;
-  const scale = Math.max(w / iw, h / ih);
+  const zoom = resolved?.zoom || 1;
+  const [fx, fy] = parseFocalPoint(resolved?.position);
+  const baseScale = Math.max(w / iw, h / ih);
+  const scale = baseScale * zoom;
   const sw = w / scale;
   const sh = h / scale;
-  const sx = (iw - sw) / 2;
-  const sy = (ih - sh) / 2;
+  const sx = Math.max(0, Math.min(iw - sw, (iw - sw) * fx));
+  const sy = Math.max(0, Math.min(ih - sh, (ih - sh) * fy));
+  const coverage = (sw * sh) / (iw * ih);
+  if (coverage < 0.55) {
+    const pct = Math.round(coverage * 100);
+    console.warn(`[recipe-card] image "${resolved?.src || ""}" preserves ${pct}% of source in a ${w}x${h} slot — use layout: "band" or a tighter crop`);
+  }
   ctx.drawImage(img, sx, sy, sw, sh, x, y, w, h);
 }

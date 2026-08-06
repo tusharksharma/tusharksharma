@@ -36,7 +36,7 @@ import React from "react";
 import { resolveGroup } from "./structuredCard";
 import { buildHeroLayout, HeroStructuredInner } from "./hero.jsx";
 import { buildEndLayout, EndStructuredInner } from "./end.jsx";
-import { paginateIngredientCards, paginateMethodCards, paginateServingCards } from "./recipeCard";
+import { paginateIngredientCards, paginateMethodCards, paginateServingCards, resolveImage, overflowsFooter } from "./recipeCard";
 import RecipeCardInner from "./RecipeCardInner.jsx";
 
 const MAX_INGREDIENT_CARDS = 2;
@@ -74,30 +74,39 @@ export function buildStructuredCards(recipe, opts) {
     { required: false },
   );
 
+  // Body-budget for pagination is derived from the image layout on the
+  // card (band cards have less room because the top 380px is photo). We
+  // resolve to the ingredient/method photo layout in this pool.
+  const ingredientPhotoLayoutMode = pickLayoutMode(sc.ingredientCardPhotos?.[0]);
+  const methodPhotoLayoutMode = pickLayoutMode(sc.methodCardPhotos?.[0]);
   const ingredientCardSectionSets = paginateIngredientCards(ingredientSections, {
     maxCards: MAX_INGREDIENT_CARDS,
     perCard: INGREDIENTS_PER_CARD,
     recipeName: recipe.title,
+    mode: ingredientPhotoLayoutMode,
   });
   const methodCardSectionSets = paginateMethodCards(methodSections, {
     maxCards: MAX_METHOD_CARDS,
     perCard: STEPS_PER_METHOD_CARD,
     recipeName: recipe.title,
+    mode: methodPhotoLayoutMode,
   });
 
   // Photo pool: curated arrays win, else fall back to recipe.socialImages.
-  const usedPhotos = new Set([heroPhoto, servingPhoto].filter(Boolean));
-  const fallbackPool = collectFallbackPhotos(recipe, usedPhotos);
+  // De-dup is by src path only — the same photo used with two different
+  // crops would still collide, but that's a curator smell, not a bug.
+  const usedKeys = new Set([heroPhoto, servingPhoto].map(imageKey).filter(Boolean));
+  const fallbackPool = collectFallbackPhotos(recipe, usedKeys);
   const ingredientPhotos = pickCardPhotos(
     sc.ingredientCardPhotos,
     ingredientCardSectionSets.length,
-    usedPhotos,
+    usedKeys,
     fallbackPool,
   );
   const methodPhotos = pickCardPhotos(
     sc.methodCardPhotos,
     methodCardSectionSets.length,
-    usedPhotos,
+    usedKeys,
     fallbackPool,
   );
 
@@ -157,7 +166,11 @@ export function buildStructuredCards(recipe, opts) {
   });
 
   if (servingBlocks && servingBlocks.length > 0) {
-    const servingCardSets = paginateServingCards(servingBlocks, { recipeName: recipe.title });
+    const servingLayoutMode = pickLayoutMode(servingPhoto);
+    const servingCardSets = paginateServingCards(servingBlocks, {
+      recipeName: recipe.title,
+      mode: servingLayoutMode,
+    });
     servingCardSets.forEach((sections, i) => {
       const imageSide = alternate++ % 2 === 0 ? "right" : "left";
       cards.push({
@@ -405,21 +418,36 @@ function shortServingLine(label) {
 
 // ---------- PHOTO SELECTION ----------
 
-function collectFallbackPhotos(recipe, alreadyUsed) {
+function pickLayoutMode(image) {
+  return resolveImage(image)?.layout || "side";
+}
+
+// Canonicalize image field to its src path — used for de-dup only. The
+// full crop object still flows through to the renderer.
+function imageKey(image) {
+  if (!image) return null;
+  return typeof image === "string" ? image : image.src || null;
+}
+
+function collectFallbackPhotos(recipe, alreadyUsedKeys) {
   const raw = Array.isArray(recipe.socialImages) ? recipe.socialImages : [];
-  const seen = new Set(alreadyUsed);
+  const seen = new Set(alreadyUsedKeys);
   const out = [];
   for (const src of raw) {
-    if (!src || seen.has(src)) continue;
-    seen.add(src);
+    const key = imageKey(src);
+    if (!key || seen.has(key)) continue;
+    seen.add(key);
     out.push(src);
   }
   return out;
 }
 
-function pickCardPhotos(curated, count, usedPhotos, fallbackPool) {
+function pickCardPhotos(curated, count, usedKeys, fallbackPool) {
   const out = [];
-  const isValid = (src) => !!src && !usedPhotos.has(src);
+  const isValid = (image) => {
+    const key = imageKey(image);
+    return !!key && !usedKeys.has(key);
+  };
 
   for (let i = 0; i < count; i++) {
     let pick = null;
@@ -432,7 +460,7 @@ function pickCardPhotos(curated, count, usedPhotos, fallbackPool) {
       }
     }
     if (pick) {
-      usedPhotos.add(pick);
+      usedKeys.add(imageKey(pick));
       out.push(pick);
     } else {
       out.push(null);
@@ -472,6 +500,20 @@ export function validateCards(cards, recipe) {
   }
   if (cards[0]?.kind !== "hero") errors.push(`First card must be hero (got ${cards[0]?.kind}).`);
   if (cards[cards.length - 1]?.kind !== "end") errors.push(`Last card must be end (got ${cards[cards.length - 1]?.kind}).`);
+
+  // Every recipe-body card must fit above the footer safety pad.
+  // Curators using explicit `card:` splits can silently overflow past
+  // pagination; this check catches it before export ships bad PNGs.
+  for (const card of cards) {
+    const body = card.kind === "recipe-ingredients"
+      || card.kind === "recipe-method"
+      || card.kind === "recipe-serving";
+    if (!body || !card.layout) continue;
+    if (overflowsFooter(card.layout)) {
+      errors.push(`${card.id} content enters the footer safety zone — split more cards, trim copy, or use band layout.`);
+    }
+  }
+
   if (errors.length) {
     console.warn(`[social-carousel] validation issues for "${recipe.title}":\n- ${errors.join("\n- ")}`);
   }

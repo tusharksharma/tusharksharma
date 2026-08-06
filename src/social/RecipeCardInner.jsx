@@ -14,6 +14,7 @@ import {
   RECIPE_CARD_METRICS,
   RECIPE_CARD_THEME,
   accentColorFor,
+  resolveImage,
 } from "./recipeCard";
 
 const T = RECIPE_CARD_THEME;
@@ -25,6 +26,12 @@ const FONT_SANS =
   'ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif';
 
 export default function RecipeCardInner({ layout }) {
+  const resolved = resolveImage(layout.image);
+  if (resolved?.layout === "band") return <BandRecipeCard layout={layout} resolved={resolved} />;
+  return <SideRecipeCard layout={layout} resolved={resolved} />;
+}
+
+function SideRecipeCard({ layout, resolved }) {
   const imageOnLeft = layout.imageSide === "left";
   const cols = imageOnLeft
     ? `${P.photoWidth * S}px ${P.contentWidth * S}px`
@@ -40,14 +47,57 @@ export default function RecipeCardInner({ layout }) {
         gridTemplateColumns: cols,
       }}
     >
-      {imageOnLeft && <RecipeImage layout={layout} imageOnLeft />}
-      <RecipeContent layout={layout} />
-      {!imageOnLeft && <RecipeImage layout={layout} />}
+      {imageOnLeft && <SideImage resolved={resolved} imageOnLeft />}
+      <RecipeContent layout={layout} mode="side" />
+      {!imageOnLeft && <SideImage resolved={resolved} />}
     </div>
   );
 }
 
-function RecipeImage({ layout, imageOnLeft }) {
+function BandRecipeCard({ layout, resolved }) {
+  const bandH = P.bandHeight * S;
+  const seamH = P.bandSeamGradientHeight * S;
+  return (
+    <div
+      className="relative w-full h-full overflow-hidden"
+      style={{ background: T.background, color: T.text }}
+    >
+      <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: `${bandH}px`, overflow: "hidden" }}>
+        {resolved?.src ? (
+          <img
+            src={resolved.src}
+            alt=""
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              objectPosition: resolved.position,
+              transform: resolved.zoom !== 1 ? `scale(${resolved.zoom})` : undefined,
+              transformOrigin: resolved.position,
+            }}
+          />
+        ) : (
+          <div style={{ width: "100%", height: "100%", background: T.surface }} />
+        )}
+        <div
+          aria-hidden
+          style={{
+            position: "absolute",
+            left: 0,
+            right: 0,
+            bottom: 0,
+            height: `${seamH}px`,
+            background: `linear-gradient(to bottom, rgba(17,17,15,0), ${T.background})`,
+            pointerEvents: "none",
+          }}
+        />
+      </div>
+      <RecipeContent layout={layout} mode="band" />
+    </div>
+  );
+}
+
+function SideImage({ resolved, imageOnLeft }) {
   const seamW = P.seamGradientWidth * S;
   const gradient = imageOnLeft
     ? `linear-gradient(to left, ${T.background}, rgba(17,17,15,0))`
@@ -55,9 +105,9 @@ function RecipeImage({ layout, imageOnLeft }) {
 
   return (
     <div style={{ position: "relative", overflow: "hidden" }}>
-      {layout.image ? (
+      {resolved?.src ? (
         <img
-          src={layout.image}
+          src={resolved.src}
           alt=""
           style={{
             position: "absolute",
@@ -65,7 +115,9 @@ function RecipeImage({ layout, imageOnLeft }) {
             width: "100%",
             height: "100%",
             objectFit: "cover",
-            objectPosition: "center",
+            objectPosition: resolved.position,
+            transform: resolved.zoom !== 1 ? `scale(${resolved.zoom})` : undefined,
+            transformOrigin: resolved.position,
           }}
         />
       ) : (
@@ -87,13 +139,22 @@ function RecipeImage({ layout, imageOnLeft }) {
   );
 }
 
-function RecipeContent({ layout }) {
+function RecipeContent({ layout, mode = "side" }) {
   const pad = P.contentMargin * S;
+  const isBand = mode === "band";
+  const topPad = isBand
+    ? (P.bandHeight + P.bandContentTopPad) * S
+    : (P.contentMargin + 22) * S;
   return (
     <div
       style={{
-        position: "relative",
-        padding: `${(P.contentMargin + 22) * S}px ${pad}px ${P.footerBottomInset * S}px`,
+        position: isBand ? "absolute" : "relative",
+        top: isBand ? 0 : undefined,
+        left: isBand ? 0 : undefined,
+        right: isBand ? 0 : undefined,
+        bottom: isBand ? 0 : undefined,
+        padding: `${topPad}px ${pad}px ${P.footerBottomInset * S}px`,
+        pointerEvents: isBand ? "none" : undefined,
       }}
     >
       <Header layout={layout} />
@@ -107,7 +168,7 @@ function RecipeContent({ layout }) {
           <IngredientList layout={layout} />
         )}
       </div>
-      <Footer layout={layout} />
+      <Footer layout={layout} mode={mode} />
     </div>
   );
 }
@@ -365,6 +426,7 @@ function Footer({ layout }) {
         fontWeight: 500,
         fontSize: `${P.footerSize * S}px`,
         color: T.muted,
+        pointerEvents: "auto",
       }}
     >
       <span>{layout.footer || "thesplitplate.com"}</span>

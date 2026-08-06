@@ -2488,23 +2488,36 @@ const recipes = [
         {
           card: 2,
           accent: "coral",
-          heading: "Adult Finish",
+          heading: "Adult Sauce",
           items: [
-            { quantity: "1 tbsp ea", text: "Soy sauce, red chili sauce, rice vinegar" },
-            { quantity: "1/2 tbsp ea", text: "Thai chili, sesame oil, fried chili oil" },
+            { quantity: "1 tbsp", text: "Soy sauce" },
+            { quantity: "1 tbsp", text: "Red chili sauce" },
+            { quantity: "1 tbsp", text: "Rice vinegar" },
+            { quantity: "1/2 tbsp", text: "Thai chili sauce" },
+            { quantity: "1/2 tbsp", text: "Sesame chili oil" },
+            { quantity: "1/2 tbsp", text: "Fried chili oil" },
           ],
         },
       ],
-      // Method cards — action-headed. Body kept to one short line. The
-      // long form (with brand names) stays in splitCook below.
+      // Method cards — action-headed. Split 3+3 across two cards via
+      // explicit `card:` so pagination doesn't leave step 5 clipped by
+      // the footer or step 6 alone on card 5.
       methodGroups: [
         {
+          card: 1,
           accent: "amber",
           heading: "Method",
           items: [
             { number: 1, heading: "Air Fry", body: "400°F · 10-12 min, shake halfway" },
             { number: 2, heading: "Split", body: "Reserve 7 oz plain chicken before saucing", accent: "coral" },
             { number: 3, heading: "Mix", body: "Stir the six-ingredient adult sauce" },
+          ],
+        },
+        {
+          card: 2,
+          accent: "amber",
+          heading: "Method",
+          items: [
             { number: 4, heading: "Char", body: "Peppers + onion, high heat 3-5 min" },
             { number: 5, heading: "Add", body: "Adult chicken back in, sprinkle seasoning" },
             { number: 6, heading: "Toss", body: "Pour sauce, 45-75s until glossy" },
@@ -2515,9 +2528,16 @@ const recipes = [
       // / left alternation is applied by the generator; index 0 = first
       // ingredient card, index 1 = second, etc.
       // Card 1 photo swapped to the plated smaller-plate — carries the
-      // split-plate story without the package/brand foreground.
+      // split-plate story without the package/brand foreground. Focal
+      // point + zoom crop tight to a single plate so the narrow side
+      // column doesn't slice the outer plates in half.
       ingredientCardPhotos: [
-        "/images/indo-chinese-chili-chicken/step-07-build-kid-plates-polished.webp",
+        {
+          src: "/images/indo-chinese-chili-chicken/step-07-build-kid-plates-polished.webp",
+          position: "50% 55%",
+          zoom: 1.35,
+          layout: "side",
+        },
         "/images/indo-chinese-chili-chicken/context-six-ingredient-sauce.webp",
       ],
       methodCardPhotos: [
