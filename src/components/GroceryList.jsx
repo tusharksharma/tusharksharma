@@ -1112,6 +1112,28 @@ const GROCERY_BY_WEEK = {
       { name: "Kirkland Sipping Bone Broth (Fri Soules skillet reheat, 1/4 cup)", qty: "pantry", meal: "Fri" },
     ],
   },
+  // Week 27: Mon=Viral Tomato Feta Chicken Pasta batch cook(56) — one Sunday cook reheats Mon / Wed / Fri
+  27: {
+    "Protein": [
+      { name: "Chicken thighs (Mon batch — feeds Mon + Wed + Fri, 2 lb, pre-seasoned Mediterranean shortcut or plain)", baseQty: 2, unit: "lb", meal: "Mon + Wed + Fri" },
+    ],
+    "Dairy": [
+      { name: "Feta cheese blocks (Mon batch — feeds Mon + Wed + Fri, two 8 oz, BLOCK feta only, not pre-crumbled)", baseQty: 2, unit: "pack", meal: "Mon + Wed + Fri" },
+    ],
+    "Produce": [
+      { name: "Cherry + pear tomatoes (Mon batch — feeds Mon + Wed + Fri, 600 g whole, do not chop before roasting)", baseQty: 600, unit: "g", meal: "Mon + Wed + Fri" },
+    ],
+    "Carbs": [
+      { name: "Low-carb penne (Mon batch adult — feeds Mon + Wed + Fri, 12 oz dry, Carbe Diem or Barilla Protein+)", baseQty: 12, unit: "oz", meal: "Mon + Wed + Fri adult" },
+      { name: "Regular penne (Mon batch kid — feeds Mon + Wed + Fri, 9 oz dry, Barilla or similar)", baseQty: 9, unit: "oz", meal: "Mon + Wed + Fri kid" },
+    ],
+    "Pantry": [
+      { name: "Olive oil (Mon batch, 4 tbsp)", qty: "pantry", meal: "Mon + Wed + Fri" },
+    ],
+    "Spice + Aromatic": [
+      { name: "Mediterranean or Greek seasoning (Mon batch — Spiceology Greek Freak shown)", qty: "pantry", meal: "Mon + Wed + Fri" },
+    ],
+  },
 };
 
 function getGrocery(week) { return GROCERY_BY_WEEK[week] || GROCERY_BY_WEEK[1]; }
@@ -1142,6 +1164,7 @@ const WHOLE_UNITS = new Set([
 const FRACTIONAL_UNITS = new Set([
   "oz", "oz dry", "oz jar", "lb", "lb bunch",
   "tbsp", "tsp",
+  "g",
 ]);
 
 // baseQty values are for 4 servings (2 adults + 2 kids standard).
