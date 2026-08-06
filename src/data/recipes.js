@@ -8051,12 +8051,12 @@ const recipes = [
     },
     slug: "viral-tomato-feta-chicken-pasta",
     socialImages: [
-      "/images/viral-tomato-feta-chicken-pasta/step-01-add-feta.webp",
-      "/images/viral-tomato-feta-chicken-pasta/step-02-baked-tomatoes-feta.webp",
-      "/images/viral-tomato-feta-chicken-pasta/step-04-chop-chicken.webp",
-      "/images/viral-tomato-feta-chicken-pasta/step-05-mash-tomato-feta-sauce.webp",
-      "/images/viral-tomato-feta-chicken-pasta/step-06-divide-sauce.webp",
-      "/images/viral-tomato-feta-chicken-pasta/step-09-pack-family-dinners.webp",
+      "/images/viral-tomato-feta-chicken-pasta/step-01-add-feta-polished.webp",
+      "/images/viral-tomato-feta-chicken-pasta/step-02-baked-tomatoes-feta-polished.webp",
+      "/images/viral-tomato-feta-chicken-pasta/step-04-chop-chicken-polished.webp",
+      "/images/viral-tomato-feta-chicken-pasta/step-05-mash-tomato-feta-sauce-polished.webp",
+      "/images/viral-tomato-feta-chicken-pasta/step-06-divide-sauce-polished.webp",
+      "/images/viral-tomato-feta-chicken-pasta/step-09-pack-family-dinners-polished.webp",
     ],
     socialHashtags: [
       "#TomatoFetaPasta",
@@ -8069,8 +8069,8 @@ const recipes = [
       heroBadge: "Split Plate Dinner",
       heroTitle: "Viral Tomato Feta Chicken Pasta",
       hook: "One shared bake, two pasta finishes. 6 adult + 6 smaller portions from a single cook. ~450 cal / 37g protein per adult plate.",
-      heroPhoto: "/images/viral-tomato-feta-chicken-pasta/hero-split-batch.webp",
-      servingPhoto: "/images/viral-tomato-feta-chicken-pasta/step-09-pack-family-dinners.webp",
+      heroPhoto: "/images/viral-tomato-feta-chicken-pasta/hero-split-batch-polished.webp",
+      servingPhoto: "/images/viral-tomato-feta-chicken-pasta/step-09-pack-family-dinners-polished.webp",
       ingredientGroups: [
         {
           card: 1,
@@ -8130,8 +8130,8 @@ const recipes = [
         "/images/viral-tomato-feta-chicken-pasta/context-adult-kid-pasta-split.webp",
       ],
       methodCardPhotos: [
-        "/images/viral-tomato-feta-chicken-pasta/step-02-baked-tomatoes-feta.webp",
-        "/images/viral-tomato-feta-chicken-pasta/step-08-mix-low-carb-pasta.webp",
+        "/images/viral-tomato-feta-chicken-pasta/step-02-baked-tomatoes-feta-polished.webp",
+        "/images/viral-tomato-feta-chicken-pasta/step-08-mix-low-carb-pasta-polished.webp",
       ],
       servingGroups: [
         {
@@ -8163,7 +8163,7 @@ const recipes = [
     servings: 9,
     protein: 37,
     calories: 450,
-    image: "/images/viral-tomato-feta-chicken-pasta/hero-split-batch.webp",
+    image: "/images/viral-tomato-feta-chicken-pasta/hero-split-batch-polished.webp",
     prepImage: "/images/viral-tomato-feta-chicken-pasta/hero-adult-tomato-feta-chicken-pasta.webp",
     prepImageCaption: "Adult plate — 2 oz dry low-carb penne + one full tomato-feta sauce + chicken unit. ~450 cal / 37g protein. From a single bake: 6 adult portions + 6 smaller portions = 3 family dinners.",
     video: "/videos/viral-tomato-feta-chicken-pasta/viral-tomato-feta-chicken-pasta-split-plate-450cal-37protein-marcus.mp4",
