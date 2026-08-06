@@ -487,35 +487,148 @@ function renderFor(card) {
 
 // ---------- VALIDATION ----------
 
-export function validateCards(cards, recipe) {
-  const errors = [];
-  if (cards.length > 10) errors.push(`Card count ${cards.length} exceeds 10.`);
-  if (!cards.some((c) => c.kind === "recipe-ingredients")) errors.push(`No ingredients card for ${recipe.title || recipe.slug}.`);
-  if (!cards.some((c) => c.kind === "recipe-method")) errors.push(`No method card for ${recipe.title || recipe.slug}.`);
-  if (cards.filter((c) => c.kind === "recipe-ingredients").length > MAX_INGREDIENT_CARDS) {
-    errors.push(`More than ${MAX_INGREDIENT_CARDS} ingredient cards — trim curated card copy.`);
-  }
-  if (cards.filter((c) => c.kind === "recipe-method").length > MAX_METHOD_CARDS) {
-    errors.push(`More than ${MAX_METHOD_CARDS} method cards — trim curated card copy.`);
-  }
-  if (cards[0]?.kind !== "hero") errors.push(`First card must be hero (got ${cards[0]?.kind}).`);
-  if (cards[cards.length - 1]?.kind !== "end") errors.push(`Last card must be end (got ${cards[cards.length - 1]?.kind}).`);
+// Named validation codes. Each check emits {code, message, cardId}
+// so batch-review tooling can group by code and diff between runs.
+export const VALIDATION_CODES = Object.freeze({
+  MORE_THAN_TEN_CARDS: "MORE_THAN_TEN_CARDS",
+  MISSING_INGREDIENTS: "MISSING_INGREDIENTS",
+  MISSING_METHOD: "MISSING_METHOD",
+  WRONG_FIRST_CARD: "WRONG_FIRST_CARD",
+  WRONG_LAST_CARD: "WRONG_LAST_CARD",
+  MAX_INGREDIENT_CARDS: "MAX_INGREDIENT_CARDS",
+  MAX_METHOD_CARDS: "MAX_METHOD_CARDS",
+  MORE_THAN_THREE_METHOD_STEPS: "MORE_THAN_THREE_METHOD_STEPS",
+  SPARSE_CARD: "SPARSE_CARD",
+  TEXT_ENTERING_FOOTER: "TEXT_ENTERING_FOOTER",
+  DUPLICATE_PHOTO: "DUPLICATE_PHOTO",
+  METHOD_PHOTO_OUT_OF_ORDER: "METHOD_PHOTO_OUT_OF_ORDER",
+  EXCESSIVE_ZOOM: "EXCESSIVE_ZOOM",
+});
 
-  // Every recipe-body card must fit above the footer safety pad.
-  // Curators using explicit `card:` splits can silently overflow past
-  // pagination; this check catches it before export ships bad PNGs.
-  for (const card of cards) {
-    const body = card.kind === "recipe-ingredients"
-      || card.kind === "recipe-method"
-      || card.kind === "recipe-serving";
-    if (!body || !card.layout) continue;
-    if (overflowsFooter(card.layout)) {
-      errors.push(`${card.id} content enters the footer safety zone — split more cards, trim copy, or use band layout.`);
+// Density thresholds — the "no sparse tail" and "max 3 steps per card"
+// rules. Values match the rules doc: 3-6 ingredient rows per card,
+// hard cap 3 steps per method card.
+const MIN_INGREDIENT_ROWS_PER_CARD = 3;
+const MAX_METHOD_STEPS_PER_CARD = 3;
+const MAX_AUTHOR_ZOOM = 1.35;
+
+export function validateCards(cards, recipe) {
+  const issues = [];
+  const emit = (code, message, cardId = null) => issues.push({ code, message, cardId });
+
+  if (cards.length > 10) emit(VALIDATION_CODES.MORE_THAN_TEN_CARDS, `Card count ${cards.length} exceeds 10.`);
+  if (!cards.some((c) => c.kind === "recipe-ingredients")) {
+    emit(VALIDATION_CODES.MISSING_INGREDIENTS, `No ingredients card for ${recipe.title || recipe.slug}.`);
+  }
+  if (!cards.some((c) => c.kind === "recipe-method")) {
+    emit(VALIDATION_CODES.MISSING_METHOD, `No method card for ${recipe.title || recipe.slug}.`);
+  }
+  const ingredientCards = cards.filter((c) => c.kind === "recipe-ingredients");
+  const methodCards = cards.filter((c) => c.kind === "recipe-method");
+  if (ingredientCards.length > MAX_INGREDIENT_CARDS) {
+    emit(VALIDATION_CODES.MAX_INGREDIENT_CARDS, `${ingredientCards.length} ingredient cards exceeds cap ${MAX_INGREDIENT_CARDS}.`);
+  }
+  if (methodCards.length > MAX_METHOD_CARDS) {
+    emit(VALIDATION_CODES.MAX_METHOD_CARDS, `${methodCards.length} method cards exceeds cap ${MAX_METHOD_CARDS}.`);
+  }
+  if (cards[0]?.kind !== "hero") emit(VALIDATION_CODES.WRONG_FIRST_CARD, `First card must be hero (got ${cards[0]?.kind}).`);
+  if (cards[cards.length - 1]?.kind !== "end") emit(VALIDATION_CODES.WRONG_LAST_CARD, `Last card must be end (got ${cards[cards.length - 1]?.kind}).`);
+
+  // MORE_THAN_THREE_METHOD_STEPS — hard rule; three per card, no 5+1.
+  for (const card of methodCards) {
+    const items = (card.layout?.sections || []).flatMap((s) => s.items || []);
+    if (items.length > MAX_METHOD_STEPS_PER_CARD) {
+      emit(
+        VALIDATION_CODES.MORE_THAN_THREE_METHOD_STEPS,
+        `${card.id}: ${items.length} method steps (max ${MAX_METHOD_STEPS_PER_CARD}).`,
+        card.id,
+      );
     }
   }
 
-  if (errors.length) {
-    console.warn(`[social-carousel] validation issues for "${recipe.title}":\n- ${errors.join("\n- ")}`);
+  // SPARSE_CARD — a 2nd (or later) ingredient card with < 3 rows means
+  // the split is unbalanced; consolidate or curate.
+  for (let i = 0; i < ingredientCards.length; i++) {
+    const card = ingredientCards[i];
+    const items = (card.layout?.sections || []).flatMap((s) => s.items || []);
+    if (items.length < MIN_INGREDIENT_ROWS_PER_CARD && ingredientCards.length > 1) {
+      emit(
+        VALIDATION_CODES.SPARSE_CARD,
+        `${card.id}: only ${items.length} rows (min ${MIN_INGREDIENT_ROWS_PER_CARD} per card when there are 2+ ingredient cards).`,
+        card.id,
+      );
+    }
   }
-  return errors;
+
+  // METHOD_PHOTO_OUT_OF_ORDER — step numbers must be strictly ascending
+  // across ALL method cards. Chronology is the whole point of the numbers.
+  const stepNumbers = methodCards
+    .flatMap((c) => (c.layout?.sections || []).flatMap((s) => s.items || []))
+    .map((it) => it.number)
+    .filter((n) => Number.isInteger(n));
+  for (let i = 1; i < stepNumbers.length; i++) {
+    if (stepNumbers[i] <= stepNumbers[i - 1]) {
+      emit(
+        VALIDATION_CODES.METHOD_PHOTO_OUT_OF_ORDER,
+        `Step numbers not ascending across method cards: ${stepNumbers.join(", ")}.`,
+      );
+      break;
+    }
+  }
+
+  // DUPLICATE_PHOTO — same src on 2+ body/end cards. Hero → serving
+  // reuse is allowed (matches the batch-workflow rule).
+  const seen = new Map();
+  const heroCard = cards.find((c) => c.kind === "hero");
+  const heroSrc = imageKey(heroCard?.layout?.photoSrc);
+  for (const card of cards) {
+    if (card.kind === "hero" || card.kind === "end" || card.kind === "component") continue;
+    const src = imageKey(card.layout?.image);
+    if (!src) continue;
+    // Hero → serving payoff reuse is intentional.
+    if (card.kind === "recipe-serving" && src === heroSrc) continue;
+    if (seen.has(src)) {
+      emit(
+        VALIDATION_CODES.DUPLICATE_PHOTO,
+        `Photo "${src}" used on ${seen.get(src)} and ${card.id}.`,
+        card.id,
+      );
+    } else {
+      seen.set(src, card.id);
+    }
+  }
+
+  // EXCESSIVE_ZOOM — author-set zoom above the auto-cap.
+  for (const card of cards) {
+    const resolved = resolveImage(card.layout?.image);
+    if (resolved && resolved.zoom > MAX_AUTHOR_ZOOM) {
+      emit(
+        VALIDATION_CODES.EXCESSIVE_ZOOM,
+        `${card.id}: zoom ${resolved.zoom} exceeds ${MAX_AUTHOR_ZOOM}. Pick a tighter photo or use band layout.`,
+        card.id,
+      );
+    }
+  }
+
+  // TEXT_ENTERING_FOOTER — body content overlaps footer safety pad.
+  for (const card of cards) {
+    const body =
+      card.kind === "recipe-ingredients" ||
+      card.kind === "recipe-method" ||
+      card.kind === "recipe-serving";
+    if (!body || !card.layout) continue;
+    if (overflowsFooter(card.layout)) {
+      emit(
+        VALIDATION_CODES.TEXT_ENTERING_FOOTER,
+        `${card.id} content enters the footer safety zone — split more cards, trim copy, or use band layout.`,
+        card.id,
+      );
+    }
+  }
+
+  if (issues.length) {
+    const lines = issues.map((i) => `  [${i.code}] ${i.message}`).join("\n");
+    console.warn(`[social-carousel] validation issues for "${recipe.title}":\n${lines}`);
+  }
+  return issues;
 }

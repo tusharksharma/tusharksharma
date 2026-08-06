@@ -132,6 +132,11 @@ function hashtagsFor(recipe) {
     if (recipe.carbLevel === "low" || recipe.carbLevel === "none") tags.add("#LowCarb");
     else if ((recipe.protein || 0) >= 40) tags.add("#HighProteinDinner");
     else tags.add("#FamilyDinner");
+
+    // 5. Format signals — fill missing slots so every dinner ships 5 tags,
+    // matching the "5 hashtags" claim in the caption.
+    if (recipe.splitCook) tags.add("#SplitPlateDinner");
+    if ((recipe.meta?.effortTags || []).includes("weeknight")) tags.add("#WeeknightDinner");
   }
 
   // No brand anchor. Audience already knows the account; spending a tag

@@ -485,10 +485,13 @@ export function paginateIngredientCards(sections, { maxCards = 2, recipeName = "
   return cards;
 }
 
-// Method sections → cards, packed by height. Author can force a split
-// via `card:` on each section (mirrors ingredients). Otherwise method
-// items are flattened across sections and packed against the dynamic
-// body budget.
+// Method sections → cards. Author can force a split via `card:` on each
+// section (mirrors ingredients). Otherwise steps are distributed evenly
+// with a HARD cap of 3 per card, so a 6-step recipe pages as 3+3 and
+// never 5+1. Height budget is still respected as a secondary constraint
+// when individual step bodies are long.
+const MAX_METHOD_STEPS_PER_CARD = 3;
+
 export function paginateMethodCards(sections, { maxCards = 2, recipeName = "", mode = "side" } = {}) {
   const list = sections || [];
   if (!list.length) return [];
@@ -503,26 +506,52 @@ export function paginateMethodCards(sections, { maxCards = 2, recipeName = "", m
     for (const sec of list) {
       for (const it of sec.items || []) flat.push({ ...it, accent: it.accent || sec.accent || "amber" });
     }
-    cards = [];
-    let current = [];
-    let currentH = 0;
-    for (const item of flat) {
-      const h = methodRowHeight(item) + P.methodItemGap;
-      if (currentH + h > budget && current.length) {
-        cards.push([{ accent: "amber", heading: "", items: current }]);
-        current = [];
-        currentH = 0;
-      }
-      current.push(item);
-      currentH += h;
-    }
-    if (current.length) cards.push([{ accent: "amber", heading: "", items: current }]);
+    cards = distributeMethodItems(flat, budget);
   }
 
   if (cards.length > maxCards) {
     console.warn(`[recipe-card] "${recipeName}" paginated to ${cards.length} method cards (soft cap ${maxCards}). Consider fewer steps or shorter bodies.`);
   }
   return cards;
+}
+
+// Even distribution with a hard 3-per-card cap. Also splits further when
+// a single card's items would overflow the height budget — long bodies
+// can force a page break sooner than the 3-cap alone would.
+function distributeMethodItems(flat, budget) {
+  const total = flat.length;
+  if (!total) return [];
+  // Minimum card count from the count cap.
+  let cardCount = Math.max(1, Math.ceil(total / MAX_METHOD_STEPS_PER_CARD));
+  // Height check: if any card's items overflow the budget, add cards.
+  let buckets;
+  while (true) {
+    buckets = evenBuckets(flat, cardCount);
+    const anyOverflows = buckets.some((bucket) => {
+      const h = bucket.reduce((sum, it) => sum + methodRowHeight(it) + P.methodItemGap, 0);
+      return h > budget && bucket.length > 1;
+    });
+    if (!anyOverflows) break;
+    cardCount += 1;
+    if (cardCount >= total) break; // avoid runaway
+  }
+  return buckets.map((items) => [{ accent: "amber", heading: "", items }]);
+}
+
+// Split N items across K cards as evenly as possible.
+// N=7, K=3 → [3, 2, 2]. N=6, K=2 → [3, 3]. N=5, K=2 → [3, 2].
+function evenBuckets(flat, cardCount) {
+  const total = flat.length;
+  const base = Math.floor(total / cardCount);
+  const extras = total % cardCount;
+  const buckets = [];
+  let idx = 0;
+  for (let i = 0; i < cardCount; i++) {
+    const take = base + (i < extras ? 1 : 0);
+    buckets.push(flat.slice(idx, idx + take));
+    idx += take;
+  }
+  return buckets;
 }
 
 // Serving sections → single card. Serving always fits on one card for

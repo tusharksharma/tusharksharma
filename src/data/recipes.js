@@ -5905,6 +5905,90 @@ const recipes = [
       "/images/chicken-pot-pie/step-10-oven-425-polished.webp",
       "/images/chicken-pot-pie/payoff-spoon-crack-polished.webp",
     ],
+    // Curated 7-card carousel. The auto-derive path produced 4+4+4
+    // method cards + a 9/3 ingredient split; this block imposes the
+    // "3 + 3 method / balanced ingredients / short hero copy" shape.
+    socialCarousel: {
+      heroBadge: "Split Plate Dinner",
+      heroTitle: "Shortcut Chicken Pot Pie",
+      hook: "One filling, two portions · 520 cal · 30g protein",
+      heroPhoto: "/images/chicken-pot-pie/hero-family-pot-pie-batch-polished.webp",
+      // 5 rows + 6 rows — balanced, no sparse tail. Portion-split
+      // dinner, so a single amber section.
+      ingredientGroups: [
+        {
+          card: 1,
+          accent: "amber",
+          heading: "Ingredients",
+          items: [
+            { quantity: "18 oz", text: "Chipotle-seasoned cooked chicken" },
+            { quantity: "4 oz", text: "Mushrooms" },
+            { quantity: "4 oz", text: "Carrots" },
+            { quantity: "4 oz", text: "Asparagus" },
+            { quantity: "2 tbsp", text: "All-purpose flour" },
+          ],
+        },
+        {
+          card: 2,
+          accent: "amber",
+          heading: "Ingredients",
+          items: [
+            { quantity: "1/4 cup", text: "Dry vermouth" },
+            { quantity: "3 cups", text: "Chicken bone broth" },
+            { quantity: "4 pinches", text: "Kosher salt" },
+            { quantity: "1 sheet", text: "Puff pastry (~250g)" },
+            { quantity: "1/2", text: "Beaten egg, for wash" },
+            { quantity: "1 tbsp", text: "Avocado oil spray" },
+          ],
+        },
+      ],
+      // 6 steps → 3 + 3 via explicit card assignment. Numbers stay
+      // ascending across cards for METHOD_PHOTO_OUT_OF_ORDER validation.
+      methodGroups: [
+        {
+          card: 1,
+          accent: "amber",
+          heading: "Method",
+          items: [
+            { number: 1, heading: "Sauté", body: "Mushrooms 3 min, then carrots 3 min." },
+            { number: 2, heading: "Build Roux", body: "Flour 1 min, off-heat vermouth deglaze." },
+            { number: 3, heading: "Finish Filling", body: "Broth to boil, fold in chicken + asparagus, simmer 3 min." },
+          ],
+        },
+        {
+          card: 2,
+          accent: "amber",
+          heading: "Method",
+          items: [
+            { number: 4, heading: "Fill", body: "Scoop into greased oven-safe bowls." },
+            { number: 5, heading: "Top", body: "Puff pastry, 1-inch vent slit, egg wash." },
+            { number: 6, heading: "Bake", body: "425°F · 20 min. Rest before serving." },
+          ],
+        },
+      ],
+      // Ingredient card photos: mushroom sauté + vermouth pour (action,
+      // chronological). Method card photos: broth boil (mid) + puff
+      // pastry (late). Serving reuses hero for the payoff shot.
+      ingredientCardPhotos: [
+        "/images/chicken-pot-pie/step-01-mushrooms-polished.webp",
+        "/images/chicken-pot-pie/step-04-vermouth-polished.webp",
+      ],
+      methodCardPhotos: [
+        "/images/chicken-pot-pie/step-05-bone-broth-polished.webp",
+        "/images/chicken-pot-pie/step-08-puff-pastry-polished.webp",
+      ],
+      servingPhoto: "/images/chicken-pot-pie/payoff-spoon-crack-polished.webp",
+      servingGroups: [
+        {
+          accent: "amber",
+          heading: "Serve",
+          items: [
+            { text: "I served adults a full bowl and my kids half based on their appetite. Adjust for your family and cool smaller portions first." },
+          ],
+        },
+      ],
+      engagementQuestion: "Puff pastry or biscuit topping — which one wins?",
+    },
     proteinAnchor: "chicken",
     mealType: "casserole",
     flavorDirection: "american-comfort",

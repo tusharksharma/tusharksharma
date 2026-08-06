@@ -227,14 +227,19 @@ export function buildHeroLayout(recipe, curated = {}, { index, total, isCookbook
 
   const accent = curated.heroAccent || (recipe.splitCook ? "amber" : "amber");
 
+  // heroTitle override lets a carousel use a marketing-shorter or
+  // marketing-punchier title than the base recipe title (e.g. adding
+  // "Shortcut " or dropping a subvariant). Falls back to recipe.title.
+  const title = curated.heroTitle || recipe.title || "";
+
   return {
     kind: "hero",
     index, total,
-    recipeName: recipe.title || "",
+    recipeName: title,
     photoSrc,
     photoStripHeight: HERO_PHOTO_STRIP_HEIGHT,
     badge,
-    title: recipe.title || "",
+    title,
     tagline,
     stats,
     accent,
