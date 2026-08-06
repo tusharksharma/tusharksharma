@@ -327,7 +327,9 @@ function deriveMethodSections(recipe) {
     (split.sharedSteps || []).forEach((s) => push(typeof s === "object" ? s.text : s));
     (split.adult?.steps || []).forEach((s) => push(typeof s === "object" ? s.text : s));
   } else if (Array.isArray(recipe.steps) && recipe.steps.length) {
-    recipe.steps.forEach((s) => push(typeof s === "object" ? (s.text || s.instruction) : s));
+    recipe.steps
+      .filter((s) => !(typeof s === "object" && s.__visualOnly))
+      .forEach((s) => push(typeof s === "object" ? (s.text || s.instruction) : s));
   } else if (Array.isArray(recipe.method) && recipe.method.length) {
     recipe.method.forEach((s) => push(typeof s === "object" ? (s.text || s.instruction) : s));
   } else if (Array.isArray(recipe.executionRules) && recipe.executionRules.length) {

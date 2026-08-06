@@ -2325,6 +2325,78 @@ export const desserts = [
     tagline: "CrumblCreamiCut Week 1, Flavor 1 — two-freeze marbled chocolate + vanilla protein Creami pint, stuffed with frozen cheesecake frosting + Lily's chips + Teddy Graham finish. 335 cal / 45g protein whole pint.",
     heroImage: "/images/marbled-stuffed-cheesecake-creami/hero-finished-marbled-stuffed-cheesecake-creami-polished.webp",
     prepImage: "/images/marbled-stuffed-cheesecake-creami/step-04-frozen-marbled-layers-polished.webp",
+    socialHashtags: [
+      "#MarbledCheesecakeCreami",
+      "#CrumblCreamiCut",
+      "#NinjaCreamiRecipe",
+      "#ProteinIceCream",
+      "#HighProteinDessert",
+    ],
+    socialCarousel: {
+      heroBadge: "CrumblCreamiCut · W1 F1",
+      heroAccent: "amber",
+      hook: "Two freezes create the chocolate-vanilla marble. Cheesecake frosting bites finish it at 335 cal / 45g protein.",
+      heroPhoto: "/images/marbled-stuffed-cheesecake-creami/hero-finished-marbled-stuffed-cheesecake-creami-polished.webp",
+      ingredientGroups: [
+        {
+          card: 0,
+          accent: "amber",
+          heading: "Creami Base",
+          items: [
+            { quantity: "1 cup", text: "2% ultra-filtered milk" },
+            { quantity: "2 tbsp", text: "Monk fruit sweetener" },
+            { quantity: "1 serving", text: "Unflavored whey isolate" },
+            { quantity: "1/8 tsp", text: "Guar gum" },
+            { quantity: "Pinch", text: "Salt" },
+          ],
+        },
+        {
+          card: 1,
+          accent: "amber",
+          heading: "Flavor + Mix-Ins",
+          items: [
+            { quantity: "1/2 tbsp", text: "Black cocoa" },
+            { quantity: "15g", text: "Frozen protein cheesecake frosting" },
+            { quantity: "7g", text: "Milk-chocolate-style chips" },
+            { quantity: "7g", text: "Crushed graham snacks", note: "Add after every machine cycle" },
+          ],
+        },
+      ],
+      methodGroups: [
+        {
+          accent: "amber",
+          heading: "Method",
+          items: [
+            { number: 1, heading: "Blend", body: "Blend milk, sweetener, whey, guar, and salt until completely smooth." },
+            { number: 2, heading: "Split", body: "Divide the base. Blend black cocoa into one half." },
+            { number: 3, heading: "Freeze Twice", body: "Freeze chocolate 24 hours. Add vanilla on top; freeze another 24 hours." },
+            { number: 4, heading: "Spin", body: "Briefly warm the outside, then run Regular Ice Cream. Respin only if powdery." },
+            { number: 5, heading: "Mix In", body: "Add frozen frosting pieces and chocolate chips; run Mix-In." },
+            { number: 6, heading: "Finish", body: "Scoop and top with crushed graham snacks so they stay crisp." },
+          ],
+        },
+      ],
+      ingredientCardPhotos: [
+        { src: "/images/marbled-stuffed-cheesecake-creami/step-01-blend-base-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
+        { src: "/images/marbled-stuffed-cheesecake-creami/step-05-chop-cheesecake-frosting-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
+      ],
+      methodCardPhotos: [
+        { src: "/images/marbled-stuffed-cheesecake-creami/step-02-add-black-cocoa-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
+        { src: "/images/marbled-stuffed-cheesecake-creami/step-06-add-mix-ins-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
+      ],
+      servingPhoto: "/images/marbled-stuffed-cheesecake-creami/hero-finished-marbled-stuffed-cheesecake-creami-polished.webp",
+      servingGroups: [
+        {
+          accent: "amber",
+          heading: "Whole-Pint Dessert",
+          items: [
+            { text: "One finished pint: 335 calories and 45g protein." },
+            { text: "Serve immediately after Mix-In for the creamiest texture and crisp graham finish." },
+          ],
+        },
+      ],
+      engagementQuestion: "Which Crumbl flavor should I turn into a Creami next?",
+    },
     socialImages: [
       "/images/marbled-stuffed-cheesecake-creami/step-01-blend-base-polished.webp",
       "/images/marbled-stuffed-cheesecake-creami/step-02-add-black-cocoa-polished.webp",

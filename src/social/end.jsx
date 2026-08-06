@@ -170,7 +170,8 @@ export function EndStructuredInner({ layout }) {
 }
 
 export function buildEndLayout(recipe, curated, { index, total, isCookbook, slug }) {
-  const path = isCookbook ? `cookbook/${recipe.id}` : `recipes/${slug}`;
+  const resolvedSlug = recipe.id || slug || recipe.slug;
+  const path = isCookbook ? `cookbook/${resolvedSlug}` : `recipes/${resolvedSlug}`;
   return {
     kind: "end",
     index, total,

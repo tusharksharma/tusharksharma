@@ -307,10 +307,12 @@ function deriveIngredientGroups(recipe) {
 }
 
 function deriveMethodGroups(recipe) {
-  const steps = (recipe.steps || []).map((s, i) => ({
+  const steps = (recipe.steps || [])
+    .filter((s) => !(typeof s === "object" && s.__visualOnly))
+    .map((s, i) => ({
     step: i + 1,
     text: (typeof s === "object" ? s.text : s) || "",
-  }));
+    }));
   return [{ accent: "amber", heading: "Method", items: steps }];
 }
 

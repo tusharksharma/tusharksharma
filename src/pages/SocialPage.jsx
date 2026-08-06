@@ -87,6 +87,12 @@ function bestForHashtag(item, suffix = "Sauce") {
 // and Instagram — both platforms reward specificity over generic brand tags.
 // The brand tag (#TheSplitPlate) takes 1 slot; the other 4 are recipe-driven.
 function hashtagsFor(recipe) {
+  const curatedTags = (recipe.socialHashtags || [])
+    .map((tag) => String(tag || "").trim())
+    .filter(Boolean)
+    .map((tag) => tag.startsWith("#") ? tag : `#${tag}`);
+  if (curatedTags.length) return [...new Set(curatedTags)].slice(0, 5);
+
   const tags = new Set();
 
   // Cookbook items have __cookbookKind set by adaptCookbookToRecipe
@@ -949,9 +955,10 @@ function longCaption(recipe, components, platform = "tiktok") {
   }
 
   // METHOD — first sentence of each step
-  if (recipe.steps?.length) {
+  const captionSteps = (recipe.steps || []).filter((step) => !step.__visualOnly);
+  if (captionSteps.length) {
     lines.push("METHOD");
-    recipe.steps.forEach((s, i) => {
+    captionSteps.forEach((s, i) => {
       const first = (s.text || "").split(/[:.]/)[0].trim();
       if (first) lines.push(`${i + 1}. ${first}.`);
     });
@@ -996,6 +1003,7 @@ function adaptCookbookToRecipe(item, kind) {
     : (item.protein != null && item.servings ? Math.round((item.protein / item.servings) * 10) / 10 : (item.protein ?? 0));
   return {
     // shape: recipe-like surface
+    id: item.id,
     title: item.title,
     slug: item.id,
     image: item.heroImage,
@@ -1032,8 +1040,8 @@ function adaptCookbookToRecipe(item, kind) {
     // process cards. Normalize string steps to { text } objects.
     steps: [
       ...(item.steps || []).map((s) => typeof s === "string" ? { text: s } : s),
-      item.prepImage ? { text: item.prepImageCaption || "Mise en place", images: [item.prepImage] } : null,
-      item.actionImage ? { text: item.actionImageCaption || "In use", images: [item.actionImage] } : null,
+      item.prepImage ? { text: item.prepImageCaption || "Mise en place", images: [item.prepImage], __visualOnly: true } : null,
+      item.actionImage ? { text: item.actionImageCaption || "In use", images: [item.actionImage], __visualOnly: true } : null,
     ].filter(Boolean),
     // brands array is the same shape
     brands: item.brands || [],
@@ -1045,6 +1053,7 @@ function adaptCookbookToRecipe(item, kind) {
     // items fall through to auto-derived blocks and drop their curated
     // Serving / hook / photo assignments.
     socialCarousel: item.socialCarousel,
+    socialHashtags: item.socialHashtags,
     // Snack boxes / powerups need their mealPrep block for the auto-derive
     // Serving fallback when socialCarousel.servingGroups is undefined.
     mealPrep: item.mealPrep,
