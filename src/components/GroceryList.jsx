@@ -1112,26 +1112,29 @@ const GROCERY_BY_WEEK = {
       { name: "Kirkland Sipping Bone Broth (Fri Soules skillet reheat, 1/4 cup)", qty: "pantry", meal: "Fri" },
     ],
   },
-  // Week 27: Mon=Viral Tomato Feta Chicken Pasta batch cook(56) — one Sunday cook reheats Mon / Wed / Fri
+  // Week 27: Mon=Viral Tomato Feta Chicken Pasta batch cook(56) — one Sunday
+  // cook produces the full 6+6 container set that reheats through Mon / Wed /
+  // Fri. All grocery items are tagged to Mon only + fixedBatch:true so the
+  // "Make leftovers" toggle doesn't double the shop.
   27: {
     "Protein": [
-      { name: "Chicken thighs (Mon batch — feeds Mon + Wed + Fri, 2 lb, pre-seasoned Mediterranean shortcut or plain)", baseQty: 2, unit: "lb", meal: "Mon + Wed + Fri" },
+      { name: "Chicken thighs (Mon batch, 2 lb — pre-seasoned Mediterranean shortcut or plain)", baseQty: 2, unit: "lb", meal: "Mon", fixedBatch: true },
     ],
     "Dairy": [
-      { name: "Feta cheese blocks (Mon batch — feeds Mon + Wed + Fri, two 8 oz, BLOCK feta only, not pre-crumbled)", baseQty: 2, unit: "pack", meal: "Mon + Wed + Fri" },
+      { name: "Feta cheese blocks (Mon batch, two 8 oz — BLOCK feta only, not pre-crumbled)", baseQty: 2, unit: "pack", meal: "Mon", fixedBatch: true },
     ],
     "Produce": [
-      { name: "Cherry + pear tomatoes (Mon batch — feeds Mon + Wed + Fri, 600 g whole, do not chop before roasting)", baseQty: 600, unit: "g", meal: "Mon + Wed + Fri" },
+      { name: "Cherry + pear tomatoes (Mon batch, 600 g whole — do not chop before roasting)", baseQty: 600, unit: "g", meal: "Mon", fixedBatch: true },
     ],
     "Carbs": [
-      { name: "Low-carb penne (Mon batch adult — feeds Mon + Wed + Fri, 12 oz dry, Carbe Diem or Barilla Protein+)", baseQty: 12, unit: "oz", meal: "Mon + Wed + Fri adult" },
-      { name: "Regular penne (Mon batch kid — feeds Mon + Wed + Fri, 9 oz dry, Barilla or similar)", baseQty: 9, unit: "oz", meal: "Mon + Wed + Fri kid" },
+      { name: "Low-carb penne (Mon batch adult, 12 oz dry — Carbe Diem or Barilla Protein+)", baseQty: 12, unit: "oz", meal: "Mon adult", fixedBatch: true },
+      { name: "Regular penne (Mon batch kid, 9 oz dry — Barilla or similar)", baseQty: 9, unit: "oz", meal: "Mon kid", fixedBatch: true },
     ],
     "Pantry": [
-      { name: "Olive oil (Mon batch, 4 tbsp)", qty: "pantry", meal: "Mon + Wed + Fri" },
+      { name: "Olive oil (Mon batch, 4 tbsp)", qty: "pantry", meal: "Mon", fixedBatch: true },
     ],
     "Spice + Aromatic": [
-      { name: "Mediterranean or Greek seasoning (Mon batch — Spiceology Greek Freak shown)", qty: "pantry", meal: "Mon + Wed + Fri" },
+      { name: "Mediterranean or Greek seasoning (Mon batch — Spiceology Greek Freak shown)", qty: "pantry", meal: "Mon", fixedBatch: true },
     ],
   },
 };
@@ -1184,6 +1187,20 @@ function getItemDays(entry) {
 
 function scaleQty(entry, adults, kids, leftovers, dayReheats) {
   if (entry.baseQty != null) {
+    // fixedBatch items belong to a batch-cook whose yield is defined by the
+    // recipe (e.g. Week 27 pasta bake = one batch feeds Mon+Wed+Fri regardless
+    // of the leftovers toggle). Do not scale by adults/kids or leftovers —
+    // scaling the batch would ask the shopper to buy 2x the ingredients but
+    // the recipe still says "one bake". The batch quantity is authoritative.
+    if (entry.fixedBatch) {
+      const scaled = entry.baseQty;
+      if (WHOLE_UNITS.has(entry.unit)) {
+        return `${Math.ceil(scaled)} ${entry.unit}`.trim();
+      }
+      const rounded = Math.round(scaled * 10) / 10;
+      const display = rounded % 1 === 0 ? rounded.toString() : rounded.toFixed(1);
+      return `${display} ${entry.unit}`.trim();
+    }
     const base = isKidItem(entry) ? kids / 2 : isAdultItem(entry) ? adults / 2 : (adults + kids) / 4;
     // Per-day leftovers: split baseQty across tagged days, double only reheating days
     const days = getItemDays(entry);

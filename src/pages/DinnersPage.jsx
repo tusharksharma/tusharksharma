@@ -14,9 +14,31 @@ const NET_CARB_OPTIONS = [
   { label: "≤30g net carbs", max: 30 },
   { label: "≤45g net carbs", max: 45 },
 ];
-const EFFORT_OPTIONS = [...new Set(liveRecipes.flatMap((r) => r.meta?.effortTags || []))].sort();
-const SPLIT_OPTIONS = [...new Set(liveRecipes.flatMap((r) => r.meta?.splitAxes || []))].sort();
+
+// Effort / split filters render only the tags a shopper actually filters by.
+// meta.effortTags and meta.splitAxes are richer internal taxonomies that show
+// up in the recipe card body — we intentionally do NOT surface every internal
+// tag as a chip (mobile page height blew past 18k px with the ungated set).
+// Add a value here to expose it as a filter.
+const CANONICAL_EFFORT_TAGS = new Set([
+  "15-min", "one-pot", "sheet-pan", "grill", "air-fryer", "stovetop", "no-cook",
+  "meal-prep", "batch-cook", "reheats", "chain-from",
+  "freezer-shortcut", "fridge-shortcut", "assembly",
+  "kid-approved", "weeknight", "emergency-dinner",
+]);
+const EFFORT_OPTIONS = [...new Set(liveRecipes.flatMap((r) => r.meta?.effortTags || []))]
+  .filter((t) => CANONICAL_EFFORT_TAGS.has(t))
+  .sort();
+
+const CANONICAL_SPLIT_AXES = new Set([
+  "carb", "portion", "heat", "presentation", "protein", "prep-time",
+]);
+const SPLIT_OPTIONS = [...new Set(liveRecipes.flatMap((r) => r.meta?.splitAxes || []))]
+  .filter((t) => CANONICAL_SPLIT_AXES.has(t))
+  .sort();
+
 const COST_OPTIONS = ["budget", "moderate", "premium"];
+
 // Diet filter is a dietary-constraint surface, not a marketing surface.
 // Marketing / use-case tags (high-protein, family-dinner, kid-approved,
 // busy-parent, split-plate, batch-cook, etc.) that historically leaked into
@@ -36,7 +58,17 @@ const CANONICAL_DIET_TAGS = new Set([
 const DIET_OPTIONS = [...new Set(liveRecipes.flatMap((r) => r.meta?.dietTags || []))]
   .filter((t) => CANONICAL_DIET_TAGS.has(t))
   .sort();
-const ALLERGEN_OPTIONS = [...new Set(liveRecipes.flatMap((r) => r.meta?.allergens || []))].sort();
+
+// Allergen filter — Big-8 + realistic dairy substrates. Non-allergen tags
+// (packaged-labels-vary, verify-*) that leaked into meta.allergens are
+// intentionally not surfaced. They belong in meta.warnings.
+const CANONICAL_ALLERGENS = new Set([
+  "dairy", "eggs", "fish", "shellfish", "tree-nuts", "peanuts", "wheat", "gluten",
+  "soy", "sesame", "mustard",
+]);
+const ALLERGEN_OPTIONS = [...new Set(liveRecipes.flatMap((r) => r.meta?.allergens || []))]
+  .filter((t) => CANONICAL_ALLERGENS.has(t))
+  .sort();
 
 // Build searchable text per recipe once
 function buildSearchText(r) {

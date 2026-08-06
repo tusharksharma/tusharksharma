@@ -156,7 +156,7 @@ export const sauces = [
     id: "indo-chinese-chili-sauce",
     title: "Indo-Chinese Chili Sauce",
     tagline: "6 ingredients. 1 glass. Restaurant-level glaze.",
-    heroImage: "/images/chili-chicken/step0-sauce.webp",
+    heroImage: "/images/indo-chinese-chili-chicken/context-six-ingredient-sauce.webp",
     flavorProfile: "Smoky, spicy, tangy, slightly sweet — Indo-Chinese glaze",
     calories: 120,
     caloriesPerServing: 20,
@@ -2162,7 +2162,7 @@ export const desserts = [
       { problem: "Prime Bites brownie feels dry", fix: "Some flavor lots run drier than others. Optional rescue: 15-20 sec in the microwave before topping with ice cream — softens the interior. Not required for the recipe, just a save if the brownie feels stale." },
     ],
     brands: [
-      { name: "Protein Pints", item: "Coffee (Option 1 — 180 cal / 15g protein for 1.5 servings from a pint. Any Protein Pints flavor works)", why: "Coffee is my favorite Protein Pints flavor and the best protein ice cream I've tried. Real ice cream texture, coffee-forward, no chalk. This is what I grab when I want dessert to be one thing and one thing only. Not sponsored, not affiliated. Any flavor works — Coffee is just the pick.", image: "/images/brands/protein-pints-coffee.png", url: "https://proteinpints.com/" },
+      { name: "Protein Pints", item: "Coffee (Option 1 — 180 cal / 15g protein for 1.5 servings from a pint. Any Protein Pints flavor works)", why: "Coffee is my favorite Protein Pints flavor and the best protein ice cream I've tried. Real ice cream texture, coffee-forward, no chalk. This is what I grab when I want dessert to be one thing and one thing only. Not sponsored, not affiliated. Any flavor works — Coffee is just the pick.", image: "/images/high-protein-brownie-ice-cream-bowl/context-protein-pints-coffee-polished.webp", url: "https://proteinpints.com/" },
       { name: "Prime Bites", item: "Protein Brownie (Option 2 base — 19g protein, 5g collagen, low sugar, ~180-220 cal per brownie depending on flavor)", why: "The individually-wrapped protein brownie that anchors Option 2. Any flavor works. Cross-recipe with the [Chocolate Protein Brownie Bowl](/cookbook/chocolate-protein-brownie-bowl) elsewhere in the cookbook. Not sponsored, not affiliated.", image: "/images/brands/prime-bites-smores-brownie.png", url: "https://primebites.com/" },
       { name: "Halo Top / Frozen One / Protein Pints", item: "1/4 pint lighter or high-protein ice cream (Option 2 topping)", why: "Halo Top and Frozen One are average on their own — that's the honest read. Paired with a Prime Bites brownie, the full dessert becomes an easy 8/10. The brownie is doing the heavy lifting; the ice cream is the temperature/texture partner. Any lighter or high-protein pint works.", image: "/images/brands/frozen-one-chocolate-protein-ice-cream.png", url: "https://www.frozen-one.com/flavors" },
     ],

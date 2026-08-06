@@ -28,7 +28,13 @@ export default function RecipeDetail({ recipe }) {
   const forceSplitView = hasSplit && !Array.isArray(recipe.steps);
   const baseServings = recipe.servings || 4;
   const totalServings = adults + kids;
-  const scale = (totalServings / baseServings) * (leftovers ? 2 : 1);
+  // fixedBatch recipes (e.g. one-bake meal preps that yield N containers) do
+  // NOT scale by household size or leftovers — the batch quantity IS the
+  // recipe. Scaling would ask the shopper to buy 2x tomatoes but the recipe
+  // still says "one 45-min bake". Freeze scale at 1 and show a batch-cook
+  // caption instead of the scaled indicator.
+  const isFixedBatch = !!recipe.meta?.fixedBatch;
+  const scale = isFixedBatch ? 1 : (totalServings / baseServings) * (leftovers ? 2 : 1);
   const ppc = ((recipe.protein * 4 / recipe.calories) * 100).toFixed(0);
 
   return (

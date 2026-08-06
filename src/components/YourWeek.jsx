@@ -276,9 +276,9 @@ const WEEKS = {
     description: "Viral Tomato Feta Batch Week — one Sunday bake yields three family dinners. 600 g cherry + pear tomatoes and two 8 oz feta blocks roast at 400°F for 45 min while 2 lb chicken thighs air-fry in parallel. Mash into a creamy sauce, split 2:1, fold into low-carb penne (adult, 2 oz dry per container) and regular penne (smaller portion, 1.5 oz dry). Six adult containers + six smaller = Mon / Wed / Fri family dinners for 2 adults + 2 kids. ~450 cal / 37g protein per adult plate. Adult carb / portion split; kid portions adjust to appetite.",
     subtitle: "Viral Tomato Feta Chicken Pasta — batch cook once, reheat Mon / Wed / Fri",
     cookDays: [
-      { day: "Monday", label: "Viral Tomato Feta Batch Cook", vibe: "60 min — one sheet-pan bake at 400°F, 45 min, roasts 600 g tomatoes + two 8 oz feta blocks in olive oil + Mediterranean seasoning. In parallel: air-fry 2 lb chicken thighs 20 min (verify safe internal temp). Mash the baked feta and tomatoes into a creamy sauce with visible pieces, chop the chicken. Split the sauce 2:1 into two pastas — 12 oz low-carb penne (adults) + 9 oz regular penne (kids). Pack 6 + 6 for the week. ~450 cal / 37g protein per adult container.", id: 56, time: "60 min", reheats: true, adult: "2 oz dry low-carb penne + full sauce-and-chicken unit (~450 cal / 37g protein)", kid: "1.5 oz dry regular penne + half sauce-and-chicken unit (portion adjusts to appetite)", needs: ["Cherry + pear tomatoes (600 g)", "Feta cheese blocks (two 8 oz — BLOCK feta only)", "Olive oil", "Mediterranean or Greek seasoning (Spiceology Greek Freak shown)", "Chicken thighs (2 lb, pre-seasoned Mediterranean shortcut or plain)", "Low-carb penne (12 oz dry — adult)", "Regular penne (9 oz dry — kid)"], carbLevel: "low" },
-      { day: "Wednesday", label: "Viral Tomato Feta Reheat (Round 2)", vibe: "10 min — pull two adult containers + two smaller containers from Monday's batch. Reheat covered microwave 60-90 sec with a splash of water if the pasta has tightened, or a covered skillet on low. Same sauce, same chicken, same split — the batch does the work.", id: 56, time: "10 min", reheats: true, adult: "Reheated adult container from Mon batch (~450 cal / 37g protein)", kid: "Reheated smaller container from Mon batch (portion adjusts to appetite)", needs: ["(No new grocery — Wed reheat pulls from Mon batch)"], carbLevel: "low" },
-      { day: "Friday", label: "Viral Tomato Feta Reheat (Round 3)", vibe: "10 min — final two adult + two smaller containers from Monday's batch. Reheat gently, add a spoon of water if the pasta has soaked up the sauce. Three family dinners from one Sunday cook.", id: 56, time: "10 min", reheats: true, adult: "Reheated adult container from Mon batch (~450 cal / 37g protein)", kid: "Reheated smaller container from Mon batch (portion adjusts to appetite)", needs: ["(No new grocery — Fri reheat pulls from Mon batch)"], carbLevel: "low" },
+      { day: "Monday", label: "Viral Tomato Feta Batch Cook", vibe: "60 min — one sheet-pan bake at 400°F, 45 min, roasts 600 g tomatoes + two 8 oz feta blocks in olive oil + Mediterranean seasoning. In parallel: air-fry 2 lb chicken thighs 20 min (verify safe internal temp). Mash the baked feta and tomatoes into a creamy sauce with visible pieces, chop the chicken. Split the sauce 2:1 into two pastas — 12 oz low-carb penne (adults) + 9 oz regular penne (kids). Pack 6 + 6 for the week. ~450 cal / 37g protein per adult container.", id: 56, time: "60 min", fixedBatch: true, batchCoversDays: ["Mon", "Wed", "Fri"], adult: "2 oz dry low-carb penne + full sauce-and-chicken unit (~450 cal / 37g protein)", kid: "1.5 oz dry regular penne + half sauce-and-chicken unit (portion adjusts to appetite)", needs: ["Cherry + pear tomatoes (600 g)", "Feta cheese blocks (two 8 oz — BLOCK feta only)", "Olive oil", "Mediterranean or Greek seasoning (Spiceology Greek Freak shown)", "Chicken thighs (2 lb, pre-seasoned Mediterranean shortcut or plain)", "Low-carb penne (12 oz dry — adult)", "Regular penne (9 oz dry — kid)"], carbLevel: "low" },
+      { day: "Wednesday", label: "Viral Tomato Feta Reheat (Round 2)", vibe: "10 min — pull two adult containers + two smaller containers from Monday's batch. Reheat covered microwave 60-90 sec with a splash of water if the pasta has tightened, or a covered skillet on low. Same sauce, same chicken, same split — the batch does the work.", id: 56, time: "10 min", isReheat: true, reheatOf: "Mon", adult: "Reheated adult container from Mon batch (~450 cal / 37g protein)", kid: "Reheated smaller container from Mon batch (portion adjusts to appetite)", needs: [], carbLevel: "low" },
+      { day: "Friday", label: "Viral Tomato Feta Reheat (Round 3)", vibe: "10 min — final two adult + two smaller containers from Monday's batch. Reheat gently, add a spoon of water if the pasta has soaked up the sauce. Three family dinners from one Sunday cook.", id: 56, time: "10 min", isReheat: true, reheatOf: "Mon", adult: "Reheated adult container from Mon batch (~450 cal / 37g protein)", kid: "Reheated smaller container from Mon batch (portion adjusts to appetite)", needs: [], carbLevel: "low" },
     ],
   },
 };
@@ -290,9 +290,11 @@ function getLeftoverMsg(hasLeftovers) {
   return { tue: "Reheat Monday's dinner — already handled", thu: "Reheat Wednesday's dinner — already handled", sat: "Reheat Friday's dinner — already handled", sun: "Flexible — finish leftovers, eat out, or reset" };
 }
 
-function CookDay({ day, label, vibe, id, time, reheats, adult, kid, needs, servings, enabled, onToggle, adults, kids, leftovers }) {
+function CookDay({ day, label, vibe, id, time, reheats, isReheat, fixedBatch, reheatOf, adult, kid, needs, servings, enabled, onToggle, adults, kids, leftovers }) {
   const r = recipes.find((x) => x.id === id);
   if (!r) return null;
+  // Reheat days pull from another day's batch — no toggle, no grocery add.
+  const isReheatDay = !!isReheat;
   return (
     <div className={`transition-all ${enabled ? "" : "opacity-40"}`}>
       <div className="flex items-center gap-2 mb-1 sm:pl-12">
@@ -304,7 +306,11 @@ function CookDay({ day, label, vibe, id, time, reheats, adult, kid, needs, servi
         >
           {enabled && "\u2713"}
         </button>
-        <span className="text-neutral-500 text-[10px]">{enabled ? "Included" : "Skipped — removed from grocery"}</span>
+        {!isReheatDay ? (
+          <span className="text-neutral-500 text-[10px]">{enabled ? "Included" : "Skipped — removed from grocery"}</span>
+        ) : (
+          <span className="text-green-500/80 text-[10px] font-semibold">Reheats from {reheatOf} batch — no new grocery</span>
+        )}
       </div>
       <Link to={enabled ? `/recipes/${r.slug}?adults=${adults}&kids=${kids}&leftovers=${leftovers ? 1 : 0}` : "#"} className={`block ${enabled ? "group" : "pointer-events-none"}`}>
         <div className={`bg-neutral-900 border rounded-xl overflow-hidden transition-all ${enabled ? "border-neutral-800 hover:border-amber-500/40" : "border-neutral-800/50"}`}>
@@ -313,7 +319,9 @@ function CookDay({ day, label, vibe, id, time, reheats, adult, kid, needs, servi
               <img src={r.image} alt={r.title} className={`w-full h-32 sm:h-full object-cover transition-all ${enabled ? "group-hover:brightness-110" : "grayscale brightness-50"}`} loading="lazy" />
               <div className="absolute top-2 left-2 flex gap-1.5">
                 <span className="text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded bg-amber-500 text-black">{day}</span>
-                {reheats && enabled && <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-green-600/80 text-white">Reheats</span>}
+                {fixedBatch && enabled && <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-amber-600/80 text-white">Batch</span>}
+                {isReheatDay && <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-green-600/80 text-white">Reheat</span>}
+                {reheats && !isReheatDay && enabled && <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-green-600/80 text-white">Reheats</span>}
               </div>
             </div>
             <div className="flex-1 p-4">

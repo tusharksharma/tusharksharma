@@ -61,6 +61,18 @@ for (const w of plannerWeekNums) {
   const ids = [...weekMatch[1].matchAll(/id:\s*(\d+)/g)].map((m) => Number(m[1]));
   const days = [...weekMatch[1].matchAll(/day:\s*"(\w+)"/g)].map((m) => m[1].substring(0, 3));
 
+  // isReheat days share a batch cook from another day in the same week — no
+  // fresh grocery required. Extract per-day objects and mark each as either
+  // a fresh cook or a reheat so the grocery-coverage check can skip reheats.
+  const dayObjects = [];
+  const dayBlockRegex = /\{[^{}]*?day:\s*"(\w+)"[^{}]*?\}/g;
+  for (const m of weekMatch[1].matchAll(dayBlockRegex)) {
+    const block = m[0];
+    const day = m[1].substring(0, 3);
+    const isReheat = /isReheat:\s*true/.test(block);
+    dayObjects.push({ day, isReheat });
+  }
+
   if (ids.length !== 3 || days.length !== 3) {
     console.error(`ERROR: Week ${w} parsed ${ids.length} recipe IDs and ${days.length} days (expected 3 each)`);
     errors++;
@@ -86,6 +98,8 @@ for (const w of plannerWeekNums) {
   }
 
   for (let i = 0; i < days.length; i++) {
+    const dayObj = dayObjects[i];
+    if (dayObj && dayObj.isReheat) continue; // reheat day, grocery lives on the fresh-cook day
     if (!groceryDays.has(days[i])) {
       console.error(`ERROR: Week ${w} planner has ${days[i]}=id${ids[i]} but grocery has NO items tagged "${days[i]}"`);
       errors++;

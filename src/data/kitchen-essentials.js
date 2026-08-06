@@ -71,7 +71,7 @@ export const collections = [
       "babybel-cheese",
       "sargento-cheese-sticks",
     ],
-    ogImage: "/images/deli-dill-snack-box/hero-polished.webp",
+    ogImage: "/images/deli-dill-snack-box/hero-deli-dill-snack-box-polished.webp",
   },
   {
     id: "creami-essentials",
@@ -86,7 +86,7 @@ export const collections = [
       "guar-gum",
       "hormbles-chormbles-protein-chocolate",
     ],
-    ogImage: "/images/white-drop-cookies-n-creme-creami/hero-polished.webp",
+    ogImage: "/images/white-drop-cookies-n-creme-creami/hero-finished-white-drop-cookies-n-creme-creami-polished.webp",
   },
   {
     id: "proffee-gear",
@@ -100,7 +100,7 @@ export const collections = [
       "sugar-free-syrup",
       "lorann-caramel-emulsion",
     ],
-    ogImage: "/images/100-calorie-iced-protein-coffee/hero-polished.webp",
+    ogImage: "/images/100-calorie-iced-protein-coffee/hero-finished-iced-protein-coffee-polished.webp",
   },
   {
     id: "freezer-weeknight",

@@ -1645,7 +1645,7 @@ const recipes = [
       // soy, and mustard per the current published label — that's the adult-
       // path allergen expansion vs the kid path (toum, currently vegan-tagged
       // by Mezete but verify the physical label).
-      allergens: ["dairy", "egg", "soy", "mustard"],
+      allergens: ["dairy", "eggs", "soy", "mustard"],
       warnings: ["contains-dairy-ghee", "contains-egg-soy-mustard-adult-tari", "verify-halal-package", "verify-toum-vegan-package", "verify-broth-gluten-package", "verify-steak-package"],
       // Halal DROPPED — the physical steak / broth / Tari / toum labels
       // weren't verified in the handoff. Add back only after label-by-label
@@ -5661,7 +5661,7 @@ const recipes = [
       proteinTags: ["chicken"],
       splitAxes: ["plating", "sauce", "portion"],
       effortTags: ["weeknight", "sheet-pan", "one-cook"],
-      costTier: "low",
+      costTier: "budget",
       costPerServing: "$2.50",
       substitutionNotes: [
         "Chicken drumsticks (T1 protein anchor — bone-in skin-on, 6 drumsticks for 4 servings = 2 per adult / 1 per kid). Sub bone-in thighs (4-6 thighs total) — needs ~5 min less in the oven; check temp at 35 min. Boneless skinless chicken doesn't crisp the same way; don't sub.",
@@ -7201,8 +7201,8 @@ const recipes = [
     carbLevel: "none",
     meta: {
       macros: { protein: 40, calories: 480, fat: 28, carbs: 8, netCarbs: 6, estimated: true },
-      allergens: ["gluten", "packaged-labels-vary"],
-      warnings: ["contains-gluten-kid-bun", "kid-bun-gluten"],
+      allergens: ["gluten"],
+      warnings: ["contains-gluten-kid-bun", "kid-bun-gluten", "packaged-labels-vary"],
       dietTags: ["pork-free"],
       proteinTags: ["beef", "chicken"],
       splitAxes: ["protein", "carb", "presentation"],
@@ -7687,7 +7687,7 @@ const recipes = [
       proteinTags: ["beef"],
       splitAxes: ["portion", "presentation", "heat"],
       effortTags: ["freezer-shortcut", "air-fryer", "assembly", "20-min", "kid-approved"],
-      costTier: "medium",
+      costTier: "moderate",
       costPerServing: "$4.50",
       substitutionNotes: [
         "6 fully cooked Mediterranean beef kebabs (adult portion + kid single, keep 2 more available for hungrier kids). Photographed brand = The Falafel Company Beef Kebabs (Costco 24 oz pack). Sub any fully-cooked frozen beef kebab; verify the physical package for temperature and storage guidance since brands vary. LABEL POSTURE: halal / soy-free / nut-free claims require verifying the specific kebab package — not tagged in meta.dietTags by default.",
@@ -7882,7 +7882,7 @@ const recipes = [
       proteinTags: ["chicken"],
       splitAxes: ["portion", "presentation", "heat"],
       effortTags: ["freezer-shortcut", "fridge-shortcut", "stovetop", "assembly", "15-min", "kid-approved", "emergency-dinner"],
-      costTier: "medium",
+      costTier: "moderate",
       costPerServing: "$4.25",
       substitutionNotes: [
         "1 package / 36 oz prepared chicken tikka masala (2 x 18 oz pouches, seven 5 oz servings). Photographed brand = Sukhi's Costco twin-pack. Sub any quality refrigerated / shelf-stable chicken tikka masala; verify the physical package for serving size, macros, and heating time since prepared-food formulations change. LABEL POSTURE: halal claim requires verifying the specific Sukhi's package — not tagged in meta.dietTags by default.",
@@ -8037,8 +8037,9 @@ const recipes = [
       proteinTags: ["chicken"],
       splitAxes: ["carb", "portion"],
       effortTags: ["batch-cook", "meal-prep", "one-oven", "reheats", "weeknight", "kid-approved", "viral"],
-      costTier: "medium",
+      costTier: "moderate",
       costPerServing: "$4.75",
+      fixedBatch: true,
       substitutionNotes: [
         "600 g cherry and pear tomatoes. Homegrown red cherry + yellow pear tomatoes are shown; store-bought works. Keep them whole so they roast and burst rather than releasing liquid up front.",
         "16 oz feta cheese blocks (two 8 oz blocks). Use BLOCK feta, not pre-crumbled — pre-crumbled is coated in anti-caking starch and won't melt into the creamy baked-feta texture the whole viral recipe is built around.",

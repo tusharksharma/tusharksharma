@@ -170,7 +170,11 @@ export function EndStructuredInner({ layout }) {
 }
 
 export function buildEndLayout(recipe, curated, { index, total, isCookbook, slug }) {
-  const resolvedSlug = recipe.id || slug || recipe.slug;
+  // Dinners: slug is the URL segment (recipe.id is a numeric primary key that
+  // maps to a 404). Cookbook: id IS the slug (a kebab string like
+  // "hot-dog-chili-base"). Prefer the explicit slug arg → recipe.slug for both;
+  // fall back to recipe.id only for cookbook entries where id is stringly.
+  const resolvedSlug = slug || recipe.slug || (isCookbook ? recipe.id : null);
   const path = isCookbook ? `cookbook/${resolvedSlug}` : `recipes/${resolvedSlug}`;
   return {
     kind: "end",
