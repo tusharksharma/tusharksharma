@@ -42,4 +42,19 @@ export default defineConfig([
       'no-unused-vars': ['error', { argsIgnorePattern: '^_', varsIgnorePattern: '^[A-Z_]' }],
     },
   },
+  // scripts/ — Node ES modules (build helpers, validators, review tools).
+  // Need Node globals for process/Buffer; keep browser globals available
+  // for scripts that run inline in a page.evaluate() (e.g. contact sheets).
+  {
+    files: ['scripts/**/*.js'],
+    extends: [js.configs.recommended],
+    languageOptions: {
+      ecmaVersion: 'latest',
+      globals: { ...globals.node, ...globals.browser },
+      sourceType: 'module',
+    },
+    rules: {
+      'no-unused-vars': ['error', { argsIgnorePattern: '^_', varsIgnorePattern: '^[A-Z_]' }],
+    },
+  },
 ])

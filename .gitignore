@@ -11,6 +11,10 @@ node_modules
 dist-ssr
 *.local
 
+# Review artifacts from `npm run social:contact-sheets` — regenerated
+# on demand, never committed.
+dist/contact-sheets/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

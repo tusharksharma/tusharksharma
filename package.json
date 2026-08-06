@@ -8,7 +8,8 @@
     "build": "vite build && node scripts/validate-weeks.js && node scripts/validate-macros.js && node scripts/validate-diet-tags.js && node scripts/validate-allergens.js && node scripts/validate-grocery-items.js && node scripts/validate-cookbook.js && node scripts/prerender.js",
     "deploy": "npm run build && npm run lint && git add dist/ && echo 'dist/ staged — ready to commit and push'",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "social:contact-sheets": "node scripts/social-contact-sheets.js"
   },
   "dependencies": {
     "react": "^19.2.4",
@@ -28,6 +29,7 @@
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.5.2",
     "globals": "^17.4.0",
+    "puppeteer-core": "^24.43.1",
     "tailwindcss": "^4.2.2",
     "vite": "^8.0.1"
   }
