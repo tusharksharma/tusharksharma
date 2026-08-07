@@ -6205,6 +6205,130 @@ const recipes = [
       "/images/smash-burger-split-plate/step-11-sauce-spread-polished.webp",
       "/images/smash-burger-split-plate/hero-final-adult-plate-polished.webp",
     ],
+    // Curated seven-card recipe carousel. The generic split fallback made
+    // nine cards, buried the burger build, and paired the sauce photo with a
+    // mixed shopping list. Keep each photo aligned with the copy beside it.
+    socialCarousel: {
+      heroBadge: "Split Plate Dinner",
+      heroTitle: "Split-Plate Smash Burgers",
+      hook: "One griddle, two burger builds. Adult double: 490 cal / 51g protein.",
+      heroPhoto: "/images/smash-burger-split-plate/hero-split-adult-kid-plates-polished.webp",
+      ingredientGroups: [
+        {
+          card: 1,
+          accent: "coral",
+          heading: "Adult Burger",
+          items: [
+            { quantity: "12 oz", text: "93/7 ground beef", note: "Four 3 oz patties" },
+            { quantity: "2", text: "Keto hamburger buns" },
+            { quantity: "4 slices", text: "American-style cheese" },
+          ],
+        },
+        {
+          card: 1,
+          accent: "coral",
+          heading: "House Spread",
+          items: [
+            { quantity: "1 tbsp each", text: "Mustard, light mayo + ketchup" },
+            { quantity: "1 tbsp", text: "Pickle juice" },
+            { quantity: "1 tsp", text: "Harissa + chopped pickles", note: "Skip or swap in any hot sauce" },
+          ],
+        },
+        {
+          card: 2,
+          accent: "green",
+          heading: "Smaller Burger",
+          items: [
+            { quantity: "6 oz", text: "80/20 ground beef", note: "Two 3 oz patties" },
+            { quantity: "2", text: "Brioche slider rolls" },
+            { quantity: "2 slices", text: "American-style cheese" },
+            { quantity: "as needed", text: "Bottled burger sauce + ketchup" },
+          ],
+        },
+        {
+          card: 2,
+          accent: "amber",
+          heading: "Shared Side",
+          items: [
+            { quantity: "3 servings", text: "Frozen seasoned fries", note: "1 per adult; 1/2 per smaller plate" },
+            { quantity: "as needed", text: "Kosher salt + cooking spray" },
+          ],
+        },
+      ],
+      methodGroups: [
+        {
+          card: 1,
+          accent: "amber",
+          heading: "Method",
+          items: [
+            { number: 1, heading: "Mix Sauce", body: "Stir the house-spread ingredients together; set aside." },
+            { number: 2, heading: "Start Fries", body: "Air-fry at 400°F for 15 minutes. Start these before the griddle." },
+            { number: 3, heading: "Salt + Smash", body: "Portion six 3 oz balls. Salt on the hot griddle, then smash to 1/4 inch." },
+          ],
+        },
+        {
+          card: 2,
+          accent: "amber",
+          heading: "Method",
+          items: [
+            { number: 4, heading: "Crust + Flip", body: "Cook 2–3 minutes untouched. Mustard the raw tops, flip, then cook 90 seconds." },
+            { number: 5, heading: "Melt", body: "Add one cheese slice per patty and cover for 30 seconds." },
+            { number: 6, heading: "Toast + Build", body: "Toast buns in the beef fat. Stack the adult double; keep the smaller burger single." },
+          ],
+        },
+      ],
+      ingredientCardPhotos: [
+        {
+          src: "/images/smash-burger-split-plate/step-02-sauce-hack-seasoning-polished.webp",
+          position: "50% 47%",
+          zoom: 1,
+          layout: "side",
+        },
+        {
+          src: "/images/smash-burger-split-plate/step-04-air-fryer-fries-polished.webp",
+          position: "50% 43%",
+          zoom: 1,
+          layout: "side",
+        },
+      ],
+      methodCardPhotos: [
+        {
+          src: "/images/smash-burger-split-plate/step-06-smash-patties-polished.webp",
+          position: "50% 48%",
+          zoom: 1,
+          layout: "side",
+        },
+        {
+          src: "/images/smash-burger-split-plate/step-10-assemble-burger-polished.webp",
+          position: "50% 52%",
+          zoom: 1,
+          layout: "side",
+        },
+      ],
+      servingPhoto: {
+        src: "/images/smash-burger-split-plate/hero-final-adult-plate-polished.webp",
+        position: "50% 48%",
+        zoom: 1,
+        layout: "side",
+      },
+      servingGroups: [
+        {
+          accent: "coral",
+          heading: "Adult Plate",
+          items: [
+            { text: "Double 93/7 burger on a keto bun with house spread, fries + extra spread for dipping." },
+          ],
+        },
+        {
+          accent: "green",
+          heading: "Smaller Plate",
+          items: [
+            { text: "I served one 80/20 slider, half fries, bottled sauce + ketchup. Adjust for your child's appetite." },
+          ],
+        },
+      ],
+      engagementQuestion: "Harissa in burger sauce: keep it or skip it?",
+    },
     proteinAnchor: "beef",
     mealType: "burger",
     flavorDirection: "american-comfort",
