@@ -3866,8 +3866,8 @@ export const desserts = [
     id: "pink-berry-cookie-creami",
     title: "Pink Berry Cookie Creami",
     tagline: "CrumblCreamiCut Week 5, Flavor 1 — buttery strawberry protein Creami pint inspired by Crumbl's Pink Berry Cookie. Brown-butter emulsion carries the cookie note; freeze-dried strawberries stay crunchy on top. 315 cal / 43g protein whole pint.",
-    heroImage: "/images/pink-berry-cookie-creami/hero-finished-pink-berry-cookie-creami.webp",
-    prepImage: "/images/pink-berry-cookie-creami/step-frozen-base.webp",
+    heroImage: "/images/pink-berry-cookie-creami/hero-finished-pink-berry-cookie-creami-polished.webp",
+    prepImage: "/images/pink-berry-cookie-creami/step-frozen-base-polished.webp",
     socialHashtags: [
       "#PinkBerryCookieCreami",
       "#CrumblCreamiCut",
@@ -3879,7 +3879,7 @@ export const desserts = [
       heroBadge: "CrumblCreamiCut · W5 F1",
       heroAccent: "coral",
       hook: "Crumbl's Pink Berry Cookie, Creami'd — 315 cal / 43g protein for the whole pint. Brown butter carries the cookie note.",
-      heroPhoto: "/images/pink-berry-cookie-creami/hero-finished-pink-berry-cookie-creami.webp",
+      heroPhoto: "/images/pink-berry-cookie-creami/hero-finished-pink-berry-cookie-creami-polished.webp",
       ingredientGroups: [
         {
           card: 0,
@@ -3920,14 +3920,14 @@ export const desserts = [
         },
       ],
       ingredientCardPhotos: [
-        { src: "/images/pink-berry-cookie-creami/context-strawberry-emulsion.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
-        { src: "/images/pink-berry-cookie-creami/context-brown-butter-emulsion.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
+        { src: "/images/pink-berry-cookie-creami/step-freeze-dried-strawberries-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
+        { src: "/images/pink-berry-cookie-creami/context-brown-butter-emulsion-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
       ],
       methodCardPhotos: [
-        { src: "/images/pink-berry-cookie-creami/step-frozen-base.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
-        { src: "/images/pink-berry-cookie-creami/step-respin-result.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
+        { src: "/images/pink-berry-cookie-creami/step-frozen-base-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
+        { src: "/images/pink-berry-cookie-creami/step-respin-result-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
       ],
-      servingPhoto: "/images/pink-berry-cookie-creami/final-close-reveal.webp",
+      servingPhoto: "/images/pink-berry-cookie-creami/final-close-reveal-polished.webp",
       servingGroups: [
         {
           accent: "coral",
@@ -3942,12 +3942,12 @@ export const desserts = [
       engagementQuestion: "I haven't tried the original — should I rate this Creami solo, or find the cookie first?",
     },
     socialImages: [
-      "/images/pink-berry-cookie-creami/context-brown-butter-emulsion.webp",
-      "/images/pink-berry-cookie-creami/step-frozen-base.webp",
-      "/images/pink-berry-cookie-creami/step-add-vanilla-wafers.webp",
-      "/images/pink-berry-cookie-creami/step-respin-result.webp",
-      "/images/pink-berry-cookie-creami/step-freeze-dried-strawberries.webp",
-      "/images/pink-berry-cookie-creami/final-close-reveal.webp",
+      "/images/pink-berry-cookie-creami/context-brown-butter-emulsion-polished.webp",
+      "/images/pink-berry-cookie-creami/step-frozen-base-polished.webp",
+      "/images/pink-berry-cookie-creami/step-add-vanilla-wafers-polished.webp",
+      "/images/pink-berry-cookie-creami/step-respin-result-polished.webp",
+      "/images/pink-berry-cookie-creami/step-freeze-dried-strawberries-polished.webp",
+      "/images/pink-berry-cookie-creami/final-close-reveal-polished.webp",
     ],
     flavorProfile: "Buttery strawberry protein ice cream. Brown-butter emulsion carries the cookie note through the base; vanilla wafers deliver soft cookie pockets from Respin; freeze-dried strawberries stay crisp on top. Reads like a strawberry shortcake in whole-pint dessert form.",
     calories: 315,
@@ -3984,12 +3984,12 @@ export const desserts = [
       "4 g freeze-dried strawberries",
     ],
     steps: [
-      { text: "BLEND BASE: Combine Fairlife 2% milk + monk fruit + whey isolate + guar gum + salt + 1/4 tsp strawberry emulsion + 1/4 tsp brown-butter emulsion. Immersion blender until completely smooth. Zero lumps.", image: "/images/pink-berry-cookie-creami/context-strawberry-emulsion.webp" },
-      { text: "POUR + FREEZE (24 HR): Pour into a Creami pint, keeping the mixture below the max-fill line. Freeze upright and level for a full 24 hours.", image: "/images/pink-berry-cookie-creami/step-frozen-base.webp" },
-      { text: "REST + SPIN: Pull the pint from the freezer, rest at ROOM TEMPERATURE for 5 minutes. Process on Regular Ice Cream (not Lite). Powdery after the first spin is expected — the Respin fixes it.", image: "/images/pink-berry-cookie-creami/step-frozen-base.webp" },
-      { text: "MIX-IN: Make a narrow center well. Drop in half a serving of vanilla wafers. Run RESPIN without adding liquid.", image: "/images/pink-berry-cookie-creami/step-add-vanilla-wafers.webp" },
-      { text: "SCOOP: Scoop into a bowl. The Respin should give a smooth, evenly-mixed pink base with visible wafer pockets.", image: "/images/pink-berry-cookie-creami/step-respin-result.webp" },
-      { text: "TOP + SERVE: Finish with 4g freeze-dried strawberries — added AFTER all machine processing so they stay crunchy. Eat immediately.", image: "/images/pink-berry-cookie-creami/step-freeze-dried-strawberries.webp" },
+      { text: "BLEND BASE: Combine Fairlife 2% milk + monk fruit + whey isolate + guar gum + salt + 1/4 tsp strawberry emulsion + 1/4 tsp brown-butter emulsion. Immersion blender until completely smooth. Zero lumps.", image: "/images/pink-berry-cookie-creami/context-brown-butter-emulsion-polished.webp" },
+      { text: "POUR + FREEZE (24 HR): Pour into a Creami pint, keeping the mixture below the max-fill line. Freeze upright and level for a full 24 hours.", image: "/images/pink-berry-cookie-creami/step-frozen-base-polished.webp" },
+      { text: "REST + SPIN: Pull the pint from the freezer, rest at ROOM TEMPERATURE for 5 minutes. Process on Regular Ice Cream (not Lite). Powdery after the first spin is expected — the Respin fixes it.", image: "/images/pink-berry-cookie-creami/step-frozen-base-polished.webp" },
+      { text: "MIX-IN: Make a narrow center well. Drop in half a serving of vanilla wafers. Run RESPIN without adding liquid.", image: "/images/pink-berry-cookie-creami/step-add-vanilla-wafers-polished.webp" },
+      { text: "SCOOP: Scoop into a bowl. The Respin should give a smooth, evenly-mixed pink base with visible wafer pockets.", image: "/images/pink-berry-cookie-creami/step-respin-result-polished.webp" },
+      { text: "TOP + SERVE: Finish with 4g freeze-dried strawberries — added AFTER all machine processing so they stay crunchy. Eat immediately.", image: "/images/pink-berry-cookie-creami/step-freeze-dried-strawberries-polished.webp" },
     ],
     executionRules: [
       "Level 1/8 tsp guar gum — heaped = gummy.",
