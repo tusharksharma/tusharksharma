@@ -8452,12 +8452,12 @@ const recipes = [
     },
     slug: "high-protein-beef-potato-slop-bowl",
     socialImages: [
-      "/images/high-protein-beef-potato-slop-bowl/step-03-roasted-potatoes.webp",
-      "/images/high-protein-beef-potato-slop-bowl/step-04-brown-beef.webp",
-      "/images/high-protein-beef-potato-slop-bowl/step-05-blend-adult-sauce.webp",
-      "/images/high-protein-beef-potato-slop-bowl/step-06-build-kid-plate.webp",
-      "/images/high-protein-beef-potato-slop-bowl/step-07-sauce-adult-bowl.webp",
-      "/images/high-protein-beef-potato-slop-bowl/step-08-jalapeno-finish.webp",
+      "/images/high-protein-beef-potato-slop-bowl/step-03-roasted-potatoes-polished.webp",
+      "/images/high-protein-beef-potato-slop-bowl/step-04-brown-beef-polished.webp",
+      "/images/high-protein-beef-potato-slop-bowl/step-05-blend-adult-sauce-polished.webp",
+      "/images/high-protein-beef-potato-slop-bowl/step-06-build-kid-plate-polished.webp",
+      "/images/high-protein-beef-potato-slop-bowl/step-07-sauce-adult-bowl-polished.webp",
+      "/images/high-protein-beef-potato-slop-bowl/step-08-jalapeno-finish-polished.webp",
     ],
     socialHashtags: [
       "#BeefAndPotatoes",
@@ -8471,8 +8471,8 @@ const recipes = [
       heroBadge: "Split Plate Dinner",
       heroTitle: "Beef & Potato Slop Bowl",
       hook: "Looks like slop. Hits at 620 cal / 62g protein. Adult chipotle sauce + jalapeños; deconstructed Velveeta + veg for the smaller plates.",
-      heroPhoto: "/images/high-protein-beef-potato-slop-bowl/hero-split-adult-kid-plates.webp",
-      servingPhoto: "/images/high-protein-beef-potato-slop-bowl/hero-adult-beef-potato-bowl.webp",
+      heroPhoto: "/images/high-protein-beef-potato-slop-bowl/hero-split-adult-kid-plates-polished.webp",
+      servingPhoto: "/images/high-protein-beef-potato-slop-bowl/hero-adult-beef-potato-bowl-polished.webp",
       ingredientGroups: [
         {
           card: 1,
@@ -8526,12 +8526,12 @@ const recipes = [
         },
       ],
       ingredientCardPhotos: [
-        "/images/high-protein-beef-potato-slop-bowl/step-01-dice-potatoes.webp",
-        "/images/high-protein-beef-potato-slop-bowl/step-05-blend-adult-sauce.webp",
+        "/images/high-protein-beef-potato-slop-bowl/step-04-brown-beef-polished.webp",
+        "/images/high-protein-beef-potato-slop-bowl/step-05-blend-adult-sauce-polished.webp",
       ],
       methodCardPhotos: [
-        "/images/high-protein-beef-potato-slop-bowl/step-03-roasted-potatoes.webp",
-        "/images/high-protein-beef-potato-slop-bowl/step-07-sauce-adult-bowl.webp",
+        "/images/high-protein-beef-potato-slop-bowl/step-03-roasted-potatoes-polished.webp",
+        "/images/high-protein-beef-potato-slop-bowl/step-07-sauce-adult-bowl-polished.webp",
       ],
       servingGroups: [
         {
@@ -8563,8 +8563,8 @@ const recipes = [
     servings: 4,
     protein: 62,
     calories: 620,
-    image: "/images/high-protein-beef-potato-slop-bowl/hero-split-adult-kid-plates.webp",
-    prepImage: "/images/high-protein-beef-potato-slop-bowl/hero-adult-beef-potato-bowl.webp",
+    image: "/images/high-protein-beef-potato-slop-bowl/hero-split-adult-kid-plates-polished.webp",
+    prepImage: "/images/high-protein-beef-potato-slop-bowl/hero-adult-beef-potato-bowl-polished.webp",
     prepImageCaption: "Adult bowl — 8 oz raw-weight potatoes + 8 oz raw-weight beef + one serving of the linked chipotle cheddar sauce + Mt. Olive jalapeños. ~620 cal / 62g protein.",
     video: "/videos/high-protein-beef-potato-slop-bowl/beef-potato-slop-bowl-620cal-62protein-marcus.mp4",
     originalSoundVideo: "/videos/high-protein-beef-potato-slop-bowl/beef-potato-slop-bowl-620cal-62protein-original-sound.mp4",
@@ -8622,8 +8622,8 @@ const recipes = [
       sharedSteps: [
         { text: "PREHEAT + PARCHMENT: Heat oven to 450°F. Line a large rimmed sheet pan with parchment.", images: [] },
         { text: "DICE + SEASON POTATOES: Small, even dice with skin on. Spread on the sheet pan, light avocado-oil spray, SPG.", images: ["/images/high-protein-beef-potato-slop-bowl/step-01-dice-potatoes.webp", "/images/high-protein-beef-potato-slop-bowl/step-02-season-potatoes.webp"] },
-        { text: "ROAST 40 MIN: Toss halfway (~20 min in) and redistribute. Continue until browned outside and tender inside.", images: ["/images/high-protein-beef-potato-slop-bowl/step-03-roasted-potatoes.webp"] },
-        { text: "BROWN THE BEEF: Wide skillet, hot. Add beef, season with SPG. Smash, turn, crumble until browned and cooked through.", images: ["/images/high-protein-beef-potato-slop-bowl/step-04-brown-beef.webp"] },
+        { text: "ROAST 40 MIN: Toss halfway (~20 min in) and redistribute. Continue until browned outside and tender inside.", images: ["/images/high-protein-beef-potato-slop-bowl/step-03-roasted-potatoes-polished.webp"] },
+        { text: "BROWN THE BEEF: Wide skillet, hot. Add beef, season with SPG. Smash, turn, crumble until browned and cooked through.", images: ["/images/high-protein-beef-potato-slop-bowl/step-04-brown-beef-polished.webp"] },
       ],
       adult: {
         label: "Adult — Chipotle Cheddar Sauce + Crunchy Jalapeños",
@@ -8635,8 +8635,8 @@ const recipes = [
           "Mt. Olive pickled jalapeño slices, to taste",
         ],
         steps: [
-          { text: "BLEND ADULT SAUCE: Prepare one full batch of High-Protein Chipotle Cheddar Sauce per the linked cookbook entry. Uses cottage cheese + cheddar powder + nutritional yeast + fat-free ultra-filtered milk + Smoky Chipotle Crema. This dinner uses 2 of its 4 servings.", images: ["/images/high-protein-beef-potato-slop-bowl/step-05-blend-adult-sauce.webp"] },
-          { text: "BUILD ADULT BOWL: 8 oz raw-weight potatoes + 8 oz raw-weight beef per adult bowl. Top with one sauce serving and crunchy pickled jalapeños.", images: ["/images/high-protein-beef-potato-slop-bowl/step-07-sauce-adult-bowl.webp", "/images/high-protein-beef-potato-slop-bowl/step-08-jalapeno-finish.webp"] },
+          { text: "BLEND ADULT SAUCE: Prepare one full batch of High-Protein Chipotle Cheddar Sauce per the linked cookbook entry. Uses cottage cheese + cheddar powder + nutritional yeast + fat-free ultra-filtered milk + Smoky Chipotle Crema. This dinner uses 2 of its 4 servings.", images: ["/images/high-protein-beef-potato-slop-bowl/step-05-blend-adult-sauce-polished.webp"] },
+          { text: "BUILD ADULT BOWL: 8 oz raw-weight potatoes + 8 oz raw-weight beef per adult bowl. Top with one sauce serving and crunchy pickled jalapeños.", images: ["/images/high-protein-beef-potato-slop-bowl/step-07-sauce-adult-bowl-polished.webp", "/images/high-protein-beef-potato-slop-bowl/step-08-jalapeno-finish-polished.webp"] },
         ],
       },
       kid: {
@@ -8655,7 +8655,7 @@ const recipes = [
             description: "The creator started each young child with half of an adult potato and beef portion, served deconstructed with mild melted Velveeta and cucumber or carrot sticks. No jalapeños. Adjust to your own child's appetite — kid macros intentionally not published.",
             steps: [
               { text: "MELT MILD CHEESE: Warm Velveeta gently — add a small splash of fat-free ultra-filtered milk only if needed to loosen it. Keep separate from the adult chipotle sauce.", images: [] },
-              { text: "BUILD DECONSTRUCTED PLATE: ~4 oz raw-weight potatoes + ~4 oz raw-weight beef per young-kid plate. Serve deconstructed with the mild cheese on the side and cucumber or carrot sticks for crunch. No jalapeños.", images: ["/images/high-protein-beef-potato-slop-bowl/step-06-build-kid-plate.webp"] },
+              { text: "BUILD DECONSTRUCTED PLATE: ~4 oz raw-weight potatoes + ~4 oz raw-weight beef per young-kid plate. Serve deconstructed with the mild cheese on the side and cucumber or carrot sticks for crunch. No jalapeños.", images: ["/images/high-protein-beef-potato-slop-bowl/step-06-build-kid-plate-polished.webp"] },
             ],
           },
         ],
@@ -8678,12 +8678,12 @@ const recipes = [
     steps: [
       { text: "PREHEAT + PARCHMENT: Heat the oven to 450°F and line a large rimmed sheet pan with parchment.", images: [] },
       { text: "DICE + SEASON POTATOES: Small, even dice with skin on. Spread on the sheet pan, spray lightly with avocado oil, season with SPG.", images: ["/images/high-protein-beef-potato-slop-bowl/step-01-dice-potatoes.webp", "/images/high-protein-beef-potato-slop-bowl/step-02-season-potatoes.webp"] },
-      { text: "ROAST 40 MIN: Toss and redistribute at ~20 min. Continue until browned outside and tender inside.", images: ["/images/high-protein-beef-potato-slop-bowl/step-03-roasted-potatoes.webp"] },
-      { text: "BROWN THE BEEF: Wide skillet, hot. Add beef, season with SPG. Smash, turn, and crumble until browned and cooked through.", images: ["/images/high-protein-beef-potato-slop-bowl/step-04-brown-beef.webp"] },
-      { text: "BLEND ADULT SAUCE: One full batch of High-Protein Chipotle Cheddar Sauce (linked cookbook entry). Uses 2 of its 4 servings; refrigerate the other 2 for pasta or vegetables later.", images: ["/images/high-protein-beef-potato-slop-bowl/step-05-blend-adult-sauce.webp"] },
+      { text: "ROAST 40 MIN: Toss and redistribute at ~20 min. Continue until browned outside and tender inside.", images: ["/images/high-protein-beef-potato-slop-bowl/step-03-roasted-potatoes-polished.webp"] },
+      { text: "BROWN THE BEEF: Wide skillet, hot. Add beef, season with SPG. Smash, turn, and crumble until browned and cooked through.", images: ["/images/high-protein-beef-potato-slop-bowl/step-04-brown-beef-polished.webp"] },
+      { text: "BLEND ADULT SAUCE: One full batch of High-Protein Chipotle Cheddar Sauce (linked cookbook entry). Uses 2 of its 4 servings; refrigerate the other 2 for pasta or vegetables later.", images: ["/images/high-protein-beef-potato-slop-bowl/step-05-blend-adult-sauce-polished.webp"] },
       { text: "MELT MILD KID CHEESE: Warm Velveeta gently with a splash of fat-free ultra-filtered milk only if needed. Keep separate from the adult chipotle sauce.", images: [] },
-      { text: "BUILD ADULT BOWL: 8 oz raw-weight potatoes + 8 oz raw-weight beef per adult bowl. Top with one sauce serving and crunchy pickled jalapeños.", images: ["/images/high-protein-beef-potato-slop-bowl/step-07-sauce-adult-bowl.webp", "/images/high-protein-beef-potato-slop-bowl/step-08-jalapeno-finish.webp"] },
-      { text: "BUILD YOUNG-KID PLATE: Half of the adult potato and beef portions, served deconstructed with the mild melted cheese on the side and cucumber or carrot sticks. No jalapeños. Adjust to your own child's appetite.", images: ["/images/high-protein-beef-potato-slop-bowl/step-06-build-kid-plate.webp"] },
+      { text: "BUILD ADULT BOWL: 8 oz raw-weight potatoes + 8 oz raw-weight beef per adult bowl. Top with one sauce serving and crunchy pickled jalapeños.", images: ["/images/high-protein-beef-potato-slop-bowl/step-07-sauce-adult-bowl-polished.webp", "/images/high-protein-beef-potato-slop-bowl/step-08-jalapeno-finish-polished.webp"] },
+      { text: "BUILD YOUNG-KID PLATE: Half of the adult potato and beef portions, served deconstructed with the mild melted cheese on the side and cucumber or carrot sticks. No jalapeños. Adjust to your own child's appetite.", images: ["/images/high-protein-beef-potato-slop-bowl/step-06-build-kid-plate-polished.webp"] },
     ],
     brands: [
       { name: "Mt. Olive", item: "Pickled Jalapeño Slices (adult finish)", why: "The creator's crunch reference — Mt. Olive holds a crisper snap than most jarred jalapeños. Any crunchy pickled jalapeño works.", url: "https://mtolivepickles.com/" },
