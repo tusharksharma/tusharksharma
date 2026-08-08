@@ -1137,6 +1137,48 @@ const GROCERY_BY_WEEK = {
       { name: "Mediterranean or Greek seasoning (Mon batch — Spiceology Greek Freak shown)", qty: "pantry", meal: "Mon", fixedBatch: true },
     ],
   },
+  28: {
+    "Protein": [
+      { name: "93/7 lean ground beef (24 oz raw — Mon slop bowl)", baseQty: 24, unit: "oz", meal: "Mon" },
+      { name: "Bavette steak (6 oz per adult — Fri steak night)", baseQty: 6, unit: "oz", meal: "Fri adult" },
+      { name: "Great Value pork breakfast patties (1.5 per kid — Fri kid alt)", baseQty: 1.5, unit: "patties", meal: "Fri kid" },
+    ],
+    "Dairy": [
+      { name: "Good Culture 2% cottage cheese (150 g — for the Mon chipotle cheddar sauce)", baseQty: 150, unit: "g", meal: "Mon" },
+      { name: "Fairlife fat-free ultra-filtered milk (~1/2 cup — 6 tbsp for the sauce + splash for kid Velveeta if needed)", baseQty: 0.5, unit: "cup", meal: "Mon" },
+      { name: "Velveeta or mild melting cheese (kid finish — Mon)", baseQty: 1, unit: "pack", meal: "Mon kid" },
+    ],
+    "Produce": [
+      { name: "Yukon Gold or yellow potatoes (24 oz raw — Mon slop bowl)", baseQty: 24, unit: "oz", meal: "Mon" },
+      { name: "Cucumber or carrot sticks (Mon kid crunch — quantity to taste)", baseQty: 1, unit: "bunch", meal: "Mon kid" },
+      { name: "Raw carrots (baby or sticks — Fri kid)", baseQty: 1, unit: "bag", meal: "Fri kid" },
+    ],
+    "Carbs": [
+      { name: "Vadilal frozen rumali rotis (7 rotis, ~40g each — Wed tikka masala)", baseQty: 7, unit: "pieces", meal: "Wed" },
+      { name: "Checkers/Rally's frozen fries (Fri steak night)", baseQty: 1, unit: "bag", meal: "Fri" },
+    ],
+    "Frozen + Shortcut": [
+      { name: "Sukhi's Costco chicken tikka masala twin-pack (36 oz / 2 x 18 oz pouches — Wed)", baseQty: 1, unit: "pack", meal: "Wed" },
+    ],
+    "Sauce + Condiment": [
+      { name: "Mt. Olive pickled jalapeño slices (Mon adult finish)", baseQty: 1, unit: "jar", meal: "Mon adult" },
+      { name: "Smoky Chipotle Crema (2 tbsp — Mon adult sauce; batch from cookbook or use existing jar)", qty: "pantry", meal: "Mon adult" },
+      { name: "Cheddar cheese powder (1 tbsp — Mon sauce; pantry staple)", qty: "pantry", meal: "Mon" },
+      { name: "Nutritional yeast (1 tbsp — Mon sauce; pantry staple)", qty: "pantry", meal: "Mon" },
+      { name: "O California organic extra virgin olive oil (Fri chimichurri)", qty: "pantry", meal: "Fri adult" },
+      { name: "Napa Valley Naturals organic red wine vinegar (Fri chimichurri)", qty: "pantry", meal: "Fri adult" },
+      { name: "Spiceology Chimichurri Blend (Fri chimichurri)", qty: "pantry", meal: "Fri adult" },
+    ],
+    "Spice + Aromatic": [
+      { name: "SPG (salt, pepper, garlic powder — Mon slop bowl + Fri steak)", qty: "pantry", meal: "Mon + Fri" },
+      { name: "Kashmiri chili powder (1 tsp — Wed adult tikka)", qty: "pantry", meal: "Wed adult" },
+      { name: "Chili flakes (Fri chimichurri)", qty: "pantry", meal: "Fri adult" },
+    ],
+    "Pantry": [
+      { name: "Avocado-oil spray (Mon slop bowl potatoes + Fri steak sear)", qty: "pantry", meal: "Mon + Fri" },
+      { name: "Water (hot tap — Wed tikka pouch warm-up)", qty: "pantry", meal: "Wed" },
+    ],
+  },
 };
 
 function getGrocery(week) { return GROCERY_BY_WEEK[week] || GROCERY_BY_WEEK[1]; }
