@@ -37,3 +37,10 @@ src/assets/react.svg
 src/assets/vite.svg
 public/favicon.svg
 public/icons.svg
+
+# Video/audio assets — served from GitHub Releases (tusharma88/tsp-videos)
+# instead of being shipped through git. Keep the folders present in the
+# working tree for local dev; vercel.json rewrites /videos/* to the CDN URL.
+public/videos/**/*.mp4
+public/videos/**/*.m4a
+dist/videos/
