@@ -1179,6 +1179,48 @@ const GROCERY_BY_WEEK = {
       { name: "Water (hot tap — Wed tikka pouch warm-up)", qty: "pantry", meal: "Wed" },
     ],
   },
+  29: {
+    "Protein": [
+      { name: "Fully cooked chargrilled chipotle-seasoned chicken (18 oz — Mon rice bowls)", baseQty: 18, unit: "oz", meal: "Mon" },
+      { name: "Bavette steak (6 oz per adult — Fri steak night)", baseQty: 6, unit: "oz", meal: "Fri adult" },
+      { name: "Great Value pork breakfast patties (1.5 per kid — Fri kid alt)", baseQty: 1.5, unit: "patties", meal: "Fri kid" },
+    ],
+    "Dairy": [
+      { name: "Butter (1 tbsp — Mon kid rice)", baseQty: 1, unit: "tbsp", meal: "Mon kid" },
+    ],
+    "Produce": [
+      { name: "Limes (1-2 — Mon adult rice + corn)", baseQty: 2, unit: "limes", meal: "Mon" },
+      { name: "Fresh cilantro (1 generous handful — Mon adult rice)", baseQty: 1, unit: "bunch", meal: "Mon adult" },
+      { name: "Raw carrots (baby or sticks — Fri kid)", baseQty: 1, unit: "bag", meal: "Fri kid" },
+    ],
+    "Carbs": [
+      { name: "Long-grain white rice (2 cups — for the Sunday Bone Broth Rice batch used Mon)", baseQty: 2, unit: "cups", meal: "Mon" },
+      { name: "Vadilal frozen rumali rotis (7 rotis, ~40g each — Wed tikka masala)", baseQty: 7, unit: "pieces", meal: "Wed" },
+      { name: "Checkers/Rally's frozen fries (Fri steak night)", baseQty: 1, unit: "bag", meal: "Fri" },
+    ],
+    "Frozen + Shortcut": [
+      { name: "Frozen fire-roasted corn (8 oz — Mon rice bowls)", baseQty: 8, unit: "oz", meal: "Mon" },
+      { name: "Sukhi's Costco chicken tikka masala twin-pack (36 oz / 2 x 18 oz pouches — Wed)", baseQty: 1, unit: "pack", meal: "Wed" },
+    ],
+    "Sauce + Condiment": [
+      { name: "Tari Verde (2 tbsp — Mon adult finish)", baseQty: 2, unit: "tbsp", meal: "Mon adult" },
+      { name: "Toum or preferred mayo-based sauce (1 tbsp — Mon kid finish)", baseQty: 1, unit: "tbsp", meal: "Mon kid" },
+      { name: "Kirkland Organic Chicken Bone Broth (4 cups — for the Sunday Bone Broth Rice batch used Mon)", baseQty: 4, unit: "cups", meal: "Mon" },
+      { name: "O California organic extra virgin olive oil (Fri chimichurri)", qty: "pantry", meal: "Fri adult" },
+      { name: "Napa Valley Naturals organic red wine vinegar (Fri chimichurri)", qty: "pantry", meal: "Fri adult" },
+      { name: "Spiceology Chimichurri Blend (Fri chimichurri)", qty: "pantry", meal: "Fri adult" },
+    ],
+    "Spice + Aromatic": [
+      { name: "Salt (Mon rice + corn seasoning)", qty: "pantry", meal: "Mon" },
+      { name: "SPG (salt, pepper, garlic powder — Fri steak)", qty: "pantry", meal: "Fri" },
+      { name: "Kashmiri chili powder (1 tsp — Wed adult tikka)", qty: "pantry", meal: "Wed adult" },
+      { name: "Chili flakes (Fri chimichurri)", qty: "pantry", meal: "Fri adult" },
+    ],
+    "Pantry": [
+      { name: "Avocado-oil spray (Fri steak sear)", qty: "pantry", meal: "Fri" },
+      { name: "Water (hot tap — Wed tikka pouch warm-up)", qty: "pantry", meal: "Wed" },
+    ],
+  },
 };
 
 function getGrocery(week) { return GROCERY_BY_WEEK[week] || GROCERY_BY_WEEK[1]; }
