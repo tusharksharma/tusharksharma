@@ -8731,11 +8731,11 @@ const recipes = [
     slug: "cilantro-lime-rice-chipotle-chicken-fire-roasted-corn",
     socialImages: [
       "/images/cilantro-lime-chipotle-chicken-rice/hero-split-adult-kid-plates-polished.webp",
-      "/images/cilantro-lime-chipotle-chicken-rice/step-01-bone-broth-rice.webp",
-      "/images/cilantro-lime-chipotle-chicken-rice/step-02-cilantro-lime-rice.webp",
-      "/images/cilantro-lime-chipotle-chicken-rice/step-03-air-fryer-chicken.webp",
-      "/images/cilantro-lime-chipotle-chicken-rice/step-04-fire-roasted-corn.webp",
-      "/images/cilantro-lime-chipotle-chicken-rice/step-06-adult-tari-verde-finish.webp",
+      "/images/cilantro-lime-chipotle-chicken-rice/step-01-bone-broth-rice-polished.webp",
+      "/images/cilantro-lime-chipotle-chicken-rice/step-02-cilantro-lime-rice-polished.webp",
+      "/images/cilantro-lime-chipotle-chicken-rice/step-03-air-fryer-chicken-polished.webp",
+      "/images/cilantro-lime-chipotle-chicken-rice/step-04-fire-roasted-corn-polished.webp",
+      "/images/cilantro-lime-chipotle-chicken-rice/step-06-adult-tari-verde-finish-polished.webp",
     ],
     socialHashtags: [
       "#ChipotleChicken",
