@@ -180,7 +180,7 @@ export function buildEndLayout(recipe, curated, { index, total, isCookbook, slug
     kind: "end",
     index, total,
     recipeName: recipe.title || "",
-    recipeUrl: `thesplitplate.com/${path}`,
+    recipeUrl: curated?.endUrl || `thesplitplate.com/${path}`,
     engagementQuestion: curated?.engagementQuestion || null,
   };
 }

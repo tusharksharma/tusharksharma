@@ -808,6 +808,111 @@ export const sauces = [
     tagline: "Viral Grillo's pickle dip, rebuilt protein-style. 10 servings, 110 cal / 16g protein per scoop. Packed back into the pickle tub for serving.",
     heroImage: "/images/grillos-pickle-dip-protein-style/hero-finished-dip-with-wilde-polished.webp",
     prepImage: "/images/grillos-pickle-dip-protein-style/context-grillos-pickle-chips-polished.webp",
+    socialHashtags: [
+      "#GrillosPickleDip",
+      "#HighProteinDip",
+      "#ProteinSnack",
+      "#HealthySnackIdeas",
+      "#TheSplitPlate",
+    ],
+    socialCarousel: {
+      heroBadge: "Power-Up · Dip",
+      heroAccent: "green",
+      heroTitle: "Grillo's Pickle Dip, Protein Style",
+      hook: "110 cal / 16g protein per scoop. Pickle-forward, smoky, and packed back into the original tub.",
+      heroPhoto: "/images/grillos-pickle-dip-protein-style/context-wilde-chip-dip-polished.webp",
+      ingredientGroups: [
+        {
+          card: 0,
+          accent: "green",
+          heading: "Creamy Base",
+          items: [
+            { quantity: "450g", text: "High-protein cottage cheese" },
+            { quantity: "1/2 cup", text: "Plain nonfat skyr" },
+            { quantity: "4", text: "Light cheese wedges" },
+            { quantity: "5 tbsp", text: "Protein ranch seasoning" },
+          ],
+        },
+        {
+          card: 1,
+          accent: "green",
+          heading: "Pickle + Crunch",
+          items: [
+            { quantity: "8", text: "Dill pickle chips" },
+            { quantity: "2 tbsp", text: "Pickle brine" },
+            { quantity: "A few", text: "Garlic pieces + dill from the tub" },
+            { quantity: "3 oz", text: "Smoked bacon bits" },
+          ],
+        },
+      ],
+      methodGroups: [
+        {
+          accent: "green",
+          heading: "Method",
+          items: [
+            { number: 1, heading: "Blend Base", body: "Blend the cottage cheese completely smooth, then transfer it to a bowl." },
+            { number: 2, heading: "Build Ranch Mix", body: "Blend skyr, cheese wedges, ranch seasoning, pickle chips, brine, garlic, and dill." },
+            { number: 3, heading: "Combine", body: "Fold the pickle-ranch mixture into the smooth cottage-cheese base." },
+            { number: 4, heading: "Add Crunch", body: "Fold in the bacon bits gently so the pieces stay visible." },
+            { number: 5, heading: "Pack The Tub", body: "Spoon the finished dip back into the empty pickle tub and smooth the top." },
+            { number: 6, heading: "Chill + Serve", body: "Serve cold now, or chill until the flavors settle. Stir once before dipping." },
+          ],
+        },
+      ],
+      ingredientCardPhotos: [
+        {
+          src: "/images/grillos-pickle-dip-protein-style/step-01-cottage-cheese-base-polished.webp",
+          position: "50% 48%",
+          zoom: 1.08,
+          layout: "side",
+        },
+        {
+          src: "/images/grillos-pickle-dip-protein-style/context-grillos-pickle-chips-polished.webp",
+          position: "50% 52%",
+          zoom: 1.05,
+          layout: "band",
+        },
+      ],
+      methodCardPhotos: [
+        {
+          src: "/images/grillos-pickle-dip-protein-style/step-04-ranch-protein-seasoning-polished.webp",
+          position: "50% 48%",
+          zoom: 1.08,
+          layout: "side",
+        },
+        {
+          src: "/images/grillos-pickle-dip-protein-style/step-06-fill-grillos-tub-polished.webp",
+          position: "50% 50%",
+          zoom: 1.08,
+          layout: "side",
+        },
+      ],
+      servingPhoto: {
+        src: "/images/grillos-pickle-dip-protein-style/hero-finished-dip-with-wilde-polished.webp",
+        position: "24% 50%",
+        zoom: 1,
+        layout: "side",
+      },
+      servingGroups: [
+        {
+          accent: "green",
+          heading: "Serve",
+          items: [
+            { text: "Divide the batch into 10 generous scoops: 110 calories and 16g protein each." },
+            { text: "Serve cold with protein chips, regular chips, carrots, cucumbers, or celery." },
+          ],
+        },
+        {
+          accent: "neutral",
+          heading: "Storage",
+          items: [
+            { text: "Refrigerate in the pickle tub for 3-4 days. Stir before serving; the brine may separate slightly." },
+          ],
+        },
+      ],
+      endUrl: "thesplitplate.com",
+      engagementQuestion: "Chips, carrots, cucumbers, or celery - what gets the first dip?",
+    },
     // Polished-only carousel — 9 image-model-generated outputs swapped in.
     // Narrative: brand → base → pickle brine → ranch seasoning → bacon → fill tub.
     socialImages: [
