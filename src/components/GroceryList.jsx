@@ -1221,6 +1221,41 @@ const GROCERY_BY_WEEK = {
       { name: "Water (hot tap — Wed tikka pouch warm-up)", qty: "pantry", meal: "Wed" },
     ],
   },
+  30: {
+    "Protein": [
+      { name: "93/7 lean ground chicken (1 lb — Mon dumpling lasagna filling)", baseQty: 1, unit: "lb", meal: "Mon" },
+      { name: "95/5 lean ground pork (1 lb — Mon dumpling lasagna filling)", baseQty: 1, unit: "lb", meal: "Mon" },
+      { name: "Bavette steak (6 oz per adult — Fri steak night)", baseQty: 6, unit: "oz", meal: "Fri adult" },
+      { name: "Great Value pork breakfast patties (1.5 per kid — Fri kid alt)", baseQty: 1.5, unit: "patties", meal: "Fri kid" },
+    ],
+    "Produce": [
+      { name: "Scallions (1 bunch — Mon dumpling lasagna filling + garnish)", baseQty: 1, unit: "bunch", meal: "Mon" },
+      { name: "Raw carrots (baby or sticks — Fri kid)", baseQty: 1, unit: "bag", meal: "Fri kid" },
+    ],
+    "Carbs": [
+      { name: "Wonton wrappers (1 package / 51 sheets — Mon dumpling lasagna)", baseQty: 1, unit: "pack", meal: "Mon" },
+      { name: "Checkers/Rally's frozen fries (Fri steak night)", baseQty: 1, unit: "bag", meal: "Fri" },
+    ],
+    "Sauce + Condiment": [
+      { name: "Soy sauce (2 tbsp filling + light post-bake drizzle — Mon)", baseQty: 2, unit: "tbsp", meal: "Mon" },
+      { name: "Rice vinegar (2 tbsp — Mon dumpling lasagna filling)", baseQty: 2, unit: "tbsp", meal: "Mon" },
+      { name: "Ginger-garlic paste (2 tbsp — Mon dumpling lasagna filling)", baseQty: 2, unit: "tbsp", meal: "Mon" },
+      { name: "Chicken broth (1 cup — Mon dumpling lasagna bake + Wed reheat splash)", baseQty: 1, unit: "cup", meal: "Mon" },
+      { name: "Chili-garlic sauce (to taste — Mon + Wed adult section only)", qty: "pantry", meal: "Mon adult" },
+      { name: "O California organic extra virgin olive oil (Fri chimichurri)", qty: "pantry", meal: "Fri adult" },
+      { name: "Napa Valley Naturals organic red wine vinegar (Fri chimichurri)", qty: "pantry", meal: "Fri adult" },
+      { name: "Spiceology Chimichurri Blend (Fri chimichurri)", qty: "pantry", meal: "Fri adult" },
+    ],
+    "Spice + Aromatic": [
+      { name: "Umami seasoning (2 tbsp — Mon dumpling lasagna filling)", baseQty: 2, unit: "tbsp", meal: "Mon" },
+      { name: "SPG (salt, pepper, garlic powder — Fri steak)", qty: "pantry", meal: "Fri" },
+      { name: "Chili flakes (Fri chimichurri)", qty: "pantry", meal: "Fri adult" },
+    ],
+    "Pantry": [
+      { name: "Cooking spray (Mon dumpling lasagna dish + Fri steak sear)", qty: "pantry", meal: "Mon" },
+      { name: "Aluminum foil (Mon dumpling lasagna covered bake)", qty: "pantry", meal: "Mon" },
+    ],
+  },
 };
 
 function getGrocery(week) { return GROCERY_BY_WEEK[week] || GROCERY_BY_WEEK[1]; }
