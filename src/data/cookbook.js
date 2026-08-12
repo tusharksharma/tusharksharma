@@ -2198,7 +2198,7 @@ export const quickLunches = [
       "/images/toasted-roast-beef-cheese-sandwich/step-01-portion-roast-beef.webp",
       "/images/toasted-roast-beef-cheese-sandwich/step-02-add-velveeta.webp",
       "/images/toasted-roast-beef-cheese-sandwich/step-03-air-fry-beef-cheese.webp",
-      "/images/toasted-roast-beef-cheese-sandwich/step-04-reveal-melted-beef-cheese.webp",
+      "/images/toasted-roast-beef-cheese-sandwich/step-04-reveal-melted-beef-cheese-polished.webp",
       "/images/toasted-roast-beef-cheese-sandwich/step-05-load-toast.webp",
       "/images/toasted-roast-beef-cheese-sandwich/step-06-add-mustard.webp",
       "/images/toasted-roast-beef-cheese-sandwich/step-07-slice-sandwich.webp",
@@ -2246,7 +2246,7 @@ export const quickLunches = [
       ],
       methodCardPhotos: [
         { src: "/images/toasted-roast-beef-cheese-sandwich/step-03-air-fry-beef-cheese.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
-        { src: "/images/toasted-roast-beef-cheese-sandwich/step-04-reveal-melted-beef-cheese.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
+        { src: "/images/toasted-roast-beef-cheese-sandwich/step-04-reveal-melted-beef-cheese-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
       ],
       servingPhoto: "/images/toasted-roast-beef-cheese-sandwich/step-07-slice-sandwich.webp",
       servingGroups: [
