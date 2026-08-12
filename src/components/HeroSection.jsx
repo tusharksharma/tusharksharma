@@ -9,8 +9,13 @@ export default function HeroSection() {
           {/* Food visual */}
           <div className="flex-shrink-0 w-full sm:w-[42%]">
             <img
-              src="/images/smash-tacos/hero.png"
+              src="/images/smash-tacos/hero.webp"
+              srcSet="/images/smash-tacos/hero-sm.webp 800w, /images/smash-tacos/hero.webp 1400w"
+              sizes="(min-width: 640px) 42vw, 100vw"
+              width="1400"
+              height="1867"
               alt="Split plate — adult and kid tacos from the same cook"
+              fetchPriority="high"
               className="w-full rounded-2xl border border-neutral-800 sm:max-h-[420px] sm:object-cover"
             />
             <p className="text-neutral-600 text-[10px] mt-2 text-center">Same cook. Different plates.</p>
@@ -35,7 +40,7 @@ export default function HeroSection() {
             </p>
             <div className="flex gap-3 mt-6 flex-wrap justify-center sm:justify-start">
               <a
-                href="#timeline"
+                href="#your-week"
                 onClick={() => track("hero_cta_click", { cta: "see_this_week" })}
                 className="px-6 py-3 bg-amber-500 text-black font-bold rounded-xl hover:bg-amber-400 transition-colors cursor-pointer text-sm"
               >

@@ -124,7 +124,7 @@ export default function AboutPage() {
         </div>
 
         <div className="mt-10 flex gap-3 flex-wrap">
-          <Link to="/" className="px-5 py-2.5 bg-amber-500 text-black font-bold rounded-xl text-sm hover:bg-amber-400 transition-colors">
+          <Link to="/#your-week" className="px-5 py-2.5 bg-amber-500 text-black font-bold rounded-xl text-sm hover:bg-amber-400 transition-colors">
             See This Week
           </Link>
           <Link to="/dinners" className="px-5 py-2.5 bg-neutral-800 text-white font-bold rounded-xl border border-neutral-700 text-sm hover:bg-neutral-700 transition-colors">

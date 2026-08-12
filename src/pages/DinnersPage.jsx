@@ -141,8 +141,18 @@ export default function DinnersPage() {
   const [selectedCost, setSelectedCost] = useState([]);
   const [selectedDiet, setSelectedDiet] = useState([]);
   const [excludeAllergens, setExcludeAllergens] = useState([]);
+  const [filtersOpen, setFiltersOpen] = useState(false);
 
-  const hasActiveFilters = search || selectedProteins.length || selectedTime || selectedNetCarbs || selectedEffort.length || selectedSplit.length || selectedCost.length || selectedDiet.length || excludeAllergens.length;
+  const activeCount =
+    (selectedProteins.length) +
+    (selectedTime ? 1 : 0) +
+    (selectedNetCarbs ? 1 : 0) +
+    (selectedEffort.length) +
+    (selectedSplit.length) +
+    (selectedCost.length) +
+    (selectedDiet.length) +
+    (excludeAllergens.length);
+  const hasActiveFilters = !!search || activeCount > 0;
 
   function toggleInArray(arr, setArr, value) {
     setArr(arr.includes(value) ? arr.filter((v) => v !== value) : [...arr, value]);
@@ -241,8 +251,30 @@ export default function DinnersPage() {
           />
         </div>
 
+        {/* Filter toggle — chips live behind a drawer so cards stay above the fold */}
+        <div className="mb-4 flex items-center justify-between gap-3">
+          <button
+            onClick={() => setFiltersOpen((v) => !v)}
+            className="flex items-center gap-2 px-4 py-2 rounded-lg bg-neutral-900 border border-neutral-700 text-neutral-200 text-sm font-medium hover:border-amber-500/40 transition-colors cursor-pointer"
+            aria-expanded={filtersOpen}
+            aria-controls="dinners-filter-drawer"
+          >
+            <span>Filters</span>
+            {activeCount > 0 && (
+              <span className="px-1.5 py-0.5 rounded-full bg-amber-500 text-neutral-950 text-[10px] font-bold">{activeCount}</span>
+            )}
+            <span className={`text-neutral-500 transition-transform ${filtersOpen ? "rotate-180" : ""}`} aria-hidden="true">▾</span>
+          </button>
+          {hasActiveFilters && (
+            <button onClick={clearAll} className="text-amber-400 text-xs font-medium hover:underline cursor-pointer">
+              Clear all
+            </button>
+          )}
+        </div>
+
         {/* Filters */}
-        <div className="mb-4 space-y-2 bg-neutral-900/40 border border-neutral-800 rounded-xl p-4">
+        {filtersOpen && (
+        <div id="dinners-filter-drawer" className="mb-4 space-y-2 bg-neutral-900/40 border border-neutral-800 rounded-xl p-4">
           <FilterSection title="Protein">
             {PROTEIN_OPTIONS.map((p) => (
               <Chip key={p} label={p} active={selectedProteins.includes(p)} onClick={() => toggleInArray(selectedProteins, setSelectedProteins, p)} />
@@ -291,18 +323,14 @@ export default function DinnersPage() {
             ))}
           </FilterSection>
         </div>
+        )}
 
-        {/* Active filters + result count */}
-        <div className="mb-6 flex items-center justify-between">
+        {/* Result count */}
+        <div className="mb-6">
           <span className="text-neutral-500 text-xs">
             {filtered.length} {filtered.length === 1 ? "recipe" : "recipes"}
             {hasActiveFilters ? " matching filters" : ""}
           </span>
-          {hasActiveFilters && (
-            <button onClick={clearAll} className="text-amber-400 text-xs font-medium hover:underline cursor-pointer">
-              Clear all filters
-            </button>
-          )}
         </div>
 
         {/* Recipe grid or empty state */}

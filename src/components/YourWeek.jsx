@@ -429,8 +429,10 @@ function FlexDay({ day, meal }) {
   );
 }
 
+const LATEST_WEEK = Math.max(...Object.keys(WEEKS).map(Number));
+
 export default function YourWeek() {
-  const [week, setWeek] = useState(1);
+  const [week, setWeek] = useState(LATEST_WEEK);
   const [adults, setAdults] = useState(2);
   const [kids, setKids] = useState(2);
   const [leftovers, setLeftovers] = useState(true);
@@ -479,7 +481,7 @@ export default function YourWeek() {
   }, [enabledMeals]);
 
   return (
-    <section className="border-b border-neutral-800 bg-gradient-to-b from-neutral-950 to-neutral-900/80">
+    <section id="your-week" className="border-b border-neutral-800 bg-gradient-to-b from-neutral-950 to-neutral-900/80 scroll-mt-16">
       <div className="max-w-3xl mx-auto px-4 py-16">
         {/* Header */}
         <div className="text-center mb-6">
