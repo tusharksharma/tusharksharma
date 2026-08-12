@@ -638,9 +638,10 @@ function SplitCookView({ recipe, scale = 1 }) {
             </>
           ) : (
             <StepList
-              steps={(sc.kid.steps || []).map((s) =>
-                typeof s === "string" ? { text: s } : s
-              )}
+              steps={((sc.kid.steps && sc.kid.steps.length > 0)
+                ? sc.kid.steps
+                : (sc.kid.variants?.[0]?.steps || [])
+              ).map((s) => (typeof s === "string" ? { text: s } : s))}
               startAt={sc.sharedSteps.length + 1}
               accent="green"
             />

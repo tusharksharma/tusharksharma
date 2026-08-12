@@ -4629,7 +4629,7 @@ const recipes = [
         "Bolthouse Farms Creamy Caesar Parmigiano (T1 NEW signature dressing) — yogurt-based, ~50 cal per 2 tbsp. The macro lever that makes Caesar weeknight-eligible.",
         "Quest Hot & Spicy Tortilla Style Protein Chips (T3 crunch — cross-recipe with id 22). 19g protein per bag, crushed coarse into the salad.",
         "Dan-O's Jalapeño Cheesoning (T1 Dan-O's family — NEW variant). Parmesan + jalapeño + Italian herbs. The 5-cal finisher that turns ordinary salad into 'Caesar Crunch.'",
-        { text: "Smoky Chipotle Crema (T1 cookbook sauce — adult drizzle, OPTIONAL)", link: "/cookbook/smoky-chipotle-crema" },
+        "Smoky Chipotle Crema (T1 cookbook sauce — adult drizzle, OPTIONAL — see /cookbook/smoky-chipotle-crema).",
       ],
     },
     slug: "caesar-crunch-pizza-night",
@@ -8708,7 +8708,7 @@ const recipes = [
     status: "live",
     carbLevel: "medium",
     meta: {
-      macros: { protein: 43, calories: 450, fat: 12, carbs: 48, netCarbs: 44, estimated: true },
+      macros: { protein: 43, calories: 472, fat: 12, carbs: 48, netCarbs: 44, estimated: true },
       allergens: ["dairy"],
       warnings: ["contains-dairy-kid-butter", "verify-prepared-chicken-labels", "verify-tari-verde-labels", "verify-toum-or-mayo-labels", "kid-macros-not-published"],
       dietTags: ["pork-free", "high-protein"],
@@ -8756,10 +8756,10 @@ const recipes = [
     time: "10 min prep + 30 min cook (rice from scratch) — 15 min with prepared rice on hand",
     servings: 4,
     protein: 43,
-    calories: 450,
+    calories: 472,
     image: "/images/cilantro-lime-chipotle-chicken-rice/hero-split-adult-kid-plates-polished.webp",
     prepImage: "/images/cilantro-lime-chipotle-chicken-rice/step-02-cilantro-lime-rice.webp",
-    prepImageCaption: "Adult plate — 1 cilantro-lime Bone Broth Rice serving + 6 oz chipotle chicken + 2 oz fire-roasted corn + 1 tbsp Tari Verde. 450 cal / 43g protein. Kid tray = 1/2 rice + 3 oz chicken + 2 oz corn + 1/2 tbsp toum (Tushar's build; adjust for appetite).",
+    prepImageCaption: "Adult plate — 1 cilantro-lime Bone Broth Rice serving + 6 oz chipotle chicken + 2 oz fire-roasted corn + 1 tbsp Tari Verde. 472 cal / 43g protein. Kid tray = 1/2 rice + 3 oz chicken + 2 oz corn + 1/2 tbsp toum (Tushar's build; adjust for appetite).",
     video: "/videos/cilantro-lime-chipotle-chicken-rice/cilantro-lime-rice-chipotle-chicken-corn-450cal-43protein-marcus.mp4",
     teaserVideo: "/videos/cilantro-lime-chipotle-chicken-rice/cilantro-lime-chipotle-chicken-rice-7s-teaser.mp4",
     commentRecipeVideo: "/videos/cilantro-lime-chipotle-chicken-rice/cilantro-lime-chipotle-chicken-rice-15s-comment-recipe-450cal-43protein-marcus.mp4",
@@ -8819,7 +8819,10 @@ const recipes = [
         { text: "BOIL THE CORN: 5 min in salted water. Drain, then season with fresh lime juice and salt to taste.", images: ["/images/cilantro-lime-chipotle-chicken-rice/step-04-fire-roasted-corn.webp"] },
       ],
       adult: {
-        finishIngredients: [
+        label: "Adult — Cilantro-Lime Rice + Tari Verde",
+        protein: 43,
+        calories: 472,
+        extraIngredients: [
           "2 prepared servings Bone Broth Rice (from the shared cook)",
           "1 generous handful fresh cilantro, chopped",
           "Juice of 1 lime (to taste)",
@@ -8828,27 +8831,23 @@ const recipes = [
           "4 oz cooked fire-roasted corn (2 oz per adult)",
           "2 tbsp Tari Verde (1 tbsp per adult, drizzled on top)",
         ],
-        finishSteps: [
+        steps: [
           { text: "TOSS ADULT RICE: Combine 2 rice servings with chopped cilantro, lime juice, and salt to taste. Toss while the rice is still warm — the aroma opens up faster.", images: ["/images/cilantro-lime-chipotle-chicken-rice/step-02-cilantro-lime-rice.webp"] },
           { text: "PLATE ADULT: Divide the cilantro-lime rice across two plates. Add 6 oz chicken and 2 oz corn to each. Drizzle 1 tbsp Tari Verde over the top of each plate — do not mix in.", images: ["/images/cilantro-lime-chipotle-chicken-rice/step-06-adult-tari-verde-finish.webp"] },
         ],
       },
       kid: {
-        variants: [
-          {
-            label: "Tushar's Kid Build (starting point, not a prescription)",
-            finishIngredients: [
-              "1 prepared serving Bone Broth Rice (split between two trays)",
-              "1 tbsp butter (divided across both rice portions)",
-              "6 oz reheated chipotle chicken (3 oz per tray)",
-              "4 oz cooked fire-roasted corn (2 oz per tray)",
-              "1 tbsp toum or preferred mayo-based sauce (1/2 tbsp per tray in Tushar's build)",
-            ],
-            finishSteps: [
-              { text: "SPLIT THE KID RICE: Divide 1 rice serving across two trays. Add 1/2 tbsp butter per tray while the rice is warm; toss until melted.", images: ["/images/cilantro-lime-chipotle-chicken-rice/step-05-kid-toum-finish.webp"] },
-              { text: "PLATE THE KID TRAYS: Add 3 oz chicken and 2 oz corn to each tray. Drizzle 1/2 tbsp toum over the chicken in each tray. ADJUST PORTIONS FOR YOUR OWN KIDS' APPETITES.", images: ["/images/cilantro-lime-chipotle-chicken-rice/step-05-kid-toum-finish.webp"] },
-            ],
-          },
+        label: "Kid — Buttery Rice + Toum (Tushar's Build)",
+        extraIngredients: [
+          "1 prepared serving Bone Broth Rice (split between two trays)",
+          "1 tbsp butter (divided across both rice portions)",
+          "6 oz reheated chipotle chicken (3 oz per tray)",
+          "4 oz cooked fire-roasted corn (2 oz per tray)",
+          "1 tbsp toum or preferred mayo-based sauce (1/2 tbsp per tray in Tushar's build)",
+        ],
+        steps: [
+          { text: "SPLIT THE KID RICE: Divide 1 rice serving across two trays. Add 1/2 tbsp butter per tray while the rice is warm; toss until melted.", images: ["/images/cilantro-lime-chipotle-chicken-rice/step-05-kid-toum-finish.webp"] },
+          { text: "PLATE THE KID TRAYS: Add 3 oz chicken and 2 oz corn to each tray. Drizzle 1/2 tbsp toum over the chicken in each tray. ADJUST PORTIONS FOR YOUR OWN KIDS' APPETITES.", images: ["/images/cilantro-lime-chipotle-chicken-rice/step-05-kid-toum-finish.webp"] },
         ],
         notes: "This documents what Tushar served, not a universal prescription. Adjust for your child's age, hunger, growth, and preferences. Kid macros are intentionally NOT published in the recipe meta.",
       },
@@ -9005,26 +9004,25 @@ const recipes = [
         { text: "CUT + SHARED FINISH: Score the pan into 6 equal full servings. Lightly drizzle soy sauce over the whole pan; scatter the reserved scallions across all six squares.", images: ["/images/viral-dumpling-lasagna-proteinized/step-05-cut-six-servings-polished.webp"] },
       ],
       adult: {
-        finishIngredients: [
+        label: "Adult — Full Serving + Chili-Garlic",
+        protein: 40,
+        calories: 450,
+        extraIngredients: [
           "Chili-garlic sauce, to taste (adult section only; the split lives here)",
         ],
-        finishSteps: [
+        steps: [
           { text: "ADULT DRIZZLE: Draw chili-garlic sauce ONLY across the adult section of the cut pan. Keep the kid section clean.", images: ["/images/viral-dumpling-lasagna-proteinized/step-06-split-adult-chili-garlic-polished.webp"] },
           { text: "PLATE ADULT: Lift 1 full serving per adult plate. Extra chili-garlic on the side if desired.", images: ["/images/viral-dumpling-lasagna-proteinized/step-07-lift-layered-serving-polished.webp"] },
         ],
       },
       kid: {
-        variants: [
-          {
-            label: "Tushar's Kid Build (starting point, not a prescription)",
-            finishIngredients: [
-              "No chili-garlic sauce — kid section stays mild.",
-              "1/2 full serving per kid tray, based on appetite.",
-            ],
-            finishSteps: [
-              { text: "PLATE THE KID TRAYS: Lift a half serving from the kid section onto each tray. Tushar's build: 1/2 full serving per child based on appetite. Do not add chili-garlic sauce.", images: ["/images/viral-dumpling-lasagna-proteinized/step-07-lift-layered-serving-polished.webp"] },
-            ],
-          },
+        label: "Kid — Half Serving, No Chili-Garlic (Tushar's Build)",
+        extraIngredients: [
+          "No chili-garlic sauce — kid section stays mild.",
+          "1/2 full serving per kid tray, based on appetite.",
+        ],
+        steps: [
+          { text: "PLATE THE KID TRAYS: Lift a half serving from the kid section onto each tray. Tushar's build: 1/2 full serving per child based on appetite. Do not add chili-garlic sauce.", images: ["/images/viral-dumpling-lasagna-proteinized/step-07-lift-layered-serving-polished.webp"] },
         ],
         notes: "This documents what Tushar served, not a universal prescription. Adjust for your child's age, hunger, growth, and preferences. Kid macros are intentionally NOT published in the recipe meta.",
       },
