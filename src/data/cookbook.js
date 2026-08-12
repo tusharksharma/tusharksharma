@@ -6076,7 +6076,7 @@ export const snackBoxes = [
     title: "Strawberry Brownie Cheesecake Snack Box",
     tagline: "Snack Box Series Ep. 12 — dessert-inspired kid snack box: Oikos Triple Zero strawberry yogurt, Prime Bites red velvet protein brownie, Honey Maid graham crackers, fresh strawberries. ~230 cal / 19g protein per box.",
     heroImage: "/images/strawberry-brownie-cheesecake-snack-box/hero-strawberry-brownie-cheesecake-snack-box-polished.webp",
-    prepImage: "/images/strawberry-brownie-cheesecake-snack-box/context-strawberry-greek-yogurt.webp",
+    prepImage: "/images/strawberry-brownie-cheesecake-snack-box/context-strawberry-greek-yogurt-polished.webp",
     socialImages: [
       "/images/strawberry-brownie-cheesecake-snack-box/step-01-portion-strawberry-yogurt-polished.webp",
       "/images/strawberry-brownie-cheesecake-snack-box/step-02-add-strawberries-polished.webp",
@@ -6149,7 +6149,7 @@ export const snackBoxes = [
     title: "Maple Waffle Brunch Box",
     tagline: "Snack Box Series Ep. 11 — breakfast-inspired kid snack box: boiled egg, 365 uncured Black Forest ham, St Pierre Belgian waffle with Kirkland organic maple syrup, fresh strawberries. ~250 cal / 14g protein per box.",
     heroImage: "/images/maple-waffle-brunch-box/hero-maple-waffle-brunch-box-polished.webp",
-    prepImage: "/images/maple-waffle-brunch-box/context-organic-black-forest-ham.webp",
+    prepImage: "/images/maple-waffle-brunch-box/context-organic-black-forest-ham-polished.webp",
     socialImages: [
       "/images/maple-waffle-brunch-box/step-01-add-boiled-eggs-polished.webp",
       "/images/maple-waffle-brunch-box/step-02-add-ham-polished.webp",
