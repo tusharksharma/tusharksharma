@@ -4994,9 +4994,88 @@ export const bases = [
   {
     id: "bone-broth-rice",
     title: "Bone Broth Rice",
-    tagline: "Hack-on-hand. 8 servings of rice that quietly carries protein.",
+    tagline: "Swap water for bone broth: 8 meal-prep servings, about 9g protein each, with no extra cook time.",
     heroImage: "/images/bone-broth-rice/hero-bone-broth-rice-polished.webp",
     prepImage: "/images/bone-broth-rice/step-01-rice-into-broth.webp",
+    socialHashtags: [
+      "#BoneBrothRice",
+      "#MealPrepIdeas",
+      "#RiceRecipes",
+      "#EasyMealPrep",
+      "#TheSplitPlate",
+    ],
+    socialCarousel: {
+      heroBadge: "Cookbook Base · Meal Prep",
+      heroAccent: "amber",
+      heroTitle: "Bone Broth Rice",
+      hook: "Same rice, smarter liquid. One batch makes 8 savory servings at about 175 calories and 9g protein each.",
+      heroPhoto: "/images/bone-broth-rice/hero-bone-broth-rice-polished.webp",
+      ingredientGroups: [
+        {
+          accent: "amber",
+          heading: "The 1:2 Formula",
+          items: [
+            { quantity: "2 cups", text: "Long-grain white rice", note: "Basmati or jasmine" },
+            { quantity: "4 cups", text: "Chicken bone broth", note: "Taste before adding salt" },
+          ],
+        },
+      ],
+      methodGroups: [
+        {
+          accent: "amber",
+          heading: "Cook The Rice",
+          items: [
+            { number: 1, heading: "Rinse", body: "Rinse the rice under cold water until the water runs mostly clear." },
+            { number: 2, heading: "Combine", body: "Add the rinsed rice and bone broth to a heavy pot or rice cooker. Do not salt yet." },
+            { number: 3, heading: "Cook", body: "Simmer, cover, and cook on low for 18-20 minutes, or use the white-rice setting." },
+            { number: 4, heading: "Rest", body: "Take it off the heat and leave it covered for 10 minutes so each grain finishes steaming." },
+            { number: 5, heading: "Fluff + Cool", body: "Fluff with a fork. For fried rice, spread it out, cool promptly, and refrigerate overnight." },
+            { number: 6, heading: "Store", body: "Portion into shallow containers within 2 hours. Refrigerate for 3-4 days or freeze." },
+          ],
+        },
+      ],
+      ingredientCardPhotos: [
+        {
+          src: "/images/bone-broth-rice/step-01-rice-into-broth.webp",
+          position: "50% 55%",
+          zoom: 1.02,
+          layout: "band",
+        },
+      ],
+      methodCardPhotos: [
+        {
+          src: "/images/bone-broth-rice/step-02-stir-and-cover.webp",
+          position: "50% 47%",
+          zoom: 1.06,
+          layout: "side",
+        },
+        {
+          src: "/images/bone-broth-rice/step-03-cooked-rice.webp",
+          position: "50% 48%",
+          zoom: 1.06,
+          layout: "side",
+        },
+      ],
+      servingPhoto: {
+        src: "/images/bone-broth-rice/step-04-eight-servings.webp",
+        position: "50% 50%",
+        zoom: 1.05,
+        layout: "side",
+      },
+      servingGroups: [
+        {
+          accent: "amber",
+          heading: "Batch Once, Use Three Ways",
+          items: [
+            { text: "Serve it warm under chicken, steak, vegetables, or any bowl-style dinner." },
+            { text: "Chill it overnight for fried rice, or loosen it with more broth for quick congee." },
+            { text: "Reheat one serving with a splash of water and a damp paper towel." },
+          ],
+        },
+      ],
+      endUrl: "thesplitplate.com",
+      engagementQuestion: "What would you make first with the leftovers: fried rice, a rice bowl, or quick congee?",
+    },
     socialImages: [
       "/images/bone-broth-rice/hero-bone-broth-rice-polished.webp",
       "/images/bone-broth-rice/step-01-rice-into-broth.webp",
@@ -5028,11 +5107,11 @@ export const bases = [
     },
     ingredients: [
       "2 cups long-grain white rice (basmati or jasmine — basmati separates better for fried rice)",
-      "4 cups Kirkland Organic Chicken Bone Broth",
+      "4 cups chicken bone broth (protein and sodium vary by brand)",
     ],
     steps: [
       { text: "RINSE: Rinse 2 cups rice under cold water until the water runs mostly clear. Two minutes. This removes excess starch and is the single biggest factor between 'separate grains' and 'sticky mush.'", image: "/images/bone-broth-rice/step-01-rice-into-broth.webp" },
-      { text: "COMBINE: Add rinsed rice + 4 cups Kirkland chicken bone broth to a heavy-bottom pot or rice cooker. No salt — the bone broth carries the salt.", image: "/images/bone-broth-rice/step-02-stir-and-cover.webp" },
+      { text: "COMBINE: Add rinsed rice + 4 cups chicken bone broth to a heavy-bottom pot or rice cooker. Taste the broth before adding any salt.", image: "/images/bone-broth-rice/step-02-stir-and-cover.webp" },
       { text: "COOK: Stovetop — bring to a gentle simmer, then cover and reduce to low. 18-20 minutes, lid stays on. Rice cooker — just hit the white rice button.", image: "/images/bone-broth-rice/step-02-stir-and-cover.webp" },
       { text: "REST: 10 minutes off heat, lid on. Don't skip — this is when the steam finishes the inside of each grain.", image: "/images/bone-broth-rice/step-03-cooked-rice.webp" },
       { text: "FLUFF + COOL: Fork-fluff to break up clumps. For fried rice usage, spread on a sheet pan to cool fast, then fridge overnight (cold rice fries better than warm rice).", image: "/images/bone-broth-rice/step-04-eight-servings.webp" },
