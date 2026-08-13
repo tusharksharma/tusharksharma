@@ -5019,6 +5019,14 @@ export const bases = [
             { quantity: "4 cups", text: "Chicken bone broth", note: "Taste before adding salt" },
           ],
         },
+        {
+          accent: "green",
+          heading: "What It Makes",
+          items: [
+            { quantity: "8", text: "Meal-prep servings", note: "About 175 calories and 9g protein each" },
+            { quantity: "10 min", text: "Covered rest", note: "Steam finishes the grains before fluffing" },
+          ],
+        },
       ],
       methodGroups: [
         {
@@ -5037,9 +5045,9 @@ export const bases = [
       ingredientCardPhotos: [
         {
           src: "/images/bone-broth-rice/step-01-rice-into-broth.webp",
-          position: "50% 55%",
-          zoom: 1.02,
-          layout: "band",
+          position: "50% 58%",
+          zoom: 1.04,
+          layout: "side",
         },
       ],
       methodCardPhotos: [
