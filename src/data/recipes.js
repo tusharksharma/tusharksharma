@@ -3709,7 +3709,7 @@ const recipes = [
     servings: 4,
     protein: 23,
     calories: 400,
-    image: "/images/tks-sweet-heat-bowl/hero-split-adult-kid-tks-bowls.webp",
+    image: "/images/tks-sweet-heat-bowl/hero-split-adult-kid-tks-bowls-polished.webp",
     prepImage: "/images/tks-sweet-heat-bowl/adult-finished-tks-bowl.webp",
     video: "/videos/tks-sweet-heat-bowl/tks-sweet-heat-bowl-main-marcus.mp4",
     originalSoundVideo: "/videos/tks-sweet-heat-bowl/tks-sweet-heat-bowl-main-clean-original-sound.mp4",
