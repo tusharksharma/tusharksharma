@@ -1523,6 +1523,64 @@ export const breakfasts = [
     tagline: "5-minute smoked salmon cream cheese bagel — 250 cal / 30g protein on a Sola high-protein bagel. No deli build, no toast.",
     heroImage: "/images/salmon-cream-cheese-bagel/hero-loaded-salmon-cream-cheese-bagel-polished.webp",
     prepImage: "/images/salmon-cream-cheese-bagel/context-smoked-salmon-polished.webp",
+    socialHashtags: [
+      "#SalmonCreamCheeseBagel",
+      "#HighProteinBreakfast",
+      "#QuickLunchIdeas",
+      "#EasyBreakfast",
+      "#TheSplitPlate",
+    ],
+    // Four-card carousel for a three-ingredient, five-minute build. The
+    // generic fallback over-explained the recipe across six cards and used
+    // wide crops that left the food tiny against the cutting board.
+    socialCarousel: {
+      heroBadge: "Power-Up · Breakfast or Lunch",
+      heroTitle: "5-Minute Salmon Cream Cheese Bagel",
+      hook: "250 calories · 30g protein · three ingredients · five minutes.",
+      heroPhoto: "/images/salmon-cream-cheese-bagel/hero-loaded-salmon-cream-cheese-bagel-polished.webp",
+      ingredientGroups: [
+        {
+          card: 0,
+          accent: "amber",
+          heading: "Three Ingredients",
+          items: [
+            { quantity: "1", text: "Sola high-protein bagel", note: "Use both halves" },
+            { quantity: "2 oz", text: "Cold-smoked salmon" },
+            { quantity: "2 tbsp", text: "Cream cheese" },
+          ],
+        },
+      ],
+      methodGroups: [
+        {
+          accent: "amber",
+          heading: "Chop, Load, Eat",
+          items: [
+            { number: 1, heading: "Combine", body: "Place the salmon and cream cheese together on a cutting board." },
+            { number: 2, heading: "Chop", body: "Chop into a chunky spread. Keep visible pieces of salmon instead of whipping it smooth." },
+            { number: 3, heading: "Load", body: "Split the bagel, spread the mixture across both halves, and eat immediately." },
+          ],
+        },
+      ],
+      ingredientCardPhotos: [
+        {
+          src: "/images/salmon-cream-cheese-bagel/step-02-add-cream-cheese-polished.webp",
+          position: "50% 72%",
+          zoom: 1,
+          layout: "band",
+        },
+      ],
+      methodCardPhotos: [
+        {
+          src: "/images/salmon-cream-cheese-bagel/step-03-chop-salmon-cream-cheese-polished.webp",
+          position: "50% 58%",
+          zoom: 1.25,
+          layout: "side",
+        },
+      ],
+      servingGroups: null,
+      endUrl: "thesplitplate.com",
+      engagementQuestion: "Breakfast or quick lunch — where would this fit in your day?",
+    },
     // socialImages — Path A polished. Step-execution order per
     // [feedback-social-images-step-order]: salmon on board → cream
     // cheese → chop → bagel reveal → load. Payoff (loaded bagel) at the
