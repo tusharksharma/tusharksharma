@@ -2132,7 +2132,7 @@ export const quickLunches = [
     socialCarousel: {
       heroBadge: "Quick Lunches · Ep. 1",
       heroAccent: "amber",
-      hook: "160 calories, 24g protein, six minutes on Air Fry. Quick Lunches Episode 1 kicks off with a Cajun chicken cheese dog.",
+      hook: "Bilinski's Cajun andouille — 80 cal, 13g protein, fully cooked, so flavorful it doesn't taste lean. Six minutes on Air Fry into a keto bun with half a slice of Velveeta: one 160 cal / 24g protein cheese dog. Quick Lunches Episode 1.",
       heroPhoto: "/images/cajun-chicken-cheese-dog/hero-cajun-chicken-cheese-dog-polished.webp",
       ingredientGroups: [
         {
@@ -2161,6 +2161,8 @@ export const quickLunches = [
         },
       ],
       ingredientCardPhotos: [
+        { src: "/images/cajun-chicken-cheese-dog/context-bilinski-package-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
+        { src: "/images/cajun-chicken-cheese-dog/context-bilinski-nutrition-panel-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
         { src: "/images/cajun-chicken-cheese-dog/context-bun-and-chicken-sausage.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
       ],
       methodCardPhotos: [
