@@ -5851,7 +5851,7 @@ export const desserts = [
       "#TheSplitPlate",
     ],
     socialCarousel: {
-      heroBadge: "Protein Dessert Hacks",
+      heroBadge: "Powerup Dessert",
       heroAccent: "amber",
       hook: "David Vanilla scored a 6/10 alone. Add 3 HighKey sandwich cookies — 70 cal, one 3-minute fix — and it's an 8.5/10. Not sponsored: I bought both, they genuinely make each other better.",
       heroPhoto: "/images/david-vanilla-cookies-cream-hack/hero-david-cookies-cream-bowl-polished.webp",
@@ -5922,7 +5922,7 @@ export const desserts = [
       "Adults",
       "No-cook",
     ],
-    useThisWhen: "You want a large cookies-and-cream dessert on a day when protein and calorie targets matter more than a perfect conventional ice cream experience. First entry in a new Protein Dessert Hacks series — 3 minutes, 2 ingredients, no machine. Honest positioning: David Vanilla alone scored a 6/10, this hack scored an 8.5/10. Not the best-tasting protein ice cream — the value proposition is macro density plus the cookie fix.",
+    useThisWhen: "You want a large cookies-and-cream dessert on a day when protein and calorie targets matter more than a perfect conventional ice cream experience. 3 minutes, 2 ingredients, no machine. Honest positioning: David Vanilla alone scored a 6/10, this hack scored an 8.5/10. Not the best-tasting protein ice cream — the value proposition is macro density plus the cookie fix.",
     flavorTarget: "First bite: vanilla-bean ice cream (David Vanilla Bean is the current label — verify the physical package before publishing). Middle + finish: sandwich-cookie crunch that turns the vanilla pint's slightly grainy texture into a cookies-and-cream cue instead of a distraction. Serve immediately; cookies soften fast.",
     ingredients: [
       "1/2 pint David Vanilla Bean frozen dessert (~105 cal / 15g protein — half the current-label pint)",
