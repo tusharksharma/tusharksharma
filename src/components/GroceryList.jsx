@@ -1256,6 +1256,42 @@ const GROCERY_BY_WEEK = {
       { name: "Aluminum foil (Mon batch — dumpling lasagna covered bake)", qty: "pantry", meal: "Mon", fixedBatch: true },
     ],
   },
+  31: {
+    "Protein": [
+      { name: "93/7 lean ground beef (Mon batch, 2 lb / 32 oz — potato waffle meal prep skillet)", baseQty: 2, unit: "lb", meal: "Mon", fixedBatch: true },
+      { name: "Liquid egg whites (Mon batch, 240-300 g — potato waffle binder; start at 240g)", baseQty: 300, unit: "g", meal: "Mon", fixedBatch: true },
+      { name: "Bavette steak (6 oz per adult — Fri steak night)", baseQty: 6, unit: "oz", meal: "Fri adult" },
+      { name: "Great Value pork breakfast patties (1.5 per kid — Fri kid alt)", baseQty: 1.5, unit: "patties", meal: "Fri kid" },
+    ],
+    "Produce": [
+      { name: "Raw carrots (baby or sticks — Fri kid)", baseQty: 1, unit: "bag", meal: "Fri kid" },
+    ],
+    "Carbs": [
+      { name: "Frozen shredded hash browns (Mon batch, 840 g — potato waffles)", baseQty: 840, unit: "g", meal: "Mon", fixedBatch: true },
+      { name: "Regular burger buns (Mon batch reheat, 4 kid plates across Mon + Wed)", baseQty: 4, unit: "buns", meal: "Mon kid", fixedBatch: true },
+      { name: "Checkers/Rally's frozen fries (Fri steak night)", baseQty: 1, unit: "bag", meal: "Fri" },
+    ],
+    "Dairy": [
+      { name: "Reduced-fat shredded cheddar (Mon batch, 168 g / 6 oz — potato waffle mix)", baseQty: 168, unit: "g", meal: "Mon", fixedBatch: true },
+      { name: "Velveeta Original slices (Mon batch, 9 slices — 6 adult + 3 kid across Mon + Wed)", baseQty: 9, unit: "slices", meal: "Mon", fixedBatch: true },
+    ],
+    "Sauce + Condiment": [
+      { name: "Bone broth (Mon batch, 1/2 cup — beef skillet)", baseQty: 0.5, unit: "cup", meal: "Mon", fixedBatch: true },
+      { name: "Tari hot sauce (to taste — Mon + Wed adult finish)", qty: "pantry", meal: "Mon adult" },
+      { name: "Ketchup (to taste — Mon + Wed kid finish)", qty: "pantry", meal: "Mon kid" },
+      { name: "O California organic extra virgin olive oil (Fri chimichurri)", qty: "pantry", meal: "Fri adult" },
+      { name: "Napa Valley Naturals organic red wine vinegar (Fri chimichurri)", qty: "pantry", meal: "Fri adult" },
+      { name: "Spiceology Chimichurri Blend (Fri chimichurri)", qty: "pantry", meal: "Fri adult" },
+    ],
+    "Spice + Aromatic": [
+      { name: "Cornstarch (Mon batch, 3 tbsp — potato waffle binder)", baseQty: 3, unit: "tbsp", meal: "Mon", fixedBatch: true },
+      { name: "SPG or Dan-O's SPG (Mon batch waffle + beef + Fri steak — pantry)", qty: "pantry", meal: "Mon" },
+      { name: "Chili flakes (Fri chimichurri)", qty: "pantry", meal: "Fri adult" },
+    ],
+    "Pantry": [
+      { name: "Avocado-oil spray (Mon batch waffle iron + Fri steak sear)", qty: "pantry", meal: "Mon" },
+    ],
+  },
 };
 
 function getGrocery(week) { return GROCERY_BY_WEEK[week] || GROCERY_BY_WEEK[1]; }
