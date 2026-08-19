@@ -2932,6 +2932,63 @@ export const desserts = [
     tagline: "Cheesecake-style frosting that lives in a jar. 30g serving = 60 cal / 6g protein. 15 servings per batch, 5-min blend, no cook.",
     heroImage: "/images/protein-cheesecake-frosting/hero-pouring-frosting.webp",
     prepImage: "/images/protein-cheesecake-frosting/context-siggis-skyr.webp",
+    socialHashtags: [
+      "#ProteinCheesecakeFrosting",
+      "#HighProteinDessert",
+      "#ProteinDessert",
+      "#MealPrepDessert",
+      "#TheSplitPlate",
+    ],
+    socialCarousel: {
+      heroBadge: "Powerup Dessert",
+      heroAccent: "amber",
+      hook: "Five minutes, one blender, and a fridge jar of cheesecake frosting: 60 calories and 6g protein per 30g serving.",
+      heroPhoto: "/images/protein-cheesecake-frosting/hero-pouring-frosting.webp",
+      ingredientGroups: [
+        {
+          card: 0,
+          accent: "amber",
+          heading: "One Blender Batch",
+          items: [
+            { quantity: "225g", text: "Plain nonfat skyr" },
+            { quantity: "215g", text: "1/3-less-fat cream cheese" },
+            { quantity: "15g", text: "Sugar-free cheesecake pudding mix" },
+            { quantity: "15g", text: "Monk-fruit sweetener blend" },
+            { quantity: "62g", text: "Vanilla whey-casein protein blend" },
+          ],
+        },
+      ],
+      methodGroups: [
+        {
+          accent: "amber",
+          heading: "Blend, Jar, Chill",
+          items: [
+            { number: 1, heading: "Load the Base", body: "Add skyr and room-temperature cream cheese to a blender cup or small food processor." },
+            { number: 2, heading: "Add the Dry Ingredients", body: "Add pudding mix, sweetener, and vanilla protein on top." },
+            { number: 3, heading: "Blend and Chill", body: "Blend 30-60 seconds until thick, glossy, and barely pourable. Scrape into a clean 16-ounce jar, seal, and refrigerate." },
+          ],
+        },
+      ],
+      ingredientCardPhotos: [
+        { src: "/images/protein-cheesecake-frosting/context-siggis-skyr.webp", position: "50% 48%", zoom: 1.02, layout: "side" },
+      ],
+      methodCardPhotos: [
+        { src: "/images/protein-cheesecake-frosting/step-blend-smooth.webp", position: "50% 50%", zoom: 1.04, layout: "side" },
+      ],
+      servingPhoto: "/images/protein-cheesecake-frosting/step-transfer-frosting.webp",
+      servingGroups: [
+        {
+          accent: "amber",
+          heading: "15 Servings - 30g Each",
+          items: [
+            { text: "60 calories and 6g protein per 30g serving." },
+            { text: "Use it on protein cakes, brownies, pancakes, fruit, oats, toast, or ice cream." },
+            { text: "Keeps 5 days refrigerated. Stir before serving; do not freeze." },
+          ],
+        },
+      ],
+      engagementQuestion: "What gets the first spoonful: protein cake, fruit, pancakes, or straight from the jar?",
+    },
     // Polished-only carousel — first commit ships raw stills; Path A polish
     // prompts queued for follow-up swap. Narrative: brand reveals → blend → final jar.
     socialImages: [

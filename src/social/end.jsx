@@ -44,7 +44,7 @@ export function drawStructuredEnd(ctx, layout) {
 
   // Read-the-full-recipe URL — center-aligned, wraps if long
   ctx.textAlign = "center";
-  const urlLines = wrapCentered(ctx, layout.recipeUrl || "", contentWidth, { size: 34, weight: 700 });
+  const urlLines = wrapUrlCentered(ctx, layout.recipeUrl || "", contentWidth, { size: 34, weight: 700 });
   let urlY = 540;
   urlLines.forEach((line, i) => {
     ctx.font = font(700, 34);
@@ -87,6 +87,24 @@ function wrapCentered(ctx, text, maxWidth, { size, weight }) {
   return lines;
 }
 
+function wrapUrlCentered(ctx, text, maxWidth, { size, weight }) {
+  ctx.font = font(weight, size);
+  const value = String(text || "");
+  if (ctx.measureText(value).width <= maxWidth) return [value];
+
+  const lastSlash = value.lastIndexOf("/");
+  if (lastSlash > 0) {
+    const prefix = value.slice(0, lastSlash + 1);
+    const leaf = value.slice(lastSlash + 1);
+    if (ctx.measureText(prefix).width <= maxWidth && ctx.measureText(leaf).width <= maxWidth) {
+      return [prefix, leaf];
+    }
+  }
+
+  return wrapCentered(ctx, value.replaceAll("/", "/ "), maxWidth, { size, weight })
+    .map((line) => line.replaceAll("/ ", "/"));
+}
+
 function drawWrappedCentered(ctx, text, cx, y, maxWidth, { size, weight, color, lineHeight, maxLines }) {
   ctx.font = font(weight, size);
   ctx.fillStyle = color;
@@ -104,6 +122,7 @@ const S = SCREEN / EXPORT_SIZE;
 
 export function EndStructuredInner({ layout }) {
   const marginPx = SAFE_MARGIN * S;
+  const urlParts = splitUrlForPreview(layout.recipeUrl);
   return (
     <div className="relative w-full h-full bg-neutral-950 overflow-hidden text-white flex flex-col">
       <div
@@ -138,10 +157,10 @@ export function EndStructuredInner({ layout }) {
           {layout.recipeName}
         </div>
         <div
-          className="font-bold break-all"
+          className="font-bold"
           style={{ fontSize: `${34 * S}px`, color: "#f5f5f5", marginBottom: 24 * S }}
         >
-          {layout.recipeUrl}
+          {urlParts.map((part) => <span key={part} className="block">{part}</span>)}
         </div>
         {layout.engagementQuestion && (
           <div
@@ -167,6 +186,14 @@ export function EndStructuredInner({ layout }) {
       </div>
     </div>
   );
+}
+
+function splitUrlForPreview(value) {
+  const url = String(value || "");
+  if (url.length <= 42) return [url];
+  const lastSlash = url.lastIndexOf("/");
+  if (lastSlash <= 0) return [url];
+  return [url.slice(0, lastSlash + 1), url.slice(lastSlash + 1)];
 }
 
 export function buildEndLayout(recipe, curated, { index, total, isCookbook, slug }) {
