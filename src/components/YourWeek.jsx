@@ -639,16 +639,23 @@ export default function YourWeek() {
         {/* Weekly stats */}
         {(() => {
           const dayKeys = ["Mon", "Wed", "Fri"];
-          const leftoverDays = leftovers ? currentWeek.cookDays.filter((d, i) => enabledMeals[dayKeys[i]] && d.reheats).length : 0;
+          // isReheat cards ARE the leftover day (fixedBatch pattern) — exclude
+          // from cook count and count as leftover days regardless of toggle.
+          const cookCount = currentWeek.cookDays.filter((d, i) => enabledMeals[dayKeys[i]] && !d.isReheat).length;
+          const legacyLeftoverDays = leftovers ? currentWeek.cookDays.filter((d, i) => enabledMeals[dayKeys[i]] && d.reheats).length : 0;
+          const inlineReheatDays = currentWeek.cookDays.filter((d, i) => enabledMeals[dayKeys[i]] && d.isReheat).length;
+          const leftoverDays = legacyLeftoverDays + inlineReheatDays;
           // Real protein sum: enabled cook days × recipe-specific adult/kid macros × leftover doubling.
-          // Falls back to top-level recipe.protein when splitCook doesn't break out adult/kid.
+          // Adult falls back to top-level recipe.protein; kid does NOT — if the
+          // recipe doesn't publish kid macros, that portion contributes 0
+          // (substituting adult inflates the total).
           let totalProtein = 0;
           currentWeek.cookDays.forEach((day, i) => {
             if (!enabledMeals[dayKeys[i]]) return;
             const recipe = recipes.find((r) => r.id === day.id);
             if (!recipe) return;
             const adultProt = recipe.splitCook?.adult?.protein ?? recipe.protein ?? 0;
-            const kidProt = recipe.splitCook?.kid?.protein ?? recipe.protein ?? 0;
+            const kidProt = recipe.splitCook?.kid?.protein ?? 0;
             let mealProtein = adults * adultProt + kids * kidProt;
             if (leftovers && day.reheats) mealProtein *= 2;
             totalProtein += mealProtein;
@@ -657,7 +664,7 @@ export default function YourWeek() {
             <div className="mt-8 flex justify-center gap-4 text-xs text-neutral-500 flex-wrap">
               <span><span className="text-amber-400 font-bold">~{Math.round(totalProtein)}g protein</span> this week</span>
               <span className="text-neutral-700">|</span>
-              <span><span className="text-white font-semibold">{enabledCount} cooks</span>{leftovers ? ` + ${leftoverDays} leftover days` : ""}</span>
+              <span><span className="text-white font-semibold">{cookCount} cooks</span>{leftoverDays > 0 ? ` + ${leftoverDays} leftover days` : ""}</span>
               <span className="text-neutral-700">|</span>
               <span>~30 min avg</span>
             </div>
@@ -698,13 +705,20 @@ export default function YourWeek() {
         {/* Completion */}
         {(() => {
           const dayKeys = ["Mon", "Wed", "Fri"];
-          const leftoverDays = leftovers ? currentWeek.cookDays.filter((d, i) => enabledMeals[dayKeys[i]] && d.reheats).length : 0;
-          const nonReheatDays = leftovers ? currentWeek.cookDays.filter((d, i) => enabledMeals[dayKeys[i]] && !d.reheats).length : 0;
+          const cookCount = currentWeek.cookDays.filter((d, i) => enabledMeals[dayKeys[i]] && !d.isReheat).length;
+          const legacyLeftoverDays = leftovers ? currentWeek.cookDays.filter((d, i) => enabledMeals[dayKeys[i]] && d.reheats).length : 0;
+          const inlineReheatDays = currentWeek.cookDays.filter((d, i) => enabledMeals[dayKeys[i]] && d.isReheat).length;
+          const leftoverDays = legacyLeftoverDays + inlineReheatDays;
+          // Fresh-only cooks = enabled cook cards with no leftover mechanism
+          // (neither legacy `reheats` nor a downstream `batchCoversDays`).
+          const nonReheatDays = leftovers ? currentWeek.cookDays.filter((d, i) =>
+            enabledMeals[dayKeys[i]] && !d.isReheat && !d.reheats && !d.batchCoversDays
+          ).length : 0;
           return (
             <div className="mt-6 text-center py-6 bg-amber-500/5 border border-amber-500/20 rounded-xl">
               <p className="text-neutral-500 text-xs">Once you've shopped and checked everything off:</p>
               <p className="text-amber-400 font-black text-base mt-1">
-                {enabledCount} dinners + {leftoverDays} leftover days handled.
+                {cookCount} dinners + {leftoverDays} leftover days handled.
               </p>
               <p className="text-neutral-600 text-[10px] mt-1">
                 {nonReheatDays > 0 && leftovers ? `${nonReheatDays} dinner best eaten fresh (no leftover day).` : ""}

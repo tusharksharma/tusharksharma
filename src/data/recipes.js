@@ -9063,8 +9063,9 @@ const recipes = [
     status: "live",
     carbLevel: "medium",
     meta: {
+      fixedBatch: true,
       macros: { protein: 50, calories: 600, fat: 22, carbs: 45, netCarbs: 42, estimated: true },
-      allergens: ["milk/dairy", "egg", "gluten/wheat in kid buns"],
+      allergens: ["dairy", "eggs", "wheat", "gluten"],
       warnings: ["contains-dairy-cheddar-velveeta", "contains-egg-whites", "contains-wheat-gluten-in-kid-buns", "kid-macros-not-published", "brand-macros-vary-recalculate"],
       dietTags: ["high-protein", "meal-prep", "family-dinner", "pork-free"],
       proteinTags: ["beef"],

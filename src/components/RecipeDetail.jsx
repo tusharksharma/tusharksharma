@@ -27,14 +27,15 @@ export default function RecipeDetail({ recipe }) {
   // of mode — the standard view expects recipe.steps to exist.
   const forceSplitView = hasSplit && !Array.isArray(recipe.steps);
   const baseServings = recipe.servings || 4;
-  const totalServings = adults + kids;
   // fixedBatch recipes (e.g. one-bake meal preps that yield N containers) do
   // NOT scale by household size or leftovers — the batch quantity IS the
   // recipe. Scaling would ask the shopper to buy 2x tomatoes but the recipe
-  // still says "one 45-min bake". Freeze scale at 1 and show a batch-cook
-  // caption instead of the scaled indicator.
+  // still says "one 45-min bake". Freeze scale at 1 and show the yield
+  // instead of the household total.
   const isFixedBatch = !!recipe.meta?.fixedBatch;
+  const totalServings = isFixedBatch ? baseServings : adults + kids;
   const scale = isFixedBatch ? 1 : (totalServings / baseServings) * (leftovers ? 2 : 1);
+  const videoUrl = recipe.video || recipe.videoSrc;
   const ppc = ((recipe.protein * 4 / recipe.calories) * 100).toFixed(0);
 
   return (
@@ -75,10 +76,10 @@ export default function RecipeDetail({ recipe }) {
 
       <article className="max-w-3xl mx-auto px-4 py-8 print:hidden">
         {/* Hero video (falls back to hero image if no video) */}
-        {recipe.videoSrc ? (
+        {videoUrl ? (
           <div className="rounded-2xl overflow-hidden bg-black aspect-[9/16] sm:aspect-video max-h-[520px] mx-auto">
             <video
-              src={recipe.videoSrc}
+              src={videoUrl}
               poster={recipe.image}
               controls
               playsInline
@@ -129,39 +130,47 @@ export default function RecipeDetail({ recipe }) {
             {recipe.description}
           </p>
 
-          {/* Family size picker */}
-          <div className="flex flex-wrap items-center gap-x-4 gap-y-3 mt-5 bg-neutral-900/50 border border-neutral-800 rounded-xl px-4 py-3">
-            <div className="flex items-center gap-2">
-              <span className="text-neutral-500 text-[10px]">Adults</span>
-              <div className="flex gap-1">
-                {[1, 2, 3, 4].map((n) => (
-                  <button key={n} onClick={() => setAdults(n)}
-                    className={`w-7 h-7 rounded text-xs font-bold cursor-pointer transition-all ${adults === n ? "bg-red-500 text-white" : "bg-neutral-800 text-neutral-500 hover:bg-neutral-700"}`}
-                  >{n}</button>
-                ))}
-              </div>
+          {/* Family size picker \u2014 hidden for fixed-batch recipes where the
+              batch quantity IS the recipe (no household scaling). */}
+          {isFixedBatch ? (
+            <div className="flex flex-wrap items-center gap-x-3 gap-y-2 mt-5 bg-neutral-900/50 border border-neutral-800 rounded-xl px-4 py-3">
+              <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-amber-500/20 text-amber-400 border border-amber-500/30">Batch cook</span>
+              <span className="text-neutral-300 text-xs">Yields {baseServings} servings \u2014 quantities below are the full batch.</span>
             </div>
-            <div className="flex items-center gap-2">
-              <span className="text-neutral-500 text-[10px]">Kids</span>
-              <div className="flex gap-1">
-                {[0, 1, 2, 3].map((n) => (
-                  <button key={n} onClick={() => setKids(n)}
-                    className={`w-7 h-7 rounded text-xs font-bold cursor-pointer transition-all ${kids === n ? "bg-green-500 text-white" : "bg-neutral-800 text-neutral-500 hover:bg-neutral-700"}`}
-                  >{n}</button>
-                ))}
+          ) : (
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-3 mt-5 bg-neutral-900/50 border border-neutral-800 rounded-xl px-4 py-3">
+              <div className="flex items-center gap-2">
+                <span className="text-neutral-500 text-[10px]">Adults</span>
+                <div className="flex gap-1">
+                  {[1, 2, 3, 4].map((n) => (
+                    <button key={n} onClick={() => setAdults(n)}
+                      className={`w-7 h-7 rounded text-xs font-bold cursor-pointer transition-all ${adults === n ? "bg-red-500 text-white" : "bg-neutral-800 text-neutral-500 hover:bg-neutral-700"}`}
+                    >{n}</button>
+                  ))}
+                </div>
               </div>
+              <div className="flex items-center gap-2">
+                <span className="text-neutral-500 text-[10px]">Kids</span>
+                <div className="flex gap-1">
+                  {[0, 1, 2, 3].map((n) => (
+                    <button key={n} onClick={() => setKids(n)}
+                      className={`w-7 h-7 rounded text-xs font-bold cursor-pointer transition-all ${kids === n ? "bg-green-500 text-white" : "bg-neutral-800 text-neutral-500 hover:bg-neutral-700"}`}
+                    >{n}</button>
+                  ))}
+                </div>
+              </div>
+              <button
+                onClick={() => setLeftovers(!leftovers)}
+                className={`flex items-center gap-1 px-2 py-1 rounded text-[10px] font-bold cursor-pointer transition-all ${leftovers ? "bg-amber-500 text-black" : "bg-neutral-800 text-neutral-500 hover:bg-neutral-700"}`}
+              >
+                <span className={`w-2.5 h-2.5 rounded-sm border ${leftovers ? "bg-black border-black" : "border-neutral-600"} flex items-center justify-center text-[7px]`}>{leftovers ? "\u2713" : ""}</span>
+                Leftovers
+              </button>
+              {scale !== 1 && (
+                <span className="text-amber-400 text-[10px] font-bold ml-auto">Ingredients scaled {leftovers ? "(2x for leftovers)" : ""}</span>
+              )}
             </div>
-            <button
-              onClick={() => setLeftovers(!leftovers)}
-              className={`flex items-center gap-1 px-2 py-1 rounded text-[10px] font-bold cursor-pointer transition-all ${leftovers ? "bg-amber-500 text-black" : "bg-neutral-800 text-neutral-500 hover:bg-neutral-700"}`}
-            >
-              <span className={`w-2.5 h-2.5 rounded-sm border ${leftovers ? "bg-black border-black" : "border-neutral-600"} flex items-center justify-center text-[7px]`}>{leftovers ? "\u2713" : ""}</span>
-              Leftovers
-            </button>
-            {scale !== 1 && (
-              <span className="text-amber-400 text-[10px] font-bold ml-auto">Ingredients scaled {leftovers ? "(2x for leftovers)" : ""}</span>
-            )}
-          </div>
+          )}
 
           {/* Stats */}
           <div className="flex flex-wrap gap-3 mt-4">
