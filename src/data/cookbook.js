@@ -1851,6 +1851,79 @@ export const quickLunches = [
     tagline: "8 open-faced toasts. 130 cal / 13g protein each. Blended cottage cheese + reduced-fat fiesta + chilies on keto buns.",
     heroImage: "/images/high-protein-chili-cheese-toast/hero-finished-chili-cheese-toast-polished.webp",
     prepImage: "/images/high-protein-chili-cheese-toast/context-daisy-low-fat-cottage-cheese-polished.webp",
+    socialHashtags: [
+      "#ChiliCheeseToast",
+      "#HighProteinSnack",
+      "#QuickLunchIdeas",
+      "#CottageCheeseRecipes",
+      "#TheSplitPlate",
+    ],
+    // Six-card recipe carousel. The generic fallback turned twelve granular
+    // recipe steps into four dense method cards, including two "STEP"
+    // headings and a footer collision. Curate the actual cooking decisions
+    // instead: blend the filling, load the buns, bake, and reheat.
+    socialCarousel: {
+      heroBadge: "Power-Up · Quick Lunch",
+      heroAccent: "amber",
+      heroTitle: "Chili Cheese Toasts",
+      hook: "Eight open-faced toasts at 130 calories and 13g protein each. Creamy chili-cheese filling, crisp keto-bun edges, 18 minutes.",
+      heroPhoto: "/images/high-protein-chili-cheese-toast/hero-finished-chili-cheese-toast-polished.webp",
+      ingredientGroups: [
+        {
+          card: 0,
+          accent: "amber",
+          heading: "Eight Open-Faced Toasts",
+          items: [
+            { quantity: "4", text: "Keto hamburger buns", note: "Split into 8 halves" },
+            { quantity: "5.3 oz", text: "Low-fat cottage cheese", note: "Blend completely smooth" },
+            { quantity: "7 oz", text: "Reduced-fat fiesta cheese" },
+            { quantity: "2-4", text: "Thai bird chilies", note: "Or 1-2 seeded jalapeños" },
+            { quantity: "To taste", text: "Crunchy savory seasoning" },
+            { quantity: "As needed", text: "Parchment or cooking spray" },
+          ],
+        },
+      ],
+      methodGroups: [
+        {
+          accent: "amber",
+          heading: "Make the Filling",
+          items: [
+            { number: 1, heading: "Heat", body: "Set the oven to 375°F and line a baking sheet." },
+            { number: 2, heading: "Blend", body: "Blend the cottage cheese for 30-45 seconds until completely smooth and creamy." },
+            { number: 3, heading: "Fold", body: "Fold in the shredded cheese and finely chopped chilies until evenly distributed." },
+          ],
+        },
+        {
+          accent: "amber",
+          heading: "Load and Bake",
+          items: [
+            { number: 4, heading: "Build", body: "Arrange 8 bun halves cut-side up. Divide the filling evenly and spread it to the edges." },
+            { number: 5, heading: "Season", body: "Finish each toast with crunchy savory seasoning." },
+            { number: 6, heading: "Bake", body: "Bake about 9 minutes until melted and lightly browned. Rest 1-2 minutes before eating." },
+          ],
+        },
+      ],
+      ingredientCardPhotos: [
+        { src: "/images/high-protein-chili-cheese-toast/context-daisy-low-fat-cottage-cheese-polished.webp", position: "50% 50%", zoom: 1.04, layout: "side" },
+      ],
+      methodCardPhotos: [
+        { src: "/images/high-protein-chili-cheese-toast/step-05-mix-cheese-base-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
+        { src: "/images/high-protein-chili-cheese-toast/step-10-fill-toasts-polished.webp", position: "50% 48%", zoom: 1.03, layout: "side" },
+      ],
+      servingPhoto: "/images/high-protein-chili-cheese-toast/step-12-finished-toasts-reveal-polished.webp",
+      servingGroups: [
+        {
+          accent: "amber",
+          heading: "Serve Now, Reheat Later",
+          items: [
+            { text: "Each toast: about 130 calories and 13g protein." },
+            { text: "Eat 2-3 fresh; refrigerate the remaining baked toasts for 2-3 days." },
+            { text: "Reheat at 350°F for 3-4 minutes in a toaster oven or 2-3 minutes in an air fryer. Skip the microwave if you want crisp edges." },
+          ],
+        },
+      ],
+      engagementQuestion: "Thai chili or jalapeño — how hot are you making yours?",
+    },
     // Polished-only carousel. 5 Gemini Path A polished cards (step-11 didn't
     // get a polish run + the polished-only rule keeps raw out of socialImages).
     // Narrative: brand → blend → fold → fill → reveal.
