@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import track from "../hooks/useTrack";
 import { liveRecipes } from "../data/recipes";
@@ -129,6 +129,15 @@ export default function RecipeDetail({ recipe }) {
           <p className="text-neutral-500 mt-2 leading-relaxed text-xs">
             {recipe.description}
           </p>
+          {recipe.testedCorrection && (
+            <div className="mt-3 bg-red-500/10 border border-red-500/30 rounded-lg px-4 py-3">
+              <span className="text-red-400 text-xs font-bold uppercase tracking-wider">Tested Correction</span>
+              <p className="text-red-100/90 text-sm mt-1 leading-relaxed">
+                <span className="text-red-300 font-semibold">{recipe.testedCorrection.what}</span>{" "}
+                {recipe.testedCorrection.fix}
+              </p>
+            </div>
+          )}
 
           {/* Family size picker \u2014 hidden for fixed-batch recipes where the
               batch quantity IS the recipe (no household scaling). */}
@@ -139,21 +148,25 @@ export default function RecipeDetail({ recipe }) {
             </div>
           ) : (
             <div className="flex flex-wrap items-center gap-x-4 gap-y-3 mt-5 bg-neutral-900/50 border border-neutral-800 rounded-xl px-4 py-3">
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2" role="group" aria-label="Adult servings">
                 <span className="text-neutral-500 text-[10px]">Adults</span>
                 <div className="flex gap-1">
                   {[1, 2, 3, 4].map((n) => (
                     <button key={n} onClick={() => setAdults(n)}
+                      aria-pressed={adults === n}
+                      aria-label={`${n} adult${n === 1 ? "" : "s"}`}
                       className={`w-7 h-7 rounded text-xs font-bold cursor-pointer transition-all ${adults === n ? "bg-red-500 text-white" : "bg-neutral-800 text-neutral-500 hover:bg-neutral-700"}`}
                     >{n}</button>
                   ))}
                 </div>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2" role="group" aria-label="Kid servings">
                 <span className="text-neutral-500 text-[10px]">Kids</span>
                 <div className="flex gap-1">
                   {[0, 1, 2, 3].map((n) => (
                     <button key={n} onClick={() => setKids(n)}
+                      aria-pressed={kids === n}
+                      aria-label={`${n} kid${n === 1 ? "" : "s"}`}
                       className={`w-7 h-7 rounded text-xs font-bold cursor-pointer transition-all ${kids === n ? "bg-green-500 text-white" : "bg-neutral-800 text-neutral-500 hover:bg-neutral-700"}`}
                     >{n}</button>
                   ))}
@@ -161,6 +174,7 @@ export default function RecipeDetail({ recipe }) {
               </div>
               <button
                 onClick={() => setLeftovers(!leftovers)}
+                aria-pressed={leftovers}
                 className={`flex items-center gap-1 px-2 py-1 rounded text-[10px] font-bold cursor-pointer transition-all ${leftovers ? "bg-amber-500 text-black" : "bg-neutral-800 text-neutral-500 hover:bg-neutral-700"}`}
               >
                 <span className={`w-2.5 h-2.5 rounded-sm border ${leftovers ? "bg-black border-black" : "border-neutral-600"} flex items-center justify-center text-[7px]`}>{leftovers ? "\u2713" : ""}</span>
@@ -185,9 +199,14 @@ export default function RecipeDetail({ recipe }) {
           {recipe.meta?.macros && (
             <div className="mt-3">
               {recipe.meta.macros.estimated ? (
-                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-amber-500/15 border border-amber-500/30 text-amber-300">
-                  <span className="text-[11px] font-bold uppercase tracking-wider">~ Estimated macros</span>
-                  <span className="text-amber-300/70 text-[10px]">— calculated from ingredient averages, not measured. Numbers prefixed with "~" throughout.</span>
+                <div className="inline-flex flex-col gap-1 px-3 py-1.5 rounded-lg bg-amber-500/15 border border-amber-500/30 text-amber-300 max-w-xl">
+                  <div className="flex items-center gap-2">
+                    <span className="text-[11px] font-bold uppercase tracking-wider">~ Estimated macros</span>
+                    <span className="text-amber-300/70 text-[10px]">— calculated from ingredient averages, not measured. Numbers prefixed with "~" throughout.</span>
+                  </div>
+                  <span className="text-amber-300/60 text-[10px] leading-relaxed">
+                    Stated calories may differ from strict 4P + 9F + 4C by ~10–70 cal due to label-rounded macros, fiber and sugar-alcohol net-carb accounting, and brand-specific label methodology (e.g., Carbe Diem). Fat and carb totals are best-effort estimates.
+                  </span>
                 </div>
               ) : (
                 <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-emerald-500/15 border border-emerald-500/30 text-emerald-300">
@@ -667,28 +686,52 @@ function SplitCookView({ recipe, scale = 1 }) {
 
 function StepImages({ images }) {
   const [expanded, setExpanded] = useState(null);
+  useEffect(() => {
+    if (!expanded) return;
+    const onKey = (e) => { if (e.key === "Escape") setExpanded(null); };
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, [expanded]);
   if (!images || images.length === 0) return null;
+  const stepLabel = (src) => {
+    const m = src.match(/step-\d+-([a-z0-9-]+)/i);
+    return m ? `Step photo: ${m[1].replace(/-/g, " ")}` : "Step photo";
+  };
   return (
     <>
       <div className="flex gap-2 mt-3 overflow-x-auto pb-2 -mx-1 px-1">
         {images.map((src, i) => (
-          <img
+          <button
             key={i}
-            src={src}
-            alt=""
-            className="w-28 h-28 sm:w-32 sm:h-32 object-cover rounded-lg flex-shrink-0 border border-neutral-800 cursor-pointer hover:border-amber-500/50 transition-colors"
-            loading="lazy"
+            type="button"
             onClick={() => setExpanded(src)}
-          />
+            aria-label={`Expand ${stepLabel(src)}`}
+            className="w-28 h-28 sm:w-32 sm:h-32 rounded-lg flex-shrink-0 border border-neutral-800 cursor-pointer hover:border-amber-500/50 focus:outline-none focus:border-amber-500 transition-colors overflow-hidden"
+          >
+            <img
+              src={src}
+              alt={stepLabel(src)}
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </button>
         ))}
       </div>
       {expanded && (
         <div
           className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4 cursor-pointer"
           onClick={() => setExpanded(null)}
+          role="dialog"
+          aria-modal="true"
+          aria-label="Expanded step photo"
         >
-          <img src={expanded} alt="" className="max-w-full max-h-[90vh] object-contain rounded-xl" />
-          <button className="absolute top-4 right-4 text-white/70 hover:text-white text-2xl font-bold">&times;</button>
+          <img src={expanded} alt={stepLabel(expanded)} className="max-w-full max-h-[90vh] object-contain rounded-xl" />
+          <button
+            type="button"
+            onClick={(e) => { e.stopPropagation(); setExpanded(null); }}
+            aria-label="Close expanded photo"
+            className="absolute top-4 right-4 text-white/70 hover:text-white text-2xl font-bold"
+          >&times;</button>
         </div>
       )}
     </>

@@ -92,6 +92,19 @@ function parseTime(timeStr) {
   return match ? parseInt(match[1], 10) : 999;
 }
 
+function parseCost(costStr) {
+  if (!costStr) return Infinity;
+  const match = costStr.match(/(\d+(?:\.\d+)?)/);
+  return match ? parseFloat(match[1]) : Infinity;
+}
+
+const SORT_OPTIONS = [
+  { key: "newest", label: "Newest", compare: (a, b) => (b.id || 0) - (a.id || 0) },
+  { key: "protein", label: "Highest protein", compare: (a, b) => (b.protein || 0) - (a.protein || 0) },
+  { key: "fastest", label: "Fastest", compare: (a, b) => parseTime(a.time) - parseTime(b.time) },
+  { key: "cost", label: "Lowest cost", compare: (a, b) => parseCost(a.meta?.costPerServing) - parseCost(b.meta?.costPerServing) },
+];
+
 // Protein per 100 calories — higher = leaner. >= 8 is excellent, 5-8 is solid, < 5 is fat-heavy.
 function proteinPer100Cal(r) {
   if (!r.calories || !r.protein) return null;
@@ -109,6 +122,7 @@ function Chip({ label, active, onClick }) {
   return (
     <button
       onClick={onClick}
+      aria-pressed={active}
       className={`px-3 py-1 rounded-full text-xs font-medium border transition-all cursor-pointer ${
         active
           ? "bg-amber-500 text-neutral-950 border-amber-500"
@@ -142,6 +156,7 @@ export default function DinnersPage() {
   const [selectedDiet, setSelectedDiet] = useState([]);
   const [excludeAllergens, setExcludeAllergens] = useState([]);
   const [filtersOpen, setFiltersOpen] = useState(false);
+  const [sortKey, setSortKey] = useState("newest");
 
   const activeCount =
     (selectedProteins.length) +
@@ -227,8 +242,14 @@ export default function DinnersPage() {
       );
     }
 
+    const sorter = SORT_OPTIONS.find((s) => s.key === sortKey);
+    if (sorter) {
+      // Copy before sort — do not mutate liveRecipes.
+      results = [...results].sort(sorter.compare);
+    }
+
     return results;
-  }, [search, selectedProteins, selectedTime, selectedNetCarbs, selectedEffort, selectedSplit, selectedCost, selectedDiet, excludeAllergens]);
+  }, [search, selectedProteins, selectedTime, selectedNetCarbs, selectedEffort, selectedSplit, selectedCost, selectedDiet, excludeAllergens, sortKey]);
 
   return (
     <div className="min-h-screen bg-neutral-950 text-neutral-100">
@@ -252,7 +273,7 @@ export default function DinnersPage() {
         </div>
 
         {/* Filter toggle — chips live behind a drawer so cards stay above the fold */}
-        <div className="mb-4 flex items-center justify-between gap-3">
+        <div className="mb-4 flex items-center justify-between gap-3 flex-wrap">
           <button
             onClick={() => setFiltersOpen((v) => !v)}
             className="flex items-center gap-2 px-4 py-2 rounded-lg bg-neutral-900 border border-neutral-700 text-neutral-200 text-sm font-medium hover:border-amber-500/40 transition-colors cursor-pointer"
@@ -265,6 +286,18 @@ export default function DinnersPage() {
             )}
             <span className={`text-neutral-500 transition-transform ${filtersOpen ? "rotate-180" : ""}`} aria-hidden="true">▾</span>
           </button>
+          <label className="flex items-center gap-2 text-xs text-neutral-500">
+            <span>Sort</span>
+            <select
+              value={sortKey}
+              onChange={(e) => setSortKey(e.target.value)}
+              className="bg-neutral-900 border border-neutral-700 rounded-lg px-3 py-1.5 text-neutral-200 text-xs font-medium hover:border-amber-500/40 focus:outline-none focus:border-amber-500/60 transition-colors cursor-pointer"
+            >
+              {SORT_OPTIONS.map((s) => (
+                <option key={s.key} value={s.key}>{s.label}</option>
+              ))}
+            </select>
+          </label>
           {hasActiveFilters && (
             <button onClick={clearAll} className="text-amber-400 text-xs font-medium hover:underline cursor-pointer">
               Clear all

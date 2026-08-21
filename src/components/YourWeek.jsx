@@ -500,28 +500,14 @@ export default function YourWeek() {
           <p className="text-neutral-400 text-sm mt-2">Pick the plan that matches your week. Each has its own grocery list.</p>
         </div>
 
-        {/* Plan selector */}
-        <div className="flex flex-col items-center gap-2 mb-6">
-          <div className="flex items-center gap-1.5 flex-wrap justify-center">
-            {Object.entries(WEEKS).map(([num, w]) => (
-              <button
-                key={num}
-                onClick={() => handleWeekChange(Number(num))}
-                className={`px-3 py-1.5 rounded-lg text-[11px] font-bold transition-all cursor-pointer ${
-                  week === Number(num)
-                    ? "bg-amber-500 text-black"
-                    : "bg-neutral-800 text-neutral-400 hover:bg-neutral-700"
-                }`}
-              >
-                {w.label}
-              </button>
-            ))}
-          </div>
-          <div className="text-center">
-            <span className="text-neutral-400 text-xs">{currentWeek.subtitle}</span>
-            {currentWeek.description && <p className="text-neutral-600 text-[10px] mt-1">{currentWeek.description}</p>}
-          </div>
-        </div>
+        {/* Plan selector — current plan pinned; older plans behind an archive
+            toggle so the button grid doesn't grow unbounded. */}
+        <PlanSelector
+          weeks={WEEKS}
+          activeWeek={week}
+          onChange={handleWeekChange}
+          currentWeek={currentWeek}
+        />
 
         {/* Family size */}
         <div className="bg-neutral-900/50 border border-neutral-800 rounded-xl p-4 mb-6">
@@ -745,4 +731,66 @@ function TimelineDot({ type, enabled = true }) {
   return <div className="h-0 relative"><div className={`absolute left-[21px] top-2 w-2.5 h-2.5 rounded-full border-2 hidden sm:block z-10 ${
     type === "cook" ? "bg-amber-500 border-amber-500" : type === "leftover" ? "bg-neutral-700 border-neutral-600" : "bg-neutral-800 border-neutral-700"
   }`} /></div>;
+}
+
+function PlanSelector({ weeks, activeWeek, onChange, currentWeek }) {
+  const entries = Object.entries(weeks)
+    .map(([num, w]) => ({ num: Number(num), ...w }))
+    .sort((a, b) => b.num - a.num);
+  const latest = entries[0];
+  const archive = entries.slice(1);
+  // Auto-expand the archive when the user has navigated to a non-latest plan
+  // so the highlighted button is visible without an extra click.
+  const [archiveOpen, setArchiveOpen] = useState(activeWeek !== latest.num);
+  return (
+    <div className="flex flex-col items-center gap-2 mb-6">
+      <div className="flex items-center gap-1.5 flex-wrap justify-center">
+        <span className="text-neutral-500 text-[10px] uppercase tracking-wider font-bold mr-1">This week</span>
+        <button
+          onClick={() => onChange(latest.num)}
+          aria-pressed={activeWeek === latest.num}
+          className={`px-4 py-1.5 rounded-lg text-[11px] font-bold transition-all cursor-pointer ${
+            activeWeek === latest.num
+              ? "bg-amber-500 text-black"
+              : "bg-neutral-800 text-neutral-200 hover:bg-neutral-700 border border-amber-500/40"
+          }`}
+        >
+          {latest.label}
+        </button>
+        {archive.length > 0 && (
+          <button
+            onClick={() => setArchiveOpen((v) => !v)}
+            aria-expanded={archiveOpen}
+            aria-controls="week-archive"
+            className="ml-2 px-3 py-1.5 rounded-lg text-[11px] font-medium text-neutral-400 bg-neutral-900 border border-neutral-700 hover:border-amber-500/40 hover:text-neutral-200 transition-colors cursor-pointer flex items-center gap-1"
+          >
+            <span>Older plans ({archive.length})</span>
+            <span className={`transition-transform ${archiveOpen ? "rotate-180" : ""}`} aria-hidden="true">▾</span>
+          </button>
+        )}
+      </div>
+      {archiveOpen && archive.length > 0 && (
+        <div id="week-archive" className="flex items-center gap-1.5 flex-wrap justify-center mt-1 pt-2 border-t border-neutral-800 max-w-full">
+          {archive.map((w) => (
+            <button
+              key={w.num}
+              onClick={() => onChange(w.num)}
+              aria-pressed={activeWeek === w.num}
+              className={`px-3 py-1 rounded-md text-[10px] font-semibold transition-all cursor-pointer ${
+                activeWeek === w.num
+                  ? "bg-amber-500 text-black"
+                  : "bg-neutral-900 text-neutral-500 hover:bg-neutral-800 hover:text-neutral-300"
+              }`}
+            >
+              {w.label}
+            </button>
+          ))}
+        </div>
+      )}
+      <div className="text-center mt-1">
+        <span className="text-neutral-400 text-xs">{currentWeek.subtitle}</span>
+        {currentWeek.description && <p className="text-neutral-600 text-[10px] mt-1">{currentWeek.description}</p>}
+      </div>
+    </div>
+  );
 }

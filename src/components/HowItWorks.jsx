@@ -7,8 +7,11 @@ function StepCard({ num, color, title, desc, isSplit }) {
 
   return (
     <div className={`bg-neutral-900 border ${borderColor} rounded-xl p-5 text-center`}>
-      <div className={`w-10 h-10 rounded-full ${numBg} flex items-center justify-center text-sm font-black mx-auto mb-3`}>
-        {isSplit ? "\u2194" : num}
+      <div
+        className={`w-10 h-10 rounded-full ${numBg} flex items-center justify-center text-sm font-black mx-auto mb-3`}
+        aria-label={isSplit ? `Step ${num}` : undefined}
+      >
+        <span aria-hidden={isSplit ? "true" : undefined}>{isSplit ? "\u2194" : num}</span>
       </div>
       <h3 className={`font-bold text-sm ${textColor}`}>{title}</h3>
       <p className="text-neutral-500 text-xs mt-1.5 leading-relaxed">{desc}</p>
