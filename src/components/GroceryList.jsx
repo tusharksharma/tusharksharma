@@ -1292,6 +1292,45 @@ const GROCERY_BY_WEEK = {
       { name: "Avocado-oil spray (Mon batch waffle iron + Fri steak sear)", qty: "pantry", meal: "Mon" },
     ],
   },
+  32: {
+    "Protein": [
+      { name: "Lean stir-fry beef (Mon batch, 2 lb — Lomo Saltado wok; trim further)", baseQty: 2, unit: "lb", meal: "Mon", fixedBatch: true },
+      { name: "Bavette steak (6 oz per adult — Fri steak night)", baseQty: 6, unit: "oz", meal: "Fri adult" },
+      { name: "Great Value pork breakfast patties (1.5 per kid — Fri kid alt)", baseQty: 1.5, unit: "patties", meal: "Fri kid" },
+    ],
+    "Produce": [
+      { name: "Red onion (Mon batch, 8 oz — thickly sliced for the wok)", baseQty: 8, unit: "oz", meal: "Mon", fixedBatch: true },
+      { name: "Tomatoes (Mon batch, 8 oz — creator used homegrown yellow)", baseQty: 8, unit: "oz", meal: "Mon", fixedBatch: true },
+      { name: "Green onions (Mon batch, 1/2 bunch — 2-inch pieces, added at toss)", baseQty: 0.5, unit: "bunch", meal: "Mon", fixedBatch: true },
+      { name: "Raw carrots (baby or sticks — Fri kid)", baseQty: 1, unit: "bag", meal: "Fri kid" },
+    ],
+    "Carbs": [
+      { name: "Long-grain rice (Mon batch, 1 cup dry — cooked in bone broth, 8 household portions)", baseQty: 1, unit: "cup", meal: "Mon", fixedBatch: true },
+      { name: "Frozen fries (Mon + Wed, 16 oz total — air-fry 8 oz fresh each dinner)", baseQty: 16, unit: "oz", meal: "Mon" },
+      { name: "Checkers/Rally's frozen fries (Fri steak night)", baseQty: 1, unit: "bag", meal: "Fri" },
+    ],
+    "Sauce + Condiment": [
+      { name: "Soy sauce (Mon batch, 2 tbsp — sauce hack)", baseQty: 2, unit: "tbsp", meal: "Mon", fixedBatch: true },
+      { name: "Fish sauce (Mon batch, 2 tbsp — sauce hack)", baseQty: 2, unit: "tbsp", meal: "Mon", fixedBatch: true },
+      { name: "White-wine vinegar (Mon batch, 2 tbsp — sauce hack)", baseQty: 2, unit: "tbsp", meal: "Mon", fixedBatch: true },
+      { name: "Tari Amarillo hot-ish sauce (Mon batch, 2 tbsp for sauce hack + adult drizzle Mon + Wed)", baseQty: 2, unit: "tbsp", meal: "Mon", fixedBatch: true },
+      { name: "Ginger-garlic paste (Mon batch, 2 tbsp — sauce hack)", baseQty: 2, unit: "tbsp", meal: "Mon", fixedBatch: true },
+      { name: "Bare Bones bone-broth stick pack (Mon batch, 1 stick / ~15g — sauce hack)", baseQty: 1, unit: "stick", meal: "Mon", fixedBatch: true },
+      { name: "Bone broth (Mon batch, 2 cups — bone-broth rice)", baseQty: 2, unit: "cups", meal: "Mon", fixedBatch: true },
+      { name: "Toum (optional kid drizzle — Mon + Wed)", qty: "pantry", meal: "Mon kid" },
+      { name: "Butter (optional kid rice finish — Mon + Wed)", qty: "pantry", meal: "Mon kid" },
+      { name: "O California organic extra virgin olive oil (Fri chimichurri)", qty: "pantry", meal: "Fri adult" },
+      { name: "Napa Valley Naturals organic red wine vinegar (Fri chimichurri)", qty: "pantry", meal: "Fri adult" },
+      { name: "Spiceology Chimichurri Blend (Fri chimichurri)", qty: "pantry", meal: "Fri adult" },
+    ],
+    "Spice + Aromatic": [
+      { name: "SPG (Mon wok beef + Fri steak — pantry)", qty: "pantry", meal: "Mon" },
+      { name: "Chili flakes (Fri chimichurri)", qty: "pantry", meal: "Fri adult" },
+    ],
+    "Pantry": [
+      { name: "Avocado-oil spray (Mon wok + Fri steak sear)", qty: "pantry", meal: "Mon" },
+    ],
+  },
 };
 
 function getGrocery(week) { return GROCERY_BY_WEEK[week] || GROCERY_BY_WEEK[1]; }
@@ -1310,7 +1349,7 @@ const WHOLE_UNITS = new Set([
   "tub", "tubs",
   "tray", "trays",
   "wedge", "wedges",
-  "buns", "fillets", "rolls", "tortillas", "slices", "pieces", "patties", "thighs", "chops", "kababs", "kebabs", "pitas", "drumsticks", "wings", "pucks",
+  "buns", "fillets", "rolls", "tortillas", "slices", "pieces", "patties", "thighs", "chops", "kababs", "kebabs", "pitas", "drumsticks", "wings", "pucks", "stick", "sticks",
   "ears", "sheet", "sheets",
   "servings",
   "lemon", "lemons", "lime", "limes", "cucumber", "cucumbers", "onion", "onions",
