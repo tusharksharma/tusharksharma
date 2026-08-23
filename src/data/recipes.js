@@ -9746,6 +9746,7 @@ const recipes = [
     ],
     macroHonesty: "Adult ~600 cal / 65g protein per bowl is a creator estimate assuming a lean stir-fry beef cut after visible fat trimming. Component estimate: 5-6 oz raw-equivalent lean stir-fry beef (~250-300 cal / 40-45g protein cooked) + bone-broth rice from 1/8 cup dry (~110 cal / 3g protein) + 8 oz frozen fries / four = 2 oz per bowl (~140 cal / 2g protein) + sauce (~30 cal / 2g protein) + trace green onion/tomato/onion ≈ 550-610 cal / 47-52g protein — protein reads high because stir-fry cuts range widely. Recalculate for your specific beef and fry brand. Kid macros intentionally not published — the creator served appetite-based portions.",
     relatedRecipes: [
+      { title: "Golden Umami Stir-Fry Sauce", path: "/cookbook/golden-umami-stir-fry-sauce", relationship: "The six-ingredient sauce from this dinner, extracted as a reusable cookbook powerup. Same batch works on beef, chicken, shrimp, noodles, fried rice, and cooked vegetables." },
       { title: "Cheeseburger Potato Waffle Meal Prep", path: "/recipes/cheeseburger-potato-waffle-meal-prep", relationship: "Same 2:1 adult/kid split-plate meal-prep pattern, different flavor profile. Beef-and-cheese American vs beef-sauce Peruvian." },
       { title: "High-Protein Beef & Potato Slop Bowl", path: "/recipes/high-protein-beef-potato-slop-bowl", relationship: "Another lean-beef + potato split-plate build. This is the wok-and-sauce version; that one is the sheet-pan version." },
     ],
