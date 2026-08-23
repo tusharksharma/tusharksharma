@@ -7113,14 +7113,75 @@ export const powerups = [
   {
     id: "electrolyte-watermelon-limeade",
     title: "Electrolyte Watermelon Limeade",
-    tagline: "Salty-sour summer hydration — blend a mini watermelon with lime + LMNT, strain smooth, drink cold.",
+    tagline: "Fresh watermelon, tart lime, and electrolytes blended and strained into one cold summer drink.",
     heroImage: "/images/electrolyte-watermelon-limeade/hero-finished-watermelon-limeade-polished.webp",
     prepImage: "/images/electrolyte-watermelon-limeade/context-lmnt-electrolyte-packet-polished.webp",
-    // socialImages — Path A polished. Step-execution order per
-    // [feedback-social-images-step-order]: blender → lime → LMNT → blend
-    // → strain → pour. Payoff (carafe pour) at the tail. Sized to 6
-    // entries — fits the cookbook carousel cap exactly. `final-glass`
-    // dropped as a near-duplicate of the hero.
+    socialHashtags: [
+      "#WatermelonLimeade",
+      "#ElectrolyteDrink",
+      "#SummerDrink",
+      "#HydrationRecipe",
+      "#TheSplitPlate",
+    ],
+    socialCarousel: {
+      heroBadge: "Powerup Drink",
+      heroAccent: "coral",
+      hook: "Fresh watermelon, tart lime, and electrolytes in one cold summer drink.",
+      heroPhoto: "/images/electrolyte-watermelon-limeade/hero-finished-watermelon-limeade-polished.webp",
+      ingredientGroups: [
+        {
+          card: 0,
+          accent: "coral",
+          heading: "Four-Ingredient Batch",
+          items: [
+            { quantity: "1 mini", text: "Watermelon, rind removed and flesh cut into chunks" },
+            { quantity: "2", text: "Limes, juiced" },
+            { quantity: "2 packets", text: "Electrolyte drink mix", note: "I used LMNT" },
+            { quantity: "Optional", text: "Ice for serving" },
+          ],
+        },
+      ],
+      methodGroups: [
+        {
+          accent: "coral",
+          heading: "Build the Blender",
+          items: [
+            { number: 1, heading: "Watermelon", body: "Add the watermelon chunks to a blender." },
+            { number: 2, heading: "Lime + Electrolytes", body: "Squeeze in both limes and add 2 electrolyte packets." },
+            { number: 3, heading: "Blend", body: "Blend until completely smooth." },
+          ],
+        },
+        {
+          accent: "coral",
+          heading: "Strain and Serve",
+          items: [
+            { number: 4, heading: "Strain", body: "Pour through a fine-mesh strainer so it drinks like limeade, not a smoothie." },
+            { number: 5, heading: "Chill", body: "Transfer to a carafe or sealed pitcher and refrigerate until cold." },
+            { number: 6, heading: "Pour", body: "Stir or shake, then serve cold or over ice." },
+          ],
+        },
+      ],
+      ingredientCardPhotos: [
+        { src: "/images/electrolyte-watermelon-limeade/step-01-watermelon-in-blender-polished.webp", position: "50% 43%", zoom: 1.02, layout: "side" },
+      ],
+      methodCardPhotos: [
+        { src: "/images/electrolyte-watermelon-limeade/step-02-lime-juice-polished.webp", position: "50% 45%", zoom: 1.03, layout: "side" },
+        { src: "/images/electrolyte-watermelon-limeade/step-05-strain-limeade-polished.webp", position: "50% 48%", zoom: 1.04, layout: "side" },
+      ],
+      servingPhoto: { src: "/images/electrolyte-watermelon-limeade/final-glass-watermelon-limeade.webp", position: "46% 57%", zoom: 1.12, layout: "side" },
+      servingGroups: [
+        {
+          accent: "coral",
+          heading: "Cold, Salty-Sour Hydration",
+          items: [
+            { text: "Makes 4 servings at about 80 calories each; watermelon size changes the final yield." },
+            { text: "With 2 LMNT packets, each serving gets about 500mg sodium, 100mg potassium, and 30mg magnesium from the mix." },
+            { text: "Refrigerate up to 2 days, but drink within 24 hours for the freshest watermelon flavor." },
+          ],
+        },
+      ],
+      engagementQuestion: "Would you keep the watermelon pulp or strain it out?",
+    },
     socialImages: [
       "/images/electrolyte-watermelon-limeade/step-01-watermelon-in-blender-polished.webp",
       "/images/electrolyte-watermelon-limeade/step-02-lime-juice-polished.webp",
