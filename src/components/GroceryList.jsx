@@ -1331,6 +1331,45 @@ const GROCERY_BY_WEEK = {
       { name: "Avocado-oil spray (Mon wok + Fri steak sear)", qty: "pantry", meal: "Mon" },
     ],
   },
+  33: {
+    "Protein": [
+      { name: "Costco chipotle seasoned grilled chicken (Mon batch, 12 oz — Alfredo filling for 12 nests)", baseQty: 12, unit: "oz", meal: "Mon", fixedBatch: true },
+      { name: "Bavette steak (6 oz per adult — Fri steak night)", baseQty: 6, unit: "oz", meal: "Fri adult" },
+      { name: "Great Value pork breakfast patties (1.5 per kid — Fri kid alt)", baseQty: 1.5, unit: "patties", meal: "Fri kid" },
+    ],
+    "Dairy + Egg": [
+      { name: "2% cottage cheese (Mon batch, 1 cup — cottage-cheese Alfredo)", baseQty: 1, unit: "cup", meal: "Mon", fixedBatch: true },
+      { name: "Fairlife 2% ultra-filtered milk (Mon batch, 2 tbsp)", baseQty: 2, unit: "tbsp", meal: "Mon", fixedBatch: true },
+      { name: "Finely grated Parmesan (Mon batch, ~1 cup total — shell + filling + lid mix)", baseQty: 1, unit: "cup", meal: "Mon", fixedBatch: true },
+      { name: "Part-skim low-moisture mozzarella, shredded (Mon batch, 1 1/2 oz — cheese lids)", baseQty: 1.5, unit: "oz", meal: "Mon", fixedBatch: true },
+      { name: "Egg whites (Mon batch, 2 large — shell binder)", baseQty: 2, unit: "large", meal: "Mon", fixedBatch: true },
+    ],
+    "Produce": [
+      { name: "Broccoli florets (Mon + Wed, 40 oz total — roast 20 oz fresh each dinner)", baseQty: 40, unit: "oz", meal: "Mon", fixedBatch: true },
+      { name: "Lemon (1 wedge per dinner — Mon + Wed broccoli finish)", baseQty: 2, unit: "wedges", meal: "Mon", fixedBatch: true },
+      { name: "Raw carrots (baby or sticks — Fri kid)", baseQty: 1, unit: "bag", meal: "Fri kid" },
+    ],
+    "Carbs": [
+      { name: "Plain frozen shredded hash browns (Mon batch, 15 oz — nests)", baseQty: 15, unit: "oz", meal: "Mon", fixedBatch: true },
+      { name: "Checkers/Rally's frozen fries (Fri steak night)", baseQty: 1, unit: "bag", meal: "Fri" },
+    ],
+    "Sauce + Condiment": [
+      { name: "Rao's Alfredo Sauce (optional kid dipping — Mon + Wed)", qty: "pantry", meal: "Mon kid" },
+      { name: "O California organic extra virgin olive oil (Fri chimichurri)", qty: "pantry", meal: "Fri adult" },
+      { name: "Napa Valley Naturals organic red wine vinegar (Fri chimichurri)", qty: "pantry", meal: "Fri adult" },
+      { name: "Spiceology Chimichurri Blend (Fri chimichurri)", qty: "pantry", meal: "Fri adult" },
+    ],
+    "Spice + Aromatic": [
+      { name: "Garlic powder + onion powder + Italian seasoning + kosher salt + black pepper (Mon Alfredo + shells + broccoli — pantry)", qty: "pantry", meal: "Mon" },
+      { name: "Cornstarch (Mon batch, 3 tsp total — pantry)", qty: "pantry", meal: "Mon" },
+      { name: "SPG (Fri steak — pantry)", qty: "pantry", meal: "Fri" },
+      { name: "Chili flakes (Fri chimichurri)", qty: "pantry", meal: "Fri adult" },
+    ],
+    "Pantry": [
+      { name: "Avocado oil (Mon shell mix + pan brush + broccoli oil — pantry)", qty: "pantry", meal: "Mon" },
+      { name: "Cooking spray (Fri steak sear)", qty: "pantry", meal: "Fri" },
+    ],
+  },
 };
 
 function getGrocery(week) { return GROCERY_BY_WEEK[week] || GROCERY_BY_WEEK[1]; }
