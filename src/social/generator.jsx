@@ -156,7 +156,7 @@ export function buildStructuredCards(recipe, opts) {
         kind: "recipe-method",
         index: 0, total: 0,
         recipeName: recipe.title || "",
-        label: "HOW TO COOK",
+        label: sc.methodLabel || "HOW TO COOK",
         image: methodPhotos[i] || null,
         imageSide,
         sections,

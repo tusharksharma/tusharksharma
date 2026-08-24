@@ -8756,7 +8756,7 @@ export const snackBoxes = [
   {
     id: "split-plate-pizza-snack-box",
     title: "Split Plate Pizza Snack Box",
-    tagline: "No-cook pizza-inspired kid snack box — turkey pepperoni, cubed cheese stick, Triscuit Thin Crisps, cucumber. Higher-protein without turning snack into diet food.",
+    tagline: "Four no-cook pizza snack boxes with turkey pepperoni, cubed cheese, crackers, and cucumber. About 220 calories and 15g protein per box.",
     heroImage: "/images/split-plate-pizza-snack-box/hero-final-snack-box-polished.webp",
     // prepImage — swapped from handoff's `final-stacked-snack-boxes` (payoff
     // shot) to the Sargento colby-jack context shot (mise-style brand
@@ -8777,6 +8777,79 @@ export const snackBoxes = [
       "/images/split-plate-pizza-snack-box/step-04-cucumber-to-fill-polished.webp",
       "/images/split-plate-pizza-snack-box/final-stacked-snack-boxes.webp",
     ],
+    socialHashtags: [
+      "#PizzaSnackBox",
+      "#SnackBoxIdeas",
+      "#AfterSchoolSnacks",
+      "#KidsSnackIdeas",
+      "#TheSplitPlate",
+    ],
+    socialCarousel: {
+      heroBadge: "Snack Box Series · Ep. 1",
+      heroAccent: "amber",
+      heroStats: [
+        { value: "220", label: "calories" },
+        { value: "15g", label: "protein" },
+        { value: "4", label: "boxes" },
+      ],
+      hook: "Pizza-night flavor without a reheating step or a messy sauce compartment. Make 4 boxes for 2 kids across 2 snack days.",
+      heroPhoto: "/images/split-plate-pizza-snack-box/hero-final-snack-box-polished.webp",
+      methodLabel: "HOW TO BUILD",
+      ingredientGroups: [
+        {
+          card: 0,
+          accent: "amber",
+          heading: "Per Box (4 boxes total)",
+          items: [
+            { quantity: "3/4-1 serving", text: "Turkey pepperoni", note: "Adjust to appetite" },
+            { quantity: "1 stick", text: "Colby Jack or mozzarella cheese", note: "Cut into cubes" },
+            { quantity: "1/2 serving", text: "Thin wheat crackers" },
+            { quantity: "To fill", text: "Cucumber", note: "Slice or chop age-appropriate" },
+            { quantity: "Optional", text: "Marinara on the side", note: "Best for serving at home" },
+          ],
+        },
+      ],
+      methodGroups: [
+        {
+          accent: "amber",
+          heading: "Build the Savory Side",
+          items: [
+            { number: 1, heading: "Set Out 4 Boxes", body: "Use divided containers so the crackers stay away from the cucumber." },
+            { number: 2, heading: "Add Pepperoni", body: "Portion 3/4 to 1 serving into each box based on appetite." },
+            { number: 3, heading: "Cube the Cheese", body: "Cut 1 cheese stick per box into bite-size pieces and add it beside the pepperoni." },
+          ],
+        },
+        {
+          accent: "amber",
+          heading: "Add Crunch and Chill",
+          items: [
+            { number: 4, heading: "Add Crackers", body: "Use 1/2 labeled serving per box for the pizza-crust crunch." },
+            { number: 5, heading: "Fill with Cucumber", body: "Pack the last compartment with sliced or chopped cucumber." },
+            { number: 6, heading: "Seal + Chill", body: "Refrigerate and serve cold. Keep optional marinara outside the packed box." },
+          ],
+        },
+      ],
+      ingredientCardPhotos: [
+        { src: "/images/split-plate-pizza-snack-box/step-04-cucumber-to-fill-polished.webp", position: "50% 50%", zoom: 1.08, layout: "side" },
+      ],
+      methodCardPhotos: [
+        { src: "/images/split-plate-pizza-snack-box/step-02-cheese-stick-cubes-polished.webp", position: "50% 50%", zoom: 1.08, layout: "side" },
+        { src: "/images/split-plate-pizza-snack-box/step-03-add-thin-crisps-polished.webp", position: "50% 50%", zoom: 1.08, layout: "side" },
+      ],
+      servingPhoto: { src: "/images/split-plate-pizza-snack-box/final-stacked-snack-boxes.webp", position: "50% 53%", zoom: 1.12, layout: "side" },
+      servingGroups: [
+        {
+          accent: "amber",
+          heading: "4 Boxes = 2 Kids × 2 Days",
+          items: [
+            { text: "About 220 calories and 15g protein per box; exact totals depend on the pepperoni portion and brands used." },
+            { text: "Refrigerate covered for up to 2 days. For the best crunch, keep crackers in their dry compartment." },
+            { text: "Serve cold after lunch, after school, or as a weekend snack. Adults can grab one too." },
+          ],
+        },
+      ],
+      engagementQuestion: "Which pizza-box ingredient disappears first in your house?",
+    },
     flavorProfile: "Pizza-inspired: cheesy, savory, crunchy, fresh. Familiar kid flavors on a snack-box grid without the sauce mess.",
     calories: 880,
     caloriesPerServing: 220,
@@ -8830,7 +8903,7 @@ export const snackBoxes = [
   {
     id: "split-plate-apple-pie-snack-box",
     title: "Split Plate Apple Pie Snack Box",
-    tagline: "Snack Box Series Ep. 2 — kid-friendly apple pie energy without the dessert plate. Jerky + apple + Oikos Triple Zero + Simple Mills cookies. ~240 cal / 18g protein per box.",
+    tagline: "Four apple-pie-inspired snack boxes with jerky, apples, yogurt dip, and cookies. About 240 calories and 18g protein per box.",
     heroImage: "/images/split-plate-apple-pie-snack-box/hero-final-apple-pie-snack-box-polished.webp",
     // prepImage — swapped from handoff's `final-stacked-snack-boxes`
     // (payoff shot) to `context-rocket-apple` (theme-signature Rocket
@@ -8852,13 +8925,85 @@ export const snackBoxes = [
       "/images/split-plate-apple-pie-snack-box/step-04-add-cookies-polished.webp",
       "/images/split-plate-apple-pie-snack-box/final-stacked-snack-boxes-polished.webp",
     ],
+    socialHashtags: [
+      "#ApplePieSnackBox",
+      "#SnackBoxIdeas",
+      "#AfterSchoolSnacks",
+      "#KidsSnackIdeas",
+      "#TheSplitPlate",
+    ],
+    socialCarousel: {
+      heroBadge: "Snack Box Series · Ep. 2",
+      heroAccent: "amber",
+      heroStats: [
+        { value: "240", label: "calories" },
+        { value: "18g", label: "protein" },
+        { value: "4", label: "boxes" },
+      ],
+      hook: "Apple-pie energy from apples, yogurt dip, and cookies, with jerky making it a more filling snack. Make 4 boxes for 2 kids across 2 snack days.",
+      heroPhoto: "/images/split-plate-apple-pie-snack-box/hero-final-apple-pie-snack-box-polished.webp",
+      methodLabel: "HOW TO BUILD",
+      ingredientGroups: [
+        {
+          card: 0,
+          accent: "amber",
+          heading: "Per Box (4 boxes total)",
+          items: [
+            { quantity: "1 stick", text: "Beef jerky", note: "Or 2 mini sticks" },
+            { quantity: "1 small", text: "Apple", note: "Or 1/2 regular apple" },
+            { quantity: "1/2 container", text: "High-protein yogurt", note: "Use as the apple dip" },
+            { quantity: "2", text: "Chocolate chip cookies" },
+          ],
+        },
+      ],
+      methodGroups: [
+        {
+          accent: "amber",
+          heading: "Build 4 Boxes",
+          items: [
+            { number: 1, heading: "Jerky", body: "Add 1 regular jerky stick or 2 minis to each box." },
+            { number: 2, heading: "Apple", body: "Cut 1 small apple or 1/2 regular apple per box into age-appropriate pieces." },
+            { number: 3, heading: "Yogurt Dip", body: "Spoon 1/2 container of high-protein yogurt into each box." },
+          ],
+        },
+        {
+          accent: "amber",
+          heading: "Finish and Chill",
+          items: [
+            { number: 4, heading: "Add Cookies", body: "Finish each box with 2 chocolate chip cookies." },
+            { number: 5, heading: "Protect the Crunch", body: "Keep cookies in the driest compartment and away from the yogurt." },
+            { number: 6, heading: "Seal + Chill", body: "Refrigerate or transport with an ice pack until snack time." },
+          ],
+        },
+      ],
+      ingredientCardPhotos: [
+        { src: "/images/split-plate-apple-pie-snack-box/step-04-add-cookies-polished.webp", position: "50% 50%", zoom: 1.08, layout: "side" },
+      ],
+      methodCardPhotos: [
+        { src: "/images/split-plate-apple-pie-snack-box/step-02-add-apple-polished.webp", position: "50% 50%", zoom: 1.08, layout: "side" },
+        { src: "/images/split-plate-apple-pie-snack-box/step-03-add-oikos-dip-polished.webp", position: "50% 50%", zoom: 1.08, layout: "side" },
+      ],
+      servingPhoto: { src: "/images/split-plate-apple-pie-snack-box/final-stacked-snack-boxes-polished.webp", position: "50% 53%", zoom: 1.1, layout: "side" },
+      servingGroups: [
+        {
+          accent: "amber",
+          heading: "4 Boxes = 2 Kids × 2 Days",
+          items: [
+            { text: "About 240 calories and 18g protein per box; label totals can land closer to 260 calories depending on the jerky, yogurt, cookies, and apple size." },
+            { text: "Refrigerate up to 2 days. A little lemon juice helps the apple pieces keep their color across the prep window." },
+            { text: "Serve chilled after lunch, after school, or as a weekend snack. Adults can grab one too." },
+          ],
+        },
+      ],
+      engagementQuestion: "What gets dipped in the yogurt first: apple or cookie?",
+    },
     flavorProfile: "Sweet, creamy, salty, chewy, cookie-crunchy. Apple pie flavor split across 4 compartments so the yogurt stays creamy + the cookies stay crunchy.",
-    calories: 240,
+    calories: 960,
     caloriesPerServing: 240,
-    protein: 18,
+    protein: 72,
     proteinPerServing: 18,
-    servings: 1,
-    time: "5 min",
+    servings: 4,
+    time: "10 min",
     bestFor: [
       "Kid snack",
       "Snack box",
@@ -8868,21 +9013,21 @@ export const snackBoxes = [
       "Higher-protein snack",
       "No cook",
     ],
-    useThisWhen: "Kid wants an apple pie vibe as a snack but you don't want to hand them a dessert plate. Jerky covers the protein (10g), Oikos Triple Zero doubles as the yogurt-dip (7g), Simple Mills chocolate chip cookies bring the treat energy without a sugar bomb, apple slices are the vehicle. 5 min to assemble, no cook.",
+    useThisWhen: "You want an apple-pie-inspired post-lunch or after-school snack without baking. Make 4 boxes once for 2 kids across 2 snack days; jerky and yogurt add protein while apples and cookies keep the box familiar and fun.",
     flavorTarget: "Creamy yogurt-dip apple bites + salty chewy jerky + soft-crisp cookie crunch. Reads as apple pie in a snack-box format, no baking, no sauce mess.",
     ingredients: [
-      "1 jerky stick or 2 mini jerkies (Archer Minis shown — ~90-100 cal / 10g protein target)",
-      "1 Rocket apple (or 1/2 regular apple), cut into kid-friendly pieces",
-      "1/2 container Oikos Triple Zero yogurt (used as the apple dip — vanilla or plain flavor works)",
-      "2 Simple Mills chocolate chip cookies (~70 cal / 1g protein for 2)",
+      "4 jerky sticks or 8 mini jerkies — 1 stick or 2 minis per box",
+      "4 small apples or 2 regular apples, cut into kid-friendly pieces",
+      "2 containers high-protein yogurt — 1/2 container per box for dipping",
+      "8 chocolate chip cookies — 2 per box",
     ],
     steps: [
-      { text: "SET UP: 1 divided snack box (any 4-compartment Bento-style — same boxes as Snack Box Series Ep. 1).", image: "/images/split-plate-apple-pie-snack-box/hero-final-apple-pie-snack-box-polished.webp" },
-      { text: "JERKY: Drop 1 jerky stick or 2 Archer Minis in the first compartment. Adjust by kid appetite — 1 regular = 2 minis roughly.", image: "/images/split-plate-apple-pie-snack-box/step-01-add-jerky-polished.webp" },
-      { text: "APPLE: Cut 1 Rocket apple (or 1/2 regular apple) into kid-friendly wedges. Add to the next compartment. Rocket apples are small + naturally kid-portion-sized, no waste.", image: "/images/split-plate-apple-pie-snack-box/step-02-add-apple-polished.webp" },
-      { text: "YOGURT DIP: Spoon 1/2 container of Oikos Triple Zero into the third compartment as the apple dip. Vanilla or plain — no flavor with fake sweetness.", image: "/images/split-plate-apple-pie-snack-box/step-03-add-oikos-dip-polished.webp" },
-      { text: "COOKIES: Add 2 Simple Mills chocolate chip cookies to the last compartment. The cookies are intentional — this is a snack box, not diet food.", image: "/images/split-plate-apple-pie-snack-box/step-04-add-cookies-polished.webp" },
-      { text: "LID + CHILL: Snap lid on. Refrigerate or pack with an ice pack until snack time. Serve chilled — the Oikos dip is best cold.", image: "/images/split-plate-apple-pie-snack-box/final-stacked-snack-boxes-polished.webp" },
+      { text: "SET UP: Line up 4 divided snack boxes.", image: "/images/split-plate-apple-pie-snack-box/hero-final-apple-pie-snack-box-polished.webp" },
+      { text: "JERKY: Add 1 jerky stick or 2 minis to each box. Adjust the exact portion based on appetite.", image: "/images/split-plate-apple-pie-snack-box/step-01-add-jerky-polished.webp" },
+      { text: "APPLE: Cut 1 small apple or 1/2 regular apple per box into age-appropriate pieces.", image: "/images/split-plate-apple-pie-snack-box/step-02-add-apple-polished.webp" },
+      { text: "YOGURT DIP: Spoon 1/2 container of high-protein yogurt into each box as the apple dip.", image: "/images/split-plate-apple-pie-snack-box/step-03-add-oikos-dip-polished.webp" },
+      { text: "COOKIES: Add 2 chocolate chip cookies to each box, keeping them away from the yogurt compartment.", image: "/images/split-plate-apple-pie-snack-box/step-04-add-cookies-polished.webp" },
+      { text: "LID + CHILL: Seal all 4 boxes and refrigerate or pack with an ice pack until snack time.", image: "/images/split-plate-apple-pie-snack-box/final-stacked-snack-boxes-polished.webp" },
     ],
     brands: [
       { name: "Archer", item: "Grass-Fed Beef Mini Jerky (5-pack — ~50 cal / 5g protein per mini). 2 minis per box ≈ 10g protein.", why: "Clean-label protein anchor. Grass-fed, no MSG, no nitrates. Cross-recipe candidate for any kid snack box needing a chewy protein hit.", url: "https://eatarcher.com/products/mini-grass-fed-beef" },
@@ -8898,9 +9043,9 @@ export const snackBoxes = [
       framing: "Higher-protein kid snack boxes with familiar flavors + better-for-you swaps. Kid-first, but macro-friendly enough that parents may want one too. Make-once-eat-twice for 2-kid households.",
     },
     mealPrep: {
-      storage: "Refrigerate covered snack boxes, or pack with an ice pack for lunchbox use.",
-      lasts: "Best same day — apple slices oxidize + brown after ~4 hours cut. Toss with lemon juice if packing for later.",
-      reheat: "Don't — serve chilled. Oikos dip is the whole texture play.",
+      storage: "Refrigerate covered, or transport with an ice pack.",
+      lasts: "Best within 2 days. Toss apple pieces with a little lemon juice to slow browning across the prep window.",
+      reheat: "Serve chilled; no reheating needed.",
     },
   },
   {
