@@ -6,7 +6,8 @@
   "trailingSlash": false,
   "cleanUrls": true,
   "redirects": [
-    { "source": "/shop", "destination": "/favorites", "permanent": true }
+    { "source": "/shop", "destination": "/favorites", "permanent": true },
+    { "source": "/recipes/split-plate-buldak-ramen", "destination": "/recipes/split-plate-spicy-protein-ramen-night", "permanent": true }
   ],
   "rewrites": [
     { "source": "/videos/:recipe/:filename(.+\\.mp4)", "destination": "https://github.com/tusharma88/tsp-videos/releases/download/videos/:filename" },
