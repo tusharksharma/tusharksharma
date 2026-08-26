@@ -7938,9 +7938,77 @@ export const powerups = [
   {
     id: "100-calorie-iced-protein-coffee",
     title: "100-Calorie Iced Protein Coffee",
-    tagline: "Cold morning Powerup — 100 cal / 20g protein per glass. Blend whey into a small coffee concentrate FIRST, then add ice + milk. Skips the clumps every protein-coffee recipe suffers from.",
+    tagline: "A five-minute iced coffee with 100 calories and 20g protein per glass. Blend the whey into a small coffee concentrate first for a smooth drink without visible clumps.",
     heroImage: "/images/100-calorie-iced-protein-coffee/hero-finished-iced-protein-coffee-polished.webp",
     prepImage: "/images/100-calorie-iced-protein-coffee/step-05-blend-smooth-polished.webp",
+    socialHashtags: [
+      "#ProteinCoffee",
+      "#IcedProteinCoffee",
+      "#HighProteinCoffee",
+      "#Proffee",
+      "#TheSplitPlate",
+    ],
+    socialCarousel: {
+      heroBadge: "Proffee · Episode 1",
+      heroAccent: "amber",
+      hook: "100 calories. 20g protein. Blend the whey into the coffee concentrate first for a smooth iced coffee without visible clumps.",
+      heroPhoto: "/images/100-calorie-iced-protein-coffee/hero-finished-iced-protein-coffee-polished.webp",
+      ingredientGroups: [
+        {
+          card: 0,
+          accent: "amber",
+          heading: "One Glass",
+          items: [
+            { quantity: "1/2 tbsp", text: "Instant coffee" },
+            { quantity: "1/2 serving", text: "Unflavored whey isolate" },
+            { quantity: "2 tsp", text: "Monk-fruit sweetener" },
+            { quantity: "2-3 tbsp", text: "Cold or room-temperature water" },
+            { quantity: "As needed", text: "Ice" },
+            { quantity: "1/2 cup", text: "Fat-free ultra-filtered milk" },
+          ],
+        },
+      ],
+      methodGroups: [
+        {
+          accent: "amber",
+          heading: "Make the Concentrate",
+          items: [
+            { number: 1, heading: "Load the Cup", body: "Add instant coffee, whey isolate, and sweetener to a tall blending cup." },
+            { number: 2, heading: "Add Water", body: "Start with 2 tablespoons. Add the third only if the concentrate needs help moving." },
+            { number: 3, heading: "Blend Smooth", body: "Submerge the blender head before switching it on, then blend until lightly foamy with no visible clumps." },
+          ],
+        },
+        {
+          accent: "amber",
+          heading: "Turn It Into Iced Coffee",
+          items: [
+            { number: 4, heading: "Add Ice", body: "Fill the glass with as much ice as you like." },
+            { number: 5, heading: "Add Milk", body: "Pour in 1/2 cup fat-free ultra-filtered milk." },
+            { number: 6, heading: "Stir and Drink", body: "Stir the concentrate through the milk and serve immediately." },
+          ],
+        },
+      ],
+      ingredientCardPhotos: [
+        { src: "/images/100-calorie-iced-protein-coffee/step-01-instant-coffee-polished.webp", position: "50% 46%", zoom: 1.04, layout: "side" },
+      ],
+      methodCardPhotos: [
+        { src: "/images/100-calorie-iced-protein-coffee/step-05-blend-smooth-polished.webp", position: "50% 48%", zoom: 1.04, layout: "side" },
+        { src: "/images/100-calorie-iced-protein-coffee/step-07-add-milk-polished.webp", position: "50% 48%", zoom: 1.05, layout: "side" },
+      ],
+      servingPhoto: { src: "/images/100-calorie-iced-protein-coffee/final-sip-polished.webp", position: "50% 50%", zoom: 1.03, layout: "side" },
+      servingGroups: [
+        {
+          accent: "amber",
+          heading: "One Cold Powerup",
+          items: [
+            { text: "One glass is about 100 calories with 20g protein." },
+            { text: "Best served immediately before the ice dilutes the coffee." },
+            { text: "Use it for morning coffee, after a workout, or as a hot-day refresher. This is an adult caffeinated drink." },
+          ],
+        },
+      ],
+      engagementQuestion: "Morning coffee, post-workout drink, or hot-day refresher: when would you make this?",
+    },
     socialImages: [
       "/images/100-calorie-iced-protein-coffee/step-01-instant-coffee-polished.webp",
       "/images/100-calorie-iced-protein-coffee/step-02-unflavored-whey-polished.webp",
