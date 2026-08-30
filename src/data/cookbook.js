@@ -2371,6 +2371,85 @@ export const quickLunches = [
       "/images/leftover-cheeseburger-tacos/step-07-sauce-drizzle-polished.webp",
       "/images/leftover-cheeseburger-tacos/final-open-tacos-polished.webp",
     ],
+    socialHashtags: [
+      "#CheeseburgerTacos",
+      "#HighProteinLunch",
+      "#LeftoverLunch",
+      "#LowCarbLunch",
+      "#QuickLunchIdeas",
+    ],
+    socialCarousel: {
+      heroBadge: "Quick Lunches",
+      heroAccent: "coral",
+      heroTitle: "Leftover Cheeseburger Tacos",
+      hook: "Turn 4 oz of leftover beef into two crisp cheeseburger tacos. 310 calories, 31g protein, and 10 minutes from fridge to plate.",
+      heroPhoto: "/images/leftover-cheeseburger-tacos/hero-final-cheeseburger-tacos-polished.webp",
+      heroStats: [
+        { value: "310", label: "calories" },
+        { value: "31g", label: "protein" },
+        { value: "10 min", label: "total" },
+      ],
+      ingredientGroups: [{
+        card: 0,
+        accent: "coral",
+        heading: "For Two Tacos",
+        items: [
+          { quantity: "2", text: "Low-carb street taco tortillas" },
+          { quantity: "4 oz", text: "93/7 ground beef, leftover or freshly cooked" },
+          { quantity: "1 slice", text: "Velveeta Original" },
+          { quantity: "To taste", text: "Pickled red onion + burger sauce" },
+        ],
+      }],
+      methodGroups: [
+        {
+          accent: "coral",
+          heading: "Cook",
+          items: [
+            { number: 1, heading: "Smash", body: "Press 2 oz of beef thin across each tortilla, right to the edges." },
+            { number: 2, heading: "Brown", body: "Oil-spray a hot pan. Cook beef-side down until browned and the tortilla crisps." },
+            { number: 3, heading: "Flip + Melt", body: "Flip. Add half a Velveeta slice to each taco and let it soften." },
+          ],
+        },
+        {
+          accent: "coral",
+          heading: "Finish",
+          items: [
+            { number: 4, heading: "Add Crunch", body: "Top with pickled red onion and your preferred sauce." },
+            { number: 5, heading: "Fold + Crisp", body: "Fold each taco and crisp the folded sides briefly. Eat immediately." },
+          ],
+        },
+      ],
+      ingredientCardPhotos: [{
+        src: "/images/leftover-cheeseburger-tacos/step-02-smash-beef-thin-polished.webp",
+        position: "50% 50%",
+        zoom: 1,
+        layout: "side",
+      }],
+      methodCardPhotos: [
+        {
+          src: "/images/leftover-cheeseburger-tacos/step-04-beef-side-down-polished.webp",
+          position: "52% 50%",
+          zoom: 1,
+          layout: "side",
+        },
+        {
+          src: "/images/leftover-cheeseburger-tacos/step-07-sauce-drizzle-polished.webp",
+          position: "50% 50%",
+          zoom: 1,
+          layout: "side",
+        },
+      ],
+      servingPhoto: "/images/leftover-cheeseburger-tacos/final-open-tacos-polished.webp",
+      servingGroups: [{
+        accent: "coral",
+        heading: "One Lunch",
+        items: [
+          { text: "Two crispy cheeseburger tacos: 310 calories and 31g protein." },
+          { text: "Best eaten immediately. The crisp tortilla is the point." },
+        ],
+      }],
+      engagementQuestion: "What leftover would you turn into tacos next?",
+    },
     flavorProfile: "Cheeseburger-style: savory beef, melty Velveeta, tangy pickled onion crunch, sauce drizzle. Crisp low-carb tortilla shell.",
     calories: 310,
     caloriesPerServing: 310,
