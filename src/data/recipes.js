@@ -2693,7 +2693,7 @@ const recipes = [
     status: "live",
     carbLevel: "high",
     meta: {
-      macros: { protein: 54, calories: 370, fat: 12, carbs: 34, netCarbs: 31, estimated: true },
+      macros: { protein: 54, calories: 430, fat: 15, carbs: 38, netCarbs: 35, estimated: true },
       allergens: ["wheat", "gluten", "soy"],
       warnings: ["contains-gluten", "contains-soy", "spicy-adult-version", "kid-macros-not-published", "estimated-macros-adult-plate", "brand-macros-vary-recalculate"],
       dietTags: ["dairy-free", "halal"],
@@ -2722,10 +2722,10 @@ const recipes = [
     time: "15 min",
     servings: 4,
     protein: 54,
-    calories: 370,
+    calories: 430,
     image: "/images/split-plate-spicy-protein-ramen-night/hero-split-plate-spicy-protein-ramen-polished.webp",
     prepImage: "/images/split-plate-spicy-protein-ramen-night/hero-adult-spicy-protein-ramen-polished.webp",
-    prepImageCaption: "Adult bowl — Heal Spot spicy protein ramen simmered in a cup of chicken bone broth until the broth is absorbed, tossed with the included spicy sauce, finished with a 6-min air-fried Bilinski's Cajun chicken sausage. Creator estimate: ~370 cal / 54g protein per adult.",
+    prepImageCaption: "Adult bowl — Heal Spot spicy protein ramen simmered in a cup of chicken bone broth until the broth is absorbed, tossed with the included spicy sauce, finished with a 6-min air-fried Bilinski's Cajun chicken sausage. Creator estimate: ~430 cal / 54g protein per adult.",
     socialImages: [
       "/images/split-plate-spicy-protein-ramen-night/hero-adult-spicy-protein-ramen-polished.webp",
       "/images/split-plate-spicy-protein-ramen-night/hero-kid-classic-chicken-ramen-polished.webp",
@@ -2751,7 +2751,7 @@ const recipes = [
       heroBadge: "Split Plate Dinner",
       heroAccent: "coral",
       heroTitle: "Spicy Protein Ramen Night",
-      hook: "Heal Spot spicy protein ramen simmered in a cup of chicken bone broth until absorbed, tossed with the included spicy sauce, finished with a 6-min Bilinski's Cajun chicken sausage. Kids get Maruchan + a regular hot dog. Adult plate: ~370 cal / 54g protein estimated.",
+      hook: "Heal Spot spicy protein ramen simmered in a cup of chicken bone broth until absorbed, tossed with the included spicy sauce, finished with a 6-min Bilinski's Cajun chicken sausage. Kids get Maruchan + a regular hot dog. Adult plate: ~430 cal / 54g protein estimated.",
       heroPhoto: "/images/split-plate-spicy-protein-ramen-night/hero-split-plate-spicy-protein-ramen-polished.webp",
       servingPhoto: "/images/split-plate-spicy-protein-ramen-night/hero-adult-spicy-protein-ramen-polished.webp",
       ingredientGroups: [
@@ -2820,7 +2820,7 @@ const recipes = [
           accent: "coral",
           heading: "Adult Bowl",
           items: [
-            { text: "One Heal Spot ramen package cooked in 1 cup chicken bone broth (absorbed, not drained) + both included sauce packets + one 6-min Bilinski's Cajun chicken sausage. Creator estimate: ~370 cal / 54g protein per adult." },
+            { text: "One Heal Spot ramen package cooked in 1 cup chicken bone broth (absorbed, not drained) + both included sauce packets + one 6-min Bilinski's Cajun chicken sausage. Creator estimate: ~430 cal / 54g protein per adult." },
           ],
         },
         {
@@ -2834,7 +2834,7 @@ const recipes = [
       engagementQuestion: "Which bowl are you choosing tonight?",
     },
     editorialNotes: [
-      "Adult macros are creator estimates: ~370 cal / 54g protein per adult, scoped to one Heal Spot spicy protein ramen package + 1 cup chicken bone broth + 1 Bilinski's Cajun chicken sausage.",
+      "Adult macros are creator estimates: ~430 cal / 54g protein per adult, scoped to one Heal Spot spicy protein ramen package + 1 cup chicken bone broth + 1 Bilinski's Cajun chicken sausage.",
       "The broth absorbs into the noodles. Do not drain.",
       "Only the included Heal Spot spicy sauce packets go into the adult pan. Do not add soy sauce, chili oil, or chili crisp.",
       "The Bilinski's Cajun chicken sausage is adult-only. Kids get regular hot dogs on the kid side.",
@@ -2843,8 +2843,8 @@ const recipes = [
     ],
     role: "The 54g Protein Ramen — Split Plate Style",
     makeThisWhen: "You want a 15-minute family ramen night that splits cleanly into a spicy adult bowl and a kid-familiar chicken ramen + hot dog plate, without cooking two meals from scratch.",
-    hook: "Heal Spot spicy protein ramen simmered in bone broth until the broth is absorbed — the protein and flavor go into the noodle instead of down the drain. Adult plate: ~370 cal / 54g protein estimated.",
-    description: "Adult plate: Heal Spot spicy protein ramen cooked in 1 cup chicken bone broth (broth absorbed into the noodles), tossed with both included spicy sauce packets until glossy, finished with a 6-min air-fried Bilinski's Cajun chicken sausage. Kid plate (creator's build): Maruchan chicken ramen with water + seasoning per package directions and a regular hot dog. Two spice levels, two protein tiers, one 15-minute cook. ~370 cal / 54g protein per adult (estimated). Kid macros intentionally not published.",
+    hook: "Heal Spot spicy protein ramen simmered in bone broth until the broth is absorbed — the protein and flavor go into the noodle instead of down the drain. Adult plate: ~430 cal / 54g protein estimated.",
+    description: "Adult plate: Heal Spot spicy protein ramen cooked in 1 cup chicken bone broth (broth absorbed into the noodles), tossed with both included spicy sauce packets until glossy, finished with a 6-min air-fried Bilinski's Cajun chicken sausage. Kid plate (creator's build): Maruchan chicken ramen with water + seasoning per package directions and a regular hot dog. Two spice levels, two protein tiers, one 15-minute cook. ~430 cal / 54g protein per adult (estimated). Kid macros intentionally not published.",
     whyMostFail: [
       "Cook adult ramen in water — throws away the free protein and flavor that bone broth carries.",
       "Drain the adult pan — pours protein and umami down the sink. The broth is meant to be absorbed.",
@@ -2870,7 +2870,7 @@ const recipes = [
       "KIDS GET REGULAR HOT DOGS, NOT THE CAJUN SAUSAGE. Cajun sausage is adult-only.",
       "COOK MARUCHAN PER PACKAGE DIRECTIONS. Water + seasoning packet. Do not overcomplicate.",
       "SERVE IMMEDIATELY. Ramen softens fast; the adult plate loses gloss within a couple minutes off heat.",
-      "ADULT MACROS ARE ESTIMATED. ~370 cal / 54g protein per adult. Recalculate for the specific product labels you buy.",
+      "ADULT MACROS ARE ESTIMATED. ~430 cal / 54g protein per adult. Recalculate for the specific product labels you buy.",
       "KID MACROS INTENTIONALLY NOT PUBLISHED. Kid portions are appetite-based, not a serving prescription.",
     ],
     troubleshooting: [
@@ -2899,7 +2899,7 @@ const recipes = [
       adult: {
         label: "Adult — Spicy Protein Ramen + Cajun Sausage",
         protein: 54,
-        calories: 370,
+        calories: 430,
         extraIngredients: [
           "--- ADULT (per plate) ---",
           "1 Heal Spot spicy protein ramen package (both packets included with the package)",
@@ -2968,7 +2968,7 @@ const recipes = [
       { name: "Kirkland / any brand", item: "Chicken Bone Broth", why: "1 cup per ramen package — replaces water, adds protein and depth that absorbs into the noodles. Any chicken bone broth works.", url: "https://www.costcobusinessdelivery.com/kirkland-signature-organic-chicken-bone-broth-32-fl-oz,-6-ct.product.100403862.html" },
       { name: "Maruchan", item: "Chicken Ramen", why: "The kid noodle. Familiar, fast, cooked per package with water + seasoning. Zero adaptation on the kid side.", url: "https://maruchan.com/products/ramen/chicken-flavor" },
     ],
-    macroHonesty: "Adult ~370 cal / 54g protein per plate is a creator estimate scoped to one Heal Spot spicy protein ramen package + 1 cup chicken bone broth + 1 Bilinski's Cajun chicken sausage. Component estimate: ~250 cal / 30g protein per Heal Spot package (verify current label — the line is marketed as a protein-forward ramen; macros vary by SKU/flavor), ~12g protein per cup of chicken bone broth (~60 cal), and ~120 cal / 12g protein per Bilinski's Cajun chicken sausage. Marked estimated: recalculate off the exact labels on the products you buy. Kid macros intentionally not published — the creator served 1 Maruchan chicken ramen + 1 regular hot dog per child as an appetite-based portion, not a serving prescription.",
+    macroHonesty: "Adult ~430 cal / 54g protein per plate is a creator estimate scoped to one Heal Spot spicy protein ramen package + 1 cup chicken bone broth + 1 Bilinski's Cajun chicken sausage. Component estimate: ~250 cal / 30g protein per Heal Spot package (verify current label — the line is marketed as a protein-forward ramen; macros vary by SKU/flavor), ~12g protein per cup of chicken bone broth (~60 cal), and ~120 cal / 12g protein per Bilinski's Cajun chicken sausage. Marked estimated: recalculate off the exact labels on the products you buy. Kid macros intentionally not published — the creator served 1 Maruchan chicken ramen + 1 regular hot dog per child as an appetite-based portion, not a serving prescription.",
     relatedRecipes: [
       { title: "Creamy Steak Noodles (No Cream)", path: "/recipes/creamy-steak-noodles", relationship: "Adjacent split-plate noodle night — adults get the built-out sauced plate, kids get the plain build. Longer cook, richer sauce." },
       { title: "Chicken Alfredo Crunch Nests", path: "/recipes/chicken-alfredo-crunch-nests", relationship: "Adjacent split-plate weeknight — different carrier (hash-brown cups vs ramen), same 2-adult / 2-kid pattern with a familiar kid side." },
@@ -9570,7 +9570,7 @@ const recipes = [
     carbLevel: "medium",
     meta: {
       fixedBatch: true,
-      macros: { protein: 65, calories: 600, fat: 18, carbs: 55, netCarbs: 51, estimated: true },
+      macros: { protein: 52, calories: 580, fat: 18, carbs: 55, netCarbs: 51, estimated: true },
       allergens: ["fish", "soy"],
       warnings: ["contains-soy-sauce", "contains-fish-sauce", "kid-macros-not-published", "brand-macros-vary-recalculate", "estimated-macros-recalc-for-your-beef"],
       dietTags: ["high-protein", "meal-prep", "family-dinner", "nut-free", "dairy-free-adult"],
@@ -9616,7 +9616,7 @@ const recipes = [
       heroBadge: "Split Plate Dinner",
       heroAccent: "amber",
       heroTitle: "Lomo Saltado Meal Prep",
-      hook: "One sauce turns lean stir-fry beef, bone-broth rice, and crisp fries into a meal prep the whole family eats. Adult bowl: creator estimate 600 cal / 65g protein.",
+      hook: "One sauce turns lean stir-fry beef, bone-broth rice, and crisp fries into a meal prep the whole family eats. Adult bowl: creator estimate ~580 cal / 52g protein.",
       heroPhoto: "/images/lomo-saltado-meal-prep/hero-adult-lomo-saltado-polished.webp",
       servingPhoto: "/images/lomo-saltado-meal-prep/hero-adult-and-kid-plates-polished.webp",
       ingredientGroups: [
@@ -9707,7 +9707,7 @@ const recipes = [
           accent: "coral",
           heading: "Adult Bowl",
           items: [
-            { text: "Full adult-equivalent beef, bone-broth rice, crisp fries (mixed in or on the side), extra Tari Amarillo drizzle. Creator estimate: 600 cal / 65g protein." },
+            { text: "Full adult-equivalent beef, bone-broth rice, crisp fries (mixed in or on the side), extra Tari Amarillo drizzle. Creator estimate: ~580 cal / 52g protein." },
           ],
         },
         {
@@ -9721,7 +9721,7 @@ const recipes = [
       engagementQuestion: "Fries mixed in with the beef, or crisp on the side?",
     },
     editorialNotes: [
-      "Adult macros are creator estimates: 600 cal / 65g protein. Recalculate for your specific stir-fry beef and fry brand.",
+      "Adult macros are creator estimates: ~580 cal / 52g protein. Recalculate for your specific stir-fry beef and fry brand.",
       "Beef was labelled 'lean stir-fry beef' at Whole Foods and trimmed further. Do not claim an exact cut — the meal-prep math survives any lean stir-fry cut.",
       "Kid plate is the creator's household build: half an adult beef serving based on appetite. Not a universal serving rule.",
       "Fries are air-fried fresh for each meal-prep dinner. Do not batch-fry — reheated fries lose the crisp that makes the plate work.",
@@ -9737,11 +9737,11 @@ const recipes = [
     tags: ["beef", "lomo-saltado", "peruvian", "stir-fry", "meal-prep", "sauce-hack", "family-dinner", "split-plate", "wok", "batch-cook"],
     time: "20 min prep + 25 min cook",
     servings: 6,
-    protein: 65,
-    calories: 600,
+    protein: 52,
+    calories: 580,
     image: "/images/lomo-saltado-meal-prep/hero-adult-lomo-saltado-polished.webp",
     prepImage: "/images/lomo-saltado-meal-prep/hero-adult-and-kid-plates-polished.webp",
-    prepImageCaption: "Adult bowl — lean stir-fry beef, bone-broth rice, fresh air-fried fries, and an extra Tari Amarillo drizzle. Creator estimate: 600 cal / 65g protein.",
+    prepImageCaption: "Adult bowl — lean stir-fry beef, bone-broth rice, fresh air-fried fries, and an extra Tari Amarillo drizzle. Creator estimate: ~580 cal / 52g protein.",
     video: "/videos/lomo-saltado-meal-prep/lomo-saltado-meal-prep-600cal-65protein-marcus.mp4",
     teaserVideo: "/videos/lomo-saltado-meal-prep/lomo-saltado-meal-prep-teaser.mp4",
     commentRecipeVideo: "/videos/lomo-saltado-meal-prep/lomo-saltado-meal-prep-comment.mp4",
@@ -9750,7 +9750,7 @@ const recipes = [
     adultOnlyVideo: "/videos/lomo-saltado-meal-prep/lomo-saltado-meal-prep-adult-only-600cal-65protein-marcus.mp4",
     adultOnlyOriginalSoundVideo: "/videos/lomo-saltado-meal-prep/lomo-saltado-meal-prep-adult-only-original-sound.mp4",
     adultOnlyTextOriginalSoundVideo: "/videos/lomo-saltado-meal-prep/lomo-saltado-meal-prep-adult-only-text-original-sound.mp4",
-    role: "Split Plate Dinner — Peruvian-inspired weeknight meal prep. Adult bowl: creator estimate 600 cal / 65g protein.",
+    role: "Split Plate Dinner — Peruvian-inspired weeknight meal prep. Adult bowl: creator estimate ~580 cal / 52g protein.",
     makeThisWhen: "You want a punchy Peruvian-leaning stir-fry that meal-preps for four adults and four kid plates, with fries crisp on demand.",
     hook: "One sauce, lean beef, bone-broth rice, crisp fries. The Tari Amarillo drizzle is what makes this dinner memorable.",
     description: "Lean stir-fry beef seared hard in a wok with red onion and yellow tomato, tossed in a six-ingredient sauce (soy, fish, vinegar, Tari Amarillo, ginger-garlic paste, bone-broth stick pack), then finished with green onion and crisp air-fried fries folded in right before serving. Rice cooks in bone broth. Adult bowl gets extra Tari; the creator's kid plate uses the same base with an appetite-based beef portion and either no heat or a touch of toum.",
@@ -9791,7 +9791,7 @@ const recipes = [
       { problem: "Fries are soggy", fix: "Air-fried too early or reheated from an earlier batch. Cook fresh per dinner, fold into the wok during the last toss, and serve immediately." },
       { problem: "Kid won't eat the tomato pieces", fix: "Serve the kid portion with the tomato pieces picked out. The sauce still carries the flavor; the pieces are the visible ask." },
       { problem: "Rice tastes plain", fix: "Cooked in water instead of bone broth. Rebuild with 1 cup dry rice + 2 cups bone broth next time — the broth is the flavor floor." },
-      { problem: "Adult bowl misses 65g protein", fix: "Beef portion drifted low. Weigh 5-6 oz raw-equivalent per adult bowl; recalculate for your specific stir-fry cut since fat content varies." },
+      { problem: "Adult bowl misses ~52g protein", fix: "Beef portion drifted low. Weigh 5-6 oz raw-equivalent per adult bowl; recalculate for your specific stir-fry cut since fat content varies." },
     ],
     splitCook: {
       splitRatio: "6 adult-equivalent servings (creator's household: 4 adult + 4 half-size kid) from 2 lb lean stir-fry beef + one sauce + one rice pot + fries air-fried per dinner. Adult finish: full serving + extra Tari. Kid finish (creator's build): half an adult beef serving based on appetite + same rice and fries + toum or no extra sauce.",
@@ -9826,8 +9826,8 @@ const recipes = [
       ],
       adult: {
         label: "Adult — Full Bowl + Extra Tari",
-        protein: 65,
-        calories: 600,
+        protein: 52,
+        calories: 580,
         extraIngredients: [
           "--- ADULT FINISH (per bowl) ---",
           "Full adult-equivalent portion of beef + sauce",
@@ -9903,7 +9903,7 @@ const recipes = [
       { name: "Tari", item: "Tari Amarillo hot-ish sauce", why: "Peruvian-style aji amarillo sauce that carries the whole sauce hack. Substitute aji amarillo paste + lime for a similar profile.", url: "https://tarifoods.com/" },
       { name: "Bare Bones", item: "Bone-broth stick pack (~15g)", why: "Dissolves into the sauce for body and depth; also the flavor floor for the rice. Any bone-broth powder works.", url: "https://barebonesbroth.com/" },
     ],
-    macroHonesty: "Adult ~600 cal / 65g protein per bowl is a creator estimate assuming a lean stir-fry beef cut after visible fat trimming. Component estimate: 5-6 oz raw-equivalent lean stir-fry beef (~250-300 cal / 40-45g protein cooked) + bone-broth rice from 1/8 cup dry (~110 cal / 3g protein) + 8 oz frozen fries / four = 2 oz per bowl (~140 cal / 2g protein) + sauce (~30 cal / 2g protein) + trace green onion/tomato/onion ≈ 550-610 cal / 47-52g protein — protein reads high because stir-fry cuts range widely. Recalculate for your specific beef and fry brand. Kid macros intentionally not published — the creator served appetite-based portions.",
+    macroHonesty: "Adult ~580 cal / 52g protein per bowl is a creator estimate assuming a lean stir-fry beef cut after visible fat trimming. Component estimate: 5-6 oz raw-equivalent lean stir-fry beef (~250-300 cal / 40-45g protein cooked) + bone-broth rice from 1/8 cup dry (~110 cal / 3g protein) + 8 oz frozen fries / four = 2 oz per bowl (~140 cal / 2g protein) + sauce (~30 cal / 2g protein) + trace green onion/tomato/onion ≈ 550-610 cal / 47-52g protein. Headline claim (52g) is the top of the component band; a lower-lean stir-fry cut lands closer to 47g. Recalculate for your specific beef and fry brand. Kid macros intentionally not published — the creator served appetite-based portions.",
     relatedRecipes: [
       { title: "Golden Umami Stir-Fry Sauce", path: "/cookbook/golden-umami-stir-fry-sauce", relationship: "The six-ingredient sauce from this dinner, extracted as a reusable cookbook powerup. Same batch works on beef, chicken, shrimp, noodles, fried rice, and cooked vegetables." },
       { title: "Cheeseburger Potato Waffle Meal Prep", path: "/recipes/cheeseburger-potato-waffle-meal-prep", relationship: "Same 2:1 adult/kid split-plate meal-prep pattern, different flavor profile. Beef-and-cheese American vs beef-sauce Peruvian." },
