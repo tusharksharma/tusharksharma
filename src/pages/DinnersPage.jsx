@@ -5,7 +5,19 @@ import { normalizeEffortTags, normalizeSplitAxes } from "../data/taxonomy";
 import cardImage from "../utils/cardImage";
 import useMeta from "../hooks/useMeta";
 
-const PROTEIN_OPTIONS = [...new Set(liveRecipes.flatMap((r) => r.meta?.proteinTags || []))].sort();
+// Chip order is by how many recipes carry the value across the whole library,
+// computed once at module scope so the order never shuffles while a shopper is
+// filtering. Sections collapse after COLLAPSE_AFTER, so this ordering decides
+// which chips are visible before "+N more" — alphabetical put the three rarest
+// effort tags (fridge-shortcut: 1, chain-from: 2, 15-min: 2) in the visible set
+// and buried the four commonest.
+function byFrequency(values) {
+  const counts = {};
+  for (const v of values) counts[v] = (counts[v] || 0) + 1;
+  return Object.keys(counts).sort((a, b) => counts[b] - counts[a] || a.localeCompare(b));
+}
+
+const PROTEIN_OPTIONS = byFrequency(liveRecipes.flatMap((r) => r.meta?.proteinTags || []));
 const TIME_OPTIONS = [
   { label: "15 min", max: 15 },
   { label: "25 min", max: 25 },
@@ -26,8 +38,8 @@ const NET_CARB_OPTIONS = [
 //
 // Normalizing at read time is what makes the chips honest: a recipe authored
 // with splitAxis "spice" matches the Heat chip, and "one-pan" matches One-pot.
-const EFFORT_OPTIONS = [...new Set(liveRecipes.flatMap((r) => normalizeEffortTags(r.meta?.effortTags)))].sort();
-const SPLIT_OPTIONS = [...new Set(liveRecipes.flatMap((r) => normalizeSplitAxes(r.meta?.splitAxes)))].sort();
+const EFFORT_OPTIONS = byFrequency(liveRecipes.flatMap((r) => normalizeEffortTags(r.meta?.effortTags)));
+const SPLIT_OPTIONS = byFrequency(liveRecipes.flatMap((r) => normalizeSplitAxes(r.meta?.splitAxes)));
 
 const COST_OPTIONS = ["budget", "moderate", "premium"];
 
@@ -47,9 +59,9 @@ const CANONICAL_DIET_TAGS = new Set([
   "paleo", "whole30", "mediterranean",
   "vegetarian", "vegan",
 ]);
-const DIET_OPTIONS = [...new Set(liveRecipes.flatMap((r) => r.meta?.dietTags || []))]
-  .filter((t) => CANONICAL_DIET_TAGS.has(t))
-  .sort();
+const DIET_OPTIONS = byFrequency(
+  liveRecipes.flatMap((r) => (r.meta?.dietTags || []).filter((t) => CANONICAL_DIET_TAGS.has(t)))
+);
 
 // Allergen filter — Big-8 + realistic dairy substrates. Non-allergen tags
 // (packaged-labels-vary, verify-*) that leaked into meta.allergens are
@@ -76,12 +88,6 @@ function buildSearchText(r) {
     // Search ingredient names
     ...(r.ingredients || []).map((i) => typeof i === "object" ? i.text : i),
   ].filter(Boolean).join(" ").toLowerCase();
-}
-
-function parseTime(timeStr) {
-  if (!timeStr) return 999;
-  const match = timeStr.match(/(\d+)/);
-  return match ? parseInt(match[1], 10) : 999;
 }
 
 function getTotalMinutes(r) {
@@ -121,27 +127,69 @@ function netCarbColor(nc) {
   return "bg-rose-500/15 text-rose-300";
 }
 
-function Chip({ label, active, onClick }) {
+// Chips carry their live match count. Without it every chip looks equally
+// useful, when in practice "weeknight" matches 26 of 47 recipes and
+// "fridge-shortcut" matches 1 — and some combinations match nothing at all.
+// A zero-match chip is disabled rather than hidden so the row doesn't reflow
+// under the shopper's thumb as they tap.
+function Chip({ label, active, count, onClick }) {
+  const dead = !active && count === 0;
   return (
     <button
       onClick={onClick}
       aria-pressed={active}
-      className={`px-3 py-1 rounded-full text-xs font-medium border transition-all cursor-pointer ${
-        active
-          ? "bg-amber-500 text-neutral-950 border-amber-500"
-          : "bg-neutral-900 text-neutral-400 border-neutral-700 hover:border-amber-500/40 hover:text-neutral-200"
+      disabled={dead}
+      aria-label={count == null ? label : `${label}, ${count} ${count === 1 ? "recipe" : "recipes"}`}
+      className={`px-3 py-1 rounded-full text-xs font-medium border transition-all ${
+        dead
+          ? "bg-neutral-900/40 text-neutral-700 border-neutral-800/60 cursor-not-allowed"
+          : active
+            ? "bg-amber-500 text-neutral-950 border-amber-500 cursor-pointer"
+            : "bg-neutral-900 text-neutral-400 border-neutral-700 hover:border-amber-500/40 hover:text-neutral-200 cursor-pointer"
       }`}
     >
       {label}
+      {count != null && (
+        <span aria-hidden="true" className={`ml-1.5 tabular-nums ${active ? "text-neutral-950/60" : "text-neutral-600"}`}>{count}</span>
+      )}
     </button>
   );
 }
 
-function FilterSection({ title, children }) {
+// Effort carries 19 values. Showing all of them made the open drawer taller
+// than a phone screen, so the tail collapses behind "+N more". Anything the
+// shopper has already selected stays visible regardless of position — a hidden
+// active filter is worse than a long row.
+// 6, not 8: across all eight sections the drawer carries 61 chips. At 8 it
+// still rendered 46 of them and stood 774px tall on a 390px-wide phone —
+// essentially a full screen of chips before any recipe. 6 brings it to 38 and
+// keeps every visible Effort chip at 10+ matches.
+const COLLAPSE_AFTER = 6;
+
+function FilterSection({ title, items }) {
+  const [expanded, setExpanded] = useState(false);
+  const collapsible = items.length > COLLAPSE_AFTER;
+  const visible = !collapsible || expanded
+    ? items
+    : [...items.slice(0, COLLAPSE_AFTER), ...items.slice(COLLAPSE_AFTER).filter((i) => i.active)];
+  const hiddenCount = items.length - visible.length;
+
   return (
     <div className="flex flex-wrap items-center gap-2">
       <span className="text-neutral-500 text-xs font-medium min-w-[70px]">{title}</span>
-      {children}
+      {visible.map((item) => (
+        <Chip key={item.key} label={item.label} active={item.active} count={item.count} onClick={item.onClick} />
+      ))}
+      {hiddenCount > 0 && (
+        <button onClick={() => setExpanded(true)} className="text-amber-400 text-xs font-medium hover:underline cursor-pointer">
+          +{hiddenCount} more
+        </button>
+      )}
+      {collapsible && expanded && (
+        <button onClick={() => setExpanded(false)} className="text-neutral-500 text-xs font-medium hover:underline cursor-pointer">
+          show less
+        </button>
+      )}
     </div>
   );
 }
@@ -188,64 +236,59 @@ export default function DinnersPage() {
     setExcludeAllergens([]);
   }
 
+  // Each active filter becomes a named predicate so a facet's own selection can
+  // be excluded when counting it. Without that, selecting "beef" would make
+  // every other protein chip read 0 even though tapping one would widen the
+  // (OR-semantics) result set rather than empty it.
+  const predicates = useMemo(() => {
+    const q = search.toLowerCase();
+    return {
+      search: search ? (r) => buildSearchText(r).includes(q) : null,
+      protein: selectedProteins.length
+        ? (r) => selectedProteins.some((p) => (r.meta?.proteinTags || []).includes(p))
+        : null,
+      time: selectedTime
+        ? (selectedTime.max === Infinity
+            ? (r) => getTotalMinutes(r) >= 30
+            : (r) => getTotalMinutes(r) <= selectedTime.max)
+        : null,
+      netCarbs: selectedNetCarbs
+        ? (r) => {
+            const nc = r.meta?.macros?.netCarbs;
+            return nc != null && nc <= selectedNetCarbs.max;
+          }
+        : null,
+      effort: selectedEffort.length
+        ? (r) => {
+            const tags = normalizeEffortTags(r.meta?.effortTags);
+            return selectedEffort.some((e) => tags.includes(e));
+          }
+        : null,
+      split: selectedSplit.length
+        ? (r) => {
+            const axes = normalizeSplitAxes(r.meta?.splitAxes);
+            return selectedSplit.some((s) => axes.includes(s));
+          }
+        : null,
+      cost: selectedCost.length ? (r) => selectedCost.includes(r.meta?.costTier) : null,
+      diet: selectedDiet.length
+        ? (r) => selectedDiet.every((d) => (r.meta?.dietTags || []).includes(d))
+        : null,
+      allergens: excludeAllergens.length
+        ? (r) => !excludeAllergens.some((a) => (r.meta?.allergens || []).includes(a))
+        : null,
+    };
+  }, [search, selectedProteins, selectedTime, selectedNetCarbs, selectedEffort, selectedSplit, selectedCost, selectedDiet, excludeAllergens]);
+
+  // Recipes passing every active filter except `exceptKey` (pass null for all).
+  const narrow = useMemo(() => {
+    const entries = Object.entries(predicates);
+    return (exceptKey) =>
+      liveRecipes.filter((r) => entries.every(([k, fn]) => k === exceptKey || !fn || fn(r)));
+  }, [predicates]);
+
   const filtered = useMemo(() => {
-    let results = liveRecipes;
-
-    if (search) {
-      const q = search.toLowerCase();
-      results = results.filter((r) => buildSearchText(r).includes(q));
-    }
-
-    if (selectedProteins.length) {
-      results = results.filter((r) =>
-        selectedProteins.some((p) => (r.meta?.proteinTags || []).includes(p))
-      );
-    }
-
-    if (selectedTime) {
-      if (selectedTime.max === Infinity) {
-        results = results.filter((r) => getTotalMinutes(r) >= 30);
-      } else {
-        results = results.filter((r) => getTotalMinutes(r) <= selectedTime.max);
-      }
-    }
-
-    if (selectedNetCarbs) {
-      results = results.filter((r) => {
-        const nc = r.meta?.macros?.netCarbs;
-        return nc != null && nc <= selectedNetCarbs.max;
-      });
-    }
-
-    if (selectedEffort.length) {
-      results = results.filter((r) => {
-        const tags = normalizeEffortTags(r.meta?.effortTags);
-        return selectedEffort.some((e) => tags.includes(e));
-      });
-    }
-
-    if (selectedSplit.length) {
-      results = results.filter((r) => {
-        const axes = normalizeSplitAxes(r.meta?.splitAxes);
-        return selectedSplit.some((s) => axes.includes(s));
-      });
-    }
-
-    if (selectedCost.length) {
-      results = results.filter((r) => selectedCost.includes(r.meta?.costTier));
-    }
-
-    if (selectedDiet.length) {
-      results = results.filter((r) =>
-        selectedDiet.every((d) => (r.meta?.dietTags || []).includes(d))
-      );
-    }
-
-    if (excludeAllergens.length) {
-      results = results.filter((r) =>
-        !excludeAllergens.some((a) => (r.meta?.allergens || []).includes(a))
-      );
-    }
+    let results = narrow(null);
 
     const sorter = SORT_OPTIONS.find((s) => s.key === sortKey);
     if (sorter) {
@@ -254,7 +297,50 @@ export default function DinnersPage() {
     }
 
     return results;
-  }, [search, selectedProteins, selectedTime, selectedNetCarbs, selectedEffort, selectedSplit, selectedCost, selectedDiet, excludeAllergens, sortKey]);
+  }, [narrow, sortKey]);
+
+  // Match counts per chip.
+  //
+  // OR facets (protein, effort, split, cost) and single-select ranges (time,
+  // net carbs) count against everything *except* their own selection, because
+  // tapping another value there widens or replaces rather than narrows.
+  //
+  // Diet is AND semantics and Exclude only ever removes recipes, so both count
+  // against the fully-filtered set — the honest question there is "how many of
+  // my current results survive if I add this".
+  const facetCounts = useMemo(() => {
+    const tally = (pool, valuesOf) => {
+      const out = {};
+      for (const r of pool) for (const v of valuesOf(r)) out[v] = (out[v] || 0) + 1;
+      return out;
+    };
+    const current = narrow(null);
+    return {
+      protein: tally(narrow("protein"), (r) => r.meta?.proteinTags || []),
+      effort: tally(narrow("effort"), (r) => normalizeEffortTags(r.meta?.effortTags)),
+      split: tally(narrow("split"), (r) => normalizeSplitAxes(r.meta?.splitAxes)),
+      cost: tally(narrow("cost"), (r) => (r.meta?.costTier ? [r.meta.costTier] : [])),
+      time: Object.fromEntries(
+        TIME_OPTIONS.map((t) => [
+          t.label,
+          narrow("time").filter((r) => (t.max === Infinity ? getTotalMinutes(r) >= 30 : getTotalMinutes(r) <= t.max)).length,
+        ])
+      ),
+      netCarbs: Object.fromEntries(
+        NET_CARB_OPTIONS.map((n) => [
+          n.label,
+          narrow("netCarbs").filter((r) => {
+            const nc = r.meta?.macros?.netCarbs;
+            return nc != null && nc <= n.max;
+          }).length,
+        ])
+      ),
+      diet: tally(current, (r) => (r.meta?.dietTags || []).filter((t) => CANONICAL_DIET_TAGS.has(t))),
+      allergens: Object.fromEntries(
+        ALLERGEN_OPTIONS.map((a) => [a, current.filter((r) => !(r.meta?.allergens || []).includes(a)).length])
+      ),
+    };
+  }, [narrow]);
 
   return (
     <div className="min-h-screen bg-neutral-950 text-neutral-100">
@@ -310,56 +396,87 @@ export default function DinnersPage() {
           )}
         </div>
 
-        {/* Filters */}
+        {/* Filters. Height is capped on phones so the drawer can never push
+            results a full screen down. Eight sections of chips is ~700px even
+            collapsed, and it grows every time a recipe introduces a new tag —
+            a scroll cap holds the hierarchy no matter how the taxonomy grows.
+            Desktop has the room, so the cap lifts at sm. */}
         {filtersOpen && (
-        <div id="dinners-filter-drawer" className="mb-4 space-y-2 bg-neutral-900/40 border border-neutral-800 rounded-xl p-4">
-          <FilterSection title="Protein">
-            {PROTEIN_OPTIONS.map((p) => (
-              <Chip key={p} label={p} active={selectedProteins.includes(p)} onClick={() => toggleInArray(selectedProteins, setSelectedProteins, p)} />
-            ))}
-          </FilterSection>
+        <div
+          id="dinners-filter-drawer"
+          className="mb-4 space-y-2 bg-neutral-900/40 border border-neutral-800 rounded-xl p-4 max-h-[55vh] overflow-y-auto overscroll-contain sm:max-h-none sm:overflow-visible"
+        >
+          <FilterSection
+            title="Protein"
+            items={PROTEIN_OPTIONS.map((p) => ({
+              key: p, label: p, count: facetCounts.protein[p] || 0,
+              active: selectedProteins.includes(p),
+              onClick: () => toggleInArray(selectedProteins, setSelectedProteins, p),
+            }))}
+          />
 
-          <FilterSection title="Max time">
-            {TIME_OPTIONS.map((t) => (
-              <Chip key={t.label} label={t.label} active={selectedTime?.label === t.label} onClick={() => setSelectedTime(selectedTime?.label === t.label ? null : t)} />
-            ))}
-          </FilterSection>
+          <FilterSection
+            title="Max time"
+            items={TIME_OPTIONS.map((t) => ({
+              key: t.label, label: t.label, count: facetCounts.time[t.label] || 0,
+              active: selectedTime?.label === t.label,
+              onClick: () => setSelectedTime(selectedTime?.label === t.label ? null : t),
+            }))}
+          />
 
-          <FilterSection title="Net carbs">
-            {NET_CARB_OPTIONS.map((n) => (
-              <Chip key={n.label} label={n.label} active={selectedNetCarbs?.label === n.label} onClick={() => setSelectedNetCarbs(selectedNetCarbs?.label === n.label ? null : n)} />
-            ))}
-          </FilterSection>
+          <FilterSection
+            title="Net carbs"
+            items={NET_CARB_OPTIONS.map((n) => ({
+              key: n.label, label: n.label, count: facetCounts.netCarbs[n.label] || 0,
+              active: selectedNetCarbs?.label === n.label,
+              onClick: () => setSelectedNetCarbs(selectedNetCarbs?.label === n.label ? null : n),
+            }))}
+          />
 
-          <FilterSection title="Effort">
-            {EFFORT_OPTIONS.map((e) => (
-              <Chip key={e} label={e} active={selectedEffort.includes(e)} onClick={() => toggleInArray(selectedEffort, setSelectedEffort, e)} />
-            ))}
-          </FilterSection>
+          <FilterSection
+            title="Effort"
+            items={EFFORT_OPTIONS.map((e) => ({
+              key: e, label: e, count: facetCounts.effort[e] || 0,
+              active: selectedEffort.includes(e),
+              onClick: () => toggleInArray(selectedEffort, setSelectedEffort, e),
+            }))}
+          />
 
-          <FilterSection title="Split type">
-            {SPLIT_OPTIONS.map((s) => (
-              <Chip key={s} label={s} active={selectedSplit.includes(s)} onClick={() => toggleInArray(selectedSplit, setSelectedSplit, s)} />
-            ))}
-          </FilterSection>
+          <FilterSection
+            title="Split type"
+            items={SPLIT_OPTIONS.map((s) => ({
+              key: s, label: s, count: facetCounts.split[s] || 0,
+              active: selectedSplit.includes(s),
+              onClick: () => toggleInArray(selectedSplit, setSelectedSplit, s),
+            }))}
+          />
 
-          <FilterSection title="Cost">
-            {COST_OPTIONS.map((c) => (
-              <Chip key={c} label={c} active={selectedCost.includes(c)} onClick={() => toggleInArray(selectedCost, setSelectedCost, c)} />
-            ))}
-          </FilterSection>
+          <FilterSection
+            title="Cost"
+            items={COST_OPTIONS.map((c) => ({
+              key: c, label: c, count: facetCounts.cost[c] || 0,
+              active: selectedCost.includes(c),
+              onClick: () => toggleInArray(selectedCost, setSelectedCost, c),
+            }))}
+          />
 
-          <FilterSection title="Diet">
-            {DIET_OPTIONS.map((d) => (
-              <Chip key={d} label={d} active={selectedDiet.includes(d)} onClick={() => toggleInArray(selectedDiet, setSelectedDiet, d)} />
-            ))}
-          </FilterSection>
+          <FilterSection
+            title="Diet"
+            items={DIET_OPTIONS.map((d) => ({
+              key: d, label: d, count: facetCounts.diet[d] || 0,
+              active: selectedDiet.includes(d),
+              onClick: () => toggleInArray(selectedDiet, setSelectedDiet, d),
+            }))}
+          />
 
-          <FilterSection title="Exclude">
-            {ALLERGEN_OPTIONS.map((a) => (
-              <Chip key={a} label={`no ${a}`} active={excludeAllergens.includes(a)} onClick={() => toggleInArray(excludeAllergens, setExcludeAllergens, a)} />
-            ))}
-          </FilterSection>
+          <FilterSection
+            title="Exclude"
+            items={ALLERGEN_OPTIONS.map((a) => ({
+              key: a, label: `no ${a}`, count: facetCounts.allergens[a] || 0,
+              active: excludeAllergens.includes(a),
+              onClick: () => toggleInArray(excludeAllergens, setExcludeAllergens, a),
+            }))}
+          />
         </div>
         )}
 
@@ -381,9 +498,9 @@ export default function DinnersPage() {
                 )}
                 <div className="p-5">
                   <h3 className="text-white font-bold text-sm group-hover:text-amber-400 transition-colors">{r.title}</h3>
-                  <p className="text-neutral-500 text-xs mt-1 line-clamp-2">{r.makeThisWhen || r.role}</p>
+                  <p className="text-neutral-500 text-xs mt-1 line-clamp-1 sm:line-clamp-2">{r.makeThisWhen || r.role}</p>
                   <div className="flex items-center gap-2 mt-2 text-[10px] text-neutral-600">
-                    <span className="text-amber-400 font-bold">{r.meta?.macros?.estimated ? "~" : ""}{r.protein}g protein</span>
+                    <span className="text-amber-400 font-black text-xs">{r.meta?.macros?.estimated ? "~" : ""}{r.protein}g protein</span>
                     <span>&middot;</span>
                     <span>{r.meta?.macros?.estimated ? "~" : ""}{r.calories} cal</span>
                     <span>&middot;</span>
@@ -396,9 +513,13 @@ export default function DinnersPage() {
                       )
                     )}
                   </div>
+                  {/* Net carbs is colour-coded and dietary, so it stays on phones.
+                      P/100cal and cost-per-serving are power-user metrics that made
+                      the mobile card a flat wall of same-weight badges — they show
+                      from sm up, and are one tap away on the recipe page regardless. */}
                   <div className="flex flex-wrap items-center gap-1.5 mt-2 text-[10px]">
                     {proteinPer100Cal(r) != null && (
-                      <span className="px-1.5 py-0.5 rounded bg-emerald-500/10 text-emerald-300 font-semibold" title="Protein per 100 calories — higher is leaner">
+                      <span className="hidden sm:inline-block px-1.5 py-0.5 rounded bg-emerald-500/10 text-emerald-300 font-semibold" title="Protein per 100 calories — higher is leaner">
                         {proteinPer100Cal(r)}g P/100cal
                       </span>
                     )}
@@ -408,7 +529,7 @@ export default function DinnersPage() {
                       </span>
                     )}
                     {r.meta?.costPerServing && (
-                      <span className="px-1.5 py-0.5 rounded bg-neutral-800 text-neutral-400 font-semibold">{r.meta.costPerServing}/serving</span>
+                      <span className="hidden sm:inline-block px-1.5 py-0.5 rounded bg-neutral-800 text-neutral-400 font-semibold">{r.meta.costPerServing}/serving</span>
                     )}
                   </div>
                   {(r.splitCook?.adult?.label || r.splitCook?.kid?.label) && (
@@ -427,12 +548,16 @@ export default function DinnersPage() {
                       )}
                     </div>
                   )}
+                  {/* Normalized, so a card never advertises "spice split" while the
+                      filter chip for the same recipe reads "heat". Hidden on phones:
+                      the Adult/Kid boxes directly above already say what the split is,
+                      and this row was the fourth near-identical band on the card. */}
                   {r.meta && (
-                    <div className="flex flex-wrap gap-1 mt-2">
-                      {(r.meta.splitAxes || []).slice(0, 2).map((s) => (
+                    <div className="hidden sm:flex flex-wrap gap-1 mt-2">
+                      {normalizeSplitAxes(r.meta.splitAxes).slice(0, 2).map((s) => (
                         <span key={s} className="text-[9px] px-1.5 py-0.5 rounded bg-amber-500/10 text-amber-400/80">{s} split</span>
                       ))}
-                      {(r.meta.effortTags || []).slice(0, 1).map((t) => (
+                      {normalizeEffortTags(r.meta.effortTags).slice(0, 1).map((t) => (
                         <span key={t} className="text-[9px] px-1.5 py-0.5 rounded bg-neutral-800 text-neutral-400">{t}</span>
                       ))}
                       {(r.meta.warnings || []).filter((w) => w.includes("spicy")).length > 0 && (
