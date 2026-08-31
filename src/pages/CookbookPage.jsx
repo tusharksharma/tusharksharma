@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import useMeta from "../hooks/useMeta";
 import { sauces, quickLunches, desserts, breakfasts, bases, powerups, snackBoxes } from "../data/cookbook";
+import cardImage from "../utils/cardImage";
 
 const TABS = [
   ...(bases.length > 0 ? ["Bases"] : []),
@@ -44,7 +45,7 @@ function RecipeCard({ item }) {
   return (
     <Link to={`/cookbook/${item.id}`} className="text-left bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden hover:border-amber-500/40 transition-all group w-full block">
       {item.heroImage && (
-        <img src={item.heroImage} alt={item.title} className="w-full h-36 object-cover" loading="lazy" />
+        <img {...cardImage(item.heroImage)} alt={item.title} width="640" height="360" className="w-full h-36 object-cover" loading="lazy" />
       )}
       <div className={item.heroImage ? "p-5 pt-3" : "p-5"}>
         <h3 className="text-white font-bold text-sm group-hover:text-amber-400 transition-colors">{item.title}</h3>

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { liveRecipes } from "../data/recipes";
 import { sauces, bases, breakfasts, desserts, quickLunches, powerups, snackBoxes } from "../data/cookbook";
+import cardImage from "../utils/cardImage";
 import useMeta from "../hooks/useMeta";
 
 const COOKBOOK_SECTIONS = [
@@ -98,7 +99,7 @@ export default function SocialIndexPage() {
               className="bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden hover:border-amber-500/40 transition-all flex group"
             >
               {r.image && (
-                <img src={r.image} alt={r.title} className="w-24 h-24 object-cover flex-shrink-0" loading="lazy" />
+                <img {...cardImage(r.image, { sizes: "96px" })} alt={r.title} width="96" height="96" className="w-24 h-24 object-cover flex-shrink-0" loading="lazy" />
               )}
               <div className="p-3 flex flex-col justify-center min-w-0">
                 <h3 className="text-white font-bold text-sm group-hover:text-amber-400 transition-colors truncate">{r.title}</h3>
@@ -120,7 +121,7 @@ export default function SocialIndexPage() {
                   className="bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden hover:border-amber-500/40 transition-all flex group"
                 >
                   {c.heroImage && (
-                    <img src={c.heroImage} alt={c.title} className="w-24 h-24 object-cover flex-shrink-0" loading="lazy" />
+                    <img {...cardImage(c.heroImage, { sizes: "96px" })} alt={c.title} width="96" height="96" className="w-24 h-24 object-cover flex-shrink-0" loading="lazy" />
                   )}
                   <div className="p-3 flex flex-col justify-center min-w-0">
                     <h3 className="text-white font-bold text-sm group-hover:text-amber-400 transition-colors truncate">{c.title}</h3>

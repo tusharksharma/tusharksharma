@@ -3,6 +3,7 @@ import { sauces, desserts, breakfasts, quickLunches, bases, powerups, snackBoxes
 import { liveRecipes } from "../data/recipes";
 import useMeta from "../hooks/useMeta";
 import track from "../hooks/useTrack";
+import cardImage from "../utils/cardImage";
 import ZoomableImage from "../components/ZoomableImage";
 
 const allItems = [...bases, ...sauces, ...breakfasts, ...desserts, ...quickLunches, ...powerups, ...snackBoxes];
@@ -276,8 +277,10 @@ export default function CookbookDetailPage() {
                   className="bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden hover:border-amber-500/30 transition-colors block"
                 >
                   <img
-                    src={r.image}
+                    {...cardImage(r.image)}
                     alt={r.title}
+                    width="640"
+                    height="360"
                     className="w-full h-36 object-cover"
                     loading="lazy"
                   />

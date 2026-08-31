@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { liveRecipes } from "../data/recipes";
+import cardImage from "../utils/cardImage";
 import track from "../hooks/useTrack";
 
 const RECIPES = liveRecipes.filter((r) => r.splitFriendly);
@@ -137,7 +138,7 @@ export default function FanSpinner() {
       {result && !spinning && (
         <div className="mt-10 bg-neutral-900 border border-amber-500/40 rounded-xl overflow-hidden max-w-md mx-auto text-left">
           {result.image && (
-            <img src={result.image} alt={result.title} className="w-full h-40 object-cover" />
+            <img {...cardImage(result.image, { sizes: "(min-width: 480px) 448px, 100vw" })} alt={result.title} width="640" height="400" className="w-full h-40 object-cover" />
           )}
           <div className="p-6">
             <p className="text-amber-500 text-[10px] font-bold uppercase tracking-wider mb-2">Tonight you're making</p>

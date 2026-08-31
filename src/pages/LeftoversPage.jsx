@@ -7,6 +7,7 @@ import {
   groupByCategory,
 } from "../lib/leftoverIndex";
 import RecipeCard from "../components/RecipeCard";
+import cardImage from "../utils/cardImage";
 import useMeta from "../hooks/useMeta";
 
 // Reads ?have=slug1,slug2 from the URL on first load — lets you share or bookmark
@@ -197,7 +198,7 @@ export default function LeftoversPage() {
                         }`}
                       >
                         {item.image && (
-                          <img src={item.image} alt="" className="w-6 h-6 rounded object-cover bg-neutral-800" loading="lazy" />
+                          <img {...cardImage(item.image, { sizes: "24px" })} alt="" width="24" height="24" className="w-6 h-6 rounded object-cover bg-neutral-800" loading="lazy" />
                         )}
                         <span className="text-left">
                           <span className="block">{item.label}</span>

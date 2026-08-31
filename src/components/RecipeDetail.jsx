@@ -2,6 +2,7 @@ import { useState, useMemo, useEffect } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import track from "../hooks/useTrack";
 import { liveRecipes } from "../data/recipes";
+import cardImage from "../utils/cardImage";
 import LeftoversPanel from "./LeftoversPanel";
 
 const pillarColors = {
@@ -989,8 +990,10 @@ function RelatedRecipes({ current }) {
             className="bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden hover:border-amber-500/30 transition-colors block"
           >
             <img
-              src={r.image}
+              {...cardImage(r.image)}
               alt={r.title}
+              width="640"
+              height="360"
               className="w-full h-36 object-cover"
               loading="lazy"
             />

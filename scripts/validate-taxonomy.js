@@ -16,7 +16,7 @@
  */
 import { readFileSync, existsSync } from "fs";
 import { join, dirname } from "path";
-import { fileURLToPath } from "url";
+import { fileURLToPath, pathToFileURL } from "url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = join(__dirname, "..");
@@ -30,18 +30,12 @@ const CANONICAL_ALLERGENS = new Set([
   "wheat", "gluten", "soy", "sesame", "mustard",
 ]);
 
-// Effort tags / split axes surfaced as filter chips. Values outside these sets
-// still ship on the recipe card body — only chip surfacing is gated. These
-// mirror DinnersPage.jsx CANONICAL_EFFORT_TAGS / CANONICAL_SPLIT_AXES.
-const CANONICAL_EFFORT_TAGS = new Set([
-  "15-min", "one-pot", "sheet-pan", "grill", "air-fryer", "stovetop", "no-cook",
-  "meal-prep", "batch-cook", "reheats", "chain-from",
-  "freezer-shortcut", "fridge-shortcut", "assembly",
-  "kid-approved", "weeknight", "emergency-dinner",
-]);
-const CANONICAL_SPLIT_AXES = new Set([
-  "carb", "portion", "heat", "presentation", "protein", "prep-time",
-]);
+// Effort tags / split axes are classified by the shared taxonomy module —
+// canonical (is a chip), alias (normalized onto a chip), or descriptive
+// (deliberately not a chip). Only genuinely unrecognized vocabulary warns.
+const { classifyEffortTag, classifySplitAxis } = await import(
+  pathToFileURL(join(REPO_ROOT, "src/data/taxonomy.js")).href
+);
 
 const recipesRaw = readFileSync(join(REPO_ROOT, "src/data/recipes.js"), "utf-8");
 
@@ -76,13 +70,13 @@ for (const m of recipeBlocks) {
     }
   }
 
-  // effortTag warning (not error — off-taxonomy still ships)
+  // effortTag warning (not error — off-taxonomy still ships on the card body)
   const effortsM = block.match(/effortTags:\s*\[([^\]]+)\]/);
   if (effortsM) {
     const values = [...effortsM[1].matchAll(/"([^"]+)"/g)].map((v) => v[1]);
     for (const v of values) {
-      if (!CANONICAL_EFFORT_TAGS.has(v)) {
-        console.warn(`WARN: recipe id=${id} "${title}" has effortTag="${v}" — not in filter whitelist; will not surface as a Dinners chip.`);
+      if (classifyEffortTag(v) === "unknown") {
+        console.warn(`WARN: recipe id=${id} "${title}" has effortTag="${v}" — unrecognized vocabulary. Add it to CANONICAL_EFFORT_TAGS (make it a chip), EFFORT_TAG_ALIASES (map it onto an existing chip), or DESCRIPTIVE_EFFORT_TAGS (never a chip) in src/data/taxonomy.js.`);
         warnings++;
       }
     }
@@ -93,8 +87,8 @@ for (const m of recipeBlocks) {
   if (splitM) {
     const values = [...splitM[1].matchAll(/"([^"]+)"/g)].map((v) => v[1]);
     for (const v of values) {
-      if (!CANONICAL_SPLIT_AXES.has(v)) {
-        console.warn(`WARN: recipe id=${id} "${title}" has splitAxis="${v}" — not in filter whitelist; will not surface as a Dinners chip.`);
+      if (classifySplitAxis(v) === "unknown") {
+        console.warn(`WARN: recipe id=${id} "${title}" has splitAxis="${v}" — unrecognized vocabulary. Add it to CANONICAL_SPLIT_AXES, SPLIT_AXIS_ALIASES, or DESCRIPTIVE_SPLIT_AXES in src/data/taxonomy.js.`);
         warnings++;
       }
     }

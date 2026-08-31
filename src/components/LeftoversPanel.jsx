@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useMemo } from "react";
 import { liveRecipes } from "../data/recipes";
+import cardImage from "../utils/cardImage";
 import { buildUnifiedIndex, findCrossRecipePairs } from "../lib/leftoverIndex";
 
 // Surfaces the top-N other recipes that share the most ingredients/brands with
@@ -44,8 +45,10 @@ export default function LeftoversPanel({ recipe }) {
           >
             <div className="relative">
               <img
-                src={other.image}
+                {...cardImage(other.image)}
                 alt={other.title}
+                width="640"
+                height="320"
                 className="w-full h-32 object-cover group-hover:brightness-110 transition-all"
                 loading="lazy"
               />

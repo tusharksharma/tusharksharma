@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import cardImage from "../utils/cardImage";
 
 const pillarColors = {
   "Protein Meals": "text-amber-500",
@@ -27,8 +28,10 @@ export default function RecipeCard({ recipe }) {
     >
       <div className="relative">
         <img
-          src={recipe.image}
+          {...cardImage(recipe.image)}
           alt={recipe.title}
+          width="640"
+          height="480"
           className={`w-full h-48 object-cover transition-all ${
             isComingSoon ? "grayscale brightness-75" : "group-hover:brightness-110"
           }`}

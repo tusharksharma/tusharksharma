@@ -7,6 +7,7 @@ import HowItWorks from "../components/HowItWorks";
 import YourWeek from "../components/YourWeek";
 import RecipeCard from "../components/RecipeCard";
 import EmailCapture from "../components/EmailCapture";
+import cardImage from "../utils/cardImage";
 
 function TrustCard({ title, desc }) {
   return (
@@ -29,7 +30,7 @@ function MakeAheadDessertCallout() {
         </div>
         <Link to={`/cookbook/${featured.id}`} className="grid grid-cols-1 sm:grid-cols-2 gap-5 bg-neutral-900/60 border border-amber-500/20 rounded-xl overflow-hidden hover:border-amber-500/40 transition-all group">
           {featured.heroImage && (
-            <img src={featured.heroImage} alt={featured.title} className="w-full h-full object-cover sm:max-h-64" loading="lazy" />
+            <img {...cardImage(featured.heroImage, { sizes: "(min-width: 640px) 50vw, 100vw" })} alt={featured.title} className="w-full h-full object-cover sm:max-h-64" loading="lazy" />
           )}
           <div className="p-5 sm:p-6 flex flex-col justify-center">
             <h3 className="text-white font-black text-lg group-hover:text-amber-400 transition-colors">{featured.title}</h3>

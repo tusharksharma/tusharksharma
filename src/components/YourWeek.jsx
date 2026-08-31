@@ -1,6 +1,7 @@
 import { useState, useEffect, useMemo } from "react";
 import { Link } from "react-router-dom";
 import recipes from "../data/recipes";
+import cardImage from "../utils/cardImage";
 import GroceryList from "./GroceryList";
 
 const ADULT_OPTIONS = [1, 2, 3, 4];
@@ -360,11 +361,13 @@ function CookDay({ day, label, vibe, id, time, reheats, isReheat, fixedBatch, re
       <div className="flex items-center gap-2 mb-1 sm:pl-12">
         <button
           onClick={(e) => { e.preventDefault(); onToggle(); }}
+          aria-label={`${day}: ${label} \u2014 ${enabled ? "included in this week" : "skipped"}`}
+          aria-pressed={enabled}
           className={`w-5 h-5 rounded border flex-shrink-0 flex items-center justify-center text-[10px] cursor-pointer transition-colors ${
             enabled ? "bg-amber-500 border-amber-500 text-black" : "border-neutral-600 bg-neutral-800"
           }`}
         >
-          {enabled && "\u2713"}
+          <span aria-hidden="true">{enabled && "\u2713"}</span>
         </button>
         {!isReheatDay ? (
           <span className="text-neutral-500 text-[10px]">{enabled ? "Included" : "Skipped — removed from grocery"}</span>
@@ -376,7 +379,7 @@ function CookDay({ day, label, vibe, id, time, reheats, isReheat, fixedBatch, re
         <div className={`bg-neutral-900 border rounded-xl overflow-hidden transition-all ${enabled ? "border-neutral-800 hover:border-amber-500/40" : "border-neutral-800/50"}`}>
           <div className="flex flex-col sm:flex-row">
             <div className="sm:w-40 flex-shrink-0 relative">
-              <img src={r.image} alt={r.title} className={`w-full h-32 sm:h-full object-cover transition-all ${enabled ? "group-hover:brightness-110" : "grayscale brightness-50"}`} loading="lazy" />
+              <img {...cardImage(r.image, { sizes: "(min-width: 640px) 33vw, 100vw" })} alt={r.title} className={`w-full h-32 sm:h-full object-cover transition-all ${enabled ? "group-hover:brightness-110" : "grayscale brightness-50"}`} loading="lazy" />
               <div className="absolute top-2 left-2 flex gap-1.5">
                 <span className="text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded bg-amber-500 text-black">{day}</span>
                 {fixedBatch && enabled && <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-amber-600/80 text-white">Batch</span>}
@@ -536,26 +539,30 @@ export default function YourWeek() {
               <span className="text-white text-xs font-bold">Your family</span>
               <span className="text-neutral-600 text-[10px] ml-2">Adjusts grocery + portions</span>
             </div>
-            {showFeedback && (
-              <span className="text-amber-400 text-[10px] font-bold animate-pulse">Updated for {servings}</span>
-            )}
+            <span role="status" aria-live="polite" className="text-amber-400 text-[10px] font-bold animate-pulse">
+              {showFeedback ? `Updated for ${servings}` : ""}
+            </span>
           </div>
           <div className="flex flex-col sm:flex-row gap-4">
             <div className="flex items-center gap-3">
-              <span className="text-neutral-500 text-xs w-12">Adults:</span>
-              <div className="flex gap-1">
+              <span id="adults-label" className="text-neutral-500 text-xs w-12">Adults:</span>
+              <div className="flex gap-1" role="group" aria-labelledby="adults-label">
                 {ADULT_OPTIONS.map((n) => (
                   <button key={n} onClick={() => handleFamilyChange(setAdults, n)}
+                    aria-label={`${n} ${n === 1 ? "adult" : "adults"}`}
+                    aria-pressed={adults === n}
                     className={`w-9 h-9 rounded-lg text-sm font-bold transition-all cursor-pointer ${adults === n ? "bg-red-500 text-white scale-110" : "bg-neutral-800 text-neutral-400 hover:bg-neutral-700"}`}
                   >{n}</button>
                 ))}
               </div>
             </div>
             <div className="flex items-center gap-3">
-              <span className="text-neutral-500 text-xs w-12">Kids:</span>
-              <div className="flex gap-1">
+              <span id="kids-label" className="text-neutral-500 text-xs w-12">Kids:</span>
+              <div className="flex gap-1" role="group" aria-labelledby="kids-label">
                 {KID_OPTIONS.map((n) => (
                   <button key={n} onClick={() => handleFamilyChange(setKids, n)}
+                    aria-label={`${n} ${n === 1 ? "kid" : "kids"}`}
+                    aria-pressed={kids === n}
                     className={`w-9 h-9 rounded-lg text-sm font-bold transition-all cursor-pointer ${kids === n ? "bg-green-500 text-white scale-110" : "bg-neutral-800 text-neutral-400 hover:bg-neutral-700"}`}
                   >{n}</button>
                 ))}
@@ -565,9 +572,10 @@ export default function YourWeek() {
           <div className="flex items-center justify-between mt-3 pt-3 border-t border-neutral-800">
             <button
               onClick={() => { setLeftovers(!leftovers); setShowFeedback(true); }}
+              aria-pressed={leftovers}
               className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold cursor-pointer transition-all ${leftovers ? "bg-amber-500 text-black" : "bg-neutral-800 text-neutral-500 hover:bg-neutral-700"}`}
             >
-              <span className={`w-3 h-3 rounded-sm border ${leftovers ? "bg-black border-black" : "border-neutral-600"} flex items-center justify-center text-[8px]`}>{leftovers ? "\u2713" : ""}</span>
+              <span aria-hidden="true" className={`w-3 h-3 rounded-sm border ${leftovers ? "bg-black border-black" : "border-neutral-600"} flex items-center justify-center text-[8px]`}>{leftovers ? "\u2713" : ""}</span>
               Make leftovers for next day
             </button>
             <span className="text-neutral-600 text-[10px]">

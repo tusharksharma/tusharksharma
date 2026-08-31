@@ -1,6 +1,8 @@
 import { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { liveRecipes } from "../data/recipes";
+import { normalizeEffortTags, normalizeSplitAxes } from "../data/taxonomy";
+import cardImage from "../utils/cardImage";
 import useMeta from "../hooks/useMeta";
 
 const PROTEIN_OPTIONS = [...new Set(liveRecipes.flatMap((r) => r.meta?.proteinTags || []))].sort();
@@ -19,23 +21,13 @@ const NET_CARB_OPTIONS = [
 // meta.effortTags and meta.splitAxes are richer internal taxonomies that show
 // up in the recipe card body — we intentionally do NOT surface every internal
 // tag as a chip (mobile page height blew past 18k px with the ungated set).
-// Add a value here to expose it as a filter.
-const CANONICAL_EFFORT_TAGS = new Set([
-  "15-min", "one-pot", "sheet-pan", "grill", "air-fryer", "stovetop", "no-cook",
-  "meal-prep", "batch-cook", "reheats", "chain-from",
-  "freezer-shortcut", "fridge-shortcut", "assembly",
-  "kid-approved", "weeknight", "emergency-dinner",
-]);
-const EFFORT_OPTIONS = [...new Set(liveRecipes.flatMap((r) => r.meta?.effortTags || []))]
-  .filter((t) => CANONICAL_EFFORT_TAGS.has(t))
-  .sort();
-
-const CANONICAL_SPLIT_AXES = new Set([
-  "carb", "portion", "heat", "presentation", "protein", "prep-time",
-]);
-const SPLIT_OPTIONS = [...new Set(liveRecipes.flatMap((r) => r.meta?.splitAxes || []))]
-  .filter((t) => CANONICAL_SPLIT_AXES.has(t))
-  .sort();
+// The canonical sets, synonym aliases, and deliberately-unfiltered values all
+// live in src/data/taxonomy.js; edit there, not here.
+//
+// Normalizing at read time is what makes the chips honest: a recipe authored
+// with splitAxis "spice" matches the Heat chip, and "one-pan" matches One-pot.
+const EFFORT_OPTIONS = [...new Set(liveRecipes.flatMap((r) => normalizeEffortTags(r.meta?.effortTags)))].sort();
+const SPLIT_OPTIONS = [...new Set(liveRecipes.flatMap((r) => normalizeSplitAxes(r.meta?.splitAxes)))].sort();
 
 const COST_OPTIONS = ["budget", "moderate", "premium"];
 
@@ -226,15 +218,17 @@ export default function DinnersPage() {
     }
 
     if (selectedEffort.length) {
-      results = results.filter((r) =>
-        selectedEffort.some((e) => (r.meta?.effortTags || []).includes(e))
-      );
+      results = results.filter((r) => {
+        const tags = normalizeEffortTags(r.meta?.effortTags);
+        return selectedEffort.some((e) => tags.includes(e));
+      });
     }
 
     if (selectedSplit.length) {
-      results = results.filter((r) =>
-        selectedSplit.some((s) => (r.meta?.splitAxes || []).includes(s))
-      );
+      results = results.filter((r) => {
+        const axes = normalizeSplitAxes(r.meta?.splitAxes);
+        return selectedSplit.some((s) => axes.includes(s));
+      });
     }
 
     if (selectedCost.length) {
@@ -383,7 +377,7 @@ export default function DinnersPage() {
             {filtered.map((r) => (
               <Link key={r.id} to={`/recipes/${r.slug}`} className="bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden hover:border-amber-500/40 transition-all group block">
                 {r.image && (
-                  <img src={r.image} alt={r.title} className="w-full h-40 object-cover" loading="lazy" />
+                  <img {...cardImage(r.image)} alt={r.title} width="640" height="400" className="w-full h-40 object-cover" loading="lazy" />
                 )}
                 <div className="p-5">
                   <h3 className="text-white font-bold text-sm group-hover:text-amber-400 transition-colors">{r.title}</h3>
