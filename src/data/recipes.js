@@ -9569,6 +9569,7 @@ const recipes = [
     status: "live",
     carbLevel: "medium",
     meta: {
+      fixedBatch: true,
       macros: { protein: 65, calories: 600, fat: 18, carbs: 55, netCarbs: 51, estimated: true },
       allergens: ["fish", "soy"],
       warnings: ["contains-soy-sauce", "contains-fish-sauce", "kid-macros-not-published", "brand-macros-vary-recalculate", "estimated-macros-recalc-for-your-beef"],
@@ -9919,6 +9920,7 @@ const recipes = [
     status: "live",
     carbLevel: "medium",
     meta: {
+      fixedBatch: true,
       macros: { protein: 28, calories: 340, fat: 14, carbs: 26, netCarbs: 22, estimated: true },
       allergens: ["dairy", "eggs"],
       warnings: ["contains-dairy", "contains-egg", "gluten-varies-by-chicken-and-hashbrown-brand", "kid-macros-not-published", "brand-macros-vary-recalculate", "estimated-macros-adult-plate"],
@@ -10295,6 +10297,7 @@ const recipes = [
     status: "live",
     carbLevel: "medium",
     meta: {
+      fixedBatch: true,
       macros: { protein: 52, calories: 530, fat: 22, carbs: 32, netCarbs: 30, estimated: true },
       allergens: ["dairy", "eggs", "wheat", "gluten"],
       warnings: ["contains-dairy-parmesan-mozzarella-cottage-cheese-milk", "contains-egg-whole-and-white", "contains-wheat-gluten-flour-and-panko", "kid-macros-not-published", "brand-macros-vary-recalculate", "estimated-macros-adult-plate"],
@@ -10383,6 +10386,7 @@ const recipes = [
     status: "live",
     carbLevel: "medium",
     meta: {
+      fixedBatch: true,
       macros: { protein: 55, calories: 665, fat: 27, carbs: 43, netCarbs: 40, estimated: true },
       allergens: ["dairy", "wheat", "gluten"],
       warnings: ["contains-dairy-mozzarella-pizza", "contains-wheat-gluten-pizza-crust", "kid-macros-not-published", "brand-macros-vary-recalculate", "estimated-macros-adult-plate"],
