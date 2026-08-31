@@ -180,6 +180,17 @@ function titleCase(s) {
   return s.split(/\s+/).map((w) => w.length > 2 ? w[0].toUpperCase() + w.slice(1).toLowerCase() : w.toLowerCase()).join(" ");
 }
 
+function recipeTotalMinutes(r) {
+  if (typeof r?.meta?.totalMinutes === "number") return r.meta.totalMinutes;
+  const raw = r?.time || "";
+  if (!raw) return 30;
+  const stripped = raw.replace(/\([^)]*\)/g, " ");
+  const withHours = stripped.replace(/(\d+)\s*(hr|hour)s?/gi, (_, n) => `${parseInt(n, 10) * 60}`);
+  const nums = withHours.match(/\d+/g);
+  if (!nums) return 30;
+  return nums.reduce((sum, n) => sum + parseInt(n, 10), 0);
+}
+
 function buildRecipeSchema(r, ingredients, steps, tags) {
   const schema = {
     "@context": "https://schema.org",
@@ -187,7 +198,7 @@ function buildRecipeSchema(r, ingredients, steps, tags) {
     name: r.title,
     description: r.description || "",
     image: r.image ? `${DOMAIN}${r.image}` : undefined,
-    totalTime: `PT${(r.time || "30 min").replace(/\s*min.*/, "")}M`,
+    totalTime: `PT${recipeTotalMinutes(r)}M`,
     recipeYield: `${r.servings || 4} servings`,
     nutrition: {
       "@type": "NutritionInformation",

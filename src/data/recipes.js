@@ -1490,7 +1490,7 @@ const recipes = [
     status: "live",
     carbLevel: "low", // keto tortillas
     meta: {
-      macros: { protein: 45, calories: 500, fat: 22, carbs: 18, netCarbs: 8, estimated: true },
+      macros: { protein: 45, calories: 500, fat: 22, carbs: 23, netCarbs: 13, estimated: true },
       allergens: ["dairy", "gluten"],
       warnings: ["contains-dairy", "contains-gluten"],
       dietTags: ["halal", "keto-option"],
@@ -2693,7 +2693,7 @@ const recipes = [
     status: "live",
     carbLevel: "high",
     meta: {
-      macros: { protein: 54, calories: 430, fat: 15, carbs: 38, netCarbs: 35, estimated: true },
+      macros: { protein: 54, calories: 430, fat: 12, carbs: 28, netCarbs: 25, estimated: true },
       allergens: ["wheat", "gluten", "soy"],
       warnings: ["contains-gluten", "contains-soy", "spicy-adult-version", "kid-macros-not-published", "estimated-macros-adult-plate", "brand-macros-vary-recalculate"],
       dietTags: ["dairy-free", "halal"],
@@ -4956,7 +4956,7 @@ const recipes = [
     status: "live",
     carbLevel: "high", // penne pasta
     meta: {
-      macros: { protein: 28, calories: 350, fat: 15, carbs: 43, netCarbs: 29, estimated: true },
+      macros: { protein: 28, calories: 350, fat: 15, carbs: 33, netCarbs: 19, estimated: true },
       allergens: ["dairy", "gluten"],
       warnings: ["contains-dairy", "contains-gluten"],
       dietTags: ["egg-free", "soy-free", "nut-free", "pork-free"],
@@ -5360,7 +5360,7 @@ const recipes = [
     status: "live",
     carbLevel: "low",
     meta: {
-      macros: { protein: 61, calories: 500, fat: 17, carbs: 12, netCarbs: 7, estimated: true },
+      macros: { protein: 61, calories: 500, fat: 20, carbs: 15, netCarbs: 10, estimated: true },
       allergens: ["dairy"],
       warnings: ["contains-dairy", "packaged-labels-vary"],
       dietTags: ["gluten-free", "egg-free", "soy-free", "nut-free", "pork-free"],

@@ -9,12 +9,10 @@ export default function HeroSection() {
           {/* Food visual */}
           <div className="flex-shrink-0 w-full sm:w-[42%]">
             <img
-              src="/images/smash-tacos/hero.webp"
-              srcSet="/images/smash-tacos/hero-sm.webp 800w, /images/smash-tacos/hero.webp 1400w"
-              sizes="(min-width: 640px) 42vw, 100vw"
-              width="1400"
-              height="1867"
-              alt="Split plate — adult and kid tacos from the same cook"
+              src="/images/pizza-leftover-meatballs/hero-split-pizza-leftover-meatballs-polished.webp"
+              width="2048"
+              height="2048"
+              alt="Split plate — adult half-pizza plus five lean-beef meatballs next to a kid's single-serve pizza and two meatballs"
               fetchPriority="high"
               className="w-full rounded-2xl border border-neutral-800 sm:max-h-[420px] sm:object-cover"
             />
@@ -36,7 +34,7 @@ export default function HeroSection() {
               One cook. No separate meals. No negotiating.
             </p>
             <p className="text-neutral-500 mt-2 text-sm">
-              Pick a weekly plan. Shop once. Cook 3 nights. Leftovers handle the rest.
+              Pick a weekly plan. Shop once. Cook 2–3 nights. Leftovers handle the rest.
             </p>
             <div className="flex gap-3 mt-6 flex-wrap justify-center sm:justify-start">
               <a

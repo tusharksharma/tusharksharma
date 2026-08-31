@@ -136,6 +136,8 @@ for (const u of usedUnits) {
 // rather than being a primary slot. Add their ids to KNOWN_LEFTOVER_CHAINS.
 const KNOWN_LEFTOVER_CHAINS = new Set([
   32, // Split Plate Next-Day Chicken Tacos — chained off id 31 Friday's leftover thighs.
+  63, // Meatball Parm Puff — Can I Make a Recipe Go Viral? Ep. 2. Video-first drop that uses the Lean Beef Meatballs (30-piece) cookbook base; not slotted into a specific week.
+  64, // Pizza + Leftover Meatballs Dinner — genuine leftover-chain recipe that consumes 10 meatballs from the base after a Parm Puff / batch bake.
 ]);
 
 const recipesSrc = readFileSync("src/data/recipes.js", "utf-8");

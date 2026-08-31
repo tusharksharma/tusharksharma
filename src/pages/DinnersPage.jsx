@@ -92,6 +92,17 @@ function parseTime(timeStr) {
   return match ? parseInt(match[1], 10) : 999;
 }
 
+function getTotalMinutes(r) {
+  if (typeof r?.meta?.totalMinutes === "number") return r.meta.totalMinutes;
+  const raw = r?.time || "";
+  if (!raw) return 999;
+  const stripped = raw.replace(/\([^)]*\)/g, " ");
+  const withHours = stripped.replace(/(\d+)\s*(hr|hour)s?/gi, (_, n) => `${parseInt(n, 10) * 60}`);
+  const nums = withHours.match(/\d+/g);
+  if (!nums) return 999;
+  return nums.reduce((sum, n) => sum + parseInt(n, 10), 0);
+}
+
 function parseCost(costStr) {
   if (!costStr) return Infinity;
   const match = costStr.match(/(\d+(?:\.\d+)?)/);
@@ -101,7 +112,7 @@ function parseCost(costStr) {
 const SORT_OPTIONS = [
   { key: "newest", label: "Newest", compare: (a, b) => (b.id || 0) - (a.id || 0) },
   { key: "protein", label: "Highest protein", compare: (a, b) => (b.protein || 0) - (a.protein || 0) },
-  { key: "fastest", label: "Fastest", compare: (a, b) => parseTime(a.time) - parseTime(b.time) },
+  { key: "fastest", label: "Fastest", compare: (a, b) => getTotalMinutes(a) - getTotalMinutes(b) },
   { key: "cost", label: "Lowest cost", compare: (a, b) => parseCost(a.meta?.costPerServing) - parseCost(b.meta?.costPerServing) },
 ];
 
@@ -201,9 +212,9 @@ export default function DinnersPage() {
 
     if (selectedTime) {
       if (selectedTime.max === Infinity) {
-        results = results.filter((r) => parseTime(r.time) >= 30);
+        results = results.filter((r) => getTotalMinutes(r) >= 30);
       } else {
-        results = results.filter((r) => parseTime(r.time) <= selectedTime.max);
+        results = results.filter((r) => getTotalMinutes(r) <= selectedTime.max);
       }
     }
 
