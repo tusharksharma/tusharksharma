@@ -193,8 +193,7 @@ const GROCERY_BY_WEEK = {
       { name: "Garlic", qty: "1 head", meal: "All" },
     ],
     "Sauce & Flavor": [
-      { name: "Shan Tandoori Masala", baseQty: 1, unit: "packet", meal: "Mon" },
-      { name: "Lawry's seasoning", qty: "pantry", meal: "Mon kid" },
+      { name: "Shan Tandoori Masala (one packet covers adult + kid)", baseQty: 1, unit: "packet", meal: "Mon" },
       { name: "Kala namak (black salt)", qty: "pantry", meal: "Mon" },
       { name: "Kashmiri chili", qty: "pantry", meal: "Mon" },
       { name: "Dan-O's SPG Tri-O (Salt-Pepper-Garlic)", qty: "pantry", meal: "Wed (sauce)" },
@@ -896,6 +895,7 @@ const GROCERY_BY_WEEK = {
       { name: "Barilla Mini Penne (kid)", baseQty: 1, unit: "box", meal: "Mon kid" },
       { name: "Nature's Own Keto Hot Dog Buns (adult)", baseQty: 3, unit: "buns", meal: "Fri adult" },
       { name: "Ball Park regular hot dog buns (kid)", baseQty: 2, unit: "buns", meal: "Fri kid" },
+      { name: "Naan, bhatura, or rice (kid tandoori carb, ~200 cal each)", baseQty: 4, unit: "pieces", meal: "Wed kid" },
     ],
     "Dairy": [
       { name: "Rao's Homemade Alfredo", baseQty: 2, unit: "jars", meal: "Mon" },
@@ -918,8 +918,7 @@ const GROCERY_BY_WEEK = {
     "Spice + Aromatic": [
       { name: "Chili flakes", qty: "pantry", meal: "Mon adult" },
       { name: "Italian seasoning", qty: "pantry", meal: "Mon adult" },
-      { name: "Shan Tandoori Masala (adult)", baseQty: 1, unit: "packet", meal: "Wed adult" },
-      { name: "Lawry's seasoning (kid tandoori)", qty: "pantry", meal: "Wed kid" },
+      { name: "Shan Tandoori Masala (one packet covers adult + kid)", baseQty: 1, unit: "packet", meal: "Wed" },
       { name: "Spiceology Beef-Infused BBQ Rub (or paprika + garlic powder + onion powder + salt alternative)", qty: "pantry", meal: "Fri" },
       { name: "Salt", qty: "pantry", meal: "Fri" },
     ],
