@@ -1417,15 +1417,20 @@ function getItemDays(entry) {
   return entry.meal.split(/\s*\+\s*/).map((d) => d.trim().replace(/\s+(kid|adult)$/i, "").substring(0, 3));
 }
 
-function scaleQty(entry, adults, kids, leftovers, dayReheats) {
+function scaleQty(entry, adults, kids, leftovers, dayReheats, batchMultiplier = 1) {
   if (entry.baseQty != null) {
     // fixedBatch items belong to a batch-cook whose yield is defined by the
     // recipe (e.g. Week 27 pasta bake = one batch feeds Mon+Wed+Fri regardless
     // of the leftovers toggle). Do not scale by adults/kids or leftovers —
-    // scaling the batch would ask the shopper to buy 2x the ingredients but
-    // the recipe still says "one bake". The batch quantity is authoritative.
+    // scaling the batch implicitly would ask the shopper to buy 2x the
+    // ingredients while the recipe still says "one bake". The batch quantity
+    // is authoritative unless the week explicitly runs it twice.
+    // A week may explicitly run the batch more than once (batchMultiplier: 2 =
+    // two pans) to cover more nights. That is an authored, visible decision —
+    // the week description states the pan count — so it scales, while the
+    // implicit adults/kids/leftovers scaling above stays blocked.
     if (entry.fixedBatch) {
-      const scaled = entry.baseQty;
+      const scaled = entry.baseQty * batchMultiplier;
       if (WHOLE_UNITS.has(entry.unit)) {
         return `${Math.ceil(scaled)} ${entry.unit}`.trim();
       }
@@ -1458,7 +1463,7 @@ function scaleQty(entry, adults, kids, leftovers, dayReheats) {
   return entry.qty || "";
 }
 
-export default function GroceryList({ adults = 2, kids = 2, leftovers = true, dayReheats = {}, excludedTags = [], week = 1, planLabel = "" }) {
+export default function GroceryList({ adults = 2, kids = 2, leftovers = true, dayReheats = {}, batchMultiplier = 1, excludedTags = [], week = 1, planLabel = "" }) {
   const [checked, setChecked] = useState(new Set());
   const [isOpen, setIsOpen] = useState(false);
   const GROCERY = getGrocery(week);
@@ -1498,11 +1503,11 @@ export default function GroceryList({ adults = 2, kids = 2, leftovers = true, da
         const visible = items.filter((i) => {
           if (isExcluded(i)) return false;
           // Drop baseQty items that scaled to zero.
-          if (i.baseQty != null && scaleQty(i, adults, kids, leftovers, dayReheats) === "") return false;
+          if (i.baseQty != null && scaleQty(i, adults, kids, leftovers, dayReheats, batchMultiplier) === "") return false;
           return true;
         });
         if (visible.length === 0) return null;
-        return `${cat}:\n${visible.map((i) => `  - ${i.name}${scaleQty(i, adults, kids, leftovers, dayReheats) ? ` (${scaleQty(i, adults, kids, leftovers, dayReheats)})` : ""}`).join("\n")}`;
+        return `${cat}:\n${visible.map((i) => `  - ${i.name}${scaleQty(i, adults, kids, leftovers, dayReheats, batchMultiplier) ? ` (${scaleQty(i, adults, kids, leftovers, dayReheats, batchMultiplier)})` : ""}`).join("\n")}`;
       })
       .filter(Boolean)
       .join("\n\n");
@@ -1580,7 +1585,7 @@ export default function GroceryList({ adults = 2, kids = 2, leftovers = true, da
                 const idx = globalIdx++;
                 if (isExcluded(entry)) return null;
                 const isChecked = checked.has(idx);
-                const qty = scaleQty(entry, adults, kids, leftovers, dayReheats);
+                const qty = scaleQty(entry, adults, kids, leftovers, dayReheats, batchMultiplier);
                 // Hide scaled-to-zero baseQty items (e.g. kid-only when kids = 0).
                 // Pantry items keep showing (entry.baseQty undefined, qty === "" is normal).
                 if (entry.baseQty != null && qty === "") return null;
