@@ -14,11 +14,13 @@
     <title>The Split Plate — One Meal. Two Outcomes. No Extra Work.</title>
     <!-- Theme pre-flight. Runs before first paint so a light-mode reader never
          sees a black flash while React boots. Mirrors src/hooks/useTheme.js:
-         stored choice wins, otherwise OS preference. Scoped to recipe routes
-         because only RecipeDetail + Nav are on semantic tokens so far. -->
+         stored choice wins, otherwise OS preference. Scoped to the two recipe
+         detail routes because only RecipeDetail + Nav are on semantic tokens
+         so far. -->
     <script>
       try {
-        if (location.pathname.indexOf('/recipes/') === 0) {
+        var p = location.pathname;
+        if (p.indexOf('/recipes/') === 0 || p.indexOf('/cookbook/') === 0) {
           var t = localStorage.getItem('tsp-theme');
           if (t !== 'light' && t !== 'dark') {
             t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';

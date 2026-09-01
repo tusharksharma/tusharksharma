@@ -94,9 +94,22 @@ export function parseGroups(items, { fallbackTitle, tone, idPrefix }) {
 }
 
 /** Normalize a step to `{ text, images }` — recipes store both strings and objects. */
+/**
+ * Several prose fields are a string on some records and an array of strings on
+ * others (`whyThisWorks` is a string on protein-tiramisu, an array elsewhere).
+ * Everything downstream renders lists, so coerce at the boundary.
+ */
+function asList(v) {
+  if (v == null) return [];
+  if (Array.isArray(v)) return v.filter((x) => typeof x === "string" && x.trim());
+  return typeof v === "string" && v.trim() ? [v] : [];
+}
+
 function normalizeStep(step) {
   if (typeof step === "string") return { text: step, images: [] };
-  return { text: step?.text ?? "", images: step?.images ?? [] };
+  // Dinners store `images: []`; cookbook entries store a single `image`.
+  const images = step?.images ?? (step?.image ? [step.image] : []);
+  return { text: step?.text ?? "", images };
 }
 
 function normalizeSteps(steps) {
@@ -332,28 +345,35 @@ export function buildRecipeModel(recipe) {
   const keys = pickKeys(recipe);
   const usedKeys = new Set(keys);
   const deepDive = [];
-  const rules = (recipe.executionRules || []).filter((r) => !usedKeys.has(r));
+  const rules = asList(recipe.executionRules).filter((r) => !usedKeys.has(r));
   if (rules.length > 0) {
     deepDive.push({ id: "rules", title: "The rest of the execution rules", tone: "danger", items: rules });
   }
-  if (recipe.whyMostFail?.length) {
-    deepDive.push({ id: "fail", title: "Why most versions fail", tone: "danger", items: recipe.whyMostFail });
+  const mostFail = asList(recipe.whyMostFail);
+  if (mostFail.length) {
+    deepDive.push({ id: "fail", title: "Why most versions fail", tone: "danger", items: mostFail });
   }
-  const works = (recipe.whyThisWorks || []).filter((r) => !usedKeys.has(r));
+  const works = asList(recipe.whyThisWorks).filter((r) => !usedKeys.has(r));
   if (works.length > 0) {
     deepDive.push({ id: "works", title: "Why this version works", tone: "ok", items: works });
   } else if (recipe.whyItWorks && keys.length === 0) {
-    deepDive.push({ id: "works", title: "Why it works", tone: "ok", items: [recipe.whyItWorks] });
+    deepDive.push({ id: "works", title: "Why it works", tone: "ok", items: asList(recipe.whyItWorks) });
   }
-  if (!recipe.executionRules && recipe.mistakes?.length) {
-    deepDive.push({ id: "mistakes", title: "Mistakes to avoid", tone: "danger", items: recipe.mistakes });
+  const mistakes = asList(recipe.mistakes);
+  if (!recipe.executionRules && mistakes.length) {
+    deepDive.push({ id: "mistakes", title: "Mistakes to avoid", tone: "danger", items: mistakes });
   }
-  if (recipe.variations?.length) {
-    deepDive.push({ id: "variations", title: "Variations", tone: "brand", items: recipe.variations });
+  const variations = asList(recipe.variations);
+  if (variations.length) {
+    deepDive.push({ id: "variations", title: "Variations", tone: "brand", items: variations });
   }
 
   return {
+    kind: "dinner",
     slug: recipe.slug,
+    path: `/recipes/${recipe.slug}`,
+    breadcrumb: { to: "/dinners", label: "Dinners" },
+    callouts: [],
     title: recipe.title,
     hook: recipe.hook || "",
     description: recipe.description || "",
@@ -373,6 +393,7 @@ export function buildRecipeModel(recipe) {
     storage: recipe.mealPrep || null,
     nutrition: {
       macros,
+      batch: null,
       estimated,
       honesty: recipe.meta?.macroHonesty || "",
       costPerServing: recipe.meta?.costPerServing || null,
@@ -385,6 +406,236 @@ export function buildRecipeModel(recipe) {
     video: recipe.video || recipe.videoSrc || null,
     brands: recipe.brands || [],
     tags: recipe.tags || [],
+  };
+}
+
+/* Which cookbook array an entry came from, for the category badge and the
+   breadcrumb. CookbookDetailPage knows the array; the model just labels it. */
+const COOKBOOK_GROUPS = {
+  bases: "Base",
+  sauces: "Sauce",
+  breakfasts: "Breakfast",
+  quickLunches: "Quick lunch",
+  desserts: "Dessert",
+  powerups: "Power-up",
+  snackBoxes: "Snack box",
+};
+
+/**
+ * Cookbook entries (sauces, breakfasts, desserts…) carry different field names
+ * than dinners — `tagline` not `hook`, `useThisWhen` not `makeThisWhen`,
+ * `bestFor` not `tags`, flat protein/calories instead of a macros object. This
+ * maps them onto the identical model so both routes render the same ordered
+ * sections, which is the whole point of having a model layer.
+ */
+export function buildCookbookModel(item, group) {
+  /* ── Badges. ── */
+  const badges = [];
+  const series =
+    typeof item.seriesInfo === "string" ? item.seriesInfo : item.seriesInfo?.series;
+  if (series) badges.push({ label: series, tone: "brand" });
+  if (item.splitNote) badges.push({ label: "Split Cook Method™", tone: "split" });
+  if (COOKBOOK_GROUPS[group]) badges.push({ label: COOKBOOK_GROUPS[group], tone: "muted" });
+
+  /* ── Facts. Cookbook macros are published per serving alongside a whole-batch
+       total; the glance row shows per serving, the batch total goes in the
+       nutrition disclosure so the two numbers can't be confused. ── */
+  const facts = [];
+  if (item.time) facts.push({ key: "time", label: "Total time", value: item.time });
+  if (item.servings != null) {
+    facts.push({
+      key: "yield",
+      label: "Yield",
+      value: `${item.servings} serving${item.servings === 1 ? "" : "s"}`,
+    });
+  }
+  const perProtein =
+    item.proteinPerServing ??
+    (item.servings ? Math.round((item.protein / item.servings) * 10) / 10 : item.protein);
+  if (perProtein != null) {
+    facts.push({
+      key: "protein",
+      label: "Protein / serving",
+      value: `${perProtein}g`,
+      estimated: true,
+      highlight: true,
+    });
+  }
+  if (item.caloriesPerServing != null) {
+    facts.push({
+      key: "calories",
+      label: "Cal / serving",
+      value: item.caloriesPerServing,
+      estimated: true,
+    });
+  }
+  if (item.servingSize) {
+    facts.push({ key: "servingSize", label: "Serving size", value: item.servingSize });
+  }
+
+  /* ── Safety. Same three-way classifier as dinners. `contains` is an explicit
+       allergen declaration and joins the allergen list. ── */
+  const warnings = item.warnings || [];
+  const safety = {
+    allergens: [...(item.allergens || []), ...(item.contains || [])],
+    critical: warnings.filter((w) => classifyWarning(w) === "safety").map(prettyWarning),
+    headsUp: warnings.filter((w) => classifyWarning(w) === "headsUp").map(prettyWarning),
+    nutritionCaveats: warnings.filter((w) => classifyWarning(w) === "nutrition").map(prettyWarning),
+    correction: null,
+  };
+
+  /* ── Callouts that sit above the ingredients. The locked core ratio is the
+       one thing a cook must not improvise, so it leads. ── */
+  const callouts = [];
+  if (item.coreRatio) {
+    callouts.push({
+      id: "ratio",
+      label: "Core ratio — locked",
+      body: item.coreRatio,
+      tone: "danger",
+    });
+  }
+  if (item.flavorTarget) {
+    callouts.push({ id: "target", label: "Flavor target", body: item.flavorTarget, tone: "shared" });
+  }
+
+  /* ── Method: always one phase, matching a non-split dinner. ── */
+  const method = {
+    phases: [
+      { id: "main", label: "Method", tone: "shared", steps: normalizeSteps(item.steps), startAt: 1 },
+    ],
+    splitPoint: null,
+    splitRatio: null,
+  };
+
+  /* ── Split. Cookbook entries describe the adult/kid difference in prose and
+       don't publish per-plate macros, so the cards carry the text as the body
+       rather than showing an empty macro row. ── */
+  const split = item.splitNote
+    ? {
+        ratio: null,
+        point: null,
+        adult: {
+          label: "Adult",
+          protein: null,
+          calories: null,
+          extras: [],
+          body: item.splitNote.adult,
+          note: null,
+        },
+        kid: {
+          label: "Kid",
+          protein: null,
+          calories: null,
+          choices: [],
+          body: item.splitNote.kid,
+          proteinSwap: null,
+          note: null,
+        },
+      }
+    : null;
+
+  /* ── Expertise material. ── */
+  const rules = asList(item.executionRules);
+  const keys = rules.slice(0, 3);
+  const deepDive = [];
+  if (rules.length > 3) {
+    deepDive.push({
+      id: "rules",
+      title: "The rest of the execution rules",
+      tone: "danger",
+      items: rules.slice(3),
+    });
+  }
+  // A couple of entries name this field after their own subject
+  // (`whyPumpkinWorks`), so match the pattern rather than one literal key —
+  // otherwise that copy never reaches the page.
+  const works = Object.keys(item)
+    .filter((k) => /^why.+works$/i.test(k))
+    .flatMap((k) => asList(item[k]));
+  if (works.length) {
+    deepDive.push({ id: "works", title: "Why this version works", tone: "ok", items: works });
+  }
+  const upgrades = asList(item.smartUpgrades);
+  if (upgrades.length) {
+    deepDive.push({ id: "upgrades", title: "Smart upgrades", tone: "brand", items: upgrades });
+  }
+  const notes = [...asList(item.notes), ...asList(item.editorialNotes), ...asList(item.alternativeSeasoning)];
+  if (notes.length) {
+    deepDive.push({ id: "notes", title: "Notes", tone: "muted", items: notes });
+  }
+  if (item.systemInsight) {
+    const si = item.systemInsight;
+    deepDive.push({
+      id: "system",
+      title: si.title || "The system",
+      tone: "brand",
+      items: [
+        si.body,
+        ...(si.framework || []).map((f) => `${f.lever} (${f.role}): ${f.swaps}`),
+        si.payoff,
+      ].filter(Boolean),
+    });
+  }
+
+  return {
+    kind: "cookbook",
+    slug: item.id,
+    path: `/cookbook/${item.id}`,
+    breadcrumb: { to: "/cookbook", label: "Cookbook" },
+    callouts,
+    title: item.title,
+    hook: item.tagline || "",
+    description: item.flavorProfile || "",
+    makeThisWhen: item.useThisWhen || "",
+    overview: "",
+    badges,
+    hero: { src: item.heroImage, alt: item.title },
+    facts,
+    safety,
+    // The 143 `--- HEADER ---` lines across these entries used to render as
+    // ordinary ingredient rows; parseGroups turns them into real group headers.
+    ingredientGroups: parseGroups(item.ingredients, {
+      fallbackTitle: "Ingredients",
+      tone: "shared",
+      idPrefix: "main",
+    }),
+    kidIngredientChoices: [],
+    method,
+    split,
+    keys,
+    deepDive,
+    troubleshooting: item.troubleshooting || [],
+    storage: item.mealPrep || item.storage || null,
+    nutrition: {
+      macros: null,
+      batch:
+        item.protein != null || item.calories != null
+          ? {
+              protein: item.protein,
+              calories: item.calories,
+              servings: item.servings,
+              servingSize: item.servingSize || null,
+            }
+          : null,
+      estimated: true,
+      honesty: item.macroHonesty || "",
+      costPerServing: null,
+      dietTags: item.dietTags || [],
+      splitAxes: [],
+      effortTags: [],
+      caveats: safety.nutritionCaveats,
+      // Dinners store swaps as plain strings; cookbook stores structured
+      // {insteadOf, use, note}. Flatten so one renderer handles both.
+      substitutions: (item.substitutions || []).map((s) =>
+        typeof s === "string"
+          ? s
+          : `Instead of ${s.insteadOf}, use ${s.use}${s.note ? ` — ${s.note}` : ""}`
+      ),
+    },
+    video: item.video || item.videoSrc || null,
+    brands: item.brands || [],
+    tags: item.bestFor || [],
   };
 }
 

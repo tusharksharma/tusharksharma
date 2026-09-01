@@ -14,11 +14,13 @@
     <title>Social Carousel — Shirley Temple Cookie Creami — The Split Plate</title>
     <!-- Theme pre-flight. Runs before first paint so a light-mode reader never
          sees a black flash while React boots. Mirrors src/hooks/useTheme.js:
-         stored choice wins, otherwise OS preference. Scoped to recipe routes
-         because only RecipeDetail + Nav are on semantic tokens so far. -->
+         stored choice wins, otherwise OS preference. Scoped to the two recipe
+         detail routes because only RecipeDetail + Nav are on semantic tokens
+         so far. -->
     <script>
       try {
-        if (location.pathname.indexOf('/recipes/') === 0) {
+        var p = location.pathname;
+        if (p.indexOf('/recipes/') === 0 || p.indexOf('/cookbook/') === 0) {
           var t = localStorage.getItem('tsp-theme');
           if (t !== 'light' && t !== 'dark') {
             t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
@@ -29,8 +31,8 @@
     </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-10YP1BFG19"></script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-10YP1BFG19');</script>
-    <script type="module" crossorigin src="/assets/index-DhIothp2.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-CowDybxQ.css">
+    <script type="module" crossorigin src="/assets/index-BDLek-8k.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-D_DI_YbT.css">
       <link rel="canonical" href="https://thesplitplate.com/social/cookbook/shirley-temple-cookie-creami" />
     <meta property="og:title" content="Social Carousel — Shirley Temple Cookie Creami — The Split Plate" />
     <meta property="og:description" content="Instagram carousel for Shirley Temple Cookie Creami." />

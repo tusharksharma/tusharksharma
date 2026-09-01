@@ -4,7 +4,7 @@ import track from "../hooks/useTrack";
 import useTheme from "../hooks/useTheme";
 import { liveRecipes } from "../data/recipes";
 import cardImage from "../utils/cardImage";
-import { balanceColumns, buildRecipeModel, flattenSteps, ingredientText, isGroupHeader, parseGroups } from "../utils/recipeModel";
+import { balanceColumns, buildCookbookModel, buildRecipeModel, flattenSteps, ingredientText, isGroupHeader, parseGroups } from "../utils/recipeModel";
 import CookingMode from "./CookingMode";
 import LeftoversPanel from "./LeftoversPanel";
 
@@ -35,9 +35,20 @@ const TONE = {
 };
 const tone = (t) => TONE[t] || TONE.muted;
 
-export default function RecipeDetail({ recipe }) {
+/**
+ * Renders one recipe. `recipe` is a dinner from data/recipes; `item` is a
+ * cookbook entry from data/cookbook. Both are normalized to the same model so
+ * the section order is identical either way — the dinner-only interactions
+ * (household scaling, leftovers, related dinners, print card) are the only
+ * things gated on which one it is.
+ */
+export default function RecipeDetail({ recipe, item, group }) {
   const [searchParams] = useSearchParams();
-  const model = useMemo(() => buildRecipeModel(recipe), [recipe]);
+  const model = useMemo(
+    () => (recipe ? buildRecipeModel(recipe) : buildCookbookModel(item, group)),
+    [recipe, item, group]
+  );
+  const isDinner = model.kind === "dinner";
 
   const [adults, setAdults] = useState(() => { const v = searchParams.get("adults"); return v !== null ? Number(v) || 1 : 2; });
   const [kids, setKids] = useState(() => { const v = searchParams.get("kids"); return v !== null ? Number(v) : 2; });
@@ -46,12 +57,14 @@ export default function RecipeDetail({ recipe }) {
   const [cooking, setCooking] = useState(false);
   const [kidChoice, setKidChoice] = useState(0);
 
-  const baseServings = recipe.servings || 4;
+  const baseServings = (recipe || item).servings || 4;
   // fixedBatch recipes (e.g. one-bake meal preps that yield N containers) do
   // NOT scale by household size or leftovers — the batch quantity IS the
   // recipe. Scaling would ask the shopper to buy 2x tomatoes but the recipe
   // still says "one 45-min bake".
-  const isFixedBatch = !!recipe.meta?.fixedBatch;
+  // A cookbook entry's yield IS the recipe (a batch of sauce, a tray of
+  // brownies), so it never scales by household — same rule as fixedBatch.
+  const isFixedBatch = !isDinner || !!recipe.meta?.fixedBatch;
   const totalServings = isFixedBatch ? baseServings : adults + kids;
   const scale = isFixedBatch ? 1 : (totalServings / baseServings) * (leftovers ? 2 : 1);
 
@@ -87,11 +100,11 @@ export default function RecipeDetail({ recipe }) {
 
   return (
     <div className="theme-fade min-h-screen bg-page text-ink">
-      <RecipeHeader recipe={recipe} />
+      <RecipeHeader model={model} />
 
       {/* Compact print-only recipe card (2 pages max). Screen users see the
           full article below; print rendering swaps to this stripped view. */}
-      <PrintCard recipe={recipe} />
+      <PrintCard model={model} />
 
       <article className="mx-auto max-w-3xl px-4 pb-16 print:hidden">
         {/* ── 1. Hero image. 4:3 on mobile, 16:9 on desktop. The video used to
@@ -141,25 +154,23 @@ export default function RecipeDetail({ recipe }) {
           )}
 
           {/* ── 3. At-a-glance facts. ── */}
-          {model.facts.length > 0 && (
-            <dl className="mt-5 grid grid-cols-2 gap-px overflow-hidden rounded-xl border border-line bg-line sm:grid-cols-3">
-              {model.facts.map((f) => (
-                <div key={f.key} className="bg-surface px-3 py-3">
-                  <dt className="text-[10px] font-bold uppercase tracking-wider text-faint">
-                    {f.label}
-                  </dt>
-                  <dd className={`mt-0.5 text-base font-bold ${f.highlight ? "text-brand" : "text-ink"}`}>
-                    {f.estimated ? "~" : ""}
-                    {f.value}
-                  </dd>
-                </div>
-              ))}
-            </dl>
-          )}
+          {model.facts.length > 0 && <FactsRow facts={model.facts} />}
 
           {/* ── 4. Safety. Allergens and food-safety warnings stay visible;
                  label/macro caveats moved into Nutrition details. ── */}
           <SafetyBand safety={model.safety} />
+
+          {/* Cookbook entries lead with what the result should taste like and,
+              where it exists, the ratio you must not improvise. */}
+          {model.callouts.map((c) => (
+            <div
+              key={c.id}
+              className={`mt-4 rounded-xl border px-4 py-3 ${tone(c.tone).chip}`}
+            >
+              <span className="text-[11px] font-bold uppercase tracking-wider">{c.label}</span>
+              <p className="mt-1 text-sm leading-relaxed text-ink">{c.body}</p>
+            </div>
+          ))}
         </header>
 
         {/* ── 5. Ingredients. ── */}
@@ -243,7 +254,12 @@ export default function RecipeDetail({ recipe }) {
 
             <div className="space-y-8">
               {model.method.phases.map((phase) => (
-                <MethodPhase key={phase.id} phase={phase} />
+                <MethodPhase
+                  key={phase.id}
+                  phase={phase}
+                  // A lone generic phase just repeats the "Method" heading above it.
+                  hideLabel={model.method.phases.length === 1 && phase.label === "Method"}
+                />
               ))}
             </div>
           </Section>
@@ -354,8 +370,14 @@ export default function RecipeDetail({ recipe }) {
 
         {/* ── 12. Promotional + navigational tail. ── */}
         {model.brands.length > 0 && <Brands brands={model.brands} />}
-        <LeftoversPanel recipe={recipe} />
-        <RelatedRecipes current={recipe} />
+        {isDinner ? (
+          <>
+            <LeftoversPanel recipe={recipe} />
+            <RelatedRecipes current={recipe} />
+          </>
+        ) : (
+          <CookbookTail item={item} />
+        )}
 
         {model.tags.length > 0 && (
           <div className="mt-10 flex flex-wrap gap-2">
@@ -384,7 +406,7 @@ export default function RecipeDetail({ recipe }) {
    PAGE CHROME
    ════════════════════════════════════════════ */
 
-function RecipeHeader({ recipe }) {
+function RecipeHeader({ model }) {
   const [theme, toggleTheme] = useTheme();
 
   return (
@@ -401,10 +423,10 @@ function RecipeHeader({ recipe }) {
               <span aria-hidden="true">/</span>
             </li>
             <li className="flex items-center gap-1.5">
-              <Link to="/dinners" className="hover:text-brand">Dinners</Link>
+              <Link to={model.breadcrumb.to} className="hover:text-brand">{model.breadcrumb.label}</Link>
               <span aria-hidden="true">/</span>
             </li>
-            <li className="min-w-0 truncate text-muted" aria-current="page">{recipe.title}</li>
+            <li className="min-w-0 truncate text-muted" aria-current="page">{model.title}</li>
           </ol>
         </nav>
 
@@ -429,7 +451,7 @@ function RecipeHeader({ recipe }) {
 
         <button
           type="button"
-          onClick={() => { track("recipe_print", { recipe: recipe.title, slug: recipe.slug }); window.print(); }}
+          onClick={() => { track("recipe_print", { recipe: model.title, slug: model.slug }); window.print(); }}
           className="flex-shrink-0 rounded-full border border-line px-3 py-1 text-xs font-semibold text-muted hover:text-brand cursor-pointer"
           title="Print this recipe"
         >
@@ -437,6 +459,36 @@ function RecipeHeader({ recipe }) {
         </button>
       </div>
     </div>
+  );
+}
+
+/**
+ * The at-a-glance facts grid. The hairline seams are a `gap-px` over a `bg-line`
+ * backdrop, so a partly-filled last row shows through as a block of seam colour
+ * — four facts in three columns left a tinted orphan cell. Pad the row out with
+ * blank surface tiles instead. The count differs per breakpoint (2 cols on
+ * mobile, 3 from `sm`), so render both sets and let the breakpoint pick.
+ */
+function FactsRow({ facts }) {
+  const pad = (cols) => Array.from({ length: (cols - (facts.length % cols)) % cols });
+  return (
+    <dl className="mt-5 grid grid-cols-2 gap-px overflow-hidden rounded-xl border border-line bg-line sm:grid-cols-3">
+      {facts.map((f) => (
+        <div key={f.key} className="bg-surface px-3 py-3">
+          <dt className="text-[10px] font-bold uppercase tracking-wider text-faint">{f.label}</dt>
+          <dd className={`mt-0.5 text-base font-bold ${f.highlight ? "text-brand" : "text-ink"}`}>
+            {f.estimated ? "~" : ""}
+            {f.value}
+          </dd>
+        </div>
+      ))}
+      {pad(2).map((_, i) => (
+        <div key={`p2-${i}`} className="bg-surface sm:hidden" aria-hidden="true" />
+      ))}
+      {pad(3).map((_, i) => (
+        <div key={`p3-${i}`} className="hidden bg-surface sm:block" aria-hidden="true" />
+      ))}
+    </dl>
   );
 }
 
@@ -642,17 +694,21 @@ function IngredientGroup({ group, scale, checked, onToggle, accent }) {
   );
 }
 
-function MethodPhase({ phase }) {
+function MethodPhase({ phase, hideLabel = false }) {
   const [active, setActive] = useState(0);
   const t = tone(phase.tone);
   const steps = phase.choices ? phase.choices[active].steps : phase.steps;
 
   return (
     <div>
-      <div className={`mb-4 border-l-4 pl-4 ${phase.tone === "adult" ? "border-adult" : phase.tone === "kid" ? "border-kid" : "border-brand"}`}>
-        <h3 className={`text-sm font-bold uppercase tracking-wider ${t.text}`}>{phase.label}</h3>
-        {phase.subtitle && <p className="mt-0.5 text-xs text-faint">{phase.subtitle}</p>}
-      </div>
+      {(!hideLabel || phase.subtitle) && (
+        <div className={`mb-4 border-l-4 pl-4 ${phase.tone === "adult" ? "border-adult" : phase.tone === "kid" ? "border-kid" : "border-brand"}`}>
+          {!hideLabel && (
+            <h3 className={`text-sm font-bold uppercase tracking-wider ${t.text}`}>{phase.label}</h3>
+          )}
+          {phase.subtitle && <p className="mt-0.5 text-xs text-faint">{phase.subtitle}</p>}
+        </div>
+      )}
 
       {phase.choices && phase.choices.length > 1 && (
         <div className="mb-4 flex flex-wrap gap-1.5">
@@ -693,6 +749,7 @@ function SplitPlates({ split, scale }) {
           protein={split.adult.protein}
           calories={split.adult.calories}
           items={split.adult.extras}
+          body={split.adult.body}
           note={split.adult.note}
           scale={scale}
         />
@@ -703,6 +760,7 @@ function SplitPlates({ split, scale }) {
           protein={split.kid.protein}
           calories={split.kid.calories}
           items={kid?.extraIngredients || []}
+          body={split.kid.body}
           note={split.kid.proteinSwap || split.kid.note}
           scale={scale}
           choices={split.kid.choices.length > 1 ? split.kid.choices : null}
@@ -714,7 +772,7 @@ function SplitPlates({ split, scale }) {
   );
 }
 
-function PlateCard({ label, side, toneKey, protein, calories, items, note, scale, choices, activeChoice, onChoice }) {
+function PlateCard({ label, side, toneKey, protein, calories, items, body, note, scale, choices, activeChoice, onChoice }) {
   const isAdult = toneKey === "adult";
   const visible = (items || []).filter((i) => !isGroupHeader(i));
 
@@ -742,7 +800,11 @@ function PlateCard({ label, side, toneKey, protein, calories, items, note, scale
             )}
           </div>
         )}
-        {protein == null && calories == null && (
+        {/* Cookbook entries describe the difference in prose instead of
+            publishing per-plate macros, so that text stands in for the macro
+            row rather than sitting under an apology for missing numbers. */}
+        {body && <p className="text-sm leading-relaxed text-ink">{body}</p>}
+        {!body && protein == null && calories == null && (
           <p className="text-xs italic text-faint">
             Macros not published for this plate — portion it to their appetite.
           </p>
@@ -786,8 +848,8 @@ function PlateCard({ label, side, toneKey, protein, calories, items, note, scale
 }
 
 function NutritionDetails({ nutrition, tags }) {
-  const { macros, estimated, honesty, costPerServing, dietTags, splitAxes, caveats } = nutrition;
-  if (!macros && !honesty && dietTags.length === 0) return null;
+  const { macros, batch, estimated, honesty, costPerServing, dietTags, splitAxes, caveats } = nutrition;
+  if (!macros && !batch && !honesty && dietTags.length === 0) return null;
 
   return (
     <Disclosure
@@ -795,6 +857,16 @@ function NutritionDetails({ nutrition, tags }) {
       hint={estimated ? "Estimated" : macros ? "Verified" : undefined}
     >
       <div className="space-y-3 text-sm text-muted">
+        {/* The glance row shows per-serving; this is the whole batch, labelled
+            so the two numbers can't be mistaken for each other. */}
+        {batch && (
+          <p className="text-ink">
+            <span className="font-semibold">Whole batch:</span> {batch.protein}g protein ·{" "}
+            {batch.calories} cal
+            {batch.servings != null && <span className="text-muted"> across {batch.servings} servings</span>}
+            {batch.servingSize && <span className="text-muted"> ({batch.servingSize} each)</span>}
+          </p>
+        )}
         {macros && (
           <p className="text-ink">
             <span className="font-semibold">
@@ -1038,42 +1110,113 @@ function scaleIngredientText(text, scale) {
 // (with section headers) + numbered steps. Skips whyMostFail, whyThisWorks,
 // executionRules, troubleshooting, brands, mealPrep, splitCook adult/kid
 // branches — those live only on the screen article.
-function PrintCard({ recipe }) {
-  const isSectionHeader = (s) => typeof s === "string" && s.startsWith("---");
-  const stepText = (step) => typeof step === "string" ? step : (step?.text || "");
-
+// Driven off the model rather than the raw record so it covers cookbook
+// entries, and so split dinners that keep their steps only under splitCook
+// lanes still print a method instead of an empty list.
+function PrintCard({ model }) {
   return (
     <div className="mx-auto hidden max-w-3xl px-6 py-4 print:block">
       <div className="mb-3 flex items-baseline justify-between border-b border-neutral-300 pb-2">
-        <h2 className="text-2xl font-black text-black">{recipe.title}</h2>
-        <span className="text-[10px] text-neutral-600">thesplitplate.com/recipes/{recipe.slug}</span>
+        <h2 className="text-2xl font-black text-black">{model.title}</h2>
+        <span className="text-[10px] text-neutral-600">thesplitplate.com{model.path}</span>
       </div>
-      <p className="mb-3 text-sm text-neutral-800">
-        <strong>{recipe.time}</strong> · <strong>{recipe.servings} servings</strong> · <strong>{recipe.protein}g protein</strong> · <strong>{recipe.calories} cal</strong> per serving
-      </p>
-      {recipe.splitCook && (
+      {model.facts.length > 0 && (
+        <p className="mb-3 text-sm text-neutral-800">
+          {model.facts.map((f, i) => (
+            <span key={f.key}>
+              {i > 0 && " · "}
+              <strong>{f.estimated ? "~" : ""}{f.value}</strong> {f.label.toLowerCase()}
+            </span>
+          ))}
+        </p>
+      )}
+      {model.split && (
         <p className="mb-3 text-xs italic text-neutral-700">
-          Split: {recipe.splitCook.adult?.label || "Adult"} · {recipe.splitCook.kid?.label || "Kid"}
+          Split: {model.split.adult.label} · {model.split.kid.label}
         </p>
       )}
 
       <h2 className="mt-4 mb-1 border-b border-neutral-300 pb-0.5 text-xs font-black uppercase tracking-wider text-black">Ingredients</h2>
-      <ul className="space-y-0.5 text-[11px] leading-snug text-neutral-900">
-        {(recipe.ingredients || []).map((item, i) => {
-          if (isSectionHeader(item)) {
-            return <li key={i} className="mt-1.5 list-none text-[10px] font-bold uppercase text-neutral-600">{item.replace(/-/g, "").trim()}</li>;
-          }
-          return <li key={i} className="-indent-3 pl-3">• {ingredientText(item)}</li>;
-        })}
-      </ul>
+      {model.ingredientGroups.map((g) => (
+        <div key={g.id}>
+          <p className="mt-1.5 text-[10px] font-bold uppercase text-neutral-600">{g.title}</p>
+          <ul className="space-y-0.5 text-[11px] leading-snug text-neutral-900">
+            {g.items.map((it, i) => (
+              <li key={i} className="-indent-3 pl-3">• {ingredientText(it)}</li>
+            ))}
+          </ul>
+        </div>
+      ))}
 
       <h2 className="mt-4 mb-1 border-b border-neutral-300 pb-0.5 text-xs font-black uppercase tracking-wider text-black">Method</h2>
       <ol className="ml-4 list-decimal space-y-1 text-[11px] leading-snug text-neutral-900">
-        {(recipe.steps || []).map((step, i) => (
-          <li key={i}>{stepText(step)}</li>
+        {flattenSteps(model).map((s, i) => (
+          <li key={i}>
+            {s.lane && <em className="text-neutral-600">{s.lane}: </em>}
+            {s.text}
+          </li>
         ))}
       </ol>
     </div>
+  );
+}
+
+/**
+ * Cookbook counterpart to RelatedRecipes: dinners that mention this item,
+ * plus a way back to the index. Same contextual scoring the old page used.
+ */
+function CookbookTail({ item }) {
+  const related = useMemo(() => {
+    const keywords = (item.title || "").toLowerCase().split(/\s+/);
+    return liveRecipes
+      .filter((r) => r.pillar === "Protein Meals")
+      .map((r) => {
+        const text = `${r.title} ${r.description || ""} ${(r.tags || []).join(" ")}`.toLowerCase();
+        return { ...r, score: keywords.reduce((s, kw) => s + (text.includes(kw) ? 1 : 0), 0) };
+      })
+      .sort((a, b) => b.score - a.score)
+      .slice(0, 2);
+  }, [item]);
+
+  return (
+    <Section id="related" title="Try it with">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+        {related.map((r) => (
+          <Link
+            key={r.id}
+            to={`/recipes/${r.slug}`}
+            className="block overflow-hidden rounded-xl border border-line bg-surface hover:border-brand/40"
+          >
+            <img
+              {...cardImage(r.image)}
+              alt={r.title}
+              width="640"
+              height="360"
+              className="h-36 w-full object-cover"
+              loading="lazy"
+            />
+            <div className="p-3">
+              <h3 className="text-sm font-bold leading-tight text-ink">{r.title}</h3>
+              <div className="mt-2 flex gap-2 text-[10px] text-faint">
+                <span className="font-bold text-brand">{r.protein}g protein</span>
+                <span>{r.calories} cal</span>
+                <span>{r.time}</span>
+              </div>
+            </div>
+          </Link>
+        ))}
+        <Link
+          to="/cookbook"
+          className="flex items-center justify-center rounded-xl border border-line bg-surface hover:border-brand/40"
+        >
+          <div className="p-6 text-center">
+            <span className="mb-2 block text-2xl font-black text-brand">&larr;</span>
+            <h3 className="text-sm font-bold text-ink">All cookbook recipes</h3>
+            <p className="mt-1 text-[10px] text-faint">Sauces, breakfasts, and more</p>
+          </div>
+        </Link>
+      </div>
+    </Section>
   );
 }
 
