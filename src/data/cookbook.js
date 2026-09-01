@@ -9460,7 +9460,7 @@ export const powerups = [
     id: "cookies-and-cream-iced-proffee",
     title: "Cookies & Cream Iced Proffee",
     tagline: "Proffee Episode 6 — one HighKey sandwich cookie does double duty as the chocolate-syrup rim AND the crumb topping, with black cocoa carrying the dark-cookie flavor from inside the concentrate. 140 cal / 22g protein per glass, 5-minute build.",
-    heroImage: "/images/cookies-and-cream-iced-proffee/hero-cookies-and-cream-iced-proffee.webp",
+    heroImage: "/images/cookies-and-cream-iced-proffee/hero-cookies-and-cream-iced-proffee-polished.webp",
     // Source frame is 9:16. The chocolate-and-crumb rim — the thing that makes
     // this read as cookies and cream — sits about a quarter of the way down, so
     // a centred object-cover crop into 4:3 / 16:9 throws it away entirely.
@@ -9469,10 +9469,10 @@ export const powerups = [
       heroBadge: "Proffee · Episode 6",
       heroAccent: "amber",
       hook: "5-minute cookies-and-cream iced protein coffee. One sandwich cookie rims the glass and tops the drink; black cocoa does the rest from inside. 140 cal / 22g protein.",
-      heroPhoto: "/images/cookies-and-cream-iced-proffee/hero-cookies-and-cream-iced-proffee.webp",
-      ingredientsPhoto: "/images/cookies-and-cream-iced-proffee/context-highkey-sandwich-cookie.webp",
-      methodPhoto: "/images/cookies-and-cream-iced-proffee/step-07-froth-smooth.webp",
-      servingPhoto: "/images/cookies-and-cream-iced-proffee/hero-cookies-and-cream-iced-proffee.webp",
+      heroPhoto: "/images/cookies-and-cream-iced-proffee/hero-cookies-and-cream-iced-proffee-polished.webp",
+      ingredientsPhoto: "/images/cookies-and-cream-iced-proffee/context-highkey-sandwich-cookie-polished.webp",
+      methodPhoto: "/images/cookies-and-cream-iced-proffee/step-07-froth-smooth-polished.webp",
+      servingPhoto: "/images/cookies-and-cream-iced-proffee/hero-cookies-and-cream-iced-proffee-polished.webp",
       ingredientGroups: [
         {
           accent: "amber",
@@ -9502,7 +9502,7 @@ export const powerups = [
       ],
       ingredientCardPhotos: [
         {
-          src: "/images/cookies-and-cream-iced-proffee/step-02-break-cookie.webp",
+          src: "/images/cookies-and-cream-iced-proffee/step-02-break-cookie-polished.webp",
           position: "50% 45%",
           zoom: 1.15,
           layout: "side",
@@ -9510,7 +9510,7 @@ export const powerups = [
       ],
       methodCardPhotos: [
         {
-          src: "/images/cookies-and-cream-iced-proffee/step-05-black-cocoa.webp",
+          src: "/images/cookies-and-cream-iced-proffee/step-05-black-cocoa-polished.webp",
           position: "50% 45%",
           zoom: 1.1,
           layout: "side",
@@ -9534,21 +9534,21 @@ export const powerups = [
       ],
       engagementQuestion: "Cookies and cream: basic, or undefeated?",
     },
-    prepImage: "/images/cookies-and-cream-iced-proffee/step-07-froth-smooth.webp",
+    prepImage: "/images/cookies-and-cream-iced-proffee/step-07-froth-smooth-polished.webp",
     socialImages: [
-      "/images/cookies-and-cream-iced-proffee/context-highkey-sandwich-cookie.webp",
-      "/images/cookies-and-cream-iced-proffee/step-01-chocolate-syrup-rim.webp",
-      "/images/cookies-and-cream-iced-proffee/step-02-break-cookie.webp",
-      "/images/cookies-and-cream-iced-proffee/step-03-cookie-crumb-rim.webp",
-      "/images/cookies-and-cream-iced-proffee/step-04-instant-coffee.webp",
-      "/images/cookies-and-cream-iced-proffee/step-05-black-cocoa.webp",
-      "/images/cookies-and-cream-iced-proffee/step-06-whey-isolate.webp",
-      "/images/cookies-and-cream-iced-proffee/step-07-froth-smooth.webp",
-      "/images/cookies-and-cream-iced-proffee/step-08-add-ice.webp",
-      "/images/cookies-and-cream-iced-proffee/step-09-ultra-filtered-milk.webp",
-      "/images/cookies-and-cream-iced-proffee/step-10-cookie-crumb-topping.webp",
-      "/images/cookies-and-cream-iced-proffee/step-11-final-stir.webp",
-      "/images/cookies-and-cream-iced-proffee/hero-cookies-and-cream-iced-proffee.webp",
+      "/images/cookies-and-cream-iced-proffee/context-highkey-sandwich-cookie-polished.webp",
+      "/images/cookies-and-cream-iced-proffee/step-01-chocolate-syrup-rim-polished.webp",
+      "/images/cookies-and-cream-iced-proffee/step-02-break-cookie-polished.webp",
+      "/images/cookies-and-cream-iced-proffee/step-03-cookie-crumb-rim-polished.webp",
+      "/images/cookies-and-cream-iced-proffee/step-04-instant-coffee-polished.webp",
+      "/images/cookies-and-cream-iced-proffee/step-05-black-cocoa-polished.webp",
+      "/images/cookies-and-cream-iced-proffee/step-06-whey-isolate-polished.webp",
+      "/images/cookies-and-cream-iced-proffee/step-07-froth-smooth-polished.webp",
+      "/images/cookies-and-cream-iced-proffee/step-08-add-ice-polished.webp",
+      "/images/cookies-and-cream-iced-proffee/step-09-ultra-filtered-milk-polished.webp",
+      "/images/cookies-and-cream-iced-proffee/step-10-cookie-crumb-topping-polished.webp",
+      "/images/cookies-and-cream-iced-proffee/step-11-final-stir-polished.webp",
+      "/images/cookies-and-cream-iced-proffee/hero-cookies-and-cream-iced-proffee-polished.webp",
     ],
     socialHashtags: [
       "#CookiesAndCream",
@@ -9600,10 +9600,10 @@ export const powerups = [
       "Reserved cookie crumbs from the cookie above (no second cookie needed)",
     ],
     steps: [
-      { text: "BUILD THE COOKIE RIM: Spread 1 tsp sugar-free chocolate syrup on a small plate. Break the sandwich cookie into the syrup and RESERVE a spoonful of loose crumbs for the topping before you rim — once the crumbs are in the syrup they're too wet to sit on top of the drink. Press and rotate the glass rim through the remaining crumbs.", image: "/images/cookies-and-cream-iced-proffee/step-03-cookie-crumb-rim.webp" },
-      { text: "BUILD THE CONCENTRATE (into the rimmed glass): 1 tbsp instant coffee + 1 tsp black cocoa + 1/2 serving unflavored whey isolate + 2 tsp monk fruit sweetener. Blend the whey into the concentrate FIRST — this is the Proffee-series spine that prevents clumps.", image: "/images/cookies-and-cream-iced-proffee/step-06-whey-isolate.webp" },
-      { text: "ADD HOT WATER + FROTH: 2 tbsp hot (not boiling) water. Submerge the frother head BEFORE turning it on for splatter control. Froth until the concentrate is completely smooth — black cocoa clumps harder than plain coffee, so give it a few extra seconds. Add the third tbsp only if it needs help moving.", image: "/images/cookies-and-cream-iced-proffee/step-07-froth-smooth.webp" },
-      { text: "FINISH + SERVE: Fill the glass with ice, pour in 1/2 cup Fairlife fat-free ultra-filtered milk, spoon the reserved cookie crumbs over the top, stir once, and serve immediately.", image: "/images/cookies-and-cream-iced-proffee/step-10-cookie-crumb-topping.webp" },
+      { text: "BUILD THE COOKIE RIM: Spread 1 tsp sugar-free chocolate syrup on a small plate. Break the sandwich cookie into the syrup and RESERVE a spoonful of loose crumbs for the topping before you rim — once the crumbs are in the syrup they're too wet to sit on top of the drink. Press and rotate the glass rim through the remaining crumbs.", image: "/images/cookies-and-cream-iced-proffee/step-03-cookie-crumb-rim-polished.webp" },
+      { text: "BUILD THE CONCENTRATE (into the rimmed glass): 1 tbsp instant coffee + 1 tsp black cocoa + 1/2 serving unflavored whey isolate + 2 tsp monk fruit sweetener. Blend the whey into the concentrate FIRST — this is the Proffee-series spine that prevents clumps.", image: "/images/cookies-and-cream-iced-proffee/step-06-whey-isolate-polished.webp" },
+      { text: "ADD HOT WATER + FROTH: 2 tbsp hot (not boiling) water. Submerge the frother head BEFORE turning it on for splatter control. Froth until the concentrate is completely smooth — black cocoa clumps harder than plain coffee, so give it a few extra seconds. Add the third tbsp only if it needs help moving.", image: "/images/cookies-and-cream-iced-proffee/step-07-froth-smooth-polished.webp" },
+      { text: "FINISH + SERVE: Fill the glass with ice, pour in 1/2 cup Fairlife fat-free ultra-filtered milk, spoon the reserved cookie crumbs over the top, stir once, and serve immediately.", image: "/images/cookies-and-cream-iced-proffee/step-10-cookie-crumb-topping-polished.webp" },
     ],
     executionRules: [
       "RESERVE the topping crumbs BEFORE rimming. Once the cookie is in the chocolate syrup the crumbs are wet and won't sit on the drink. This is the one ordering mistake that costs you the topping.",
@@ -9635,7 +9635,7 @@ export const powerups = [
       { insteadOf: "Monk fruit sweetener", use: "Allulose, stevia, or 2 tsp sugar (+32 cal)", note: "Black cocoa is unsweetened and needs something to push against. Don't leave the sweetener out entirely." },
     ],
     brands: [
-      { name: "HighKey", item: "Original Sandwich Cookies (1 cookie per glass — rim + topping)", why: "The cookies-and-cream identity on a single-cookie budget. Low-cal sandwich cookie with an ALMOND FLOUR base — verify the tree-nut allergen on the current package before serving. Any equivalent low-cal sandwich cookie substitutes. Not sponsored.", image: "/images/cookies-and-cream-iced-proffee/context-highkey-sandwich-cookie.webp", url: "https://www.highkey.com/" },
+      { name: "HighKey", item: "Original Sandwich Cookies (1 cookie per glass — rim + topping)", why: "The cookies-and-cream identity on a single-cookie budget. Low-cal sandwich cookie with an ALMOND FLOUR base — verify the tree-nut allergen on the current package before serving. Any equivalent low-cal sandwich cookie substitutes. Not sponsored.", image: "/images/cookies-and-cream-iced-proffee/context-highkey-sandwich-cookie-polished.webp", url: "https://www.highkey.com/" },
       { name: "Black Cocoa Powder", item: "Heavily Dutched black cocoa (1 tsp per glass)", why: "The ingredient that makes one cookie enough. Black cocoa is the same dark, low-acid cocoa used in sandwich-cookie wafers — it supplies the cookie-shell flavor from inside the drink instead of from more cookies. King Arthur and Rodelle both sell it. Not sponsored.", url: "https://www.kingarthurbaking.com/shop/items/black-cocoa-8-oz" },
       { name: "Sugar-Free Chocolate Syrup", item: "Torani Sugar-Free Chocolate OR Skinny Syrups Sugar-Free Chocolate (1 tsp per glass)", why: "Rim tack. Only a teaspoon is used, spread on a plate rather than poured into the glass. Torani is thicker and grips the crumbs better. Not sponsored.", url: "https://www.torani.com/products/sugar-free-chocolate-syrup" },
       { name: "Fairlife", item: "Fat-Free Ultra-Filtered Milk (1/2 cup per glass)", why: "Series-standard high-protein milk in the fat-free grade — same as Ep 1-5. 8g protein per 1/2 cup vs 4g in regular skim milk. Not sponsored.", image: "/images/brands/fairlife-milk.png", url: "https://fairlife.com/ultra-filtered-milk/fat-free-skim-milk/" },
