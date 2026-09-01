@@ -109,7 +109,13 @@ export default function RecipeDetail({ recipe, item, group }) {
       <article className="mx-auto max-w-3xl px-4 pb-16 print:hidden">
         {/* ── 1. Hero image. 4:3 on mobile, 16:9 on desktop. The video used to
                live here and ate the whole first screen; it now sits at the
-               bottom under "Watch the full cook". ── */}
+               bottom under "Watch the full cook".
+
+               Source photos are much taller than the frame, so `object-cover`
+               throws away most of the height and a centred crop can land on the
+               side dish instead of the protein. `imagePosition` lets a recipe
+               anchor the crop on its own subject; leave it unset for the
+               centred default. ── */}
         {model.hero.src && (
           <img
             {...cardImage(model.hero.src, { sizes: "(min-width: 768px) 768px, 100vw" })}
@@ -117,6 +123,7 @@ export default function RecipeDetail({ recipe, item, group }) {
             width="1280"
             height="960"
             className="mt-4 aspect-[4/3] w-full rounded-2xl border border-line object-cover sm:aspect-video"
+            style={model.hero.position ? { objectPosition: model.hero.position } : undefined}
             fetchPriority="high"
           />
         )}

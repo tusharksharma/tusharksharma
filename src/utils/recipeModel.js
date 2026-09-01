@@ -380,7 +380,7 @@ export function buildRecipeModel(recipe) {
     makeThisWhen: recipe.makeThisWhen || "",
     overview: roleIsLabel ? "" : role,
     badges,
-    hero: { src: recipe.image, alt: recipe.title },
+    hero: { src: recipe.image, alt: recipe.title, position: recipe.imagePosition || null },
     facts,
     safety,
     ingredientGroups,
@@ -590,7 +590,7 @@ export function buildCookbookModel(item, group) {
     makeThisWhen: item.useThisWhen || "",
     overview: "",
     badges,
-    hero: { src: item.heroImage, alt: item.title },
+    hero: { src: item.heroImage, alt: item.title, position: item.imagePosition || null },
     facts,
     safety,
     // The 143 `--- HEADER ---` lines across these entries used to render as
