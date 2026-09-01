@@ -12,10 +12,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Episode 2 of Can I Make a Recipe Go Viral? A puffed savory cottage-cheese-egg batter baked in a 12-inch cast-iron skillet, then topped with a full…" />
     <title>Meatball Parm Puff — The Split Plate</title>
+    <!-- Theme pre-flight. Runs before first paint so a light-mode reader never
+         sees a black flash while React boots. Mirrors src/hooks/useTheme.js:
+         stored choice wins, otherwise OS preference. Scoped to recipe routes
+         because only RecipeDetail + Nav are on semantic tokens so far. -->
+    <script>
+      try {
+        if (location.pathname.indexOf('/recipes/') === 0) {
+          var t = localStorage.getItem('tsp-theme');
+          if (t !== 'light' && t !== 'dark') {
+            t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+          }
+          document.documentElement.setAttribute('data-theme', t);
+        }
+      } catch (e) { /* private mode / no storage — fall through to dark */ }
+    </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-10YP1BFG19"></script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-10YP1BFG19');</script>
-    <script type="module" crossorigin src="/assets/index-DWDTLHO1.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-D1ATzH8D.css">
+    <script type="module" crossorigin src="/assets/index-DhIothp2.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CowDybxQ.css">
       <link rel="canonical" href="https://thesplitplate.com/recipes/meatball-parm-puff" />
     <meta property="og:title" content="Meatball Parm Puff — The Split Plate" />
     <meta property="og:description" content="Episode 2 of Can I Make a Recipe Go Viral? A puffed savory cottage-cheese-egg batter baked in a 12-inch cast-iron skillet, then topped with a full…" />

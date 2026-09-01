@@ -1,6 +1,139 @@
 @import "tailwindcss";
 
 /*
+ * ─────────────────────────────────────────────────────────────
+ * SEMANTIC THEME TOKENS
+ * ─────────────────────────────────────────────────────────────
+ * Every surface on the recipe page reads from a named token, never from a
+ * hardcoded neutral. That's what makes light mode a *theme* instead of a
+ * color inversion: `--surface` means "the card behind the ingredients",
+ * so light mode can make it white-on-cream while dark mode makes it a
+ * lifted charcoal, and neither has to know about the other.
+ *
+ * Dark is the default (`:root`). Light is opt-in via `[data-theme="light"]`
+ * on <html>, set by src/hooks/useTheme.js and pre-applied by the inline
+ * script in index.html so there's no flash before React hydrates.
+ *
+ * Scope note: only RecipeDetail and Nav consume these today. The rest of the
+ * site is still on hardcoded neutrals, so useTheme only applies data-theme
+ * while a recipe page is mounted. Rolling the tokens out site-wide is the
+ * follow-on to this refactor.
+ */
+:root {
+  /* Dark — the original palette, with pure-black surfaces lifted off #0a0a0a
+     so cards read as cards instead of holes. */
+  --page: #101013;
+  --surface: #191a1e;
+  --surface-2: #212227;
+  --line: #303138;
+  --text: #f2f2f0;
+  --muted: #a3a3ad;
+  --faint: #74747f;
+
+  --brand: #f59e0b;
+  --brand-ink: #101013;
+
+  --adult: #e2825f;
+  --adult-soft: rgba(226, 130, 95, 0.13);
+  --adult-line: rgba(226, 130, 95, 0.34);
+  --kid: #a9c19b;
+  --kid-soft: rgba(169, 193, 155, 0.12);
+  --kid-line: rgba(169, 193, 155, 0.3);
+
+  --warn: #fbbf24;
+  --warn-soft: rgba(251, 191, 36, 0.11);
+  --warn-line: rgba(251, 191, 36, 0.3);
+  --danger: #f87171;
+  --danger-soft: rgba(248, 113, 113, 0.11);
+  --danger-line: rgba(248, 113, 113, 0.32);
+  --ok: #4ade80;
+
+  --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="light"] {
+  /* Light — warm cookbook. Cream page, white cards, charcoal text,
+     terracotta/sage for the adult+kid split, amber-brown for warnings. */
+  --page: #faf5ec;
+  --surface: #ffffff;
+  --surface-2: #f4ecdf;
+  --line: #e3d8c6;
+  --text: #2c2823;
+  --muted: #6d6357;
+  --faint: #978c7c;
+
+  --brand: #b45309;
+  --brand-ink: #ffffff;
+
+  --adult: #bf553a;
+  --adult-soft: #f8e6df;
+  --adult-line: #e8c3b6;
+  --kid: #5f7f55;
+  --kid-soft: #e8efe1;
+  --kid-line: #c6d6bb;
+
+  --warn: #97590a;
+  --warn-soft: #fdf1da;
+  --warn-line: #ecd5a8;
+  --danger: #a8291c;
+  --danger-soft: #fbe7e4;
+  --danger-line: #eec6bf;
+  --ok: #3d7a37;
+
+  --shadow-card: 0 1px 2px rgba(59, 47, 32, 0.06), 0 1px 8px rgba(59, 47, 32, 0.04);
+}
+
+/*
+ * Expose the tokens as Tailwind color utilities. `@theme inline` keeps the
+ * var() reference in the generated CSS rather than baking the value in, which
+ * is what lets `bg-surface` re-resolve when data-theme flips.
+ */
+@theme inline {
+  --color-page: var(--page);
+  --color-surface: var(--surface);
+  --color-surface2: var(--surface-2);
+  --color-line: var(--line);
+  --color-ink: var(--text);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+
+  --color-brand: var(--brand);
+  --color-brandink: var(--brand-ink);
+
+  --color-adult: var(--adult);
+  --color-adultsoft: var(--adult-soft);
+  --color-adultline: var(--adult-line);
+  --color-kid: var(--kid);
+  --color-kidsoft: var(--kid-soft);
+  --color-kidline: var(--kid-line);
+
+  --color-warn: var(--warn);
+  --color-warnsoft: var(--warn-soft);
+  --color-warnline: var(--warn-line);
+  --color-danger: var(--danger);
+  --color-dangersoft: var(--danger-soft);
+  --color-dangerline: var(--danger-line);
+  --color-ok: var(--ok);
+}
+
+/* Theme swap should feel like a dimmer, not a page reload. Only the themed
+   surfaces animate — everything else keeps whatever transition it declares. */
+[data-theme] .theme-fade,
+[data-theme] .theme-fade * {
+  transition:
+    background-color 240ms ease,
+    border-color 240ms ease,
+    color 240ms ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-theme] .theme-fade,
+  [data-theme] .theme-fade * {
+    transition: none;
+  }
+}
+
+/*
  * Print styles. Only active when the user hits browser Print.
  * - Force white background + black text so ink use is sane on paper.
  * - Avoid mid-section page breaks on ingredient/step blocks so a step doesn't
@@ -17,6 +150,19 @@
     background: #fff !important;
     color: #111 !important;
     font-size: 11pt;
+  }
+  /* Force the light token set on paper regardless of the on-screen theme,
+     so a dark-mode reader doesn't print a black page. */
+  :root, [data-theme] {
+    --page: #fff;
+    --surface: #fff;
+    --surface-2: #fff;
+    --line: #ddd;
+    --text: #111;
+    --muted: #444;
+    --faint: #666;
+    --brand: #a16207;
+    --shadow-card: none;
   }
   /* Neutral dark surfaces → white; borders soften to gray */
   .bg-neutral-950, .bg-neutral-900, .bg-neutral-800,

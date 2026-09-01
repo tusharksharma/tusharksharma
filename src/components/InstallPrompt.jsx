@@ -35,16 +35,16 @@ export default function InstallPrompt() {
   if (!show) return null;
 
   return (
-    <div className="fixed bottom-4 left-4 right-4 z-30 max-w-md mx-auto bg-neutral-900 border border-amber-500/40 rounded-xl p-4 shadow-2xl flex items-center gap-3">
+    <div className="theme-fade fixed bottom-4 left-4 right-4 z-30 max-w-md mx-auto bg-surface border border-brand/40 rounded-xl p-4 shadow-2xl flex items-center gap-3 print:hidden">
       <img src="/images/favicon.png" alt="" className="w-10 h-10 flex-shrink-0" />
       <div className="flex-1 min-w-0">
-        <p className="text-white text-sm font-bold">Add to Home Screen</p>
-        <p className="text-neutral-400 text-xs">Quick access to recipes + grocery lists</p>
+        <p className="text-ink text-sm font-bold">Add to Home Screen</p>
+        <p className="text-muted text-xs">Quick access to recipes + grocery lists</p>
       </div>
-      <button onClick={handleInstall} className="px-3 py-1.5 bg-amber-500 text-black text-xs font-bold rounded-lg hover:bg-amber-400 transition-colors cursor-pointer flex-shrink-0">
+      <button onClick={handleInstall} className="px-3 py-1.5 bg-brand text-brandink text-xs font-bold rounded-lg hover:opacity-90 transition-opacity cursor-pointer flex-shrink-0">
         Install
       </button>
-      <button onClick={handleDismiss} className="text-neutral-600 hover:text-neutral-400 text-lg cursor-pointer flex-shrink-0">&times;</button>
+      <button onClick={handleDismiss} aria-label="Dismiss" className="text-faint hover:text-ink text-lg cursor-pointer flex-shrink-0">&times;</button>
     </div>
   );
 }

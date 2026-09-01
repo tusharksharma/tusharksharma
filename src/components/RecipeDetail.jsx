@@ -1,688 +1,917 @@
 import { useState, useMemo, useEffect } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import track from "../hooks/useTrack";
+import useTheme from "../hooks/useTheme";
 import { liveRecipes } from "../data/recipes";
 import cardImage from "../utils/cardImage";
+import { balanceColumns, buildRecipeModel, flattenSteps, ingredientText, isGroupHeader, parseGroups } from "../utils/recipeModel";
+import CookingMode from "./CookingMode";
 import LeftoversPanel from "./LeftoversPanel";
 
-const pillarColors = {
-  "Protein Meals": "text-amber-500 bg-amber-500/10 border-amber-500/30",
-  "Sauce Systems": "text-red-500 bg-red-500/10 border-red-500/30",
-  "Cooking Techniques": "text-blue-400 bg-blue-400/10 border-blue-400/30",
+/*
+ * Recipe page.
+ *
+ * Ordered around the dinner decision, not around the archive: hero image,
+ * what it is, the six facts that decide whether you cook it, what could hurt
+ * you, what to buy, how to cook it, how the two plates differ — then the
+ * expertise material, then the video, then the promotional cards.
+ *
+ * Section order and shape come from buildRecipeModel(), so a split recipe and
+ * a standard recipe render the same page with the same headings; a recipe
+ * missing a section just drops it.
+ */
+
+/* Tone → token classes. Every surface reads from a semantic token so light
+   mode is a theme rather than an inversion (see src/index.css). */
+const TONE = {
+  shared: { text: "text-brand", chip: "bg-brand/12 text-brand border-brand/30", dot: "bg-brand text-brandink" },
+  adult: { text: "text-adult", chip: "bg-adultsoft text-adult border-adultline", dot: "bg-adult text-white" },
+  kid: { text: "text-kid", chip: "bg-kidsoft text-kid border-kidline", dot: "bg-kid text-white" },
+  danger: { text: "text-danger", chip: "bg-dangersoft text-danger border-dangerline", dot: "bg-danger text-white" },
+  ok: { text: "text-ok", chip: "bg-ok/12 text-ok border-ok/30", dot: "bg-ok text-white" },
+  brand: { text: "text-brand", chip: "bg-brand/12 text-brand border-brand/30", dot: "bg-brand text-brandink" },
+  muted: { text: "text-muted", chip: "bg-surface2 text-muted border-line", dot: "bg-surface2 text-muted" },
+  split: { text: "text-ink", chip: "bg-gradient-to-r from-adultsoft to-kidsoft text-ink border-line", dot: "" },
 };
+const tone = (t) => TONE[t] || TONE.muted;
 
 export default function RecipeDetail({ recipe }) {
   const [searchParams] = useSearchParams();
-  const hasSplit = !!recipe.splitCook;
-  // Default to split mode when splitCook is present — these recipes typically
-  // don't carry top-level `steps`, so rendering the standard view would crash
-  // on `recipe.steps.map`. Users can still toggle to Adult Mode, but the split
-  // fallback below keeps SplitCookView as the render for split recipes without
-  // top-level steps.
-  const [mode, setMode] = useState(hasSplit ? "split" : "adult");
+  const model = useMemo(() => buildRecipeModel(recipe), [recipe]);
+
   const [adults, setAdults] = useState(() => { const v = searchParams.get("adults"); return v !== null ? Number(v) || 1 : 2; });
   const [kids, setKids] = useState(() => { const v = searchParams.get("kids"); return v !== null ? Number(v) : 2; });
   const [leftovers, setLeftovers] = useState(() => searchParams.get("leftovers") === "1");
-  const isSplit = hasSplit && mode === "split";
-  // Split recipes without top-level steps must render SplitCookView regardless
-  // of mode — the standard view expects recipe.steps to exist.
-  const forceSplitView = hasSplit && !Array.isArray(recipe.steps);
+  const [checked, setChecked] = useState(() => new Set());
+  const [cooking, setCooking] = useState(false);
+  const [kidChoice, setKidChoice] = useState(0);
+
   const baseServings = recipe.servings || 4;
   // fixedBatch recipes (e.g. one-bake meal preps that yield N containers) do
   // NOT scale by household size or leftovers — the batch quantity IS the
   // recipe. Scaling would ask the shopper to buy 2x tomatoes but the recipe
-  // still says "one 45-min bake". Freeze scale at 1 and show the yield
-  // instead of the household total.
+  // still says "one 45-min bake".
   const isFixedBatch = !!recipe.meta?.fixedBatch;
   const totalServings = isFixedBatch ? baseServings : adults + kids;
   const scale = isFixedBatch ? 1 : (totalServings / baseServings) * (leftovers ? 2 : 1);
-  const videoUrl = recipe.video || recipe.videoSrc;
-  const ppc = ((recipe.protein * 4 / recipe.calories) * 100).toFixed(0);
+
+  const cookSteps = useMemo(() => flattenSteps(model), [model]);
+
+  // Shared + adult groups, then the selected kid lane, balanced across two
+  // desktop columns as one list.
+  const ingredientColumns = useMemo(() => {
+    const choice = model.kidIngredientChoices[kidChoice];
+    const kidGroups = choice
+      ? parseGroups(choice.extraIngredients, {
+          fallbackTitle: model.split?.kid.label || "Kid plate",
+          tone: "kid",
+          idPrefix: choice.id,
+        })
+      : [];
+    return balanceColumns([...model.ingredientGroups, ...kidGroups], 2);
+  }, [model, kidChoice]);
+
+  const flatIngredients = useMemo(() => {
+    const all = model.ingredientGroups.flatMap((g) => g.items);
+    for (const choice of model.kidIngredientChoices) all.push(...choice.extraIngredients);
+    return all.map((i) => scaleIngredientText(ingredientText(i), scale));
+  }, [model, scale]);
+
+  const toggleCheck = (key) =>
+    setChecked((prev) => {
+      const next = new Set(prev);
+      if (next.has(key)) next.delete(key);
+      else next.add(key);
+      return next;
+    });
 
   return (
-    <div className="min-h-screen bg-neutral-950 text-neutral-100">
-      {/* Back nav — hidden in print */}
-      <div className="border-b border-neutral-800 sticky top-0 z-10 bg-neutral-950/90 backdrop-blur-sm print:hidden">
-        <div className="max-w-3xl mx-auto px-4 py-4 flex items-center justify-between gap-3">
-          <Link
-            to="/"
-            className="flex items-center gap-2 text-neutral-500 hover:text-amber-400 transition-colors text-sm font-semibold"
-          >
-            <img src="/images/favicon.png" alt="" className="w-5 h-5" />
-            The Split Plate
-          </Link>
-          <div className="flex items-center gap-2">
-            <button
-              type="button"
-              onClick={() => { track("recipe_print", { recipe: recipe.title, slug: recipe.slug }); window.print(); }}
-              className="text-xs font-semibold text-neutral-400 hover:text-amber-400 transition-colors border border-neutral-700 hover:border-amber-500/40 rounded-full px-3 py-1 cursor-pointer"
-              title="Print this recipe"
-            >
-              Print
-            </button>
-            <span
-              className={`text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full border ${
-                pillarColors[recipe.pillar] || ""
-              }`}
-            >
-              {recipe.pillar}
-            </span>
-          </div>
-        </div>
-      </div>
+    <div className="theme-fade min-h-screen bg-page text-ink">
+      <RecipeHeader recipe={recipe} />
 
       {/* Compact print-only recipe card (2 pages max). Screen users see the
           full article below; print rendering swaps to this stripped view. */}
       <PrintCard recipe={recipe} />
 
-      <article className="max-w-3xl mx-auto px-4 py-8 print:hidden">
-        {/* Hero video (falls back to hero image if no video) */}
-        {videoUrl ? (
-          <div className="rounded-2xl overflow-hidden bg-black aspect-[9/16] sm:aspect-video max-h-[520px] mx-auto">
-            <video
-              src={videoUrl}
-              poster={recipe.image}
-              controls
-              playsInline
-              preload="metadata"
-              className="w-full h-full object-contain"
-            />
-          </div>
-        ) : (
+      <article className="mx-auto max-w-3xl px-4 pb-16 print:hidden">
+        {/* ── 1. Hero image. 4:3 on mobile, 16:9 on desktop. The video used to
+               live here and ate the whole first screen; it now sits at the
+               bottom under "Watch the full cook". ── */}
+        {model.hero.src && (
           <img
-            src={recipe.image}
-            alt={recipe.title}
-            className="w-full h-64 sm:h-80 object-cover rounded-2xl"
+            {...cardImage(model.hero.src, { sizes: "(min-width: 768px) 768px, 100vw" })}
+            alt={model.hero.alt}
+            width="1280"
+            height="960"
+            className="mt-4 aspect-[4/3] w-full rounded-2xl border border-line object-cover sm:aspect-video"
+            fetchPriority="high"
           />
         )}
 
-        {/* Title block */}
-        <div className="mt-6">
-          <div className="flex items-center gap-2 flex-wrap">
-            <span className="text-xs font-bold uppercase tracking-wider text-amber-500">
-              {recipe.category}
-            </span>
-            {hasSplit && (
-              <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-gradient-to-r from-red-900/50 to-green-900/50 border border-neutral-700 text-neutral-300">
-                Split Cook Method&trade;
-              </span>
-            )}
-          </div>
-          {recipe.role && (
-            <span className="text-xs font-semibold text-neutral-500 uppercase tracking-wider">
-              {recipe.role}
-            </span>
+        {/* ── 2. The decision block. ── */}
+        <header className="mt-6">
+          {model.badges.length > 0 && (
+            <div className="flex flex-wrap items-center gap-1.5">
+              {model.badges.map((b, i) => (
+                <span
+                  key={i}
+                  className={`rounded-full border px-2.5 py-1 text-[11px] font-bold uppercase tracking-wide ${tone(b.tone).chip}`}
+                >
+                  {b.label}
+                </span>
+              ))}
+            </div>
           )}
-          <h1 className="text-3xl font-black text-white mt-1">
-            {recipe.title}
+
+          <h1 className="mt-3 text-3xl font-black leading-tight text-ink sm:text-4xl">
+            {model.title}
           </h1>
-          {recipe.makeThisWhen && (
-            <div className="mt-3 bg-amber-500/10 border border-amber-500/20 rounded-lg px-4 py-3">
-              <span className="text-amber-500 text-xs font-bold uppercase tracking-wider">Make This When</span>
-              <p className="text-amber-100/90 text-sm mt-1 leading-relaxed">{recipe.makeThisWhen}</p>
-            </div>
+
+          {model.hook && (
+            <p className="mt-3 text-base leading-relaxed text-muted">{model.hook}</p>
           )}
-          {recipe.hook && (
-            <p className="text-neutral-300 mt-3 text-sm leading-relaxed">
-              {recipe.hook}
-            </p>
-          )}
-          <p className="text-neutral-500 mt-2 leading-relaxed text-xs">
-            {recipe.description}
-          </p>
-          {recipe.testedCorrection && (
-            <div className="mt-3 bg-red-500/10 border border-red-500/30 rounded-lg px-4 py-3">
-              <span className="text-red-400 text-xs font-bold uppercase tracking-wider">Tested Correction</span>
-              <p className="text-red-100/90 text-sm mt-1 leading-relaxed">
-                <span className="text-red-300 font-semibold">{recipe.testedCorrection.what}</span>{" "}
-                {recipe.testedCorrection.fix}
-              </p>
+
+          {model.makeThisWhen && (
+            <div className="mt-4 rounded-xl border border-brand/30 bg-brand/10 px-4 py-3">
+              <span className="text-[11px] font-bold uppercase tracking-wider text-brand">
+                Make this when
+              </span>
+              <p className="mt-1 text-sm leading-relaxed text-ink">{model.makeThisWhen}</p>
             </div>
           )}
 
-          {/* Family size picker \u2014 hidden for fixed-batch recipes where the
-              batch quantity IS the recipe (no household scaling). */}
-          {isFixedBatch ? (
-            <div className="flex flex-wrap items-center gap-x-3 gap-y-2 mt-5 bg-neutral-900/50 border border-neutral-800 rounded-xl px-4 py-3">
-              <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-amber-500/20 text-amber-400 border border-amber-500/30">Batch cook</span>
-              <span className="text-neutral-300 text-xs">Yields {baseServings} servings \u2014 quantities below are the full batch.</span>
-            </div>
-          ) : (
-            <div className="flex flex-wrap items-center gap-x-4 gap-y-3 mt-5 bg-neutral-900/50 border border-neutral-800 rounded-xl px-4 py-3">
-              <div className="flex items-center gap-2" role="group" aria-label="Adult servings">
-                <span className="text-neutral-500 text-[10px]">Adults</span>
-                <div className="flex gap-1">
-                  {[1, 2, 3, 4].map((n) => (
-                    <button key={n} onClick={() => setAdults(n)}
-                      aria-pressed={adults === n}
-                      aria-label={`${n} adult${n === 1 ? "" : "s"}`}
-                      className={`w-7 h-7 rounded text-xs font-bold cursor-pointer transition-all ${adults === n ? "bg-red-500 text-white" : "bg-neutral-800 text-neutral-500 hover:bg-neutral-700"}`}
-                    >{n}</button>
-                  ))}
+          {/* ── 3. At-a-glance facts. ── */}
+          {model.facts.length > 0 && (
+            <dl className="mt-5 grid grid-cols-2 gap-px overflow-hidden rounded-xl border border-line bg-line sm:grid-cols-3">
+              {model.facts.map((f) => (
+                <div key={f.key} className="bg-surface px-3 py-3">
+                  <dt className="text-[10px] font-bold uppercase tracking-wider text-faint">
+                    {f.label}
+                  </dt>
+                  <dd className={`mt-0.5 text-base font-bold ${f.highlight ? "text-brand" : "text-ink"}`}>
+                    {f.estimated ? "~" : ""}
+                    {f.value}
+                  </dd>
                 </div>
+              ))}
+            </dl>
+          )}
+
+          {/* ── 4. Safety. Allergens and food-safety warnings stay visible;
+                 label/macro caveats moved into Nutrition details. ── */}
+          <SafetyBand safety={model.safety} />
+        </header>
+
+        {/* ── 5. Ingredients. ── */}
+        <Section id="ingredients" title="Ingredients">
+          <ServingsControl
+            isFixedBatch={isFixedBatch}
+            baseServings={baseServings}
+            adults={adults}
+            kids={kids}
+            leftovers={leftovers}
+            scale={scale}
+            setAdults={setAdults}
+            setKids={setKids}
+            setLeftovers={setLeftovers}
+          />
+
+          {/* When the kid lane offers a choice, pick it before the list renders
+              so the kid groups sit in the same two columns as everything else
+              instead of starting a second block below them. */}
+          {model.kidIngredientChoices.length > 1 && (
+            <div className="mt-4 flex flex-wrap gap-1.5">
+              {model.kidIngredientChoices.map((c, i) => (
+                <button
+                  key={c.id}
+                  type="button"
+                  onClick={() => setKidChoice(i)}
+                  aria-pressed={kidChoice === i}
+                  className={`rounded-full px-3 py-1.5 text-xs font-bold cursor-pointer ${kidChoice === i ? "bg-kid text-white" : "border border-line bg-surface text-muted hover:text-ink"}`}
+                >
+                  {c.label}
+                </button>
+              ))}
+            </div>
+          )}
+
+          {/* Two columns on desktop like the printed page, one on mobile. A
+              recipe with a single group keeps the full width rather than
+              leaving half the row empty. */}
+          <div className={`mt-4 grid gap-x-5 ${ingredientColumns.length > 1 ? "sm:grid-cols-2" : ""}`}>
+            {ingredientColumns.map((col, i) => (
+              <div key={i}>
+                {col.map((g) => (
+                  <IngredientGroup
+                    key={g.id}
+                    group={g}
+                    scale={scale}
+                    checked={checked}
+                    onToggle={toggleCheck}
+                  />
+                ))}
               </div>
-              <div className="flex items-center gap-2" role="group" aria-label="Kid servings">
-                <span className="text-neutral-500 text-[10px]">Kids</span>
-                <div className="flex gap-1">
-                  {[0, 1, 2, 3].map((n) => (
-                    <button key={n} onClick={() => setKids(n)}
-                      aria-pressed={kids === n}
-                      aria-label={`${n} kid${n === 1 ? "" : "s"}`}
-                      className={`w-7 h-7 rounded text-xs font-bold cursor-pointer transition-all ${kids === n ? "bg-green-500 text-white" : "bg-neutral-800 text-neutral-500 hover:bg-neutral-700"}`}
-                    >{n}</button>
-                  ))}
-                </div>
+            ))}
+          </div>
+        </Section>
+
+        {/* ── 6. Method. ── */}
+        {cookSteps.length > 0 && (
+          <Section id="method" title="Method">
+            <button
+              type="button"
+              onClick={() => { track("cooking_mode_start", { recipe: recipe.title, slug: recipe.slug }); setCooking(true); }}
+              className="mb-5 flex w-full items-center justify-center gap-2 rounded-xl bg-brand py-3.5 text-base font-black text-brandink cursor-pointer sm:w-auto sm:px-6"
+            >
+              Start cooking
+              <span className="text-sm font-semibold opacity-70">
+                · {cookSteps.length} steps, one at a time
+              </span>
+            </button>
+
+            {model.method.splitPoint && (
+              <div className="mb-5 rounded-xl border border-line bg-surface2 px-4 py-3">
+                <span className="text-[11px] font-bold uppercase tracking-wider text-faint">
+                  Split point
+                </span>
+                <p className="mt-1 text-sm leading-relaxed text-ink">{model.method.splitPoint}</p>
+                {model.method.splitRatio && (
+                  <p className="mt-1 text-xs font-bold text-muted">{model.method.splitRatio}</p>
+                )}
               </div>
-              <button
-                onClick={() => setLeftovers(!leftovers)}
-                aria-pressed={leftovers}
-                className={`flex items-center gap-1 px-2 py-1 rounded text-[10px] font-bold cursor-pointer transition-all ${leftovers ? "bg-amber-500 text-black" : "bg-neutral-800 text-neutral-500 hover:bg-neutral-700"}`}
-              >
-                <span className={`w-2.5 h-2.5 rounded-sm border ${leftovers ? "bg-black border-black" : "border-neutral-600"} flex items-center justify-center text-[7px]`}>{leftovers ? "\u2713" : ""}</span>
-                Leftovers
-              </button>
-              {scale !== 1 && (
-                <span className="text-amber-400 text-[10px] font-bold ml-auto">Ingredients scaled {leftovers ? "(2x for leftovers)" : ""}</span>
-              )}
-            </div>
-          )}
-
-          {/* Stats */}
-          <div className="flex flex-wrap gap-3 mt-4">
-            <Stat label="Time" value={recipe.time} />
-            <Stat label="Servings" value={totalServings} />
-            <Stat label="Cal/serving" value={recipe.meta?.macros?.calories || recipe.calories} estimated={recipe.meta?.macros?.estimated} />
-            <Stat label="Protein/serving" value={`${recipe.meta?.macros?.protein || recipe.protein}g`} highlight estimated={recipe.meta?.macros?.estimated} />
-            <Stat label="PPC" value={`${ppc}%`} highlight estimated={recipe.meta?.macros?.estimated} />
-          </div>
-
-          {/* Macro confidence pill */}
-          {recipe.meta?.macros && (
-            <div className="mt-3">
-              {recipe.meta.macros.estimated ? (
-                <div className="inline-flex flex-col gap-1 px-3 py-1.5 rounded-lg bg-amber-500/15 border border-amber-500/30 text-amber-300 max-w-xl">
-                  <div className="flex items-center gap-2">
-                    <span className="text-[11px] font-bold uppercase tracking-wider">~ Estimated macros</span>
-                    <span className="text-amber-300/70 text-[10px]">— calculated from ingredient averages, not measured. Numbers prefixed with "~" throughout.</span>
-                  </div>
-                  <span className="text-amber-300/60 text-[10px] leading-relaxed">
-                    Stated calories may differ from strict 4P + 9F + 4C by ~10–70 cal due to label-rounded macros, fiber and sugar-alcohol net-carb accounting, and brand-specific label methodology (e.g., Carbe Diem). Fat and carb totals are best-effort estimates.
-                  </span>
-                </div>
-              ) : (
-                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-emerald-500/15 border border-emerald-500/30 text-emerald-300">
-                  <span className="text-[11px] font-bold uppercase tracking-wider">✓ Verified macros</span>
-                  <span className="text-emerald-300/70 text-[10px]">— calculated per-ingredient at the listed brands and quantities.</span>
-                </div>
-              )}
-            </div>
-          )}
-
-          {/* Metadata section */}
-          {recipe.meta && (
-            <div className="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-[10px] text-neutral-500 bg-neutral-900/50 border border-neutral-800 rounded-lg px-4 py-3">
-              {recipe.meta.macros && (
-                <span>
-                  <span className="text-neutral-600">Macros:</span>{" "}
-                  <span className="text-neutral-300">{recipe.meta.macros.protein}P / {recipe.meta.macros.fat}F / {recipe.meta.macros.carbs}C</span>
-                  {recipe.meta.macros.netCarbs != null && <span className="text-neutral-400"> ({recipe.meta.macros.netCarbs}g net)</span>}
-                  {recipe.meta.macros.estimated && <span className="text-neutral-600 italic"> est.</span>}
-                </span>
-              )}
-              {recipe.meta.costPerServing && (
-                <span><span className="text-neutral-600">Cost:</span> <span className="text-neutral-300">{recipe.meta.costPerServing}/serving</span></span>
-              )}
-              {recipe.meta.splitAxes?.length > 0 && (
-                <span><span className="text-neutral-600">Split:</span> {recipe.meta.splitAxes.map((a) => <span key={a} className="text-amber-400/70 mr-1">{a}</span>)}</span>
-              )}
-              {recipe.meta.allergens?.length > 0 && (
-                <span><span className="text-neutral-600">Contains:</span> <span className="text-red-400/70">{recipe.meta.allergens.join(", ")}</span></span>
-              )}
-              {recipe.meta.warnings?.length > 0 && (
-                <span>{recipe.meta.warnings.map((w) => <span key={w} className="bg-amber-500/10 text-amber-400/80 px-1.5 py-0.5 rounded mr-1">{w.replace(/-/g, " ")}</span>)}</span>
-              )}
-              {recipe.meta.dietTags?.length > 0 && (
-                <span>{recipe.meta.dietTags.map((t) => <span key={t} className="bg-neutral-800 text-neutral-400 px-1.5 py-0.5 rounded mr-1">{t}</span>)}</span>
-              )}
-              {recipe.meta.substitutionNotes?.length > 0 && (
-                <div className="w-full mt-1 pt-1 border-t border-neutral-800">
-                  <span className="text-neutral-600">Swaps: </span>
-                  {recipe.meta.substitutionNotes.map((s, i) => <span key={i} className="text-neutral-400">{s}{i < recipe.meta.substitutionNotes.length - 1 ? " · " : ""}</span>)}
-                </div>
-              )}
-            </div>
-          )}
-        </div>
-
-        {/* Mode Toggle */}
-        {hasSplit && (
-          <div className="mt-8 bg-neutral-900 border border-neutral-800 rounded-xl p-4">
-            <div className="flex items-center justify-between mb-3">
-              <h2 className="text-sm font-bold uppercase tracking-wider text-white">
-                Mode
-              </h2>
-              {recipe.splitCook.splitRatio && (
-                <span className="text-[10px] text-neutral-500 uppercase tracking-wider">
-                  Split: {recipe.splitCook.splitRatio}
-                </span>
-              )}
-            </div>
-            <div className="flex gap-2">
-              <button
-                onClick={() => setMode("adult")}
-                className={`flex-1 py-2.5 rounded-lg text-sm font-bold transition-all cursor-pointer ${
-                  mode === "adult"
-                    ? "bg-amber-500 text-black"
-                    : "bg-neutral-800 text-neutral-400 hover:bg-neutral-700"
-                }`}
-              >
-                Adult Mode
-              </button>
-              <button
-                onClick={() => setMode("split")}
-                className={`flex-1 py-2.5 rounded-lg text-sm font-bold transition-all cursor-pointer ${
-                  mode === "split"
-                    ? "bg-gradient-to-r from-red-600 to-green-600 text-white"
-                    : "bg-neutral-800 text-neutral-400 hover:bg-neutral-700"
-                }`}
-              >
-                Kids + Adult Mode
-              </button>
-            </div>
-          </div>
-        )}
-
-        {/* Why Most Versions Fail + Why This Works */}
-        {(recipe.whyMostFail || recipe.whyThisWorks || recipe.whyItWorks) && (
-          <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {recipe.whyMostFail && (
-              <section className="bg-red-950/20 border border-red-900/40 rounded-xl p-5">
-                <h2 className="text-sm font-bold uppercase tracking-wider text-red-400 mb-3">
-                  Why Most Versions Fail
-                </h2>
-                <ul className="space-y-2">
-                  {recipe.whyMostFail.map((r, i) => (
-                    <li key={i} className="text-sm text-neutral-300 flex gap-2">
-                      <span className="text-red-400 flex-shrink-0">&#10005;</span>
-                      {r}
-                    </li>
-                  ))}
-                </ul>
-              </section>
             )}
-            {recipe.whyThisWorks ? (
-              <section className="bg-green-950/20 border border-green-900/40 rounded-xl p-5">
-                <h2 className="text-sm font-bold uppercase tracking-wider text-green-400 mb-3">
-                  Why This Version Works
-                </h2>
-                <ul className="space-y-2">
-                  {recipe.whyThisWorks.map((r, i) => (
-                    <li key={i} className="text-sm text-neutral-300 flex gap-2">
-                      <span className="text-green-400 flex-shrink-0">&#10003;</span>
-                      {r}
-                    </li>
+
+            <div className="space-y-8">
+              {model.method.phases.map((phase) => (
+                <MethodPhase key={phase.id} phase={phase} />
+              ))}
+            </div>
+          </Section>
+        )}
+
+        {/* ── 7. The signature: Adult Plate | Kid Plate. ── */}
+        {model.split && <SplitPlates split={model.split} scale={scale} />}
+
+        {/* ── 8. Three keys to success. The short version stays visible; the
+               full diagnostic material is one tap down. ── */}
+        {model.keys.length > 0 && (
+          <Section id="keys" title="Three keys to success">
+            <ol className="space-y-3">
+              {model.keys.map((k, i) => (
+                <li key={i} className="flex gap-3 rounded-xl border border-line bg-surface px-4 py-3">
+                  <span className="mt-0.5 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-brand text-xs font-black text-brandink">
+                    {i + 1}
+                  </span>
+                  <span className="text-sm leading-relaxed text-ink">{k}</span>
+                </li>
+              ))}
+            </ol>
+          </Section>
+        )}
+
+        {/* ── 9. Everything a cook only wants when something is going wrong. ── */}
+        {(model.deepDive.length > 0 || model.troubleshooting.length > 0 || model.overview) && (
+          <Section id="details" title="Go deeper">
+            <div className="space-y-2">
+              {model.troubleshooting.length > 0 && (
+                <Disclosure title="Troubleshooting" hint={`${model.troubleshooting.length} fixes`}>
+                  <div className="space-y-3">
+                    {model.troubleshooting.map((t, i) => (
+                      <div key={i}>
+                        <p className="text-sm font-bold text-ink">{t.problem}</p>
+                        <p className="mt-0.5 text-sm leading-relaxed text-muted">{t.fix}</p>
+                      </div>
+                    ))}
+                  </div>
+                </Disclosure>
+              )}
+              {model.deepDive.map((d) => (
+                <Disclosure key={d.id} title={d.title} hint={`${d.items.length}`}>
+                  <ul className="space-y-2">
+                    {d.items.map((item, i) => (
+                      <li key={i} className="flex gap-2 text-sm leading-relaxed text-muted">
+                        <span className={`flex-shrink-0 ${tone(d.tone).text}`}>&bull;</span>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </Disclosure>
+              ))}
+              {model.overview && (
+                <Disclosure title="About this recipe">
+                  <p className="text-sm leading-relaxed text-muted">{model.overview}</p>
+                </Disclosure>
+              )}
+              {model.description && (
+                <Disclosure title="Full description">
+                  <p className="text-sm leading-relaxed text-muted">{model.description}</p>
+                </Disclosure>
+              )}
+            </div>
+          </Section>
+        )}
+
+        {/* ── 10. Storage + nutrition. ── */}
+        <Section id="storage" title="Storage and nutrition">
+          <div className="space-y-2">
+            {model.storage && (
+              <Disclosure title="Storage and reheating" defaultOpen hint={model.storage.lasts}>
+                <div className="space-y-1.5 text-sm text-muted">
+                  <p><span className="font-semibold text-ink">Storage:</span> {model.storage.storage}</p>
+                  <p><span className="font-semibold text-ink">Reheat:</span> {model.storage.reheat}</p>
+                  <p><span className="font-semibold text-ink">Lasts:</span> {model.storage.lasts}</p>
+                </div>
+                {model.storage.chainTo && (
+                  <Link
+                    to={model.storage.chainTo.href || `/recipes/${model.storage.chainTo.slug}`}
+                    className="mt-3 flex items-center gap-3 rounded-lg border border-brand/30 bg-brand/10 px-4 py-3 hover:bg-brand/15"
+                  >
+                    <span className="flex-shrink-0 text-[10px] font-black uppercase tracking-wider text-brand">Meal chain</span>
+                    <span className="text-xs text-ink">
+                      <span className="font-bold text-brand">Reinvent as {model.storage.chainTo.title}</span>
+                      {model.storage.chainTo.note && <span className="ml-2 text-muted">— {model.storage.chainTo.note}</span>}
+                    </span>
+                    <span className="ml-auto text-brand">&rarr;</span>
+                  </Link>
+                )}
+              </Disclosure>
+            )}
+            <NutritionDetails nutrition={model.nutrition} tags={model.tags} />
+            {model.nutrition.substitutions.length > 0 && (
+              <Disclosure title="Swaps" hint={`${model.nutrition.substitutions.length}`}>
+                <ul className="space-y-1.5">
+                  {model.nutrition.substitutions.map((s, i) => (
+                    <li key={i} className="text-sm leading-relaxed text-muted">— {s}</li>
                   ))}
                 </ul>
-              </section>
-            ) : recipe.whyItWorks ? (
-              <section className="bg-neutral-900 border border-neutral-800 rounded-xl p-5">
-                <h2 className="text-sm font-bold uppercase tracking-wider text-amber-500 mb-2">
-                  Why It Works
-                </h2>
-                <p className="text-neutral-300 text-sm leading-relaxed">{recipe.whyItWorks}</p>
-              </section>
-            ) : null}
+              </Disclosure>
+            )}
           </div>
-        )}
+        </Section>
 
-        {/* ═══ SPLIT COOK VIEW ═══ */}
-        {isSplit || forceSplitView ? (
-          <SplitCookView recipe={recipe} scale={scale} />
-        ) : (
-          /* ═══ STANDARD VIEW ═══ */
-          <>
-            <section className="mt-8">
-              <h2 className="text-xl font-bold text-white mb-3">Ingredients</h2>
-              <IngredientList items={recipe.ingredients} scale={scale} />
-            </section>
-            <section className="mt-8">
-              <h2 className="text-xl font-bold text-white mb-3">Method</h2>
-              <StepList steps={recipe.steps.map((s) => (typeof s === "string" ? { text: s } : s))} startAt={1} />
-            </section>
-          </>
-        )}
+        {/* ── 11. Video, last, behind a poster. ── */}
+        {model.video && <VideoBlock src={model.video} poster={model.hero.src} title={model.title} />}
 
-        {/* Execution Rules */}
-        {recipe.executionRules && recipe.executionRules.length > 0 && (
-          <section className="mt-8 bg-red-950/30 border border-red-900/50 rounded-xl p-5">
-            <h2 className="text-sm font-bold uppercase tracking-wider text-red-400 mb-3">
-              Execution Rules (Non-Negotiable)
-            </h2>
-            <ul className="space-y-2">
-              {recipe.executionRules.map((r, i) => (
-                <li key={i} className="text-sm text-neutral-300 flex gap-2">
-                  <span className="text-red-400 flex-shrink-0">&#10005;</span>
-                  {r}
-                </li>
-              ))}
-            </ul>
-          </section>
-        )}
-
-        {/* Legacy mistakes (for recipes without executionRules) */}
-        {!recipe.executionRules && recipe.mistakes && recipe.mistakes.length > 0 && (
-          <section className="mt-8 bg-red-950/30 border border-red-900/50 rounded-xl p-5">
-            <h2 className="text-sm font-bold uppercase tracking-wider text-red-400 mb-3">
-              Mistakes to Avoid
-            </h2>
-            <ul className="space-y-2">
-              {recipe.mistakes.map((m, i) => (
-                <li key={i} className="text-sm text-neutral-300 flex gap-2">
-                  <span className="text-red-400 flex-shrink-0">&#10005;</span>
-                  {m}
-                </li>
-              ))}
-            </ul>
-          </section>
-        )}
-
-        {/* Troubleshooting — If This Goes Wrong */}
-        {recipe.troubleshooting && recipe.troubleshooting.length > 0 && (
-          <section className="mt-8 bg-amber-950/20 border border-amber-900/40 rounded-xl p-5">
-            <h2 className="text-sm font-bold uppercase tracking-wider text-amber-400 mb-3">
-              If This Goes Wrong
-            </h2>
-            <div className="space-y-3">
-              {recipe.troubleshooting.map((t, i) => (
-                <div key={i} className="text-sm">
-                  <p className="text-white font-semibold">{t.problem}</p>
-                  <p className="text-neutral-400 mt-0.5">{t.fix}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-        )}
-
-        {/* Variations (only in adult mode) */}
-        {recipe.variations && recipe.variations.length > 0 && !isSplit && (
-          <section className="mt-8 bg-neutral-900 border border-neutral-800 rounded-xl p-5">
-            <h2 className="text-sm font-bold uppercase tracking-wider text-blue-400 mb-3">
-              Variations
-            </h2>
-            <ul className="space-y-2">
-              {recipe.variations.map((v, i) => (
-                <li key={i} className="text-sm text-neutral-300 flex gap-2">
-                  <span className="text-blue-400 flex-shrink-0">&#10148;</span>
-                  {v}
-                </li>
-              ))}
-            </ul>
-          </section>
-        )}
-
-        {/* Brands */}
-        {recipe.brands && recipe.brands.length > 0 && (
-          <section className="mt-8">
-            <h2 className="text-sm font-bold uppercase tracking-wider text-neutral-400 mb-3">
-              Brands I Use
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-              {recipe.brands.map((b, i) => {
-                const inner = (
-                  <div className="bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden hover:border-amber-500/30 transition-colors">
-                    {b.image && (
-                      <div className="bg-white p-3 flex items-center justify-center h-32">
-                        <img src={b.image} alt={b.name} className="max-h-full max-w-full object-contain" loading="lazy" />
-                      </div>
-                    )}
-                    <div className="p-4">
-                      <div className="text-amber-400 font-black text-sm">{b.name}</div>
-                      <div className="text-white text-xs font-semibold mt-0.5">{b.item}</div>
-                      <div className="text-neutral-500 text-xs mt-1.5 leading-relaxed">{b.why}</div>
-                    </div>
-                  </div>
-                );
-                if (!b.url) return <div key={i}>{inner}</div>;
-                const isInternal = b.url.startsWith("/");
-                return isInternal ? (
-                  <Link key={i} to={b.url} onClick={() => track("brand_click", { brand: b.name, item: b.item, url: b.url })} className="block">
-                    {inner}
-                  </Link>
-                ) : (
-                  <a key={i} href={b.url} target="_blank" rel="noopener noreferrer" onClick={() => track("brand_click", { brand: b.name, item: b.item, url: b.url })} className="block">
-                    {inner}
-                  </a>
-                );
-              })}
-            </div>
-          </section>
-        )}
-
-        {/* Leftovers Panel — cross-recipe pairs that share brands/ingredients */}
+        {/* ── 12. Promotional + navigational tail. ── */}
+        {model.brands.length > 0 && <Brands brands={model.brands} />}
         <LeftoversPanel recipe={recipe} />
-
-        {/* Related Recipes */}
         <RelatedRecipes current={recipe} />
 
-        {/* Meal Prep */}
-        {recipe.mealPrep && (
-          <section className="mt-8 bg-neutral-900 border border-neutral-800 rounded-xl p-5">
-            <h2 className="text-sm font-bold uppercase tracking-wider text-amber-500 mb-3">
-              Meal Prep
-            </h2>
-            <div className="space-y-2 text-sm text-neutral-300">
-              <p><span className="text-neutral-500 font-semibold">Storage:</span> {recipe.mealPrep.storage}</p>
-              <p><span className="text-neutral-500 font-semibold">Reheat:</span> {recipe.mealPrep.reheat}</p>
-              <p><span className="text-neutral-500 font-semibold">Lasts:</span> {recipe.mealPrep.lasts}</p>
-            </div>
-            {recipe.mealPrep.chainTo && (
-              <Link
-                to={recipe.mealPrep.chainTo.href || `/recipes/${recipe.mealPrep.chainTo.slug}`}
-                className="mt-4 flex items-center gap-3 px-4 py-3 bg-amber-500/10 border border-amber-500/30 rounded-lg hover:bg-amber-500/15 transition-colors group"
-              >
-                <span className="text-[10px] font-black uppercase tracking-wider text-amber-500 flex-shrink-0">Meal Chain</span>
-                <span className="text-xs text-neutral-200">
-                  <span className="font-bold text-amber-400 group-hover:underline">Reinvent as {recipe.mealPrep.chainTo.title}</span>
-                  {recipe.mealPrep.chainTo.note && <span className="text-neutral-500 ml-2">— {recipe.mealPrep.chainTo.note}</span>}
-                </span>
-                <span className="text-amber-500 ml-auto">&rarr;</span>
-              </Link>
-            )}
-          </section>
+        {model.tags.length > 0 && (
+          <div className="mt-10 flex flex-wrap gap-2">
+            {model.tags.map((t) => (
+              <span key={t} className="rounded-full bg-surface2 px-2.5 py-1 text-xs text-faint">
+                #{t}
+              </span>
+            ))}
+          </div>
         )}
-
-        {/* Tags */}
-        <div className="flex gap-2 flex-wrap mt-8 mb-8">
-          {recipe.tags.map((tag) => (
-            <span
-              key={tag}
-              className="text-xs bg-neutral-800 text-neutral-500 px-2.5 py-1 rounded-full"
-            >
-              #{tag}
-            </span>
-          ))}
-        </div>
       </article>
+
+      {cooking && (
+        <CookingMode
+          steps={cookSteps}
+          ingredients={flatIngredients}
+          title={model.title}
+          onClose={() => setCooking(false)}
+        />
+      )}
     </div>
   );
 }
 
 /* ════════════════════════════════════════════
-   SPLIT COOK VIEW
+   PAGE CHROME
    ════════════════════════════════════════════ */
 
-function SplitCookView({ recipe, scale = 1 }) {
-  const sc = recipe.splitCook;
-  const [kidOption, setKidOption] = useState(0);
-  const hasKidOptions = sc.kid.options && sc.kid.options.length > 0;
+function RecipeHeader({ recipe }) {
+  const [theme, toggleTheme] = useTheme();
 
   return (
-    <>
-      {/* Shared Ingredients */}
-      <section className="mt-8">
-        <h2 className="text-xl font-bold text-white mb-3">
-          Shared Ingredients
-        </h2>
-        <IngredientList items={sc.sharedIngredients} scale={scale} />
-      </section>
+    <div className="theme-fade sticky top-0 z-10 border-b border-line bg-page/90 backdrop-blur-sm print:hidden">
+      <div className="mx-auto flex max-w-3xl items-center gap-2 px-4 py-3">
+        {/* Breadcrumb — the current recipe is the last crumb, unlinked. */}
+        <nav aria-label="Breadcrumb" className="min-w-0 flex-1">
+          <ol className="flex items-center gap-1.5 text-xs font-semibold text-faint">
+            <li className="flex items-center gap-1.5">
+              <Link to="/" className="flex items-center gap-1.5 hover:text-brand">
+                <img src="/images/favicon.png" alt="" className="h-4 w-4" />
+                <span className="hidden sm:inline">The Split Plate</span>
+              </Link>
+              <span aria-hidden="true">/</span>
+            </li>
+            <li className="flex items-center gap-1.5">
+              <Link to="/dinners" className="hover:text-brand">Dinners</Link>
+              <span aria-hidden="true">/</span>
+            </li>
+            <li className="min-w-0 truncate text-muted" aria-current="page">{recipe.title}</li>
+          </ol>
+        </nav>
 
-      {/* Adult + Kid ingredients side by side */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
-        <section>
-          <div className="flex items-center justify-between mb-2">
-            <h3 className="text-sm font-bold uppercase tracking-wider text-red-400">
-              {sc.adult.label}
-            </h3>
-          </div>
-          <IngredientList items={sc.adult.extraIngredients} accent="red" scale={scale} />
-          <div className="flex gap-3 mt-2">
-            <MiniStat label="Protein" value={`${sc.adult.protein}g`} />
-            <MiniStat label="Cal" value={sc.adult.calories} />
-          </div>
-        </section>
+        <button
+          type="button"
+          onClick={toggleTheme}
+          aria-label={theme === "light" ? "Switch to dark theme" : "Switch to light theme"}
+          title={theme === "light" ? "Dark theme" : "Light theme"}
+          className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full border border-line text-muted hover:text-brand cursor-pointer"
+        >
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            {theme === "light" ? (
+              <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" />
+            ) : (
+              <>
+                <circle cx="12" cy="12" r="4" />
+                <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
+              </>
+            )}
+          </svg>
+        </button>
 
-        <section>
-          <div className="flex items-center justify-between mb-2">
-            <h3 className="text-sm font-bold uppercase tracking-wider text-green-400">
-              {sc.kid.label}
-            </h3>
-          </div>
-          {hasKidOptions ? (
-            <>
-              {/* Kid option tabs */}
-              <div className="flex gap-1 mb-2">
-                {sc.kid.options.map((opt, i) => (
-                  <button
-                    key={i}
-                    onClick={() => setKidOption(i)}
-                    className={`flex-1 px-2 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
-                      kidOption === i
-                        ? "bg-green-600 text-white"
-                        : "bg-neutral-800 text-neutral-500 hover:bg-neutral-700"
-                    }`}
-                  >
-                    {opt.label}
-                  </button>
-                ))}
-              </div>
-              <IngredientList
-                items={sc.kid.options[kidOption].extraIngredients}
-                accent="green"
-                scale={scale}
-              />
-            </>
-          ) : (
-            <IngredientList items={sc.kid.extraIngredients || []} accent="green" scale={scale} />
-          )}
-          {sc.kid.protein && (
-            <div className="flex gap-3 mt-2">
-              <MiniStat label="Protein" value={`${sc.kid.protein}g`} />
-              <MiniStat label="Cal" value={sc.kid.calories} />
-            </div>
-          )}
-        </section>
+        <button
+          type="button"
+          onClick={() => { track("recipe_print", { recipe: recipe.title, slug: recipe.slug }); window.print(); }}
+          className="flex-shrink-0 rounded-full border border-line px-3 py-1 text-xs font-semibold text-muted hover:text-brand cursor-pointer"
+          title="Print this recipe"
+        >
+          Print
+        </button>
       </div>
+    </div>
+  );
+}
 
-      {/* Protein Swap callout */}
-      {sc.kid.proteinSwap && (
-        <div className="mt-4 bg-green-950/30 border border-green-900/50 rounded-lg p-3">
-          <span className="text-xs font-bold uppercase tracking-wider text-green-400">
-            Protein Swap
-          </span>
-          <p className="text-sm text-neutral-300 mt-1">{sc.kid.proteinSwap}</p>
-        </div>
-      )}
+function Section({ id, title, children }) {
+  return (
+    <section id={id} className="mt-10 scroll-mt-20">
+      <h2 className="mb-4 text-xl font-black text-ink">{title}</h2>
+      {children}
+    </section>
+  );
+}
 
-      {/* ── PHASE 1: Shared Base ── */}
-      <section className="mt-10">
-        <PhaseHeader
-          label="Phase 1 — Shared Base"
-          color="amber"
-          subtitle="Cook once — works for everyone. No spice here, no complexity."
-        />
-        <StepList steps={sc.sharedSteps} startAt={1} />
-      </section>
-
-      {/* ── SPLIT POINT ── */}
-      <div className="my-10 relative">
-        <div className="absolute inset-0 flex items-center">
-          <div className="w-full border-t-2 border-dashed border-neutral-600" />
-        </div>
-        <div className="relative flex justify-center">
-          <span className="bg-neutral-950 px-5 py-2.5 rounded-full border-2 border-amber-500/50 text-sm font-black text-white uppercase tracking-wider">
-            Split Point
-          </span>
-        </div>
-      </div>
-      <p className="text-center text-neutral-400 text-sm mb-2 -mt-6">
-        {sc.splitPoint}
-      </p>
-      {sc.splitRatio && (
-        <p className="text-center text-amber-500/70 text-xs font-bold mb-2">
-          {sc.splitRatio}
-        </p>
-      )}
-      <p className="text-center text-neutral-600 text-xs font-semibold italic mb-8">
-        Cook once. Split smart. Done.
-      </p>
-
-      {/* ── PHASE 2: Adult + Kid side by side ── */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-        {/* Adult path */}
-        <section>
-          <PhaseHeader label={sc.adult.label} color="red" />
-          <StepList
-            steps={sc.adult.steps}
-            startAt={sc.sharedSteps.length + 1}
-            accent="red"
-          />
-        </section>
-
-        {/* Kid path */}
-        <section>
-          <PhaseHeader label={sc.kid.label} color="green" />
-
-          {hasKidOptions ? (
-            <>
-              <div className="flex gap-1 mb-4">
-                {sc.kid.options.map((opt, i) => (
-                  <button
-                    key={i}
-                    onClick={() => setKidOption(i)}
-                    className={`flex-1 px-2 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
-                      kidOption === i
-                        ? "bg-green-600 text-white"
-                        : "bg-neutral-800 text-neutral-500 hover:bg-neutral-700"
-                    }`}
-                  >
-                    {opt.label}
-                  </button>
-                ))}
-              </div>
-              <StepList
-                steps={sc.kid.options[kidOption].steps}
-                startAt={sc.sharedSteps.length + 1}
-                accent="green"
-              />
-            </>
-          ) : (
-            <StepList
-              steps={((sc.kid.steps && sc.kid.steps.length > 0)
-                ? sc.kid.steps
-                : (sc.kid.variants?.[0]?.steps || [])
-              ).map((s) => (typeof s === "string" ? { text: s } : s))}
-              startAt={sc.sharedSteps.length + 1}
-              accent="green"
-            />
-          )}
-        </section>
-      </div>
-    </>
+function Disclosure({ title, hint, defaultOpen = false, children }) {
+  const [open, setOpen] = useState(defaultOpen);
+  return (
+    <div className="overflow-hidden rounded-xl border border-line bg-surface">
+      <button
+        type="button"
+        onClick={() => setOpen((o) => !o)}
+        aria-expanded={open}
+        className="flex w-full items-center gap-2 px-4 py-3 text-left cursor-pointer"
+      >
+        <span className="flex-1 text-sm font-bold text-ink">{title}</span>
+        {hint && <span className="text-xs text-faint">{hint}</span>}
+        <span className={`text-faint transition-transform ${open ? "rotate-180" : ""}`} aria-hidden="true">
+          &#9662;
+        </span>
+      </button>
+      {open && <div className="border-t border-line px-4 py-4">{children}</div>}
+    </div>
   );
 }
 
 /* ════════════════════════════════════════════
-   SUB-COMPONENTS
+   SECTIONS
+   ════════════════════════════════════════════ */
+
+function SafetyBand({ safety }) {
+  const hasCritical = safety.allergens.length > 0 || safety.critical.length > 0;
+  if (!hasCritical && safety.headsUp.length === 0 && !safety.correction) return null;
+
+  return (
+    <div className="mt-4 space-y-2">
+      {safety.correction && (
+        <div className="rounded-xl border border-dangerline bg-dangersoft px-4 py-3">
+          <span className="text-[11px] font-bold uppercase tracking-wider text-danger">Tested correction</span>
+          <p className="mt-1 text-sm leading-relaxed text-ink">
+            <span className="font-semibold">{safety.correction.what}</span> {safety.correction.fix}
+          </p>
+        </div>
+      )}
+
+      {hasCritical && (
+        <div className="rounded-xl border border-dangerline bg-dangersoft px-4 py-3">
+          <span className="text-[11px] font-bold uppercase tracking-wider text-danger">
+            Allergens and safety
+          </span>
+          {safety.allergens.length > 0 && (
+            <p className="mt-1 text-sm text-ink">
+              <span className="font-semibold">Contains:</span> {safety.allergens.join(", ")}
+            </p>
+          )}
+          {safety.critical.length > 0 && (
+            <ul className="mt-1.5 flex flex-wrap gap-1.5">
+              {safety.critical.map((w) => (
+                <li key={w} className="rounded border border-dangerline px-2 py-0.5 text-xs text-danger">
+                  {w}
+                </li>
+              ))}
+            </ul>
+          )}
+          <p className="mt-2 text-xs text-muted">
+            Packaged ingredients change formulas — check the label on what's actually in your kitchen.
+          </p>
+        </div>
+      )}
+
+      {safety.headsUp.length > 0 && (
+        <div className="flex flex-wrap gap-1.5">
+          {safety.headsUp.map((w) => (
+            <span key={w} className="rounded-full border border-warnline bg-warnsoft px-2.5 py-1 text-xs font-semibold text-warn">
+              {w}
+            </span>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+function ServingsControl({ isFixedBatch, baseServings, adults, kids, leftovers, scale, setAdults, setKids, setLeftovers }) {
+  if (isFixedBatch) {
+    return (
+      <div className="flex flex-wrap items-center gap-x-3 gap-y-2 rounded-xl border border-line bg-surface2 px-4 py-3">
+        <span className="rounded border border-brand/30 bg-brand/15 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-brand">
+          Batch cook
+        </span>
+        <span className="text-xs text-muted">
+          Yields {baseServings} servings — quantities below are the full batch.
+        </span>
+      </div>
+    );
+  }
+
+  return (
+    <div className="flex flex-wrap items-center gap-x-5 gap-y-3 rounded-xl border border-line bg-surface2 px-4 py-3">
+      <div className="flex items-center gap-2" role="group" aria-label="Adult servings">
+        <span className="text-[10px] font-bold uppercase tracking-wider text-faint">Adults</span>
+        <div className="flex gap-1">
+          {[1, 2, 3, 4].map((n) => (
+            <button
+              key={n}
+              onClick={() => setAdults(n)}
+              aria-pressed={adults === n}
+              aria-label={`${n} adult${n === 1 ? "" : "s"}`}
+              className={`h-7 w-7 rounded text-xs font-bold cursor-pointer ${adults === n ? "bg-adult text-white" : "bg-surface text-muted hover:text-ink"}`}
+            >
+              {n}
+            </button>
+          ))}
+        </div>
+      </div>
+      <div className="flex items-center gap-2" role="group" aria-label="Kid servings">
+        <span className="text-[10px] font-bold uppercase tracking-wider text-faint">Kids</span>
+        <div className="flex gap-1">
+          {[0, 1, 2, 3].map((n) => (
+            <button
+              key={n}
+              onClick={() => setKids(n)}
+              aria-pressed={kids === n}
+              aria-label={`${n} kid${n === 1 ? "" : "s"}`}
+              className={`h-7 w-7 rounded text-xs font-bold cursor-pointer ${kids === n ? "bg-kid text-white" : "bg-surface text-muted hover:text-ink"}`}
+            >
+              {n}
+            </button>
+          ))}
+        </div>
+      </div>
+      <button
+        onClick={() => setLeftovers(!leftovers)}
+        aria-pressed={leftovers}
+        className={`rounded px-2.5 py-1 text-[11px] font-bold cursor-pointer ${leftovers ? "bg-brand text-brandink" : "bg-surface text-muted hover:text-ink"}`}
+      >
+        {leftovers ? "✓ " : ""}Leftovers
+      </button>
+      {scale !== 1 && (
+        <span className="ml-auto text-[11px] font-bold text-brand">
+          Scaled {leftovers ? "2× for leftovers" : `to ${adults + kids}`}
+        </span>
+      )}
+    </div>
+  );
+}
+
+function IngredientGroup({ group, scale, checked, onToggle, accent }) {
+  const t = tone(accent || group.tone);
+  return (
+    <div className="mb-5">
+      <div className="overflow-hidden rounded-xl border border-line bg-surface">
+        <h3 className={`border-b border-line bg-surface2 px-4 py-2 text-xs font-bold uppercase tracking-wider ${t.text}`}>
+          {group.title}
+        </h3>
+        <ul className="divide-y divide-line">
+          {group.items.map((item, i) => {
+            const key = `${group.id}:${i}`;
+            const text = ingredientText(item);
+            const isNote = text.startsWith("  ");
+            const link = typeof item === "object" ? item.link : null;
+            const isChecked = checked.has(key);
+
+            if (isNote) {
+              return (
+                <li key={key} className="px-4 py-2 pl-11 text-xs italic text-faint">
+                  {text.trim()}
+                </li>
+              );
+            }
+            return (
+              <li key={key}>
+                <label className="flex cursor-pointer items-start gap-3 px-4 py-2.5">
+                  <input
+                    type="checkbox"
+                    checked={isChecked}
+                    onChange={() => onToggle(key)}
+                    className="mt-0.5 h-5 w-5 flex-shrink-0 cursor-pointer accent-[var(--brand)]"
+                  />
+                  <span className={`text-sm leading-snug ${isChecked ? "text-faint line-through" : "text-ink"}`}>
+                    {link ? (
+                      <Link to={link} className="font-semibold text-brand hover:underline">
+                        {scaleIngredientText(text, scale)}
+                      </Link>
+                    ) : (
+                      scaleIngredientText(text, scale)
+                    )}
+                  </span>
+                </label>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    </div>
+  );
+}
+
+function MethodPhase({ phase }) {
+  const [active, setActive] = useState(0);
+  const t = tone(phase.tone);
+  const steps = phase.choices ? phase.choices[active].steps : phase.steps;
+
+  return (
+    <div>
+      <div className={`mb-4 border-l-4 pl-4 ${phase.tone === "adult" ? "border-adult" : phase.tone === "kid" ? "border-kid" : "border-brand"}`}>
+        <h3 className={`text-sm font-bold uppercase tracking-wider ${t.text}`}>{phase.label}</h3>
+        {phase.subtitle && <p className="mt-0.5 text-xs text-faint">{phase.subtitle}</p>}
+      </div>
+
+      {phase.choices && phase.choices.length > 1 && (
+        <div className="mb-4 flex flex-wrap gap-1.5">
+          {phase.choices.map((c, i) => (
+            <button
+              key={c.id}
+              type="button"
+              onClick={() => setActive(i)}
+              aria-pressed={active === i}
+              className={`rounded-full px-3 py-1.5 text-xs font-bold cursor-pointer ${active === i ? "bg-kid text-white" : "border border-line bg-surface text-muted hover:text-ink"}`}
+            >
+              {c.label}
+            </button>
+          ))}
+        </div>
+      )}
+
+      <StepList steps={steps} startAt={phase.startAt} tone={phase.tone} />
+    </div>
+  );
+}
+
+/** The signature element: two parallel plates, terracotta and sage. */
+function SplitPlates({ split, scale }) {
+  const [kidChoice, setKidChoice] = useState(0);
+  const kid = split.kid.choices[kidChoice] || split.kid.choices[0];
+
+  return (
+    <Section id="split" title="Adult plate | Kid plate">
+      {split.ratio && (
+        <p className="-mt-2 mb-4 text-sm text-muted">{split.ratio}</p>
+      )}
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <PlateCard
+          label={split.adult.label}
+          side="Adult"
+          toneKey="adult"
+          protein={split.adult.protein}
+          calories={split.adult.calories}
+          items={split.adult.extras}
+          note={split.adult.note}
+          scale={scale}
+        />
+        <PlateCard
+          label={split.kid.label}
+          side="Kid"
+          toneKey="kid"
+          protein={split.kid.protein}
+          calories={split.kid.calories}
+          items={kid?.extraIngredients || []}
+          note={split.kid.proteinSwap || split.kid.note}
+          scale={scale}
+          choices={split.kid.choices.length > 1 ? split.kid.choices : null}
+          activeChoice={kidChoice}
+          onChoice={setKidChoice}
+        />
+      </div>
+    </Section>
+  );
+}
+
+function PlateCard({ label, side, toneKey, protein, calories, items, note, scale, choices, activeChoice, onChoice }) {
+  const isAdult = toneKey === "adult";
+  const visible = (items || []).filter((i) => !isGroupHeader(i));
+
+  return (
+    <div className={`overflow-hidden rounded-2xl border ${isAdult ? "border-adultline bg-adultsoft" : "border-kidline bg-kidsoft"}`}>
+      <div className={`px-4 py-3 ${isAdult ? "bg-adult" : "bg-kid"}`}>
+        <span className="text-[10px] font-black uppercase tracking-widest text-white/80">{side} plate</span>
+        <h3 className="text-base font-black leading-tight text-white">{label}</h3>
+      </div>
+
+      <div className="px-4 py-3">
+        {(protein != null || calories != null) && (
+          <div className="flex gap-4">
+            {protein != null && (
+              <div>
+                <div className={`text-xl font-black ${isAdult ? "text-adult" : "text-kid"}`}>{protein}g</div>
+                <div className="text-[10px] font-bold uppercase tracking-wider text-faint">Protein</div>
+              </div>
+            )}
+            {calories != null && (
+              <div>
+                <div className="text-xl font-black text-ink">{calories}</div>
+                <div className="text-[10px] font-bold uppercase tracking-wider text-faint">Calories</div>
+              </div>
+            )}
+          </div>
+        )}
+        {protein == null && calories == null && (
+          <p className="text-xs italic text-faint">
+            Macros not published for this plate — portion it to their appetite.
+          </p>
+        )}
+
+        {choices && (
+          <div className="mt-3 flex flex-wrap gap-1.5">
+            {choices.map((c, i) => (
+              <button
+                key={c.id}
+                type="button"
+                onClick={() => onChoice(i)}
+                aria-pressed={activeChoice === i}
+                className={`rounded-full px-2.5 py-1 text-[11px] font-bold cursor-pointer ${activeChoice === i ? "bg-kid text-white" : "border border-kidline bg-surface text-muted"}`}
+              >
+                {c.label}
+              </button>
+            ))}
+          </div>
+        )}
+
+        {visible.length > 0 && (
+          <>
+            <p className="mt-3 text-[10px] font-bold uppercase tracking-wider text-faint">
+              What makes it different
+            </p>
+            <ul className="mt-1 space-y-1">
+              {visible.map((item, i) => (
+                <li key={i} className="text-sm leading-snug text-ink">
+                  {scaleIngredientText(ingredientText(item), scale)}
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
+
+        {note && <p className="mt-3 text-xs leading-relaxed text-muted">{note}</p>}
+      </div>
+    </div>
+  );
+}
+
+function NutritionDetails({ nutrition, tags }) {
+  const { macros, estimated, honesty, costPerServing, dietTags, splitAxes, caveats } = nutrition;
+  if (!macros && !honesty && dietTags.length === 0) return null;
+
+  return (
+    <Disclosure
+      title="Nutrition details"
+      hint={estimated ? "Estimated" : macros ? "Verified" : undefined}
+    >
+      <div className="space-y-3 text-sm text-muted">
+        {macros && (
+          <p className="text-ink">
+            <span className="font-semibold">
+              {estimated ? "~" : ""}{macros.protein}g protein / {macros.fat}g fat / {macros.carbs}g carbs
+            </span>
+            {macros.netCarbs != null && <span> ({macros.netCarbs}g net carbs)</span>}
+            {costPerServing && <span className="text-muted"> · {costPerServing} per serving</span>}
+          </p>
+        )}
+        <p className="leading-relaxed">
+          {estimated
+            ? "Estimated from ingredient averages, not lab-measured. Stated calories can drift from a strict 4P + 9F + 4C sum because of label rounding, fiber and sugar-alcohol net-carb accounting, and brand-specific label methodology."
+            : "Calculated per-ingredient at the listed brands and quantities."}
+        </p>
+        {honesty && <p className="leading-relaxed">{honesty}</p>}
+        {caveats.length > 0 && (
+          <ul className="flex flex-wrap gap-1.5">
+            {caveats.map((c) => (
+              <li key={c} className="rounded border border-line px-2 py-0.5 text-xs text-faint">{c}</li>
+            ))}
+          </ul>
+        )}
+        {(dietTags.length > 0 || splitAxes.length > 0) && (
+          <div className="flex flex-wrap gap-1.5 border-t border-line pt-3">
+            {dietTags.map((t) => (
+              <span key={t} className="rounded bg-surface2 px-2 py-0.5 text-xs text-muted">{t}</span>
+            ))}
+            {splitAxes.map((a) => (
+              <span key={a} className="rounded border border-brand/30 px-2 py-0.5 text-xs text-brand">split: {a}</span>
+            ))}
+          </div>
+        )}
+        {tags.length > 0 && (
+          <p className="text-xs text-faint">{tags.map((t) => `#${t}`).join(" ")}</p>
+        )}
+      </div>
+    </Disclosure>
+  );
+}
+
+/** Video, at the bottom, behind a poster. Nothing downloads until a tap. */
+function VideoBlock({ src, poster, title }) {
+  const [playing, setPlaying] = useState(false);
+
+  return (
+    <Section id="video" title="Watch the full cook">
+      <div className="mx-auto aspect-[9/16] max-h-[520px] overflow-hidden rounded-2xl border border-line bg-black sm:aspect-video">
+        {playing ? (
+          <video
+            src={src}
+            poster={poster}
+            controls
+            autoPlay
+            playsInline
+            preload="metadata"
+            className="h-full w-full object-contain"
+          />
+        ) : (
+          <button
+            type="button"
+            onClick={() => setPlaying(true)}
+            aria-label={`Play the ${title} cook-along video`}
+            className="group relative h-full w-full cursor-pointer"
+          >
+            {poster && (
+              <img src={poster} alt="" loading="lazy" className="h-full w-full object-cover opacity-70" />
+            )}
+            <span className="absolute inset-0 flex items-center justify-center">
+              <span className="flex h-16 w-16 items-center justify-center rounded-full bg-white/90 text-2xl text-black shadow-lg group-hover:bg-white">
+                &#9654;
+              </span>
+            </span>
+          </button>
+        )}
+      </div>
+    </Section>
+  );
+}
+
+function Brands({ brands }) {
+  return (
+    <Section id="brands" title="Brands I use">
+      <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
+        {brands.map((b, i) => {
+          const inner = (
+            <div className="overflow-hidden rounded-xl border border-line bg-surface hover:border-brand/40">
+              {b.image && (
+                <div className="flex h-32 items-center justify-center bg-white p-3">
+                  <img src={b.image} alt={b.name} className="max-h-full max-w-full object-contain" loading="lazy" />
+                </div>
+              )}
+              <div className="p-4">
+                <div className="text-sm font-black text-brand">{b.name}</div>
+                <div className="mt-0.5 text-xs font-semibold text-ink">{b.item}</div>
+                <div className="mt-1.5 text-xs leading-relaxed text-muted">{b.why}</div>
+              </div>
+            </div>
+          );
+          if (!b.url) return <div key={i}>{inner}</div>;
+          const isInternal = b.url.startsWith("/");
+          return isInternal ? (
+            <Link key={i} to={b.url} onClick={() => track("brand_click", { brand: b.name, item: b.item, url: b.url })} className="block">
+              {inner}
+            </Link>
+          ) : (
+            <a key={i} href={b.url} target="_blank" rel="noopener noreferrer" onClick={() => track("brand_click", { brand: b.name, item: b.item, url: b.url })} className="block">
+              {inner}
+            </a>
+          );
+        })}
+      </div>
+    </Section>
+  );
+}
+
+/* ════════════════════════════════════════════
+   SHARED HELPERS
    ════════════════════════════════════════════ */
 
 function StepImages({ images }) {
@@ -700,38 +929,33 @@ function StepImages({ images }) {
   };
   return (
     <>
-      <div className="flex gap-2 mt-3 overflow-x-auto pb-2 -mx-1 px-1">
+      <div className="-mx-1 mt-3 flex gap-2 overflow-x-auto px-1 pb-2">
         {images.map((src, i) => (
           <button
             key={i}
             type="button"
             onClick={() => setExpanded(src)}
             aria-label={`Expand ${stepLabel(src)}`}
-            className="w-28 h-28 sm:w-32 sm:h-32 rounded-lg flex-shrink-0 border border-neutral-800 cursor-pointer hover:border-amber-500/50 focus:outline-none focus:border-amber-500 transition-colors overflow-hidden"
+            className="h-28 w-28 flex-shrink-0 overflow-hidden rounded-lg border border-line cursor-pointer hover:border-brand focus:border-brand focus:outline-none sm:h-32 sm:w-32"
           >
-            <img
-              src={src}
-              alt={stepLabel(src)}
-              className="w-full h-full object-cover"
-              loading="lazy"
-            />
+            <img src={src} alt={stepLabel(src)} className="h-full w-full object-cover" loading="lazy" />
           </button>
         ))}
       </div>
       {expanded && (
         <div
-          className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4 cursor-pointer"
+          className="fixed inset-0 z-50 flex cursor-pointer items-center justify-center bg-black/90 p-4"
           onClick={() => setExpanded(null)}
           role="dialog"
           aria-modal="true"
           aria-label="Expanded step photo"
         >
-          <img src={expanded} alt={stepLabel(expanded)} className="max-w-full max-h-[90vh] object-contain rounded-xl" />
+          <img src={expanded} alt={stepLabel(expanded)} className="max-h-[90vh] max-w-full rounded-xl object-contain" />
           <button
             type="button"
             onClick={(e) => { e.stopPropagation(); setExpanded(null); }}
             aria-label="Close expanded photo"
-            className="absolute top-4 right-4 text-white/70 hover:text-white text-2xl font-bold"
+            className="absolute right-4 top-4 text-2xl font-bold text-white/70 hover:text-white"
           >&times;</button>
         </div>
       )}
@@ -739,53 +963,29 @@ function StepImages({ images }) {
   );
 }
 
-function StepList({ steps, startAt = 1, accent }) {
-  const bgColor =
-    accent === "red"
-      ? "bg-red-600"
-      : accent === "green"
-        ? "bg-green-600"
-        : "bg-amber-500";
-  const textColor =
-    accent === "red" || accent === "green" ? "text-white" : "text-black";
-  const labelColor =
-    accent === "red"
-      ? "text-red-400"
-      : accent === "green"
-        ? "text-green-400"
-        : "text-amber-400";
-
+function StepList({ steps, startAt = 1, tone: toneKey }) {
+  const t = tone(toneKey);
   return (
     <ol className="space-y-5">
       {steps.map((step, i) => {
-        const stepObj = typeof step === "string" ? { text: step } : step;
-        const colonIdx = stepObj.text.indexOf(":");
-        const hasLabel =
-          colonIdx > 0 &&
-          colonIdx < 30 &&
-          stepObj.text[0] === stepObj.text[0].toUpperCase();
-        const label = hasLabel ? stepObj.text.slice(0, colonIdx) : null;
-        const body = hasLabel
-          ? stepObj.text.slice(colonIdx + 1).trim()
-          : stepObj.text;
+        const colonIdx = step.text.indexOf(":");
+        const hasLabel = colonIdx > 0 && colonIdx < 30 && step.text[0] === step.text[0].toUpperCase();
+        const label = hasLabel ? step.text.slice(0, colonIdx) : null;
+        const body = hasLabel ? step.text.slice(colonIdx + 1).trim() : step.text;
 
         return (
           <li key={i} className="flex gap-3">
-            <span
-              className={`flex-shrink-0 w-7 h-7 rounded-full ${bgColor} ${textColor} flex items-center justify-center text-xs font-black mt-0.5`}
-            >
+            <span className={`mt-0.5 flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full text-xs font-black ${t.dot}`}>
               {startAt + i}
             </span>
-            <div className="flex-1 min-w-0">
+            <div className="min-w-0 flex-1">
               {label && (
-                <span
-                  className={`${labelColor} font-bold text-xs uppercase tracking-wider block mb-1`}
-                >
+                <span className={`mb-1 block text-xs font-bold uppercase tracking-wider ${t.text}`}>
                   {label}
                 </span>
               )}
-              <p className="text-neutral-300 text-sm leading-relaxed">{body}</p>
-              <StepImages images={stepObj.images} />
+              <p className="text-base leading-relaxed text-ink">{body}</p>
+              <StepImages images={step.images} />
             </div>
           </li>
         );
@@ -833,88 +1033,6 @@ function scaleIngredientText(text, scale) {
   });
 }
 
-function IngredientList({ items, accent, scale = 1 }) {
-  const headerColor =
-    accent === "red"
-      ? "text-red-400"
-      : accent === "green"
-        ? "text-green-400"
-        : "text-amber-500";
-
-  return (
-    <ul className="bg-neutral-900 rounded-xl border border-neutral-800 divide-y divide-neutral-800">
-      {items.map((item, i) => {
-        const isLinked = typeof item === "object" && item.link;
-        const text = typeof item === "object" ? item.text : item;
-        const isHeader = text.startsWith("---");
-        const isNote = text.startsWith("  ");
-        if (isHeader) {
-          return (
-            <li
-              key={i}
-              className={`px-4 py-2 text-xs font-bold uppercase tracking-wider bg-neutral-900/50 ${headerColor}`}
-            >
-              {text.replace(/---/g, "").trim()}
-            </li>
-          );
-        }
-        return (
-          <li
-            key={i}
-            className={`px-4 py-2.5 text-sm ${
-              isNote ? "text-neutral-500 pl-8 italic" : "text-neutral-300"
-            }`}
-          >
-            {isLinked ? (
-              <Link to={item.link} className="text-amber-400 hover:underline font-semibold">{scaleIngredientText(text, scale)}</Link>
-            ) : isHeader || isNote ? text : scaleIngredientText(text, scale)}
-            {scale !== 1 && !isHeader && !isNote && <span className="text-amber-500/40 text-[10px] ml-1">scaled</span>}
-          </li>
-        );
-      })}
-    </ul>
-  );
-}
-
-function PhaseHeader({ label, color, subtitle }) {
-  const colors = {
-    amber: "border-amber-500/50 text-amber-400",
-    red: "border-red-500/50 text-red-400",
-    green: "border-green-500/50 text-green-400",
-  };
-  const c = colors[color] || colors.amber;
-  return (
-    <div className={`border-l-4 ${c.split(" ")[0]} pl-4 mb-4`}>
-      <h3
-        className={`font-bold text-sm uppercase tracking-wider ${c.split(" ")[1]}`}
-      >
-        {label}
-      </h3>
-      {subtitle && (
-        <p className="text-neutral-500 text-xs mt-0.5">{subtitle}</p>
-      )}
-    </div>
-  );
-}
-
-function Stat({ label, value, highlight, estimated }) {
-  return (
-    <div className="bg-neutral-900 border border-neutral-800 rounded-lg px-4 py-2 text-center min-w-[70px] relative">
-      <div
-        className={`font-black text-lg ${
-          highlight ? "text-amber-400" : "text-white"
-        }`}
-      >
-        {estimated ? "~" : ""}{value}
-      </div>
-      <div className="text-neutral-500 text-xs uppercase tracking-wider">
-        {label}
-        {estimated && <span className="text-amber-500/60 ml-1 normal-case font-semibold">· est.</span>}
-      </div>
-    </div>
-  );
-}
-
 // Print-only 2-page recipe card. Hidden on screen (`hidden`), visible when
 // printing (`print:block`). Renders title + one-line macros + ingredients
 // (with section headers) + numbered steps. Skips whyMostFail, whyThisWorks,
@@ -922,36 +1040,35 @@ function Stat({ label, value, highlight, estimated }) {
 // branches — those live only on the screen article.
 function PrintCard({ recipe }) {
   const isSectionHeader = (s) => typeof s === "string" && s.startsWith("---");
-  const ingredientText = (item) => typeof item === "string" ? item : (item?.text || "");
   const stepText = (step) => typeof step === "string" ? step : (step?.text || "");
 
   return (
-    <div className="hidden print:block max-w-3xl mx-auto px-6 py-4">
-      <div className="flex items-baseline justify-between mb-3 pb-2 border-b border-neutral-300">
+    <div className="mx-auto hidden max-w-3xl px-6 py-4 print:block">
+      <div className="mb-3 flex items-baseline justify-between border-b border-neutral-300 pb-2">
         <h2 className="text-2xl font-black text-black">{recipe.title}</h2>
         <span className="text-[10px] text-neutral-600">thesplitplate.com/recipes/{recipe.slug}</span>
       </div>
-      <p className="text-sm text-neutral-800 mb-3">
+      <p className="mb-3 text-sm text-neutral-800">
         <strong>{recipe.time}</strong> · <strong>{recipe.servings} servings</strong> · <strong>{recipe.protein}g protein</strong> · <strong>{recipe.calories} cal</strong> per serving
       </p>
       {recipe.splitCook && (
-        <p className="text-xs text-neutral-700 mb-3 italic">
+        <p className="mb-3 text-xs italic text-neutral-700">
           Split: {recipe.splitCook.adult?.label || "Adult"} · {recipe.splitCook.kid?.label || "Kid"}
         </p>
       )}
 
-      <h2 className="text-xs font-black uppercase tracking-wider text-black mt-4 mb-1 border-b border-neutral-300 pb-0.5">Ingredients</h2>
-      <ul className="text-[11px] text-neutral-900 space-y-0.5 leading-snug">
+      <h2 className="mt-4 mb-1 border-b border-neutral-300 pb-0.5 text-xs font-black uppercase tracking-wider text-black">Ingredients</h2>
+      <ul className="space-y-0.5 text-[11px] leading-snug text-neutral-900">
         {(recipe.ingredients || []).map((item, i) => {
           if (isSectionHeader(item)) {
-            return <li key={i} className="font-bold uppercase text-[10px] text-neutral-600 mt-1.5 list-none">{item.replace(/-/g, "").trim()}</li>;
+            return <li key={i} className="mt-1.5 list-none text-[10px] font-bold uppercase text-neutral-600">{item.replace(/-/g, "").trim()}</li>;
           }
-          return <li key={i} className="pl-3 -indent-3">• {ingredientText(item)}</li>;
+          return <li key={i} className="-indent-3 pl-3">• {ingredientText(item)}</li>;
         })}
       </ul>
 
-      <h2 className="text-xs font-black uppercase tracking-wider text-black mt-4 mb-1 border-b border-neutral-300 pb-0.5">Method</h2>
-      <ol className="text-[11px] text-neutral-900 space-y-1 leading-snug list-decimal ml-4">
+      <h2 className="mt-4 mb-1 border-b border-neutral-300 pb-0.5 text-xs font-black uppercase tracking-wider text-black">Method</h2>
+      <ol className="ml-4 list-decimal space-y-1 text-[11px] leading-snug text-neutral-900">
         {(recipe.steps || []).map((step, i) => (
           <li key={i}>{stepText(step)}</li>
         ))}
@@ -978,31 +1095,26 @@ function RelatedRecipes({ current }) {
   }, [current.id, current.proteinAnchor]);
 
   return (
-    <section className="mt-10">
-      <h2 className="text-sm font-bold uppercase tracking-wider text-neutral-400 mb-4">
-        Related Recipes
-      </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+    <Section id="related" title="Related recipes">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
         {related.map((r) => (
           <Link
             key={r.id}
             to={`/recipes/${r.slug}`}
-            className="bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden hover:border-amber-500/30 transition-colors block"
+            className="block overflow-hidden rounded-xl border border-line bg-surface hover:border-brand/40"
           >
             <img
               {...cardImage(r.image)}
               alt={r.title}
               width="640"
               height="360"
-              className="w-full h-36 object-cover"
+              className="h-36 w-full object-cover"
               loading="lazy"
             />
             <div className="p-3">
-              <h3 className="text-white font-bold text-sm leading-tight">
-                {r.title}
-              </h3>
-              <div className="flex gap-2 mt-2 text-[10px] text-neutral-500">
-                <span className="text-amber-400 font-bold">{r.protein}g protein</span>
+              <h3 className="text-sm font-bold leading-tight text-ink">{r.title}</h3>
+              <div className="mt-2 flex gap-2 text-[10px] text-faint">
+                <span className="font-bold text-brand">{r.protein}g protein</span>
                 <span>{r.calories} cal</span>
                 <span>{r.time}</span>
               </div>
@@ -1013,31 +1125,20 @@ function RelatedRecipes({ current }) {
         {/* Power-up: Money Mustard */}
         <Link
           to="/cookbook/money-mustard"
-          className="bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden hover:border-amber-500/30 transition-colors block"
+          className="block overflow-hidden rounded-xl border border-line bg-surface hover:border-brand/40"
         >
-          <div className="h-36 bg-amber-500/10 flex items-center justify-center">
-            <span className="text-amber-500 text-3xl font-black">+</span>
+          <div className="flex h-36 items-center justify-center bg-brand/10">
+            <span className="text-3xl font-black text-brand">+</span>
           </div>
           <div className="p-3">
-            <h3 className="text-white font-bold text-sm leading-tight">
-              Money Mustard
-            </h3>
-            <div className="flex gap-2 mt-2 text-[10px] text-neutral-500">
-              <span className="text-amber-400 font-bold">Power-Up</span>
+            <h3 className="text-sm font-bold leading-tight text-ink">Money Mustard</h3>
+            <div className="mt-2 flex gap-2 text-[10px] text-faint">
+              <span className="font-bold text-brand">Power-Up</span>
               <span>Pairs with everything</span>
             </div>
           </div>
         </Link>
       </div>
-    </section>
-  );
-}
-
-function MiniStat({ label, value }) {
-  return (
-    <div className="bg-neutral-800 rounded px-2.5 py-1 text-center">
-      <span className="text-white font-bold text-xs">{value}</span>
-      <span className="text-neutral-500 text-[10px] ml-1">{label}</span>
-    </div>
+    </Section>
   );
 }
