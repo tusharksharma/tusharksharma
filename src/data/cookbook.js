@@ -3612,7 +3612,7 @@ export const desserts = [
     socialCarousel: {
       heroBadge: "Powerup Dessert",
       heroAccent: "amber",
-      hook: "Five minutes, one blender, and a fridge jar of cheesecake frosting: 60 calories and 6g protein per 30g serving.",
+      hook: "A five-minute cheesecake frosting with 6g protein for 60 calories per scoop.",
       heroPhoto: "/images/protein-cheesecake-frosting/hero-pouring-frosting.webp",
       ingredientGroups: [
         {
@@ -3640,24 +3640,24 @@ export const desserts = [
         },
       ],
       ingredientCardPhotos: [
-        { src: "/images/protein-cheesecake-frosting/context-siggis-skyr.webp", position: "50% 48%", zoom: 1.02, layout: "side" },
+        { src: "/images/protein-cheesecake-frosting/step-cheesecake-pudding-mix.webp", position: "50% 51%", zoom: 1.03, layout: "side" },
       ],
       methodCardPhotos: [
         { src: "/images/protein-cheesecake-frosting/step-blend-smooth.webp", position: "50% 50%", zoom: 1.04, layout: "side" },
       ],
-      servingPhoto: "/images/protein-cheesecake-frosting/step-transfer-frosting.webp",
+      servingPhoto: { src: "/images/high-protein-viral-dot-cake/step-cheesecake-frosting-polished.webp", position: "50% 56%", zoom: 1.05, layout: "side" },
       servingGroups: [
         {
           accent: "amber",
-          heading: "15 Servings - 30g Each",
+          heading: "15 Scoops - 30g Each",
           items: [
-            { text: "60 calories and 6g protein per 30g serving." },
-            { text: "Use it on protein cakes, brownies, pancakes, fruit, oats, toast, or ice cream." },
-            { text: "Keeps 5 days refrigerated. Stir before serving; do not freeze." },
+            { text: "Each scoop has 60 calories and 6g protein." },
+            { text: "Spread it on cakes, brownies, pancakes, fruit, oats, toast, or ice cream." },
+            { text: "Refrigerate up to 5 days. Stir before serving; do not freeze." },
           ],
         },
       ],
-      engagementQuestion: "What gets the first spoonful: protein cake, fruit, pancakes, or straight from the jar?",
+      engagementQuestion: "Brownies, fruit, pancakes, or straight from the jar?",
     },
     // Polished-only carousel — first commit ships raw stills; Path A polish
     // prompts queued for follow-up swap. Narrative: brand reveals → blend → final jar.
