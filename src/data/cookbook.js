@@ -8187,6 +8187,81 @@ export const bases = [
     originalSoundVideo: "/videos/spicy-umami-fried-rice/spicy-umami-fried-rice-main-clean-original-sound.mp4",
     teaserVideo: "/videos/spicy-umami-fried-rice/spicy-umami-fried-rice-7s-teaser-original-sound.mp4",
     commentRecipeVideo: "/videos/spicy-umami-fried-rice/spicy-umami-fried-rice-under-15s-comment-recipe-marcus.mp4",
+    socialCarousel: {
+      heroBadge: "12-Minute Base",
+      heroAccent: "amber",
+      hook: "Cold rice, a hot wok, and twelve minutes to takeout fried rice.",
+      heroPhoto: "/images/spicy-umami-fried-rice/hero-spicy-umami-fried-rice-polished.webp",
+      ingredientGroups: [
+        {
+          card: 0,
+          accent: "amber",
+          heading: "The Fresh Stuff",
+          items: [
+            { quantity: "2 large", text: "Eggs" },
+            { quantity: "2", text: "Thai chilies", note: "sliced thin, straight into the egg whisk" },
+            { quantity: "2", text: "Green onions", note: "chopped" },
+            { quantity: "2 tbsp", text: "Fresh chives", note: "chopped" },
+            { quantity: "2 tsp", text: "Neutral high-smoke-point oil" },
+          ],
+        },
+        {
+          card: 1,
+          accent: "amber",
+          heading: "Base and Sauce",
+          items: [
+            { quantity: "3 servings", text: "Cold cooked rice", note: "about 2 1/4 cups, refrigerated overnight" },
+            { quantity: "2 tbsp", text: "Soy sauce" },
+            { quantity: "2 tsp", text: "Sambal oelek" },
+            { quantity: "2 tsp", text: "Sesame chili oil" },
+            { quantity: "2 tsp", text: "Umami seasoning blend" },
+          ],
+        },
+      ],
+      methodGroups: [
+        {
+          card: 0,
+          accent: "amber",
+          heading: "Prep and Eggs",
+          items: [
+            { number: 1, heading: "Mix the Sauce", body: "Stir the soy, sambal, sesame chili oil, and umami blend together in a ramekin. That is the entire sauce step. No cooking, no reduction." },
+            { number: 2, heading: "Slice and Whisk", body: "Slice the Thai chilies thin and whisk them straight into the eggs, so the heat ends up flecked through the curds instead of sitting on top." },
+            { number: 3, heading: "Pour the Eggs", body: "Medium-high wok, 1 tsp of oil. Pour the chili egg in and let it spread into a thin pancake." },
+          ],
+        },
+        {
+          card: 1,
+          accent: "amber",
+          heading: "Rice and Sauce",
+          items: [
+            { number: 4, heading: "Soft Scramble", body: "Break the set egg into soft curds at about 30 seconds. Pull at 80 percent and let carryover finish them, then push them to the side of the wok." },
+            { number: 5, heading: "Toast the Rice", body: "Second tsp of oil, then the cold rice. Break the clumps, then leave it alone in 30-second intervals. Stir, sit, stir, sit. That is where the takeout texture comes from." },
+            { number: 6, heading: "Sauce and Finish", body: "Pour the sauce around the edge of the wok so it hits hot metal and sizzles. Toss until the rice is amber, not wet brown, then fold the eggs back in with the green onions and chives." },
+          ],
+        },
+      ],
+      ingredientCardPhotos: [
+        { src: "/images/spicy-umami-fried-rice/step-01-chop-thai-chilies-polished.webp", position: "55% 58%", zoom: 1.08, layout: "side" },
+        { src: "/images/spicy-umami-fried-rice/step-03-toast-cold-rice-polished.webp", position: "50% 62%", zoom: 1.1, layout: "side" },
+      ],
+      methodCardPhotos: [
+        { src: "/images/spicy-umami-fried-rice/step-02-soft-scramble-eggs-polished.webp", position: "52% 62%", zoom: 1.12, layout: "side" },
+        { src: "/images/spicy-umami-fried-rice/step-04-add-sambal-polished.webp", position: "48% 62%", zoom: 1.1, layout: "side" },
+      ],
+      servingPhoto: { src: "/images/spicy-umami-fried-rice/final-fried-rice-unmold-polished.webp", position: "42% 60%", zoom: 1.08, layout: "side" },
+      servingGroups: [
+        {
+          accent: "amber",
+          heading: "3 Servings - Carb-Forward Base",
+          items: [
+            { text: "This is a base, not a finished dinner. It is carb-forward on purpose." },
+            { text: "Stack a protein on top — crispy chicken, shrimp, steak, or tofu — and it becomes a real dinner." },
+            { text: "Cold rice is not optional. Fresh rice steams instead of toasting, and you get mush." },
+          ],
+        },
+      ],
+      engagementQuestion: "Cold rice overnight, or do you cheat with the freezer?",
+    },
     socialImages: [
       "/images/spicy-umami-fried-rice/step-01-chop-thai-chilies-polished.webp",
       "/images/spicy-umami-fried-rice/step-02-soft-scramble-eggs-polished.webp",
