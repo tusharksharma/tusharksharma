@@ -3074,6 +3074,148 @@ export const quickLunches = [
       reheat: "N/A — assemble hot. Follow the Kirkland chipotle chicken package for reheat guidance if pulling from a stored batch.",
     },
   },
+  {
+    id: "green-sauce-chipotle-chicken-mini-tacos",
+    title: "Green Sauce Chipotle Chicken Mini Tacos",
+    tagline: "Quick Lunches Ep. 4 — two mini tacos: Kirkland chipotle chicken, high-protein cilantro-jalapeño ranch, on La Banderita Carb Counter tortillas. ~220 cal / 27g protein (est.) for both.",
+    heroImage: "/images/green-sauce-chipotle-chicken-mini-tacos/hero-green-sauce-chipotle-chicken-mini-tacos.webp",
+    prepImage: "/images/green-sauce-chipotle-chicken-mini-tacos/step-02-divide-chicken.webp",
+    socialImages: [
+      "/images/green-sauce-chipotle-chicken-mini-tacos/hero-green-sauce-chipotle-chicken-mini-tacos.webp",
+      "/images/green-sauce-chipotle-chicken-mini-tacos/context-kirkland-chipotle-chicken.webp",
+      "/images/green-sauce-chipotle-chicken-mini-tacos/step-02-divide-chicken.webp",
+      "/images/green-sauce-chipotle-chicken-mini-tacos/step-03-add-green-sauce.webp",
+      "/images/green-sauce-chipotle-chicken-mini-tacos/serving-green-sauce-mini-taco.webp",
+    ],
+    socialHashtags: [
+      "#QuickLunches",
+      "#ChickenTacos",
+      "#HighProteinLunch",
+      "#CostcoFinds",
+      "#TheSplitPlate",
+    ],
+    socialCarousel: {
+      heroBadge: "Quick Lunches · Ep. 4",
+      heroAccent: "coral",
+      hook: "Two mini green-sauce chicken tacos: ~220 cal / 27g protein (estimated). Fully cooked Kirkland chipotle chicken, six minutes in the air fryer, and high-protein cilantro-jalapeño ranch on each.",
+      heroPhoto: "/images/green-sauce-chipotle-chicken-mini-tacos/hero-green-sauce-chipotle-chicken-mini-tacos.webp",
+      ingredientGroups: [
+        {
+          card: 0,
+          accent: "coral",
+          heading: "Three Ingredients (2 mini tacos)",
+          items: [
+            { quantity: "2", text: "La Banderita Carb Counter mini tortillas", note: "40 cal each" },
+            { quantity: "4 oz", text: "Kirkland chipotle chicken", note: "Costco shortcut, fully cooked" },
+            { quantity: "1 tbsp", text: "High-Protein Cilantro-Jalapeño Ranch", note: "Cross-link — 1/2 tbsp per taco" },
+          ],
+        },
+      ],
+      methodGroups: [
+        {
+          accent: "coral",
+          heading: "Method",
+          items: [
+            { number: 1, heading: "Reheat Chicken", body: "Air-fry the fully cooked Kirkland chipotle chicken about 6 min, to 165 F." },
+            { number: 2, heading: "Divide", body: "Lay out both mini tortillas and split the hot chicken evenly between them." },
+            { number: 3, heading: "Sauce", body: "Add 1/2 tbsp high-protein cilantro-jalapeño ranch to each taco." },
+            { number: 4, heading: "Fold + Eat", body: "Fold and eat immediately while the chicken is hot." },
+          ],
+        },
+      ],
+      ingredientCardPhotos: [
+        { src: "/images/green-sauce-chipotle-chicken-mini-tacos/context-kirkland-chipotle-chicken.webp", position: "50% 45%", zoom: 1.0, layout: "side" },
+      ],
+      methodCardPhotos: [
+        { src: "/images/green-sauce-chipotle-chicken-mini-tacos/step-02-divide-chicken.webp", position: "40% 92%", zoom: 1.5, layout: "side" },
+        { src: "/images/green-sauce-chipotle-chicken-mini-tacos/step-03-add-green-sauce.webp", position: "45% 94%", zoom: 1.5, layout: "side" },
+      ],
+      servingPhoto: "/images/green-sauce-chipotle-chicken-mini-tacos/serving-green-sauce-mini-taco.webp",
+      servingGroups: [
+        {
+          accent: "coral",
+          heading: "Two Tacos = One Serving",
+          items: [
+            { text: "~220 cal / 27g protein estimated across both mini tacos — verify current labels for the tortilla, chicken, and ranch." },
+            { text: "Best folded and eaten immediately while the chicken is hot." },
+            { text: "No kid variation — Ep. 4 is intentionally an adult single-serve, same format as Ep. 1 through Ep. 3." },
+          ],
+        },
+      ],
+      engagementQuestion: "Would two be enough, or are you making four?",
+    },
+    flavorProfile: "Smoky Kirkland chipotle chicken + cool, tangy high-protein cilantro-jalapeño ranch, folded into soft La Banderita Carb Counter mini tortillas. Reads like a fast-casual chicken street taco at a fraction of the calories and double the protein-per-cal.",
+    calories: 220,
+    caloriesPerServing: 220,
+    protein: 27,
+    proteinPerServing: 27,
+    servings: 1,
+    time: "3 min prep + 6 min air fry",
+    bestFor: [
+      "Quick lunch",
+      "High-protein lunch",
+      "Air-fryer meal",
+      "Taco",
+      "Powerup",
+    ],
+    useThisWhen: "You want a hot chipotle-chicken taco lunch in under 10 minutes with almost no cleanup. Two mini tacos land at ~220 cal / 27g protein estimated. Fourth episode of the Quick Lunches numbered series.",
+    flavorTarget: "Hot Kirkland chipotle chicken (the real shortcut) split across two mini tortillas, finished with high-protein cilantro-jalapeño ranch for a cool, herby, gently spicy contrast against the smoky chicken. The ranch goes on last so it stays bright and doesn't cook down on the hot chicken.",
+    ingredients: [
+      "2 La Banderita Carb Counter snack-size mini tortillas (~40 cal / 2g protein each)",
+      "4 oz Kirkland / Costco shortcut chipotle chicken (fully cooked)",
+      "1 tbsp High-Protein Cilantro-Jalapeño Ranch (1/2 tbsp per taco; cross-link to /cookbook/high-protein-cilantro-jalapeno-ranch)",
+    ],
+    steps: [
+      { text: "REHEAT CHICKEN: Air-fry 4 oz fully cooked Kirkland chipotle chicken about 6 minutes, until hot and 165 F. Appliance settings vary — no temperature invented; use your air fryer's default reheat preset.", image: "/images/green-sauce-chipotle-chicken-mini-tacos/context-kirkland-chipotle-chicken.webp" },
+      { text: "DIVIDE THE CHICKEN: Lay out both La Banderita Carb Counter mini tortillas and divide the hot chicken evenly between them — about 2 oz per taco.", image: "/images/green-sauce-chipotle-chicken-mini-tacos/step-02-divide-chicken.webp" },
+      { text: "ADD GREEN SAUCE: Add 1/2 tablespoon of high-protein cilantro-jalapeño ranch to each taco, straight over the hot chicken.", image: "/images/green-sauce-chipotle-chicken-mini-tacos/step-03-add-green-sauce.webp" },
+      { text: "FOLD + EAT: Fold each mini taco and eat immediately while the chicken is hot and the tortilla is soft.", image: "/images/green-sauce-chipotle-chicken-mini-tacos/hero-green-sauce-chipotle-chicken-mini-tacos.webp" },
+    ],
+    executionRules: [
+      "REHEAT CHICKEN PER THE PACKAGE, TO 165 F. Do not invent a temperature — appliance settings vary. Use your air fryer's default reheat preset for about 6 min.",
+      "TWO MINI TORTILLAS, NOT ONE CUT IN HALF. The filming used one larger tortilla cut into two rounds; the published recipe calls for two ready-made snack-size mini tortillas.",
+      "SPLIT THE CHICKEN EVENLY. ~2 oz per taco. Under-fill drops the sandwich below the ~27g protein target.",
+      "RANCH GOES ON LAST. 1/2 tbsp per taco, straight over the hot chicken, so it stays cool and bright instead of cooking down.",
+      "EAT IMMEDIATELY. Hot chicken + cool ranch + soft tortilla is the payoff. Sitting = tortilla goes soft, chicken cools.",
+      "FEATURED BRANDS DRIVE THE MACRO. Kirkland chipotle chicken, La Banderita Carb Counter, high-protein cilantro-jalapeño ranch. Any sub changes the ~220 / 27 estimate.",
+    ],
+    troubleshooting: [
+      { problem: "Taco tastes cold in the middle", fix: "Chicken wasn't fully reheated. Confirm 165 F center with an instant-read; if the package reheat time isn't hitting 165, add 1-2 min." },
+      { problem: "Not filling enough for lunch", fix: "Bump to 6 oz chicken (~+65 cal / +11g protein) or add a broth cup on the side. The two-mini-taco serving is intentionally a light adult single-serve." },
+      { problem: "Ranch tastes flat", fix: "Add it last, off the heat. Spread on before or during reheat and the herby brightness cooks down." },
+      { problem: "Tortilla tears when folded", fix: "Warm the mini tortillas for a few seconds so they fold without cracking; over-filling also splits them — keep to ~2 oz chicken per taco." },
+    ],
+    substitutions: [
+      { insteadOf: "La Banderita Carb Counter mini tortillas (~40 cal / 2g protein each)", use: "Any snack-size low-carb tortilla, or Mission Carb Balance / Ole Xtreme Wellness cut down (~40-70 cal / 2-6g protein each)", note: "La Banderita Carb Counter snack size is what anchors the ~80 cal / 4g protein for two tortillas. Any low-cal mini tortilla flexes." },
+      { insteadOf: "Kirkland chipotle chicken (Costco shortcut)", use: "Any fully-cooked pre-seasoned chipotle chicken (~100 cal / 16g protein per 3 oz)", note: "Kirkland/Costco is the featured shortcut. Verify heating time on the physical bag." },
+      { insteadOf: "High-Protein Cilantro-Jalapeño Ranch (cookbook cross-link)", use: "Store-bought cilantro-lime or avocado ranch (~50-70 cal / 0-1g protein per tbsp)", note: "The cookbook ranch is the flavor identity and keeps the protein-per-cal high — batch once. Store-bought subs will read lower-protein and often higher-cal." },
+    ],
+    brands: [
+      { name: "Costco / Kirkland", item: "Chargrilled Chipotle Seasoned Chicken (~100 cal / 16g protein per 3 oz)", why: "The featured shortcut. Fully cooked, seriously flavorful, ready in ~6 min from fridge to hot. 4 oz across both tacos is the protein anchor. Not sponsored — creator-purchased.", url: null },
+      { name: "La Banderita", item: "Carb Counter Snack-Size Tortillas (~40 cal / 2g protein each)", why: "Two mini tortillas at ~80 cal / 4g protein is what keeps both tacos near 220 cal without dropping protein.", url: "https://labanderita.net/" },
+      { name: "The Split Plate", item: "High-Protein Cilantro-Jalapeño Ranch (cookbook cross-link)", why: "The cool, herby, gently spicy finish. 1/2 tbsp per taco is enough. Batch once and it also drops into bowls, wings, and salads — ecosystem sauce.", url: "/cookbook/high-protein-cilantro-jalapeno-ranch" },
+    ],
+    macroHonesty: "~220 cal / 27g protein per serving (2 mini tacos) — creator estimate. Component check: 2 La Banderita Carb Counter snack-size tortillas (~80 cal / 4g protein) + 4 oz Kirkland chipotle chicken (~133 cal / 21.3g protein — scaled from 3 oz labeled 100 cal / 16g protein) + 1 tbsp high-protein cilantro-jalapeño ranch (~7 cal / 1.3g protein) = ~220 cal / ~27g protein. Flagged estimated: true — recheck the exact labels of the tortilla, chicken, and ranch before publishing as label-verified. Kirkland chipotle chicken is a creator-purchased featured shortcut, not a sponsored callout.",
+    allergens: ["dairy", "wheat", "gluten"],
+    warnings: [
+      "packaged-labels-vary — verify current La Banderita Carb Counter and Kirkland chipotle chicken packages before publishing allergen or gluten-free tags.",
+      "The cross-linked High-Protein Cilantro-Jalapeño Ranch contains dairy.",
+      "No air-fryer temperature published — appliance settings vary. Follow the physical Kirkland chipotle chicken package for definitive heating guidance.",
+      "No kid variation for this recipe — Ep. 4 is intentionally an adult single-serve.",
+      "Estimated macros — recalculate if any of the three featured products change.",
+    ],
+    dietTags: ["high-protein", "pork-free"],
+    seriesInfo: {
+      series: "Quick Lunches",
+      episode: 4,
+      framing: "Fourth episode of the Quick Lunches numbered series. Ep. 4 keeps the format: dependable convenience products, one heat step, real macros. The move here is the Costco chipotle chicken as the shortcut anchor — fully cooked, ready in about six minutes — finished with the cookbook's high-protein cilantro-jalapeño ranch added last so it stays cool and bright against the smoky chicken. Two ready-made mini tortillas, not one cut in half.",
+    },
+    mealPrep: {
+      storage: "Best assembled and eaten immediately. If prepping components, keep tortillas, chicken, and ranch separate.",
+      lasts: "Assembled = same-meal only. Components hold per each package's own storage guidance.",
+      reheat: "N/A — assemble hot. Follow the Kirkland chipotle chicken package for reheat guidance if pulling from a stored batch.",
+    },
+  },
 ];
 
 export const desserts = [
