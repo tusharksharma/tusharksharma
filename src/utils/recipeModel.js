@@ -176,6 +176,7 @@ const METHOD_TAGS = {
   grill: "Grill",
   "air-fryer": "Air fryer",
   stovetop: "Stovetop",
+  "cast-iron": "Cast iron",
   "sheet-pan": "Sheet pan",
   "one-pot": "One pot",
   "no-cook": "No cook",

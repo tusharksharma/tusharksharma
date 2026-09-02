@@ -16,7 +16,7 @@ export default function HeroSection() {
               fetchPriority="high"
               className="w-full rounded-2xl border border-neutral-800 sm:max-h-[420px] sm:object-cover"
             />
-            <p className="text-neutral-600 text-[10px] mt-2 text-center">Same cook. Different plates.</p>
+            <p className="text-neutral-400 text-xs mt-2 text-center">Same cook. Different plates.</p>
           </div>
 
           {/* Copy */}
@@ -33,7 +33,7 @@ export default function HeroSection() {
               Family dinners where adults eat what they actually want and kids eat what they'll actually finish.
               One cook. No separate meals. No negotiating.
             </p>
-            <p className="text-neutral-500 mt-2 text-sm">
+            <p className="text-neutral-400 mt-2 text-sm">
               Pick a weekly plan. Shop once. Cook 2–3 nights. Leftovers handle the rest.
             </p>
             <div className="flex gap-3 mt-6 flex-wrap justify-center sm:justify-start">

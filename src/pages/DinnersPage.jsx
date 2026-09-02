@@ -499,12 +499,13 @@ export default function DinnersPage() {
                 <div className="p-5">
                   <h3 className="text-white font-bold text-sm group-hover:text-amber-400 transition-colors">{r.title}</h3>
                   <p className="text-neutral-500 text-xs mt-1 line-clamp-1 sm:line-clamp-2">{r.makeThisWhen || r.role}</p>
-                  <div className="flex items-center gap-2 mt-2 text-[10px] text-neutral-600">
+                  {/* First row is the leanness read — protein, calories, and
+                      whether the macros are estimated. Time gets its own row
+                      below so five fragments don't compete in one strip. */}
+                  <div className="flex items-center gap-2 mt-2 text-[11px] text-neutral-400">
                     <span className="text-amber-400 font-black text-xs">{r.meta?.macros?.estimated ? "~" : ""}{r.protein}g protein</span>
-                    <span>&middot;</span>
+                    <span className="text-neutral-600">&middot;</span>
                     <span>{r.meta?.macros?.estimated ? "~" : ""}{r.calories} cal</span>
-                    <span>&middot;</span>
-                    <span>{r.time}</span>
                     {r.meta?.macros && (
                       r.meta.macros.estimated ? (
                         <span className="ml-auto px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-300 text-[9px] font-bold uppercase tracking-wider" title="Macros are an estimate — calculated, not measured per-ingredient">~ EST</span>
@@ -513,6 +514,7 @@ export default function DinnersPage() {
                       )
                     )}
                   </div>
+                  <p className="mt-1 text-[11px] text-neutral-500">{r.time}</p>
                   {/* Net carbs is colour-coded and dietary, so it stays on phones.
                       P/100cal and cost-per-serving are power-user metrics that made
                       the mobile card a flat wall of same-weight badges — they show

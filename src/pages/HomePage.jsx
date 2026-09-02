@@ -40,7 +40,7 @@ function MakeAheadDessertCallout() {
               <span>&middot;</span>
               <span>~{featured.caloriesPerServing} cal</span>
               <span>&middot;</span>
-              <span>{featured.servings} servings</span>
+              <span>{featured.servings} serving{featured.servings === 1 ? "" : "s"}</span>
               <span>&middot;</span>
               <span>{featured.time}</span>
             </div>
