@@ -3725,6 +3725,73 @@ export const desserts = [
     tagline: "Viral dot cake, protein version. 3 ramekin cakes per batch, 250 cal / 25g protein each (base 170/19 + cheesecake frosting + sprinkles).",
     heroImage: "/images/high-protein-viral-dot-cake/hero-finished-dot-cakes-polished.webp",
     prepImage: "/images/high-protein-viral-dot-cake/context-pescience-vanilla-polished.webp",
+    socialCarousel: {
+      heroBadge: "Powerup Dessert",
+      heroAccent: "amber",
+      hook: "Three ramekin birthday cakes under a full sprinkle coat, 25g protein each.",
+      heroPhoto: "/images/high-protein-viral-dot-cake/hero-finished-dot-cakes-polished.webp",
+      ingredientGroups: [
+        {
+          card: 0,
+          accent: "amber",
+          heading: "Dry Mix",
+          items: [
+            { quantity: "62g", text: "Vanilla whey-casein protein blend" },
+            { quantity: "45g", text: "All-purpose flour" },
+            { quantity: "15g", text: "Sugar-free vanilla pudding mix" },
+            { quantity: "15g", text: "Monk-fruit sweetener blend" },
+            { quantity: "1 tsp", text: "Baking powder" },
+          ],
+        },
+        {
+          card: 1,
+          accent: "amber",
+          heading: "Wet Mix + Topping",
+          items: [
+            { quantity: "3 large", text: "Eggs" },
+            { quantity: "1/4 cup", text: "Ultra-filtered fat-free milk" },
+            { quantity: "1 tsp", text: "Vanilla extract" },
+            { quantity: "30g each", text: "Protein cheesecake frosting" },
+            { quantity: "5g each", text: "Rainbow nonpareils" },
+          ],
+        },
+      ],
+      methodGroups: [
+        {
+          accent: "amber",
+          heading: "Bake, Chill, Dip",
+          items: [
+            { number: 1, heading: "Whisk the Dry", body: "Combine protein, flour, pudding mix, sweetener, and baking powder. Whisk to break up clumps." },
+            { number: 2, heading: "Add the Wet", body: "Whisk eggs, milk, and vanilla in a second bowl, then pour into the dry. Mix to a thick batter that barely flows off the whisk." },
+            { number: 3, heading: "Fill and Bake", body: "Divide across three greased ramekins, about three-quarters full. Bake at 350°F for 15 minutes until the tops are golden and spring back." },
+            { number: 4, heading: "Cool and Trim", body: "Cool 10 minutes, then chill 30 minutes. Slice the domed top off each cake so the surface sits flat." },
+            { number: 5, heading: "Frost", body: "Spread 30g of protein cheesecake frosting over each chilled cake, smoothing all the way to the edges." },
+            { number: 6, heading: "Dip in Sprinkles", body: "Pour the nonpareils onto a shallow plate and press each frosted top straight down into them. Lift gently." },
+          ],
+        },
+      ],
+      ingredientCardPhotos: [
+        { src: "/images/high-protein-viral-dot-cake/step-mix-batter-polished.webp", position: "50% 50%", zoom: 1.03, layout: "side" },
+        { src: "/images/high-protein-viral-dot-cake/step-cheesecake-frosting-polished.webp", position: "50% 54%", zoom: 1.04, layout: "side" },
+      ],
+      methodCardPhotos: [
+        { src: "/images/high-protein-viral-dot-cake/step-fill-ramekins-polished.webp", position: "50% 52%", zoom: 1.03, layout: "side" },
+        { src: "/images/high-protein-viral-dot-cake/step-sprinkle-pour-polished.webp", position: "50% 48%", zoom: 1.04, layout: "side" },
+      ],
+      servingPhoto: { src: "/images/high-protein-viral-dot-cake/step-final-scoop-polished.webp", position: "50% 58%", zoom: 1.05, layout: "side" },
+      servingGroups: [
+        {
+          accent: "amber",
+          heading: "3 Cakes - 250 Calories Each",
+          items: [
+            { text: "Each cake has 250 calories and 25g protein." },
+            { text: "The trimmed tops are a fourth serving. Snack them or save them for a parfait." },
+            { text: "Best within 2 hours. The sprinkle crunch softens after 4 to 6 hours." },
+          ],
+        },
+      ],
+      engagementQuestion: "Sprinkles to the edge, or just a light dusting?",
+    },
     // Polished-only carousel — STEP-ORDER (matches cookbook detail page
     // reading order). Build-to-payoff arc: wet mix → fill → bake → frost
     // → sprinkle dip → scoop. Sized to 6 entries so all fit the cookbook
