@@ -1321,65 +1321,65 @@ export const breakfasts = [
       "#TheSplitPlate",
     ],
     socialCarousel: {
-      heroBadge: "2-Minute Breakfast · No Cook",
+      heroBadge: "No-Cook Breakfast",
       heroAccent: "amber",
-      hook: "Two minutes, no cooking: 250 cal / 35g protein. One of my rushed-morning backups, not an everyday requirement. Post-workout pairing pushes it to 350 cal / 60g protein.",
+      hook: "Two minutes, zero heat, and an open-face bagel that lands 35g protein for 250 calories.",
       heroPhoto: "/images/two-minute-ham-cream-cheese-protein-bagel/hero-ham-cream-cheese-protein-bagel-polished.webp",
       ingredientGroups: [
         {
           card: 0,
           accent: "amber",
-          heading: "Ingredients (open-face, 2 halves)",
+          heading: "Ingredients - 2 Halves",
           items: [
-            { quantity: "1", text: "Sola Plain Bagel", note: "110 cal / 15g protein on the creator's package" },
-            { quantity: "2 tbsp", text: "Philadelphia Original Whipped Cream Cheese", note: "1 tbsp per half" },
-            { quantity: "4 slices", text: "365 Organic Black Forest Uncured Ham", note: "~1.5 label servings; 2 slices per half" },
-          ],
-        },
-        {
-          card: 1,
-          accent: "amber",
-          heading: "Optional Post-Workout Pairing",
-          items: [
-            { quantity: "1 can", text: "Bucked Up Green Apple Protein Soda", note: "Adult only. Adds 100 cal / 25g protein → 350 cal / 60g protein combined. Not part of the base recipe." },
+            { quantity: "1", text: "Plain high-protein bagel", note: "15g protein on the package" },
+            { quantity: "2 tbsp", text: "Whipped cream cheese", note: "1 tbsp per half" },
+            { quantity: "4 slices", text: "Uncured black forest deli ham", note: "2 slices per half" },
           ],
         },
       ],
       methodGroups: [
         {
+          card: 0,
           accent: "amber",
-          heading: "Method",
+          heading: "Split and Spread",
           items: [
-            { number: 1, heading: "Split", body: "Place both bagel halves cut-side up." },
-            { number: 2, heading: "Spread", body: "Spread 1 tbsp whipped cream cheese over each half." },
-            { number: 3, heading: "Layer", body: "Top each half with 2 slices of ham and serve open-faced." },
+            { number: 1, heading: "Split", body: "Set both bagel halves cut-side up on the board. No toaster, no pan, no dishes." },
+            { number: 2, heading: "Spread", body: "Spread 1 tbsp of whipped cream cheese edge to edge on each half. If the tub is fridge-stiff, let it sit out 60 seconds so it does not tear the crumb." },
+          ],
+        },
+        {
+          card: 1,
+          accent: "amber",
+          heading: "Layer and Eat",
+          items: [
+            { number: 3, heading: "Fold the Ham", body: "Fold each slice in half so it sits flat, then lay two folded slices on each half. Folded slices stack without sliding off." },
+            { number: 4, heading: "Eat Open-Face", body: "Leave it open. Two halves, about three bites each, one hand free the whole time." },
           ],
         },
       ],
       ingredientCardPhotos: [
-        { src: "/images/two-minute-ham-cream-cheese-protein-bagel/context-sola-plain-bagel-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
-        { src: "/images/two-minute-ham-cream-cheese-protein-bagel/context-philadelphia-whipped-cream-cheese-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
+        { src: "/images/two-minute-ham-cream-cheese-protein-bagel/context-philadelphia-whipped-cream-cheese-polished.webp", position: "45% 76%", zoom: 1.22, layout: "side" },
       ],
       methodCardPhotos: [
-        { src: "/images/two-minute-ham-cream-cheese-protein-bagel/step-01-spread-cream-cheese-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
-        { src: "/images/two-minute-ham-cream-cheese-protein-bagel/step-02-layer-ham-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
+        { src: "/images/two-minute-ham-cream-cheese-protein-bagel/step-01-spread-cream-cheese-polished.webp", position: "58% 52%", zoom: 1.12, layout: "side" },
+        { src: "/images/two-minute-ham-cream-cheese-protein-bagel/context-365-black-forest-ham-polished.webp", position: "58% 58%", zoom: 1.15, layout: "side" },
       ],
-      servingPhoto: "/images/two-minute-ham-cream-cheese-protein-bagel/hero-ham-cream-cheese-protein-bagel-polished.webp",
+      servingPhoto: { src: "/images/two-minute-ham-cream-cheese-protein-bagel/step-02-layer-ham-polished.webp", position: "42% 48%", zoom: 1.1, layout: "side" },
       servingGroups: [
         {
           accent: "amber",
-          heading: "Rushed-Morning Backup",
+          heading: "2 Halves - 250 Cal, 35g Protein",
           items: [
-            { text: "Base recipe: 250 cal / 35g protein — bagel, whipped cream cheese, and ham only." },
-            { text: "Optional post-workout: add one Bucked Up Green Apple protein soda → 350 cal / 60g protein combined. Adult only." },
-            { text: "Positioning: convenient no-cook breakfast when time disappears, not an everyday requirement." },
+            { text: "The bagel carries 15g of the 35g on its own. The ham and cream cheese do the rest." },
+            { text: "Post-workout, a 25g-protein soda takes it to 350 calories and 60g protein. Adult only." },
+            { text: "This is the rushed-morning backup, not the everyday breakfast." },
           ],
         },
       ],
-      engagementQuestion: "What's your no-time breakfast that still gets the job done?",
+      engagementQuestion: "Open-face, or do you close it and eat it one-handed?",
     },
     socialImages: [
-      "/images/two-minute-ham-cream-cheese-protein-bagel/context-sola-plain-bagel-polished.webp",
+      "/images/two-minute-ham-cream-cheese-protein-bagel/context-philadelphia-whipped-cream-cheese-polished.webp",
       "/images/two-minute-ham-cream-cheese-protein-bagel/step-01-spread-cream-cheese-polished.webp",
       "/images/two-minute-ham-cream-cheese-protein-bagel/context-365-black-forest-ham-polished.webp",
       "/images/two-minute-ham-cream-cheese-protein-bagel/step-02-layer-ham-polished.webp",
@@ -1403,7 +1403,7 @@ export const breakfasts = [
       "1 Bucked Up Green Apple Protein Soda (adds 100 cal / 25g protein → 350 cal / 60g combined). Adult only.",
     ],
     steps: [
-      { text: "SPLIT: Place both bagel halves cut-side up.", image: "/images/two-minute-ham-cream-cheese-protein-bagel/context-sola-plain-bagel-polished.webp" },
+      { text: "SPLIT: Place both bagel halves cut-side up.", image: "/images/two-minute-ham-cream-cheese-protein-bagel/context-philadelphia-whipped-cream-cheese-polished.webp" },
       { text: "SPREAD: 1 tbsp whipped cream cheese over each half.", image: "/images/two-minute-ham-cream-cheese-protein-bagel/step-01-spread-cream-cheese-polished.webp" },
       { text: "LAYER HAM: Top each half with 2 slices of ham and serve open-faced. No lid — the open-face format is intentional so the fillings stay visible and the whole thing eats in 3 bites per half.", image: "/images/two-minute-ham-cream-cheese-protein-bagel/step-02-layer-ham-polished.webp" },
     ],
