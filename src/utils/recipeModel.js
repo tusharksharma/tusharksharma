@@ -22,9 +22,31 @@ const SAFETY_RE =
   /allerg|halal|food-safety|\b\d{3}\s*f\b|heating|\b(dairy|gluten|egg|eggs|soy|sesame|fish|shellfish|peanut|peanuts|nut|nuts|milk|wheat|mustard|pork|alcohol)\b/i;
 const NUTRITION_CAVEAT_RE = /macro|label|packag|vary|recalc|estimat/i;
 
-/** Human-readable form of a kebab-case warning token. */
-function prettyWarning(w) {
-  return w.replace(/-/g, " ").replace(/\s+/g, " ").trim();
+/**
+ * Warnings are authored two ways. Most are kebab-case string tokens
+ * ("needs-overnight-marinade"); newer safety-critical ones are structured
+ * `{ label, detail, kind? }` objects so a chip can read "Hot cast iron" with
+ * "Skillet and handle stay 450°F — use oven mitts" underneath instead of one
+ * run-on token. `normalizeWarning` collapses both into `{ label, detail }` so
+ * the renderer never branches on shape.
+ */
+
+/** Title-case-ish label from a kebab token, with °F cleanup. */
+function prettyLabel(token) {
+  const s = String(token)
+    .replace(/-/g, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+    .replace(/\b(\d{2,3})\s*f\b/gi, "$1°F");
+  return s.charAt(0).toUpperCase() + s.slice(1);
+}
+
+/** A warning (string token or object) as `{ label, detail }`. */
+function normalizeWarning(w) {
+  if (w && typeof w === "object") {
+    return { label: w.label ?? "", detail: w.detail ?? null };
+  }
+  return { label: prettyLabel(w), detail: null };
 }
 
 /**
@@ -32,11 +54,43 @@ function prettyWarning(w) {
  * strip. Allergen and food-safety lines are the ones someone can get hurt by
  * and stay visible; label/macro caveats belong with the nutrition disclosure;
  * everything else is a planning heads-up ("needs an overnight marinade").
+ * A structured warning may set `kind` to skip the regex.
  */
 export function classifyWarning(w) {
-  if (SAFETY_RE.test(w)) return "safety";
-  if (NUTRITION_CAVEAT_RE.test(w)) return "nutrition";
+  if (w && typeof w === "object" && w.kind) return w.kind;
+  const text = w && typeof w === "object" ? `${w.label ?? ""} ${w.detail ?? ""}` : String(w);
+  if (SAFETY_RE.test(text)) return "safety";
+  if (NUTRITION_CAVEAT_RE.test(text)) return "nutrition";
   return "headsUp";
+}
+
+/**
+ * A `contains-*` safety token is redundant when the allergen it names is
+ * already in the Contains: line — dropping it removes the tokeny duplicate
+ * chip without hiding anything. It is dropped ONLY when the allergen is
+ * present in `allergens`; a `contains-*` token naming an allergen the list is
+ * missing stays visible, because a missing allergen is the dangerous direction.
+ */
+function restatesKnownAllergen(w, allergens) {
+  if (typeof w !== "string" || !/^contains[-\s]/i.test(w)) return false;
+  const words = w.toLowerCase().split(/[-\s]+/);
+  return allergens.some((a) => {
+    const stem = String(a).toLowerCase().replace(/s$/, "");
+    return stem && words.includes(stem);
+  });
+}
+
+/** Build the three-way safety split, deduping allergen restatements. */
+function buildSafety(warnings, allergens, correction) {
+  const notRedundant = (w) =>
+    !(classifyWarning(w) === "safety" && restatesKnownAllergen(w, allergens));
+  return {
+    allergens,
+    critical: warnings.filter((w) => classifyWarning(w) === "safety" && notRedundant(w)).map(normalizeWarning),
+    headsUp: warnings.filter((w) => classifyWarning(w) === "headsUp").map(normalizeWarning),
+    nutritionCaveats: warnings.filter((w) => classifyWarning(w) === "nutrition").map(normalizeWarning),
+    correction: correction || null,
+  };
 }
 
 /** Text of an ingredient, which may be a bare string or `{ text, link }`. */
@@ -235,14 +289,11 @@ export function buildRecipeModel(recipe) {
   }
 
   /* ── Safety, split out of the metadata wall. ── */
-  const warnings = recipe.meta?.warnings || [];
-  const safety = {
-    allergens: recipe.meta?.allergens || [],
-    critical: warnings.filter((w) => classifyWarning(w) === "safety").map(prettyWarning),
-    headsUp: warnings.filter((w) => classifyWarning(w) === "headsUp").map(prettyWarning),
-    nutritionCaveats: warnings.filter((w) => classifyWarning(w) === "nutrition").map(prettyWarning),
-    correction: recipe.testedCorrection || null,
-  };
+  const safety = buildSafety(
+    recipe.meta?.warnings || [],
+    recipe.meta?.allergens || [],
+    recipe.testedCorrection,
+  );
 
   /* ── Ingredients, grouped like the printed cookbook page. ── */
   const ingredientGroups = sc
@@ -476,14 +527,11 @@ export function buildCookbookModel(item, group) {
 
   /* ── Safety. Same three-way classifier as dinners. `contains` is an explicit
        allergen declaration and joins the allergen list. ── */
-  const warnings = item.warnings || [];
-  const safety = {
-    allergens: [...(item.allergens || []), ...(item.contains || [])],
-    critical: warnings.filter((w) => classifyWarning(w) === "safety").map(prettyWarning),
-    headsUp: warnings.filter((w) => classifyWarning(w) === "headsUp").map(prettyWarning),
-    nutritionCaveats: warnings.filter((w) => classifyWarning(w) === "nutrition").map(prettyWarning),
-    correction: null,
-  };
+  const safety = buildSafety(
+    item.warnings || [],
+    [...(item.allergens || []), ...(item.contains || [])],
+    null,
+  );
 
   /* ── Callouts that sit above the ingredients. The locked core ratio is the
        one thing a cook must not improvise, so it leads. ── */

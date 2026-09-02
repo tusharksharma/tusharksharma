@@ -559,10 +559,11 @@ function SafetyBand({ safety }) {
             </p>
           )}
           {safety.critical.length > 0 && (
-            <ul className="mt-1.5 flex flex-wrap gap-1.5">
+            <ul className="mt-1.5 space-y-1">
               {safety.critical.map((w) => (
-                <li key={w} className="rounded border border-dangerline px-2 py-0.5 text-xs text-danger">
-                  {w}
+                <li key={w.label} className="text-sm leading-snug text-danger">
+                  <span className="font-semibold">{w.label}</span>
+                  {w.detail ? <span className="text-danger/80"> — {w.detail}</span> : null}
                 </li>
               ))}
             </ul>
@@ -576,8 +577,12 @@ function SafetyBand({ safety }) {
       {safety.headsUp.length > 0 && (
         <div className="flex flex-wrap gap-1.5">
           {safety.headsUp.map((w) => (
-            <span key={w} className="rounded-full border border-warnline bg-warnsoft px-2.5 py-1 text-xs font-semibold text-warn">
-              {w}
+            <span
+              key={w.label}
+              title={w.detail || undefined}
+              className="rounded-full border border-warnline bg-warnsoft px-2.5 py-1 text-xs font-semibold text-warn"
+            >
+              {w.label}
             </span>
           ))}
         </div>
@@ -892,7 +897,7 @@ function NutritionDetails({ nutrition, tags }) {
         {caveats.length > 0 && (
           <ul className="flex flex-wrap gap-1.5">
             {caveats.map((c) => (
-              <li key={c} className="rounded border border-line px-2 py-0.5 text-xs text-faint">{c}</li>
+              <li key={c.label} title={c.detail || undefined} className="rounded border border-line px-2 py-0.5 text-xs text-faint">{c.label}</li>
             ))}
           </ul>
         )}

@@ -10335,7 +10335,7 @@ const recipes = [
       fixedBatch: true,
       macros: { protein: 52, calories: 530, fat: 22, carbs: 32, netCarbs: 30, estimated: true },
       allergens: ["dairy", "eggs", "wheat", "gluten"],
-      warnings: ["hot-cast-iron-skillet-and-handle-stay-450f-hot-use-oven-mitts", "contains-dairy-parmesan-mozzarella-cottage-cheese-milk", "contains-egg-whole-and-white", "contains-wheat-gluten-flour-and-panko", "kid-macros-not-published", "brand-macros-vary-recalculate", "estimated-macros-adult-plate"],
+      warnings: [{ label: "Hot cast iron", detail: "Skillet and handle stay 450°F — use oven mitts and set them on a trivet", kind: "safety" }, "contains-dairy-parmesan-mozzarella-cottage-cheese-milk", "contains-egg-whole-and-white", "contains-wheat-gluten-flour-and-panko", "kid-macros-not-published", "brand-macros-vary-recalculate", "estimated-macros-adult-plate"],
       dietTags: ["high-protein", "family-dinner", "meal-prep", "pork-free"],
       proteinTags: ["beef"],
       splitAxes: ["portion", "heat"],
