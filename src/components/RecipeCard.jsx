@@ -19,11 +19,11 @@ export default function RecipeCard({ recipe }) {
 
   const card = (
     <article
-      className={`bg-neutral-900 rounded-2xl overflow-hidden border border-neutral-800
+      className={`bg-surface rounded-2xl overflow-hidden border border-line
                   transition-all h-full ${
                     isComingSoon
                       ? "opacity-70"
-                      : "hover:border-amber-500/50 hover:-translate-y-0.5 cursor-pointer group"
+                      : "hover:border-brand/50 hover:-translate-y-0.5 cursor-pointer group"
                   }`}
     >
       <div className="relative">
@@ -67,19 +67,19 @@ export default function RecipeCard({ recipe }) {
       </div>
       <div className="p-5">
         <div className="flex items-center justify-between mb-2">
-          <span className="text-xs font-bold uppercase tracking-wider text-amber-500">{recipe.category}</span>
-          <span className="text-xs text-neutral-500">{recipe.time}</span>
+          <span className="text-xs font-bold uppercase tracking-wider text-brand">{recipe.category}</span>
+          <span className="text-xs text-muted">{recipe.time}</span>
         </div>
-        <h2 className={`text-lg font-bold mb-1 ${isComingSoon ? "text-neutral-500" : "text-white group-hover:text-amber-400"} transition-colors`}>
+        <h2 className={`text-lg font-bold mb-1 ${isComingSoon ? "text-muted" : "text-ink group-hover:text-brand"} transition-colors`}>
           {recipe.title}
         </h2>
-        <p className="text-sm text-neutral-400 leading-relaxed line-clamp-2">{recipe.description}</p>
-        <div className="flex items-center gap-3 mt-4 pt-3 border-t border-neutral-800 text-xs text-neutral-500">
+        <p className="text-sm text-muted leading-relaxed line-clamp-2">{recipe.description}</p>
+        <div className="flex items-center gap-3 mt-4 pt-3 border-t border-line text-xs text-muted">
           <span>{recipe.calories} cal</span>
-          <span className="text-neutral-700">|</span>
+          <span className="text-faint">|</span>
           <span>{recipe.protein}g protein</span>
-          <span className="text-neutral-700">|</span>
-          <span>{recipe.servings} servings</span>
+          <span className="text-faint">|</span>
+          <span>{recipe.servings} serving{recipe.servings === 1 ? "" : "s"}</span>
         </div>
       </div>
     </article>

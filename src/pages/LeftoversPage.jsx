@@ -98,17 +98,17 @@ export default function LeftoversPage() {
     .filter(Boolean);
 
   return (
-    <div className="min-h-screen bg-neutral-950">
+    <div className="min-h-screen bg-page">
       {/* Header */}
-      <section className="border-b border-neutral-800">
+      <section className="border-b border-line">
         <div className="max-w-5xl mx-auto px-4 py-10 sm:py-14">
-          <p className="text-amber-500 font-black text-xs tracking-[0.2em] uppercase mb-3">
+          <p className="text-brand font-black text-xs tracking-[0.2em] uppercase mb-3">
             Use Up Leftover Ingredients
           </p>
-          <h1 className="text-3xl sm:text-5xl font-black tracking-tight text-white leading-[1.1]">
+          <h1 className="text-3xl sm:text-5xl font-black tracking-tight text-ink leading-[1.1]">
             What's in your fridge?
           </h1>
-          <p className="text-neutral-400 mt-4 text-base max-w-2xl leading-relaxed">
+          <p className="text-muted mt-4 text-base max-w-2xl leading-relaxed">
             Pick what you have leftover — we'll find Split Plate dinners that use it.
             Tap as many as you want. The more you pick, the tighter the match.
           </p>
@@ -116,7 +116,7 @@ export default function LeftoversPage() {
       </section>
 
       {/* Search + selected chips */}
-      <section className="border-b border-neutral-800 sticky top-[57px] z-10 bg-neutral-950/95 backdrop-blur-sm">
+      <section className="border-b border-line sticky top-[57px] z-10 bg-page/95 backdrop-blur-sm">
         <div className="max-w-5xl mx-auto px-4 py-4 space-y-3">
           <div className="flex flex-col sm:flex-row gap-3">
             <input
@@ -124,14 +124,14 @@ export default function LeftoversPage() {
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Filter ingredients (e.g. 'cheddar', 'broth', 'iceberg')…"
-              className="flex-1 bg-neutral-900 border border-neutral-800 rounded-xl px-4 py-2.5 text-sm text-white placeholder-neutral-500 focus:outline-none focus:border-amber-500"
+              className="flex-1 bg-surface border border-line rounded-xl px-4 py-2.5 text-sm text-ink placeholder-faint focus:outline-none focus:border-brand"
             />
             {selected.length > 1 && (
-              <div className="flex gap-1 bg-neutral-900 border border-neutral-800 rounded-xl p-1">
+              <div className="flex gap-1 bg-surface border border-line rounded-xl p-1">
                 <button
                   onClick={() => setMode("AND")}
                   className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-colors ${
-                    mode === "AND" ? "bg-amber-500 text-black" : "text-neutral-400 hover:text-white"
+                    mode === "AND" ? "bg-brand text-brandink" : "text-muted hover:text-ink"
                   }`}
                 >
                   ALL of these
@@ -139,7 +139,7 @@ export default function LeftoversPage() {
                 <button
                   onClick={() => setMode("OR")}
                   className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-colors ${
-                    mode === "OR" ? "bg-amber-500 text-black" : "text-neutral-400 hover:text-white"
+                    mode === "OR" ? "bg-brand text-brandink" : "text-muted hover:text-ink"
                   }`}
                 >
                   ANY of these
@@ -149,20 +149,20 @@ export default function LeftoversPage() {
           </div>
           {selectedItems.length > 0 && (
             <div className="flex flex-wrap items-center gap-2">
-              <span className="text-neutral-500 text-xs font-bold uppercase tracking-wider">In fridge:</span>
+              <span className="text-muted text-xs font-bold uppercase tracking-wider">In fridge:</span>
               {selectedItems.map((item) => (
                 <button
                   key={item.slug}
                   onClick={() => toggle(item.slug)}
-                  className="bg-amber-500/10 border border-amber-500/40 text-amber-400 px-2.5 py-1 rounded-full text-xs font-bold hover:bg-amber-500/20 transition-colors flex items-center gap-1.5"
+                  className="bg-brand/10 border border-brand/40 text-brand px-2.5 py-1 rounded-full text-xs font-bold hover:bg-brand/20 transition-colors flex items-center gap-1.5"
                 >
                   {item.label}
-                  <span className="text-amber-500/70">×</span>
+                  <span className="text-brand/70">×</span>
                 </button>
               ))}
               <button
                 onClick={clearAll}
-                className="text-neutral-500 hover:text-neutral-300 text-xs underline ml-2 cursor-pointer"
+                className="text-muted hover:text-muted text-xs underline ml-2 cursor-pointer"
               >
                 clear all
               </button>
@@ -172,16 +172,16 @@ export default function LeftoversPage() {
       </section>
 
       {/* Ingredient chips (collapsed when results are showing) */}
-      <section className="border-b border-neutral-800">
+      <section className="border-b border-line">
         <div className="max-w-5xl mx-auto px-4 py-6 sm:py-8 space-y-6">
           {filteredGroups.length === 0 ? (
-            <div className="text-neutral-500 text-sm text-center py-8">
+            <div className="text-muted text-sm text-center py-8">
               No ingredients match "{query}". Try a different search.
             </div>
           ) : (
             filteredGroups.map((group) => (
               <div key={group.category}>
-                <h2 className="text-amber-500 text-xs font-black uppercase tracking-[0.2em] mb-3">
+                <h2 className="text-brand text-xs font-black uppercase tracking-[0.2em] mb-3">
                   {group.category}
                 </h2>
                 <div className="flex flex-wrap gap-2">
@@ -193,19 +193,19 @@ export default function LeftoversPage() {
                         onClick={() => toggle(item.slug)}
                         className={`group flex items-center gap-2 px-3 py-2 rounded-xl text-sm font-bold transition-all cursor-pointer border ${
                           isSelected
-                            ? "bg-amber-500 text-black border-amber-500"
-                            : "bg-neutral-900 text-neutral-300 border-neutral-800 hover:border-amber-500/40 hover:bg-neutral-800"
+                            ? "bg-brand text-brandink border-brand"
+                            : "bg-surface text-muted border-line hover:border-brand/40 hover:bg-surface2"
                         }`}
                       >
                         {item.image && (
-                          <img {...cardImage(item.image, { sizes: "24px" })} alt="" width="24" height="24" className="w-6 h-6 rounded object-cover bg-neutral-800" loading="lazy" />
+                          <img {...cardImage(item.image, { sizes: "24px" })} alt="" width="24" height="24" className="w-6 h-6 rounded object-cover bg-surface2" loading="lazy" />
                         )}
                         <span className="text-left">
                           <span className="block">{item.label}</span>
                           {item.kind === "brand" && item.sublabel && item.sublabel !== item.label && (
                             <span
                               className={`block text-[10px] font-normal leading-tight ${
-                                isSelected ? "text-black/60" : "text-neutral-500"
+                                isSelected ? "text-brandink/60" : "text-muted"
                               }`}
                             >
                               {item.sublabel}
@@ -214,7 +214,7 @@ export default function LeftoversPage() {
                         </span>
                         <span
                           className={`text-[10px] font-normal ${
-                            isSelected ? "text-black/60" : "text-neutral-500"
+                            isSelected ? "text-brandink/60" : "text-muted"
                           }`}
                         >
                           {item.recipeCount}
@@ -233,29 +233,29 @@ export default function LeftoversPage() {
       <section>
         <div className="max-w-5xl mx-auto px-4 py-8 sm:py-12">
           {selected.length === 0 ? (
-            <div className="text-center py-16 px-6 bg-neutral-900/40 border border-neutral-800 rounded-2xl">
-              <p className="text-amber-500 text-xs font-black uppercase tracking-[0.2em] mb-2">
+            <div className="text-center py-16 px-6 bg-surface/40 border border-line rounded-2xl">
+              <p className="text-brand text-xs font-black uppercase tracking-[0.2em] mb-2">
                 Get Started
               </p>
-              <p className="text-white text-xl font-bold mb-2">
+              <p className="text-ink text-xl font-bold mb-2">
                 Pick at least one ingredient above
               </p>
-              <p className="text-neutral-500 text-sm max-w-md mx-auto leading-relaxed">
+              <p className="text-muted text-sm max-w-md mx-auto leading-relaxed">
                 Tap any chip — protein, veggie, sauce, brand. We'll show every Split
                 Plate dinner that uses it. Pick more to tighten the match.
               </p>
             </div>
           ) : results.length === 0 ? (
-            <div className="text-center py-16 px-6 bg-neutral-900/40 border border-neutral-800 rounded-2xl">
+            <div className="text-center py-16 px-6 bg-surface/40 border border-line rounded-2xl">
               <p className="text-red-400 text-xs font-black uppercase tracking-[0.2em] mb-2">
                 No matches
               </p>
-              <p className="text-white text-xl font-bold mb-2">
+              <p className="text-ink text-xl font-bold mb-2">
                 Nothing uses ALL of those
               </p>
-              <p className="text-neutral-500 text-sm max-w-md mx-auto leading-relaxed">
+              <p className="text-muted text-sm max-w-md mx-auto leading-relaxed">
                 Try removing a chip — or switch to{" "}
-                <button onClick={() => setMode("OR")} className="text-amber-400 underline cursor-pointer">
+                <button onClick={() => setMode("OR")} className="text-brand underline cursor-pointer">
                   ANY of these
                 </button>{" "}
                 to see recipes that match any one of your ingredients.
@@ -264,11 +264,11 @@ export default function LeftoversPage() {
           ) : (
             <>
               <div className="flex items-center justify-between mb-6">
-                <h2 className="text-white text-xl font-black">
+                <h2 className="text-ink text-xl font-black">
                   {results.length} {results.length === 1 ? "recipe" : "recipes"} match
                 </h2>
                 {mode === "AND" && selected.length > 1 && (
-                  <p className="text-neutral-500 text-xs">All {selected.length} ingredients used</p>
+                  <p className="text-muted text-xs">All {selected.length} ingredients used</p>
                 )}
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -276,7 +276,7 @@ export default function LeftoversPage() {
                   <div key={recipe.id} className="relative">
                     <RecipeCard recipe={recipe} />
                     {selected.length > 1 && (
-                      <div className="absolute top-3 right-3 z-10 bg-amber-500 text-black text-[10px] font-black uppercase tracking-wider px-2 py-1 rounded-lg shadow-lg pointer-events-none">
+                      <div className="absolute top-3 right-3 z-10 bg-brand text-brandink text-[10px] font-black uppercase tracking-wider px-2 py-1 rounded-lg shadow-lg pointer-events-none">
                         {matchCount}/{selected.length} match
                       </div>
                     )}

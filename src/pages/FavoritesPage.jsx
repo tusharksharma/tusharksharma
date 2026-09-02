@@ -24,7 +24,7 @@ function resolveSource(sourceId) {
 
 function Badge({ children }) {
   return (
-    <span className="text-[10px] font-black uppercase tracking-wider bg-neutral-800 text-neutral-300 px-2 py-0.5 rounded">
+    <span className="text-[10px] font-black uppercase tracking-wider bg-surface2 text-muted px-2 py-0.5 rounded">
       {children}
     </span>
   );
@@ -51,21 +51,21 @@ function ProductCard({ product, collection }) {
   };
 
   return (
-    <div className="bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden hover:border-amber-500/40 transition-all flex flex-col">
+    <div className="bg-surface border border-line rounded-xl overflow-hidden hover:border-brand/40 transition-all flex flex-col">
       {product.image ? (
-        <div className="w-full h-48 bg-neutral-950 flex items-center justify-center overflow-hidden">
+        <div className="w-full h-48 bg-page flex items-center justify-center overflow-hidden">
           <img src={product.image} alt={`${product.brand} ${product.name}`} className="w-full h-full object-contain p-3" loading="lazy" />
         </div>
       ) : (
-        <div className="w-full h-48 bg-gradient-to-br from-neutral-900 to-neutral-950 border-b border-neutral-800 flex flex-col items-center justify-center px-3">
-          <span className="text-neutral-500 text-[10px] uppercase tracking-widest">{isEditorial ? "Editorial pick" : product.brand}</span>
-          <span className="text-neutral-300 text-base font-bold text-center mt-2 leading-tight">{product.name}</span>
+        <div className="w-full h-48 bg-gradient-to-br from-surface to-page border-b border-line flex flex-col items-center justify-center px-3">
+          <span className="text-muted text-[10px] uppercase tracking-widest">{isEditorial ? "Editorial pick" : product.brand}</span>
+          <span className="text-muted text-base font-bold text-center mt-2 leading-tight">{product.name}</span>
         </div>
       )}
       <div className="p-5 flex flex-col gap-3 flex-1">
         <div>
-          <p className="text-amber-500/80 text-[11px] uppercase tracking-wider font-black">{product.brand}</p>
-          <h3 className="text-white text-base font-bold mt-1 leading-tight">{product.name}</h3>
+          <p className="text-brand/80 text-[11px] uppercase tracking-wider font-black">{product.brand}</p>
+          <h3 className="text-ink text-base font-bold mt-1 leading-tight">{product.name}</h3>
         </div>
 
         {product.badges && product.badges.length > 0 && (
@@ -76,40 +76,40 @@ function ProductCard({ product, collection }) {
           </div>
         )}
 
-        <p className="text-neutral-300 text-sm leading-relaxed">{product.why}</p>
+        <p className="text-muted text-sm leading-relaxed">{product.why}</p>
 
         {product.bestFor && (
           <div className="text-sm leading-relaxed">
-            <span className="text-neutral-500 font-bold">Best for: </span>
-            <span className="text-neutral-300">{product.bestFor}</span>
+            <span className="text-muted font-bold">Best for: </span>
+            <span className="text-muted">{product.bestFor}</span>
           </div>
         )}
 
         {product.whatToKnow && (
-          <div className="text-sm leading-relaxed border-l-2 border-neutral-700 pl-3">
-            <span className="text-neutral-500 font-bold">What to know: </span>
-            <span className="text-neutral-400">{product.whatToKnow}</span>
+          <div className="text-sm leading-relaxed border-l-2 border-line pl-3">
+            <span className="text-muted font-bold">What to know: </span>
+            <span className="text-muted">{product.whatToKnow}</span>
           </div>
         )}
 
         {shown.length > 0 && (
-          <div className="text-xs text-neutral-500 leading-relaxed">
-            <span className="text-neutral-600">Used in </span>
+          <div className="text-xs text-muted leading-relaxed">
+            <span className="text-faint">Used in </span>
             {shown.map((s, i) => (
               <span key={s.href}>
-                <Link to={s.href} className="text-neutral-300 hover:text-amber-400 underline decoration-neutral-700 hover:decoration-amber-500/60 transition-colors">
+                <Link to={s.href} className="text-muted hover:text-brand underline decoration-line hover:decoration-brand/60 transition-colors">
                   {s.title}
                 </Link>
                 {i < shown.length - 1 && <span>, </span>}
               </span>
             ))}
-            {extraCount > 0 && <span className="text-neutral-600"> + {extraCount} more</span>}
+            {extraCount > 0 && <span className="text-faint"> + {extraCount} more</span>}
           </div>
         )}
 
-        <div className="flex items-center justify-between text-[11px] text-neutral-600 border-t border-neutral-800 pt-3 mt-auto">
+        <div className="flex items-center justify-between text-[11px] text-faint border-t border-line pt-3 mt-auto">
           <span>Last checked {product.lastLinkCheck}</span>
-          <span className={hasAmazon ? "text-amber-500/70" : "text-neutral-500"}>{affiliateLabel}</span>
+          <span className={hasAmazon ? "text-brand/70" : "text-muted"}>{affiliateLabel}</span>
         </div>
 
         {hasAmazon && (
@@ -118,7 +118,7 @@ function ProductCard({ product, collection }) {
             target="_blank"
             rel="noopener noreferrer sponsored"
             onClick={handleClick("amazon", product.amazonUrl, "product_card_amazon_primary")}
-            className="text-center bg-amber-500 hover:bg-amber-400 text-black text-sm font-black px-3 py-2.5 rounded-lg transition-colors"
+            className="text-center bg-brand hover:bg-brand text-brandink text-sm font-black px-3 py-2.5 rounded-lg transition-colors"
           >
             {product.amazonCtaLabel || "Buy on Amazon"} &rarr;
           </a>
@@ -132,8 +132,8 @@ function ProductCard({ product, collection }) {
             onClick={handleClick("brand", product.brandUrl, hasAmazon ? "product_card_brand_secondary" : "product_card_brand_primary")}
             className={
               hasAmazon
-                ? "text-center text-neutral-400 hover:text-amber-400 text-xs font-bold underline decoration-neutral-700 hover:decoration-amber-500/60 transition-colors"
-                : "text-center bg-amber-500 hover:bg-amber-400 text-black text-sm font-black px-3 py-2.5 rounded-lg transition-colors"
+                ? "text-center text-muted hover:text-brand text-xs font-bold underline decoration-line hover:decoration-brand/60 transition-colors"
+                : "text-center bg-brand hover:bg-brand text-brandink text-sm font-black px-3 py-2.5 rounded-lg transition-colors"
             }
           >
             {product.brandCtaLabel || `Shop at ${product.brand}`} {hasAmazon ? "" : "→"}
@@ -162,20 +162,20 @@ export default function FavoritesPage() {
   const activeProducts = activeCollection.productIds.map((id) => products[id]).filter(Boolean);
 
   return (
-    <div className="min-h-screen bg-neutral-950 text-neutral-100">
+    <div className="min-h-screen bg-page text-ink">
       <div className="max-w-5xl mx-auto px-4 py-16">
         <div className="mb-6">
-          <h1 className="text-3xl sm:text-4xl font-black text-white">Favorites</h1>
-          <p className="text-neutral-300 text-base mt-2 leading-relaxed">
+          <h1 className="text-3xl sm:text-4xl font-black text-ink">Favorites</h1>
+          <p className="text-muted text-base mt-2 leading-relaxed">
             Products that earned a permanent place in our kitchen.
           </p>
-          <p className="text-neutral-500 text-sm mt-2 leading-relaxed">
+          <p className="text-muted text-sm mt-2 leading-relaxed">
             Every product here was purchased by us and used in real recipes on the site — not sponsored placements, not backfilled from a stock catalog.
           </p>
         </div>
 
-        <div className="mb-6 bg-neutral-900/60 border border-neutral-800 rounded-lg px-4 py-3 text-sm text-neutral-300 leading-relaxed">
-          <span className="text-white font-bold">Disclosure:</span> Every product here was purchased and used in our kitchen. The primary "Buy on Amazon" links are affiliate links (Amazon Associates) — we may earn a small commission at no additional cost to you. Direct-to-brand links are currently non-affiliate. Affiliate availability never determines what appears here.
+        <div className="mb-6 bg-surface/60 border border-line rounded-lg px-4 py-3 text-sm text-muted leading-relaxed">
+          <span className="text-ink font-bold">Disclosure:</span> Every product here was purchased and used in our kitchen. The primary "Buy on Amazon" links are affiliate links (Amazon Associates) — we may earn a small commission at no additional cost to you. Direct-to-brand links are currently non-affiliate. Affiliate availability never determines what appears here.
         </div>
 
         {collections.length > 1 && (
@@ -185,7 +185,7 @@ export default function FavoritesPage() {
                 key={c.id}
                 onClick={() => setCollection(c.slug)}
                 className={`px-4 py-2 rounded-lg text-sm font-bold transition-all cursor-pointer whitespace-nowrap ${
-                  activeCollection.id === c.id ? "bg-amber-500 text-black" : "bg-neutral-800 text-neutral-300 hover:bg-neutral-700"
+                  activeCollection.id === c.id ? "bg-brand text-brandink" : "bg-surface2 text-muted hover:bg-line"
                 }`}
               >
                 {c.title}
@@ -194,7 +194,7 @@ export default function FavoritesPage() {
           </div>
         )}
 
-        <p className="text-neutral-400 text-sm mb-6 leading-relaxed">{activeCollection.tagline}</p>
+        <p className="text-muted text-sm mb-6 leading-relaxed">{activeCollection.tagline}</p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {activeProducts.map((p) => (
@@ -202,12 +202,12 @@ export default function FavoritesPage() {
           ))}
         </div>
 
-        <div className="mt-12 text-center bg-neutral-900/30 border border-neutral-800 rounded-xl py-6 px-4">
-          <p className="text-neutral-400 text-sm">See these in action:</p>
-          <Link to="/" className="text-amber-400 text-base font-bold hover:underline mt-1 inline-block">
+        <div className="mt-12 text-center bg-surface/30 border border-line rounded-xl py-6 px-4">
+          <p className="text-muted text-sm">See these in action:</p>
+          <Link to="/" className="text-brand text-base font-bold hover:underline mt-1 inline-block">
             Go to This Week&apos;s Dinners &rarr;
           </Link>
-          <p className="text-neutral-500 text-xs mt-1">Every dinner shows the brand + product we use, right in the ingredient list.</p>
+          <p className="text-muted text-xs mt-1">Every dinner shows the brand + product we use, right in the ingredient list.</p>
         </div>
       </div>
     </div>

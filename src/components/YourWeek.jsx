@@ -379,61 +379,61 @@ function CookDay({ day, label, vibe, id, time, reheats, isReheat, fixedBatch, re
           aria-label={`${day}: ${label} — ${enabled ? "included in this week" : "skipped"}`}
           aria-pressed={enabled}
           className={`w-5 h-5 rounded border flex-shrink-0 flex items-center justify-center text-[10px] cursor-pointer transition-colors ${
-            enabled ? "bg-amber-500 border-amber-500 text-black" : "border-neutral-600 bg-neutral-800"
+            enabled ? "bg-brand border-brand text-brandink" : "border-line bg-surface2"
           }`}
         >
           <span aria-hidden="true">{enabled && "\u2713"}</span>
         </button>
         {!isReheatDay ? (
-          <span className="text-neutral-500 text-[10px]">{enabled ? "Included" : "Skipped — removed from grocery"}</span>
+          <span className="text-muted text-[10px]">{enabled ? "Included" : "Skipped — removed from grocery"}</span>
         ) : (
           <span className="text-green-500/80 text-[10px] font-semibold">Reheats from {reheatOf} batch — no new grocery</span>
         )}
       </div>
       <Link to={enabled ? `/recipes/${r.slug}?adults=${adults}&kids=${kids}&leftovers=${leftovers ? 1 : 0}` : "#"} className={`block ${enabled ? "group" : "pointer-events-none"}`}>
-        <div className={`bg-neutral-900 border rounded-xl overflow-hidden transition-all ${enabled ? "border-neutral-800 hover:border-amber-500/40" : "border-neutral-800/50"}`}>
+        <div className={`bg-surface border rounded-xl overflow-hidden transition-all ${enabled ? "border-line hover:border-brand/40" : "border-line/50"}`}>
           <div className="flex flex-col sm:flex-row">
             <div className="sm:w-40 flex-shrink-0 relative">
               <img {...cardImage(r.image, { sizes: "(min-width: 640px) 33vw, 100vw" })} alt={r.title} className={`w-full h-32 sm:h-full object-cover transition-all ${enabled ? "group-hover:brightness-110" : "grayscale brightness-50"}`} loading="lazy" />
               <div className="absolute top-2 left-2 flex gap-1.5">
-                <span className="text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded bg-amber-500 text-black">{day}</span>
-                {fixedBatch && enabled && <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-amber-600/80 text-white">Batch</span>}
-                {isReheatDay && <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-green-600/80 text-white">Reheat</span>}
-                {reheats && !isReheatDay && enabled && <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-green-600/80 text-white">Reheats</span>}
+                <span className="text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded bg-brand text-brandink">{day}</span>
+                {fixedBatch && enabled && <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-brand/80 text-ink">Batch</span>}
+                {isReheatDay && <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-green-600/80 text-ink">Reheat</span>}
+                {reheats && !isReheatDay && enabled && <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-green-600/80 text-ink">Reheats</span>}
               </div>
             </div>
             <div className="flex-1 p-4">
               <div className="flex items-center gap-2 mb-1">
-                <span className="text-amber-500 text-[10px] font-bold uppercase tracking-wider">{label}</span>
-                <span className="text-neutral-600 text-[10px]">{time} &middot; {servings} servings</span>
+                <span className="text-brand text-[10px] font-bold uppercase tracking-wider">{label}</span>
+                <span className="text-faint text-[10px]">{time} &middot; {servings} servings</span>
               </div>
-              <h3 className={`font-bold text-sm transition-colors ${enabled ? "text-white group-hover:text-amber-400" : "text-neutral-600 line-through"}`}>{r.title}</h3>
+              <h3 className={`font-bold text-sm transition-colors ${enabled ? "text-ink group-hover:text-brand" : "text-faint line-through"}`}>{r.title}</h3>
               {enabled && vibe && (
-                <p className="text-neutral-500 text-[10px] italic mt-0.5">{vibe}</p>
+                <p className="text-muted text-[10px] italic mt-0.5">{vibe}</p>
               )}
               {enabled && (
                 <>
                   <div className="mt-2 space-y-1">
                     <div className="flex gap-2 items-start">
                       <span className="text-red-400 text-[10px] font-black mt-0.5 w-8 flex-shrink-0">ADULT</span>
-                      <p className="text-neutral-400 text-xs">{adult}</p>
+                      <p className="text-muted text-xs">{adult}</p>
                     </div>
                     <div className="flex gap-2 items-start">
                       <span className="text-green-400 text-[10px] font-black mt-0.5 w-8 flex-shrink-0">KID</span>
-                      <p className="text-neutral-400 text-xs">{kid}</p>
+                      <p className="text-muted text-xs">{kid}</p>
                     </div>
                   </div>
                   <div className="mt-2 flex gap-1.5 flex-wrap">
                     {needs.map((n) => (
-                      <span key={n} className="text-[10px] bg-neutral-800 text-neutral-500 px-2 py-0.5 rounded-full">{n}</span>
+                      <span key={n} className="text-[10px] bg-surface2 text-muted px-2 py-0.5 rounded-full">{n}</span>
                     ))}
                   </div>
                   <div className="mt-2 flex items-center gap-2 text-[10px]">
-                    <span className="text-amber-400 font-bold">{r.protein}g protein</span>
-                    <span className="text-neutral-700">&middot;</span>
-                    <span className="text-neutral-500">{r.calories} cal/serving</span>
-                    <span className="text-neutral-700">&middot;</span>
-                    <span className="text-neutral-500">{Math.round((r.protein * 4 / r.calories) * 100)}% PPC</span>
+                    <span className="text-brand font-bold">{r.protein}g protein</span>
+                    <span className="text-faint">&middot;</span>
+                    <span className="text-muted">{r.calories} cal/serving</span>
+                    <span className="text-faint">&middot;</span>
+                    <span className="text-muted">{Math.round((r.protein * 4 / r.calories) * 100)}% PPC</span>
                   </div>
                 </>
               )}
@@ -454,29 +454,29 @@ function LeftoverDay({ day, meal, visible, chain, note, repeat }) {
   // Chimichurri" is a jar of sauce, not a meal.
   if (note) {
     return (
-      <div className="flex items-center gap-3 px-4 py-3 bg-neutral-900/30 border border-amber-500/20 rounded-lg">
-        <span className="text-[10px] font-bold uppercase tracking-wider text-neutral-600 w-12 flex-shrink-0">{day}</span>
-        <span className="text-xs text-neutral-400">{note}</span>
-        <span className="text-[10px] bg-amber-900/30 text-amber-500 px-2 py-0.5 rounded-full ml-auto flex-shrink-0">{repeat ? "Cook again" : "Second night"}</span>
+      <div className="flex items-center gap-3 px-4 py-3 bg-surface/30 border border-brand/20 rounded-lg">
+        <span className="text-[10px] font-bold uppercase tracking-wider text-faint w-12 flex-shrink-0">{day}</span>
+        <span className="text-xs text-muted">{note}</span>
+        <span className="text-[10px] bg-brand/30 text-brand px-2 py-0.5 rounded-full ml-auto flex-shrink-0">{repeat ? "Cook again" : "Second night"}</span>
       </div>
     );
   }
   if (chain) {
     return (
-      <Link to={`/recipes/${chain.slug}`} className="flex items-center gap-3 px-4 py-3 bg-amber-500/5 border border-amber-500/30 rounded-lg hover:bg-amber-500/10 transition-colors group">
-        <span className="text-[10px] font-bold uppercase tracking-wider text-amber-500 w-12 flex-shrink-0">{day}</span>
-        <span className="text-xs text-neutral-200">
-          <span className="font-bold text-amber-400 group-hover:underline">Reinvent as {chain.title}</span>
-          {chain.note && <span className="text-neutral-500 ml-2">— {chain.note}</span>}
+      <Link to={`/recipes/${chain.slug}`} className="flex items-center gap-3 px-4 py-3 bg-brand/5 border border-brand/30 rounded-lg hover:bg-brand/10 transition-colors group">
+        <span className="text-[10px] font-bold uppercase tracking-wider text-brand w-12 flex-shrink-0">{day}</span>
+        <span className="text-xs text-ink">
+          <span className="font-bold text-brand group-hover:underline">Reinvent as {chain.title}</span>
+          {chain.note && <span className="text-muted ml-2">— {chain.note}</span>}
         </span>
-        <span className="text-[10px] bg-amber-900/30 text-amber-500 px-2 py-0.5 rounded-full ml-auto">Meal chain &rarr;</span>
+        <span className="text-[10px] bg-brand/30 text-brand px-2 py-0.5 rounded-full ml-auto">Meal chain &rarr;</span>
       </Link>
     );
   }
   return (
-    <div className="flex items-center gap-3 px-4 py-3 bg-neutral-900/30 border border-neutral-800/50 rounded-lg">
-      <span className="text-[10px] font-bold uppercase tracking-wider text-neutral-600 w-12 flex-shrink-0">{day}</span>
-      <span className="text-xs text-neutral-500">{meal}</span>
+    <div className="flex items-center gap-3 px-4 py-3 bg-surface/30 border border-line/50 rounded-lg">
+      <span className="text-[10px] font-bold uppercase tracking-wider text-faint w-12 flex-shrink-0">{day}</span>
+      <span className="text-xs text-muted">{meal}</span>
       <span className="text-[10px] bg-green-900/30 text-green-600 px-2 py-0.5 rounded-full ml-auto">No cooking</span>
     </div>
   );
@@ -484,9 +484,9 @@ function LeftoverDay({ day, meal, visible, chain, note, repeat }) {
 
 function FlexDay({ day, meal }) {
   return (
-    <div className="flex items-center gap-3 px-4 py-3 border border-dashed border-neutral-800 rounded-lg">
-      <span className="text-[10px] font-bold uppercase tracking-wider text-neutral-600 w-12 flex-shrink-0">{day}</span>
-      <span className="text-xs text-neutral-600 italic">{meal}</span>
+    <div className="flex items-center gap-3 px-4 py-3 border border-dashed border-line rounded-lg">
+      <span className="text-[10px] font-bold uppercase tracking-wider text-faint w-12 flex-shrink-0">{day}</span>
+      <span className="text-xs text-faint italic">{meal}</span>
     </div>
   );
 }
@@ -543,13 +543,13 @@ export default function YourWeek() {
   }, [enabledMeals]);
 
   return (
-    <section id="your-week" className="border-b border-neutral-800 bg-gradient-to-b from-neutral-950 to-neutral-900/80 scroll-mt-16">
+    <section id="your-week" className="border-b border-line bg-gradient-to-b from-page to-surface/80 scroll-mt-16">
       <div className="max-w-3xl mx-auto px-4 py-16">
         {/* Header */}
         <div className="text-center mb-6">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-amber-500 mb-2">Sample Weekly Plans</p>
-          <h2 className="text-3xl font-black text-white">3 Dinners. 1 Grocery Run.</h2>
-          <p className="text-neutral-400 text-sm mt-2">Pick the plan that matches your week. Each has its own grocery list.</p>
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand mb-2">Sample Weekly Plans</p>
+          <h2 className="text-3xl font-black text-ink">3 Dinners. 1 Grocery Run.</h2>
+          <p className="text-muted text-sm mt-2">Pick the plan that matches your week. Each has its own grocery list.</p>
         </div>
 
         {/* Plan selector — current plan pinned; older plans behind an archive
@@ -562,52 +562,52 @@ export default function YourWeek() {
         />
 
         {/* Family size */}
-        <div className="bg-neutral-900/50 border border-neutral-800 rounded-xl p-4 mb-6">
+        <div className="bg-surface/50 border border-line rounded-xl p-4 mb-6">
           <div className="flex items-center justify-between mb-3">
             <div>
-              <span className="text-white text-xs font-bold">Your family</span>
-              <span className="text-neutral-600 text-[10px] ml-2">Adjusts grocery + portions</span>
+              <span className="text-ink text-xs font-bold">Your family</span>
+              <span className="text-faint text-[10px] ml-2">Adjusts grocery + portions</span>
             </div>
-            <span role="status" aria-live="polite" className="text-amber-400 text-[10px] font-bold animate-pulse">
+            <span role="status" aria-live="polite" className="text-brand text-[10px] font-bold animate-pulse">
               {showFeedback ? `Updated for ${servings}` : ""}
             </span>
           </div>
           <div className="flex flex-col sm:flex-row gap-4">
             <div className="flex items-center gap-3">
-              <span id="adults-label" className="text-neutral-500 text-xs w-12">Adults:</span>
+              <span id="adults-label" className="text-muted text-xs w-12">Adults:</span>
               <div className="flex gap-1" role="group" aria-labelledby="adults-label">
                 {ADULT_OPTIONS.map((n) => (
                   <button key={n} onClick={() => handleFamilyChange(setAdults, n)}
                     aria-label={`${n} ${n === 1 ? "adult" : "adults"}`}
                     aria-pressed={adults === n}
-                    className={`w-9 h-9 rounded-lg text-sm font-bold transition-all cursor-pointer ${adults === n ? "bg-red-500 text-white scale-110" : "bg-neutral-800 text-neutral-400 hover:bg-neutral-700"}`}
+                    className={`w-9 h-9 rounded-lg text-sm font-bold transition-all cursor-pointer ${adults === n ? "bg-red-500 text-ink scale-110" : "bg-surface2 text-muted hover:bg-line"}`}
                   >{n}</button>
                 ))}
               </div>
             </div>
             <div className="flex items-center gap-3">
-              <span id="kids-label" className="text-neutral-500 text-xs w-12">Kids:</span>
+              <span id="kids-label" className="text-muted text-xs w-12">Kids:</span>
               <div className="flex gap-1" role="group" aria-labelledby="kids-label">
                 {KID_OPTIONS.map((n) => (
                   <button key={n} onClick={() => handleFamilyChange(setKids, n)}
                     aria-label={`${n} ${n === 1 ? "kid" : "kids"}`}
                     aria-pressed={kids === n}
-                    className={`w-9 h-9 rounded-lg text-sm font-bold transition-all cursor-pointer ${kids === n ? "bg-green-500 text-white scale-110" : "bg-neutral-800 text-neutral-400 hover:bg-neutral-700"}`}
+                    className={`w-9 h-9 rounded-lg text-sm font-bold transition-all cursor-pointer ${kids === n ? "bg-green-500 text-ink scale-110" : "bg-surface2 text-muted hover:bg-line"}`}
                   >{n}</button>
                 ))}
               </div>
             </div>
           </div>
-          <div className="flex items-center justify-between mt-3 pt-3 border-t border-neutral-800">
+          <div className="flex items-center justify-between mt-3 pt-3 border-t border-line">
             <button
               onClick={() => { setLeftovers(!leftovers); setShowFeedback(true); }}
               aria-pressed={leftovers}
-              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold cursor-pointer transition-all ${leftovers ? "bg-amber-500 text-black" : "bg-neutral-800 text-neutral-500 hover:bg-neutral-700"}`}
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold cursor-pointer transition-all ${leftovers ? "bg-brand text-brandink" : "bg-surface2 text-muted hover:bg-line"}`}
             >
-              <span aria-hidden="true" className={`w-3 h-3 rounded-sm border ${leftovers ? "bg-black border-black" : "border-neutral-600"} flex items-center justify-center text-[8px]`}>{leftovers ? "\u2713" : ""}</span>
+              <span aria-hidden="true" className={`w-3 h-3 rounded-sm border ${leftovers ? "bg-black border-black" : "border-line"} flex items-center justify-center text-[8px]`}>{leftovers ? "\u2713" : ""}</span>
               Make leftovers for next day
             </button>
-            <span className="text-neutral-600 text-[10px]">
+            <span className="text-faint text-[10px]">
               {servings} servings
             </span>
           </div>
@@ -616,44 +616,44 @@ export default function YourWeek() {
         {/* Meal inclusion */}
         {enabledCount < 3 ? (
           <div className="flex items-center justify-between mb-4 px-1">
-            <span className="text-neutral-500 text-[10px]">
+            <span className="text-muted text-[10px]">
               {enabledCount} of 3 dinners active &middot; grocery adjusted
             </span>
-            <button onClick={resetMeals} className="text-amber-500 text-[10px] font-bold cursor-pointer hover:underline">
+            <button onClick={resetMeals} className="text-brand text-[10px] font-bold cursor-pointer hover:underline">
               Reset to full week
             </button>
           </div>
         ) : (
-          <p className="text-neutral-600 text-[10px] text-center mb-4">
+          <p className="text-faint text-[10px] text-center mb-4">
             Can't do all 3? Uncheck a dinner below to skip it — grocery updates automatically.
           </p>
         )}
 
         {/* Start here */}
-        <div className="mb-8 bg-amber-500/5 border border-amber-500/20 rounded-xl py-4 px-5">
+        <div className="mb-8 bg-brand/5 border border-brand/20 rounded-xl py-4 px-5">
           <div className="flex items-center gap-2 mb-2">
-            <span className="text-amber-500 text-xs font-black uppercase tracking-wider">Start here</span>
-            <span className="text-neutral-600 text-[10px]">Zero decisions required</span>
+            <span className="text-brand text-xs font-black uppercase tracking-wider">Start here</span>
+            <span className="text-faint text-[10px]">Zero decisions required</span>
           </div>
           <div className="grid grid-cols-3 gap-3 text-center">
             <div>
-              <a href="#grocery" className="text-white font-bold text-sm hover:text-amber-400 transition-colors">1. Shop</a>
-              <p className="text-neutral-500 text-[10px] mt-0.5">One list, one trip</p>
+              <a href="#grocery" className="text-ink font-bold text-sm hover:text-brand transition-colors">1. Shop</a>
+              <p className="text-muted text-[10px] mt-0.5">One list, one trip</p>
             </div>
             <div>
-              <span className="text-white font-bold text-sm">2. Cook</span>
-              <p className="text-neutral-500 text-[10px] mt-0.5">3 dinners, your schedule</p>
+              <span className="text-ink font-bold text-sm">2. Cook</span>
+              <p className="text-muted text-[10px] mt-0.5">3 dinners, your schedule</p>
             </div>
             <div>
-              <span className="text-white font-bold text-sm">3. Done</span>
-              <p className="text-neutral-500 text-[10px] mt-0.5">{leftovers ? "Leftovers cover off-nights" : "Cook nights sorted"}</p>
+              <span className="text-ink font-bold text-sm">3. Done</span>
+              <p className="text-muted text-[10px] mt-0.5">{leftovers ? "Leftovers cover off-nights" : "Cook nights sorted"}</p>
             </div>
           </div>
         </div>
 
         {/* Timeline */}
         <div className="relative" id="timeline">
-          <div className="absolute left-6 top-4 bottom-4 w-px bg-neutral-800 hidden sm:block" />
+          <div className="absolute left-6 top-4 bottom-4 w-px bg-surface2 hidden sm:block" />
           <div className="space-y-2 relative">
             {/* Monday */}
             <TimelineDot type="cook" enabled={enabledMeals.Mon && !(currentWeek.cookDays[0].isReheat && !leftovers)} />
@@ -709,11 +709,11 @@ export default function YourWeek() {
             totalProtein += mealProtein;
           });
           return (
-            <div className="mt-8 flex justify-center gap-4 text-xs text-neutral-500 flex-wrap">
-              <span><span className="text-amber-400 font-bold">~{Math.round(totalProtein)}g protein</span> this week</span>
-              <span className="text-neutral-700">|</span>
-              <span><span className="text-white font-semibold">{cookCount} cooks</span>{leftoverDays > 0 ? ` + ${leftoverDays} leftover days` : ""}</span>
-              <span className="text-neutral-700">|</span>
+            <div className="mt-8 flex justify-center gap-4 text-xs text-muted flex-wrap">
+              <span><span className="text-brand font-bold">~{Math.round(totalProtein)}g protein</span> this week</span>
+              <span className="text-faint">|</span>
+              <span><span className="text-ink font-semibold">{cookCount} cooks</span>{leftoverDays > 0 ? ` + ${leftoverDays} leftover days` : ""}</span>
+              <span className="text-faint">|</span>
               <span>~30 min avg</span>
             </div>
           );
@@ -725,25 +725,25 @@ export default function YourWeek() {
         </div>
 
         {/* Sauce bridge */}
-        <div className="mt-8 bg-neutral-900/50 border border-amber-500/20 rounded-xl p-4">
+        <div className="mt-8 bg-surface/50 border border-brand/20 rounded-xl p-4">
           <div className="flex items-center justify-between mb-2">
-            <h4 className="text-xs font-bold text-amber-400">Add flavor to any dinner</h4>
-            <Link to="/cookbook" className="text-amber-500 text-[10px] font-bold hover:underline">View all sauces &rarr;</Link>
+            <h4 className="text-xs font-bold text-brand">Add flavor to any dinner</h4>
+            <Link to="/cookbook" className="text-brand text-[10px] font-bold hover:underline">View all sauces &rarr;</Link>
           </div>
-          <p className="text-neutral-400 text-xs">Sauces that turn any meal from good to great. ~30 cal, 5 min, works on everything.</p>
-          <Link to="/cookbook" className="mt-3 flex items-center gap-3 bg-neutral-800/50 rounded-lg p-3 hover:bg-neutral-800 transition-colors">
+          <p className="text-muted text-xs">Sauces that turn any meal from good to great. ~30 cal, 5 min, works on everything.</p>
+          <Link to="/cookbook" className="mt-3 flex items-center gap-3 bg-surface2/50 rounded-lg p-3 hover:bg-surface2 transition-colors">
             <div className="flex-1">
-              <span className="text-white text-xs font-bold">Money Mustard</span>
-              <span className="text-neutral-500 text-[10px] ml-2">Chick-fil-A style, high protein</span>
+              <span className="text-ink text-xs font-bold">Money Mustard</span>
+              <span className="text-muted text-[10px] ml-2">Chick-fil-A style, high protein</span>
             </div>
-            <span className="text-amber-500 text-[10px] font-bold">Use this &rarr;</span>
+            <span className="text-brand text-[10px] font-bold">Use this &rarr;</span>
           </Link>
         </div>
 
         {/* Flexibility note */}
-        <div className="mt-4 bg-neutral-900/50 border border-neutral-800 rounded-xl p-4">
-          <h4 className="text-xs font-bold text-white mb-2">Make it yours</h4>
-          <div className="space-y-1.5 text-xs text-neutral-400">
+        <div className="mt-4 bg-surface/50 border border-line rounded-xl p-4">
+          <h4 className="text-xs font-bold text-ink mb-2">Make it yours</h4>
+          <div className="space-y-1.5 text-xs text-muted">
             <p>Swap any protein: chicken &harr; beef &harr; turkey. System still works.</p>
             <p>Uncheck a dinner above to remove it from your week and grocery list.</p>
             <p>Adjust spice levels, not the structure. That's how this stays repeatable.</p>
@@ -765,12 +765,12 @@ export default function YourWeek() {
             enabledMeals[dayKeys[i]] && !d.isReheat && !d.reheats && !d.batchCoversDays
           ).length : 0;
           return (
-            <div className="mt-6 text-center py-6 bg-amber-500/5 border border-amber-500/20 rounded-xl">
-              <p className="text-neutral-500 text-xs">Once you've shopped and checked everything off:</p>
-              <p className="text-amber-400 font-black text-base mt-1">
+            <div className="mt-6 text-center py-6 bg-brand/5 border border-brand/20 rounded-xl">
+              <p className="text-muted text-xs">Once you've shopped and checked everything off:</p>
+              <p className="text-brand font-black text-base mt-1">
                 {cookCount} {cookCount === 1 ? "cook" : "cooks"} + {leftoverDays} {leftoverDays === 1 ? "leftover night" : "leftover nights"} handled.
               </p>
-              <p className="text-neutral-600 text-[10px] mt-1">
+              <p className="text-faint text-[10px] mt-1">
                 {nonReheatDays > 0 && leftovers ? `${nonReheatDays} dinner best eaten fresh (no leftover day).` : ""}
                 {!leftovers ? "Turn on leftovers to cover more of the week." : ""}
               </p>
@@ -779,11 +779,11 @@ export default function YourWeek() {
         })()}
 
         {/* Return hook */}
-        <div className="mt-6 text-center bg-neutral-900/30 border border-neutral-800 rounded-xl py-5 px-4">
-          <p className="text-white text-xs font-bold">Come back Sunday</p>
-          <p className="text-amber-400 text-[10px] mt-1 font-semibold">New dinners every week.</p>
-          <p className="text-neutral-500 text-[10px] mt-1">Same system, new flavors. Swap 1 protein, keep the structure, zero thinking.</p>
-          <p className="text-neutral-600 text-[10px] mt-2">3 dinners. 1 shop. 0 decisions. Every week.</p>
+        <div className="mt-6 text-center bg-surface/30 border border-line rounded-xl py-5 px-4">
+          <p className="text-ink text-xs font-bold">Come back Sunday</p>
+          <p className="text-brand text-[10px] mt-1 font-semibold">New dinners every week.</p>
+          <p className="text-muted text-[10px] mt-1">Same system, new flavors. Swap 1 protein, keep the structure, zero thinking.</p>
+          <p className="text-faint text-[10px] mt-2">3 dinners. 1 shop. 0 decisions. Every week.</p>
         </div>
       </div>
     </section>
@@ -793,7 +793,7 @@ export default function YourWeek() {
 function TimelineDot({ type, enabled = true }) {
   if (!enabled && type !== "flex") return <div className="h-0" />;
   return <div className="h-0 relative"><div className={`absolute left-[21px] top-2 w-2.5 h-2.5 rounded-full border-2 hidden sm:block z-10 ${
-    type === "cook" ? "bg-amber-500 border-amber-500" : type === "leftover" ? "bg-neutral-700 border-neutral-600" : "bg-neutral-800 border-neutral-700"
+    type === "cook" ? "bg-brand border-brand" : type === "leftover" ? "bg-line border-line" : "bg-surface2 border-line"
   }`} /></div>;
 }
 
@@ -809,14 +809,14 @@ function PlanSelector({ weeks, activeWeek, onChange, currentWeek }) {
   return (
     <div className="flex flex-col items-center gap-2 mb-6">
       <div className="flex items-center gap-1.5 flex-wrap justify-center">
-        <span className="text-neutral-500 text-[10px] uppercase tracking-wider font-bold mr-1">This week</span>
+        <span className="text-muted text-[10px] uppercase tracking-wider font-bold mr-1">This week</span>
         <button
           onClick={() => onChange(latest.num)}
           aria-pressed={activeWeek === latest.num}
           className={`px-4 py-1.5 rounded-lg text-[11px] font-bold transition-all cursor-pointer ${
             activeWeek === latest.num
-              ? "bg-amber-500 text-black"
-              : "bg-neutral-800 text-neutral-200 hover:bg-neutral-700 border border-amber-500/40"
+              ? "bg-brand text-brandink"
+              : "bg-surface2 text-ink hover:bg-line border border-brand/40"
           }`}
         >
           {latest.label}
@@ -826,7 +826,7 @@ function PlanSelector({ weeks, activeWeek, onChange, currentWeek }) {
             onClick={() => setArchiveOpen((v) => !v)}
             aria-expanded={archiveOpen}
             aria-controls="week-archive"
-            className="ml-2 px-3 py-1.5 rounded-lg text-[11px] font-medium text-neutral-400 bg-neutral-900 border border-neutral-700 hover:border-amber-500/40 hover:text-neutral-200 transition-colors cursor-pointer flex items-center gap-1"
+            className="ml-2 px-3 py-1.5 rounded-lg text-[11px] font-medium text-muted bg-surface border border-line hover:border-brand/40 hover:text-ink transition-colors cursor-pointer flex items-center gap-1"
           >
             <span>Older plans ({archive.length})</span>
             <span className={`transition-transform ${archiveOpen ? "rotate-180" : ""}`} aria-hidden="true">▾</span>
@@ -834,7 +834,7 @@ function PlanSelector({ weeks, activeWeek, onChange, currentWeek }) {
         )}
       </div>
       {archiveOpen && archive.length > 0 && (
-        <div id="week-archive" className="flex items-center gap-1.5 flex-wrap justify-center mt-1 pt-2 border-t border-neutral-800 max-w-full">
+        <div id="week-archive" className="flex items-center gap-1.5 flex-wrap justify-center mt-1 pt-2 border-t border-line max-w-full">
           {archive.map((w) => (
             <button
               key={w.num}
@@ -842,8 +842,8 @@ function PlanSelector({ weeks, activeWeek, onChange, currentWeek }) {
               aria-pressed={activeWeek === w.num}
               className={`px-3 py-1 rounded-md text-[10px] font-semibold transition-all cursor-pointer ${
                 activeWeek === w.num
-                  ? "bg-amber-500 text-black"
-                  : "bg-neutral-900 text-neutral-500 hover:bg-neutral-800 hover:text-neutral-300"
+                  ? "bg-brand text-brandink"
+                  : "bg-surface text-muted hover:bg-surface2 hover:text-muted"
               }`}
             >
               {w.label}
@@ -852,8 +852,8 @@ function PlanSelector({ weeks, activeWeek, onChange, currentWeek }) {
         </div>
       )}
       <div className="text-center mt-1">
-        <span className="text-neutral-400 text-xs">{currentWeek.subtitle}</span>
-        {currentWeek.description && <p className="text-neutral-600 text-[10px] mt-1">{currentWeek.description}</p>}
+        <span className="text-muted text-xs">{currentWeek.subtitle}</span>
+        {currentWeek.description && <p className="text-faint text-[10px] mt-1">{currentWeek.description}</p>}
       </div>
     </div>
   );

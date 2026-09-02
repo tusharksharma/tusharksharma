@@ -11,13 +11,15 @@
  * lifted charcoal, and neither has to know about the other.
  *
  * Dark is the default (`:root`). Light is opt-in via `[data-theme="light"]`
- * on <html>, set by src/hooks/useTheme.js and pre-applied by the inline
- * script in index.html so there's no flash before React hydrates.
+ * on <html>, owned by App (via src/hooks/useTheme.js) and pre-applied by the
+ * inline script in index.html so there's no flash before React hydrates.
  *
- * Scope note: only RecipeDetail and Nav consume these today. The rest of the
- * site is still on hardcoded neutrals, so useTheme only applies data-theme
- * while a recipe page is mounted. Rolling the tokens out site-wide is the
- * follow-on to this refactor.
+ * Scope: the tokens now back the whole reader-facing site — every content
+ * page and shared component reads them, so a light-mode choice persists across
+ * navigation. Fixed-color surfaces are the deliberate exceptions: image
+ * overlays / scrims (RecipeCard badges, ZoomableImage) and the social-card
+ * export views stay on hardcoded colors because they sit on photography, not
+ * on a themed surface.
  */
 :root {
   /* Dark — the original palette, with pure-black surfaces lifted off #0a0a0a

@@ -21,10 +21,10 @@ export default function EmailCapture() {
   };
 
   return (
-    <div className="bg-neutral-900 border border-neutral-800 rounded-xl p-6">
+    <div className="bg-surface border border-line rounded-xl p-6">
       <div className="text-center mb-4">
-        <p className="text-white font-bold text-sm">Get 3 dinners + 1 grocery list every Sunday</p>
-        <p className="text-neutral-500 text-xs mt-1">New week, new meals, same system. Free.</p>
+        <p className="text-ink font-bold text-sm">Get 3 dinners + 1 grocery list every Sunday</p>
+        <p className="text-muted text-xs mt-1">New week, new meals, same system. Free.</p>
       </div>
       <form action={KIT_FORM_URL} method="post" onSubmit={handleSubmit} className="flex gap-2 max-w-sm mx-auto">
         <input
@@ -34,17 +34,17 @@ export default function EmailCapture() {
           onChange={(e) => { setEmail(e.target.value); setError(""); }}
           placeholder="your@email.com"
           required
-          className="flex-1 px-4 py-2.5 bg-neutral-800 border border-neutral-700 rounded-lg text-white text-sm placeholder-neutral-600 focus:outline-none focus:border-amber-500 transition-colors"
+          className="flex-1 px-4 py-2.5 bg-surface2 border border-line rounded-lg text-ink text-sm placeholder-faint focus:outline-none focus:border-brand transition-colors"
         />
         <button
           type="submit"
-          className="px-5 py-2.5 bg-amber-500 text-black font-bold rounded-lg text-sm hover:bg-amber-400 transition-colors cursor-pointer flex-shrink-0"
+          className="px-5 py-2.5 bg-brand text-brandink font-bold rounded-lg text-sm hover:bg-brand transition-colors cursor-pointer flex-shrink-0"
         >
           Sign Up
         </button>
       </form>
       {error && <p className="text-red-400 text-xs text-center mt-2">{error}</p>}
-      <p className="text-neutral-600 text-[10px] text-center mt-3">No spam. Unsubscribe anytime.</p>
+      <p className="text-faint text-[10px] text-center mt-3">No spam. Unsubscribe anytime.</p>
     </div>
   );
 }

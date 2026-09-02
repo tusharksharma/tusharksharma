@@ -3,6 +3,7 @@ import { Component, useEffect, lazy, Suspense } from "react";
 import Nav from "./components/Nav";
 import InstallPrompt from "./components/InstallPrompt";
 import MyListDrawer from "./components/MyListDrawer";
+import useTheme from "./hooks/useTheme";
 
 // Code-split route components — only loaded when navigated to
 const HomePage = lazy(() => import("./pages/HomePage"));
@@ -47,11 +48,19 @@ class ErrorBoundary extends Component {
 }
 
 function App() {
+  // Theme is owned here now (not scoped to the recipe page), so a light-mode
+  // choice persists across every route. index.html pre-applies data-theme
+  // before hydration; this keeps <html> in sync when the reader toggles.
+  const [theme] = useTheme();
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", theme);
+  }, [theme]);
+
   return (
     <ErrorBoundary>
       <ScrollToTop />
       <Nav />
-      <Suspense fallback={<div className="min-h-screen bg-neutral-950" />}>
+      <Suspense fallback={<div className="min-h-screen bg-page" />}>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/dinners" element={<DinnersPage />} />

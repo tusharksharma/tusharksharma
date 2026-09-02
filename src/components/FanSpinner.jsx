@@ -49,9 +49,9 @@ export default function FanSpinner() {
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-16 text-center">
-      <p className="text-xs font-bold uppercase tracking-[0.2em] text-amber-500 mb-2">Feeling Lucky?</p>
-      <h1 className="text-3xl font-black text-white">In the Hands of the Fan</h1>
-      <p className="text-neutral-400 text-sm mt-2 mb-10">
+      <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand mb-2">Feeling Lucky?</p>
+      <h1 className="text-3xl font-black text-ink">In the Hands of the Fan</h1>
+      <p className="text-muted text-sm mt-2 mb-10">
         Can't decide? Spin the fan. Cook whatever it lands on.
       </p>
 
@@ -59,7 +59,7 @@ export default function FanSpinner() {
       <div className="relative w-72 h-72 sm:w-96 sm:h-96 mx-auto">
         {/* Pointer at top */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1 z-20">
-          <div className="w-0 h-0 border-l-[10px] border-r-[10px] border-t-[18px] border-l-transparent border-r-transparent border-t-amber-500 drop-shadow-lg" />
+          <div className="w-0 h-0 border-l-[10px] border-r-[10px] border-t-[18px] border-l-transparent border-r-transparent border-t-brand drop-shadow-lg" />
         </div>
 
         {/* Spinning fan body */}
@@ -103,7 +103,7 @@ export default function FanSpinner() {
                   <div
                     className="absolute inset-0 flex items-center justify-center px-4"
                   >
-                    <span className="text-white font-bold text-[9px] sm:text-[11px] truncate drop-shadow-md text-center leading-tight">
+                    <span className="text-ink font-bold text-[9px] sm:text-[11px] truncate drop-shadow-md text-center leading-tight">
                       {recipe.title}
                     </span>
                   </div>
@@ -113,9 +113,9 @@ export default function FanSpinner() {
           })}
 
           {/* Center hub */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-neutral-900 border-4 border-amber-500 z-10 flex items-center justify-center shadow-2xl">
-            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-neutral-800 border-2 border-amber-500/50 flex items-center justify-center">
-              <span className="text-amber-500 text-[8px] sm:text-[10px] font-black">FAN</span>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-surface border-4 border-brand z-10 flex items-center justify-center shadow-2xl">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-surface2 border-2 border-brand/50 flex items-center justify-center">
+              <span className="text-brand text-[8px] sm:text-[10px] font-black">FAN</span>
             </div>
           </div>
         </div>
@@ -127,8 +127,8 @@ export default function FanSpinner() {
         disabled={spinning}
         className={`mt-8 px-10 py-4 rounded-xl font-bold text-base transition-all cursor-pointer ${
           spinning
-            ? "bg-neutral-800 text-neutral-500 cursor-wait"
-            : "bg-amber-500 text-black hover:bg-amber-400 hover:scale-105 shadow-lg shadow-amber-500/20"
+            ? "bg-surface2 text-muted cursor-wait"
+            : "bg-brand text-brandink hover:bg-brand hover:scale-105 shadow-lg shadow-brand/20"
         }`}
       >
         {spinning ? "Spinning..." : result ? "Spin Again" : "Spin the Fan"}
@@ -136,24 +136,24 @@ export default function FanSpinner() {
 
       {/* Result */}
       {result && !spinning && (
-        <div className="mt-10 bg-neutral-900 border border-amber-500/40 rounded-xl overflow-hidden max-w-md mx-auto text-left">
+        <div className="mt-10 bg-surface border border-brand/40 rounded-xl overflow-hidden max-w-md mx-auto text-left">
           {result.image && (
             <img {...cardImage(result.image, { sizes: "(min-width: 480px) 448px, 100vw" })} alt={result.title} width="640" height="400" className="w-full h-40 object-cover" />
           )}
           <div className="p-6">
-            <p className="text-amber-500 text-[10px] font-bold uppercase tracking-wider mb-2">Tonight you're making</p>
-            <h3 className="text-white font-black text-xl">{result.title}</h3>
-            <div className="flex items-center gap-2 mt-1 text-xs text-neutral-500">
-              <span className="text-amber-400 font-bold">{result.protein}g protein</span>
+            <p className="text-brand text-[10px] font-bold uppercase tracking-wider mb-2">Tonight you're making</p>
+            <h3 className="text-ink font-black text-xl">{result.title}</h3>
+            <div className="flex items-center gap-2 mt-1 text-xs text-muted">
+              <span className="text-brand font-bold">{result.protein}g protein</span>
               <span>&middot;</span>
               <span>{result.calories} cal</span>
               <span>&middot;</span>
               <span>{result.time}</span>
             </div>
-            <p className="text-neutral-400 text-sm mt-3 leading-relaxed">{result.makeThisWhen}</p>
+            <p className="text-muted text-sm mt-3 leading-relaxed">{result.makeThisWhen}</p>
             <Link
               to={`/recipes/${result.slug}`}
-              className="mt-4 inline-block px-6 py-3 bg-amber-500 text-black font-bold rounded-xl text-sm hover:bg-amber-400 transition-colors"
+              className="mt-4 inline-block px-6 py-3 bg-brand text-brandink font-bold rounded-xl text-sm hover:bg-brand transition-colors"
             >
               Let's Cook &rarr;
             </Link>

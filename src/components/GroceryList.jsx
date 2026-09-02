@@ -1529,7 +1529,7 @@ export default function GroceryList({ adults = 2, kids = 2, leftovers = true, da
     return (
       <button
         onClick={() => { setIsOpen(true); track("grocery_open", { week, adults, kids, leftovers }); }}
-        className="w-full bg-amber-500 text-black font-bold rounded-xl py-3.5 text-sm hover:bg-amber-400 transition-colors cursor-pointer"
+        className="w-full bg-brand text-brandink font-bold rounded-xl py-3.5 text-sm hover:bg-brand transition-colors cursor-pointer"
       >
         Shop This Week ({adults} adults{kids > 0 ? ` + ${kids} kids` : ""}{leftovers ? " + leftovers" : ""})
       </button>
@@ -1539,39 +1539,39 @@ export default function GroceryList({ adults = 2, kids = 2, leftovers = true, da
   let globalIdx = 0;
 
   return (
-    <div className="bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden">
+    <div className="bg-surface border border-line rounded-xl overflow-hidden">
       {/* Header */}
-      <div className="px-5 py-4 border-b border-neutral-800">
+      <div className="px-5 py-4 border-b border-line">
         <div className="flex items-center justify-between mb-1">
-          <h3 className="text-sm font-bold text-white">{planLabel || `Plan ${week}`} — Grocery List</h3>
-          <button onClick={() => setIsOpen(false)} className="text-neutral-500 hover:text-neutral-300 text-xs cursor-pointer">Close</button>
+          <h3 className="text-sm font-bold text-ink">{planLabel || `Plan ${week}`} — Grocery List</h3>
+          <button onClick={() => setIsOpen(false)} className="text-muted hover:text-muted text-xs cursor-pointer">Close</button>
         </div>
-        <p className="text-neutral-500 text-xs">
+        <p className="text-muted text-xs">
           {adults} adults{kids > 0 ? ` + ${kids} kids` : ""} &middot; {3 - excludedTags.length} dinners{leftovers ? " &middot; doubled for leftovers" : ""}
         </p>
         {excludedTags.length > 0 && (
-          <p className="text-amber-400 text-[10px] font-semibold mt-1">
+          <p className="text-brand text-[10px] font-semibold mt-1">
             Shopping list updated for {3 - excludedTags.length} dinners
           </p>
         )}
         <div className="flex items-center gap-3 mt-2 text-[10px]">
-          <span className="text-neutral-600">Included:</span>
+          <span className="text-faint">Included:</span>
           {["Mon", "Wed", "Fri"].map((d) => (
-            <span key={d} className={excludedTags.includes(d) ? "text-neutral-700 line-through" : "text-neutral-400 font-semibold"}>
+            <span key={d} className={excludedTags.includes(d) ? "text-faint line-through" : "text-muted font-semibold"}>
               {d}
             </span>
           ))}
         </div>
         <div className="flex items-center gap-3 mt-3">
-          <button onClick={() => { copyList(); track("grocery_copy", { week }); }} className="px-3 py-1.5 bg-neutral-800 text-neutral-300 text-xs font-semibold rounded-lg hover:bg-neutral-700 transition-colors cursor-pointer">
+          <button onClick={() => { copyList(); track("grocery_copy", { week }); }} className="px-3 py-1.5 bg-surface2 text-muted text-xs font-semibold rounded-lg hover:bg-line transition-colors cursor-pointer">
             Copy List
           </button>
           {checkedCount > 0 && (
-            <button onClick={clearChecked} className="px-3 py-1.5 bg-neutral-800 text-neutral-400 text-xs font-semibold rounded-lg hover:bg-neutral-700 transition-colors cursor-pointer">
+            <button onClick={clearChecked} className="px-3 py-1.5 bg-surface2 text-muted text-xs font-semibold rounded-lg hover:bg-line transition-colors cursor-pointer">
               Clear ({checkedCount})
             </button>
           )}
-          <span className="text-neutral-600 text-xs ml-auto">{checkedCount}/{visibleCount}</span>
+          <span className="text-faint text-xs ml-auto">{checkedCount}/{visibleCount}</span>
         </div>
       </div>
 
@@ -1579,7 +1579,7 @@ export default function GroceryList({ adults = 2, kids = 2, leftovers = true, da
       <div className="px-5 py-4 grid grid-cols-1 sm:grid-cols-2 gap-6">
         {Object.entries(GROCERY).map(([category, items]) => (
           <div key={category}>
-            <h4 className="text-xs font-bold uppercase tracking-wider text-amber-500 mb-2.5">{category}</h4>
+            <h4 className="text-xs font-bold uppercase tracking-wider text-brand mb-2.5">{category}</h4>
             <ul className="space-y-0.5">
               {items.map((entry) => {
                 const idx = globalIdx++;
@@ -1590,17 +1590,17 @@ export default function GroceryList({ adults = 2, kids = 2, leftovers = true, da
                 // Pantry items keep showing (entry.baseQty undefined, qty === "" is normal).
                 if (entry.baseQty != null && qty === "") return null;
                 return (
-                  <li key={idx} onClick={() => toggle(idx)} className="flex items-start gap-3 py-2 px-2 -mx-2 rounded-lg hover:bg-neutral-800/50 cursor-pointer select-none transition-colors">
-                    <span className={`w-4 h-4 mt-0.5 rounded border flex-shrink-0 flex items-center justify-center text-[10px] transition-colors ${isChecked ? "bg-amber-500 border-amber-500 text-black" : "border-neutral-600"}`}>
+                  <li key={idx} onClick={() => toggle(idx)} className="flex items-start gap-3 py-2 px-2 -mx-2 rounded-lg hover:bg-surface2/50 cursor-pointer select-none transition-colors">
+                    <span className={`w-4 h-4 mt-0.5 rounded border flex-shrink-0 flex items-center justify-center text-[10px] transition-colors ${isChecked ? "bg-brand border-brand text-brandink" : "border-line"}`}>
                       {isChecked && "\u2713"}
                     </span>
                     <div className="flex-1 min-w-0">
-                      <span className={`text-xs font-semibold block transition-colors ${isChecked ? "text-neutral-600 line-through" : "text-neutral-100"}`}>
+                      <span className={`text-xs font-semibold block transition-colors ${isChecked ? "text-faint line-through" : "text-ink"}`}>
                         {entry.name}
                       </span>
                       <div className="flex items-center gap-2 mt-0.5">
-                        {qty && <span className={`text-[10px] ${isChecked ? "text-neutral-700" : "text-neutral-500"}`}>{qty}</span>}
-                        <span className="text-[10px] bg-neutral-800 text-neutral-600 px-1.5 py-0 rounded">{entry.meal}</span>
+                        {qty && <span className={`text-[10px] ${isChecked ? "text-faint" : "text-muted"}`}>{qty}</span>}
+                        <span className="text-[10px] bg-surface2 text-faint px-1.5 py-0 rounded">{entry.meal}</span>
                       </div>
                     </div>
                   </li>
@@ -1613,13 +1613,13 @@ export default function GroceryList({ adults = 2, kids = 2, leftovers = true, da
 
       {/* Completion / efficiency */}
       {allDone ? (
-        <div className="px-5 py-6 border-t border-amber-500/30 bg-amber-500/5 text-center">
-          <p className="text-amber-400 font-black text-sm">Shopping list complete.</p>
-          <p className="text-neutral-500 text-xs mt-1">3 dinners planned. One grocery run. You're set.</p>
+        <div className="px-5 py-6 border-t border-brand/30 bg-brand/5 text-center">
+          <p className="text-brand font-black text-sm">Shopping list complete.</p>
+          <p className="text-muted text-xs mt-1">3 dinners planned. One grocery run. You're set.</p>
         </div>
       ) : (
-        <div className="px-5 py-4 border-t border-neutral-800 bg-neutral-900/50">
-          <p className="text-neutral-500 text-xs text-center">
+        <div className="px-5 py-4 border-t border-line bg-surface/50">
+          <p className="text-muted text-xs text-center">
             One grocery run covers the whole plan. Same base ingredients reused across meals. Minimal waste.
           </p>
         </div>

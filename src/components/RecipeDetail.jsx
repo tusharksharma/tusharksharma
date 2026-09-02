@@ -1,7 +1,6 @@
 import { useState, useMemo, useEffect } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import track from "../hooks/useTrack";
-import useTheme from "../hooks/useTheme";
 import { liveRecipes } from "../data/recipes";
 import cardImage from "../utils/cardImage";
 import { balanceColumns, buildCookbookModel, buildRecipeModel, flattenSteps, ingredientText, isGroupHeader, parseGroups } from "../utils/recipeModel";
@@ -429,8 +428,6 @@ export default function RecipeDetail({ recipe, item, group }) {
    ════════════════════════════════════════════ */
 
 function RecipeHeader({ model }) {
-  const [theme, toggleTheme] = useTheme();
-
   return (
     <div className="theme-fade sticky top-0 z-10 border-b border-line bg-page/90 backdrop-blur-sm print:hidden">
       <div className="mx-auto flex max-w-3xl items-center gap-2 px-4 py-3">
@@ -451,25 +448,6 @@ function RecipeHeader({ model }) {
             <li className="min-w-0 truncate text-muted" aria-current="page">{model.title}</li>
           </ol>
         </nav>
-
-        <button
-          type="button"
-          onClick={toggleTheme}
-          aria-label={theme === "light" ? "Switch to dark theme" : "Switch to light theme"}
-          title={theme === "light" ? "Dark theme" : "Light theme"}
-          className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full border border-line text-muted hover:text-brand cursor-pointer"
-        >
-          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            {theme === "light" ? (
-              <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" />
-            ) : (
-              <>
-                <circle cx="12" cy="12" r="4" />
-                <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
-              </>
-            )}
-          </svg>
-        </button>
 
         <button
           type="button"

@@ -121,9 +121,9 @@ function proteinPer100Cal(r) {
 }
 
 function netCarbColor(nc) {
-  if (nc == null) return "bg-neutral-800 text-neutral-500";
+  if (nc == null) return "bg-surface2 text-muted";
   if (nc < 10) return "bg-emerald-500/15 text-emerald-300";
-  if (nc <= 20) return "bg-amber-500/15 text-amber-300";
+  if (nc <= 20) return "bg-brand/15 text-brand";
   return "bg-rose-500/15 text-rose-300";
 }
 
@@ -142,15 +142,15 @@ function Chip({ label, active, count, onClick }) {
       aria-label={count == null ? label : `${label}, ${count} ${count === 1 ? "recipe" : "recipes"}`}
       className={`px-3 py-1 rounded-full text-xs font-medium border transition-all ${
         dead
-          ? "bg-neutral-900/40 text-neutral-700 border-neutral-800/60 cursor-not-allowed"
+          ? "bg-surface/40 text-faint border-line/60 cursor-not-allowed"
           : active
-            ? "bg-amber-500 text-neutral-950 border-amber-500 cursor-pointer"
-            : "bg-neutral-900 text-neutral-400 border-neutral-700 hover:border-amber-500/40 hover:text-neutral-200 cursor-pointer"
+            ? "bg-brand text-brandink border-brand cursor-pointer"
+            : "bg-surface text-muted border-line hover:border-brand/40 hover:text-ink cursor-pointer"
       }`}
     >
       {label}
       {count != null && (
-        <span aria-hidden="true" className={`ml-1.5 tabular-nums ${active ? "text-neutral-950/60" : "text-neutral-600"}`}>{count}</span>
+        <span aria-hidden="true" className={`ml-1.5 tabular-nums ${active ? "text-brandink/60" : "text-faint"}`}>{count}</span>
       )}
     </button>
   );
@@ -176,17 +176,17 @@ function FilterSection({ title, items }) {
 
   return (
     <div className="flex flex-wrap items-center gap-2">
-      <span className="text-neutral-500 text-xs font-medium min-w-[70px]">{title}</span>
+      <span className="text-muted text-xs font-medium min-w-[70px]">{title}</span>
       {visible.map((item) => (
         <Chip key={item.key} label={item.label} active={item.active} count={item.count} onClick={item.onClick} />
       ))}
       {hiddenCount > 0 && (
-        <button onClick={() => setExpanded(true)} className="text-amber-400 text-xs font-medium hover:underline cursor-pointer">
+        <button onClick={() => setExpanded(true)} className="text-brand text-xs font-medium hover:underline cursor-pointer">
           +{hiddenCount} more
         </button>
       )}
       {collapsible && expanded && (
-        <button onClick={() => setExpanded(false)} className="text-neutral-500 text-xs font-medium hover:underline cursor-pointer">
+        <button onClick={() => setExpanded(false)} className="text-muted text-xs font-medium hover:underline cursor-pointer">
           show less
         </button>
       )}
@@ -343,11 +343,11 @@ export default function DinnersPage() {
   }, [narrow]);
 
   return (
-    <div className="min-h-screen bg-neutral-950 text-neutral-100">
+    <div className="min-h-screen bg-page text-ink">
       <div className="max-w-5xl mx-auto px-4 py-16">
         <div className="mb-8">
-          <h1 className="text-3xl font-black text-white">Dinners</h1>
-          <p className="text-neutral-400 text-sm mt-1">
+          <h1 className="text-3xl font-black text-ink">Dinners</h1>
+          <p className="text-muted text-sm mt-1">
             One cook, two plates — adults and kids from the same workflow. Filter by time, protein, cost, or dietary needs.
           </p>
         </div>
@@ -359,7 +359,7 @@ export default function DinnersPage() {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search recipes, proteins, tags..."
-            className="w-full bg-neutral-900 border border-neutral-700 rounded-lg px-4 py-2.5 text-sm text-neutral-100 placeholder-neutral-500 focus:outline-none focus:border-amber-500/60 transition-colors"
+            className="w-full bg-surface border border-line rounded-lg px-4 py-2.5 text-sm text-ink placeholder-faint focus:outline-none focus:border-brand/60 transition-colors"
           />
         </div>
 
@@ -367,22 +367,22 @@ export default function DinnersPage() {
         <div className="mb-4 flex items-center justify-between gap-3 flex-wrap">
           <button
             onClick={() => setFiltersOpen((v) => !v)}
-            className="flex items-center gap-2 px-4 py-2 rounded-lg bg-neutral-900 border border-neutral-700 text-neutral-200 text-sm font-medium hover:border-amber-500/40 transition-colors cursor-pointer"
+            className="flex items-center gap-2 px-4 py-2 rounded-lg bg-surface border border-line text-ink text-sm font-medium hover:border-brand/40 transition-colors cursor-pointer"
             aria-expanded={filtersOpen}
             aria-controls="dinners-filter-drawer"
           >
             <span>Filters</span>
             {activeCount > 0 && (
-              <span className="px-1.5 py-0.5 rounded-full bg-amber-500 text-neutral-950 text-[10px] font-bold">{activeCount}</span>
+              <span className="px-1.5 py-0.5 rounded-full bg-brand text-brandink text-[10px] font-bold">{activeCount}</span>
             )}
-            <span className={`text-neutral-500 transition-transform ${filtersOpen ? "rotate-180" : ""}`} aria-hidden="true">▾</span>
+            <span className={`text-muted transition-transform ${filtersOpen ? "rotate-180" : ""}`} aria-hidden="true">▾</span>
           </button>
-          <label className="flex items-center gap-2 text-xs text-neutral-500">
+          <label className="flex items-center gap-2 text-xs text-muted">
             <span>Sort</span>
             <select
               value={sortKey}
               onChange={(e) => setSortKey(e.target.value)}
-              className="bg-neutral-900 border border-neutral-700 rounded-lg px-3 py-1.5 text-neutral-200 text-xs font-medium hover:border-amber-500/40 focus:outline-none focus:border-amber-500/60 transition-colors cursor-pointer"
+              className="bg-surface border border-line rounded-lg px-3 py-1.5 text-ink text-xs font-medium hover:border-brand/40 focus:outline-none focus:border-brand/60 transition-colors cursor-pointer"
             >
               {SORT_OPTIONS.map((s) => (
                 <option key={s.key} value={s.key}>{s.label}</option>
@@ -390,7 +390,7 @@ export default function DinnersPage() {
             </select>
           </label>
           {hasActiveFilters && (
-            <button onClick={clearAll} className="text-amber-400 text-xs font-medium hover:underline cursor-pointer">
+            <button onClick={clearAll} className="text-brand text-xs font-medium hover:underline cursor-pointer">
               Clear all
             </button>
           )}
@@ -404,7 +404,7 @@ export default function DinnersPage() {
         {filtersOpen && (
         <div
           id="dinners-filter-drawer"
-          className="mb-4 space-y-2 bg-neutral-900/40 border border-neutral-800 rounded-xl p-4 max-h-[55vh] overflow-y-auto overscroll-contain sm:max-h-none sm:overflow-visible"
+          className="mb-4 space-y-2 bg-surface/40 border border-line rounded-xl p-4 max-h-[55vh] overflow-y-auto overscroll-contain sm:max-h-none sm:overflow-visible"
         >
           <FilterSection
             title="Protein"
@@ -482,7 +482,7 @@ export default function DinnersPage() {
 
         {/* Result count */}
         <div className="mb-6">
-          <span className="text-neutral-500 text-xs">
+          <span className="text-muted text-xs">
             {filtered.length} {filtered.length === 1 ? "recipe" : "recipes"}
             {hasActiveFilters ? " matching filters" : ""}
           </span>
@@ -492,29 +492,29 @@ export default function DinnersPage() {
         {filtered.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {filtered.map((r) => (
-              <Link key={r.id} to={`/recipes/${r.slug}`} className="bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden hover:border-amber-500/40 transition-all group block">
+              <Link key={r.id} to={`/recipes/${r.slug}`} className="bg-surface border border-line rounded-xl overflow-hidden hover:border-brand/40 transition-all group block">
                 {r.image && (
                   <img {...cardImage(r.image)} alt={r.title} width="640" height="400" className="w-full h-40 object-cover" loading="lazy" />
                 )}
                 <div className="p-5">
-                  <h3 className="text-white font-bold text-sm group-hover:text-amber-400 transition-colors">{r.title}</h3>
-                  <p className="text-neutral-500 text-xs mt-1 line-clamp-1 sm:line-clamp-2">{r.makeThisWhen || r.role}</p>
+                  <h3 className="text-ink font-bold text-sm group-hover:text-brand transition-colors">{r.title}</h3>
+                  <p className="text-muted text-xs mt-1 line-clamp-1 sm:line-clamp-2">{r.makeThisWhen || r.role}</p>
                   {/* First row is the leanness read — protein, calories, and
                       whether the macros are estimated. Time gets its own row
                       below so five fragments don't compete in one strip. */}
-                  <div className="flex items-center gap-2 mt-2 text-[11px] text-neutral-400">
-                    <span className="text-amber-400 font-black text-xs">{r.meta?.macros?.estimated ? "~" : ""}{r.protein}g protein</span>
-                    <span className="text-neutral-600">&middot;</span>
+                  <div className="flex items-center gap-2 mt-2 text-[11px] text-muted">
+                    <span className="text-brand font-black text-xs">{r.meta?.macros?.estimated ? "~" : ""}{r.protein}g protein</span>
+                    <span className="text-faint">&middot;</span>
                     <span>{r.meta?.macros?.estimated ? "~" : ""}{r.calories} cal</span>
                     {r.meta?.macros && (
                       r.meta.macros.estimated ? (
-                        <span className="ml-auto px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-300 text-[9px] font-bold uppercase tracking-wider" title="Macros are an estimate — calculated, not measured per-ingredient">~ EST</span>
+                        <span className="ml-auto px-1.5 py-0.5 rounded bg-brand/20 text-brand text-[9px] font-bold uppercase tracking-wider" title="Macros are an estimate — calculated, not measured per-ingredient">~ EST</span>
                       ) : (
                         <span className="ml-auto px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-300 text-[9px] font-bold uppercase tracking-wider" title="Macros are verified per-ingredient">✓ VERIFIED</span>
                       )
                     )}
                   </div>
-                  <p className="mt-1 text-[11px] text-neutral-500">{r.time}</p>
+                  <p className="mt-1 text-[11px] text-muted">{r.time}</p>
                   {/* Net carbs is colour-coded and dietary, so it stays on phones.
                       P/100cal and cost-per-serving are power-user metrics that made
                       the mobile card a flat wall of same-weight badges — they show
@@ -531,7 +531,7 @@ export default function DinnersPage() {
                       </span>
                     )}
                     {r.meta?.costPerServing && (
-                      <span className="hidden sm:inline-block px-1.5 py-0.5 rounded bg-neutral-800 text-neutral-400 font-semibold">{r.meta.costPerServing}/serving</span>
+                      <span className="hidden sm:inline-block px-1.5 py-0.5 rounded bg-surface2 text-muted font-semibold">{r.meta.costPerServing}/serving</span>
                     )}
                   </div>
                   {(r.splitCook?.adult?.label || r.splitCook?.kid?.label) && (
@@ -539,13 +539,13 @@ export default function DinnersPage() {
                       {r.splitCook?.adult?.label && (
                         <div className="bg-red-950/30 border border-red-900/40 rounded px-2 py-1.5">
                           <span className="text-red-400 text-[9px] font-bold uppercase tracking-wider">Adult</span>
-                          <p className="text-neutral-300 text-[10px] mt-0.5 line-clamp-2 leading-tight">{r.splitCook.adult.label.replace(/^Adult\s*[—-]\s*/i, "")}</p>
+                          <p className="text-muted text-[10px] mt-0.5 line-clamp-2 leading-tight">{r.splitCook.adult.label.replace(/^Adult\s*[—-]\s*/i, "")}</p>
                         </div>
                       )}
                       {r.splitCook?.kid?.label && (
                         <div className="bg-green-950/30 border border-green-900/40 rounded px-2 py-1.5">
                           <span className="text-green-400 text-[9px] font-bold uppercase tracking-wider">Kid</span>
-                          <p className="text-neutral-300 text-[10px] mt-0.5 line-clamp-2 leading-tight">{r.splitCook.kid.label.replace(/^Kid(\s*Path)?\s*[—-]\s*/i, "")}</p>
+                          <p className="text-muted text-[10px] mt-0.5 line-clamp-2 leading-tight">{r.splitCook.kid.label.replace(/^Kid(\s*Path)?\s*[—-]\s*/i, "")}</p>
                         </div>
                       )}
                     </div>
@@ -557,12 +557,12 @@ export default function DinnersPage() {
                   {r.meta && (
                     <div className="hidden sm:flex flex-wrap gap-1 mt-2">
                       {normalizeSplitAxes(r.meta.splitAxes).slice(0, 2).map((s) => (
-                        <span key={s} className="text-[9px] px-1.5 py-0.5 rounded bg-amber-500/10 text-amber-400/80">{s} split</span>
+                        <span key={s} className="text-[9px] px-1.5 py-0.5 rounded bg-brand/10 text-brand/80">{s} split</span>
                       ))}
                       {normalizeEffortTags(r.meta.effortTags).slice(0, 1).map((t) => (
-                        <span key={t} className="text-[9px] px-1.5 py-0.5 rounded bg-neutral-800 text-neutral-400">{t}</span>
+                        <span key={t} className="text-[9px] px-1.5 py-0.5 rounded bg-surface2 text-muted">{t}</span>
                       ))}
-                      {(r.meta.warnings || []).filter((w) => w.includes("spicy")).length > 0 && (
+                      {(r.meta.warnings || []).some((w) => (typeof w === "string" ? w : `${w?.label ?? ""} ${w?.detail ?? ""}`).toLowerCase().includes("spicy")) && (
                         <span className="text-[9px] px-1.5 py-0.5 rounded bg-red-500/10 text-red-400/70">spicy (adult)</span>
                       )}
                     </div>
@@ -572,18 +572,18 @@ export default function DinnersPage() {
             ))}
           </div>
         ) : (
-          <div className="text-center py-16 bg-neutral-900/30 border border-neutral-800 rounded-xl">
-            <p className="text-neutral-400 text-sm font-medium">No recipes match your filters.</p>
-            <p className="text-neutral-500 text-xs mt-1">Try adjusting your search or clearing some filters.</p>
-            <button onClick={clearAll} className="mt-4 text-amber-400 text-sm font-bold hover:underline cursor-pointer">
+          <div className="text-center py-16 bg-surface/30 border border-line rounded-xl">
+            <p className="text-muted text-sm font-medium">No recipes match your filters.</p>
+            <p className="text-muted text-xs mt-1">Try adjusting your search or clearing some filters.</p>
+            <button onClick={clearAll} className="mt-4 text-brand text-sm font-bold hover:underline cursor-pointer">
               Clear all filters
             </button>
           </div>
         )}
 
-        <div className="mt-12 text-center bg-neutral-900/30 border border-neutral-800 rounded-xl py-5 px-4">
-          <p className="text-neutral-500 text-xs">Want the full weekly system?</p>
-          <Link to="/" className="text-amber-400 text-sm font-bold hover:underline mt-1 inline-block">
+        <div className="mt-12 text-center bg-surface/30 border border-line rounded-xl py-5 px-4">
+          <p className="text-muted text-xs">Want the full weekly system?</p>
+          <Link to="/" className="text-brand text-sm font-bold hover:underline mt-1 inline-block">
             Go to This Week &rarr;
           </Link>
         </div>

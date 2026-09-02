@@ -17,22 +17,22 @@ export default function LeftoversPanel({ recipe }) {
   if (pairs.length === 0) return null;
 
   return (
-    <section className="border-t border-neutral-800 mt-10 pt-8">
+    <section className="border-t border-line mt-10 pt-8">
       <div className="flex items-baseline justify-between mb-4 flex-wrap gap-2">
         <div>
-          <p className="text-amber-500 text-[10px] font-black uppercase tracking-[0.2em] mb-1">
+          <p className="text-brand text-[10px] font-black uppercase tracking-[0.2em] mb-1">
             Pairs With Your Leftovers
           </p>
-          <h2 className="text-white text-xl font-black">Cook this next</h2>
+          <h2 className="text-ink text-xl font-black">Cook this next</h2>
         </div>
         <Link
           to="/leftovers"
-          className="text-amber-400 text-xs font-bold hover:underline"
+          className="text-brand text-xs font-bold hover:underline"
         >
           Browse all by ingredient →
         </Link>
       </div>
-      <p className="text-neutral-500 text-sm mb-5 leading-relaxed">
+      <p className="text-muted text-sm mb-5 leading-relaxed">
         Recipes that share the most ingredients with this one — same brands or proteins in your
         fridge are reusable here.
       </p>
@@ -41,7 +41,7 @@ export default function LeftoversPanel({ recipe }) {
           <Link
             key={other.id}
             to={`/recipes/${other.slug}`}
-            className="bg-neutral-900 rounded-2xl overflow-hidden border border-neutral-800 hover:border-amber-500/50 transition-all group"
+            className="bg-surface rounded-2xl overflow-hidden border border-line hover:border-brand/50 transition-all group"
           >
             <div className="relative">
               <img
@@ -52,18 +52,18 @@ export default function LeftoversPanel({ recipe }) {
                 className="w-full h-32 object-cover group-hover:brightness-110 transition-all"
                 loading="lazy"
               />
-              <div className="absolute top-2 right-2 bg-amber-500 text-black text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded-lg shadow-lg">
+              <div className="absolute top-2 right-2 bg-brand text-brandink text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded-lg shadow-lg">
                 {score} shared
               </div>
             </div>
             <div className="p-4">
-              <h3 className="text-white text-sm font-black leading-tight group-hover:text-amber-400 transition-colors line-clamp-2">
+              <h3 className="text-ink text-sm font-black leading-tight group-hover:text-brand transition-colors line-clamp-2">
                 {other.title}
               </h3>
-              <p className="text-neutral-500 text-[10px] mt-2 font-bold uppercase tracking-wider">
+              <p className="text-muted text-[10px] mt-2 font-bold uppercase tracking-wider">
                 Shared:
               </p>
-              <p className="text-neutral-400 text-xs mt-1 leading-snug line-clamp-2">
+              <p className="text-muted text-xs mt-1 leading-snug line-clamp-2">
                 {sharedTags.slice(0, 4).map((t) => t.label).join(" • ")}
               </p>
             </div>
