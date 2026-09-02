@@ -2,6 +2,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import { Component, useEffect, lazy, Suspense } from "react";
 import Nav from "./components/Nav";
 import InstallPrompt from "./components/InstallPrompt";
+import MyListDrawer from "./components/MyListDrawer";
 
 // Code-split route components — only loaded when navigated to
 const HomePage = lazy(() => import("./pages/HomePage"));
@@ -70,6 +71,7 @@ function App() {
           <Route path="/favorites/:collectionSlug" element={<FavoritesPage />} />
         </Routes>
       </Suspense>
+      <MyListDrawer />
       <InstallPrompt />
     </ErrorBoundary>
   );

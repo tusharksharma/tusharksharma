@@ -7,6 +7,7 @@ import cardImage from "../utils/cardImage";
 import { balanceColumns, buildCookbookModel, buildRecipeModel, flattenSteps, ingredientText, isGroupHeader, parseGroups } from "../utils/recipeModel";
 import CookingMode from "./CookingMode";
 import LeftoversPanel from "./LeftoversPanel";
+import RecipeActionBar, { StickyJump } from "./RecipeActionBar";
 
 /*
  * Recipe page.
@@ -89,6 +90,14 @@ export default function RecipeDetail({ recipe, item, group }) {
     for (const choice of model.kidIngredientChoices) all.push(...choice.extraIngredients);
     return all.map((i) => scaleIngredientText(ingredientText(i), scale));
   }, [model, scale]);
+
+  const saveEntry = useMemo(
+    () =>
+      recipe
+        ? { key: `recipe:${recipe.id}`, kind: "recipe", title: model.title, href: `/recipes/${recipe.slug}` }
+        : { key: `cookbook:${item.id}`, kind: "cookbook", title: model.title, href: `/cookbook/${item.id}` },
+    [recipe, item, model.title]
+  );
 
   const toggleCheck = (key) =>
     setChecked((prev) => {
@@ -178,7 +187,13 @@ export default function RecipeDetail({ recipe, item, group }) {
               <p className="mt-1 text-sm leading-relaxed text-ink">{c.body}</p>
             </div>
           ))}
+
+          {/* ── Reader actions: save, share, push ingredients to the list. ── */}
+          <RecipeActionBar saveEntry={saveEntry} ingredients={flatIngredients} />
         </header>
+
+        {/* Sticky jump between the two long sections. */}
+        <StickyJump />
 
         {/* ── 5. Ingredients. ── */}
         <Section id="ingredients" title="Ingredients">
