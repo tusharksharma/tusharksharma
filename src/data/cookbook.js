@@ -329,62 +329,54 @@ export const sauces = [
     socialCarousel: {
       heroBadge: "Power-Ups · Sauces",
       heroAccent: "coral",
-      hook: "70 cal / 8g protein per 1/4 batch — cottage cheese cheddar sauce with a smoky chipotle finish. Pours smooth over bowls, pasta, chicken, veg.",
+      hook: "A smooth, pourable cheddar sauce with 8g protein for about 70 calories. Keep it mild, or blend in chipotle crema for smoky heat.",
       heroPhoto: "/images/high-protein-chipotle-cheddar-sauce/hero-high-protein-chipotle-cheddar-sauce-polished.webp",
       ingredientGroups: [
         {
           card: 0,
           accent: "coral",
-          heading: "Blender Base",
+          heading: "One Blender, Five Ingredients",
           items: [
             { quantity: "150 g", text: "2% cottage cheese" },
             { quantity: "6 tbsp", text: "Fat-free ultra-filtered milk" },
             { quantity: "1 tbsp", text: "Cheddar cheese powder" },
             { quantity: "1 tbsp", text: "Nutritional yeast" },
-          ],
-        },
-        {
-          card: 1,
-          accent: "coral",
-          heading: "Adult Heat",
-          items: [
-            { quantity: "2 tbsp", text: "Smoky Chipotle Crema", note: "Optional — omit for a mild cheddar base" },
+            { quantity: "2 tbsp", text: "Smoky Chipotle Crema", note: "Optional for heat" },
           ],
         },
       ],
       methodGroups: [
         {
           accent: "coral",
-          heading: "Method",
+          heading: "Blend + Finish",
           items: [
-            { number: 1, heading: "Load", body: "Cottage cheese, milk, cheddar powder, nutritional yeast into a small blender." },
-            { number: 2, heading: "Blend Smooth", body: "Blend until completely smooth, scraping the sides once if needed." },
-            { number: 3, heading: "Add Heat", body: "Blend in the Smoky Chipotle Crema for the adult version. Omit it for the mild base." },
-            { number: 4, heading: "Adjust", body: "For a thinner drizzle, add ultra-filtered milk one teaspoon at a time." },
-            { number: 5, heading: "Serve", body: "Room temperature, or warm in 15-second microwave intervals. Do not boil." },
+            { number: 1, heading: "Load", body: "Add cottage cheese, milk, cheddar powder, and nutritional yeast to a small blender." },
+            { number: 2, heading: "Blend", body: "Blend completely smooth, scraping the sides once if needed." },
+            { number: 3, heading: "Choose the Heat", body: "Keep the cheddar base mild, or blend in the chipotle crema for smoky heat." },
+            { number: 4, heading: "Adjust + Serve", body: "Thin with milk one teaspoon at a time. Serve at room temperature or warm gently; do not boil." },
           ],
         },
       ],
       ingredientCardPhotos: [
-        { src: "/images/high-protein-chipotle-cheddar-sauce/step-01-add-cottage-cheese-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
         { src: "/images/high-protein-chipotle-cheddar-sauce/step-03-add-cheddar-powder-and-yeast-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
       ],
       methodCardPhotos: [
         { src: "/images/high-protein-chipotle-cheddar-sauce/step-04-blend-sauce-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
-        { src: "/images/high-protein-chipotle-cheddar-sauce/step-05-smooth-sauce-reveal-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
+        { src: "/images/high-protein-chipotle-cheddar-sauce/step-06-transfer-sauce-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
       ],
       servingPhoto: "/images/high-protein-chipotle-cheddar-sauce/step-06-transfer-sauce-polished.webp",
       servingGroups: [
         {
           accent: "coral",
-          heading: "1/4 Batch — One Serving",
+          heading: "One Batch, Four Servings",
           items: [
             { text: "70 calories, 8g protein per 1/4 batch (~1/4 cup)." },
-            { text: "Batch of 4 servings — the linked Beef & Potato Slop Bowl uses 2; the other 2 hold in the fridge for pasta / vegetables through the week." },
+            { text: "Pour it over beef bowls, pasta, chicken, roasted vegetables, fries, or mac and cheese." },
+            { text: "Refrigerate up to 4 days. Add a teaspoon of milk and whisk if it thickens." },
           ],
         },
       ],
-      engagementQuestion: "Where should the leftover 2 servings land next — pasta, wings, or a second bowl?",
+      engagementQuestion: "What would you pour this over first?",
     },
     socialImages: [
       "/images/high-protein-chipotle-cheddar-sauce/step-01-add-cottage-cheese-polished.webp",
