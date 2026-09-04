@@ -30,6 +30,7 @@ export default function SocialIndexPage() {
   ));
   const [input, setInput] = useState("");
   const [error, setError] = useState(false);
+  const [query, setQuery] = useState("");
 
   function submit(e) {
     e.preventDefault();
@@ -76,8 +77,18 @@ export default function SocialIndexPage() {
   }
 
   // Sorted: newest recipe IDs first (most recent carousels at top)
-  const sortedDinners = [...liveRecipes].sort((a, b) => b.id - a.id);
+  const allDinners = [...liveRecipes].sort((a, b) => b.id - a.id);
   const totalCookbook = COOKBOOK_SECTIONS.reduce((n, s) => n + s.items.length, 0);
+
+  // Search filters both dinners and cookbook sections by title. Empty query
+  // shows everything; empty sections drop out so results stay tight.
+  const q = query.trim().toLowerCase();
+  const matches = (t) => !q || (t || "").toLowerCase().includes(q);
+  const sortedDinners = allDinners.filter((r) => matches(r.title));
+  const filteredSections = COOKBOOK_SECTIONS
+    .map((s) => ({ ...s, items: s.items.filter((c) => matches(c.title)) }))
+    .filter((s) => s.items.length > 0);
+  const resultCount = sortedDinners.length + filteredSections.reduce((n, s) => n + s.items.length, 0);
 
   return (
     <div className="min-h-screen bg-neutral-950 text-neutral-100 py-10 px-4">
@@ -85,14 +96,42 @@ export default function SocialIndexPage() {
         <div className="flex items-baseline justify-between mb-6">
           <div>
             <h1 className="text-white text-2xl font-black">Social Carousels</h1>
-            <p className="text-neutral-500 text-sm mt-1">{sortedDinners.length} dinners + {totalCookbook} power-ups · click to open and screenshot</p>
+            <p className="text-neutral-500 text-sm mt-1">
+              {q
+                ? `${resultCount} match${resultCount === 1 ? "" : "es"} for "${query.trim()}"`
+                : `${allDinners.length} dinners + ${totalCookbook} power-ups · click to open and screenshot`}
+            </p>
           </div>
           <button onClick={lock} className="text-neutral-500 text-xs hover:text-amber-400 cursor-pointer">Lock</button>
         </div>
 
-        <h2 className="text-amber-400 text-xs font-black uppercase tracking-[0.2em] mb-3">Dinners ({sortedDinners.length})</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-10">
-          {sortedDinners.map((r) => (
+        <div className="relative mb-8">
+          <input
+            type="search"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder="Search carousels by name…"
+            className="w-full bg-neutral-900 border border-neutral-700 rounded-lg pl-4 pr-16 py-2.5 text-sm text-neutral-100 placeholder-neutral-500 focus:outline-none focus:border-amber-500/60 transition-colors [&::-webkit-search-cancel-button]:appearance-none"
+          />
+          {q && (
+            <button
+              onClick={() => setQuery("")}
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-neutral-500 text-xs hover:text-amber-400 cursor-pointer"
+            >
+              Clear
+            </button>
+          )}
+        </div>
+
+        {resultCount === 0 && (
+          <p className="text-neutral-500 text-sm">No carousels match &ldquo;{query.trim()}&rdquo;. Try a shorter word.</p>
+        )}
+
+        {sortedDinners.length > 0 && (
+          <>
+            <h2 className="text-amber-400 text-xs font-black uppercase tracking-[0.2em] mb-3">Dinners ({sortedDinners.length})</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-10">
+              {sortedDinners.map((r) => (
             <Link
               key={r.id}
               to={`/social/${r.slug}`}
@@ -107,10 +146,12 @@ export default function SocialIndexPage() {
                 <p className="text-amber-400 text-[10px] mt-1 group-hover:underline">Open carousel →</p>
               </div>
             </Link>
-          ))}
-        </div>
+              ))}
+            </div>
+          </>
+        )}
 
-        {COOKBOOK_SECTIONS.map((section) => section.items.length > 0 && (
+        {filteredSections.map((section) => (
           <div key={section.label} className="mb-8">
             <h2 className="text-amber-400 text-xs font-black uppercase tracking-[0.2em] mb-3">{section.label} ({section.items.length})</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
