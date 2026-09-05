@@ -2150,8 +2150,35 @@ export const quickLunches = [
     id: "miyoka-protein-ramen",
     title: "No-Dish Protein Ramen",
     tagline: "~35g protein. 7 minutes. Zero dishes. Eat from the container.",
-    heroImage: "/images/miyoka-ramen/hero.webp",
-    prepImage: "/images/miyoka-ramen/step0-ingredients.webp",
+    heroImage: "/images/miyoka-protein-ramen/hero-miyoka-protein-ramen-polished.webp",
+    prepImage: "/images/miyoka-protein-ramen/context-miyoka-spicy-protein-ramen-polished.webp",
+    video: "/videos/miyoka-protein-ramen/miyoka-protein-ramen-quick-lunches-ep5-350cal-35protein-marcus.mp4",
+    originalSoundVideo: "/videos/miyoka-protein-ramen/miyoka-protein-ramen-quick-lunches-ep5-clean-original-sound.mp4",
+    textOriginalSoundVideo: "/videos/miyoka-protein-ramen/miyoka-protein-ramen-quick-lunches-ep5-text-original-sound.mp4",
+    socialHashtags: [
+      "#QuickLunches",
+      "#ProteinRamen",
+      "#HighProteinLunch",
+      "#LunchHack",
+      "#TheSplitPlate",
+    ],
+    // Quick Lunches Episode 5 repost of the existing No-Dish Protein Ramen.
+    // Recipe text/macros preserved verbatim; only images, Ep5 video fields,
+    // and series metadata added. Polished-only social set ships raw
+    // placeholders first; Path A polish prompts queued for the swap.
+    // Narrative: cup brand -> empty pot -> pour broth -> add noodles ->
+    // cook -> return to cup -> add sauce -> close+shake -> eat.
+    socialImages: [
+      "/images/miyoka-protein-ramen/context-miyoka-spicy-protein-ramen-polished.webp",
+      "/images/miyoka-protein-ramen/context-kirkland-chicken-bone-broth-polished.webp",
+      "/images/miyoka-protein-ramen/step-01-pour-bone-broth-polished.webp",
+      "/images/miyoka-protein-ramen/step-02-add-ramen-noodles-polished.webp",
+      "/images/miyoka-protein-ramen/step-03-cook-until-absorbed-polished.webp",
+      "/images/miyoka-protein-ramen/step-04-return-noodles-to-cup-polished.webp",
+      "/images/miyoka-protein-ramen/step-05-add-spicy-sauce-polished.webp",
+      "/images/miyoka-protein-ramen/step-06-close-and-shake-polished.webp",
+      "/images/miyoka-protein-ramen/final-eat-from-container-polished.webp",
+    ],
     flavorProfile: "Spicy stir-fried ramen, bone broth depth, coated not soupy",
     calories: 350,
     caloriesPerServing: 350,
@@ -2186,6 +2213,11 @@ export const quickLunches = [
       { name: "Miyoka", item: "Protein Spicy Ramen (Chicken Flavor)", why: "25g protein per container. Spicy stir-fried style. Eat from the container — zero dishes." },
       { name: "Kirkland", item: "Organic Chicken Bone Broth", why: "9g protein per cup. Replaces water — free protein + umami.", image: "/images/brands/kirkland-bone-broth.jpg", url: "https://www.costcobusinessdelivery.com/kirkland-signature-organic-chicken-bone-broth-32-fl-oz,-6-ct.product.100403862.html" },
     ],
+    seriesInfo: {
+      series: "Quick Lunches",
+      episode: 5,
+      framing: "Fifth episode of the Quick Lunches numbered series — the first repost of an existing recipe as a numbered episode. Ep. 5 keeps the format: dependable convenience products, one heat step, real macros. The move here is swapping water for Kirkland chicken bone broth so the Miyoka Spicy Protein Ramen cup lands at ~350 cal / ~35g protein — 25g from the noodles, ~9g from the broth — and cooking the noodles down until the broth is mostly absorbed, then finishing in the cup with the full sauce packet. No extra bowl, zero cleanup. Recipe, ingredients, and macros are unchanged from the original No-Dish Protein Ramen; the episode brings a fresh hook, footage order, caption, and question.",
+    },
     mealPrep: {
       storage: "N/A — 7 minutes to make.",
       lasts: "Eat immediately.",
