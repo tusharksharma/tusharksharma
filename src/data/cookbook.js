@@ -331,6 +331,7 @@ export const sauces = [
       heroAccent: "coral",
       hook: "A smooth, pourable cheddar sauce with 8g protein for about 70 calories. Keep it mild, or blend in chipotle crema for smoky heat.",
       heroPhoto: "/images/high-protein-chipotle-cheddar-sauce/hero-high-protein-chipotle-cheddar-sauce-polished.webp",
+      heroPhotoStripHeight: 560,
       ingredientGroups: [
         {
           card: 0,

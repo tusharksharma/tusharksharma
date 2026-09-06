@@ -237,7 +237,7 @@ export function buildHeroLayout(recipe, curated = {}, { index, total, isCookbook
     index, total,
     recipeName: title,
     photoSrc,
-    photoStripHeight: HERO_PHOTO_STRIP_HEIGHT,
+    photoStripHeight: curated.heroPhotoStripHeight || HERO_PHOTO_STRIP_HEIGHT,
     badge,
     title,
     tagline,
