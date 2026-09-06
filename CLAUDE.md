@@ -2,6 +2,23 @@
 
 Rules and conventions for working on this recipe site. Follow these exactly.
 
+## Content Strategy Standing Rule
+
+The canonical strategy is [The Split Plate 90-Day Content Growth Plan](docs/content-growth-plan.md). Apply it whenever planning or producing content, calendar entries, social packages, website destinations, analytics, or commercial work.
+
+- Protect the promise: help busy parents make food, family life, and fitness work together through meals and shortcuts they will actually repeat.
+- "One cook, two plates" is the signature food method. Tushar's real routines, opinions, experiments, and tradeoffs are the broader account story.
+- Give every post exactly one primary job: Reach, Growth, Community, or Monetization. Align the opening, evidence, CTA, and measurement with that job.
+- Keep every post within one of six connected pillars: real-life meals, useful food knowledge, experiments, enjoyable dessert routines, the person behind the system, or products that earn their place.
+- Lead with viewer value before the series label. Use only claims supported by footage or reliable sources, keep text inside safe areas, and use one CTA.
+- A product appearance is not automatically Monetization. Reviews must answer a purchase question with actual use, strengths, drawbacks, fit, and disclosure.
+- Family-dinner posts must show the shared-cook decision and adult/kid split where relevant. Adult macros belong only to the adult serving.
+- Four daily slots and 28 weekly posts are capacity ceilings. Never call unfinished work publishable merely because it occupies a calendar slot.
+- Capture distinct stories from one activity while reserving non-overlapping footage for teasers, mains, rankings, and follow-ups. A brief requiring fresh footage cannot be satisfied with recycled clips.
+- Compare performance only within the same platform, format, purpose, and age window. Prefer medians, preserve missing values, track production time, and test one variable at a time.
+- Every post should lead to the most relevant useful destination, not a generic website CTA.
+- Surface conflicts with this strategy before building. Explicit instructions from Tushar for the current task remain authoritative.
+
 ## The Tier Framework (brand thesis)
 
 The Split Plate is not a recipe site. It is a **modular family food system**. Most creators ship one-off recipes; the strategic advantage here is that the meals **stack into a system**. Every recipe should be writable into one of four tiers:
