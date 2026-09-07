@@ -484,8 +484,10 @@ export const sauces = [
     socialCarousel: {
       heroBadge: "Power-Ups · Sauces",
       heroAccent: "amber",
-      hook: "The sauce I built for Lomo Saltado — but it belongs on far more than one dinner. Six ingredients, one pour, reduce until glossy. Beef, chicken, shrimp, noodles, fried rice, cooked veg — same base, different pan.",
+      heroTitle: "Golden Umami Stir-Fry Sauce",
+      hook: "Six ingredients. One pour. Reduce until glossy. · 25 cal · 3g protein",
       heroPhoto: "/images/golden-umami-stir-fry-sauce/hero-golden-umami-sauce-polished.webp",
+      captionTitle: "The Stir-Fry Sauce I Keep Reusing",
       ingredientGroups: [
         {
           card: 0,
@@ -525,10 +527,17 @@ export const sauces = [
       servingGroups: [
         {
           accent: "amber",
-          heading: "Six Servings, One Pour",
+          heading: "Yield",
           items: [
-            { text: "~2/3 cup of finished sauce = 6 servings at about 1 tablespoon plus 2 teaspoons each. ~25 cal / 3g protein per serving (estimated — recalculate against your specific labels)." },
-            { text: "Lomo Saltado is the original dinner. Same sauce works on beef stir-fry, chicken, shrimp, noodles, fried rice, and cooked vegetables." },
+            { text: "About 2/3 cup · 6 servings · about 1 tbsp + 2 tsp each" },
+            { text: "~25 cal · 3g protein per serving (estimated; recalculate with your labels)" },
+          ],
+        },
+        {
+          accent: "coral",
+          heading: "Use It On",
+          items: [
+            { text: "Lomo Saltado, beef, chicken, shrimp, noodles, fried rice, or cooked vegetables" },
           ],
         },
       ],
