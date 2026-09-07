@@ -1696,6 +1696,100 @@ const recipes = [
       "/images/golden-garlic-rice-bowl-steak/step-10-kid-toum-polished.webp",
       "/images/golden-garlic-rice-bowl-steak/step-11-adult-tari-polished.webp",
     ],
+    // Curated seven-card carousel. The generic fallback split the adult and
+    // smaller-plate finishes into a nearly empty ingredient card, then spread
+    // eleven granular instructions across four method cards. Keep the full
+    // recipe below; this is the concise social teaching sequence.
+    socialCarousel: {
+      heroBadge: "Split Plate Dinner",
+      heroTitle: "Golden Garlic Steak Bowls",
+      hook: "One 35-minute cook = two family dinners · 520 cal · 45g protein",
+      heroPhoto: "/images/golden-garlic-rice-bowl-steak/hero-split-family-bowls-polished.webp",
+      ingredientGroups: [
+        {
+          card: 1,
+          accent: "amber",
+          heading: "Golden Rice",
+          items: [
+            { quantity: "2 cups", text: "Basmati rice, rinsed" },
+            { quantity: "4 cups", text: "Chicken bone broth" },
+            { quantity: "3 tbsp", text: "Ghee" },
+            { quantity: "~30g", text: "Frozen garlic cubes" },
+            { quantity: "~60g", text: "Frozen baby onions" },
+            { quantity: "1.5 tsp each", text: "Turmeric + salt" },
+          ],
+        },
+        {
+          card: 2,
+          accent: "amber",
+          heading: "Protein + Prep",
+          items: [
+            { quantity: "36 oz", text: "Frozen thin-sliced sirloin", note: "Six 6 oz pucks" },
+            { quantity: "8", text: "Shallow meal-prep containers" },
+          ],
+        },
+        {
+          card: 2,
+          accent: "coral",
+          heading: "Adult Finish",
+          items: [
+            { quantity: "2 tsp", text: "Tari Aji Amarillo per bowl" },
+          ],
+        },
+        {
+          card: 2,
+          accent: "green",
+          heading: "Smaller Finish",
+          items: [
+            { quantity: "2 tsp", text: "Prepared toum per bowl" },
+          ],
+        },
+      ],
+      methodGroups: [
+        {
+          card: 1,
+          accent: "amber",
+          heading: "Method",
+          items: [
+            { number: 1, heading: "Pulse Aromatics", body: "Pulse frozen garlic + onions 5-7 times. Keep them finely chopped, not pureed." },
+            { number: 2, heading: "Build Golden Rice", body: "Sauté in ghee, bloom turmeric + salt, then add broth and rinsed rice." },
+            { number: 3, heading: "Cook + Portion", body: "Cover on low for 15 min, rest 5, then divide evenly across 8 containers." },
+          ],
+        },
+        {
+          card: 2,
+          accent: "amber",
+          heading: "Method",
+          items: [
+            { number: 4, heading: "Sear Steak", body: "Sear frozen pucks in a very hot, uncrowded skillet; break into ribbons once browned." },
+            { number: 5, heading: "Split Portions", body: "Adults get 6 oz steak. Smaller bowls get 3 oz over the same rice portion." },
+            { number: 6, heading: "Sauce at Serve", body: "Add Tari or toum only after reheating. Keep the second dinner unsauced." },
+          ],
+        },
+      ],
+      ingredientCardPhotos: [
+        "/images/golden-garlic-rice-bowl-steak/step-04-season-golden-rice-polished.webp",
+        "/images/golden-garlic-rice-bowl-steak/step-06-portion-eight-rice-servings-polished.webp",
+      ],
+      methodCardPhotos: [
+        "/images/golden-garlic-rice-bowl-steak/step-01-pulse-frozen-aromatics.webp",
+        "/images/golden-garlic-rice-bowl-steak/step-07-sear-frozen-steak-polished.webp",
+      ],
+      servingPhoto: "/images/golden-garlic-rice-bowl-steak/hero-split-family-bowls-polished.webp",
+      servingGroups: [
+        {
+          accent: "coral",
+          heading: "Adult Bowl",
+          items: [{ text: "6 oz steak + 2 tsp Tari · 520 cal · 45g protein" }],
+        },
+        {
+          accent: "green",
+          heading: "Smaller Bowl",
+          items: [{ text: "3 oz steak + 2 tsp mild toum · same golden-rice portion" }],
+        },
+      ],
+      engagementQuestion: "Tari heat or mild toum — which bowl are you choosing?",
+    },
     role: "The Make-Once-Eat-Twice Family Batch",
     makeThisWhen: "You want ONE 35-min cook to cover two family dinners (2 adults + 2 kids × 2 nights = 8 bowls). Same rice for everyone; the split is at the plate — adults get 6 oz steak + 2 tsp Tari heat, kids get 3 oz steak + 2 tsp mild toum. The updated framing came from the kids asking for the adult rice portion after the last cook.",
     hook: "The rice was so good last time, my kids asked for the adult portion. That's not a request I ignore. ONE 35-min cook = 8 bowls (4 adult + 4 kid across 2 family dinners). Same golden turmeric-broth rice for everyone; adults get 6 oz steak + 2 tsp Tari, kids get 3 oz steak + 2 tsp toum. Sauce goes on at serve — never in storage. Adult bowl ~520 cal / 45g protein. Kid macros intentionally not published — parents pick the portion.",
