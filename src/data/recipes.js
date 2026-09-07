@@ -2258,6 +2258,94 @@ const recipes = [
       "/images/tandoori-chicken-drumsticks/step-09-cucumber-spicy-onion-sides-polished.webp",
       "/images/tandoori-chicken-drumsticks/hero-tandoori-chicken-drumsticks-polished.webp",
     ],
+    // Curated seven-card carousel. The generic fallback produced a paragraph-
+    // length hero, a sparse second ingredient card, three method cards, and an
+    // adult-only serving image. Keep the full recipe below while teaching the
+    // split in six concise actions and showing the smaller plate at the end.
+    socialCarousel: {
+      heroBadge: "Split Plate Dinner",
+      heroTitle: "Split-Plate Tandoori Drumsticks",
+      hook: "One yogurt-lemon base, two spice levels · 525 cal · 60g protein",
+      heroPhoto: "/images/tandoori-chicken-drumsticks/hero-adult-three-drumstick-plate-polished.webp",
+      captionTitle: "The Weekend Tandoori Grill",
+      ingredientGroups: [
+        {
+          card: 1,
+          accent: "amber",
+          heading: "Shared Base",
+          items: [
+            { quantity: "8-10", text: "Skinless chicken drumsticks" },
+            { quantity: "1 container", text: "Fat-free Greek yogurt", note: "About 150-170g" },
+            { quantity: "1", text: "Lemon, juiced" },
+            { quantity: "1", text: "Cucumber" },
+          ],
+        },
+        {
+          card: 2,
+          accent: "coral",
+          heading: "Adult Finish",
+          items: [
+            { quantity: "2/3 packet", text: "Tandoori masala" },
+            { quantity: "optional", text: "Pinch of red color" },
+            { quantity: "1", text: "Onion + Kashmiri chili + lemon" },
+            { quantity: "to taste", text: "Kala namak for cucumber" },
+          ],
+        },
+        {
+          card: 2,
+          accent: "green",
+          heading: "Smaller Finish",
+          items: [
+            { quantity: "~1/6 packet", text: "Tandoori masala" },
+            { quantity: "~200 cal", text: "Rice, naan, or bhatura" },
+          ],
+        },
+      ],
+      methodGroups: [
+        {
+          card: 1,
+          accent: "amber",
+          heading: "Method",
+          items: [
+            { number: 1, heading: "Skin + Slit", body: "Remove the skin, pat dry, and cut 2-3 deep slits in every drumstick." },
+            { number: 2, heading: "Mix the Base", body: "Combine yogurt + lemon. Reserve about one-third before adding any masala." },
+            { number: 3, heading: "Season Two Ways", body: "Use 2/3 packet for adults and about 1/6 packet in the reserved smaller batch." },
+          ],
+        },
+        {
+          card: 2,
+          accent: "amber",
+          heading: "Method",
+          items: [
+            { number: 4, heading: "Marinate", body: "Massage into the slits, cover both bowls, and chill overnight; 6 hours minimum." },
+            { number: 5, heading: "Bake + Char", body: "Space on a rack. Bake at 425°F for 15-20 min, then broil 5-7 min per side to 165°F." },
+            { number: 6, heading: "Split the Plates", body: "Adults get 3 drumsticks + spicy onions. Smaller plates get 1 mild drumstick + a familiar carb." },
+          ],
+        },
+      ],
+      ingredientCardPhotos: [
+        "/images/tandoori-chicken-drumsticks/step-01-fat-free-greek-yogurt-polished.webp",
+        "/images/tandoori-chicken-drumsticks/step-06-mild-kid-marinade-polished.webp",
+      ],
+      methodCardPhotos: [
+        "/images/tandoori-chicken-drumsticks/step-05-massage-adult-marinade-polished.webp",
+        "/images/tandoori-chicken-drumsticks/step-08-charred-finished-drumsticks-polished.webp",
+      ],
+      servingPhoto: "/images/tandoori-chicken-drumsticks/step-10-kid-indian-flatbread-polished.webp",
+      servingGroups: [
+        {
+          accent: "coral",
+          heading: "Adult Plate",
+          items: [{ text: "3 full-strength drumsticks + cucumber + spicy onions · 525 cal · 60g protein" }],
+        },
+        {
+          accent: "green",
+          heading: "Smaller Plate",
+          items: [{ text: "1 mild drumstick + cucumber + about 200 calories of rice, naan, or bhatura" }],
+        },
+      ],
+      engagementQuestion: "Full-strength tandoori or the milder plate?",
+    },
     role: "The Weekend Grill (Adult: 3 drumsticks + cucumber + spicy onions / Kid: 1 mild drumstick + cucumber + ~200 cal Indian carb)",
     makeThisWhen: "You want tandoori that actually tastes like tandoori — deep spice from a full-strength masala, yogurt tenderized, visible char from the grill or broiler. One marinade base, two spice levels: full power for adults, about a sixth of the masala for kids.",
     hook: "One marinade base, two spice levels. Adults get the full Shan (or Everest) tandoori masala — 3 drumsticks, 525 cal, 60g protein. Kids get the same yogurt-and-lemon base with roughly a sixth of the spice, plus a carb they recognize. Both batches hit the same rack at the same time. Overnight marinade is non-negotiable.",

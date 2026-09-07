@@ -906,7 +906,7 @@ function longCaption(recipe, components, platform = "tiktok") {
   const m = recipe.meta?.macros || {};
 
   // HOOK — first line, the one that has to land in 1 sec
-  lines.push(recipe.role || recipe.title);
+  lines.push(recipe.socialCarousel?.captionTitle || recipe.role || recipe.title);
   lines.push("");
 
   // QUICK STATS
@@ -922,8 +922,8 @@ function longCaption(recipe, components, platform = "tiktok") {
   // SPLIT
   if (recipe.splitCook?.adult?.label || recipe.splitCook?.kid?.label) {
     lines.push("THE SPLIT");
-    if (recipe.splitCook.adult?.label) lines.push(`👨‍🍳 Adult: ${recipe.splitCook.adult.label}`);
-    if (recipe.splitCook.kid?.label) lines.push(`🧒 Kid: ${recipe.splitCook.kid.label}`);
+    if (recipe.splitCook.adult?.label) lines.push(`👨‍🍳 Adult: ${stripPlatePrefix(recipe.splitCook.adult.label, "Adult")}`);
+    if (recipe.splitCook.kid?.label) lines.push(`🧒 Kid: ${stripPlatePrefix(recipe.splitCook.kid.label, "Kid")}`);
     lines.push("");
   }
 
@@ -978,6 +978,12 @@ function longCaption(recipe, components, platform = "tiktok") {
   lines.push(tags.join(" "));
 
   return lines.join("\n");
+}
+
+function stripPlatePrefix(label, prefix) {
+  return String(label || "")
+    .replace(new RegExp(`^${prefix}\\s*[—–-]\\s*`, "i"), "")
+    .trim();
 }
 
 function classifyCookbook(item) {
