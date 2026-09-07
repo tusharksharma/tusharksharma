@@ -1369,6 +1369,36 @@ const GROCERY_BY_WEEK = {
       { name: "Cooking spray (Fri steak sear)", qty: "pantry", meal: "Fri" },
     ],
   },
+  34: {
+    "Protein": [
+      { name: "Turkey pepperoni (Mon batch, 8 servings — chopped + folded through the mac)", baseQty: 8, unit: "servings", meal: "Mon", fixedBatch: true },
+      { name: "Bavette steak (6 oz per adult — Fri steak night)", baseQty: 6, unit: "oz", meal: "Fri adult" },
+      { name: "Great Value pork breakfast patties (1.5 per kid — Fri kid alt)", baseQty: 1.5, unit: "patties", meal: "Fri kid" },
+    ],
+    "Dairy + Egg": [
+      { name: "Whole milk (Mon batch, 2 cups — creator used Nurri; whisked with the cheese packets)", baseQty: 2, unit: "cups", meal: "Mon", fixedBatch: true },
+    ],
+    "Produce": [
+      { name: "Raw carrots (baby or sticks — Fri kid)", baseQty: 1, unit: "bag", meal: "Fri kid" },
+    ],
+    "Carbs": [
+      { name: "Annie's Super Mac Shells & White Cheddar (Mon batch, 6 boxes — higher-protein line, cheese packets included)", baseQty: 6, unit: "boxes", meal: "Mon", fixedBatch: true },
+      { name: "Checkers/Rally's frozen fries (Fri steak night)", baseQty: 1, unit: "bag", meal: "Fri" },
+    ],
+    "Sauce + Condiment": [
+      { name: "O California organic extra virgin olive oil (Fri chimichurri)", qty: "pantry", meal: "Fri adult" },
+      { name: "Napa Valley Naturals organic red wine vinegar (Fri chimichurri)", qty: "pantry", meal: "Fri adult" },
+      { name: "Spiceology Chimichurri Blend (Fri chimichurri)", qty: "pantry", meal: "Fri adult" },
+    ],
+    "Spice + Aromatic": [
+      { name: "SPG (Fri steak — pantry)", qty: "pantry", meal: "Fri" },
+      { name: "Chili flakes (Fri chimichurri)", qty: "pantry", meal: "Fri adult" },
+    ],
+    "Pantry": [
+      { name: "Avocado-oil spray (Mon — optional, only if the pot needs it)", qty: "pantry", meal: "Mon" },
+      { name: "Cooking spray (Fri steak sear)", qty: "pantry", meal: "Fri" },
+    ],
+  },
 };
 
 function getGrocery(week) { return GROCERY_BY_WEEK[week] || GROCERY_BY_WEEK[1]; }
