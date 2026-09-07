@@ -36,7 +36,7 @@ const TEXTURE_WORDS = /\b(sharpen|sharpens|texture|gloss|glossy|glisten|glisteni
 // Separation — the canonical "cool the <X> shadow a half-stop" depth move.
 const SEPARATION = /\b(half-stop|separation|separate|separates|pops? off|read three-dimensional)\b/i;
 // Guardrail — a target color paired with a bound ("... — not neon"). Warning-only.
-const GUARDRAIL = /\bnot\s+(neon|muddy|gray|grey|slushy|candy|candy-apple|avocado|vivid|flat|plastic|washed)\b/i;
+const GUARDRAIL = /\bnot\s+(neon|muddy|gray|grey|slushy|candy|candy-apple|avocado|vivid|flat|plastic|washed|burnt|burned|dull|orange|dark|pale|gummy)\b/i;
 // SATURATION LOCK — a prohibition that tells the model to leave color alone.
 // This is the cardinal sin: it turns the whole prompt into "don't change this".
 const SATURATION_LOCK = /\b(?:don'?t|do not|never|no|avoid|without)\s+(?:push(?:ing)?\s+|adding\s+|boost(?:ing)?\s+|increas(?:e|ing)\s+)?(?:the\s+)?(?:saturation|vibrance|vibrancy)\b|\bsaturation\s+lock\b|\bkeep\s+(?:the\s+)?(?:colors?|saturation|vibrance)\s+(?:unchanged|as[-\s]is|flat)\b/i;
@@ -139,8 +139,13 @@ function main() {
     process.exit(2);
   }
 
-  // header spec check (2048 / sRGB / -polished.webp) — file-level, warning
-  const headerOk = /2048/.test(text) && /srgb/i.test(text) && /-polished\.webp/i.test(text);
+  // header spec check (2048 / sRGB / save destination) — file-level, warning.
+  // Cookbook items save over `-polished.webp`; dinner recipes overwrite the raw
+  // filename in place, so accept a `public/images` save instruction too.
+  const headerOk =
+    /2048/.test(text) &&
+    /srgb/i.test(text) &&
+    (/-polished\.webp/i.test(text) || /public\/images/i.test(text) || /save over/i.test(text));
 
   let passCount = 0;
   let satLocks = 0;
