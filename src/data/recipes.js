@@ -3358,7 +3358,7 @@ const recipes = [
     status: "live",
     carbLevel: "medium",
     meta: {
-      macros: { protein: 50, calories: 580, fat: 25, carbs: 48, netCarbs: 42, estimated: true },
+      macros: { protein: 35, calories: 400, fat: 18, carbs: 26, netCarbs: 22, estimated: true },
       allergens: ["dairy"],
       warnings: ["verify-taco-seasoning-label", "green-sauce-contains-dairy", "kid-macros-not-published"],
       dietTags: ["egg-free", "soy-free", "nut-free", "gluten-free"],
@@ -3385,8 +3385,8 @@ const recipes = [
     tags: ["tacos", "chicken-thighs", "air-fryer", "weeknight", "kid-friendly", "deconstructed", "split-cook"],
     time: "30 min",
     servings: 4,
-    protein: 50,
-    calories: 580,
+    protein: 35,
+    calories: 400,
     image: "/images/next-day-tacos/hero-air-fryer-chicken-tacos.webp",
     video: "/videos/next-day-chicken-tacos/air-fryer-chicken-tacos-marcus.mp4",
     teaserVideo: "/videos/next-day-chicken-tacos/air-fryer-chicken-tacos-7-second-teaser.mp4",
@@ -3444,8 +3444,8 @@ const recipes = [
       ],
       adult: {
         label: "Adult — Four Chicken Tacos + Optional Green Sauce",
-        protein: 50,
-        calories: 580,
+        protein: 35,
+        calories: 400,
         extraIngredients: [
           "--- ADULT GARNISH ---",
           "1/2 cup white onion, finely diced",
@@ -3517,7 +3517,7 @@ const recipes = [
       { name: "The Split Plate", item: "High-Protein Cilantro Jalapeño Ranch", why: "Optional adult green-sauce finish from the recently made batch. Keep it off the shared chicken so the child plate stays familiar.", link: "/cookbook/high-protein-cilantro-jalapeno-ranch" },
       { name: "Kirkland Signature", item: "Grass-Fed Ghee", why: "The filmed kid-tortilla finish. Use only a light brush to keep the warmed corn tortilla pliable.", url: "https://www.costco.com/" },
     ],
-    macroHonesty: "Adult estimate is for four tacos with 6 oz cooked boneless, skinless chicken thigh total, four small corn tortillas, cilantro-onion-lime, and about 2 tbsp of the optional High-Protein Cilantro Jalapeño Ranch. Brands, thigh trimming, absorbed oil, tortilla size, and sauce amount can shift the result. Kid macros are intentionally not published because the filmed child serving is appetite-led: 2 oz cooked chicken plus guacamole and tortilla as accepted. Not laboratory-verified.",
+    macroHonesty: "About 400 calories and 35g protein per adult serving. That estimate is for four tacos with 6 oz cooked boneless, skinless chicken thigh total, four small corn tortillas, cilantro-onion-lime, and about 2 tbsp of the optional High-Protein Cilantro Jalapeño Ranch. Brands, thigh trimming, absorbed oil, tortilla size, and sauce amount can shift the result. Kid macros are intentionally not published because the filmed child serving is appetite-led: 2 oz cooked chicken plus guacamole and tortilla as accepted. Not laboratory-verified.",
     relatedRecipes: [
       { title: "High-Protein Cilantro Jalapeño Ranch", path: "/cookbook/high-protein-cilantro-jalapeno-ranch", relationship: "The optional recently made green sauce used on the adult tacos." },
       { title: "High-Protein Beef & Potato Slop Bowl", path: "/recipes/high-protein-beef-potato-slop-bowl", relationship: "Another one-cook, two-finish dinner with a fully deconstructed young-kid plate." },
