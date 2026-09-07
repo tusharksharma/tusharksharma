@@ -17,3 +17,9 @@ The canonical strategy is [The Split Plate 90-Day Content Growth Plan](docs/cont
 11. Connect attention to a useful destination: the matching recipe, weekly plan, collection, detailed review, or starting guide. Do not use a generic website CTA when a more relevant destination exists.
 12. When a proposed asset conflicts with this rule, surface the conflict before building it and recommend the smallest change that restores alignment. Explicit instructions from Tushar for the current task remain authoritative.
 
+## Path A Image-Prompt Standing Rule
+
+Path A prompts must **transform** an amateur still into appetizing, editorial food photography — not merely polish/color-correct it. The transformation lives in **directional grade moves**: a tone verb (deepen/warm/brighten/cool) pointed at a **named target color** with a guardrail ("— not neon"). Detail verbs alone (sharpen/define) do nothing. **Never write a saturation lock** ("do not push saturation/vibrance") — give a target color + bound instead.
+
+**Hard gate:** before delivering any Path A `.md`, run `node scripts/lint-path-a.mjs <slug>`. It must print `N/N PASS · 0 saturation-locks · deliver` (exit 0); rewrite any FAIL and re-run before delivering. Full rules, per-prompt rhythm, and the canonical reference live in [docs/path-a-prompt-template.md](docs/path-a-prompt-template.md).
+

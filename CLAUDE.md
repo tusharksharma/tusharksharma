@@ -287,6 +287,20 @@ Implementation rules:
 If a recipe doesn't have a split-plate photo yet, produce one before shipping. Path A polish prompt template:
 > Transform the image. Two plates side by side on a warm wood butcher-block: kid plate (smaller, plainer, less sauce, larger ingredient pieces) on [left/top]; adult plate (sauced, garnished, full portion) on [right/bottom]. Keep the exact composition — both plates visible, lived-in family context. Replace harsh overhead lighting with warm natural daylight from upper-left, sharpen plate edges and food details, deepen wood grain warmth. Remove unnecessary clutter but PRESERVE the lived-in family kitchen context (water cans, brand packaging, real-table props in frame). Make it postworthy in the documentary-family-food style, not magazine-studio style.
 
+### Path A prompt quality gate (MANDATORY — run the linter)
+
+Path A prompts must **TRANSFORM** the amateur still into appetizing, editorial food photography — **not just polish/color-correct it**. Grade-only prompts ("sharpen the edges, warm the board") keep coming back visibly unchanged. The mechanism that actually transforms a ChatGPT image-to-image pass is **directional grade moves**: a tone verb (`deepen`/`warm`/`brighten`/`cool`) pointed at a **named target color** with a **guardrail** (`deepen the marinara into rich tomato red — not neon`). Detail verbs (`sharpen`/`define`/`clarify`) alone do nothing. **NEVER write a saturation lock** (`do not push saturation/vibrance`) — give a target color + bound instead.
+
+Every prompt needs: `Polish the…` opener · ≥3 grade moves · ≥2 named colors · ≥1 texture/gloss move · ≥1 `cool the <X> shadow a half-stop` separation move · a label-lock when packaging is in frame · `No text.` closer · zero saturation locks.
+
+**HARD GATE — before delivering any Path A `.md`, run:**
+
+```
+node scripts/lint-path-a.mjs <slug>
+```
+
+It must print `N/N PASS · 0 saturation-locks · deliver` (exit 0). If any prompt **FAIL**s, rewrite and re-run — do not deliver a failing set. Paste the PASS report alongside the file path when delivering. Full rules + rhythm + canonical reference: **`docs/path-a-prompt-template.md`**.
+
 ### Polished-only rule for social images (NON-NEGOTIABLE)
 
 **The social carousel must NEVER include raw video stills, un-polished phone shots, or any step image that hasn't been through Gemini "Transform this image" / ChatGPT studio-restyle.** Raw shots make the brand look amateur on Instagram even when they read fine on the recipe page.
