@@ -277,7 +277,10 @@ function deriveStats(recipe, { isSnackBox }) {
   if (pro) stats.push({ value: `${pro}g`, label: "protein" });
   const servings = recipe.servings || recipe.servingSize;
   if (servings) {
-    stats.push({ value: `${servings}`, label: isSnackBox ? "box" : "servings" });
+    stats.push({
+      value: `${servings}`,
+      label: isSnackBox ? (Number(servings) === 1 ? "box" : "boxes") : (Number(servings) === 1 ? "serving" : "servings"),
+    });
   } else if (recipe.time) {
     stats.push({ value: `${recipe.time}`, label: "time" });
   }

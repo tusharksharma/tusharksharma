@@ -4909,7 +4909,8 @@ export const desserts = [
     socialCarousel: {
       heroBadge: "CrumblCreamiCut · W1 F1",
       heroAccent: "amber",
-      hook: "Two freezes create the chocolate-vanilla marble. Cheesecake frosting bites finish it at 335 cal / 45g protein.",
+      hook: "Chocolate-vanilla layers, frozen cheesecake bites, and graham crunch. 335 cal / 45g protein for the whole pint.",
+      captionTitle: "Chocolate-vanilla cheesecake Creami with 45g protein in the whole pint.",
       heroPhoto: "/images/marbled-stuffed-cheesecake-creami/hero-finished-marbled-stuffed-cheesecake-creami-polished.webp",
       ingredientGroups: [
         {
@@ -4932,7 +4933,7 @@ export const desserts = [
             { quantity: "1/2 tbsp", text: "Black cocoa" },
             { quantity: "15g", text: "Frozen protein cheesecake frosting" },
             { quantity: "7g", text: "Milk-chocolate-style chips" },
-            { quantity: "7g", text: "Crushed graham snacks", note: "Add after every machine cycle" },
+            { quantity: "7g", text: "Crushed graham snacks", note: "Add after all machine cycles" },
           ],
         },
       ],
@@ -4958,6 +4959,7 @@ export const desserts = [
         { src: "/images/marbled-stuffed-cheesecake-creami/step-02-add-black-cocoa-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
         { src: "/images/marbled-stuffed-cheesecake-creami/step-06-add-mix-ins-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
       ],
+      methodLabel: "HOW TO MAKE",
       servingPhoto: "/images/marbled-stuffed-cheesecake-creami/hero-finished-marbled-stuffed-cheesecake-creami-polished.webp",
       servingGroups: [
         {
@@ -5073,6 +5075,81 @@ export const desserts = [
     tagline: "CrumblCreamiCut Week 1, Flavor 2 — single-freeze protein Creami with brown butter + vanilla base, Lily's chips through Respin (not Mix-In), zero-cal salted caramel drizzle, and chopped Twix pieces for the shortbread crunch. 350 cal / 42g protein whole pint.",
     heroImage: "/images/caramel-shortbread-creami-with-twix/hero-finished-caramel-shortbread-creami-polished.webp",
     prepImage: "/images/caramel-shortbread-creami-with-twix/step-03-first-spin-polished.webp",
+    socialHashtags: [
+      "#CrumblCreamiCut",
+      "#CaramelShortbreadCreami",
+      "#NinjaCreamiRecipe",
+      "#ProteinIceCream",
+      "#HighProteinDessert",
+    ],
+    socialCarousel: {
+      heroBadge: "CrumblCreamiCut · W1 F2",
+      heroAccent: "amber",
+      hook: "Brown-butter vanilla, salted caramel, and Twix crunch. 350 cal / 42g protein for the whole pint.",
+      captionTitle: "Caramel-shortbread Creami with Twix crunch and 42g protein.",
+      heroPhoto: "/images/caramel-shortbread-creami-with-twix/hero-finished-caramel-shortbread-creami-polished.webp",
+      ingredientGroups: [
+        {
+          card: 0,
+          accent: "amber",
+          heading: "Creami Base",
+          items: [
+            { quantity: "1 cup", text: "2% ultra-filtered milk" },
+            { quantity: "2 tbsp", text: "Monk fruit sweetener" },
+            { quantity: "1 serving", text: "Unflavored whey isolate" },
+            { quantity: "1/8 tsp", text: "Guar gum" },
+            { quantity: "Pinch", text: "Salt" },
+          ],
+        },
+        {
+          card: 1,
+          accent: "amber",
+          heading: "Flavor + Finish",
+          items: [
+            { quantity: "1 tsp", text: "Brown-butter bakery emulsion" },
+            { quantity: "1 tsp", text: "Vanilla extract" },
+            { quantity: "7g", text: "Milk-chocolate-style chips" },
+            { quantity: "To taste", text: "Sugar-free salted caramel" },
+            { quantity: "15g", text: "Twix pieces", note: "Chopped; add after Respin" },
+          ],
+        },
+      ],
+      methodGroups: [
+        {
+          accent: "amber",
+          heading: "Method",
+          items: [
+            { number: 1, heading: "Blend", body: "Blend milk, sweetener, whey, guar, and salt until completely smooth." },
+            { number: 2, heading: "Flavor", body: "Blend in brown-butter emulsion and vanilla just until combined." },
+            { number: 3, heading: "Freeze", body: "Freeze upright on a level surface for 24 hours." },
+            { number: 4, heading: "Rest + Spin", body: "Rest 5 minutes at room temperature; run Regular Ice Cream." },
+            { number: 5, heading: "Add Chips", body: "Add chips to a narrow center well and run Respin, not Mix-In." },
+            { number: 6, heading: "Finish", body: "Scoop, drizzle with caramel, and top with chopped Twix." },
+          ],
+        },
+      ],
+      ingredientCardPhotos: [
+        { src: "/images/caramel-shortbread-creami-with-twix/step-01-blend-base-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
+        { src: "/images/caramel-shortbread-creami-with-twix/step-06-add-twix-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
+      ],
+      methodCardPhotos: [
+        { src: "/images/caramel-shortbread-creami-with-twix/step-03-first-spin-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
+        { src: "/images/caramel-shortbread-creami-with-twix/step-05-caramel-drizzle-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
+      ],
+      methodLabel: "HOW TO MAKE",
+      servingPhoto: "/images/caramel-shortbread-creami-with-twix/hero-finished-caramel-shortbread-creami-polished.webp",
+      servingGroups: [
+        {
+          accent: "amber",
+          heading: "Whole-Pint Dessert",
+          items: [
+            { text: "One finished pint: 350 calories and 42g protein." },
+            { text: "Add the caramel and Twix after Respin, then serve immediately for the best crunch." },
+          ],
+        },
+      ],
+      engagementQuestion: "Would you keep the Twix on top or mix it through?",
+    },
     socialImages: [
       "/images/caramel-shortbread-creami-with-twix/step-01-blend-base-polished.webp",
       "/images/caramel-shortbread-creami-with-twix/step-02-frozen-base-polished.webp",
@@ -5181,6 +5258,82 @@ export const desserts = [
     tagline: "CrumblCreamiCut Week 1, Flavor 3 — cookie-butter protein Creami with 1 tsp Biscoff spread + LorAnn Cookie Butter emulsion + vanilla in the base, one Biscoff cookie through Mix-In, sugar-free cookie-butter syrup + LorAnn drizzle, and a second Biscoff cookie crushed on top. 340 cal / 42g protein whole pint.",
     heroImage: "/images/biscoff-skillet-creami/hero-finished-biscoff-skillet-creami-polished.webp",
     prepImage: "/images/biscoff-skillet-creami/step-05-add-biscoff-cookie-polished.webp",
+    socialHashtags: [
+      "#CrumblCreamiCut",
+      "#BiscoffCreami",
+      "#NinjaCreamiRecipe",
+      "#ProteinIceCream",
+      "#HighProteinDessert",
+    ],
+    socialCarousel: {
+      heroBadge: "CrumblCreamiCut · W1 F3",
+      heroAccent: "amber",
+      hook: "Cookie butter in the base, Biscoff crunch inside and on top. 340 cal / 42g protein for the whole pint.",
+      captionTitle: "Biscoff cookie-butter Creami with 42g protein in the whole pint.",
+      heroPhoto: "/images/biscoff-skillet-creami/hero-finished-biscoff-skillet-creami-polished.webp",
+      ingredientGroups: [
+        {
+          card: 0,
+          accent: "amber",
+          heading: "Creami Base",
+          items: [
+            { quantity: "1 cup", text: "2% ultra-filtered milk" },
+            { quantity: "2 tbsp", text: "Monk fruit sweetener" },
+            { quantity: "1 serving", text: "Unflavored whey isolate" },
+            { quantity: "1/8 tsp", text: "Guar gum" },
+            { quantity: "Pinch", text: "Salt" },
+          ],
+        },
+        {
+          card: 1,
+          accent: "amber",
+          heading: "Cookie-Butter Stack",
+          items: [
+            { quantity: "1 tsp", text: "Cookie-butter emulsion", note: "For the base" },
+            { quantity: "1 tsp", text: "Vanilla extract" },
+            { quantity: "1 tsp", text: "Biscoff spread" },
+            { quantity: "1 cookie", text: "Biscoff cookie", note: "For Mix-In" },
+            { quantity: "1 pump + 1 tsp", text: "Sugar-free syrup + emulsion", note: "For the drizzle" },
+            { quantity: "1 cookie", text: "Biscoff cookie", note: "Crushed on top" },
+          ],
+        },
+      ],
+      methodGroups: [
+        {
+          accent: "amber",
+          heading: "Method",
+          items: [
+            { number: 1, heading: "Blend", body: "Blend milk, sweetener, whey, guar, and salt until completely smooth." },
+            { number: 2, heading: "Flavor", body: "Blend in 1 tsp emulsion, vanilla, and Biscoff spread." },
+            { number: 3, heading: "Freeze", body: "Freeze upright on a level surface for 24 hours." },
+            { number: 4, heading: "Rest + Spin", body: "Rest 5 minutes; run Regular Ice Cream. Respin only if powdery." },
+            { number: 5, heading: "Mix In", body: "Add one crumbled cookie to a narrow well and run Mix-In." },
+            { number: 6, heading: "Finish", body: "Scoop, add the syrup-emulsion drizzle, and crush the second cookie on top." },
+          ],
+        },
+      ],
+      ingredientCardPhotos: [
+        { src: "/images/biscoff-skillet-creami/step-02-blend-base.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
+        { src: "/images/biscoff-skillet-creami/step-01-flavor-base-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
+      ],
+      methodCardPhotos: [
+        { src: "/images/biscoff-skillet-creami/step-04-first-spin-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
+        { src: "/images/biscoff-skillet-creami/step-07-garnish-drizzle-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
+      ],
+      methodLabel: "HOW TO MAKE",
+      servingPhoto: "/images/biscoff-skillet-creami/hero-finished-biscoff-skillet-creami-polished.webp",
+      servingGroups: [
+        {
+          accent: "amber",
+          heading: "Whole-Pint Dessert",
+          items: [
+            { text: "One finished pint: 340 calories and 42g protein." },
+            { text: "Keep the second cookie out of the machine and add it last for the best crunch." },
+          ],
+        },
+      ],
+      engagementQuestion: "Mix one cookie in and save one for the top, or put both on top?",
+    },
     socialImages: [
       "/images/biscoff-skillet-creami/step-01-flavor-base-polished.webp",
       "/images/biscoff-skillet-creami/step-03-frozen-base-polished.webp",

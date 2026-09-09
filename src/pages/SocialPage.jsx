@@ -913,7 +913,7 @@ function longCaption(recipe, components, platform = "tiktok") {
   lines.push(`✓ ${m.protein || recipe.protein}g protein`);
   lines.push(`✓ ~${m.calories || recipe.calories} cal per serving`);
   if (m.netCarbs != null) lines.push(`✓ ~${m.netCarbs}g net carbs`);
-  lines.push(`✓ ${recipe.time} · ${recipe.servings} servings`);
+  lines.push(`✓ ${recipe.time} · ${recipe.servings} serving${Number(recipe.servings) === 1 ? "" : "s"}`);
   // "One cook, two plates" is the dinner-only split-plate stat. Cookbook
   // items (sauce / breakfast / dessert / etc.) don't have a kid version.
   if (recipe.splitCook) lines.push(`✓ One cook, two plates (adult + kid)`);
