@@ -1371,18 +1371,18 @@ const GROCERY_BY_WEEK = {
   },
   34: {
     "Protein": [
-      { name: "Turkey pepperoni (Mon batch, 8 servings — chopped + folded through the mac)", baseQty: 8, unit: "servings", meal: "Mon", fixedBatch: true },
+      { name: "Turkey pepperoni (Mon batch, 4 servings per batch — chopped + folded through the mac)", baseQty: 4, unit: "servings", meal: "Mon", fixedBatch: true },
       { name: "Bavette steak (6 oz per adult — Fri steak night)", baseQty: 6, unit: "oz", meal: "Fri adult" },
       { name: "Great Value pork breakfast patties (1.5 per kid — Fri kid alt)", baseQty: 1.5, unit: "patties", meal: "Fri kid" },
     ],
     "Dairy + Egg": [
-      { name: "Whole milk (Mon batch, 2 cups — creator used Nurri; whisked with the cheese packets)", baseQty: 2, unit: "cups", meal: "Mon", fixedBatch: true },
+      { name: "Whole milk (Mon batch, 1 cup per batch — creator used Nurri; whisked with the cheese packets)", baseQty: 1, unit: "cups", meal: "Mon", fixedBatch: true },
     ],
     "Produce": [
       { name: "Raw carrots (baby or sticks — Fri kid)", baseQty: 1, unit: "bag", meal: "Fri kid" },
     ],
     "Carbs": [
-      { name: "Annie's Super Mac Shells & White Cheddar (Mon batch, 6 boxes — higher-protein line, cheese packets included)", baseQty: 6, unit: "boxes", meal: "Mon", fixedBatch: true },
+      { name: "Annie's Super Mac Shells & White Cheddar (Mon batch, 3 boxes per batch — higher-protein line, cheese packets included)", baseQty: 3, unit: "boxes", meal: "Mon", fixedBatch: true },
       { name: "Checkers/Rally's frozen fries (Fri steak night)", baseQty: 1, unit: "bag", meal: "Fri" },
     ],
     "Sauce + Condiment": [

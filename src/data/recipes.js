@@ -10675,6 +10675,7 @@ const recipes = [
     carbLevel: "high",
     meta: {
       macros: { protein: 25, calories: 370, fat: 12, carbs: 42, netCarbs: 40, estimated: true },
+      fixedBatch: true,
       allergens: ["dairy", "wheat", "gluten"],
       warnings: ["verify-pepperoni-label", "boxed-mix-labels-vary", "kid-macros-not-published"],
       dietTags: ["high-protein", "meal-prep", "family-dinner", "pork-free"],
