@@ -2235,6 +2235,85 @@ export const quickLunches = [
     },
   },
   {
+    id: "spicy-chicken-sandwich",
+    title: "Spicy Chicken Sandwich",
+    tagline: "250 cal / 26g protein. One crispy air-fryer sandwich, almost no effort.",
+    heroImage: "/images/spicy-chicken-sandwich/hero-spicy-chicken-sandwich.webp",
+    prepImage: "/images/spicy-chicken-sandwich/context-bettergoods-chicken-fillet.webp",
+    video: "/videos/spicy-chicken-sandwich/spicy-chicken-sandwich-quick-lunches-ep6-250cal-26protein-marcus.mp4",
+    originalSoundVideo: "/videos/spicy-chicken-sandwich/spicy-chicken-sandwich-quick-lunches-ep6-clean-original-sound.mp4",
+    textOriginalSoundVideo: "/videos/spicy-chicken-sandwich/spicy-chicken-sandwich-quick-lunches-ep6-text-original-sound.mp4",
+    socialHashtags: [
+      "#QuickLunches",
+      "#ChickenSandwich",
+      "#HighProteinLunch",
+      "#AirFryerLunch",
+      "#TheSplitPlate",
+    ],
+    // Quick Lunches Episode 6 — single-sandwich air-fryer build. A requested
+    // rewrite that moves the Spicy Chicken Sandwich into the Quick Lunches
+    // numbered series: one sandwich, one Velveeta slice, the filmed Bettergoods
+    // build at 250 cal / 26g protein, sauce kept at 20 cal or less. The old
+    // two-sandwich split adult/kid dinner construction is dropped here — the
+    // legacy family-dinner build still lives as its own recipe.
+    // Narrative: fillet + bun packages -> fillet into air fryer -> toast bun ->
+    // sauce the bun -> melt Velveeta on the fillet -> assemble -> finished.
+    socialImages: [
+      "/images/spicy-chicken-sandwich/context-bettergoods-chicken-fillet.webp",
+      "/images/spicy-chicken-sandwich/step-01-air-fry-frozen-fillet.webp",
+      "/images/spicy-chicken-sandwich/step-02-toast-keto-bun.webp",
+      "/images/spicy-chicken-sandwich/step-03-add-low-calorie-sauce.webp",
+      "/images/spicy-chicken-sandwich/step-04-melt-velveeta.webp",
+      "/images/spicy-chicken-sandwich/step-05-assemble-sandwich.webp",
+      "/images/spicy-chicken-sandwich/final-spicy-chicken-sandwich.webp",
+    ],
+    flavorProfile: "Crispy breaded chicken, melty Velveeta, spicy low-calorie sauce, toasted keto bun",
+    calories: 250,
+    caloriesPerServing: 250,
+    protein: 26,
+    proteinPerServing: 26,
+    servings: 1,
+    servingSize: "1 sandwich",
+    time: "~20 min",
+    bestFor: ["Quick lunch", "Air fryer", "High protein", "Low effort"],
+    useThisWhen: "You want a crispy chicken sandwich lunch with real macros and almost no effort. 250 cal / 26g protein for one sandwich — a frozen breaded fillet does the work in the air fryer.",
+    flavorTarget: "Crispy air-fried chicken fillet, one melted Velveeta slice, and a spicy low-calorie sauce on a toasted keto bun. The fillet is the whole recipe — pick one with at least 10g protein per 100 calories and the macros land.",
+    ingredients: [
+      "1 frozen breaded chicken breast fillet — Episode 6 uses Bettergoods Original (140 cal / 16g protein); Kirkland is the preferred pick. Choose any fillet with at least 10g protein per 100 calories.",
+      "1 keto hamburger bun — Episode 6 uses Bettergoods (50 cal / 7g protein)",
+      "1 slice Velveeta (40 cal / 3g protein)",
+      "1 tbsp or less low-calorie spicy sauce — keep this at 20 cal or less for the stated macros",
+    ],
+    steps: [
+      "COOK THE FILLET: Air fry the frozen chicken fillet per its package directions and verify it reaches 165°F. Crispy, not soggy — single layer, don't overcrowd.",
+      "TOAST THE BUN: Add the bun halves near the end and toast until lightly crisp.",
+      "MELT THE VELVEETA: Lay one Velveeta slice on the hot fillet and return it to the air fryer just until melted.",
+      "SAUCE + ASSEMBLE: Spread up to 1 tablespoon low-calorie spicy sauce on the bottom bun, add the cheesy fillet, close the sandwich, and serve immediately.",
+    ],
+    troubleshooting: [
+      { problem: "Chicken isn't crispy", fix: "You microwaved it or overcrowded the basket. Air fry in a single layer per the package directions until 165°F." },
+      { problem: "My macros don't match", fix: "Labels vary by brand. The 250 cal / 26g is the filmed Bettergoods build — recalc from the fillet, bun, cheese, and sauce you actually bought." },
+      { problem: "Sauce blew past the calorie budget", fix: "Keep the sauce to 20 cal or less. A tablespoon of a low-calorie spicy sauce is the ceiling — more and the macro line moves." },
+      { problem: "Bun falls apart", fix: "Keto buns are softer. Toast lightly and don't over-sauce the bottom." },
+    ],
+    brands: [
+      { name: "Bettergoods", item: "Original Breaded Chicken Fillet (140 cal / 16g protein)", why: "The fillet filmed in Episode 6. Any frozen breaded fillet works if it clears at least 10g protein per 100 calories — Kirkland is the preferred pick, Bettergoods Original is what's used here and also works. Recheck the label; macros vary by SKU.", url: null },
+      { name: "Bettergoods", item: "Keto Friendly Hamburger Bun (50 cal / 7g protein)", why: "Low-calorie, higher-protein bun that keeps the sandwich near 250 cal. Any keto bun works.", url: null },
+      { name: "Velveeta", item: "Original Slice (40 cal / 3g protein)", why: "One slice melts into the hot fillet for the cheesy layer without a calorie bomb.", image: "/images/brands/velveeta-slices.png", url: "https://www.kraftheinz.com/velveeta/products/00021000611447-original-flavored-cheese" },
+    ],
+    seriesInfo: {
+      series: "Quick Lunches",
+      episode: 6,
+      framing: "Sixth episode of the Quick Lunches numbered series — a requested rewrite that moves the Spicy Chicken Sandwich into the series as a single-sandwich lunch. Ep. 6 keeps the format: dependable convenience products, one heat step, real macros. The build is one frozen breaded chicken fillet air-fried crispy, a keto bun toasted at the end, one melted Velveeta slice, and up to a tablespoon of low-calorie spicy sauce — 250 cal / 26g protein for the filmed Bettergoods build, with the sauce held at 20 calories or less. The fillet rule is the point: any frozen breaded fillet with at least 10g protein per 100 calories works, Kirkland preferred and Bettergoods Original filmed. Macros move with the fillet, bun, cheese, and sauce you pick — labels vary, so recalc. The old two-sandwich split adult/kid dinner construction is dropped for this single-serving lunch.",
+    },
+    macroHonesty: "250 cal / 26g protein is calculated from current package labels for the filmed build: Bettergoods Original fillet (140 cal / 16g) + Bettergoods keto bun (50 cal / 7g) + 1 Velveeta slice (40 cal / 3g) + up to 20 cal of sauce. Not every compatible fillet lands on these exact numbers — labels vary by brand and SKU, so recheck and recalc from the fillet, bun, cheese, and sauce you actually buy. The 10g-protein-per-100-calories rule is the filter that keeps a swap honest.",
+    mealPrep: {
+      storage: "Best fresh. Air fry the fillet to order.",
+      lasts: "Same day. A toasted bun goes stale and the fillet loses its crisp.",
+      reheat: "Re-crisp a cooked fillet in the air fryer at 350°F for 3-4 min. Don't microwave — it goes soggy.",
+    },
+  },
+  {
     id: "high-protein-chili-cheese-toast",
     title: "High-Protein Chili Cheese Toast",
     tagline: "8 open-faced toasts. 130 cal / 13g protein each. Blended cottage cheese + reduced-fat fiesta + chilies on keto buns.",
