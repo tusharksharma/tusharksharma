@@ -21,7 +21,16 @@
 
 import { ACCENTS, EXPORT_SIZE, SAFE_MARGIN, drawCover, drawWrapped, font, loadImage } from "./structuredCard";
 
-export const HERO_PHOTO_STRIP_HEIGHT = 640;
+export const HERO_PHOTO_STRIP_HEIGHT = 560;
+
+// Bottom stats pills are a fixed anchor; the text block above them must never
+// grow into them. These constants define the reserved zone + line metrics used
+// by BOTH renderers so the canvas export and the DOM preview stay in sync.
+const HERO_PILL_H = 96;
+const HERO_STATS_GAP = 28; // min gap between the text block and the pills
+const HERO_TITLE_LH = 66;
+const HERO_TAG_LH = 38;
+const HERO_TITLE_TAG_GAP = 16;
 
 export async function drawStructuredHero(ctx, layout) {
   const stripH = layout.photoStripHeight || HERO_PHOTO_STRIP_HEIGHT;
@@ -48,6 +57,14 @@ export async function drawStructuredHero(ctx, layout) {
   ctx.textAlign = "right"; ctx.textBaseline = "top";
   ctx.fillText(`${layout.index} / ${layout.total}`, EXPORT_SIZE - SAFE_MARGIN, 40);
 
+  // Reserve the stats zone up front so the text block below the photo can be
+  // clamped to the space ABOVE the pills — text and pills were previously
+  // pinned to a fixed top and bottom independently, so a 2-3 line title + a
+  // 2-line tagline grew straight into the macro row.
+  const stats = (layout.stats || []).slice(0, 3);
+  const pillY = EXPORT_SIZE - SAFE_MARGIN - HERO_PILL_H;
+  const textBottomLimit = stats.length ? pillY - HERO_STATS_GAP : EXPORT_SIZE - SAFE_MARGIN;
+
   let y = stripH + 40;
 
   if (layout.badge) {
@@ -58,27 +75,32 @@ export async function drawStructuredHero(ctx, layout) {
     y += 36;
   }
 
-  // Title
+  // Title — cap lines to what fits above the stats zone, always leaving room
+  // for at least one tagline line when a tagline is present.
+  const taglineReserve = layout.tagline ? HERO_TAG_LH + HERO_TITLE_TAG_GAP : 0;
+  const titleLinesFit = Math.floor((textBottomLimit - y - taglineReserve) / HERO_TITLE_LH);
+  const maxTitleLines = Math.max(1, Math.min(3, titleLinesFit));
   y = drawWrapped(ctx, layout.title || "", SAFE_MARGIN, y, EXPORT_SIZE - SAFE_MARGIN * 2, {
-    size: 56, weight: 900, color: "#ffffff", lineHeight: 66, maxLines: 3,
+    size: 56, weight: 900, color: "#ffffff", lineHeight: HERO_TITLE_LH, maxLines: maxTitleLines,
   });
-  y += 16;
+  y += HERO_TITLE_TAG_GAP;
 
   if (layout.tagline) {
-    y = drawWrapped(ctx, layout.tagline, SAFE_MARGIN, y, EXPORT_SIZE - SAFE_MARGIN * 2, {
-      size: 28, weight: 500, color: "#d4d4d4", lineHeight: 38, maxLines: 2,
-    });
-    y += 20;
+    const tagLinesFit = Math.floor((textBottomLimit - y) / HERO_TAG_LH);
+    const maxTagLines = Math.max(0, Math.min(2, tagLinesFit));
+    if (maxTagLines > 0) {
+      y = drawWrapped(ctx, layout.tagline, SAFE_MARGIN, y, EXPORT_SIZE - SAFE_MARGIN * 2, {
+        size: 28, weight: 500, color: "#d4d4d4", lineHeight: HERO_TAG_LH, maxLines: maxTagLines,
+      });
+    }
   }
 
-  // Stats row — up to 3 pills across the bottom
-  const stats = (layout.stats || []).slice(0, 3);
+  // Stats row — up to 3 pills across the bottom (fixed anchor)
   if (stats.length) {
     const gap = 20;
     const contentW = EXPORT_SIZE - SAFE_MARGIN * 2;
     const pillW = Math.floor((contentW - gap * (stats.length - 1)) / stats.length);
-    const pillH = 96;
-    const pillY = EXPORT_SIZE - SAFE_MARGIN - pillH;
+    const pillH = HERO_PILL_H;
     stats.forEach((s, i) => {
       const x = SAFE_MARGIN + i * (pillW + gap);
       ctx.fillStyle = "#171717";
@@ -144,58 +166,69 @@ export function HeroStructuredInner({ layout }) {
         {layout.index} / {layout.total}
       </div>
 
+      {/* Below-photo area is a flex column so the stats row is a reserved,
+          fixed-height anchor and the text block takes the remaining space —
+          clipping if content is long rather than overlapping the macro pills. */}
       <div
-        className="absolute inset-x-0"
-        style={{ top: stripH + 20 * S, padding: `0 ${marginPx}px` }}
+        className="absolute inset-x-0 bottom-0 flex flex-col"
+        style={{ top: stripH, padding: `${20 * S}px ${marginPx}px ${marginPx}px`, gap: `${HERO_STATS_GAP * S}px` }}
       >
-        {layout.badge && (
+        <div className="flex-1 min-h-0 overflow-hidden">
+          {layout.badge && (
+            <div
+              className="uppercase tracking-wider font-black"
+              style={{ fontSize: `${22 * S}px`, color: accent, marginBottom: 8 * S }}
+            >
+              {layout.badge}
+            </div>
+          )}
           <div
-            className="uppercase tracking-wider font-black"
-            style={{ fontSize: `${22 * S}px`, color: accent, marginBottom: 8 * S }}
+            className="font-black leading-tight overflow-hidden"
+            style={{
+              fontSize: `${56 * S}px`, color: "#ffffff", marginBottom: 8 * S,
+              display: "-webkit-box", WebkitBoxOrient: "vertical", WebkitLineClamp: 3,
+            }}
           >
-            {layout.badge}
+            {layout.title}
           </div>
-        )}
-        <div
-          className="font-black leading-tight"
-          style={{ fontSize: `${56 * S}px`, color: "#ffffff", marginBottom: 8 * S }}
-        >
-          {layout.title}
+          {layout.tagline && (
+            <div
+              className="overflow-hidden"
+              style={{
+                fontSize: `${28 * S}px`, color: "#d4d4d4", fontWeight: 500, lineHeight: 1.35,
+                display: "-webkit-box", WebkitBoxOrient: "vertical", WebkitLineClamp: 2,
+              }}
+            >
+              {layout.tagline}
+            </div>
+          )}
         </div>
-        {layout.tagline && (
-          <div style={{ fontSize: `${28 * S}px`, color: "#d4d4d4", fontWeight: 500, lineHeight: 1.35 }}>
-            {layout.tagline}
+
+        {(layout.stats || []).length > 0 && (
+          <div className="flex gap-2.5 flex-shrink-0">
+            {layout.stats.slice(0, 3).map((s, i) => (
+              <div
+                key={i}
+                className="flex-1 flex flex-col items-center justify-center bg-neutral-900 border border-neutral-700 rounded-2xl"
+                style={{ height: 96 * S, padding: `${14 * S}px 0` }}
+              >
+                <div
+                  className="font-black"
+                  style={{ fontSize: `${32 * S}px`, color: accent, lineHeight: 1 }}
+                >
+                  {s.value}
+                </div>
+                <div
+                  className="uppercase tracking-wider font-semibold"
+                  style={{ fontSize: `${18 * S}px`, color: "#a3a3a3", marginTop: 6 * S }}
+                >
+                  {s.label}
+                </div>
+              </div>
+            ))}
           </div>
         )}
       </div>
-
-      {(layout.stats || []).length > 0 && (
-        <div
-          className="absolute inset-x-0 flex gap-2.5"
-          style={{ bottom: marginPx, padding: `0 ${marginPx}px` }}
-        >
-          {layout.stats.slice(0, 3).map((s, i) => (
-            <div
-              key={i}
-              className="flex-1 flex flex-col items-center justify-center bg-neutral-900 border border-neutral-700 rounded-2xl"
-              style={{ height: 96 * S, padding: `${14 * S}px 0` }}
-            >
-              <div
-                className="font-black"
-                style={{ fontSize: `${32 * S}px`, color: accent, lineHeight: 1 }}
-              >
-                {s.value}
-              </div>
-              <div
-                className="uppercase tracking-wider font-semibold"
-                style={{ fontSize: `${18 * S}px`, color: "#a3a3a3", marginTop: 6 * S }}
-              >
-                {s.label}
-              </div>
-            </div>
-          ))}
-        </div>
-      )}
     </div>
   );
 }
