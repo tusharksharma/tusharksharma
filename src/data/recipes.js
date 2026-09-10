@@ -10889,12 +10889,12 @@ const recipes = [
       "Kashmiri chilli, to taste — adult servings only",
     ],
     steps: [
-      { text: "COAT THE CHICKEN: Toss the chicken thighs with the tandoori masala, salt, and avocado oil (or Greek yogurt) until evenly coated.", images: [] },
+      { text: "COAT THE CHICKEN: Toss the chicken thighs with the tandoori masala, salt, and avocado oil (or Greek yogurt) until evenly coated.", images: ["/images/high-protein-butter-chicken/step-01-coat-tandoori-chicken.webp"] },
       { text: "AIR FRY: Air fry at 400°F/205°C for about 15 minutes, turning halfway, until the thickest pieces reach 165°F/74°C. Rest briefly, then chop into bite-sized pieces.", images: [] },
-      { text: "BLEND THE CREAMY BASE: Blend the cottage cheese and chicken bone broth until completely smooth — this is what replaces the cream.", images: [] },
-      { text: "BUILD THE SAUCE: Melt the ghee in a wide pan. Cook the ginger-garlic paste briefly, then stir in the marinara, garam masala, cumin, and paprika.", images: [] },
-      { text: "COMBINE + SIMMER: Stir in the chopped chicken and the blended cottage-cheese mixture. Add the kasoori methi and simmer until cohesive and glossy.", images: [] },
-      { text: "SPLIT ON HEAT: Plate the kids' portions of the same base first. Then stir Kashmiri chilli into the remaining sauce for the adults. Serve with phulkas or rice.", images: [] },
+      { text: "BLEND THE CREAMY BASE: Blend the cottage cheese and chicken bone broth until completely smooth — this is what replaces the cream.", images: ["/images/high-protein-butter-chicken/step-02-blend-cottage-cheese.webp"] },
+      { text: "BUILD THE SAUCE: Melt the ghee in a wide pan. Cook the ginger-garlic paste briefly, then stir in the marinara, garam masala, cumin, and paprika.", images: ["/images/high-protein-butter-chicken/step-03-build-marinara-sauce.webp"] },
+      { text: "COMBINE + SIMMER: Stir in the chopped chicken and the blended cottage-cheese mixture. Add the kasoori methi and simmer until cohesive and glossy.", images: ["/images/high-protein-butter-chicken/step-04-add-cottage-cheese-base.webp"] },
+      { text: "SPLIT ON HEAT: Plate the kids' portions of the same base first. Then stir Kashmiri chilli into the remaining sauce for the adults. Serve with phulkas or rice.", images: ["/images/high-protein-butter-chicken/step-05-finish-and-split-heat.webp"] },
     ],
     brands: [
       { name: "Mulu", item: "2% low-fat cottage cheese (250g, blended smooth)", why: "Blended smooth, it's the creamy high-protein base that stands in for heavy cream. Any smooth-blended low-fat cottage cheese works — the macros move slightly with the brand.", url: null },
@@ -10902,6 +10902,10 @@ const recipes = [
       { name: "Tandoori masala", item: "2 tbsp, on the chicken", why: "The single spice blend that flavors the chicken. If unavailable, use the paprika/garam-masala/cumin/garlic/turmeric mix in the notes. Check whether your blend already contains salt.", url: null },
     ],
     socialImages: [
+      "/images/high-protein-butter-chicken/step-02-blend-cottage-cheese.webp",
+      "/images/high-protein-butter-chicken/step-03-build-marinara-sauce.webp",
+      "/images/high-protein-butter-chicken/step-04-add-cottage-cheese-base.webp",
+      "/images/high-protein-butter-chicken/step-05-finish-and-split-heat.webp",
       "/images/high-protein-butter-chicken/hero.webp",
     ],
     socialHashtags: [
