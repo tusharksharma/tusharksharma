@@ -10975,9 +10975,9 @@ const recipes = [
       "Familiar mild Mezzetta sauce or Alfredo, to taste — kid finish",
     ],
     steps: [
-      { text: "MARINATE: Add the chicken thighs and 2 servings of Golden Umami Stir-Fry Sauce to a zip-top bag. Seal and massage until evenly coated, then marinate refrigerated.", images: ["/images/peruvian-style-chicken-thighs-roasted-corn/grill-lifestyle.webp"] },
-      { text: "HEAT THE GRILL: Arrange the corn on the upper rack and the chicken on the main grates.", images: [] },
-      { text: "GRILL: Turning as needed, grill until the corn is browned and the thickest part of every thigh reaches 165°F/74°C.", images: [] },
+      { text: "MARINATE: Add the chicken thighs and 2 servings of Golden Umami Stir-Fry Sauce to a zip-top bag (or jar). Seal and massage until evenly coated, then marinate refrigerated.", images: ["/images/peruvian-style-chicken-thighs-roasted-corn/step-marinade-whisk.webp"] },
+      { text: "HEAT THE GRILL: Arrange the corn on the upper rack and the marinated chicken on the main grates.", images: ["/images/peruvian-style-chicken-thighs-roasted-corn/step-raw-chicken-on-grill.webp"] },
+      { text: "GRILL + BASTE: Turning and basting as needed, grill until the corn is browned and the thickest part of every thigh reaches 165°F/74°C.", images: ["/images/peruvian-style-chicken-thighs-roasted-corn/step-baste-chicken-grill.webp", "/images/peruvian-style-chicken-thighs-roasted-corn/step-finished-chicken-grill.webp"] },
       { text: "ADULT PLATES: Serve two thighs, one ear of corn, and 2 tbsp of the green sauce per adult plate.", images: ["/images/peruvian-style-chicken-thighs-roasted-corn/hero-peruvian-chicken-roasted-corn.webp"] },
       { text: "KID PLATES: Chop one thigh into bite-sized pieces and serve with corn plus a familiar mild sauce or Alfredo.", images: ["/images/peruvian-style-chicken-thighs-roasted-corn/family-table-peruvian-chicken.webp"] },
       { text: "SECOND DINNER: Refrigerate the second-dinner portions promptly and reheat to 165°F/74°C.", images: [] },
@@ -10989,6 +10989,10 @@ const recipes = [
     ],
     socialImages: [
       "/images/peruvian-style-chicken-thighs-roasted-corn/hero-peruvian-chicken-roasted-corn.webp",
+      "/images/peruvian-style-chicken-thighs-roasted-corn/step-marinade-whisk.webp",
+      "/images/peruvian-style-chicken-thighs-roasted-corn/step-raw-chicken-on-grill.webp",
+      "/images/peruvian-style-chicken-thighs-roasted-corn/step-baste-chicken-grill.webp",
+      "/images/peruvian-style-chicken-thighs-roasted-corn/step-finished-chicken-grill.webp",
       "/images/peruvian-style-chicken-thighs-roasted-corn/grill-lifestyle.webp",
       "/images/peruvian-style-chicken-thighs-roasted-corn/family-table-peruvian-chicken.webp",
     ],
