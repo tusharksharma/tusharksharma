@@ -140,6 +140,7 @@ const KNOWN_LEFTOVER_CHAINS = new Set([
   64, // Pizza + Leftover Meatballs Dinner — genuine leftover-chain recipe that consumes 10 meatballs from the base after a Parm Puff / batch bake.
   66, // High-Protein Weeknight Butter Chicken — video-first drop; fixedBatch (6 servings) not slotted into a specific week yet.
   67, // Peruvian-Style Chicken Thighs with Roasted Corn — video-first drop; fixedBatch (two dinners: 4 adult + 4 kid plates) not slotted into a specific week yet.
+  68, // Mexican Rice Taco Bowls — video-first drop; fixedBatch (three dinners: 6 adult + 6 kid bowls) not slotted into a specific week yet.
 ]);
 
 const recipesSrc = readFileSync("src/data/recipes.js", "utf-8");
