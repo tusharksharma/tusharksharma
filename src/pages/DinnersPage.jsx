@@ -5,6 +5,12 @@ import { normalizeEffortTags, normalizeSplitAxes } from "../data/taxonomy";
 import cardImage from "../utils/cardImage";
 import useMeta from "../hooks/useMeta";
 
+// The Dinners page is a dinner surface. Non-dinner daypart drops (e.g. the
+// 10-Minute Steak, Egg & Cheese Breakfast Bowl, mealType "breakfast") still
+// live in recipes.js so their own detail + social pages render, but they must
+// not show up in the Dinners grid or skew its facet counts.
+const dinnerRecipes = liveRecipes.filter((r) => r.mealType !== "breakfast");
+
 // Chip order is by how many recipes carry the value across the whole library,
 // computed once at module scope so the order never shuffles while a shopper is
 // filtering. Sections collapse after COLLAPSE_AFTER, so this ordering decides
@@ -17,7 +23,7 @@ function byFrequency(values) {
   return Object.keys(counts).sort((a, b) => counts[b] - counts[a] || a.localeCompare(b));
 }
 
-const PROTEIN_OPTIONS = byFrequency(liveRecipes.flatMap((r) => r.meta?.proteinTags || []));
+const PROTEIN_OPTIONS = byFrequency(dinnerRecipes.flatMap((r) => r.meta?.proteinTags || []));
 const TIME_OPTIONS = [
   { label: "15 min", max: 15 },
   { label: "25 min", max: 25 },
@@ -38,8 +44,8 @@ const NET_CARB_OPTIONS = [
 //
 // Normalizing at read time is what makes the chips honest: a recipe authored
 // with splitAxis "spice" matches the Heat chip, and "one-pan" matches One-pot.
-const EFFORT_OPTIONS = byFrequency(liveRecipes.flatMap((r) => normalizeEffortTags(r.meta?.effortTags)));
-const SPLIT_OPTIONS = byFrequency(liveRecipes.flatMap((r) => normalizeSplitAxes(r.meta?.splitAxes)));
+const EFFORT_OPTIONS = byFrequency(dinnerRecipes.flatMap((r) => normalizeEffortTags(r.meta?.effortTags)));
+const SPLIT_OPTIONS = byFrequency(dinnerRecipes.flatMap((r) => normalizeSplitAxes(r.meta?.splitAxes)));
 
 const COST_OPTIONS = ["budget", "moderate", "premium"];
 
@@ -60,7 +66,7 @@ const CANONICAL_DIET_TAGS = new Set([
   "vegetarian", "vegan",
 ]);
 const DIET_OPTIONS = byFrequency(
-  liveRecipes.flatMap((r) => (r.meta?.dietTags || []).filter((t) => CANONICAL_DIET_TAGS.has(t)))
+  dinnerRecipes.flatMap((r) => (r.meta?.dietTags || []).filter((t) => CANONICAL_DIET_TAGS.has(t)))
 );
 
 // Allergen filter — Big-8 + realistic dairy substrates. Non-allergen tags
@@ -70,7 +76,7 @@ const CANONICAL_ALLERGENS = new Set([
   "dairy", "eggs", "fish", "shellfish", "tree-nuts", "peanuts", "wheat", "gluten",
   "soy", "sesame", "mustard",
 ]);
-const ALLERGEN_OPTIONS = [...new Set(liveRecipes.flatMap((r) => r.meta?.allergens || []))]
+const ALLERGEN_OPTIONS = [...new Set(dinnerRecipes.flatMap((r) => r.meta?.allergens || []))]
   .filter((t) => CANONICAL_ALLERGENS.has(t))
   .sort();
 
@@ -284,7 +290,7 @@ export default function DinnersPage() {
   const narrow = useMemo(() => {
     const entries = Object.entries(predicates);
     return (exceptKey) =>
-      liveRecipes.filter((r) => entries.every(([k, fn]) => k === exceptKey || !fn || fn(r)));
+      dinnerRecipes.filter((r) => entries.every(([k, fn]) => k === exceptKey || !fn || fn(r)));
   }, [predicates]);
 
   const filtered = useMemo(() => {

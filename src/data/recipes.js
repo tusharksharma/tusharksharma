@@ -11128,7 +11128,7 @@ const recipes = [
     },
     slug: "10-minute-steak-egg-cheese-breakfast-bowl",
     proteinAnchor: "beef",
-    mealType: "bowl",
+    mealType: "breakfast",
     flavorDirection: "savory",
     splitFriendly: "portion",
     title: "10-Minute Steak, Egg & Cheese Breakfast Bowl",

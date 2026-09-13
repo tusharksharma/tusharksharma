@@ -35,6 +35,7 @@ const MEALTYPE_HASHTAGS = {
   "pizza-split": "#PizzaNight",
   "bowl": "#GrainBowl",
   "rice-bowl": "#RiceBowl",
+  "breakfast": "#HighProteinBreakfast",
   "tacos": "#TacoNight",
   "pasta": "#ProteinPasta",
   "sandwich": "#HighProteinSandwich",
