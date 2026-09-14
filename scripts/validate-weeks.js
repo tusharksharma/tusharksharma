@@ -142,6 +142,7 @@ const KNOWN_LEFTOVER_CHAINS = new Set([
   67, // Peruvian-Style Chicken Thighs with Roasted Corn — video-first drop; fixedBatch (two dinners: 4 adult + 4 kid plates) not slotted into a specific week yet.
   68, // Mexican Rice Taco Bowls — video-first drop; fixedBatch (three dinners: 6 adult + 6 kid bowls) not slotted into a specific week yet.
   69, // 10-Minute Steak, Egg & Cheese Breakfast Bowl — video-first breakfast drop; a standalone 2-serving recipe, not slotted into a weekly dinner planner.
+  70, // French Dip Polenta Dunkers — Can I Make a Recipe Go Viral? Ep. 3. Video-first drop; fixedBatch (3 servings) not slotted into a specific week.
 ]);
 
 const recipesSrc = readFileSync("src/data/recipes.js", "utf-8");
