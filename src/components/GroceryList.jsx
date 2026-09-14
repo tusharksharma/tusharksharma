@@ -11,13 +11,13 @@ const GROCERY_BY_WEEK = {
   1: {
     "Protein": [
       { name: "Kirkland chicken breast fillets", baseQty: 4, unit: "fillets", meal: "Mon" },
-      { name: "99/1 ground chicken", baseQty: 24, unit: "oz", meal: "Wed" },
+      { name: "94/6 ground chicken", baseQty: 16, unit: "oz", meal: "Wed" },
       { name: "Chicken thighs (boneless skinless)", baseQty: 2, unit: "lb", meal: "Fri" },
     ],
     "Carbs": [
       { name: "Bettergoods Keto Hamburger Buns", baseQty: 4, unit: "buns", meal: "Mon adult" },
       { name: "Slider buns", baseQty: 4, unit: "buns", meal: "Mon kid" },
-      { name: "Mission Zero Net Carbs tortillas", baseQty: 8, unit: "tortillas", meal: "Wed adult" },
+      { name: "La Banderita Carb Counter keto street tacos", baseQty: 8, unit: "tortillas", meal: "Wed adult" },
       { name: "Mission Street Tacos flour tortillas", baseQty: 4, unit: "tortillas", meal: "Wed kid" },
       { name: "Dinner rolls", baseQty: 4, unit: "rolls", meal: "Fri kid" },
     ],
@@ -30,7 +30,7 @@ const GROCERY_BY_WEEK = {
     "Sauce & Flavor": [
       { name: "Liquid Chipotle or Money Mustard", baseQty: 4, unit: "servings", meal: "Mon" },
       { name: "Spiceology Taco seasoning", qty: "pantry", meal: "Wed" },
-      { name: "Bolthouse Farms Caesar dressing", baseQty: 8, unit: "tbsp", meal: "Wed" },
+      { name: "Homemade high-protein Caesar dressing", baseQty: 4, unit: "tbsp", meal: "Wed" },
       { name: "Dan-O's Outlaw seasoning", qty: "pantry", meal: "Fri" },
       { name: "Dan-O's Original seasoning", qty: "pantry", meal: "Fri" },
       { name: "Dan-O's Cheesoning", qty: "pantry", meal: "Fri" },
@@ -39,7 +39,7 @@ const GROCERY_BY_WEEK = {
       { name: "Fresh cilantro", baseQty: 1, unit: "bunch", meal: "Wed" },
     ],
     "Creamy Base": [
-      { name: "Kraft Mild Cheddar shredded", baseQty: 4, unit: "oz", meal: "Wed" },
+      { name: "Velveeta Original Shreds", baseQty: 3, unit: "oz", meal: "Wed" },
     ],
     "Kid Mode": [
       { name: "Ketchup", qty: "pantry", meal: "Mon kid" },
@@ -135,13 +135,13 @@ const GROCERY_BY_WEEK = {
     "Protein": [
       { name: "Bavette steak", baseQty: 1.5, unit: "lb", meal: "Mon" },
       { name: "Pork breakfast patties", baseQty: 6, unit: "patties", meal: "Mon kid" },
-      { name: "99/1 ground chicken", baseQty: 24, unit: "oz", meal: "Wed" },
+      { name: "94/6 ground chicken", baseQty: 16, unit: "oz", meal: "Wed" },
       { name: "Colonel Kababz Chicken Seekh Kabab (8 large, 11 oz frozen)", baseQty: 1, unit: "box", meal: "Fri adult" },
       { name: "Colonel Kababz Beef Seekh Kabab (8 large, 11 oz frozen)", baseQty: 1, unit: "box", meal: "Fri kid" },
     ],
     "Carbs": [
       { name: "Checkers/Rally's frozen fries", baseQty: 4, unit: "servings", meal: "Mon" },
-      { name: "Mission Zero Net Carbs tortillas", baseQty: 8, unit: "tortillas", meal: "Wed adult" },
+      { name: "La Banderita Carb Counter keto street tacos", baseQty: 8, unit: "tortillas", meal: "Wed adult" },
       { name: "Mission Street Tacos flour tortillas", baseQty: 4, unit: "tortillas", meal: "Wed kid" },
       { name: "Vadilal Quick Treat Rumali Roti (6 pieces)", baseQty: 1, unit: "pack", meal: "Fri" },
     ],
@@ -158,13 +158,13 @@ const GROCERY_BY_WEEK = {
       { name: "Red wine vinegar", qty: "pantry", meal: "Mon" },
       { name: "Chili flakes", qty: "pantry", meal: "Mon" },
       { name: "Spiceology Taco seasoning", qty: "pantry", meal: "Wed" },
-      { name: "Bolthouse Farms Caesar dressing", baseQty: 8, unit: "tbsp", meal: "Wed" },
+      { name: "Homemade high-protein Caesar dressing", baseQty: 4, unit: "tbsp", meal: "Wed" },
       { name: "Green chutney (store-bought cilantro-mint)", qty: "pantry", meal: "Fri adult" },
       { name: "Lime", baseQty: 2, unit: "", meal: "Wed + Fri" },
       { name: "Fresh cilantro", baseQty: 1, unit: "bunch", meal: "Wed" },
     ],
     "Creamy Base": [
-      { name: "Kraft Mild Cheddar shredded", baseQty: 4, unit: "oz", meal: "Wed" },
+      { name: "Velveeta Original Shreds", baseQty: 3, unit: "oz", meal: "Wed" },
     ],
     "Kid Mode": [
       { name: "Regular Caesar dressing", qty: "pantry", meal: "Wed kid" },
@@ -264,12 +264,12 @@ const GROCERY_BY_WEEK = {
   8: {
     "Protein": [
       { name: "Steak (flat iron or sirloin)", baseQty: 1.25, unit: "lb", meal: "Mon" },
-      { name: "99/1 ground chicken", baseQty: 24, unit: "oz", meal: "Wed" },
+      { name: "94/6 ground chicken", baseQty: 16, unit: "oz", meal: "Wed" },
       { name: "Kirkland chicken breast fillets", baseQty: 4, unit: "fillets", meal: "Fri" },
     ],
     "Carbs": [
       { name: "Wide egg noodles", baseQty: 12, unit: "oz", meal: "Mon" },
-      { name: "Mission Zero Net Carbs tortillas", baseQty: 8, unit: "tortillas", meal: "Wed adult" },
+      { name: "La Banderita Carb Counter keto street tacos", baseQty: 8, unit: "tortillas", meal: "Wed adult" },
       { name: "Mission Street Tacos flour tortillas", baseQty: 4, unit: "tortillas", meal: "Wed kid" },
       { name: "Bettergoods Keto Hamburger Buns", baseQty: 4, unit: "buns", meal: "Fri adult" },
       { name: "Slider buns", baseQty: 4, unit: "buns", meal: "Fri kid" },
@@ -286,7 +286,7 @@ const GROCERY_BY_WEEK = {
       { name: "Garlic powder", qty: "pantry", meal: "Mon" },
       { name: "Onion powder", qty: "pantry", meal: "Mon" },
       { name: "Spiceology Taco seasoning", qty: "pantry", meal: "Wed" },
-      { name: "Bolthouse Farms Caesar dressing", baseQty: 8, unit: "tbsp", meal: "Wed" },
+      { name: "Homemade high-protein Caesar dressing", baseQty: 4, unit: "tbsp", meal: "Wed" },
       { name: "Liquid Chipotle or Money Mustard", baseQty: 4, unit: "servings", meal: "Fri" },
       { name: "Lime", baseQty: 2, unit: "", meal: "Wed" },
       { name: "Fresh cilantro", baseQty: 1, unit: "bunch", meal: "Wed" },
@@ -296,7 +296,7 @@ const GROCERY_BY_WEEK = {
       { name: "Fairlife 2% milk", baseQty: 1, unit: "cups", meal: "Mon" },
       { name: "Kirkland Grass-Fed Butter", qty: "pantry", meal: "Mon" },
       { name: "All-purpose flour", qty: "pantry", meal: "Mon" },
-      { name: "Kraft Mild Cheddar shredded", baseQty: 4, unit: "oz", meal: "Wed" },
+      { name: "Velveeta Original Shreds", baseQty: 3, unit: "oz", meal: "Wed" },
     ],
     "Kid Mode": [
       { name: "Regular Caesar dressing", qty: "pantry", meal: "Wed kid" },
