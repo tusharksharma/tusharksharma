@@ -2666,15 +2666,13 @@ const recipes = [
       heroPhoto: "/images/indo-chinese-chili-chicken/hero-split-adult-kid-plates-polished.webp",
       ingredientsPhoto: "/images/indo-chinese-chili-chicken/context-chicken-chunks.webp",
       methodPhoto: "/images/indo-chinese-chili-chicken/step-06-toss-until-glossy-polished.webp",
-      servingPhoto: "/images/indo-chinese-chili-chicken/hero-adult-chili-chicken-polished.webp",
       // Ingredient cards for the /social carousel — shortened, brand names
       // dropped, split into two cards via `card` index. Full brand+detail
       // stays on the website ingredients list below.
       //
-      // Card 1: SHARED BASE + ADULT FINISH (veg) + SMALLER PLATE — the
-      // "cook and split" side, paired with a smaller-plate action photo.
-      // Card 2: ADULT FINISH (sauce only) — the "adult glossy" side,
-      // paired with the six-ingredient sauce photo.
+      // Card 1: SHARED BASE + SMALLER PLATE — the "cook and split" side,
+      // paired with the smaller-plate photo. Card 2 keeps every adult-only
+      // ingredient together beside the six-ingredient sauce photo.
       ingredientGroups: [
         {
           card: 1,
@@ -2682,15 +2680,6 @@ const recipes = [
           heading: "Shared Base",
           items: [
             { quantity: "21 oz", text: "Breaded chicken chunks" },
-          ],
-        },
-        {
-          card: 1,
-          accent: "coral",
-          heading: "Adult Finish",
-          items: [
-            { quantity: "8 oz", text: "Peppers + red onion" },
-            { quantity: "1 tbsp", text: "Umami seasoning" },
           ],
         },
         {
@@ -2705,7 +2694,16 @@ const recipes = [
         {
           card: 2,
           accent: "coral",
-          heading: "Adult Sauce",
+          heading: "Adult Finish",
+          items: [
+            { quantity: "8 oz", text: "Peppers + red onion" },
+            { quantity: "1 tbsp", text: "Umami seasoning" },
+          ],
+        },
+        {
+          card: 2,
+          accent: "coral",
+          heading: "Six-Ingredient Sauce",
           items: [
             { quantity: "1 tbsp", text: "Soy sauce" },
             { quantity: "1 tbsp", text: "Red chili sauce" },
@@ -2751,8 +2749,8 @@ const recipes = [
       ingredientCardPhotos: [
         {
           src: "/images/indo-chinese-chili-chicken/step-07-build-kid-plates-polished.webp",
-          position: "50% 55%",
-          zoom: 1.35,
+          position: "50% 62%",
+          zoom: 1,
           layout: "side",
         },
         "/images/indo-chinese-chili-chicken/context-six-ingredient-sauce.webp",
@@ -2761,6 +2759,12 @@ const recipes = [
         "/images/indo-chinese-chili-chicken/step-01-air-fry-chicken-polished.webp",
         "/images/indo-chinese-chili-chicken/step-06-toss-until-glossy-polished.webp",
       ],
+      servingPhoto: {
+        src: "/images/indo-chinese-chili-chicken/step-08-build-adult-plates-polished.webp",
+        position: "48% 62%",
+        zoom: 1,
+        layout: "side",
+      },
       servingGroups: [
         {
           accent: "coral",
