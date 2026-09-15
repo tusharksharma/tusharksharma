@@ -842,6 +842,65 @@ export const sauces = [
       "/images/tks-sauce/step-04-whisk-smooth-polished.webp",
       "/images/tks-sauce/final-tks-sauce-polished.webp",
     ],
+    socialCarousel: {
+      heroBadge: "Power-Ups · Sauces",
+      heroAccent: "coral",
+      heroTitle: "Tks (Tso) Sauce",
+      hook: "Sweet heat + takeout-style umami · 55 cal · 6g protein per serving",
+      heroPhoto: "/images/tks-sauce/hero-tks-sauce-ribbon-polished.webp",
+      ingredientGroups: [
+        {
+          card: 0,
+          accent: "coral",
+          heading: "Six Ingredients · Two Minutes",
+          items: [
+            { quantity: "1 tbsp", text: "Ginger-garlic paste" },
+            { quantity: "1/2 tsp", text: "Sesame chili oil" },
+            { quantity: "1 tbsp", text: "Seasoned rice vinegar" },
+            { quantity: "2 tbsp", text: "Soy sauce" },
+            { quantity: "1 packet", text: "Instant chicken bone broth", note: "15g packet" },
+            { quantity: "1.5 tbsp", text: "Hot honey sriracha" },
+          ],
+        },
+      ],
+      methodGroups: [
+        {
+          accent: "coral",
+          heading: "Whisk + Glaze",
+          items: [
+            { number: 1, heading: "Combine", body: "Add all six ingredients to a bowl or shaker bottle." },
+            { number: 2, heading: "Whisk Smooth", body: "Whisk aggressively until the bone-broth powder fully dissolves." },
+            { number: 3, heading: "Glaze", body: "Pour around crispy chicken in a hot, dry skillet. Toss 60-90 seconds until glossy." },
+          ],
+        },
+      ],
+      ingredientCardPhotos: [
+        { src: "/images/tks-sauce/step-03-bone-broth-powder-polished.webp", position: "50% 50%", zoom: 1.04, layout: "side" },
+      ],
+      methodCardPhotos: [
+        { src: "/images/tks-sauce/step-04-whisk-smooth-polished.webp", position: "50% 50%", zoom: 1.04, layout: "side" },
+      ],
+      servingPhoto: "/images/tks-sauce/final-tks-sauce-polished.webp",
+      servingGroups: [
+        {
+          accent: "coral",
+          heading: "One Batch · Two Servings",
+          items: [
+            { text: "55 calories · 6g protein per serving" },
+            { text: "One batch coats 1 lb of crispy chicken" },
+            { text: "Refrigerate 4-5 days; whisk before using" },
+          ],
+        },
+        {
+          accent: "amber",
+          heading: "Also Try It On",
+          items: [
+            { text: "Rice bowls, wraps, stir-fries, shrimp, or dumplings" },
+          ],
+        },
+      ],
+      engagementQuestion: "What would you glaze with it first?",
+    },
     flavorProfile: "Salty, tangy, lightly sweet, mildly spicy. Bone broth body without oil. Takeout aroma from sesame chili oil.",
     calories: 110,
     caloriesPerServing: 55,
