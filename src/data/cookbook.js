@@ -10309,6 +10309,77 @@ export const bases = [
       "/images/tks-sweet-heat-chicken/step-04-add-tks-sauce-polished.webp",
       "/images/tks-sweet-heat-chicken/step-05-toss-until-glossy-polished.webp",
     ],
+    socialCarousel: {
+      heroBadge: "20-Minute Freezer Shortcut",
+      heroAccent: "coral",
+      heroTitle: "TKS Sweet Heat Chicken",
+      hook: "Keep the crispy chicken. Ditch the orange packet. Glaze it with TKS Sauce instead.",
+      heroPhoto: "/images/tks-sweet-heat-chicken/hero-tks-sweet-heat-chicken-polished.webp",
+      ingredientGroups: [
+        {
+          card: 0,
+          accent: "coral",
+          heading: "The Freezer Shortcut",
+          items: [
+            { quantity: "1 lb", text: "Frozen Mandarin orange chicken", note: "Use the breaded chicken; discard the included sauce packet" },
+          ],
+        },
+        {
+          card: 1,
+          accent: "amber",
+          heading: "Glaze and Finish",
+          items: [
+            { quantity: "1 batch", text: "TKS Sauce", note: "Enough to coat the full pound" },
+            { quantity: "1-2", text: "Scallions", note: "Thinly sliced" },
+            { quantity: "1 tsp", text: "Toasted sesame seeds", note: "Optional" },
+          ],
+        },
+      ],
+      methodGroups: [
+        {
+          card: 0,
+          accent: "coral",
+          heading: "Get It Crispy",
+          items: [
+            { number: 1, heading: "Air Fry", body: "Cook from frozen at 400 F for 9-12 minutes. Keep it in one layer and shake halfway." },
+            { number: 2, heading: "Check the Edges", body: "Pull the chicken when it is golden and the breading feels crisp, not soft." },
+            { number: 3, heading: "Heat a Dry Pan", body: "Set a large skillet over medium-high heat. Do not add oil." },
+          ],
+        },
+        {
+          card: 1,
+          accent: "amber",
+          heading: "Make the Glaze Cling",
+          items: [
+            { number: 4, heading: "Add the Chicken", body: "Move the crisp chicken into the hot, dry skillet." },
+            { number: 5, heading: "Pour Around the Edge", body: "Add the TKS Sauce around the pan so it hisses and starts reducing immediately." },
+            { number: 6, heading: "Toss 60-90 Seconds", body: "Keep tossing. Stop as soon as every piece is glossy so the breading stays crisp." },
+          ],
+        },
+      ],
+      ingredientCardPhotos: [
+        { src: "/images/tks-sweet-heat-chicken/step-01-portion-frozen-chicken-polished.webp", position: "50% 54%", zoom: 1.06, layout: "side" },
+        { src: "/images/tks-sweet-heat-chicken/step-04-add-tks-sauce-polished.webp", position: "48% 55%", zoom: 1.08, layout: "side" },
+      ],
+      methodCardPhotos: [
+        { src: "/images/tks-sweet-heat-chicken/step-02-load-air-fryer-polished.webp", position: "52% 55%", zoom: 1.05, layout: "side" },
+        { src: "/images/tks-sweet-heat-chicken/step-05-toss-until-glossy-polished.webp", position: "48% 52%", zoom: 1.08, layout: "side" },
+      ],
+      methodLabel: "CRISP + GLAZE",
+      servingPhoto: { src: "/images/tks-sweet-heat-chicken/hero-tks-sweet-heat-chicken-polished.webp", position: "50% 52%", zoom: 1.04, layout: "side" },
+      servingGroups: [
+        {
+          accent: "coral",
+          heading: "Two Servings",
+          items: [
+            { text: "Chicken alone: about 480 calories and 36g protein per serving." },
+            { text: "With Spicy Umami Fried Rice: about 810 calories and 52g protein." },
+            { text: "For less heat, halve the hot honey sriracha in the TKS Sauce." },
+          ],
+        },
+      ],
+      engagementQuestion: "Would you replace the orange packet with this glaze?",
+    },
     flavorProfile: "Crispy chicken in a glossy sweet-heat umami glaze. Bone broth body, sesame chili aroma, hot honey sriracha finish.",
     calories: 960,
     caloriesPerServing: 480,
