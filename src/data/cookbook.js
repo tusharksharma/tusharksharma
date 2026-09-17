@@ -6340,6 +6340,81 @@ export const desserts = [
     tagline: "CrumblCreamiCut Week 2, Flavor 1 — pineapple-fruit-cup + yellow-color stirred into the standard base BEFORE freezing (no machine mix-in), Regular Ice Cream cycle, graham crumble on top. ~340 cal / 42g protein whole pint vs the 760-cal Crumbl Pineapple Whip Cookie on the current Gawinder listing.",
     heroImage: "/images/pineapple-whip-creami/hero-finished-pineapple-whip-creami-polished.webp",
     prepImage: "/images/pineapple-whip-creami/step-09-pineapple-base-ready-polished.webp",
+    socialHashtags: [
+      "#CrumblCreamiCut",
+      "#PineappleWhipCreami",
+      "#NinjaCreamiRecipe",
+      "#ProteinIceCream",
+      "#HighProteinDessert",
+    ],
+    socialCarousel: {
+      heroBadge: "CrumblCreamiCut · W2 F1",
+      heroAccent: "amber",
+      heroTitle: "Pineapple Whip Creami",
+      hook: "Real pineapple, creamy protein base, and graham crunch. 340 cal / 42g protein for the whole pint.",
+      captionTitle: "Pineapple Whip Creami with real fruit and 42g protein.",
+      heroPhoto: "/images/pineapple-whip-creami/hero-finished-pineapple-whip-creami-polished.webp",
+      ingredientGroups: [
+        {
+          card: 0,
+          accent: "amber",
+          heading: "Creami Base",
+          items: [
+            { quantity: "1 cup", text: "2% ultra-filtered milk" },
+            { quantity: "2 tbsp", text: "Monk fruit sweetener" },
+            { quantity: "1 serving", text: "Unflavored whey isolate" },
+            { quantity: "1/8 tsp", text: "Guar gum", note: "Level measure" },
+            { quantity: "Pinch", text: "Salt" },
+          ],
+        },
+        {
+          card: 1,
+          accent: "amber",
+          heading: "Pineapple + Finish",
+          items: [
+            { quantity: "1 cup", text: "Pineapple tidbits in 100% juice", note: "Single-serve fruit cup" },
+            { quantity: "Few drops", text: "Yellow food coloring", note: "Optional" },
+            { quantity: "40 cal", text: "Graham crackers", note: "Crushed; add after scooping" },
+          ],
+        },
+      ],
+      methodGroups: [
+        {
+          accent: "amber",
+          heading: "Method",
+          items: [
+            { number: 1, heading: "Blend", body: "Blend milk, sweetener, whey, guar, and salt until completely smooth." },
+            { number: 2, heading: "Stir", body: "Stir in the entire pineapple cup, juice included. Keep the tidbits intact." },
+            { number: 3, heading: "Color", body: "Add a few yellow drops and stir just until evenly distributed." },
+            { number: 4, heading: "Freeze", body: "Freeze upright on a level surface for a full 24 hours." },
+            { number: 5, heading: "Spin", body: "Rest 5 minutes, then run Regular Ice Cream. Respin only if powdery." },
+            { number: 6, heading: "Finish", body: "Scoop and add crushed graham last so it stays crisp." },
+          ],
+        },
+      ],
+      ingredientCardPhotos: [
+        { src: "/images/pineapple-whip-creami/context-pineapple-fruit-cup-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
+        { src: "/images/pineapple-whip-creami/step-06-add-pineapple-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
+      ],
+      methodCardPhotos: [
+        { src: "/images/pineapple-whip-creami/step-09-pineapple-base-ready-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
+        { src: "/images/pineapple-whip-creami/step-10-regular-ice-cream-result-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
+      ],
+      methodLabel: "HOW TO MAKE",
+      servingPhoto: "/images/pineapple-whip-creami/final-graham-crunch-texture-polished.webp",
+      servingGroups: [
+        {
+          accent: "amber",
+          heading: "Whole-Pint Dessert",
+          items: [
+            { text: "One finished pint: about 340 calories and 42g protein." },
+            { text: "Stir the fruit in before freezing; do not puree it or run a Mix-In cycle." },
+            { text: "Add the graham only after scooping for the cookie-crunch finish." },
+          ],
+        },
+      ],
+      engagementQuestion: "Would you keep the pineapple chunky or blend it smooth?",
+    },
     socialImages: [
       "/images/pineapple-whip-creami/context-pineapple-fruit-cup-polished.webp",
       "/images/pineapple-whip-creami/step-06-add-pineapple-polished.webp",
@@ -6452,6 +6527,83 @@ export const desserts = [
     tagline: "CrumblCreamiCut Week 2, Flavor 2 — blue protein Creami with graham cracker Respun through the pint, honey drizzle, and a Teddy Graham standing inside a peach ring like a beach bum on a float. ~340 cal / 42g protein whole pint.",
     heroImage: "/images/beach-bum-creami/hero-finished-beach-bum-creami-polished.webp",
     prepImage: "/images/beach-bum-creami/step-10-respin-result-polished.webp",
+    socialHashtags: [
+      "#CrumblCreamiCut",
+      "#BeachBumCreami",
+      "#NinjaCreamiRecipe",
+      "#ProteinIceCream",
+      "#HighProteinDessert",
+    ],
+    socialCarousel: {
+      heroBadge: "CrumblCreamiCut · W2 F2",
+      heroAccent: "amber",
+      heroTitle: "Beach Bum Creami",
+      hook: "Graham through the pint, honey on top, and a Teddy on a peach-ring float. 340 cal / 42g protein.",
+      captionTitle: "Beach Bum Creami with graham crunch and 42g protein.",
+      heroPhoto: "/images/beach-bum-creami/hero-finished-beach-bum-creami-polished.webp",
+      ingredientGroups: [
+        {
+          card: 0,
+          accent: "amber",
+          heading: "Creami Base",
+          items: [
+            { quantity: "1 cup", text: "2% ultra-filtered milk" },
+            { quantity: "2 tbsp", text: "Monk fruit sweetener" },
+            { quantity: "1 serving", text: "Unflavored whey isolate" },
+            { quantity: "1/8 tsp", text: "Guar gum", note: "Level measure" },
+            { quantity: "Pinch", text: "Salt" },
+          ],
+        },
+        {
+          card: 1,
+          accent: "amber",
+          heading: "Mix-In + Float",
+          items: [
+            { quantity: "Few drops", text: "Blue food coloring" },
+            { quantity: "1 sheet", text: "Graham cracker", note: "Break up for Respin" },
+            { quantity: "1 tsp", text: "Honey" },
+            { quantity: "1", text: "Peach gummy ring" },
+            { quantity: "1", text: "Teddy Graham" },
+          ],
+        },
+      ],
+      methodGroups: [
+        {
+          accent: "amber",
+          heading: "Method",
+          items: [
+            { number: 1, heading: "Blend", body: "Blend the base ingredients and blue color until completely smooth." },
+            { number: 2, heading: "Freeze", body: "Freeze upright on a level surface for a full 24 hours." },
+            { number: 3, heading: "First Spin", body: "Rest 5 minutes, then run Regular Ice Cream. A powdery first spin is expected." },
+            { number: 4, heading: "Respin", body: "Add broken graham pieces, push them into the pint, and run one Respin." },
+            { number: 5, heading: "Scoop", body: "Scoop the blue Creami and drizzle with one teaspoon of honey." },
+            { number: 6, heading: "Build the Float", body: "Top with a peach ring and stand one Teddy Graham inside it." },
+          ],
+        },
+      ],
+      ingredientCardPhotos: [
+        { src: "/images/beach-bum-creami/step-06-blue-food-color-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
+        { src: "/images/beach-bum-creami/step-12-honey-drizzle-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
+      ],
+      methodCardPhotos: [
+        { src: "/images/beach-bum-creami/step-08-first-spin-result-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
+        { src: "/images/beach-bum-creami/step-10-respin-result-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
+      ],
+      methodLabel: "HOW TO MAKE",
+      servingPhoto: "/images/beach-bum-creami/final-teddy-peach-ring-float-polished.webp",
+      servingGroups: [
+        {
+          accent: "amber",
+          heading: "Whole-Pint Dessert",
+          items: [
+            { text: "One finished pint: about 340 calories and 42g protein." },
+            { text: "The graham goes through Respin; the honey, peach ring, and Teddy go on after scooping." },
+            { text: "Serve immediately so the Teddy stays crisp and upright." },
+          ],
+        },
+      ],
+      engagementQuestion: "Are you eating the Teddy first or saving it for last?",
+    },
     socialImages: [
       "/images/beach-bum-creami/step-06-blue-food-color-polished.webp",
       "/images/beach-bum-creami/step-08-first-spin-result-polished.webp",
@@ -6572,6 +6724,82 @@ export const desserts = [
     tagline: "CrumblCreamiCut Week 2, Flavor 3 — green protein Creami with 2 tsp lime gelatin mix in the base, 15g frozen Protein Cheesecake Frosting Respun through the pint, crisp graham finish. ~350 cal / 42g protein whole pint. First cross-recipe Creami — chains to the existing Protein Cheesecake Frosting cookbook entry.",
     heroImage: "/images/key-lime-cheesecake-creami/hero-finished-key-lime-cheesecake-creami-polished.webp",
     prepImage: "/images/key-lime-cheesecake-creami/step-13-respin-result-polished.webp",
+    socialHashtags: [
+      "#CrumblCreamiCut",
+      "#KeyLimeCheesecake",
+      "#NinjaCreamiRecipe",
+      "#ProteinIceCream",
+      "#HighProteinDessert",
+    ],
+    socialCarousel: {
+      heroBadge: "CrumblCreamiCut · W2 F3",
+      heroAccent: "green",
+      heroTitle: "Key Lime Cheesecake Creami",
+      hook: "Tart lime, frozen cheesecake pockets, and a crisp graham finish. 350 cal / 42g protein for the pint.",
+      captionTitle: "Key Lime Cheesecake Creami with 42g protein in the whole pint.",
+      heroPhoto: "/images/key-lime-cheesecake-creami/hero-finished-key-lime-cheesecake-creami-polished.webp",
+      ingredientGroups: [
+        {
+          card: 0,
+          accent: "green",
+          heading: "Creami Base",
+          items: [
+            { quantity: "1 cup", text: "2% ultra-filtered milk" },
+            { quantity: "2 tbsp", text: "Monk fruit sweetener" },
+            { quantity: "1 serving", text: "Unflavored whey isolate" },
+            { quantity: "1/8 tsp", text: "Guar gum", note: "Level measure" },
+            { quantity: "Pinch", text: "Salt" },
+          ],
+        },
+        {
+          card: 1,
+          accent: "green",
+          heading: "Lime + Cheesecake",
+          items: [
+            { quantity: "2 tsp", text: "Regular lime gelatin mix", note: "Level measure" },
+            { quantity: "5 drops", text: "Green food coloring" },
+            { quantity: "15g", text: "Frozen protein cheesecake frosting", note: "Chopped small" },
+            { quantity: "60 cal", text: "Graham crackers", note: "Crushed; add after scooping" },
+          ],
+        },
+      ],
+      methodGroups: [
+        {
+          accent: "green",
+          heading: "Method",
+          items: [
+            { number: 1, heading: "Blend", body: "Blend the base, lime gelatin, and green color until completely smooth." },
+            { number: 2, heading: "Freeze", body: "Freeze upright on a level surface for a full 24 hours." },
+            { number: 3, heading: "First Spin", body: "Rest 5 minutes, then run Regular Ice Cream. Powdery is okay." },
+            { number: 4, heading: "Add Cheesecake", body: "Push small, frozen-solid frosting pieces into the first-spin pint." },
+            { number: 5, heading: "Respin", body: "Run one Respin to distribute the cheesecake and finish the texture." },
+            { number: 6, heading: "Finish", body: "Scoop and add crushed graham last so the crust stays crisp." },
+          ],
+        },
+      ],
+      ingredientCardPhotos: [
+        { src: "/images/key-lime-cheesecake-creami/step-08-blend-key-lime-base-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
+        { src: "/images/key-lime-cheesecake-creami/step-12-add-frozen-frosting-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
+      ],
+      methodCardPhotos: [
+        { src: "/images/key-lime-cheesecake-creami/step-10-first-spin-result-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
+        { src: "/images/key-lime-cheesecake-creami/step-13-respin-result-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
+      ],
+      methodLabel: "HOW TO MAKE",
+      servingPhoto: "/images/key-lime-cheesecake-creami/final-graham-key-lime-spoon-polished.webp",
+      servingGroups: [
+        {
+          accent: "green",
+          heading: "Whole-Pint Dessert",
+          items: [
+            { text: "One finished pint: about 350 calories and 42g protein." },
+            { text: "Freeze the cheesecake frosting solid before chopping so pockets survive the Respin." },
+            { text: "Check your gelatin package if halal or pork-free suitability matters." },
+          ],
+        },
+      ],
+      engagementQuestion: "Extra graham crust or extra cheesecake pockets?",
+    },
     socialImages: [
       "/images/key-lime-cheesecake-creami/step-08-blend-key-lime-base-polished.webp",
       "/images/key-lime-cheesecake-creami/step-10-first-spin-result-polished.webp",
