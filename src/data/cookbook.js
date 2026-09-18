@@ -12469,8 +12469,8 @@ export const powerups = [
       heroAccent: "amber",
       hook: "5-minute tiramisu iced protein coffee. A Nilla-and-chocolate rim, my lighter protein-coffee base, and a separate vanilla yogurt cold foam. ~180 cal / 24g protein — it tastes like drinking tiramisu.",
       heroPhoto: "/images/tiramisu-iced-proffee/hero-tiramisu-proffee.webp",
-      ingredientsPhoto: "/images/tiramisu-iced-proffee/hero-tiramisu-proffee.webp",
-      methodPhoto: "/images/tiramisu-iced-proffee/hero-tiramisu-proffee.webp",
+      ingredientsPhoto: "/images/tiramisu-iced-proffee/step-froth-concentrate.webp",
+      methodPhoto: "/images/tiramisu-iced-proffee/step-foam-top.webp",
       servingPhoto: "/images/tiramisu-iced-proffee/hero-tiramisu-proffee.webp",
       ingredientGroups: [
         {
@@ -12509,10 +12509,12 @@ export const powerups = [
         },
       ],
       ingredientCardPhotos: [
-        { src: "/images/tiramisu-iced-proffee/hero-tiramisu-proffee.webp", position: "50% 30%", zoom: 1.1, layout: "side" },
+        { src: "/images/tiramisu-iced-proffee/step-coat-rim.webp", position: "50% 40%", zoom: 1.1, layout: "side" },
+        { src: "/images/tiramisu-iced-proffee/step-froth-concentrate.webp", position: "50% 40%", zoom: 1.1, layout: "side" },
       ],
       methodCardPhotos: [
-        { src: "/images/tiramisu-iced-proffee/hero-tiramisu-proffee.webp", position: "50% 30%", zoom: 1.1, layout: "side" },
+        { src: "/images/tiramisu-iced-proffee/step-froth-foam.webp", position: "50% 45%", zoom: 1.1, layout: "side" },
+        { src: "/images/tiramisu-iced-proffee/step-foam-top.webp", position: "50% 55%", zoom: 1.1, layout: "side" },
       ],
       servingGroups: [
         {
@@ -12532,9 +12534,14 @@ export const powerups = [
       ],
       engagementQuestion: "What flavor should I try next?",
     },
-    prepImage: "/images/tiramisu-iced-proffee/hero-tiramisu-proffee.webp",
+    prepImage: "/images/tiramisu-iced-proffee/step-froth-concentrate.webp",
     socialImages: [
-      "/images/tiramisu-iced-proffee/hero-tiramisu-proffee.webp",
+      "/images/tiramisu-iced-proffee/step-coat-rim.webp",
+      "/images/tiramisu-iced-proffee/step-froth-concentrate.webp",
+      "/images/tiramisu-iced-proffee/step-add-ice.webp",
+      "/images/tiramisu-iced-proffee/step-froth-foam.webp",
+      "/images/tiramisu-iced-proffee/step-foam-top.webp",
+      "/images/tiramisu-iced-proffee/step-cocoa-dust.webp",
     ],
     socialHashtags: [
       "#Proffee",
@@ -12590,11 +12597,11 @@ export const powerups = [
       "Light cocoa dust",
     ],
     steps: [
-      { text: "RIM THE GLASS: Coat the rim lightly with sugar-free chocolate syrup and crushed Nilla wafers. Reserve the leftover chocolate-Nilla mixture — it goes into the drink later, no waste.", image: "/images/tiramisu-iced-proffee/hero-tiramisu-proffee.webp" },
-      { text: "BUILD THE CONCENTRATE: Froth instant coffee, monk fruit, 1/2 scoop unflavored whey isolate, 1/2 tsp vanilla, and 2-3 tbsp hot (not boiling) water until completely smooth. Blend the whey into the concentrate FIRST — the Proffee-series spine that prevents clumps.", image: "/images/tiramisu-iced-proffee/hero-tiramisu-proffee.webp" },
-      { text: "ASSEMBLE: Add ice and 1/2 cup Fairlife fat-free milk to the concentrate.", image: "/images/tiramisu-iced-proffee/hero-tiramisu-proffee.webp" },
-      { text: "MAKE THE FOAM: Separately froth 1 tbsp Fage 0%, 1 tsp sugar-free vanilla Jell-O pudding mix, and 1/8 cup Fairlife until thick and creamy.", image: "/images/tiramisu-iced-proffee/hero-tiramisu-proffee.webp" },
-      { text: "FINISH + SERVE: Stir the reserved chocolate-Nilla rim mixture into the drink, spoon the vanilla cold foam over the top, and dust lightly with cocoa. Serve immediately.", image: "/images/tiramisu-iced-proffee/hero-tiramisu-proffee.webp" },
+      { text: "RIM THE GLASS: Coat the rim lightly with sugar-free chocolate syrup and crushed Nilla wafers. Reserve the leftover chocolate-Nilla mixture — it goes into the drink later, no waste.", image: "/images/tiramisu-iced-proffee/step-coat-rim.webp" },
+      { text: "BUILD THE CONCENTRATE: Froth instant coffee, monk fruit, 1/2 scoop unflavored whey isolate, 1/2 tsp vanilla, and 2-3 tbsp hot (not boiling) water until completely smooth. Blend the whey into the concentrate FIRST — the Proffee-series spine that prevents clumps.", image: "/images/tiramisu-iced-proffee/step-froth-concentrate.webp" },
+      { text: "ASSEMBLE: Add ice and 1/2 cup Fairlife fat-free milk to the concentrate.", image: "/images/tiramisu-iced-proffee/step-add-ice.webp" },
+      { text: "MAKE THE FOAM: Separately froth 1 tbsp Fage 0%, 1 tsp sugar-free vanilla Jell-O pudding mix, and 1/8 cup Fairlife until thick and creamy.", image: "/images/tiramisu-iced-proffee/step-froth-foam.webp" },
+      { text: "FINISH + SERVE: Stir the reserved chocolate-Nilla rim mixture into the drink, spoon the vanilla cold foam over the top, and dust lightly with cocoa. Serve immediately.", image: "/images/tiramisu-iced-proffee/step-foam-top.webp" },
     ],
     executionRules: [
       "Blend whey into the CONCENTRATE first, before ice or milk. Proffee-series spine — carries from Ep 1.",
