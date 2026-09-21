@@ -2376,9 +2376,163 @@ export const breakfasts = [
 
 export const quickLunches = [
   {
+    id: "steak-quesadilla",
+    title: "Steak Quesadilla",
+    tagline: "Quick Lunches Ep. 6 — one crispy air-fryer steak quesadilla for National Quesadilla Day. ~270 cal / 24g protein for the whole thing.",
+    heroImage: "/images/steak-quesadilla/hero-steak-quesadilla.webp",
+    prepImage: "/images/steak-quesadilla/step-03-add-steak.webp",
+    video: "/videos/steak-quesadilla/quick-lunches-ep6-steak-quesadilla-marcus.mp4",
+    originalSoundVideo: "/videos/steak-quesadilla/quick-lunches-ep6-steak-quesadilla-clean-original-sound.mp4",
+    textOriginalSoundVideo: "/videos/steak-quesadilla/quick-lunches-ep6-steak-quesadilla-text-original-sound.mp4",
+    socialImages: [
+      "/images/steak-quesadilla/hero-steak-quesadilla.webp",
+      "/images/steak-quesadilla/step-01-spread-chipotle-crema.webp",
+      "/images/steak-quesadilla/step-02-add-velveeta-shreds.webp",
+      "/images/steak-quesadilla/step-03-add-steak.webp",
+      "/images/steak-quesadilla/step-04-fold.webp",
+      "/images/steak-quesadilla/step-05-air-fry.webp",
+    ],
+    socialHashtags: [
+      "#QuickLunches",
+      "#SteakQuesadilla",
+      "#HighProteinLunch",
+      "#AirFryerRecipes",
+      "#MacroFriendlyMeals",
+    ],
+    socialCarousel: {
+      heroBadge: "Quick Lunches · Ep. 6",
+      heroAccent: "coral",
+      heroTitle: "Steak Quesadilla",
+      hook: "Happy National Quesadilla Day. One crispy air-fryer steak quesadilla — ~270 cal / 24g protein for the whole thing. Quick Lunches Episode 6.",
+      heroPhoto: "/images/steak-quesadilla/hero-steak-quesadilla.webp",
+      ingredientGroups: [
+        {
+          card: 0,
+          accent: "coral",
+          heading: "Five Things · One Quesadilla",
+          items: [
+            { quantity: "1", text: "Mission Carb Balance flour tortilla", note: "70 cal / ~6g protein" },
+            { quantity: "1/2 serving", text: "Smoky Chipotle Crema", note: "cookbook sauce · 20 cal / ~1g protein" },
+            { quantity: "1 oz", text: "Velveeta Original shreds", note: "60 cal / 5g protein" },
+            { quantity: "2 oz", text: "Soule's Kitchen thinly sliced steak", note: "fully cooked · 80 cal / 12g protein" },
+            { quantity: "1 tsp", text: "Avocado oil spray", note: "40 cal" },
+          ],
+        },
+      ],
+      methodGroups: [
+        {
+          accent: "coral",
+          heading: "Build",
+          items: [
+            { number: 1, heading: "Sauce", body: "Spread the smoky chipotle crema across the tortilla." },
+            { number: 2, heading: "Cheese", body: "Scatter the Velveeta shreds over one half." },
+            { number: 3, heading: "Steak", body: "Layer the ready-to-eat steak over the cheese and fold into a half-moon." },
+          ],
+        },
+        {
+          accent: "amber",
+          heading: "Crisp",
+          items: [
+            { number: 4, heading: "Spray", body: "Mist both sides with avocado oil for the crackly finish." },
+            { number: 5, heading: "Air-Fry", body: "Air fry until golden and crisp, flipping once." },
+            { number: 6, heading: "Cut", body: "Slice into wedges and eat immediately while it's hot and melty." },
+          ],
+        },
+      ],
+      ingredientCardPhotos: [
+        { src: "/images/steak-quesadilla/step-03-add-steak.webp", position: "50% 50%", zoom: 1.04, layout: "side" },
+      ],
+      methodCardPhotos: [
+        { src: "/images/steak-quesadilla/step-01-spread-chipotle-crema.webp", position: "50% 50%", zoom: 1.04, layout: "side" },
+        { src: "/images/steak-quesadilla/step-05-air-fry.webp", position: "50% 50%", zoom: 1.04, layout: "side" },
+      ],
+      servingPhoto: "/images/steak-quesadilla/hero-steak-quesadilla.webp",
+      servingGroups: [
+        {
+          accent: "coral",
+          heading: "One Fast Lunch",
+          items: [
+            { text: "1 quesadilla · ~270 cal · 24g protein." },
+            { text: "Ready-to-eat steak and pre-shredded cheese mean it's a melt-and-crisp, not a cook." },
+            { text: "Eat immediately — the air-fried tortilla is crispest straight out of the basket." },
+          ],
+        },
+        {
+          accent: "amber",
+          heading: "Macro Note",
+          items: [
+            { text: "Label-based estimate. Tortilla, cheese, and steak labels vary — track the packages in hand." },
+          ],
+        },
+      ],
+      engagementQuestion: "What's your go-to quesadilla filling?",
+    },
+    flavorProfile: "Crispy air-fried tortilla, melty Velveeta, savory ready-to-eat steak, and a smoky chipotle crema layer. Reads like a street-cart steak quesadilla at a high-protein, low-calorie macro.",
+    calories: 270,
+    caloriesPerServing: 270,
+    protein: 24,
+    proteinPerServing: 24,
+    servings: 1,
+    servingSize: "1 quesadilla",
+    time: "~12 min",
+    bestFor: ["Quick lunch", "High-protein lunch", "Air fryer", "Low effort", "National Quesadilla Day"],
+    useThisWhen: "You want a crispy steak quesadilla lunch with real macros and almost no effort. One Mission Carb Balance tortilla, ready-to-eat steak, a little Velveeta, and the smoky chipotle crema go into the air fryer and come out golden — the whole quesadilla is ~270 cal / 24g protein. Sixth episode of the Quick Lunches numbered series, filmed for National Quesadilla Day.",
+    flavorTarget: "Crispy, blistered tortilla with a melty Velveeta pull, savory steak, and a smoky-tangy chipotle crema backbone. NOT soggy — the avocado-oil spray plus the air fryer crisp the tortilla. The crema carries the flavor; the steak carries the protein.",
+    ingredients: [
+      "1 Mission Carb Balance flour tortilla, soft taco size (70 cal / ~6g protein)",
+      "1/2 serving Smoky Chipotle Crema (20 cal / ~1g protein; cross-link to /cookbook/smoky-chipotle-crema)",
+      "1 oz Velveeta Original shreds (60 cal / 5g protein)",
+      "2 oz Soule's Kitchen thinly sliced steak, fully cooked (80 cal / 12g protein)",
+      "1 tsp avocado oil spray (40 cal)",
+    ],
+    steps: [
+      { text: "SAUCE: Spread 1/2 serving of Smoky Chipotle Crema across the tortilla.", image: "/images/steak-quesadilla/step-01-spread-chipotle-crema.webp" },
+      { text: "CHEESE: Scatter the Velveeta shreds over one half of the tortilla.", image: "/images/steak-quesadilla/step-02-add-velveeta-shreds.webp" },
+      { text: "STEAK + FOLD: Layer the ready-to-eat steak over the cheese and fold the tortilla into a half-moon.", image: "/images/steak-quesadilla/step-03-add-steak.webp" },
+      { text: "SPRAY + AIR-FRY: Mist both sides with avocado oil and air fry until golden and crisp, flipping once.", image: "/images/steak-quesadilla/step-05-air-fry.webp" },
+      { text: "CUT + SERVE: Slice into wedges and eat immediately while it's hot and melty.", image: "/images/steak-quesadilla/hero-steak-quesadilla.webp" },
+    ],
+    executionRules: [
+      "Ready-to-eat steak and pre-shredded cheese are the point — this is a melt-and-crisp, not a raw cook. Heat until the cheese melts and the tortilla crisps.",
+      "The avocado-oil spray is what crisps the tortilla — don't skip it, but 1 tsp is enough; more moves the macros.",
+      "No temperature or time invented beyond the filmed air-fry — appliances vary, so pull it when it's golden and crisp.",
+      "Featured brands drive the label-based macros. A different tortilla / cheese / steak = different macros; recalc against the packages in hand.",
+    ],
+    troubleshooting: [
+      { problem: "Tortilla came out soft, not crisp", fix: "Not enough oil or not hot enough. Mist both sides with avocado oil and give it the full air-fry until the edges are golden." },
+      { problem: "Cheese leaked out", fix: "Keep the filling off the very edge and don't overfill — 1 oz of shreds and 2 oz of steak is the balance that seals." },
+      { problem: "Steak dried out", fix: "It's already fully cooked, so it only needs to warm through — pull the quesadilla as soon as the tortilla is crisp." },
+      { problem: "Macros don't match your tracker", fix: "Tortilla, cheese, and steak labels vary by brand. Recalculate against the specific packages you used." },
+    ],
+    brands: [
+      { name: "Mission", item: "Carb Balance Soft Taco Flour Tortillas (70 cal / ~6g protein each)", why: "The high-fiber, lower-carb tortilla that crisps well in the air fryer and keeps the whole quesadilla near 270 cal. Any carb-smart tortilla works — recalc against its label.", url: "https://www.missionfoods.com/products/carb-balance-soft-taco-flour-tortillas/" },
+      { name: "Soule's Kitchen", item: "Thinly Sliced Steak (fully cooked, 80 cal / 12g protein per 2 oz)", why: "Fully cooked, seasoned, thinly sliced beef that carries most of the protein with zero prep — it just needs to warm through. Any ready-to-eat steak works; recalc against its label.", url: "https://www.souleskitchen.com/products/thinly-sliced-steak/" },
+      { name: "Velveeta", item: "Original Shreds (60 cal / 5g protein per oz)", why: "Melts fast and smooth for the cheese pull; 1 oz is enough to bind the quesadilla without a calorie bomb.", url: "https://www.velveeta.com/products" },
+      { name: "The Split Plate", item: "Smoky Chipotle Crema (indexed cookbook sauce — see /cookbook/smoky-chipotle-crema)", why: "The flavor layer — a yogurt-based smoky chipotle crema that adds tang and heat for ~20 cal per half serving. The same crema anchors the Quick Lunches Ep. 3 burritos." },
+    ],
+    macroHonesty: "~270 cal / 24g protein for the whole quesadilla — one quesadilla is one serving. Component sum from filmed labels: Mission Carb Balance tortilla (70 / ~6) + 1 oz Velveeta shreds (60 / 5) + 2 oz Soule's Kitchen steak (80 / 12) + 1/2 serving Smoky Chipotle Crema (20 / ~1) + 1 tsp avocado oil spray (40 / 0) ≈ 270 / 24. The oil is real calories, so this is low-calorie, not free. Labels vary by brand and SKU — recalculate against the packages you actually buy.",
+    allergens: ["dairy", "wheat", "soy"],
+    warnings: [
+      "packaged-labels-vary — verify current tortilla, cheese, and steak packages before publishing allergen or gluten-free tags. Formulations drift.",
+      "estimated-macros — label-based estimate; tortilla, cheese, and steak labels vary, so recalculate against the packages in hand.",
+      "No temperature guessing beyond the filmed air-fry — appliances vary; pull it when it's golden and crisp.",
+    ],
+    dietTags: ["high-protein", "pork-free"],
+    seriesInfo: {
+      series: "Quick Lunches",
+      episode: 6,
+      framing: "Sixth episode of the Quick Lunches numbered series, filmed for National Quesadilla Day. Ep. 6 keeps the format: dependable convenience products, one heat step, real macros — here one Mission Carb Balance tortilla, ready-to-eat Soule's Kitchen steak, 1 oz Velveeta shreds, and a half serving of the Smoky Chipotle Crema, folded and air-fried into a single ~270 cal / 24g protein quesadilla. The move is the avocado-oil spray plus the air fryer crisping the tortilla into a shell, with fully cooked steak doing the protein and the crema doing the flavor with almost no prep. Macros are label-based and move with the specific tortilla / cheese / steak used.",
+    },
+    mealPrep: {
+      storage: "Best fresh and hot. If holding, store cooled in a sealed container and re-crisp.",
+      lasts: "Same day is best; up to 2 days refrigerated.",
+      reheat: "Re-crisp in the air fryer or a hot skillet a few minutes. Microwave works but softens the tortilla.",
+    },
+  },
+  {
     id: "mexican-lavash-pizza",
     title: "Mexican Lavash Pizza",
-    tagline: "Quick Lunches Ep. 7 — crisp lavash pizza, 450°F for 8 min. ~290 cal / 31g protein per half (585 / 62 whole). Joseph's lavash + Trader Joe's spicy red sauce + two cheeses + Kirkland chipotle chicken.",
+    tagline: "Quick Lunches Ep. 8 — crisp lavash pizza, 450°F for 8 min. ~290 cal / 31g protein per half (585 / 62 whole). Joseph's lavash + Trader Joe's spicy red sauce + two cheeses + Kirkland chipotle chicken.",
     heroImage: "/images/mexican-lavash-pizza/hero-mexican-lavash-pizza.webp",
     prepImage: "/images/mexican-lavash-pizza/step-03-add-chipotle-chicken.webp",
     socialImages: [
@@ -2399,10 +2553,10 @@ export const quickLunches = [
       "#TheSplitPlate",
     ],
     socialCarousel: {
-      heroBadge: "Quick Lunches · Ep. 7",
+      heroBadge: "Quick Lunches · Ep. 8",
       heroAccent: "coral",
       heroTitle: "Mexican Lavash Pizza",
-      hook: "One crisp lavash pizza = two generous lunches. ~290 cal / 31g protein per half, or 585 / 62 for the whole thing. Quick Lunches Episode 7.",
+      hook: "One crisp lavash pizza = two generous lunches. ~290 cal / 31g protein per half, or 585 / 62 for the whole thing. Quick Lunches Episode 8.",
       heroPhoto: "/images/mexican-lavash-pizza/hero-mexican-lavash-pizza.webp",
       ingredientGroups: [
         {
@@ -2477,7 +2631,7 @@ export const quickLunches = [
       "Eats well cold",
       "Powerup",
     ],
-    useThisWhen: "You want a hot, crispy, high-protein lunch in about 15 minutes with almost no cleanup. One lavash bakes into a personal pizza that splits into two ~290 cal / 31g protein servings — eat one half now, keep the other for a cold next-day lunch. Seventh episode of the Quick Lunches numbered series.",
+    useThisWhen: "You want a hot, crispy, high-protein lunch in about 15 minutes with almost no cleanup. One lavash bakes into a personal pizza that splits into two ~290 cal / 31g protein servings — eat one half now, keep the other for a cold next-day lunch. Eighth episode of the Quick Lunches numbered series.",
     flavorTarget: "Crisp, cracker-thin lavash base + spicy tomato + a mozzarella-and-Velveeta melt + smoky chipotle chicken. NOT soggy — the 450°F bake crisps the lavash edges. The chipotle chicken carries the 'Mexican pizza' angle; the two cheeses give the pull.",
     ingredients: [
       "1 Joseph's flax, oat bran & whole wheat lavash (120 cal / 12g protein per flatbread)",
@@ -2521,8 +2675,8 @@ export const quickLunches = [
     dietTags: ["high-protein", "pork-free"],
     seriesInfo: {
       series: "Quick Lunches",
-      episode: 7,
-      framing: "Seventh episode of the Quick Lunches numbered series. Ep. 7 keeps the format: dependable convenience products, one heat step, real macros — here a single Joseph's lavash baked into a personal Mexican pizza that splits into two ~290 cal / 31g protein lunches. The move is the 450°F bake that crisps the lavash into a cracker crust, plus a fully cooked Kirkland chipotle chicken doing the protein and the smoky angle with zero prep. Macros are label-based and move with the specific lavash / sauce / cheese / chicken used. Filmed as a two-serving lunch: eat one half hot, keep the other for a cold next-day lunch.",
+      episode: 8,
+      framing: "Eighth episode of the Quick Lunches numbered series. Ep. 8 keeps the format: dependable convenience products, one heat step, real macros — here a single Joseph's lavash baked into a personal Mexican pizza that splits into two ~290 cal / 31g protein lunches. The move is the 450°F bake that crisps the lavash into a cracker crust, plus a fully cooked Kirkland chipotle chicken doing the protein and the smoky angle with zero prep. Macros are label-based and move with the specific lavash / sauce / cheese / chicken used. Filmed as a two-serving lunch: eat one half hot, keep the other for a cold next-day lunch.",
     },
     mealPrep: {
       storage: "Refrigerate the second half promptly in a sealed container.",
@@ -2585,7 +2739,7 @@ export const quickLunches = [
   {
     id: "crispy-chicken-money-mustard",
     title: "Crispy Chicken + Hot Honey Mustard",
-    tagline: "Quick Lunches Episode 8 — two ingredients, one air fryer, and lunch is handled. About 365 calories and 32g protein.",
+    tagline: "Quick Lunches Episode 9 — two ingredients, one air fryer, and lunch is handled. About 365 calories and 32g protein.",
     heroImage: "/images/crispy-chicken-hot-honey-mustard/hero-finished-chicken-hot-honey-mustard.webp",
     prepImage: "/images/crispy-chicken-hot-honey-mustard/step-pour-hot-honey-mustard.webp",
     video: "/videos/crispy-chicken-hot-honey-mustard/quick-lunches-episode-8-chicken-hot-honey-mustard-365cal-32protein-text.mp4",
@@ -2603,7 +2757,7 @@ export const quickLunches = [
       "#TheSplitPlate",
     ],
     socialCarousel: {
-      heroBadge: "Quick Lunches · Ep. 8",
+      heroBadge: "Quick Lunches · Ep. 9",
       heroAccent: "coral",
       heroTitle: "Crispy Chicken + Hot Honey Mustard",
       hook: "Six ounces of crispy chicken breast chunks plus one tablespoon of hot honey mustard. About 365 calories and 32g protein.",
@@ -2789,7 +2943,7 @@ export const quickLunches = [
       "#AirFryerLunch",
       "#TheSplitPlate",
     ],
-    // Quick Lunches Episode 6 — single-sandwich air-fryer build. A requested
+    // Quick Lunches Episode 7 — single-sandwich air-fryer build. A requested
     // rewrite that moves the Spicy Chicken Sandwich into the Quick Lunches
     // numbered series: one sandwich, one Velveeta slice, the filmed Bettergoods
     // build at 250 cal / 26g protein, sauce kept at 20 cal or less. The old
@@ -2818,8 +2972,8 @@ export const quickLunches = [
     useThisWhen: "You want a crispy chicken sandwich lunch with real macros and almost no effort. 250 cal / 26g protein for one sandwich — a frozen breaded fillet does the work in the air fryer.",
     flavorTarget: "Crispy air-fried chicken fillet, one melted Velveeta slice, and a spicy low-calorie sauce on a toasted keto bun. The fillet is the whole recipe — pick one with at least 10g protein per 100 calories and the macros land.",
     ingredients: [
-      "1 frozen breaded chicken breast fillet — Episode 6 uses Bettergoods Original (140 cal / 16g protein); Kirkland is the preferred pick. Choose any fillet with at least 10g protein per 100 calories.",
-      "1 keto hamburger bun — Episode 6 uses Bettergoods (50 cal / 7g protein)",
+      "1 frozen breaded chicken breast fillet — Episode 7 uses Bettergoods Original (140 cal / 16g protein); Kirkland is the preferred pick. Choose any fillet with at least 10g protein per 100 calories.",
+      "1 keto hamburger bun — Episode 7 uses Bettergoods (50 cal / 7g protein)",
       "1 slice Velveeta (40 cal / 3g protein)",
       "1 tbsp or less low-calorie spicy sauce — keep this at 20 cal or less for the stated macros",
     ],
@@ -2836,14 +2990,14 @@ export const quickLunches = [
       { problem: "Bun falls apart", fix: "Keto buns are softer. Toast lightly and don't over-sauce the bottom." },
     ],
     brands: [
-      { name: "Bettergoods", item: "Original Breaded Chicken Fillet (140 cal / 16g protein)", why: "The fillet filmed in Episode 6. Any frozen breaded fillet works if it clears at least 10g protein per 100 calories — Kirkland is the preferred pick, Bettergoods Original is what's used here and also works. Recheck the label; macros vary by SKU.", url: null },
+      { name: "Bettergoods", item: "Original Breaded Chicken Fillet (140 cal / 16g protein)", why: "The fillet filmed in Episode 7. Any frozen breaded fillet works if it clears at least 10g protein per 100 calories — Kirkland is the preferred pick, Bettergoods Original is what's used here and also works. Recheck the label; macros vary by SKU.", url: null },
       { name: "Bettergoods", item: "Keto Friendly Hamburger Bun (50 cal / 7g protein)", why: "Low-calorie, higher-protein bun that keeps the sandwich near 250 cal. Any keto bun works.", url: null },
       { name: "Velveeta", item: "Original Slice (40 cal / 3g protein)", why: "One slice melts into the hot fillet for the cheesy layer without a calorie bomb.", image: "/images/brands/velveeta-slices.png", url: "https://www.kraftheinz.com/velveeta/products/00021000611447-original-flavored-cheese" },
     ],
     seriesInfo: {
       series: "Quick Lunches",
-      episode: 6,
-      framing: "Sixth episode of the Quick Lunches numbered series — a requested rewrite that moves the Spicy Chicken Sandwich into the series as a single-sandwich lunch. Ep. 6 keeps the format: dependable convenience products, one heat step, real macros. The build is one frozen breaded chicken fillet air-fried crispy, a keto bun toasted at the end, one melted Velveeta slice, and up to a tablespoon of low-calorie spicy sauce — 250 cal / 26g protein for the filmed Bettergoods build, with the sauce held at 20 calories or less. The fillet rule is the point: any frozen breaded fillet with at least 10g protein per 100 calories works, Kirkland preferred and Bettergoods Original filmed. Macros move with the fillet, bun, cheese, and sauce you pick — labels vary, so recalc. The old two-sandwich split adult/kid dinner construction is dropped for this single-serving lunch.",
+      episode: 7,
+      framing: "Seventh episode of the Quick Lunches numbered series — a requested rewrite that moves the Spicy Chicken Sandwich into the series as a single-sandwich lunch. Ep. 7 keeps the format: dependable convenience products, one heat step, real macros. The build is one frozen breaded chicken fillet air-fried crispy, a keto bun toasted at the end, one melted Velveeta slice, and up to a tablespoon of low-calorie spicy sauce — 250 cal / 26g protein for the filmed Bettergoods build, with the sauce held at 20 calories or less. The fillet rule is the point: any frozen breaded fillet with at least 10g protein per 100 calories works, Kirkland preferred and Bettergoods Original filmed. Macros move with the fillet, bun, cheese, and sauce you pick — labels vary, so recalc. The old two-sandwich split adult/kid dinner construction is dropped for this single-serving lunch.",
     },
     macroHonesty: "250 cal / 26g protein is calculated from current package labels for the filmed build: Bettergoods Original fillet (140 cal / 16g) + Bettergoods keto bun (50 cal / 7g) + 1 Velveeta slice (40 cal / 3g) + up to 20 cal of sauce. Not every compatible fillet lands on these exact numbers — labels vary by brand and SKU, so recheck and recalc from the fillet, bun, cheese, and sauce you actually buy. The 10g-protein-per-100-calories rule is the filter that keeps a swap honest.",
     mealPrep: {
