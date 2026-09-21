@@ -2963,17 +2963,17 @@ const recipes = [
       "/images/split-plate-spicy-protein-ramen-night/step-10-adult-taste-test-polished.webp",
     ],
     socialHashtags: [
-      "#RamenNight",
-      "#FamilyDinner",
-      "#HighProteinMeals",
-      "#OneCookTwoPlates",
-      "#TheSplitPlate",
+      "#ProteinRamen",
+      "#HighProteinDinner",
+      "#FamilyDinnerIdeas",
+      "#SplitPlateMeals",
+      "#EasyWeeknightDinner",
     ],
     socialCarousel: {
       heroBadge: "Split Plate Dinner",
       heroAccent: "coral",
       heroTitle: "Spicy Protein Ramen Night",
-      hook: "Heal Spot spicy protein ramen simmered in a cup of chicken bone broth until absorbed, tossed with the included spicy sauce, finished with a 6-min Bilinski's Cajun chicken sausage. Kids get Maruchan + a regular hot dog. Adult plate: ~430 cal / 54g protein estimated.",
+      hook: "One 15-minute ramen night, split two ways. Adults get spicy protein ramen cooked in bone broth with Cajun chicken sausage; kids get familiar chicken ramen + a hot dog. Adult bowl: ~430 cal / 54g protein.",
       heroPhoto: "/images/split-plate-spicy-protein-ramen-night/hero-split-plate-spicy-protein-ramen-polished.webp",
       servingPhoto: "/images/split-plate-spicy-protein-ramen-night/hero-adult-spicy-protein-ramen-polished.webp",
       ingredientGroups: [
@@ -2990,11 +2990,11 @@ const recipes = [
         {
           card: 2,
           accent: "green",
-          heading: "Kid (creator's build, per 2 kids)",
+          heading: "Kid (per 2 kids)",
           items: [
-            { quantity: "2 packages", text: "Maruchan chicken ramen", note: "1 per child as served; adjust to appetite" },
+            { quantity: "2 packages", text: "Maruchan chicken ramen", note: "1 per child; adjust to appetite" },
             { quantity: "Per pkg", text: "Water + seasoning packet", note: "Package directions" },
-            { quantity: "2", text: "Regular hot dogs", note: "1 per child as served; adjust to appetite" },
+            { quantity: "2", text: "Regular hot dogs", note: "1 per child; adjust to appetite" },
           ],
         },
       ],
@@ -3004,37 +3004,28 @@ const recipes = [
           accent: "coral",
           heading: "Adult Build",
           items: [
-            { number: 1, heading: "Bone Broth", body: "Bring 2 cups chicken bone broth to a boil in a wide pan — 1 cup per Heal Spot ramen package." },
-            { number: 2, heading: "Noodles In", body: "Add both Heal Spot noodle bricks. Turn and separate as they soften. Keep cooking + tossing until the broth is absorbed. Do not drain." },
-            { number: 3, heading: "Included Sauce Only", body: "Add both included spicy sauce packets. Toss until every noodle is evenly glossy. No soy sauce, no chili oil, no chili crisp." },
+            { number: 1, heading: "Start With Broth", body: "Bring 2 cups chicken bone broth to a boil — 1 cup per protein-ramen package." },
+            { number: 2, heading: "Absorb, Don't Drain", body: "Add the noodles and toss as they soften until the broth is absorbed." },
+            { number: 3, heading: "Sauce + Toss", body: "Add the included spicy sauce packets and toss until every noodle is glossy." },
           ],
         },
         {
           card: 2,
           accent: "amber",
-          heading: "Sausage + Hot Dogs",
+          heading: "Kid Build + Finish",
           items: [
-            { number: 4, heading: "Air-Fry 6 Min", body: "Air-fry the Bilinski's Cajun chicken sausages (adult) and the regular hot dogs (kid) for 6 minutes or until heated through per package. Keep the two types separate — the sausage is adult-only." },
-          ],
-        },
-        {
-          card: 3,
-          accent: "green",
-          heading: "Kid Build + Plate",
-          items: [
-            { number: 5, heading: "Maruchan Per Package", body: "Prepare Maruchan chicken ramen with water + seasoning packet per package directions. 1 package per child as the creator served — adjust to appetite." },
-            { number: 6, heading: "Plate Two Ways", body: "Adult: one portion of spicy protein ramen + one Cajun chicken sausage. Kid: chicken ramen + a regular hot dog." },
+            { number: 4, heading: "Air-Fry 6 Min", body: "Heat the Cajun sausages and hot dogs per their packages, keeping the adult and kid proteins separate." },
+            { number: 5, heading: "Make Kid Ramen", body: "Prepare the chicken ramen with water + seasoning according to the package." },
+            { number: 6, heading: "Plate Two Ways", body: "Adult: spicy protein ramen + Cajun sausage. Kid: chicken ramen + hot dog." },
           ],
         },
       ],
       ingredientCardPhotos: [
         "/images/split-plate-spicy-protein-ramen-night/step-02-heal-spot-spicy-protein-ramen-polished.webp",
-        "/images/split-plate-spicy-protein-ramen-night/step-06-bilinskis-cajun-sausage-polished.webp",
+        "/images/split-plate-spicy-protein-ramen-night/hero-kid-classic-chicken-ramen-polished.webp",
       ],
       methodCardPhotos: [
-        "/images/split-plate-spicy-protein-ramen-night/step-01-chicken-bone-broth-polished.webp",
         "/images/split-plate-spicy-protein-ramen-night/step-03-noodles-in-broth-polished.webp",
-        "/images/split-plate-spicy-protein-ramen-night/step-05-toss-until-glossy-polished.webp",
         "/images/split-plate-spicy-protein-ramen-night/step-08-kid-chicken-ramen-polished.webp",
       ],
       servingGroups: [
@@ -3042,14 +3033,14 @@ const recipes = [
           accent: "coral",
           heading: "Adult Bowl",
           items: [
-            { text: "One Heal Spot ramen package cooked in 1 cup chicken bone broth (absorbed, not drained) + both included sauce packets + one 6-min Bilinski's Cajun chicken sausage. Creator estimate: ~430 cal / 54g protein per adult." },
+            { text: "Protein ramen cooked in bone broth + its spicy sauce + one Cajun chicken sausage. ~430 cal / 54g protein per adult." },
           ],
         },
         {
           accent: "green",
-          heading: "Kid Plate (creator's build)",
+          heading: "Kid Plate",
           items: [
-            { text: "One Maruchan chicken ramen per child + one regular hot dog. Kid macros intentionally not published — appetite-based. Kid does not get the Cajun chicken sausage or the Heal Spot spicy sauce." },
+            { text: "Chicken ramen + one regular hot dog. Adjust the portion to appetite; kid macros are intentionally not published." },
           ],
         },
       ],

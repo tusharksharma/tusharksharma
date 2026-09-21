@@ -3219,6 +3219,73 @@ export const quickLunches = [
       "/images/leftover-beef-kebab-tacos/context-tari-hot-sauces-polished.webp",
       "/images/leftover-beef-kebab-tacos/step-05-optional-tari-drizzle-polished.webp",
     ],
+    socialHashtags: [
+      "#LeftoverMakeover",
+      "#HighProteinLunch",
+      "#QuickLunchIdeas",
+      "#CostcoMeals",
+      "#EasyTacos",
+    ],
+    socialCarousel: {
+      heroBadge: "Leftover Reset",
+      heroAccent: "coral",
+      heroTitle: "10-Minute Beef Kebab Tacos",
+      hook: "Three leftover Costco beef kebabs become a full street-taco lunch in 10 minutes: 450 calories and 38g protein.",
+      heroPhoto: "/images/leftover-beef-kebab-tacos/hero-leftover-beef-kebab-tacos-polished.webp",
+      ingredientGroups: [
+        {
+          card: 0,
+          accent: "coral",
+          heading: "Four Things",
+          items: [
+            { quantity: "3", text: "Cooked Mediterranean beef kebabs" },
+            { quantity: "3", text: "Low-carb street taco tortillas" },
+            { quantity: "To taste", text: "Pickled red onions" },
+            { quantity: "3 tsp", text: "Tari hot sauce", note: "Optional — about 1 tsp per taco" },
+          ],
+        },
+      ],
+      methodGroups: [
+        {
+          accent: "coral",
+          heading: "Reheat",
+          items: [
+            { number: 1, heading: "Thaw", body: "Thaw the cooked kebabs overnight in the refrigerator." },
+            { number: 2, heading: "Air-Fry", body: "Reheat 7–8 minutes, following the current package temperature." },
+            { number: 3, heading: "Warm", body: "Warm 3 street-taco tortillas per their package." },
+          ],
+        },
+        {
+          accent: "amber",
+          heading: "Build",
+          items: [
+            { number: 4, heading: "Kebab", body: "Place one hot kebab on each tortilla." },
+            { number: 5, heading: "Onion", body: "Add pickled red onions for crunch and acidity." },
+            { number: 6, heading: "Finish", body: "Drizzle with Tari hot sauce, or leave it off. Eat immediately." },
+          ],
+        },
+      ],
+      ingredientCardPhotos: [
+        { src: "/images/leftover-beef-kebab-tacos/context-costco-beef-kebabs.webp", position: "50% 50%", zoom: 1.04, layout: "side" },
+      ],
+      methodCardPhotos: [
+        { src: "/images/leftover-beef-kebab-tacos/step-01-reheat-kebabs-polished.webp", position: "50% 50%", zoom: 1.04, layout: "side" },
+        { src: "/images/leftover-beef-kebab-tacos/step-04-pickled-red-onions-polished.webp", position: "50% 50%", zoom: 1.04, layout: "side" },
+      ],
+      servingPhoto: "/images/leftover-beef-kebab-tacos/step-05-optional-tari-drizzle-polished.webp",
+      servingGroups: [
+        {
+          accent: "coral",
+          heading: "One Fast Lunch",
+          items: [
+            { text: "3 tacos · 450 calories · 38g protein." },
+            { text: "A second meal from the same Costco kebab pack — no leftover repeat." },
+            { text: "Serve immediately so the tortillas stay warm and soft." },
+          ],
+        },
+      ],
+      engagementQuestion: "Hot sauce or no sauce on your kebab tacos?",
+    },
     flavorProfile: "Mediterranean street-taco: seasoned beef kebab, tangy pickled red onion, optional Tari hot sauce drizzle. Warm carb-counter tortilla shell.",
     calories: 450,
     caloriesPerServing: 450,
@@ -10740,15 +10807,15 @@ export const desserts = [
     textOriginalSoundVideo: "/videos/david-vanilla-cookies-cream-hack/david-vanilla-cookies-cream-hack-text-original-sound.mp4",
     socialHashtags: [
       "#ProteinIceCream",
-      "#ProteinDessert",
-      "#MacroFriendly",
+      "#HighProteinDessert",
+      "#MacroFriendlyDessert",
       "#DessertHack",
-      "#TheSplitPlate",
+      "#EasyProteinSnack",
     ],
     socialCarousel: {
       heroBadge: "Powerup Dessert",
       heroAccent: "amber",
-      hook: "David Vanilla scored a 6/10 alone. Add 3 HighKey sandwich cookies — 70 cal, one 3-minute fix — and it's an 8.5/10. Not sponsored: I bought both, they genuinely make each other better.",
+      hook: "David Vanilla was a 6/10 alone. Three crushed sandwich cookies turned it into an 8.5/10 cookies-and-cream bowl — 175 cal, 16g protein, 3 minutes.",
       heroPhoto: "/images/david-vanilla-cookies-cream-hack/hero-david-cookies-cream-bowl-polished.webp",
       ingredientGroups: [
         {
@@ -10756,8 +10823,8 @@ export const desserts = [
           accent: "amber",
           heading: "Two Ingredients",
           items: [
-            { quantity: "1/2 pint", text: "David Vanilla Bean frozen dessert", note: "105 cal / 15g protein — half the current-label pint" },
-            { quantity: "3 cookies (31g)", text: "HighKey Original Sandwich Cookies", note: "70 cal / 1g protein per 3 cookies on the current label" },
+            { quantity: "1/2 pint", text: "David Vanilla Bean", note: "105 cal / 15g protein" },
+            { quantity: "3 cookies", text: "HighKey sandwich cookies", note: "70 cal / 1g protein" },
           ],
         },
       ],
@@ -10766,18 +10833,16 @@ export const desserts = [
           accent: "amber",
           heading: "Method",
           items: [
-            { number: 1, heading: "Portion", body: "Scoop half of the David Vanilla Bean pint into a wide serving bowl." },
-            { number: 2, heading: "Crush", body: "Hand-crush 3 HighKey sandwich cookies directly over the bowl — keep both fine crumbs and larger crunchy pieces." },
-            { number: 3, heading: "Fold + Serve", body: "Fold once or twice, don't crush every piece. Serve immediately while the cookies are still crisp." },
+            { number: 1, heading: "Portion", body: "Scoop half the vanilla pint into a wide bowl." },
+            { number: 2, heading: "Crush", body: "Crush 3 cookies over it, keeping fine crumbs and crunchy pieces." },
+            { number: 3, heading: "Fold + Eat", body: "Fold once or twice and eat immediately while the cookies are crisp." },
           ],
         },
       ],
       ingredientCardPhotos: [
-        { src: "/images/david-vanilla-cookies-cream-hack/context-david-vanilla-protein-pint-polished.webp", position: "50% 50%", zoom: 1.04, layout: "side" },
         { src: "/images/david-vanilla-cookies-cream-hack/context-highkey-sandwich-cookies-polished.webp", position: "50% 50%", zoom: 1.04, layout: "side" },
       ],
       methodCardPhotos: [
-        { src: "/images/david-vanilla-cookies-cream-hack/step-01-scoop-half-pint-polished.webp", position: "50% 50%", zoom: 1.04, layout: "side" },
         { src: "/images/david-vanilla-cookies-cream-hack/step-02-crush-three-cookies-polished.webp", position: "50% 50%", zoom: 1.04, layout: "side" },
       ],
       servingPhoto: "/images/david-vanilla-cookies-cream-hack/final-cookie-texture-spoon-polished.webp",
@@ -10786,13 +10851,13 @@ export const desserts = [
           accent: "amber",
           heading: "One Large Bowl",
           items: [
-            { text: "175 calories and 16g protein — half a David Vanilla Bean pint plus 3 HighKey sandwich cookies." },
-            { text: "The cookie crunch gives David's slightly grainy vanilla texture a reason to exist — reads deliberate, not distracting." },
-            { text: "Serve immediately. Cookies soften once they sit in the ice cream." },
+            { text: "175 calories · 16g protein · honest 8.5/10." },
+            { text: "The cookie crunch turns the slightly grainy base into a deliberate cookies-and-cream texture." },
+            { text: "Eat immediately — the cookies soften fast." },
           ],
         },
       ],
-      engagementQuestion: "Macros need saving today — perfect taste, or perfect numbers?",
+      engagementQuestion: "Would this 3-minute fix save the pint for you?",
     },
     socialImages: [
       "/images/david-vanilla-cookies-cream-hack/context-david-vanilla-protein-pint-polished.webp",
