@@ -2067,6 +2067,8 @@ const recipes = [
     carbLevel: "low", // fries only
     meta: {
       macros: { protein: 45, calories: 620, fat: 30, carbs: 35, netCarbs: 32, estimated: true },
+      macroHonesty:
+        "620 cal / 45g protein is the adult plate built with the No-Judge Chimichurri below — Spiceology blend, olive oil, red wine vinegar. The filmed episode used a ready-made Costco chimichurri jar as a shortcut, so don't apply these numbers to the jarred version; check that label instead. Same dinner either way.",
       allergens: [],
       warnings: ["contains-pork-kid-version"],
       dietTags: ["dairy-free", "gluten-free-option"],
@@ -2090,7 +2092,100 @@ const recipes = [
     servings: 4,
     protein: 45,
     calories: 620,
-    image: "/images/steak-fries/hero.webp",
+    image: "/images/steak-fries/hero-2026-09-22.webp",
+    prepImage: "/images/steak-fries/step-07-kid-plate-patties.webp",
+    prepImageCaption: "Kid plates mid-build — pork patties cooked in the steak pan and cut small. Fries come off the shared air-fryer batch next, carrots on the side if they'll take them. No chimichurri, no second cook.",
+    video: "/videos/bavette-steak-fries-chimichurri/bavette-steak-fries-chimichurri-editorial-motion-marcus.mp4",
+    // socialImages — recipe step order, payoff plate at the tail per
+    // [feedback-social-images-step-order].
+    socialImages: [
+      "/images/steak-fries/step-01-checkers-fries-air-fried.webp",
+      "/images/steak-fries/step-02-sear-bavette.webp",
+      "/images/steak-fries/step-04-pork-patties-same-pan.webp",
+      "/images/steak-fries/step-05-slice-against-grain.webp",
+      "/images/steak-fries/step-06-spoon-chimichurri.webp",
+      "/images/steak-fries/final-adult-steak-fries-plate.webp",
+    ],
+    socialCarousel: {
+      heroBadge: "Split Plate Dinner",
+      heroTitle: "Steak Night, Two Plates",
+      hook: "Bavette + fries for the adults, pork patties + the same fries for the kids · one pan, one cook",
+      heroPhoto: "/images/steak-fries/final-adult-steak-fries-plate.webp",
+      captionTitle: "The 20-Minute Steak Night",
+      ingredientGroups: [
+        {
+          card: 1,
+          accent: "amber",
+          heading: "Shared",
+          items: [
+            { quantity: "~1 serving/person", text: "Checkers/Rally's frozen fries", note: "One air-fryer batch feeds both plates" },
+          ],
+        },
+        {
+          card: 2,
+          accent: "coral",
+          heading: "Adult Plate",
+          items: [
+            { quantity: "6 oz/person", text: "Bavette (flap steak)" },
+            { quantity: "to coat", text: "SPG seasoning" },
+            { quantity: "2 tbsp + 1.5 tbsp + 1 tbsp", text: "Olive oil + Spiceology chimichurri + red wine vinegar" },
+          ],
+        },
+        {
+          card: 2,
+          accent: "green",
+          heading: "Kid Plate",
+          items: [
+            { quantity: "1.5/kid", text: "Pork breakfast patties" },
+            { quantity: "optional", text: "Raw carrots" },
+          ],
+        },
+      ],
+      methodGroups: [
+        {
+          card: 1,
+          accent: "amber",
+          heading: "Method",
+          items: [
+            { number: 1, heading: "Fries First", body: "Air fry at 400°F for 12-15 min. No oil, single layer, shake halfway." },
+            { number: 2, heading: "Sear the Bavette", body: "Season with SPG. High-heat stainless pan, 2-3 min per side. That's it." },
+            { number: 3, heading: "Rest — Non-Negotiable", body: "Pull the steak and rest 5 minutes. Skipping this is what makes steak dry." },
+          ],
+        },
+        {
+          card: 2,
+          accent: "amber",
+          heading: "Method",
+          items: [
+            { number: 4, heading: "Patties in the Same Pan", body: "While the steak rests, cook the pork patties in the steak fat. 5 min per side." },
+            { number: 5, heading: "Mix the Chimichurri", body: "Oil + Spiceology blend + vinegar + chili flakes. Let it sit 5-10 min to bloom." },
+            { number: 6, heading: "Slice + Split", body: "Cut thin against the grain. Adults get steak, fries and chimichurri; kids get patties and the same fries." },
+          ],
+        },
+      ],
+      ingredientCardPhotos: [
+        "/images/steak-fries/step-01-checkers-fries-air-fried.webp",
+        "/images/steak-fries/step-06-spoon-chimichurri.webp",
+      ],
+      methodCardPhotos: [
+        "/images/steak-fries/step-02-sear-bavette.webp",
+        "/images/steak-fries/step-05-slice-against-grain.webp",
+      ],
+      servingPhoto: "/images/steak-fries/step-07-kid-plate-patties.webp",
+      servingGroups: [
+        {
+          accent: "coral",
+          heading: "Adult Plate",
+          items: [{ text: "6 oz sliced bavette + fries + chimichurri over the steak · 620 cal · 45g protein" }],
+        },
+        {
+          accent: "green",
+          heading: "Kid Plate",
+          items: [{ text: "1.5 pork patties cut small + the same fries + carrots · 400 cal · 20g protein" }],
+        },
+      ],
+      engagementQuestion: "Chimichurri from scratch, or the jar on a weeknight?",
+    },
     role: "The Steak Night",
     makeThisWhen: "You want a proper steak dinner that feels like a restaurant but takes 20 minutes. Kids get pork patties + fries from the same cook — no second meal.",
     hook: "Bavette steak is the most underrated cut. Fast cook, insane flavor, and it slices beautifully against the grain. Pair it with a no-judge chimichurri (Spiceology seasoning + olive oil + vinegar) and air fryer fries. Kids swap to pork breakfast patties — zero resistance.",
@@ -2126,11 +2221,11 @@ const recipes = [
         "Checkers/Rally's frozen fries (~1 serving per person)",
       ],
       sharedSteps: [
-        { text: "FRIES FIRST: Air fry at 400°F for 12-15 min. No oil, no spray. Shake halfway.", images: ["/images/steak-fries/step2-fries.webp"] },
-        { text: "SEAR STEAK: Season bavette with SPG. High heat stainless pan + cooking spray. 2-3 min per side.", images: ["/images/steak-fries/step3-sear.webp"] },
-        { text: "REST: Pull steak, rest 5 minutes. Cook pork patties in the same pan, 5 min per side." },
-        { text: "CHIMICHURRI: Mix olive oil + Spiceology chimichurri seasoning + red wine vinegar + chili flakes. Let sit 5 min." },
-        { text: "SLICE: Cut steak thin against the grain." },
+        { text: "FRIES FIRST: Air fry at 400°F for 12-15 min. No oil, no spray. Shake halfway.", images: ["/images/steak-fries/step-01-checkers-fries-air-fried.webp"] },
+        { text: "SEAR STEAK: Season bavette with SPG. High heat stainless pan + cooking spray. 2-3 min per side.", images: ["/images/steak-fries/step-02-sear-bavette.webp"] },
+        { text: "REST: Pull steak, rest 5 minutes. Cook pork patties in the same pan, 5 min per side.", images: ["/images/steak-fries/step-03-rest-steak-board.webp", "/images/steak-fries/step-04-pork-patties-same-pan.webp"] },
+        { text: "CHIMICHURRI: Mix olive oil + Spiceology chimichurri seasoning + red wine vinegar + chili flakes. Let sit 5 min.", images: ["/images/steak-fries/step-06-spoon-chimichurri.webp"] },
+        { text: "SLICE: Cut steak thin against the grain.", images: ["/images/steak-fries/step-05-slice-against-grain.webp"] },
       ],
       adult: {
         label: "Adult — Steak + Chimichurri",
@@ -2148,7 +2243,7 @@ const recipes = [
           "Dash chili flakes",
         ],
         steps: [
-          { text: "PLATE: Sliced bavette + fries. Spoon chimichurri over the steak — not on the fries." },
+          { text: "PLATE: Sliced bavette + fries. Spoon chimichurri over the steak — not on the fries.", images: ["/images/steak-fries/final-adult-steak-fries-plate.webp"] },
         ],
       },
       kid: {
@@ -2165,7 +2260,7 @@ const recipes = [
             name: "Simple",
             description: "Patties cut up, fries, carrots on side",
             steps: [
-              { text: "PLATE: Cut patties into small pieces. Fries on side. Raw carrots. No sauce needed." },
+              { text: "PLATE: Cut patties into small pieces. Fries on side. Raw carrots. No sauce needed.", images: ["/images/steak-fries/step-07-kid-plate-patties.webp"] },
             ],
           },
         ],
@@ -2186,12 +2281,12 @@ const recipes = [
       "Raw carrots",
     ],
     steps: [
-      { text: "FRIES: Air fry at 400°F, 12-15 min. No oil. Shake halfway.", images: ["/images/steak-fries/step2-fries.webp"] },
-      { text: "SEAR: Season bavette with SPG. High heat pan + spray. 2-3 min per side.", images: ["/images/steak-fries/step3-sear.webp"] },
-      { text: "REST: 5 minutes. Don't skip — this is what makes it juicy." },
-      { text: "CHIMICHURRI: Mix oil + seasoning + vinegar + chili flakes. Let sit 5 min." },
-      { text: "SLICE: Thin, against the grain. Always." },
-      { text: "PLATE: Adults get steak + fries + chimichurri. Kids get pork patties + fries + carrots.", images: ["/images/steak-fries/step5-split-plate.webp", "/images/steak-fries/step4-kid-plate.webp"] },
+      { text: "FRIES: Air fry at 400°F, 12-15 min. No oil. Shake halfway.", images: ["/images/steak-fries/step-01-checkers-fries-air-fried.webp"] },
+      { text: "SEAR: Season bavette with SPG. High heat pan + spray. 2-3 min per side.", images: ["/images/steak-fries/step-02-sear-bavette.webp"] },
+      { text: "REST: 5 minutes. Don't skip — this is what makes it juicy.", images: ["/images/steak-fries/step-03-rest-steak-board.webp", "/images/steak-fries/step-04-pork-patties-same-pan.webp"] },
+      { text: "CHIMICHURRI: Mix oil + seasoning + vinegar + chili flakes. Let sit 5 min.", images: ["/images/steak-fries/step-06-spoon-chimichurri.webp"] },
+      { text: "SLICE: Thin, against the grain. Always.", images: ["/images/steak-fries/step-05-slice-against-grain.webp"] },
+      { text: "PLATE: Adults get steak + fries + chimichurri. Kids get pork patties + fries + carrots.", images: ["/images/steak-fries/final-adult-steak-fries-plate.webp", "/images/steak-fries/step-07-kid-plate-patties.webp"] },
     ],
     brands: [
       { name: "Spiceology", item: "Chimichurri Blend", why: "60-second chimichurri — no chopping herbs. Just add oil + vinegar.", image: "/images/brands/spiceology-chimichurri.jpg", url: "https://spiceology.com/products/chimichurri-blend" },
