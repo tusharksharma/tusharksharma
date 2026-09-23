@@ -2,14 +2,19 @@
 
 ## Canonical Strategy And Rules
 
-- TikTok/Reels/Shorts editing rules: `/Users/tusharsharma/Documents/New project/video-edits/SPLITPLATE_TIKTOK_EDIT_RULES.md`
-- YouTube landscape rules: `/Users/tusharsharma/Documents/New project/video-edits/SPLITPLATE_YOUTUBE_VIDEO_RULES.md`
-- Reelrise learning model: `/Users/tusharsharma/Documents/New project/video-edits/REELRISE_LEARNING_MODEL.md`
+- **Video & cover rules, committed:** `/Users/tusharsharma/recipes-site/docs/video/` — the durable copies of everything below. The `video-edits/` paths are the working copies an agent launched from that directory reads; a rule change updates both.
+- Cover/thumbnail playbook: `/Users/tusharsharma/recipes-site/docs/video/SPLITPLATE_THUMBNAIL_PLAYBOOK.md` (working copy: `/Users/tusharsharma/Documents/New project/video-edits/SPLITPLATE_THUMBNAIL_PLAYBOOK.md`) — read in full before generating, choosing, revising, or delivering any cover
+- Production rules: `/Users/tusharsharma/recipes-site/docs/video/SPLITPLATE_PRODUCTION_RULES.md`
+- TikTok/Reels/Shorts editing rules: `/Users/tusharsharma/recipes-site/docs/video/SPLITPLATE_TIKTOK_EDIT_RULES.md`
+- HyperFrames visual system: `/Users/tusharsharma/recipes-site/docs/video/HYPERFRAMES_STYLE_SYSTEM.md`
+- Reusable HyperFrames save CTA: `/Users/tusharsharma/Documents/New project/video-edits/hyperframes-components/split-plate-save-glass.html` (asset, not mirrored)
+- YouTube landscape rules: `/Users/tusharsharma/recipes-site/docs/video/SPLITPLATE_YOUTUBE_VIDEO_RULES.md`
+- Reelrise learning model: `/Users/tusharsharma/recipes-site/docs/video/REELRISE_LEARNING_MODEL.md`
 - Canonical 90-day strategy: `/Users/tusharsharma/recipes-site/docs/content-growth-plan.md`
 - Website standing rules: `/Users/tusharsharma/recipes-site/AGENTS.md`
 - This transfer manual: `/Users/tusharsharma/Documents/New project/split-plate-chat-transfer-2026-09-13/START_HERE.md`
 
-Read the TikTok rules before every social-video build. Read the Reelrise model when selecting a hook, pacing, text, CTA, or trend-informed structure. Read the YouTube file before making a landscape video from portrait footage.
+Read the TikTok rules and HyperFrames visual system before every social-video build, and the thumbnail playbook before every cover. Reuse the saved CTA component when a final save prompt is appropriate. Read the Reelrise model when selecting a hook, pacing, text, CTA, or trend-informed structure. Read the YouTube file before making a landscape video from portrait footage.
 
 ## Planning And Inventory Workbook
 
