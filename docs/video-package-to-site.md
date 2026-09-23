@@ -11,6 +11,27 @@ live means three deliverables, in one push, plus a gated fourth:
 
 > Read the package README first. It decides which of the two shapes below you're in.
 
+## One postable cut is not a complete dinner package
+
+A dinner requires **three** cuts — 7-second teaser, full Split Plate, distinct full
+adult — plus a **fourth** under-15 comment-recipe cut when the complete served
+recipe has six or more ingredients or Tushar asks for it. All of them are planned
+and built in one pass from a single raw-footage allocation map, with exclusive
+source-time ranges per cut; staggered posting is not staggered production. See
+`video/SPLITPLATE_PRODUCTION_RULES.md`.
+
+That gate is about the *video* package, and this runbook is about the *site*. The
+site takes one canonical video per recipe — the **full Split Plate cut**. So:
+
+- A handoff of a single approved MP4 can be enough to ship the site work while the
+  video package is still incomplete (bavette-steak-fries-editorial-motion is
+  exactly this). Wiring a video into `recipes.js` says nothing about whether the
+  companion cuts exist.
+- Never report a dinner package as complete on the strength of a live recipe page.
+  Check the package README's dinner-package status line.
+- If the handoff is an adult-only or teaser cut, it is not the site video. Ask
+  before attaching it.
+
 ## Two shapes — check before authoring anything
 
 **New recipe.** The package introduces a dish the site doesn't have. Author the
