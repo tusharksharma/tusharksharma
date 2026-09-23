@@ -21,5 +21,9 @@ The canonical strategy is [The Split Plate 90-Day Content Growth Plan](docs/cont
 
 Path A prompts must **transform** an amateur still into appetizing, editorial food photography — not merely polish/color-correct it. The transformation lives in **directional grade moves**: a tone verb (deepen/warm/brighten/cool) pointed at a **named target color** with a guardrail ("— not neon"). Detail verbs alone (sharpen/define) do nothing. **Never write a saturation lock** ("do not push saturation/vibrance") — give a target color + bound instead.
 
-**Hard gate:** before delivering any Path A `.md`, run `node scripts/lint-path-a.mjs <slug>`. It must print `N/N PASS · 0 saturation-locks · deliver` (exit 0); rewrite any FAIL and re-run before delivering. Full rules, per-prompt rhythm, and the canonical reference live in [docs/path-a-prompt-template.md](docs/path-a-prompt-template.md).
+**Hard gate:** before delivering any Path A `.md`, run `node scripts/lint-path-a.mjs <slug>`. It must print `N/N PASS · 0 saturation-locks · deliver` (exit 0); rewrite any FAIL and re-run before delivering. Full rules, per-prompt rhythm, and the canonical reference live in [docs/path-a-prompt-template.md](docs/path-a-prompt-template.md). If the gate was skipped and the set already shipped, disclose the retrospective result rather than quietly backfilling.
+
+## Video Package Standing Rule
+
+Taking a finished edit from `~/Documents/New project/video-edits/` live means recipe entry + CDN video + footage-derived images in one push, then a gated Path A pass. Read the package README first — it decides whether you're authoring a **new recipe** or attaching video/images/carousel to an **existing** one (in which case the recipe body stays untouched). Runbook: [docs/video-package-to-site.md](docs/video-package-to-site.md).
 

@@ -66,14 +66,46 @@ Reference files:
 
 ---
 
+## Camera-vs-appetite fixes (things the phone gets wrong every time)
+
+Recurring failures of the *camera*, not of the cooking. Each one is a food that
+photographs unappetizingly and needs a named directional fix. Check the raw
+frames against this list before writing — these are usually the single biggest
+win in a set.
+
+| What's in frame | How it records | The move |
+|---|---|---|
+| Green herb sauce (chimichurri, pesto, salsa verde, chermoula) | murky near-black olive — reads as sludge | lift to a **herbaceous mid-green** with visible chopped-herb flecks, chili specks, and a clean olive-oil sheen — not neon |
+| Pooled juice from rested steak | bright raw red — reads as **blood** | convert to a rich **mahogany-brown resting jus** with a glossy sheen — concentrated juice, not blood |
+| Pan fond / drippings | flat grey | richen to **mahogany-brown** with warm highlights on the rendered fat |
+| Par-cooked / pale food mid-progression | looks raw and unfinished | keep it honestly pale and grade only the *done* item — do not "finish" food the footage hasn't cooked |
+| Frozen bases, unspun pints | flat and matte | frost/crystal texture + condensation on the vessel |
+
+### Busy-background rule — defocus, never delete
+
+Home-kitchen frames come with an open dishwasher, a dish rack, counter clutter,
+and sometimes a **digital photo frame cycling family photos**. The instruction is
+always **"let it fall into soft warm bokeh and lose a stop"** — *defocus and
+darken, never remove or redraw objects.* Removal invents a kitchen that wasn't
+filmed; a stop of falloff plus defocus makes the food the unambiguous subject and
+renders faces unreadable at the same time.
+
+If a frame has a face-bearing prop that stays legible after the pass, say so at
+review time rather than shipping it silently. A whole clip can share the problem:
+when the obvious pick is weak, sample the clip densely (`-vf "fps=2"`) before
+concluding a better frame exists.
+
+---
+
 ## The gate — run it before delivering (MANDATORY)
 
 ```
 node scripts/lint-path-a.mjs <slug>
 ```
 
-It resolves `<slug>-path-a-prompts.md` in the video-edits dir (override with
-`--dir` or `PATH_A_DIR`) and checks every prompt for: `Polish the…` opener,
+It resolves `<slug>-path-a-prompts.md` in the video-edits dir — either at the
+top level or inside a per-episode package subfolder (override the root with
+`--dir` or `PATH_A_DIR`) — and checks every prompt for: `Polish the…` opener,
 `No text.` closer, ≥3 grade verbs, ≥2 named colors, ≥1 texture move, ≥1
 separation move, label-lock when packaging is present, and **zero saturation
 locks**. It prints a per-prompt PASS/FAIL line and a summary.
@@ -90,8 +122,24 @@ path so the quality is verifiable, not vibes.
 - **Scope:** one prompt per image the recipe page actually renders — hero,
   prepImage/servingPhoto, socialImages, ingredientCardPhotos, methodCardPhotos,
   and step images. Typically 5–12 prompts.
-- **Output:** 2048×2048, sRGB, WebP, saved over the matching `-polished.webp` in
-  `public/images/<slug>/`. Put the spec once in the file header, never per prompt.
-- **Tool:** ChatGPT only, image-to-image via file upload. No Path B.
-- **Delivery:** write the .md to `~/Documents/New project/video-edits/<slug>-path-a-prompts.md`,
-  run the linter, and reply with the PASS report + the file path.
+- **Output:** sRGB WebP in `public/images/<slug>/`. Two conventions, pick by
+  content type — put the spec once in the file header, never per prompt:
+  - **Dinner / footage-derived sets:** **1152×2048** portrait (9:16, matching the
+    filmed frame), regenerated **in place over the original filename**. This is
+    what the site actually renders and what recent ships use.
+  - **Cookbook items:** 2048×2048, saved over the matching `-polished.webp`.
+- **Tool:** ChatGPT / built-in imagegen, image-to-image via file upload. No Path B.
+- **Delivery:** write the .md next to the rest of the package —
+  `~/Documents/New project/video-edits/<package>/<slug>-path-a-prompts.md` (or at
+  the video-edits root for standalone sets) — run the linter, and reply with the
+  PASS report + the file path.
+
+### If the gate was skipped
+
+It has happened: a set shipped, images were generated, and the linter was run
+only afterwards (bavette-steak-fries, 0/7 FAIL — no `Polish the…` opener, no
+`No text.` closer, no separation move, missing label locks). **Disclose it rather
+than quietly backfilling.** The images can still be good — a FAIL is a statement
+about the prompt's reliability, not proof the output is bad — but the user needs
+to know the quality claim behind a delivery was never actually checked. Run the
+linter *before* the first message that hands prompts over, every time.

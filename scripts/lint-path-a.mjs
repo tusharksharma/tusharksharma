@@ -55,6 +55,28 @@ function resolveFile(arg, dir) {
     path.join(dir, arg, "path-a-prompts.md"),
   ];
   for (const c of candidates) if (fs.existsSync(c)) return c;
+
+  // Packages increasingly keep their prompts inside a per-episode subfolder
+  // whose name is the video cut, not the recipe slug (e.g.
+  // bavette-steak-fries-editorial-motion/bavette-steak-fries-chimichurri-path-a-prompts.md).
+  // Search one level down so the gate runs without needing --dir.
+  const names = [`${arg}-path-a-prompts.md`, `${arg}-path-a-image-prompts.md`];
+  let subdirs = [];
+  try {
+    subdirs = fs
+      .readdirSync(dir, { withFileTypes: true })
+      .filter((e) => e.isDirectory())
+      .map((e) => e.name);
+  } catch {
+    /* unreadable dir — fall through to the primary miss */
+  }
+  for (const sub of subdirs) {
+    for (const n of names) {
+      const c = path.join(dir, sub, n);
+      if (fs.existsSync(c)) return c;
+    }
+  }
+
   return candidates[0]; // report the primary miss
 }
 
