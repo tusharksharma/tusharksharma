@@ -206,7 +206,7 @@ export function buildEndLayout(recipe, curated, { index, total, isCookbook, slug
   return {
     kind: "end",
     index, total,
-    recipeName: recipe.title || "",
+    recipeName: curated?.cardTitle || recipe.title || "",
     recipeUrl: curated?.endUrl || `thesplitplate.com/${path}`,
     engagementQuestion: curated?.engagementQuestion || null,
   };

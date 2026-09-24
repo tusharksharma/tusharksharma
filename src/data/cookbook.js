@@ -7772,6 +7772,50 @@ export const desserts = [
     title: "Mallow Sandwich Cookie Creami",
     tagline: "CrumblCreamiCut Week 3, Flavor 1 — black-cocoa protein Creami pint, protein-brownie Respin, and a post-scoop marshmallow ribbon. ~370 cal / 48g protein whole pint vs 970 cal for the Crumbl Mallow Sandwich Cookie ft. OREO on the current Crumbl UT/American Fork nutrition listing.",
     heroImage: "/images/mallow-sandwich-cookie-creami/hero-marshmallow-ribbon-polished.webp",
+    socialHashtags: ["#CrumblCreamiCut", "#NinjaCreami", "#ProteinDessert", "#HighProteinDessert", "#CreamiRecipe"],
+    socialCarousel: {
+      heroBadge: "CrumblCreamiCut · Week 3 / 1",
+      heroAccent: "amber",
+      hook: "Black-cocoa Creami, fudgy brownie pockets, and a marshmallow ribbon. ~370 cal / 48g protein for the whole pint.",
+      heroPhoto: "/images/mallow-sandwich-cookie-creami/hero-marshmallow-ribbon-polished.webp",
+      ingredientGroups: [
+        { card: 0, accent: "amber", heading: "The Base", items: [
+          { quantity: "1 cup", text: "Fairlife 2% milk" },
+          { quantity: "2 tbsp", text: "monk fruit / erythritol" },
+          { quantity: "1 serving", text: "unflavored whey isolate" },
+          { quantity: "1/8 tsp", text: "guar gum" },
+          { quantity: "pinch", text: "salt" },
+          { quantity: "1 tbsp", text: "black cocoa" },
+        ] },
+        { card: 1, accent: "amber", heading: "Brownie + Ribbon", items: [
+          { quantity: "1/3 bar", text: "Prime Bites Cookie Monster brownie" },
+          { quantity: "2 tbsp", text: "marshmallow creme" },
+          { quantity: "1/2 tbsp", text: "Fairlife 2% milk", note: "to loosen the ribbon" },
+        ] },
+      ],
+      methodGroups: [
+        { card: 0, accent: "amber", heading: "Creami", items: [
+          { number: 1, heading: "Blend + Freeze", body: "Blend the base with black cocoa. Freeze level for 24 hours." },
+          { number: 2, heading: "First Spin", body: "Rest 5 minutes, then run Regular Ice Cream." },
+          { number: 3, heading: "Brownie Respin", body: "Press in small brownie pieces; Respin until smooth." },
+        ] },
+        { card: 1, accent: "amber", heading: "Finish", items: [
+          { number: 4, heading: "Loosen", body: "Stir marshmallow creme with 1/2 tbsp milk until glossy." },
+          { number: 5, heading: "Scoop", body: "Scoop the dark Creami into a bowl." },
+          { number: 6, heading: "Ribbon", body: "Drizzle after scooping. Keep marshmallow out of the machine." },
+        ] },
+      ],
+      ingredientCardPhotos: [
+        { src: "/images/mallow-sandwich-cookie-creami/step-01-add-black-cocoa-polished.webp", position: "50% 50%", zoom: 1.04, layout: "side" },
+        { src: "/images/mallow-sandwich-cookie-creami/step-09-add-milk-to-marshmallow.webp", position: "50% 50%", zoom: 1.04, layout: "side" },
+      ],
+      methodCardPhotos: [
+        { src: "/images/mallow-sandwich-cookie-creami/step-06-add-brownie-polished.webp", position: "50% 50%", zoom: 1.04, layout: "side" },
+        { src: "/images/mallow-sandwich-cookie-creami/step-10-stir-marshmallow-filling.webp", position: "50% 50%", zoom: 1.04, layout: "side" },
+      ],
+      servingGroups: null,
+      engagementQuestion: "Brownie pockets or marshmallow ribbon — which bite wins?",
+    },
     // prepImage — matches the W2 pattern (Key Lime W2F3 used step-13-respin
     // as prep). Step-07-respin-result anchors the mid-technique moment right
     // after the brownie mix-in gets distributed. Raw for now; swap to
@@ -7910,6 +7954,52 @@ export const desserts = [
     title: "Dubai-Style Chocolate Thin Sandwich Cookie Creami",
     tagline: "CrumblCreamiCut Week 3, Flavor 2 — chocolate-pistachio protein Creami pint finished with a POST-SCOOP toasted-kataifi-and-pistachio-cream crunch topping. ~360 cal / 43g protein whole pint vs 810 cal for the Crumbl Dubai-Style Chocolate Thin Sandwich Cookie on the current Crumbl Davie nutrition listing.",
     heroImage: "/images/dubai-style-chocolate-thin-sandwich-cookie-creami/hero-dubai-chocolate-creami-polished.webp",
+    socialHashtags: ["#CrumblCreamiCut", "#NinjaCreami", "#ProteinDessert", "#DubaiChocolate", "#PistachioDessert"],
+    socialCarousel: {
+      heroBadge: "CrumblCreamiCut · Week 3 / 2",
+      heroAccent: "amber",
+      heroTitle: "Dubai Chocolate Creami",
+      cardTitle: "Dubai Chocolate Creami",
+      hook: "Chocolate-pistachio Creami with real toasted-kataifi crunch. ~360 cal / 43g protein for the whole pint.",
+      heroPhoto: "/images/dubai-style-chocolate-thin-sandwich-cookie-creami/hero-dubai-chocolate-creami-polished.webp",
+      ingredientGroups: [
+        { card: 0, accent: "amber", heading: "The Base", items: [
+          { quantity: "1 cup", text: "Fairlife 2% milk" },
+          { quantity: "2 tbsp", text: "monk fruit / erythritol" },
+          { quantity: "1 serving", text: "unflavored whey isolate" },
+          { quantity: "1/8 tsp", text: "guar gum" },
+          { quantity: "pinch", text: "salt" },
+        ] },
+        { card: 1, accent: "amber", heading: "Chocolate + Crunch", items: [
+          { quantity: "1 tbsp", text: "Dutch-process cocoa" },
+          { quantity: "1/2 tsp", text: "pistachio emulsion", note: "revised from the filmed 1 tsp" },
+          { quantity: "10g", text: "dry kataifi strands" },
+          { quantity: "1 tbsp", text: "pistachio cream" },
+        ] },
+      ],
+      methodGroups: [
+        { card: 0, accent: "amber", heading: "Creami", items: [
+          { number: 1, heading: "Blend + Freeze", body: "Blend the base with cocoa and 1/2 tsp emulsion. Freeze 24 hours." },
+          { number: 2, heading: "Toast", body: "Dry-toast 10g kataifi over low heat until crisp, 3–4 minutes." },
+          { number: 3, heading: "Coat", body: "Turn heat off; stir in 1 tbsp pistachio cream." },
+        ] },
+        { card: 1, accent: "amber", heading: "Finish", items: [
+          { number: 4, heading: "Spin", body: "Rest the pint 5 minutes; run Regular Ice Cream." },
+          { number: 5, heading: "Respin", body: "Respin with no extra liquid until smooth." },
+          { number: 6, heading: "Top", body: "Scoop and add the kataifi on top — never in the machine." },
+        ] },
+      ],
+      ingredientCardPhotos: [
+        { src: "/images/dubai-style-chocolate-thin-sandwich-cookie-creami/step-01-blend-chocolate-pistachio-base-polished.webp", position: "50% 50%", zoom: 1.04, layout: "side" },
+        { src: "/images/dubai-style-chocolate-thin-sandwich-cookie-creami/step-04-dry-toast-kataifi-polished.webp", position: "50% 50%", zoom: 1.04, layout: "side" },
+      ],
+      methodCardPhotos: [
+        { src: "/images/dubai-style-chocolate-thin-sandwich-cookie-creami/step-05-mix-pistachio-kataifi-polished.webp", position: "50% 50%", zoom: 1.04, layout: "side" },
+        { src: "/images/dubai-style-chocolate-thin-sandwich-cookie-creami/step-09-add-pistachio-kataifi-polished.webp", position: "50% 50%", zoom: 1.04, layout: "side" },
+      ],
+      servingGroups: null,
+      engagementQuestion: "Would you put the kataifi crunch on your Creami?",
+    },
     // prepImage — series pattern: mid-technique moment right after the
     // Respin finishes and before the topping goes on. Step-07-no-liquid-respin
     // shows the finished chocolate-pistachio Creami texture that's about to
@@ -8052,6 +8142,51 @@ export const desserts = [
     title: "Red Velvet Cookie Thins Creami",
     tagline: "CrumblCreamiCut Week 3, Flavor 3 — Week 3 finale. Rose-mauve red velvet protein Creami with fudgy protein-brownie pockets Respun through the pint and a POST-SCOOP white-chocolate drizzle. ~370 cal / 48g protein whole pint — original Creami adaptation inspired by the Crumbl Red Velvet Cookie Thins (Set of 2).",
     heroImage: "/images/red-velvet-cookie-thins-creami/hero-finished-red-velvet-creami-polished.webp",
+    socialHashtags: ["#CrumblCreamiCut", "#NinjaCreami", "#ProteinDessert", "#RedVelvet", "#CreamiRecipe"],
+    socialCarousel: {
+      heroBadge: "CrumblCreamiCut · Week 3 / 3",
+      heroAccent: "amber",
+      hook: "Red velvet Creami with brownie pockets and a white-chocolate drizzle. ~370 cal / 48g protein for the whole pint.",
+      heroPhoto: "/images/red-velvet-cookie-thins-creami/hero-finished-red-velvet-creami-polished.webp",
+      ingredientGroups: [
+        { card: 0, accent: "amber", heading: "The Base", items: [
+          { quantity: "1 cup", text: "Fairlife 2% milk" },
+          { quantity: "2 tbsp", text: "monk fruit / erythritol" },
+          { quantity: "1 serving", text: "unflavored whey isolate" },
+          { quantity: "1/8 tsp", text: "guar gum" },
+          { quantity: "pinch", text: "salt" },
+        ] },
+        { card: 1, accent: "amber", heading: "Velvet + Finish", items: [
+          { quantity: "1/2 tbsp", text: "Dutch-process cocoa" },
+          { quantity: "1 tsp", text: "red velvet emulsion" },
+          { quantity: "1/3 bar", text: "red velvet protein brownie" },
+          { quantity: "1 tbsp", text: "white chocolate chips" },
+          { quantity: "1 tbsp", text: "Fairlife fat-free milk" },
+        ] },
+      ],
+      methodGroups: [
+        { card: 0, accent: "amber", heading: "Creami", items: [
+          { number: 1, heading: "Blend + Freeze", body: "Blend the base, cocoa, and emulsion. Freeze level 24 hours." },
+          { number: 2, heading: "First Spin", body: "Rest 5 minutes; run Regular Ice Cream." },
+          { number: 3, heading: "Brownie Respin", body: "Press in chopped brownie and Respin until smooth." },
+        ] },
+        { card: 1, accent: "amber", heading: "Finish", items: [
+          { number: 4, heading: "Melt", body: "Warm white chocolate with fat-free milk in 10–15-second bursts." },
+          { number: 5, heading: "Scoop", body: "Scoop the pint so the brownie pockets stay visible." },
+          { number: 6, heading: "Drizzle", body: "Pour the white chocolate over the top after scooping." },
+        ] },
+      ],
+      ingredientCardPhotos: [
+        { src: "/images/red-velvet-cookie-thins-creami/step-03-blend-red-velvet-base-polished.webp", position: "50% 50%", zoom: 1.04, layout: "side" },
+        { src: "/images/red-velvet-cookie-thins-creami/step-06-chop-brownie-polished.webp", position: "50% 50%", zoom: 1.04, layout: "side" },
+      ],
+      methodCardPhotos: [
+        { src: "/images/red-velvet-cookie-thins-creami/step-07-add-brownie-polished.webp", position: "50% 50%", zoom: 1.04, layout: "side" },
+        { src: "/images/red-velvet-cookie-thins-creami/step-09-white-chocolate-finish-polished.webp", position: "50% 50%", zoom: 1.04, layout: "side" },
+      ],
+      servingGroups: null,
+      engagementQuestion: "Is red velvet chocolate, or its own flavor?",
+    },
     // prepImage — series pattern is a mid-technique moment. Step-08 shows
     // the finished Respun pint (post-brownie mix-in) with visible brownie
     // pockets before the drizzle goes on. Matches W3F1 Mallow + W3F2 Dubai

@@ -55,6 +55,7 @@ export function buildStructuredCards(recipe, opts) {
   } = opts;
 
   const sc = recipe.socialCarousel || {};
+  const cardTitle = sc.cardTitle || recipe.title || "";
   const heroPhoto = sc.heroPhoto || recipe.image || recipe.heroImage || null;
   const servingPhoto = sc.servingPhoto || heroPhoto;
 
@@ -133,7 +134,7 @@ export function buildStructuredCards(recipe, opts) {
       layout: {
         kind: "recipe-ingredients",
         index: 0, total: 0,
-        recipeName: recipe.title || "",
+        recipeName: cardTitle,
         label: "WHAT YOU NEED",
         image: ingredientPhotos[i] || null,
         imageSide,
@@ -155,7 +156,7 @@ export function buildStructuredCards(recipe, opts) {
       layout: {
         kind: "recipe-method",
         index: 0, total: 0,
-        recipeName: recipe.title || "",
+        recipeName: cardTitle,
         label: sc.methodLabel || "HOW TO COOK",
         image: methodPhotos[i] || null,
         imageSide,
@@ -183,7 +184,7 @@ export function buildStructuredCards(recipe, opts) {
         layout: {
           kind: "recipe-serving",
           index: 0, total: 0,
-          recipeName: recipe.title || "",
+          recipeName: cardTitle,
           label: "SERVE",
           image: i === 0 ? servingPhoto : null,
           imageSide,
