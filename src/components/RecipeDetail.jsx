@@ -136,6 +136,17 @@ export default function RecipeDetail({ recipe, item, group }) {
           />
         )}
 
+        {model.filmedBatch && (
+          <div className="mt-3 grid grid-cols-2 gap-3">
+            {model.filmedBatch.images.slice(1).map((photo) => (
+              <a key={photo.src} href={photo.src} target="_blank" rel="noopener noreferrer" className="overflow-hidden rounded-xl border border-line bg-surface2" aria-label={`Open full photo: ${photo.alt}`}>
+                <img src={photo.src} alt={photo.alt} loading="eager" className="h-48 w-full object-contain sm:h-64" />
+                <p className="px-3 py-2 text-xs font-semibold text-muted">{photo.alt}</p>
+              </a>
+            ))}
+          </div>
+        )}
+
         {/* ── 2. The decision block. ── */}
         <header className="mt-6">
           {model.badges.length > 0 && (
@@ -313,13 +324,6 @@ export default function RecipeDetail({ recipe, item, group }) {
             <div className="mt-5 rounded-xl border border-brand/30 bg-brand/10 px-4 py-3">
               <span className="text-[11px] font-bold uppercase tracking-wider text-brand">Filmed-batch nutrition</span>
               <p className="mt-1 text-sm leading-relaxed text-ink">{model.filmedBatch.nutrition}</p>
-            </div>
-            <div className="mt-5 grid gap-3 sm:grid-cols-3">
-              {model.filmedBatch.images.map((photo) => (
-                <a key={photo.src} href={photo.src} target="_blank" rel="noopener noreferrer" aria-label={`Open full photo: ${photo.alt}`}>
-                  <img src={photo.src} alt={photo.alt} loading="lazy" className="max-h-[480px] w-full rounded-xl border border-line bg-surface2 object-contain" />
-                </a>
-              ))}
             </div>
           </Section>
         )}

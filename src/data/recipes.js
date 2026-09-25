@@ -479,7 +479,7 @@ const recipes = [
     servings: 4,
     protein: 45,
     calories: 500,
-    image: "/images/beefbroccoli/split-point.png",
+    image: "/images/beefbroccoli/filmed-adult-wok.webp",
     role: "The Fast Weekday Workhorse",
     makeThisWhen: "It's Tuesday, you have 25 minutes, and you need something that feeds the family, hits protein goals, and meal preps through Thursday.",
     hook: "This replaces takeout beef & broccoli with a 25-minute version that reheats clean, doesn't get soggy, and splits for kids without a single extra step.",
