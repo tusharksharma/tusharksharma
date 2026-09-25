@@ -286,6 +286,44 @@ export default function RecipeDetail({ recipe, item, group }) {
           </Section>
         )}
 
+        {model.filmedBatch && (
+          <Section id="filmed-batch" title={model.filmedBatch.title}>
+            <p className="text-sm leading-relaxed text-muted">{model.filmedBatch.intro}</p>
+            <p className="mt-3 text-sm leading-relaxed text-muted">
+              The rice base is in the <Link to="/cookbook/bone-broth-rice" className="font-semibold text-brand underline">Bone Broth Rice recipe</Link>.
+            </p>
+            <h3 className="mt-6 text-lg font-bold text-ink">What the filmed batch used</h3>
+            <ul className="mt-3 space-y-2">
+              {model.filmedBatch.ingredients.map((ingredient, i) => (
+                <li key={i} className="flex gap-2 text-sm leading-relaxed text-muted">
+                  <span className="text-brand" aria-hidden="true">&bull;</span>
+                  <span>{ingredient}</span>
+                </li>
+              ))}
+            </ul>
+            <h3 className="mt-6 text-lg font-bold text-ink">How the filmed dinner came together</h3>
+            <ol className="mt-3 space-y-3">
+              {model.filmedBatch.steps.map((step, i) => (
+                <li key={i} className="flex gap-3 text-sm leading-relaxed text-muted">
+                  <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-brand/15 text-xs font-bold text-brand">{i + 1}</span>
+                  <span>{step}</span>
+                </li>
+              ))}
+            </ol>
+            <div className="mt-5 rounded-xl border border-brand/30 bg-brand/10 px-4 py-3">
+              <span className="text-[11px] font-bold uppercase tracking-wider text-brand">Filmed-batch nutrition</span>
+              <p className="mt-1 text-sm leading-relaxed text-ink">{model.filmedBatch.nutrition}</p>
+            </div>
+            <div className="mt-5 grid gap-3 sm:grid-cols-3">
+              {model.filmedBatch.images.map((photo) => (
+                <a key={photo.src} href={photo.src} target="_blank" rel="noopener noreferrer" aria-label={`Open full photo: ${photo.alt}`}>
+                  <img src={photo.src} alt={photo.alt} loading="lazy" className="max-h-[480px] w-full rounded-xl border border-line bg-surface2 object-contain" />
+                </a>
+              ))}
+            </div>
+          </Section>
+        )}
+
         {/* ── 7. The signature: Adult Plate | Kid Plate. ── */}
         {model.split && <SplitPlates split={model.split} scale={scale} />}
 

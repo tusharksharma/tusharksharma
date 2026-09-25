@@ -425,7 +425,9 @@ export function buildRecipeModel(recipe) {
     slug: recipe.slug,
     path: `/recipes/${recipe.slug}`,
     breadcrumb: { to: "/dinners", label: "Dinners" },
-    callouts: [],
+    callouts: recipe.filmedBatch
+      ? [{ id: "filmed-batch", label: "Two versions on this page", tone: "brand", body: "The ingredients, yield, and nutrition above describe the original four-serving recipe. The video and the filmed 2026 section below show a separate six-adult-bowl batch with a different kid plate." }]
+      : [],
     title: recipe.title,
     hook: recipe.hook || "",
     description: recipe.description || "",
@@ -438,6 +440,7 @@ export function buildRecipeModel(recipe) {
     ingredientGroups,
     kidIngredientChoices: kid.filter((c) => (c.extraIngredients || []).length > 0),
     method,
+    filmedBatch: recipe.filmedBatch || null,
     split,
     keys,
     deepDive,
