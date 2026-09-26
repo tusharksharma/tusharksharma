@@ -281,6 +281,7 @@ Implementation rules:
 1. **For every new dinner recipe, the hero photo must include both the adult plate and the kid plate visible in the same frame.** Either side-by-side on a wood/marble surface (top-down 45°), or one plate behind the other (depth composition). Both plates must be readable as distinct portions — different sauce, different garnish, different size.
 2. **`recipe.image` points to the polished split-plate webp.** Filename convention: `split-plate-*-polished.webp` (e.g. `split-plate-side-by-side-polished.webp`).
 3. **The single-bowl/closeup hero** (if you have one — many recipes do) **moves into `socialImages` as a later carousel card**, not the cover. Don't waste a polished closeup — it earns a spot, just not slide 1.
+   For video updates to existing recipes, also place approved photos on the recipe page beside the actions they show. A social carousel alone does not finish the image work. See [docs/recipe-image-integration.md](docs/recipe-image-integration.md) for the page layout and visual check.
 4. **The Hero card renders the photo with NO title overlay, NO tagline, NO accent line, NO heavy black gradient.** The photo is the hook. Only a subtle bottom darken (`rgba(10, 10, 10, 0.25)` peak) for visual depth. Title + tagline + recipe title appear later (Macros, Split, End cards already carry them).
 5. **For cookbook items / desserts / power-ups** (no kid-vs-adult split): use the cleanest single-subject shot as `image`. The split-plate rule applies to DINNER recipes only.
 

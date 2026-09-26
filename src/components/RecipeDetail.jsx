@@ -137,13 +137,16 @@ export default function RecipeDetail({ recipe, item, group }) {
         )}
 
         {model.filmedBatch && (
-          <div className="mt-3 grid grid-cols-2 gap-3">
-            {model.filmedBatch.images.slice(1).map((photo) => (
-              <a key={photo.src} href={photo.src} target="_blank" rel="noopener noreferrer" className="overflow-hidden rounded-xl border border-line bg-surface2" aria-label={`Open full photo: ${photo.alt}`}>
-                <img src={photo.src} alt={photo.alt} loading="eager" className="h-48 w-full object-contain sm:h-64" />
-                <p className="px-3 py-2 text-xs font-semibold text-muted">{photo.alt}</p>
-              </a>
-            ))}
+          <div className="mt-3">
+            <div className="grid gap-3 sm:grid-cols-2">
+              {model.filmedBatch.images.map((photo) => (
+                <figure key={photo.src} className="overflow-hidden rounded-xl border border-line bg-surface">
+                  <img src={photo.src} alt={photo.alt} loading="eager" className="aspect-[4/3] w-full object-cover" />
+                  <figcaption className="px-3 py-2 text-xs font-semibold text-muted">{photo.alt}</figcaption>
+                </figure>
+              ))}
+            </div>
+            <a href="#filmed-batch" className="mt-3 inline-block text-sm font-bold text-brand underline">See the filmed six-bowl method ↓</a>
           </div>
         )}
 
@@ -313,11 +316,19 @@ export default function RecipeDetail({ recipe, item, group }) {
               ))}
             </ul>
             <h3 className="mt-6 text-lg font-bold text-ink">How the filmed dinner came together</h3>
-            <ol className="mt-3 space-y-3">
+            <ol className="mt-3 space-y-4">
               {model.filmedBatch.steps.map((step, i) => (
-                <li key={i} className="flex gap-3 text-sm leading-relaxed text-muted">
-                  <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-brand/15 text-xs font-bold text-brand">{i + 1}</span>
-                  <span>{step}</span>
+                <li key={i} className={`grid gap-4 rounded-xl border border-line bg-surface p-4 ${step.image ? "sm:grid-cols-[minmax(0,1fr)_240px]" : ""}`}>
+                  <div className="flex gap-3 text-sm leading-relaxed text-muted">
+                    <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-brand/15 text-xs font-bold text-brand">{i + 1}</span>
+                    <span>{step.text}</span>
+                  </div>
+                  {step.image && (
+                    <figure className="mx-auto w-full max-w-[280px] overflow-hidden rounded-lg border border-line bg-surface2 sm:max-w-none">
+                      <img src={step.image} alt={step.imageAlt} loading="lazy" className="aspect-[9/16] w-full object-cover" />
+                      <figcaption className="px-2 py-1.5 text-xs text-muted">{step.imageAlt}</figcaption>
+                    </figure>
+                  )}
                 </li>
               ))}
             </ol>

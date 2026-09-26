@@ -49,6 +49,8 @@ for a recipe already on the site. The deliverable is *not* a new entry — it is
 **Leave the recipe body alone** — ingredients, steps text, macros, splitCook copy.
 The README will say so explicitly ("recipe unchanged"); honor it.
 
+If the film documents a materially different batch, preserve the original body and give the filmed variant its own pictured method. Place its polished images on the recipe page as well as in social; an uploaded set or a raw thumbnail strip does not complete the page. Follow [recipe image integration](recipe-image-integration.md) and inspect the rendered page at desktop and phone widths.
+
 ### meta.macroHonesty is where filmed shortcuts go
 
 When the episode films a shortcut the written recipe doesn't use — a jarred sauce
