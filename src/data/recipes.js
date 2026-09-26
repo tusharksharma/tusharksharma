@@ -467,6 +467,68 @@ const recipes = [
       substitutionNotes: ["use tamari for gluten-free soy sauce", "swap beef for chicken or tofu", "carb lever: adults ½ cup jasmine (~22g net) + 1 oz extra beef, kids full cup — rice is dinner, don't kill it"],
     },
     slug: "spicy-beef-broccoli-bowls",
+    socialImages: [
+      "/images/beefbroccoli/filmed-2026-six-bowl-prep-polished.webp",
+      "/images/beefbroccoli/filmed-2026-wok-close-polished.webp",
+      "/images/beefbroccoli/filmed-2026-wok-action-polished.webp",
+      "/images/beefbroccoli/filmed-2026-kid-path-polished.webp",
+      "/images/beefbroccoli/filmed-2026-adult-finish-polished.webp",
+    ],
+    socialHashtags: ["#SpicyBeefBroccoli", "#MealPrepBowls", "#SplitPlateDinner", "#HighProteinDinner", "#FamilyDinner"],
+    socialCarousel: {
+      heroBadge: "Filmed Split Plate Dinner",
+      heroTitle: "Spicy Beef & Broccoli Bowls",
+      hook: "Six adult bowls · separate kid plates",
+      heroPhoto: "/images/beefbroccoli/filmed-2026-split-hero-polished.webp",
+      heroStats: [
+        { value: "455–490", label: "cal / adult" },
+        { value: "41–42g", label: "protein" },
+        { value: "6", label: "adult bowls" },
+      ],
+      ingredientGroups: [
+        { card: 1, accent: "amber", heading: "Adult bowls", items: [
+          { quantity: "30 oz", text: "Trimmed raw tri-tip" },
+          { quantity: "6", text: "Bone-broth rice portions" },
+          { quantity: "3–4 cups", text: "Broccoli" },
+          { quantity: "3 tbsp", text: "Soy sauce" },
+          { quantity: "3/4 cup", text: "Beef broth" },
+        ] },
+        { card: 2, accent: "green", heading: "Sauce + kid path", items: [
+          { quantity: "1½ tsp", text: "Sesame oil" },
+          { quantity: "1½ tsp", text: "Cornstarch" },
+          { quantity: "4–5", text: "Garlic cloves" },
+          { quantity: "1½ tsp", text: "Grated ginger" },
+          { quantity: "1 tbsp", text: "Cooking oil for the wok" },
+          { quantity: "1 each", text: "Kid Polish sausage, plus rice + broccoli" },
+        ] },
+      ],
+      methodGroups: [
+        { card: 1, accent: "amber", heading: "Cook", items: [
+          { number: 1, heading: "Rice + veg", body: "Cook bone-broth rice. Steam the kid broccoli separately." },
+          { number: 2, heading: "Slice beef", body: "Trim tri-tip to about 30 oz; slice thin against the grain." },
+          { number: 3, heading: "Sear", body: "Brown beef in batches in a hot wok with 1 tbsp oil." },
+        ] },
+        { card: 2, accent: "coral", heading: "Split", items: [
+          { number: 4, heading: "Build sauce", body: "Simmer soy, broth, sesame, garlic, ginger + cornstarch." },
+          { number: 5, heading: "Adult bowls", body: "Toss beef + broccoli in sauce. Divide over six rice portions." },
+          { number: 6, heading: "Kid plates", body: "Heat Polish sausage; serve with rice + steamed broccoli, no adult sauce." },
+        ] },
+      ],
+      ingredientCardPhotos: [
+        "/images/beefbroccoli/filmed-2026-six-bowl-prep-polished.webp",
+        "/images/beefbroccoli/filmed-2026-wok-close-polished.webp",
+      ],
+      methodCardPhotos: [
+        "/images/beefbroccoli/filmed-2026-wok-action-polished.webp",
+        "/images/beefbroccoli/filmed-2026-kid-path-polished.webp",
+      ],
+      servingPhoto: "/images/beefbroccoli/filmed-2026-adult-finish-polished.webp",
+      servingGroups: [
+        { accent: "coral", heading: "Adult", items: [{ text: "Six beef-and-broccoli rice bowls. Add about 1 tsp chili crisp per bowl only after portioning." }] },
+        { accent: "green", heading: "Kid", items: [{ text: "Smaller unweighed rice portion, steamed broccoli, and one Polish sausage. Keep the adult sauce separate." }] },
+      ],
+      captionBody: "Six adult beef-and-broccoli bowls from one trimmed tri-tip, with a separate kid path.\n\nAdult base bowl: estimated 455–490 calories and 41–42g protein before chili crisp. About 1 tsp chili crisp adds an estimated 40 calories. Kid rice portions were not weighed, so no full kid-plate total is claimed.\n\nWHAT WE USED\n• About 2 lb tri-tip, trimmed to roughly 30 oz raw beef\n• Bone-broth rice for six adult bowls plus smaller kid portions\n• 3–4 cups adult broccoli, plus steamed broccoli for kids\n• 3 tbsp soy sauce, 3/4 cup beef broth, 1½ tsp sesame oil\n• 4–5 garlic cloves, 1½ tsp ginger, about 1½ tsp cornstarch\n• 1 tbsp cooking oil; optional chili crisp to finish\n• One Teton beef Polish sausage per kid plate\n\nHOW IT CAME TOGETHER\n1. Cook the bone-broth rice and steam kid broccoli separately.\n2. Slice trimmed tri-tip thin against the grain; sear in batches.\n3. Simmer the soy-sesame sauce, then toss with beef and adult broccoli.\n4. Portion six adult bowls. Heat sausage for the kids and serve with rice and broccoli, without the adult sauce.",
+    },
     proteinAnchor: "beef",
     mealType: "rice-bowl",
     flavorDirection: "spicy-asian",

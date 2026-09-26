@@ -903,6 +903,9 @@ function flattenIngredients(arr) {
 
 function longCaption(recipe, components, platform = "tiktok") {
   const tags = platform === "tiktok" ? tiktokHashtagsFor(recipe) : hashtagsFor(recipe);
+  if (recipe.socialCarousel?.captionBody) {
+    return `${recipe.socialCarousel.captionBody}\n\n${tags.join(" ")}`;
+  }
   const lines = [];
   const m = recipe.meta?.macros || {};
 
