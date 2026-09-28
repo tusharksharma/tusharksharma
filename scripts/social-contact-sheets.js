@@ -288,8 +288,8 @@ async function startPreview(port) {
   // --host 127.0.0.1 binds v4 explicitly. Some vite versions bind IPv6
   // by default, which makes a plain 127.0.0.1 connection attempt fail.
   const proc = spawn(
-    "npx",
-    ["vite", "preview", "--host", "127.0.0.1", "--port", String(port), "--strictPort"],
+    process.execPath,
+    [join(ROOT, "node_modules", "vite", "bin", "vite.js"), "preview", "--host", "127.0.0.1", "--port", String(port), "--strictPort"],
     {
       cwd: ROOT,
       stdio: ["ignore", "pipe", "pipe"],

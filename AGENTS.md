@@ -33,3 +33,4 @@ Taking a finished edit from `~/Documents/New project/video-edits/` live means re
 
 **Recipe-page image gate:** after a Path A or video update, integrate the approved images into the recipe page itself: a polished split hero, purposeful supporting photos, and action-matched images beside the relevant method steps. If the film is a distinct version, give it its own pictured steps while preserving the original method. Visually check the full recipe and social pages at desktop and phone widths before pushing. Full rule: [docs/recipe-image-integration.md](docs/recipe-image-integration.md).
 
+**Carousel image gate:** each ingredient and method card needs its own relevant photo, distinct from the hero and the other cards. The generator removes duplicate photo paths, leaving blank cards if a source is reused. Keep text concise, use only substantiated nutrition claims, and inspect every exported card at its actual square size in a contact sheet before pushing.

@@ -15,6 +15,15 @@ const COOKBOOK_SECTIONS = [
   { label: "Snack Boxes", items: snackBoxes },
 ];
 
+function cookbookSummary(item) {
+  const protein = item.proteinPerServing ??
+    (item.protein != null && item.servings ? Math.round((item.protein / item.servings) * 10) / 10 : item.protein);
+  const serving = `${item.servings} serving${item.servings === 1 ? "" : "s"}`;
+  return protein != null
+    ? `${protein}g protein/serving · ${serving}`
+    : `Protein estimate pending · ${serving}`;
+}
+
 // ⚠️ CLIENT-SIDE GATE — not cryptographically secure.
 // The constant below sits in the JS bundle. Anyone who view-sources can read it.
 // This is "keep out of casual navigation" protection, not real auth.
@@ -166,7 +175,7 @@ export default function SocialIndexPage() {
                   )}
                   <div className="p-3 flex flex-col justify-center min-w-0">
                     <h3 className="text-white font-bold text-sm group-hover:text-amber-400 transition-colors truncate">{c.title}</h3>
-                    <p className="text-neutral-500 text-[10px] mt-0.5">{c.proteinPerServing ?? (c.servings ? Math.round((c.protein / c.servings) * 10) / 10 : c.protein) ?? 0}g protein/serving · {c.servings} serving{c.servings === 1 ? "" : "s"}</p>
+                    <p className="text-neutral-500 text-[10px] mt-0.5">{cookbookSummary(c)}</p>
                     <p className="text-amber-400 text-[10px] mt-1 group-hover:underline">Open carousel →</p>
                   </div>
                 </Link>

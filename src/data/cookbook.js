@@ -4101,9 +4101,10 @@ const WEEK12_BASE = [
   "1/8 tsp guar gum (level measure)",
   "Pinch of salt",
 ];
-const week12Creami = ({ id, title, rank, score, calories, tagline, flavorProfile, before, mixIns, topping, verdict, instructions, warning, processCaption, processAt }) => {
+const week12Creami = ({ id, title, rank, score, calories, tagline, flavorProfile, before, mixIns, topping, verdict, instructions, warning, processCaption, processAt, socialHook, socialFlavorItems, socialPhotos, question, flavorHashtag }) => {
   const image = `/images/${id}/hero.webp`;
   const processImage = `/images/${id}/process.webp`;
+  const socialPhoto = (name) => ({ src: `/images/${id}/${name}.webp`, position: "50% 50%", zoom: 1, layout: "side" });
   const baseItems = [
     { quantity: "1 cup", text: "Fairlife 2% ultra-filtered milk" },
     { quantity: "2 tbsp", text: "Monk-fruit/erythritol sweetener" },
@@ -4116,20 +4117,17 @@ const week12Creami = ({ id, title, rank, score, calories, tagline, flavorProfile
     prepImage: processImage,
     prepImageCaption: processCaption,
     video: WEEK12_VIDEO,
-    socialHashtags: ["#CrumblCreamiCut", "#NinjaCreamiRecipe", "#ProteinIceCream", "#TheSplitPlate"],
+    socialHashtags: ["#CrumblCreamiCut", "#NinjaCreamiRecipe", flavorHashtag, "#TheSplitPlate"],
     socialCarousel: {
       heroBadge: "Week 12 Creami Cut",
       heroAccent: "amber",
-      hook: tagline,
-      captionBody: `${title} — Week 12 #${rank} (${score}/10). About ${calories} calories for the complete finished pint. ${verdict} Homemade and inspired by the cookie-shop flavor; not a Crumbl product. Finished-pint protein is unverified. Full ingredients and method: thesplitplate.com/cookbook/${id}`,
+      heroStats: [{ value: `~${calories}`, label: "cal / whole pint" }, { value: `${score}/10`, label: `#${rank} of 3` }],
+      hook: socialHook,
+      captionBody: `Save this ${title} build for your next Creami pint. Swipe for the exact base, flavor additions, and the step that makes it work. Week 12 #${rank}: ${score}/10 and about ${calories} calories for the complete finished pint. ${verdict} Homemade and inspired by a cookie-shop flavor; not a Crumbl product. Finished-pint protein is unverified. Recipe: thesplitplate.com/cookbook/${id}\n\n${question}`,
       heroPhoto: image,
       ingredientGroups: [
         { card: 0, accent: "amber", heading: "Base for one pint", items: baseItems },
-        { card: 1, accent: "amber", heading: "Flavor and finish", items: [
-          ...before.map((text) => ({ quantity: "Before freeze", text })),
-          ...mixIns.map((text) => ({ quantity: "After first spin", text })),
-          ...topping.map((text) => ({ quantity: "Top to finish", text })),
-        ] },
+        { card: 1, accent: "amber", heading: "Flavor and finish", items: socialFlavorItems },
       ],
       methodGroups: [
         { accent: "amber", heading: "Build and freeze", items: [
@@ -4139,19 +4137,19 @@ const week12Creami = ({ id, title, rank, score, calories, tagline, flavorProfile
         { accent: "amber", heading: "Spin and finish", items: [
           { number: 3, heading: "Regular Ice Cream", body: "Rest five minutes, then run Regular Ice Cream. If powdery, use a no-water Respin." },
           { number: 4, heading: mixIns.length ? "Mix-In" : "No machine mix-in", body: mixIns.length ? `Add ${mixIns.join(" and ")} after the first spin, then run Mix-In.` : "Keep the Oreo pieces for the topping; do not run a post-spin machine Mix-In." },
-          { number: 5, heading: "Finish", body: `Scoop and top with ${topping.join(" and ")}. Serve immediately.` },
+          { number: 5, heading: "Finish", body: `${instructions} Serve immediately.` },
         ] },
       ],
-      ingredientCardPhotos: [{ src: image, position: "50% 50%", zoom: 1, layout: "side" }, { src: processImage, position: "50% 50%", zoom: 1, layout: "side" }],
-      methodCardPhotos: [{ src: image, position: "50% 50%", zoom: 1, layout: "side" }, { src: processImage, position: "50% 50%", zoom: 1, layout: "side" }],
+      ingredientCardPhotos: socialPhotos.ingredients.map(socialPhoto),
+      methodCardPhotos: socialPhotos.method.map(socialPhoto),
       servingPhoto: image,
       servingGroups: [{ accent: "amber", heading: `#${rank} of three · ${score}/10`, items: [
         { text: `About ${calories} calories for the whole finished pint, including the listed toppings.` },
         { text: verdict },
       ] }],
-      engagementQuestion: "Which of the three Week 12 Creami builds would you try first?",
+      engagementQuestion: question,
     },
-    socialImages: [processImage, image],
+    socialImages: socialPhotos.order.map((name) => `/images/${id}/${name}.webp`),
     flavorProfile,
     calories,
     caloriesPerServing: calories,
@@ -4198,6 +4196,16 @@ const WEEK12_CREAMIS = [
     instructions: "Top the spun pint with two more Oreo Thins and 1/2 tsp rainbow sprinkles.",
     warning: "Black-cocoa calories use a standard unsweetened-cocoa proxy; sprinkles were not weighed and are estimated at 1/2 tsp.",
     processCaption: "Scatter the measured rainbow sprinkles over the Oreo-topped Creami after spinning.", processAt: 4,
+    socialHook: "Black cocoa and Oreo Thins make the Week 12 winner. Keep the last two cookies on top for crunch.",
+    socialFlavorItems: [
+      { quantity: "1 tbsp", text: "Black cocoa", note: "Blend before freezing" },
+      { quantity: "2", text: "Oreo Thins", note: "Blend before freezing" },
+      { quantity: "2", text: "More Oreo Thins", note: "Top after spinning; no machine Mix-In" },
+      { quantity: "1/2 tsp", text: "Rainbow sprinkles", note: "Top after spinning" },
+    ],
+    socialPhotos: { ingredients: ["carousel-base", "process"], method: ["carousel-scoop", "carousel-finish"], order: ["carousel-base", "carousel-scoop", "process", "carousel-finish"] },
+    question: "Oreo Thins on top or mixed in — which texture would you pick?",
+    flavorHashtag: "#OreoCreami",
   }),
   week12Creami({
     id: "chocolate-chip-cookie-cake-creami", title: "Chocolate Chip Cookie Cake Creami", rank: 2, score: 8.8, calories: 340,
@@ -4210,6 +4218,19 @@ const WEEK12_CREAMIS = [
     instructions: "Whisk the syrup and cocoa until smooth, then drizzle the fudge over the finished pint.",
     warning: "The chocolate quantity is measured as 50 calories' worth from its package; the 342-calorie estimate is rounded to 340.",
     processCaption: "Whisk sugar-free maple syrup and cocoa into a glossy fudge before drizzling.", processAt: 4,
+    socialHook: "The cocoa-maple fudge made this cookie-cake Creami worth repeating.",
+    socialFlavorItems: [
+      { quantity: "1/4 tsp", text: "Butter extract", note: "Blend before freezing" },
+      { quantity: "1 tsp", text: "Vanilla extract", note: "Blend before freezing" },
+      { quantity: "1 drop", text: "Natural brown food coloring", note: "Blend before freezing" },
+      { quantity: "7g", text: "Lily's milk-chocolate chips", note: "Mix-In after first spin" },
+      { quantity: "50 cal", text: "Hormbles Chormbles milk chocolate", note: "Mix-In; weigh from package" },
+      { quantity: "1 tbsp", text: "Sugar-free maple syrup", note: "Whisk with cocoa for topping" },
+      { quantity: "1/2 tbsp", text: "Cocoa", note: "Whisk with syrup for topping" },
+    ],
+    socialPhotos: { ingredients: ["carousel-base", "process"], method: ["carousel-chips", "carousel-drizzle"], order: ["carousel-base", "carousel-chips", "process", "carousel-drizzle"] },
+    question: "Would you try this two-ingredient hot fudge on another Creami flavor?",
+    flavorHashtag: "#ChocolateChipCookieCreami",
   }),
   week12Creami({
     id: "cake-batter-blondie-cookie-creami", title: "Cake Batter Blondie Cookie Creami", rank: 3, score: 7.8, calories: 310,
@@ -4220,6 +4241,15 @@ const WEEK12_CREAMIS = [
     instructions: "Top the finished pint with 1/2 tsp rainbow sprinkles.",
     warning: "Sprinkles were not weighed and are estimated at 1/2 tsp.",
     processCaption: "Add the white-chocolate-style chips after the first spin, then run Mix-In.", processAt: 3,
+    socialHook: "Brown-butter base, white chocolate, sprinkles — plus the honest reason this one ranked third.",
+    socialFlavorItems: [
+      { quantity: "1/4 tsp", text: "Brown-butter emulsion", note: "Blend before freezing" },
+      { quantity: "14g", text: "Lily's white-chocolate-style chips", note: "Mix-In after first spin" },
+      { quantity: "1/2 tsp", text: "Rainbow sprinkles", note: "Top after spinning" },
+    ],
+    socialPhotos: { ingredients: ["carousel-hold", "process"], method: ["carousel-base", "carousel-sprinkle"], order: ["carousel-base", "process", "carousel-sprinkle", "carousel-hold"] },
+    question: "What would you add to give this white-chocolate pint more contrast?",
+    flavorHashtag: "#CakeBatterCreami",
   }),
 ];
 
