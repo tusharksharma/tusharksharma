@@ -506,7 +506,7 @@ export function buildCookbookModel(item, group) {
   }
   const perProtein =
     item.proteinPerServing ??
-    (item.servings ? Math.round((item.protein / item.servings) * 10) / 10 : item.protein);
+    (item.protein != null && item.servings ? Math.round((item.protein / item.servings) * 10) / 10 : item.protein);
   if (perProtein != null) {
     facts.push({
       key: "protein",

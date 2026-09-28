@@ -7,14 +7,14 @@
  */
 import { readFileSync, writeFileSync, mkdirSync } from "fs";
 import { join, dirname } from "path";
+import { sauces, breakfasts, quickLunches, desserts, bases, powerups, snackBoxes } from "../src/data/cookbook.js";
 
 const DIST = "dist";
 const DOMAIN = "https://thesplitplate.com";
-const template = readFileSync(join(DIST, "index.html"), "utf-8");
+const template = readFileSync(join(DIST, "index.html"), "utf-8").replace(/\r\n/g, "\n");
 
 // Import recipe/cookbook data
 const recipesRaw = readFileSync("src/data/recipes.js", "utf-8");
-const cookbookRaw = readFileSync("src/data/cookbook.js", "utf-8");
 
 // Extract live recipe slugs + metadata via regex (avoids ESM import issues with JSX)
 function extractRecipes(src) {
@@ -37,23 +37,10 @@ function extractRecipes(src) {
   return recipes;
 }
 
-function extractCookbookItems(src) {
-  const items = [];
-  // Match recipe blocks that start with { followed by id: "slug-like-id"
-  const blockRegex = /\{\s*\n\s*id:\s*"([a-z0-9-]+)",\s*\n\s*title:\s*"([^"]+)",\s*\n\s*tagline:\s*"([^"]+)",/g;
-  let m;
-  while ((m = blockRegex.exec(src)) !== null) {
-    const id = m[1];
-    // Find heroImage near this position
-    const after = src.slice(m.index, m.index + 300);
-    const hero = after.match(/heroImage:\s*"([^"]+)"/)?.[1] || "";
-    items.push({ id, title: m[2], description: m[3], image: hero });
-  }
-  return items;
-}
-
 const recipes = extractRecipes(recipesRaw);
-const cookbookItems = extractCookbookItems(cookbookRaw);
+const cookbookItems = [sauces, breakfasts, quickLunches, desserts, bases, powerups, snackBoxes]
+  .flat()
+  .map((item) => ({ id: item.id, title: item.title, description: item.tagline, image: item.heroImage || "" }));
 
 // Define all routes with metadata
 const routes = [

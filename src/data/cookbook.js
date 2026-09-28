@@ -4091,7 +4091,140 @@ export const quickLunches = [
   },
 ];
 
+// Week 12: each entry is one complete homemade pint inspired by a cookie flavor.
+// Protein for the finished pints is deliberately omitted until every product label is checked.
+const WEEK12_VIDEO = "https://github.com/tusharksharma/tusharksharma/releases/download/crumblcreamicut-week12-site-video/crumblcreamicut-week12-three-builds-ranking-site.mp4";
+const WEEK12_BASE = [
+  "1 cup Fairlife 2% ultra-filtered milk",
+  "2 tbsp monk-fruit/erythritol sweetener",
+  "1 serving unflavored whey isolate",
+  "1/8 tsp guar gum (level measure)",
+  "Pinch of salt",
+];
+const week12Creami = ({ id, title, rank, score, calories, tagline, flavorProfile, before, mixIns, topping, verdict, instructions, warning, processCaption, processAt }) => {
+  const image = `/images/${id}/hero.webp`;
+  const processImage = `/images/${id}/process.webp`;
+  const baseItems = [
+    { quantity: "1 cup", text: "Fairlife 2% ultra-filtered milk" },
+    { quantity: "2 tbsp", text: "Monk-fruit/erythritol sweetener" },
+    { quantity: "1 serving", text: "Unflavored whey isolate" },
+    { quantity: "1/8 tsp", text: "Guar gum", note: "Level measure" },
+    { quantity: "Pinch", text: "Salt" },
+  ];
+  return {
+    id, title, tagline, heroImage: image,
+    prepImage: processImage,
+    prepImageCaption: processCaption,
+    video: WEEK12_VIDEO,
+    socialHashtags: ["#CrumblCreamiCut", "#NinjaCreamiRecipe", "#ProteinIceCream", "#TheSplitPlate"],
+    socialCarousel: {
+      heroBadge: "Week 12 Creami Cut",
+      heroAccent: "amber",
+      hook: tagline,
+      captionBody: `${title} — Week 12 #${rank} (${score}/10). About ${calories} calories for the complete finished pint. ${verdict} Homemade and inspired by the cookie-shop flavor; not a Crumbl product. Finished-pint protein is unverified. Full ingredients and method: thesplitplate.com/cookbook/${id}`,
+      heroPhoto: image,
+      ingredientGroups: [
+        { card: 0, accent: "amber", heading: "Base for one pint", items: baseItems },
+        { card: 1, accent: "amber", heading: "Flavor and finish", items: [
+          ...before.map((text) => ({ quantity: "Before freeze", text })),
+          ...mixIns.map((text) => ({ quantity: "After first spin", text })),
+          ...topping.map((text) => ({ quantity: "Top to finish", text })),
+        ] },
+      ],
+      methodGroups: [
+        { accent: "amber", heading: "Build and freeze", items: [
+          { number: 1, heading: "Blend", body: `Blend the base with ${before.join(", ")} until smooth.` },
+          { number: 2, heading: "Freeze", body: "Pour below the max-fill line; freeze upright and level for 24 hours." },
+        ] },
+        { accent: "amber", heading: "Spin and finish", items: [
+          { number: 3, heading: "Regular Ice Cream", body: "Rest five minutes, then run Regular Ice Cream. If powdery, use a no-water Respin." },
+          { number: 4, heading: mixIns.length ? "Mix-In" : "No machine mix-in", body: mixIns.length ? `Add ${mixIns.join(" and ")} after the first spin, then run Mix-In.` : "Keep the Oreo pieces for the topping; do not run a post-spin machine Mix-In." },
+          { number: 5, heading: "Finish", body: `Scoop and top with ${topping.join(" and ")}. Serve immediately.` },
+        ] },
+      ],
+      ingredientCardPhotos: [{ src: image, position: "50% 50%", zoom: 1, layout: "side" }, { src: processImage, position: "50% 50%", zoom: 1, layout: "side" }],
+      methodCardPhotos: [{ src: image, position: "50% 50%", zoom: 1, layout: "side" }, { src: processImage, position: "50% 50%", zoom: 1, layout: "side" }],
+      servingPhoto: image,
+      servingGroups: [{ accent: "amber", heading: `#${rank} of three · ${score}/10`, items: [
+        { text: `About ${calories} calories for the whole finished pint, including the listed toppings.` },
+        { text: verdict },
+      ] }],
+      engagementQuestion: "Which of the three Week 12 Creami builds would you try first?",
+    },
+    socialImages: [processImage, image],
+    flavorProfile,
+    calories,
+    caloriesPerServing: calories,
+    servings: 1,
+    time: "10 min active + 24 hr freeze",
+    bestFor: ["Dessert", "Ninja Creami", "Whole-pint dessert", "Make-ahead", "CrumblCreamiCut"],
+    useThisWhen: `You want a homemade Creami inspired by a cookie-shop flavor. This is Week 12's #${rank} ranked pint (${score}/10).`,
+    ingredients: [
+      "--- BASE (ONE PINT) ---", ...WEEK12_BASE,
+      "--- BLEND IN BEFORE FREEZING ---", ...before,
+      ...(mixIns.length ? ["--- AFTER FIRST SPIN: MACHINE MIX-IN ---", ...mixIns] : []),
+      "--- TOP AFTER SPINNING ---", ...topping,
+    ],
+    steps: [
+      `BLEND: Combine ${WEEK12_BASE.join(", ")} with ${before.join(", ")}. Blend until smooth.`,
+      "FREEZE: Pour into a Creami pint below the max-fill line. Freeze upright and level for 24 hours.",
+      "FIRST SPIN: Rest five minutes. Run Regular Ice Cream. If powdery, run a no-water Respin.",
+      { text: mixIns.length ? `MIX-IN: After the first spin, add ${mixIns.join(" and ")}; run Mix-In.` : "NO MACHINE MIX-IN: Keep the remaining Oreo Thins for the topping.", ...(processAt === 3 ? { image: processImage } : {}) },
+      { text: `FINISH: ${instructions} Serve immediately.`, ...(processAt === 4 ? { image: processImage } : {}) },
+    ],
+    executionRules: [
+      "Each ingredient list makes one complete finished pint; do not divide the calories by multiple servings.",
+      "Blend flavor additions before freezing, run Regular Ice Cream, and use a no-water Respin only if powdery.",
+      "Add toppings after spinning so their texture stays distinct.",
+    ],
+    troubleshooting: [
+      { problem: "Powdery after first spin", fix: "Run one no-water Respin." },
+      { problem: "Gummy texture", fix: "Use a level 1/8 teaspoon of guar gum, not a heaped scoop." },
+    ],
+    macroHonesty: `About ${calories} calories for the complete finished pint, including the listed mix-ins and toppings. This is a rounded creator estimate using the ~240-calorie base. Exact calories and total protein depend on the physical whey, chocolate, cocoa, and sprinkle labels; no finished-pint protein claim is made. ${warning}`,
+    warnings: [warning, "Contains dairy; check all current packaged labels for additional allergens."],
+    allergens: ["dairy"],
+    mealPrep: { storage: "Freeze the unprocessed pint upright and level; spin and add toppings when ready to eat.", lasts: "Process within a week for best texture.", reheat: "Not applicable." },
+  };
+};
+
+const WEEK12_CREAMIS = [
+  week12Creami({
+    id: "birthday-cake-cookie-oreo-creami", title: "Birthday Cake Cookie ft. OREO Creami", rank: 1, score: 9.5, calories: 400,
+    tagline: "Dark cocoa Creami with Oreo Thins and rainbow sprinkles. The Week 12 winner: 9.5/10, about 400 calories for the whole finished pint.",
+    flavorProfile: "Dark black cocoa, crisp Oreo Thin pieces, birthday-cake sprinkles",
+    before: ["1 tbsp black cocoa", "2 Oreo Thins"], mixIns: [], topping: ["2 more Oreo Thins", "1/2 tsp rainbow sprinkles"],
+    verdict: "Oreo Thins worked especially well on top, where their texture stayed distinct.",
+    instructions: "Top the spun pint with two more Oreo Thins and 1/2 tsp rainbow sprinkles.",
+    warning: "Black-cocoa calories use a standard unsweetened-cocoa proxy; sprinkles were not weighed and are estimated at 1/2 tsp.",
+    processCaption: "Scatter the measured rainbow sprinkles over the Oreo-topped Creami after spinning.", processAt: 4,
+  }),
+  week12Creami({
+    id: "chocolate-chip-cookie-cake-creami", title: "Chocolate Chip Cookie Cake Creami", rank: 2, score: 8.8, calories: 340,
+    tagline: "Cookie-cake Creami with chocolate chips and quick cocoa-maple fudge. Ranked 8.8/10; about 340 calories for the whole finished pint.",
+    flavorProfile: "Buttery vanilla, milk chocolate, glossy cocoa-maple fudge",
+    before: ["1/4 tsp butter extract", "1 tsp vanilla extract", "1 drop natural brown food coloring"],
+    mixIns: ["7g Lily's milk-chocolate chips", "50 calories' worth of Hormbles Chormbles milk chocolate"],
+    topping: ["1 tbsp Maple Grove Farms sugar-free maple syrup", "1/2 tbsp cocoa"],
+    verdict: "The quick fudge was the standout and is worth repeating.",
+    instructions: "Whisk the syrup and cocoa until smooth, then drizzle the fudge over the finished pint.",
+    warning: "The chocolate quantity is measured as 50 calories' worth from its package; the 342-calorie estimate is rounded to 340.",
+    processCaption: "Whisk sugar-free maple syrup and cocoa into a glossy fudge before drizzling.", processAt: 4,
+  }),
+  week12Creami({
+    id: "cake-batter-blondie-cookie-creami", title: "Cake Batter Blondie Cookie Creami", rank: 3, score: 7.8, calories: 310,
+    tagline: "Brown-butter blondie Creami with white-chocolate-style chips and sprinkles. Ranked 7.8/10; about 310 calories for the whole pint.",
+    flavorProfile: "Brown butter, creamy vanilla, white chocolate, rainbow sprinkles",
+    before: ["1/4 tsp brown-butter emulsion"], mixIns: ["14g Lily's white-chocolate-style chips"], topping: ["1/2 tsp rainbow sprinkles"],
+    verdict: "The white chocolate over a relatively plain ice cream felt flat; this one needed more flavor contrast.",
+    instructions: "Top the finished pint with 1/2 tsp rainbow sprinkles.",
+    warning: "Sprinkles were not weighed and are estimated at 1/2 tsp.",
+    processCaption: "Add the white-chocolate-style chips after the first spin, then run Mix-In.", processAt: 3,
+  }),
+];
+
 export const desserts = [
+  ...WEEK12_CREAMIS,
   {
     id: "chocolate-protein-brownie-bowl",
     title: "Chocolate Protein Brownie Bowl",
