@@ -12673,6 +12673,57 @@ export const powerups = [
     title: "Cookie Butter Iced Proffee",
     tagline: "Proffee Episode 2 — Ep 1's concentrate-first technique now carries cookie butter and Biscoff. 210 cal / 22g protein per glass (1:9.5 protein-to-cal), 5-minute build. Whey blends into a hot coffee concentrate with a crushed Biscoff cookie, then ice + fat-free ultra-filtered milk + cookie-butter rim + whipped topping + a second Biscoff crumble finish.",
     heroImage: "/images/cookie-butter-iced-proffee/hero-cookie-butter-iced-proffee-polished.webp",
+    socialHashtags: ["#CookieButterProffee", "#ProteinCoffee", "#IcedProteinCoffee", "#BiscoffCoffee", "#TheSplitPlate"],
+    socialCarousel: {
+      heroBadge: "Proffee · Episode 2",
+      heroAccent: "amber",
+      hook: "Biscoff in the coffee, cookie butter on the rim. One iced glass: about 210 cal and 22g protein.",
+      heroPhoto: "/images/cookie-butter-iced-proffee/hero-cookie-butter-iced-proffee-polished.webp",
+      captionBody: "Save this Cookie Butter Iced Proffee for a five-minute dessert coffee: about 210 calories and 22g protein per glass. Crush one Biscoff cookie into the hot coffee-whey concentrate; save the second for the whipped-topping finish. Rim the empty serving glass with cookie butter before adding ice and milk. This is a caffeinated adult drink. Recipe: thesplitplate.com/cookbook/cookie-butter-iced-proffee\n\nCoffee or dessert — which would you call it?",
+      ingredientGroups: [
+        { card: 0, accent: "amber", heading: "Blend into concentrate", items: [
+          { quantity: "1", text: "Biscoff cookie", note: "Crush into the coffee" },
+          { quantity: "1/2 tbsp", text: "Instant coffee" },
+          { quantity: "1/2 serving", text: "Unflavored whey isolate" },
+          { quantity: "2 tsp", text: "Monk-fruit sweetener" },
+          { quantity: "2–3 tbsp", text: "Hot water", note: "Not boiling" },
+        ] },
+        { card: 1, accent: "amber", heading: "Ice and finish", items: [
+          { quantity: "1 tsp", text: "Cookie butter", note: "Rim the empty glass" },
+          { quantity: "As needed", text: "Ice" },
+          { quantity: "1/2 cup", text: "Fat-free ultra-filtered milk" },
+          { quantity: "1 tbsp", text: "Sugar-free whipped topping" },
+          { quantity: "1", text: "More Biscoff cookie", note: "Crush over the top" },
+        ] },
+      ],
+      methodLabel: "HOW TO MAKE",
+      methodGroups: [
+        { accent: "amber", heading: "Make the concentrate", items: [
+          { number: 1, heading: "Crush", body: "Crush one Biscoff cookie into a tall blending cup." },
+          { number: 2, heading: "Add coffee + whey", body: "Add instant coffee, whey, sweetener, and 2 tbsp hot water. Add a third tablespoon only if needed." },
+          { number: 3, heading: "Blend smooth", body: "Submerge the blender head first; blend until no protein clumps or cookie pieces remain." },
+        ] },
+        { accent: "amber", heading: "Build the glass", items: [
+          { number: 4, heading: "Rim", body: "Spread cookie butter on the empty serving glass." },
+          { number: 5, heading: "Ice + milk", body: "Add ice, pour in the concentrate, then add 1/2 cup fat-free ultra-filtered milk." },
+          { number: 6, heading: "Finish", body: "Add whipped topping and crumble the second Biscoff cookie over it. Serve immediately." },
+        ] },
+      ],
+      ingredientCardPhotos: [
+        { src: "/images/cookie-butter-iced-proffee/step-01-crush-biscoff-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
+        { src: "/images/cookie-butter-iced-proffee/step-09-cookie-butter-rim-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
+      ],
+      methodCardPhotos: [
+        { src: "/images/cookie-butter-iced-proffee/step-06-blend-smooth-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
+        { src: "/images/cookie-butter-iced-proffee/step-08-add-milk-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
+      ],
+      servingPhoto: { src: "/images/cookie-butter-iced-proffee/step-11-biscoff-garnish-polished.webp", position: "50% 50%", zoom: 1.04, layout: "side" },
+      servingGroups: [{ accent: "amber", heading: "One cold powerup", items: [
+        { text: "One glass: about 210 calories and 22g protein. Contains caffeine; for adults." },
+        { text: "Drink it while the whipped topping and Biscoff crumble still have texture." },
+      ] }],
+      engagementQuestion: "Coffee or dessert — which would you call it?",
+    },
     // prepImage = the blended concentrate moment (matches Ep 1's convention of
     // showing the concentrate as the technique center of the recipe).
     prepImage: "/images/cookie-butter-iced-proffee/step-06-blend-smooth-polished.webp",
@@ -14564,8 +14615,54 @@ export const snackBoxes = [
   {
     id: "split-plate-berry-power-up-snack-box",
     title: "Split Plate Berry Power-Up Snack Box",
-    tagline: "Snack Box Series Ep. 3 — no-cook kid snack with protein, fruit, cheese, and crunch. Beef stick + blueberries + Babybel + pistachios. ~260 cal / 18g protein per box.",
+    tagline: "Snack Box Series Ep. 3 — no-cook kid snack with protein, fruit, cheese, and crunch. Beef stick + blueberries + Babybel + 28g pistachios. About 360 cal / 20g protein per box.",
     heroImage: "/images/split-plate-berry-power-up-snack-box/hero-final-berry-power-up-box-polished.webp",
+    socialHashtags: ["#BerrySnackBox", "#SnackBoxIdeas", "#AfterSchoolSnacks", "#KidsSnackIdeas", "#TheSplitPlate"],
+    socialCarousel: {
+      heroBadge: "Snack Box Series · Ep. 3",
+      heroAccent: "amber",
+      heroStats: [{ value: "~360", label: "cal / box" }, { value: "~20g", label: "protein / box" }, { value: "5 min", label: "no cook" }],
+      hook: "Blueberries, beef stick, Babybel, and pistachios in four compartments. Five minutes, no cooking.",
+      heroPhoto: "/images/split-plate-berry-power-up-snack-box/hero-final-berry-power-up-box-polished.webp",
+      captionBody: "Save this five-minute Berry Power-Up Snack Box: beef stick, blueberries, Babybel, and 28g pistachio kernels in four compartments. At these amounts, one box is about 360 calories and 20g protein; check your product labels. Slice the beef stick for kids, keep the box chilled, and omit whole nuts for children under 4. Recipe: thesplitplate.com/cookbook/split-plate-berry-power-up-snack-box\n\nWhich compartment disappears first?",
+      methodLabel: "HOW TO BUILD",
+      ingredientGroups: [
+        { card: 0, accent: "amber", heading: "Protein and fruit", items: [
+          { quantity: "1", text: "Beef stick", note: "Slice into kid-friendly bites" },
+          { quantity: "1 handful", text: "Blueberries", note: "Rinse before packing" },
+        ] },
+        { card: 1, accent: "amber", heading: "Cheese and crunch", items: [
+          { quantity: "1", text: "Babybel Original cheese" },
+          { quantity: "28g", text: "Pistachio kernels", note: "Weigh after shelling; ages 4+" },
+        ] },
+      ],
+      methodGroups: [
+        { accent: "amber", heading: "Fill the first half", items: [
+          { number: 1, heading: "Set up", body: "Start with a clean, divided four-compartment snack box." },
+          { number: 2, heading: "Beef stick", body: "Slice one stick into kid-friendly pieces; fill one compartment." },
+          { number: 3, heading: "Blueberries", body: "Rinse a handful and fill the next compartment." },
+        ] },
+        { accent: "amber", heading: "Finish and chill", items: [
+          { number: 4, heading: "Babybel", body: "Unwrap one cheese and add it to the third compartment." },
+          { number: 5, heading: "Pistachios", body: "Measure 28g kernels into the last compartment. For kids under 4, omit whole nuts." },
+          { number: 6, heading: "Keep cold", body: "Seal and refrigerate, or pack with an ice pack." },
+        ] },
+      ],
+      ingredientCardPhotos: [
+        { src: "/images/split-plate-berry-power-up-snack-box/step-01-add-beef-stick-polished.webp", position: "50% 50%", zoom: 1.04, layout: "side" },
+        { src: "/images/split-plate-berry-power-up-snack-box/step-04-add-pistachios-polished.webp", position: "50% 50%", zoom: 1.04, layout: "side" },
+      ],
+      methodCardPhotos: [
+        { src: "/images/split-plate-berry-power-up-snack-box/step-02-add-blueberries-polished.webp", position: "50% 50%", zoom: 1.04, layout: "side" },
+        { src: "/images/split-plate-berry-power-up-snack-box/step-03-add-babybel-polished.webp", position: "50% 50%", zoom: 1.04, layout: "side" },
+      ],
+      servingPhoto: { src: "/images/split-plate-berry-power-up-snack-box/final-stacked-snack-boxes-polished.webp", position: "50% 50%", zoom: 1.04, layout: "side" },
+      servingGroups: [{ accent: "amber", heading: "One finished snack box", items: [
+        { text: "About 360 calories and 20g protein with a full 28g serving of pistachios." },
+        { text: "Keep chilled. Omit whole nuts for kids under 4; that changes the nutrition estimate." },
+      ] }],
+      engagementQuestion: "Which compartment disappears first?",
+    },
     // prepImage — swapped from handoff's `final-stacked-snack-boxes` (payoff
     // shot) to `context-blueberries` (theme-signature blueberry mise-style,
     // matches Ep. 2's Rocket-apple prepImage pattern and Ep. 1's Sargento
@@ -14586,10 +14683,10 @@ export const snackBoxes = [
       "/images/split-plate-berry-power-up-snack-box/final-stacked-snack-boxes-polished.webp",
     ],
     flavorProfile: "Sweet blueberries + salty pistachios + creamy Babybel + chewy savory beef stick. Four textures in four compartments — no single flavor blends into another.",
-    calories: 260,
-    caloriesPerServing: 260,
-    protein: 18,
-    proteinPerServing: 18,
+    calories: 360,
+    caloriesPerServing: 360,
+    protein: 20,
+    proteinPerServing: 20,
     servings: 1,
     time: "5 min",
     bestFor: [
@@ -14602,12 +14699,12 @@ export const snackBoxes = [
       "Higher-protein snack",
       "No cook",
     ],
-    useThisWhen: "Kid wants a snack but you don't want to hand them chips. Beef stick covers the protein (10g), Babybel adds ~5g more, pistachios bring the crunch, blueberries are the fruit anchor. 5 min to assemble, no cook. Parent-steal-worthy too.",
-    flavorTarget: "Every compartment is a different texture: juicy blueberries, crunchy pistachio shells, creamy Babybel wedge, chewy beef stick. Kid gets to graze; parent gets an assembled 260 cal / 18g protein snack.",
+    useThisWhen: "Kid wants a snack but you don't want to hand them chips. Beef stick covers 10g protein, Babybel adds about 4g more, pistachios bring the crunch, and blueberries are the fruit anchor. Five minutes to assemble, no cooking. Parent-steal-worthy too.",
+    flavorTarget: "Every compartment is a different texture: juicy blueberries, crunchy shelled pistachios, creamy Babybel, chewy beef stick. Kid gets to graze; parent gets an assembled ~360 cal / ~20g protein snack at the listed portions.",
     ingredients: [
       "1 beef stick (Chomps or any — ~100 cal / 10g protein target)",
       "1 handful blueberries (~30 cal / 0g protein for ~1/2 cup)",
-      "1 Babybel Original cheese (~70 cal / 5g protein per wedge)",
+      "1 Babybel Original cheese (~70 cal / 4g protein per piece; check your pack)",
       "28g shelled pistachios (~160 cal / 6g protein — see notes: for kids over 4 only)",
     ],
     steps: [
@@ -14615,20 +14712,20 @@ export const snackBoxes = [
       { text: "BEEF STICK: Slice 1 beef stick into kid-friendly bite-size pieces. Drop into the first compartment.", image: "/images/split-plate-berry-power-up-snack-box/step-01-add-beef-stick-polished.webp" },
       { text: "BLUEBERRIES: Rinse a handful of blueberries. Fill the second compartment.", image: "/images/split-plate-berry-power-up-snack-box/step-02-add-blueberries-polished.webp" },
       { text: "BABYBEL: Unwrap 1 Babybel Original wedge. Drop into the third compartment (wax off, or leave wax on if the kid opens their own).", image: "/images/split-plate-berry-power-up-snack-box/step-03-add-babybel-polished.webp" },
-      { text: "PISTACHIOS: Measure 28g shelled pistachios (~1/4 cup). Add to the final compartment. FOR KIDS OVER 4 ONLY — see notes.", image: "/images/split-plate-berry-power-up-snack-box/step-04-add-pistachios-polished.webp" },
+      { text: "PISTACHIOS: Measure 28g edible kernels after removing the shells (~1/4 cup). Add to the final compartment. Omit whole nuts for children under 4; see notes.", image: "/images/split-plate-berry-power-up-snack-box/step-04-add-pistachios-polished.webp" },
       { text: "LID + CHILL: Snap lid on. Refrigerate or pack with an ice pack until snack time. Serve chilled — Babybel and blueberries are best cold.", image: "/images/split-plate-berry-power-up-snack-box/final-stacked-snack-boxes-polished.webp" },
     ],
     notes: [
-      "Pistachios: for kids over 4 only. Under 4, swap the pistachios for any other nut they safely eat (or skip the pistachio slot entirely and add extra blueberries / Babybel).",
+      "Whole pistachios are for children 4 and older who can chew them safely. For children under 4, omit whole nuts and add extra blueberries or another age-appropriate food. The stated macros apply only to the box with 28g edible pistachio kernels.",
       "Beef stick brand flexes — Chomps shown, but any grass-fed / clean-label beef stick works. Target ~100 cal / 10g protein per stick.",
       "Adult-friendly too — the macros hit a parent snack cleanly. Steal one from the meal-prep stack.",
       "Keep the snack box chilled if packing ahead — Babybel firms up when cold + blueberries stay crisp.",
     ],
     brands: [
       { name: "Chomps", item: "Original Beef Stick (~100 cal / 10g protein / 0g sugar per stick).", why: "Clean-label protein anchor for the box. Grass-fed, no MSG, no nitrates. Sub any beef stick that hits the macro target. Cross-recipe candidate for any kid snack box needing a chewy protein hit.", url: "https://chomps.com/products/original-beef" },
-      { name: "Babybel", item: "Original semisoft cheese wedge (~70 cal / 5g protein / 6g fat per wedge).", why: "Kid-proof cheese unit. Individually wrapped in wax, no cutting or portioning, ~5g protein per wedge. Kids can open their own — the wax-peel ritual is part of the appeal.", url: "https://www.babybel.com/us/" },
+      { name: "Babybel", item: "Original semisoft cheese (~70 cal / 4g protein per piece on the current U.S. label).", why: "Individually wrapped in wax, no cutting or portioning. Kids can open their own — the wax-peel ritual is part of the appeal.", url: "https://babybel.com/product/babybel-original-cheese/" },
     ],
-    macroHonesty: "~260 cal / 18g protein per snack box, approximate. Component breakdown: 1 Chomps Original (~100 cal / 10g protein) + 1 handful blueberries (~30 cal / 0g protein for ~1/2 cup) + 1 Babybel Original (~70 cal / 5g protein) + 28g shelled pistachios (~160 cal / 6g protein). Total: ~360 cal / 21g protein raw component sum. Adjusted to ~260 / 18 for the typical served portion (beef stick + Babybel per label; blueberry handful vs 1/2 cup exact; pistachio 28g vs the 40g raw label serving). Marked estimated. Verify against your exact beef stick / cheese label before publishing as macro-accurate.",
+    macroHonesty: "About 360 cal / 20g protein per snack box at the listed portions: 1 Chomps Original beef stick (100 cal / 10g protein) + a handful of blueberries (~30 cal / negligible protein) + 1 Babybel Original (70 cal / 4g protein on the current U.S. label) + 28g shelled pistachios (~160 cal / 6g protein). This is an estimate; weigh the blueberries and check your specific labels for a more precise total.",
     seriesInfo: {
       series: "Split Plate Snack Box",
       episode: 3,
