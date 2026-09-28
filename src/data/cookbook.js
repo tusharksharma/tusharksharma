@@ -4101,7 +4101,7 @@ const WEEK12_BASE = [
   "1/8 tsp guar gum (level measure)",
   "Pinch of salt",
 ];
-const week12Creami = ({ id, title, rank, score, calories, tagline, flavorProfile, before, mixIns, topping, verdict, instructions, warning, processCaption, processAt, socialHook, socialFlavorItems, socialPhotos, question, flavorHashtag }) => {
+const week12Creami = ({ id, title, calories, tagline, flavorProfile, before, mixIns, topping, verdict, instructions, warning, processCaption, processAt, socialHook, socialFlavorItems, socialPhotos, question, flavorHashtag }) => {
   const image = `/images/${id}/hero.webp`;
   const processImage = `/images/${id}/process.webp`;
   const socialPhoto = (name) => ({ src: `/images/${id}/${name}.webp`, position: "50% 50%", zoom: 1, layout: "side" });
@@ -4119,11 +4119,11 @@ const week12Creami = ({ id, title, rank, score, calories, tagline, flavorProfile
     video: WEEK12_VIDEO,
     socialHashtags: ["#CrumblCreamiCut", "#NinjaCreamiRecipe", flavorHashtag, "#TheSplitPlate"],
     socialCarousel: {
-      heroBadge: "Week 12 Creami Cut",
+      heroBadge: "CrumblCreamiCut · W12",
       heroAccent: "amber",
-      heroStats: [{ value: `~${calories}`, label: "cal / whole pint" }, { value: "~40g", label: "protein in base" }, { value: `${score}/10`, label: `#${rank} of 3` }],
+      heroStats: [{ value: `~${calories}`, label: "cal / whole pint" }, { value: "~40g", label: "protein in base" }, { value: "1", label: "serving" }],
       hook: socialHook,
-      captionBody: `Save this protein ${title} build for your next Creami pint. Swipe for the exact base, flavor additions, and the step that makes it work. Week 12 #${rank}: ${score}/10, about ${calories} calories for the complete finished pint, and about 40g protein from the shared base before flavor additions. ${verdict} Homemade and inspired by a cookie-shop flavor; not a Crumbl product. Finished-pint protein varies with the whey and mix-ins. Recipe: thesplitplate.com/cookbook/${id}\n\n${question}`,
+      captionBody: `Save this ${title} protein Creami for your next pint. Swipe for the exact base, flavor additions, and the step that makes it work. About ${calories} calories for the complete finished pint and about 40g protein from the shared base before flavor additions. ${verdict} Homemade and inspired by a cookie-shop flavor; not a Crumbl product. Finished-pint protein varies with the whey and mix-ins. Recipe: thesplitplate.com/cookbook/${id}\n\n${question}`,
       heroPhoto: image,
       ingredientGroups: [
         { card: 0, accent: "amber", heading: "Base for one pint", items: baseItems },
@@ -4143,9 +4143,8 @@ const week12Creami = ({ id, title, rank, score, calories, tagline, flavorProfile
       ingredientCardPhotos: socialPhotos.ingredients.map(socialPhoto),
       methodCardPhotos: socialPhotos.method.map(socialPhoto),
       servingPhoto: image,
-      servingGroups: [{ accent: "amber", heading: `#${rank} of three · ${score}/10`, items: [
-        { text: `About ${calories} calories for the whole finished pint, including the listed toppings.` },
-        { text: "About 40g protein from the shared base; the finished-pint total varies by labels and additions." },
+      servingGroups: [{ accent: "amber", heading: "Whole-Pint Dessert", items: [
+        { text: `One finished pint: about ${calories} calories, including the listed toppings; about 40g protein from the shared base.` },
         { text: verdict },
       ] }],
       engagementQuestion: question,
@@ -4158,7 +4157,7 @@ const week12Creami = ({ id, title, rank, score, calories, tagline, flavorProfile
     servings: 1,
     time: "10 min active + 24 hr freeze",
     bestFor: ["Dessert", "Ninja Creami", "Whole-pint dessert", "Make-ahead", "CrumblCreamiCut"],
-    useThisWhen: `You want a homemade Creami inspired by a cookie-shop flavor. This is Week 12's #${rank} ranked pint (${score}/10).`,
+    useThisWhen: `You want a homemade protein Creami inspired by a cookie-shop flavor. The shared base contributes about 40g protein before flavor additions; the finished pint is about ${calories} calories.`,
     ingredients: [
       "--- BASE (ONE PINT) ---", ...WEEK12_BASE,
       "--- BLEND IN BEFORE FREEZING ---", ...before,
@@ -4190,15 +4189,15 @@ const week12Creami = ({ id, title, rank, score, calories, tagline, flavorProfile
 
 const WEEK12_CREAMIS = [
   week12Creami({
-    id: "birthday-cake-cookie-oreo-creami", title: "Birthday Cake Cookie ft. OREO Creami", rank: 1, score: 9.5, calories: 400,
-    tagline: "Dark cocoa protein Creami with Oreo Thins and rainbow sprinkles. Week 12 winner: 9.5/10, about 400 calories per finished pint and 40g protein from the base.",
+    id: "birthday-cake-cookie-oreo-creami", title: "Birthday Cake Cookie ft. OREO Creami", calories: 400,
+    tagline: "Dark cocoa protein Creami with Oreo Thins and rainbow sprinkles. About 400 calories per finished pint and 40g protein from the base.",
     flavorProfile: "Dark black cocoa, crisp Oreo Thin pieces, birthday-cake sprinkles",
     before: ["1 tbsp black cocoa", "2 Oreo Thins"], mixIns: [], topping: ["2 more Oreo Thins", "1/2 tsp rainbow sprinkles"],
     verdict: "Oreo Thins worked especially well on top, where their texture stayed distinct.",
     instructions: "Top the spun pint with two more Oreo Thins and 1/2 tsp rainbow sprinkles.",
     warning: "Black-cocoa calories use a standard unsweetened-cocoa proxy; sprinkles were not weighed and are estimated at 1/2 tsp.",
     processCaption: "Scatter the measured rainbow sprinkles over the Oreo-topped Creami after spinning.", processAt: 4,
-    socialHook: "Black cocoa and Oreo Thins make the Week 12 winner. Keep the last two cookies on top for crunch.",
+    socialHook: "Black cocoa, Oreo Thin crunch, and rainbow sprinkles. ~400 cal per pint; ~40g protein in the base.",
     socialFlavorItems: [
       { quantity: "1 tbsp", text: "Black cocoa", note: "Blend before freezing" },
       { quantity: "2", text: "Oreo Thins", note: "Blend before freezing" },
@@ -4210,8 +4209,8 @@ const WEEK12_CREAMIS = [
     flavorHashtag: "#OreoCreami",
   }),
   week12Creami({
-    id: "chocolate-chip-cookie-cake-creami", title: "Chocolate Chip Cookie Cake Creami", rank: 2, score: 8.8, calories: 340,
-    tagline: "Cookie-cake protein Creami with chocolate chips and quick cocoa-maple fudge. Ranked 8.8/10; about 340 calories per finished pint and 40g protein from the base.",
+    id: "chocolate-chip-cookie-cake-creami", title: "Chocolate Chip Cookie Cake Creami", calories: 340,
+    tagline: "Cookie-cake protein Creami with chocolate chips and quick cocoa-maple fudge. About 340 calories per finished pint and 40g protein from the base.",
     flavorProfile: "Buttery vanilla, milk chocolate, glossy cocoa-maple fudge",
     before: ["1/4 tsp butter extract", "1 tsp vanilla extract", "1 drop natural brown food coloring"],
     mixIns: ["7g Lily's milk-chocolate chips", "50 calories' worth of Hormbles Chormbles milk chocolate"],
@@ -4220,7 +4219,7 @@ const WEEK12_CREAMIS = [
     instructions: "Whisk the syrup and cocoa until smooth, then drizzle the fudge over the finished pint.",
     warning: "The chocolate quantity is measured as 50 calories' worth from its package; the 342-calorie estimate is rounded to 340.",
     processCaption: "Whisk sugar-free maple syrup and cocoa into a glossy fudge before drizzling.", processAt: 4,
-    socialHook: "The cocoa-maple fudge made this cookie-cake Creami worth repeating.",
+    socialHook: "Buttery cookie-cake base, chips, and cocoa-maple fudge. ~340 cal per pint; ~40g protein in the base.",
     socialFlavorItems: [
       { quantity: "1/4 tsp", text: "Butter extract", note: "Blend before freezing" },
       { quantity: "1 tsp", text: "Vanilla extract", note: "Blend before freezing" },
@@ -4235,15 +4234,15 @@ const WEEK12_CREAMIS = [
     flavorHashtag: "#ChocolateChipCookieCreami",
   }),
   week12Creami({
-    id: "cake-batter-blondie-cookie-creami", title: "Cake Batter Blondie Cookie Creami", rank: 3, score: 7.8, calories: 310,
-    tagline: "Brown-butter blondie protein Creami with white-chocolate-style chips and sprinkles. Ranked 7.8/10; about 310 calories per finished pint and 40g protein from the base.",
+    id: "cake-batter-blondie-cookie-creami", title: "Cake Batter Blondie Cookie Creami", calories: 310,
+    tagline: "Brown-butter blondie protein Creami with white-chocolate-style chips and sprinkles. About 310 calories per finished pint and 40g protein from the base.",
     flavorProfile: "Brown butter, creamy vanilla, white chocolate, rainbow sprinkles",
     before: ["1/4 tsp brown-butter emulsion"], mixIns: ["14g Lily's white-chocolate-style chips"], topping: ["1/2 tsp rainbow sprinkles"],
     verdict: "The white chocolate over a relatively plain ice cream felt flat; this one needed more flavor contrast.",
     instructions: "Top the finished pint with 1/2 tsp rainbow sprinkles.",
     warning: "Sprinkles were not weighed and are estimated at 1/2 tsp.",
     processCaption: "Add the white-chocolate-style chips after the first spin, then run Mix-In.", processAt: 3,
-    socialHook: "Brown-butter base, white chocolate, sprinkles — plus the honest reason this one ranked third.",
+    socialHook: "Brown-butter base, white chocolate, and sprinkles. ~310 cal per pint; ~40g protein in the base.",
     socialFlavorItems: [
       { quantity: "1/4 tsp", text: "Brown-butter emulsion", note: "Blend before freezing" },
       { quantity: "14g", text: "Lily's white-chocolate-style chips", note: "Mix-In after first spin" },
