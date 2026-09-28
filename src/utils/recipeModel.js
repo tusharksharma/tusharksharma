@@ -515,6 +515,14 @@ export function buildCookbookModel(item, group) {
       estimated: true,
       highlight: true,
     });
+  } else if (item.proteinBaseEstimate != null) {
+    facts.push({
+      key: "protein-base",
+      label: "Protein in base",
+      value: `${item.proteinBaseEstimate}g`,
+      estimated: true,
+      highlight: true,
+    });
   }
   if (item.caloriesPerServing != null) {
     facts.push({

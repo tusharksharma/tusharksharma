@@ -53,6 +53,7 @@ function RecipeCard({ item }) {
         <div className="flex items-center gap-2 mt-2 text-[10px] text-faint">
           <span className="text-brand font-bold">~{item.caloriesPerServing} cal/serving</span>
           {pps != null && <><span>&middot;</span><span>{pps}g protein/serving</span></>}
+          {pps == null && item.proteinBaseEstimate != null && <><span>&middot;</span><span>~{item.proteinBaseEstimate}g protein in base</span></>}
           <span>&middot;</span>
           <span>{item.time}</span>
         </div>

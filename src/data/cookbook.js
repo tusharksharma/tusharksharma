@@ -4092,7 +4092,7 @@ export const quickLunches = [
 ];
 
 // Week 12: each entry is one complete homemade pint inspired by a cookie flavor.
-// Protein for the finished pints is deliberately omitted until every product label is checked.
+// The shared base is estimated at ~40g protein. Finished-pint totals need exact product labels.
 const WEEK12_VIDEO = "https://github.com/tusharksharma/tusharksharma/releases/download/crumblcreamicut-week12-site-video/crumblcreamicut-week12-three-builds-ranking-site.mp4";
 const WEEK12_BASE = [
   "1 cup Fairlife 2% ultra-filtered milk",
@@ -4121,9 +4121,9 @@ const week12Creami = ({ id, title, rank, score, calories, tagline, flavorProfile
     socialCarousel: {
       heroBadge: "Week 12 Creami Cut",
       heroAccent: "amber",
-      heroStats: [{ value: `~${calories}`, label: "cal / whole pint" }, { value: `${score}/10`, label: `#${rank} of 3` }],
+      heroStats: [{ value: `~${calories}`, label: "cal / whole pint" }, { value: "~40g", label: "protein in base" }, { value: `${score}/10`, label: `#${rank} of 3` }],
       hook: socialHook,
-      captionBody: `Save this ${title} build for your next Creami pint. Swipe for the exact base, flavor additions, and the step that makes it work. Week 12 #${rank}: ${score}/10 and about ${calories} calories for the complete finished pint. ${verdict} Homemade and inspired by a cookie-shop flavor; not a Crumbl product. Finished-pint protein is unverified. Recipe: thesplitplate.com/cookbook/${id}\n\n${question}`,
+      captionBody: `Save this protein ${title} build for your next Creami pint. Swipe for the exact base, flavor additions, and the step that makes it work. Week 12 #${rank}: ${score}/10, about ${calories} calories for the complete finished pint, and about 40g protein from the shared base before flavor additions. ${verdict} Homemade and inspired by a cookie-shop flavor; not a Crumbl product. Finished-pint protein varies with the whey and mix-ins. Recipe: thesplitplate.com/cookbook/${id}\n\n${question}`,
       heroPhoto: image,
       ingredientGroups: [
         { card: 0, accent: "amber", heading: "Base for one pint", items: baseItems },
@@ -4145,12 +4145,14 @@ const week12Creami = ({ id, title, rank, score, calories, tagline, flavorProfile
       servingPhoto: image,
       servingGroups: [{ accent: "amber", heading: `#${rank} of three · ${score}/10`, items: [
         { text: `About ${calories} calories for the whole finished pint, including the listed toppings.` },
+        { text: "About 40g protein from the shared base; the finished-pint total varies by labels and additions." },
         { text: verdict },
       ] }],
       engagementQuestion: question,
     },
     socialImages: socialPhotos.order.map((name) => `/images/${id}/${name}.webp`),
     flavorProfile,
+    proteinBaseEstimate: 40,
     calories,
     caloriesPerServing: calories,
     servings: 1,
@@ -4179,7 +4181,7 @@ const week12Creami = ({ id, title, rank, score, calories, tagline, flavorProfile
       { problem: "Powdery after first spin", fix: "Run one no-water Respin." },
       { problem: "Gummy texture", fix: "Use a level 1/8 teaspoon of guar gum, not a heaped scoop." },
     ],
-    macroHonesty: `About ${calories} calories for the complete finished pint, including the listed mix-ins and toppings. This is a rounded creator estimate using the ~240-calorie base. Exact calories and total protein depend on the physical whey, chocolate, cocoa, and sprinkle labels; no finished-pint protein claim is made. ${warning}`,
+    macroHonesty: `About ${calories} calories for the complete finished pint, including the listed mix-ins and toppings. The shared Fairlife-and-whey base contributes about 40g protein before flavor additions, based on the creator's established base estimate. These are rounded estimates; exact calories and finished-pint protein depend on the physical whey, chocolate, cocoa, and sprinkle labels. ${warning}`,
     warnings: [warning, "Contains dairy; check all current packaged labels for additional allergens."],
     allergens: ["dairy"],
     mealPrep: { storage: "Freeze the unprocessed pint upright and level; spin and add toppings when ready to eat.", lasts: "Process within a week for best texture.", reheat: "Not applicable." },
@@ -4189,7 +4191,7 @@ const week12Creami = ({ id, title, rank, score, calories, tagline, flavorProfile
 const WEEK12_CREAMIS = [
   week12Creami({
     id: "birthday-cake-cookie-oreo-creami", title: "Birthday Cake Cookie ft. OREO Creami", rank: 1, score: 9.5, calories: 400,
-    tagline: "Dark cocoa Creami with Oreo Thins and rainbow sprinkles. The Week 12 winner: 9.5/10, about 400 calories for the whole finished pint.",
+    tagline: "Dark cocoa protein Creami with Oreo Thins and rainbow sprinkles. Week 12 winner: 9.5/10, about 400 calories per finished pint and 40g protein from the base.",
     flavorProfile: "Dark black cocoa, crisp Oreo Thin pieces, birthday-cake sprinkles",
     before: ["1 tbsp black cocoa", "2 Oreo Thins"], mixIns: [], topping: ["2 more Oreo Thins", "1/2 tsp rainbow sprinkles"],
     verdict: "Oreo Thins worked especially well on top, where their texture stayed distinct.",
@@ -4209,7 +4211,7 @@ const WEEK12_CREAMIS = [
   }),
   week12Creami({
     id: "chocolate-chip-cookie-cake-creami", title: "Chocolate Chip Cookie Cake Creami", rank: 2, score: 8.8, calories: 340,
-    tagline: "Cookie-cake Creami with chocolate chips and quick cocoa-maple fudge. Ranked 8.8/10; about 340 calories for the whole finished pint.",
+    tagline: "Cookie-cake protein Creami with chocolate chips and quick cocoa-maple fudge. Ranked 8.8/10; about 340 calories per finished pint and 40g protein from the base.",
     flavorProfile: "Buttery vanilla, milk chocolate, glossy cocoa-maple fudge",
     before: ["1/4 tsp butter extract", "1 tsp vanilla extract", "1 drop natural brown food coloring"],
     mixIns: ["7g Lily's milk-chocolate chips", "50 calories' worth of Hormbles Chormbles milk chocolate"],
@@ -4234,7 +4236,7 @@ const WEEK12_CREAMIS = [
   }),
   week12Creami({
     id: "cake-batter-blondie-cookie-creami", title: "Cake Batter Blondie Cookie Creami", rank: 3, score: 7.8, calories: 310,
-    tagline: "Brown-butter blondie Creami with white-chocolate-style chips and sprinkles. Ranked 7.8/10; about 310 calories for the whole pint.",
+    tagline: "Brown-butter blondie protein Creami with white-chocolate-style chips and sprinkles. Ranked 7.8/10; about 310 calories per finished pint and 40g protein from the base.",
     flavorProfile: "Brown butter, creamy vanilla, white chocolate, rainbow sprinkles",
     before: ["1/4 tsp brown-butter emulsion"], mixIns: ["14g Lily's white-chocolate-style chips"], topping: ["1/2 tsp rainbow sprinkles"],
     verdict: "The white chocolate over a relatively plain ice cream felt flat; this one needed more flavor contrast.",

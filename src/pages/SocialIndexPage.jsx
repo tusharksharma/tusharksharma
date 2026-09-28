@@ -21,6 +21,8 @@ function cookbookSummary(item) {
   const serving = `${item.servings} serving${item.servings === 1 ? "" : "s"}`;
   return protein != null
     ? `${protein}g protein/serving · ${serving}`
+    : item.proteinBaseEstimate != null
+      ? `~${item.proteinBaseEstimate}g protein in base · ${serving}`
     : `Protein estimate pending · ${serving}`;
 }
 

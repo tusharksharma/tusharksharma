@@ -919,8 +919,9 @@ function NutritionDetails({ nutrition, tags }) {
             so the two numbers can't be mistaken for each other. */}
         {batch && (
           <p className="text-ink">
-            <span className="font-semibold">Whole batch:</span> {batch.protein}g protein ·{" "}
-            {batch.calories} cal
+            <span className="font-semibold">Whole batch:</span>{" "}
+            {batch.protein != null && <>{batch.protein}g protein{batch.calories != null && " · "}</>}
+            {batch.calories != null && <>{batch.calories} cal</>}
             {batch.servings != null && <span className="text-muted"> across {batch.servings} servings</span>}
             {batch.servingSize && <span className="text-muted"> ({batch.servingSize} each)</span>}
           </p>
