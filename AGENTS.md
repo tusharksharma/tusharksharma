@@ -35,6 +35,8 @@ Taking a finished edit from `~/Documents/New project/video-edits/` live means re
 
 **Carousel image gate:** each ingredient and method card needs its own relevant photo, distinct from the hero and the other cards. The generator removes duplicate photo paths, leaving blank cards if a source is reused. Keep text concise, use only substantiated nutrition claims, and inspect every exported card at its actual square size in a contact sheet before pushing.
 
+**Carousel hero crop gate:** inspect the first card at its rendered crop and confirm the food named in the title is clearly visible. A source photo may contain the dish but still crop it out of the hero strip; choose a different frame or crop when that happens.
+
 **Protein Creami macro rule:** show a supported protein figure on the recipe page and social carousel. When only the common base is documented, label its estimate explicitly as "protein in base" on both surfaces and disclose that finished-pint protein varies with the whey and additions. Publish a finished-pint total only after checking the specific ingredient labels and amounts; never silently replace a missing total with zero or omit protein entirely.
 
 **Creami carousel reference rule:** inspect an existing Creami social carousel before building or revising another one. Use the Week 1 Creami carousels as the layout reference: flavor and supported calories/protein on the hero, concise base and flavor cards, cooking steps, then a whole-pint serving card. Do not put scores, ratings, or rankings on Creami carousels or in their captions; lead with the recipe and its useful details.

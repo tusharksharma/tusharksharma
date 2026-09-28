@@ -2202,7 +2202,7 @@ const recipes = [
       heroBadge: "Split Plate Dinner",
       heroTitle: "Steak Night, Two Plates",
       hook: "Bavette + fries for the adults, pork patties + the same fries for the kids · one pan, one cook",
-      heroPhoto: "/images/steak-fries/final-adult-steak-fries-plate.webp",
+      heroPhoto: "/images/steak-fries/hero-2026-09-22.webp",
       captionTitle: "The 20-Minute Steak Night",
       ingredientGroups: [
         {
