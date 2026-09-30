@@ -426,7 +426,7 @@ export function buildRecipeModel(recipe) {
     path: `/recipes/${recipe.slug}`,
     breadcrumb: { to: "/dinners", label: "Dinners" },
     callouts: recipe.filmedBatch
-      ? [{ id: "filmed-batch", label: "Two versions on this page", tone: "brand", body: "The ingredients, yield, and nutrition above describe the original four-serving recipe. The video and the filmed 2026 section below show a separate six-adult-bowl batch with a different kid plate." }]
+      ? [{ id: "filmed-batch", label: "Two versions on this page", tone: "brand", body: "The recipe and nutrition above describe the original version. The video and filmed section below document a separate cook with its own ingredients and nutrition notes." }]
       : [],
     title: recipe.title,
     hook: recipe.hook || "",

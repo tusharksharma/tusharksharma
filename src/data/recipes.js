@@ -5259,6 +5259,7 @@ const recipes = [
     carbLevel: "high",
     meta: {
       macros: { protein: 41, calories: 550, fat: 19, carbs: 54, netCarbs: 50, estimated: true },
+      macroHonesty: "The ~550-calorie / 41g-protein estimate on this original recipe describes the Bettergoods pizza and Soules chicken version below. The approved 2026 film uses a Yough pizza with turkey pepperoni and mozzarella plus a chicken Caesar with homemade dressing. That filmed adult plate is separately estimated at about 475 calories and 45g protein; toppings and dressing were not weighed.",
       allergens: ["dairy", "gluten", "soy"],
       warnings: ["contains-dairy", "contains-gluten", "contains-soy"],
       dietTags: ["egg-free", "nut-free"],
@@ -5279,6 +5280,59 @@ const recipes = [
       ],
     },
     slug: "caesar-crunch-pizza-night",
+    video: "/videos/caesar-crunch-pizza-night/caesar-crunch-pizza-night-filmed.mp4",
+    socialImages: [
+      "/images/caesar-crunch-pizza-filmed-2026/filmed-2026-pizza-prep.webp",
+      "/images/caesar-crunch-pizza-filmed-2026/filmed-2026-salad.webp",
+      "/images/caesar-crunch-pizza-filmed-2026/filmed-2026-toss-salad.webp",
+      "/images/caesar-crunch-pizza-filmed-2026/filmed-2026-dress-salad.webp",
+      "/images/caesar-crunch-pizza-filmed-2026/filmed-2026-serving.webp",
+    ],
+    socialCarousel: {
+      heroBadge: "Split Plate Dinner",
+      heroAccent: "amber",
+      criticalComponent: false,
+      heroStats: [{ value: "~475", label: "cal / adult plate" }, { value: "~45g", label: "protein / adult plate" }, { value: "estimate", label: "not weighed" }],
+      hook: "Pizza night with a chicken Caesar alongside it. One dinner table, different pizzas.",
+      heroPhoto: "/images/caesar-crunch-pizza-filmed-2026/filmed-2026-plate.webp",
+      captionBody: "Pizza night with a protein-forward Caesar alongside it. For my plate, I topped a Yough pizza with turkey pepperoni and mozzarella, then made a chicken Caesar with my homemade dressing and Quest-chip crunch. The kids had regular pizza with the same style of salad. About 475 calories and 45g protein for the adult pizza-and-salad plate is an estimate, not a weighed macro. Save this for your next pizza night. Want the Caesar dressing build? Comment CAESAR. Recipe: thesplitplate.com/recipes/caesar-crunch-pizza-night",
+      methodLabel: "THE FILMED BUILD",
+      ingredientGroups: [
+        { card: 0, accent: "amber", heading: "Adult pizza", items: [
+          { quantity: "~⅓ pizza", text: "Yough pizza", note: "The filmed adult portion" },
+          { quantity: "to taste", text: "Turkey pepperoni + mozzarella", note: "Extra toppings were not weighed" },
+        ] },
+        { card: 1, accent: "amber", heading: "Chicken Caesar", items: [
+          { quantity: "~3 oz", text: "Cooked chicken", note: "Filmed salad estimate" },
+          { quantity: "as needed", text: "Romaine + homemade Caesar", note: "Dressing was not weighed" },
+          { quantity: "to finish", text: "Quest protein chips", note: "Crush over salad" },
+        ] },
+      ],
+      methodGroups: [
+        { accent: "amber", heading: "Make the pizza", items: [
+          { number: 1, heading: "Top it", body: "Add turkey pepperoni and mozzarella to the Yough pizza." },
+          { number: 2, heading: "Bake", body: "Bake according to the pizza package until hot and browned. Cut the adult portion." },
+        ] },
+        { accent: "amber", heading: "Build the Caesar", items: [
+          { number: 3, heading: "Toss", body: "Combine romaine and cooked chicken; add the homemade Caesar dressing." },
+          { number: 4, heading: "Crunch and plate", body: "Add crushed Quest chips at the end. Serve beside the adult pizza portion." },
+        ] },
+      ],
+      ingredientCardPhotos: [
+        { src: "/images/caesar-crunch-pizza-filmed-2026/filmed-2026-pizza-prep.webp", position: "50% 60%", zoom: 1.03, layout: "side" },
+        { src: "/images/caesar-crunch-pizza-filmed-2026/filmed-2026-salad.webp", position: "50% 65%", zoom: 1.03, layout: "side" },
+      ],
+      methodCardPhotos: [
+        { src: "/images/caesar-crunch-pizza-filmed-2026/filmed-2026-toss-salad.webp", position: "50% 50%", zoom: 1.03, layout: "side" },
+        { src: "/images/caesar-crunch-pizza-filmed-2026/filmed-2026-dress-salad.webp", position: "50% 50%", zoom: 1.03, layout: "side" },
+      ],
+      servingPhoto: { src: "/images/caesar-crunch-pizza-filmed-2026/filmed-2026-serving.webp", position: "50% 50%", zoom: 1.03, layout: "side" },
+      servingGroups: [{ accent: "amber", heading: "One finished adult plate", items: [
+        { text: "Pizza plus chicken Caesar: roughly 475 calories and 45g protein, estimated." },
+        { text: "The pizza toppings and dressing were not weighed. The original recipe on the site uses different brands and portions." },
+      ] }],
+      engagementQuestion: "Want the homemade Caesar dressing build? Comment CAESAR.",
+    },
     proteinAnchor: "chicken",
     mealType: "pizza-split",
     flavorDirection: "savory-crunchy",
@@ -5420,6 +5474,28 @@ const recipes = [
       { text: "DRESS PER PORTION: Adults — 2-3 tbsp Bolthouse Caesar + Dan-O's Jalapeño Cheesoning + crushed Quest chips on top + optional Chipotle Crema. Kids — 1 tbsp Caesar tossed in, no Cheesoning.", images: [] },
       { text: "PLATE: Adult — 2 Bettergoods slices + adult Caesar Crunch bowl. Kid — whole personal Red Baron + small Caesar Crunch in a separate ramekin.", images: ["/images/caesar-crunch-pizza/hero.webp", "/images/caesar-crunch-pizza/step6-kid-plates.webp"] },
     ],
+    filmedBatch: {
+      title: "Filmed 2026: Yough pizza and chicken Caesar",
+      intro: "The approved video shows a different pizza night from the original Bettergoods and Red Baron recipe above. Tushar topped a Yough pizza with turkey pepperoni and mozzarella for the adult plate, then paired it with romaine, chicken, homemade Caesar dressing, and Quest-chip crunch. The kids had regular pizza with the same style of salad. Their portions were not measured.",
+      ingredients: [
+        "Yough pizza, with turkey pepperoni and mozzarella added; adult plate used about one-third of the pizza",
+        "Romaine and about 3 oz cooked chicken for the filmed adult Caesar estimate",
+        "Homemade Caesar dressing and crushed Quest protein chips; amounts were not weighed",
+        "Regular pizza and a similar salad for the kids; no measured kid-plate portions",
+      ],
+      steps: [
+        { text: "Top the Yough pizza with turkey pepperoni and mozzarella. Bake according to the pizza package until hot and browned.", image: "/images/caesar-crunch-pizza-filmed-2026/filmed-2026-pizza-prep.webp", imageAlt: "Filmed Yough pizza topped with turkey pepperoni and mozzarella before baking" },
+        { text: "Toss romaine and cooked chicken together in a large bowl. The filmed adult salad estimate uses about 3 oz chicken.", image: "/images/caesar-crunch-pizza-filmed-2026/filmed-2026-toss-salad.webp", imageAlt: "Romaine being tossed in the filmed Caesar bowl" },
+        { text: "Add homemade Caesar dressing and toss. Its filmed amount was not weighed, so use enough to coat the salad to your taste.", image: "/images/caesar-crunch-pizza-filmed-2026/filmed-2026-dress-salad.webp", imageAlt: "Homemade Caesar dressing being added to romaine and cooked chicken" },
+        { text: "Crush Quest protein chips over the salad just before eating to keep the crunch. Serve it beside the adult pizza portion.", image: "/images/caesar-crunch-pizza-filmed-2026/filmed-2026-serving.webp", imageAlt: "Finished filmed adult plate with two pizza slices and chicken Caesar salad" },
+        { text: "Serve the kids their regular pizza with the same style of salad. Their filmed pizza and salad portions were not weighed." },
+      ],
+      nutrition: "Filmed adult plate estimate: about 445–495 calories and 43–48g protein, rounded in the video to about 475 calories and 45g protein. The salad estimate is about 195 calories and 28g protein with 3 oz chicken; the usual one-third Yough pizza portion contributes about 250–300 calories and 15–20g protein. Added toppings and dressing were not weighed. These are not measured totals, and the original recipe's 550-calorie figure does not apply to the filmed plate.",
+      images: [
+        { src: "/images/caesar-crunch-pizza-filmed-2026/filmed-2026-plate.webp", alt: "Filmed adult pizza and chicken Caesar plate" },
+        { src: "/images/caesar-crunch-pizza-filmed-2026/filmed-2026-pizza-prep.webp", alt: "Yough pizza with turkey pepperoni and mozzarella before baking" },
+      ],
+    },
     brands: [
       { name: "Soules Kitchen", item: "Fully Cooked Fajita Chicken Breast Strips (16 oz refrigerated)", why: "Pre-cooked, fully seasoned, fire-grilled. Already in the tier framework as T2 reliable protein. 18g protein per 3 oz. Chop and fold in cold OR microwave 30 sec — 90-second cheat for the entire dinner.", image: "/images/brands/soules-fajita-chicken.png", url: "https://www.souleskitchen.com/products/fajita-chicken/" },
       { name: "Bettergoods", item: "Italian Wood-Fired Margherita Pizza (14.6 oz, Walmart)", why: "Imported from Italy, lava-stone wood-fired oven. Tomato + mozzarella + basil, no fillers. ~$7/pie. Bakes 14-16 min at 400°F. 4.6-star Walmart rating — the rare frozen pizza adults order again on purpose.", image: "/images/brands/bettergoods-margherita-pizza.jpg", url: "https://www.walmart.com/ip/Bettergoods-Italian-Wood-Fired-Margherita-Pizza-14-6-oz-Frozen/5463970979" },

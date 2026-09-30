@@ -196,9 +196,11 @@ export function buildStructuredCards(recipe, opts) {
   }
 
   const criticalSlug = sc.criticalComponent;
-  const criticalComponent = criticalSlug
-    ? components.find((c) => c.id === criticalSlug) || components[0]
-    : components[0];
+  const criticalComponent = criticalSlug === false
+    ? null
+    : criticalSlug
+      ? components.find((c) => c.id === criticalSlug) || components[0]
+      : components[0];
   if (criticalComponent) {
     cards.push({
       id: `component-${criticalComponent.id}`,
