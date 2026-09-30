@@ -13,6 +13,7 @@
     { "source": "/videos/orchard-cheddar-stackers-snack-box/:filename(.+\\.mp4)", "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename" },
     { "source": "/videos/danos-bone-in-thighs/:filename(.+\\.mp4)", "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename" },
     { "source": "/videos/caesar-crunch-salad/:filename(.+\\.mp4)", "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename" },
+    { "source": "/videos/caesar-crunch-wrap/:filename(.+\\.mp4)", "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename" },
     { "source": "/videos/:recipe/:filename(.+\\.mp4)", "destination": "https://github.com/tusharma88/tsp-videos/releases/download/videos/:filename" },
     { "source": "/videos/:recipe/:filename(.+\\.m4a)", "destination": "https://github.com/tusharma88/tsp-videos/releases/download/videos/:filename" },
     { "source": "/(.*)", "destination": "/index.html" }
