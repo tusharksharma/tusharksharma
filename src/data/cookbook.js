@@ -12215,6 +12215,62 @@ export const bases = [
     title: "Caesar Crunch Salad",
     tagline: "Pre-cooked chicken + crushed protein chips + yogurt Caesar. 199 cal, 27g protein, 4 min build.",
     heroImage: "/images/caesar-crunch-pizza/step2-salad-mix.webp",
+    socialCarousel: {
+      heroBadge: "Filmed chicken Caesar",
+      heroAccent: "amber",
+      heroStats: [{ value: "~28g", label: "est. protein" }, { value: "~195", label: "est. cal" }, { value: "4 steps", label: "fresh crunch" }],
+      hook: "Romaine, chicken, homemade Caesar, and Quest chips for the last-second crunch.",
+      heroPhoto: "/images/caesar-crunch-salad-filmed-2026/hero-salad.webp",
+      captionBody: "The salad from our filmed pizza night works on its own: toss romaine with cooked chicken and homemade Caesar, then add Quest protein chips right before serving. We used about 3 oz cooked chicken. The filmed salad was estimated at about 195 calories and 28g protein, but the dressing and chips were not weighed, so your total will vary. The original Sweet Gem + Bolthouse Caesar recipe is also on the page. Recipe: thesplitplate.com/cookbook/caesar-crunch-salad\n\nWould you add the chips or keep it classic?",
+      methodLabel: "HOW TO BUILD",
+      ingredientGroups: [{ card: 0, accent: "amber", heading: "Filmed salad", items: [
+        { quantity: "To taste", text: "Romaine" },
+        { quantity: "About 3 oz", text: "Cooked chicken" },
+        { quantity: "To taste", text: "Homemade Caesar dressing" },
+        { quantity: "Finish", text: "Quest protein chips", note: "Add just before eating" },
+      ] }],
+      methodGroups: [
+        { accent: "amber", heading: "Start the bowl", items: [
+          { number: 1, heading: "Romaine first", body: "Add chopped romaine to a big bowl." },
+          { number: 2, heading: "Add chicken", body: "Fold in about 3 oz cooked chicken." },
+        ] },
+        { accent: "amber", heading: "Dress and crunch", items: [
+          { number: 3, heading: "Toss", body: "Coat the romaine and chicken with homemade Caesar to taste." },
+          { number: 4, heading: "Finish", body: "Scatter Quest chips on top right before serving." },
+        ] },
+      ],
+      ingredientCardPhotos: [{ src: "/images/caesar-crunch-pizza-filmed-2026/filmed-2026-dress-salad.webp", position: "50% 70%", zoom: 1.02, layout: "side" }],
+      methodCardPhotos: [
+        { src: "/images/caesar-crunch-pizza-filmed-2026/filmed-2026-toss-salad.webp", position: "50% 65%", zoom: 1.02, layout: "side" },
+        { src: "/images/caesar-crunch-salad-filmed-2026/crunch-finish.webp", position: "50% 50%", zoom: 1.02, layout: "side" },
+      ],
+      servingPhoto: { src: "/images/caesar-crunch-salad-filmed-2026/serving-salad.webp", position: "50% 50%", zoom: 1.02, layout: "side" },
+      servingGroups: [{ accent: "amber", heading: "Filmed salad estimate", items: [
+        { text: "About 195 calories and 28g protein for the filmed salad; dressing and chip portions were not weighed." },
+        { text: "Keep the chips off until serving so the crunch stays crisp." },
+      ] }],
+      engagementQuestion: "Quest chip crunch or classic croutons?",
+    },
+    filmedBatch: {
+      title: "Filmed variation: romaine chicken Caesar crunch",
+      intro: "The filmed salad is a separate build from the original Sweet Gem, Soules chicken, and Bolthouse yogurt Caesar recipe on this page. It uses romaine, cooked chicken, homemade Caesar dressing, and Quest protein chips.",
+      ingredients: [
+        "Romaine, chopped; filmed amount not weighed",
+        "About 3 oz cooked chicken per salad",
+        "Homemade Caesar dressing, to taste; filmed amount not weighed",
+        "Quest protein chips for crunch; filmed amount not weighed",
+      ],
+      steps: [
+        { text: "Put chopped romaine in a large bowl.", image: "/images/caesar-crunch-pizza-filmed-2026/filmed-2026-toss-salad.webp", imageAlt: "Romaine being tossed in the filmed salad bowl" },
+        { text: "Add about 3 oz cooked chicken and toss with homemade Caesar dressing to taste.", image: "/images/caesar-crunch-pizza-filmed-2026/filmed-2026-dress-salad.webp", imageAlt: "Cooked chicken and homemade Caesar dressing added to romaine" },
+        { text: "Top with Quest protein chips immediately before serving so they keep their crunch.", image: "/images/caesar-crunch-salad-filmed-2026/crunch-finish.webp", imageAlt: "Finished chicken Caesar salad with Quest chip crunch" },
+      ],
+      nutrition: "The filmed salad was estimated at about 195 calories and 28g protein using about 3 oz cooked chicken. Dressing and chip amounts were not weighed, so this is not a measured total. The 199 calories and 27.5g protein elsewhere on this page belong to the original two-serving recipe, not this filmed variation.",
+      images: [
+        { src: "/images/caesar-crunch-salad-filmed-2026/hero-salad.webp", alt: "Close view of the filmed romaine chicken Caesar salad with Quest chips" },
+        { src: "/images/caesar-crunch-salad-filmed-2026/serving-salad.webp", alt: "Filmed chicken Caesar salad with crunchy Quest chips on the dinner plate" },
+      ],
+    },
     flavorProfile: "Crisp Sweet Gem + tangy yogurt Caesar + smoky fajita chicken + crunchy Hot & Spicy chips + Parmesan-jalapeño finisher. Restaurant-craveable, weeknight-fast.",
     calories: 398,
     caloriesPerServing: 199,

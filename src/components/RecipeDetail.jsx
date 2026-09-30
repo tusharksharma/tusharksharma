@@ -317,7 +317,7 @@ export default function RecipeDetail({ recipe, item, group }) {
                 </li>
               ))}
             </ul>
-            <h3 className="mt-6 text-lg font-bold text-ink">How the filmed dinner came together</h3>
+            <h3 className="mt-6 text-lg font-bold text-ink">How the filmed version came together</h3>
             <ol className="mt-3 space-y-4">
               {model.filmedBatch.steps.map((step, i) => (
                 <li key={i} className={`grid gap-4 rounded-xl border border-line bg-surface p-4 ${step.image ? "sm:grid-cols-[minmax(0,1fr)_240px]" : ""}`}>

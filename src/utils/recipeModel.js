@@ -559,6 +559,14 @@ export function buildCookbookModel(item, group) {
   if (item.flavorTarget) {
     callouts.push({ id: "target", label: "Flavor target", body: item.flavorTarget, tone: "shared" });
   }
+  if (item.filmedBatch) {
+    callouts.push({
+      id: "filmed-batch",
+      label: "Also filmed",
+      body: item.filmedBatch.intro,
+      tone: "brand",
+    });
+  }
 
   /* ── Method: always one phase, matching a non-split dinner. ── */
   const method = {
@@ -695,6 +703,7 @@ export function buildCookbookModel(item, group) {
       ),
     },
     video: item.video || item.videoSrc || null,
+    filmedBatch: item.filmedBatch || null,
     brands: item.brands || [],
     tags: item.bestFor || [],
   };
