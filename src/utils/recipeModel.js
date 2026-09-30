@@ -703,6 +703,7 @@ export function buildCookbookModel(item, group) {
       ),
     },
     video: item.video || item.videoSrc || null,
+    videoPoster: item.videoPoster || null,
     filmedBatch: item.filmedBatch || null,
     brands: item.brands || [],
     tags: item.bestFor || [],

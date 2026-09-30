@@ -442,7 +442,7 @@ export default function RecipeDetail({ recipe, item, group }) {
         </Section>
 
         {/* ── 11. Video, last, behind a poster. ── */}
-        {model.video && <VideoBlock src={model.video} poster={model.hero.src} title={model.title} />}
+        {model.video && <VideoBlock src={model.video} poster={model.videoPoster || model.hero.src} title={model.title} />}
         {model.videoVariants?.length > 0 && (
           <div className="mt-4 rounded-xl border border-line bg-surface p-4">
             <h3 className="text-sm font-bold text-ink">More cuts from this cook</h3>
