@@ -459,6 +459,7 @@ export function buildRecipeModel(recipe) {
       substitutions: recipe.meta?.substitutionNotes || [],
     },
     video: recipe.video || recipe.videoSrc || null,
+    videoVariants: recipe.videoVariants || [],
     brands: recipe.brands || [],
     tags: recipe.tags || [],
   };

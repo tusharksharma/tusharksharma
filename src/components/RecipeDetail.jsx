@@ -146,7 +146,7 @@ export default function RecipeDetail({ recipe, item, group }) {
                 </figure>
               ))}
             </div>
-            <a href="#filmed-batch" className="mt-3 inline-block text-sm font-bold text-brand underline">See the filmed six-bowl method ↓</a>
+            <a href="#filmed-batch" className="mt-3 inline-block text-sm font-bold text-brand underline">See the filmed version ↓</a>
           </div>
         )}
 
@@ -303,9 +303,11 @@ export default function RecipeDetail({ recipe, item, group }) {
         {model.filmedBatch && (
           <Section id="filmed-batch" title={model.filmedBatch.title}>
             <p className="text-sm leading-relaxed text-muted">{model.filmedBatch.intro}</p>
-            <p className="mt-3 text-sm leading-relaxed text-muted">
-              The rice base is in the <Link to="/cookbook/bone-broth-rice" className="font-semibold text-brand underline">Bone Broth Rice recipe</Link>.
-            </p>
+            {model.slug === "spicy-beef-broccoli-bowls" && (
+              <p className="mt-3 text-sm leading-relaxed text-muted">
+                The rice base is in the <Link to="/cookbook/bone-broth-rice" className="font-semibold text-brand underline">Bone Broth Rice recipe</Link>.
+              </p>
+            )}
             <h3 className="mt-6 text-lg font-bold text-ink">What the filmed batch used</h3>
             <ul className="mt-3 space-y-2">
               {model.filmedBatch.ingredients.map((ingredient, i) => (
@@ -441,6 +443,16 @@ export default function RecipeDetail({ recipe, item, group }) {
 
         {/* ── 11. Video, last, behind a poster. ── */}
         {model.video && <VideoBlock src={model.video} poster={model.hero.src} title={model.title} />}
+        {model.videoVariants?.length > 0 && (
+          <div className="mt-4 rounded-xl border border-line bg-surface p-4">
+            <h3 className="text-sm font-bold text-ink">More cuts from this cook</h3>
+            <div className="mt-2 flex flex-wrap gap-3">
+              {model.videoVariants.map((clip) => (
+                <a key={clip.src} href={clip.src} target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-brand underline">{clip.label}</a>
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* ── 12. Promotional + navigational tail. ── */}
         {model.brands.length > 0 && <Brands brands={model.brands} />}
