@@ -1,0 +1,515 @@
+{
+  "schema_version": "1.0.0",
+  "review_id": "synthetic-example-001",
+  "is_example": true,
+  "reviewed_at": "2026-10-01T12:00:00Z",
+  "review_status": "partial",
+  "target": {
+    "url": "https://example.invalid",
+    "name": "Fictional demonstration only",
+    "version_or_commit": null
+  },
+  "scope": {
+    "primary_goal": "Help a visitor find and save an appropriate meal.",
+    "audience": "Time-constrained home cooks.",
+    "market_locale": "Illustrative English-language market",
+    "assumptions": [
+      "All data is synthetic; no actual website was inspected."
+    ],
+    "pages_inspected": [
+      "https://example.invalid/",
+      "https://example.invalid/meals",
+      "https://example.invalid/meals/demo"
+    ],
+    "journeys": [
+      "Find a meal",
+      "Read instructions",
+      "Save a meal"
+    ],
+    "environments": [
+      "Synthetic 390x844 phone fixture"
+    ],
+    "tools_used": [
+      "No browser or audit tool; schema demonstration only"
+    ],
+    "limitations": [
+      "Synthetic fixture, not actual findings.",
+      "Competitor, analytics, security, and field-performance evidence are unavailable."
+    ],
+    "sample_constrained": true
+  },
+  "overall": {
+    "problem_score": 6.3,
+    "confidence": "low",
+    "provisional": true,
+    "scored_coverage_percent": 52.0,
+    "full_coverage_percent": 0,
+    "rationale": "Synthetic weighted example; untested dimensions are excluded and coverage remains visible."
+  },
+  "dimensions": {
+    "user_interface": {
+      "status": "not_tested",
+      "problem_score": null,
+      "summary": "No evidence supplied in this fixture.",
+      "evidence_ids": [],
+      "observation_ids": []
+    },
+    "market_competition": {
+      "status": "not_tested",
+      "problem_score": null,
+      "summary": "No evidence supplied in this fixture.",
+      "evidence_ids": [],
+      "observation_ids": []
+    },
+    "navigation": {
+      "status": "partial",
+      "problem_score": 6,
+      "summary": "Synthetic single-flow evidence only.",
+      "evidence_ids": [
+        "E3"
+      ],
+      "observation_ids": [
+        "O3"
+      ]
+    },
+    "content_quality": {
+      "status": "partial",
+      "problem_score": 6,
+      "summary": "Synthetic single-flow evidence only.",
+      "evidence_ids": [
+        "E4"
+      ],
+      "observation_ids": [
+        "O4"
+      ]
+    },
+    "mobile_friendliness": {
+      "status": "partial",
+      "problem_score": 7,
+      "summary": "Synthetic single-flow evidence only.",
+      "evidence_ids": [
+        "E2"
+      ],
+      "observation_ids": [
+        "O2"
+      ]
+    },
+    "performance": {
+      "status": "not_tested",
+      "problem_score": null,
+      "summary": "No evidence supplied in this fixture.",
+      "evidence_ids": [],
+      "observation_ids": []
+    },
+    "calls_to_action": {
+      "status": "partial",
+      "problem_score": 4,
+      "summary": "Synthetic single-flow evidence only.",
+      "evidence_ids": [
+        "E5"
+      ],
+      "observation_ids": [
+        "O5"
+      ]
+    },
+    "security_privacy": {
+      "status": "not_tested",
+      "problem_score": null,
+      "summary": "No evidence supplied in this fixture.",
+      "evidence_ids": [],
+      "observation_ids": []
+    },
+    "accessibility": {
+      "status": "partial",
+      "problem_score": 8,
+      "summary": "Synthetic single-flow evidence only.",
+      "evidence_ids": [
+        "E1"
+      ],
+      "observation_ids": [
+        "O1"
+      ]
+    },
+    "visual_design": {
+      "status": "not_tested",
+      "problem_score": null,
+      "summary": "No evidence supplied in this fixture.",
+      "evidence_ids": [],
+      "observation_ids": []
+    },
+    "search_discovery": {
+      "status": "not_tested",
+      "problem_score": null,
+      "summary": "No evidence supplied in this fixture.",
+      "evidence_ids": [],
+      "observation_ids": []
+    },
+    "reliability_measurement": {
+      "status": "not_tested",
+      "problem_score": null,
+      "summary": "No evidence supplied in this fixture.",
+      "evidence_ids": [],
+      "observation_ids": []
+    }
+  },
+  "evidence": [
+    {
+      "id": "E1",
+      "locator": "https://example.invalid/meals/demo#fixture-1",
+      "captured_at": "2026-10-01T12:00:00Z",
+      "method": "user_supplied",
+      "environment": "Synthetic demonstration fixture, not measured",
+      "fact": "Fictional example: Menu button cannot be reached with Tab."
+    },
+    {
+      "id": "E2",
+      "locator": "https://example.invalid/meals/demo#fixture-2",
+      "captured_at": "2026-10-01T12:00:00Z",
+      "method": "user_supplied",
+      "environment": "Synthetic demonstration fixture, not measured",
+      "fact": "Fictional example: Sticky banner covers the save control at phone width."
+    },
+    {
+      "id": "E3",
+      "locator": "https://example.invalid/meals/demo#fixture-3",
+      "captured_at": "2026-10-01T12:00:00Z",
+      "method": "user_supplied",
+      "environment": "Synthetic demonstration fixture, not measured",
+      "fact": "Fictional example: Returning from a recipe clears selected filters."
+    },
+    {
+      "id": "E4",
+      "locator": "https://example.invalid/meals/demo#fixture-4",
+      "captured_at": "2026-10-01T12:00:00Z",
+      "method": "user_supplied",
+      "environment": "Synthetic demonstration fixture, not measured",
+      "fact": "Fictional example: Ingredient quantities do not identify their serving basis."
+    },
+    {
+      "id": "E5",
+      "locator": "https://example.invalid/meals/demo#fixture-5",
+      "captured_at": "2026-10-01T12:00:00Z",
+      "method": "user_supplied",
+      "environment": "Synthetic demonstration fixture, not measured",
+      "fact": "Fictional example: Primary button says Continue although it saves a meal."
+    }
+  ],
+  "observations": [
+    {
+      "id": "O1",
+      "dimension": "accessibility",
+      "title": "Make the recipe menu keyboard operable",
+      "location": "Fictional meal detail/listing",
+      "affected_audience": "Users completing the illustrative journey",
+      "observed_behavior": "Menu button cannot be reached with Tab.",
+      "user_consequence": "The described behavior interrupts completion of the meal-selection task.",
+      "evidence_ids": [
+        "E1"
+      ],
+      "confidence": "high",
+      "impact": 4,
+      "reach": 3,
+      "persistence": 5,
+      "factor_rationale": "Illustrative factors chosen to demonstrate the formula, not population measurements.",
+      "problem_score": 8,
+      "critical_override": false,
+      "critical_reason": null
+    },
+    {
+      "id": "O2",
+      "dimension": "mobile_friendliness",
+      "title": "Keep the save action above the sticky banner",
+      "location": "Fictional meal detail/listing",
+      "affected_audience": "Users completing the illustrative journey",
+      "observed_behavior": "Sticky banner covers the save control at phone width.",
+      "user_consequence": "The described behavior interrupts completion of the meal-selection task.",
+      "evidence_ids": [
+        "E2"
+      ],
+      "confidence": "high",
+      "impact": 3,
+      "reach": 4,
+      "persistence": 4,
+      "factor_rationale": "Illustrative factors chosen to demonstrate the formula, not population measurements.",
+      "problem_score": 7,
+      "critical_override": false,
+      "critical_reason": null
+    },
+    {
+      "id": "O3",
+      "dimension": "navigation",
+      "title": "Preserve the selected filters on return",
+      "location": "Fictional meal detail/listing",
+      "affected_audience": "Users completing the illustrative journey",
+      "observed_behavior": "Returning from a recipe clears selected filters.",
+      "user_consequence": "The described behavior interrupts completion of the meal-selection task.",
+      "evidence_ids": [
+        "E3"
+      ],
+      "confidence": "high",
+      "impact": 3,
+      "reach": 3,
+      "persistence": 3,
+      "factor_rationale": "Illustrative factors chosen to demonstrate the formula, not population measurements.",
+      "problem_score": 6,
+      "critical_override": false,
+      "critical_reason": null
+    },
+    {
+      "id": "O4",
+      "dimension": "content_quality",
+      "title": "Clarify the serving basis",
+      "location": "Fictional meal detail/listing",
+      "affected_audience": "Users completing the illustrative journey",
+      "observed_behavior": "Ingredient quantities do not identify their serving basis.",
+      "user_consequence": "The described behavior interrupts completion of the meal-selection task.",
+      "evidence_ids": [
+        "E4"
+      ],
+      "confidence": "high",
+      "impact": 3,
+      "reach": 3,
+      "persistence": 3,
+      "factor_rationale": "Illustrative factors chosen to demonstrate the formula, not population measurements.",
+      "problem_score": 6,
+      "critical_override": false,
+      "critical_reason": null
+    },
+    {
+      "id": "O5",
+      "dimension": "calls_to_action",
+      "title": "Name the outcome of saving",
+      "location": "Fictional meal detail/listing",
+      "affected_audience": "Users completing the illustrative journey",
+      "observed_behavior": "Primary button says Continue although it saves a meal.",
+      "user_consequence": "The described behavior interrupts completion of the meal-selection task.",
+      "evidence_ids": [
+        "E5"
+      ],
+      "confidence": "high",
+      "impact": 2,
+      "reach": 3,
+      "persistence": 3,
+      "factor_rationale": "Illustrative factors chosen to demonstrate the formula, not population measurements.",
+      "problem_score": 4,
+      "critical_override": false,
+      "critical_reason": null
+    }
+  ],
+  "strengths": [],
+  "competitors": [],
+  "improvements": [
+    {
+      "rank": 1,
+      "id": "I1",
+      "kind": "observed_defect",
+      "title": "Make the recipe menu keyboard operable",
+      "primary_dimension": "accessibility",
+      "problem_score": 8,
+      "score_basis": "observed",
+      "confidence": "high",
+      "observation_ids": [
+        "O1"
+      ],
+      "evidence_ids": [
+        "E1"
+      ],
+      "affected_location": "Fictional meal detail/listing",
+      "affected_audience": "Users completing the illustrative journey",
+      "current_behavior": "Menu button cannot be reached with Tab.",
+      "desired_behavior": "Complete the menu-to-recipe journey with keyboard alone; focus returns to the trigger on close.",
+      "why_it_matters": "Reduces avoidable barriers to finding and saving a meal.",
+      "proposed_change": "Use a semantic button and support focus, Enter, Space, and Escape.",
+      "expected_benefit": "Hypothesis: more users complete the affected task.",
+      "effort": {
+        "size": "S",
+        "assumptions": "Estimate assumes reusable components and existing test coverage."
+      },
+      "owner_role": "Accessibility engineer",
+      "dependencies": [],
+      "acceptance_criteria": [
+        "Complete the menu-to-recipe journey with keyboard alone; focus returns to the trigger on close."
+      ],
+      "success_metric": {
+        "name": "Affected journey completion",
+        "baseline": null,
+        "proposed_target": "All defined acceptance checks pass.",
+        "measurement_method": "Repeat the specified journey before and after the change in the same environment.",
+        "guardrail": "Do not regress keyboard access, responsiveness, or data minimization."
+      },
+      "priority_rationale": "Ranked by severity, with equal-severity ties by estimated effort.",
+      "previous_status": "new"
+    },
+    {
+      "rank": 2,
+      "id": "I2",
+      "kind": "observed_defect",
+      "title": "Keep the save action above the sticky banner",
+      "primary_dimension": "mobile_friendliness",
+      "problem_score": 7,
+      "score_basis": "observed",
+      "confidence": "high",
+      "observation_ids": [
+        "O2"
+      ],
+      "evidence_ids": [
+        "E2"
+      ],
+      "affected_location": "Fictional meal detail/listing",
+      "affected_audience": "Users completing the illustrative journey",
+      "current_behavior": "Sticky banner covers the save control at phone width.",
+      "desired_behavior": "At 320 and 390 CSS pixels, the save control is visible, focusable, and tappable without overlap.",
+      "why_it_matters": "Reduces avoidable barriers to finding and saving a meal.",
+      "proposed_change": "Reserve layout space for the banner and prevent overlap at narrow widths.",
+      "expected_benefit": "Hypothesis: more users complete the affected task.",
+      "effort": {
+        "size": "S",
+        "assumptions": "Estimate assumes reusable components and existing test coverage."
+      },
+      "owner_role": "Frontend engineer",
+      "dependencies": [],
+      "acceptance_criteria": [
+        "At 320 and 390 CSS pixels, the save control is visible, focusable, and tappable without overlap."
+      ],
+      "success_metric": {
+        "name": "Affected journey completion",
+        "baseline": null,
+        "proposed_target": "All defined acceptance checks pass.",
+        "measurement_method": "Repeat the specified journey before and after the change in the same environment.",
+        "guardrail": "Do not regress keyboard access, responsiveness, or data minimization."
+      },
+      "priority_rationale": "Ranked by severity, with equal-severity ties by estimated effort.",
+      "previous_status": "new"
+    },
+    {
+      "rank": 3,
+      "id": "I3",
+      "kind": "observed_defect",
+      "title": "Preserve the selected filters on return",
+      "primary_dimension": "navigation",
+      "problem_score": 6,
+      "score_basis": "observed",
+      "confidence": "high",
+      "observation_ids": [
+        "O3"
+      ],
+      "evidence_ids": [
+        "E3"
+      ],
+      "affected_location": "Fictional meal detail/listing",
+      "affected_audience": "Users completing the illustrative journey",
+      "current_behavior": "Returning from a recipe clears selected filters.",
+      "desired_behavior": "Choose two filters, open a result, return, and verify the same selections and result set.",
+      "why_it_matters": "Reduces avoidable barriers to finding and saving a meal.",
+      "proposed_change": "Persist filters in the URL and restore them on browser back.",
+      "expected_benefit": "Hypothesis: more users complete the affected task.",
+      "effort": {
+        "size": "S",
+        "assumptions": "Estimate assumes reusable components and existing test coverage."
+      },
+      "owner_role": "Frontend engineer",
+      "dependencies": [],
+      "acceptance_criteria": [
+        "Choose two filters, open a result, return, and verify the same selections and result set."
+      ],
+      "success_metric": {
+        "name": "Affected journey completion",
+        "baseline": null,
+        "proposed_target": "All defined acceptance checks pass.",
+        "measurement_method": "Repeat the specified journey before and after the change in the same environment.",
+        "guardrail": "Do not regress keyboard access, responsiveness, or data minimization."
+      },
+      "priority_rationale": "Ranked by severity, with equal-severity ties by estimated effort.",
+      "previous_status": "new"
+    },
+    {
+      "rank": 4,
+      "id": "I4",
+      "kind": "observed_defect",
+      "title": "Clarify the serving basis",
+      "primary_dimension": "content_quality",
+      "problem_score": 6,
+      "score_basis": "observed",
+      "confidence": "high",
+      "observation_ids": [
+        "O4"
+      ],
+      "evidence_ids": [
+        "E4"
+      ],
+      "affected_location": "Fictional meal detail/listing",
+      "affected_audience": "Users completing the illustrative journey",
+      "current_behavior": "Ingredient quantities do not identify their serving basis.",
+      "desired_behavior": "A reader can identify the yield before cooking; scaling to twice the servings doubles quantities consistently.",
+      "why_it_matters": "Reduces avoidable barriers to finding and saving a meal.",
+      "proposed_change": "State the recipe yield beside quantities and describe how serving changes scale ingredients.",
+      "expected_benefit": "Hypothesis: more users complete the affected task.",
+      "effort": {
+        "size": "S",
+        "assumptions": "Estimate assumes reusable components and existing test coverage."
+      },
+      "owner_role": "Content editor",
+      "dependencies": [],
+      "acceptance_criteria": [
+        "A reader can identify the yield before cooking; scaling to twice the servings doubles quantities consistently."
+      ],
+      "success_metric": {
+        "name": "Affected journey completion",
+        "baseline": null,
+        "proposed_target": "All defined acceptance checks pass.",
+        "measurement_method": "Repeat the specified journey before and after the change in the same environment.",
+        "guardrail": "Do not regress keyboard access, responsiveness, or data minimization."
+      },
+      "priority_rationale": "Ranked by severity, with equal-severity ties by estimated effort.",
+      "previous_status": "new"
+    },
+    {
+      "rank": 5,
+      "id": "I5",
+      "kind": "observed_defect",
+      "title": "Name the outcome of saving",
+      "primary_dimension": "calls_to_action",
+      "problem_score": 4,
+      "score_basis": "observed",
+      "confidence": "high",
+      "observation_ids": [
+        "O5"
+      ],
+      "evidence_ids": [
+        "E5"
+      ],
+      "affected_location": "Fictional meal detail/listing",
+      "affected_audience": "Users completing the illustrative journey",
+      "current_behavior": "Primary button says Continue although it saves a meal.",
+      "desired_behavior": "The label describes saving; confirmation appears only after successful persistence.",
+      "why_it_matters": "Reduces avoidable barriers to finding and saving a meal.",
+      "proposed_change": "Use Save meal and show an accurate confirmation after success.",
+      "expected_benefit": "Hypothesis: more users complete the affected task.",
+      "effort": {
+        "size": "S",
+        "assumptions": "Estimate assumes reusable components and existing test coverage."
+      },
+      "owner_role": "Product designer",
+      "dependencies": [],
+      "acceptance_criteria": [
+        "The label describes saving; confirmation appears only after successful persistence."
+      ],
+      "success_metric": {
+        "name": "Affected journey completion",
+        "baseline": null,
+        "proposed_target": "All defined acceptance checks pass.",
+        "measurement_method": "Repeat the specified journey before and after the change in the same environment.",
+        "guardrail": "Do not regress keyboard access, responsiveness, or data minimization."
+      },
+      "priority_rationale": "Ranked by severity, with equal-severity ties by estimated effort.",
+      "previous_status": "new"
+    }
+  ],
+  "previous_review": {
+    "reference": null,
+    "comparable": false,
+    "comparison_reason": "No prior report provided.",
+    "overall_score_delta": null,
+    "changes": []
+  }
+}

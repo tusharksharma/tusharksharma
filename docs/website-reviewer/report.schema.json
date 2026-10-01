@@ -1,0 +1,1046 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "review_id",
+    "is_example",
+    "reviewed_at",
+    "review_status",
+    "target",
+    "scope",
+    "overall",
+    "dimensions",
+    "evidence",
+    "observations",
+    "strengths",
+    "competitors",
+    "improvements",
+    "previous_review"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "review_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "is_example": {
+      "type": "boolean"
+    },
+    "reviewed_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "review_status": {
+      "enum": [
+        "complete",
+        "partial",
+        "blocked"
+      ]
+    },
+    "target": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "url",
+        "name",
+        "version_or_commit"
+      ],
+      "properties": {
+        "url": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "uri"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version_or_commit": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      }
+    },
+    "scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "primary_goal",
+        "audience",
+        "market_locale",
+        "assumptions",
+        "pages_inspected",
+        "journeys",
+        "environments",
+        "tools_used",
+        "limitations",
+        "sample_constrained"
+      ],
+      "properties": {
+        "primary_goal": {
+          "type": "string",
+          "minLength": 1
+        },
+        "audience": {
+          "type": "string",
+          "minLength": 1
+        },
+        "market_locale": {
+          "type": "string",
+          "minLength": 1
+        },
+        "assumptions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "pages_inspected": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "journeys": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "environments": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "tools_used": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "limitations": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "sample_constrained": {
+          "type": "boolean"
+        }
+      }
+    },
+    "overall": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "problem_score",
+        "confidence",
+        "provisional",
+        "scored_coverage_percent",
+        "full_coverage_percent",
+        "rationale"
+      ],
+      "properties": {
+        "problem_score": {
+          "anyOf": [
+            {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 10
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "confidence": {
+          "enum": [
+            "high",
+            "medium",
+            "low",
+            "unassessed"
+          ]
+        },
+        "provisional": {
+          "type": "boolean"
+        },
+        "scored_coverage_percent": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "full_coverage_percent": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "dimensions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "user_interface",
+        "market_competition",
+        "navigation",
+        "content_quality",
+        "mobile_friendliness",
+        "performance",
+        "calls_to_action",
+        "security_privacy",
+        "accessibility",
+        "visual_design",
+        "search_discovery",
+        "reliability_measurement"
+      ],
+      "properties": {
+        "user_interface": {
+          "$ref": "#/$defs/dimension"
+        },
+        "market_competition": {
+          "$ref": "#/$defs/dimension"
+        },
+        "navigation": {
+          "$ref": "#/$defs/dimension"
+        },
+        "content_quality": {
+          "$ref": "#/$defs/dimension"
+        },
+        "mobile_friendliness": {
+          "$ref": "#/$defs/dimension"
+        },
+        "performance": {
+          "$ref": "#/$defs/dimension"
+        },
+        "calls_to_action": {
+          "$ref": "#/$defs/dimension"
+        },
+        "security_privacy": {
+          "$ref": "#/$defs/dimension"
+        },
+        "accessibility": {
+          "$ref": "#/$defs/dimension"
+        },
+        "visual_design": {
+          "$ref": "#/$defs/dimension"
+        },
+        "search_discovery": {
+          "$ref": "#/$defs/dimension"
+        },
+        "reliability_measurement": {
+          "$ref": "#/$defs/dimension"
+        }
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "locator",
+          "captured_at",
+          "method",
+          "environment",
+          "fact"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "locator": {
+            "type": "string",
+            "minLength": 1
+          },
+          "captured_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "method": {
+            "enum": [
+              "browser",
+              "screenshot",
+              "source",
+              "measurement",
+              "headers",
+              "analytics",
+              "user_supplied",
+              "access_gap"
+            ]
+          },
+          "environment": {
+            "type": "string",
+            "minLength": 1
+          },
+          "fact": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "minItems": 0
+    },
+    "observations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "dimension",
+          "title",
+          "location",
+          "affected_audience",
+          "observed_behavior",
+          "user_consequence",
+          "evidence_ids",
+          "confidence",
+          "impact",
+          "reach",
+          "persistence",
+          "factor_rationale",
+          "problem_score",
+          "critical_override",
+          "critical_reason"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "dimension": {
+            "enum": [
+              "user_interface",
+              "market_competition",
+              "navigation",
+              "content_quality",
+              "mobile_friendliness",
+              "performance",
+              "calls_to_action",
+              "security_privacy",
+              "accessibility",
+              "visual_design",
+              "search_discovery",
+              "reliability_measurement"
+            ]
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "location": {
+            "type": "string",
+            "minLength": 1
+          },
+          "affected_audience": {
+            "type": "string",
+            "minLength": 1
+          },
+          "observed_behavior": {
+            "type": "string",
+            "minLength": 1
+          },
+          "user_consequence": {
+            "type": "string",
+            "minLength": 1
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1
+          },
+          "confidence": {
+            "enum": [
+              "high",
+              "medium",
+              "low"
+            ]
+          },
+          "impact": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "reach": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "persistence": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "factor_rationale": {
+            "type": "string",
+            "minLength": 1
+          },
+          "problem_score": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 10
+          },
+          "critical_override": {
+            "type": "boolean"
+          },
+          "critical_reason": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        }
+      },
+      "minItems": 0
+    },
+    "strengths": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "description",
+          "evidence_ids"
+        ],
+        "properties": {
+          "description": {
+            "type": "string",
+            "minLength": 1
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1
+          }
+        }
+      },
+      "minItems": 0
+    },
+    "competitors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "name",
+          "url",
+          "relationship",
+          "why_comparable",
+          "inspected_at",
+          "evidence_ids",
+          "comparison"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "relationship": {
+            "enum": [
+              "direct",
+              "adjacent"
+            ]
+          },
+          "why_comparable": {
+            "type": "string",
+            "minLength": 1
+          },
+          "inspected_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1
+          },
+          "comparison": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "dimension",
+                "target_observation",
+                "competitor_observation",
+                "implication"
+              ],
+              "properties": {
+                "dimension": {
+                  "enum": [
+                    "user_interface",
+                    "market_competition",
+                    "navigation",
+                    "content_quality",
+                    "mobile_friendliness",
+                    "performance",
+                    "calls_to_action",
+                    "security_privacy",
+                    "accessibility",
+                    "visual_design",
+                    "search_discovery",
+                    "reliability_measurement"
+                  ]
+                },
+                "target_observation": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "competitor_observation": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "implication": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            },
+            "minItems": 1
+          }
+        }
+      },
+      "minItems": 0,
+      "maxItems": 3
+    },
+    "improvements": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "rank",
+          "id",
+          "kind",
+          "title",
+          "primary_dimension",
+          "problem_score",
+          "score_basis",
+          "confidence",
+          "observation_ids",
+          "evidence_ids",
+          "affected_location",
+          "affected_audience",
+          "current_behavior",
+          "desired_behavior",
+          "why_it_matters",
+          "proposed_change",
+          "expected_benefit",
+          "effort",
+          "owner_role",
+          "dependencies",
+          "acceptance_criteria",
+          "success_metric",
+          "priority_rationale",
+          "previous_status"
+        ],
+        "properties": {
+          "rank": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "kind": {
+            "enum": [
+              "observed_defect",
+              "opportunity",
+              "validation_task"
+            ]
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "primary_dimension": {
+            "enum": [
+              "user_interface",
+              "market_competition",
+              "navigation",
+              "content_quality",
+              "mobile_friendliness",
+              "performance",
+              "calls_to_action",
+              "security_privacy",
+              "accessibility",
+              "visual_design",
+              "search_discovery",
+              "reliability_measurement"
+            ]
+          },
+          "problem_score": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 10
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "score_basis": {
+            "enum": [
+              "observed",
+              "no_observed_defect",
+              "unmeasured"
+            ]
+          },
+          "confidence": {
+            "enum": [
+              "high",
+              "medium",
+              "low"
+            ]
+          },
+          "observation_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uniqueItems": true
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1
+          },
+          "affected_location": {
+            "type": "string",
+            "minLength": 1
+          },
+          "affected_audience": {
+            "type": "string",
+            "minLength": 1
+          },
+          "current_behavior": {
+            "type": "string",
+            "minLength": 1
+          },
+          "desired_behavior": {
+            "type": "string",
+            "minLength": 1
+          },
+          "why_it_matters": {
+            "type": "string",
+            "minLength": 1
+          },
+          "proposed_change": {
+            "type": "string",
+            "minLength": 1
+          },
+          "expected_benefit": {
+            "type": "string",
+            "minLength": 1
+          },
+          "effort": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "size",
+              "assumptions"
+            ],
+            "properties": {
+              "size": {
+                "enum": [
+                  "XS",
+                  "S",
+                  "M",
+                  "L",
+                  "XL"
+                ]
+              },
+              "assumptions": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          },
+          "owner_role": {
+            "type": "string",
+            "minLength": 1
+          },
+          "dependencies": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 0
+          },
+          "acceptance_criteria": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1
+          },
+          "success_metric": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "name",
+              "baseline",
+              "proposed_target",
+              "measurement_method",
+              "guardrail"
+            ],
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1
+              },
+              "baseline": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "proposed_target": {
+                "type": "string",
+                "minLength": 1
+              },
+              "measurement_method": {
+                "type": "string",
+                "minLength": 1
+              },
+              "guardrail": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          },
+          "priority_rationale": {
+            "type": "string",
+            "minLength": 1
+          },
+          "previous_status": {
+            "enum": [
+              "new",
+              "unchanged",
+              "improved",
+              "regressed",
+              "not_retested"
+            ]
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "kind": {
+                  "const": "observed_defect"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "problem_score": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 10
+                },
+                "score_basis": {
+                  "const": "observed"
+                },
+                "observation_ids": {
+                  "minItems": 1
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "kind": {
+                  "const": "opportunity"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "problem_score": {
+                  "const": 1
+                },
+                "score_basis": {
+                  "const": "no_observed_defect"
+                },
+                "observation_ids": {
+                  "maxItems": 0
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "kind": {
+                  "const": "validation_task"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "problem_score": {
+                  "type": "null"
+                },
+                "score_basis": {
+                  "const": "unmeasured"
+                },
+                "observation_ids": {
+                  "maxItems": 0
+                }
+              }
+            }
+          }
+        ]
+      },
+      "minItems": 5,
+      "maxItems": 5
+    },
+    "previous_review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "reference",
+        "comparable",
+        "comparison_reason",
+        "overall_score_delta",
+        "changes"
+      ],
+      "properties": {
+        "reference": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "comparable": {
+          "type": "boolean"
+        },
+        "comparison_reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "overall_score_delta": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "changes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "status",
+              "evidence_ids",
+              "summary"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "status": {
+                "enum": [
+                  "new",
+                  "unchanged",
+                  "improved",
+                  "regressed",
+                  "resolved",
+                  "not_retested"
+                ]
+              },
+              "evidence_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "uniqueItems": true
+              },
+              "summary": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          },
+          "minItems": 0
+        }
+      }
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$defs": {
+    "dimension": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "problem_score",
+        "summary",
+        "evidence_ids",
+        "observation_ids"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "assessed",
+            "partial",
+            "not_tested",
+            "not_applicable"
+          ]
+        },
+        "problem_score": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 10
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "observation_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "enum": [
+                  "not_tested",
+                  "not_applicable"
+                ]
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "problem_score": {
+                "type": "null"
+              },
+              "observation_ids": {
+                "maxItems": 0
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "problem_score": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 10
+              },
+              "evidence_ids": {
+                "minItems": 1
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "title": "Website review report",
+  "description": "Exactly five actions. Higher problem scores are worse. Null means unmeasured. Use validate.py for arithmetic and references."
+}

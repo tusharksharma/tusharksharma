@@ -1,0 +1,81 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [],
+  "properties": {
+    "url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "local_preview": {
+      "type": "string",
+      "minLength": 1
+    },
+    "audience": {
+      "type": "string",
+      "minLength": 1
+    },
+    "primary_goal": {
+      "type": "string",
+      "minLength": 1
+    },
+    "website_type": {
+      "type": "string",
+      "minLength": 1
+    },
+    "market_locale": {
+      "type": "string",
+      "minLength": 1
+    },
+    "competitor_urls": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      },
+      "minItems": 0,
+      "maxItems": 3
+    },
+    "focus_pages": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    },
+    "constraints": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    },
+    "analytics_reference": {
+      "type": "string",
+      "minLength": 1
+    },
+    "previous_report_reference": {
+      "type": "string",
+      "minLength": 1
+    },
+    "output_mode": {
+      "enum": [
+        "markdown_and_json",
+        "json_only"
+      ]
+    },
+    "report_destination": {
+      "type": "string",
+      "minLength": 1
+    },
+    "authorized_access_notes": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Website reviewer input",
+  "description": "Optional context. An empty request uses repository defaults only when that repository is known. Never include passwords or secrets."
+}
