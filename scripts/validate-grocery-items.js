@@ -170,8 +170,11 @@ function parseGrocery() {
     const w = Number(wm[1]);
     const body = wm[2];
     const items = [];
-    for (const im of body.matchAll(/\{\s*name:\s*"([^"]+)"[\s\S]*?meal:\s*"([^"]+)"[^}]*\}/g)) {
-      items.push({ name: im[1], meal: im[2] });
+    for (const im of body.matchAll(/\{\s*name:\s*"([^"]+)"([^}]*)\}/g)) {
+      const meal = im[2].match(/\bmeal:\s*"([^"]+)"/);
+      const baseQty = im[2].match(/\bbaseQty:\s*([\d.]+)/);
+      const unit = im[2].match(/\bunit:\s*"([^"]+)"/);
+      if (meal) items.push({ name: im[1], meal: meal[1], baseQty: baseQty ? Number(baseQty[1]) : null, unit: unit?.[1] || null });
     }
     out[w] = items;
   }
@@ -222,6 +225,16 @@ for (const [weekStr, items] of Object.entries(grocery)) {
   const weekCorpus = Object.values(dayCorpus).join("\n");
 
   for (const item of items) {
+    // A per-person quantity in the label is for one person; baseQty is the
+    // standard 2-adult/2-kid household before household scaling.
+    const perPerson = item.name.match(/\((\d+(?:\.\d+)?)\s*(\w+)?\s+per\s+(adult|kid)\b/i);
+    if (perPerson && item.baseQty != null) {
+      const annotatedUnit = perPerson[2];
+      if ((!annotatedUnit || annotatedUnit === item.unit) && Math.abs(item.baseQty - Number(perPerson[1]) * 2) > 0.001) {
+        console.error(`ERROR: Week ${week} grocery item "${item.name}" has baseQty ${item.baseQty}; 2 ${perPerson[3]}s need ${Number(perPerson[1]) * 2}.`);
+        errors++;
+      }
+    }
     const itemDays = daysFromMeal(item.meal);
     if (itemDays.length === 0) continue; // pantry/swap items not tagged to a day
 

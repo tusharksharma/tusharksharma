@@ -382,6 +382,7 @@ function CookDay({ day, label, vibe, id, time, reheats, isReheat, fixedBatch, re
   if (!r) return null;
   // Reheat days pull from another day's batch — no toggle, no grocery add.
   const isReheatDay = !!isReheat;
+  const authoredBatchDay = !!fixedBatch || isReheatDay;
   return (
     <div className={`transition-all ${enabled ? "" : "opacity-40"}`}>
       <div className="flex items-center gap-2 mb-1 sm:pl-12">
@@ -401,7 +402,7 @@ function CookDay({ day, label, vibe, id, time, reheats, isReheat, fixedBatch, re
           <span className="text-green-500/80 text-[10px] font-semibold">Reheats from {reheatOf} batch — no new grocery</span>
         )}
       </div>
-      <Link to={enabled ? `/recipes/${r.slug}?adults=${adults}&kids=${kids}&leftovers=${leftovers ? 1 : 0}` : "#"} className={`block ${enabled ? "group" : "pointer-events-none"}`}>
+      <Link to={enabled ? `/recipes/${r.slug}?adults=${authoredBatchDay ? 2 : adults}&kids=${authoredBatchDay ? 2 : kids}&leftovers=${leftovers ? 1 : 0}` : "#"} className={`block ${enabled ? "group" : "pointer-events-none"}`}>
         <div className={`bg-surface border rounded-xl overflow-hidden transition-all ${enabled ? "border-line hover:border-brand/40" : "border-line/50"}`}>
           <div className="flex flex-col sm:flex-row">
             <div className="sm:w-40 flex-shrink-0 relative">
@@ -416,7 +417,7 @@ function CookDay({ day, label, vibe, id, time, reheats, isReheat, fixedBatch, re
             <div className="flex-1 p-4">
               <div className="flex items-center gap-2 mb-1">
                 <span className="text-brand text-[10px] font-bold uppercase tracking-wider">{label}</span>
-                <span className="text-faint text-[10px]">{time} &middot; {servings} servings</span>
+                <span className="text-faint text-[10px]">{time} &middot; {authoredBatchDay ? "2 adult + 2 kid plates per dinner" : `${servings} servings`}</span>
               </div>
               <h3 className={`font-bold text-sm transition-colors ${enabled ? "text-ink group-hover:text-brand" : "text-faint line-through"}`}>{r.title}</h3>
               {enabled && vibe && (
@@ -514,6 +515,8 @@ export default function YourWeek() {
 
   const servings = adults + kids;
   const currentWeek = WEEKS[week];
+  const hasFixedBatch = currentWeek.cookDays.some((day) => day.fixedBatch);
+  const batchHouseholdDiffers = hasFixedBatch && (adults !== 2 || kids !== 2);
   // Build per-day reheats map for grocery scaling
   const dayReheats = { Mon: needsDoubleGroceries(currentWeek.cookDays[0]), Wed: needsDoubleGroceries(currentWeek.cookDays[1]), Fri: needsDoubleGroceries(currentWeek.cookDays[2]) };
   const enabledCount = Object.values(enabledMeals).filter(Boolean).length;
@@ -577,7 +580,7 @@ export default function YourWeek() {
           <div className="flex items-center justify-between mb-3">
             <div>
               <span className="text-ink text-xs font-bold">Your family</span>
-              <span className="text-faint text-[10px] ml-2">Adjusts grocery + portions</span>
+              <span className="text-faint text-[10px] ml-2">Adjusts non-batch groceries + portions</span>
             </div>
             <span role="status" aria-live="polite" className="text-brand text-[10px] font-bold animate-pulse">
               {showFeedback ? `Updated for ${servings}` : ""}
@@ -622,6 +625,11 @@ export default function YourWeek() {
               {servings} servings
             </span>
           </div>
+          {batchHouseholdDiffers && (
+            <p role="status" className="mt-3 rounded-lg border border-brand/30 bg-brand/10 px-3 py-2 text-xs text-ink">
+              This plan’s batch dinners and shopping amounts are written for 2 adults + 2 kids per night. Your selected household changes the other meals only. For batch nights, follow the recipe again or adjust the batch ingredients and cook directions to make enough for your family.
+            </p>
+          )}
         </div>
 
         {/* Meal inclusion */}
@@ -712,7 +720,8 @@ export default function YourWeek() {
             if (!recipe) return;
             const adultProt = recipe.splitCook?.adult?.protein ?? recipe.protein ?? 0;
             const kidProt = recipe.splitCook?.kid?.protein ?? 0;
-            let mealProtein = adults * adultProt + kids * kidProt;
+            const batchDay = day.fixedBatch || day.isReheat;
+            let mealProtein = (batchDay ? 2 : adults) * adultProt + (batchDay ? 2 : kids) * kidProt;
             // Only a true reheat day doubles — that batch was cooked double.
             // A leftoverNote night stretches one cook across two nights
             // (steak salad from Friday's steak), so the protein is unchanged.
@@ -732,7 +741,7 @@ export default function YourWeek() {
 
         {/* Grocery */}
         <div className="mt-10" id="grocery">
-          <GroceryList adults={adults} kids={kids} leftovers={leftovers} dayReheats={dayReheats} batchMultiplier={currentWeek.batchMultiplier || 1} excludedTags={excludedTags} week={week} planLabel={currentWeek.label} />
+          <GroceryList adults={adults} kids={kids} leftovers={leftovers} dayReheats={dayReheats} batchMultiplier={currentWeek.batchMultiplier || 1} hasFixedBatch={hasFixedBatch} excludedTags={excludedTags} week={week} planLabel={currentWeek.label} />
         </div>
 
         {/* Sauce bridge */}

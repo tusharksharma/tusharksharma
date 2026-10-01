@@ -10,6 +10,7 @@
 // copy should be curated shorter or paginated across more cards, per
 // paginateIngredientCards / paginateMethodCards in ./recipeCard.js.
 
+import { useEffect, useRef, useState } from "react";
 import {
   RECIPE_CARD_METRICS,
   RECIPE_CARD_THEME,
@@ -26,9 +27,27 @@ const FONT_SANS =
   'ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif';
 
 export default function RecipeCardInner({ layout }) {
+  const previewRef = useRef(null);
+  const [previewWidth, setPreviewWidth] = useState(SCREEN);
+  useEffect(() => {
+    const element = previewRef.current;
+    if (!element) return undefined;
+    const updateWidth = () => setPreviewWidth(element.clientWidth || SCREEN);
+    updateWidth();
+    const observer = new ResizeObserver(updateWidth);
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, []);
   const resolved = resolveImage(layout.image);
-  if (resolved?.layout === "band") return <BandRecipeCard layout={layout} resolved={resolved} />;
-  return <SideRecipeCard layout={layout} resolved={resolved} />;
+  return (
+    <div ref={previewRef} className="relative h-full w-full overflow-hidden">
+      <div style={{ position: "absolute", width: SCREEN, height: SCREEN, transformOrigin: "top left", transform: `scale(${previewWidth / SCREEN})` }}>
+        {resolved?.layout === "band"
+          ? <BandRecipeCard layout={layout} resolved={resolved} />
+          : <SideRecipeCard layout={layout} resolved={resolved} />}
+      </div>
+    </div>
+  );
 }
 
 function SideRecipeCard({ layout, resolved }) {

@@ -21,6 +21,13 @@ function TrustCard({ title, desc }) {
 function MakeAheadDessertCallout() {
   const featured = desserts.find((d) => d.bestFor?.includes("Make-ahead"));
   if (!featured) return null;
+  const proteinLabel = featured.proteinPerServing != null
+    ? `${featured.proteinPerServing}g protein per serving`
+    : featured.protein != null
+      ? `${featured.protein}g protein per serving`
+      : featured.proteinBaseEstimate != null
+        ? `~${featured.proteinBaseEstimate}g protein in base`
+        : null;
   return (
     <section className="border-b border-line bg-gradient-to-br from-brand/20 via-page to-page">
       <div className="max-w-5xl mx-auto px-4 py-12">
@@ -36,8 +43,7 @@ function MakeAheadDessertCallout() {
             <h3 className="text-ink font-black text-lg group-hover:text-brand transition-colors">{featured.title}</h3>
             <p className="text-muted text-xs mt-1">{featured.tagline}</p>
             <div className="flex items-center gap-2 mt-3 text-[10px] text-muted">
-              <span className="text-brand font-bold">{featured.proteinPerServing || featured.protein}g protein</span>
-              <span>&middot;</span>
+              {proteinLabel && <><span className="text-brand font-bold">{proteinLabel}</span><span>&middot;</span></>}
               <span>~{featured.caloriesPerServing} cal</span>
               <span>&middot;</span>
               <span>{featured.servings} serving{featured.servings === 1 ? "" : "s"}</span>

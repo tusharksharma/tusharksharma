@@ -3833,6 +3833,16 @@ const recipes = [
     protein: 35,
     calories: 400,
     image: "/images/next-day-tacos/hero-air-fryer-chicken-tacos.webp",
+    socialCarousel: {
+      ingredientCardPhotos: [
+        "/images/next-day-tacos/step-season-chicken.webp",
+        "/images/next-day-tacos/step-onion-cilantro.webp",
+      ],
+      methodCardPhotos: [
+        "/images/next-day-tacos/step-air-fry-chicken.webp",
+        "/images/next-day-tacos/step-chop-chicken.webp",
+      ],
+    },
     video: "/videos/next-day-chicken-tacos/air-fryer-chicken-tacos-marcus.mp4",
     teaserVideo: "/videos/next-day-chicken-tacos/air-fryer-chicken-tacos-7-second-teaser.mp4",
     originalSoundVideo: "/videos/next-day-chicken-tacos/air-fryer-chicken-tacos-clean-original-sound.mp4",
@@ -11562,6 +11572,8 @@ const recipes = [
     protein: 40,
     calories: 450,
     image: "/images/french-dip-polenta-dunkers/hero-french-dip-polenta-dunkers.webp",
+    imagePosition: "center 75%",
+    makeThisWhen: "You want three equal plates of crisp polenta, beef, beans, and jus. This recipe has no separate child portion; serve smaller amounts from a plate as appetite calls for it.",
     video: "/videos/french-dip-polenta-dunkers/can-i-make-a-recipe-go-viral-episode-3-french-dip-polenta-dunkers-450cal-40protein-marcus.mp4",
     companionVideo: "/videos/french-dip-polenta-dunkers/french-dip-polenta-dunkers-450cal-40protein-clean-original-sound.mp4",
     discoveryVideo: "/videos/french-dip-polenta-dunkers/french-dip-polenta-dunkers-450cal-40protein-text-original-sound.mp4",

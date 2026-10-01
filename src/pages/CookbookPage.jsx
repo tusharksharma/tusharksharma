@@ -95,7 +95,7 @@ export default function CookbookPage() {
 
   useMeta({
     title: tab === (TABS[0] || "Sauces") ? "Power-Ups" : `${tab} — Power-Ups`,
-    description: `${tab} — high-protein upgrades from The Split Plate. Sauces, breakfasts, desserts, and quick meals in 10 minutes or less.`,
+    description: `${tab} — sauces, breakfasts, desserts, and quick meals from The Split Plate, including make-ahead recipes.`,
   });
 
   const filterItems = (items) => {
@@ -116,7 +116,7 @@ export default function CookbookPage() {
         <div className="mb-8">
           <h1 className="text-3xl font-black text-ink">Power-Ups</h1>
           <p className="text-muted text-sm mt-1">
-            Sauces, breakfasts, desserts, and quick meals — high-protein upgrades that take 10 minutes or less.
+            Sauces, breakfasts, desserts, and quick meals — some ready in minutes, others worth making ahead.
           </p>
           <p className="text-faint text-[10px] mt-1">
             Everything here is designed to complement your weekly dinners or stand alone when you need something fast.

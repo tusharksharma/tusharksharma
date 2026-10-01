@@ -1139,8 +1139,8 @@ const GROCERY_BY_WEEK = {
   28: {
     "Protein": [
       { name: "93/7 lean ground beef (24 oz raw — Mon slop bowl)", baseQty: 24, unit: "oz", meal: "Mon" },
-      { name: "Bavette steak (6 oz per adult — Fri steak night)", baseQty: 6, unit: "oz", meal: "Fri adult" },
-      { name: "Great Value pork breakfast patties (1.5 per kid — Fri kid alt)", baseQty: 1.5, unit: "patties", meal: "Fri kid" },
+      { name: "Bavette steak (6 oz per adult — Fri steak night)", baseQty: 12, unit: "oz", meal: "Fri adult" },
+      { name: "Great Value pork breakfast patties (1.5 per kid — Fri kid alt)", baseQty: 3, unit: "patties", meal: "Fri kid" },
     ],
     "Dairy": [
       { name: "Good Culture 2% cottage cheese (150 g — for the Mon chipotle cheddar sauce)", baseQty: 150, unit: "g", meal: "Mon" },
@@ -1181,8 +1181,8 @@ const GROCERY_BY_WEEK = {
   29: {
     "Protein": [
       { name: "Fully cooked chargrilled chipotle-seasoned chicken (18 oz — Mon rice bowls)", baseQty: 18, unit: "oz", meal: "Mon" },
-      { name: "Bavette steak (6 oz per adult — Fri steak night)", baseQty: 6, unit: "oz", meal: "Fri adult" },
-      { name: "Great Value pork breakfast patties (1.5 per kid — Fri kid alt)", baseQty: 1.5, unit: "patties", meal: "Fri kid" },
+      { name: "Bavette steak (6 oz per adult — Fri steak night)", baseQty: 12, unit: "oz", meal: "Fri adult" },
+      { name: "Great Value pork breakfast patties (1.5 per kid — Fri kid alt)", baseQty: 3, unit: "patties", meal: "Fri kid" },
     ],
     "Dairy": [
       { name: "Butter (1 tbsp — Mon kid rice)", baseQty: 1, unit: "tbsp", meal: "Mon kid" },
@@ -1224,8 +1224,8 @@ const GROCERY_BY_WEEK = {
     "Protein": [
       { name: "93/7 lean ground chicken (Mon batch, 1 lb — dumpling lasagna filling)", baseQty: 1, unit: "lb", meal: "Mon", fixedBatch: true },
       { name: "95/5 lean ground pork (Mon batch, 1 lb — dumpling lasagna filling)", baseQty: 1, unit: "lb", meal: "Mon", fixedBatch: true },
-      { name: "Bavette steak (6 oz per adult — Fri steak night)", baseQty: 6, unit: "oz", meal: "Fri adult" },
-      { name: "Great Value pork breakfast patties (1.5 per kid — Fri kid alt)", baseQty: 1.5, unit: "patties", meal: "Fri kid" },
+      { name: "Bavette steak (6 oz per adult — Fri steak night)", baseQty: 12, unit: "oz", meal: "Fri adult" },
+      { name: "Great Value pork breakfast patties (1.5 per kid — Fri kid alt)", baseQty: 3, unit: "patties", meal: "Fri kid" },
     ],
     "Produce": [
       { name: "Scallions (Mon batch, 1 bunch — dumpling lasagna filling + garnish)", baseQty: 1, unit: "bunch", meal: "Mon", fixedBatch: true },
@@ -1259,8 +1259,8 @@ const GROCERY_BY_WEEK = {
     "Protein": [
       { name: "93/7 lean ground beef (Mon batch, 2 lb / 32 oz — potato waffle meal prep skillet)", baseQty: 2, unit: "lb", meal: "Mon", fixedBatch: true },
       { name: "Liquid egg whites (Mon batch, 240-300 g — potato waffle binder; start at 240g)", baseQty: 300, unit: "g", meal: "Mon", fixedBatch: true },
-      { name: "Bavette steak (6 oz per adult — Fri steak night)", baseQty: 6, unit: "oz", meal: "Fri adult" },
-      { name: "Great Value pork breakfast patties (1.5 per kid — Fri kid alt)", baseQty: 1.5, unit: "patties", meal: "Fri kid" },
+      { name: "Bavette steak (6 oz per adult — Fri steak night)", baseQty: 12, unit: "oz", meal: "Fri adult" },
+      { name: "Great Value pork breakfast patties (1.5 per kid — Fri kid alt)", baseQty: 3, unit: "patties", meal: "Fri kid" },
     ],
     "Produce": [
       { name: "Raw carrots (baby or sticks — Fri kid)", baseQty: 1, unit: "bag", meal: "Fri kid" },
@@ -1294,8 +1294,8 @@ const GROCERY_BY_WEEK = {
   32: {
     "Protein": [
       { name: "Lean stir-fry beef (Mon batch, 2 lb — Lomo Saltado wok; trim further)", baseQty: 2, unit: "lb", meal: "Mon", fixedBatch: true },
-      { name: "Bavette steak (6 oz per adult — Fri steak night)", baseQty: 6, unit: "oz", meal: "Fri adult" },
-      { name: "Great Value pork breakfast patties (1.5 per kid — Fri kid alt)", baseQty: 1.5, unit: "patties", meal: "Fri kid" },
+      { name: "Bavette steak (6 oz per adult — Fri steak night)", baseQty: 12, unit: "oz", meal: "Fri adult" },
+      { name: "Great Value pork breakfast patties (1.5 per kid — Fri kid alt)", baseQty: 3, unit: "patties", meal: "Fri kid" },
     ],
     "Produce": [
       { name: "Red onion (Mon batch, 8 oz — thickly sliced for the wok)", baseQty: 8, unit: "oz", meal: "Mon", fixedBatch: true },
@@ -1333,8 +1333,8 @@ const GROCERY_BY_WEEK = {
   33: {
     "Protein": [
       { name: "Costco chipotle seasoned grilled chicken (Mon batch, 12 oz — Alfredo filling for 12 nests)", baseQty: 12, unit: "oz", meal: "Mon", fixedBatch: true },
-      { name: "Bavette steak (6 oz per adult — Fri steak night)", baseQty: 6, unit: "oz", meal: "Fri adult" },
-      { name: "Great Value pork breakfast patties (1.5 per kid — Fri kid alt)", baseQty: 1.5, unit: "patties", meal: "Fri kid" },
+      { name: "Bavette steak (6 oz per adult — Fri steak night)", baseQty: 12, unit: "oz", meal: "Fri adult" },
+      { name: "Great Value pork breakfast patties (1.5 per kid — Fri kid alt)", baseQty: 3, unit: "patties", meal: "Fri kid" },
     ],
     "Dairy + Egg": [
       { name: "2% cottage cheese (Mon batch, 1 cup — cottage-cheese Alfredo)", baseQty: 1, unit: "cup", meal: "Mon", fixedBatch: true },
@@ -1372,8 +1372,8 @@ const GROCERY_BY_WEEK = {
   34: {
     "Protein": [
       { name: "Turkey pepperoni (Mon batch, 4 servings per batch — chopped + folded through the mac)", baseQty: 4, unit: "servings", meal: "Mon", fixedBatch: true },
-      { name: "Bavette steak (6 oz per adult — Fri steak night)", baseQty: 6, unit: "oz", meal: "Fri adult" },
-      { name: "Great Value pork breakfast patties (1.5 per kid — Fri kid alt)", baseQty: 1.5, unit: "patties", meal: "Fri kid" },
+      { name: "Bavette steak (6 oz per adult — Fri steak night)", baseQty: 12, unit: "oz", meal: "Fri adult" },
+      { name: "Great Value pork breakfast patties (1.5 per kid — Fri kid alt)", baseQty: 3, unit: "patties", meal: "Fri kid" },
     ],
     "Dairy + Egg": [
       { name: "Whole milk (Mon batch, 1 cup per batch — creator used Nurri; whisked with the cheese packets)", baseQty: 1, unit: "cups", meal: "Mon", fixedBatch: true },
@@ -1493,10 +1493,11 @@ function scaleQty(entry, adults, kids, leftovers, dayReheats, batchMultiplier = 
   return entry.qty || "";
 }
 
-export default function GroceryList({ adults = 2, kids = 2, leftovers = true, dayReheats = {}, batchMultiplier = 1, excludedTags = [], week = 1, planLabel = "" }) {
+export default function GroceryList({ adults = 2, kids = 2, leftovers = true, dayReheats = {}, batchMultiplier = 1, hasFixedBatch = false, excludedTags = [], week = 1, planLabel = "" }) {
   const [checked, setChecked] = useState(new Set());
   const [isOpen, setIsOpen] = useState(false);
   const GROCERY = getGrocery(week);
+  const batchHouseholdDiffers = hasFixedBatch && (adults !== 2 || kids !== 2);
   const allItems = Object.values(GROCERY).flat();
 
   // Reset checked items when anything changes the shopping list
@@ -1541,7 +1542,9 @@ export default function GroceryList({ adults = 2, kids = 2, leftovers = true, da
       })
       .filter(Boolean)
       .join("\n\n");
-    navigator.clipboard.writeText(text);
+    navigator.clipboard.writeText(batchHouseholdDiffers
+      ? `Batch dinners: listed amounts cover 2 adults + 2 kids per night. Adjust batch ingredients and cook directions for your household.\n\n${text}`
+      : text);
   };
 
   // Build a set of visible item indices for accurate counting
@@ -1577,8 +1580,11 @@ export default function GroceryList({ adults = 2, kids = 2, leftovers = true, da
           <button onClick={() => setIsOpen(false)} className="text-muted hover:text-muted text-xs cursor-pointer">Close</button>
         </div>
         <p className="text-muted text-xs">
-          {adults} adults{kids > 0 ? ` + ${kids} kids` : ""} &middot; {3 - excludedTags.length} dinners{leftovers ? " &middot; doubled for leftovers" : ""}
+          {adults} adults{kids > 0 ? ` + ${kids} kids` : ""} &middot; {3 - excludedTags.length} dinners{leftovers ? " · doubled for leftovers" : ""}
         </p>
+        {batchHouseholdDiffers && (
+          <p className="mt-2 text-xs font-semibold text-brand">Batch dinner quantities cover 2 adults + 2 kids per night. Other groceries follow your selected household.</p>
+        )}
         {excludedTags.length > 0 && (
           <p className="text-brand text-[10px] font-semibold mt-1">
             Shopping list updated for {3 - excludedTags.length} dinners
