@@ -74,7 +74,7 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 py-16">
           <h2 className="text-2xl font-black text-ink mb-2">All Recipes</h2>
           <p className="text-muted text-sm mb-6">
-            Full split-cook recipes with real photos, step-by-step method, and nutrition.
+            Recipes for real life, with photos, step-by-step method, and clear serving notes.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {liveRecipes.map((r) => (
@@ -128,7 +128,7 @@ export default function HomePage() {
             Most family dinner systems fail because they assume everyone eats the same thing. This one doesn't.
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8">
-            {["Real Flavor", "Honest Macros", "Actual Split", "Repeatable"].map((l) => (
+            {["Real Flavor", "Honest Macros", "Flexible Plates", "Repeatable"].map((l) => (
               <div key={l} className="bg-surface border border-brand/20 rounded-lg px-3 py-3">
                 <span className="text-brand text-xs font-bold uppercase tracking-wider">{l}</span>
               </div>
@@ -145,7 +145,11 @@ export default function HomePage() {
         <img src="/images/favicon.png" alt="The Split Plate" className="w-10 h-10 mx-auto mb-2" />
         <p className="text-brand/80 font-black text-xs tracking-[0.2em] uppercase">The Split Plate</p>
         <p className="text-muted font-semibold mt-2">Dinners &middot; Power-Ups &middot; Weekly Plans</p>
-        <Link to="/about" className="text-faint text-xs hover:text-brand mt-2 inline-block">About</Link>
+        <div className="mt-2 flex items-center justify-center gap-4">
+          <Link to="/about" className="text-faint text-xs hover:text-brand">About</Link>
+          <Link to="/privacy" className="text-faint text-xs hover:text-brand">Privacy</Link>
+          <Link to="/terms" className="text-faint text-xs hover:text-brand">Terms</Link>
+        </div>
         <p className="mt-2 text-faint">One cook. Two plates. Done.</p>
       </footer>
     </div>

@@ -11,6 +11,7 @@ const splitLabels = {
   full: "Split Friendly",
   "easy-swap": "Easy Kid Swap",
   "adult-only": "Adult Only",
+  portion: "Shared Portions",
 };
 
 export default function RecipeCard({ recipe }) {

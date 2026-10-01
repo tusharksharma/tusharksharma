@@ -201,7 +201,7 @@ function FilterSection({ title, items }) {
 }
 
 export default function DinnersPage() {
-  useMeta({ title: "Dinners", description: "High-protein family dinners with the Split Cook Method. Same cook, different plates for adults and kids." });
+  useMeta({ title: "Dinners", description: "High-protein family dinners with shared cooking and clear adult, kid, or flexible-portion serving paths." });
 
   const [search, setSearch] = useState("");
   const [selectedProteins, setSelectedProteins] = useState([]);
@@ -354,7 +354,7 @@ export default function DinnersPage() {
         <div className="mb-8">
           <h1 className="text-3xl font-black text-ink">Dinners</h1>
           <p className="text-muted text-sm mt-1">
-            One cook, two plates — adults and kids from the same workflow. Filter by time, protein, cost, or dietary needs.
+            One shared cook, with different finishes or flexible portions. Filter by time, protein, cost, or dietary needs.
           </p>
         </div>
 
@@ -505,6 +505,9 @@ export default function DinnersPage() {
                 )}
                 <div className="p-5">
                   <h3 className="text-ink font-bold text-sm group-hover:text-brand transition-colors">{r.title}</h3>
+                  {r.splitFriendly === "portion" && (
+                    <span className="mt-1 inline-block rounded bg-brand/15 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-brand">Shared portions</span>
+                  )}
                   <p className="text-muted text-sm mt-1 line-clamp-2">{r.makeThisWhen || r.role}</p>
                   {/* First row is the leanness read — protein, calories, and
                       whether the macros are estimated. Time gets its own row

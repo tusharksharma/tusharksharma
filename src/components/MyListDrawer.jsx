@@ -10,7 +10,7 @@ import { useMyList } from "../hooks/useMyList";
 export default function MyListDrawer() {
   const { saved, grocery, removeSaved, toggleGrocery, removeGrocery, clearChecked, clearGrocery } = useMyList();
   const [open, setOpen] = useState(false);
-  const [tab, setTab] = useState("grocery");
+  const [tab, setTab] = useState("saved");
 
   const total = saved.length + grocery.length;
 
@@ -32,7 +32,13 @@ export default function MyListDrawer() {
       {!open && (
         <button
           type="button"
-          onClick={() => setOpen(true)}
+          onClick={() => {
+            // Prefer the populated tab when one side is empty. With both
+            // populated, keep the reader's last explicit tab choice.
+            if (saved.length > 0 && grocery.length === 0) setTab("saved");
+            if (grocery.length > 0 && saved.length === 0) setTab("grocery");
+            setOpen(true);
+          }}
           aria-label={`Open my list (${total} item${total === 1 ? "" : "s"})`}
           className="theme-fade fixed bottom-4 right-4 z-40 inline-flex items-center gap-2 rounded-full border border-brand/40 bg-surface px-4 py-2.5 text-xs font-bold text-ink shadow-2xl print:hidden"
         >

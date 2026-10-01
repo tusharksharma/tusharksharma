@@ -22,11 +22,11 @@ export default function AboutPage() {
           {/* The System */}
           <div className="bg-surface border border-line rounded-xl p-5">
             <h2 className="text-ink font-bold text-sm mb-3">The System</h2>
-            <p className="text-muted text-sm mb-3">Every recipe follows one rule: <span className="text-brand font-semibold">Cook once. Split smart.</span></p>
+            <p className="text-muted text-sm mb-3">Family dinners start with one shared cook. Some have different adult and kid finishes; others use the same base with portions adjusted for appetite. <span className="text-brand font-semibold">Cook once. Split smart.</span></p>
             <ul className="space-y-1.5 text-muted text-sm">
               <li>Start with a single base meal</li>
               <li>Adjust portions, toppings, and finishes</li>
-              <li>Turn it into two plates:</li>
+              <li>Serve distinct finishes or flexible portions, depending on the recipe:</li>
             </ul>
             <div className="mt-3 grid grid-cols-2 gap-3">
               <div className="bg-red-950/20 border border-red-900/40 rounded-lg p-3">

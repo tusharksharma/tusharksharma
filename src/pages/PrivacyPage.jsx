@@ -2,28 +2,41 @@ import { Link } from "react-router-dom";
 import useMeta from "../hooks/useMeta";
 
 export default function PrivacyPage() {
-  useMeta({ title: "Privacy Policy", description: "How The Split Plate handles your data — what we collect, what we don't, and how the Split Plate posting tool uses social account access." });
+  useMeta({ title: "Privacy Policy", description: "How The Split Plate handles newsletter email addresses, analytics, local lists, and the private posting tool." });
 
   return (
     <div className="min-h-screen bg-page text-ink">
       <div className="max-w-2xl mx-auto px-4 py-16">
         <h1 className="text-3xl font-black text-ink">Privacy Policy</h1>
-        <p className="text-brand text-sm font-semibold mt-2">Last updated: June 18, 2026</p>
+        <p className="text-brand text-sm font-semibold mt-2">Last updated: October 1, 2026</p>
 
         <div className="mt-8 space-y-5 text-muted text-sm leading-relaxed">
           <p>
             The Split Plate (<span className="text-ink">thesplitplate.com</span>) is a personal recipe
-            website run by an individual. This policy explains what data is and isn't collected, both on
-            the website and through the Split Plate posting tool described below.
+            website run by an individual. This policy describes the website, newsletter, and private
+            posting tool. It reflects the services currently used by the website.
           </p>
 
           <div className="bg-surface border border-line rounded-xl p-5">
-            <h2 className="text-ink font-bold text-sm mb-3">The website</h2>
+            <h2 className="text-ink font-bold text-sm mb-3">Newsletter email</h2>
             <p className="text-muted text-sm">
-              The website is a static recipe site. It has no user accounts, no sign-in, and no shopping
-              cart. We don't ask you for personal information, and we don't sell or share any. Standard
-              hosting logs (such as IP address and browser type) may be processed by our hosting provider
-              for security and reliability, as is typical for any website.
+              If you sign up for the weekly dinner email, you provide your email address. The signup form
+              sends it to <a href="https://kit.com/" className="text-brand underline">Kit</a>,
+              the email service used to manage subscriptions and send the newsletter. You can unsubscribe
+              from a message at any time. Questions or a request about your subscription can be sent to
+              the contact address below. Do not include sensitive information in the signup form.
+            </p>
+          </div>
+
+          <div className="bg-surface border border-line rounded-xl p-5">
+            <h2 className="text-ink font-bold text-sm mb-3">Website usage</h2>
+            <p className="text-muted text-sm">
+              The site has no public accounts, sign-in, or shopping cart. Google Analytics measures page
+              visits and interactions using browser information and identifiers such as cookies. The site
+              also stores your saved recipes, grocery items, and theme choice in this browser's local
+              storage so they remain available on this device. Clearing browser data removes those local
+              choices. The hosting provider may process standard request logs for security and reliability.
+              We do not send your saved recipes or grocery list to a site account.
             </p>
           </div>
 
@@ -67,7 +80,8 @@ export default function PrivacyPage() {
           <div className="bg-surface border border-line rounded-xl p-5">
             <h2 className="text-ink font-bold text-sm mb-3">Contact</h2>
             <p className="text-muted text-sm">
-              Questions about this policy? Email <span className="text-brand">splitplates@gmail.com</span>.
+              Questions about this policy or your newsletter address? Email{" "}
+              <a href="mailto:splitplates@gmail.com" className="text-brand underline">splitplates@gmail.com</a>.
             </p>
           </div>
         </div>
