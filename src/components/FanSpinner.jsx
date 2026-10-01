@@ -9,8 +9,10 @@ const COLORS = ["#a95a24", "#b96b3e", "#7b7760", "#5f7755", "#a47339", "#955646"
 const SEGMENT = 360 / COLORS.length;
 const WHEEL_BACKGROUND = `conic-gradient(${COLORS.map((color, index) => `${color} ${index * SEGMENT}deg ${(index + 1) * SEGMENT}deg`).join(", ")})`;
 
-function randomLineup() {
-  const recipes = [...DINNERS];
+function randomLineup(previous = []) {
+  const previousIds = new Set(previous.map((recipe) => recipe.id));
+  const fresh = DINNERS.filter((recipe) => !previousIds.has(recipe.id));
+  const recipes = [...(fresh.length >= COLORS.length ? fresh : DINNERS)];
   for (let i = recipes.length - 1; i > 0; i -= 1) {
     const j = Math.floor(Math.random() * (i + 1));
     [recipes[i], recipes[j]] = [recipes[j], recipes[i]];
@@ -23,30 +25,56 @@ export default function FanSpinner() {
   const [spinning, setSpinning] = useState(false);
   const [result, setResult] = useState(null);
   const [rotation, setRotation] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(null);
   const spinTimer = useRef(null);
+  const wheelRef = useRef(null);
 
   useEffect(() => () => clearTimeout(spinTimer.current), []);
 
+  useEffect(() => {
+    if (!spinning) return undefined;
+    let frame;
+    const followPointer = () => {
+      if (wheelRef.current) {
+        // Read the browser's actual eased rotation so the list and wheel stay
+        // in sync, even while the CSS transition slows near the winner.
+        const matrix = new DOMMatrixReadOnly(getComputedStyle(wheelRef.current).transform);
+        const angle = ((Math.atan2(matrix.b, matrix.a) * 180 / Math.PI) % 360 + 360) % 360;
+        setActiveIndex(Math.floor(((360 - angle) % 360) / SEGMENT));
+      }
+      frame = requestAnimationFrame(followPointer);
+    };
+    frame = requestAnimationFrame(followPointer);
+    return () => cancelAnimationFrame(frame);
+  }, [spinning]);
+
   function spin() {
     if (spinning || !lineup.length) return;
-    const winner = Math.floor(Math.random() * lineup.length);
+    // Keep the completed result tied to its eight choices until the next spin.
+    // Spin Again then rotates in eight different recipes automatically.
+    const nextLineup = result ? randomLineup(lineup) : lineup;
+    const winner = Math.floor(Math.random() * nextLineup.length);
     const currentAngle = ((rotation % 360) + 360) % 360;
     const targetAngle = (360 - (winner * SEGMENT + SEGMENT / 2)) % 360;
     const alignment = (targetAngle - currentAngle + 360) % 360;
+    if (result) setLineup(nextLineup);
     setResult(null);
+    setActiveIndex(null);
     setSpinning(true);
     setRotation(rotation + 360 * 5 + alignment);
     spinTimer.current = setTimeout(() => {
-      setResult(lineup[winner]);
+      setResult(nextLineup[winner]);
+      setActiveIndex(winner);
       setSpinning(false);
-      track("fan_spin", { result: lineup[winner].title });
+      track("fan_spin", { result: nextLineup[winner].title });
     }, 4000);
   }
 
   function shuffle() {
     if (spinning) return;
-    setLineup(randomLineup());
+    setLineup(randomLineup(lineup));
     setResult(null);
+    setActiveIndex(null);
     setRotation(0);
   }
 
@@ -59,6 +87,7 @@ export default function FanSpinner() {
       <div className="relative w-64 h-64 sm:w-80 sm:h-80 mx-auto">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-2 z-20 w-0 h-0 border-l-[12px] border-r-[12px] border-t-[22px] border-l-transparent border-r-transparent border-t-brand drop-shadow-lg" aria-hidden="true" />
         <div
+          ref={wheelRef}
           className="w-full h-full rounded-full border-8 border-surface shadow-xl relative"
           style={{ background: WHEEL_BACKGROUND, transform: `rotate(${rotation}deg)`, transition: spinning ? "transform 4s cubic-bezier(0.15, 0.6, 0.15, 1)" : "none" }}
           aria-hidden="true"
@@ -90,9 +119,9 @@ export default function FanSpinner() {
 
       <div className="mt-10 text-left">
         <h2 className="text-ink text-lg font-black mb-3">On tonight's wheel</h2>
-        <ol className="grid sm:grid-cols-2 gap-2">
+        <ol className="grid sm:grid-cols-2 gap-2" aria-label="Dinner ideas on tonight's wheel">
           {lineup.map((recipe, index) => (
-            <li key={recipe.id} className="rounded-lg border border-line bg-surface px-3 py-2 flex items-center gap-3">
+            <li key={recipe.id} aria-current={result && !spinning && index === activeIndex ? "true" : undefined} className={`rounded-lg border px-3 py-2 flex items-center gap-3 transition-colors ${index === activeIndex ? "border-brand bg-brand/15" : "border-line bg-surface"}`}>
               <span className="w-7 h-7 flex-shrink-0 rounded-full text-white text-sm font-black flex items-center justify-center" style={{ background: COLORS[index] }}>{index + 1}</span>
               <span className="text-ink text-sm font-semibold">{recipe.title}</span>
             </li>
