@@ -4401,6 +4401,41 @@ const WEEK12_CREAMIS = [
   }),
 ];
 
+const week4CreamiCarousel = ({ flavor, title, id, heroImage, calories, protein, hook, caption, flavorItems, methodGroups, photos, servingNote, question, accent = "amber" }) => ({
+  heroBadge: `CrumblCreamiCut · W4 F${flavor}`,
+  heroAccent: accent,
+  heroTitle: title,
+  cardTitle: title,
+  heroStats: [
+    { value: calories, label: "cal / whole pint" },
+    { value: protein, label: "protein / pint" },
+    { value: "1", label: "serving" },
+  ],
+  hook,
+  captionBody: `${caption} Recipe: thesplitplate.com/cookbook/${id}\n\n${question}`,
+  heroPhoto: heroImage,
+  ingredientGroups: [
+    { card: 0, accent, heading: "Protein Creami base", items: [
+      { quantity: "1 cup", text: "Fairlife 2% milk" },
+      { quantity: "1 serving", text: "Unflavored whey isolate" },
+      { quantity: "2 tbsp", text: "Monk fruit sweetener" },
+      { quantity: "1/8 tsp", text: "Guar gum", note: "Level measure" },
+      { quantity: "Pinch", text: "Salt" },
+    ] },
+    { card: 1, accent, heading: "Flavor + finish", items: flavorItems },
+  ],
+  methodLabel: "HOW TO MAKE",
+  methodGroups: methodGroups.map((group) => ({ accent, ...group })),
+  ingredientCardPhotos: [photos.base, photos.flavor].map((src) => ({ src, position: "50% 50%", zoom: 1, layout: "side" })),
+  methodCardPhotos: [photos.method1, photos.method2].map((src) => ({ src, position: "50% 50%", zoom: 1, layout: "side" })),
+  servingPhoto: { src: photos.serving, position: "50% 50%", zoom: 1, layout: "side" },
+  servingGroups: [{ accent, heading: "Whole-pint dessert", items: [
+    { text: `One complete pint: ${calories} calories and ${protein} protein from the listed ingredients.` },
+    { text: servingNote },
+  ] }],
+  engagementQuestion: question,
+});
+
 export const desserts = [
   ...WEEK12_CREAMIS,
   {
@@ -8640,6 +8675,41 @@ export const desserts = [
     tagline: "CrumblCreamiCut Week 4, Flavor 1 — powdered-peanut-butter protein Creami pint, peanut-caramel protein bar Respin, sugar-free chocolate drizzle, and chopped bar on top. ~370 cal / 53g protein whole pint — highest-protein CCC ep so far.",
     heroImage: "/images/snickers-peanut-butter-cookie-creami/hero-finished-snickers-peanut-butter-cookie-creami-polished.webp",
     prepImage: "/images/snickers-peanut-butter-cookie-creami/step-add-mix-in-polished.webp",
+    socialHashtags: ["#CrumblCreamiCut", "#ProteinCreami", "#PeanutButterCreami", "#HighProteinDessert"],
+    socialCarousel: week4CreamiCarousel({
+      flavor: 1,
+      title: "SNICKERS Peanut Butter Creami",
+      id: "snickers-peanut-butter-cookie-creami",
+      heroImage: "/images/snickers-peanut-butter-cookie-creami/hero-finished-snickers-peanut-butter-cookie-creami-polished.webp",
+      calories: "~370", protein: "53g",
+      hook: "Peanut-butter base, caramel-peanut bar pieces, and chocolate drizzle. One protein Creami pint.",
+      caption: "Blend 1 tbsp powdered peanut butter into the Fairlife-and-whey base and freeze. After the first spin, Respin one-quarter of a peanut-caramel protein bar through the pint without added liquid. Scoop, drizzle sugar-free chocolate syrup, and add the remaining quarter bar on top. The whole pint is about 370 calories and 53g protein from the listed ingredients; bar and syrup labels vary. Homemade and inspired by Crumbl's SNICKERS Peanut Butter Cookie.",
+      flavorItems: [
+        { quantity: "1 tbsp", text: "Powdered peanut butter", note: "Blend into the base" },
+        { quantity: "1/2 bar", text: "Peanut-caramel protein bar", note: "1/4 Respin; 1/4 topping" },
+        { quantity: "To taste", text: "Sugar-free chocolate syrup", note: "Drizzle after scooping" },
+      ],
+      methodGroups: [
+        { heading: "Peanut base", items: [
+          { number: 1, heading: "Blend", body: "Blend the base with powdered peanut butter until smooth." },
+          { number: 2, heading: "Freeze", body: "Freeze upright and level for 24 hours, below the max-fill line." },
+          { number: 3, heading: "First spin", body: "Rest 5 minutes, then run Regular Ice Cream." },
+        ] },
+        { heading: "Bar + drizzle", items: [
+          { number: 4, heading: "Respin", body: "Chop half a bar. Push one-quarter bar into the pint and Respin without liquid." },
+          { number: 5, heading: "Finish", body: "Scoop, drizzle chocolate syrup, and add the other quarter bar on top." },
+        ] },
+      ],
+      photos: {
+        base: "/images/snickers-peanut-butter-cookie-creami/context-powdered-peanut-butter-polished.webp",
+        flavor: "/images/snickers-peanut-butter-cookie-creami/step-chop-mix-in-polished.webp",
+        method1: "/images/snickers-peanut-butter-cookie-creami/step-regular-ice-cream-polished.webp",
+        method2: "/images/snickers-peanut-butter-cookie-creami/step-chocolate-drizzle-polished.webp",
+        serving: "/images/snickers-peanut-butter-cookie-creami/final-protein-bar-topping-polished.webp",
+      },
+      servingNote: "The last bar pieces stay on top for distinct caramel-peanut bites against the creamy base.",
+      question: "Chocolate drizzle or more peanut crunch?",
+    }),
     socialImages: [
       "/images/snickers-peanut-butter-cookie-creami/context-powdered-peanut-butter-polished.webp",
       "/images/snickers-peanut-butter-cookie-creami/step-regular-ice-cream-polished.webp",
@@ -8764,6 +8834,41 @@ export const desserts = [
     tagline: "CrumblCreamiCut Week 4, Flavor 2 — naturally purple mixed-berry + lime-Jell-O protein Creami pint, Rainbow NERDS Gummy Clusters Respin, and more candy on top. ~350 cal / 44g protein whole pint. No food coloring — color comes from the berries.",
     heroImage: "/images/berry-limeade-cookie-nerds-creami/hero-finished-berry-limeade-nerds-creami-polished.webp",
     prepImage: "/images/berry-limeade-cookie-nerds-creami/step-respin-result-polished.webp",
+    socialHashtags: ["#CrumblCreamiCut", "#ProteinCreami", "#BerryLimeadeCreami", "#HighProteinDessert"],
+    socialCarousel: week4CreamiCarousel({
+      flavor: 2,
+      title: "Berry Limeade Creami",
+      id: "berry-limeade-cookie-nerds-creami",
+      heroImage: "/images/berry-limeade-cookie-nerds-creami/hero-finished-berry-limeade-nerds-creami-polished.webp",
+      calories: "~350–365", protein: "~44g", accent: "coral",
+      hook: "Real berries make the purple base; lime and NERDS Gummy Clusters bring the bright finish.",
+      caption: "Blend half a cup of frozen mixed berries and 1 tsp regular lime Jell-O into the Fairlife-and-whey base. Freeze, spin, then Respin one-third labeled serving of chopped NERDS Gummy Clusters through the pint without added liquid. Scoop and scatter another third on top. The whole pint is about 350–365 calories and 44g protein from the listed ingredients; candy serving size and whey labels vary. Homemade and inspired by Crumbl's Berry Limeade Cookie ft. NERDS Gummy Clusters.",
+      flavorItems: [
+        { quantity: "1/2 cup", text: "Frozen mixed berries", note: "Blend into the base" },
+        { quantity: "1 tsp", text: "Regular lime Jell-O powder", note: "Not sugar-free" },
+        { quantity: "2/3 serving", text: "Rainbow NERDS Gummy Clusters", note: "Half Respin; half topping" },
+      ],
+      methodGroups: [
+        { heading: "Purple lime base", items: [
+          { number: 1, heading: "Blend", body: "Blend the base with berries and regular lime Jell-O until smooth." },
+          { number: 2, heading: "Freeze", body: "Freeze upright and level for 24 hours, below the max-fill line." },
+          { number: 3, heading: "First spin", body: "Rest 5 minutes, then run Regular Ice Cream." },
+        ] },
+        { heading: "Candy finish", items: [
+          { number: 4, heading: "Respin", body: "Chop two-thirds labeled serving of NERDS. Respin half through without liquid." },
+          { number: 5, heading: "Top", body: "Scoop and scatter the other half over the finished pint." },
+        ] },
+      ],
+      photos: {
+        base: "/images/berry-limeade-cookie-nerds-creami/context-frozen-mixed-berries-polished.webp",
+        flavor: "/images/berry-limeade-cookie-nerds-creami/context-nerds-gummy-clusters.webp",
+        method1: "/images/berry-limeade-cookie-nerds-creami/step-regular-ice-cream-polished.webp",
+        method2: "/images/berry-limeade-cookie-nerds-creami/step-add-nerds-mixin-polished.webp",
+        serving: "/images/berry-limeade-cookie-nerds-creami/final-nerds-topping-polished.webp",
+      },
+      servingNote: "The purple comes from berries; the last candy pieces stay on top for a bright finish.",
+      question: "More lime or more berry?",
+    }),
     socialImages: [
       "/images/berry-limeade-cookie-nerds-creami/context-frozen-mixed-berries-polished.webp",
       "/images/berry-limeade-cookie-nerds-creami/step-regular-ice-cream-polished.webp",
@@ -8890,6 +8995,41 @@ export const desserts = [
     tagline: "CrumblCreamiCut Week 4, Flavor 3 (WEEK 4 FINALE) — plain vanilla protein Creami base, three low-cal sandwich cookies Respun through, and chopped cookies-and-cream protein chocolate bar on top. ~360 cal / 47g protein whole pint. Classic cookies-and-cream identity, both swaps work.",
     heroImage: "/images/white-drop-cookies-n-creme-creami/hero-finished-white-drop-cookies-n-creme-creami-polished.webp",
     prepImage: "/images/white-drop-cookies-n-creme-creami/step-respin-result-polished.webp",
+    socialHashtags: ["#CrumblCreamiCut", "#ProteinCreami", "#CookiesAndCreamCreami", "#HighProteinDessert"],
+    socialCarousel: week4CreamiCarousel({
+      flavor: 3,
+      title: "White Drop Cookies & Cream",
+      id: "white-drop-cookies-n-creme-creami",
+      heroImage: "/images/white-drop-cookies-n-creme-creami/hero-finished-white-drop-cookies-n-creme-creami-polished.webp",
+      calories: "~360–375", protein: "47g",
+      hook: "Vanilla protein base, sandwich cookies through Respin, and cookies-and-cream chocolate on top.",
+      caption: "Keep the base simple: Fairlife, whey, and 1 tsp vanilla. Freeze the pint, run Regular Ice Cream, then add three whole low-calorie sandwich cookies and Respin without liquid. Scoop and finish with half a cookies-and-cream protein chocolate bar, chopped on top. The listed ingredient estimates put the whole pint around 360–375 calories and 47g protein; exact cookie and bar labels determine where it lands. Homemade and inspired by Crumbl's White Drop Cookie ft. HERSHEY'S Cookies 'n' Creme.",
+      flavorItems: [
+        { quantity: "1 tsp", text: "Vanilla extract or emulsion", note: "Blend into the base" },
+        { quantity: "3", text: "Low-calorie sandwich cookies", note: "Whole cookies through Respin" },
+        { quantity: "1/2 bar", text: "Cookies-and-cream protein chocolate", note: "Chop on top" },
+      ],
+      methodGroups: [
+        { heading: "Vanilla base", items: [
+          { number: 1, heading: "Blend", body: "Blend the base with vanilla until smooth." },
+          { number: 2, heading: "Freeze", body: "Freeze upright and level for 24 hours, below the max-fill line." },
+          { number: 3, heading: "First spin", body: "Rest 5 minutes, then run Regular Ice Cream." },
+        ] },
+        { heading: "Cookies + finish", items: [
+          { number: 4, heading: "Respin", body: "Add three whole sandwich cookies and Respin without liquid." },
+          { number: 5, heading: "Top", body: "Scoop and scatter the chopped protein chocolate on top." },
+        ] },
+      ],
+      photos: {
+        base: "/images/white-drop-cookies-n-creme-creami/step-frozen-vanilla-base-polished.webp",
+        flavor: "/images/white-drop-cookies-n-creme-creami/context-low-cal-sandwich-cookies-polished.webp",
+        method1: "/images/white-drop-cookies-n-creme-creami/step-add-three-sandwich-cookies-polished.webp",
+        method2: "/images/white-drop-cookies-n-creme-creami/step-protein-chocolate-topping-polished.webp",
+        serving: "/images/white-drop-cookies-n-creme-creami/final-taste-test-polished.webp",
+      },
+      servingNote: "The cookies run through Respin; the chopped chocolate stays on top for the final crunch.",
+      question: "Cookie pieces through the pint or extra chocolate on top?",
+    }),
     socialImages: [
       "/images/white-drop-cookies-n-creme-creami/step-frozen-vanilla-base-polished.webp",
       "/images/white-drop-cookies-n-creme-creami/context-low-cal-sandwich-cookies-polished.webp",
