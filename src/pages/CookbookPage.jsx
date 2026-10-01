@@ -10,7 +10,7 @@ const TABS = [
   ...(breakfasts.length > 0 ? ["Breakfast"] : []),
   ...(desserts.length > 0 ? ["Desserts"] : []),
   ...(quickLunches.length > 0 ? ["Quick Lunches"] : []),
-  ...(powerups.length > 0 ? ["Powerups"] : []),
+  ...(powerups.length > 0 ? ["Power-Ups"] : []),
   ...(snackBoxes.length > 0 ? ["Snack Boxes"] : []),
 ];
 
@@ -20,16 +20,16 @@ const TAB_SLUG = {
   "Breakfast": "breakfast",
   "Desserts": "desserts",
   "Quick Lunches": "quick-lunches",
-  "Powerups": "powerups",
+  "Power-Ups": "powerups",
   "Snack Boxes": "snack-boxes",
 };
 const SLUG_TAB = Object.fromEntries(Object.entries(TAB_SLUG).map(([k, v]) => [v, k]));
 
 function netCarbColor(nc) {
   if (nc == null) return "bg-surface2 text-muted";
-  if (nc < 10) return "bg-emerald-500/15 text-emerald-300";
+  if (nc < 10) return "bg-kidsoft text-kid";
   if (nc <= 20) return "bg-brand/15 text-brand";
-  return "bg-rose-500/15 text-rose-300";
+  return "bg-adultsoft text-adult";
 }
 
 function RecipeCard({ item }) {
@@ -59,7 +59,7 @@ function RecipeCard({ item }) {
         </div>
         <div className="flex flex-wrap items-center gap-1.5 mt-2 text-[10px]">
           {ppc != null && (
-            <span className="px-1.5 py-0.5 rounded bg-emerald-500/10 text-emerald-300 font-semibold" title="Protein per 100 calories — higher is leaner">
+            <span className="px-1.5 py-0.5 rounded bg-kidsoft text-kid font-semibold" title="Protein per 100 calories — higher is leaner">
               {ppc}g P/100cal
             </span>
           )}
@@ -112,31 +112,31 @@ export default function CookbookPage() {
 
   return (
     <div className="min-h-screen bg-page text-ink">
-      <div className="max-w-5xl mx-auto px-4 py-16">
+      <div className="max-w-5xl mx-auto px-4 py-10 sm:py-16">
         <div className="mb-8">
           <h1 className="text-3xl font-black text-ink">Power-Ups</h1>
           <p className="text-muted text-sm mt-1">
             Sauces, breakfasts, desserts, and quick meals — some ready in minutes, others worth making ahead.
           </p>
-          <p className="text-faint text-[10px] mt-1">
+          <p className="text-muted text-xs mt-1">
             Everything here is designed to complement your weekly dinners or stand alone when you need something fast.
           </p>
         </div>
 
         {/* Quick Fix Today */}
         {quickFix && (
-        <div className="mb-8 bg-brand/5 border border-brand/20 rounded-xl p-5">
+        <div className="mb-6 bg-brand/5 border border-brand/20 rounded-xl p-4">
           <div className="flex items-center gap-2 mb-3">
             <span className="text-brand text-xs font-black uppercase tracking-wider">Quick Fix Today</span>
-            <span className="text-faint text-[10px]">Need food now?</span>
+            <span className="text-muted text-xs">Need food now?</span>
           </div>
           <div className="space-y-2">
-              <Link to={`/cookbook/${quickFix.id}`} className="w-full text-left flex items-center justify-between bg-surface2/50 rounded-lg p-3 hover:bg-surface2 transition-colors group">
-                <div>
-                  <span className="text-ink text-xs font-bold group-hover:text-brand transition-colors">{quickFix.title}</span>
-                  <span className="text-muted text-[10px] ml-2">{quickFix.proteinPerServing ?? (quickFix.servings ? Math.round((quickFix.protein / quickFix.servings) * 10) / 10 : quickFix.protein)}g protein/serving in {quickFix.time}</span>
+              <Link to={`/cookbook/${quickFix.id}`} className="w-full text-left flex items-center justify-between gap-3 bg-surface2/50 rounded-lg p-3 hover:bg-surface2 transition-colors group">
+                <div className="min-w-0">
+                  <span className="block text-ink text-sm font-bold group-hover:text-brand transition-colors">{quickFix.title}</span>
+                  <span className="block text-muted text-xs mt-0.5">{quickFix.proteinPerServing ?? (quickFix.servings ? Math.round((quickFix.protein / quickFix.servings) * 10) / 10 : quickFix.protein)}g protein/serving · {quickFix.time}</span>
                 </div>
-                <span className="text-brand text-[10px] font-bold">Try this &rarr;</span>
+                <span className="text-brand text-xs font-bold whitespace-nowrap shrink-0">Try this &rarr;</span>
               </Link>
           </div>
         </div>
@@ -146,6 +146,7 @@ export default function CookbookPage() {
         <div className="mb-4">
           <input
             type="text"
+            aria-label="Search power-ups"
             value={cookbookSearch}
             onChange={(e) => setCookbookSearch(e.target.value)}
             placeholder="Search power-ups..."
@@ -234,7 +235,7 @@ export default function CookbookPage() {
           </div>
         )}
 
-        {tab === "Powerups" && powerups.length > 0 && (
+        {tab === "Power-Ups" && powerups.length > 0 && (
           <div>
             <p className="text-muted text-xs mb-4">
               Hydration drinks + electrolyte fuel. Hot day, pre-workout, during a long sweat — fresh produce + LMNT math, no sugar bombs.

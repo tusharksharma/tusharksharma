@@ -32,7 +32,7 @@ const LINKS = [
   { to: "/cookbook", label: "Power-Ups", match: (p) => p.startsWith("/cookbook") },
   { to: "/leftovers", label: "Leftovers", match: (p) => p.startsWith("/leftovers") },
   { to: "/fan", label: "The Fan", match: (p) => p === "/fan" },
-  { to: "/favorites", label: "Favorites", match: (p) => p.startsWith("/favorites") },
+  { to: "/favorites", label: "Kitchen Picks", match: (p) => p.startsWith("/favorites") },
 ];
 
 export default function Nav() {

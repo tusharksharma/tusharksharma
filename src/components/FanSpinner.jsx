@@ -1,165 +1,104 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { liveRecipes } from "../data/recipes";
 import cardImage from "../utils/cardImage";
 import track from "../hooks/useTrack";
 
-const RECIPES = liveRecipes.filter((r) => r.splitFriendly);
-const COUNT = RECIPES.length;
-const SLICE_DEG = 360 / COUNT;
+const DINNERS = liveRecipes.filter((recipe) => recipe.mealType !== "breakfast");
+const COLORS = ["#a95a24", "#b96b3e", "#7b7760", "#5f7755", "#a47339", "#955646", "#686b4d", "#8a7547"];
+const SEGMENT = 360 / COLORS.length;
+const WHEEL_BACKGROUND = `conic-gradient(${COLORS.map((color, index) => `${color} ${index * SEGMENT}deg ${(index + 1) * SEGMENT}deg`).join(", ")})`;
 
-const BLADE_COLORS = [
-  "#f59e0b", "#ef4444", "#22c55e", "#3b82f6", "#a855f7", "#ec4899", "#14b8a6", "#f97316",
-];
+function randomLineup() {
+  const recipes = [...DINNERS];
+  for (let i = recipes.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [recipes[i], recipes[j]] = [recipes[j], recipes[i]];
+  }
+  return recipes.slice(0, COLORS.length);
+}
 
 export default function FanSpinner() {
+  const [lineup, setLineup] = useState(() => DINNERS.slice(-COLORS.length));
   const [spinning, setSpinning] = useState(false);
   const [result, setResult] = useState(null);
   const [rotation, setRotation] = useState(0);
+  const spinTimer = useRef(null);
 
-  const spin = () => {
-    if (spinning) return;
-    setSpinning(true);
+  useEffect(() => () => clearTimeout(spinTimer.current), []);
+
+  function spin() {
+    if (spinning || !lineup.length) return;
+    const winner = Math.floor(Math.random() * lineup.length);
+    const currentAngle = ((rotation % 360) + 360) % 360;
+    const targetAngle = (360 - (winner * SEGMENT + SEGMENT / 2)) % 360;
+    const alignment = (targetAngle - currentAngle + 360) % 360;
     setResult(null);
-
-    const extraRotations = (4 + Math.random() * 3) * 360;
-    const landingAngle = Math.random() * 360;
-    const totalRotation = rotation + extraRotations + landingAngle;
-
-    setRotation(totalRotation);
-
-    setTimeout(() => {
-      // Pointer is at top (270° in unit-circle terms).
-      // Blade i sits at (i * SLICE_DEG). After rotation R, blade i is at (i * SLICE_DEG + R) % 360.
-      // Find which blade is closest to 270° (top).
-      const finalRotation = totalRotation % 360;
-      let bestIdx = 0;
-      let bestDist = Infinity;
-      for (let i = 0; i < COUNT; i++) {
-        const bladeAngle = (i * SLICE_DEG + finalRotation) % 360;
-        // Distance to 270° (top), wrapping around
-        const dist = Math.min(Math.abs(bladeAngle - 270), 360 - Math.abs(bladeAngle - 270));
-        if (dist < bestDist) { bestDist = dist; bestIdx = i; }
-      }
-      setResult(RECIPES[bestIdx]);
+    setSpinning(true);
+    setRotation(rotation + 360 * 5 + alignment);
+    spinTimer.current = setTimeout(() => {
+      setResult(lineup[winner]);
       setSpinning(false);
-      track("fan_spin", { result: RECIPES[bestIdx].title });
+      track("fan_spin", { result: lineup[winner].title });
     }, 4000);
-  };
+  }
+
+  function shuffle() {
+    if (spinning) return;
+    setLineup(randomLineup());
+    setResult(null);
+    setRotation(0);
+  }
 
   return (
-    <div className="max-w-3xl mx-auto px-4 py-16 text-center">
+    <div className="max-w-3xl mx-auto px-4 py-10 sm:py-16 text-center">
       <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand mb-2">Feeling Lucky?</p>
       <h1 className="text-3xl font-black text-ink">In the Hands of the Fan</h1>
-      <p className="text-muted text-sm mt-2 mb-10">
-        Can't decide? Spin the fan. Cook whatever it lands on.
-      </p>
+      <p className="text-muted text-sm mt-2 mb-8">Eight dinner ideas, one easy decision. Spin for tonight's pick.</p>
 
-      {/* Fan */}
-      <div className="relative w-72 h-72 sm:w-96 sm:h-96 mx-auto">
-        {/* Pointer at top */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1 z-20">
-          <div className="w-0 h-0 border-l-[10px] border-r-[10px] border-t-[18px] border-l-transparent border-r-transparent border-t-brand drop-shadow-lg" />
-        </div>
-
-        {/* Spinning fan body */}
+      <div className="relative w-64 h-64 sm:w-80 sm:h-80 mx-auto">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-2 z-20 w-0 h-0 border-l-[12px] border-r-[12px] border-t-[22px] border-l-transparent border-r-transparent border-t-brand drop-shadow-lg" aria-hidden="true" />
         <div
-          className="w-full h-full relative"
-          style={{
-            transform: `rotate(${rotation}deg)`,
-            transition: spinning ? "transform 4s cubic-bezier(0.15, 0.6, 0.15, 1)" : "none",
-          }}
+          className="w-full h-full rounded-full border-8 border-surface shadow-xl relative"
+          style={{ background: WHEEL_BACKGROUND, transform: `rotate(${rotation}deg)`, transition: spinning ? "transform 4s cubic-bezier(0.15, 0.6, 0.15, 1)" : "none" }}
+          aria-hidden="true"
         >
-          {RECIPES.map((recipe, i) => {
-            const angle = i * SLICE_DEG;
-            const color = BLADE_COLORS[i % BLADE_COLORS.length];
-            const dimmed = result && result.id !== recipe.id;
-
-            return (
-              <div
-                key={recipe.id}
-                className="absolute top-1/2 left-1/2 origin-bottom-left"
-                style={{
-                  transform: `rotate(${angle}deg)`,
-                  width: "50%",
-                  height: 0,
-                }}
-              >
-                {/* Blade */}
-                <div
-                  className="absolute bottom-0 left-0 transition-opacity duration-500"
-                  style={{
-                    width: "92%",
-                    height: "48px",
-                    marginLeft: "16px",
-                    marginBottom: "-24px",
-                    background: `linear-gradient(90deg, ${color}dd, ${color}88)`,
-                    borderRadius: "4px 24px 24px 4px",
-                    opacity: dimmed ? 0.25 : 1,
-                    boxShadow: `0 2px 8px ${color}44`,
-                  }}
-                >
-                  {/* Recipe name on blade */}
-                  <div
-                    className="absolute inset-0 flex items-center justify-center px-4"
-                  >
-                    <span className="text-ink font-bold text-[9px] sm:text-[11px] truncate drop-shadow-md text-center leading-tight">
-                      {recipe.title}
-                    </span>
-                  </div>
-                </div>
-              </div>
-            );
+          {lineup.map((recipe, index) => {
+            const angle = (index + 0.5) * SEGMENT * Math.PI / 180;
+            return <span key={recipe.id} className="absolute -translate-x-1/2 -translate-y-1/2 text-white font-black text-xl drop-shadow-md" style={{ left: `${50 + 34 * Math.sin(angle)}%`, top: `${50 - 34 * Math.cos(angle)}%` }}>{index + 1}</span>;
           })}
-
-          {/* Center hub */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-surface border-4 border-brand z-10 flex items-center justify-center shadow-2xl">
-            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-surface2 border-2 border-brand/50 flex items-center justify-center">
-              <span className="text-brand text-[8px] sm:text-[10px] font-black">FAN</span>
-            </div>
-          </div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full bg-surface border-4 border-brand flex items-center justify-center shadow-xl text-brand font-black text-sm">FAN</div>
         </div>
       </div>
 
-      {/* Spin button */}
-      <button
-        onClick={spin}
-        disabled={spinning}
-        className={`mt-8 px-10 py-4 rounded-xl font-bold text-base transition-all cursor-pointer ${
-          spinning
-            ? "bg-surface2 text-muted cursor-wait"
-            : "bg-brand text-brandink hover:bg-brand hover:scale-105 shadow-lg shadow-brand/20"
-        }`}
-      >
-        {spinning ? "Spinning..." : result ? "Spin Again" : "Spin the Fan"}
-      </button>
+      <div className="mt-7 flex flex-wrap justify-center gap-3">
+        <button onClick={spin} disabled={spinning} className="px-8 py-3 rounded-xl bg-brand text-brandink font-bold text-sm shadow-lg shadow-brand/20 disabled:opacity-60 cursor-pointer">{spinning ? "Spinning…" : result ? "Spin Again" : "Spin the Fan"}</button>
+        <button onClick={shuffle} disabled={spinning} className="px-5 py-3 rounded-xl border border-line bg-surface text-ink font-bold text-sm disabled:opacity-60 cursor-pointer">New lineup</button>
+      </div>
 
-      {/* Result */}
       {result && !spinning && (
-        <div className="mt-10 bg-surface border border-brand/40 rounded-xl overflow-hidden max-w-md mx-auto text-left">
-          {result.image && (
-            <img {...cardImage(result.image, { sizes: "(min-width: 480px) 448px, 100vw" })} alt={result.title} width="640" height="400" className="w-full h-40 object-cover" />
-          )}
-          <div className="p-6">
-            <p className="text-brand text-[10px] font-bold uppercase tracking-wider mb-2">Tonight you're making</p>
-            <h3 className="text-ink font-black text-xl">{result.title}</h3>
-            <div className="flex items-center gap-2 mt-1 text-xs text-muted">
-              <span className="text-brand font-bold">{result.protein}g protein</span>
-              <span>&middot;</span>
-              <span>{result.calories} cal</span>
-              <span>&middot;</span>
-              <span>{result.time}</span>
-            </div>
-            <p className="text-muted text-sm mt-3 leading-relaxed">{result.makeThisWhen}</p>
-            <Link
-              to={`/recipes/${result.slug}`}
-              className="mt-4 inline-block px-6 py-3 bg-brand text-brandink font-bold rounded-xl text-sm hover:bg-brand transition-colors"
-            >
-              Let's Cook &rarr;
-            </Link>
+        <div role="status" className="mt-8 bg-surface border border-brand/40 rounded-xl overflow-hidden max-w-md mx-auto text-left">
+          {result.image && <img {...cardImage(result.image, { sizes: "(min-width: 480px) 448px, 100vw" })} alt={result.title} width="640" height="400" className="w-full h-40 object-cover" />}
+          <div className="p-5">
+            <p className="text-brand text-xs font-bold uppercase tracking-wider mb-2">Tonight you're making</p>
+            <h2 className="text-ink font-black text-xl">{result.title}</h2>
+            <p className="text-muted text-sm mt-2">{result.time} · {result.protein}g protein · {result.calories} cal</p>
+            <Link to={`/recipes/${result.slug}`} className="mt-4 inline-block px-6 py-3 bg-brand text-brandink font-bold rounded-xl text-sm">Let's Cook →</Link>
           </div>
         </div>
       )}
+
+      <div className="mt-10 text-left">
+        <h2 className="text-ink text-lg font-black mb-3">On tonight's wheel</h2>
+        <ol className="grid sm:grid-cols-2 gap-2">
+          {lineup.map((recipe, index) => (
+            <li key={recipe.id} className="rounded-lg border border-line bg-surface px-3 py-2 flex items-center gap-3">
+              <span className="w-7 h-7 flex-shrink-0 rounded-full text-white text-sm font-black flex items-center justify-center" style={{ background: COLORS[index] }}>{index + 1}</span>
+              <span className="text-ink text-sm font-semibold">{recipe.title}</span>
+            </li>
+          ))}
+        </ol>
+      </div>
     </div>
   );
 }

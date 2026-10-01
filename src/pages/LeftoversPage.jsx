@@ -41,6 +41,8 @@ export default function LeftoversPage() {
   const [selected, setSelected] = useState(() => readSelectedFromURL(search));
   const [query, setQuery] = useState("");
   const [mode, setMode] = useState("AND");
+  const [showBrands, setShowBrands] = useState(false);
+  const [showPicker, setShowPicker] = useState(true);
 
   // Build indexes once
   const { brand, generic } = useMemo(() => buildUnifiedIndex(liveRecipes), []);
@@ -48,19 +50,20 @@ export default function LeftoversPage() {
 
   // Filtered chips based on search query
   const filteredGroups = useMemo(() => {
-    if (!query.trim()) return grouped;
+    if (!query.trim() && showBrands) return grouped;
     const q = query.toLowerCase();
     return grouped
       .map((g) => ({
         ...g,
         items: g.items.filter(
           (it) =>
-            it.label.toLowerCase().includes(q) ||
-            (it.sublabel && it.sublabel.toLowerCase().includes(q))
+            (showBrands || !!q || it.kind === "generic") &&
+            (!q || it.label.toLowerCase().includes(q) ||
+            (it.sublabel && it.sublabel.toLowerCase().includes(q)))
         ),
       }))
       .filter((g) => g.items.length > 0);
-  }, [grouped, query]);
+  }, [grouped, query, showBrands]);
 
   // Recipe results
   const results = useMemo(
@@ -75,11 +78,14 @@ export default function LeftoversPage() {
 
   function toggle(slug) {
     setSelected((curr) => (curr.includes(slug) ? curr.filter((s) => s !== slug) : [...curr, slug]));
+    setShowPicker(selected.length === 1 && selected.includes(slug));
+    requestAnimationFrame(() => document.getElementById("leftover-results")?.scrollIntoView({ block: "start" }));
   }
 
   function clearAll() {
     setSelected([]);
     setQuery("");
+    setShowPicker(true);
   }
 
   const selectedItems = selected
@@ -121,8 +127,9 @@ export default function LeftoversPage() {
           <div className="flex flex-col sm:flex-row gap-3">
             <input
               type="text"
+              aria-label="Filter ingredients"
               value={query}
-              onChange={(e) => setQuery(e.target.value)}
+              onChange={(e) => { setQuery(e.target.value); setShowPicker(true); }}
               placeholder="Filter ingredients (e.g. 'cheddar', 'broth', 'iceberg')…"
               className="flex-1 bg-surface border border-line rounded-xl px-4 py-2.5 text-sm text-ink placeholder-faint focus:outline-none focus:border-brand"
             />
@@ -171,9 +178,49 @@ export default function LeftoversPage() {
         </div>
       </section>
 
-      {/* Ingredient chips (collapsed when results are showing) */}
+      <div className={`flex flex-col ${query && showPicker ? "flex-col-reverse" : ""}`}>
+      {/* Search results bring the filtered picker close to the search field. */}
+      {selected.length > 0 && (
+      <section id="leftover-results" className="scroll-mt-52">
+        <div className="max-w-5xl mx-auto px-4 py-8 sm:py-12">
+          {results.length === 0 ? (
+            <div className="text-center py-10 px-6 bg-surface/40 border border-line rounded-2xl">
+              <p className="text-danger text-xs font-black uppercase tracking-[0.2em] mb-2">No matches</p>
+              <p className="text-ink text-xl font-bold mb-2">Nothing uses all of those</p>
+              <p className="text-muted text-sm max-w-md mx-auto leading-relaxed">
+                Remove an ingredient or switch to{" "}
+                <button onClick={() => setMode("OR")} className="text-brand underline cursor-pointer">any of these</button>
+                {" "}to see recipes using one or more of your picks.
+              </p>
+            </div>
+          ) : (
+            <>
+              <h2 className="text-ink text-xl font-black mb-5" aria-live="polite">{results.length} {results.length === 1 ? "recipe" : "recipes"} match</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                {results.map(({ recipe, matchCount }) => (
+                  <div key={recipe.id} className="relative">
+                    <RecipeCard recipe={recipe} />
+                    {selected.length > 1 && <div className="absolute top-3 right-3 z-10 bg-brand text-brandink text-xs font-black uppercase tracking-wider px-2 py-1 rounded-lg shadow-lg pointer-events-none">{matchCount}/{selected.length} match</div>}
+                  </div>
+                ))}
+              </div>
+            </>
+          )}
+        </div>
+      </section>
+      )}
+
       <section className="border-b border-line">
         <div className="max-w-5xl mx-auto px-4 py-6 sm:py-8 space-y-6">
+          <div className="flex items-center justify-between gap-4">
+            <div>
+              <h2 className="text-ink text-lg font-black">{selected.length ? "Add another ingredient" : "Choose an ingredient"}</h2>
+              <p className="text-muted text-sm">Start with a common ingredient, or search for a specific product.</p>
+            </div>
+            {selected.length > 0 && <button onClick={() => setShowPicker((value) => !value)} aria-expanded={showPicker} className="shrink-0 rounded-lg border border-line bg-surface px-3 py-2 text-sm font-bold text-ink">{showPicker ? "Hide" : "Browse"}</button>}
+          </div>
+          {showPicker && <>
+          {!query && <button onClick={() => setShowBrands((value) => !value)} aria-pressed={showBrands} className="text-brand text-sm font-bold underline underline-offset-4">{showBrands ? "Show common ingredients only" : "Show branded products too"}</button>}
           {filteredGroups.length === 0 ? (
             <div className="text-muted text-sm text-center py-8">
               No ingredients match "{query}". Try a different search.
@@ -226,13 +273,14 @@ export default function LeftoversPage() {
               </div>
             ))
           )}
+          </>}
         </div>
       </section>
+      </div>
 
-      {/* Recipe results */}
-      <section>
+      {/* Empty state before the first selection */}
+      {selected.length === 0 && <section>
         <div className="max-w-5xl mx-auto px-4 py-8 sm:py-12">
-          {selected.length === 0 ? (
             <div className="text-center py-16 px-6 bg-surface/40 border border-line rounded-2xl">
               <p className="text-brand text-xs font-black uppercase tracking-[0.2em] mb-2">
                 Get Started
@@ -245,48 +293,8 @@ export default function LeftoversPage() {
                 Plate dinner that uses it. Pick more to tighten the match.
               </p>
             </div>
-          ) : results.length === 0 ? (
-            <div className="text-center py-16 px-6 bg-surface/40 border border-line rounded-2xl">
-              <p className="text-red-400 text-xs font-black uppercase tracking-[0.2em] mb-2">
-                No matches
-              </p>
-              <p className="text-ink text-xl font-bold mb-2">
-                Nothing uses ALL of those
-              </p>
-              <p className="text-muted text-sm max-w-md mx-auto leading-relaxed">
-                Try removing a chip — or switch to{" "}
-                <button onClick={() => setMode("OR")} className="text-brand underline cursor-pointer">
-                  ANY of these
-                </button>{" "}
-                to see recipes that match any one of your ingredients.
-              </p>
-            </div>
-          ) : (
-            <>
-              <div className="flex items-center justify-between mb-6">
-                <h2 className="text-ink text-xl font-black">
-                  {results.length} {results.length === 1 ? "recipe" : "recipes"} match
-                </h2>
-                {mode === "AND" && selected.length > 1 && (
-                  <p className="text-muted text-xs">All {selected.length} ingredients used</p>
-                )}
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-                {results.map(({ recipe, matchCount }) => (
-                  <div key={recipe.id} className="relative">
-                    <RecipeCard recipe={recipe} />
-                    {selected.length > 1 && (
-                      <div className="absolute top-3 right-3 z-10 bg-brand text-brandink text-[10px] font-black uppercase tracking-wider px-2 py-1 rounded-lg shadow-lg pointer-events-none">
-                        {matchCount}/{selected.length} match
-                      </div>
-                    )}
-                  </div>
-                ))}
-              </div>
-            </>
-          )}
         </div>
-      </section>
+      </section>}
     </div>
   );
 }

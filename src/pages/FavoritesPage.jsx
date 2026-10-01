@@ -53,13 +53,13 @@ function ProductCard({ product, collection }) {
   return (
     <div className="bg-surface border border-line rounded-xl overflow-hidden hover:border-brand/40 transition-all flex flex-col">
       {product.image ? (
-        <div className="w-full h-48 bg-page flex items-center justify-center overflow-hidden">
-          <img src={product.image} alt={`${product.brand} ${product.name}`} className="w-full h-full object-contain p-3" loading="lazy" />
+        <div className="w-full h-44 bg-surface2 border-b border-line flex items-center justify-center overflow-hidden">
+          <img src={product.image} alt={`${product.brand} ${product.name}`} className="w-full h-full object-contain p-5" loading="lazy" />
         </div>
       ) : (
-        <div className="w-full h-48 bg-gradient-to-br from-surface to-page border-b border-line flex flex-col items-center justify-center px-3">
-          <span className="text-muted text-[10px] uppercase tracking-widest">{isEditorial ? "Editorial pick" : product.brand}</span>
-          <span className="text-muted text-base font-bold text-center mt-2 leading-tight">{product.name}</span>
+        <div className="w-full h-44 bg-surface2 border-b border-line flex flex-col items-center justify-center px-6" aria-hidden="true">
+          <svg viewBox="0 0 64 64" className="w-12 h-12 text-brand/60" fill="none" stroke="currentColor" strokeWidth="2" strokeLinejoin="round"><path d="M12 20 32 10l20 10v28L32 58 12 48V20Z"/><path d="m12 20 20 10 20-10M32 30v28"/></svg>
+          <span className="text-brand text-xs uppercase tracking-widest font-black mt-3">{isEditorial ? "Editorial pick" : product.brand}</span>
         </div>
       )}
       <div className="p-5 flex flex-col gap-3 flex-1">
@@ -154,7 +154,7 @@ export default function FavoritesPage() {
   };
 
   useMeta({
-    title: !collectionSlug ? "Favorites" : `${activeCollection.title} — Favorites`,
+    title: !collectionSlug ? "Kitchen Picks" : `${activeCollection.title} — Kitchen Picks`,
     description: `${activeCollection.title} — the kitchen tools, pantry staples, and brands we actually purchased, used, and would buy again. Curated favorites on The Split Plate.`,
     image: activeCollection.ogImage,
   });
@@ -163,23 +163,22 @@ export default function FavoritesPage() {
 
   return (
     <div className="min-h-screen bg-page text-ink">
-      <div className="max-w-5xl mx-auto px-4 py-16">
-        <div className="mb-6">
-          <h1 className="text-3xl sm:text-4xl font-black text-ink">Favorites</h1>
-          <p className="text-muted text-base mt-2 leading-relaxed">
-            Products that earned a permanent place in our kitchen.
-          </p>
-          <p className="text-muted text-sm mt-2 leading-relaxed">
-            Every product here was purchased by us and used in real recipes on the site — not sponsored placements, not backfilled from a stock catalog.
-          </p>
+      <div className="max-w-5xl mx-auto px-4 py-10 sm:py-16">
+        <div className="mb-4">
+          <h1 className="text-3xl sm:text-4xl font-black text-ink">Kitchen Picks</h1>
+          <p className="text-muted text-sm sm:text-base mt-2 leading-relaxed">Products we've bought, used, and kept in our kitchen.</p>
         </div>
 
-        <div className="mb-6 bg-surface/60 border border-line rounded-lg px-4 py-3 text-sm text-muted leading-relaxed">
-          <span className="text-ink font-bold">Disclosure:</span> Every product here was purchased and used in our kitchen. The primary "Buy on Amazon" links are affiliate links (Amazon Associates) — we may earn a small commission at no additional cost to you. Direct-to-brand links are currently non-affiliate. Affiliate availability never determines what appears here.
+        <div className="mb-5 bg-surface/60 border border-line rounded-lg px-4 py-3 text-xs sm:text-sm text-muted leading-relaxed">
+          <span className="text-ink font-bold">Affiliate disclosure:</span> Amazon links may earn us a small commission at no extra cost to you. Direct brand links are currently non-affiliate. Commissions do not determine our picks.
         </div>
 
         {collections.length > 1 && (
-          <div className="flex flex-wrap gap-2 mb-8">
+          <>
+          <select aria-label="Product collection" value={activeCollection.slug} onChange={(event) => setCollection(event.target.value)} className="sm:hidden w-full mb-5 rounded-lg border border-line bg-surface px-3 py-3 text-ink text-sm font-bold">
+            {collections.map((c) => <option key={c.id} value={c.slug}>{c.title}</option>)}
+          </select>
+          <div className="hidden sm:flex flex-wrap gap-2 mb-5" aria-label="Product collections">
             {collections.map((c) => (
               <button
                 key={c.id}
@@ -192,9 +191,10 @@ export default function FavoritesPage() {
               </button>
             ))}
           </div>
+          </>
         )}
 
-        <p className="text-muted text-sm mb-6 leading-relaxed">{activeCollection.tagline}</p>
+        <p className="text-muted text-sm mb-5 leading-relaxed">{activeCollection.tagline}</p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {activeProducts.map((p) => (

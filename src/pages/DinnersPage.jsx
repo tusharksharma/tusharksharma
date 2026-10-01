@@ -128,9 +128,9 @@ function proteinPer100Cal(r) {
 
 function netCarbColor(nc) {
   if (nc == null) return "bg-surface2 text-muted";
-  if (nc < 10) return "bg-emerald-500/15 text-emerald-300";
+  if (nc < 10) return "bg-kidsoft text-kid";
   if (nc <= 20) return "bg-brand/15 text-brand";
-  return "bg-rose-500/15 text-rose-300";
+  return "bg-adultsoft text-adult";
 }
 
 // Chips carry their live match count. Without it every chip looks equally
@@ -350,7 +350,7 @@ export default function DinnersPage() {
 
   return (
     <div className="min-h-screen bg-page text-ink">
-      <div className="max-w-5xl mx-auto px-4 py-16">
+      <div className="max-w-5xl mx-auto px-4 py-10 sm:py-16">
         <div className="mb-8">
           <h1 className="text-3xl font-black text-ink">Dinners</h1>
           <p className="text-muted text-sm mt-1">
@@ -362,6 +362,7 @@ export default function DinnersPage() {
         <div className="mb-4">
           <input
             type="text"
+            aria-label="Search dinners"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search recipes, proteins, tags..."
@@ -500,11 +501,11 @@ export default function DinnersPage() {
             {filtered.map((r) => (
               <Link key={r.id} to={`/recipes/${r.slug}`} className="bg-surface border border-line rounded-xl overflow-hidden hover:border-brand/40 transition-all group block">
                 {r.image && (
-                  <img {...cardImage(r.image)} alt={r.title} width="640" height="400" className="w-full h-40 object-cover" loading="lazy" />
+                  <img {...cardImage(r.image)} alt={r.title} width="640" height="400" className={`w-full h-40 object-cover ${r.slug === "french-dip-polenta-dunkers" ? "object-[center_72%]" : ""}`} loading="lazy" />
                 )}
                 <div className="p-5">
                   <h3 className="text-ink font-bold text-sm group-hover:text-brand transition-colors">{r.title}</h3>
-                  <p className="text-muted text-xs mt-1 line-clamp-1 sm:line-clamp-2">{r.makeThisWhen || r.role}</p>
+                  <p className="text-muted text-sm mt-1 line-clamp-2">{r.makeThisWhen || r.role}</p>
                   {/* First row is the leanness read — protein, calories, and
                       whether the macros are estimated. Time gets its own row
                       below so five fragments don't compete in one strip. */}
@@ -516,7 +517,7 @@ export default function DinnersPage() {
                       r.meta.macros.estimated ? (
                         <span className="ml-auto px-1.5 py-0.5 rounded bg-brand/20 text-brand text-[9px] font-bold uppercase tracking-wider" title="Macros are an estimate — calculated, not measured per-ingredient">~ EST</span>
                       ) : (
-                        <span className="ml-auto px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-300 text-[9px] font-bold uppercase tracking-wider" title="Macros are verified per-ingredient">✓ VERIFIED</span>
+                        <span className="ml-auto px-1.5 py-0.5 rounded bg-kidsoft text-kid text-[10px] font-bold uppercase tracking-wider" title="Macros are verified per-ingredient">✓ VERIFIED</span>
                       )
                     )}
                   </div>
@@ -527,7 +528,7 @@ export default function DinnersPage() {
                       from sm up, and are one tap away on the recipe page regardless. */}
                   <div className="flex flex-wrap items-center gap-1.5 mt-2 text-[10px]">
                     {proteinPer100Cal(r) != null && (
-                      <span className="hidden sm:inline-block px-1.5 py-0.5 rounded bg-emerald-500/10 text-emerald-300 font-semibold" title="Protein per 100 calories — higher is leaner">
+                      <span className="hidden sm:inline-block px-1.5 py-0.5 rounded bg-kidsoft text-kid font-semibold" title="Protein per 100 calories — higher is leaner">
                         {proteinPer100Cal(r)}g P/100cal
                       </span>
                     )}
@@ -543,15 +544,15 @@ export default function DinnersPage() {
                   {(r.splitCook?.adult?.label || r.splitCook?.kid?.label) && (
                     <div className="grid grid-cols-2 gap-1.5 mt-2">
                       {r.splitCook?.adult?.label && (
-                        <div className="bg-red-950/30 border border-red-900/40 rounded px-2 py-1.5">
-                          <span className="text-red-400 text-[9px] font-bold uppercase tracking-wider">Adult</span>
-                          <p className="text-muted text-[10px] mt-0.5 line-clamp-2 leading-tight">{r.splitCook.adult.label.replace(/^Adult\s*[—-]\s*/i, "")}</p>
+                        <div className="bg-adultsoft border border-adultline rounded px-2 py-1.5">
+                          <span className="text-adult text-xs font-bold uppercase tracking-wider">Adult</span>
+                          <p className="text-muted text-xs mt-0.5 line-clamp-2 leading-tight">{r.splitCook.adult.label.replace(/^Adult\s*[—-]\s*/i, "")}</p>
                         </div>
                       )}
                       {r.splitCook?.kid?.label && (
-                        <div className="bg-green-950/30 border border-green-900/40 rounded px-2 py-1.5">
-                          <span className="text-green-400 text-[9px] font-bold uppercase tracking-wider">Kid</span>
-                          <p className="text-muted text-[10px] mt-0.5 line-clamp-2 leading-tight">{r.splitCook.kid.label.replace(/^Kid(\s*Path)?\s*[—-]\s*/i, "")}</p>
+                        <div className="bg-kidsoft border border-kidline rounded px-2 py-1.5">
+                          <span className="text-kid text-xs font-bold uppercase tracking-wider">Kid</span>
+                          <p className="text-muted text-xs mt-0.5 line-clamp-2 leading-tight">{r.splitCook.kid.label.replace(/^Kid(\s*Path)?\s*[—-]\s*/i, "")}</p>
                         </div>
                       )}
                     </div>

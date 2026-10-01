@@ -371,11 +371,11 @@ export function buildBrandIndex(recipes) {
 
 function categorizeBrand(brand) {
   const text = `${brand.name} ${brand.item}`.toLowerCase();
-  if (/broth|alfredo|guac|hot sauce|seasoning|chili|chimichurri|mustard|fish sauce|soy|sesame|caesar|cilantro|paste|spice|dan-o/.test(text)) return "Sauce & Flavor";
+  if (/broth|alfredo|guac|\b(?:sauce|crema|ranch|dressing|dip)\b|seasoning|chili (?:crisp|oil)|chimichurri|mustard|soy sauce|sesame oil|paste|vinegar|dan-o/.test(text)) return "Sauce & Flavor";
+  if (/\b(beef|pork|chicken|sausage|carnitas|bacon|steak|fillet|thigh|chop|wing|meatball|turkey pepperoni)\b/.test(text)) return "Protein";
+  if (/lettuce|tomato|asparagus|spinach|broccoli|onion|carrot|cucumber/.test(text)) return "Vegetables";
+  if (/\b(tortilla|chips?|rice|penne|pasta|bun|gnocchi|noodle|ramen|wrap|roll|polenta)\b/.test(text)) return "Carbs";
   if (/cheese|cheddar|cottage|sour cream|wedge|milk|fairlife|laughing/.test(text)) return "Dairy";
-  if (/tortilla|chip|rice|penne|pasta|bun|gnocchi|noodle|ramen|wrap|roll/.test(text)) return "Carbs";
-  if (/beef|pork|chicken|sausage|carnitas|bacon|steak|fillet|thigh|chop|wing/.test(text)) return "Protein";
-  if (/lettuce|tomato|asparagus|spinach|broccoli|onion|chili|carrot|cucumber/.test(text)) return "Vegetables";
   return "Pantry";
 }
 

@@ -390,62 +390,60 @@ function CookDay({ day, label, vibe, id, time, reheats, isReheat, fixedBatch, re
           onClick={(e) => { e.preventDefault(); onToggle(); }}
           aria-label={`${day}: ${label} — ${enabled ? "included in this week" : "skipped"}`}
           aria-pressed={enabled}
-          className={`w-5 h-5 rounded border flex-shrink-0 flex items-center justify-center text-[10px] cursor-pointer transition-colors ${
+          className={`w-7 h-7 rounded border flex-shrink-0 flex items-center justify-center text-sm cursor-pointer transition-colors ${
             enabled ? "bg-brand border-brand text-brandink" : "border-line bg-surface2"
           }`}
         >
           <span aria-hidden="true">{enabled && "\u2713"}</span>
         </button>
         {!isReheatDay ? (
-          <span className="text-muted text-[10px]">{enabled ? "Included" : "Skipped — removed from grocery"}</span>
+          <span className="text-muted text-xs">{enabled ? "Included" : "Skipped — removed from grocery"}</span>
         ) : (
-          <span className="text-green-500/80 text-[10px] font-semibold">Reheats from {reheatOf} batch — no new grocery</span>
+          <span className="text-kid text-xs font-semibold">Reheats from {reheatOf} batch — no new grocery</span>
         )}
       </div>
       <Link to={enabled ? `/recipes/${r.slug}?adults=${authoredBatchDay ? 2 : adults}&kids=${authoredBatchDay ? 2 : kids}&leftovers=${leftovers ? 1 : 0}` : "#"} className={`block ${enabled ? "group" : "pointer-events-none"}`}>
         <div className={`bg-surface border rounded-xl overflow-hidden transition-all ${enabled ? "border-line hover:border-brand/40" : "border-line/50"}`}>
-          <div className="flex flex-col sm:flex-row">
-            <div className="sm:w-40 flex-shrink-0 relative">
-              <img {...cardImage(r.image, { sizes: "(min-width: 640px) 33vw, 100vw" })} alt={r.title} className={`w-full h-32 sm:h-full object-cover transition-all ${enabled ? "group-hover:brightness-110" : "grayscale brightness-50"}`} loading="lazy" />
+          <div className="flex flex-row">
+            <div className="w-24 sm:w-40 flex-shrink-0 relative">
+              <img {...cardImage(r.image, { sizes: "(min-width: 640px) 33vw, 96px" })} alt={r.title} className={`w-full h-full min-h-36 object-cover transition-all ${enabled ? "group-hover:brightness-110" : "grayscale brightness-50"}`} loading="lazy" />
               <div className="absolute top-2 left-2 flex gap-1.5">
                 <span className="text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded bg-brand text-brandink">{day}</span>
                 {fixedBatch && enabled && <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-brand/80 text-ink">Batch</span>}
-                {isReheatDay && <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-green-600/80 text-ink">Reheat</span>}
-                {reheats && !isReheatDay && enabled && <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-green-600/80 text-ink">Reheats</span>}
+                {isReheatDay && <span className="hidden sm:inline text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-kid text-page">Reheat</span>}
+                {reheats && !isReheatDay && enabled && <span className="hidden sm:inline text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-kid text-page">Reheats</span>}
               </div>
             </div>
-            <div className="flex-1 p-4">
-              <div className="flex items-center gap-2 mb-1">
-                <span className="text-brand text-[10px] font-bold uppercase tracking-wider">{label}</span>
-                <span className="text-faint text-[10px]">{time} &middot; {authoredBatchDay ? "2 adult + 2 kid plates per dinner" : `${servings} servings`}</span>
+            <div className="flex-1 min-w-0 p-3 sm:p-4">
+              <div className="flex flex-wrap items-center gap-x-2 gap-y-0.5 mb-1">
+                <span className="text-brand text-xs font-bold uppercase tracking-wider">{label}</span>
+                <span className="text-muted text-xs">{time} &middot; {authoredBatchDay ? "2 adult + 2 kid plates" : `${servings} servings`}</span>
               </div>
               <h3 className={`font-bold text-sm transition-colors ${enabled ? "text-ink group-hover:text-brand" : "text-faint line-through"}`}>{r.title}</h3>
-              {enabled && vibe && (
-                <p className="text-muted text-[10px] italic mt-0.5">{vibe}</p>
-              )}
+              {enabled && vibe && <p className="hidden sm:block text-muted text-xs mt-1 line-clamp-2">{vibe}</p>}
               {enabled && (
                 <>
                   <div className="mt-2 space-y-1">
                     <div className="flex gap-2 items-start">
-                      <span className="text-red-400 text-[10px] font-black mt-0.5 w-8 flex-shrink-0">ADULT</span>
-                      <p className="text-muted text-xs">{adult}</p>
+                      <span className="text-adult text-xs font-black mt-0.5 w-10 flex-shrink-0">ADULT</span>
+                      <p className="text-muted text-xs line-clamp-1 sm:line-clamp-none">{adult}</p>
                     </div>
                     <div className="flex gap-2 items-start">
-                      <span className="text-green-400 text-[10px] font-black mt-0.5 w-8 flex-shrink-0">KID</span>
-                      <p className="text-muted text-xs">{kid}</p>
+                      <span className="text-kid text-xs font-black mt-0.5 w-10 flex-shrink-0">KID</span>
+                      <p className="text-muted text-xs line-clamp-1 sm:line-clamp-none">{kid}</p>
                     </div>
                   </div>
-                  <div className="mt-2 flex gap-1.5 flex-wrap">
+                  <div className="hidden sm:flex mt-2 gap-1.5 flex-wrap">
                     {needs.map((n) => (
                       <span key={n} className="text-[10px] bg-surface2 text-muted px-2 py-0.5 rounded-full">{n}</span>
                     ))}
                   </div>
-                  <div className="mt-2 flex items-center gap-2 text-[10px]">
+                  <div className="mt-2 flex flex-wrap items-center gap-1.5 text-xs">
                     <span className="text-brand font-bold">{r.protein}g protein</span>
                     <span className="text-faint">&middot;</span>
                     <span className="text-muted">{r.calories} cal/serving</span>
-                    <span className="text-faint">&middot;</span>
-                    <span className="text-muted">{Math.round((r.protein * 4 / r.calories) * 100)}% PPC</span>
+                    <span className="hidden sm:inline text-faint">&middot;</span>
+                    <span className="hidden sm:inline text-muted">{Math.round((r.protein * 4 / r.calories) * 100)}% PPC</span>
                   </div>
                 </>
               )}
@@ -558,7 +556,7 @@ export default function YourWeek() {
 
   return (
     <section id="your-week" className="border-b border-line bg-gradient-to-b from-page to-surface/80 scroll-mt-16">
-      <div className="max-w-3xl mx-auto px-4 py-16">
+      <div className="max-w-3xl mx-auto px-4 py-10 sm:py-16">
         {/* Header */}
         <div className="text-center mb-6">
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand mb-2">Sample Weekly Plans</p>
@@ -580,7 +578,7 @@ export default function YourWeek() {
           <div className="flex items-center justify-between mb-3">
             <div>
               <span className="text-ink text-xs font-bold">Your family</span>
-              <span className="text-faint text-[10px] ml-2">Adjusts non-batch groceries + portions</span>
+              <span className="text-muted text-xs ml-2">Adjusts non-batch groceries + portions</span>
             </div>
             <span role="status" aria-live="polite" className="text-brand text-[10px] font-bold animate-pulse">
               {showFeedback ? `Updated for ${servings}` : ""}
@@ -594,7 +592,7 @@ export default function YourWeek() {
                   <button key={n} onClick={() => handleFamilyChange(setAdults, n)}
                     aria-label={`${n} ${n === 1 ? "adult" : "adults"}`}
                     aria-pressed={adults === n}
-                    className={`w-9 h-9 rounded-lg text-sm font-bold transition-all cursor-pointer ${adults === n ? "bg-red-500 text-ink scale-110" : "bg-surface2 text-muted hover:bg-line"}`}
+                    className={`w-9 h-9 rounded-lg text-sm font-bold transition-all cursor-pointer ${adults === n ? "bg-adult text-page scale-110" : "bg-surface2 text-muted hover:bg-line"}`}
                   >{n}</button>
                 ))}
               </div>
@@ -606,7 +604,7 @@ export default function YourWeek() {
                   <button key={n} onClick={() => handleFamilyChange(setKids, n)}
                     aria-label={`${n} ${n === 1 ? "kid" : "kids"}`}
                     aria-pressed={kids === n}
-                    className={`w-9 h-9 rounded-lg text-sm font-bold transition-all cursor-pointer ${kids === n ? "bg-green-500 text-ink scale-110" : "bg-surface2 text-muted hover:bg-line"}`}
+                    className={`w-9 h-9 rounded-lg text-sm font-bold transition-all cursor-pointer ${kids === n ? "bg-kid text-page scale-110" : "bg-surface2 text-muted hover:bg-line"}`}
                   >{n}</button>
                 ))}
               </div>
@@ -643,13 +641,13 @@ export default function YourWeek() {
             </button>
           </div>
         ) : (
-          <p className="text-faint text-[10px] text-center mb-4">
+          <p className="text-muted text-xs text-center mb-4">
             Can't do all 3? Uncheck a dinner below to skip it — grocery updates automatically.
           </p>
         )}
 
         {/* Start here */}
-        <div className="mb-8 bg-brand/5 border border-brand/20 rounded-xl py-4 px-5">
+        <div className="hidden sm:block mb-8 bg-brand/5 border border-brand/20 rounded-xl py-4 px-5">
           <div className="flex items-center gap-2 mb-2">
             <span className="text-brand text-xs font-black uppercase tracking-wider">Start here</span>
             <span className="text-faint text-[10px]">Zero decisions required</span>
@@ -873,7 +871,10 @@ function PlanSelector({ weeks, activeWeek, onChange, currentWeek }) {
       )}
       <div className="text-center mt-1">
         <span className="text-muted text-xs">{currentWeek.subtitle}</span>
-        {currentWeek.description && <p className="text-faint text-[10px] mt-1">{currentWeek.description}</p>}
+        {currentWeek.description && <details className="mt-2 max-w-2xl mx-auto rounded-lg border border-line bg-surface/50 px-3 py-2 text-left">
+          <summary className="text-brand text-xs font-bold cursor-pointer">About this plan</summary>
+          <p className="text-muted text-sm leading-relaxed mt-2">{currentWeek.description}</p>
+        </details>}
       </div>
     </div>
   );
