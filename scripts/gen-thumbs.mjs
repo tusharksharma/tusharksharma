@@ -39,6 +39,7 @@ const COOKBOOK_ARRAYS = [
   "sauces",
   "breakfasts",
   "quickLunches",
+  "batchPrep",
   "desserts",
   "bases",
   "powerups",

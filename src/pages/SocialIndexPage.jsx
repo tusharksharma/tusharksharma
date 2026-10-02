@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { liveRecipes } from "../data/recipes";
-import { sauces, bases, breakfasts, desserts, quickLunches, powerups, snackBoxes } from "../data/cookbook";
+import { sauces, bases, breakfasts, desserts, quickLunches, batchPrep, powerups, snackBoxes } from "../data/cookbook";
 import cardImage from "../utils/cardImage";
 import useMeta from "../hooks/useMeta";
 
@@ -11,6 +11,7 @@ const COOKBOOK_SECTIONS = [
   { label: "Breakfasts", items: breakfasts },
   { label: "Desserts", items: desserts },
   { label: "Quick Lunches", items: quickLunches },
+  { label: "Batch Prep", items: batchPrep },
   { label: "Powerups", items: powerups },
   { label: "Snack Boxes", items: snackBoxes },
 ];

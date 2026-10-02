@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import useMeta from "../hooks/useMeta";
-import { sauces, quickLunches, desserts, breakfasts, bases, powerups, snackBoxes } from "../data/cookbook";
+import { sauces, quickLunches, batchPrep, desserts, breakfasts, bases, powerups, snackBoxes } from "../data/cookbook";
 import cardImage from "../utils/cardImage";
 
 const TABS = [
@@ -10,6 +10,7 @@ const TABS = [
   ...(breakfasts.length > 0 ? ["Breakfast"] : []),
   ...(desserts.length > 0 ? ["Desserts"] : []),
   ...(quickLunches.length > 0 ? ["Quick Lunches"] : []),
+  ...(batchPrep.length > 0 ? ["Batch Prep"] : []),
   ...(powerups.length > 0 ? ["Power-Ups"] : []),
   ...(snackBoxes.length > 0 ? ["Snack Boxes"] : []),
 ];
@@ -20,6 +21,7 @@ const TAB_SLUG = {
   "Breakfast": "breakfast",
   "Desserts": "desserts",
   "Quick Lunches": "quick-lunches",
+  "Batch Prep": "batch-prep",
   "Power-Ups": "powerups",
   "Snack Boxes": "snack-boxes",
 };
@@ -116,7 +118,7 @@ export default function CookbookPage() {
         <div className="mb-8">
           <h1 className="text-3xl font-black text-ink">Power-Ups</h1>
           <p className="text-muted text-sm mt-1">
-            Sauces, breakfasts, desserts, and quick meals — some ready in minutes, others worth making ahead.
+            Sauces, breakfasts, desserts, quick meals, and batch-prep dinners.
           </p>
           <p className="text-muted text-xs mt-1">
             Everything here is designed to complement your weekly dinners or stand alone when you need something fast.
@@ -231,6 +233,15 @@ export default function CookbookPage() {
               {filterItems(quickLunches).map((q) => (
                 <RecipeCard key={q.id} item={q} />
               ))}
+            </div>
+          </div>
+        )}
+
+        {tab === "Batch Prep" && batchPrep.length > 0 && (
+          <div>
+            <p className="text-muted text-xs mb-4">Cook one complete batch, then portion it for several meals.</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {filterItems(batchPrep).map((item) => <RecipeCard key={item.id} item={item} />)}
             </div>
           </div>
         )}
