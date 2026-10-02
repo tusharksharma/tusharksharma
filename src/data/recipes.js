@@ -3589,11 +3589,11 @@ const recipes = [
       { label: "Second dinner: why it reheats well", src: "/videos/danos-bone-in-thighs/danos-chicken-worth-reheating.mp4" },
     ],
     socialImages: [
-      "/images/danos-thighs-2026/season-polished.webp",
-      "/images/danos-thighs-2026/roast-polished.webp",
-      "/images/danos-thighs-2026/split-polished.webp",
-      "/images/danos-thighs-2026/reheat-polished.webp",
-      "/images/danos-thighs-2026/plate-polished.webp",
+      "/images/danos-thighs-2026/season-polished-v2.webp",
+      "/images/danos-thighs-2026/roast-polished-v2.webp",
+      "/images/danos-thighs-2026/split-polished-v2.webp",
+      "/images/danos-thighs-2026/reheat-polished-v2.webp",
+      "/images/danos-thighs-2026/plate-polished-v2.webp",
     ],
     socialCarousel: {
       heroBadge: "One cook, two plates",
@@ -3601,7 +3601,7 @@ const recipes = [
       heroTitle: "Dan-O's Bone-In Thighs",
       heroStats: [{ value: "1", label: "shared pan" }, { value: "2", label: "family dinners" }, { value: "165°F", label: "safe temp" }],
       hook: "One pan of chicken. Mild for kids, spicy for adults. Save the juices for dinner two.",
-      heroPhoto: "/images/danos-thighs-2026/hero-polished.webp",
+      heroPhoto: "/images/danos-thighs-2026/hero-polished-v2.webp",
       captionBody: "Dan-O's bone-in thighs are our one-cook, two-plate dinner: Original seasoning for the kids, Spicy for adults. The filmed batch used one pan and roasted at 350°F; cook to 165°F in the thickest thigh rather than relying on a fixed time. Adult asparagus gets Umami Lemon Heat; the kid plate stays plain. Save chicken and pan juices for a second dinner, then reheat leftovers to 165°F. The filmed portions were not weighed, so the page's adult and kid macros are estimates from the original recipe. Recipe: thesplitplate.com/recipes/danos-bone-in-thighs",
       ingredientGroups: [
         { card: 0, accent: "amber", heading: "The shared pan", items: [
@@ -3625,14 +3625,14 @@ const recipes = [
         ] },
       ],
       ingredientCardPhotos: [
-        { src: "/images/danos-thighs-2026/season-polished.webp", position: "50% 45%", zoom: 1.03, layout: "side" },
+        { src: "/images/danos-thighs-2026/season-polished-v2.webp", position: "50% 45%", zoom: 1.03, layout: "side" },
         { src: "/images/umami-lemon-heat-asparagus.webp", position: "50% 50%", zoom: 1.03, layout: "side" },
       ],
       methodCardPhotos: [
-        { src: "/images/danos-thighs-2026/roast-polished.webp", position: "50% 50%", zoom: 1.03, layout: "side" },
-        { src: "/images/danos-thighs-2026/reheat-polished.webp", position: "50% 50%", zoom: 1.03, layout: "side" },
+        { src: "/images/danos-thighs-2026/roast-polished-v2.webp", position: "50% 50%", zoom: 1.03, layout: "side" },
+        { src: "/images/danos-thighs-2026/reheat-polished-v2.webp", position: "50% 50%", zoom: 1.03, layout: "side" },
       ],
-      servingPhoto: { src: "/images/danos-thighs-2026/plate-polished.webp", position: "50% 50%", zoom: 1.03, layout: "side" },
+      servingPhoto: { src: "/images/danos-thighs-2026/plate-polished-v2.webp", position: "50% 50%", zoom: 1.03, layout: "side" },
       servingGroups: [{ accent: "amber", heading: "Adult and kid plates", items: [
         { text: "Same chicken cook; different seasoning and asparagus finish." },
         { text: "Portions in the film were not weighed. Original recipe macros are estimates, not filmed measurements." },
@@ -3776,16 +3776,16 @@ const recipes = [
         "Reserved pan juices for storing and reheating the chicken",
       ],
       steps: [
-        { text: "Pat the thighs dry. Arrange in one pan, keeping the Original-seasoned kid pieces separate from the Spicy adult pieces.", image: "/images/danos-thighs-2026/season-polished.webp", imageAlt: "Mild bone-in thighs being arranged in the filmed pan" },
-        { text: "Roast uncovered. This filmed pan took about 90 minutes at 350°F; thigh size and oven conditions vary. Use a thermometer to verify 165°F in the thickest part, away from the bone.", image: "/images/danos-thighs-2026/roast-polished.webp", imageAlt: "Spicy seasoning being added to the adult side of the chicken pan" },
-        { text: "Cook asparagus. Whisk light mayonnaise, lemon, soy, Dijon, and chili oil for the adult Umami Lemon Heat finish. Keep the kid asparagus plain.", image: "/images/danos-thighs-2026/split-polished.webp", imageAlt: "Filmed adult chicken plate beside asparagus" },
-        { text: "Serve adults chicken with sauced asparagus. Serve the first-night kid plate with plain asparagus and a buttered bun. Save remaining chicken with its pan juices; refrigerate promptly.", image: "/images/danos-thighs-2026/plate-polished.webp", imageAlt: "Two cooked bone-in thighs plated beside asparagus" },
-        { text: "For dinner two, reheat the refrigerated chicken with its juices. The filmed reheat took about 30 minutes at 350°F; use a thermometer to check the center reaches 165°F before serving.", image: "/images/danos-thighs-2026/reheat-polished.webp", imageAlt: "Reheated chicken being served with asparagus" },
+        { text: "Pat the thighs dry. Arrange in one pan, keeping the Original-seasoned kid pieces separate from the Spicy adult pieces.", image: "/images/danos-thighs-2026/season-polished-v2.webp", imageAlt: "Mild bone-in thighs being arranged in the filmed pan" },
+        { text: "Roast uncovered. This filmed pan took about 90 minutes at 350°F; thigh size and oven conditions vary. Use a thermometer to verify 165°F in the thickest part, away from the bone.", image: "/images/danos-thighs-2026/roast-polished-v2.webp", imageAlt: "Spicy seasoning being added to the adult side of the chicken pan" },
+        { text: "Cook asparagus. Whisk light mayonnaise, lemon, soy, Dijon, and chili oil for the adult Umami Lemon Heat finish. Keep the kid asparagus plain.", image: "/images/danos-thighs-2026/split-polished-v2.webp", imageAlt: "Filmed adult chicken plate beside asparagus" },
+        { text: "Serve adults chicken with sauced asparagus. Serve the first-night kid plate with plain asparagus and a buttered bun. Save remaining chicken with its pan juices; refrigerate promptly.", image: "/images/danos-thighs-2026/plate-polished-v2.webp", imageAlt: "Two cooked bone-in thighs plated beside asparagus" },
+        { text: "For dinner two, reheat the refrigerated chicken with its juices. The filmed reheat took about 30 minutes at 350°F; use a thermometer to check the center reaches 165°F before serving.", image: "/images/danos-thighs-2026/reheat-polished-v2.webp", imageAlt: "Reheated chicken being served with asparagus" },
       ],
       nutrition: "The adult ~48g protein and kid ~28g protein values elsewhere on this page are estimates from the original recipe portions. The filmed portions were not weighed, so no measured nutrition total is claimed for the one-pan version.",
       images: [
-        { src: "/images/danos-thighs-2026/hero-polished.webp", alt: "Filmed adult Dan-O's bone-in thighs and asparagus" },
-        { src: "/images/danos-thighs-2026/reheat-polished.webp", alt: "Second-dinner asparagus with reheated chicken" },
+        { src: "/images/danos-thighs-2026/hero-polished-v2.webp", alt: "Filmed adult Dan-O's bone-in thighs and asparagus" },
+        { src: "/images/danos-thighs-2026/reheat-polished-v2.webp", alt: "Second-dinner asparagus with reheated chicken" },
       ],
     },
     brands: [
