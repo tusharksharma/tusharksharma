@@ -941,7 +941,9 @@ function NutritionDetails({ nutrition, tags }) {
         {macros && (
           <p className="text-ink">
             <span className="font-semibold">
-              {estimated ? "~" : ""}{macros.protein}g protein / {macros.fat}g fat / {macros.carbs}g carbs
+              {estimated ? "~" : ""}{macros.protein}g protein
+              {macros.fat != null && <> / {macros.fat}g fat</>}
+              {macros.carbs != null && <> / {macros.carbs}g carbs</>}
             </span>
             {macros.netCarbs != null && <span> ({macros.netCarbs}g net carbs)</span>}
             {costPerServing && <span className="text-muted"> · {costPerServing} per serving</span>}
