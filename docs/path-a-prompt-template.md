@@ -125,8 +125,9 @@ path so the quality is verifiable, not vibes.
 - **Output:** sRGB WebP in `public/images/<slug>/`. Two conventions, pick by
   content type — put the spec once in the file header, never per prompt:
   - **Dinner / footage-derived sets:** **1152×2048** portrait (9:16, matching the
-    filmed frame), regenerated **in place over the original filename**. This is
-    what the site actually renders and what recent ships use.
+    filmed frame), saved as a `-polished.webp` sibling and wired into every
+    recipe and carousel photo slot before publishing. Keep the raw still only
+    as source material outside the live image set.
   - **Cookbook items:** 2048×2048, saved over the matching `-polished.webp`.
 - **Tool:** ChatGPT / built-in imagegen, image-to-image via file upload. No Path B.
 - **Delivery:** write the .md next to the rest of the package —

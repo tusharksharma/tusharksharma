@@ -29,7 +29,7 @@ The short-form video rules — production, TikTok editing, the HyperFrames visua
 
 ## Video Package Standing Rule
 
-Taking a finished edit from `~/Documents/New project/video-edits/` live means recipe entry + CDN video + footage-derived images in one push, then a gated Path A pass. Read the package README first — it decides whether you're authoring a **new recipe** or attaching video/images/carousel to an **existing** one (in which case the recipe body stays untouched). Runbook: [docs/video-package-to-site.md](docs/video-package-to-site.md).
+Taking a finished edit from `~/Documents/New project/video-edits/` live means recipe entry + CDN video + footage-derived, ImageGen-transformed images in one push. Transform every image rendered on the recipe page or social carousel with built-in ImageGen before publishing; raw extracted frames are source material, not final site assets. Preserve the actual food, portions, cooking stage, and real setting, and inspect each transformed result. Read the package README first — it decides whether you're authoring a **new recipe** or attaching video/images/carousel to an **existing** one (in which case the recipe body stays untouched). Runbook: [docs/video-package-to-site.md](docs/video-package-to-site.md).
 
 **Recipe-page image gate:** after a Path A or video update, integrate the approved images into the recipe page itself: a polished split hero, purposeful supporting photos, and action-matched images beside the relevant method steps. If the film is a distinct version, give it its own pictured steps while preserving the original method. Visually check the full recipe and social pages at desktop and phone widths before pushing. Full rule: [docs/recipe-image-integration.md](docs/recipe-image-integration.md).
 

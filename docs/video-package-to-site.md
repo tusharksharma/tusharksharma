@@ -2,12 +2,13 @@
 
 A "package" is a finished edit handed over from `~/Documents/New project/video-edits/<package>/`:
 an approved MP4, covers, caption, voiceover script, raw clips, and a README. Going
-live means three deliverables, in one push, plus a gated fourth:
+live means three deliverables, in one push, with the image transformation completed before that push:
 
 1. **Recipe entry** live in `src/data/recipes.js`
 2. **Video variants** on the GitHub Release CDN
-3. **Footage-derived images** — a rich process/step set built from the raw clips
-4. **Path A prompt set** (gated — the user regenerates locally, then a second push deploys them)
+3. **Footage-derived, ImageGen-transformed images** — a rich process/step set built from the raw clips and transformed with the built-in ImageGen tool before publishing
+
+When the handoff includes a Path A prompt set, run its prompt linter before using it. Save the transformed results in `public/images/<slug>/`, connect those paths to the recipe steps and social carousel, and inspect every actual page/card crop. Do not ship raw extracted frames as temporary final images or defer their transformation to a later push.
 
 > Read the package README first. It decides which of the two shapes below you're in.
 
@@ -60,6 +61,8 @@ which build the numbers describe, what the camera used instead, and that it's th
 same dinner either way. Don't silently rewrite the macros to match the shortcut.
 
 ## Images
+
+Extract candidate stills, inspect what is actually visible, then use built-in ImageGen once per final image. Direct the grade toward named food colors with bounds, improve texture and subject separation, and preserve the real ingredient count, cook stage, hands, and kitchen. Reject a result that invents toppings, cooks an unbaked stage, changes the adult/kid build, or crops the named food out of the card. Save final sRGB WebP assets with `-polished` filenames and keep the source frames in the package/work area for comparison.
 
 - `ffmpeg -y -loglevel error -ss <t> -i <clip> -frames:v 1 -q:v 2 <out.png>`
 - Contact sheets: `magick a.png b.png … -resize 300x533 +append sheet.png`.
