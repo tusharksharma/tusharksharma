@@ -56,15 +56,14 @@ function PrintStep({ step }) {
   );
 }
 
-function PrintBanner({ model, compact = false, adjustedServings }) {
+function PrintBanner({ model, adjustedServings }) {
   return (
-    <div className={`print-banner ${compact ? "print-banner-compact" : ""}`}>
+    <div className="print-banner">
       <div className="print-banner-top">
         <span>THE SPLIT PLATE / RECIPE</span>
-        {compact && <span>METHOD + NOTES</span>}
       </div>
       <h1>{model.title}</h1>
-      {!compact && <p>{adjustedServings ? `Adjusted recipe for ${adjustedServings} servings. Use the ingredient quantities below.` : model.hook || model.description}</p>}
+      <p>{adjustedServings ? `Adjusted recipe for ${adjustedServings} servings. Use the ingredient quantities below.` : model.hook || model.description}</p>
     </div>
   );
 }
@@ -83,9 +82,12 @@ export default function RecipePrintCard({ model, scale = 1, totalServings, baseS
   const otherKeys = model.keys.slice(1);
   const hasNotes = otherKeys.length > 0 || model.troubleshooting.length > 0;
   const safety = model.safety;
+  const ingredientCount = model.ingredientGroups.reduce((sum, group) => sum + group.items.length, 0);
+  const methodSteps = model.method.phases.reduce((sum, phase) => sum + (phase.choices?.length ? phase.choices.reduce((count, choice) => count + choice.steps.length, 0) : phase.steps.length), 0);
+  const compact = ingredientCount <= 12 && methodSteps <= 8 && !hasNotes && !model.split;
 
   return (
-    <div className="print-sheet" aria-label={`Printable recipe: ${model.title}`}>
+    <div className={`print-sheet ${compact ? "print-sheet-compact" : ""}`} aria-label={`Printable recipe: ${model.title}`}>
       <section className="print-page print-first-page">
         <PrintBanner model={model} adjustedServings={scale !== 1 ? totalServings : null} />
         <div className="print-facts">
@@ -117,11 +119,9 @@ export default function RecipePrintCard({ model, scale = 1, totalServings, baseS
             {safety.critical.map((warning) => `${warning.label}${warning.detail ? `: ${warning.detail}` : ""}`).join(" ")}
           </p>
         )}
-        <p className="print-source">thesplitplate.com{model.path}</p>
       </section>
 
       <section className="print-page print-method-page">
-        <PrintBanner model={model} compact />
         {(model.method.splitPoint || model.makeThisWhen) && (
           <p className="print-method-intro">{model.method.splitPoint || model.makeThisWhen}</p>
         )}
@@ -180,6 +180,7 @@ export default function RecipePrintCard({ model, scale = 1, totalServings, baseS
             )}
           </div>
         )}
+        <p className="print-source">thesplitplate.com{model.path}</p>
       </section>
     </div>
   );
