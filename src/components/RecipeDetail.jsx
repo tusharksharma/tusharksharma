@@ -7,6 +7,7 @@ import { balanceColumns, buildCookbookModel, buildRecipeModel, flattenSteps, ing
 import CookingMode from "./CookingMode";
 import LeftoversPanel from "./LeftoversPanel";
 import RecipeActionBar, { StickyJump } from "./RecipeActionBar";
+import RecipePrintCard from "./RecipePrintCard";
 
 /*
  * Recipe page.
@@ -106,13 +107,16 @@ export default function RecipeDetail({ recipe, item, group }) {
       return next;
     });
 
+  const printRecipe = () => {
+    track("recipe_print", { recipe: model.title, slug: model.slug });
+    window.print();
+  };
+
   return (
     <div className="theme-fade min-h-screen bg-page text-ink">
-      <RecipeHeader model={model} />
+      <RecipeHeader model={model} onPrint={printRecipe} />
 
-      {/* Compact print-only recipe card (2 pages max). Screen users see the
-          full article below; print rendering swaps to this stripped view. */}
-      <PrintCard model={model} />
+      <RecipePrintCard model={model} />
 
       <article className="mx-auto max-w-3xl px-4 pb-16 print:hidden">
         {/* ── 1. Hero image. 4:3 on mobile, 16:9 on desktop. The video used to
@@ -202,7 +206,7 @@ export default function RecipeDetail({ recipe, item, group }) {
           ))}
 
           {/* ── Reader actions: save, share, push ingredients to the list. ── */}
-          <RecipeActionBar saveEntry={saveEntry} ingredients={flatIngredients} />
+          <RecipeActionBar saveEntry={saveEntry} ingredients={flatIngredients} onPrint={printRecipe} />
         </header>
 
         {/* Sticky jump between the two long sections. */}
@@ -505,7 +509,7 @@ export default function RecipeDetail({ recipe, item, group }) {
    PAGE CHROME
    ════════════════════════════════════════════ */
 
-function RecipeHeader({ model }) {
+function RecipeHeader({ model, onPrint }) {
   return (
     <div className="theme-fade sticky top-0 z-10 border-b border-line bg-page/90 backdrop-blur-sm print:hidden">
       <div className="mx-auto flex max-w-3xl items-center gap-2 px-4 py-3">
@@ -529,7 +533,7 @@ function RecipeHeader({ model }) {
 
         <button
           type="button"
-          onClick={() => { track("recipe_print", { recipe: model.title, slug: model.slug }); window.print(); }}
+          onClick={onPrint}
           className="flex-shrink-0 rounded-full border border-line px-3 py-1 text-xs font-semibold text-muted hover:text-brand cursor-pointer"
           title="Print this recipe"
         >
@@ -1189,62 +1193,6 @@ function scaleIngredientText(text, scale) {
     }
     return tilde + formatNum(parseFrac(num) * scale);
   });
-}
-
-// Print-only 2-page recipe card. Hidden on screen (`hidden`), visible when
-// printing (`print:block`). Renders title + one-line macros + ingredients
-// (with section headers) + numbered steps. Skips whyMostFail, whyThisWorks,
-// executionRules, troubleshooting, brands, mealPrep, splitCook adult/kid
-// branches — those live only on the screen article.
-// Driven off the model rather than the raw record so it covers cookbook
-// entries, and so split dinners that keep their steps only under splitCook
-// lanes still print a method instead of an empty list.
-function PrintCard({ model }) {
-  return (
-    <div className="mx-auto hidden max-w-3xl px-6 py-4 print:block">
-      <div className="mb-3 flex items-baseline justify-between border-b border-neutral-300 pb-2">
-        <h2 className="text-2xl font-black text-black">{model.title}</h2>
-        <span className="text-[10px] text-neutral-600">thesplitplate.com{model.path}</span>
-      </div>
-      {model.facts.length > 0 && (
-        <p className="mb-3 text-sm text-neutral-800">
-          {model.facts.map((f, i) => (
-            <span key={f.key}>
-              {i > 0 && " · "}
-              <strong>{f.estimated ? "~" : ""}{f.value}</strong> {f.label.toLowerCase()}
-            </span>
-          ))}
-        </p>
-      )}
-      {model.split && (
-        <p className="mb-3 text-xs italic text-neutral-700">
-          Split: {model.split.adult.label} · {model.split.kid.label}
-        </p>
-      )}
-
-      <h2 className="mt-4 mb-1 border-b border-neutral-300 pb-0.5 text-xs font-black uppercase tracking-wider text-black">Ingredients</h2>
-      {model.ingredientGroups.map((g) => (
-        <div key={g.id}>
-          <p className="mt-1.5 text-[10px] font-bold uppercase text-neutral-600">{g.title}</p>
-          <ul className="space-y-0.5 text-[11px] leading-snug text-neutral-900">
-            {g.items.map((it, i) => (
-              <li key={i} className="-indent-3 pl-3">• {ingredientText(it)}</li>
-            ))}
-          </ul>
-        </div>
-      ))}
-
-      <h2 className="mt-4 mb-1 border-b border-neutral-300 pb-0.5 text-xs font-black uppercase tracking-wider text-black">Method</h2>
-      <ol className="ml-4 list-decimal space-y-1 text-[11px] leading-snug text-neutral-900">
-        {flattenSteps(model).map((s, i) => (
-          <li key={i}>
-            {s.lane && <em className="text-neutral-600">{s.lane}: </em>}
-            {s.text}
-          </li>
-        ))}
-      </ol>
-    </div>
-  );
 }
 
 /**

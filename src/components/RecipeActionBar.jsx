@@ -23,6 +23,7 @@ function Icon({ path, filled }) {
 const HEART = <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z" />;
 const SHARE = <><circle cx="18" cy="5" r="3" /><circle cx="6" cy="12" r="3" /><circle cx="18" cy="19" r="3" /><line x1="8.6" y1="13.5" x2="15.4" y2="17.5" /><line x1="15.4" y1="6.5" x2="8.6" y2="10.5" /></>;
 const CART = <><circle cx="9" cy="21" r="1" /><circle cx="20" cy="21" r="1" /><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6" /></>;
+const PRINTER = <><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" /><path d="M6 15h12v7H6zM18 12h.01" /></>;
 
 function ActionButton({ onClick, active, children }) {
   return (
@@ -40,7 +41,7 @@ function ActionButton({ onClick, active, children }) {
   );
 }
 
-export default function RecipeActionBar({ saveEntry, ingredients }) {
+export default function RecipeActionBar({ saveEntry, ingredients, onPrint }) {
   const { isSaved, toggleSave, addGrocery } = useMyList();
   const saved = isSaved(saveEntry.key);
   const [shared, setShared] = useState(false);
@@ -84,6 +85,11 @@ export default function RecipeActionBar({ saveEntry, ingredients }) {
       <ActionButton onClick={onShare}>
         <Icon path={SHARE} />
         {shared ? "Link copied" : "Share"}
+      </ActionButton>
+
+      <ActionButton onClick={onPrint}>
+        <Icon path={PRINTER} />
+        Print recipe
       </ActionButton>
 
       {ingredients.length > 0 && (
