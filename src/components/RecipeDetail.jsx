@@ -8,6 +8,7 @@ import CookingMode from "./CookingMode";
 import LeftoversPanel from "./LeftoversPanel";
 import RecipeActionBar, { StickyJump } from "./RecipeActionBar";
 import RecipePrintCard from "./RecipePrintCard";
+import { scaleIngredientText } from "../utils/scaleIngredient";
 
 /*
  * Recipe page.
@@ -59,6 +60,7 @@ export default function RecipeDetail({ recipe, item, group }) {
   const [kidChoice, setKidChoice] = useState(0);
 
   const baseServings = (recipe || item).servings || 4;
+  const [batchServings, setBatchServings] = useState(baseServings);
   // fixedBatch recipes (e.g. one-bake meal preps that yield N containers) do
   // NOT scale by household size or leftovers — the batch quantity IS the
   // recipe. Scaling would ask the shopper to buy 2x tomatoes but the recipe
@@ -66,8 +68,8 @@ export default function RecipeDetail({ recipe, item, group }) {
   // A cookbook entry's yield IS the recipe (a batch of sauce, a tray of
   // brownies), so it never scales by household — same rule as fixedBatch.
   const isFixedBatch = !isDinner || !!recipe.meta?.fixedBatch;
-  const totalServings = isFixedBatch ? baseServings : adults + kids;
-  const scale = isFixedBatch ? 1 : (totalServings / baseServings) * (leftovers ? 2 : 1);
+  const totalServings = isFixedBatch ? (isDinner ? Number(batchServings) || baseServings : baseServings) : (adults + kids) * (leftovers ? 2 : 1);
+  const scale = isFixedBatch ? (isDinner ? totalServings / baseServings : 1) : totalServings / baseServings;
 
   const cookSteps = useMemo(() => flattenSteps(model), [model]);
 
@@ -116,7 +118,7 @@ export default function RecipeDetail({ recipe, item, group }) {
     <div className="theme-fade min-h-screen bg-page text-ink">
       <RecipeHeader model={model} onPrint={printRecipe} />
 
-      <RecipePrintCard model={model} />
+      <RecipePrintCard model={model} scale={scale} totalServings={totalServings} baseServings={baseServings} />
 
       <article className="mx-auto max-w-3xl px-4 pb-16 print:hidden">
         {/* ── 1. Hero image. 4:3 on mobile, 16:9 on desktop. The video used to
@@ -206,7 +208,7 @@ export default function RecipeDetail({ recipe, item, group }) {
           ))}
 
           {/* ── Reader actions: save, share, push ingredients to the list. ── */}
-          <RecipeActionBar saveEntry={saveEntry} ingredients={flatIngredients} onPrint={printRecipe} />
+          <RecipeActionBar saveEntry={saveEntry} ingredients={flatIngredients} onPrint={printRecipe} printServings={totalServings} canAdjustServings={isDinner} />
         </header>
 
         {/* Sticky jump between the two long sections. */}
@@ -217,6 +219,8 @@ export default function RecipeDetail({ recipe, item, group }) {
           <ServingsControl
             isFixedBatch={isFixedBatch}
             baseServings={baseServings}
+            batchServings={batchServings}
+            setBatchServings={isDinner ? setBatchServings : null}
             adults={adults}
             kids={kids}
             leftovers={leftovers}
@@ -666,16 +670,27 @@ function SafetyBand({ safety }) {
   );
 }
 
-function ServingsControl({ isFixedBatch, baseServings, adults, kids, leftovers, scale, setAdults, setKids, setLeftovers }) {
+function ServingsControl({ isFixedBatch, baseServings, batchServings, setBatchServings, adults, kids, leftovers, scale, setAdults, setKids, setLeftovers }) {
   if (isFixedBatch) {
     return (
       <div className="flex flex-wrap items-center gap-x-3 gap-y-2 rounded-xl border border-line bg-surface2 px-4 py-3">
         <span className="rounded border border-brand/30 bg-brand/15 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-brand">
           Batch cook
         </span>
-        <span className="text-xs text-muted">
-          Yields {baseServings} servings — quantities below are the full batch.
-        </span>
+        {setBatchServings ? (
+          <>
+            <label htmlFor="batch-servings" className="text-xs font-semibold text-ink">Servings</label>
+            <input id="batch-servings" type="number" min="1" max="24" value={batchServings}
+              onChange={(event) => {
+                if (event.target.value === "") { setBatchServings(""); return; }
+                const next = Number(event.target.value);
+                if (Number.isInteger(next) && next >= 1 && next <= 24) setBatchServings(next);
+              }}
+              onBlur={() => { if (!batchServings) setBatchServings(baseServings); }}
+              className="w-16 rounded border border-line bg-surface px-2 py-1 text-sm text-ink" />
+            <span className="text-xs text-muted">Original yield: {baseServings}. Adjusted ingredients will appear in print; check pan size and cooking time.</span>
+          </>
+        ) : <span className="text-xs text-muted">Yields {baseServings} servings — quantities below are the full batch.</span>}
       </div>
     );
   }
@@ -1154,45 +1169,6 @@ function StepList({ steps, startAt = 1, tone: toneKey }) {
       })}
     </ol>
   );
-}
-
-function parseFrac(s) {
-  s = s.trim();
-  // "1/2" → 0.5, "3/4" → 0.75
-  if (s.includes("/")) {
-    const [num, den] = s.split("/").map(Number);
-    return den ? num / den : parseFloat(s);
-  }
-  return parseFloat(s);
-}
-
-function formatNum(n) {
-  // Try to express as a clean fraction if close
-  const fracs = [[0.25, "1/4"], [0.33, "1/3"], [0.5, "1/2"], [0.67, "2/3"], [0.75, "3/4"]];
-  const whole = Math.floor(n);
-  const remainder = n - whole;
-  if (remainder < 0.05) return whole.toString();
-  for (const [val, str] of fracs) {
-    if (Math.abs(remainder - val) < 0.05) {
-      return whole > 0 ? `${whole} ${str}` : str;
-    }
-  }
-  const rounded = Math.round(n * 10) / 10;
-  return rounded % 1 === 0 ? rounded.toString() : rounded.toFixed(1);
-}
-
-function scaleIngredientText(text, scale) {
-  if (scale === 1) return text;
-  // Match leading quantities: "24", "1.25", "2-2.5", "1/2", "3/4",
-  // optionally prefixed with "~" for creator estimates ("~300 g cottage cheese").
-  return text.replace(/^(~?)(\d+\/\d+|\d+(?:\.\d+)?(?:\s*[-–]\s*(?:\d+\/\d+|\d+(?:\.\d+)?))?)/g, (_match, tilde, num) => {
-    // Handle ranges like "2-2.5" or "1/2-3/4"
-    if (/[-–]/.test(num) && !num.startsWith("-")) {
-      const parts = num.split(/\s*[-–]\s*/).map((p) => formatNum(parseFrac(p) * scale));
-      return tilde + parts.join("–");
-    }
-    return tilde + formatNum(parseFrac(num) * scale);
-  });
 }
 
 /**

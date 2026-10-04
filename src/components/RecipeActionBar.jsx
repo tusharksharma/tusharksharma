@@ -41,7 +41,7 @@ function ActionButton({ onClick, active, children }) {
   );
 }
 
-export default function RecipeActionBar({ saveEntry, ingredients, onPrint }) {
+export default function RecipeActionBar({ saveEntry, ingredients, onPrint, printServings, canAdjustServings }) {
   const { isSaved, toggleSave, addGrocery } = useMyList();
   const saved = isSaved(saveEntry.key);
   const [shared, setShared] = useState(false);
@@ -89,8 +89,9 @@ export default function RecipeActionBar({ saveEntry, ingredients, onPrint }) {
 
       <ActionButton onClick={onPrint}>
         <Icon path={PRINTER} />
-        Print recipe
+        Print {printServings} serving{printServings === 1 ? "" : "s"}
       </ActionButton>
+      {canAdjustServings && <a href="#ingredients" className="px-1 text-xs font-semibold text-brand underline underline-offset-2">Adjust servings</a>}
 
       {ingredients.length > 0 && (
         <ActionButton onClick={onAdd}>

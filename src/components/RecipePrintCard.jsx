@@ -1,16 +1,17 @@
 import { ingredientText, isGroupHeader } from "../utils/recipeModel";
+import { scaleIngredientText } from "../utils/scaleIngredient";
 
 function fact(model, key) {
   return model.facts.find((item) => item.key === key);
 }
 
-function ingredientColumns(model) {
+function ingredientColumns(model, scale) {
   const groups = model.ingredientGroups.map((group) => ({
     title: group.title,
-    items: group.items.map(ingredientText).filter(Boolean),
+    items: group.items.map(ingredientText).filter(Boolean).map((item) => scaleIngredientText(item, scale)),
   }));
   for (const choice of model.kidIngredientChoices || []) {
-    const items = (choice.extraIngredients || []).filter((item) => !isGroupHeader(item)).map(ingredientText).filter(Boolean);
+    const items = (choice.extraIngredients || []).filter((item) => !isGroupHeader(item)).map(ingredientText).filter(Boolean).map((item) => scaleIngredientText(item, scale));
     if (items.length) groups.push({ title: choice.label, items });
   }
   if (groups.length === 1 && groups[0].items.length > 5) {
@@ -55,7 +56,7 @@ function PrintStep({ step }) {
   );
 }
 
-function PrintBanner({ model, compact = false }) {
+function PrintBanner({ model, compact = false, adjustedServings }) {
   return (
     <div className={`print-banner ${compact ? "print-banner-compact" : ""}`}>
       <div className="print-banner-top">
@@ -63,13 +64,13 @@ function PrintBanner({ model, compact = false }) {
         {compact && <span>METHOD + NOTES</span>}
       </div>
       <h1>{model.title}</h1>
-      {!compact && (model.hook || model.description) && <p>{model.hook || model.description}</p>}
+      {!compact && <p>{adjustedServings ? `Adjusted recipe for ${adjustedServings} servings. Use the ingredient quantities below.` : model.hook || model.description}</p>}
     </div>
   );
 }
 
-export default function RecipePrintCard({ model }) {
-  const [left, right] = ingredientColumns(model);
+export default function RecipePrintCard({ model, scale = 1, totalServings, baseServings }) {
+  const [left, right] = ingredientColumns(model, scale);
   const time = fact(model, "time");
   const yieldFact = fact(model, "yield");
   const method = fact(model, "method");
@@ -86,9 +87,9 @@ export default function RecipePrintCard({ model }) {
   return (
     <div className="print-sheet" aria-label={`Printable recipe: ${model.title}`}>
       <section className="print-page print-first-page">
-        <PrintBanner model={model} />
+        <PrintBanner model={model} adjustedServings={scale !== 1 ? totalServings : null} />
         <div className="print-facts">
-          <div><span>YIELD</span><strong>{yieldFact?.value || serving?.value || "See recipe"}</strong></div>
+          <div><span>YIELD</span><strong>{totalServings ? `${totalServings} serving${totalServings === 1 ? "" : "s"}` : yieldFact?.value || serving?.value || "See recipe"}</strong></div>
           <div><span>TOTAL TIME</span><strong>{time?.value || "See method"}</strong></div>
           <div><span>COOK METHOD</span><strong>{method?.value || "See method"}</strong></div>
           <div><span>EST. / SERVING</span><strong>{nutritionLine || "See nutrition notes"}</strong></div>
@@ -96,6 +97,7 @@ export default function RecipePrintCard({ model }) {
         {model.keys[0] && (
           <div className="print-rule"><strong>KEY TO SUCCESS:</strong> {model.keys[0]}</div>
         )}
+        {scale !== 1 && <p className="print-scale-note">Ingredients scaled from the original {baseServings}-serving recipe. Cooking times, pan size, and amounts written in the method may need adjustment.</p>}
         <h2 className="print-section-title">Ingredients</h2>
         <div className="print-ingredients">
           {[left, right].map((column, side) => (
