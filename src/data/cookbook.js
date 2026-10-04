@@ -4547,7 +4547,149 @@ const week4CreamiCarousel = ({ flavor, title, id, heroImage, calories, protein, 
   engagementQuestion: question,
 });
 
-export const desserts = [
+const WEEK13_VIDEO = "/videos/crumbl-week13/crumblcreamicut-week13-english-2026-10-04.mp4";
+const WEEK13_SPANISH_VIDEO = "/videos/crumbl-week13/crumblcreamicut-week13-spanish-2026-10-04.mp4";
+const WEEK13_COLLECTION = [
+  { id: "butterfinger-peanut-butter-milkshake-creami-week13", title: "Butterfinger Peanut-Butter Creami" },
+  { id: "snickerdoodle-cereal-protein-creami-week13", title: "Snickerdoodle Cereal Creami" },
+  { id: "midnight-smores-protein-creami-week13", title: "Midnight S'mores Creami" },
+];
+const WEEK13_BASE = [
+  "1 cup Fairlife 2% ultra-filtered milk",
+  "2 tbsp monk-fruit/erythritol sweetener",
+  "1 serving unflavored whey isolate",
+  "1/8 tsp guar gum",
+  "Pinch of salt",
+];
+const week13Creami = ({ id, title, flavor, calories, protein, before, mixIn, topping, flavorProfile, verdict, imageFolder, actionName, actionAlt, toppingAlt, question, allergens, macroHonesty, lead = false }) => {
+  const photo = (name) => `/images/${imageFolder}/${name}-polished.webp`;
+  const hero = photo("hero");
+  const socialHero = imageFolder.endsWith("butterfinger") ? photo("hero-social") : hero;
+  const base = photo("base");
+  const action = photo(actionName);
+  const finish = photo(imageFolder.endsWith("smores") ? "drizzle" : "topping");
+  const postSpin = imageFolder.endsWith("smores")
+    ? "Break one full graham-cracker sheet into the spun pint and run Mix-In."
+    : `Add ${mixIn} to the spun pint and run Mix-In.`;
+  const finalStep = imageFolder.endsWith("smores")
+    ? "Scoop; add half a graham sheet, 1 tbsp marshmallow creme, and about 1 tbsp zero-sugar chocolate syrup."
+    : `Scoop and top with ${topping}.`;
+  return {
+    id, title,
+    tagline: `${flavor}. About ${calories} calories and ${protein}g protein for the whole finished pint.`,
+    heroImage: hero, prepImage: base, actionImage: finish,
+    video: lead ? WEEK13_VIDEO : null,
+    videoVariants: lead
+      ? [{ label: "Spanish social cut", src: WEEK13_SPANISH_VIDEO }]
+      : [{ label: "Watch the three-flavor video", src: WEEK13_VIDEO }],
+    videoPoster: hero,
+    collectionTitle: "Three Crumbl-Inspired Protein Creami Pints",
+    collectionLinks: WEEK13_COLLECTION,
+    socialImages: [socialHero, base, action, finish],
+    socialHashtags: ["#CrumblCreamiCut", "#ProteinCreami", "#NinjaCreami", "#HighProteinDessert"],
+    socialCarousel: {
+      heroBadge: "CrumblCreamiCut · Week 13", heroAccent: "amber", heroTitle: title,
+      heroStats: [
+        { value: `~${calories}`, label: "cal · whole pint" },
+        { value: `~${protein}g`, label: "protein · whole pint" },
+        { value: "1", label: "finished pint" },
+      ],
+      hook: `${flavor}. One whole protein Creami pint, including the finish.`,
+      captionBody: `${flavor}. One complete pint is about ${calories} calories and ${protein}g protein using my tracked labels. The shared Fairlife-and-whey base gets its own flavor before freezing; the mix-in and topping are measured separately. Inspired by a Crumbl cookie flavor, but this is my independent ice-cream recipe, not a Crumbl product. Recipe: thesplitplate.com/cookbook/${id}\n\n${question}`,
+      heroPhoto: socialHero,
+      ingredientGroups: [{ card: 0, accent: "amber", heading: "One complete protein pint", items: [
+        { quantity: "1 cup", text: "Fairlife 2% ultra-filtered milk" },
+        { quantity: "2 tbsp", text: "Monk-fruit/erythritol sweetener" },
+        { quantity: "1 serving", text: "Unflavored whey isolate" },
+        { quantity: "1/8 tsp", text: "Guar gum" },
+        { quantity: "Pinch", text: "Salt" },
+        ...before.map((x) => ({ quantity: "", text: x, note: "Blend before freezing" })),
+        { quantity: "", text: mixIn, note: "Mix-In after first spin" },
+        { quantity: "", text: topping, note: "Top after scooping" },
+      ] }],
+      methodGroups: [
+        { accent: "amber", heading: "Blend and spin", items: [
+          { number: 1, heading: "Blend", body: "Blend the shared base with the listed pre-freeze flavor ingredients." },
+          { number: 2, heading: "Freeze", body: "Pour below max-fill; freeze upright and level for 24 hours." },
+          { number: 3, heading: "Spin", body: "Rest about five minutes. Run Regular Ice Cream; use a no-liquid Respin only if powdery." },
+        ] },
+        { accent: "coral", heading: "Mix and finish", items: [
+          { number: 4, heading: "Mix-In", body: postSpin },
+          { number: 5, heading: "Top", body: finalStep },
+        ] },
+      ],
+      ingredientCardPhotos: [{ src: base, layout: "side" }],
+      methodCardPhotos: [{ src: action, layout: "side" }, { src: finish, layout: "side" }],
+      servingPhoto: { src: socialHero, layout: "band" },
+      servingGroups: [{ accent: "amber", heading: "Whole finished pint", items: [
+        { text: `About ${calories} calories and ${protein}g protein, including measured mix-ins and toppings.` },
+        { text: "Label-based estimate; exact brands and serving amounts change the total." },
+      ] }],
+      engagementQuestion: question,
+    },
+    flavorProfile,
+    calories, caloriesPerServing: calories, protein, proteinPerServing: protein,
+    servings: 1, servingSize: "1 complete finished Creami pint",
+    time: "10 min active + 24 hr freeze",
+    bestFor: ["Protein Creami", "Whole-pint dessert", "Make-ahead", "CrumblCreamiCut"],
+    useThisWhen: `${flavor}. Inspired by a Crumbl cookie flavor; this independent protein ice-cream build is not an official Crumbl recipe. ${verdict}`,
+    flavorTarget: flavorProfile,
+    ingredients: ["--- SHARED BASE — ONE PINT ---", ...WEEK13_BASE, "--- BLEND BEFORE FREEZING ---", ...before, "--- AFTER FIRST SPIN ---", mixIn, "--- TOP AFTER SCOOPING ---", topping],
+    steps: [
+      { text: `BLEND: Blend the shared base with ${before.join(" and ")} until fully smooth. These amounts make one pint.`, image: base, imageAlt: "Three separate Creami base containers and flavor ingredients before freezing" },
+      "FREEZE: Pour into one Creami pint below the max-fill line. Freeze upright and level for 24 hours.",
+      { text: "SPIN: Rest about five minutes, then run Regular Ice Cream. If powdery, run a no-liquid Respin before mix-ins.", ...(actionName !== "graham" ? { image: action, imageAlt: actionAlt } : {}) },
+      { text: `MIX-IN: ${postSpin}`, ...(actionName === "graham" ? { image: action, imageAlt: actionAlt } : {}) },
+      { text: `FINISH: ${finalStep} Serve immediately.`, image: finish, imageAlt: toppingAlt },
+    ],
+    executionRules: [
+      "The nutrition estimate is for one entire finished pint, not one scoop.",
+      "Each flavor uses its own pint; do not combine the three flavor additions into one base.",
+      "Use a no-liquid Respin only if the first spin is powdery; keep crunchy toppings for the finish.",
+    ],
+    macroHonesty, allergens,
+    warnings: ["Verify allergens and nutrition against your exact milk, whey, candy or cereal, and topping labels."],
+    dietTags: ["high-protein"],
+    seriesInfo: { series: "CrumblCreamiCut · Week 13", framing: "Three separate homemade pints inspired by cookie flavors; no affiliation with Crumbl." },
+    mealPrep: { storage: "Freeze the unspun base upright and level; add mix-ins and toppings when ready to eat.", lasts: "Best texture when spun within two weeks.", reheat: "Do not heat. If refrozen after spinning, re-spin per machine guidance and refresh crunchy toppings." },
+  };
+};
+
+const WEEK13_CREAMIS = [
+  week13Creami({
+    id: "butterfinger-peanut-butter-milkshake-creami-week13", title: "Butterfinger Peanut-Butter Protein Creami", imageFolder: "crumbl-week13-butterfinger",
+    flavor: "Subtle PB2 peanut base with Butterfinger crunch", calories: 380, protein: 44,
+    before: ["1 tbsp PB2 powder"], mixIn: "10g Butterfinger baking bits", topping: "10g more Butterfinger baking bits",
+    flavorProfile: "Soft peanut flavor from PB2 with crisp Butterfinger bits mixed through and scattered on top.",
+    verdict: "The peanut base is gentle and the candy adds crunch; it does not claim to taste identical to the frosted cookie.",
+    actionName: "spun-base", actionAlt: "Freshly spun peanut-butter Creami in the processor pint before candy is added", toppingAlt: "Butterfinger baking bits tipped over scooped peanut-butter protein Creami",
+    question: "Would you keep the peanut base subtle or make it stronger?", allergens: ["milk", "peanuts", "soy"],
+    macroHonesty: "Approximate whole-pint estimate: 240 calories and 40g protein in the shared base, 30 calories and 3g protein from PB2, and about 107 calories and 1g protein from 20g Butterfinger bits. Rounded to 380 calories and 44g protein; exact labels vary.",
+  }),
+  week13Creami({
+    id: "snickerdoodle-cereal-protein-creami-week13", title: "Snickerdoodle Cereal Protein Creami", imageFolder: "crumbl-week13-snickerdoodle",
+    flavor: "Vanilla-cinnamon Creami with cereal inside and on top", calories: 340, protein: 41,
+    before: ["1 tsp vanilla extract", "1/2 tsp ground cinnamon"], mixIn: "10g Cinnamon Toast Crunch", topping: "10g more Cinnamon Toast Crunch",
+    flavorProfile: "Frozen cinnamon cereal milk with cereal mixed in and a fresh crunchy finish.",
+    verdict: "Cereal is the star; the target is nostalgic cereal milk rather than cupcake frosting.",
+    actionName: "scoop", actionAlt: "A scoop of vanilla-cinnamon Creami in the red handled bowl before cereal topping", toppingAlt: "Cinnamon Toast Crunch held over scooped protein Creami",
+    question: "Cereal mixed in or extra crunch on top?", allergens: ["milk", "wheat", "soy"],
+    macroHonesty: "Approximate whole-pint estimate: 240 calories and 40g protein in the shared base, 12 calories from vanilla, 3 calories from cinnamon, and 83 calories and 1g protein from 20g Cinnamon Toast Crunch. Rounded to 340 calories and 41g protein; exact labels vary.",
+  }),
+  week13Creami({
+    id: "midnight-smores-protein-creami-week13", title: "Midnight S'mores Protein Creami", imageFolder: "crumbl-week13-smores",
+    flavor: "Chocolate Creami with graham, marshmallow creme, and chocolate drizzle", calories: 375, protein: 43,
+    before: ["1 tbsp Dutch-process cocoa"], mixIn: "1 full graham-cracker sheet", topping: "1/2 graham-cracker sheet, 1 tbsp marshmallow creme, and about 1 tbsp zero-sugar chocolate syrup",
+    flavorProfile: "Cocoa base, graham inside and on top, marshmallow creme, and a glossy chocolate finish.",
+    verdict: "The graham in the ice cream and on top gives this pint the strongest s'mores character of the three.",
+    actionName: "graham", actionAlt: "Graham cracker broken over chocolate Creami in a red handled bowl", toppingAlt: "Chocolate syrup drizzled over graham and marshmallow-topped chocolate Creami",
+    question: "Would you add extra graham or extra chocolate drizzle?", allergens: ["milk", "wheat", "soy"], lead: true,
+    macroHonesty: "Approximate whole-pint estimate: 240 calories and 40g protein in the shared base, 10 calories from cocoa, 98 calories from one and a half graham sheets, 23 calories from marshmallow creme, and 5 calories from zero-sugar syrup. Rounded to 375 calories and 43g protein; exact labels and drizzle amount vary.",
+  }),
+];
+
+const DESSERT_CATALOG = [
+  ...WEEK13_CREAMIS,
   ...WEEK12_CREAMIS,
   {
     id: "chocolate-protein-brownie-bowl",
@@ -12021,6 +12163,10 @@ export const desserts = [
     commentRecipeVideo: "/videos/viral-proteinized-rice-paper-mochi/viral-proteinized-rice-paper-mochi-15-second-comment-recipe-topped-hook-post.mp4",
   },
 ];
+
+// Creamis have their own browsing section while other sweets remain Desserts.
+export const creamis = DESSERT_CATALOG.filter((item) => item.id.includes("creami"));
+export const desserts = DESSERT_CATALOG.filter((item) => !item.id.includes("creami"));
 
 // Bases — utility recipes that power other meals. The modular building blocks
 // (bone broth rice that becomes fried rice, fried rice that becomes a dinner

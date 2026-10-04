@@ -445,10 +445,23 @@ export default function RecipeDetail({ recipe, item, group }) {
         {model.video && <VideoBlock src={model.video} poster={model.videoPoster || model.hero.src} title={model.title} />}
         {model.videoVariants?.length > 0 && (
           <div className="mt-4 rounded-xl border border-line bg-surface p-4">
-            <h3 className="text-sm font-bold text-ink">More cuts from this cook</h3>
+            <h3 className="text-sm font-bold text-ink">{model.video ? "More cuts from this cook" : "Video from this collection"}</h3>
             <div className="mt-2 flex flex-wrap gap-3">
               {model.videoVariants.map((clip) => (
                 <a key={clip.src} href={clip.src} target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-brand underline">{clip.label}</a>
+              ))}
+            </div>
+          </div>
+        )}
+        {item?.collectionLinks?.length > 0 && (
+          <div className="mt-6 rounded-xl border border-line bg-surface p-5">
+            <h3 className="text-sm font-bold text-ink">{item.collectionTitle}</h3>
+            <p className="mt-1 text-xs text-muted">Three separate pints share the same protein Creami base and spin method. Each recipe lists its own measured flavor additions.</p>
+            <div className="mt-3 flex flex-wrap gap-2">
+              {item.collectionLinks.map((entry) => (
+                <Link key={entry.id} to={`/cookbook/${entry.id}`} className={`rounded-lg px-3 py-2 text-xs font-semibold ${entry.id === item.id ? "bg-brand/15 text-brand" : "bg-surface2 text-ink hover:text-brand"}`}>
+                  {entry.title}
+                </Link>
               ))}
             </div>
           </div>

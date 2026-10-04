@@ -1,13 +1,13 @@
 import { useParams, Link } from "react-router-dom";
 import { useEffect } from "react";
-import { sauces, desserts, breakfasts, quickLunches, batchPrep, bases, powerups, snackBoxes } from "../data/cookbook";
+import { sauces, desserts, creamis, breakfasts, quickLunches, batchPrep, bases, powerups, snackBoxes } from "../data/cookbook";
 import RecipeDetail from "../components/RecipeDetail";
 import useMeta from "../hooks/useMeta";
 import track from "../hooks/useTrack";
 
 // Which array an entry came from drives its category badge, so look it up by
 // group rather than flattening first.
-const GROUPS = { bases, sauces, breakfasts, quickLunches, batchPrep, desserts, powerups, snackBoxes };
+const GROUPS = { bases, sauces, breakfasts, quickLunches, batchPrep, creamis, desserts, powerups, snackBoxes };
 
 function findItem(id) {
   for (const [group, items] of Object.entries(GROUPS)) {

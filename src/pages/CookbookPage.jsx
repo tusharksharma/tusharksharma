@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import useMeta from "../hooks/useMeta";
-import { sauces, quickLunches, batchPrep, desserts, breakfasts, bases, powerups, snackBoxes } from "../data/cookbook";
+import { sauces, quickLunches, batchPrep, desserts, creamis, breakfasts, bases, powerups, snackBoxes } from "../data/cookbook";
 import cardImage from "../utils/cardImage";
 
 const TABS = [
@@ -9,6 +9,7 @@ const TABS = [
   ...(sauces.length > 0 ? ["Sauces"] : []),
   ...(breakfasts.length > 0 ? ["Breakfast"] : []),
   ...(desserts.length > 0 ? ["Desserts"] : []),
+  ...(creamis.length > 0 ? ["Creamis"] : []),
   ...(quickLunches.length > 0 ? ["Quick Lunches"] : []),
   ...(batchPrep.length > 0 ? ["Batch Prep"] : []),
   ...(powerups.length > 0 ? ["Power-Ups"] : []),
@@ -20,6 +21,7 @@ const TAB_SLUG = {
   "Sauces": "sauces",
   "Breakfast": "breakfast",
   "Desserts": "desserts",
+  "Creamis": "creamis",
   "Quick Lunches": "quick-lunches",
   "Batch Prep": "batch-prep",
   "Power-Ups": "powerups",
@@ -97,7 +99,7 @@ export default function CookbookPage() {
 
   useMeta({
     title: tab === (TABS[0] || "Sauces") ? "Power-Ups" : `${tab} — Power-Ups`,
-    description: `${tab} — sauces, breakfasts, desserts, and quick meals from The Split Plate, including make-ahead recipes.`,
+    description: `${tab} — sauces, breakfasts, Creamis, desserts, and quick meals from The Split Plate, including make-ahead recipes.`,
   });
 
   const filterItems = (items) => {
@@ -118,7 +120,7 @@ export default function CookbookPage() {
         <div className="mb-8">
           <h1 className="text-3xl font-black text-ink">Power-Ups</h1>
           <p className="text-muted text-sm mt-1">
-            Sauces, breakfasts, desserts, quick meals, and batch-prep dinners.
+            Sauces, breakfasts, Creamis, desserts, quick meals, and batch-prep dinners.
           </p>
           <p className="text-muted text-xs mt-1">
             Everything here is designed to complement your weekly dinners or stand alone when you need something fast.
@@ -220,6 +222,22 @@ export default function CookbookPage() {
               {filterItems(desserts).map((d) => (
                 <RecipeCard key={d.id} item={d} />
               ))}
+            </div>
+          </div>
+        )}
+
+        {tab === "Creamis" && creamis.length > 0 && (
+          <div>
+            <p className="text-muted text-xs mb-4">Protein Creami pints with the complete recipe and whole-pint nutrition on each page.</p>
+            <div className="mb-7 rounded-xl border border-brand/20 bg-brand/5 p-4">
+              <h2 className="text-ink text-base font-black">Week 13 · Three Crumbl-inspired protein pints</h2>
+              <p className="mt-1 mb-4 text-xs text-muted">One repeatable Fairlife-and-whey base, three separate flavor builds. Each card shows nutrition for the whole finished pint.</p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {filterItems(creamis.filter((item) => item.id.endsWith("-week13"))).map((item) => <RecipeCard key={item.id} item={item} />)}
+              </div>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {filterItems(creamis.filter((item) => !item.id.endsWith("-week13"))).map((item) => <RecipeCard key={item.id} item={item} />)}
             </div>
           </div>
         )}

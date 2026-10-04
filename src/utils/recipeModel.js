@@ -474,6 +474,7 @@ const COOKBOOK_GROUPS = {
   quickLunches: "Quick lunch",
   batchPrep: "Batch prep",
   desserts: "Dessert",
+  creamis: "Creami",
   powerups: "Power-up",
   snackBoxes: "Snack box",
 };

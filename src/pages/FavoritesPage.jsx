@@ -3,9 +3,9 @@ import useMeta from "../hooks/useMeta";
 import { trackOutboundClick } from "../hooks/useOutboundClick";
 import { collections, products } from "../data/kitchen-essentials";
 import recipes from "../data/recipes";
-import { sauces, breakfasts, quickLunches, batchPrep, desserts, bases, powerups, snackBoxes } from "../data/cookbook";
+import { sauces, breakfasts, quickLunches, batchPrep, desserts, creamis, bases, powerups, snackBoxes } from "../data/cookbook";
 
-const cookbookAll = [...sauces, ...breakfasts, ...quickLunches, ...batchPrep, ...desserts, ...bases, ...powerups, ...snackBoxes];
+const cookbookAll = [...sauces, ...breakfasts, ...quickLunches, ...batchPrep, ...desserts, ...creamis, ...bases, ...powerups, ...snackBoxes];
 
 function resolveSource(sourceId) {
   if (!sourceId) return null;

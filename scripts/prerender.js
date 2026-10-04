@@ -7,7 +7,7 @@
  */
 import { readFileSync, writeFileSync, mkdirSync } from "fs";
 import { join, dirname } from "path";
-import { sauces, breakfasts, quickLunches, batchPrep, desserts, bases, powerups, snackBoxes } from "../src/data/cookbook.js";
+import { sauces, breakfasts, quickLunches, batchPrep, desserts, creamis, bases, powerups, snackBoxes } from "../src/data/cookbook.js";
 
 const DIST = "dist";
 const DOMAIN = "https://thesplitplate.com";
@@ -38,7 +38,7 @@ function extractRecipes(src) {
 }
 
 const recipes = extractRecipes(recipesRaw);
-const cookbookItems = [sauces, breakfasts, quickLunches, batchPrep, desserts, bases, powerups, snackBoxes]
+const cookbookItems = [sauces, breakfasts, quickLunches, batchPrep, desserts, creamis, bases, powerups, snackBoxes]
   .flat()
   .map((item) => ({ id: item.id, title: item.title, description: item.tagline, image: item.heroImage || "" }));
 

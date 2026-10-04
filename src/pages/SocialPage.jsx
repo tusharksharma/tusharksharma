@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { liveRecipes } from "../data/recipes";
-import { sauces, bases, breakfasts, desserts, quickLunches, batchPrep, powerups, snackBoxes } from "../data/cookbook";
+import { sauces, bases, breakfasts, desserts, creamis, quickLunches, batchPrep, powerups, snackBoxes } from "../data/cookbook";
 import useMeta from "../hooks/useMeta";
 import { buildStructuredCards } from "../social/generator.jsx";
 import { drawStructuredCard } from "../social/structuredCard";
@@ -9,7 +9,7 @@ import { drawStructuredHero } from "../social/hero.jsx";
 import { drawStructuredEnd } from "../social/end.jsx";
 import { drawRecipeCard } from "../social/recipeCard";
 
-const ALL_COOKBOOK = [...sauces, ...bases, ...breakfasts, ...desserts, ...quickLunches, ...batchPrep, ...powerups, ...snackBoxes];
+const ALL_COOKBOOK = [...sauces, ...bases, ...breakfasts, ...desserts, ...creamis, ...quickLunches, ...batchPrep, ...powerups, ...snackBoxes];
 
 // Words we deliberately filter out of title-derived hashtags.
 // Either too generic (#The, #With) or already brand-encoded (#Plate, #Cook).
@@ -995,6 +995,7 @@ function classifyCookbook(item) {
   if (bases.includes(item)) return "Side / Base";
   if (breakfasts.includes(item)) return "Breakfast";
   if (desserts.includes(item)) return "Dessert";
+  if (creamis.includes(item)) return "Creami";
   if (quickLunches.includes(item)) return "Quick Lunch";
   if (batchPrep.includes(item)) return "Batch Prep";
   if (powerups.includes(item)) return "Powerup";
