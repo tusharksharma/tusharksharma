@@ -1012,41 +1012,26 @@ function NutritionDetails({ nutrition, tags }) {
   );
 }
 
-/** Video, at the bottom, behind a poster. Nothing downloads until a tap. */
+/** Native controls let mobile browsers start playback from the user's tap. */
 function VideoBlock({ src, poster, title }) {
-  const [playing, setPlaying] = useState(false);
+  const [videoError, setVideoError] = useState(false);
 
   return (
     <Section id="video" title="Watch the full cook">
       <div className="mx-auto aspect-[9/16] max-h-[520px] overflow-hidden rounded-2xl border border-line bg-black sm:aspect-video">
-        {playing ? (
-          <video
-            src={src}
-            poster={poster}
-            controls
-            autoPlay
-            playsInline
-            preload="metadata"
-            className="h-full w-full object-contain"
-          />
-        ) : (
-          <button
-            type="button"
-            onClick={() => setPlaying(true)}
-            aria-label={`Play the ${title} cook-along video`}
-            className="group relative h-full w-full cursor-pointer"
-          >
-            {poster && (
-              <img src={poster} alt="" loading="lazy" className="h-full w-full object-cover opacity-70" />
-            )}
-            <span className="absolute inset-0 flex items-center justify-center">
-              <span className="flex h-16 w-16 items-center justify-center rounded-full bg-white/90 text-2xl text-black shadow-lg group-hover:bg-white">
-                &#9654;
-              </span>
-            </span>
-          </button>
-        )}
+        <video
+          poster={poster}
+          controls
+          playsInline
+          preload="none"
+          aria-label={`${title} cook-along video`}
+          onError={() => setVideoError(true)}
+          className="h-full w-full object-contain"
+        >
+          <source src={src} type="video/mp4" />
+        </video>
       </div>
+      {videoError && <p className="mt-2 text-sm text-muted">Video unavailable here? <a href={src} className="font-semibold text-brand underline">Open the video</a>.</p>}
     </Section>
   );
 }
