@@ -22,14 +22,19 @@
     { "source": "/videos/:recipe/:filename(.+\\.m4a)", "destination": "https://github.com/tusharma88/tsp-videos/releases/download/videos/:filename" },
     { "source": "/(.*)", "destination": "/index.html" }
   ],
-  "headers": [
+  "routes": [
     {
-      "source": "/videos/:recipe/:filename(.+\\.mp4)",
-      "headers": [
-        { "key": "Content-Type", "value": "video/mp4" },
-        { "key": "Content-Disposition", "value": "inline" }
+      "src": "/videos/(.*)\\.mp4",
+      "continue": true,
+      "transforms": [
+        { "type": "response.headers", "op": "delete", "target": { "key": "content-type" } },
+        { "type": "response.headers", "op": "set", "target": { "key": "content-type" }, "args": "video/mp4" },
+        { "type": "response.headers", "op": "delete", "target": { "key": "content-disposition" } },
+        { "type": "response.headers", "op": "set", "target": { "key": "content-disposition" }, "args": "inline" }
       ]
-    },
+    }
+  ],
+  "headers": [
     {
       "source": "/images/(.*)",
       "headers": [
