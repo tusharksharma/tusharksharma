@@ -24,13 +24,14 @@
   ],
   "routes": [
     {
-      "src": "/videos/(.*)\\.mp4",
-      "continue": true,
+      "src": "/videos/chipotle-queso-tacos/(.*)\\.mp4",
+      "dest": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/$1.mp4",
       "transforms": [
         { "type": "response.headers", "op": "delete", "target": { "key": "content-type" } },
         { "type": "response.headers", "op": "set", "target": { "key": "content-type" }, "args": "video/mp4" },
         { "type": "response.headers", "op": "delete", "target": { "key": "content-disposition" } },
-        { "type": "response.headers", "op": "set", "target": { "key": "content-disposition" }, "args": "inline" }
+        { "type": "response.headers", "op": "set", "target": { "key": "content-disposition" }, "args": "inline" },
+        { "type": "response.headers", "op": "set", "target": { "key": "x-video-route" }, "args": "inline-mp4" }
       ]
     }
   ],
