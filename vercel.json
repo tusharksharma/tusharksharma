@@ -17,23 +17,10 @@
     { "source": "/videos/viral-proteinized-burger-in-a-bun/:filename(.+\\.mp4)", "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename" },
     { "source": "/videos/creamy-chipotle-chicken-ditalini/:filename(.+\\.mp4)", "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename" },
     { "source": "/videos/crumbl-week13/:filename(.+\\.mp4)", "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename" },
-    { "source": "/videos/chipotle-queso-tacos/:filename(.+\\.mp4)", "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename" },
+    { "source": "/videos/chipotle-queso-tacos/:filename(.+\\.mp4)", "destination": "/api/video?collection=chipotle-queso-tacos&filename=:filename" },
     { "source": "/videos/:recipe/:filename(.+\\.mp4)", "destination": "https://github.com/tusharma88/tsp-videos/releases/download/videos/:filename" },
     { "source": "/videos/:recipe/:filename(.+\\.m4a)", "destination": "https://github.com/tusharma88/tsp-videos/releases/download/videos/:filename" },
     { "source": "/(.*)", "destination": "/index.html" }
-  ],
-  "routes": [
-    {
-      "src": "/videos/chipotle-queso-tacos/(.*)\\.mp4",
-      "dest": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/$1.mp4",
-      "transforms": [
-        { "type": "response.headers", "op": "delete", "target": { "key": "content-type" } },
-        { "type": "response.headers", "op": "set", "target": { "key": "content-type" }, "args": "video/mp4" },
-        { "type": "response.headers", "op": "delete", "target": { "key": "content-disposition" } },
-        { "type": "response.headers", "op": "set", "target": { "key": "content-disposition" }, "args": "inline" },
-        { "type": "response.headers", "op": "set", "target": { "key": "x-video-route" }, "args": "inline-mp4" }
-      ]
-    }
   ],
   "headers": [
     {
