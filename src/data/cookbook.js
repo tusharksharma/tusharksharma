@@ -2366,6 +2366,35 @@ export const breakfasts = [
       "/images/high-protein-japanese-yogurt-hack/step-02-stir-cookie-yogurt-polished.webp",
       "/images/high-protein-japanese-yogurt-hack/final-cookie-yogurt-spoon-polished.webp",
     ],
+    socialCarousel: {
+      heroBadge: "High-Protein Breakfast Hack",
+      heroAccent: "coral",
+      heroTitle: "Japanese Yogurt Cookie Hack",
+      hook: "Press whole protein cookies into vanilla protein yogurt, chill overnight, and get cake-soft cookie bites. 260 cal / 27g protein.",
+      heroPhoto: "/images/high-protein-japanese-yogurt-hack/hero-japanese-yogurt-cookie-bowl-polished.webp",
+      ingredientGroups: [{ card: 0, accent: "coral", heading: "Two Ingredients", items: [
+        { quantity: "1 cup", text: "Vanilla Oikos Pro yogurt", note: "5.3 oz single-serve cup; 20g protein on filmed label" },
+        { quantity: "6", text: "HighKey chocolate-chip protein mini cookies", note: "Keep them whole; 7g protein on filmed serving label" },
+      ] }],
+      methodGroups: [{ accent: "coral", heading: "Press, Chill, Fold", items: [
+        { number: 1, heading: "Open", body: "Leave the vanilla protein yogurt in its original cup." },
+        { number: 2, heading: "Press", body: "Push all six cookies into the yogurt whole; do not crush them." },
+        { number: 3, heading: "Chill", body: "Cover and refrigerate at least four hours; overnight gives the best cake-soft texture." },
+        { number: 4, heading: "Fold", body: "Gently fold once and eat cold, straight from the cup." },
+      ] }],
+      ingredientCardPhotos: [{ src: "/images/high-protein-japanese-yogurt-hack/context-highkey-protein-mini-cookies-polished.webp", layout: "side" }],
+      methodCardPhotos: [
+        { src: "/images/high-protein-japanese-yogurt-hack/step-01-press-cookies-into-yogurt-polished.webp", layout: "side" },
+        { src: "/images/high-protein-japanese-yogurt-hack/step-02-stir-cookie-yogurt-polished.webp", layout: "side" },
+      ],
+      methodLabel: "HOW TO MAKE",
+      servingPhoto: "/images/high-protein-japanese-yogurt-hack/final-cookie-yogurt-spoon-polished.webp",
+      servingGroups: [{ accent: "coral", heading: "One-Cup Breakfast", items: [
+        { text: "About 260 calories and 27g protein using the filmed product labels." },
+        { text: "Chill overnight for soft cookie bites; eat within two days." },
+      ] }],
+      engagementQuestion: "Would you prep this yogurt cup the night before?",
+    },
     flavorProfile: "Cold thick vanilla protein yogurt with softened chocolate-chip mini cookies folded through — cookies-and-cream texture without ice cream. The overnight chill turns the cookies cake-soft.",
     calories: 260,
     caloriesPerServing: 260,
@@ -2637,18 +2666,15 @@ export const quickLunches = [
     id: "steak-quesadilla",
     title: "Steak Quesadilla",
     tagline: "Quick Lunches Ep. 6 — one crispy air-fryer steak quesadilla for National Quesadilla Day. ~270 cal / 24g protein for the whole thing.",
-    heroImage: "/images/steak-quesadilla/hero-steak-quesadilla.webp",
-    prepImage: "/images/steak-quesadilla/step-03-add-steak.webp",
+    heroImage: "/images/steak-quesadilla/hero-steak-quesadilla-polished.png",
+    prepImage: "/images/steak-quesadilla/step-03-add-steak-polished.png",
     video: "/videos/steak-quesadilla/quick-lunches-ep6-steak-quesadilla-marcus.mp4",
     originalSoundVideo: "/videos/steak-quesadilla/quick-lunches-ep6-steak-quesadilla-clean-original-sound.mp4",
     textOriginalSoundVideo: "/videos/steak-quesadilla/quick-lunches-ep6-steak-quesadilla-text-original-sound.mp4",
     socialImages: [
-      "/images/steak-quesadilla/hero-steak-quesadilla.webp",
-      "/images/steak-quesadilla/step-01-spread-chipotle-crema.webp",
-      "/images/steak-quesadilla/step-02-add-velveeta-shreds.webp",
-      "/images/steak-quesadilla/step-03-add-steak.webp",
-      "/images/steak-quesadilla/step-04-fold.webp",
-      "/images/steak-quesadilla/step-05-air-fry.webp",
+      "/images/steak-quesadilla/step-01-spread-chipotle-crema-polished.png",
+      "/images/steak-quesadilla/step-03-add-steak-polished.png",
+      "/images/steak-quesadilla/step-05-air-fry-polished.png",
     ],
     socialHashtags: [
       "#QuickLunches",
@@ -2661,8 +2687,8 @@ export const quickLunches = [
       heroBadge: "Quick Lunches · Ep. 6",
       heroAccent: "coral",
       heroTitle: "Steak Quesadilla",
-      hook: "Happy National Quesadilla Day. One crispy air-fryer steak quesadilla — ~270 cal / 24g protein for the whole thing. Quick Lunches Episode 6.",
-      heroPhoto: "/images/steak-quesadilla/hero-steak-quesadilla.webp",
+      hook: "Crispy air-fryer steak quesadilla in 12 minutes. About 270 cal / 24g protein for the whole lunch.",
+      heroPhoto: "/images/steak-quesadilla/hero-steak-quesadilla-polished.png",
       ingredientGroups: [
         {
           card: 0,
@@ -2698,13 +2724,13 @@ export const quickLunches = [
         },
       ],
       ingredientCardPhotos: [
-        { src: "/images/steak-quesadilla/step-03-add-steak.webp", position: "50% 50%", zoom: 1.04, layout: "side" },
+        { src: "/images/steak-quesadilla/step-03-add-steak-polished.png", position: "50% 50%", zoom: 1.04, layout: "side" },
       ],
       methodCardPhotos: [
-        { src: "/images/steak-quesadilla/step-01-spread-chipotle-crema.webp", position: "50% 50%", zoom: 1.04, layout: "side" },
-        { src: "/images/steak-quesadilla/step-05-air-fry.webp", position: "50% 50%", zoom: 1.04, layout: "side" },
+        { src: "/images/steak-quesadilla/step-01-spread-chipotle-crema-polished.png", position: "50% 50%", zoom: 1.04, layout: "side" },
+        { src: "/images/steak-quesadilla/step-05-air-fry-polished.png", position: "50% 50%", zoom: 1.04, layout: "side" },
       ],
-      servingPhoto: "/images/steak-quesadilla/hero-steak-quesadilla.webp",
+      servingPhoto: "/images/steak-quesadilla/hero-steak-quesadilla-polished.png",
       servingGroups: [
         {
           accent: "coral",
@@ -6507,8 +6533,13 @@ const DESSERT_CATALOG = [
     socialCarousel: {
       heroBadge: "Hot-Day Hack",
       heroAccent: "coral",
-      hook: "Zero-calorie shaved ice for the hottest days: blend plain ice into snow, pack a cup, and add a zero-calorie-labeled water enhancer. It's not pretending to be fruit — just cold and sweet.",
+      hook: "Blend ice into snow, then flavor with a zero-calorie-labeled water enhancer. A fast, cold hot-day treat.",
       heroPhoto: "/images/zero-calorie-shaved-ice/hero-two-flavor-zero-calorie-shaved-ice-polished.webp",
+      heroStats: [
+        { value: "0", label: "cal / label" },
+        { value: "5 min", label: "prep" },
+        { value: "1", label: "cup" },
+      ],
       ingredientGroups: [
         {
           card: 0,
@@ -6538,6 +6569,7 @@ const DESSERT_CATALOG = [
         { src: "/images/zero-calorie-shaved-ice/step-blended-ice-snow-polished.webp", position: "50% 50%", zoom: 1.04, layout: "side" },
         { src: "/images/zero-calorie-shaved-ice/step-add-water-enhancer-polished.webp", position: "50% 50%", zoom: 1.04, layout: "side" },
       ],
+      methodLabel: "HOW TO MAKE",
       servingPhoto: "/images/zero-calorie-shaved-ice/final-two-color-shaved-ice-polished.webp",
       servingGroups: [
         {
@@ -9513,7 +9545,7 @@ const DESSERT_CATALOG = [
     socialCarousel: {
       heroBadge: "CrumblCreamiCut · W5 F1",
       heroAccent: "coral",
-      hook: "Crumbl's Pink Berry Cookie, Creami'd — 315 cal / 43g protein for the whole pint. Brown butter carries the cookie note.",
+      hook: "Strawberry and brown-butter protein Creami with crisp berry topping. 315 cal / 43g protein per pint.",
       heroPhoto: "/images/pink-berry-cookie-creami/hero-finished-pink-berry-cookie-creami-polished.webp",
       ingredientGroups: [
         {
@@ -9562,6 +9594,7 @@ const DESSERT_CATALOG = [
         { src: "/images/pink-berry-cookie-creami/step-frozen-base-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
         { src: "/images/pink-berry-cookie-creami/step-respin-result-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
       ],
+      methodLabel: "HOW TO MAKE",
       servingPhoto: "/images/pink-berry-cookie-creami/final-close-reveal-polished.webp",
       servingGroups: [
         {
@@ -9574,7 +9607,7 @@ const DESSERT_CATALOG = [
           ],
         },
       ],
-      engagementQuestion: "I haven't tried the original — should I rate this Creami solo, or find the cookie first?",
+      engagementQuestion: "Would you finish a strawberry Creami with freeze-dried berry crunch?",
     },
     socialImages: [
       "/images/pink-berry-cookie-creami/context-brown-butter-emulsion-polished.webp",
@@ -9692,7 +9725,7 @@ const DESSERT_CATALOG = [
     socialCarousel: {
       heroBadge: "CrumblCreamiCut · W5 F2",
       heroAccent: "amber",
-      hook: "Cola in a Creami — 340 cal / 43g protein whole pint. Diet cola for volume, black cocoa for the float identity, salted-caramel CocoRolls for the payoff.",
+      hook: "Cola-float protein Creami with black cocoa and caramel crunch. 340 cal / 43g protein per pint.",
       heroPhoto: "/images/nilla-bean-float-cookie-creami/hero-finished-nilla-bean-float-cookie-creami-polished.webp",
       ingredientGroups: [
         {
@@ -9742,6 +9775,7 @@ const DESSERT_CATALOG = [
         { src: "/images/nilla-bean-float-cookie-creami/step-add-diet-cola-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
         { src: "/images/nilla-bean-float-cookie-creami/step-first-spin-result-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
       ],
+      methodLabel: "HOW TO MAKE",
       servingPhoto: "/images/nilla-bean-float-cookie-creami/final-close-reveal-polished.webp",
       servingGroups: [
         {
@@ -9878,7 +9912,7 @@ const DESSERT_CATALOG = [
     socialCarousel: {
       heroBadge: "CrumblCreamiCut · W5 F3 · FINALE",
       heroAccent: "coral",
-      hook: "Lime gelatin in the base, brown-butter emulsion for the cookie note, HighKey wafers for crunch, and one restrained grenadine drizzle. 340 cal / 43g protein whole pint. Week 5 finale.",
+      hook: "Shirley Temple protein Creami: lime, wafer crunch, grenadine and a cherry. 340 cal / 43g protein per pint.",
       heroPhoto: "/images/shirley-temple-cookie-creami/hero-finished-shirley-temple-cookie-creami-polished.webp",
       ingredientGroups: [
         {
@@ -9929,6 +9963,7 @@ const DESSERT_CATALOG = [
         { src: "/images/shirley-temple-cookie-creami/step-first-spin-result-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
         { src: "/images/shirley-temple-cookie-creami/step-respin-result-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
       ],
+      methodLabel: "HOW TO MAKE",
       servingPhoto: "/images/shirley-temple-cookie-creami/final-close-reveal-polished.webp",
       servingGroups: [
         {
@@ -9936,7 +9971,7 @@ const DESSERT_CATALOG = [
           heading: "Whole-Pint Dessert",
           items: [
             { text: "One finished pint: 340 calories and 43g protein." },
-            { text: "Editorial: the lime gelatin noticeably improved the finished texture — the creator may test it in the standard series base going forward." },
+            { text: "Lime gelatin in the base gives this pint a noticeably smoother texture." },
             { text: "Serve immediately after Respin + grenadine drizzle + cherry — the wafer crunch fades if the Creami sits." },
           ],
         },
