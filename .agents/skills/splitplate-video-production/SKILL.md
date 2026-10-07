@@ -1,6 +1,6 @@
 ---
 name: splitplate-video-production
-description: Plan, produce, or review reusable recipe-video workflows for The Split Plate (thesplitplate.com), including scripts, shot lists, adult and kid plating, captions, editing, and video QA. Also use when updating its video production rules. Does not initiate a video when the user only requests rules or planning.
+description: Plan, produce, or review The Split Plate recipe videos; analyze reference videos, develop hooks and shot lists, and learn from supplied performance data and audience feedback. Use also for updating its reusable production rules. Rules, analysis, and planning requests do not initiate video production or publishing.
 ---
 
 # The Split Plate video production
@@ -22,6 +22,19 @@ The existing `docs/video/SPLITPLATE_PRODUCTION_RULES.md` governs explicit narrat
 Apply the adult/kid split to family-dinner content where relevant; do not impose it on Creami, sauce, snack, or other recipes without a documented split. Record the post's primary job, audience signal, and one relevant destination in the brief. Attach adult macros only to the adult serving. If existing rules conflict with one another, surface the specific conflict before dependent production rather than silently choosing a new policy. Explicit instructions for the current task remain authoritative.
 
 This repository skill is maintained here. The existing documents in `docs/video/` retain their working-copy mirror policy; this addition does not edit those mirrored playbooks.
+
+## Analysis and learning modes
+
+Read only the reference needed for the task:
+
+- For a reference-video breakdown, edit review, hook alternatives, or evidence-based storyboard, use [video-analysis.md](references/video-analysis.md).
+- For supplied performance data, audience questions, hook experiments, or recurring lessons, use [performance-learning.md](references/performance-learning.md). Read the existing `docs/video/REELRISE_LEARNING_MODEL.md` as well; its active experiment and established practices are not replaced by this skill.
+- Use [record-templates.md](references/record-templates.md) for the relevant analysis, build, audit, or learning record. Records are created only when there is actual work or evidence to record.
+- Attribution, pinned source revisions, adaptations, and license notices are in [upstream-sources.md](references/upstream-sources.md).
+
+For future production, retrieve relevant prior lessons if available, connect the chosen opening to actual recipe footage, and attach any resulting learning note to the existing production records. Do not require analytics or a reference video to produce a recipe video. Distinguish proposed, approved, rendered, and measured states. A script or storyboard is not a finished video.
+
+This update adds rules and templates only. It does not grant permission to post, message viewers, alter calendars, install services, or start background jobs. It does not imply that media tools, analytics access, or Ootto integrations are configured.
 
 ## Recipe fidelity
 

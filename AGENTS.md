@@ -46,3 +46,9 @@ Taking a finished edit from `~/Documents/New project/video-edits/` live means re
 ## Reusable Recipe Video Agent Workflow
 
 For recipe-video planning, production, review, or updates to the reusable workflow, read [.agents/skills/splitplate-video-production/SKILL.md](.agents/skills/splitplate-video-production/SKILL.md). It defines production roles, structured handoffs, recipe fidelity, checkpoints, and quality review across recipes. The existing content strategy and `docs/video/` playbooks remain authoritative over its general defaults, including narrative approval, companion cuts, footage allocation, covers, CTAs, and inventory. A request for rules or planning alone does not start video production.
+
+The skill also routes reference-video analysis, evidence-backed hook options, supplied analytics, audience-question research, and persistent learning notes. Use its linked references for those modes; treat performance explanations as hypotheses and keep private source data out of this public repository. The existing Reelrise learning model and current experiments remain authoritative.
+
+## Repository Delivery Preference
+
+For changes Tushar requests in this repository, validate the affected work, then commit and push directly to `main`. Do not open a pull request unless he requests one or repository protections require it. Preserve unrelated work, never force-push to bypass a concurrent change or protection, and report a blocked push honestly. This preference does not authorize unrelated edits or social publishing.
