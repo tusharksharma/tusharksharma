@@ -128,6 +128,7 @@ export const sauces = [
   },
   {
     id: "high-protein-cilantro-jalapeno-ranch",
+    video: "/videos/high-protein-cilantro-jalapeno-ranch/ID.411.-.Sauce.Series.Episode.4-.High-Protein.Cilantro.Jalapeno.Ranch.mp4",
     title: "High-Protein Cilantro Jalapeño Ranch",
     tagline: "The viral green sauce from @eatingwithahbaddie, proteinized. 46g protein in the batch.",
     heroImage: "/images/high-protein-cilantro-jalapeno-ranch/hero-high-protein-green-sauce-polished.webp",
@@ -389,6 +390,7 @@ export const sauces = [
   },
   {
     id: "smoky-chipotle-crema",
+    video: "/videos/smoky-chipotle-crema/ID.009.-.Smoky.Chipotle.Crema.mp4",
     title: "Smoky Chipotle Crema",
     tagline: "Bold. Smoky. Proper heat. Built the way it should be.",
     heroImage: "/images/chipotle-crema-hero.webp",
@@ -442,6 +444,7 @@ export const sauces = [
   },
   {
     id: "high-protein-chipotle-cheddar-sauce",
+    video: "/videos/high-protein-chipotle-cheddar-sauce/ID.327.-.Sauce.Series.Episode.2-.High-Protein.Cheese.Sauce.mp4",
     title: "High-Protein Chipotle Cheddar Sauce",
     tagline: "70 cal / 8g protein per 1/4 batch. Cottage cheese + cheddar powder + nutritional yeast, blended smooth. Adds Smoky Chipotle Crema for heat.",
     heroImage: "/images/high-protein-chipotle-cheddar-sauce/hero-high-protein-chipotle-cheddar-sauce-polished.webp",
@@ -825,6 +828,7 @@ export const sauces = [
   },
   {
     id: "protein-blue-cheese-crema",
+    video: "/videos/protein-blue-cheese-crema/ID.106.-.Protein.Blue.Cheese.Crema.mp4",
     title: "Protein Blue Cheese Crema",
     tagline: "Tastes like real blue cheese sauce. Quietly protein-forward.",
     heroImage: "/images/blue-cheese-crema/hero.webp",
@@ -1215,6 +1219,7 @@ export const sauces = [
   },
   {
     id: "grillos-pickle-dip-protein-style",
+    video: "/videos/grillos-pickle-dip-protein-style/ID.047.-.Grillo-s.Pickle.Dip.Protein.Style.mp4",
     title: "High-Protein Grillo's Pickle Dip",
     tagline: "Viral Grillo's pickle dip, rebuilt protein-style. 10 servings, 110 cal / 16g protein per scoop. Packed back into the pickle tub for serving.",
     heroImage: "/images/grillos-pickle-dip-protein-style/hero-finished-dip-with-wilde-polished.webp",
@@ -1574,6 +1579,7 @@ export const breakfasts = [
   },
   {
     id: "protein-cereal-hack",
+    video: "/videos/protein-cereal-hack/ID.026.-.Protein.Cereal.Hack.Hot.Take.mp4",
     title: "Protein Cereal Hack",
     tagline: "Keep your cereal. Upgrade your milk.",
     heroImage: "/images/cereal-hack-hero.png",
@@ -1746,6 +1752,7 @@ export const breakfasts = [
   },
   {
     id: "ham-cheese-power-melt",
+    video: "/videos/ham-cheese-power-melt/ID.645.-.Ham.-.Cheese.Power.Melt.-.Rinsed.Cheddar.mp4",
     title: "Ham & Cheese Power Melt",
     tagline: "Crispy outside. Layered inside. High-protein comfort.",
     heroImage: "/images/ham-cheese-power-melt-2026/power-melt-hero-polished.webp",
@@ -1972,6 +1979,7 @@ export const breakfasts = [
   },
   {
     id: "30-30-muffin-mug-bowl",
+    video: "/videos/30-30-muffin-mug-bowl/ID.536.-.30-30.Muffin.Mug.Bowl-.Fresh.Edition.mp4",
     title: "30/30 Muffin Mug Bowl",
     tagline: "Two protein products, two 30-second microwave bursts, one warm mug. Adults only.",
     heroImage: "/images/30-30-muffin-mug-bowl/hero.webp",
@@ -2098,6 +2106,7 @@ export const breakfasts = [
   },
   {
     id: "one-pan-breakfast-skillet",
+    video: "/videos/one-pan-breakfast-skillet/ID.068.-.One-Pan.Breakfast.Skillet.mp4",
     title: "High-Protein One-Pan Breakfast Skillet",
     tagline: "510 cal. 45g protein. 10 minutes. One pan. Eggs + Gilbert's Caprese + Lao Gan Ma.",
     heroImage: "/images/one-pan-breakfast-skillet/hero-finished-breakfast-skillet-polished.webp",
@@ -2169,6 +2178,7 @@ export const breakfasts = [
   },
   {
     id: "salmon-cream-cheese-bagel",
+    video: "/videos/salmon-cream-cheese-bagel/ID.048.-.Salmon.Cream.Cheese.Bagel.mp4",
     title: "Salmon Cream Cheese Bagel",
     tagline: "5-minute smoked salmon cream cheese bagel — 250 cal / 30g protein on a Sola high-protein bagel. No deli build, no toast.",
     heroImage: "/images/salmon-cream-cheese-bagel/hero-loaded-salmon-cream-cheese-bagel-polished.webp",
@@ -3292,6 +3302,7 @@ export const quickLunches = [
   },
   {
     id: "high-protein-chili-cheese-toast",
+    video: "/videos/high-protein-chili-cheese-toast/ID.033.-.High-Protein.Chili.Cheese.Toast.mp4",
     title: "High-Protein Chili Cheese Toast",
     tagline: "8 open-faced toasts. 130 cal / 13g protein each. Blended cottage cheese + reduced-fat fiesta + chilies on keto buns.",
     heroImage: "/images/high-protein-chili-cheese-toast/hero-finished-chili-cheese-toast-polished.webp",
@@ -3435,6 +3446,7 @@ export const quickLunches = [
   },
   {
     id: "grillos-pickle-dip-wilde-combo",
+    video: "/videos/grillos-pickle-dip-wilde-combo/ID.017.-.Grillo-s.Pickle.Dip.-.Wilde.Combo.mp4",
     title: "Grillo's Pickle Dip + Wilde Chips Combo",
     tagline: "270 cal / 27g protein snack — the dip (110/16) + a bag of Wilde Spicy Queso Protein Chips (160/11). Macro-coded combo of the viral pickle dip remix.",
     heroImage: "/images/grillos-pickle-dip-protein-style/context-wilde-chip-dip-polished.webp",
@@ -3487,6 +3499,7 @@ export const quickLunches = [
   },
   {
     id: "leftover-cheeseburger-tacos",
+    video: "/videos/leftover-cheeseburger-tacos/ID.018.-.Leftover.Cheeseburger.Tacos.mp4",
     title: "Leftover Cheeseburger Tacos",
     tagline: "10-min cheeseburger taco lunch built from 4 oz of leftover 93/7 ground beef. Chain-cook from Smash Burger Night (id 47).",
     heroImage: "/images/leftover-cheeseburger-tacos/hero-final-cheeseburger-tacos-polished.webp",
@@ -4233,6 +4246,7 @@ export const quickLunches = [
   },
   {
     id: "green-sauce-chipotle-chicken-mini-tacos",
+    video: "/videos/green-sauce-chipotle-chicken-mini-tacos/ID.418.-.Quick.Lunches.Episode.4-.Green.Sauce.Chipotle.Chicken.Mini.Tacos.mp4",
     title: "Green Sauce Chipotle Chicken Mini Tacos",
     tagline: "Quick Lunches Ep. 4 — two mini tacos: Kirkland chipotle chicken, high-protein cilantro-jalapeño ranch, on La Banderita Carb Counter tortillas. ~220 cal / 27g protein (est.) for both.",
     heroImage: "/images/green-sauce-chipotle-chicken-mini-tacos/hero-green-sauce-chipotle-chicken-mini-tacos.webp",
@@ -4672,7 +4686,7 @@ const week4CreamiCarousel = ({ flavor, title, id, heroImage, calories, protein, 
   engagementQuestion: question,
 });
 
-const WEEK13_VIDEO = "/videos/crumbl-week13/crumblcreamicut-week13-english-2026-10-04.mp4";
+const WEEK13_VIDEO = "/videos/butterfinger-peanut-butter-milkshake-creami-week13/ID.668.-.CrumblCreamiCut.Week.13.-.Three.Builds.and.Scores.mp4";
 const WEEK13_SPANISH_VIDEO = "/videos/crumbl-week13/crumblcreamicut-week13-spanish-2026-10-04.mp4";
 const WEEK13_COLLECTION = [
   { id: "butterfinger-peanut-butter-milkshake-creami-week13", title: "Butterfinger Peanut-Butter Creami" },
@@ -4818,6 +4832,7 @@ const DESSERT_CATALOG = [
   ...WEEK12_CREAMIS,
   {
     id: "chocolate-protein-brownie-bowl",
+    video: "/videos/chocolate-protein-brownie-bowl/ID.046.-.Chocolate.Protein.Brownie.Bowl.mp4",
     title: "Chocolate Protein Brownie Bowl",
     tagline: "Pumpkin for texture. Chocolate is the flavor.",
     heroImage: "/images/brownie-bowl-hero.png",
@@ -4943,6 +4958,7 @@ const DESSERT_CATALOG = [
   },
   {
     id: "midnight-mix-creami",
+    video: "/videos/midnight-mix-creami/ID.005.-.Midnight.Mix.Creami.mp4",
     title: "Midnight Mix Creami",
     tagline: "Chocolate protein ice cream with the 5g mix-in method.",
     heroImage: "/images/midnight-mix-hero.webp",
@@ -7097,6 +7113,7 @@ const DESSERT_CATALOG = [
   },
   {
     id: "protein-cheesecake-frosting",
+    video: "/videos/protein-cheesecake-frosting/ID.035.-.Protein.Cheesecake.Frosting.mp4",
     title: "Protein Cheesecake Frosting",
     tagline: "Cheesecake-style frosting that lives in a jar. 30g serving = 60 cal / 6g protein. 15 servings per batch, 5-min blend, no cook.",
     heroImage: "/images/protein-cheesecake-frosting/hero-pouring-frosting.webp",
@@ -7220,6 +7237,7 @@ const DESSERT_CATALOG = [
   },
   {
     id: "high-protein-viral-dot-cake",
+    video: "/videos/high-protein-viral-dot-cake/ID.036.-.High-Protein.Viral.Dot.Cake.mp4",
     title: "High-Protein Viral Dot Cake",
     tagline: "Viral dot cake, protein version. 3 ramekin cakes per batch, 250 cal / 25g protein each (base 170/19 + cheesecake frosting + sprinkles).",
     heroImage: "/images/high-protein-viral-dot-cake/hero-finished-dot-cakes-polished.webp",
@@ -7367,6 +7385,7 @@ const DESSERT_CATALOG = [
   },
   {
     id: "marbled-stuffed-cheesecake-creami",
+    video: "/videos/marbled-stuffed-cheesecake-creami/ID.027.-.CrumblCreamiCut-.Marbled.Stuffed.Cheesecake.Creami.mp4",
     title: "Marbled Stuffed Cheesecake Creami",
     tagline: "CrumblCreamiCut Week 1, Flavor 1 — two-freeze marbled chocolate + vanilla protein Creami pint, stuffed with frozen cheesecake frosting + Lily's chips + Teddy Graham finish. 335 cal / 45g protein whole pint.",
     heroImage: "/images/marbled-stuffed-cheesecake-creami/hero-finished-marbled-stuffed-cheesecake-creami-polished.webp",
@@ -7543,6 +7562,7 @@ const DESSERT_CATALOG = [
   },
   {
     id: "caramel-shortbread-creami-with-twix",
+    video: "/videos/caramel-shortbread-creami-with-twix/ID.028.-.CrumblCreamiCut-.Caramel.Shortbread.Creami.with.Twix.mp4",
     title: "Caramel Shortbread Creami with Twix",
     tagline: "CrumblCreamiCut Week 1, Flavor 2 — single-freeze protein Creami with brown butter + vanilla base, Lily's chips through Respin (not Mix-In), zero-cal salted caramel drizzle, and chopped Twix pieces for the shortbread crunch. 350 cal / 42g protein whole pint.",
     heroImage: "/images/caramel-shortbread-creami-with-twix/hero-finished-caramel-shortbread-creami-polished.webp",
@@ -7726,6 +7746,7 @@ const DESSERT_CATALOG = [
   },
   {
     id: "biscoff-skillet-creami",
+    video: "/videos/biscoff-skillet-creami/ID.029.-.CrumblCreamiCut-.Biscoff.Skillet.Creami.mp4",
     title: "Biscoff Skillet Creami",
     tagline: "CrumblCreamiCut Week 1, Flavor 3 — cookie-butter protein Creami with 1 tsp Biscoff spread + LorAnn Cookie Butter emulsion + vanilla in the base, one Biscoff cookie through Mix-In, sugar-free cookie-butter syrup + LorAnn drizzle, and a second Biscoff cookie crushed on top. 340 cal / 42g protein whole pint.",
     heroImage: "/images/biscoff-skillet-creami/hero-finished-biscoff-skillet-creami-polished.webp",
@@ -9531,6 +9552,7 @@ const DESSERT_CATALOG = [
   },
   {
     id: "pink-berry-cookie-creami",
+    video: "/videos/pink-berry-cookie-creami/ID.123.-.Pink.Berry.Cookie.Creami.mp4",
     title: "Pink Berry Cookie Creami",
     tagline: "CrumblCreamiCut Week 5, Flavor 1 — buttery strawberry protein Creami pint inspired by Crumbl's Pink Berry Cookie. Brown-butter emulsion carries the cookie note; freeze-dried strawberries stay crunchy on top. 315 cal / 43g protein whole pint.",
     heroImage: "/images/pink-berry-cookie-creami/hero-finished-pink-berry-cookie-creami-polished.webp",
@@ -9711,6 +9733,7 @@ const DESSERT_CATALOG = [
   },
   {
     id: "nilla-bean-float-cookie-creami",
+    video: "/videos/nilla-bean-float-cookie-creami/ID.134.-.Nilla.Bean.Float.Cookie.Creami.mp4",
     title: "Nilla Bean Float Cookie Creami",
     tagline: "CrumblCreamiCut Week 5, Flavor 2 — cola-float-inspired protein Creami with vanilla, black cocoa, 1/4 cup Diet Coke in the base, and salted-caramel CocoRolls through Respin + on top. 340 cal / 43g protein whole pint. Slightly icier than a standard base — honest review.",
     heroImage: "/images/nilla-bean-float-cookie-creami/hero-finished-nilla-bean-float-cookie-creami-polished.webp",
@@ -9898,6 +9921,7 @@ const DESSERT_CATALOG = [
   },
   {
     id: "shirley-temple-cookie-creami",
+    video: "/videos/shirley-temple-cookie-creami/ID.137.-.Shirley.Temple.Cookie.Creami.mp4",
     title: "Shirley Temple Cookie Creami",
     tagline: "CrumblCreamiCut Week 5, Flavor 3 (WEEK 5 FINALE / Ep. 15) — Shirley-Temple-inspired protein Creami: base carries lime gelatin + vanilla + brown-butter emulsion pre-freeze, mix-in is HighKey vanilla wafers via Respin, finished with a restrained 1/3 oz regular grenadine drizzle + one maraschino cherry. 340 cal / 43g protein whole pint.",
     heroImage: "/images/shirley-temple-cookie-creami/hero-finished-shirley-temple-cookie-creami-polished.webp",
@@ -10089,6 +10113,7 @@ const DESSERT_CATALOG = [
   },
   {
     id: "mississippi-mud-pie-cookie-creami",
+    video: "/videos/mississippi-mud-pie-cookie-creami/ID.183.-.Mississippi.Mud.Pie.Cookie.Creami.mp4",
     title: "Mississippi Mud Pie Cookie Creami",
     tagline: "CrumblCreamiCut Week 6, Flavor 1 (Ep. 16 / Week 6 opener) — darkest Creami in the series so far: 2 tbsp Dutch cocoa in the base, cocoa grahams through Respin, Mid-Day Squares brownie garnish + sugar-free whipped cream + cocoa dusting on top. 390 cal / 46g protein whole pint.",
     heroImage: "/images/mississippi-mud-pie-cookie-creami/hero-finished-mississippi-mud-pie-cookie-creami-polished.webp",
@@ -13113,6 +13138,7 @@ export const bases = [
 export const powerups = [
   {
     id: "electrolyte-watermelon-limeade",
+    video: "/videos/electrolyte-watermelon-limeade/ID.049.-.Electrolyte.Watermelon.Limeade.mp4",
     title: "Electrolyte Watermelon Limeade",
     tagline: "Fresh watermelon, tart lime, and electrolytes blended and strained into one cold summer drink.",
     heroImage: "/images/electrolyte-watermelon-limeade/hero-finished-watermelon-limeade-polished.webp",
@@ -15139,6 +15165,7 @@ export const snackBoxes = [
   },
   {
     id: "split-plate-pizza-snack-box",
+    video: "/videos/split-plate-pizza-snack-box/ID.015.-.Split.Plate.Pizza.Snack.Box.mp4",
     title: "Split Plate Pizza Snack Box",
     tagline: "Four no-cook pizza snack boxes with turkey pepperoni, cubed cheese, crackers, and cucumber. About 220 calories and 15g protein per box.",
     heroImage: "/images/split-plate-pizza-snack-box/hero-final-snack-box-polished.webp",
@@ -15286,6 +15313,7 @@ export const snackBoxes = [
   },
   {
     id: "split-plate-apple-pie-snack-box",
+    video: "/videos/split-plate-apple-pie-snack-box/ID.019.-.Split.Plate.Apple.Pie.Snack.Box.mp4",
     title: "Split Plate Apple Pie Snack Box",
     tagline: "Four apple-pie-inspired snack boxes with jerky, apples, yogurt dip, and cookies. About 240 calories and 18g protein per box.",
     heroImage: "/images/split-plate-apple-pie-snack-box/hero-final-apple-pie-snack-box-polished.webp",
@@ -15434,6 +15462,7 @@ export const snackBoxes = [
   },
   {
     id: "split-plate-berry-power-up-snack-box",
+    video: "/videos/split-plate-berry-power-up-snack-box/ID.022.-.Split.Plate.Berry.Power-Up.Snack.Box.mp4",
     title: "Split Plate Berry Power-Up Snack Box",
     tagline: "Snack Box Series Ep. 3 — no-cook kid snack with protein, fruit, cheese, and crunch. Beef stick + blueberries + Babybel + 28g pistachios. About 360 cal / 20g protein per box.",
     heroImage: "/images/split-plate-berry-power-up-snack-box/hero-final-berry-power-up-box-polished.webp",
@@ -15560,6 +15589,7 @@ export const snackBoxes = [
   },
   {
     id: "split-plate-ranch-crunch-snack-box",
+    video: "/videos/split-plate-ranch-crunch-snack-box/ID.024.-.Split.Plate.Ranch.Crunch.Snack.Box.mp4",
     title: "Split Plate Ranch Crunch Snack Box",
     tagline: "Snack Box Series Ep. 4 — higher-protein savory snack box. Turkey + cucumber + carrots + Harvest Snaps + Greek-yogurt-forward ranch dip. ~230 cal / 27g protein per box.",
     heroImage: "/images/split-plate-ranch-crunch-snack-box/hero-final-ranch-crunch-box-polished.webp",
@@ -15658,6 +15688,7 @@ export const snackBoxes = [
   },
   {
     id: "split-plate-mediterranean-snack-box",
+    video: "/videos/split-plate-mediterranean-snack-box/ID.031.-.Split.Plate.Mediterranean.Snack.Box.mp4",
     title: "Split Plate Mediterranean Snack Box",
     tagline: "Mediterranean-inspired kid snack box — prosciutto, Babybel, Castelvetrano olives, and almond-flour crackers. 4 boxes at once for 2 kids across 2 days. About 270 cal / 16g protein per box.",
     heroImage: "/images/split-plate-mediterranean-snack-box/hero-final-mediterranean-snack-box-polished.webp",

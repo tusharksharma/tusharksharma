@@ -2082,6 +2082,7 @@ const recipes = [
       substitutionNotes: ["use GF buns for gluten-free", "swap fillets for chicken tenders", "regular buns for non-keto version"],
     },
     slug: "spicy-chicken-sandwich",
+    video: "/videos/spicy-chicken-sandwich/ID.502.-.Quick.Lunches.Episode.7-.Spicy.Chicken.Sandwich.mp4",
     proteinAnchor: "chicken",
     mealType: "other",
     flavorDirection: "spicy-crispy",
@@ -2727,6 +2728,7 @@ const recipes = [
       substitutionNotes: ["use GF tortillas for gluten-free", "swap chicken for steak or ground beef", "use regular cheese if not tracking macros"],
     },
     slug: "chipotle-chicken-quesadillas",
+    video: "/videos/chipotle-chicken-quesadillas/ID.008.-.Chicken.Quesadilla.mp4",
     proteinAnchor: "chicken",
     mealType: "other",
     flavorDirection: "smoky-southwest",
@@ -4048,6 +4050,7 @@ const recipes = [
       ],
     },
     slug: "buffalo-wing-night",
+    video: "/videos/buffalo-wing-night/ID.112.-.Buffalo.Wing.Night.-.Freezer.Shortcut.mp4",
     proteinAnchor: "chicken",
     mealType: "other",
     flavorDirection: "smoky-southwest",
@@ -6234,6 +6237,7 @@ const recipes = [
       ],
     },
     slug: "high-protein-halal-cart-chicken-rice-bowls",
+    video: "/videos/high-protein-halal-cart-chicken-rice-bowls/ID.012.-.High-Protein.Halal.Cart.Chicken.Rice.Bowls.mp4",
     // Polished-only carousel — Gemini Path A outputs from the 60-sec cook
     // video. Narrative order: brand setup → cooking (sear) → texture moment
     // (chop) → assembly (drizzle) → adult result → kid pattern. The hero
@@ -6460,6 +6464,7 @@ const recipes = [
       ],
     },
     slug: "garlic-parmesan-chicken-drumsticks-chipotle-corn",
+    video: "/videos/garlic-parmesan-chicken-drumsticks-chipotle-corn/ID.300.-.Garlic.Parmesan.Chicken.Drumsticks.-.Chipotle.Corn.mp4",
     // socialImages — raw paths for now; swap to -polished.webp after the
     // Path A polish run lands. Step-execution order per
     // [feedback-social-images-step-order]: season → rack → oven → final
@@ -6668,6 +6673,7 @@ const recipes = [
       ],
     },
     slug: "chicken-pot-pie",
+    video: "/videos/chicken-pot-pie/ID.011.-.Chicken.Pot.Pie.mp4",
     // socialImages — raw paths for now; swap to -polished.webp after the
     // Path A polish run lands. Step-execution order per
     // [feedback-social-images-step-order]: vermouth → broth → chicken →
@@ -6977,6 +6983,7 @@ const recipes = [
       ],
     },
     slug: "smash-burger-split-plate",
+    video: "/videos/smash-burger-split-plate/ID.014.-.High-Protein.Smash.Burgers.mp4",
     // socialImages — raw paths for now; swap to -polished.webp after Path A.
     // Step-execution order per [feedback-social-images-step-order]: sauce
     // build → fries load → smash → cheese melt → assembly → adult plate
@@ -7333,6 +7340,7 @@ const recipes = [
       ],
     },
     slug: "fire-grilled-chicken-thighs-frozen-veggies",
+    video: "/videos/fire-grilled-chicken-thighs-frozen-veggies/ID.021.-.Fire-Grilled.Chicken.Thighs.-.Frozen.Veggies.mp4",
     // socialImages — raw paths for now; swap to -polished.webp after Path A.
     // Step-execution order per [feedback-social-images-step-order]: seasoning
     // start → grill prep hook → grilling → slicing → payoff plate. 5 entries.
@@ -7521,6 +7529,7 @@ const recipes = [
       ],
     },
     slug: "high-protein-philly-cheesesteak-sliders",
+    video: "/videos/high-protein-philly-cheesesteak-sliders/ID.023.-.High-Protein.Philly.Cheesesteak.Sliders.mp4",
     // socialImages — step-execution order per [feedback-social-images-step-
     // order]: cook → combined filling → bread build (split visual) → sauce
     // split → baked payoff pan → bite tail. 6 entries. Drop hero
@@ -7748,6 +7757,7 @@ const recipes = [
       ],
     },
     slug: "busy-day-steak-taco-plates",
+    video: "/videos/busy-day-steak-taco-plates/ID.025.-.Busy-Day.Steak.Taco.Plates.mp4",
     // socialImages — raw paths for now; swap to -polished.webp after Path A.
     // Step-execution order per [feedback-social-images-step-order]: skillet
     // start → broth deglaze → tortilla warm → adult salsa portion → steak
