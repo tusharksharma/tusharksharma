@@ -1,0 +1,380 @@
+{
+  "schema_version": "1.0.0",
+  "report_id": "synthetic-seo-example",
+  "is_example": true,
+  "reviewed_at": "2026-10-06T12:00:00Z",
+  "mode": "audit",
+  "status": "partial",
+  "target": {
+    "url": "https://example.invalid",
+    "repository_commit": null,
+    "audience": "Busy home cooks",
+    "market_language": "Illustrative English-language market"
+  },
+  "scope": {
+    "inspected_urls_or_files": [
+      "https://example.invalid/recipes/demo"
+    ],
+    "tools_used": [
+      "Synthetic fixture only; no live tools"
+    ],
+    "search_console_access": "unavailable",
+    "data_window": null,
+    "assumptions": [
+      "All findings and URLs are fictional."
+    ],
+    "limitations": [
+      "Not a real website audit.",
+      "No Google account or ranking evidence."
+    ],
+    "constrained": true
+  },
+  "overall": {
+    "problem_score": 8,
+    "confidence": "low",
+    "provisional": true,
+    "driving_issue": "Synthetic unwanted noindex on a public recipe."
+  },
+  "areas": {
+    "crawl_index": {
+      "status": "partial",
+      "problem_score": 8,
+      "summary": "The fictional recipe response contains an unintended noindex directive.",
+      "evidence_ids": [
+        "E1"
+      ]
+    },
+    "rendering_delivery": {
+      "status": "not_tested",
+      "problem_score": null,
+      "summary": "Not supplied in this synthetic fixture.",
+      "evidence_ids": []
+    },
+    "recipe_schema": {
+      "status": "partial",
+      "problem_score": 6,
+      "summary": "The fictional JSON-LD says 8 servings while the recipe says 4.",
+      "evidence_ids": [
+        "E2"
+      ]
+    },
+    "query_intent": {
+      "status": "not_tested",
+      "problem_score": null,
+      "summary": "Not supplied in this synthetic fixture.",
+      "evidence_ids": []
+    },
+    "onpage_content": {
+      "status": "partial",
+      "problem_score": 5,
+      "summary": "The fictional page title is Recipe 14, although the visible dish is chickpea tomato stew.",
+      "evidence_ids": [
+        "E3"
+      ]
+    },
+    "internal_links": {
+      "status": "partial",
+      "problem_score": 4,
+      "summary": "The fictional collection shows plain recipe text without a link.",
+      "evidence_ids": [
+        "E4"
+      ]
+    },
+    "media_discovery": {
+      "status": "not_tested",
+      "problem_score": null,
+      "summary": "Not supplied in this synthetic fixture.",
+      "evidence_ids": []
+    },
+    "mobile_performance": {
+      "status": "not_tested",
+      "problem_score": null,
+      "summary": "Not supplied in this synthetic fixture.",
+      "evidence_ids": []
+    },
+    "authority_trust": {
+      "status": "not_tested",
+      "problem_score": null,
+      "summary": "Not supplied in this synthetic fixture.",
+      "evidence_ids": []
+    },
+    "search_measurement": {
+      "status": "not_tested",
+      "problem_score": null,
+      "summary": "Not supplied in this synthetic fixture.",
+      "evidence_ids": []
+    }
+  },
+  "evidence": [
+    {
+      "id": "E1",
+      "locator": "https://example.invalid/recipes/demo",
+      "captured_at": "2026-10-06T12:00:00Z",
+      "method": "user_provided",
+      "context": "Synthetic demonstration; not a real inspection.",
+      "fact": "The fictional recipe response contains an unintended noindex directive."
+    },
+    {
+      "id": "E2",
+      "locator": "https://example.invalid/recipes/demo",
+      "captured_at": "2026-10-06T12:00:00Z",
+      "method": "user_provided",
+      "context": "Synthetic demonstration; not a real inspection.",
+      "fact": "The fictional JSON-LD says 8 servings while the recipe says 4."
+    },
+    {
+      "id": "E3",
+      "locator": "https://example.invalid/recipes/demo",
+      "captured_at": "2026-10-06T12:00:00Z",
+      "method": "user_provided",
+      "context": "Synthetic demonstration; not a real inspection.",
+      "fact": "The fictional page title is Recipe 14, although the visible dish is chickpea tomato stew."
+    },
+    {
+      "id": "E4",
+      "locator": "https://example.invalid/recipes/demo",
+      "captured_at": "2026-10-06T12:00:00Z",
+      "method": "user_provided",
+      "context": "Synthetic demonstration; not a real inspection.",
+      "fact": "The fictional collection shows plain recipe text without a link."
+    },
+    {
+      "id": "E5",
+      "locator": "https://example.invalid/recipes/demo",
+      "captured_at": "2026-10-06T12:00:00Z",
+      "method": "access_gap",
+      "context": "Synthetic demonstration; not a real inspection.",
+      "fact": "No Search Console export or connected access was supplied."
+    }
+  ],
+  "indexing_observations": [
+    {
+      "url": "https://example.invalid/recipes/demo",
+      "technical_indexability": "block_observed",
+      "google_index_status": "unknown",
+      "summary": "Synthetic noindex evidence cannot establish the actual Google index state.",
+      "evidence_ids": [
+        "E1"
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "rank": 1,
+      "id": "SEO-1",
+      "kind": "observed_issue",
+      "title": "Remove an unintended recipe noindex",
+      "primary_area": "crawl_index",
+      "related_areas": [],
+      "problem_score": 8,
+      "score_rationale": "Illustrative anchored severity, not a Google score.",
+      "confidence": "high",
+      "evidence_ids": [
+        "E1"
+      ],
+      "affected_urls_or_files": [
+        "https://example.invalid/recipes/demo"
+      ],
+      "diagnosis": "The fictional recipe response contains an unintended noindex directive.",
+      "proposed_change": "Remove the directive at its maintained source for this public recipe.",
+      "owner_role": "SEO editor / frontend engineer",
+      "effort": "S",
+      "effort_assumptions": "Assumes a reusable template and access to its maintained source.",
+      "dependencies": [],
+      "acceptance_tests": [
+        "The recipe responds successfully with no unintended noindex in HTML or headers."
+      ],
+      "measurement": {
+        "metric": "Specified verification outcome",
+        "baseline": null,
+        "baseline_evidence_ids": [],
+        "proposed_target": "All action-specific acceptance tests pass.",
+        "comparison_window": "Verify delivery after implementation; evaluate search outcomes over comparable complete windows when data exists.",
+        "guardrail": "Preserve truthful recipe content and avoid unintended exclusions on other pages."
+      },
+      "priority_rationale": "Discovery blockers precede markup, clarity, link improvements, and measurement gaps.",
+      "previous_status": "new",
+      "delivery_status": "proposed"
+    },
+    {
+      "rank": 2,
+      "id": "SEO-2",
+      "kind": "observed_issue",
+      "title": "Align declared yield with the recipe",
+      "primary_area": "recipe_schema",
+      "related_areas": [],
+      "problem_score": 6,
+      "score_rationale": "Illustrative anchored severity, not a Google score.",
+      "confidence": "high",
+      "evidence_ids": [
+        "E2"
+      ],
+      "affected_urls_or_files": [
+        "https://example.invalid/recipes/demo"
+      ],
+      "diagnosis": "The fictional JSON-LD says 8 servings while the recipe says 4.",
+      "proposed_change": "Use the verified four-serving yield consistently in visible content and markup.",
+      "owner_role": "SEO editor / frontend engineer",
+      "effort": "S",
+      "effort_assumptions": "Assumes a reusable template and access to its maintained source.",
+      "dependencies": [],
+      "acceptance_tests": [
+        "Visible yield, ingredient quantities and declared nutrition basis agree; run the actual rich-result test."
+      ],
+      "measurement": {
+        "metric": "Specified verification outcome",
+        "baseline": null,
+        "baseline_evidence_ids": [],
+        "proposed_target": "All action-specific acceptance tests pass.",
+        "comparison_window": "Verify delivery after implementation; evaluate search outcomes over comparable complete windows when data exists.",
+        "guardrail": "Preserve truthful recipe content and avoid unintended exclusions on other pages."
+      },
+      "priority_rationale": "Discovery blockers precede markup, clarity, link improvements, and measurement gaps.",
+      "previous_status": "new",
+      "delivery_status": "proposed"
+    },
+    {
+      "rank": 3,
+      "id": "SEO-3",
+      "kind": "observed_issue",
+      "title": "Use a descriptive recipe title",
+      "primary_area": "onpage_content",
+      "related_areas": [],
+      "problem_score": 5,
+      "score_rationale": "Illustrative anchored severity, not a Google score.",
+      "confidence": "high",
+      "evidence_ids": [
+        "E3"
+      ],
+      "affected_urls_or_files": [
+        "https://example.invalid/recipes/demo"
+      ],
+      "diagnosis": "The fictional page title is Recipe 14, although the visible dish is chickpea tomato stew.",
+      "proposed_change": "Use Chickpea Tomato Stew as the descriptive recipe identity in title/H1.",
+      "owner_role": "SEO editor / frontend engineer",
+      "effort": "S",
+      "effort_assumptions": "Assumes a reusable template and access to its maintained source.",
+      "dependencies": [],
+      "acceptance_tests": [
+        "The title and H1 accurately identify the dish in initial and rendered content."
+      ],
+      "measurement": {
+        "metric": "Specified verification outcome",
+        "baseline": null,
+        "baseline_evidence_ids": [],
+        "proposed_target": "All action-specific acceptance tests pass.",
+        "comparison_window": "Verify delivery after implementation; evaluate search outcomes over comparable complete windows when data exists.",
+        "guardrail": "Preserve truthful recipe content and avoid unintended exclusions on other pages."
+      },
+      "priority_rationale": "Discovery blockers precede markup, clarity, link improvements, and measurement gaps.",
+      "previous_status": "new",
+      "delivery_status": "proposed"
+    },
+    {
+      "rank": 4,
+      "id": "SEO-4",
+      "kind": "observed_issue",
+      "title": "Connect the recipe from its relevant collection",
+      "primary_area": "internal_links",
+      "related_areas": [],
+      "problem_score": 4,
+      "score_rationale": "Illustrative anchored severity, not a Google score.",
+      "confidence": "high",
+      "evidence_ids": [
+        "E4"
+      ],
+      "affected_urls_or_files": [
+        "https://example.invalid/recipes/demo"
+      ],
+      "diagnosis": "The fictional collection shows plain recipe text without a link.",
+      "proposed_change": "Add a semantic link from the relevant collection to the existing recipe URL.",
+      "owner_role": "SEO editor / frontend engineer",
+      "effort": "S",
+      "effort_assumptions": "Assumes a reusable template and access to its maintained source.",
+      "dependencies": [],
+      "acceptance_tests": [
+        "The collection includes a working anchor with descriptive text to the canonical recipe."
+      ],
+      "measurement": {
+        "metric": "Specified verification outcome",
+        "baseline": null,
+        "baseline_evidence_ids": [],
+        "proposed_target": "All action-specific acceptance tests pass.",
+        "comparison_window": "Verify delivery after implementation; evaluate search outcomes over comparable complete windows when data exists.",
+        "guardrail": "Preserve truthful recipe content and avoid unintended exclusions on other pages."
+      },
+      "priority_rationale": "Discovery blockers precede markup, clarity, link improvements, and measurement gaps.",
+      "previous_status": "new",
+      "delivery_status": "proposed"
+    },
+    {
+      "rank": 5,
+      "id": "SEO-5",
+      "kind": "validation_task",
+      "title": "Establish the search visibility baseline",
+      "primary_area": "search_measurement",
+      "related_areas": [],
+      "problem_score": null,
+      "score_rationale": "Unknown visibility; do not invent a score.",
+      "confidence": "high",
+      "evidence_ids": [
+        "E5"
+      ],
+      "affected_urls_or_files": [
+        "https://example.invalid/recipes/demo"
+      ],
+      "diagnosis": "No Search Console export or connected access was supplied.",
+      "proposed_change": "Inspect an authorized export or connected property for this recipe and record the date range.",
+      "owner_role": "SEO editor / frontend engineer",
+      "effort": "S",
+      "effort_assumptions": "Assumes a reusable template and access to its maintained source.",
+      "dependencies": [],
+      "acceptance_tests": [
+        "A sourced baseline or an explicit remaining access limitation is recorded without invented numbers."
+      ],
+      "measurement": {
+        "metric": "Specified verification outcome",
+        "baseline": null,
+        "baseline_evidence_ids": [],
+        "proposed_target": "All action-specific acceptance tests pass.",
+        "comparison_window": "Verify delivery after implementation; evaluate search outcomes over comparable complete windows when data exists.",
+        "guardrail": "Preserve truthful recipe content and avoid unintended exclusions on other pages."
+      },
+      "priority_rationale": "Discovery blockers precede markup, clarity, link improvements, and measurement gaps.",
+      "previous_status": "new",
+      "delivery_status": "proposed"
+    }
+  ],
+  "recipe_briefs": [
+    {
+      "action_id": "SEO-3",
+      "target_url": "https://example.invalid/recipes/demo",
+      "primary_query": "chickpea tomato stew",
+      "supporting_queries": [],
+      "demand_basis": "hypothesis",
+      "evidence_ids": [
+        "E3"
+      ],
+      "proposed_title": "Chickpea Tomato Stew | Example Kitchen",
+      "proposed_h1": "Chickpea Tomato Stew",
+      "proposed_meta_description": "Make chickpea tomato stew with clear ingredient quantities and step-by-step instructions.",
+      "content_changes": [
+        "Use the recognizable dish name without introducing unsupported timing or nutrition claims."
+      ],
+      "internal_links": [],
+      "facts_to_verify": [
+        "Search demand and the actual recipe facts before publishing."
+      ]
+    }
+  ],
+  "previous_review": {
+    "reference": null,
+    "comparable": false,
+    "reason": "No earlier report supplied.",
+    "changes": []
+  },
+  "guidance_sources": [
+    "https://developers.google.com/search/docs/appearance/structured-data/recipe",
+    "https://developers.google.com/search/docs/appearance/structured-data/sd-policies"
+  ]
+}
