@@ -1393,6 +1393,7 @@ export const sauces = [
       reheat: "N/A — serve cold, never reheat.",
     },
   },
+
 ];
 
 export const breakfasts = [
@@ -16348,5 +16349,88 @@ export const snackBoxes = [
     ],
     allergens: ["eggs", "milk", "peanuts"],
     dietTags: ["no-cook-assembly", "kid-snack", "snack-prep", "pork-free", "vegetarian", "high-protein"],
+  },
+  {
+    id: "summer-moon-inspired-protein-creamer",
+    title: "Summer Moon-Inspired Protein Creamer",
+    tagline: "A homemade Moon Milk-inspired creamer with Nurri protein milk and four sugar-free syrup flavors — about 14 calories and 1.7g protein per 2 tablespoons.",
+    heroImage: "/images/summer-moon-inspired-protein-creamer/hero.webp",
+    prepImage: "/images/summer-moon-inspired-protein-creamer/hero.webp",
+    videoSrc: "/videos/summer-moon-inspired-protein-creamer/protein-creamer-main-english-hdr.mp4",
+    socialHashtags: ["#TheSplitPlate", "#ProteinCoffee", "#CoffeeCreamer", "#CoffeeHack", "#SummerMoonInspired"],
+    socialCarousel: {
+      heroBadge: "Protein Coffee · Inspired By Summer Moon",
+      heroAccent: "amber",
+      hook: "A homemade Summer Moon-inspired creamer with protein milk, four syrup flavors, and a 14-calorie coffee portion.",
+      heroPhoto: "/images/summer-moon-inspired-protein-creamer/hero.webp",
+      ingredientGroups: [{
+        card: 0,
+        accent: "amber",
+        heading: "One Small Batch",
+        items: [
+          { quantity: "1/2 cup", text: "Nurri Protein Whole Milk" },
+          { quantity: "2 pumps each", text: "Sugar-free White Chocolate Mocha, Irish Cream, Maple Bourbon Pecan, and French Vanilla syrups" },
+          { quantity: "2 tbsp", text: "Finished creamer per coffee" },
+        ],
+      }],
+      methodGroups: [{
+        accent: "amber",
+        heading: "Shake and Pour",
+        items: [
+          { number: 1, heading: "Combine", body: "Pour the milk and two pumps of each syrup into a clean lidded jar." },
+          { number: 2, heading: "Shake", body: "Close the jar and shake until the creamer is evenly combined." },
+          { number: 3, heading: "Use", body: "Add 2 tablespoons to brewed coffee. Stir or shake the batch again before each pour." },
+        ],
+      }],
+      servingPhoto: { src: "/images/summer-moon-inspired-protein-creamer/hero.webp", position: "50% 55%", zoom: 1.02, layout: "side" },
+      servingGroups: [{
+        accent: "amber",
+        heading: "The Honest Pour",
+        items: [
+          { text: "Makes about 6 coffee portions. Each 2-tbsp creamer portion is approximately 14 calories and 1.7g protein." },
+          { text: "The macro estimate is for the creamer only; coffee and any other additions are excluded." },
+          { text: "This is a homemade inspired-by mix, not Summer Moon's proprietary recipe or an official collaboration." },
+        ],
+      }],
+      engagementQuestion: "If you know Summer Moon, what's your order?",
+    },
+    socialImages: ["/images/summer-moon-inspired-protein-creamer/hero.webp"],
+    flavorProfile: "Sweet, creamy, vanilla-forward coffee-shop creamer with maple-pecan and Irish-cream notes.",
+    calories: 85,
+    caloriesPerServing: 14,
+    protein: 10,
+    proteinPerServing: 1.7,
+    servings: 6,
+    time: "5 min",
+    bestFor: ["Morning coffee", "Protein coffee", "Coffee prep", "No cook", "Batch prep"],
+    useThisWhen: "You want a sweet coffee-shop-style creamer with a little protein built into the pour, without claiming the whole coffee is 14 calories.",
+    flavorTarget: "Cold, pourable creamer with a smooth dairy base and layered white-chocolate, Irish-cream, maple-pecan, and vanilla notes.",
+    ingredients: [
+      "1/2 cup Nurri Protein Whole Milk",
+      "2 pumps (about 1 tbsp) Syruvia Sugar-Free White Chocolate Mocha syrup",
+      "2 pumps (about 1 tbsp) Syruvia Sugar-Free Irish Cream syrup",
+      "2 pumps (about 1 tbsp) Syruvia Sugar-Free Maple Bourbon Pecan syrup",
+      "2 pumps (about 1 tbsp) Syruvia Sugar-Free French Vanilla syrup",
+      "Black coffee, to serve",
+    ],
+    steps: [
+      { text: "COMBINE: Pour the milk and two pumps of each syrup into a clean lidded jar.", image: "/images/summer-moon-inspired-protein-creamer/hero.webp" },
+      { text: "SHAKE: Close the jar and shake until combined.", image: "/images/summer-moon-inspired-protein-creamer/hero.webp" },
+      { text: "POUR: Add 2 tablespoons to brewed coffee. Stir or shake the batch again before each use.", image: "/images/summer-moon-inspired-protein-creamer/hero.webp" },
+      { text: "CHILL: Refrigerate promptly and follow the milk carton storage guidance. This is a cold-mixed dairy creamer, not shelf-stable.", image: "/images/summer-moon-inspired-protein-creamer/hero.webp" },
+    ],
+    macroHonesty: "About 14 calories and 1.7g protein per 2 tbsp creamer portion, based on 1/2 cup Nurri Protein Whole Milk plus eight approximately zero-calorie syrup pumps. The estimate excludes coffee; pump volume, yield, and label rounding can change the result. This is an inspired-by recipe, not Summer Moon's proprietary formula.",
+    mealPrep: {
+      storage: "Refrigerate promptly in a sealed jar.",
+      lasts: "Follow the milk carton storage and use-by guidance.",
+      reheat: "Don't heat. Shake or stir and pour cold into coffee.",
+    },
+    notes: [
+      "This is Tushar's own homemade Summer Moon-inspired mix, not Summer Moon's recipe or an official collaboration.",
+      "The 14-calorie / 1.7g protein claim applies to 2 tablespoons of creamer only, not the whole coffee.",
+      "Use regular brewed coffee; do not describe the filmed Keurig brew as espresso.",
+    ],
+    allergens: ["milk"],
+    dietTags: ["high-protein", "coffee", "no-cook", "batch-prep"],
   },
 ];
