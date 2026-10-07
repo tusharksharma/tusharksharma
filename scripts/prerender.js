@@ -8,39 +8,23 @@
 import { readFileSync, writeFileSync, mkdirSync } from "fs";
 import { join, dirname } from "path";
 import { sauces, breakfasts, quickLunches, batchPrep, desserts, creamis, bases, powerups, snackBoxes } from "../src/data/cookbook.js";
+import { liveRecipes } from "../src/data/recipes.js";
 
 const DIST = "dist";
 const DOMAIN = "https://thesplitplate.com";
-const template = readFileSync(join(DIST, "index.html"), "utf-8").replace(/\r\n/g, "\n");
-
-// Import recipe/cookbook data
-const recipesRaw = readFileSync("src/data/recipes.js", "utf-8");
-
-// Extract live recipe slugs + metadata via regex (avoids ESM import issues with JSX)
-function extractRecipes(src) {
-  const recipes = [];
-  const blocks = src.split(/\n {2}\{/).slice(1);
-  for (const block of blocks) {
-    const id = block.match(/id:\s*(\d+)/)?.[1];
-    const status = block.match(/status:\s*"([^"]+)"/)?.[1];
-    if (status !== "live") continue;
-    const slug = block.match(/slug:\s*"([^"]+)"/)?.[1];
-    const title = block.match(/title:\s*"([^"]+)"/)?.[1];
-    const description = block.match(/description:\s*"([^"]+)"/)?.[1];
-    const image = block.match(/image:\s*"([^"]+)"/)?.[1];
-    const protein = block.match(/protein:\s*(\d+)/)?.[1];
-    const calories = block.match(/calories:\s*(\d+)/)?.[1];
-    const time = block.match(/time:\s*"([^"]+)"/)?.[1];
-    const servings = block.match(/servings:\s*(\d+)/)?.[1];
-    if (slug && title) recipes.push({ id, slug, title, description, image, protein, calories, time, servings });
-  }
-  return recipes;
+const template = readFileSync(join(DIST, "index.html"), "utf-8").replace(/\r\n?/g, "\n");
+if (!template.includes('<div id="root"></div>')) {
+  throw new Error('Prerender needs a fresh Vite build with an empty root container. Run vite build first.');
 }
 
-const recipes = extractRecipes(recipesRaw);
-const cookbookItems = [sauces, breakfasts, quickLunches, batchPrep, desserts, creamis, bases, powerups, snackBoxes]
-  .flat()
-  .map((item) => ({ id: item.id, title: item.title, description: item.tagline, image: item.heroImage || "" }));
+const recipes = liveRecipes;
+const cookbookItems = [
+  [sauces, "Sauce"], [breakfasts, "Breakfast"], [quickLunches, "Lunch"],
+  [batchPrep, "Dinner"], [desserts, "Dessert"], [creamis, "Dessert"],
+  [bases, "Base"], [powerups, "Sauce"], [snackBoxes, "Snack"],
+].flatMap(([items, recipeCategory]) => items.map((item) => ({
+  ...item, recipeCategory, description: item.tagline, image: item.heroImage || "",
+})));
 
 // Define all routes with metadata
 const routes = [
@@ -61,16 +45,12 @@ const routes = [
   { path: "/favorites/freezer-weeknight", title: "Freezer & Weeknight Shortcuts — Favorites", description: "The pantry and freezer staples that keep a 30-minute dinner actually 30 minutes. Kirkland ghee, Bare Bones broth, Dan-O's, TJ shawarma chicken.", image: "/images/split-protein-creamy-spinach-pasta/hero-split-adult-kid-plates-polished.webp" },
   { path: "/favorites/breakfast-powerups", title: "Breakfast Powerups — Favorites", description: "The fast, protein-forward breakfasts we default to on rest days. Happy Egg heritage-breed eggs, Bilinski's Cajun chicken sausage, Tony Chachere's Creole seasoning.", image: "/images/runny-sunny-eggs-chicken-sausage/hero-runny-sunny-eggs-chicken-sausage-polished.webp" },
   ...recipes.map((r) => {
-    const idx = recipesRaw.indexOf(`slug: "${r.slug}"`);
-    const ingredients = idx > -1 ? extractIngredients(recipesRaw, idx) : [];
-    const steps = idx > -1 ? extractSteps(recipesRaw, idx) : [];
-    const tags = idx > -1 ? extractTags(recipesRaw, idx) : [];
     return {
       path: `/recipes/${r.slug}`,
       title: `${r.title} — The Split Plate`,
       description: r.description || `${r.title} — ${r.protein}g protein, ${r.calories} cal, ${r.time}.`,
       image: r.image,
-      schema: buildRecipeSchema(r, ingredients, steps, tags),
+      schema: buildRecipeSchema(r, "Dinner"),
     };
   }),
   ...recipes.map((r) => ({
@@ -92,65 +72,9 @@ const routes = [
     title: `${c.title} — The Split Plate`,
     description: c.description,
     image: c.image,
+    schema: buildRecipeSchema(c, "Cookbook"),
   })),
 ];
-
-function extractIngredients(src, startIdx) {
-  // Extract ingredient strings from recipe source starting at the recipe's slug.
-  // Long entries (splitCook + whyMostFail + whyThisWorks + troubleshooting +
-  // shared/adult/kid step trees) push the `ingredients: [...]` field 30k+ chars
-  // past `slug:`. The window must be generous — under-sizing here causes the
-  // schema.recipeIngredient field to drop silently and Google Search Console
-  // flags it as a Recipes structured-data issue. 50k covers every live entry
-  // including halal cart (id 44) and pot pie (id 46).
-  const after = src.slice(startIdx, startIdx + 50000);
-  // Skip past `sharedIngredients:` (splitCook nested ingredient list) — the
-  // top-level `ingredients:` field is what schema.org Recipe expects.
-  // Use \b boundary so `sharedIngredients` doesn't match.
-  const ingredBlock = after.match(/\bingredients:\s*\[([\s\S]*?)\n {4}\],/);
-  if (!ingredBlock) return [];
-  const raw = ingredBlock[1];
-  const items = [];
-  // Match plain strings: "ingredient text"
-  // Skip strings that are URLs (/cookbook/...) or section headers (---)
-  for (const m of raw.matchAll(/"([^"]+)"/g)) {
-    const s = m[1];
-    if (s.startsWith("---") || s.startsWith("/") || s === "text" || s === "link") continue;
-    items.push(s);
-  }
-  return items;
-}
-
-// Pull top-level `steps: [...]` (NOT splitCook.sharedSteps / adult.steps /
-// kid.steps — those are nested below `splitCook:`). Returns the text of each
-// step, splittable into name + body via the leading "LABEL:" pattern.
-function extractSteps(src, startIdx) {
-  const after = src.slice(startIdx, startIdx + 50000);
-  const block = after.match(/\n {4}steps:\s*\[([\s\S]*?)\n {4}\],/);
-  if (!block) return [];
-  // Each step is `{ text: "...", images: [...] }` — grab the text strings.
-  const steps = [];
-  for (const m of block[1].matchAll(/text:\s*"((?:[^"\\]|\\.)*)"/g)) {
-    // Un-escape JS string literals (\" → ", \\ → \).
-    steps.push(m[1].replace(/\\"/g, '"').replace(/\\\\/g, "\\"));
-  }
-  return steps;
-}
-
-// Pull `tags: [...]` strings. Used as `keywords` (Google's hint for relevant
-// query matching). Skip section-header tokens and url-like values.
-function extractTags(src, startIdx) {
-  const after = src.slice(startIdx, startIdx + 50000);
-  const block = after.match(/\n {4}tags:\s*\[([\s\S]*?)\],/);
-  if (!block) return [];
-  const tags = [];
-  for (const m of block[1].matchAll(/"([^"]+)"/g)) {
-    const t = m[1];
-    if (t.startsWith("---") || t.startsWith("/")) continue;
-    tags.push(t);
-  }
-  return tags;
-}
 
 // Convert "PREHEAT + RACK: Oven to 425°F." → {name: "Preheat + Rack", text: "Oven to 425°F."}
 // Step text without a colon-prefix label just gets `text`, no `name`.
@@ -170,43 +94,55 @@ function titleCase(s) {
 function recipeTotalMinutes(r) {
   if (typeof r?.meta?.totalMinutes === "number") return r.meta.totalMinutes;
   const raw = r?.time || "";
-  if (!raw) return 30;
-  const stripped = raw.replace(/\([^)]*\)/g, " ");
-  const withHours = stripped.replace(/(\d+)\s*(hr|hour)s?/gi, (_, n) => `${parseInt(n, 10) * 60}`);
-  const nums = withHours.match(/\d+/g);
-  if (!nums) return 30;
-  return nums.reduce((sum, n) => sum + parseInt(n, 10), 0);
+  if (/\+|overnight|\d+\s*[-–]\s*\d+/i.test(raw)) return null;
+  const first = raw.match(/^\s*(?:about\s+|~)?(\d+)\s*(hr|hour|min|minute)/i);
+  if (!first) return null;
+  const hours = /^h/i.test(first[2]);
+  const extraMinutes = hours ? Number(raw.slice(first[0].length).match(/^\s*(\d+)\s*min/i)?.[1] || 0) : 0;
+  return Number(first[1]) * (hours ? 60 : 1) + extraMinutes;
 }
 
-function buildRecipeSchema(r, ingredients, steps, tags) {
+function recipeIngredients(r) {
+  const lists = r.splitCook
+    ? [r.splitCook.sharedIngredients, r.splitCook.adult?.extraIngredients, r.splitCook.kid?.extraIngredients]
+    : [r.ingredients];
+  return lists.flatMap((list) => Array.isArray(list) ? list : [])
+    .map((entry) => typeof entry === "string" ? entry : entry?.text)
+    .filter((entry) => entry && !entry.startsWith("---") && !/^[A-Z][^:]{0,45}:$/.test(entry));
+}
+
+function recipeSteps(r) {
+  const lists = r.splitCook
+    ? [r.splitCook.sharedSteps, r.splitCook.adult?.steps, r.splitCook.kid?.steps]
+    : [r.steps];
+  return lists.flatMap((list) => Array.isArray(list) ? list : [])
+    .map((step) => typeof step === "string" ? step : step?.text)
+    .filter(Boolean);
+}
+
+function buildRecipeSchema(r, category) {
+  const ingredients = recipeIngredients(r);
+  const steps = recipeSteps(r);
+  if (!ingredients.length || !steps.length) return null;
+  const minutes = recipeTotalMinutes(r);
   const schema = {
     "@context": "https://schema.org",
     "@type": "Recipe",
     name: r.title,
-    description: r.description || "",
+    description: r.tagline || r.description || "",
     image: r.image ? `${DOMAIN}${r.image}` : undefined,
-    totalTime: `PT${recipeTotalMinutes(r)}M`,
-    recipeYield: `${r.servings || 4} servings`,
-    nutrition: {
-      "@type": "NutritionInformation",
-      calories: `${r.calories} calories`,
-      proteinContent: `${r.protein}g`,
-    },
-    author: { "@type": "Person", name: "The Split Plate" },
-    publisher: { "@type": "Organization", name: "The Split Plate", url: DOMAIN },
-    recipeCategory: "Dinner",
-    recipeCuisine: "American",
+    ...(minutes ? { totalTime: `PT${minutes}M` } : {}),
+    recipeYield: String(r.servings || 1),
+    author: { "@type": "Person", name: "Tushar Sharma" },
+    recipeCategory: category === "Cookbook" ? r.recipeCategory : category,
+    recipeIngredient: ingredients,
+    recipeInstructions: steps.map(toHowToStep),
   };
-  if (ingredients && ingredients.length > 0) {
-    schema.recipeIngredient = ingredients;
+  if (!r.splitCook && r.caloriesPerServing != null && r.proteinPerServing != null) {
+    schema.nutrition = { "@type": "NutritionInformation", calories: `${r.caloriesPerServing} calories`, proteinContent: `${r.proteinPerServing}g` };
   }
-  if (steps && steps.length > 0) {
-    schema.recipeInstructions = steps.map(toHowToStep);
-  }
-  if (tags && tags.length > 0) {
-    schema.keywords = tags.join(", ");
-  }
-  return JSON.stringify(schema);
+  if (r.tags?.length) schema.keywords = r.tags.join(", ");
+  return JSON.stringify(schema).replace(/</g, "\\u003c");
 }
 
 // Google SERP truncates meta descriptions at ~155-160 chars; OG previews

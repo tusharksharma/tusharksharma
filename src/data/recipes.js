@@ -11675,6 +11675,7 @@ const recipes = [
     carbLevel: "high",
     meta: {
       macros: { protein: 62, calories: 700, fat: null, carbs: null, netCarbs: null, estimated: true },
+      fixedBatch: true,
       allergens: ["dairy", "wheat", "gluten"],
       warnings: ["fully-cook-ground-beef-before-wrapping", "kid-macros-not-published", "onion-and-ketchup-excluded-from-macros"],
       dietTags: ["high-protein", "family-dinner", "pork-free"],
@@ -11699,7 +11700,7 @@ const recipes = [
     pillar: "Family Dinners",
     tags: ["burger", "beef", "crescent-dough", "high-protein", "family-dinner", "split-cook", "viral"],
     time: "About 45 min, including a 20 min dough bake",
-    servings: 1,
+    servings: 4,
     protein: 62,
     calories: 700,
     image: "/images/viral-proteinized-burger-in-a-bun/hero-adult-cut-polished.webp",
@@ -11718,12 +11719,12 @@ const recipes = [
       "Seal every seam, then bake until the dough is fully baked and the filling hot. Treat 20 minutes as a guide, not a doneness test.",
     ],
     splitCook: {
-      splitRatio: "One measured adult burger; kid burgers sized to appetite",
+      splitRatio: "Four-burger batch: two measured adult burgers and two kid burgers sized to appetite",
       splitPoint: "After fully cooking the patties. Wrap a two-patty adult stack and a one-patty kid stack separately, then bake together.",
       sharedIngredients: [
         "--- SHARED BASE ---",
-        "Fully cooked ground-beef patties: two 4 oz raw-weight 93/7 patties for the adult and one 3 oz raw-weight 80/20 patty per kid burger",
-        "Pillsbury Original Crescent Dough Sheet: a weighed 250-calorie portion for the adult; enough to enclose each kid patty (kid dough not weighed)",
+        "Fully cooked ground-beef patties: four 4 oz raw-weight 93/7 patties for two adult burgers and two 3 oz raw-weight 80/20 patties for two kid burgers",
+        "Pillsbury Original Crescent Dough Sheet: two weighed 250-calorie portions for the adult burgers; enough to enclose two kid patties (kid dough not weighed)",
         "--- OPTIONAL ONION BATCH ---",
         "1 yellow onion + 1 tsp avocado oil + 1 tsp balsamic vinegar + 1 tsp monk-fruit sweetener + salt, cooked down; add to taste",
       ],
@@ -11736,7 +11737,7 @@ const recipes = [
         label: "Adult — double burger",
         protein: 62,
         calories: 700,
-        extraIngredients: ["1.5 oz Velveeta Original Shreds", "1 tbsp homemade high-protein chipotle-style queso", "Chopped chilies, optional", "Caramelized onion, to taste, optional", "1 label serving (2.8 oz) Jesse & Ben's Sweet Potato Tallow Fries, optional", "Ketchup, optional (excluded from plate estimate)"],
+        extraIngredients: ["3 oz Velveeta Original Shreds (1.5 oz per adult burger)", "2 tbsp homemade high-protein chipotle-style queso (1 tbsp per adult burger)", "Chopped chilies, optional", "Caramelized onion, to taste, optional", "2 label servings (2.8 oz each) Jesse & Ben's Sweet Potato Tallow Fries, optional", "Ketchup, optional (excluded from plate estimate)"],
         steps: [
           { text: "BUILD THE ADULT BURGER: Stir the 1.5 oz Velveeta shreds with 1 tbsp protein queso. Layer some cheese mixture, the two fully cooked patties, optional chilies and onion, and the remaining cheese mixture inside the weighed dough.", images: ["/images/viral-proteinized-burger-in-a-bun/step-03-cheese-queso-polished.webp", "/images/viral-proteinized-burger-in-a-bun/step-04-adult-stack-polished.webp"] },
           { text: "SEAL AND BAKE: Close all dough seams. Bake at 375°F for about 20 minutes, until the dough is fully baked and the filling hot. If serving fries, spread one 2.8 oz serving on parchment and bake per its package while the bun bakes. Cut open and serve.", images: ["/images/viral-proteinized-burger-in-a-bun/step-07-seal-polished.webp", "/images/viral-proteinized-burger-in-a-bun/step-08-baked-bun-polished.webp", "/images/viral-proteinized-burger-in-a-bun/step-10-sweet-potato-fries-polished.webp", "/images/viral-proteinized-burger-in-a-bun/hero-adult-cut-polished.webp"] },
@@ -11745,7 +11746,7 @@ const recipes = [
       },
       kid: {
         label: "Kid — smaller burger",
-        extraIngredients: ["1.5 Velveeta Original cheese slices per kid burger: 3/4 under the patty and 3/4 above", "Onion optional; Tushar's kids had none"],
+        extraIngredients: ["3 Velveeta Original cheese slices for two kid burgers (1.5 slices each: 3/4 under and 3/4 above each patty)", "Onion optional; Tushar's kids had none"],
         steps: [
           { text: "BUILD THE KID BURGER: Lay 3/4 cheese slice on the kid dough, add one fully cooked 3 oz 80/20 patty, then top with the other 3/4 slice. Skip onion for Tushar's filmed version.", images: ["/images/viral-proteinized-burger-in-a-bun/step-05-kid-cheese-polished.webp", "/images/viral-proteinized-burger-in-a-bun/step-06-kid-stack-polished.webp"] },
           { text: "SEAL AND BAKE: Enclose the kid filling completely and bake alongside the adult burger at 375°F for about 20 minutes, until the dough is fully baked and the filling hot. Portion by appetite.", images: ["/images/viral-proteinized-burger-in-a-bun/step-09-family-tray-polished.webp", "/images/viral-proteinized-burger-in-a-bun/support-kid-cut-polished.webp"] },

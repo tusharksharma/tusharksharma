@@ -6860,7 +6860,7 @@ const DESSERT_CATALOG = [
     useThisWhen: "You want a make-ahead Sunday dessert that builds once and eats over four days — same recipe for the whole family, 24g protein per serving, ~10g net carbs, MacroFactor-verified macros.",
     whyThisWorks: "Most protein tiramisus fail four ways: watery yogurt, fake sweetness, sponge collapse, zero richness. This solves all four — Neufchâtel for fat carry, PEScience whey/casein blend (not isolate) for non-chalky thickening, cottage cheese tang that tiramisu uniquely tolerates, and HighKey wafers + coffee dip doing structural work. The trick is engineering AROUND real tiramisu, not faking it.",
     splitNote: {
-      adult: "Full serving — 8 wafers, full cream layer, heavy cocoa dust. Meal-prep into 4 containers and pull one per night.",
+      adult: "Full serving — 7 wafers, full cream layer, cocoa dust. Meal-prep into 4 containers and pull one per night.",
       kid: "Same recipe works for the whole family. Coffee is only in the wafer dip, never in the cream — so the cream layer is completely coffee-free. If you want zero coffee for kids, dip THEIR wafers in plain Fairlife milk instead of black coffee — same cream layer, same cocoa top.",
     },
     ingredients: [
@@ -6893,7 +6893,7 @@ const DESSERT_CATALOG = [
       { text: "DIP, DON'T SOAK: One wafer at a time — quick in, quick out. Roughly one second per side. The wafer should still feel structural when you place it. Soaked wafers turn into wet sludge by morning. This is where most home tiramisus die.", image: "/images/protein-tiramisu/step-04-dip-vanilla-wafers-polished.webp" },
       { text: "LAYER: In each of 4 ramekins or 6 oz meal-prep containers — 3-4 dipped wafers on the bottom (snap if needed to fit), generous spoonful of cream (~1/4 of cream total ÷ 2 layers = ~1/8 per layer), 3-4 more dipped wafers, another generous spoonful of cream on top (7 wafers per ramekin × 4 ramekins = 28 wafers total). Smooth flat. Repeat for all 4 containers.", image: "/images/protein-tiramisu/step-06-layer-cream-polished.webp" },
       { text: "CHILL OVERNIGHT — NOT 4 HOURS, OVERNIGHT: This is the second non-negotiable step. The protein powder needs to hydrate, the wafers need to soften from the coffee dip, and the flavors need to meld. Day 2 tastes dramatically better than fresh — the coffee bitterness smooths out and the cream sets like real tiramisu cream.", image: "/images/protein-tiramisu/step-07-cover-and-chill-polished.webp" },
-      { text: "COCOA DUST RIGHT BEFORE EATING: Don't dust ahead of time — cocoa absorbs moisture and goes patchy. Dust 1/2 tbsp Ghirardelli cocoa heavily over the top of one container right before you eat it. Use a fine mesh strainer for an even snowfall. The cocoa carries the tiramisu perception harder than anything else in the recipe.", image: "/images/protein-tiramisu/final-cocoa-dusted-tiramisu-polished.webp" },
+      { text: "COCOA DUST RIGHT BEFORE EATING: Don't dust ahead of time — cocoa absorbs moisture and goes patchy. Divide the listed 1/2 tbsp Ghirardelli cocoa among the four containers, dusting each only when you eat it. Use a fine mesh strainer for an even snowfall. The cocoa carries the tiramisu perception harder than anything else in the recipe.", image: "/images/protein-tiramisu/final-cocoa-dusted-tiramisu-polished.webp" },
     ],
     troubleshooting: [
       { problem: "Cream is grainy / has curds", fix: "You skipped step 1. The cottage cheese MUST be blended alone first until silky. Once you mix it with the yogurt and Neufchâtel, the curds won't break down further. No fix after the fact — start over." },
@@ -9375,8 +9375,8 @@ const DESSERT_CATALOG = [
   },
   {
     id: "white-drop-cookies-n-creme-creami",
-    title: "White Drop Cookie ft. HERSHEY'S Cookies 'n' Creme Creami",
-    tagline: "CrumblCreamiCut Week 4, Flavor 3 (WEEK 4 FINALE) — plain vanilla protein Creami base, three low-cal sandwich cookies Respun through, and chopped cookies-and-cream protein chocolate bar on top. ~360 cal / 47g protein whole pint. Classic cookies-and-cream identity, both swaps work.",
+    title: "Cookies and Cream Protein Ice Cream (Ninja Creami)",
+    tagline: "A vanilla protein ice cream with three sandwich cookies spun through and chopped cookies-and-cream protein chocolate on top. Freeze the base overnight, then spin and finish the pint. Inspired by a White Drop cookie for CrumblCreamiCut Week 4.",
     heroImage: "/images/white-drop-cookies-n-creme-creami/hero-finished-white-drop-cookies-n-creme-creami-polished.webp",
     prepImage: "/images/white-drop-cookies-n-creme-creami/step-respin-result-polished.webp",
     socialHashtags: ["#CrumblCreamiCut", "#ProteinCreami", "#CookiesAndCreamCreami", "#HighProteinDessert"],
@@ -9441,7 +9441,7 @@ const DESSERT_CATALOG = [
       "Vanilla",
       "Make-ahead",
     ],
-    useThisWhen: "You want a classic cookies-and-cream protein dessert that reads as Crumbl's White Drop Cookie ft. HERSHEY'S Cookies 'n' Creme without the cookie's sugar hit. Ep. 12 of CrumblCreamiCut and the WEEK 4 FINALE — closes the Week 4 trilogy (Ep. 10 SNICKERS peanut-butter-chocolate → Ep. 11 Berry Limeade fruit-forward → Ep. 12 White Drop cookies-and-cream). This ep is deliberately a SYNTHESIS ep, not a series-first innovation showcase — classic flavor, familiar not surprising, and the entire point is that both swaps work extremely well against a plain vanilla base. Two accessible swaps to note: (1) SIMPLEST CCC BASE VARIANT TO DATE — 1 tsp vanilla extract carries the flavor without cocoa / emulsions / berries / powdered PB / Jell-O; the cookies + protein chocolate do the identity work; (2) LOW-CALORIE SANDWICH COOKIES as the Respin mix-in (HighKey Original filmed) — different mix-in category vs prior CCC eps (Ep. 7 Mallow brownie / Ep. 9 Red Velvet brownie / Ep. 10 SNICKERS protein bar / Ep. 11 Berry Limeade NERDS candy); (3) CHOPPED PROTEIN CHOCOLATE BAR as the post-scoop topping (Hormbles Chormbles Cookies & Cream filmed) — different topping category vs prior CCC eps (Mallow marshmallow ribbon / Red Velvet white-chocolate drizzle / SNICKERS chocolate syrup + protein bar crumb / Berry Limeade NERDS scatter). ~47g protein whole pint — mid-range CCC (between Berry Limeade's 44g and SNICKERS's 53g).",
+    useThisWhen: "Make this when you want a cookies-and-cream Ninja Creami pint with cookie pieces throughout and a crunchy chocolate topping. Blend the vanilla protein base, freeze it level for 24 hours, spin on Regular Ice Cream, then Respin with three sandwich cookies. Top with chopped cookies-and-cream protein chocolate. This recipe was inspired by the White Drop cookie and appeared as the Week 4 finale of CrumblCreamiCut.",
     priorEpisode: "/cookbook/berry-limeade-cookie-nerds-creami",
     flavorTarget: "First spoon: creamy vanilla protein Creami base with visible sandwich-cookie pieces pulled through — cookies-and-cream identity from bite one. Middle: cookie pieces hit as familiar Oreo-adjacent cookie crumb pockets. Top: chopped protein chocolate bar delivers the extra chocolate cookie-and-cream cue with a slight crunch. Whole pint should read as a Crumbl White Drop Cookie ft. HERSHEY'S Cookies 'n' Creme deconstructed into ice cream — accessible, familiar, both swaps work.",
     splitNote: {
