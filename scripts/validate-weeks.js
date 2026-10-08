@@ -145,6 +145,7 @@ const KNOWN_LEFTOVER_CHAINS = new Set([
   70, // French Dip Polenta Dunkers — Can I Make a Recipe Go Viral? Ep. 3. Video-first drop; fixedBatch (3 servings) not slotted into a specific week.
   71, // Viral Proteinized Burger in a Bun — approved video-first dinner handoff; no weekly-planner slot chosen yet.
   72, // Hailey-Inspired Chicken Meatballs — approved video-first dinner handoff; no weekly-planner slot chosen yet.
+  73, // Cheesy Spinach & Chicken Orzo — approved main video-first dinner handoff; no weekly-planner slot chosen yet.
 ]);
 
 const recipesSrc = readFileSync("src/data/recipes.js", "utf-8");
