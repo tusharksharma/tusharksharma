@@ -681,11 +681,11 @@ function ServingsControl({ isFixedBatch, baseServings, batchServings, setBatchSe
         {setBatchServings ? (
           <>
             <label htmlFor="batch-servings" className="text-xs font-semibold text-ink">Servings</label>
-            <input id="batch-servings" type="number" min="1" max="24" value={batchServings}
+            <input id="batch-servings" type="number" min="1" max="24" step="any" value={batchServings}
               onChange={(event) => {
                 if (event.target.value === "") { setBatchServings(""); return; }
                 const next = Number(event.target.value);
-                if (Number.isInteger(next) && next >= 1 && next <= 24) setBatchServings(next);
+                if (Number.isFinite(next) && next >= 1 && next <= 24) setBatchServings(next);
               }}
               onBlur={() => { if (!batchServings) setBatchServings(baseServings); }}
               className="w-16 rounded border border-line bg-surface px-2 py-1 text-sm text-ink" />
