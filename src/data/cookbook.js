@@ -4914,6 +4914,255 @@ const WEEK13_CREAMIS = [
 ];
 
 const DESSERT_CATALOG = [
+  {
+    "id": "cinnamon-roll-cookie-protein-creami",
+    "title": "Cinnamon Roll Cookie Creami",
+    "tagline": "Vanilla-cinnamon protein ice cream, cereal crunch and a butter drizzle. About 310 calories and 28g protein for the whole finished pint.",
+    "heroImage": "/images/cinnamon-roll-cookie-protein-creami/hero-polished.webp",
+    "prepImage": "/images/cinnamon-roll-cookie-protein-creami/base-polished.webp",
+    "prepImageCaption": "Blend the milk, half-serving of whey and vanilla-cinnamon base until smooth.",
+    "video": "/videos/cinnamon-roll-cookie-protein-creami/cinnamon-roll-cookie-protein-creami-web.mp4",
+    "socialImages": [
+      "/images/cinnamon-roll-cookie-protein-creami/base-polished.webp",
+      "/images/cinnamon-roll-cookie-protein-creami/flavor-polished.webp",
+      "/images/cinnamon-roll-cookie-protein-creami/cereal-polished.webp",
+      "/images/cinnamon-roll-cookie-protein-creami/drizzle-polished.webp",
+      "/images/cinnamon-roll-cookie-protein-creami/finished-polished.webp"
+    ],
+    "socialHashtags": [
+      "#TheSplitPlate",
+      "#CrumblCreamiCut",
+      "#ProteinIceCream",
+      "#CinnamonRoll",
+      "#CreamiRecipes"
+    ],
+    "socialCarousel": {
+      "heroBadge": "CrumblCreamiCut",
+      "heroAccent": "amber",
+      "heroTitle": "Cinnamon Roll Cookie Creami",
+      "heroPhoto": "/images/cinnamon-roll-cookie-protein-creami/hero-polished.webp",
+      "heroStats": [
+        {
+          "value": "~310",
+          "label": "cal / whole pint"
+        },
+        {
+          "value": "~28g",
+          "label": "protein / whole pint"
+        },
+        {
+          "value": "1",
+          "label": "finished pint"
+        }
+      ],
+      "hook": "Cinnamon cereal crunch meets a butter drizzle that firms up on cold protein ice cream.",
+      "captionBody": "Cinnamon-roll flavor, cereal crunch and a butter-cinnamon drizzle that firms up on cold ice cream. About 310 calories and 28g protein for the whole finished pint, including 14g Cinnamon Toast Crunch and the entire drizzle. Blend the vanilla-cinnamon base, freeze and spin following your exact machine instructions, then use Mix-In for the cereal. Stir melted butter with sugar-free maple syrup and cinnamon; drizzle all of it over the ice cream. Estimates depend on labels and measured portions. Crumbl-inspired; no actual Crumbl cookie is used. Not sponsored. Save the recipe: thesplitplate.com/cookbook/cinnamon-roll-cookie-protein-creami",
+      "ingredientGroups": [
+        {
+          "card": 0,
+          "accent": "amber",
+          "heading": "Vanilla-cinnamon base",
+          "items": [
+            {
+              "quantity": "1 cup",
+              "text": "Fairlife 2% milk"
+            },
+            {
+              "quantity": "1/2 serving",
+              "text": "Unflavored whey isolate · 60 cal / 14g protein"
+            },
+            {
+              "quantity": "2 tbsp",
+              "text": "Monk fruit / erythritol"
+            },
+            {
+              "quantity": "1/8 tsp",
+              "text": "Guar gum"
+            },
+            {
+              "quantity": "Pinch",
+              "text": "Salt"
+            },
+            {
+              "quantity": "1 tsp",
+              "text": "Vanilla extract"
+            },
+            {
+              "quantity": "1/2 tsp",
+              "text": "Ground cinnamon"
+            }
+          ]
+        },
+        {
+          "card": 1,
+          "accent": "amber",
+          "heading": "Crunch + butter finish",
+          "items": [
+            {
+              "quantity": "14g",
+              "text": "Cinnamon Toast Crunch · mix-in"
+            },
+            {
+              "quantity": "1/2 tbsp",
+              "text": "Butter"
+            },
+            {
+              "quantity": "1/2 tbsp",
+              "text": "Sugar-free maple syrup"
+            },
+            {
+              "quantity": "1/4 tsp",
+              "text": "Ground cinnamon · drizzle"
+            }
+          ]
+        }
+      ],
+      "ingredientCardPhotos": [
+        {
+          "src": "/images/cinnamon-roll-cookie-protein-creami/base-polished.webp",
+          "layout": "side",
+          "position": "50% 65%"
+        },
+        {
+          "src": "/images/cinnamon-roll-cookie-protein-creami/cereal-polished.webp",
+          "layout": "side",
+          "position": "50% 50%"
+        }
+      ],
+      "methodLabel": "HOW TO MAKE",
+      "methodGroups": [
+        {
+          "card": 0,
+          "accent": "amber",
+          "heading": "Blend, freeze + spin",
+          "items": [
+            {
+              "number": 1,
+              "heading": "Blend smooth",
+              "body": "Combine every base ingredient; pour below the pint fill line."
+            },
+            {
+              "number": 2,
+              "heading": "Freeze + spin",
+              "body": "Freeze flat and process using the instructions for your exact machine and pint. Follow its guidance if a respin is needed."
+            }
+          ]
+        },
+        {
+          "card": 1,
+          "accent": "amber",
+          "heading": "Crunch + cinnamon drizzle",
+          "items": [
+            {
+              "number": 3,
+              "heading": "Mix in cereal",
+              "body": "Add 14g Cinnamon Toast Crunch; run the Mix-In function."
+            },
+            {
+              "number": 4,
+              "heading": "Make the drizzle",
+              "body": "Melt 1/2 tbsp butter. Stir in 1/2 tbsp sugar-free maple syrup and 1/4 tsp cinnamon; drizzle all of it over the ice cream."
+            }
+          ]
+        }
+      ],
+      "methodCardPhotos": [
+        {
+          "src": "/images/cinnamon-roll-cookie-protein-creami/flavor-polished.webp",
+          "layout": "side",
+          "position": "50% 60%"
+        },
+        {
+          "src": "/images/cinnamon-roll-cookie-protein-creami/drizzle-polished.webp",
+          "layout": "side",
+          "position": "50% 65%"
+        }
+      ],
+      "servingPhoto": "/images/cinnamon-roll-cookie-protein-creami/finished-polished.webp",
+      "servingGroups": [
+        {
+          "accent": "amber",
+          "heading": "One whole finished pint",
+          "items": [
+            {
+              "text": "~310 calories / ~28g protein, including cereal and the entire drizzle."
+            },
+            {
+              "text": "Eat cold: the buttery topping firms on contact with the ice cream. No extra cereal topping is included in the estimate."
+            }
+          ]
+        }
+      ],
+      "engagementQuestion": "Would you try the butter-cinnamon finish?"
+    },
+    "flavorProfile": "Vanilla-cinnamon ice cream, toasted cereal crunch and a buttery cinnamon finish",
+    "calories": 310,
+    "caloriesPerServing": 310,
+    "protein": 28,
+    "proteinPerServing": 28,
+    "servings": 1,
+    "time": "Prep + freeze and spin per machine",
+    "bestFor": [
+      "High-protein dessert",
+      "Ninja Creami",
+      "Whole-pint dessert",
+      "Make-ahead"
+    ],
+    "useThisWhen": "You want cinnamon-roll flavor in a protein pint with cereal crunch and a buttery finish. This version uses half a serving of whey.",
+    "flavorTarget": "Vanilla and cinnamon in the base, cereal throughout, butter-cinnamon drizzle that firms on the cold ice cream.",
+    "ingredients": [
+      "--- VANILLA-CINNAMON BASE ---",
+      "1 cup Fairlife 2% milk",
+      "1/2 serving Unflavored whey isolate · 60 cal / 14g protein",
+      "2 tbsp Monk fruit / erythritol",
+      "1/8 tsp Guar gum",
+      "Pinch Salt",
+      "1 tsp Vanilla extract",
+      "1/2 tsp Ground cinnamon",
+      "--- MIX-IN + DRIZZLE ---",
+      "14g Cinnamon Toast Crunch · mix-in",
+      "1/2 tbsp Butter",
+      "1/2 tbsp Sugar-free maple syrup",
+      "1/4 tsp Ground cinnamon · drizzle"
+    ],
+    "steps": [
+      {
+        "text": "BLEND: Blend milk, whey, sweetener, guar gum, salt, vanilla and 1/2 tsp cinnamon until smooth. Pour into the pint below its fill line.",
+        "image": "/images/cinnamon-roll-cookie-protein-creami/base-polished.webp"
+      },
+      {
+        "text": "FREEZE + SPIN: Freeze flat and process following the instructions for your exact Creami machine and pint. Use its appropriate ice cream program and follow its guidance if a respin is needed."
+      },
+      {
+        "text": "CEREAL MIX-IN: Add 14g Cinnamon Toast Crunch and use the Mix-In function.",
+        "image": "/images/cinnamon-roll-cookie-protein-creami/cereal-polished.webp"
+      },
+      {
+        "text": "BUTTER FINISH: Melt 1/2 tbsp butter. Stir in 1/2 tbsp sugar-free maple syrup and 1/4 tsp cinnamon. Drizzle the entire prepared mixture over the ice cream and eat cold.",
+        "image": "/images/cinnamon-roll-cookie-protein-creami/drizzle-polished.webp"
+      }
+    ],
+    "macroHonesty": "Estimated ~310 calories and ~28g protein for the whole finished pint, including 14g cereal and the entire butter-syrup-cinnamon drizzle. Fairlife 2% milk: 120 cal/13g protein; confirmed half-serving whey: 60 cal/14g; cereal: ~58 cal/~0.7g; butter: 50 cal; syrup: ~2.5 cal; vanilla: ~12 cal; cinnamon and guar: ~6 cal. Milk, sweetener, guar and salt amounts were assumed unchanged from the usual base. Syrup calculation assumes Maple Grove Farms at 10 calories per 2 tbsp; the filmed brand was not confirmed. Check your own labels. No extra cereal topping is included. Fat, carbs and sodium were not verified.",
+    "allergens": [
+      "dairy",
+      "wheat",
+      "gluten"
+    ],
+    "dietTags": [
+      "high-protein",
+      "pork-free"
+    ],
+    "notes": [
+      "Crumbl Cinnamon Roll Cookie is the inspiration; an actual Crumbl cookie is not an ingredient. Not sponsored or affiliated.",
+      "This reduced-whey recipe is a separate edition; earlier Creami recipes retain their original ingredients. Less whey is a personal protein-goal choice, not a proven cause of improved texture.",
+      "No specific freeze duration, thaw time or spin cycle was confirmed in the shoot. Follow the manual for your exact machine and pint.",
+      "Photos are ImageGen-transformed from the actual filmed build; the hero is an AI-polished food illustration from the package. Moving video is real footage. Check ingredient labels for additional allergens."
+    ],
+    "seriesInfo": {
+      "series": "CrumblCreamiCut",
+      "framing": "Growth: a useful whole-pint cinnamon dessert recipe. No week or episode number supplied."
+    }
+  },
   ...WEEK13_CREAMIS,
   ...WEEK12_CREAMIS,
   {
