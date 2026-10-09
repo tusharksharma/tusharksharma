@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { liveRecipes } from "../data/recipes";
 import { sauces, bases, breakfasts, desserts, creamis, quickLunches, batchPrep, powerups, snackBoxes } from "../data/cookbook";
@@ -677,6 +677,16 @@ function BrandStripTop() {
 // In the browser we render at 540×540 for screen; the PNG saves at 1080.
 function DownloadableCard({ children, card }) {
   const [busy, setBusy] = useState(false);
+  const previewRef = useRef(null);
+  const [previewScale, setPreviewScale] = useState(1);
+
+  useEffect(() => {
+    const observer = new ResizeObserver(([entry]) => {
+      setPreviewScale(entry.contentRect.width / 540);
+    });
+    observer.observe(previewRef.current);
+    return () => observer.disconnect();
+  }, []);
 
   async function exportCard() {
     setBusy(true);
@@ -722,8 +732,10 @@ function DownloadableCard({ children, card }) {
           {busy ? "Exporting…" : "Save image ↓"}
         </button>
       </div>
-      <div className="relative aspect-square w-full bg-neutral-950 overflow-hidden flex flex-col">
-        {children}
+      <div ref={previewRef} className="relative aspect-square w-full bg-neutral-950 overflow-hidden">
+        <div className="absolute top-0 left-0" style={{ width: 540, height: 540, transform: `scale(${previewScale})`, transformOrigin: "top left" }}>
+          {children}
+        </div>
       </div>
     </div>
   );
