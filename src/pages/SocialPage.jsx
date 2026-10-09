@@ -8,6 +8,7 @@ import { drawStructuredCard } from "../social/structuredCard";
 import { drawStructuredHero } from "../social/hero.jsx";
 import { drawStructuredEnd } from "../social/end.jsx";
 import { drawRecipeCard } from "../social/recipeCard";
+import { downloadBlob, isMobileDevice, zipFiles } from "../utils/downloadFiles";
 
 const ALL_COOKBOOK = [...sauces, ...bases, ...breakfasts, ...desserts, ...creamis, ...quickLunches, ...batchPrep, ...powerups, ...snackBoxes];
 
@@ -695,7 +696,7 @@ function DownloadableCard({ children, card }) {
       const file = new File([blob], `${card.filename}.png`, { type: "image/png" });
 
       // Mobile-first: Web Share API → native share sheet → "Save to Photos" / IG / etc.
-      if (typeof navigator !== "undefined" && navigator.canShare && navigator.canShare({ files: [file] })) {
+      if (isMobileDevice() && navigator.canShare?.({ files: [file] })) {
         try {
           await navigator.share({ files: [file] });
           return;
@@ -706,12 +707,7 @@ function DownloadableCard({ children, card }) {
       }
 
       // Desktop fallback: classic download
-      const url = URL.createObjectURL(blob);
-      const link = document.createElement("a");
-      link.download = `${card.filename}.png`;
-      link.href = url;
-      link.click();
-      setTimeout(() => URL.revokeObjectURL(url), 1000);
+      downloadBlob(blob, `${card.filename}.png`);
     } catch (e) {
       console.error("Card export failed:", e);
       alert("Export failed — check console.");
@@ -1234,12 +1230,8 @@ export default function SocialPage() {
     const files = [];
     try {
       for (const card of cards) {
-        try {
-          const blob = await renderSocialCardToBlob(card);
-          files.push(new File([blob], `${card.filename}.png`, { type: "image/png" }));
-        } catch (e) {
-          console.error(`Failed export of ${card.id}:`, e);
-        }
+        const blob = await renderSocialCardToBlob(card);
+        files.push(new File([blob], `${card.filename}.png`, { type: "image/png" }));
       }
       if (files.length === 0) {
         alert("No cards exported. Check console.");
@@ -1248,26 +1240,21 @@ export default function SocialPage() {
 
       // Mobile-first: try Web Share API with all files — iOS/Android opens share sheet
       // → "Save N Images" goes straight to Photos. Single user gesture.
-      if (typeof navigator !== "undefined" && navigator.canShare && navigator.canShare({ files })) {
+      if (isMobileDevice() && navigator.canShare?.({ files })) {
         try {
           await navigator.share({ files, title: `${recipe.title} carousel` });
           return;
         } catch (e) {
           if (e.name === "AbortError") return;
-          // fall through to per-file download
+          // Fall through to a ZIP download if sharing is unavailable.
         }
       }
 
-      // Desktop fallback: trigger downloads sequentially with 400ms gaps
-      for (const file of files) {
-        const url = URL.createObjectURL(file);
-        const link = document.createElement("a");
-        link.download = file.name;
-        link.href = url;
-        link.click();
-        setTimeout(() => URL.revokeObjectURL(url), 1000);
-        await new Promise((r) => setTimeout(r, 400));
-      }
+      // A single download avoids the browser's multiple-download blocker.
+      downloadBlob(await zipFiles(files), `${slugForFiles}-carousel.zip`);
+    } catch (e) {
+      console.error("Carousel export failed:", e);
+      alert("The carousel could not be downloaded. Please try again.");
     } finally {
       setSaveAllBusy(false);
     }
@@ -1282,7 +1269,7 @@ export default function SocialPage() {
         <p className="text-neutral-600 text-[10px] mt-1">
           <span className="text-neutral-500">On phone:</span> tap "Save all" — your share sheet pops up, choose "Save {cards.length} Images" → all go to Photos.
           <br />
-          <span className="text-neutral-500">On desktop:</span> tap "Save all" — {cards.length} PNGs download to your Downloads folder.
+          <span className="text-neutral-500">On desktop:</span> click "Save all" — one ZIP downloads with all {cards.length} PNGs. Extract it to get the images.
         </p>
 
         <div className="mt-4 flex items-center gap-3">
