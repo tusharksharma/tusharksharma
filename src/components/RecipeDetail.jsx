@@ -10,6 +10,7 @@ import LeftoversPanel from "./LeftoversPanel";
 import RecipeActionBar, { StickyJump } from "./RecipeActionBar";
 import RecipePrintCard from "./RecipePrintCard";
 import { scaleIngredientText } from "../utils/scaleIngredient";
+import openRecipePrint from "../utils/printRecipe";
 
 /*
  * Recipe page.
@@ -111,8 +112,8 @@ export default function RecipeDetail({ recipe, item, group }) {
     });
 
   const printRecipe = () => {
+    openRecipePrint(model.title);
     track("recipe_print", { recipe: model.title, slug: model.slug });
-    window.print();
   };
 
   return (
