@@ -4915,6 +4915,253 @@ const WEEK13_CREAMIS = [
 
 const DESSERT_CATALOG = [
   {
+    "id": "pumpkin-chocolate-chip-protein-creami",
+    "title": "Pumpkin Chocolate Chip Protein Creami",
+    "tagline": "Real pumpkin, thick protein ice cream and milk-chocolate chips. About 280 calories and 28g protein for the whole finished pint.",
+    "heroImage": "/images/pumpkin-chocolate-chip-protein-creami/hero-polished.webp",
+    "prepImage": "/images/pumpkin-chocolate-chip-protein-creami/base-polished.webp",
+    "prepImageCaption": "Pumpkin-spice syrup flavors the milk base; no monk-fruit sweetener, vanilla or cinnamon in this build.",
+    "video": "/videos/pumpkin-chocolate-chip-protein-creami/pumpkin-chocolate-chip-protein-creami-web.mp4",
+    "socialImages": [
+      "/images/pumpkin-chocolate-chip-protein-creami/base-polished.webp",
+      "/images/pumpkin-chocolate-chip-protein-creami/blend-polished.webp",
+      "/images/pumpkin-chocolate-chip-protein-creami/spin-polished.webp",
+      "/images/pumpkin-chocolate-chip-protein-creami/chips-polished.webp",
+      "/images/pumpkin-chocolate-chip-protein-creami/finish-polished.webp"
+    ],
+    "socialHashtags": [
+      "#NinjaCreami",
+      "#ProteinIceCream",
+      "#PumpkinChocolateChip",
+      "#CreamiRecipes",
+      "#TheSplitPlate"
+    ],
+    "socialCarousel": {
+      "heroBadge": "CrumblCreamiCut",
+      "heroAccent": "amber",
+      "heroTitle": "Pumpkin Chocolate Chip Protein Creami",
+      "heroPhoto": "/images/pumpkin-chocolate-chip-protein-creami/hero-polished.webp",
+      "heroStats": [
+        {
+          "value": "~280",
+          "label": "cal / whole pint"
+        },
+        {
+          "value": "~28g",
+          "label": "protein / whole pint"
+        },
+        {
+          "value": "1",
+          "label": "finished pint"
+        }
+      ],
+      "hook": "Real pumpkin, thick texture and chocolate chips inside and on top.",
+      "captionBody": "Real pumpkin, thick texture and chocolate chips throughout. This whole finished pint is about 280 calories and 28g protein, including 14g Lily’s milk-chocolate-style chips inside and 7g on top. Blend 1 cup Fairlife 2% milk, half a serving of unflavored whey, 3 pumps sugar-free pumpkin-spice syrup, 1/8 cup plain pumpkin puree, 1/8 tsp guar gum and a pinch of salt. Freeze upright for 24 hours, rest 5 minutes and process on Regular Ice Cream, following your machine’s instructions. This batch needed an extra spin. Add 14g chips and use the filmed Respin method, then top with one syrup pump and 7g chips. No vanilla, cinnamon or monk-fruit sweetener. Pumpkin remains noticeable: Tushar finished the pint but would not repeat it because he prefers pumpkin behind chocolate. Estimates vary with labels and pump size. Crumbl-inspired, with no cookie ingredient; not sponsored. Save the recipe: thesplitplate.com/cookbook/pumpkin-chocolate-chip-protein-creami",
+      "ingredientGroups": [
+        {
+          "card": 0,
+          "accent": "amber",
+          "heading": "Pumpkin protein base",
+          "items": [
+            {
+              "quantity": "1 cup",
+              "text": "Fairlife 2% milk"
+            },
+            {
+              "quantity": "1/2 serving",
+              "text": "Opportuniteas unflavored whey · 60 cal / 14g protein"
+            },
+            {
+              "quantity": "3 pumps",
+              "text": "Syruvia sugar-free Pumpkin Spice syrup"
+            },
+            {
+              "quantity": "1/8 cup",
+              "text": "Pure pumpkin puree"
+            },
+            {
+              "quantity": "1/8 tsp",
+              "text": "Guar gum"
+            },
+            {
+              "quantity": "Pinch",
+              "text": "Salt"
+            }
+          ]
+        },
+        {
+          "card": 1,
+          "accent": "amber",
+          "heading": "Chocolate inside + on top",
+          "items": [
+            {
+              "quantity": "14g",
+              "text": "Lily’s milk-chocolate-style chips · into the pint"
+            },
+            {
+              "quantity": "1 pump",
+              "text": "Same pumpkin-spice syrup · topping"
+            },
+            {
+              "quantity": "7g",
+              "text": "Same chocolate chips · topping"
+            }
+          ]
+        }
+      ],
+      "ingredientCardPhotos": [
+        {
+          "src": "/images/pumpkin-chocolate-chip-protein-creami/base-polished.webp",
+          "layout": "side",
+          "position": "50% 60%"
+        },
+        {
+          "src": "/images/pumpkin-chocolate-chip-protein-creami/chips-polished.webp",
+          "layout": "side",
+          "position": "50% 50%"
+        }
+      ],
+      "methodLabel": "HOW TO MAKE",
+      "methodGroups": [
+        {
+          "card": 0,
+          "accent": "amber",
+          "heading": "Blend + freeze",
+          "items": [
+            {
+              "number": 1,
+              "heading": "Blend the pumpkin base",
+              "body": "Blend all six base ingredients smooth. Keep below the pint fill line."
+            },
+            {
+              "number": 2,
+              "heading": "Freeze + rest",
+              "body": "Freeze upright and level for 24 hours; rest 5 minutes. Follow your machine’s instructions."
+            }
+          ]
+        },
+        {
+          "card": 1,
+          "accent": "amber",
+          "heading": "Spin, chips + topping",
+          "items": [
+            {
+              "number": 3,
+              "heading": "Spin until ready",
+              "body": "Regular Ice Cream; this thick batch needed an extra spin."
+            },
+            {
+              "number": 4,
+              "heading": "Chocolate through Respin",
+              "body": "Add 14g chips and run the filmed Respin method."
+            },
+            {
+              "number": 5,
+              "heading": "Finish the bowl",
+              "body": "Top with 1 syrup pump and 7g chips. Enjoy the pumpkin-forward flavor."
+            }
+          ]
+        }
+      ],
+      "methodCardPhotos": [
+        {
+          "src": "/images/pumpkin-chocolate-chip-protein-creami/blend-polished.webp",
+          "layout": "side",
+          "position": "50% 55%"
+        },
+        {
+          "src": "/images/pumpkin-chocolate-chip-protein-creami/spin-polished.webp",
+          "layout": "side",
+          "position": "50% 50%"
+        }
+      ],
+      "servingPhoto": "/images/pumpkin-chocolate-chip-protein-creami/finish-polished.webp",
+      "servingGroups": [
+        {
+          "accent": "amber",
+          "heading": "One whole finished pint",
+          "items": [
+            {
+              "text": "~280 calories / ~28g protein, including all 21g chocolate chips and the syrup topping."
+            },
+            {
+              "text": "Pumpkin stays noticeable. Choose this flavor if you enjoy pumpkin; the chocolate does not mask it."
+            }
+          ]
+        }
+      ],
+      "engagementQuestion": "Team pumpkin—or pumpkin tucked behind chocolate?"
+    },
+    "flavorProfile": "Pumpkin-forward, pumpkin spice and milk-chocolate chips",
+    "calories": 280,
+    "caloriesPerServing": 280,
+    "protein": 28,
+    "proteinPerServing": 28,
+    "servings": 1,
+    "time": "24 hr freeze + 5 min rest + blend and spin",
+    "bestFor": [
+      "High-protein dessert",
+      "Ninja Creami",
+      "Whole-pint dessert",
+      "Make-ahead"
+    ],
+    "useThisWhen": "You enjoy pumpkin flavor and want a thick protein pint with chocolate chips throughout and on top.",
+    "flavorTarget": "Real pumpkin remains noticeable; chocolate chips add pockets of sweetness without hiding the pumpkin.",
+    "ingredients": [
+      "--- PUMPKIN BASE ---",
+      "1 cup Fairlife 2% milk",
+      "1/2 serving Opportuniteas unflavored whey · 60 cal / 14g protein",
+      "3 pumps Syruvia sugar-free Pumpkin Spice syrup",
+      "1/8 cup Pure pumpkin puree",
+      "1/8 tsp Guar gum",
+      "Pinch Salt",
+      "--- CHOCOLATE + TOPPING ---",
+      "14g Lily’s milk-chocolate-style chips · into the pint",
+      "1 pump Same pumpkin-spice syrup · topping",
+      "7g Same chocolate chips · topping"
+    ],
+    "steps": [
+      {
+        "text": "BLEND: Combine milk, half-serving whey, three syrup pumps, pumpkin puree, guar gum and salt. Blend smooth in the pint, below its fill line.",
+        "image": "/images/pumpkin-chocolate-chip-protein-creami/blend-polished.webp"
+      },
+      {
+        "text": "FREEZE: Freeze upright and level for 24 hours. Rest on the counter for five minutes, following the creator’s usual process and your machine’s instructions."
+      },
+      {
+        "text": "SPIN: Process on Regular Ice Cream. This batch was thick and needed an extra spin. Pumpkin puree may have contributed, but that was not isolated or tested.",
+        "image": "/images/pumpkin-chocolate-chip-protein-creami/spin-polished.webp"
+      },
+      {
+        "text": "ADD CHIPS + RESPIN: Add 14g Lily’s milk-chocolate-style chips after the initial spin and process using the creator’s usual Respin method. Respin, rather than Mix-In, is the filmed method. Follow the manual for your exact machine.",
+        "image": "/images/pumpkin-chocolate-chip-protein-creami/chips-polished.webp"
+      },
+      {
+        "text": "TOP + SERVE: Scoop into a bowl. Add one more pump of the same pumpkin-spice syrup and 7g of the same chocolate chips.",
+        "image": "/images/pumpkin-chocolate-chip-protein-creami/finish-polished.webp"
+      }
+    ],
+    "macroHonesty": "Whole finished pint estimate: about 280 calories and 28g protein, including 21g total Lily’s chips and four total syrup pumps. Milk: 120 cal/13g protein; confirmed half-serving whey: 60 cal/14g; 1/8 cup (~30.5g) pumpkin puree: ~11 cal/~0.25g; 14g + 7g chips: 60 + 30 cal, less than 1.5g protein combined; syrup: zero calories by supplied label; guar and salt: trace. Label-based total is roughly 281–283 calories and 27.25 to under 28.75g protein, rounded for display. Pumpkin brand was unconfirmed; Libby’s plain-puree label is a reference, not the filmed brand. Syrup pump size and zero-calorie label rounding limit precision. Fat, carbs and sodium were not verified.",
+    "allergens": [
+      "dairy"
+    ],
+    "dietTags": [
+      "high-protein",
+      "pork-free"
+    ],
+    "notes": [
+      "Crumbl Pumpkin Chocolate Chip Cookie inspired this flavor; an actual cookie is not an ingredient. Not sponsored or affiliated.",
+      "No monk-fruit sweetener, vanilla, cinnamon, cereal, butter or maple drizzle in this build.",
+      "Tushar enjoyed the color and finished the pint, but would not repeat it because he is not a big pumpkin fan. That is a taste preference; this recipe does not hide the pumpkin.",
+      "Thick texture and the extra spin were observed. Pumpkin puree causing the texture is speculation, not a tested result.",
+      "Site photos are ImageGen-transformed from actual footage; moving video remains real. Check current ingredient labels for additional allergens."
+    ],
+    "seriesInfo": {
+      "series": "CrumblCreamiCut",
+      "framing": "Growth: a whole-pint pumpkin protein dessert recipe. No week or episode number supplied."
+    }
+  },
+  {
     "id": "cinnamon-roll-cookie-protein-creami",
     "title": "Cinnamon Roll Cookie Creami",
     "tagline": "Vanilla-cinnamon protein ice cream, cereal crunch and a butter drizzle. About 310 calories and 28g protein for the whole finished pint.",
