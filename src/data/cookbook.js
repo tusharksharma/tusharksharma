@@ -3232,7 +3232,7 @@ export const quickLunches = [
   {
     id: "miyoka-protein-ramen",
     title: "No-Dish Protein Ramen",
-    tagline: "~35g protein. 7 minutes. Zero dishes. Eat from the container.",
+    tagline: "~34g protein. 7 minutes. Zero dishes. Eat from the container.",
     heroImage: "/images/miyoka-protein-ramen/hero-miyoka-protein-ramen-polished.webp",
     prepImage: "/images/miyoka-protein-ramen/context-miyoka-spicy-protein-ramen-polished.webp",
     video: "/videos/miyoka-protein-ramen/miyoka-protein-ramen-quick-lunches-ep5-350cal-35protein-marcus.mp4",
@@ -3251,6 +3251,150 @@ export const quickLunches = [
     // placeholders first; Path A polish prompts queued for the swap.
     // Narrative: cup brand -> empty pot -> pour broth -> add noodles ->
     // cook -> return to cup -> add sauce -> close+shake -> eat.
+    socialCarousel: {
+      "heroBadge": "Quick Lunches · Episode 5",
+      "heroTitle": "Miyoka Protein Ramen",
+      "cardTitle": "Miyoka Protein Ramen",
+      "heroPhoto": "/images/miyoka-protein-ramen/hero-miyoka-protein-ramen-polished.webp",
+      "hook": "Bone broth boosts the protein. Cook in one pot, eat from the cup.",
+      "heroStats": [
+        {
+          "value": "~350",
+          "label": "cal / cup"
+        },
+        {
+          "value": "~34g",
+          "label": "protein / cup"
+        },
+        {
+          "value": "7–10 min",
+          "label": "quick lunch"
+        }
+      ],
+      "ingredientGroups": [
+        {
+          "card": 0,
+          "accent": "amber",
+          "heading": "The noodle cup",
+          "items": [
+            {
+              "quantity": "1 cup",
+              "text": "Miyoka spicy protein ramen",
+              "note": "Use the included sauce packet"
+            }
+          ]
+        },
+        {
+          "card": 1,
+          "accent": "amber",
+          "heading": "The protein boost",
+          "items": [
+            {
+              "quantity": "1 cup",
+              "text": "Chicken bone broth",
+              "note": "Replace water; about 9g extra protein"
+            }
+          ]
+        }
+      ],
+      "ingredientCardPhotos": [
+        {
+          "src": "/images/miyoka-protein-ramen/context-miyoka-spicy-protein-ramen-polished.webp",
+          "position": "50% 50%",
+          "zoom": 1,
+          "layout": "side"
+        },
+        {
+          "src": "/images/miyoka-protein-ramen/step-01-pour-bone-broth-polished.webp",
+          "position": "50% 50%",
+          "zoom": 1,
+          "layout": "side"
+        }
+      ],
+      "methodLabel": "HOW TO MAKE",
+      "methodGroups": [
+        {
+          "card": 0,
+          "accent": "amber",
+          "heading": "Cook in broth",
+          "items": [
+            {
+              "number": 1,
+              "heading": "Pour broth",
+              "body": "Add 1 cup bone broth to a small pot."
+            },
+            {
+              "number": 2,
+              "heading": "Add noodles",
+              "body": "Bring to a boil, then reduce to medium."
+            },
+            {
+              "number": 3,
+              "heading": "Cook down",
+              "body": "Cook 5–7 minutes until noodles soften and most broth is absorbed."
+            }
+          ]
+        },
+        {
+          "card": 1,
+          "accent": "amber",
+          "heading": "Finish in the cup",
+          "items": [
+            {
+              "number": 4,
+              "heading": "Return to cup",
+              "body": "Transfer cooked noodles back to the original container."
+            },
+            {
+              "number": 5,
+              "heading": "Add sauce",
+              "body": "Add the included packet; close the lid and shake to coat."
+            },
+            {
+              "number": 6,
+              "heading": "Rest + eat",
+              "body": "Let stand 1–2 minutes. Eat from the cup—no extra bowl."
+            }
+          ]
+        }
+      ],
+      "methodCardPhotos": [
+        {
+          "src": "/images/miyoka-protein-ramen/step-03-cook-until-absorbed-polished.webp",
+          "position": "50% 65%",
+          "zoom": 1,
+          "layout": "side"
+        },
+        {
+          "src": "/images/miyoka-protein-ramen/step-05-add-spicy-sauce-polished.webp",
+          "position": "50% 65%",
+          "zoom": 1,
+          "layout": "side"
+        }
+      ],
+      "servingPhoto": {
+        "src": "/images/miyoka-protein-ramen/final-eat-from-container-polished.webp",
+        "position": "65% 85%",
+        "zoom": 1,
+        "layout": "side"
+      },
+      "servingGroups": [
+        {
+          "accent": "amber",
+          "heading": "One warm noodle cup",
+          "items": [
+            {
+              "text": "Coated noodles, not soup. Serve immediately after the sauce has settled."
+            },
+            {
+              "text": "About 350 calories and 34g protein: 25g from the ramen + 9g from the broth. Check your product labels."
+            }
+          ]
+        }
+      ],
+      "engagementQuestion": "Would you try the bone-broth swap?",
+      "captionBody": "Save this quick protein-ramen lunch. One Miyoka spicy protein ramen cup + 1 cup chicken bone broth instead of water: about 350 calories and 34g protein (25g ramen + 9g broth; check labels).\n\nCook the noodles in broth for 5–7 minutes until soft and most broth is absorbed. Transfer back to the original cup, add the included sauce, close the lid, and shake. Rest 1–2 minutes, then eat from the cup. One cooking pot, no extra bowl.\n\nSave the recipe for a busy lunch break."
+    },
     socialImages: [
       "/images/miyoka-protein-ramen/context-miyoka-spicy-protein-ramen-polished.webp",
       "/images/miyoka-protein-ramen/context-kirkland-chicken-bone-broth-polished.webp",
@@ -3265,8 +3409,8 @@ export const quickLunches = [
     flavorProfile: "Spicy stir-fried ramen, bone broth depth, coated not soupy",
     calories: 350,
     caloriesPerServing: 350,
-    protein: 35,
-    proteinPerServing: 35,
+    protein: 34,
+    proteinPerServing: 34,
     servings: 1,
     time: "7-10 min",
     bestFor: ["Quick lunch", "No-dish", "High protein", "Zero cleanup"],
@@ -3299,7 +3443,7 @@ export const quickLunches = [
     seriesInfo: {
       series: "Quick Lunches",
       episode: 5,
-      framing: "Fifth episode of the Quick Lunches numbered series — the first repost of an existing recipe as a numbered episode. Ep. 5 keeps the format: dependable convenience products, one heat step, real macros. The move here is swapping water for Kirkland chicken bone broth so the Miyoka Spicy Protein Ramen cup lands at ~350 cal / ~35g protein — 25g from the noodles, ~9g from the broth — and cooking the noodles down until the broth is mostly absorbed, then finishing in the cup with the full sauce packet. No extra bowl, zero cleanup. Recipe, ingredients, and macros are unchanged from the original No-Dish Protein Ramen; the episode brings a fresh hook, footage order, caption, and question.",
+      framing: "Fifth episode of the Quick Lunches numbered series — the first repost of an existing recipe as a numbered episode. Ep. 5 keeps the format: dependable convenience products, one heat step, real macros. The move here is swapping water for Kirkland chicken bone broth so the Miyoka Spicy Protein Ramen cup lands at ~350 cal / ~34g protein — 25g from the noodles, ~9g from the broth — and cooking the noodles down until the broth is mostly absorbed, then finishing in the cup with the full sauce packet. No extra bowl, zero cleanup. Recipe, ingredients, and macros are unchanged from the original No-Dish Protein Ramen; the episode brings a fresh hook, footage order, caption, and question.",
     },
     mealPrep: {
       storage: "N/A — 7 minutes to make.",
@@ -10698,7 +10842,7 @@ const DESSERT_CATALOG = [
     video: "/videos/mississippi-mud-pie-cookie-creami/ID.183.-.Mississippi.Mud.Pie.Cookie.Creami.mp4",
     title: "Mississippi Mud Pie Cookie Creami",
     tagline: "CrumblCreamiCut Week 6, Flavor 1 (Ep. 16 / Week 6 opener) — darkest Creami in the series so far: 2 tbsp Dutch cocoa in the base, cocoa grahams through Respin, Mid-Day Squares brownie garnish + sugar-free whipped cream + cocoa dusting on top. 390 cal / 46g protein whole pint.",
-    heroImage: "/images/mississippi-mud-pie-cookie-creami/hero-finished-mississippi-mud-pie-cookie-creami-polished.webp",
+    heroImage: "/images/mississippi-mud-pie-cookie-creami/hero-food-forward-v2-polished.webp",
     prepImage: "/images/mississippi-mud-pie-cookie-creami/step-dark-first-spin-result-polished.webp",
     socialHashtags: [
       "#MississippiMudPie",
@@ -10708,71 +10852,184 @@ const DESSERT_CATALOG = [
       "#TheSplitPlate",
     ],
     socialCarousel: {
-      heroBadge: "CrumblCreamiCut · W6 F1",
-      heroAccent: "amber",
-      hook: "2 tbsp Dutch cocoa in the base for the darkest pint in the series. Cocoa grahams through Respin, brownie garnish + whipped cream + cocoa dust on top. 390 cal / 46g protein whole pint.",
-      heroPhoto: "/images/mississippi-mud-pie-cookie-creami/hero-finished-mississippi-mud-pie-cookie-creami-polished.webp",
-      ingredientGroups: [
+      "heroBadge": "CrumblCreamiCut · W6 F1",
+      "heroAccent": "amber",
+      "hook": "Dutch cocoa, cocoa-graham crunch, and a brownie-whip finish.",
+      "heroPhoto": "/images/mississippi-mud-pie-cookie-creami/hero-food-forward-v2-polished.webp",
+      "ingredientGroups": [
         {
-          card: 0,
-          accent: "amber",
-          heading: "Creami Base",
-          items: [
-            { quantity: "1 cup", text: "2% ultra-filtered milk" },
-            { quantity: "2 tbsp", text: "Monk fruit / erythritol sweetener" },
-            { quantity: "1 serving", text: "Unflavored whey isolate" },
-            { quantity: "1/8 tsp", text: "Guar gum" },
-            { quantity: "Pinch", text: "Salt" },
-            { quantity: "2 tbsp", text: "Dutch cocoa", note: "Intentionally dark — the flavor spine" },
-          ],
+          "card": 0,
+          "accent": "amber",
+          "heading": "Protein base",
+          "items": [
+            {
+              "quantity": "1 cup",
+              "text": "2% ultra-filtered milk"
+            },
+            {
+              "quantity": "2 tbsp",
+              "text": "Monk fruit sweetener"
+            },
+            {
+              "quantity": "1 serving",
+              "text": "Unflavored whey isolate"
+            },
+            {
+              "quantity": "1/8 tsp",
+              "text": "Guar gum"
+            },
+            {
+              "quantity": "Pinch",
+              "text": "Salt"
+            }
+          ]
         },
         {
-          card: 1,
-          accent: "amber",
-          heading: "Mix-In + Toppings",
-          items: [
-            { quantity: "0.5 oz (14g)", text: "Cocoa grahams", note: "Crazy Grahams filmed — Respin without liquid" },
-            { quantity: "1/3 square", text: "Chocolate brownie square", note: "Mid-Day Squares filmed — garnish only, does not go through the machine" },
-            { quantity: "1 tbsp", text: "Sugar-free whipped cream", note: "Post-scoop topping" },
-            { quantity: "As needed", text: "Dutch cocoa", note: "Light dusting on top" },
-          ],
-        },
+          "card": 1,
+          "accent": "amber",
+          "heading": "Cocoa + brownie",
+          "items": [
+            {
+              "quantity": "2 tbsp",
+              "text": "Dutch cocoa"
+            },
+            {
+              "quantity": "14g",
+              "text": "Cocoa grahams",
+              "note": "Add before Respin"
+            },
+            {
+              "quantity": "⅓ square",
+              "text": "Chocolate brownie",
+              "note": "Chop; garnish only"
+            },
+            {
+              "quantity": "1 tbsp",
+              "text": "Sugar-free whipped cream"
+            },
+            {
+              "quantity": "Light dust",
+              "text": "Dutch cocoa"
+            }
+          ]
+        }
       ],
-      methodGroups: [
+      "methodGroups": [
         {
-          accent: "amber",
-          heading: "Method",
-          items: [
-            { number: 1, heading: "Blend", body: "Blend milk, sweetener, whey, guar, salt, and 2 tbsp Dutch cocoa until smooth. Zero cocoa lumps." },
-            { number: 2, heading: "Freeze", body: "Pour into a Creami pint below the max-fill line. Freeze upright and level for a full 24 hours." },
-            { number: 3, heading: "Rest", body: "Room-temperature rest for 5 minutes." },
-            { number: 4, heading: "Spin", body: "Process on Regular Ice Cream. First-spin texture is expected to look dark and slightly powdery." },
-            { number: 5, heading: "Mix-In", body: "Cut a narrow center well, add 0.5 oz cocoa grahams, run no-liquid Respin." },
-            { number: 6, heading: "Finish", body: "Scoop, garnish with 1/3 chopped brownie square + 1 tbsp whipped cream + light Dutch cocoa dusting. Eat immediately." },
-          ],
+          "card": 0,
+          "accent": "amber",
+          "heading": "Blend, freeze, spin",
+          "items": [
+            {
+              "number": 1,
+              "heading": "Blend base",
+              "body": "Blend the base ingredients with 2 tbsp Dutch cocoa until smooth."
+            },
+            {
+              "number": 2,
+              "heading": "Freeze level",
+              "body": "Pour below the max-fill line. Freeze upright for 24 hours."
+            },
+            {
+              "number": 3,
+              "heading": "Rest + spin",
+              "body": "Rest 5 minutes on the counter; run Regular Ice Cream."
+            }
+          ]
         },
-      ],
-      ingredientCardPhotos: [
-        { src: "/images/mississippi-mud-pie-cookie-creami/step-add-dutch-cocoa-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
-        { src: "/images/mississippi-mud-pie-cookie-creami/context-cocoa-grahams-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
-      ],
-      methodCardPhotos: [
-        { src: "/images/mississippi-mud-pie-cookie-creami/step-dark-first-spin-result-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
-        { src: "/images/mississippi-mud-pie-cookie-creami/step-respin-result-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
-      ],
-      servingPhoto: "/images/mississippi-mud-pie-cookie-creami/final-taste-test-polished.webp",
-      servingGroups: [
         {
-          accent: "amber",
-          heading: "Whole-Pint Dessert",
-          items: [
-            { text: "One finished pint: 390 calories and 46g protein." },
-            { text: "Dark, crunchy, fudgy, creamy, slightly bitter — the darkest CrumblCreamiCut in the series so far." },
-            { text: "Serve immediately after Respin + brownie + whipped cream + cocoa dust — cocoa-graham crunch fades if the Creami sits." },
-          ],
-        },
+          "card": 1,
+          "accent": "amber",
+          "heading": "Crunch + finish",
+          "items": [
+            {
+              "number": 4,
+              "heading": "Add crunch",
+              "body": "Add 14g cocoa grahams to a center well. Run Respin without liquid."
+            },
+            {
+              "number": 5,
+              "heading": "Brownie topping",
+              "body": "Chop ⅓ brownie square. Keep it out of the machine."
+            },
+            {
+              "number": 6,
+              "heading": "Finish + serve",
+              "body": "Top with brownie, 1 tbsp whipped cream, and a light cocoa dusting."
+            }
+          ]
+        }
       ],
-      engagementQuestion: "Dutch cocoa at 2 tbsp — too dark, or the identity carrier the darker CCC flavors have been waiting for?",
+      "ingredientCardPhotos": [
+        {
+          "src": "/images/mississippi-mud-pie-cookie-creami/step-add-dutch-cocoa-polished.webp",
+          "position": "50% 50%",
+          "zoom": 1.05,
+          "layout": "side"
+        },
+        {
+          "src": "/images/mississippi-mud-pie-cookie-creami/context-cocoa-grahams-polished.webp",
+          "position": "50% 50%",
+          "zoom": 1.05,
+          "layout": "side"
+        }
+      ],
+      "methodCardPhotos": [
+        {
+          "src": "/images/mississippi-mud-pie-cookie-creami/step-dark-first-spin-result-polished.webp",
+          "position": "50% 70%",
+          "zoom": 1,
+          "layout": "side"
+        },
+        {
+          "src": "/images/mississippi-mud-pie-cookie-creami/step-add-brownie-garnish-polished.webp",
+          "position": "50% 75%",
+          "zoom": 1,
+          "layout": "side"
+        }
+      ],
+      "servingPhoto": {
+        "src": "/images/mississippi-mud-pie-cookie-creami/final-taste-test-polished.webp",
+        "position": "50% 100%",
+        "zoom": 1.2,
+        "layout": "side"
+      },
+      "servingGroups": [
+        {
+          "accent": "amber",
+          "heading": "One whole pint",
+          "items": [
+            {
+              "text": "About 390 calories and 46g protein including the listed mix-ins and toppings."
+            },
+            {
+              "text": "Brownie and whipped cream go on after Respin. Serve while the grahams are crunchy."
+            },
+            {
+              "text": "Creator estimate; nutrition varies with whey and product labels."
+            }
+          ]
+        }
+      ],
+      "engagementQuestion": "Brownie pieces on top or extra cocoa crunch?",
+      "heroTitle": "Mississippi Mud Pie Protein Creami",
+      "cardTitle": "Mississippi Mud Pie Creami",
+      "heroStats": [
+        {
+          "value": "~390",
+          "label": "cal / whole pint"
+        },
+        {
+          "value": "~46g",
+          "label": "protein / pint"
+        },
+        {
+          "value": "24h",
+          "label": "freeze first"
+        }
+      ],
+      "methodLabel": "HOW TO MAKE",
+      "captionBody": "Save this Mississippi Mud Pie Protein Creami. About 390 calories and 46g protein for one whole finished pint, including the listed toppings (creator estimate; check your whey and product labels).\n\nPROTEIN BASE\n• 1 cup 2% ultra-filtered milk\n• 2 tbsp Monk fruit sweetener\n• 1 serving Unflavored whey isolate\n• 1/8 tsp Guar gum\n• Pinch Salt\n\nFLAVOR + FINISH\n• 2 tbsp Dutch cocoa\n• 14g Cocoa grahams — Add before Respin\n• ⅓ square Chocolate brownie — Chop; garnish only\n• 1 tbsp Sugar-free whipped cream\n• Light dust Dutch cocoa\n\nHOW TO MAKE\n1. Blend the base ingredients with 2 tbsp Dutch cocoa until smooth.\n2. Pour below the max-fill line. Freeze upright for 24 hours.\n3. Rest 5 minutes on the counter; run Regular Ice Cream.\n4. Add 14g cocoa grahams to a center well. Run Respin without liquid.\n5. Chop ⅓ brownie square. Keep it out of the machine.\n6. Top with brownie, 1 tbsp whipped cream, and a light cocoa dusting.\n\nSave the recipe for your next pint."
     },
     socialImages: [
       "/images/mississippi-mud-pie-cookie-creami/step-add-dutch-cocoa-polished.webp",
@@ -10899,70 +11156,180 @@ const DESSERT_CATALOG = [
       "#TheSplitPlate",
     ],
     socialCarousel: {
-      heroBadge: "CrumblCreamiCut · W6 F2",
-      heroAccent: "amber",
-      hook: "Brown-butter vanilla base. Mini M&M's through the Respin, then a full 0.5 oz on top. 360 cal / 42g protein whole pint. Honest verdict: fine but basic — candy overload is real.",
-      heroPhoto: "/images/rainbow-shake-cookie-creami/hero-finished-rainbow-shake-cookie-creami-polished.webp",
-      ingredientGroups: [
+      "heroBadge": "CrumblCreamiCut · W6 F2",
+      "heroAccent": "amber",
+      "hook": "Brown-butter vanilla with mini M&M’s mixed in and on top.",
+      "heroPhoto": "/images/rainbow-shake-cookie-creami/hero-finished-rainbow-shake-cookie-creami-polished.webp",
+      "ingredientGroups": [
         {
-          card: 0,
-          accent: "amber",
-          heading: "Creami Base",
-          items: [
-            { quantity: "1 cup", text: "2% ultra-filtered milk" },
-            { quantity: "2 tbsp", text: "Monk fruit / erythritol sweetener" },
-            { quantity: "1 serving", text: "Unflavored whey isolate" },
-            { quantity: "1/8 tsp", text: "Guar gum" },
-            { quantity: "Pinch", text: "Salt" },
-            { quantity: "1/4 tsp", text: "Brown-butter emulsion", note: "Flavor spine — added pre-freeze" },
-            { quantity: "1/2 tsp", text: "Vanilla extract", note: "Rounds the browned-butter note" },
-          ],
+          "card": 0,
+          "accent": "amber",
+          "heading": "Protein base",
+          "items": [
+            {
+              "quantity": "1 cup",
+              "text": "2% ultra-filtered milk"
+            },
+            {
+              "quantity": "2 tbsp",
+              "text": "Monk fruit sweetener"
+            },
+            {
+              "quantity": "1 serving",
+              "text": "Unflavored whey isolate"
+            },
+            {
+              "quantity": "1/8 tsp",
+              "text": "Guar gum"
+            },
+            {
+              "quantity": "Pinch",
+              "text": "Salt"
+            }
+          ]
         },
         {
-          card: 1,
-          accent: "amber",
-          heading: "Mix-In + Garnish",
-          items: [
-            { quantity: "0.5 oz (14g)", text: "Mini M&M's", note: "Machine mix-in — added into center well before Respin" },
-            { quantity: "0.5 oz (14g)", text: "Mini M&M's", note: "Garnish only — scattered post-scoop; does not go through the machine" },
-          ],
-        },
+          "card": 1,
+          "accent": "amber",
+          "heading": "Vanilla + candy",
+          "items": [
+            {
+              "quantity": "¼ tsp",
+              "text": "Brown-butter emulsion"
+            },
+            {
+              "quantity": "½ tsp",
+              "text": "Vanilla extract"
+            },
+            {
+              "quantity": "14g",
+              "text": "Mini M&M’s",
+              "note": "Add before Respin"
+            },
+            {
+              "quantity": "14g",
+              "text": "Mini M&M’s",
+              "note": "Scatter after scooping"
+            }
+          ]
+        }
       ],
-      methodGroups: [
+      "methodGroups": [
         {
-          accent: "amber",
-          heading: "Method",
-          items: [
-            { number: 1, heading: "Blend", body: "Blend milk, sweetener, whey, guar, salt, brown-butter emulsion, and vanilla until smooth." },
-            { number: 2, heading: "Freeze", body: "Pour into a Creami pint below the max-fill line. Freeze upright and level for a full 24 hours." },
-            { number: 3, heading: "Rest", body: "Room-temperature rest for 5 minutes." },
-            { number: 4, heading: "Spin", body: "Process on Regular Ice Cream." },
-            { number: 5, heading: "Mix-In", body: "Cut a narrow center well, add 0.5 oz mini M&M's, run no-liquid Respin." },
-            { number: 6, heading: "Finish", body: "Scoop, scatter the second 0.5 oz of mini M&M's on top. Eat immediately." },
-          ],
+          "card": 0,
+          "accent": "amber",
+          "heading": "Blend, freeze, spin",
+          "items": [
+            {
+              "number": 1,
+              "heading": "Blend base",
+              "body": "Blend the base with brown-butter emulsion and vanilla until smooth."
+            },
+            {
+              "number": 2,
+              "heading": "Freeze level",
+              "body": "Pour below the max-fill line. Freeze upright for 24 hours."
+            },
+            {
+              "number": 3,
+              "heading": "Rest + spin",
+              "body": "Rest 5 minutes on the counter; run Regular Ice Cream."
+            }
+          ]
         },
-      ],
-      ingredientCardPhotos: [
-        { src: "/images/rainbow-shake-cookie-creami/step-add-brown-butter-emulsion-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
-        { src: "/images/rainbow-shake-cookie-creami/context-mini-mms-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
-      ],
-      methodCardPhotos: [
-        { src: "/images/rainbow-shake-cookie-creami/step-frozen-pint-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
-        { src: "/images/rainbow-shake-cookie-creami/step-respin-result-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
-      ],
-      servingPhoto: "/images/rainbow-shake-cookie-creami/final-taste-test-polished.webp",
-      servingGroups: [
         {
-          accent: "amber",
-          heading: "Whole-Pint Dessert",
-          items: [
-            { text: "One finished pint: 360 calories and 42g protein." },
-            { text: "Brown-butter vanilla with mini M&M's through the Respin — fine but basic, honest verdict preserved." },
-            { text: "Serve immediately after Respin + garnish — candy crunch fades if the Creami sits." },
-          ],
-        },
+          "card": 1,
+          "accent": "amber",
+          "heading": "Crunch + finish",
+          "items": [
+            {
+              "number": 4,
+              "heading": "Add crunch",
+              "body": "Add 14g mini M&M’s to a center well. Run Respin without liquid."
+            },
+            {
+              "number": 5,
+              "heading": "Candy topping",
+              "body": "Scoop into a bowl. Reserve the second 14g M&M’s for the top."
+            },
+            {
+              "number": 6,
+              "heading": "Finish + serve",
+              "body": "Scatter the reserved candy over the scoop; enjoy right away."
+            }
+          ]
+        }
       ],
-      engagementQuestion: "Full ounce of mini M&M's — keep them all, or cut the garnish in half?",
+      "ingredientCardPhotos": [
+        {
+          "src": "/images/rainbow-shake-cookie-creami/step-add-brown-butter-emulsion-polished.webp",
+          "position": "50% 50%",
+          "zoom": 1.05,
+          "layout": "side"
+        },
+        {
+          "src": "/images/rainbow-shake-cookie-creami/context-mini-mms-polished.webp",
+          "position": "50% 50%",
+          "zoom": 1.05,
+          "layout": "side"
+        }
+      ],
+      "methodCardPhotos": [
+        {
+          "src": "/images/rainbow-shake-cookie-creami/step-frozen-pint-polished.webp",
+          "position": "50% 65%",
+          "zoom": 1,
+          "layout": "side"
+        },
+        {
+          "src": "/images/rainbow-shake-cookie-creami/step-garnish-mini-mms-polished.webp",
+          "position": "50% 75%",
+          "zoom": 1,
+          "layout": "side"
+        }
+      ],
+      "servingPhoto": {
+        "src": "/images/rainbow-shake-cookie-creami/final-taste-test-polished.webp",
+        "position": "50% 100%",
+        "zoom": 1.35,
+        "layout": "side"
+      },
+      "servingGroups": [
+        {
+          "accent": "amber",
+          "heading": "One whole pint",
+          "items": [
+            {
+              "text": "About 360 calories and 42g protein including the listed mix-ins and toppings."
+            },
+            {
+              "text": "Half the candy is mixed in; half stays crunchy on top. Serve immediately."
+            },
+            {
+              "text": "Creator estimate; nutrition varies with whey and product labels."
+            }
+          ]
+        }
+      ],
+      "engagementQuestion": "Mix the candy in or keep it on top?",
+      "heroTitle": "Rainbow Shake Protein Creami",
+      "cardTitle": "Rainbow Shake Creami",
+      "heroStats": [
+        {
+          "value": "~360",
+          "label": "cal / whole pint"
+        },
+        {
+          "value": "~42g",
+          "label": "protein / pint"
+        },
+        {
+          "value": "24h",
+          "label": "freeze first"
+        }
+      ],
+      "methodLabel": "HOW TO MAKE",
+      "captionBody": "Save this Rainbow Shake Protein Creami. About 360 calories and 42g protein for one whole finished pint, including the listed toppings (creator estimate; check your whey and product labels).\n\nPROTEIN BASE\n• 1 cup 2% ultra-filtered milk\n• 2 tbsp Monk fruit sweetener\n• 1 serving Unflavored whey isolate\n• 1/8 tsp Guar gum\n• Pinch Salt\n\nFLAVOR + FINISH\n• ¼ tsp Brown-butter emulsion\n• ½ tsp Vanilla extract\n• 14g Mini M&M’s — Add before Respin\n• 14g Mini M&M’s — Scatter after scooping\n\nHOW TO MAKE\n1. Blend the base with brown-butter emulsion and vanilla until smooth.\n2. Pour below the max-fill line. Freeze upright for 24 hours.\n3. Rest 5 minutes on the counter; run Regular Ice Cream.\n4. Add 14g mini M&M’s to a center well. Run Respin without liquid.\n5. Scoop into a bowl. Reserve the second 14g M&M’s for the top.\n6. Scatter the reserved candy over the scoop; enjoy right away.\n\nSave the recipe for your next pint."
     },
     socialImages: [
       "/images/rainbow-shake-cookie-creami/step-add-brown-butter-emulsion-polished.webp",
@@ -11085,71 +11452,181 @@ const DESSERT_CATALOG = [
       "#TheSplitPlate",
     ],
     socialCarousel: {
-      heroBadge: "CrumblCreamiCut · W6 F3",
-      heroAccent: "amber",
-      hook: "PB2 in the base, half a zero-sugar oatmeal cookie through Respin, and a two-ingredient maple-cocoa hot fudge that steals the recipe. 330 cal / 47g protein whole pint.",
-      heroPhoto: "/images/peanut-butter-bar-cookie-creami/hero-finished-peanut-butter-bar-cookie-creami-polished.webp",
-      ingredientGroups: [
+      "heroBadge": "CrumblCreamiCut · W6 F3",
+      "heroAccent": "amber",
+      "hook": "Peanut-butter base, oatmeal-cookie crunch, and maple-cocoa fudge.",
+      "heroPhoto": "/images/peanut-butter-bar-cookie-creami/hero-finished-peanut-butter-bar-cookie-creami-polished.webp",
+      "ingredientGroups": [
         {
-          card: 0,
-          accent: "amber",
-          heading: "Creami Base",
-          items: [
-            { quantity: "1 cup", text: "2% ultra-filtered milk" },
-            { quantity: "2 tbsp", text: "Monk fruit / erythritol sweetener" },
-            { quantity: "1 serving", text: "Unflavored whey isolate" },
-            { quantity: "1/8 tsp", text: "Guar gum" },
-            { quantity: "Pinch", text: "Salt" },
-            { quantity: "1 tbsp", text: "PB2 powdered peanut butter", note: "Only flavor addition — no vanilla or emulsion" },
-          ],
+          "card": 0,
+          "accent": "amber",
+          "heading": "Protein base",
+          "items": [
+            {
+              "quantity": "1 cup",
+              "text": "2% ultra-filtered milk"
+            },
+            {
+              "quantity": "2 tbsp",
+              "text": "Monk fruit sweetener"
+            },
+            {
+              "quantity": "1 serving",
+              "text": "Unflavored whey isolate"
+            },
+            {
+              "quantity": "1/8 tsp",
+              "text": "Guar gum"
+            },
+            {
+              "quantity": "Pinch",
+              "text": "Salt"
+            }
+          ]
         },
         {
-          card: 1,
-          accent: "amber",
-          heading: "Mix-In + Hot Fudge",
-          items: [
-            { quantity: "1/2 cookie", text: "Zero-sugar oatmeal cookie", note: "Voortman filmed — Respin without liquid" },
-            { quantity: "1 tbsp", text: "Sugar-free maple syrup", note: "Maple Grove Farms filmed — warm 10-15s" },
-            { quantity: "1 tbsp", text: "Dutch-process cocoa powder", note: "Sift into warm syrup — sifting = silky, unsifted = gritty" },
-          ],
-        },
+          "card": 1,
+          "accent": "amber",
+          "heading": "Peanut butter + fudge",
+          "items": [
+            {
+              "quantity": "1 tbsp",
+              "text": "PB2 powder",
+              "note": "Blend into the base"
+            },
+            {
+              "quantity": "½ cookie",
+              "text": "Zero-sugar oatmeal cookie",
+              "note": "Add before Respin"
+            },
+            {
+              "quantity": "1 tbsp",
+              "text": "Sugar-free maple syrup"
+            },
+            {
+              "quantity": "1 tbsp",
+              "text": "Dutch cocoa",
+              "note": "Sift into warm syrup"
+            }
+          ]
+        }
       ],
-      methodGroups: [
+      "methodGroups": [
         {
-          accent: "amber",
-          heading: "Method",
-          items: [
-            { number: 1, heading: "Blend", body: "Blend milk, sweetener, whey, guar, salt, and 1 tbsp PB2 until smooth." },
-            { number: 2, heading: "Freeze", body: "Pour into a Creami pint below the max-fill line. Freeze upright and level for a full 24 hours." },
-            { number: 3, heading: "Rest + Spin", body: "Room-temperature rest 5 minutes. Process on Regular Ice Cream." },
-            { number: 4, heading: "Mix-In", body: "Add half a zero-sugar oatmeal cookie into a center well, run no-liquid Respin." },
-            { number: 5, heading: "Hot Fudge", body: "Warm 1 tbsp sugar-free maple syrup 10-15s. Sift in 1 tbsp Dutch cocoa. Whisk until silky and glossy." },
-            { number: 6, heading: "Finish", body: "Scoop, drizzle the full hot-fudge batch over the top. Eat immediately." },
-          ],
+          "card": 0,
+          "accent": "amber",
+          "heading": "Blend, freeze, spin",
+          "items": [
+            {
+              "number": 1,
+              "heading": "Blend base",
+              "body": "Blend the base with 1 tbsp PB2 until smooth."
+            },
+            {
+              "number": 2,
+              "heading": "Freeze level",
+              "body": "Pour below the max-fill line. Freeze upright for 24 hours."
+            },
+            {
+              "number": 3,
+              "heading": "Rest + spin",
+              "body": "Rest 5 minutes on the counter; run Regular Ice Cream."
+            }
+          ]
         },
-      ],
-      ingredientCardPhotos: [
-        { src: "/images/peanut-butter-bar-cookie-creami/step-add-pb2-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
-        { src: "/images/peanut-butter-bar-cookie-creami/context-zero-sugar-oatmeal-cookie-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
-        { src: "/images/peanut-butter-bar-cookie-creami/context-sugar-free-maple-syrup-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
-      ],
-      methodCardPhotos: [
-        { src: "/images/peanut-butter-bar-cookie-creami/step-add-cookie-after-spin-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
-        { src: "/images/peanut-butter-bar-cookie-creami/step-whisk-hot-fudge-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
-      ],
-      servingPhoto: "/images/peanut-butter-bar-cookie-creami/final-taste-test-polished.webp",
-      servingGroups: [
         {
-          accent: "amber",
-          heading: "Whole-Pint Dessert",
-          items: [
-            { text: "One finished pint: 330 calories and 47g protein (includes half-cookie mix-in + full hot-fudge batch)." },
-            { text: "Hot fudge is a reusable two-ingredient component — swap onto brownies, cakes, yogurt bowls." },
-            { text: "Serve immediately after Respin + drizzle — the fudge thickens as it cools." },
-          ],
-        },
+          "card": 1,
+          "accent": "amber",
+          "heading": "Crunch + finish",
+          "items": [
+            {
+              "number": 4,
+              "heading": "Add crunch",
+              "body": "Add half an oatmeal cookie to a center well. Run Respin without liquid."
+            },
+            {
+              "number": 5,
+              "heading": "Whisk fudge",
+              "body": "Warm 1 tbsp syrup for 10–15 seconds. Sift in 1 tbsp cocoa; whisk smooth."
+            },
+            {
+              "number": 6,
+              "heading": "Finish + serve",
+              "body": "Scoop and drizzle with the full batch of warm fudge."
+            }
+          ]
+        }
       ],
-      engagementQuestion: "Would you steal this hot-fudge hack for a Creami, brownies, or both?",
+      "ingredientCardPhotos": [
+        {
+          "src": "/images/peanut-butter-bar-cookie-creami/step-add-pb2-polished.webp",
+          "position": "50% 50%",
+          "zoom": 1.05,
+          "layout": "side"
+        },
+        {
+          "src": "/images/peanut-butter-bar-cookie-creami/context-zero-sugar-oatmeal-cookie-polished.webp",
+          "position": "50% 50%",
+          "zoom": 1.05,
+          "layout": "side"
+        }
+      ],
+      "methodCardPhotos": [
+        {
+          "src": "/images/peanut-butter-bar-cookie-creami/step-blend-pb2-base-polished.webp",
+          "position": "50% 70%",
+          "zoom": 1,
+          "layout": "side"
+        },
+        {
+          "src": "/images/peanut-butter-bar-cookie-creami/step-whisk-hot-fudge-polished.webp",
+          "position": "50% 80%",
+          "zoom": 1,
+          "layout": "side"
+        }
+      ],
+      "servingPhoto": {
+        "src": "/images/peanut-butter-bar-cookie-creami/final-taste-test-polished.webp",
+        "position": "50% 100%",
+        "zoom": 1.35,
+        "layout": "side"
+      },
+      "servingGroups": [
+        {
+          "accent": "amber",
+          "heading": "One whole pint",
+          "items": [
+            {
+              "text": "About 330 calories and 47g protein including the listed mix-ins and toppings."
+            },
+            {
+              "text": "The full warm fudge batch goes over the scoop. Serve before the sauce sets."
+            },
+            {
+              "text": "Creator estimate; nutrition varies with whey and product labels."
+            }
+          ]
+        }
+      ],
+      "engagementQuestion": "Would you use this fudge on a Creami or brownies?",
+      "heroTitle": "Peanut Butter Bar Protein Creami",
+      "cardTitle": "Peanut Butter Bar Creami",
+      "heroStats": [
+        {
+          "value": "~330",
+          "label": "cal / whole pint"
+        },
+        {
+          "value": "~47g",
+          "label": "protein / pint"
+        },
+        {
+          "value": "24h",
+          "label": "freeze first"
+        }
+      ],
+      "methodLabel": "HOW TO MAKE",
+      "captionBody": "Save this Peanut Butter Bar Protein Creami. About 330 calories and 47g protein for one whole finished pint, including the listed toppings (creator estimate; check your whey and product labels).\n\nPROTEIN BASE\n• 1 cup 2% ultra-filtered milk\n• 2 tbsp Monk fruit sweetener\n• 1 serving Unflavored whey isolate\n• 1/8 tsp Guar gum\n• Pinch Salt\n\nFLAVOR + FINISH\n• 1 tbsp PB2 powder — Blend into the base\n• ½ cookie Zero-sugar oatmeal cookie — Add before Respin\n• 1 tbsp Sugar-free maple syrup\n• 1 tbsp Dutch cocoa — Sift into warm syrup\n\nHOW TO MAKE\n1. Blend the base with 1 tbsp PB2 until smooth.\n2. Pour below the max-fill line. Freeze upright for 24 hours.\n3. Rest 5 minutes on the counter; run Regular Ice Cream.\n4. Add half an oatmeal cookie to a center well. Run Respin without liquid.\n5. Warm 1 tbsp syrup for 10–15 seconds. Sift in 1 tbsp cocoa; whisk smooth.\n6. Scoop and drizzle with the full batch of warm fudge.\n\nSave the recipe for your next pint."
     },
     socialImages: [
       "/images/peanut-butter-bar-cookie-creami/step-add-pb2-polished.webp",
@@ -14185,74 +14662,181 @@ export const powerups = [
     tagline: "Proffee Episode 3 — Ep 1's concentrate technique with a Snyder's pretzel + Skinny Syrups salted caramel rim, LorAnn caramel emulsion in the concentrate, and Reddi-wip Zero Sugar on top. 140 cal / 21g protein per glass, 5-minute build.",
     heroImage: "/images/salted-caramel-pretzel-iced-proffee/hero-salted-caramel-pretzel-iced-proffee-polished.webp",
     socialCarousel: {
-      heroBadge: "Proffee · Episode 3",
-      heroAccent: "amber",
-      hook: "5-minute iced protein coffee with a salted-caramel-pretzel rim. 140 cal / 21g protein per glass.",
-      heroPhoto: "/images/salted-caramel-pretzel-iced-proffee/hero-salted-caramel-pretzel-iced-proffee-polished.webp",
-      ingredientsPhoto: "/images/salted-caramel-pretzel-iced-proffee/context-crushed-pretzels.webp",
-      methodPhoto: "/images/salted-caramel-pretzel-iced-proffee/step-08-blend-concentrate-polished.webp",
-      servingPhoto: "/images/salted-caramel-pretzel-iced-proffee/hero-salted-caramel-pretzel-iced-proffee-polished.webp",
-      ingredientGroups: [
+      "heroBadge": "Proffee · Episode 3",
+      "heroAccent": "amber",
+      "hook": "A crunchy caramel rim and smooth protein coffee. Ready in 5 minutes.",
+      "heroPhoto": "/images/salted-caramel-pretzel-iced-proffee/hero-salted-caramel-pretzel-iced-proffee-polished.webp",
+      "servingPhoto": {
+        "src": "/images/salted-caramel-pretzel-iced-proffee/step-12-pretzel-garnish-polished.webp",
+        "position": "50% 70%",
+        "zoom": 1,
+        "layout": "side"
+      },
+      "ingredientGroups": [
         {
-          accent: "amber",
-          heading: "Ingredients",
-          items: [
-            { quantity: "0.25 oz", text: "Crushed pretzels", note: "Split between rim + garnish" },
-            { quantity: "1 tbsp", text: "Salted-caramel syrup" },
-            { quantity: "1/2 tbsp", text: "Instant coffee" },
-            { quantity: "1/2 scoop", text: "Unflavored whey" },
-            { quantity: "1/2 tsp", text: "Caramel emulsion" },
-            { quantity: "1/2 cup", text: "Fat-free milk + Reddi-wip" },
-          ],
+          "card": 0,
+          "accent": "amber",
+          "heading": "Protein coffee",
+          "items": [
+            {
+              "quantity": "½ tbsp",
+              "text": "Instant coffee"
+            },
+            {
+              "quantity": "½ serving",
+              "text": "Unflavored whey"
+            },
+            {
+              "quantity": "2 tsp",
+              "text": "Monk fruit sweetener"
+            },
+            {
+              "quantity": "½ tsp",
+              "text": "Caramel emulsion"
+            },
+            {
+              "quantity": "2–3 tbsp",
+              "text": "Hot water",
+              "note": "Hot, not boiling"
+            }
+          ]
         },
+        {
+          "card": 1,
+          "accent": "amber",
+          "heading": "Rim + finish",
+          "items": [
+            {
+              "quantity": "7g",
+              "text": "Crushed pretzels",
+              "note": "Divide between rim + topping"
+            },
+            {
+              "quantity": "To taste",
+              "text": "Sugar-free salted caramel"
+            },
+            {
+              "quantity": "½ cup",
+              "text": "Fat-free ultra-filtered milk"
+            },
+            {
+              "quantity": "As needed",
+              "text": "Ice"
+            },
+            {
+              "quantity": "1 tbsp",
+              "text": "Zero-sugar whipped topping"
+            }
+          ]
+        }
       ],
-      methodGroups: [
+      "methodGroups": [
         {
-          accent: "amber",
-          heading: "Method",
-          items: [
-            { number: 1, heading: "Rim", body: "Caramel syrup, press into crushed pretzels" },
-            { number: 2, heading: "Blend", body: "Coffee + whey + emulsion + 2 tbsp hot water, immersion-blend smooth" },
-            { number: 3, heading: "Finish", body: "Ice, milk, Reddi-wip, pretzel crumble on top" },
-          ],
+          "card": 0,
+          "accent": "amber",
+          "heading": "Rim + concentrate",
+          "items": [
+            {
+              "number": 1,
+              "heading": "Crush pretzels",
+              "body": "Crush 7g; reserve some for the topping."
+            },
+            {
+              "number": 2,
+              "heading": "Coat the rim",
+              "body": "Dip an empty glass in caramel, then crushed pretzels."
+            },
+            {
+              "number": 3,
+              "heading": "Blend smooth",
+              "body": "Blend coffee, whey, sweetener, emulsion + 2 tbsp hot water. Add a third tbsp only if needed."
+            }
+          ]
         },
+        {
+          "card": 1,
+          "accent": "amber",
+          "heading": "Ice + finish",
+          "items": [
+            {
+              "number": 4,
+              "heading": "Add ice",
+              "body": "Fill the rimmed glass with ice without disturbing the rim."
+            },
+            {
+              "number": 5,
+              "heading": "Pour milk",
+              "body": "Add ½ cup milk; stir gently."
+            },
+            {
+              "number": 6,
+              "heading": "Top + sip",
+              "body": "Add 1 tbsp whipped topping, caramel drizzle, and reserved pretzels."
+            }
+          ]
+        }
       ],
-      // Ingredient photo swapped from the context-shot (dominated by
-      // person + counter in the narrow side column) to the pretzel-rim
-      // close-up, focus tight on the crumb.
-      ingredientCardPhotos: [
+      "ingredientCardPhotos": [
         {
-          src: "/images/salted-caramel-pretzel-iced-proffee/step-02-pretzel-rim-polished.webp",
-          position: "50% 45%",
-          zoom: 1.15,
-          layout: "side",
+          "src": "/images/salted-caramel-pretzel-iced-proffee/step-06-add-caramel-emulsion-polished.webp",
+          "position": "50% 65%",
+          "zoom": 1,
+          "layout": "side"
         },
+        {
+          "src": "/images/salted-caramel-pretzel-iced-proffee/step-02-pretzel-rim-polished.webp",
+          "position": "50% 65%",
+          "zoom": 1,
+          "layout": "side"
+        }
       ],
-      methodCardPhotos: [
+      "methodCardPhotos": [
         {
-          src: "/images/salted-caramel-pretzel-iced-proffee/step-08-blend-concentrate-polished.webp",
-          position: "50% 45%",
-          zoom: 1.1,
-          layout: "side",
+          "src": "/images/salted-caramel-pretzel-iced-proffee/step-08-blend-concentrate-polished.webp",
+          "position": "50% 65%",
+          "zoom": 1,
+          "layout": "side"
         },
+        {
+          "src": "/images/salted-caramel-pretzel-iced-proffee/step-10-add-milk-polished.webp",
+          "position": "50% 70%",
+          "zoom": 1,
+          "layout": "side"
+        }
       ],
-      servingGroups: [
+      "servingGroups": [
         {
-          accent: "amber",
-          heading: "Serve",
-          items: [
-            { text: "Straight up, ice-cold, as one 140-cal / 21g-protein glass. Blend the whey INTO the concentrate before the milk hits to keep it clump-free." },
-          ],
-        },
-        {
-          accent: "neutral",
-          heading: "Storage",
-          items: [
-            { text: "Best served immediately. The blended concentrate can hold 24 hrs in the fridge (no ice, milk, rim, or toppings)." },
-          ],
-        },
+          "accent": "amber",
+          "heading": "One ice-cold glass",
+          "items": [
+            {
+              "text": "About 140 calories and 21g protein with the measured rim and toppings."
+            },
+            {
+              "text": "Sip immediately for a crunchy rim. Blend whey into the concentrate before adding cold milk."
+            }
+          ]
+        }
       ],
-      engagementQuestion: "What flavor should Proffee Episode 4 be?",
+      "engagementQuestion": "What flavor should Proffee Episode 4 be?",
+      "heroTitle": "Salted Caramel Pretzel Proffee",
+      "cardTitle": "Caramel Pretzel Proffee",
+      "heroStats": [
+        {
+          "value": "~140",
+          "label": "cal / glass"
+        },
+        {
+          "value": "~21g",
+          "label": "protein / glass"
+        },
+        {
+          "value": "5 min",
+          "label": "ready to sip"
+        }
+      ],
+      "methodLabel": "HOW TO MAKE",
+      "captionBody": "Save this 5-minute Salted Caramel Pretzel Proffee: about 140 calories and 21g protein per finished glass (product-dependent).\n\nBlend ½ tbsp instant coffee, ½ serving whey, 2 tsp monk fruit, ½ tsp caramel emulsion, and 2–3 tbsp hot—not boiling—water.\n\nRim an empty glass with sugar-free caramel and part of 7g crushed pretzels. Add ice, the smooth concentrate, and ½ cup fat-free ultra-filtered milk. Finish with 1 tbsp zero-sugar whipped topping, caramel, and the reserved pretzels.\n\nSave it for your next iced-coffee morning."
     },
     prepImage: "/images/salted-caramel-pretzel-iced-proffee/step-08-blend-concentrate-polished.webp",
     // socialImages — Path A polished, 6-cap per [feedback-social-images-step-order].
@@ -16047,52 +16631,159 @@ export const snackBoxes = [
     video: "/videos/split-plate-berry-power-up-snack-box/ID.022.-.Split.Plate.Berry.Power-Up.Snack.Box.mp4",
     title: "Split Plate Berry Power-Up Snack Box",
     tagline: "Snack Box Series Ep. 3 — no-cook kid snack with protein, fruit, cheese, and crunch. Beef stick + blueberries + Babybel + 28g pistachios. About 360 cal / 20g protein per box.",
-    heroImage: "/images/split-plate-berry-power-up-snack-box/hero-final-berry-power-up-box-polished.webp",
+    heroImage: "/images/split-plate-berry-power-up-snack-box/hero-complete-box-v2-polished.webp",
     socialHashtags: ["#BerrySnackBox", "#SnackBoxIdeas", "#AfterSchoolSnacks", "#KidsSnackIdeas", "#TheSplitPlate"],
     socialCarousel: {
-      heroBadge: "Snack Box Series · Ep. 3",
-      heroAccent: "amber",
-      heroStats: [{ value: "~360", label: "cal / box" }, { value: "~20g", label: "protein / box" }, { value: "5 min", label: "no cook" }],
-      hook: "Blueberries, beef stick, Babybel, and pistachios in four compartments. Five minutes, no cooking.",
-      heroPhoto: "/images/split-plate-berry-power-up-snack-box/hero-final-berry-power-up-box-polished.webp",
-      captionBody: "Save this five-minute Berry Power-Up Snack Box: beef stick, blueberries, Babybel, and 28g pistachio kernels in four compartments. At these amounts, one box is about 360 calories and 20g protein; check your product labels. Slice the beef stick for kids, keep the box chilled, and omit whole nuts for children under 4. Recipe: thesplitplate.com/cookbook/split-plate-berry-power-up-snack-box\n\nWhich compartment disappears first?",
-      methodLabel: "HOW TO BUILD",
-      ingredientGroups: [
-        { card: 0, accent: "amber", heading: "Protein and fruit", items: [
-          { quantity: "1", text: "Beef stick", note: "Slice into kid-friendly bites" },
-          { quantity: "1 handful", text: "Blueberries", note: "Rinse before packing" },
-        ] },
-        { card: 1, accent: "amber", heading: "Cheese and crunch", items: [
-          { quantity: "1", text: "Babybel Original cheese" },
-          { quantity: "28g", text: "Pistachio kernels", note: "Weigh after shelling; ages 4+" },
-        ] },
+      "heroBadge": "Snack Box Series · Ep. 3",
+      "heroAccent": "amber",
+      "heroStats": [
+        {
+          "value": "~360",
+          "label": "cal / box"
+        },
+        {
+          "value": "~20g",
+          "label": "protein / box"
+        },
+        {
+          "value": "5 min",
+          "label": "no cook"
+        }
       ],
-      methodGroups: [
-        { accent: "amber", heading: "Fill the first half", items: [
-          { number: 1, heading: "Set up", body: "Start with a clean, divided four-compartment snack box." },
-          { number: 2, heading: "Beef stick", body: "Slice one stick into kid-friendly pieces; fill one compartment." },
-          { number: 3, heading: "Blueberries", body: "Rinse a handful and fill the next compartment." },
-        ] },
-        { accent: "amber", heading: "Finish and chill", items: [
-          { number: 4, heading: "Babybel", body: "Unwrap one cheese and add it to the third compartment." },
-          { number: 5, heading: "Pistachios", body: "Measure 28g kernels into the last compartment. For kids under 4, omit whole nuts." },
-          { number: 6, heading: "Keep cold", body: "Seal and refrigerate, or pack with an ice pack." },
-        ] },
+      "hook": "Beef stick, berries, cheese, and pistachios. One box, five minutes.",
+      "heroPhoto": "/images/split-plate-berry-power-up-snack-box/hero-complete-box-v2-polished.webp",
+      "captionBody": "Save this five-minute Berry Power-Up Snack Box: beef stick, blueberries, Babybel, and 28g pistachio kernels in four compartments. At these amounts, one box is about 360 calories and 20g protein; check your product labels. Slice the beef stick for kids, keep the box chilled, and omit whole nuts for children under 4. Recipe: thesplitplate.com/cookbook/split-plate-berry-power-up-snack-box\n\nWhich compartment disappears first?",
+      "methodLabel": "HOW TO BUILD",
+      "ingredientGroups": [
+        {
+          "card": 0,
+          "accent": "amber",
+          "heading": "Protein and fruit",
+          "items": [
+            {
+              "quantity": "1",
+              "text": "Beef stick",
+              "note": "Slice into kid-friendly bites"
+            },
+            {
+              "quantity": "1 handful",
+              "text": "Blueberries",
+              "note": "Rinse before packing"
+            }
+          ]
+        },
+        {
+          "card": 1,
+          "accent": "amber",
+          "heading": "Cheese and crunch",
+          "items": [
+            {
+              "quantity": "1",
+              "text": "Babybel Original cheese"
+            },
+            {
+              "quantity": "28g",
+              "text": "Pistachio kernels",
+              "note": "Weigh after shelling; ages 4+"
+            }
+          ]
+        }
       ],
-      ingredientCardPhotos: [
-        { src: "/images/split-plate-berry-power-up-snack-box/step-01-add-beef-stick-polished.webp", position: "50% 50%", zoom: 1.04, layout: "side" },
-        { src: "/images/split-plate-berry-power-up-snack-box/step-04-add-pistachios-polished.webp", position: "50% 50%", zoom: 1.04, layout: "side" },
+      "methodGroups": [
+        {
+          "accent": "amber",
+          "heading": "Fill the first half",
+          "items": [
+            {
+              "number": 1,
+              "heading": "Set up",
+              "body": "Set out a clean four-compartment box."
+            },
+            {
+              "number": 2,
+              "heading": "Beef stick",
+              "body": "Slice one stick into kid-friendly pieces; fill one compartment."
+            },
+            {
+              "number": 3,
+              "heading": "Blueberries",
+              "body": "Rinse and dry a handful of blueberries; fill the next compartment."
+            }
+          ]
+        },
+        {
+          "accent": "amber",
+          "heading": "Finish and chill",
+          "items": [
+            {
+              "number": 4,
+              "heading": "Babybel",
+              "body": "Add one Babybel to the third compartment. Remove the wax before eating."
+            },
+            {
+              "number": 5,
+              "heading": "Pistachios",
+              "body": "Weigh 28g kernels after shelling. Omit whole nuts for children under 4."
+            },
+            {
+              "number": 6,
+              "heading": "Keep cold",
+              "body": "Seal and refrigerate, or pack with an ice pack."
+            }
+          ]
+        }
       ],
-      methodCardPhotos: [
-        { src: "/images/split-plate-berry-power-up-snack-box/step-02-add-blueberries-polished.webp", position: "50% 50%", zoom: 1.04, layout: "side" },
-        { src: "/images/split-plate-berry-power-up-snack-box/step-03-add-babybel-polished.webp", position: "50% 50%", zoom: 1.04, layout: "side" },
+      "ingredientCardPhotos": [
+        {
+          "src": "/images/split-plate-berry-power-up-snack-box/step-01-add-beef-stick-polished.webp",
+          "position": "60% 60%",
+          "zoom": 1.04,
+          "layout": "side"
+        },
+        {
+          "src": "/images/split-plate-berry-power-up-snack-box/step-04-add-pistachios-polished.webp",
+          "position": "50% 50%",
+          "zoom": 1,
+          "layout": "side"
+        }
       ],
-      servingPhoto: { src: "/images/split-plate-berry-power-up-snack-box/final-stacked-snack-boxes-polished.webp", position: "50% 50%", zoom: 1.04, layout: "side" },
-      servingGroups: [{ accent: "amber", heading: "One finished snack box", items: [
-        { text: "About 360 calories and 20g protein with a full 28g serving of pistachios." },
-        { text: "Keep chilled. Omit whole nuts for kids under 4; that changes the nutrition estimate." },
-      ] }],
-      engagementQuestion: "Which compartment disappears first?",
+      "methodCardPhotos": [
+        {
+          "src": "/images/split-plate-berry-power-up-snack-box/step-02-add-blueberries-polished.webp",
+          "position": "50% 50%",
+          "zoom": 1.04,
+          "layout": "side"
+        },
+        {
+          "src": "/images/split-plate-berry-power-up-snack-box/step-03-add-babybel-polished.webp",
+          "position": "50% 50%",
+          "zoom": 1.04,
+          "layout": "side"
+        }
+      ],
+      "servingPhoto": {
+        "src": "/images/split-plate-berry-power-up-snack-box/final-stacked-snack-boxes-polished.webp",
+        "position": "50% 50%",
+        "zoom": 1.04,
+        "layout": "side"
+      },
+      "servingGroups": [
+        {
+          "accent": "amber",
+          "heading": "One finished snack box",
+          "items": [
+            {
+              "text": "About 360 calories and 20g protein with a full 28g serving of pistachios."
+            },
+            {
+              "text": "Keep chilled. Omit whole nuts for kids under 4; that changes the nutrition estimate."
+            }
+          ]
+        }
+      ],
+      "engagementQuestion": "Which compartment disappears first?",
+      "heroTitle": "Berry Power-Up Snack Box",
+      "cardTitle": "Berry Power-Up Snack Box"
     },
     // prepImage — swapped from handoff's `final-stacked-snack-boxes` (payoff
     // shot) to `context-blueberries` (theme-signature blueberry mise-style,
@@ -16139,7 +16830,7 @@ export const snackBoxes = [
       "28g shelled pistachios (~160 cal / 6g protein — see notes: for kids over 4 only)",
     ],
     steps: [
-      { text: "SET UP: 1 divided snack box (4-compartment Bento-style — same boxes as Snack Box Series Ep. 1 + Ep. 2).", image: "/images/split-plate-berry-power-up-snack-box/hero-final-berry-power-up-box-polished.webp" },
+      { text: "SET UP: 1 divided snack box (4-compartment Bento-style — same boxes as Snack Box Series Ep. 1 + Ep. 2).", image: "/images/split-plate-berry-power-up-snack-box/hero-complete-box-v2-polished.webp" },
       { text: "BEEF STICK: Slice 1 beef stick into kid-friendly bite-size pieces. Drop into the first compartment.", image: "/images/split-plate-berry-power-up-snack-box/step-01-add-beef-stick-polished.webp" },
       { text: "BLUEBERRIES: Rinse a handful of blueberries. Fill the second compartment.", image: "/images/split-plate-berry-power-up-snack-box/step-02-add-blueberries-polished.webp" },
       { text: "BABYBEL: Unwrap 1 Babybel Original wedge. Drop into the third compartment (wax off, or leave wax on if the kid opens their own).", image: "/images/split-plate-berry-power-up-snack-box/step-03-add-babybel-polished.webp" },
