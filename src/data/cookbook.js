@@ -5058,6 +5058,254 @@ const WEEK13_CREAMIS = [
 ];
 
 const DESSERT_CATALOG = [
+{
+  "id": "biscoff-cookie-butter-protein-creami",
+  "title": "Biscoff Cookie Butter Protein Creami",
+  "tagline": "Cookie-butter ice cream, biscuit crunch and a topping that firms up against the cold pint. About 300 calories and 28g protein, including both biscuits and topping.",
+  "heroImage": "/images/biscoff-cookie-butter-protein-creami/hero-polished.webp",
+  "prepImage": "/images/biscoff-cookie-butter-protein-creami/base-polished.webp",
+  "prepImageCaption": "The actual processed cookie-butter base, before scooping and topping.",
+  "video": "/videos/biscoff-cookie-butter-protein-creami/biscoff-cookie-butter-protein-creami-web.mp4",
+  "socialImages": [
+    "/images/biscoff-cookie-butter-protein-creami/base-polished.webp",
+    "/images/biscoff-cookie-butter-protein-creami/flavor-polished.webp",
+    "/images/biscoff-cookie-butter-protein-creami/spin-polished.webp",
+    "/images/biscoff-cookie-butter-protein-creami/mixin-polished.webp",
+    "/images/biscoff-cookie-butter-protein-creami/finish-polished.webp"
+  ],
+  "socialHashtags": [
+    "#TheSplitPlate",
+    "#NinjaCreami",
+    "#ProteinIceCream",
+    "#Biscoff",
+    "#CookieButter"
+  ],
+  "socialCarousel": {
+    "heroBadge": "CrumblCreamiCut",
+    "heroAccent": "amber",
+    "heroTitle": "Biscoff Cookie Butter Protein Creami",
+    "cardTitle": "Biscoff Protein Creami",
+    "heroPhoto": "/images/biscoff-cookie-butter-protein-creami/hero-polished.webp",
+    "heroStats": [
+      {
+        "value": "~300",
+        "label": "cal / whole pint"
+      },
+      {
+        "value": "~28g",
+        "label": "protein / whole pint"
+      },
+      {
+        "value": "1",
+        "label": "finished pint"
+      }
+    ],
+    "hook": "Biscoff crunch + cookie butter that firms up on cold ice cream.",
+    "captionBody": "Cookie-butter ice cream with Biscoff crunch and a topping that firms up against the cold pint. About 300 calories and 28g protein for the whole finished pint, including both biscuits and topping. Blend 1 cup Fairlife 2%, half a serving Opportuniteas unflavored whey, 3 pumps sugar-free cookie-butter syrup, 1/2 tsp cookie-butter emulsion, 1/8 tsp guar gum, salt and optional brown coloring. Freeze level 24 hours; rest 5 minutes. Regular Ice Cream, then Respin without added liquid until creamy. Add 1 Biscoff biscuit and use the filmed Respin method; follow your model’s manual. Scoop and finish with 1/2 tbsp melted cookie butter and 1 more biscuit. Estimates vary with labels and pump sizes. Crumbl-inspired; no Crumbl cookie ingredient or affiliation. Save the recipe: thesplitplate.com/cookbook/biscoff-cookie-butter-protein-creami",
+    "ingredientGroups": [
+      {
+        "card": 0,
+        "accent": "amber",
+        "heading": "Cookie-butter protein base",
+        "items": [
+          {
+            "quantity": "1 cup",
+            "text": "Fairlife 2% milk"
+          },
+          {
+            "quantity": "1/2 serving",
+            "text": "Opportuniteas unflavored whey · 60 cal / 14g"
+          },
+          {
+            "quantity": "3 pumps",
+            "text": "Sugar-free cookie-butter syrup"
+          },
+          {
+            "quantity": "1/2 tsp",
+            "text": "Cookie-butter emulsion"
+          },
+          {
+            "quantity": "1/8 tsp",
+            "text": "Guar gum + pinch salt"
+          },
+          {
+            "quantity": "Optional",
+            "text": "Natural brown food coloring"
+          }
+        ]
+      },
+      {
+        "card": 1,
+        "accent": "amber",
+        "heading": "Biscuit crunch + topping",
+        "items": [
+          {
+            "quantity": "1 biscuit",
+            "text": "Biscoff · mixed into the pint"
+          },
+          {
+            "quantity": "1/2 tbsp",
+            "text": "Melted cookie butter · topping"
+          },
+          {
+            "quantity": "1 biscuit",
+            "text": "Biscoff · on top"
+          }
+        ]
+      }
+    ],
+    "ingredientCardPhotos": [
+      {
+        "src": "/images/biscoff-cookie-butter-protein-creami/base-polished.webp",
+        "layout": "side",
+        "position": "50% 55%"
+      },
+      {
+        "src": "/images/biscoff-cookie-butter-protein-creami/flavor-polished.webp",
+        "layout": "side",
+        "position": "50% 55%"
+      }
+    ],
+    "methodLabel": "HOW TO MAKE",
+    "methodGroups": [
+      {
+        "card": 0,
+        "accent": "amber",
+        "heading": "Base, freeze + first spin",
+        "items": [
+          {
+            "number": 1,
+            "heading": "Blend the base",
+            "body": "Blend all base ingredients smooth, below the pint fill line."
+          },
+          {
+            "number": 2,
+            "heading": "Freeze + rest",
+            "body": "Freeze upright and level 24 hours; rest 5 minutes."
+          },
+          {
+            "number": 3,
+            "heading": "Make it creamy",
+            "body": "Regular Ice Cream, then Respin without added liquid until creamy."
+          }
+        ]
+      },
+      {
+        "card": 1,
+        "accent": "amber",
+        "heading": "Biscoff inside + on top",
+        "items": [
+          {
+            "number": 4,
+            "heading": "Mix in one biscuit",
+            "body": "Add 1 Biscoff biscuit and use the filmed Respin method. Follow your model’s manual."
+          },
+          {
+            "number": 5,
+            "heading": "Scoop + finish",
+            "body": "Top with 1/2 tbsp melted cookie butter and the second biscuit."
+          }
+        ]
+      }
+    ],
+    "methodCardPhotos": [
+      {
+        "src": "/images/biscoff-cookie-butter-protein-creami/spin-polished.webp",
+        "layout": "side",
+        "position": "50% 55%"
+      },
+      {
+        "src": "/images/biscoff-cookie-butter-protein-creami/mixin-polished.webp",
+        "layout": "side",
+        "position": "50% 55%"
+      }
+    ],
+    "servingPhoto": "/images/biscoff-cookie-butter-protein-creami/finish-polished.webp",
+    "servingGroups": [
+      {
+        "accent": "amber",
+        "heading": "One whole finished pint",
+        "items": [
+          {
+            "text": "~300 calories / ~28g protein, including both biscuits and the cookie-butter topping."
+          },
+          {
+            "text": "Creamy cookie-butter flavor, biscuit crunch and a topping that firms up against the cold ice cream."
+          }
+        ]
+      }
+    ],
+    "engagementQuestion": "Cookie butter fans—are you taking that bite?"
+  },
+  "flavorProfile": "Caramelized biscuit, cookie butter and creamy protein ice cream",
+  "calories": 300,
+  "caloriesPerServing": 300,
+  "protein": 28,
+  "proteinPerServing": 28,
+  "servings": 1,
+  "time": "24 hr freeze + 5 min rest + blend and spin",
+  "bestFor": [
+    "High-protein dessert",
+    "Ninja Creami",
+    "Whole-pint dessert",
+    "Make-ahead"
+  ],
+  "useThisWhen": "You want a whole-pint protein dessert with Biscoff crunch and a cookie-butter finish.",
+  "flavorTarget": "Cookie-butter flavor throughout, one biscuit mixed in and another on top.",
+  "ingredients": [
+    "--- COOKIE-BUTTER BASE ---",
+    "1 cup Fairlife 2% ultra-filtered milk",
+    "1/2 serving Opportuniteas unflavored whey isolate · 60 cal / 14g protein",
+    "3 pumps Sugar-free cookie-butter syrup",
+    "1/2 tsp Cookie-butter emulsion",
+    "Natural brown food coloring, as desired",
+    "1/8 tsp Guar gum",
+    "Pinch Salt",
+    "--- MIX-IN + TOPPING ---",
+    "1 Biscoff biscuit · mixed in",
+    "1/2 tbsp Melted cookie butter · topping",
+    "1 Biscoff biscuit · topping"
+  ],
+  "steps": [
+    {
+      "text": "BLEND: Blend milk, whey, syrup, emulsion, optional brown coloring, guar gum and salt. Keep below the compatible pint fill line."
+    },
+    {
+      "text": "FREEZE + REST: Freeze upright and level for 24 hours. Rest five minutes; follow your machine manual."
+    },
+    {
+      "text": "SPIN: Run Regular Ice Cream, then Respin without added liquid until creamy.",
+      "image": "/images/biscoff-cookie-butter-protein-creami/spin-polished.webp"
+    },
+    {
+      "text": "BISCUIT: Add one Biscoff biscuit and Respin using the creator’s filmed method. Follow the instructions for your model.",
+      "image": "/images/biscoff-cookie-butter-protein-creami/mixin-polished.webp"
+    },
+    {
+      "text": "FINISH: Scoop and top with half a tablespoon melted cookie butter and the remaining biscuit. The topping firms up against the cold ice cream.",
+      "image": "/images/biscoff-cookie-butter-protein-creami/finish-polished.webp"
+    }
+  ],
+  "macroHonesty": "Estimated whole finished pint, including two biscuits and half a tablespoon cookie butter: about 300 calories and 28g protein. Fairlife 2%: 120 cal/13g; user-confirmed half-serving whey: 60 cal/14g; two standard Biscoff biscuits: about 75 cal/1g; cookie-butter reference label: 42.5 cal/0.25g for half a tablespoon. Sum before minor flavorings is 297.5 cal/28.25g. Syrup pump sizes, emulsion, spread brand and label rounding vary. Spread and flavoring brands were unconfirmed. Fat, carbs and sodium were not verified.",
+  "allergens": [
+    "dairy",
+    "wheat",
+    "soy"
+  ],
+  "dietTags": [
+    "high-protein",
+    "pork-free"
+  ],
+  "notes": [
+    "Inspired by Crumbl’s Biscoff Ice Cream Cookie; an actual Crumbl cookie is not an ingredient. No affiliation claimed.",
+    "No monk-fruit sweetener, vanilla or cinnamon is added. Syrup, emulsion and cookie-butter spread brands were unconfirmed.",
+    "Site photos are ImageGen-transformed from actual footage; the approved moving video remains real. Check ingredient labels for additional allergens."
+  ],
+  "seriesInfo": {
+    "series": "CrumblCreamiCut",
+    "framing": "Growth: save a whole-pint cookie-butter protein dessert recipe. No week or episode number supplied."
+  }
+},
   {
     "id": "pumpkin-chocolate-chip-protein-creami",
     "title": "Pumpkin Chocolate Chip Protein Creami",
