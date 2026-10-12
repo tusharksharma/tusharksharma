@@ -48,6 +48,8 @@ For SDR-derived HDR brightness checks and a complete YouTube upload package, rea
 
 ## Delivery and learning
 
+After an authorized long-form publication, automatically run [Post-publication promotion](references/post-publication-promotion.md): YouTube Shorts, a Facebook link post, and Instagram/TikTok Stories. Do not turn these promos into Instagram Reels or TikTok feed uploads. This standing follow-up applies to published films; rules-only tasks do not start production.
+
 Provide the requested master(s), editable timeline, approved script, chapters, caption track where applicable, thumbnail and source/claim audit. Keep previews, verified exports and complete packages distinct. Publishing or scheduling requires its own request; editing does not authorize it.
 
 Save reviewer feedback against the exact version and timestamps. Classify decisions as confirmed user rules, project-specific choices, observed technical lessons or proposals. Promote reusable confirmed lessons into this skill and standing principles; do not convert a pilot's numeric duration, crop, resolution, HDR preference or budget into an unconditional rule for every future film. Preserve approved previous versions.
