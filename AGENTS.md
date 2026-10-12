@@ -1,5 +1,9 @@
 # AGENTS.md - The Split Plate
 
+## Standing Food Principles
+
+Read [The Split Plate ideologies](docs/splitplate-ideologies.md) for confirmed brand beliefs. Anything cooked at home counts as a home-cooked meal, including frozen/convenience ingredients. Put effort into the star of the plate and use practical shortcuts for straightforward sides. Apply this without inventing per-recipe or family claims.
+
 ## Content Strategy Standing Rule
 
 The canonical strategy is [The Split Plate 90-Day Content Growth Plan](docs/content-growth-plan.md). Apply it to content planning, production briefs, calendar work, social packages, website destinations, analytics, and commercial content.
@@ -44,6 +48,10 @@ Taking a finished edit from `~/Documents/New project/video-edits/` live means re
 **Protein Creami macro rule:** show a supported protein figure on the recipe page and social carousel. When only the common base is documented, label its estimate explicitly as "protein in base" on both surfaces and disclose that finished-pint protein varies with the whey and additions. Publish a finished-pint total only after checking the specific ingredient labels and amounts; never silently replace a missing total with zero or omit protein entirely.
 
 **Creami carousel reference rule:** inspect an existing Creami social carousel before building or revising another one. Use the Week 1 Creami carousels as the layout reference: flavor and supported calories/protein on the hero, concise base and flavor cards, cooking steps, then a whole-pint serving card. Do not put scores, ratings, or rankings on Creami carousels or in their captions; lead with the recipe and its useful details.
+
+## Long-Form YouTube Editing
+
+For long-form YouTube edits and reusable long-form rules, use [.agents/skills/splitplate-long-form-editor/SKILL.md](.agents/skills/splitplate-long-form-editor/SKILL.md). Build the picture sequence before matching narration to visible actions and confirmed stories. Frame around food and cooking to reduce clutter; adapt the crop per shot. Record the requested duration, delivery format and credit cap per project rather than inheriting short-form settings.
 
 ## Reusable Recipe Video Agent Workflow
 

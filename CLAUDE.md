@@ -4,6 +4,10 @@ Rules and conventions for working on this recipe site. Follow these exactly.
 
 For short-form video editing, use [.agents/skills/splitplate-short-form-editor/SKILL.md](.agents/skills/splitplate-short-form-editor/SKILL.md) and [the October 11 editing snapshot](docs/video/hyperframes-editing/README.md). Its CURRENT_RULES supersedes older color, compact-duration, numbering and cover-tail examples; retain full production, cover and QA gates.
 
+## Standing Food Principles and Long-Form Video
+
+Read [the confirmed Split Plate ideologies](docs/splitplate-ideologies.md): frozen/convenience ingredients count as home-cooked food when prepared at home; work hard on the star and use practical sides. For long-form YouTube editing, use [.agents/skills/splitplate-long-form-editor/SKILL.md](.agents/skills/splitplate-long-form-editor/SKILL.md), with action-matched narration and shot-specific framing to reduce clutter.
+
 ## Content Strategy Standing Rule
 
 The canonical strategy is [The Split Plate 90-Day Content Growth Plan](docs/content-growth-plan.md). Apply it whenever planning or producing content, calendar entries, social packages, website destinations, analytics, or commercial work.

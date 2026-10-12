@@ -13,6 +13,10 @@ These are initial operating rules, not an approved visual identity. The user's r
 
 When asked for rules, templates, or workflow changes, produce those only. Begin a particular video only when requested. This skill supplies instructions, not installed rendering tools or provider credentials.
 
+## Long-form editing
+
+For long-form YouTube editing and maintaining its reusable rules, use the sibling `splitplate-long-form-editor/SKILL.md`. Read `docs/splitplate-ideologies.md` for confirmed brand beliefs. Long-form action-matched narration and clutter-conscious composition have their own format requirements; do not inherit short-form duration, crop or package defaults.
+
 ## Short-form editing
 
 For short-form cuts, recuts, captions, covers or encoded-export QA, use the sibling `splitplate-short-form-editor/SKILL.md` and `docs/video/hyperframes-editing/README.md`. Read its snapshot CURRENT_RULES first: newer explicit preferences override older playbook examples on original-footage grading, compact-cut duration, public episode numbering and cover tails. The full production, cover and QA gates still apply. General defaults below do not override this short-form route.

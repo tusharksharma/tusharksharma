@@ -1,0 +1,4 @@
+interface:
+  display_name: "Split Plate Long-Form Editor"
+  short_description: "Build YouTube stories from real cooking footage"
+  default_prompt: "Use $splitplate-long-form-editor to edit my YouTube video with action-matched narration and uncluttered framing."
