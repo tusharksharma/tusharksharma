@@ -42,6 +42,8 @@ Rebuild the final master from original media or verified full-quality intermedia
 
 Inspect moving encoded picture and sound at the opening, every important action, chapter transitions, payoff and end. Verify full decode, dimensions, duration, pixel format, color tags, caption timing, speech intelligibility and headroom. Check crops through each selected range. A technical pass or contact sheet alone does not establish audiovisual quality. HDR screenshots and ordinary SDR playback do not prove actual HDR display behavior; review an intentional SDR companion and HDR playback where available.
 
+For SDR-derived HDR brightness checks and a complete YouTube upload package, read [Export and publishing lessons](references/export-and-publishing.md). Compare the platform's actual playback with the source; metadata and 4K availability alone do not prove brightness or HDR-display quality.
+
 ## Delivery and learning
 
 Provide the requested master(s), editable timeline, approved script, chapters, caption track where applicable, thumbnail and source/claim audit. Keep previews, verified exports and complete packages distinct. Publishing or scheduling requires its own request; editing does not authorize it.
