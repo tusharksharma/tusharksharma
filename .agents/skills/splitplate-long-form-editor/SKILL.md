@@ -24,6 +24,10 @@ For an actual HyperFrames project, read `FRAMEWORK__hyperframes__SKILL.md`, resu
 
 ## Narration and credits
 
+For Tushar's personal films, Marcus is the delivery voice and Tushar is the storyteller. Write in Tushar's first person, tied to what he is doing and the confirmed life context behind the decision. Do not turn Marcus into a separate host describing Tushar from outside the scene.
+
+Use a supplied personal reference selectively: one main thread and a few details that explain a choice, connect an action or establish relevant stakes. Respect its CONFIRMED, HISTORICAL, INTERPRETATION and DRAFT labels when present. Historical schedules are not today's itinerary; proposed reflections are not recorded memories. Avoid a biography at the opening, invented family dialogue or a generic busy-parent monologue. Keep the private source reference outside the public repo; save a short source/evidence audit with the project and obtain review for newly written personal statements.
+
 Use the requested narrator and verify voice/model access. Marcus configuration is provider-specific; locate authorized private configuration at use time, never bundle keys in the skill or repository. Do not silently replace Marcus or clone Tushar's voice.
 
 If the user requests a comparison, test a short representative section before paying for complete alternate narrations. Reuse a shared approved take when the words and performance fit. A mixed version uses real, contextually appropriate recorded speech; assess intelligibility and speaker context. Do not manufacture a live reaction by relocating unrelated audio. If usable speech is scarce, explain that and offer an actual pickup.

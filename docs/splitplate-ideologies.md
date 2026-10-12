@@ -13,6 +13,12 @@ A meal prepared at home can include frozen, packaged and ready-to-heat ingredien
 
 This adds to the shared-cook philosophy: adapt a meal to the people eating it without making different preferences a moral judgment. Describe the actual choices in the household; do not turn one evening into a universal parenting recommendation.
 
+## Shared dinner, different needs
+
+Confirmed for the October 11 long-form story: adult protein and activity goals do not become rules for the children's dinner. Eating together does not require identical plates; a shared meal can accommodate different preferences. Present the household's actual choice without judging the children, inventing their reactions or making universal nutrition claims.
+
+Personal storytelling comes from the cook's perspective. When Marcus provides the voice, he speaks as Tushar using confirmed personal context; he is not a separate character commenting on the family.
+
 ## Maintaining these principles
 
 Save future ideologies when Tushar identifies them as lasting beliefs. Keep an exact statement or faithful paraphrase, its date and practical implications. Treat a proposed assistant interpretation as a proposal until confirmed. Keep personal production records and credentials outside this public document.
