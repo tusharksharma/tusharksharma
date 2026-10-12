@@ -1,5 +1,7 @@
 # Video production rules — committed copy
 
+Start short-form editing with the [current instruction snapshot and authority guide](hyperframes-editing/README.md) and the [editing agent](../../.agents/skills/splitplate-short-form-editor/SKILL.md). The snapshot contains the newer explicit user corrections and complete QA checklist. Older mirrored examples below do not override those corrections.
+
 These are the standing rules for short-form video: production, editing, the
 HyperFrames visual system, and cover art. They were authored in the working
 directory `~/Documents/New project/video-edits/`, which is **not a real git repo**

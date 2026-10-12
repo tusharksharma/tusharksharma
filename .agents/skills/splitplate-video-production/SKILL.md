@@ -13,6 +13,10 @@ These are initial operating rules, not an approved visual identity. The user's r
 
 When asked for rules, templates, or workflow changes, produce those only. Begin a particular video only when requested. This skill supplies instructions, not installed rendering tools or provider credentials.
 
+## Short-form editing
+
+For short-form cuts, recuts, captions, covers or encoded-export QA, use the sibling `splitplate-short-form-editor/SKILL.md` and `docs/video/hyperframes-editing/README.md`. Read its snapshot CURRENT_RULES first: newer explicit preferences override older playbook examples on original-footage grading, compact-cut duration, public episode numbering and cover tails. The full production, cover and QA gates still apply. General defaults below do not override this short-form route.
+
 ## Repository rules take precedence
 
 Read the repository-root `AGENTS.md`, `docs/content-growth-plan.md`, and `docs/video/WORKSPACE_RULES.md` first, then the production and format-specific rules they require. Paths in this section are relative to the repository root. This skill adds production roles, handoffs, and resumable state; it does not replace the existing video playbooks.

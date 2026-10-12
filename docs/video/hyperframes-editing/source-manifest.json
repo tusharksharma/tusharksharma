@@ -1,0 +1,1952 @@
+{
+  "source_folder": "https://drive.google.com/drive/folders/1QMEGufjQ7jWiLcSLuRocwWp2OdzSTNfF",
+  "snapshot_date": "2026-10-11",
+  "files": [
+    {
+      "path": "flat/README.md",
+      "drive_id": "1OSs7Gs6iG6vh4qQAzXWL4s6eKphJzQHc",
+      "source_modified": "2026-10-12T03:01:17.958Z",
+      "bytes": 1485,
+      "sha256": "0df62eb0b18aa7768c59e86552a4f41d25d6dee1c11f148bd9c25809a98f0535"
+    },
+    {
+      "path": "flat/FRAMEWORK__talking-head-recut__references__DESIGN_INDEX.md",
+      "drive_id": "1E4i5ur10Uvqoar5gQNOXrD590daeJxKH",
+      "source_modified": "2026-10-12T03:00:52.275Z",
+      "bytes": 10171,
+      "sha256": "25fa72902a37cafb764f86d909e72dbf1c6b44ff3494d1c3da24c4a4a819ce16"
+    },
+    {
+      "path": "flat/FRAMEWORK__talking-head-recut__SKILL.md",
+      "drive_id": "1mTnevnaOli-MhWm7l_IHf3kNy6ousRHr",
+      "source_modified": "2026-10-12T03:00:52.274Z",
+      "bytes": 65495,
+      "sha256": "b29b7bcdffd5b37698a25993f6dc074b9d5fa5f6a89ec9aea033a9d45d9044cf"
+    },
+    {
+      "path": "flat/FRAMEWORK__talking-head-recut__NOTICE.md",
+      "drive_id": "1cGeWpVa2TmMvNUV52q33fsEcLWaG0P4t",
+      "source_modified": "2026-10-12T03:00:52.272Z",
+      "bytes": 1826,
+      "sha256": "0e0a88d4eb584a1a0805930d30918ceebf0824fbb594731ebaa069eea9849995"
+    },
+    {
+      "path": "flat/FRAMEWORK__media-use__references__telemetry-dashboard.md",
+      "drive_id": "1JgOsdwctA8ePVsMmTb8HIWWLrDmRQWga",
+      "source_modified": "2026-10-12T03:00:52.271Z",
+      "bytes": 4200,
+      "sha256": "bdc30ad1ff84ebe7f5ca835acb9f47b33717e041ea79b41c6f0db489b86094a7"
+    },
+    {
+      "path": "flat/FRAMEWORK__media-use__references__setup-providers.md",
+      "drive_id": "1GDoeWk7MuO_kyYgJDd6CnDVufSIxX5gO",
+      "source_modified": "2026-10-12T03:00:52.270Z",
+      "bytes": 8542,
+      "sha256": "958448d4dbdbf16fbdf71aa55d5f4651325e98e77117f90fc80bd3d0ca897ec9"
+    },
+    {
+      "path": "flat/FRAMEWORK__media-use__references__resolve.md",
+      "drive_id": "1aZeAe_1m-wXCfseX0-i_-IKv_YMTIGc3",
+      "source_modified": "2026-10-12T03:00:52.269Z",
+      "bytes": 9605,
+      "sha256": "257ee47fcd7bbfdf7d7c4332eb9f6f0fd0e57c5bd31c4ebb077b053eed477130"
+    },
+    {
+      "path": "flat/FRAMEWORK__media-use__references__operations.md",
+      "drive_id": "1j742pf0u54Co5E9ZeurCeRDLKCDcBnB0",
+      "source_modified": "2026-10-12T03:00:52.269Z",
+      "bytes": 14823,
+      "sha256": "0ec2d2a233eb70bd7d9c134031c493c17e36918aae6a4f66eb262eb1241de3dd"
+    },
+    {
+      "path": "flat/FRAMEWORK__media-use__references__meta.md",
+      "drive_id": "1zBY3mHwo9fJDA83199kR5E3SoUrMM5Tx",
+      "source_modified": "2026-10-12T03:00:52.268Z",
+      "bytes": 6780,
+      "sha256": "62e27feef768867fdcfa3f901d0485c74b14d5e983c5b92699fe013017c32285"
+    },
+    {
+      "path": "flat/FRAMEWORK__media-use__references__memory.md",
+      "drive_id": "1DhaEZgvc-WnDQR49SUZ4endNh2w1pYGM",
+      "source_modified": "2026-10-12T03:00:52.267Z",
+      "bytes": 3498,
+      "sha256": "41d85dcfae213e4c2ae82f3870890675239142a117933eeebab4398ebbaaa204"
+    },
+    {
+      "path": "flat/FRAMEWORK__media-use__references__media-treatments.md",
+      "drive_id": "1NGRu-_rIUVcGqHsPJNqLWx4chV72UKEy",
+      "source_modified": "2026-10-12T03:00:52.267Z",
+      "bytes": 14168,
+      "sha256": "2125e106e7f891e14716efabda40f5d6a46284592c6f37d5a14b2b86bda96c1a"
+    },
+    {
+      "path": "flat/FRAMEWORK__media-use__references__media-treatment-recipes.md",
+      "drive_id": "1K0wBGkZO_l0bIbFqVasG21YY9lpw7I28",
+      "source_modified": "2026-10-12T03:00:52.266Z",
+      "bytes": 35868,
+      "sha256": "852e7e978af56c9e99ba14f19009da974cd78f99b399ca194dc416c31c49bda5"
+    },
+    {
+      "path": "flat/FRAMEWORK__media-use__references__grading.md",
+      "drive_id": "1vzXkVjMIa0AW60yGux2Zf823sAAr6bwL",
+      "source_modified": "2026-10-12T03:00:52.265Z",
+      "bytes": 6892,
+      "sha256": "b9079d336353c419730a3c0855c5ef08db4de86f0c91a9519442abdc9bcb71df"
+    },
+    {
+      "path": "flat/FRAMEWORK__media-use__references__audio.md",
+      "drive_id": "1G6bnJt1I57VSUfQIrb0GE_tjNFsaiwby",
+      "source_modified": "2026-10-12T03:00:52.265Z",
+      "bytes": 2234,
+      "sha256": "13409d128c10b55016f29c9bec55f53ac0ab63061fc87d054a45492467a9456d"
+    },
+    {
+      "path": "flat/FRAMEWORK__media-use__luts__README.md",
+      "drive_id": "1knR-hw1Axmiw2mvvfXIQOoinvWUojZwW",
+      "source_modified": "2026-10-12T03:00:52.264Z",
+      "bytes": 1087,
+      "sha256": "c06cbbf2aab80cbf8aa25c83497202a63107a61e083b6c199a89d513e8096a3b"
+    },
+    {
+      "path": "flat/FRAMEWORK__media-use__audio__references__tts.md",
+      "drive_id": "1cgr2LCSK_tPT4n3IXUOrFjOtFupKhPtc",
+      "source_modified": "2026-10-12T03:00:52.263Z",
+      "bytes": 14011,
+      "sha256": "5e25b51529a28e5dc2c1fe52ebe53aa012247357eabaa87e709c186199148fa7"
+    },
+    {
+      "path": "flat/FRAMEWORK__media-use__audio__references__tts-to-captions.md",
+      "drive_id": "10CbAkR22Ug4E0gt0N-EmODm2pTb2rX4U",
+      "source_modified": "2026-10-12T03:00:52.263Z",
+      "bytes": 1796,
+      "sha256": "3eadac029ba3a88346a86e87c1a09e6de2eefd5c93be7a85f8d4a6cbc5d36e11"
+    },
+    {
+      "path": "flat/FRAMEWORK__media-use__audio__references__sfx.md",
+      "drive_id": "1igvd1yufqKHdaGnD6AKIvtYEVLBI6YV1",
+      "source_modified": "2026-10-12T03:00:52.262Z",
+      "bytes": 3678,
+      "sha256": "9af6e0fbd861a9e3972de49d30ecbaf70b8b464b5dba20abf553ffcea32b48a1"
+    },
+    {
+      "path": "flat/FRAMEWORK__media-use__audio__references__transcribe.md",
+      "drive_id": "1cmsvkQXQS2vs5AYCL_llTnEpdZ0ZFPCa",
+      "source_modified": "2026-10-12T03:00:52.262Z",
+      "bytes": 2825,
+      "sha256": "14173405600757dfebc706bfec80be31a69c617907498ec3bfe1d7c097e953fb"
+    },
+    {
+      "path": "flat/FRAMEWORK__media-use__audio__references__requirements.md",
+      "drive_id": "1YlFNxJ28fp3rx3iY1QAIfn9gkEe4IohH",
+      "source_modified": "2026-10-12T03:00:52.261Z",
+      "bytes": 4347,
+      "sha256": "1ebd23531306ca51a85623e82a1e25fd16814b8539fe9b69cabf9f418fff55b3"
+    },
+    {
+      "path": "flat/FRAMEWORK__media-use__audio__references__remove-background.md",
+      "drive_id": "1puFNnNMfEAIBAtoMH7yQIGSD47sqrffA",
+      "source_modified": "2026-10-12T03:00:52.261Z",
+      "bytes": 8472,
+      "sha256": "fb6b38a25c6535c57a461bbe2ca681b38f18e5f09b1e904e4a0b5f6eca7a5b98"
+    },
+    {
+      "path": "flat/FRAMEWORK__media-use__audio__references__captions__transcript-handling.md",
+      "drive_id": "1b60sd6fpdTl_rM1eq1T7XuL-HCsmqHjI",
+      "source_modified": "2026-10-12T03:00:52.260Z",
+      "bytes": 5553,
+      "sha256": "31e8873ee97d1193a68af7618c42bf357dbca4418b89a0deafaabe8140e185ea"
+    },
+    {
+      "path": "flat/FRAMEWORK__media-use__audio__references__captions__motion.md",
+      "drive_id": "1PZJYvaatazi1FqVHVbWX8_iDiTxduurL",
+      "source_modified": "2026-10-12T03:00:52.259Z",
+      "bytes": 5656,
+      "sha256": "20646595c341902877f31804d4ac6be54e1a261f7d34600660b0e9fcae964019"
+    },
+    {
+      "path": "flat/FRAMEWORK__media-use__audio__references__captions__authoring.md",
+      "drive_id": "1qqEURyOkIHZnwAppp5ObYYVqLW5HGDsZ",
+      "source_modified": "2026-10-12T03:00:52.259Z",
+      "bytes": 9825,
+      "sha256": "cfd1eb1d3b92592a05cae1992ad15e33e0dba357662c245526b8cad0a605c157"
+    },
+    {
+      "path": "flat/FRAMEWORK__media-use__audio__references__bgm.md",
+      "drive_id": "14mEoMAScOh9wf9sEbvfQmxXmlKJJWpNj",
+      "source_modified": "2026-10-12T03:00:52.257Z",
+      "bytes": 8141,
+      "sha256": "921118ba932a63f8fc350a64c905676cdc2feaa5fffdd4af8dd7f9e92dd87a92"
+    },
+    {
+      "path": "flat/FRAMEWORK__media-use__audio__assets__sfx__CREDITS.md",
+      "drive_id": "1ZsAoDsJQ3Pz02koSzes_ZAqjEj2P5wDI",
+      "source_modified": "2026-10-12T03:00:52.257Z",
+      "bytes": 1183,
+      "sha256": "79590c7738b0427b10f362f76b02cfd2643158a40e1d5fd787f9ac6b33bcf4ce"
+    },
+    {
+      "path": "flat/FRAMEWORK__media-use__SKILL.md",
+      "drive_id": "1lOpoQnCV8fRueBJVLFDEIWYZn4XMEwc-",
+      "source_modified": "2026-10-12T03:00:52.256Z",
+      "bytes": 9694,
+      "sha256": "613da3976147e91bd5e607d28abbf378663b1f72553c9bff4f1e7f1a2abc82a6"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-studio__SKILL.md",
+      "drive_id": "1NhD-Mt95lzbl0zto7p6qcW_0wXWZaInA",
+      "source_modified": "2026-10-12T03:00:52.255Z",
+      "bytes": 12084,
+      "sha256": "006892cee30b41f84b35427bc57e8c2357464e9b2cae978b8fa8f94ed429bd03"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-registry__references__wiring-components.md",
+      "drive_id": "104l0W867dtL0aPuo7PLs_xTFXQkxZgGw",
+      "source_modified": "2026-10-12T03:00:52.255Z",
+      "bytes": 1723,
+      "sha256": "6c8341c29fdae6de4f9fd1560a668d11cf34731b81fe5a06c9aeb4a000047b2a"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-registry__references__wiring-blocks.md",
+      "drive_id": "1bml9rQ1wfHqb3tCN4RJnaHepKmXfPMeF",
+      "source_modified": "2026-10-12T03:00:52.254Z",
+      "bytes": 2641,
+      "sha256": "397f9ad5a9244d173b97bb5a5dfe76ea3cbccfb8dde16cba8b3dabc6044b011a"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-registry__references__placeholder-material.md",
+      "drive_id": "1UBFormJPiMNXBKK-TTs873-SF5KVzwNH",
+      "source_modified": "2026-10-12T03:00:52.253Z",
+      "bytes": 9006,
+      "sha256": "15adf4a40b26166f64df784aed065adb58051d9ccd5c0c52ad9b71e3b8367a09"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-registry__references__templates.md",
+      "drive_id": "1VzYZJM_14vur-wmtzb0Gle3yY1PvAjpf",
+      "source_modified": "2026-10-12T03:00:52.253Z",
+      "bytes": 11451,
+      "sha256": "98e1ef62d3c1264b28139d85a1c9b5a8b7438209914aebef6d9890e3f4275805"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-registry__references__discovery.md",
+      "drive_id": "1weJUdXvHX_RGeoxYbUk8p-_3GkoYJfaL",
+      "source_modified": "2026-10-12T03:00:52.252Z",
+      "bytes": 16643,
+      "sha256": "0b79462927c834b1f57af31fd514bbb81152d411c7386f1317572ea07168ea6b"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-registry__references__install-locations.md",
+      "drive_id": "1T234Q1cDcr_03VekA0LxPnDdNwF7os7O",
+      "source_modified": "2026-10-12T03:00:52.252Z",
+      "bytes": 1519,
+      "sha256": "83793e7d6aeea9a751755e4bd23ea48182ff9af082287b98a1192343d2571dd1"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-registry__references__demo-html-pattern.md",
+      "drive_id": "1z7BnHbTO3_RBbj2_3DR4tl2A9X8O1W4e",
+      "source_modified": "2026-10-12T03:00:52.251Z",
+      "bytes": 1884,
+      "sha256": "dfc50cd33eff2c2be75437786fc3e851ab0085f7d453fb35b3380ecf9a6e9f04"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-registry__references__component-quality-bar.md",
+      "drive_id": "17oYuRzZycdpBHVpzUA3CFkijeukTAxBO",
+      "source_modified": "2026-10-12T03:00:52.250Z",
+      "bytes": 16390,
+      "sha256": "f0d4c3c44131bc0791f8a8cc3d2d7478d38045451775af7d20b2dd47cf5f91ac"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-registry__references__contributing.md",
+      "drive_id": "1MNHKM2kZFmimgevOMCImE7Zo4Cc_MUj5",
+      "source_modified": "2026-10-12T03:00:52.250Z",
+      "bytes": 7393,
+      "sha256": "b9db82790ac06d72a01eb2459e1f794712fc9645a89c6c4ce8002590df24ad4d"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-registry__examples__add-component.md",
+      "drive_id": "1XBh0BJqkgsgBN1prep8vkdHudFR6v6Na",
+      "source_modified": "2026-10-12T03:00:52.249Z",
+      "bytes": 1473,
+      "sha256": "d06992d31eec617a91f5c34630c9274c52dd07898bd24f10a869d0d1cab5af29"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-registry__examples__add-block.md",
+      "drive_id": "1-Jl8trlUQkipiSLMeomHfCzpOZ9k2DsL",
+      "source_modified": "2026-10-12T03:00:52.248Z",
+      "bytes": 1232,
+      "sha256": "0e3353755c4ef55e53570d1266a4a43b2c5aef9bbe41276430e38cfa6580b83a"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-registry__SKILL.md",
+      "drive_id": "1jpVbN3n4Fn1G7e_-GfAwV3xusjapuzaX",
+      "source_modified": "2026-10-12T03:00:52.248Z",
+      "bytes": 10135,
+      "sha256": "ccd8c07078889fcd82a5c41e02f2015eb63fb383eac77da7801d134562e3b1cc"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-keyframes__references__keyframe-patterns.md",
+      "drive_id": "1wfbeIkcPctx0iEYJ4kyzdTeo2WDntiLa",
+      "source_modified": "2026-10-12T03:00:52.247Z",
+      "bytes": 6692,
+      "sha256": "727cbc8db92968e9a8c9e77434e6aa45ad4e938df577c86ba75d118aa7e6e88d"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-keyframes__SKILL.md",
+      "drive_id": "1NVVt7GZ8klATYNe1KYNkiXaGl7EqPnaF",
+      "source_modified": "2026-10-12T03:00:52.247Z",
+      "bytes": 16273,
+      "sha256": "debd9aac9414b54c240320f48f72d640182b343538ae8ebe6e0e8493f01951db"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-creative__references__video-composition.md",
+      "drive_id": "1188cs16MGRVBBOId5VO0CzEvDFqwtLnv",
+      "source_modified": "2026-10-12T03:00:52.246Z",
+      "bytes": 4298,
+      "sha256": "037a966583e4b5fc4c3385ef6217560d36237ec638d2b68b5808950c873e424b"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-creative__references__visual-styles.md",
+      "drive_id": "1eHYuV-yd_SIs_6xkYgJtGTskPuPhGiTg",
+      "source_modified": "2026-10-12T03:00:52.246Z",
+      "bytes": 11967,
+      "sha256": "c22d2c3f0732398ff52cbb469cf17567706b4d6555ad4149cae950a7cb3867c6"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-creative__references__typography.md",
+      "drive_id": "1chEb3A18txYXC_706jXh27Iq67dszPDW",
+      "source_modified": "2026-10-12T03:00:52.245Z",
+      "bytes": 14481,
+      "sha256": "2213319b8055285dbe5b6aeb923f27660355a04a1b27da1edda8fd0c91888ab2"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-creative__references__storyboard-recipe.md",
+      "drive_id": "1-YScEceN4axiqop6cxulhuIye5mLgTxR",
+      "source_modified": "2026-10-12T03:00:52.244Z",
+      "bytes": 7455,
+      "sha256": "75ce8a42aaa087c1b18f932eb61f5baccb6a0eb8315c97afb6f8bea00f0b158b"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-creative__references__story-spine.md",
+      "drive_id": "1L8wn89pbU6wvvG7Ipuq1ey0UMcXOlbEV",
+      "source_modified": "2026-10-12T03:00:52.244Z",
+      "bytes": 4154,
+      "sha256": "6c390b68004ffaaf3368e22a0355d914302d31921436c9a8fe79f9e0e096b4ef"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-creative__references__prompt-expansion.md",
+      "drive_id": "10-Xcl5WiY2scKHbc8DM-_FFP78NsqMQp",
+      "source_modified": "2026-10-12T03:00:52.243Z",
+      "bytes": 5707,
+      "sha256": "3c428274da00f7809e93a2036454b2b9cba9a20b3ae3811d43f33a50501a36f6"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-creative__references__narration.md",
+      "drive_id": "1d7AuVZWuXKgNDx9OZpqWR6VvQJ3Kc3Mv",
+      "source_modified": "2026-10-12T03:00:52.242Z",
+      "bytes": 3482,
+      "sha256": "6002bb2a2270149a8955068d5952fc57cd22594649f576b3e8c38057846610b6"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-creative__references__motion-principles.md",
+      "drive_id": "16CIrfvsjYZX8pQLijaL51xXwQofy75C9",
+      "source_modified": "2026-10-12T03:00:52.242Z",
+      "bytes": 9335,
+      "sha256": "43cb4193d2716bffde5a44f3740021f0b2eede83fe5c75d30e3f5398e2bf6d2e"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-creative__references__house-style.md",
+      "drive_id": "1c7MpWsO0qX6pQTvyOJtqgOe4jI7E0AOL",
+      "source_modified": "2026-10-12T03:00:52.241Z",
+      "bytes": 5484,
+      "sha256": "f06e58445a1a37e560f5bad79033c27615b4da215fc413af0f64cd997a0b58fe"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-creative__references__design-spec.md",
+      "drive_id": "1gxxmBRu73yJN602IzH5uPA9D8kgH6yhR",
+      "source_modified": "2026-10-12T03:00:52.240Z",
+      "bytes": 11004,
+      "sha256": "3a45a1c97fee8331aaf0f0054b8ef150d827b0e0a5b47ae885e7a4ee30b9c7b8"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-creative__references__design-picker.md",
+      "drive_id": "1wJrbOTGdPzDCf5gS0Mt3FyRaUkPizpM-",
+      "source_modified": "2026-10-12T03:00:52.239Z",
+      "bytes": 12221,
+      "sha256": "3b37cd0e9366b8f9c30b5e31a909193b23b58ada7f73675eab0fe7d2a74bbdf8"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-creative__references__composition-patterns.md",
+      "drive_id": "1VRRwggmFyB3FKBcocLYjQgzdHetCYba_",
+      "source_modified": "2026-10-12T03:00:52.238Z",
+      "bytes": 5717,
+      "sha256": "954c1d6a7eefa63991a4a34615f8eb94263f4c4b64c0e97c18b59dd006771fbd"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-creative__references__design-adherence.md",
+      "drive_id": "1E0LhtX44xu4VNJ0kAUPzCx6rdw4mcrTI",
+      "source_modified": "2026-10-12T03:00:52.238Z",
+      "bytes": 1423,
+      "sha256": "ff21deb80143c8e09092958a6f40bc712173a43d23c5ea88742566573a2a7241"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-creative__references__data-in-motion.md",
+      "drive_id": "16S4xEmMwwnZy0A3-Xj3CNgLHFr1f59OX",
+      "source_modified": "2026-10-12T03:00:52.238Z",
+      "bytes": 1274,
+      "sha256": "6066c79717156c4a41ef86f28e07c6bd35f18d6830b12893c58523063c788d7d"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-creative__references__beat-direction.md",
+      "drive_id": "11KO5tMN2K8Nw1l4VUpyoFWiE4YS_ERbB",
+      "source_modified": "2026-10-12T03:00:52.236Z",
+      "bytes": 13640,
+      "sha256": "312560b513e689aeda44956c9a883cf465a982b8efce9730722bfb8d147f94f9"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-creative__references__audio-reactive.md",
+      "drive_id": "18imxLUbL6DUIHIEEml2CmvFivXHPZ0VR",
+      "source_modified": "2026-10-12T03:00:52.236Z",
+      "bytes": 3062,
+      "sha256": "ad93a0c588a702203a08ed909842570f010f041500aa33512d2b06f66d450c1c"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-creative__palettes__warm-editorial.md",
+      "drive_id": "1c2H5jmJUYK0urVuf6kCJt4oL3k-u1Ode",
+      "source_modified": "2026-10-12T03:00:52.235Z",
+      "bytes": 411,
+      "sha256": "c467ee3cc0bbf4b2bedccc8106e18293b8a06dbac8f092b10300492da0e0559a"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-creative__palettes__pastel-soft.md",
+      "drive_id": "1o0-yqVTbhdZskgnwSZrbJ2PcZBrvOoPc",
+      "source_modified": "2026-10-12T03:00:52.235Z",
+      "bytes": 392,
+      "sha256": "ed4e25bb5f4953c002e55a53320249621437e03b5a11d43e3c1bd32c869b6d95"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-creative__palettes__nature-earth.md",
+      "drive_id": "1HW1etrX9QGAB5Ocj2MyGAuazBL4oVn0w",
+      "source_modified": "2026-10-12T03:00:52.234Z",
+      "bytes": 399,
+      "sha256": "9710549b17487787fef3c7cb459cfd6e4ac28c1593bf471fcf55a3b4e546beed"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-creative__palettes__neon-electric.md",
+      "drive_id": "143pPCfPPyUXFFwy-8jy-2sP-u4A9TUrS",
+      "source_modified": "2026-10-12T03:00:52.234Z",
+      "bytes": 380,
+      "sha256": "35225bf8d2cd37223e88e0bc59b0a96bc8adeda7225389b3df97b675cfd33dfb"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-creative__palettes__jewel-rich.md",
+      "drive_id": "1PIEq76BZ-gLb01GAZqbr60TVcfFZL9-k",
+      "source_modified": "2026-10-12T03:00:52.233Z",
+      "bytes": 394,
+      "sha256": "17c8f7506469f66bca4e27ef78c19f0bcbf250f88fe840e3043816b7041c4fc5"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-creative__palettes__monochrome.md",
+      "drive_id": "1hEIGxBHku_MbG_01irLelKGsmw-VK2cS",
+      "source_modified": "2026-10-12T03:00:52.233Z",
+      "bytes": 454,
+      "sha256": "fe8586f6d70707098859063bdef34d68084f02cf7d5aaa436d4c9915a7ae3748"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-creative__palettes__dark-premium.md",
+      "drive_id": "1i05HWKXjLK22RtUSID_T_cMizBJu6Qt9",
+      "source_modified": "2026-10-12T03:00:52.232Z",
+      "bytes": 389,
+      "sha256": "abfecbf7e8dca3b674376590a0467aac3e13b2135022ae4ec519c4b27c2303b1"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-creative__palettes__clean-corporate.md",
+      "drive_id": "1vd9CIxM8chuq7bGyNq6adG4m-1sLUBc4",
+      "source_modified": "2026-10-12T03:00:52.232Z",
+      "bytes": 410,
+      "sha256": "d0c8c86838abb77985609629afe600d0ca365eccd835820f309959e8a85cba9d"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-creative__frame-presets__editorial-forest__FRAME.md",
+      "drive_id": "1qlxtEIU8kGcE0DPiqEUDISsliYbPZzzn",
+      "source_modified": "2026-10-12T03:00:52.231Z",
+      "bytes": 17019,
+      "sha256": "ceeb2ab768367da1e1f3e1eca36ab9feeb3de3e4d15493319b0044c3d869329c"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-creative__palettes__bold-energetic.md",
+      "drive_id": "1aHijRYhPb1PZeR1rWInsfaoyzYD6Kftr",
+      "source_modified": "2026-10-12T03:00:52.231Z",
+      "bytes": 417,
+      "sha256": "17bc6b7889302151b4e5c84c0c6a33df676647078011d9decb2b68810e3baa7f"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-creative__frame-presets__daisy-days__FRAME.md",
+      "drive_id": "1rjyCquBbzM87QzBxJdHW-2_UFxBdHw_Q",
+      "source_modified": "2026-10-12T03:00:52.230Z",
+      "bytes": 17445,
+      "sha256": "42d827dbd279990052e171d04380b5e6bbc111ae391dc283deb7a452e70b9b97"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-creative__frame-presets__creative-mode__FRAME.md",
+      "drive_id": "14aQC906laPcE0rv31GhIiAKVUq-ESf5d",
+      "source_modified": "2026-10-12T03:00:52.229Z",
+      "bytes": 19605,
+      "sha256": "c1a1359502d9fc79ef267305291fe0f651219c72d88088cee32327dd933dead8"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-creative__frame-presets__coral__FRAME.md",
+      "drive_id": "1oZdFvgMgjpS6EMlemPYXZoxB5T1nO2mk",
+      "source_modified": "2026-10-12T03:00:52.229Z",
+      "bytes": 18950,
+      "sha256": "8530ecb36d1bb2d53392d88d972df35beeba19a5bcb3260fc9b18a58de7cdfe8"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-creative__frame-presets__code-editorial__FRAME.md",
+      "drive_id": "1GjNEtGqPMjIrGLW_frKtHmpgvDTdZoMO",
+      "source_modified": "2026-10-12T03:00:52.228Z",
+      "bytes": 20600,
+      "sha256": "b1c123526634e31a3e36cff9856e3b4322f2f778d2c7f573aa35a9ee1e90deb7"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-creative__frame-presets__cobalt-grid__FRAME.md",
+      "drive_id": "18h74YxK9kKBkNwtaXJBcILSCprp0DQVo",
+      "source_modified": "2026-10-12T03:00:52.227Z",
+      "bytes": 17286,
+      "sha256": "62a6c9e6e5188cc29b9c0098e9bb8e72c23f152d9a99dd92c58139d26b69b19f"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-creative__frame-presets__cartesian__FRAME.md",
+      "drive_id": "1tmUuQOKwZH2sD0puID4Jfyb4lNF9wRJC",
+      "source_modified": "2026-10-12T03:00:52.226Z",
+      "bytes": 17294,
+      "sha256": "3dc6a31813a333b2a7a1509ddbd3b4dabbbd7e12e6479b6cff10d69c185fec95"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-creative__frame-presets__broadside__FRAME.md",
+      "drive_id": "14IcHdge4doRgbHfMrcaZcvBpmycJ8P7W",
+      "source_modified": "2026-10-12T03:00:52.225Z",
+      "bytes": 16303,
+      "sha256": "3af0a1e5e61bece19841671672d7732082f03d5699b713475e90323a21dbcc89"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-creative__frame-presets__capsule__FRAME.md",
+      "drive_id": "190356jIRw4v9_xfSLjarNo78k9GgLg36",
+      "source_modified": "2026-10-12T03:00:52.225Z",
+      "bytes": 17214,
+      "sha256": "f06dba67a3859f7c732b5177f7bcc58c94592caa5d6bbbcc6730a7876f5baa7a"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-creative__frame-presets__bold-poster__FRAME.md",
+      "drive_id": "1P8R5rWSSbKXVn9FdJXBkXoXdVzuS9-V5",
+      "source_modified": "2026-10-12T03:00:52.224Z",
+      "bytes": 15984,
+      "sha256": "af756ef993099f9ac78328f676eb79a6572ff0e9c2aacf12787471cd4525b171"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-creative__frame-presets__blue-professional__FRAME.md",
+      "drive_id": "1QHYrq4wErhfToaGN-MyaMu3tee_pU2L2",
+      "source_modified": "2026-10-12T03:00:52.223Z",
+      "bytes": 17202,
+      "sha256": "62e9a445885f6057084493de385a8ce20c3b4a299ae36a553ef54884f06bad68"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-creative__frame-presets__blockframe__FRAME.md",
+      "drive_id": "1x4pQ-wXgFnse7nOI2uTODq8omWYurqD5",
+      "source_modified": "2026-10-12T03:00:52.223Z",
+      "bytes": 16292,
+      "sha256": "ef8d9d47a209bed4ccc2d928c14a81cdaecb5129f5dc0cdc0dc40afc7ef92931"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-creative__frame-presets__biennale-yellow__FRAME.md",
+      "drive_id": "1ceYuZQMUCPzaqQfNe1poRHXWCGqAwj08",
+      "source_modified": "2026-10-12T03:00:52.222Z",
+      "bytes": 17789,
+      "sha256": "76d22cced9c152b0edb520543cf34c4ce772a312caa7211c40d4315b53c053cf"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-core__references__variables-and-media.md",
+      "drive_id": "17tNDQIUeXsvKwvkDA0qyzgzXe8pGlLRN",
+      "source_modified": "2026-10-12T03:00:52.221Z",
+      "bytes": 8420,
+      "sha256": "d905b18425dfbbcf232aa9557708425bdf4b52c13f999093e04c9f7f1428d6a1"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-creative__SKILL.md",
+      "drive_id": "1csIjVaw0YlKnNSlPNy9G9st8i5JHSLb1",
+      "source_modified": "2026-10-12T03:00:52.221Z",
+      "bytes": 6607,
+      "sha256": "9884e348a665c954feb0e8b3a2d2df1bb6d4da0e4790dea6d139b2349cea35bf"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-core__references__tracks-and-clips.md",
+      "drive_id": "1gxVycgsHQnpRxmOTcl98e-xsDhfpUtiQ",
+      "source_modified": "2026-10-12T03:00:52.220Z",
+      "bytes": 8171,
+      "sha256": "c0fbb3242406e0a1f2de507427330fb998d411587b8790eec17128ee6b4f8204"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-core__references__minimal-composition.md",
+      "drive_id": "1EA_enylxH7pmgFRrfIFtOy_tl7Pf9qT0",
+      "source_modified": "2026-10-12T03:00:52.219Z",
+      "bytes": 2507,
+      "sha256": "0884abd9feeeea48d0de3d517c3d074859b9c322318401a928b9d1f9ee2cf851"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-core__references__tailwind.md",
+      "drive_id": "101T8bpWAjmwg5d0fvGf0WvJ-NgnCOThl",
+      "source_modified": "2026-10-12T03:00:52.219Z",
+      "bytes": 4078,
+      "sha256": "bce2e8ae118f91df3a9790e99273f50942f12d1c345a149d6762c9411e3dfd2c"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-core__references__sub-compositions.md",
+      "drive_id": "1cLscY838YMXW1xfo6cYbfrabEXvBkEYP",
+      "source_modified": "2026-10-12T03:00:52.219Z",
+      "bytes": 8074,
+      "sha256": "7caf63046ea0d1915b51e4eb49897101e36dc716ea1195f9a34cef4ba9c18f64"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-core__references__full-screen-motion.md",
+      "drive_id": "1gUCqojy-qR6n65P71zSkEzNTT0RvqTb1",
+      "source_modified": "2026-10-12T03:00:52.218Z",
+      "bytes": 2906,
+      "sha256": "4534cc717e94f9b7a83d5b86990d6af16594d18c4b9ddcb97950d919288f3994"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-core__references__determinism-rules.md",
+      "drive_id": "1vYkHcctzfdC2cmAc7Ko-6DFwJWJRon4C",
+      "source_modified": "2026-10-12T03:00:52.218Z",
+      "bytes": 7033,
+      "sha256": "415a3f08cf3be801e6ca381fd47959e787947da325a7ee30b8104b8b80198fd5"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-core__references__data-attributes.md",
+      "drive_id": "1B5lqMZLLsVYYjoznEwLmEv8TRcMlSra9",
+      "source_modified": "2026-10-12T03:00:52.217Z",
+      "bytes": 17452,
+      "sha256": "5dbe548cb427a6ae2e4dba8bf780e9b8e40ae89a0fba4f89a0961f90ff104a3e"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-core__references__creator-editing-recipes.md",
+      "drive_id": "1UUo13lboJ3t-A3-WSMea5Ts64zjHPs6t",
+      "source_modified": "2026-10-12T03:00:52.216Z",
+      "bytes": 18420,
+      "sha256": "8db8ed156e9e3d1a01bb6b25b92fe6597152e6c8f18128d40a03d52fe46a2af9"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-core__references__composition-patterns.md",
+      "drive_id": "1r1g6PhA9akx7Ylxze1mcATVymT3pofDU",
+      "source_modified": "2026-10-12T03:00:52.215Z",
+      "bytes": 10853,
+      "sha256": "bcdf548ba1fec8decce5ea22c7bed99c73ba268986b1bfefc837f2d7f70f55b0"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-core__SKILL.md",
+      "drive_id": "1ALZyutOOHmbW3CLdmrtq-GdT160pxgg1",
+      "source_modified": "2026-10-12T03:00:52.215Z",
+      "bytes": 12653,
+      "sha256": "92cdcccec571a1533adeeae5e5feb7cbf39ac468a462e8a4484d6bf76c462e94"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-cli__references__preview-render.md",
+      "drive_id": "1UI43uzwFeBF86YnQsqxU79dLef6ZIUoc",
+      "source_modified": "2026-10-12T03:00:52.214Z",
+      "bytes": 31668,
+      "sha256": "a60d74da477b56623211055239e6f6e8a5fed4b851a0dab0c06020ca0cf30fa5"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-cli__references__upgrade-info-misc.md",
+      "drive_id": "1z6GPZu3VAIpu7wuDJjn0XcsnalPC9HiA",
+      "source_modified": "2026-10-12T03:00:52.214Z",
+      "bytes": 11389,
+      "sha256": "1d7e2f90caa44bdd89a9ac1be2ab5583e157f9165785619b5fd3ef9592e6bfe6"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-cli__references__lint-validate-inspect.md",
+      "drive_id": "1xjuYjwIBAvp2eUmJC9JDl4BgdtcpB5M8",
+      "source_modified": "2026-10-12T03:00:52.213Z",
+      "bytes": 13424,
+      "sha256": "c628cc20ec6e6330dae68fffcbbd0f84ba8059796e2b8bf5de09165b9436e9b2"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-cli__references__lambda.md",
+      "drive_id": "18sA9etI6u8VmSvPFnvtlxZbqm0cUcPQE",
+      "source_modified": "2026-10-12T03:00:52.212Z",
+      "bytes": 16710,
+      "sha256": "e897f0e0022aceac6e7dc42ff1456489519bf38b593649af0f7071d2f89a3374"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-cli__references__init-and-scaffold.md",
+      "drive_id": "1oCbX-oQv7ErXP-6ui8dUfANHpTPvs6FC",
+      "source_modified": "2026-10-12T03:00:52.212Z",
+      "bytes": 5798,
+      "sha256": "78bd5c49352a986bd136f7c5d43f96ec5e0a5199f1d0de3b5c437cabe337cb23"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-cli__references__doctor-browser.md",
+      "drive_id": "1eur3bntMd8Mmi2sQNmHq7rj4N6xGpMRT",
+      "source_modified": "2026-10-12T03:00:52.211Z",
+      "bytes": 4357,
+      "sha256": "9747dd5a545d2528914c58d55d0c54281ace686fc5c782072334c6ba0ff65c55"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-cli__references__compare-and-batch.md",
+      "drive_id": "1i_ZqfAZ4lJy5cBCtCaSObTT3qgLHhTRI",
+      "source_modified": "2026-10-12T03:00:52.211Z",
+      "bytes": 4378,
+      "sha256": "d17fa5a16707d981fa6473b99a28aa45abf41bca0fd96c5157c632abd0bfc222"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-cli__references__cloudrun.md",
+      "drive_id": "13jeHcBRhomRYlglLxe_7WEIcpyn5iF1n",
+      "source_modified": "2026-10-12T03:00:52.210Z",
+      "bytes": 3590,
+      "sha256": "e64d57145050a4ae254957977520326f4cdcb54d20aa76cc9082d3cf99266229"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-cli__references__cloud.md",
+      "drive_id": "1CGL8XdK4Ppq4Z1ssJD0P46GA9AcauQWQ",
+      "source_modified": "2026-10-12T03:00:52.209Z",
+      "bytes": 11126,
+      "sha256": "cdf70329776aab756e5acbcadd8c440dd2eb192334ef888b7b552c19abfd6e28"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-cli__references__beats.md",
+      "drive_id": "1wMHEUgHmOcng9yEdZ02OpYmEIhToUGsM",
+      "source_modified": "2026-10-12T03:00:52.209Z",
+      "bytes": 921,
+      "sha256": "5b90e725a0a676cadfd597524e3abed77e80a5aca03a4d7bee2c3be44e5b85d6"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-cli__SKILL.md",
+      "drive_id": "193-DFvrDUA2xM2jY1T5tbiqLHuv4G2pZ",
+      "source_modified": "2026-10-12T03:00:52.208Z",
+      "bytes": 24388,
+      "sha256": "4b76689a4869a388df3b837cdfc8ce4784f216d2d07c4e916e50b96595958ad3"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-audio__references__presets.md",
+      "drive_id": "1FQqFk5BPXNReLSG-Kt06a7sIAwqiX4Hw",
+      "source_modified": "2026-10-12T03:00:52.208Z",
+      "bytes": 13195,
+      "sha256": "8396b08716d5c5659598fb10708df1d101a9a76754784bded4e62b027bed07b4"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-audio__references__fx-registry.md",
+      "drive_id": "1CDK25BWg4oRXJyPzJcExA5JJetmDk1Ww",
+      "source_modified": "2026-10-12T03:00:52.207Z",
+      "bytes": 7981,
+      "sha256": "9475c9fb8c71ebaf330a1448a82f1c06e33680345960e3f87109842a182313fb"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-audio__references__diagnosis.md",
+      "drive_id": "1vugqk358rrSINBkx4zibYN_8Dgg7pJEV",
+      "source_modified": "2026-10-12T03:00:52.206Z",
+      "bytes": 12080,
+      "sha256": "6496d8ba77e74adc48a81defe3c9c13310f6fca41ec17ca171dc851bc6e2b2e9"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-audio__references__attributes.md",
+      "drive_id": "19eP_iCapSQKLzFokFYQZMyf6I_Qobbmg",
+      "source_modified": "2026-10-12T03:00:52.205Z",
+      "bytes": 6697,
+      "sha256": "a04f8852d6e0f8cbfcf6afdc196d878c7194de01608ab02bc3d2bf680014d519"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-audio__SKILL.md",
+      "drive_id": "1pGUhYsJdvZFz4zNVOZ2kxSUU6dUsVmxO",
+      "source_modified": "2026-10-12T03:00:52.205Z",
+      "bytes": 26570,
+      "sha256": "82f1652f20596b37b9ebd6b3287a865d0f2647033936dcd24e5119c6f4a8ed6f"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__transitions__overview.md",
+      "drive_id": "1T3uyFZqX7ew5dqG9lvJ_avYB-vNDDrwG",
+      "source_modified": "2026-10-12T03:00:52.204Z",
+      "bytes": 13857,
+      "sha256": "ec878d479d16addcd88c770b39fc88fa5219086478aee39e9f96a1096a58b084"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__transitions__css-scale.md",
+      "drive_id": "1fQC3ipQqxzJLSGb2c-sNOV29PRQm48yE",
+      "source_modified": "2026-10-12T03:00:52.204Z",
+      "bytes": 715,
+      "sha256": "3c0cb33d6c844a7265379225f3241d8964afcc908ee757a1ebfb1700a5320ea7"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__transitions__css-push.md",
+      "drive_id": "1I_envQDWo7-ehfuAV1g0M4f9zfUiId1M",
+      "source_modified": "2026-10-12T03:00:52.203Z",
+      "bytes": 1243,
+      "sha256": "d55f18fd88c71ca694a7709ac613967cf81ead4f325900be3b8ace1888818eff"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__transitions__css-radial.md",
+      "drive_id": "19jWPQ30E0i8ygYdT9NrvMKGy4H_LwnTE",
+      "source_modified": "2026-10-12T03:00:52.203Z",
+      "bytes": 1060,
+      "sha256": "5d8f20de439e3f2c8d45df11c8acbe31dc1b9342e2d54bbe66b451cf81ca0a1b"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__transitions__css-mechanical.md",
+      "drive_id": "19iStqK726uhYk_zHmjm2KwNR3tDpka6Z",
+      "source_modified": "2026-10-12T03:00:52.202Z",
+      "bytes": 1613,
+      "sha256": "4fed48fa659a4b215a996beeea619d244e6c893700178b1f969c17f2ee0a8612"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__transitions__css-other.md",
+      "drive_id": "1YwYE4H_uKxExFXvbvFpX8VA5xBuo0Lbb",
+      "source_modified": "2026-10-12T03:00:52.202Z",
+      "bytes": 838,
+      "sha256": "2156e4fcc3b42cba9e0d9e268944269057fb48ff15fc1983e3ff9386fa2a8cf8"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__transitions__css-light.md",
+      "drive_id": "1jIZTnPmHG4coRI5HxM92ohut-_14Ac33",
+      "source_modified": "2026-10-12T03:00:52.202Z",
+      "bytes": 2376,
+      "sha256": "53f0422d3f6dd2584a30501f84e4f09c9b515f605d51ed264a2061567dda15db"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__transitions__css-grid.md",
+      "drive_id": "1EQUdzpXAc9ywIQa-O0JIFKHKPjBza8HJ",
+      "source_modified": "2026-10-12T03:00:52.201Z",
+      "bytes": 370,
+      "sha256": "c62b17058aa7ba42d34df29436b6b4233e47ff2b72f2c7ce0963c75bdec45144"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__transitions__css-distortion.md",
+      "drive_id": "1iGf7jtHAc-bryZlmQnM2LI5Z1urfLqXB",
+      "source_modified": "2026-10-12T03:00:52.201Z",
+      "bytes": 1803,
+      "sha256": "7140650692926959bd5459ca5c478a9b4f137cc76fb92b9138e3b0d353677c06"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__transitions__css-dissolve.md",
+      "drive_id": "1rEl1pyEQni55ECdnU9pJyDifbpxGOt69",
+      "source_modified": "2026-10-12T03:00:52.200Z",
+      "bytes": 2462,
+      "sha256": "47c11ca0a715675c2788aa4a162a652b5dc5f1773b058ea93e9907af56a4eb7c"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__transitions__css-destruction.md",
+      "drive_id": "1v8GceMB68oVs42NQzB-kFWYXOqsH4U4R",
+      "source_modified": "2026-10-12T03:00:52.200Z",
+      "bytes": 4484,
+      "sha256": "3f2fbbd561aacc8276f70cbee09ff420fc6e9c65b1e060c14e8399960d3bfbbc"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__transitions__css-blur.md",
+      "drive_id": "1pVGmMVhFz4lvK4s9gG1FaVTXbEnl8R_E",
+      "source_modified": "2026-10-12T03:00:52.199Z",
+      "bytes": 1787,
+      "sha256": "fd3eef889a517e1dd985ca816f36f1abfb43420a4b664d4fcc453554cdf561f9"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__transitions__css-cover.md",
+      "drive_id": "1aOlubR9fSaxHCoEEyfGc3DfbJVSovQU3",
+      "source_modified": "2026-10-12T03:00:52.199Z",
+      "bytes": 1448,
+      "sha256": "ba4e5926791c9e6a0a069e20afc91324acb018903f43b4b3f2866d9654f5b7eb"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__transitions__catalog.md",
+      "drive_id": "18SFcm2pt6f4jLBDU-rIH3upgfAPlRXg5",
+      "source_modified": "2026-10-12T03:00:52.198Z",
+      "bytes": 6679,
+      "sha256": "3914ec091c1f16bfee5c53d38ed6af1dfab74caedf561788dc39e67c6d7ca239"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__transitions__css-3d.md",
+      "drive_id": "1f4T8Zz1SaKF3rwppEhoIjWouAqSWG30v",
+      "source_modified": "2026-10-12T03:00:52.198Z",
+      "bytes": 421,
+      "sha256": "e1c3888dd0a2d4b36d25200c1e5ef9038649ae63953865e4b2c4c40fb028d7dd"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__techniques.md",
+      "drive_id": "1HsHkqgl59Vhl6KqVHEeDVaEkpE76XuVK",
+      "source_modified": "2026-10-12T03:00:52.197Z",
+      "bytes": 17428,
+      "sha256": "0227f5c4451807d4d425c626cf11ebddffecc228eccbcb63b9c206e0a4f7bd1b"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__transitions__TRANSITION-REGISTRY.md",
+      "drive_id": "1MAh0HbHNK8Ihw1qQ97I2p3w0jI03bkGS",
+      "source_modified": "2026-10-12T03:00:52.197Z",
+      "bytes": 8171,
+      "sha256": "250b59a56011c75c1eab69196c6f1ddf7ebb13fb4b0d89d765c016da35ff2a67"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__rules-index.md",
+      "drive_id": "1dHwqp0heMzM26hr8OlbUtTUnqfrPJ1G-",
+      "source_modified": "2026-10-12T03:00:52.196Z",
+      "bytes": 21484,
+      "sha256": "e6142e35d7090934fc139ec490df97fd3c7d4995d35745417afc52476aecd7ca"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__rules__waterfall-entry.md",
+      "drive_id": "1yJJPL0mmBWDv4TJ2BxTVbfcofnSSQblf",
+      "source_modified": "2026-10-12T03:00:52.195Z",
+      "bytes": 4623,
+      "sha256": "a0d2b561fe0827810e8d59ae08f2416c856e2b89395f3a5d491627f14f8206b1"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__rules__viewport-change.md",
+      "drive_id": "1IfAnfgdslt9h3drgzUUjpoEFQWpIsXBS",
+      "source_modified": "2026-10-12T03:00:52.194Z",
+      "bytes": 9220,
+      "sha256": "498803166e50b86d6cfcc9339a89467127d2f6a40e6ad7d4e015fbdb11e8624b"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__rules__vertical-spring-ticker.md",
+      "drive_id": "1WS_oxaksj37ZUnnhfrGFortbBzHjKdDT",
+      "source_modified": "2026-10-12T03:00:52.194Z",
+      "bytes": 5577,
+      "sha256": "0728678f337f599d33ba3494f9c218795d65d66ca7ea9288f2d5f6de68fe9466"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__rules__theme-crossfade-morph.md",
+      "drive_id": "17YIigS1dILlGVEwH7gakz97L8-MCYnuc",
+      "source_modified": "2026-10-12T03:00:52.193Z",
+      "bytes": 9486,
+      "sha256": "df8280c07f345f456b26d2cdae6511f4726dfd0989d0c676bf2b25b6bccf5bd2"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__rules__svg-path-draw.md",
+      "drive_id": "1KC6H5PMjejC0A91GGsx1lUFrLtrS0r-5",
+      "source_modified": "2026-10-12T03:00:52.193Z",
+      "bytes": 5646,
+      "sha256": "38e304463abcde3ac88095d682f86a2ea30517d366683d09d6bccccc6752c304"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__rules__svg-icon-enrichment.md",
+      "drive_id": "1iFSxmjUzxiCewpWN8uToG4drz57WRykX",
+      "source_modified": "2026-10-12T03:00:52.192Z",
+      "bytes": 7703,
+      "sha256": "25bff062bab161ec89d68963bee1661baf15e22fc9ed2ad2e164eae661509d10"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__rules__spring-pop-entrance.md",
+      "drive_id": "1XNLE8iQOR-IWX5pQ578d-dqK_FC7uslJ",
+      "source_modified": "2026-10-12T03:00:52.191Z",
+      "bytes": 6615,
+      "sha256": "7c572dfe39db36a84a14c19daa6b9fc56c33a14ba09925556d4b39612b464e34"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__rules__stat-bars-and-fills.md",
+      "drive_id": "1JSvv3qmi7ud4s9wa5jbf0FoRznC2ipcO",
+      "source_modified": "2026-10-12T03:00:52.191Z",
+      "bytes": 5609,
+      "sha256": "d10f114308bcfcb1940758b294065a683e8117e5c3dae9d4f35fc9c782b6c4ca"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__rules__split-tilt-cards.md",
+      "drive_id": "1M2oOQRH7PHDpVitQZZb40vdipwDWKkfx",
+      "source_modified": "2026-10-12T03:00:52.190Z",
+      "bytes": 5669,
+      "sha256": "a50c135af38eb5a85f7f2f8753e5a8dcff3e6782392c2c6ee42bfafad9e41ab4"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__rules__scale-swap-transition.md",
+      "drive_id": "1hULmk9JXhjcekoWjDaZLIdjD8b5czVQN",
+      "source_modified": "2026-10-12T03:00:52.189Z",
+      "bytes": 5558,
+      "sha256": "f1f530fcca829ea7f8253b79662bb211052e199acaa2d031cf9072722db3ff7d"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__rules__sine-wave-loop.md",
+      "drive_id": "1CyPaBEgBw6FSVfaSKLBvXufM6hDtkPXr",
+      "source_modified": "2026-10-12T03:00:52.189Z",
+      "bytes": 6163,
+      "sha256": "54f283f4a8915de5c3f6d7c668b97f416efad3df6b5baf4941254cea8831944b"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__rules__reactive-displacement.md",
+      "drive_id": "17UNZqV-5xFwh4tLLGAeIG5aTmrneHBGN",
+      "source_modified": "2026-10-12T03:00:52.188Z",
+      "bytes": 6621,
+      "sha256": "463c4be5bf2d333c36698dc4bb003e92ebaf5ae49d710c169c54ebf09cf0af5b"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__rules__press-release-spring.md",
+      "drive_id": "1TsR7QTOfgQcXT2GW2kBicgrKC70cpk_k",
+      "source_modified": "2026-10-12T03:00:52.187Z",
+      "bytes": 7123,
+      "sha256": "cd44252ea5d832113994e78334a9070db77aa5f931f546a08232a1c68573c805"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__rules__physics-press-reaction.md",
+      "drive_id": "1xCTV2BQlJ-19c0Ek11BYm4M4s37AcA5X",
+      "source_modified": "2026-10-12T03:00:52.186Z",
+      "bytes": 6728,
+      "sha256": "1f9bcd9fc1749ddd766467db2a7c5adea18f0c2c7fdf3a8b961e1159eab354d6"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__rules__particle-burst.md",
+      "drive_id": "1RyGKw9CH_IRhI1LwbWAPKd1VpK4nJOA6",
+      "source_modified": "2026-10-12T03:00:52.186Z",
+      "bytes": 10079,
+      "sha256": "b53152bb3a5320f4ac6b841d1ee5d95194b2a939c7402d9f92378734ab055cc2"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__rules__nudge-curve.md",
+      "drive_id": "1p0Yo0BG-ib5WeaJG-vIZvAEy2aHPPTi2",
+      "source_modified": "2026-10-12T03:00:52.185Z",
+      "bytes": 2730,
+      "sha256": "daeb9295372e435172130c9ded24a0bc3876fbad47f1af02b2ed00d476fa3ff8"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__rules__orbit-3d-entry.md",
+      "drive_id": "1ECAf3vZFH6bHtRYf0CPEUpq6FQWf1oFZ",
+      "source_modified": "2026-10-12T03:00:52.185Z",
+      "bytes": 6628,
+      "sha256": "2b24b8d92203e75faaef14c4bfdb216a70f700660056a6f77a9e5f035c5de94f"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__rules__multi-phase-camera.md",
+      "drive_id": "1_4As9Pum2GWJ_cXtsLGgorUGCckOuGlj",
+      "source_modified": "2026-10-12T03:00:52.184Z",
+      "bytes": 8019,
+      "sha256": "001cee586e5b4d47065f57100e657f12bd105bb325bb2027251f6f70cadd6240"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__rules__multi-cursor-choreography.md",
+      "drive_id": "1FqqdWUc0zIx8RZJNbS7EmPdN6D6YdVuZ",
+      "source_modified": "2026-10-12T03:00:52.183Z",
+      "bytes": 10807,
+      "sha256": "fa72ab059d0df0cd3c2f6c4d2111deb284f528da724d2f7dd1c7d4da9ca5e7cb"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__rules__kinetic-beat-slam.md",
+      "drive_id": "1ORGCD0nLiSPfkRn9HXTYH1I0Kcmyni-z",
+      "source_modified": "2026-10-12T03:00:52.182Z",
+      "bytes": 6486,
+      "sha256": "d43c120958f2bb4fe674f3a54ed788e819556029b3bcc3ca70c98c8e52409a09"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__rules__motion-blur-streak.md",
+      "drive_id": "18d70Quk_KSJwZtS8SS2zV2No84S8KJg7",
+      "source_modified": "2026-10-12T03:00:52.182Z",
+      "bytes": 16354,
+      "sha256": "461777da7d68a191fbe77cceac655e47226df1e550f6fd672420004c6f8ca60f"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__rules__hacker-flip-3d.md",
+      "drive_id": "1ymROD5EuyH_5my6We69GUCAZm0qJzF33",
+      "source_modified": "2026-10-12T03:00:52.181Z",
+      "bytes": 5586,
+      "sha256": "67a79e585996b4a58dfb778283d9431ce02ae6bb0150a474d5adb1c4d23d6951"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__rules__gsap-effects.md",
+      "drive_id": "1zTedI6hunYxqEiV2n712k_s7hDFWukli",
+      "source_modified": "2026-10-12T03:00:52.180Z",
+      "bytes": 6912,
+      "sha256": "63ee2ee5d9dcef1ecbd88b69526e1621f0ff7ce682ec7f2dbe553b5647656bbd"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__rules__gradient-text-sweep.md",
+      "drive_id": "1pypiNVa9XtMzdGZRjoH46WVvdAMyuEgS",
+      "source_modified": "2026-10-12T03:00:52.180Z",
+      "bytes": 8874,
+      "sha256": "d74b142a32c66f61fcb2f486afe8c2fe96038c57048193556876302e431c9a66"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__rules__dynamic-content-sequencing.md",
+      "drive_id": "1llKJtYEmbDBl9ywMf1z04BO4KlTmneSW",
+      "source_modified": "2026-10-12T03:00:52.179Z",
+      "bytes": 8599,
+      "sha256": "b67c249a96e6eac48a3cfa0440b21994160a6b490319fb9097843ca15d28c264"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__rules__depth-scatter-assemble.md",
+      "drive_id": "12tr8KD7eUtsCdxFFKpxPqVrlkuAg7AZt",
+      "source_modified": "2026-10-12T03:00:52.178Z",
+      "bytes": 7054,
+      "sha256": "63689fce3df29c4eca02f83cebf578f6026935bb04f3b57dbf465c63b4d8ba1e"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__rules__discrete-text-sequence.md",
+      "drive_id": "1LXSRrtWjRASw-7hZUQue9Gh3qCBDdtsC",
+      "source_modified": "2026-10-12T03:00:52.178Z",
+      "bytes": 6454,
+      "sha256": "d3eb00b0942f98eb30908f1b90f44c0bf9a4da1c2eb0dc6899b14accb75802cf"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__rules__depth-of-field-blur.md",
+      "drive_id": "1vrh6TsWd5tZ-U4FQoUwSZZwT04in5S5t",
+      "source_modified": "2026-10-12T03:00:52.177Z",
+      "bytes": 9122,
+      "sha256": "589fb83a18b92aed97e9c6d8af5a44b4d054dae0dbe4b413db3bb3d1087b829e"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__rules__cursor-drag.md",
+      "drive_id": "1p96b_CO6aXb5HvIt4QOMQcjFYcwLQHpp",
+      "source_modified": "2026-10-12T03:00:52.176Z",
+      "bytes": 10379,
+      "sha256": "491cd478a56d9469799380bd85933275a43b3e6d01b475f3eb858091dda13013"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__rules__cursor-click-ripple.md",
+      "drive_id": "12IQj28Vg8LbpNVxSpy3Xe51BpIGTt0_G",
+      "source_modified": "2026-10-12T03:00:52.175Z",
+      "bytes": 6438,
+      "sha256": "eee6580259239dbbbc1084ac5226c61728613a6684a1fe6495281dbee8d918bb"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__rules__css-marker-patterns.md",
+      "drive_id": "1aC11qbOdXtdz8b4heOCQc_e_UYsarAqr",
+      "source_modified": "2026-10-12T03:00:52.175Z",
+      "bytes": 5702,
+      "sha256": "8ac8dd360b4dc8d78d34c3846b834155ad2b482a2d1388cbbd2d3061c6e9d0c2"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__rules__counting-dynamic-scale.md",
+      "drive_id": "1SoKUjbYnUuCIXKsI5Mu_CgxioyvzBZ9I",
+      "source_modified": "2026-10-12T03:00:52.174Z",
+      "bytes": 6018,
+      "sha256": "7a2e8868d4b4bd6a8795a66b8121f5446536f51aadf62cfa858f095a8cb9e933"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__rules__coordinate-target-zoom.md",
+      "drive_id": "1LKs7hsAFzu-5qTaWt-nsdVf2YleILaBT",
+      "source_modified": "2026-10-12T03:00:52.173Z",
+      "bytes": 7812,
+      "sha256": "054f1b69cf09d80a2c9c6b18a45d5251bba714a5fe30ed482bf9bdadf484207a"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__rules__control-target-sync.md",
+      "drive_id": "1Rs0JeHB_j4r7F5uQb9wPmQP3ZqAhaNI2",
+      "source_modified": "2026-10-12T03:00:52.172Z",
+      "bytes": 10522,
+      "sha256": "04279062a4c837be430cf482d3f9f156df348988528eada729c7fded6467030d"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__rules__context-sensitive-cursor.md",
+      "drive_id": "1XqAhthovet4GWWhQ6fVlxMAjO90zlYMP",
+      "source_modified": "2026-10-12T03:00:52.172Z",
+      "bytes": 6979,
+      "sha256": "84d9e3185720473acdd44026caab55aa63146db3963e2b7c5052c4aaebc9fc62"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__rules__chromatic-glitch.md",
+      "drive_id": "1fTm1wumGbYQoS8ojECT8zVP79OAedF5M",
+      "source_modified": "2026-10-12T03:00:52.171Z",
+      "bytes": 10421,
+      "sha256": "fae8bcd06d727418b720227057a52c82fddd2cf7dcc65a06c74ec105e3acc223"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__rules__chart-scrub-readout.md",
+      "drive_id": "1kLQTB1LmjH8HhpfKuNArQAADD3qeXQl5",
+      "source_modified": "2026-10-12T03:00:52.170Z",
+      "bytes": 10512,
+      "sha256": "47b12089c6298e9299099eec20571a96b54530cd6800f8d7a56d28b9775e7184"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__rules__card-morph-anchor.md",
+      "drive_id": "1bTDqbi0waog323qteQwDfTHxcoS-Coiw",
+      "source_modified": "2026-10-12T03:00:52.169Z",
+      "bytes": 7493,
+      "sha256": "b146f0b522823f1e83087d6684eba211280c6baedb6bcbb388b298d0427b54be"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__rules__center-outward-expansion.md",
+      "drive_id": "1PwPCdwZ1av9d28IM5Q3_-cExrePDz5rr",
+      "source_modified": "2026-10-12T03:00:52.169Z",
+      "bytes": 4345,
+      "sha256": "a6a2014465a8e6a6a600a8d370c0275998396e1143c76b606b50bc38f2ecb942"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__rules__camera-cursor-tracking.md",
+      "drive_id": "1U-hkN44TTtL40Z81WK991_X0wlvV-I0P",
+      "source_modified": "2026-10-12T03:00:52.168Z",
+      "bytes": 7993,
+      "sha256": "42a55a68eb34abfa813b9e160b1b73c95608bb5387f5d5300624c0db8e35efad"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__rules__avatar-cloud-network.md",
+      "drive_id": "1YwC8BLfoMXOfnJQ5-klg14GIYKKyseYz",
+      "source_modified": "2026-10-12T03:00:52.167Z",
+      "bytes": 6619,
+      "sha256": "7152fb795db44e79d802ada85d461da6a9bb95575edd348a6cd79856a168d34c"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__rules__asr-keyword-glow.md",
+      "drive_id": "1Pd_IEwM-Ydxk06B1D3oGcToMkVZBWEPW",
+      "source_modified": "2026-10-12T03:00:52.166Z",
+      "bytes": 6762,
+      "sha256": "30d60b09bfe977896b588f2ae53d2c02a6d45d65aeaa32e261c25cba0e26d4d8"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__rules__anchored-layout-expand.md",
+      "drive_id": "1iYFH2tbt7pIyXJ4_ExL_RUhX9l5NbmSl",
+      "source_modified": "2026-10-12T03:00:52.165Z",
+      "bytes": 10477,
+      "sha256": "cb59c37fd3aec39880d118812686e7cf30b5f0d461e88734b5737a9078dbce50"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__rules__ambient-glow-bloom.md",
+      "drive_id": "1s1fRolXmT57SVrjFi-DQVYv5obSHM3qP",
+      "source_modified": "2026-10-12T03:00:52.165Z",
+      "bytes": 9840,
+      "sha256": "06cf000cd14dc72f92f4038114c21020ffc358efad921bcea05d85025d28a5e4"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__rules__ai-tracking-box.md",
+      "drive_id": "12AGriGerrvP36q0u1665-D5LwTb0ILvd",
+      "source_modified": "2026-10-12T03:00:52.164Z",
+      "bytes": 6603,
+      "sha256": "154472060cdb69171f8b37060581750a227470a64e25d97d23b7f07aa4211e29"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__rules__3d-text-depth-layers.md",
+      "drive_id": "1nIo8HUxxqzTZ9-W6iUw7pMwfIrTLhz7r",
+      "source_modified": "2026-10-12T03:00:52.163Z",
+      "bytes": 6708,
+      "sha256": "e95234a6a42bdd25a555365d5978f7f3cf20305c5f1a3be46c39b9b5d34a49d9"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__rules__3d-page-scroll.md",
+      "drive_id": "1BgCmg0hJG5vviblKw4fMP0sQAb3Te6ad",
+      "source_modified": "2026-10-12T03:00:52.162Z",
+      "bytes": 7611,
+      "sha256": "efce23b996d5e5a1f29eb3a91246c0f0a2fbdb61c4289d953f70f95882919f8e"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__rules__3d-camera-flight.md",
+      "drive_id": "15iU3oey3jNh_zDD6bMu3J1S9nI_Jda1b",
+      "source_modified": "2026-10-12T03:00:52.162Z",
+      "bytes": 18916,
+      "sha256": "15b067aed2c85839e48024f08250244866b715d6570da14f0f214df7dfa1ec15"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__blueprints-index.md",
+      "drive_id": "1wud-83mPPOmSNA8DtsGzslsug8W2qgS7",
+      "source_modified": "2026-10-12T03:00:52.160Z",
+      "bytes": 26512,
+      "sha256": "601228ddcfda89ed6add52bd08becf53296764e155126fb5e7100eb29caaa46e"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__references__motion-blur.md",
+      "drive_id": "1_EVc8tmbSJ8MBd0fTpXCl8MeFbQUeS3p",
+      "source_modified": "2026-10-12T03:00:52.160Z",
+      "bytes": 14104,
+      "sha256": "66c5a15a3515063c1103633877494430bdf33b783544f0fb98e433dbd65a6777"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__blueprints__zoom-out-workspace-reveal.md",
+      "drive_id": "1KlU1164S-rAC4X5uWtdKE2E_yA4_NMet",
+      "source_modified": "2026-10-12T03:00:52.159Z",
+      "bytes": 14714,
+      "sha256": "30a6a396a72bcd37127100f6e4cb5f13f6ca1ea179df7001ce347a3b84c8b7ae"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__blueprints__video-text-pivot.md",
+      "drive_id": "12Ndb_gJNIWqXYy-o9zerKP3buZquAieE",
+      "source_modified": "2026-10-12T03:00:52.158Z",
+      "bytes": 3281,
+      "sha256": "6472224469cfb1801989510bec88a997819fa51cd4a5260bc23eee0fd7f086ed"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__blueprints__typewriter-reveal.md",
+      "drive_id": "1Zfhp1oWvw_OnLmD2FXEK1nf-Ah8GGHXV",
+      "source_modified": "2026-10-12T03:00:52.157Z",
+      "bytes": 6276,
+      "sha256": "be324c142dc5bf89649df3c59aa8a7e218ca99d8afe1222f4028a314a237245c"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__blueprints__transcript-scroll-artifact-reveal.md",
+      "drive_id": "1SP9-g_DpzUahe_MeS1TiU52eEXBbPtSw",
+      "source_modified": "2026-10-12T03:00:52.156Z",
+      "bytes": 11666,
+      "sha256": "bb76b82b375ad919412fd201186c82950f636753608efd810ac4f32c5655de4b"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__blueprints__ticker-takeover.md",
+      "drive_id": "1iT5dgHBeoGWnFgggf0S5tFse5lUTW6ca",
+      "source_modified": "2026-10-12T03:00:52.155Z",
+      "bytes": 3052,
+      "sha256": "58e7a19b1aca8f3a85affbc24005d1b26ffd9b953053166783afa428f524b5d8"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__blueprints__titlecard-reveal.md",
+      "drive_id": "1TESb7agVzZc4FPKLP7MWfmXYZjIn6SQm",
+      "source_modified": "2026-10-12T03:00:52.155Z",
+      "bytes": 7441,
+      "sha256": "39ebf47ec45da556a03d0521d028924c61a02e0c6d60cd194cc40a236af2f08e"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__blueprints__spatial-pan-stations.md",
+      "drive_id": "1Oexf8Xx2RxR84xaMigy3Si2tUaqk6-OM",
+      "source_modified": "2026-10-12T03:00:52.154Z",
+      "bytes": 4868,
+      "sha256": "6c044d1fbdb057aae80d46efd1e5fa7222ad3e294a249566f36c82221ba02386"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__blueprints__panel-edit-live-sync.md",
+      "drive_id": "1IXkg9ccjjSj4QnPKM8I2Nxs4-bW9YiuW",
+      "source_modified": "2026-10-12T03:00:52.153Z",
+      "bytes": 13394,
+      "sha256": "f864194c9a56ca7936df72b92b4806427437c1a09fab11cd27eb3d0499186644"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__blueprints__prompt-type-submit-generate.md",
+      "drive_id": "1EkZlPy0Q1FqWnUB9HwiV2XIvcMB8qRLi",
+      "source_modified": "2026-10-12T03:00:52.153Z",
+      "bytes": 18636,
+      "sha256": "c94f17f6cccec12c7e8eac246d8b534e7cb4120a3f9b7c52dee049b9d228da1a"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__blueprints__overwhelm-surround.md",
+      "drive_id": "1Jp-66OZvO11e9CqPOvabjpLFzvNIsWKW",
+      "source_modified": "2026-10-12T03:00:52.152Z",
+      "bytes": 6140,
+      "sha256": "e35c5bff4db70574124db06122d79443cc0d3ab8238b52949548c4ba995c5b9e"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__blueprints__logo-assemble-lockup.md",
+      "drive_id": "1Dz0Jlf-F6_gyZY1Im3b8nDpPQcUVbc1l",
+      "source_modified": "2026-10-12T03:00:52.151Z",
+      "bytes": 26609,
+      "sha256": "53bff65b0b4b14566bceb061c71a9a987003273aa1f7ef711dc20c30b812ec55"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__blueprints__kinetic-type-beats.md",
+      "drive_id": "1j7ADE_RlSLvqXDPQB-dRnkG4z3eik6h8",
+      "source_modified": "2026-10-12T03:00:52.150Z",
+      "bytes": 29151,
+      "sha256": "4515b7aa6284898117e8970b76c04fd350ec61c664f5b241deb81c7fdd655d8c"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__blueprints__grid-card-assemble.md",
+      "drive_id": "1HKgnW7XXgh_eQmEHL7xA3eKC_ekR6Ku0",
+      "source_modified": "2026-10-12T03:00:52.150Z",
+      "bytes": 15594,
+      "sha256": "c35349ce839aec1e279ec66b297553c3a9dd1f30fdf64ce8b768c9fafdb4e662"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__blueprints__fixed-anchor-cycle.md",
+      "drive_id": "1iyDbEDLfWSGqDGTpHbi2HLrCtJ2A1OvS",
+      "source_modified": "2026-10-12T03:00:52.149Z",
+      "bytes": 9089,
+      "sha256": "1a49afda275f54c0383e8569b405175f2a2424a74574d935d1fdf3858f50eb89"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__blueprints__device-surface-showcase.md",
+      "drive_id": "1hDR6btPc6duexTG2bfwkXVMToYj2FGXq",
+      "source_modified": "2026-10-12T03:00:52.148Z",
+      "bytes": 17151,
+      "sha256": "83d1c7b91b40ba24de324a14b50d023514c95b6b01a3c5bcf5c066a770e07fc8"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__blueprints__cursor-ui-demo.md",
+      "drive_id": "1PMHey55H7LKednlwyW4XyITfdP-jbq5q",
+      "source_modified": "2026-10-12T03:00:52.147Z",
+      "bytes": 20276,
+      "sha256": "f4403a088e1358b59a21eabc4f5867f53b9179f5a4abf2f28e8e9982ef9fb479"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__blueprints__dataviz-countup.md",
+      "drive_id": "1FnRxrVbYZpWDKWfHTANW6bpJM9yo7uJl",
+      "source_modified": "2026-10-12T03:00:52.147Z",
+      "bytes": 14611,
+      "sha256": "9de0c34b44bcee7dda7371f8597df3421b4e6d46380237f76e815044f02e4a1f"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__blueprints__cta-morph-press.md",
+      "drive_id": "1YwXt7KkSJv9FGXQupezZ3oa0_iZ7LNFv",
+      "source_modified": "2026-10-12T03:00:52.146Z",
+      "bytes": 6407,
+      "sha256": "0f8ee56ff89af960cf2deb1da86994d5bb93186b85e71d601fb5c64b40deaaeb"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__blueprints__constellation-hub.md",
+      "drive_id": "1Z412nnnTYyFG9mosocQcrqKbqe80fpy3",
+      "source_modified": "2026-10-12T03:00:52.145Z",
+      "bytes": 7144,
+      "sha256": "729357480806d512217f46155d7810537f0ab6f7f46ba47b0905e4c3ea4d59c0"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__blueprints__comparison-split.md",
+      "drive_id": "1Fzgzb00tz7fLCDRvk4RP7KGG9NlfmFTI",
+      "source_modified": "2026-10-12T03:00:52.145Z",
+      "bytes": 3316,
+      "sha256": "af2af2ddf86aba21ed8b2016b7b1bd4b1ced52b4ac98f17eff487dca1097599a"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__blueprints__camera-journey.md",
+      "drive_id": "1UI_75_FDOJ5pA6fkkaL1vYT51-aDdJgt",
+      "source_modified": "2026-10-12T03:00:52.144Z",
+      "bytes": 13648,
+      "sha256": "0508b034b4a1c30bf3cd37a25137987c435e7805f3d5a98f85921ce0e6f06d1e"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__blueprints__agent-progress-theater.md",
+      "drive_id": "1Mbv-HRkJ1gQTukfog3yg_8LTETbFIFcM",
+      "source_modified": "2026-10-12T03:00:52.143Z",
+      "bytes": 16091,
+      "sha256": "1939690276ebf41123126e40915c283b69d3b2fd7d563f774c96e6ff6a076d4b"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__adapters__waapi.md",
+      "drive_id": "1ZIyp1cgN966nDc6Xj1BJJbR-yMOZYPF0",
+      "source_modified": "2026-10-12T03:00:52.142Z",
+      "bytes": 4248,
+      "sha256": "3e173bc484cd7daef9022c2c80e8e2091ab73321def54c2a100ddf738ee8d1e0"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__adapters__typegpu.md",
+      "drive_id": "1N9Xz2RBwf5EXoTf0LFQravwVfq8ejb8Q",
+      "source_modified": "2026-10-12T03:00:52.141Z",
+      "bytes": 8230,
+      "sha256": "7b6e8ea6719d257d928adf5d28f4cbc6d98090fb87b0ba30327ad456f1d33be2"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__adapters__three.md",
+      "drive_id": "1Qq4po88Ghj8PeAR6ZRfBHWhms5VuUB3j",
+      "source_modified": "2026-10-12T03:00:52.140Z",
+      "bytes": 8207,
+      "sha256": "e9642b2f5de4cfc211e0adab3b3d185857363b1c091f88a52123c3c61e2f6e1c"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__adapters__lottie.md",
+      "drive_id": "18ltBuOQe2DYP111i87bczNey2oJHk1kd",
+      "source_modified": "2026-10-12T03:00:52.139Z",
+      "bytes": 6181,
+      "sha256": "16da66c43a511b261f6a249c56c0c0bc3cdb76632e20952aa289e32803565d42"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__adapters__html-in-canvas-patterns.md",
+      "drive_id": "1sSHbkuBpCAOIJQyJ-qth5CqjKaSFY4LO",
+      "source_modified": "2026-10-12T03:00:52.138Z",
+      "bytes": 17166,
+      "sha256": "5e7c801c65d8f34f38c535bc9ed6808ebb6f475f166347bf71a453eb87614e9a"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__adapters__gsap.md",
+      "drive_id": "1z5jsjdQKryeZu1bizujR9JXA6UHXuHfK",
+      "source_modified": "2026-10-12T03:00:52.137Z",
+      "bytes": 7713,
+      "sha256": "53854c37fa8be925c005a6a4e21a1991db850089042d81cd4c7ebf5def44b028"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__adapters__gsap-transforms-and-perf.md",
+      "drive_id": "14MtWS7rxSW2SCADCKNpCNgakIaLzOFeR",
+      "source_modified": "2026-10-12T03:00:52.136Z",
+      "bytes": 8552,
+      "sha256": "a73c1ea0af7dd782936dd5726e0ea6c1cdc98126c89c6aec4370624f4622ee67"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__adapters__gsap-timeline-and-labels.md",
+      "drive_id": "1Eunc9J_bXgOPFBuyo-2fthx9JAvc_tXc",
+      "source_modified": "2026-10-12T03:00:52.136Z",
+      "bytes": 3791,
+      "sha256": "41263d8b42369a9799d7476e384acb59cce563672994c9f659eb3599e5042578"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__adapters__gsap-easing-and-stagger.md",
+      "drive_id": "1fwKVWxo6tV14r3aeU_Uhx9xQL8u99IJy",
+      "source_modified": "2026-10-12T03:00:52.135Z",
+      "bytes": 13270,
+      "sha256": "825e8d2524ad166d8c29d59d72caa9e81c3a0368bcfbe059c86371a64d3494d0"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__adapters__css-animations.md",
+      "drive_id": "1cSrg4cPSIiTQE2N2Xkojp15tqiTxJPf9",
+      "source_modified": "2026-10-12T03:00:52.134Z",
+      "bytes": 5407,
+      "sha256": "52a1a7fd8702cf8721bbe63e324f0492f3966c5b092925f5135839132a999012"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__adapters__animejs.md",
+      "drive_id": "1dBFPqgSKeKdjuGlFWkB8jMEg3AvEN_Pk",
+      "source_modified": "2026-10-12T03:00:52.133Z",
+      "bytes": 6224,
+      "sha256": "ade4ebfdfe4bab62ef98ec4ebc83b84f0792faad5993ff5d398d67d1a499de93"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__adapters__animate-text.md",
+      "drive_id": "1GwcmmPrJ2iQoW7qpV_LiaRAw3SWuhCZV",
+      "source_modified": "2026-10-12T03:00:52.133Z",
+      "bytes": 4666,
+      "sha256": "68dd9cc7f78dadff6165348a605fac2c63d3e20503897e352ce287b3695a0498"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes-animation__SKILL.md",
+      "drive_id": "1zeZoHgEeLMcCdIu6cZj_J3KuMX3mlb0G",
+      "source_modified": "2026-10-12T03:00:52.132Z",
+      "bytes": 8481,
+      "sha256": "faba50314d531d656cc70ca9c1539a1b37618dc418f3f93ee3131b6174034078"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes__references__workflow-catalog.md",
+      "drive_id": "10XLBAs1PggxPdGgCt7fSt3R9-H9-s8cn",
+      "source_modified": "2026-10-12T03:00:52.131Z",
+      "bytes": 458,
+      "sha256": "5f3e684ca26bc811c3c124e39633fbb685a410de1563f989b8a8cadab2680d8a"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes__references__subagent-dispatch.md",
+      "drive_id": "1vIKLqeIAk1FtGYpAwcFJSPy4WF5ADr3Y",
+      "source_modified": "2026-10-12T03:00:52.130Z",
+      "bytes": 3677,
+      "sha256": "979074196889d149fff53afebd6604258dbab777951f455c9a831ffb8576cab7"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes__references__storyboard-format.md",
+      "drive_id": "16mhMq7Rf5dnPgUaUeybctqDH1Aeukm5B",
+      "source_modified": "2026-10-12T03:00:52.130Z",
+      "bytes": 5781,
+      "sha256": "9005e7d4ca6741d88433021aa626dd92aec36cb82a5295bf0f68440ec0f66f9b"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes__references__skill-lifecycle.md",
+      "drive_id": "1DB3uv3yexrMu7_6zM-W3RFRWER92i72g",
+      "source_modified": "2026-10-12T03:00:52.129Z",
+      "bytes": 2137,
+      "sha256": "97e9fccc174ab0b802bfc88eb31226935068b0a79d90536efec5a1fb339f5d26"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes__references__script-format.md",
+      "drive_id": "1Cj1FCyGopItrvKT_Cu5EHYk7-cumPZS3",
+      "source_modified": "2026-10-12T03:00:52.128Z",
+      "bytes": 2778,
+      "sha256": "7637028d866d3d4a21d0b7934d6db4f73585a28c28da060d00cecc39c47e2e3d"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes__references__routes__talking-head-recut.md",
+      "drive_id": "1It8IuehC6ofdAOhxlEqJ_eled4xbmRcl",
+      "source_modified": "2026-10-12T03:00:52.127Z",
+      "bytes": 765,
+      "sha256": "d027e04e427c358ca0182e55b0449c0256ad7828b13b6e760d64a60de01eb0cc"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes__references__routes__slideshow.md",
+      "drive_id": "1gGhsOnliS_Y1WsWHAE5SgxkXUCfCZFlA",
+      "source_modified": "2026-10-12T03:00:52.126Z",
+      "bytes": 1081,
+      "sha256": "8f81d2f8102dd257fd3b7730edbda618c2ec8e0c180e4494e89592aa7cc5cc5b"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes__references__routes__remotion-to-hyperframes.md",
+      "drive_id": "1DVkPHPw6AMqK2203_aOUMLGmLZha8JKV",
+      "source_modified": "2026-10-12T03:00:52.126Z",
+      "bytes": 545,
+      "sha256": "86cffe564eb4e92b12375f558aeb5d30e271f97416d3c5f32ee77bcf6b14e35c"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes__references__routes__product-launch-video.md",
+      "drive_id": "1UQyKNQn2P50oucz6uR5S2zd8EzXs9Hd3",
+      "source_modified": "2026-10-12T03:00:52.125Z",
+      "bytes": 2006,
+      "sha256": "ed2cba0be42a1e34361f65f7c633110935ef53c47933584e7b9ffc2ff07c366f"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes__references__routes__pr-to-video.md",
+      "drive_id": "13Bc7aZ1I3JCKXDcbworRBKFqEXE9xm2I",
+      "source_modified": "2026-10-12T03:00:52.124Z",
+      "bytes": 2057,
+      "sha256": "179d31b24940f6ee80d833d03e7b9b4c012cede7cbc07f88b460637239d66a57"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes__references__routes__music-to-video.md",
+      "drive_id": "1JE8VOZrN9BXjUQ-kOaT1WNzLCVBlz1bi",
+      "source_modified": "2026-10-12T03:00:52.124Z",
+      "bytes": 1114,
+      "sha256": "f0b8c86130ea1167f9c3116cae5b3440f86d184c6264cad1cb2dad0675e09dc2"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes__references__routes__motion-graphics.md",
+      "drive_id": "1u93n7-ZMfWzyCt9NiPukHGWfgqol-bDe",
+      "source_modified": "2026-10-12T03:00:52.123Z",
+      "bytes": 864,
+      "sha256": "b0388400c4da484ea383c6938df47db7d67d9194aa0ccb3e03c4e53d8691fb7c"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes__references__routes__faceless-explainer.md",
+      "drive_id": "1Bwy9H5H6h03AX3NVVRczz3qSENYPrtQR",
+      "source_modified": "2026-10-12T03:00:52.122Z",
+      "bytes": 1020,
+      "sha256": "cd76f75e109e11c1bbda483b46791acd98103184a7102eb0365f966abec6b037"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes__references__routes__general-video.md",
+      "drive_id": "1cU6q28tmkGAk0u1yl3YB7VbwURuxNQIY",
+      "source_modified": "2026-10-12T03:00:52.122Z",
+      "bytes": 1374,
+      "sha256": "dda0e1559cb57e5ba8e589f0fa6eedadbef78030bd2dccb4172b3b496da9fef1"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes__references__routes__embedded-captions.md",
+      "drive_id": "1k65a-HzeNr4ce8wl1qrqTDExn5eOxZuJ",
+      "source_modified": "2026-10-12T03:00:52.121Z",
+      "bytes": 739,
+      "sha256": "4e2f83a54caad625ae0dc4150b619f8b5afd65410965f53f6a40c430253207d1"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes__references__route-briefs.md",
+      "drive_id": "1UxLyud7WhQMB3KI8DznMlL_nX0ho_j5b",
+      "source_modified": "2026-10-12T03:00:52.120Z",
+      "bytes": 579,
+      "sha256": "67f38ec0c8b4e009464657cfd87d886f46b24629fca91571d9efaa1dbe5280d0"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes__references__review-loop.md",
+      "drive_id": "1s5StyKULjkvM8RFBnrnTClMfly9daydZ",
+      "source_modified": "2026-10-12T03:00:52.120Z",
+      "bytes": 6448,
+      "sha256": "84e8ef3df646b80ece6cca9da8256ab89d57a992d2ed9585f90ec2a15f27cfa1"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes__references__production-loop.md",
+      "drive_id": "11BECF2A5q6t07Isuc7d3_jX_NNz5HaIc",
+      "source_modified": "2026-10-12T03:00:52.119Z",
+      "bytes": 8188,
+      "sha256": "15020c02cc399e17c23ab461d879ea225caa39eb93381a4a9c18080c8b84bcc1"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes__references__plugin-installation.md",
+      "drive_id": "1YlJZZ9Cypi54HDAoY3-dUMz-rp8e-tB7",
+      "source_modified": "2026-10-12T03:00:52.118Z",
+      "bytes": 2715,
+      "sha256": "8f5759c30a7cca889c2d950d8cec587de558fe193b62f20e2d399f3931d291ff"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes__references__pitch-round.md",
+      "drive_id": "1mSz7o0fVEv1aDLG6vgNANuMqiqR1AFxF",
+      "source_modified": "2026-10-12T03:00:52.118Z",
+      "bytes": 5550,
+      "sha256": "2d9ceb09ff7be704ebe47b64152b8f6d5dd611925d405e9f87f47f24dd65775c"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes__references__intent-interview.md",
+      "drive_id": "1Yv62kcxi6U6KkYnMw2wYY1xnmQquGRtb",
+      "source_modified": "2026-10-12T03:00:52.117Z",
+      "bytes": 14143,
+      "sha256": "c67ccb9a11615b87e4d3eca3b9cbcbf09aab4e29c2f46b3f765174299576bed4"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes__references__frame-worker-core.md",
+      "drive_id": "1oQTdGfjkOyWDxIr-BVq02V_QQeePj4mv",
+      "source_modified": "2026-10-12T03:00:52.116Z",
+      "bytes": 16832,
+      "sha256": "dcfdf62b928bd09e369415e40a70005d828b6bfbb5759750267d41be40c684b9"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes__references__brief-format.md",
+      "drive_id": "1GQ_GgAcVhYQGh56Az0CzvDIa4vlqema5",
+      "source_modified": "2026-10-12T03:00:52.115Z",
+      "bytes": 7090,
+      "sha256": "1e4f2f67989052fedd56fd1211e7a8c27f70aa5dba14ccd18e23cbd44d825adb"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes__references__capability-menu.md",
+      "drive_id": "15iW9hnpMSRB1HqJn3oIOz7w5qiqZRnUo",
+      "source_modified": "2026-10-12T03:00:52.115Z",
+      "bytes": 15611,
+      "sha256": "71d0f7ac7348317169fdafdc354b45198231a9e8746361481ccfa3aefe8e1a43"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes__references__brief-contract.md",
+      "drive_id": "1TjcDU2KYR85RfpzsqBv0Gtzae0tTqU5E",
+      "source_modified": "2026-10-12T03:00:52.114Z",
+      "bytes": 11906,
+      "sha256": "0b934224161ef3321d635ad62ede6a7d9d62696cbca66d4b56b9e235248702cc"
+    },
+    {
+      "path": "flat/FRAMEWORK__hyperframes__SKILL.md",
+      "drive_id": "1TbQ0gEXAn_zmYquD89D8k0-5MXDOx2y_",
+      "source_modified": "2026-10-12T03:00:52.113Z",
+      "bytes": 21086,
+      "sha256": "aead2a3708512aab6c5caf9a382714b61687975978dd4f94d089b00f38e73756"
+    },
+    {
+      "path": "flat/FRAMEWORK__general-video__sub-agents__frame-worker.md",
+      "drive_id": "1q2xWXcVWZsFWVkQ1qG4Rf8LKYfQu5XAi",
+      "source_modified": "2026-10-12T03:00:52.112Z",
+      "bytes": 2304,
+      "sha256": "cafff87f4f1fa6c5a047d621b591c25b75a3282a5020a96868803094bd084d2e"
+    },
+    {
+      "path": "flat/FRAMEWORK__general-video__SKILL.md",
+      "drive_id": "1VF0mQY1ZED1Nga0C6GsMl-049bJrve8r",
+      "source_modified": "2026-10-12T03:00:52.111Z",
+      "bytes": 21551,
+      "sha256": "527bdeb47dee8a967a20ac06d7003b9ea3d45309b08d401d0b024383c13f3849"
+    },
+    {
+      "path": "flat/FRAMEWORK__embedded-captions__themes__README.md",
+      "drive_id": "1lEDfOPW82SltH3oEbmQnYhTxLQtLuk2a",
+      "source_modified": "2026-10-12T03:00:52.110Z",
+      "bytes": 84288,
+      "sha256": "5ce273a6baa1997a933fef31994b1461ae6d4d78c7532d65c2770d3fed32d7b0"
+    },
+    {
+      "path": "flat/FRAMEWORK__embedded-captions__references__typographic-moves.md",
+      "drive_id": "1WB7mP0pS9VEc1yc11SbI5yupaFQ78qkE",
+      "source_modified": "2026-10-12T03:00:52.108Z",
+      "bytes": 8655,
+      "sha256": "1207b96dc851098109534d2eeeb307f04ba96a601d5db10edeb0ef22d8097aa6"
+    },
+    {
+      "path": "flat/FRAMEWORK__embedded-captions__references__typography-presets.md",
+      "drive_id": "1Lw8IS2chqLdAIGCIXxYOJ0rrg08jJa3B",
+      "source_modified": "2026-10-12T03:00:52.108Z",
+      "bytes": 4756,
+      "sha256": "664bb4217d75f424c2be89a93a9f9ecc9ea6b4fc36c8e95693e34c74b4030808"
+    },
+    {
+      "path": "flat/FRAMEWORK__embedded-captions__references__scene-types.md",
+      "drive_id": "1F7ivylbzVFaWvFR-d6aA85k8449P0nlz",
+      "source_modified": "2026-10-12T03:00:52.107Z",
+      "bytes": 6257,
+      "sha256": "67b31733f3d81ef84be2408707822e1d7c75fb9fb16df8b1f51f809f1478f520"
+    },
+    {
+      "path": "flat/FRAMEWORK__embedded-captions__references__reference-bar.md",
+      "drive_id": "16drmV_NVyXWvqo9NcRIJPuKRIaVuU8pi",
+      "source_modified": "2026-10-12T03:00:52.106Z",
+      "bytes": 2689,
+      "sha256": "c9b1051b2bf97066832c5071c596d7981e850cff56ed736335a943a0e98d57c1"
+    },
+    {
+      "path": "flat/FRAMEWORK__embedded-captions__references__rail.md",
+      "drive_id": "1A3M-rua3ncy48puF3oBKgLIey46uf4AH",
+      "source_modified": "2026-10-12T03:00:52.105Z",
+      "bytes": 4702,
+      "sha256": "84e1ed5bacc19453ed2615299607c7bb34ae137a8c32fbbe32462070c90e8bda"
+    },
+    {
+      "path": "flat/FRAMEWORK__embedded-captions__references__motion-vocabulary.md",
+      "drive_id": "17xrMCJMXnpAuW1SukpA3a5LqSFwFvFNK",
+      "source_modified": "2026-10-12T03:00:52.104Z",
+      "bytes": 5609,
+      "sha256": "a8b77c5d2aa8bcf5a1207f12521a9bd912e2467bb6eb64977e3f752e078572f7"
+    },
+    {
+      "path": "flat/FRAMEWORK__embedded-captions__references__layout-heuristics.md",
+      "drive_id": "1hMhtEoOR6Qy-Wl752Wp1uKzJ1yO2s0jx",
+      "source_modified": "2026-10-12T03:00:52.103Z",
+      "bytes": 13202,
+      "sha256": "d08fbbdf3ee270dd57c022f4750e11cf18acc178fe983d121c91bb0adbdeb950"
+    },
+    {
+      "path": "flat/FRAMEWORK__embedded-captions__references__failure-modes.md",
+      "drive_id": "1H4YyDw-K6WlvZubFjGt8Nv83Z9rbl1Xx",
+      "source_modified": "2026-10-12T03:00:52.103Z",
+      "bytes": 11429,
+      "sha256": "2534cbf0277f3c042d1ed308c61bedfd976af8fa8a79821f627bba10d3f901cb"
+    },
+    {
+      "path": "flat/FRAMEWORK__embedded-captions__references__direction-catalog.md",
+      "drive_id": "1QJRYEMUMto0mQdVD-8oxEj1TBtqYJT-1",
+      "source_modified": "2026-10-12T03:00:52.102Z",
+      "bytes": 7855,
+      "sha256": "f7facf4ea32f2f06494937c9b4f87a0ccde829eedb88cfd7b3cbbb7533928b6a"
+    },
+    {
+      "path": "flat/FRAMEWORK__embedded-captions__references__composition-craft.md",
+      "drive_id": "1Ism3IN6iTPBVJ_5UZZ-gI8uJAyxwerRU",
+      "source_modified": "2026-10-12T03:00:52.101Z",
+      "bytes": 55986,
+      "sha256": "ccc0f0f67f5971a2abce01d65f8e5d846e69a0791e7c646445e6ea3eb784e4e1"
+    },
+    {
+      "path": "flat/FRAMEWORK__embedded-captions__references__caption-grouping.md",
+      "drive_id": "1R1saDkwL9PFHdnrdnZPCWH5WMQdpZkUX",
+      "source_modified": "2026-10-12T03:00:52.100Z",
+      "bytes": 4283,
+      "sha256": "f662de51945190b000ff3fa1f4e5777e38b405209272030214b0f26fb5ed3ab7"
+    },
+    {
+      "path": "flat/FRAMEWORK__embedded-captions__references__bespoke-vs-presets.md",
+      "drive_id": "1RfdmY-glqgGRCe-Oty6hxq8C0dHe4Gxj",
+      "source_modified": "2026-10-12T03:00:52.099Z",
+      "bytes": 9328,
+      "sha256": "d68106bf71c62b7d2b61ac0eb2f1a25113793cd4636a63d72ac2d983dc8279f1"
+    },
+    {
+      "path": "flat/FRAMEWORK__embedded-captions__references__anti-patterns.md",
+      "drive_id": "1TLh2YAjrO-6Qud-uuVLLKKigQZbrZQFk",
+      "source_modified": "2026-10-12T03:00:52.098Z",
+      "bytes": 12233,
+      "sha256": "bf0f448399159e5a99117c1ee2a9eb87f89ce537a267fe2b15428dd3b0817b2e"
+    },
+    {
+      "path": "flat/FRAMEWORK__embedded-captions__references__aesthetic-principles.md",
+      "drive_id": "1uMo-zL-YtKu4qnG5OPmZJbWPgK21BVBG",
+      "source_modified": "2026-10-12T03:00:52.097Z",
+      "bytes": 7779,
+      "sha256": "87a139c2da38b589f34631e4865e3017300306a6e893c2e3fc5829e5ef5b954d"
+    },
+    {
+      "path": "flat/FRAMEWORK__embedded-captions__modes__standard___anatomy.md",
+      "drive_id": "1wlAzz0SEx5uGpYUMUpAm3-q8U4f-BDBz",
+      "source_modified": "2026-10-12T03:00:52.096Z",
+      "bytes": 11200,
+      "sha256": "b0afc2724aa965ca93b106166544ed1ba35fc1418be6fb42712e70f3c68353cc"
+    },
+    {
+      "path": "flat/FRAMEWORK__embedded-captions__modes__standard___motion.md",
+      "drive_id": "1Apv8NrmeMBWJDo9HydWtOwgsybJKIBxU",
+      "source_modified": "2026-10-12T03:00:52.096Z",
+      "bytes": 18518,
+      "sha256": "b5b4a7abc68a0da2dbdc60d45eb5ae6565f08774f77df63279be244741ad1ce3"
+    },
+    {
+      "path": "flat/FRAMEWORK__embedded-captions__modes__cinematic__cinematic-cream__spec.md",
+      "drive_id": "1s2_18N6x2JBk5HKL-lfkN7P5C4_4msCD",
+      "source_modified": "2026-10-12T03:00:52.095Z",
+      "bytes": 1139,
+      "sha256": "ce24dfae893e7076b4b1e030dcd4c1d29cc2b833e3761044a000f35a69c91e88"
+    },
+    {
+      "path": "flat/FRAMEWORK__embedded-captions__modes__cinematic___archive__portrait-header__spec.md",
+      "drive_id": "1FnHT9tOv3VEOvS-IXsoqeB63JiAxHftR",
+      "source_modified": "2026-10-12T03:00:52.094Z",
+      "bytes": 3621,
+      "sha256": "523f0a815c92f3948d646cc65c0f5333e4981953e4eedc4f915f28b6cd45e958"
+    },
+    {
+      "path": "flat/FRAMEWORK__embedded-captions__modes__cinematic___archive__memory-wall__spec.md",
+      "drive_id": "1eN1qsIoJX9bXTi7Dh2597NQVQlWgC_c9",
+      "source_modified": "2026-10-12T03:00:52.093Z",
+      "bytes": 5878,
+      "sha256": "50a28fbb6cb82e82c788ec741dd2503beb1636a8215bcc26fe751244488af952"
+    },
+    {
+      "path": "flat/FRAMEWORK__embedded-captions__modes__cinematic___archive__champion__spec.md",
+      "drive_id": "1tBr_F5V9l58aQsxoCnVEZA3UgdKKMRyB",
+      "source_modified": "2026-10-12T03:00:52.093Z",
+      "bytes": 4718,
+      "sha256": "741bfeecd94f18172ac379dda857ec93892687b18a28c570fc2d7d5909dd531a"
+    },
+    {
+      "path": "flat/FRAMEWORK__embedded-captions__modes__cinematic__README.md",
+      "drive_id": "1Cwr9diqILryp1GTsJt3RVHElaq-_e9Qy",
+      "source_modified": "2026-10-12T03:00:52.092Z",
+      "bytes": 2777,
+      "sha256": "16941c6e4046c84c2f7ab76f76887e9ac945c546d179bbac0ad0f91a23e31694"
+    },
+    {
+      "path": "flat/FRAMEWORK__embedded-captions__dna__README.md",
+      "drive_id": "1UG__C0yIkhIFnyqBJeXRcy65f7YluayL",
+      "source_modified": "2026-10-12T03:00:52.091Z",
+      "bytes": 12207,
+      "sha256": "3e0dcb20140a8d73ea166dfde7af27f5d4cd492fd9ad2805c5c8dd064ba58f1c"
+    },
+    {
+      "path": "flat/FRAMEWORK__embedded-captions__SKILL.md",
+      "drive_id": "1Yqo-MFyUbCHkavlAvcSybuVShdtKBcK-",
+      "source_modified": "2026-10-12T03:00:52.090Z",
+      "bytes": 35607,
+      "sha256": "65f0c988c68f4d210fe87d130d1e595daed20cfd4bbbbd1640f2a2e99d9f8b1b"
+    },
+    {
+      "path": "flat/FRAMEWORK__embedded-captions__CATALOG.md",
+      "drive_id": "1DVSyq2CKZiTdVCdlrI_KzIDJUkF5fiHF",
+      "source_modified": "2026-10-12T03:00:52.089Z",
+      "bytes": 54574,
+      "sha256": "f1eb0a6781980862fac9bbfe06be5bc9f70d5fb9c493aa159c82673b33379585"
+    },
+    {
+      "path": "flat/CURRENT_RULES.md",
+      "drive_id": "1HWrqGHwgQ4CQZT8hXasCoNKc3_WZrcEO",
+      "source_modified": "2026-10-12T03:00:52.088Z",
+      "bytes": 5540,
+      "sha256": "11491ad3b0304fada9bf12e1cd6e4e54d03b3d554601486a111d41006e817692"
+    },
+    {
+      "path": "flat/WORKSPACE_AGENTS.md",
+      "drive_id": "18wYST4bGMn84thfIGYdTq4M-auWwetMb",
+      "source_modified": "2026-10-12T03:00:52.087Z",
+      "bytes": 1748,
+      "sha256": "58a02168581d2dbd35b9ae90556c4f3cafc95cac7a22d82585ceb4e0b5cdb65f"
+    },
+    {
+      "path": "flat/STORAGE_POLICY.md",
+      "drive_id": "12lqf1CK4J_0_XIdklVPlo27UNpftQUro",
+      "source_modified": "2026-10-12T03:00:52.086Z",
+      "bytes": 1241,
+      "sha256": "33096655b89b17ea87c6024d8c1d7f603741ec15c8204ded39a99081c9ae84f2"
+    },
+    {
+      "path": "flat/SPLITPLATE_YOUTUBE_VIDEO_RULES.md",
+      "drive_id": "1pA6lOfWcjV7wwSBq7TawdJCuuj-b24nl",
+      "source_modified": "2026-10-12T03:00:52.085Z",
+      "bytes": 5718,
+      "sha256": "f143c779fc3437bffa2ad749e69674cc8822d7cb62e8b68bf1dcffc99f8b627c"
+    },
+    {
+      "path": "flat/SPLITPLATE_VIDEO_QA_CHECKLIST.md",
+      "drive_id": "15WRvD6WmTp-6zvFaGEC5TiKWun1IvklP",
+      "source_modified": "2026-10-12T03:00:52.085Z",
+      "bytes": 6052,
+      "sha256": "57ddd6d459ce539ff4a8699af0e3a25e6f2d1bb75f499343a31d2865d0ad25d4"
+    },
+    {
+      "path": "flat/SPLITPLATE_TIKTOK_EDIT_RULES.md",
+      "drive_id": "1JiivSU1ll1-3iCa6KU9PM8g0hYv86ba1",
+      "source_modified": "2026-10-12T03:00:52.084Z",
+      "bytes": 60915,
+      "sha256": "5ceae43f1cf2414f7fb7d25ca05e2ed9d738b2c84c7678268edb70ac197696d0"
+    },
+    {
+      "path": "flat/SPLITPLATE_PRODUCTION_RULES.md",
+      "drive_id": "1zaPo10Y5WQt5lziA8ews3hLIqI97FBHP",
+      "source_modified": "2026-10-12T03:00:52.082Z",
+      "bytes": 27923,
+      "sha256": "33b0495d4511a39c2058da65ce907fe48aca7f3408aca225e2bc630c84bf5b0c"
+    },
+    {
+      "path": "flat/SPLITPLATE_THUMBNAIL_PLAYBOOK.md",
+      "drive_id": "1PEZ1eK3m7QLU0hIIbZhPIT2n2Bf-Yu6K",
+      "source_modified": "2026-10-12T03:00:52.082Z",
+      "bytes": 9709,
+      "sha256": "295aa164f727694c70eb7eed7d4d72649cb9e5342b9f7e4e82403273d021be47"
+    },
+    {
+      "path": "flat/SNACK_BOX_SERIES_RULES.md",
+      "drive_id": "10QQNr5b7u78bLmEJQeG6obbLgM9rMQ-6",
+      "source_modified": "2026-10-12T03:00:52.080Z",
+      "bytes": 3236,
+      "sha256": "48c4e79f779a8c85e119cfd3519e770ca9f60aad38e294e61f94a01cc71a736c"
+    },
+    {
+      "path": "flat/REELRISE_LEARNING_MODEL.md",
+      "drive_id": "1-T-cpgkT6c_CZ6tUYwKYbcIA7ggzdWq-",
+      "source_modified": "2026-10-12T03:00:52.078Z",
+      "bytes": 39087,
+      "sha256": "d18dc0a41773900d006c056c72f5977d47ddd38e0f850380cb09f19e9d6da2c4"
+    },
+    {
+      "path": "flat/REAL_RISE_REVIEWER.md",
+      "drive_id": "1rNfISQalclkaiNKea5VqmLBEVeiSw7Ng",
+      "source_modified": "2026-10-12T03:00:52.077Z",
+      "bytes": 23149,
+      "sha256": "17ee5555b6a7dc3e923679599fd12ed481187b9d5954ab22187433951149f268"
+    },
+    {
+      "path": "flat/MUSIC_BEDS.md",
+      "drive_id": "1iPhmIucSI0PLBx7YozbsEGBHwMIdYjsZ",
+      "source_modified": "2026-10-12T03:00:52.077Z",
+      "bytes": 5788,
+      "sha256": "43e8bf1379c64e4274d3614482e19410791b15c4ad1994a6fec983d821eb9f0f"
+    },
+    {
+      "path": "flat/HYPERFRAMES_STYLE_SYSTEM.md",
+      "drive_id": "1acxgUTNDZAOnHXGPwtIQEpM60lJxASxm",
+      "source_modified": "2026-10-12T03:00:52.076Z",
+      "bytes": 15930,
+      "sha256": "c03a3def9aa7fc3c764503e10c7f2f17e46ece89f222fd12915ffc6df4b7cc04"
+    },
+    {
+      "path": "flat/CRUMBL_CREAMI_CUT_SERIES_RULES.md",
+      "drive_id": "1h1r6fn9o5In3WNSqzQJmrobMTLPqqCnQ",
+      "source_modified": "2026-10-12T03:00:52.075Z",
+      "bytes": 7977,
+      "sha256": "0e02b59dab423bd0031338b1479fb4ad18e04ee49fb7c1ebc1affabcd97746c3"
+    }
+  ]
+}

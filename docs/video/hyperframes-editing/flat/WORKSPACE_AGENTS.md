@@ -1,0 +1,8 @@
+# The Split Plate video workspace
+
+- Start every Split Plate video task with `hyperframe-editing-instructions/README.md` and `hyperframe-editing-instructions/CURRENT_RULES.md`. The hub gathers our live editing instructions; its current user decisions resolve obsolete grading, episode-numbering, duration, and cover-tail examples. Continue reading the applicable authoritative documents and installed HyperFrames skills it routes to.
+- Before producing or revising a short-form video, read `SPLITPLATE_PRODUCTION_RULES.md` and `SPLITPLATE_TIKTOK_EDIT_RULES.md`.
+- For every publishable cut, copy and complete `SPLITPLATE_VIDEO_QA_CHECKLIST.md` as a project `QA.md` before handing over a final Studio preview. A technical check does not replace sensory-hook or story QA.
+- Before generating, choosing, revising, or delivering any video thumbnail/cover, read `SPLITPLATE_THUMBNAIL_PLAYBOOK.md` in full. It is authoritative if an older cover example or duplicated rule conflicts.
+- Apply new cover rules to future work; do not silently rebuild an already approved video or cover.
+- **Mandatory footage-ledger gate:** before assigning source ranges to any new raw-footage video, open the [`UNUSED_CLIP_INVENTORY` tab](https://docs.google.com/spreadsheets/d/1xI4g9JQ47YdpDQFTHweuY7s53PHuK3cTPvNEz-FK0LM/edit?gid=1047031719#gid=1047031719) and check the recipe/series and source files. Maintain a local source-time allocation map across all companion cuts. Export genuine unused reserve clips, add their `UC-####` rows to that tab, and read the rows back before marking any package `Ready` or delivering it. If no safe reserve exists, record the explicit reason and leave the package incomplete or request Tushar's exception; never invent an unused row.

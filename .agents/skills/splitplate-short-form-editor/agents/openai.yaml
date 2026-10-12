@@ -1,0 +1,4 @@
+interface:
+  display_name: "Split Plate Short-Form Editor"
+  short_description: "Edit recipe shorts with Split Plate house rules"
+  default_prompt: "Use $splitplate-short-form-editor to edit or review my recipe short using the current house rules."
