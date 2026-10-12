@@ -40,6 +40,8 @@ Preserve natural food and skin color. Inspect source transfer/primaries/bit dept
 
 Rebuild the final master from original media or verified full-quality intermediates; do not upscale the review proxy as the master. Honor rotation once. Test a short representative export before an expensive full render. Record resolution, frame rate, crop and color decisions in the project, with the user's requested settings distinguished from the source characteristics.
 
+Confirmed October 12, 2026: for Tushar's Atto footage recorded at 4K, 16:9 and 60 fps, preserve 3840×2160, landscape 16:9 and the original approximately 59.94/60 fps in future long-form masters unless he requests a different delivery. Do not silently reduce it to 30 fps. Match the actual measured source rate; slow-motion treatment is a separate editing choice. Resolution and frame-rate preservation do not imply HDR recording or brighter grading.
+
 Inspect moving encoded picture and sound at the opening, every important action, chapter transitions, payoff and end. Verify full decode, dimensions, duration, pixel format, color tags, caption timing, speech intelligibility and headroom. Check crops through each selected range. A technical pass or contact sheet alone does not establish audiovisual quality. HDR screenshots and ordinary SDR playback do not prove actual HDR display behavior; review an intentional SDR companion and HDR playback where available.
 
 For SDR-derived HDR brightness checks and a complete YouTube upload package, read [Export and publishing lessons](references/export-and-publishing.md). Compare the platform's actual playback with the source; metadata and 4K availability alone do not prove brightness or HDR-display quality.
