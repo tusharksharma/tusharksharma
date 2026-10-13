@@ -82,6 +82,16 @@ The correction replaces 16:05 as the target; earlier samples around that point s
 
 Transferable interpretation: the conversation evokes a recognizable character/persona, the matching clip makes the reference concrete, and the edit lets the punchline play rather than treating it as decorative B-roll. Borrow this setup/payoff relationship with original or usable assets and Tushar's actual conversational context.
 
+### Agent owns clip discovery and insertion
+
+Confirmed by Tushar on October 12, 2026: finding relevant reference clips and inserting them is the editing agent's responsibility. Do not ask Tushar to supply clips, identify a meme, or research an asset as a routine production prerequisite.
+
+During each long-form edit, identify promising references in the recorded conversation or approved script, search for matching assets, inspect the actual candidate clip in context, select the part that delivers the joke, and insert it into the editable timeline. Carry the work through preview and encoded audiovisual QA. A suggestion list or saved source link alone does not complete this responsibility.
+
+Use editorial judgment to select moments that earn an insert; discovery is part of the workflow, but an irrelevant cutaway is not compulsory. Search for the meaning of the reference and the required reaction, not just the exact spoken phrase. Prefer a matching usable clip; if unavailable, find another relevant asset or make an original visual interpretation within the project's authorized tools and budget. Do not default to handing asset discovery back to Tushar.
+
+Record candidates and the selected asset's source, usage basis, time range and purpose with the project. Follow existing asset-use requirements and spending caps. Include the insert in the normal finished-preview review rather than creating a separate approval gate for every found clip. Ask only when a material creative ambiguity or authorization gap cannot be resolved from the project; continue all independent editing work.
+
 ### Editing instructions
 
 - During the speech/script pass, flag naturally occurring comparisons, recognizable references, or small incongruities that could earn a visual punchline. Work from Tushar's real conversation or reviewed first-person script. Do not write a forced reference into every chapter.
