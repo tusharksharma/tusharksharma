@@ -22,6 +22,10 @@ For an actual HyperFrames project, read `FRAMEWORK__hyperframes__SKILL.md`, resu
 5. Write narration against source-backed actions and chapter timings. Explain what is happening, why consequential steps matter when the reason is known, and how the confirmed household story fits. Let real sound breathe. Do not read the same ingredient list repeatedly or describe an action at the wrong point in the film.
 6. Present the exact script, emotional arc and closing action before paid voice generation. Carry forward explicit approval for unchanged text. Keep unconfirmed claims out of the approved read; do not substitute a fictional story merely to fill the voice track.
 
+## Viewer engagement
+
+For future films, read [Long-form engagement](references/long-form-engagement.md) before planning the opening and picture edit. Apply the confirmed direction to improve engagement through a food-first promise, useful reveals, genuine personal moments and a clear payoff. Use the reference's graphics and sound options selectively; its Sam the Cooking Guy review is sampled visual/caption evidence with audio and motion limits, not a fully watched or measured retention study. Preserve The Split Plate's own voice and current picture/export rules.
+
 ## Narration and credits
 
 For Tushar's personal films, Marcus is the delivery voice and Tushar is the storyteller. Write in Tushar's first person, tied to what he is doing and the confirmed life context behind the decision. Do not turn Marcus into a separate host describing Tushar from outside the scene.
