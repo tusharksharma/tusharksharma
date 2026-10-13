@@ -1,0 +1,56 @@
+---
+name: splitplate-youtube-uploader
+description: Prepare, upload, publish or schedule approved Split Plate YouTube long-form videos and Shorts; verify the channel, metadata, captions, processing and live or scheduled result. Maintain reusable upload rules. Rules-only requests do not upload or publish.
+---
+
+# Split Plate YouTube uploader
+
+## Scope and prerequisites
+
+Own the complete authorized YouTube upload, rather than handing Tushar a checklist. Use available supported connectors or the actual YouTube Studio browser flow. This skill is reusable instructions, not an installed background uploader, account credential or separate running agent.
+
+Locate the current tusharksharma/tusharksharma checkout and read AGENTS.md and docs/content-growth-plan.md. For long-form packages, read ../splitplate-long-form-editor/references/export-and-publishing.md and the editor's current delivery rules. For Shorts, use the short-form editor's approved final export and format rules. Do not replace approved media with a proxy or silently render a new version.
+
+Previously verified identity: Split Plate account splitplates@gmail.com; channel ID UCG7iNluWmtF1Tph0RVnuidA. Recheck the actual current channel name and ID before transfer. Do not publish to an unrelated signed-in account. Keep credentials and private project records outside the public repo.
+
+Editing approval is distinct from publishing authorization. Reuse the user's existing explicit upload/publish/schedule authorization for the selected film; do not request it again. Rules-only work creates no upload. If publication is not authorized, finish the concrete package and show it before asking for the missing final decision. Honor explicit deferrals and account/login limitations.
+
+## Package and preflight
+
+Identify the approved exact master, version, duration and thumbnail. Record a file hash, resolution, measured frame rate, color space and QA evidence. For 4K Atto long form, preserve 3840×2160 landscape and measured approximately 59.94/60 fps; SDR/HDR follows the verified master. Do not transcode, brighten, retag HDR or downscale during upload merely to accelerate transfer.
+
+Prepare a viewer-led title, description, version-specific chapters, English captions, tags, appropriate category, one primary question/comment and end-screen plan. Include actual camera/POV context and relevant recipe destination only when substantiated. Do not invent affiliate disclosures, macros, links or personal claims.
+
+Use the exact export to validate caption timing and chapters. Start manual chapters at 00:00, with at least three ascending timestamps and chapters at least ten seconds long under current guidance. If the content does not support chapters, omit them rather than inventing sections. Add external timestamp links using the assigned video ID only after upload. Recheck current YouTube guidance at execution time when requirements or UI have changed.
+
+Determine audience, paid-promotion, altered/synthetic-content and other required settings from the actual film, documented relationships and current platform guidance. Children appearing does not by itself determine intended audience. Assess Marcus narration, generated visuals and reference inserts specifically; never carry a disclosure answer forward blindly from the pilot.
+
+Check existing project records and Studio content for a matching upload before creating another. Preserve a live video; replacement, deletion or duplicate publication requires the corresponding user request.
+
+## Execute and verify
+
+1. Verify account/channel and use the approved master file in Create > Upload videos or an equivalent supported interface. Save the assigned video ID, Studio URL and watch URL as soon as available.
+2. Populate metadata and required settings, upload the approved thumbnail and caption track, and apply the relevant playlist/end screen when supported and included in the package. For promotional Shorts, attach the matching full film as Related video; verify the actual selected video.
+3. Inspect the thumbnail, saved text, links, captions and available checks. Diagnose copyright/restriction issues, including reference clips; do not dismiss a warning or dispute a claim without a basis and authorization. A checks pass is not proof of asset rights.
+4. Verify processing progress and actual playback quality. For 4K publication, prefer waiting until 2160p is available and inspect motion, speech, brightness and framing. For HDR, verify recognition and intended playback separately from resolution. Report remaining processing honestly; do not call an SD-only processing state the finished 4K result.
+5. Publish or schedule exactly as authorized. For scheduling, verify the calendar date, clock time and selected time zone in Studio; use America/Los_Angeles unless the brief specifies otherwise. Read the success receipt and actual content-row status. Scheduled is not public.
+6. After publication, inspect the actual watch page: intended channel, title, thumbnail, public status, available resolution, chapters, captions and working links. Save a screenshot and live URL. Add and pin the prepared comment when included in the authorized package and supported; report an unavailable feature rather than claiming it succeeded.
+
+If a transfer or browser operation fails, inspect whether an upload already exists before retrying. Resume the existing draft when possible. Keep the draft and completed package recoverable, and report the concrete limitation if current access cannot finish the job. Do not launch another chat or hand off by default.
+
+## Record and continue
+
+Save a project-local upload record with asset version/hash, video/channel IDs, final metadata, disclosure choices and basis, checks/processing state, visibility, scheduled date/time/zone or actual publication time, screenshots, URLs and unresolved items. Update the canonical VIDEO_INVENTORY and POSTING INVENTORY through the Google Sheets skill, inspect row occupancy before writing, preserve concurrent entries and verify readback.
+
+After an authorized long-form film is actually published, automatically continue through ../splitplate-long-form-editor/references/post-publication-promotion.md in the same job: YouTube Shorts, Facebook link post, Instagram/TikTok Stories only. A scheduled film triggers that follow-up at actual publication, not merely schedule creation. If no persistent continuation exists, save the next action and report that limit; do not claim an unattended service is running. This rule does not create new paid narration authorization or override new-cut preview requirements.
+
+For a completed upload return the live URL or verified scheduling details, quality/processing state and material unresolved items. Updating these rules does not begin a video or change an existing published film.
+
+## Current primary guidance
+
+Checked October 13, 2026; consult the actual current documentation when needed:
+- [Upload videos and checks](https://support.google.com/youtube/answer/57407)
+- [Schedule publication](https://support.google.com/youtube/answer/1270709)
+- [Video chapters](https://support.google.com/youtube/answer/9884579)
+- [Altered or synthetic content](https://support.google.com/youtube/answer/14328491)
+- [HDR uploads](https://support.google.com/youtube/answer/7126552)
