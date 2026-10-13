@@ -125,3 +125,41 @@ Record candidates and the selected asset's source, usage basis, time range and p
 Original illustration, not approved narration: a line about giving the steak the attention while the microwave handles the sides could trigger a tiny original mission-control graphic, then cut straight back to the steak. Prefer the real spoken moment when one exists.
 
 For each proposed insert, record the exact trigger, source timeline location, chosen asset/source, usage basis, insert duration, return point and purpose in the beat plan. Include it in the finished-preview review. If recognition needs a long explanation, the source is unavailable, or the insert weakens the recipe, omit it. Save successful patterns in a small reusable asset list outside the public repo; do not build an indiscriminate downloaded meme library.
+
+## User-supplied audio and visual flourishes
+
+Added October 12, 2026 from Tushar's supplied breakdown. Apply these as creative direction for future Split Plate edits, not independently measured facts about Sam's mixes or graphics. They do not change the requested runtime, establish a new font identity, or authorize paid asset purchases.
+
+### Music and silence
+
+Choose an available user-owned or licensed instrumental that suits the scene: warm lo-fi, jazzy funk, boom-bap, or light acoustic/indie grooves are useful candidates. Evaluate each film; do not make any genre or constant music bed compulsory. Prefer unobtrusive instrumental texture and avoid distracting lyrics or dramatic builds unless the scene warrants them.
+
+Keep speech and meaningful kitchen sounds clear. The supplied -22 to -26 dB / -24 dB figures lack a specified reference (track gain, dBFS or relative level); they are not a universal mix target. Set asset-specific gain and ducking by listening and measurement, retain existing loudness/headroom requirements, and inspect the encoded mix on ordinary playback. Bring music forward selectively in a montage or food reveal, with smooth changes that do not create startling jumps.
+
+At a real joke, mistake or realization, consider a brief music stop or deliberate silence to let the moment land. Preserve useful room/kitchen ambience rather than automatically muting every track. Choose a clean stop for a punchline or a short fade when it sounds better; resume naturally.
+
+### Kitchen sound and comic punctuation
+
+Prioritize the actual synchronized scrape, chop, pour, pan hiss or other sensory event. Select clearer recorded audio, reduce distracting noise, and adjust level so the action is audible without clipping or harshness. Do not import stock crunch/sizzle as proof of this food's texture or build artificial ASMR over unrelated footage.
+
+A slight 2–5 kHz boost is an option to audition for a dull scrape or sizzle, not a default EQ curve. Check whether it exaggerates hiss, utensils, speech sibilance or harshness; skip or reduce it when the source is already bright. Keep real dialogue natural.
+
+Use a tape stop, low thud, record scratch or tiny chime only when a real moment earns comic punctuation. Select a suitable usable asset, trim it to the beat, balance it with the film, and avoid recurring effects on every ingredient or cut. Do not turn a mistake into false evidence or add a child's laugh/reaction that was not recorded in context.
+
+For future shoots, suggest closer board/pan audio or a suitable external mic only when the existing sound needs improvement. The Atto remains valid source footage; extra gear and refilming are not prerequisites.
+
+### Labels, editor commentary and comparisons
+
+Favor compact ingredient labels, measurements, useful checkpoints and occasional editor asides. Use the existing Split Plate typography and local text backing; the supplied font names and hand-drawn/distressed treatment are options, not a replacement brand system. Keep cooking action visible and avoid elaborate full-screen graphics.
+
+An editor aside can gently acknowledge a real discrepancy or self-directed joke. For amounts, establish the actual quantity before writing a correction; footage appearance alone does not prove an exact count or measurement. Do not invent snark, speak for the children, humiliate family members or contradict approved factual copy. Review new spoken text through existing script gates; include on-screen comments in the normal finished preview.
+
+Use a simple side-by-side comparison when both sides show real, comparable evidence: adult/kid plates, two tested methods, or before/after cooking states. Match scale, label relevant differences and identify another batch when applicable. Do not manufacture a comparison from unrelated dishes.
+
+### Motion restraint and QA
+
+A small punch-in at a cut point can emphasize a real expression or texture. The supplied 10–20% crop suggestion and prior 120–150% scale range are candidate treatments, not stacked effects or mandatory settings. Preserve the 4K/approximately 60 fps master, adapt crop per shot and inspect encoded detail.
+
+A tiny shake or motion-blur accent is optional for a genuinely comic impact. Keep it brief and rare, and omit it if it hides technique, increases apparent camera instability or makes POV viewing uncomfortable. Natural counter/hand movement often supplies enough energy.
+
+In the beat plan, record why each music change, silence, SFX, editor aside or motion accent exists. Review these transitions with actual encoded sound and moving picture. Remove flourishes that mask speech, overstate the food, obscure a required step or distract from the household story. Measure engagement from real analytics rather than claiming effects guarantee retention.
