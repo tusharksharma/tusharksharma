@@ -65,3 +65,26 @@ Show the finished food clearly, the actual plate split where relevant, and an ho
 Save a beat plan with source in/out, viewer question, new information/payoff, narration, real sound, proposed graphic and reason for each major transition. Review the encoded opening, technique reveals, sound gaps, crop changes and final payoff as moving picture and audio.
 
 For the next film, use the food-first promise and recurring practical reveals as the main experiment. Log additional graphics and sounds as creative choices, not evidence of a retention improvement. Compare YouTube's first-30-second retention, average percentage viewed, and actual dips/spikes against similar long-form films at the same age when analytics are available. Keep missing data blank; change one main variable at a time and retain what our audience supports.
+
+## Conversational reference cutaways
+
+Confirmed preference, October 12, 2026: Tushar likes HollywoodBob's conversation-triggered reference inserts and wants this technique considered for future long-form videos. Use a spoken reference or recognizable situation to motivate a brief comic insert, then return immediately to the real cook. This preference comes directly from Tushar; do not present it as a measured retention finding.
+
+### Reference checked
+
+[TheHollywoodBob](https://www.youtube.com/@TheHollywoodBob/videos), official edited-video channel, Latest selected. Sampled [Macho Man Bob Savage OWNS The Bridge ft. vsnz](https://www.youtube.com/watch?v=3Hv140Evxh0), listed one day old, player runtime 18:33. Read the English automatic timed captions and sampled picture around 1:15 and 2:40–2:59. The description connects his sick voice with Batman/Randy Savage; captions at 18:06–18:09 contain the wrestling reference, and 2:40–2:42 repeat a dramatic conversational phrase. These are reference cues, not verified cutaway examples. The inspected frames showed gameplay with facecam; a specific inserted entertainment clip and its exact boundaries were not established. Audio was not reviewed. A precise favorite link/time supplied later should be checked before describing a matching edit as observed.
+
+### Editing instructions
+
+- During the speech/script pass, flag naturally occurring comparisons, recognizable references, or small incongruities that could earn a visual punchline. Work from Tushar's real conversation or reviewed first-person script. Do not write a forced reference into every chapter.
+- Keep the setup understandable, place the insert just after the triggering word or thought, and return to the same cooking situation while its context is still fresh. Choose a clean hard cut or brief visual/audio bridge according to the joke. Do not explain the punchline afterward.
+- Use only the portion needed for recognition. Roughly 0.5–2 seconds is an initial Split Plate timing proposal, not a HollywoodBob measurement or mandatory ceiling. Favor one or two well-earned inserts in a pilot; this is a starting restraint, not a quota.
+- Preserve the essential cooking step. Put a cutaway between actions or use a compact inset if full-screen interruption would hide the demonstration. Never interrupt the only clear view of a temperature, ingredient amount, doneness check or plate split.
+- Choose assets with documented source and usage basis: the user's own expressive footage, an original graphic/animation, or a suitable licensed or supplied clip. A public video is a reference source, not an automatic reusable asset. Do not lift Bob's finished edit, facecam, soundtrack or branding.
+- Reusing a pre-existing own-footage reaction must be framed as a comic aside; do not imply it is a live response to this dinner. Keep original/generated illustrative inserts distinct from actual cooking and family evidence.
+- Fit the joke to Tushar's family perspective. Do not adopt a streamer's profanity or adult banter merely because it appears in the reference. Target the cook's own situation or decision rather than embarrassing the children or mocking their food preferences.
+- Keep insert audio at a comfortable level with speech and kitchen sound. Avoid sudden loud meme audio. Return cleanly to the kitchen ambience; audition the actual encoded transition.
+
+Original illustration, not approved narration: a line about giving the steak the attention while the microwave handles the sides could trigger a tiny original mission-control graphic, then cut straight back to the steak. Prefer the real spoken moment when one exists.
+
+For each proposed insert, record the exact trigger, source timeline location, chosen asset/source, usage basis, insert duration, return point and purpose in the beat plan. Include it in the finished-preview review. If recognition needs a long explanation, the source is unavailable, or the insert weakens the recipe, omit it. Save successful patterns in a small reusable asset list outside the public repo; do not build an indiscriminate downloaded meme library.
