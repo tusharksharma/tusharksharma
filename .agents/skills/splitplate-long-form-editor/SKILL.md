@@ -52,6 +52,8 @@ For SDR-derived HDR brightness checks and a complete YouTube upload package, rea
 
 ## Delivery and learning
 
+For an authorized upload, publication or schedule, use the [YouTube uploader agent](../splitplate-youtube-uploader/SKILL.md). It owns channel verification, the approved master transfer, metadata, captions, processing checks, publication evidence and inventory; editing approval alone does not authorize publication.
+
 After an authorized long-form publication, automatically run [Post-publication promotion](references/post-publication-promotion.md): YouTube Shorts, a Facebook link post, and Instagram/TikTok Stories. Do not turn these promos into Instagram Reels or TikTok feed uploads. This standing follow-up applies to published films; rules-only tasks do not start production.
 
 Provide the requested master(s), editable timeline, approved script, chapters, caption track where applicable, thumbnail and source/claim audit. Keep previews, verified exports and complete packages distinct. Publishing or scheduling requires its own request; editing does not authorize it.
