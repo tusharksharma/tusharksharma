@@ -7,6 +7,8 @@ description: Edit or review The Split Plate long-form YouTube videos from real f
 
 ## Ground the project
 
+For thumbnail reaction references, read [Tushar's reaction photo library](../../../docs/video/creator-reactions.md). The six supplied images are committed under assets/creator-reactions; inspect and select the expression that fits the film without routinely asking for another upload.
+
 Locate the current `tusharksharma/tusharksharma` checkout. Read its `AGENTS.md`, `docs/content-growth-plan.md`, `docs/splitplate-ideologies.md`, and `docs/video/hyperframes-editing/README.md`. Paths here are repository-relative. Use the source snapshot's `SPLITPLATE_YOUTUBE_VIDEO_RULES.md` for long-form structure, reuse, provenance and delivery, and `CURRENT_RULES.md` for current picture, audio and factual corrections. Explicit task direction overrides historical resolution and grade defaults.
 
 Long form has its own viewing context. Do not inherit a short-form duration ceiling, fixed assembly-card holds, zero-overlap policy across formats, compulsory short companion packages or a cover flash at the end. Preserve applicable recipe truth and narrative approvals. Read the complete cover playbook before making a thumbnail; author a separate landscape YouTube thumbnail that matches the film.

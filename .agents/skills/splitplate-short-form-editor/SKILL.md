@@ -7,6 +7,8 @@ description: Edit or review The Split Plate short-form recipe videos using its H
 
 ## Locate the rules
 
+For creator-face covers, read [Tushar's reaction photo library](../../../docs/video/creator-reactions.md). Inspect the six supplied images under assets/creator-reactions and select the expression that fits the story; do not routinely ask for another upload.
+
 Use the current `tusharksharma/tusharksharma` checkout. All paths below are repository-relative. If invoked outside that checkout, locate it or retrieve these documents from the repository before editing; do not invent missing rules. Read `AGENTS.md`, `docs/content-growth-plan.md`, and `docs/video/hyperframes-editing/README.md`.
 
 Set the instruction root to `docs/video/hyperframes-editing/flat/`. Read in this order:
