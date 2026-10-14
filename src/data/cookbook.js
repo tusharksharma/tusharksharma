@@ -3,15 +3,15 @@ export const sauces = [
     id: "high-protein-chipotle-style-queso",
     title: "High-Protein Chipotle-Style Queso",
     tagline: "Sauce Series Ep. 5. Baked protein queso — cottage cheese does the creamy work, jalapeños do the kick. About 80 cal and 8g protein per serving.",
-    heroImage: "/images/high-protein-chipotle-style-queso/hero-high-protein-chipotle-queso.webp",
+    heroImage: "/images/high-protein-chipotle-style-queso/hero-high-protein-chipotle-queso-polished.webp",
     video: "/videos/high-protein-chipotle-style-queso/high-protein-chipotle-style-queso-sauce-series-episode-5-marcus.mp4",
     socialImages: [
       "/images/high-protein-chipotle-style-queso/ingredient-mulu-cottage-cheese.webp",
-      "/images/high-protein-chipotle-style-queso/ingredient-velveeta.webp",
+      "/images/high-protein-chipotle-style-queso/ingredient-velveeta-polished.webp",
       "/images/high-protein-chipotle-style-queso/step-blend-smooth.webp",
-      "/images/high-protein-chipotle-style-queso/step-add-jalapenos.webp",
-      "/images/high-protein-chipotle-style-queso/step-bake.webp",
-      "/images/high-protein-chipotle-style-queso/final-queso-dip.webp",
+      "/images/high-protein-chipotle-style-queso/step-add-jalapenos-polished.webp",
+      "/images/high-protein-chipotle-style-queso/step-bake-polished.webp",
+      "/images/high-protein-chipotle-style-queso/final-queso-dip-polished.webp",
     ],
     flavorProfile: "Smooth, melty, sharp-cheddar queso with a real jalapeño kick — nacho-cheese comfort without the oil-and-processed-cheese calorie load",
     calories: 640,
@@ -61,6 +61,118 @@ export const sauces = [
       lasts: "4-5 days.",
       reheat: "Reheat gently on the stove or in the microwave, adding a splash of Fairlife milk and whisking to bring it back to a smooth queso.",
     },
+      socialCarousel: {
+  "heroBadge": "Protein sauce · baked queso",
+  "heroAccent": "amber",
+  "heroStats": [
+    {
+      "value": "80",
+      "label": "est. cal / serving"
+    },
+    {
+      "value": "8g",
+      "label": "protein / serving"
+    },
+    {
+      "value": "8",
+      "label": "servings"
+    }
+  ],
+  "hook": "Blended cottage cheese, cheddar, jalapeño, and a little Velveeta make a warm, scoopable high-protein queso.",
+  "captionTitle": "High-Protein Chipotle-Style Queso · 8g protein per serving.",
+  "captionBody": "This baked queso uses blended MULU cottage cheese and Fairlife milk for its base, with cheddar powder, nutritional yeast, jalapeños, and 4 oz Velveeta for the melt. Whisk after baking and serve warm. Creator estimate: about 80 calories and 8g protein per serving, from a batch split into 8. Full recipe: thesplitplate.com/cookbook/high-protein-chipotle-style-queso",
+  "heroPhoto": "/images/high-protein-chipotle-style-queso/hero-high-protein-chipotle-queso-polished.webp",
+  "ingredientGroups": [
+    {
+      "card": 0,
+      "accent": "amber",
+      "heading": "Queso Batch · 8 servings",
+      "items": [
+        {
+          "quantity": "1 cup",
+          "text": "MULU 2% cottage cheese"
+        },
+        {
+          "quantity": "½ cup",
+          "text": "Fairlife fat-free milk"
+        },
+        {
+          "quantity": "1½ tbsp",
+          "text": "Nutritional yeast"
+        },
+        {
+          "quantity": "1½ tbsp",
+          "text": "Cheddar cheese powder"
+        },
+        {
+          "quantity": "4 oz",
+          "text": "Velveeta, sliced"
+        },
+        {
+          "quantity": "2",
+          "text": "Jalapeños, chopped"
+        }
+      ]
+    }
+  ],
+  "methodLabel": "HOW TO MAKE",
+  "methodGroups": [
+    {
+      "card": 0,
+      "accent": "amber",
+      "heading": "Blend + Bake",
+      "items": [
+        {
+          "number": 1,
+          "heading": "Blend Smooth",
+          "body": "Blend cottage cheese and milk until no curds remain."
+        },
+        {
+          "number": 2,
+          "heading": "Layer",
+          "body": "Pour into an oven-safe dish; stir in both powders, top with sliced Velveeta and jalapeños."
+        },
+        {
+          "number": 3,
+          "heading": "Bake + Whisk",
+          "body": "Bake at 300°F for about 15 minutes, then whisk smooth and serve warm."
+        }
+      ]
+    }
+  ],
+  "ingredientCardPhotos": [
+    {
+      "src": "/images/high-protein-chipotle-style-queso/ingredient-mulu-cottage-cheese.webp",
+      "position": "50% 55%",
+      "zoom": 1.02,
+      "layout": "side"
+    }
+  ],
+  "methodCardPhotos": [
+    {
+      "src": "/images/high-protein-chipotle-style-queso/step-bake-polished.webp",
+      "position": "50% 55%",
+      "zoom": 1.02,
+      "layout": "side"
+    }
+  ],
+  "servingPhoto": "/images/high-protein-chipotle-style-queso/final-queso-dip-polished.webp",
+  "servingGroups": [
+    {
+      "accent": "amber",
+      "heading": "Warm + Scoopable",
+      "items": [
+        {
+          "text": "Whisk thoroughly after baking so the melted cheese blends into the cottage-cheese base."
+        },
+        {
+          "text": "About 80 calories and 8g protein per serving; recipe makes 8 servings."
+        }
+      ]
+    }
+  ],
+  "engagementQuestion": "Would you serve it with chips, tacos, or roasted vegetables?"
+},
   },
   {
     id: "high-protein-caesar-dressing",
@@ -11986,9 +12098,9 @@ const DESSERT_CATALOG = [
   {
     id: "cannoli-cookie-creami",
     title: "Cannoli Cookie Creami",
-    tagline: "CrumblCreamiCut Week 7, Flavor 1 (Ep. 19) — brown-sugar base with half a regular ice-cream cone blended in before freeze, half a waffle cone through Respin for crunch, and Lily's chocolate chips on top. 380 cal / 42g protein whole pint.",
-    heroImage: "/images/cannoli-cookie-creami/final-taste-test-polished.webp",
-    prepImage: "/images/cannoli-cookie-creami/hero-finished-cannoli-cookie-creami-polished.webp",
+    tagline: "Crumbl Creami Cut Week 7 — Cannoli Cookie protein Creami with a brown-sugar base and the recipe-specific mix-ins.",
+    heroImage: "/images/cannoli-cookie-creami/hero-finished-cannoli-cookie-creami-polished.webp",
+    prepImage: "/images/cannoli-cookie-creami/final-taste-test-polished.webp",
     video: "/videos/cannoli-cookie-creami/cannoli-cookie-creami-380cal-42protein-marcus.mp4",
     originalSoundVideo: "/videos/cannoli-cookie-creami/cannoli-cookie-creami-original-sound.mp4",
     textOriginalSoundVideo: "/videos/cannoli-cookie-creami/cannoli-cookie-creami-text-original-sound.mp4",
@@ -12000,68 +12112,167 @@ const DESSERT_CATALOG = [
       "#TheSplitPlate",
     ],
     socialCarousel: {
-      heroBadge: "CrumblCreamiCut · W7 F1",
+      heroBadge: "Crumbl Creami Cut · Week 7",
       heroAccent: "amber",
-      hook: "Half a regular cone flavored the base. Half a waffle cone kept its crunch through Respin. Accidental two-cone method, and it may be the winning move. 380 cal / 42g protein whole pint.",
+      hook: "A brown-sugar protein Creami with regular-cone flavor in the base, waffle-cone crunch through Respin, and chocolate chips on top.",
       heroPhoto: "/images/cannoli-cookie-creami/hero-finished-cannoli-cookie-creami-polished.webp",
       ingredientGroups: [
-        {
-          card: 0,
-          accent: "amber",
-          heading: "Creami Base",
-          items: [
-            { quantity: "1 cup", text: "2% ultra-filtered milk" },
-            { quantity: "2 tbsp", text: "Brown-sugar monk fruit / erythritol", note: "The Week 7 sweetener swap — cannoli cookie is brown-sugar based" },
-            { quantity: "1 serving", text: "Unflavored whey isolate" },
-            { quantity: "1/8 tsp", text: "Guar gum" },
-            { quantity: "Pinch", text: "Salt" },
-            { quantity: "1/2 cone", text: "Regular ice cream cone", note: "Blend INTO the base before freeze — carries flavor" },
-          ],
-        },
-        {
-          card: 1,
-          accent: "amber",
-          heading: "Mix-In + Finish",
-          items: [
-            { quantity: "1/2 cone", text: "Waffle cone", note: "Break in AFTER first spin — Respin without liquid preserves crunch" },
-            { quantity: "1 tbsp", text: "Chocolate chips", note: "Lily's filmed — full topping counted in the 380 cal" },
-          ],
-        },
-      ],
+  {
+    "card": 0,
+    "accent": "amber",
+    "heading": "Protein Creami Base",
+    "items": [
+      {
+        "quantity": "1 cup",
+        "text": "Fairlife 2% ultra-filtered milk"
+      },
+      {
+        "quantity": "1 serving",
+        "text": "Unflavored whey isolate",
+        "note": "Protein varies by brand"
+      },
+      {
+        "quantity": "2 tbsp",
+        "text": "Brown-sugar monk fruit / erythritol"
+      },
+      {
+        "quantity": "½ regular cone",
+        "text": "Blend into the base before freezing"
+      },
+      {
+        "quantity": "⅛ tsp",
+        "text": "Guar gum"
+      },
+      {
+        "quantity": "Pinch",
+        "text": "Salt"
+      }
+    ]
+  },
+  {
+    "card": 1,
+    "accent": "amber",
+    "heading": "Crunch + Finish",
+    "items": [
+      {
+        "quantity": "½ waffle cone",
+        "text": "Add after the first spin; Respin without liquid"
+      },
+      {
+        "quantity": "1 tbsp",
+        "text": "Lily’s chocolate chips"
+      }
+    ]
+  }
+],
       methodGroups: [
-        {
-          accent: "amber",
-          heading: "Method",
-          items: [
-            { number: 1, heading: "Blend", body: "Milk, brown-sugar sweetener, whey, guar, salt, half a regular cone — immersion-blend smooth." },
-            { number: 2, heading: "Freeze", body: "Pour into Creami pint below max-fill line. Freeze upright and level for 24 hours." },
-            { number: 3, heading: "Rest + Spin", body: "Rest 5 min at room temperature. Process on Regular Ice Cream." },
-            { number: 4, heading: "Waffle Mix-In", body: "Break half a waffle cone into a center well. Run Respin WITHOUT adding liquid." },
-            { number: 5, heading: "Finish", body: "Scoop, top with 1 tbsp Lily's chocolate chips. Eat immediately." },
-          ],
-        },
-      ],
+  {
+    "card": 0,
+    "accent": "amber",
+    "heading": "Blend + Spin",
+    "items": [
+      {
+        "number": 1,
+        "heading": "Blend",
+        "body": "Blend milk, sweetener, whey, guar, salt, and half a regular cone until smooth."
+      },
+      {
+        "number": 2,
+        "heading": "Freeze",
+        "body": "Pour below the pint max-fill line. Freeze level for 24 hours."
+      },
+      {
+        "number": 3,
+        "heading": "Spin",
+        "body": "Rest 5 minutes at room temperature, then run Regular Ice Cream."
+      }
+    ]
+  },
+  {
+    "card": 1,
+    "accent": "amber",
+    "heading": "Add Crunch",
+    "items": [
+      {
+        "number": 4,
+        "heading": "Waffle Cone",
+        "body": "Add half a waffle cone to a narrow center well."
+      },
+      {
+        "number": 5,
+        "heading": "Respin",
+        "body": "Run Respin without liquid to keep cone pieces crisp."
+      },
+      {
+        "number": 6,
+        "heading": "Finish",
+        "body": "Scoop and top with chocolate chips. Serve right away."
+      }
+    ]
+  }
+],
       ingredientCardPhotos: [
-        { src: "/images/cannoli-cookie-creami/step-blend-brown-sugar-base-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
-        { src: "/images/cannoli-cookie-creami/step-add-regular-cone-before-freeze-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
-      ],
+  {
+    "src": "/images/cannoli-cookie-creami/step-add-regular-cone-before-freeze-polished.webp",
+    "position": "50% 55%",
+    "zoom": 1.02,
+    "layout": "side"
+  },
+  {
+    "src": "/images/cannoli-cookie-creami/step-add-chocolate-chips-polished.webp",
+    "position": "50% 55%",
+    "zoom": 1.02,
+    "layout": "side"
+  }
+],
       methodCardPhotos: [
-        { src: "/images/cannoli-cookie-creami/step-add-waffle-cone-after-spin-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
-        { src: "/images/cannoli-cookie-creami/step-respin-no-liquid-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
-      ],
+  {
+    "src": "/images/cannoli-cookie-creami/step-first-spin-polished.webp",
+    "position": "50% 55%",
+    "zoom": 1.02,
+    "layout": "side"
+  },
+  {
+    "src": "/images/cannoli-cookie-creami/step-add-waffle-cone-after-spin-polished.webp",
+    "position": "50% 55%",
+    "zoom": 1.02,
+    "layout": "side"
+  }
+],
       servingPhoto: "/images/cannoli-cookie-creami/final-taste-test-polished.webp",
       servingGroups: [
-        {
-          accent: "amber",
-          heading: "Whole-Pint Dessert",
-          items: [
-            { text: "One finished pint: 380 calories and 42g protein — includes both half-cone portions and the full 1 tbsp chocolate-chip topping." },
-            { text: "Two-cone technique: regular cone in the base for flavor, waffle cone in the Respin for crunch. All-waffle is a reasonable variation, but the approved macros document the half-and-half method." },
-          ],
-        },
-      ],
-      engagementQuestion: "Would you use both cones like I did, or go waffle cone all the way?",
-    },
+  {
+    "accent": "amber",
+    "heading": "Whole-Pint Estimate",
+    "items": [
+      {
+        "text": "About 380 calories and 42g protein for the full pint, including both cone portions and the chocolate chips."
+      },
+      {
+        "text": "Use no liquid during Respin; serve soon after topping so the waffle-cone pieces keep their crunch."
+      }
+    ]
+  }
+],
+      engagementQuestion: "Which cone belongs in the base, and which one belongs on top?",
+        captionTitle: "Cannoli Cookie Protein Creami · 42g protein for the whole pint.",
+      captionBody: "Cannoli Cookie Creami, with a protein base and two kinds of cone crunch. Half a regular cone goes into the brown-sugar base before freezing; half a waffle cone goes in after the first spin for a no-liquid Respin. Finish with Lily’s chocolate chips. The creator’s whole-pint estimate is 380 calories and 42g protein; whey and topping labels can shift the total. Full recipe: thesplitplate.com/cookbook/cannoli-cookie-creami",
+      heroStats: [
+  {
+    "value": "380",
+    "label": "est. cal"
+  },
+  {
+    "value": "42g",
+    "label": "est. protein"
+  },
+  {
+    "value": "1 pint",
+    "label": "full recipe"
+  }
+],
+      methodLabel: "HOW TO MAKE",
+  },
     socialImages: [
       "/images/cannoli-cookie-creami/step-blend-brown-sugar-base-polished.webp",
       "/images/cannoli-cookie-creami/step-add-regular-cone-before-freeze-polished.webp",
@@ -12174,7 +12385,7 @@ const DESSERT_CATALOG = [
   {
     id: "vanilla-chocolate-gelato-cookie-creami",
     title: "Vanilla Chocolate Gelato Cookie Creami",
-    tagline: "CrumblCreamiCut Week 7, Flavor 2 (Ep. 20) — brown-sugar base, split waffle cone (half through Respin, half on top), sugar-free chocolate drizzle, and thin shaved chocolate finish. 360 cal / 42g protein whole pint.",
+    tagline: "Crumbl Creami Cut Week 7 — Vanilla Chocolate Gelato Cookie protein Creami with a brown-sugar base and the recipe-specific mix-ins.",
     heroImage: "/images/vanilla-chocolate-gelato-cookie-creami/hero-finished-vanilla-chocolate-gelato-cookie-creami-polished.webp",
     prepImage: "/images/vanilla-chocolate-gelato-cookie-creami/final-taste-test-polished.webp",
     video: "/videos/vanilla-chocolate-gelato-cookie-creami/vanilla-chocolate-gelato-cookie-creami-360cal-42protein-marcus.mp4",
@@ -12188,69 +12399,171 @@ const DESSERT_CATALOG = [
       "#TheSplitPlate",
     ],
     socialCarousel: {
-      heroBadge: "CrumblCreamiCut · W7 F2",
+      heroBadge: "Crumbl Creami Cut · Week 7",
       heroAccent: "amber",
-      hook: "Split waffle cone (half through Respin, half on top) + shaved chocolate for chocolate in every bite instead of a few chip pockets. 360 cal / 42g protein whole pint.",
+      hook: "Vanilla protein Creami, waffle-cone crunch, chocolate drizzle, and shaved chocolate in more bites.",
       heroPhoto: "/images/vanilla-chocolate-gelato-cookie-creami/hero-finished-vanilla-chocolate-gelato-cookie-creami-polished.webp",
       ingredientGroups: [
-        {
-          card: 0,
-          accent: "amber",
-          heading: "Creami Base",
-          items: [
-            { quantity: "1 cup", text: "2% ultra-filtered milk" },
-            { quantity: "2 tbsp", text: "Brown-sugar monk fruit / erythritol", note: "Week 7 sweetener swap — matches the reference cookie's brown-sugar profile" },
-            { quantity: "1 serving", text: "Unflavored whey isolate" },
-            { quantity: "1/8 tsp", text: "Guar gum" },
-            { quantity: "Pinch", text: "Salt" },
-          ],
-        },
-        {
-          card: 1,
-          accent: "amber",
-          heading: "Mix-In + Finish",
-          items: [
-            { quantity: "1/2 cone", text: "Waffle cone", note: "Break in AFTER first spin — no-liquid Respin preserves crunch" },
-            { quantity: "To taste", text: "Sugar-free chocolate syrup", note: "Post-scoop drizzle" },
-            { quantity: "1/2 cone", text: "Waffle cone (topping)", note: "Break the remaining half over the scoops" },
-            { quantity: "40 cal", text: "Shaved chocolate", note: "Ep. 20 finish — shavings reach more bites than chips" },
-          ],
-        },
-      ],
+  {
+    "card": 0,
+    "accent": "amber",
+    "heading": "Protein Creami Base",
+    "items": [
+      {
+        "quantity": "1 cup",
+        "text": "Fairlife 2% ultra-filtered milk"
+      },
+      {
+        "quantity": "1 serving",
+        "text": "Unflavored whey isolate",
+        "note": "Protein varies by brand"
+      },
+      {
+        "quantity": "2 tbsp",
+        "text": "Brown-sugar monk fruit / erythritol"
+      },
+      {
+        "quantity": "⅛ tsp",
+        "text": "Guar gum"
+      },
+      {
+        "quantity": "Pinch",
+        "text": "Salt"
+      }
+    ]
+  },
+  {
+    "card": 1,
+    "accent": "amber",
+    "heading": "Mix-In + Topping",
+    "items": [
+      {
+        "quantity": "½ waffle cone",
+        "text": "Add after first spin; Respin without liquid"
+      },
+      {
+        "quantity": "½ waffle cone",
+        "text": "Crumble over the finished scoops"
+      },
+      {
+        "quantity": "To taste",
+        "text": "Sugar-free chocolate syrup"
+      },
+      {
+        "quantity": "40 cal worth",
+        "text": "Shaved chocolate"
+      }
+    ]
+  }
+],
       methodGroups: [
-        {
-          accent: "amber",
-          heading: "Method",
-          items: [
-            { number: 1, heading: "Blend", body: "Milk, brown-sugar sweetener, whey, guar, salt — immersion-blend smooth." },
-            { number: 2, heading: "Freeze", body: "Pour into a Creami pint below max-fill. Freeze upright and level for 24 hours." },
-            { number: 3, heading: "Rest + Spin", body: "Rest 5 min at room temperature. Process on Regular Ice Cream." },
-            { number: 4, heading: "Waffle Mix-In", body: "Break half a waffle cone into a center well. Run Respin WITHOUT adding liquid." },
-            { number: 5, heading: "Finish", body: "Scoop, drizzle sugar-free chocolate syrup, crumble the remaining half waffle cone on top, finish with 40 cal shaved chocolate. Eat immediately." },
-          ],
-        },
-      ],
+  {
+    "card": 0,
+    "accent": "amber",
+    "heading": "Blend + Spin",
+    "items": [
+      {
+        "number": 1,
+        "heading": "Blend",
+        "body": "Blend milk, sweetener, whey, guar, and salt until smooth."
+      },
+      {
+        "number": 2,
+        "heading": "Freeze",
+        "body": "Pour below the pint max-fill line. Freeze level for 24 hours."
+      },
+      {
+        "number": 3,
+        "heading": "Spin",
+        "body": "Rest 5 minutes at room temperature, then run Regular Ice Cream."
+      }
+    ]
+  },
+  {
+    "card": 1,
+    "accent": "amber",
+    "heading": "Chocolate Finish",
+    "items": [
+      {
+        "number": 4,
+        "heading": "Waffle Mix-In",
+        "body": "Add half a cone to a narrow center well; Respin without liquid."
+      },
+      {
+        "number": 5,
+        "heading": "Scoop + Drizzle",
+        "body": "Scoop into a bowl and add sugar-free chocolate syrup."
+      },
+      {
+        "number": 6,
+        "heading": "Top",
+        "body": "Add the remaining cone and shaved chocolate. Serve right away."
+      }
+    ]
+  }
+],
       ingredientCardPhotos: [
-        { src: "/images/vanilla-chocolate-gelato-cookie-creami/step-blend-brown-sugar-base-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
-        { src: "/images/vanilla-chocolate-gelato-cookie-creami/step-frozen-level-pint-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
-      ],
+  {
+    "src": "/images/vanilla-chocolate-gelato-cookie-creami/step-frozen-level-pint-polished.webp",
+    "position": "50% 55%",
+    "zoom": 1.02,
+    "layout": "side"
+  },
+  {
+    "src": "/images/vanilla-chocolate-gelato-cookie-creami/step-shaved-chocolate-polished.webp",
+    "position": "50% 55%",
+    "zoom": 1.02,
+    "layout": "side"
+  }
+],
       methodCardPhotos: [
-        { src: "/images/vanilla-chocolate-gelato-cookie-creami/step-add-waffle-cone-after-spin-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
-        { src: "/images/vanilla-chocolate-gelato-cookie-creami/step-respin-no-liquid-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
-      ],
+  {
+    "src": "/images/vanilla-chocolate-gelato-cookie-creami/step-first-spin-polished.webp",
+    "position": "50% 55%",
+    "zoom": 1.02,
+    "layout": "side"
+  },
+  {
+    "src": "/images/vanilla-chocolate-gelato-cookie-creami/step-waffle-cone-topping-polished.webp",
+    "position": "50% 55%",
+    "zoom": 1.02,
+    "layout": "side"
+  }
+],
       servingPhoto: "/images/vanilla-chocolate-gelato-cookie-creami/final-taste-test-polished.webp",
       servingGroups: [
-        {
-          accent: "amber",
-          heading: "Whole-Pint Dessert",
-          items: [
-            { text: "One finished pint: 360 calories and 42g protein — includes both half-cone portions, the sugar-free chocolate drizzle, and the 40-calorie shaved-chocolate topping." },
-            { text: "Ep. 20 finish: thin shaved chocolate distributes across every bite. Chocolate chips read as isolated pockets — shavings are the winning move." },
-          ],
-        },
-      ],
-      engagementQuestion: "Shaved chocolate or chocolate chips? Help me settle this one.",
-    },
+  {
+    "accent": "amber",
+    "heading": "Whole-Pint Estimate",
+    "items": [
+      {
+        "text": "About 360 calories and 42g protein for the full pint, including both waffle-cone portions and 40 calories of shaved chocolate."
+      },
+      {
+        "text": "Add the shaved chocolate over the scoops and serve right away."
+      }
+    ]
+  }
+],
+      engagementQuestion: "Shaved chocolate or chocolate chips on this one?",
+        captionTitle: "Vanilla Chocolate Gelato Protein Creami · 42g protein for the whole pint.",
+      captionBody: "Vanilla Chocolate Gelato Cookie Creami: a protein base with half a waffle cone through Respin, and the other half on top. A light chocolate syrup drizzle and shaved chocolate finish the pint. The creator’s whole-pint estimate is 360 calories and 42g protein, including the 40-calorie chocolate portion; whey and topping labels can shift the total. Full recipe: thesplitplate.com/cookbook/vanilla-chocolate-gelato-cookie-creami",
+      heroStats: [
+  {
+    "value": "360",
+    "label": "est. cal"
+  },
+  {
+    "value": "42g",
+    "label": "est. protein"
+  },
+  {
+    "value": "1 pint",
+    "label": "full recipe"
+  }
+],
+      methodLabel: "HOW TO MAKE",
+  },
     socialImages: [
       "/images/vanilla-chocolate-gelato-cookie-creami/step-blend-brown-sugar-base-polished.webp",
       "/images/vanilla-chocolate-gelato-cookie-creami/step-frozen-level-pint-polished.webp",
@@ -12367,7 +12680,7 @@ const DESSERT_CATALOG = [
   {
     id: "creme-brulee-cookie-creami",
     title: "Crème Brûlée Cookie Creami",
-    tagline: "CrumblCreamiCut Week 7, Flavor 3 — brown-sugar Creami base finished with a chilled sugar-free caramel-glass shell that cracks under the spoon. 300 cal / 43g protein whole pint.",
+    tagline: "Crumbl Creami Cut Week 7 — Crème Brûlée Cookie protein Creami with a brown-sugar base and the recipe-specific mix-ins.",
     heroImage: "/images/creme-brulee-cookie-creami/hero-caramel-glass-crack-polished.webp",
     prepImage: "/images/creme-brulee-cookie-creami/final-taste-test-polished.webp",
     video: "/videos/creme-brulee-cookie-creami/creme-brulee-cookie-creami-300cal-43protein-marcus.mp4",
@@ -12381,69 +12694,167 @@ const DESSERT_CATALOG = [
       "#TheSplitPlate",
     ],
     socialCarousel: {
-      heroBadge: "CrumblCreamiCut · W7 F3",
+      heroBadge: "Crumbl Creami Cut · Week 7",
       heroAccent: "amber",
-      hook: "Sugar-free caramel glass melted from 4 hard candies, chilled hard on parchment, cracked over the Creami with a spoon. Base flavor was decent, the shell made this feel special. 300 cal / 43g protein whole pint.",
+      hook: "A brown-sugar protein Creami with caramel pieces through Respin and a brittle sugar-free caramel shell to crack at the table.",
       heroPhoto: "/images/creme-brulee-cookie-creami/hero-caramel-glass-crack-polished.webp",
       ingredientGroups: [
-        {
-          card: 0,
-          accent: "amber",
-          heading: "Creami Base",
-          items: [
-            { quantity: "1 cup", text: "2% ultra-filtered milk" },
-            { quantity: "2 tbsp", text: "Brown-sugar monk fruit / erythritol", note: "Week 7 sweetener swap — matches the reference cookie's brown-sugar profile" },
-            { quantity: "1 serving", text: "Unflavored whey isolate" },
-            { quantity: "1/8 tsp", text: "Guar gum" },
-            { quantity: "Pinch", text: "Salt" },
-          ],
-        },
-        {
-          card: 1,
-          accent: "amber",
-          heading: "Caramel Split (6 hard candies)",
-          items: [
-            { quantity: "2", text: "Sugar-free hard caramels", note: "Crush → add AFTER first spin, no-liquid Respin" },
-            { quantity: "4", text: "Sugar-free hard caramels", note: "Melt → spread thin on parchment → chill hard → crack over the Creami" },
-            { quantity: "Optional", text: "Sugar-free salted caramel syrup", note: "Light drizzle before the caramel glass lands" },
-          ],
-        },
-      ],
+  {
+    "card": 0,
+    "accent": "amber",
+    "heading": "Protein Creami Base",
+    "items": [
+      {
+        "quantity": "1 cup",
+        "text": "Fairlife 2% ultra-filtered milk"
+      },
+      {
+        "quantity": "1 serving",
+        "text": "Unflavored whey isolate",
+        "note": "Protein varies by brand"
+      },
+      {
+        "quantity": "2 tbsp",
+        "text": "Brown-sugar monk fruit / erythritol"
+      },
+      {
+        "quantity": "⅛ tsp",
+        "text": "Guar gum"
+      },
+      {
+        "quantity": "Pinch",
+        "text": "Salt"
+      }
+    ]
+  },
+  {
+    "card": 1,
+    "accent": "amber",
+    "heading": "Caramel Split",
+    "items": [
+      {
+        "quantity": "2 of 6",
+        "text": "Sugar-free hard caramels, crushed into the pint"
+      },
+      {
+        "quantity": "4 of 6",
+        "text": "Sugar-free hard caramels, melted for the brittle shell"
+      },
+      {
+        "quantity": "Optional",
+        "text": "Light sugar-free salted-caramel syrup drizzle"
+      }
+    ]
+  }
+],
       methodGroups: [
-        {
-          accent: "amber",
-          heading: "Method",
-          items: [
-            { number: 1, heading: "Blend", body: "Milk, brown-sugar sweetener, whey, guar, salt — immersion-blend smooth." },
-            { number: 2, heading: "Freeze", body: "Pour into a Creami pint below max-fill. Freeze upright and level 24 hours." },
-            { number: 3, heading: "Rest + Spin", body: "Rest 5 min at room temperature. Process on Regular Ice Cream." },
-            { number: 4, heading: "Crushed-Caramel Mix-In", body: "Crush 2 hard caramels, add to the pint after the first spin, run Respin WITHOUT adding liquid." },
-            { number: 5, heading: "Melt + Chill the Glass", body: "Melt 4 caramels over low heat, spread a thin sheet on parchment, chill until completely hard." },
-            { number: 6, heading: "Crack + Serve", body: "Scoop into a bowl, optional light caramel-syrup drizzle, land the chilled glass on top, crack with a spoon at the table." },
-          ],
-        },
-      ],
+  {
+    "card": 0,
+    "accent": "amber",
+    "heading": "Spin + Mix In",
+    "items": [
+      {
+        "number": 1,
+        "heading": "Blend",
+        "body": "Blend milk, sweetener, whey, guar, and salt until smooth."
+      },
+      {
+        "number": 2,
+        "heading": "Freeze + Spin",
+        "body": "Freeze level for 24 hours; rest 5 minutes, then run Regular Ice Cream."
+      },
+      {
+        "number": 3,
+        "heading": "Add Caramel",
+        "body": "Crush two candies into a center well. Respin without liquid."
+      }
+    ]
+  },
+  {
+    "card": 1,
+    "accent": "amber",
+    "heading": "Make the Crackable Top",
+    "items": [
+      {
+        "number": 4,
+        "heading": "Melt",
+        "body": "Melt the other four hard caramels over low heat."
+      },
+      {
+        "number": 5,
+        "heading": "Chill",
+        "body": "Spread thin on parchment and chill until completely hard."
+      },
+      {
+        "number": 6,
+        "heading": "Crack + Serve",
+        "body": "Scoop, add the optional syrup, set the shell on top, and crack at the table."
+      }
+    ]
+  }
+],
       ingredientCardPhotos: [
-        { src: "/images/creme-brulee-cookie-creami/step-blend-brown-sugar-base-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
-        { src: "/images/creme-brulee-cookie-creami/step-crush-two-caramels-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
-      ],
+  {
+    "src": "/images/creme-brulee-cookie-creami/step-crush-two-caramels-polished.webp",
+    "position": "50% 55%",
+    "zoom": 1.02,
+    "layout": "side"
+  },
+  {
+    "src": "/images/creme-brulee-cookie-creami/step-melt-four-caramels-polished.webp",
+    "position": "50% 55%",
+    "zoom": 1.02,
+    "layout": "side"
+  }
+],
       methodCardPhotos: [
-        { src: "/images/creme-brulee-cookie-creami/step-add-caramels-after-first-spin-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
-        { src: "/images/creme-brulee-cookie-creami/step-melt-four-caramels-polished.webp", position: "50% 50%", zoom: 1.05, layout: "side" },
-      ],
-      servingPhoto: "/images/creme-brulee-cookie-creami/hero-caramel-glass-crack-polished.webp",
+  {
+    "src": "/images/creme-brulee-cookie-creami/step-add-caramels-after-first-spin-polished.webp",
+    "position": "50% 55%",
+    "zoom": 1.02,
+    "layout": "side"
+  },
+  {
+    "src": "/images/creme-brulee-cookie-creami/step-place-chilled-caramel-glass-polished.webp",
+    "position": "50% 55%",
+    "zoom": 1.02,
+    "layout": "side"
+  }
+],
+      servingPhoto: "/images/creme-brulee-cookie-creami/final-taste-test-polished.webp",
       servingGroups: [
-        {
-          accent: "amber",
-          heading: "Whole-Pint Dessert",
-          items: [
-            { text: "One finished pint: 300 calories and 43g protein — includes all six sugar-free hard caramels (2 crushed into the pint + 4 melted into the shell) and the optional light syrup drizzle." },
-            { text: "Base flavor was decent; the crackable sugar-free caramel-glass shell is what made this pint feel special. Crack it at the table for the payoff." },
-          ],
-        },
-      ],
-      engagementQuestion: "Would you make this for the flavor, or just for the crack?",
-    },
+  {
+    "accent": "amber",
+    "heading": "Whole-Pint Estimate",
+    "items": [
+      {
+        "text": "About 300 calories and 43g protein for the full pint; includes all six sugar-free caramel candies."
+      },
+      {
+        "text": "Let the thin caramel sheet chill until brittle before placing it on the scoops."
+      }
+    ]
+  }
+],
+      engagementQuestion: "Would you crack the caramel shell before the first bite?",
+        captionTitle: "Crème Brûlée Cookie Protein Creami · 43g protein for the whole pint.",
+      captionBody: "Crème Brûlée Cookie Creami with a protein base and a two-part caramel finish: two sugar-free hard caramels crushed into the pint, and four melted into a thin brittle shell. Chill the shell until hard, then crack it at the table. The creator’s whole-pint estimate is 300 calories and 43g protein; candy and whey labels can shift the total. Full recipe: thesplitplate.com/cookbook/creme-brulee-cookie-creami",
+      heroStats: [
+  {
+    "value": "300",
+    "label": "est. cal"
+  },
+  {
+    "value": "43g",
+    "label": "est. protein"
+  },
+  {
+    "value": "1 pint",
+    "label": "full recipe"
+  }
+],
+      methodLabel: "HOW TO MAKE",
+  },
     socialImages: [
       "/images/creme-brulee-cookie-creami/step-blend-brown-sugar-base-polished.webp",
       "/images/creme-brulee-cookie-creami/step-frozen-level-pint-polished.webp",
@@ -14108,7 +14519,7 @@ export const bases = [
     id: "parmesan-corn-chex-snap-peas",
     title: "Parmesan Corn Chex Snap Peas",
     tagline: "Two-crunch side. 2 tbsp aged Parm + 4 tbsp crushed Corn Chex = the side that disappears off any plate.",
-    heroImage: "/images/pork-chops-cowboy/step4-peas-done.webp",
+    heroImage: "/images/pork-chops-cowboy/hero-peas-side-polished.webp",
     flavorProfile: "Sweet snap pea pop + nutty aged Parmigiano crunch + crispy Corn Chex texture. The 2:1 chex-to-Parm ratio is the move — more crunch, less density.",
     calories: 320,
     caloriesPerServing: 80,
@@ -14167,6 +14578,132 @@ export const bases = [
       reheat: "Air fryer 400°F for 4-5 min. Restores ~70% of the original crispness. Oven 400°F for 6-8 min also works.",
       chainTo: { slug: "herb-garlic-pork-chops-cowboy-butter", title: "Herb-Garlic Pork Chops + Cowboy Butter Drizzle", note: "Built originally for this recipe. The crusted peas + sliced chop + cowboy butter drizzle = the flagship plating." },
     },
+      socialCarousel: {
+  "heroBadge": "Vegetable side · crisp oven finish",
+  "heroAccent": "green",
+  "heroStats": [
+    {
+      "value": "4",
+      "label": "side servings"
+    },
+    {
+      "value": "425°F",
+      "label": "oven"
+    },
+    {
+      "value": "18–22",
+      "label": "min roast"
+    }
+  ],
+  "hook": "Sugar snap peas with a crisp coat of aged Parmesan and crushed Corn Chex.",
+  "captionTitle": "Parmesan Corn Chex Snap Peas · crunchy oven side.",
+  "captionBody": "Sugar snap peas get tossed with a little oil, aged Parmesan, and coarse Corn Chex crumbs, then roasted until the edges crisp. Serve straight from the oven while the coating is crunchy. Full recipe: thesplitplate.com/cookbook/parmesan-corn-chex-snap-peas",
+  "heroPhoto": "/images/pork-chops-cowboy/hero-peas-side-polished.webp",
+  "ingredientGroups": [
+    {
+      "card": 0,
+      "accent": "green",
+      "heading": "Snap Pea Coating",
+      "items": [
+        {
+          "quantity": "12 oz",
+          "text": "Sugar snap peas, trimmed"
+        },
+        {
+          "quantity": "4 tbsp",
+          "text": "Corn Chex, pulsed to coarse crumbs"
+        },
+        {
+          "quantity": "2 tbsp",
+          "text": "Coarse grated aged Parmesan"
+        },
+        {
+          "quantity": "Light spray",
+          "text": "Avocado oil"
+        },
+        {
+          "quantity": "Pinch",
+          "text": "Salt and black pepper"
+        },
+        {
+          "quantity": "Optional",
+          "text": "Lemon wedge to serve"
+        }
+      ]
+    }
+  ],
+  "methodLabel": "HOW TO ROAST",
+  "methodGroups": [
+    {
+      "card": 0,
+      "accent": "green",
+      "heading": "Coat Evenly",
+      "items": [
+        {
+          "number": 1,
+          "heading": "Heat Oven",
+          "body": "Heat to 425°F and line a sheet pan with parchment."
+        },
+        {
+          "number": 2,
+          "heading": "Pulse",
+          "body": "Pulse Corn Chex into coarse crumbs; keep some flakes visible."
+        },
+        {
+          "number": 3,
+          "heading": "Toss",
+          "body": "Coat peas with light oil spray, Parmesan, cereal crumbs, salt, and pepper in a bowl."
+        }
+      ]
+    },
+    {
+      "card": 1,
+      "accent": "green",
+      "heading": "Roast + Serve",
+      "items": [
+        {
+          "number": 4,
+          "heading": "Spread",
+          "body": "Arrange in one layer on the lined pan."
+        },
+        {
+          "number": 5,
+          "heading": "Roast",
+          "body": "Bake 18–22 minutes until the coating is crisp and the edges turn golden."
+        },
+        {
+          "number": 6,
+          "heading": "Serve Hot",
+          "body": "Bring straight to the table; the crust softens as it sits."
+        }
+      ]
+    }
+  ],
+  "ingredientCardPhotos": [
+    {
+      "src": "/images/brands/kirkland-parmigiano-stravecchio.jpg",
+      "position": "50% 55%",
+      "zoom": 1.02,
+      "layout": "side"
+    }
+  ],
+  "methodCardPhotos": [
+    {
+      "src": "/images/pork-chops-cowboy/step3-peas-oven-polished.webp",
+      "position": "50% 55%",
+      "zoom": 1.02,
+      "layout": "side"
+    },
+    {
+      "src": "/images/pork-chops-cowboy/step4-peas-done-polished.webp",
+      "position": "50% 55%",
+      "zoom": 1.02,
+      "layout": "side"
+    }
+  ],
+  "servingGroups": null,
+  "engagementQuestion": "Would you pair the crunchy peas with pork chops, chicken, or salmon?"
+},
   },
   {
     id: "caesar-crunch-salad",

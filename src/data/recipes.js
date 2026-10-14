@@ -1779,7 +1779,7 @@ const recipes = [
     servings: 4,
     protein: 52,
     calories: 510,
-    image: "/images/chicken-smash-caesar-tacos/hero-chicken-smash-caesar-tacos.webp",
+    image: "/images/chicken-smash-caesar-tacos/hero-chicken-smash-caesar-tacos-polished.webp",
     video: "/videos/chicken-smash-caesar-tacos/chicken-smash-caesar-tacos-510cal-52protein-marcus.mp4",
     splitPlateVideo: "/videos/chicken-smash-caesar-tacos/split-plate-chicken-smash-caesar-tacos-marcus.mp4",
     commentRecipeVideo: "/videos/chicken-smash-caesar-tacos/chicken-smash-caesar-tacos-15-second-comment-recipe-marcus.mp4",
@@ -1825,9 +1825,9 @@ const recipes = [
         "4 Mission flour street-taco tortillas (kids)",
       ],
       sharedSteps: [
-        { text: "MIX: Combine ground chicken, Velveeta shreds, salt, and taco seasoning. Don't overwork — keep it loose.", images: ["/images/chicken-smash-caesar-tacos/step-mix-chicken-velveeta.webp", "/images/chicken-smash-caesar-tacos/context-two-tortillas.webp"] },
-        { text: "SMASH: Divide the mixture evenly across all 12 tortillas and spread it thin to the edges — this is critical.", images: ["/images/chicken-smash-caesar-tacos/step-portion-twelve-tacos.webp"] },
-        { text: "COOK: Chicken side down on a medium-hot griddle, 4-5 min until browned and the chicken reaches 165°F. Flip and toast the tortilla side 1-2 min.", images: ["/images/chicken-smash-caesar-tacos/step-chicken-side-down.webp", "/images/chicken-smash-caesar-tacos/step-flip-browned-tacos.webp"] },
+        { text: "MIX: Combine ground chicken, Velveeta shreds, salt, and taco seasoning. Don't overwork — keep it loose.", images: ["/images/chicken-smash-caesar-tacos/step-mix-chicken-velveeta-polished.webp", "/images/chicken-smash-caesar-tacos/context-two-tortillas.webp"] },
+        { text: "SMASH: Divide the mixture evenly across all 12 tortillas and spread it thin to the edges — this is critical.", images: ["/images/chicken-smash-caesar-tacos/step-portion-twelve-tacos-polished.webp"] },
+        { text: "COOK: Chicken side down on a medium-hot griddle, 4-5 min until browned and the chicken reaches 165°F. Flip and toast the tortilla side 1-2 min.", images: ["/images/chicken-smash-caesar-tacos/step-chicken-side-down-polished.webp", "/images/chicken-smash-caesar-tacos/step-flip-browned-tacos-polished.webp"] },
       ],
       adult: {
         label: "Adult — Caesar Crunch (Keto)",
@@ -1840,8 +1840,8 @@ const recipes = [
           "1/2 bag Quest protein chips",
         ],
         steps: [
-          { text: "SALAD: Toss 2 cups romaine with 2 tbsp of the homemade high-protein Caesar (recipe on /cookbook/high-protein-caesar-dressing), split across the two adult plates.", images: ["/images/chicken-smash-caesar-tacos/adult-plate.webp"] },
-          { text: "BUILD: Plate 4 keto tacos per adult with the dressed romaine and half a bag of Quest chips.", images: ["/images/chicken-smash-caesar-tacos/adult-plate.webp"] },
+          { text: "SALAD: Toss 2 cups romaine with 2 tbsp of the homemade high-protein Caesar (recipe on /cookbook/high-protein-caesar-dressing), split across the two adult plates.", images: ["/images/chicken-smash-caesar-tacos/adult-plate-polished.webp"] },
+          { text: "BUILD: Plate 4 keto tacos per adult with the dressed romaine and half a bag of Quest chips.", images: ["/images/chicken-smash-caesar-tacos/adult-plate-polished.webp"] },
         ],
       },
       kid: {
@@ -1881,10 +1881,10 @@ const recipes = [
       "Kid chips, to preference",
     ],
     steps: [
-      { text: "MIX: Combine ground chicken, Velveeta shreds, salt, and taco seasoning without overworking.", images: ["/images/chicken-smash-caesar-tacos/step-mix-chicken-velveeta.webp", "/images/chicken-smash-caesar-tacos/context-two-tortillas.webp"] },
-      { text: "SMASH: Divide the mixture equally across all 12 tortillas and spread it thin to the edges.", images: ["/images/chicken-smash-caesar-tacos/step-portion-twelve-tacos.webp"] },
-      { text: "COOK: Chicken-side down on a medium-hot griddle until browned and the chicken reaches 165°F, then flip and toast the tortilla side.", images: ["/images/chicken-smash-caesar-tacos/step-chicken-side-down.webp", "/images/chicken-smash-caesar-tacos/step-flip-browned-tacos.webp"] },
-      { text: "BUILD: Toss 2 cups romaine with 2 tbsp homemade Caesar. Adults get 4 keto tacos, dressed romaine, and half a bag of Quest chips. Kids get 2 plain flour tacos with chips and salad on the side.", images: ["/images/chicken-smash-caesar-tacos/adult-plate.webp", "/images/chicken-smash-caesar-tacos/kid-plate.webp"] },
+      { text: "MIX: Combine ground chicken, Velveeta shreds, salt, and taco seasoning without overworking.", images: ["/images/chicken-smash-caesar-tacos/step-mix-chicken-velveeta-polished.webp", "/images/chicken-smash-caesar-tacos/context-two-tortillas.webp"] },
+      { text: "SMASH: Divide the mixture equally across all 12 tortillas and spread it thin to the edges.", images: ["/images/chicken-smash-caesar-tacos/step-portion-twelve-tacos-polished.webp"] },
+      { text: "COOK: Chicken-side down on a medium-hot griddle until browned and the chicken reaches 165°F, then flip and toast the tortilla side.", images: ["/images/chicken-smash-caesar-tacos/step-chicken-side-down-polished.webp", "/images/chicken-smash-caesar-tacos/step-flip-browned-tacos-polished.webp"] },
+      { text: "BUILD: Toss 2 cups romaine with 2 tbsp homemade Caesar. Adults get 4 keto tacos, dressed romaine, and half a bag of Quest chips. Kids get 2 plain flour tacos with chips and salad on the side.", images: ["/images/chicken-smash-caesar-tacos/adult-plate-polished.webp", "/images/chicken-smash-caesar-tacos/kid-plate.webp"] },
     ],
     brands: [
       { name: "La Banderita", item: "Carb Counter Keto Street Tacos", why: "~20 cal per keto street-taco tortilla, holds up to smash cooking — the adult carb lever that makes the plate keto", image: "/images/brands/mission-zero-carbs.png", url: "https://www.labanderita.net/products/carb-counter-street-tacos/" },
@@ -1899,6 +1899,171 @@ const recipes = [
     },
     macroHonesty: "Adult plate ≈ 510 cal / 52g protein — estimated from 1 lb 94/6 ground chicken + 3 oz Velveeta shreds + 1/4 cup taco seasoning across 8 keto tacos (2 adults), plus 2 cups romaine with 2 tbsp homemade high-protein Caesar and half a bag of Quest chips per adult. La Banderita keto street tacos run ~20 cal each. Taco seasoning and tortilla formulations vary, so treat this as an estimate. Kid plate (2 plain flour tacos) is roughly 300 cal / 26g protein before side chips — kid chip amount is to preference and not counted.",
     notes: "The homemade high-protein Caesar (Sauce Series Ep. 6) is what carries this — it's the low-calorie Caesar that replaced Bolthouse here. Full dressing recipe at /cookbook/high-protein-caesar-dressing.",
+      socialCarousel: {
+  "heroBadge": "Split plate dinner · chicken tacos",
+  "heroAccent": "amber",
+  "heroStats": [
+    {
+      "value": "~510",
+      "label": "est. cal / adult plate"
+    },
+    {
+      "value": "~52g",
+      "label": "est. protein / adult plate"
+    },
+    {
+      "value": "12",
+      "label": "tacos per batch"
+    }
+  ],
+  "hook": "Crisp-edged chicken smash tacos, Caesar romaine, and two tortilla builds from one fast batch.",
+  "captionTitle": "Chicken Smash Caesar Tacos · one cook, two plates.",
+  "captionBody": "One pound of ground chicken and Velveeta makes 12 smash tacos. The adult plate gets four keto tortillas, Caesar romaine, and Quest chips; the kids’ plates get two flour tacos each with sides served separately. Adult plate estimate: about 510 calories and 52g protein, including the measured adult toppings. Full recipe: thesplitplate.com/recipes/chicken-smash-caesar-tacos",
+  "heroPhoto": "/images/chicken-smash-caesar-tacos/hero-chicken-smash-caesar-tacos-polished.webp",
+  "ingredientGroups": [
+    {
+      "card": 0,
+      "accent": "amber",
+      "heading": "Shared Chicken + Tacos",
+      "items": [
+        {
+          "quantity": "1 lb",
+          "text": "94/6 ground chicken"
+        },
+        {
+          "quantity": "3 oz",
+          "text": "Velveeta Original shreds"
+        },
+        {
+          "quantity": "¼ cup",
+          "text": "Taco seasoning"
+        },
+        {
+          "quantity": "To taste",
+          "text": "Redmond Real Salt"
+        },
+        {
+          "quantity": "12",
+          "text": "Street-taco tortillas"
+        }
+      ]
+    },
+    {
+      "card": 1,
+      "accent": "amber",
+      "heading": "Plate Two Ways",
+      "items": [
+        {
+          "quantity": "Adults",
+          "text": "4 keto tacos each, Caesar romaine, ½ bag Quest chips"
+        },
+        {
+          "quantity": "Kids",
+          "text": "2 flour tacos each; chips and salad on the side"
+        },
+        {
+          "quantity": "2 cups",
+          "text": "Chopped romaine"
+        },
+        {
+          "quantity": "2 tbsp",
+          "text": "Homemade high-protein Caesar"
+        }
+      ]
+    }
+  ],
+  "methodLabel": "HOW TO COOK",
+  "methodGroups": [
+    {
+      "card": 0,
+      "accent": "amber",
+      "heading": "Smash + Brown",
+      "items": [
+        {
+          "number": 1,
+          "heading": "Mix",
+          "body": "Combine ground chicken, Velveeta, salt, and taco seasoning without overworking."
+        },
+        {
+          "number": 2,
+          "heading": "Portion",
+          "body": "Divide across all 12 tortillas and spread the chicken thin to the edges."
+        },
+        {
+          "number": 3,
+          "heading": "Cook Chicken Side",
+          "body": "Cook chicken-side down on a medium-hot griddle until browned and the center reaches 165°F."
+        }
+      ]
+    },
+    {
+      "card": 1,
+      "accent": "amber",
+      "heading": "Flip + Build",
+      "items": [
+        {
+          "number": 4,
+          "heading": "Flip",
+          "body": "Turn and toast the tortilla side for 1–2 minutes."
+        },
+        {
+          "number": 5,
+          "heading": "Adult Plates",
+          "body": "Give each adult four keto tacos, Caesar romaine, and half a bag of Quest chips."
+        },
+        {
+          "number": 6,
+          "heading": "Kid Plates",
+          "body": "Give each kid two plain flour tacos; keep chips and salad on the side."
+        }
+      ]
+    }
+  ],
+  "ingredientCardPhotos": [
+    {
+      "src": "/images/chicken-smash-caesar-tacos/step-mix-chicken-velveeta-polished.webp",
+      "position": "50% 55%",
+      "zoom": 1.02,
+      "layout": "side"
+    },
+    {
+      "src": "/images/chicken-smash-caesar-tacos/context-two-tortillas.webp",
+      "position": "50% 55%",
+      "zoom": 1.02,
+      "layout": "side"
+    }
+  ],
+  "methodCardPhotos": [
+    {
+      "src": "/images/chicken-smash-caesar-tacos/step-portion-twelve-tacos-polished.webp",
+      "position": "50% 55%",
+      "zoom": 1.02,
+      "layout": "side"
+    },
+    {
+      "src": "/images/chicken-smash-caesar-tacos/step-flip-browned-tacos-polished.webp",
+      "position": "50% 55%",
+      "zoom": 1.02,
+      "layout": "side"
+    }
+  ],
+  "servingPhoto": "/images/chicken-smash-caesar-tacos/adult-plate-polished.webp",
+  "servingGroups": [
+    {
+      "accent": "amber",
+      "heading": "Adult Estimate",
+      "items": [
+        {
+          "text": "About 510 calories and 52g protein per adult plate, including four keto tacos, 1 tbsp Caesar dressing, romaine, and half a Quest chip bag."
+        },
+        {
+          "text": "Kid plates use two flour tacos each; their estimate excludes side chips because the amount is to preference."
+        }
+      ]
+    }
+  ],
+  "engagementQuestion": "Which plate would you make: Caesar crunch or plain tacos with sides?"
+},
   },
   {
     id: 24,
