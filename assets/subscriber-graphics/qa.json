@@ -1,0 +1,83 @@
+{
+  "exports": [
+    {
+      "file": "subscribe-overlay-4s-alpha.mov",
+      "bytes": 16128828,
+      "sha256": "eb082bffc588b16276437d81188c97573b0d4ff633edbda7f43f763ba327806a",
+      "width": 3840,
+      "height": 2160,
+      "fps": "60/1",
+      "frames": 240,
+      "duration": 4.0,
+      "codec": "qtrle",
+      "pixel_format": "argb",
+      "full_decode": "pass",
+      "sampled_alpha": {
+        "0": {
+          "extrema": [
+            0,
+            0
+          ],
+          "outside": 0
+        },
+        "36": {
+          "extrema": [
+            0,
+            255
+          ],
+          "outside": 0
+        },
+        "72": {
+          "extrema": [
+            0,
+            255
+          ],
+          "outside": 0
+        },
+        "114": {
+          "extrema": [
+            0,
+            255
+          ],
+          "outside": 0
+        },
+        "162": {
+          "extrema": [
+            0,
+            255
+          ],
+          "outside": 0
+        },
+        "228": {
+          "extrema": [
+            0,
+            22
+          ],
+          "outside": 0
+        },
+        "239": {
+          "extrema": [
+            0,
+            0
+          ],
+          "outside": 0
+        }
+      }
+    },
+    {
+      "file": "watch-next-outro-10s.mp4",
+      "bytes": 399898,
+      "sha256": "28885110f086e030e7461ac6bb492004e803a5a82b0932b6a8625530ef464bd8",
+      "width": 3840,
+      "height": 2160,
+      "fps": "60/1",
+      "frames": 600,
+      "duration": 10.0,
+      "codec": "h264",
+      "pixel_format": "yuv420p",
+      "full_decode": "pass",
+      "sampled_alpha": {}
+    }
+  ],
+  "review": "Full decode/frame count and sampled visual/alpha verification; no fresh subjective audio listening claim. Optional original synthetic SFX are separate."
+}

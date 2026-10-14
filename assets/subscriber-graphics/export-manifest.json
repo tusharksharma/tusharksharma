@@ -1,0 +1,134 @@
+{
+  "version": "1",
+  "created": "2026-10-13",
+  "folder": "https://drive.google.com/drive/folders/1wVzemcmjICSLA4tB7DODdSUzmJ2JxAFQ",
+  "assets": [
+    {
+      "file": "watch-next-outro-10s.mp4",
+      "drive_id": "1bXgetbcCIdAviGkWkG7fDmasfc17CaOI",
+      "drive_url": "https://drive.google.com/file/d/1bXgetbcCIdAviGkWkG7fDmasfc17CaOI/view?usp=drivesdk",
+      "bytes": 399898,
+      "sha256": "28885110f086e030e7461ac6bb492004e803a5a82b0932b6a8625530ef464bd8",
+      "width": 3840,
+      "height": 2160,
+      "fps": "60/1",
+      "frames": 600,
+      "duration": 10,
+      "codec": "h264",
+      "pixel_format": "yuv420p",
+      "full_decode": "pass",
+      "sampled_alpha": {}
+    },
+    {
+      "file": "optional-click-bell-4s.wav",
+      "drive_id": "1tDgimnQe4h8XXB5SDmdVm9D44Pj1WYoN",
+      "drive_url": "https://drive.google.com/file/d/1tDgimnQe4h8XXB5SDmdVm9D44Pj1WYoN/view?usp=drivesdk"
+    },
+    {
+      "file": "overlay-preview.mp4",
+      "drive_id": "1wUMtAAjuJ4_sRtG13gMpBPgiXWvHeNiw",
+      "drive_url": "https://drive.google.com/file/d/1wUMtAAjuJ4_sRtG13gMpBPgiXWvHeNiw/view?usp=drivesdk"
+    },
+    {
+      "file": "README.md",
+      "drive_id": "1ilBTi8HgiXLknIMoNAGrl_e5hxmZUkTk",
+      "drive_url": "https://drive.google.com/file/d/1ilBTi8HgiXLknIMoNAGrl_e5hxmZUkTk/view?usp=drivesdk"
+    },
+    {
+      "file": "subscribe-overlay-4s-alpha.mov",
+      "drive_id": "1ap-XgdM0LgsFhC_WTGSlpwBL64lG8_gh",
+      "drive_url": "https://drive.google.com/file/d/1ap-XgdM0LgsFhC_WTGSlpwBL64lG8_gh/view?usp=drivesdk",
+      "bytes": 16128828,
+      "sha256": "eb082bffc588b16276437d81188c97573b0d4ff633edbda7f43f763ba327806a",
+      "width": 3840,
+      "height": 2160,
+      "fps": "60/1",
+      "frames": 240,
+      "duration": 4,
+      "codec": "qtrle",
+      "pixel_format": "argb",
+      "full_decode": "pass",
+      "sampled_alpha": {
+        "0": {
+          "extrema": [
+            0,
+            0
+          ],
+          "outside": 0
+        },
+        "36": {
+          "extrema": [
+            0,
+            255
+          ],
+          "outside": 0
+        },
+        "72": {
+          "extrema": [
+            0,
+            255
+          ],
+          "outside": 0
+        },
+        "114": {
+          "extrema": [
+            0,
+            255
+          ],
+          "outside": 0
+        },
+        "162": {
+          "extrema": [
+            0,
+            255
+          ],
+          "outside": 0
+        },
+        "228": {
+          "extrema": [
+            0,
+            22
+          ],
+          "outside": 0
+        },
+        "239": {
+          "extrema": [
+            0,
+            0
+          ],
+          "outside": 0
+        }
+      }
+    }
+  ],
+  "native_end_screen": {
+    "coordinate_canvas": [
+      1920,
+      1080
+    ],
+    "subscribe": {
+      "center": [
+        575,
+        660
+      ],
+      "radius": 99
+    },
+    "videos": [
+      [
+        1098,
+        163,
+        1738,
+        523
+      ],
+      [
+        1098,
+        579,
+        1738,
+        939
+      ]
+    ],
+    "requires": "Native Subscribe and actual video/playlist destinations added in YouTube Studio; rendered tiles are not clickable"
+  },
+  "renderer": "render.py: original code graphics, not HyperFrames output",
+  "audio": "Optional original synthesized click/bell sound, peak approximately -18.87 dBFS. No new paid narration. Outro music not baked."
+}
