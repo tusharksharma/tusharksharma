@@ -15,6 +15,8 @@ When asked for rules, templates, or workflow changes, produce those only. Begin 
 
 ## Long-form editing
 
+For reusable channel intro/music and the confirmed post-intro/outro thanks, like, subscribe and bell treatment, read `docs/video/intro-music-and-cta.md`. For thumbnail faces, read `docs/video/creator-reactions.md`: prioritize real extracted reactions and preserve actual teeth/mouth instead of generating a new grin.
+
 For long-form YouTube editing and maintaining its reusable rules, use the sibling `splitplate-long-form-editor/SKILL.md`. Read `docs/splitplate-ideologies.md` for confirmed brand beliefs. Long-form action-matched narration and clutter-conscious composition have their own format requirements; do not inherit short-form duration, crop or package defaults.
 
 ## Short-form editing

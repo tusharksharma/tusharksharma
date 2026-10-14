@@ -7,7 +7,9 @@ description: Edit or review The Split Plate long-form YouTube videos from real f
 
 ## Ground the project
 
-For thumbnail reaction references, read [Tushar's reaction photo library](../../../docs/video/creator-reactions.md). The six supplied images are committed under assets/creator-reactions; inspect and select the expression that fits the film without routinely asking for another upload.
+For thumbnail reaction references, read [Tushar's reaction photo library](../../../docs/video/creator-reactions.md). Prefer the new real-video frames under assets/creator-reactions/real-2026-10-13; preserve actual teeth, mouth and identity. Select the expression that fits the film without routinely asking for another upload. Compare transformed cutouts with the original before use.
+
+Read [Intro, music and subscriber treatment](../../../docs/video/intro-music-and-cta.md) before planning every future long-form opening/outro. Use the supplied Drive intro/music library, show the compact thanks/like/subscribe/bell animation immediately after the intro and at the outro, and leave a real native end-screen layout. These confirmed rules supersede older CTA/intro examples; they do not retrofit approved films or initiate paid generation.
 
 Locate the current `tusharksharma/tusharksharma` checkout. Read its `AGENTS.md`, `docs/content-growth-plan.md`, `docs/splitplate-ideologies.md`, and `docs/video/hyperframes-editing/README.md`. Paths here are repository-relative. Use the source snapshot's `SPLITPLATE_YOUTUBE_VIDEO_RULES.md` for long-form structure, reuse, provenance and delivery, and `CURRENT_RULES.md` for current picture, audio and factual corrections. Explicit task direction overrides historical resolution and grade defaults.
 

@@ -51,6 +51,8 @@ Taking a finished edit from `~/Documents/New project/video-edits/` live means re
 
 ## Long-Form YouTube Editing
 
+For future long-form episodes, read [Intro, music and subscriber treatment](docs/video/intro-music-and-cta.md): use the supplied reusable music/intro library and include thanks/like/subscribe/bell immediately after the intro and at the outro, with a native watch-next end screen. For covers, prioritize [real creator reactions](docs/video/creator-reactions.md); preserve actual teeth and mouth, never synthesize a grin. These October 13 preferences override older generic CTA/cover examples within this scope.
+
 For long-form YouTube edits and reusable long-form rules, use [.agents/skills/splitplate-long-form-editor/SKILL.md](.agents/skills/splitplate-long-form-editor/SKILL.md). Build the picture sequence before matching narration to visible actions and confirmed stories. Frame around food and cooking to reduce clutter; adapt the crop per shot. Record the requested duration, delivery format and credit cap per project rather than inheriting short-form settings.
 
 ## Reusable Recipe Video Agent Workflow

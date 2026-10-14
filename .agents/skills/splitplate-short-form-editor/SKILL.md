@@ -7,7 +7,7 @@ description: Edit or review The Split Plate short-form recipe videos using its H
 
 ## Locate the rules
 
-For creator-face covers, read [Tushar's reaction photo library](../../../docs/video/creator-reactions.md). Inspect the six supplied images under assets/creator-reactions and select the expression that fits the story; do not routinely ask for another upload.
+For creator-face covers, read [Tushar's reaction photo library](../../../docs/video/creator-reactions.md). Prefer its real-video frames, preserve actual teeth/mouth and select the expression that fits the story; do not routinely ask for another upload. Compare generated cutouts to the source. The long-form subscribe intro/outro rule is not a requirement to lengthen Shorts.
 
 Use the current `tusharksharma/tusharksharma` checkout. All paths below are repository-relative. If invoked outside that checkout, locate it or retrieve these documents from the repository before editing; do not invent missing rules. Read `AGENTS.md`, `docs/content-growth-plan.md`, and `docs/video/hyperframes-editing/README.md`.
 

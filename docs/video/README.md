@@ -19,6 +19,8 @@ directory `~/Documents/New project/video-edits/`, which is **not a real git repo
 
 ## Working copy vs. committed copy
 
+Current reusable additions: [real creator reactions](creator-reactions.md) and [intro, music and subscriber treatment](intro-music-and-cta.md). The latter connects the supplied Drive music/intro library and the confirmed post-intro/outro like, subscribe and notification treatment. They are routed by the format-specific agent skills.
+
 The working copies in `video-edits/` are what an agent launched from that
 directory actually reads. When a rule changes, update **both** — edit in place
 where you're working, then mirror into this folder in the same commit. If the two

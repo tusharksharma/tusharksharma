@@ -1,0 +1,223 @@
+{
+  "checked": "2026-10-13",
+  "folder_url": "https://drive.google.com/drive/folders/1wVzemcmjICSLA4tB7DODdSUzmJ2JxAFQ",
+  "current_intro": "gemini-intro-original.mp4",
+  "current_jingle": "slam.mp4",
+  "assets": [
+    {
+      "file": "gemini-intro-original.mp4",
+      "bytes": 2335791,
+      "sha256": "f6c4df05efa4555339de102e993f063165677feb8b0bbc07bdc3044550647ffc",
+      "duration_seconds": 10.005,
+      "streams": [
+        {
+          "type": "video",
+          "codec": "h264",
+          "width": 1280,
+          "height": 720,
+          "fps": "24/1",
+          "start_seconds": 0.0,
+          "duration_seconds": 10.0
+        },
+        {
+          "type": "audio",
+          "codec": "aac",
+          "sample_rate": 48000,
+          "channels": 2,
+          "start_seconds": 0.0,
+          "duration_seconds": 10.005
+        }
+      ],
+      "decoded_frames": {
+        "VideoFrame": 240,
+        "AudioFrame": 469
+      },
+      "decode": "complete",
+      "drive_id": "1pDgTL5gQ4Eui-UR6lNkQxW9CtHKR9chz",
+      "drive_url": "https://drive.google.com/file/d/1pDgTL5gQ4Eui-UR6lNkQxW9CtHKR9chz/view",
+      "storage": "canonical bytes in authorized Drive; local downloads not committed"
+    },
+    {
+      "file": "shuffle.mp4",
+      "bytes": 202456,
+      "sha256": "6b6671347363f23f23d90d93d406ef6c4dce7eeafb28a95f38a21d884670a257",
+      "duration_seconds": 12.4,
+      "streams": [
+        {
+          "type": "video",
+          "codec": "h264",
+          "width": 960,
+          "height": 540,
+          "fps": "10/1",
+          "start_seconds": 0.0,
+          "duration_seconds": 12.4
+        },
+        {
+          "type": "audio",
+          "codec": "aac",
+          "sample_rate": 48000,
+          "channels": 2,
+          "start_seconds": 0.0,
+          "duration_seconds": 8.0
+        }
+      ],
+      "decoded_frames": {
+        "VideoFrame": 124,
+        "AudioFrame": 375
+      },
+      "decode": "complete",
+      "drive_id": "1qA0MJTPXVYl6jdAmJzm6xhYhGHr_rkuo",
+      "drive_url": "https://drive.google.com/file/d/1qA0MJTPXVYl6jdAmJzm6xhYhGHr_rkuo/view",
+      "storage": "canonical bytes in authorized Drive; local downloads not committed"
+    },
+    {
+      "file": "slam-opening.wav",
+      "bytes": 2918478,
+      "sha256": "415825a7a6f7b4ffb0386e9a2c5aba1fefe3ea3340adec2ef6199826d69e636a",
+      "duration_seconds": 15.2,
+      "streams": [
+        {
+          "type": "audio",
+          "codec": "pcm_s16le",
+          "sample_rate": 48000,
+          "channels": 2,
+          "start_seconds": 0,
+          "duration_seconds": 15.2
+        }
+      ],
+      "decoded_frames": {
+        "AudioFrame": 179
+      },
+      "decode": "complete",
+      "drive_id": "1Z5s76wmzT31Sjkhay-XSxRnDDoYqMOsQ",
+      "drive_url": "https://drive.google.com/file/d/1Z5s76wmzT31Sjkhay-XSxRnDDoYqMOsQ/view",
+      "storage": "canonical bytes in authorized Drive; local downloads not committed"
+    },
+    {
+      "file": "slam-outro.wav",
+      "bytes": 4608078,
+      "sha256": "023bceb85c8247b18494e7c899a936351f98ccf16a2ab7a10a4580048b1b9e14",
+      "duration_seconds": 24.0,
+      "streams": [
+        {
+          "type": "audio",
+          "codec": "pcm_s16le",
+          "sample_rate": 48000,
+          "channels": 2,
+          "start_seconds": 0,
+          "duration_seconds": 24.0
+        }
+      ],
+      "decoded_frames": {
+        "AudioFrame": 282
+      },
+      "decode": "complete",
+      "drive_id": "1JQj8wNgFSlHD8WsbLCQZ2GN639aco7x3",
+      "drive_url": "https://drive.google.com/file/d/1JQj8wNgFSlHD8WsbLCQZ2GN639aco7x3/view",
+      "storage": "canonical bytes in authorized Drive; local downloads not committed"
+    },
+    {
+      "file": "slam.mp4",
+      "bytes": 275326,
+      "sha256": "06dae6523079ff929f52d7da36e4afd29f09a7f523feda8f0413f7604147d33d",
+      "duration_seconds": 15.2,
+      "streams": [
+        {
+          "type": "video",
+          "codec": "h264",
+          "width": 960,
+          "height": 540,
+          "fps": "10/1",
+          "start_seconds": 0.0,
+          "duration_seconds": 15.2
+        },
+        {
+          "type": "audio",
+          "codec": "aac",
+          "sample_rate": 48000,
+          "channels": 2,
+          "start_seconds": 0.0,
+          "duration_seconds": 10.8
+        }
+      ],
+      "decoded_frames": {
+        "VideoFrame": 152,
+        "AudioFrame": 507
+      },
+      "decode": "complete",
+      "drive_id": "1VUQInTonJNxWF4K0CAihVIDnPp6NtHR5",
+      "drive_url": "https://drive.google.com/file/d/1VUQInTonJNxWF4K0CAihVIDnPp6NtHR5/view",
+      "storage": "canonical bytes in authorized Drive; local downloads not committed"
+    },
+    {
+      "file": "smash.mp4",
+      "bytes": 228686,
+      "sha256": "858fa02b9008ad4f6224a53c7efba6293d5c6b8c12a55d46b6927e3ce1dee1e1",
+      "duration_seconds": 13.6,
+      "streams": [
+        {
+          "type": "video",
+          "codec": "h264",
+          "width": 960,
+          "height": 540,
+          "fps": "10/1",
+          "start_seconds": 0.0,
+          "duration_seconds": 13.6
+        },
+        {
+          "type": "audio",
+          "codec": "aac",
+          "sample_rate": 48000,
+          "channels": 2,
+          "start_seconds": 0.0,
+          "duration_seconds": 9.2
+        }
+      ],
+      "decoded_frames": {
+        "VideoFrame": 136,
+        "AudioFrame": 432
+      },
+      "decode": "complete",
+      "drive_id": "1gc2zXZy6fnkkHBsoF-weLPDS5jmBtJsL",
+      "drive_url": "https://drive.google.com/file/d/1gc2zXZy6fnkkHBsoF-weLPDS5jmBtJsL/view",
+      "storage": "canonical bytes in authorized Drive; local downloads not committed"
+    },
+    {
+      "file": "the-split-plate.mp4",
+      "bytes": 281230,
+      "sha256": "ec25447d8408d9a24a0a1cc798e2d75686c75d890ed61786fa8941bd739d005b",
+      "duration_seconds": 15.4,
+      "streams": [
+        {
+          "type": "video",
+          "codec": "h264",
+          "width": 960,
+          "height": 540,
+          "fps": "10/1",
+          "start_seconds": 0.0,
+          "duration_seconds": 15.4
+        },
+        {
+          "type": "audio",
+          "codec": "aac",
+          "sample_rate": 48000,
+          "channels": 2,
+          "start_seconds": 0.0,
+          "duration_seconds": 11.0
+        }
+      ],
+      "decoded_frames": {
+        "VideoFrame": 154,
+        "AudioFrame": 516
+      },
+      "decode": "complete",
+      "drive_id": "1WXAdNzME30zFKrPjue00rjfI-y-arnzh",
+      "drive_url": "https://drive.google.com/file/d/1WXAdNzME30zFKrPjue00rjfI-y-arnzh/view",
+      "storage": "canonical bytes in authorized Drive; local downloads not committed"
+    }
+  ],
+  "rules_file_id": "1xSlDOqEivZRjQq9FVaFDEbpN0xPXJiW6",
+  "official_logo_file_id": "15HvlKan5MySVpKe3xD7RpiTVOE7_CqB4",
+  "intro_color_reference_file_id": "1wX3wb3FJAj2HYw7EG8jUKrVB3Zu8cj2T",
+  "verification": "complete media decode and sampled intro frames; no fresh listening claim"
+}

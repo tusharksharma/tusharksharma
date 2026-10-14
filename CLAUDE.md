@@ -6,6 +6,8 @@ For short-form video editing, use [.agents/skills/splitplate-short-form-editor/S
 
 ## Standing Food Principles and Long-Form Video
 
+For future long-form openings/outros, read [intro, music and subscriber treatment](docs/video/intro-music-and-cta.md): include thanks/like/subscribe/bell immediately after the intro and at the outro, with verified native watch-next elements. Prefer [real-video creator reactions](docs/video/creator-reactions.md) and preserve actual teeth and mouth; do not synthesize a grin. These confirmed October 13 rules supersede older generic CTA/face examples in this scope.
+
 Read [the confirmed Split Plate ideologies](docs/splitplate-ideologies.md): frozen/convenience ingredients count as home-cooked food when prepared at home; work hard on the star and use practical sides. For long-form YouTube editing, use [.agents/skills/splitplate-long-form-editor/SKILL.md](.agents/skills/splitplate-long-form-editor/SKILL.md), with action-matched narration and shot-specific framing to reduce clutter.
 
 ## Content Strategy Standing Rule

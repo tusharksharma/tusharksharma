@@ -1,5 +1,26 @@
 # Tushar's reusable thumbnail reaction photos
 
+## Preferred real-video library — October 13, 2026
+
+Use [real-2026-10-13](../../assets/creator-reactions/real-2026-10-13/) first. These eight frames were extracted from Tushar's three supplied reaction recordings, oriented once and cropped; their facial pixels have not been generated. Inspect [the source contact sheet](../../assets/creator-reactions/real-2026-10-13/source-contact-sheet.jpg) and [provenance manifest](../../assets/creator-reactions/real-2026-10-13/manifest.json). The raw MOVs remain outside the public repository.
+
+| Expression | Source moment (approximately) | Use when supported by the story |
+| --- | --- | --- |
+| surprised | IMG_8996, 6s | Surprise/discovery |
+| facepalm | IMG_8996, 12s | A real obstacle or self-directed joke |
+| excited | IMG_8997, 4s | Enthusiastic payoff; real visible teeth |
+| pointing | IMG_8997, 22s | Draw attention to the main subject; real visible teeth |
+| skeptical | IMG_8998, 28s | A comparison or question; closed-mouth preference |
+| thinking | IMG_8998, 34s | Curiosity/decision; closed-mouth preference |
+| animated-emphasis | IMG_8998, 40s | An animated explanatory reaction |
+| hands-on-cheeks | IMG_8997, 14s | Surprise or frustration |
+
+The `*-source.png` files are the identity source of truth. Generated `*-cutout.png` siblings are background-extraction derivatives, not untouched photos. Compare each derivative and final thumbnail against its source; reject changed teeth, lips, smile, eyes, hair, fingers or face shape. Prefer the original pixels whenever a derivative drifts. A source crop may truncate the top of a hat/hair or a sleeve: choose another frame or use that crop honestly; do not invent missing anatomy.
+
+**Confirmed correction:** Tushar disliked the AI-generated teeth in the FREEZER TO FEAST thumbnail. Do not fabricate, whiten, enlarge, straighten or add teeth; do not generate a broader grin from a closed mouth. Teeth naturally visible in a real frame are allowed. Select a closed-mouth source when it fits; do not artificially close an open mouth. Avoid passing the face through whole-thumbnail generation again. Generate/polish the actual food and background as needed, then composite the verified real-person asset with the supported composition tools. Keep subject primary and text short.
+
+Older six photo references below remain recoverable, but the new real-video set takes priority. These staged reactions are reusable creator expressions, not proof of a live response to a particular meal. Select the matching expression autonomously and preserve the existing finished-thumbnail approval process. Save the source filename/time, prompt, cutout version and final QA with the production record.
+
 Added October 13, 2026 at Tushar's request. The six supplied reaction references are stored in [assets/creator-reactions](../../assets/creator-reactions/). Use them for future Split Plate thumbnails when creator presence earns its place; the food or actual subject remains primary. These are reusable portrait references, not evidence that a particular reaction happened during a filmed meal.
 
 | Photo | Candidate use |
