@@ -3233,8 +3233,9 @@ export const quickLunches = [
     id: "miyoka-protein-ramen",
     title: "No-Dish Protein Ramen",
     tagline: "~34g protein. 7 minutes. Zero dishes. Eat from the container.",
-    heroImage: "/images/miyoka-protein-ramen/hero-miyoka-protein-ramen-polished.webp",
-    prepImage: "/images/miyoka-protein-ramen/context-miyoka-spicy-protein-ramen-polished.webp",
+    heroImage: "/images/miyoka-protein-ramen/hero-miyoka-protein-ramen-v2-polished.webp",
+    prepImageCaption: "The actual Miyoka protein ramen cup used for this quick lunch.",
+    prepImage: "/images/miyoka-protein-ramen/context-miyoka-spicy-protein-ramen-v2-polished.webp",
     video: "/videos/miyoka-protein-ramen/miyoka-protein-ramen-quick-lunches-ep5-350cal-35protein-marcus.mp4",
     originalSoundVideo: "/videos/miyoka-protein-ramen/miyoka-protein-ramen-quick-lunches-ep5-clean-original-sound.mp4",
     textOriginalSoundVideo: "/videos/miyoka-protein-ramen/miyoka-protein-ramen-quick-lunches-ep5-text-original-sound.mp4",
@@ -3245,17 +3246,12 @@ export const quickLunches = [
       "#LunchHack",
       "#TheSplitPlate",
     ],
-    // Quick Lunches Episode 5 repost of the existing No-Dish Protein Ramen.
-    // Recipe text/macros preserved verbatim; only images, Ep5 video fields,
-    // and series metadata added. Polished-only social set ships raw
-    // placeholders first; Path A polish prompts queued for the swap.
-    // Narrative: cup brand -> empty pot -> pour broth -> add noodles ->
-    // cook -> return to cup -> add sauce -> close+shake -> eat.
+    // ImageGen v2 transforms from the actual footage; distinct photos per carousel card.
     socialCarousel: {
       "heroBadge": "Quick Lunches · Episode 5",
       "heroTitle": "Miyoka Protein Ramen",
       "cardTitle": "Miyoka Protein Ramen",
-      "heroPhoto": "/images/miyoka-protein-ramen/hero-miyoka-protein-ramen-polished.webp",
+      "heroPhoto": "/images/miyoka-protein-ramen/hero-miyoka-protein-ramen-v2-polished.webp",
       "hook": "Bone broth boosts the protein. Cook in one pot, eat from the cup.",
       "heroStats": [
         {
@@ -3299,13 +3295,13 @@ export const quickLunches = [
       ],
       "ingredientCardPhotos": [
         {
-          "src": "/images/miyoka-protein-ramen/context-miyoka-spicy-protein-ramen-polished.webp",
+          "src": "/images/miyoka-protein-ramen/context-miyoka-spicy-protein-ramen-v2-polished.webp",
           "position": "50% 50%",
           "zoom": 1,
           "layout": "side"
         },
         {
-          "src": "/images/miyoka-protein-ramen/step-01-pour-bone-broth-polished.webp",
+          "src": "/images/miyoka-protein-ramen/step-01-pour-bone-broth-v2-polished.webp",
           "position": "50% 50%",
           "zoom": 1,
           "layout": "side"
@@ -3360,20 +3356,20 @@ export const quickLunches = [
       ],
       "methodCardPhotos": [
         {
-          "src": "/images/miyoka-protein-ramen/step-03-cook-until-absorbed-polished.webp",
+          "src": "/images/miyoka-protein-ramen/step-03-cook-until-absorbed-v2-polished.webp",
           "position": "50% 65%",
           "zoom": 1,
           "layout": "side"
         },
         {
-          "src": "/images/miyoka-protein-ramen/step-05-add-spicy-sauce-polished.webp",
+          "src": "/images/miyoka-protein-ramen/step-05-add-spicy-sauce-v2-polished.webp",
           "position": "50% 65%",
           "zoom": 1,
           "layout": "side"
         }
       ],
       "servingPhoto": {
-        "src": "/images/miyoka-protein-ramen/final-eat-from-container-polished.webp",
+        "src": "/images/miyoka-protein-ramen/final-eat-from-container-v2-polished.webp",
         "position": "65% 85%",
         "zoom": 1,
         "layout": "side"
@@ -3396,15 +3392,13 @@ export const quickLunches = [
       "captionBody": "Save this quick protein-ramen lunch. One Miyoka spicy protein ramen cup + 1 cup chicken bone broth instead of water: about 350 calories and 34g protein (25g ramen + 9g broth; check labels).\n\nCook the noodles in broth for 5–7 minutes until soft and most broth is absorbed. Transfer back to the original cup, add the included sauce, close the lid, and shake. Rest 1–2 minutes, then eat from the cup. One cooking pot, no extra bowl.\n\nSave the recipe for a busy lunch break."
     },
     socialImages: [
-      "/images/miyoka-protein-ramen/context-miyoka-spicy-protein-ramen-polished.webp",
-      "/images/miyoka-protein-ramen/context-kirkland-chicken-bone-broth-polished.webp",
-      "/images/miyoka-protein-ramen/step-01-pour-bone-broth-polished.webp",
-      "/images/miyoka-protein-ramen/step-02-add-ramen-noodles-polished.webp",
-      "/images/miyoka-protein-ramen/step-03-cook-until-absorbed-polished.webp",
-      "/images/miyoka-protein-ramen/step-04-return-noodles-to-cup-polished.webp",
-      "/images/miyoka-protein-ramen/step-05-add-spicy-sauce-polished.webp",
-      "/images/miyoka-protein-ramen/step-06-close-and-shake-polished.webp",
-      "/images/miyoka-protein-ramen/final-eat-from-container-polished.webp",
+      "/images/miyoka-protein-ramen/context-miyoka-spicy-protein-ramen-v2-polished.webp",
+      "/images/miyoka-protein-ramen/step-01-pour-bone-broth-v2-polished.webp",
+      "/images/miyoka-protein-ramen/step-02-add-ramen-noodles-v2-polished.webp",
+      "/images/miyoka-protein-ramen/step-03-cook-until-absorbed-v2-polished.webp",
+      "/images/miyoka-protein-ramen/step-04-return-noodles-to-cup-v2-polished.webp",
+      "/images/miyoka-protein-ramen/step-05-add-spicy-sauce-v2-polished.webp",
+      "/images/miyoka-protein-ramen/final-eat-from-container-v2-polished.webp",
     ],
     flavorProfile: "Spicy stir-fried ramen, bone broth depth, coated not soupy",
     calories: 350,
@@ -3425,10 +3419,10 @@ export const quickLunches = [
       "1 cup Kirkland Chicken Bone Broth (not water — 9g extra protein)",
     ],
     steps: [
-      "COOK: Add noodles to a small pot. Pour in 1 cup bone broth. Boil, then reduce to medium. Cook 5-7 min until soft and broth is mostly absorbed.",
-      "TRANSFER: Pour cooked noodles back into the Miyoka container. No bowl needed.",
-      "SAUCE: Add the sauce packet. Close lid. Shake well. Let sit 1-2 min to coat.",
-      "EAT: Directly from the container. Done.",
+      { text: "COOK: Add noodles to a small pot. Pour in 1 cup bone broth. Boil, then reduce to medium. Cook 5-7 min until soft and broth is mostly absorbed.", image: "/images/miyoka-protein-ramen/step-03-cook-until-absorbed-v2-polished.webp" },
+      { text: "TRANSFER: Pour cooked noodles back into the Miyoka container. No bowl needed.", image: "/images/miyoka-protein-ramen/step-04-return-noodles-to-cup-v2-polished.webp" },
+      { text: "SAUCE: Add the sauce packet. Close lid. Shake well. Let sit 1-2 min to coat.", image: "/images/miyoka-protein-ramen/step-05-add-spicy-sauce-v2-polished.webp" },
+      { text: "EAT: Directly from the container. Done.", image: "/images/miyoka-protein-ramen/final-eat-from-container-v2-polished.webp" },
     ],
     troubleshooting: [
       { problem: "Too soupy", fix: "Cook longer — the broth should be mostly absorbed before transferring. Not a soup." },
