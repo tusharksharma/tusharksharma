@@ -2,6 +2,12 @@
 
 Use this as the default visual system for new vertical The Split Plate videos unless Tushar approves a different direction.
 
+## Reference-brief style precedence — October 14, 2026
+
+Keep Split Plate typography and colors when adapting concepts, ReelRise suggestions or external briefs. Flag a reference's conflicting font, palette or caption treatment before adopting it; only an explicit user-approved exception changes the house treatment. Do not silently treat a pasted concept's white/black-stroke text as the new default.
+
+Butter Chicken 506-v2 is the current typography reference: Barlow Condensed ExtraBold800 for bold headline lines, DM Serif Display italic400 for selected lime emphasis, and Inter Bold700 for readable speech captions. Use warm white `#FFFAF0`, lime `#D8F36A` and warm black `#15120F` with compact translucent backing behind text only. Preserve product/food/action visibility and actual label facts. Match the contrast and hierarchy, not the reference's recipe, timestamps, old cover settings or opaque panels. Existing original-color, safe-area and selectable-cover rules remain applicable.
+
 Before scripting or animating any new video, apply the seven engagement principles in `SPLITPLATE_TIKTOK_EDIT_RULES.md` (`Have a strong opinion` through `Control pacing`). They apply equally to Marcus-led and silent/text-led cuts. Review the actual opening, payoff, and CTA against those principles before the HyperFrames preview gate.
 
 ## Canvas And Safe Area
@@ -18,7 +24,7 @@ Before scripting or animating any new video, apply the seven engagement principl
   - warm white: `#FFFAF0`
   - lime accent: `#D8F36A`
   - coral accent: `#EF593F`
-- Primary typography: Inter, heavy and compact for hooks and payoff copy.
+- Primary headline typography: Barlow Condensed ExtraBold800, with selected DM Serif Display italic400 lime emphasis. Speech captions: Inter Bold700. This supersedes Inter-only headline examples.
 - Utility typography: monospace for eyebrows, macros, labels, and small context lines.
 - Information cards use translucent near-black fills, one accent edge or pill, restrained shadow, and enough transparency to preserve the footage.
 - Avoid glossy app-store chrome, white sticker canvases, cartoon assets, oversized floating product art, and gimmicky hand/finger graphics.

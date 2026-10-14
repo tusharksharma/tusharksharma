@@ -2,6 +2,14 @@
 
 Use this as the default visual system for new vertical The Split Plate videos unless Tushar approves a different direction.
 
+## Reference-brief style precedence — October 14, 2026
+
+Keep Split Plate typography and colors when adapting concepts, ReelRise suggestions or external briefs. Flag a reference's conflicting font, palette or caption treatment before adopting it; only an explicit user-approved exception changes the house treatment. Do not silently treat a pasted concept's white/black-stroke text as the new default.
+
+Butter Chicken 506-v2 is the current typography reference: Barlow Condensed ExtraBold800 for bold headline lines, DM Serif Display italic400 for selected lime emphasis, and Inter Bold700 for readable speech captions. Use warm white `#FFFAF0`, lime `#D8F36A` and warm black `#15120F` with compact translucent backing behind text only. Preserve product/food/action visibility and actual label facts. Match the contrast and hierarchy, not the reference's recipe, timestamps, old cover settings or opaque panels. Existing original-color, safe-area and selectable-cover rules remain applicable.
+
+Before scripting or animating any new video, apply the seven engagement principles in `SPLITPLATE_TIKTOK_EDIT_RULES.md` (`Have a strong opinion` through `Control pacing`). They apply equally to Marcus-led and silent/text-led cuts. Review the actual opening, payoff, and CTA against those principles before the HyperFrames preview gate.
+
 ## Canvas And Safe Area
 
 - Master canvas: `1080x1920`, `30fps`, SDR Rec.709.
@@ -16,10 +24,17 @@ Use this as the default visual system for new vertical The Split Plate videos un
   - warm white: `#FFFAF0`
   - lime accent: `#D8F36A`
   - coral accent: `#EF593F`
-- Primary typography: Inter, heavy and compact for hooks and payoff copy.
+- Primary headline typography: Barlow Condensed ExtraBold800, with selected DM Serif Display italic400 lime emphasis. Speech captions: Inter Bold700. This supersedes Inter-only headline examples.
 - Utility typography: monospace for eyebrows, macros, labels, and small context lines.
 - Information cards use translucent near-black fills, one accent edge or pill, restrained shadow, and enough transparency to preserve the footage.
 - Avoid glossy app-store chrome, white sticker canvases, cartoon assets, oversized floating product art, and gimmicky hand/finger graphics.
+
+## Split Cook Method™ Mark
+
+- Reuse the transparent vector lockup at `video-edits/hyperframes-components/split-cook-method-logo.svg`. It uses the brand's warm-black, warm-white, lime, and coral colors and a two-sided plate emblem. Preserve the exact `™` mark; do not substitute `®`.
+- In dinner videos, bring it in only when Marcus says “Split Cook Method,” or when an unnarrated edit reveals that idea. It is a momentary in-video signature, not a cold-open bumper or a permanent watermark.
+- Use a single controlled scale-and-rise bounce on the inner logo wrapper (about `0.57 → 1`, `55px → 0`, `0.68s`, `back.out(1.55)`), then let it hold still. Keep the food and both plate styles visible; place the mark on a small translucent warm-black glass backing where contrast needs it.
+- The first implementation is `danos-bone-in-thighs-two-dinners/composition-split-1-v3`. Its voice-aligned start is `41.4s` for the existing approved Marcus read; retime against the final transcript if the narration changes.
 
 ## Hook Treatment
 
@@ -46,19 +61,22 @@ Use this as the default visual system for new vertical The Split Plate videos un
 - Animate wrappers inside `.clip` elements; HyperFrames owns clip visibility.
 - Use native HTML/SVG whenever possible so overlays remain sharp and deterministic.
 
-## Approved Final Save Treatment
+## Approved Save, Share, And Comment Beats
 
 - Reusable component: `video-edits/hyperframes-components/split-plate-save-glass.html`.
-- Show for the final three seconds over moving food, serving, tasting, or creator payoff.
+- The approved asparagus + Umami Lemon Heat edit (VIDEO_INVENTORY ID 651) is the reference for separate contextual CTA moments in a standard-length food video: save on the useful sauce/method, share on the real finished-food action, and one comment question as the primary close. Do not stack them or use this three-beat pattern in a micro-teaser with no room to earn it.
+- Show the save treatment over moving food, serving, tasting, or creator payoff. It can land before the final three seconds when the comment question owns the close.
 - Center a roughly `620px` wide glass capsule near the middle of the safe frame.
 - Use a dark translucent fill around 45-58% opacity, `18px` background blur, a thin light border, restrained shadow, a lime vector bookmark, and minimal copy.
-- Default copy structure: `SAVE THIS` plus one short contextual line such as `FOR YOUR NEXT COSTCO RUN`.
+- Default save copy: `SAVE THIS` plus one short contextual line such as `FOR YOUR NEXT COSTCO RUN`; a precise phrase such as `SAVE THIS SAUCE` is better when the reusable component is visible. Give the share cue its own equally crisp translucent capsule with a specific recipient/reason (for example `SEND TO A PARENT`), then use one concise action phrase for the closing comment question. Keep all prompts inside the safe area and off the food focal point.
 - No raster sticker GIF, white sticker background, cartoon pointing arm, or competing CTA ornament.
 - Treat the saved dumpling video as the visual reference:
   `/Users/tusharsharma/Documents/New project/video-edits/costco-dumpling-day-staple/composition/index.html`
 
 ## Footage Grade
 
+- **Non-negotiable food-color rule:** never place an always-on full-frame dark scrim, gradient, tint, or opacity layer over food footage to make text legible. The Week 13 CrumblCreamiCut hero lost its appetizing color because a dark gradient covered the entire frame, including the pint. Keep the food pixels unobstructed; use a small local backing behind each text element, a restrained text shadow, or reposition the copy. A deliberately graded clip is a separate, source-compared correction—not a workaround for text contrast.
+- Before marking any video `Ready`, compare the raw source, prepared clip, and **encoded posting MP4** at the opening money shot and final food payoff. Stop ship if the export makes the food materially darker, paler, muddier, or softer than the approved source/preview, even if HyperFrames `check` passes. Correct the actual pipeline or overlay and repeat the encoded comparison; do not compensate with a blanket saturation boost.
 - Default starting adjustments: Saturation `+10`, Exposure `-5`, Brilliance `+6`, Sharpen `+6`.
 - Reduce any adjustment that clips highlights, crushes shadows, exaggerates noise, or makes skin or food look artificial.
 - Do not stack this grade on footage that is already corrected.
@@ -69,12 +87,14 @@ Use this as the default visual system for new vertical The Split Plate videos un
 ## Marcus Voice Performance And Pronunciation
 
 - Marcus should sound emotionally engaged by default. Build a restrained performance arc through hook, explanation, reveal, and CTA; do not approve a flat take solely because it is intelligible and correctly timed.
+- In a food-led story, Marcus should react to the real footage rather than narrate the ingredient list. The asparagus cut is the reference: a curious/surprised opening, playful browned-edge beat, stronger sauce/toss payoff, and warm, specific engagement prompts. Sync each phrase to its picture beat; revise any line that sounds manufactured or arrives over unrelated footage.
 - Prefer an expressive voice model when available and use a few purposeful cues such as `[bright]`, `[confident]`, `[playful]`, and `[upbeat]`; avoid tagging every sentence.
 - Preflight brand names and uncommon terms for pronunciation. Use narration-only phonetic spellings where required while keeping the official spelling everywhere the audience reads it. Example: narrate `Danoh's`, display `Dan-O's`.
 - Save pronunciation aliases and performance direction with the voiceover script so rerenders do not regress.
 - "Still flat" is usually a dynamic-range problem, not an energy problem: a take that is loud and bright from the first word has nowhere left to rise, so it reads as uniform. Open a step below the peak — `[bright, curious]` rather than `[excited]`, no exclamation mark on the opening line — and let the clues and CTA climb. Fixing a flat take by raising the floor everywhere makes it worse.
 - Keep the alternate's script on disk next to the original (`voiceover-script-marcus.json` / `-marcus-expressive.json`) so the two takes can be compared as text, and state which factual corrections rode along with the rewrite — an alternate that also fixes wording (for example `butter and vanilla extracts` matching the cover) is not a pure voice change.
 - The review gate needs a human listen. An agent can compare scripts, cues, and timing, but it cannot hear the render and must not supply the audible-feeling approval on its own.
+- Preserve a prior approved take as an alternate when testing a chirpier read. Record the script, model/settings, phrase alignment, and CTA timing so the next agent can reuse the method without blindly copying the words.
 
 ## CrumblCreamiCut Series Identity
 

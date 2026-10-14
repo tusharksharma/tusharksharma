@@ -4,6 +4,14 @@ Portable snapshot supplied by Tushar, captured October 11, 2026: 277 instruction
 
 Use the [short-form editing agent](../../../.agents/skills/splitplate-short-form-editor/SKILL.md) for future recipe cuts, recuts, captions, covers and export reviews. Start with [CURRENT_RULES.md](flat/CURRENT_RULES.md), then the applicable house and framework documents. The agent is an instruction workflow, not an installed video runtime.
 
+## October 14, 2026 partial refresh
+
+Updated the existing `flat/CURRENT_RULES.md` and `flat/HYPERFRAMES_STYLE_SYSTEM.md` from Tushar’s two October 14 Drive uploads. The manifest records their replacement Drive IDs, source modification times, exact byte counts and SHA-256 hashes; the remaining instruction files retain their original snapshot provenance. The top-level `docs/video/HYPERFRAMES_STYLE_SYSTEM.md` mirror uses the same refreshed style-system text.
+
+The refresh adds the Butter Chicken 506-v2 typography reference, footage-led pacing, useful brand naming and closing actions, food/family proof guidance, and disclosed AI illustration of genuinely missing footage. CURRENT_RULES continues to resolve older grading, numbering and cover examples inside the style system.
+
+`PERSONAL_LIFE_STORY_RULES.md` and `BRAND_AND_CTA_RULES.md`, referenced by the new current rules, are external working-hub documents absent from this snapshot. Consult the actual hub before depending on their additional guidance; the applicable directions stated in CURRENT_RULES are available here. Private biography is not copied into this public repository. The Mac/production workspace was not synchronized by this refresh.
+
 ## Authority and updates
 
 Current task instructions and applicable repository instructions take precedence. Within this snapshot, CURRENT_RULES resolves older examples on color, compact-cut duration, numbering, narration and cover tails. Read the full production, editing, cover and QA documents for requirements it does not replace. The current repository content strategy remains authoritative over historical posting cadences. ImageGen cover treatment is distinct from the no-routine-grade rule for original moving footage.

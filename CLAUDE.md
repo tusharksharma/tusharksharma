@@ -2,7 +2,7 @@
 
 Rules and conventions for working on this recipe site. Follow these exactly.
 
-For short-form video editing, use [.agents/skills/splitplate-short-form-editor/SKILL.md](.agents/skills/splitplate-short-form-editor/SKILL.md) and [the October 11 editing snapshot](docs/video/hyperframes-editing/README.md). Its CURRENT_RULES supersedes older color, compact-duration, numbering and cover-tail examples; retain full production, cover and QA gates.
+For short-form video editing, use [.agents/skills/splitplate-short-form-editor/SKILL.md](.agents/skills/splitplate-short-form-editor/SKILL.md) and [the editing snapshot with October 14 current-rule and style-system updates](docs/video/hyperframes-editing/README.md). Its CURRENT_RULES supersedes older color, compact-duration, numbering and cover-tail examples; retain full production, cover and QA gates.
 
 ## Standing Food Principles and Long-Form Video
 

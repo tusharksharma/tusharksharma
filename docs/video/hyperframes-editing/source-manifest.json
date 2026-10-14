@@ -1852,10 +1852,12 @@
     },
     {
       "path": "flat/CURRENT_RULES.md",
-      "drive_id": "1HWrqGHwgQ4CQZT8hXasCoNKc3_WZrcEO",
-      "source_modified": "2026-10-12T03:00:52.088Z",
-      "bytes": 5540,
-      "sha256": "11491ad3b0304fada9bf12e1cd6e4e54d03b3d554601486a111d41006e817692"
+      "drive_id": "1Uj3szaHac3b0xg_sgPILVRNu5-poriRe",
+      "source_modified": "2026-10-14T16:24:33.157Z",
+      "bytes": 12071,
+      "sha256": "bd75af8849fa6024839cb43f6ee8552bf8d91ac8cdbdd3b56454bce22ad422ca",
+      "source_url": "https://drive.google.com/file/d/1Uj3szaHac3b0xg_sgPILVRNu5-poriRe/view",
+      "refreshed_date": "2026-10-14"
     },
     {
       "path": "flat/WORKSPACE_AGENTS.md",
@@ -1936,10 +1938,12 @@
     },
     {
       "path": "flat/HYPERFRAMES_STYLE_SYSTEM.md",
-      "drive_id": "1acxgUTNDZAOnHXGPwtIQEpM60lJxASxm",
-      "source_modified": "2026-10-12T03:00:52.076Z",
-      "bytes": 15930,
-      "sha256": "c03a3def9aa7fc3c764503e10c7f2f17e46ece89f222fd12915ffc6df4b7cc04"
+      "drive_id": "1weLgU9vWO4m3UljsxxWdECtFcoAM52Uj",
+      "source_modified": "2026-10-14T16:24:33.158Z",
+      "bytes": 17047,
+      "sha256": "c4aaa098c928ee1c06bcd111992296c5b14f43f151b4642579529c0c4ed71628",
+      "source_url": "https://drive.google.com/file/d/1weLgU9vWO4m3UljsxxWdECtFcoAM52Uj/view",
+      "refreshed_date": "2026-10-14"
     },
     {
       "path": "flat/CRUMBL_CREAMI_CUT_SERIES_RULES.md",
@@ -1948,5 +1952,6 @@
       "bytes": 7977,
       "sha256": "0e02b59dab423bd0031338b1479fb4ad18e04ee49fb7c1ebc1affabcd97746c3"
     }
-  ]
+  ],
+  "last_partial_refresh_date": "2026-10-14"
 }
