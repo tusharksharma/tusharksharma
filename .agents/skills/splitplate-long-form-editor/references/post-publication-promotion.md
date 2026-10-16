@@ -15,6 +15,8 @@ These constraints apply to promotion of long-form films, not to independently re
 
 Choose distinct, footage-backed moments and a single invitation to the full film. Reuse approved narration when it fits; obtain exact-script approval and a stage-specific credit cap for any new paid generation. Reuse an approved thumbnail or make format-appropriate covers through the short-form workflow. Preserve source color and measured frame rate, uncluttered crops, readable captions and genuine action sound. Keep newly invented personal claims out.
 
+Verify the current film's camera style before using POV in graphics, captions, descriptions or hashtags. Owning or previously using an Atto does not make every film POV. Tushar confirmed the golden garlic rice and steak film was not POV; its promotion must omit that label.
+
 Honor the short-form finished-preview gate for newly edited clips. An unchanged, already approved asset does not need another approval loop merely because it is shared to another authorized destination. Standing distribution authorization applies after the actual film's publication is authorized; it does not authorize publishing the long film itself.
 
 Use an approved rollout or the current content calendar; avoid posting all angles at once. October 15 and 18 at 5 p.m. Pacific were approved for the remaining two steak-night promos only, not a permanent schedule. For future films, set film-relative dates against the actual calendar and explain the selected rollout. Honor current user changes.

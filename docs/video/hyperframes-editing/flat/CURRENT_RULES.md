@@ -17,6 +17,8 @@ Updated October 14, 2026. Apply these explicit user preferences when older refer
 
 ## Format and narration
 
+- Camera-style claims are film-specific: verify them against the current footage and Tushar's corrections. Do not label a video POV, add a POV graphic, or use POV hashtags just because an earlier film used the Atto. Tushar confirmed the golden garlic rice and steak film was **not POV**; omit that label from its promos and metadata. This correction does not relabel other films.
+
 - Footage-led pacing, explicit October 12 direction: map the approved story to what is actually visible, then let the natural Marcus take and readable action beats determine runtime. Do not stretch a short read to fill a guessed 35–40 seconds, add silence or invent biography to pad a cut. Add only useful, truthful frame-relevant explanation; shorten the picture when the story is already complete. Format caps remain limits, not lengths to fill.
 - For relevant emotional connection, consult `PERSONAL_LIFE_STORY_RULES.md` and Tushar’s linked biography. Use one supported personal thread that explains a visible choice. Do not automatically insert life history, draft quotes, old schedules or unconfirmed child reactions.
 
