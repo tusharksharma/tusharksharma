@@ -674,10 +674,11 @@ function SafetyBand({ safety }) {
 
 function ServingsControl({ isFixedBatch, baseServings, batchServings, setBatchServings, adults, kids, leftovers, scale, setAdults, setKids, setLeftovers }) {
   if (isFixedBatch) {
+    const singleServing = baseServings === 1 && !setBatchServings;
     return (
       <div className="flex flex-wrap items-center gap-x-3 gap-y-2 rounded-xl border border-line bg-surface2 px-4 py-3">
         <span className="rounded border border-brand/30 bg-brand/15 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-brand">
-          Batch cook
+          {singleServing ? "Single serving" : "Batch cook"}
         </span>
         {setBatchServings ? (
           <>
@@ -692,7 +693,7 @@ function ServingsControl({ isFixedBatch, baseServings, batchServings, setBatchSe
               className="w-16 rounded border border-line bg-surface px-2 py-1 text-sm text-ink" />
             <span className="text-xs text-muted">Original yield: {baseServings}. Adjusted ingredients will appear in print; check pan size and cooking time.</span>
           </>
-        ) : <span className="text-xs text-muted">Yields {baseServings} servings — quantities below are the full batch.</span>}
+        ) : <span className="text-xs text-muted">Yields {baseServings} {baseServings === 1 ? "serving" : "servings"} — quantities below {singleServing ? "make one sandwich." : "are the full batch."}</span>}
       </div>
     );
   }
