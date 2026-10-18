@@ -5076,7 +5076,7 @@ const WEEK13_VIDEO = "/videos/butterfinger-peanut-butter-milkshake-creami-week13
 const WEEK13_SPANISH_VIDEO = "/videos/crumbl-week13/crumblcreamicut-week13-spanish-2026-10-04.mp4";
 const WEEK13_COLLECTION = [
   { id: "butterfinger-peanut-butter-milkshake-creami-week13", title: "Butterfinger Peanut-Butter Creami" },
-  { id: "snickerdoodle-cereal-protein-creami-week13", title: "Snickerdoodle Cereal Creami" },
+  { id: "snickerdoodle-cereal-protein-creami-week13", title: "Snickerdoodle Cookie Creami" },
   { id: "midnight-smores-protein-creami-week13", title: "Midnight S'mores Creami" },
 ];
 const WEEK13_BASE = [
@@ -5212,6 +5212,104 @@ const WEEK13_CREAMIS = [
     macroHonesty: "Approximate whole-pint estimate: 240 calories and 40g protein in the shared base, 10 calories from cocoa, 98 calories from one and a half graham sheets, 23 calories from marshmallow creme, and 5 calories from zero-sugar syrup. Rounded to 375 calories and 43g protein; exact labels and drizzle amount vary.",
   }),
 ];
+
+// Week 13 package refresh: one cereal mix-in, no topping, and label-checked
+// whole-pint macros. Keep the stable URL while replacing the outdated build.
+const snickerdoodlePackage = WEEK13_CREAMIS.find((recipe) => recipe.id === "snickerdoodle-cereal-protein-creami-week13");
+if (snickerdoodlePackage) {
+  const photo = (name) => `/images/crumbl-week13-snickerdoodle/${name}-713-polished.webp`;
+  const hero = photo("hero");
+  const base = photo("base");
+  const spin = photo("scoop");
+  const mixin = photo("cereal-mixin");
+  const serving = photo("serving");
+  const video = "/videos/snickerdoodle-cookie-creami/713-Snickerdoodle-Cookie-Creami.mp4";
+  Object.assign(snickerdoodlePackage, {
+    title: "Snickerdoodle Cookie Creami",
+    tagline: "Vanilla-cinnamon protein Creami with Cinnamon Toast Crunch mixed through the pint. About 285 calories and 28g protein for the whole finished pint.",
+    heroImage: hero,
+    prepImage: base,
+    prepImageCaption: "The actual spun vanilla-cinnamon base before the cereal mix-in.",
+    actionImage: mixin,
+    video,
+    videoVariants: [],
+    videoPoster: hero,
+    socialImages: [hero, base, spin, mixin, serving],
+    flavorProfile: "Vanilla and cinnamon in a creamy protein base, with 21g Cinnamon Toast Crunch mixed throughout the whole pint and no topping.",
+    calories: 285,
+    caloriesPerServing: 285,
+    protein: 28,
+    proteinPerServing: 28,
+    ingredients: [
+      "--- ONE COMPLETE PINT ---",
+      "1 cup Fairlife 2% ultra-filtered milk",
+      "1/2 serving Opportuniteas unflavored whey (60 calories, 14g protein per serving)",
+      "2 tbsp monk-fruit/erythritol sweetener",
+      "1/8 tsp level guar gum",
+      "Pinch of salt",
+      "1 tsp vanilla extract",
+      "1/2 tsp ground cinnamon",
+      "21g Cinnamon Toast Crunch, added after the first spin",
+    ],
+    steps: [
+      { text: "BLEND: Blend the milk, whey, sweetener, guar gum, salt, vanilla, and cinnamon until smooth.", image: base, imageAlt: "Creamy vanilla-cinnamon Creami base in a clear pint, before cereal is added" },
+      "FREEZE: Pour into one Creami pint below the max-fill line. Freeze upright and level for 24 hours.",
+      { text: "SPIN: Rest on the counter for five minutes, then run Regular Ice Cream following your machine instructions. If powdery, use a no-liquid Respin before adding cereal.", image: spin, imageAlt: "A scoop of freshly spun vanilla-cinnamon Creami in a glass cup" },
+      { text: "MIX-IN: Add 21g Cinnamon Toast Crunch and run Mix-In. If needed, Respin without added liquid only until the cereal is incorporated. No topping is added.", image: mixin, imageAlt: "Cinnamon Toast Crunch being added into the spun Creami pint" },
+      { text: "SERVE: Scoop the complete pint; the measured cereal is mixed through it, with no topping.", image: serving, imageAlt: "The finished Creami served in a dotted glass cup" },
+    ],
+    executionRules: [
+      "Nutrition is an approximate label-based estimate for the whole finished pint, including all 21g cereal.",
+      "Use a no-liquid Respin only if the first spin is powdery; add the cereal after the first spin.",
+      "This package has no cereal topping or extra garnish.",
+    ],
+    macroHonesty: "Approximate whole-pint estimate: about 120 calories and 13g protein from Fairlife 2%, 60 calories and 14g protein from half a serving of the saved Opportuniteas whey label, about 87 calories and 1g protein from 21g Cinnamon Toast Crunch, about 12 calories from vanilla extract, about 3 from cinnamon, and about 1 from guar gum. Rounded to about 285 calories and 28g protein. Assumes the saved zero-calorie sweetener; vanilla is assumed to be extract. Exact labels vary.",
+    allergens: ["milk", "wheat", "soy"],
+    warnings: ["Check the labels on your milk, whey, cereal, and flavorings for allergens and current nutrition."],
+    mealPrep: { storage: "Freeze the unspun base upright and level; add the measured cereal after spinning.", lasts: "Best texture when spun within two weeks.", reheat: "Do not heat. If refrozen after spinning, re-spin per machine guidance." },
+    socialCarousel: {
+      heroBadge: "Protein Creami",
+      heroAccent: "amber",
+      heroTitle: "Snickerdoodle Cookie Creami",
+      heroStats: [
+        { value: "~285", label: "cal · whole pint" },
+        { value: "~28g", label: "protein · whole pint" },
+        { value: "1", label: "finished pint" },
+      ],
+      hook: "Vanilla-cinnamon protein Creami with Cinnamon Toast Crunch mixed through every scoop.",
+      captionBody: "My Snickerdoodle Cookie Creami: vanilla, cinnamon, and 21g Cinnamon Toast Crunch mixed through one complete pint. About 285 calories and 28g protein for the whole pint, based on the specific labels and amounts listed. No topping. This is my independent homemade ice-cream recipe inspired by a cookie flavor, not a Crumbl product. Recipe: thesplitplate.com/cookbook/snickerdoodle-cereal-protein-creami-week13\n\nWould you keep the cereal crunchy or let it soften into the pint?",
+      heroPhoto: hero,
+      ingredientGroups: [{ card: 0, accent: "amber", heading: "One complete protein pint", items: [
+        { quantity: "1 cup", text: "Fairlife 2% milk" },
+        { quantity: "1/2 serving", text: "Unflavored whey" },
+        { quantity: "2 tbsp", text: "Monk-fruit/erythritol sweetener" },
+        { quantity: "1/8 tsp", text: "Guar gum" },
+        { quantity: "1 tsp", text: "Vanilla extract" },
+        { quantity: "1/2 tsp", text: "Ground cinnamon" },
+        { quantity: "21g", text: "Cinnamon Toast Crunch", note: "Mix-In after first spin; no topping" },
+      ] }],
+      methodGroups: [
+        { accent: "amber", heading: "Blend and spin", items: [
+          { number: 1, heading: "Blend", body: "Blend the milk, whey, sweetener, guar, salt, vanilla, and cinnamon until smooth." },
+          { number: 2, heading: "Freeze", body: "Freeze one level pint upright for 24 hours." },
+          { number: 3, heading: "Spin", body: "Rest five minutes, then run Regular Ice Cream. Respin without liquid only if powdery." },
+        ] },
+        { accent: "coral", heading: "Mix and serve", items: [
+          { number: 4, heading: "Mix-In", body: "Add 21g Cinnamon Toast Crunch after the first spin; run Mix-In." },
+          { number: 5, heading: "Serve", body: "Scoop the complete pint. The cereal is mixed through; there is no topping." },
+        ] },
+      ],
+      ingredientCardPhotos: [{ src: base, layout: "side" }],
+      methodCardPhotos: [{ src: spin, layout: "side" }, { src: mixin, layout: "side" }],
+      servingPhoto: { src: serving, layout: "band" },
+      servingGroups: [{ accent: "amber", heading: "Whole finished pint", items: [
+        { text: "About 285 calories and 28g protein, including all 21g cereal." },
+        { text: "Label-based estimate; brands and actual serving amounts can change the total." },
+      ] }],
+      engagementQuestion: "Would you keep the cereal crunchy or let it soften into the pint?",
+    },
+  });
+}
 
 const DESSERT_CATALOG = [
 {
