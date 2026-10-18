@@ -56,6 +56,8 @@ For SDR-derived HDR brightness checks and a complete YouTube upload package, rea
 
 ## Delivery and learning
 
+Latest October 18 correction: cap the appended outro/end card at **five seconds maximum**. Keep the spoken thank-you before it over food/host footage and use a short, resolved saved-music ending. Do not pad the ending to fit the full song or the reusable graphic's original length. This supersedes older ten- or twenty-second outro examples.
+
 Confirmed October 18, 2026: include a compact conversational midpoint like/subscribe/comment reminder after useful content, explaining that Tushar is a small creator and engagement helps. End with a spoken thanks and like/subscribe/save invitation, then a resolved musical closing using saved channel music and a native watch-next layout. Follow [Intro, music and subscriber treatment](../../../docs/video/intro-music-and-cta.md) for placement, speech/music clarity and scope; avoid abrupt endings. These are long-form rules, not extra blocks for Shorts or Stories.
 
 For an authorized upload, publication or schedule, use the [YouTube uploader agent](../splitplate-youtube-uploader/SKILL.md). It owns channel verification, the approved master transfer, metadata, captions, processing checks, publication evidence and inventory; editing approval alone does not authorize publication.

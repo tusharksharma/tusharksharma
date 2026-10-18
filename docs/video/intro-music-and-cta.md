@@ -18,6 +18,8 @@ The supplied references show a lower overlay over live host footage, and an outr
 
 ### Mid-film support and a resolved closing — confirmed October 18, 2026
 
+**Latest October 18 correction: the appended outro must be no longer than five seconds.** Keep the spoken thanks over the final food/host footage before this short card. Use a brief ending phrase from saved channel music with a clean entrance and resolved finish; do not append a long music bridge or extend the film to fit an entire arrangement. This supersedes the ten-second component default and the Creami review's twenty-second card. Fit native watch-next/subscribe elements into the final five seconds on authorized upload. A longer source graphic or music file is an asset, not a required duration.
+
 For future long-form films, include one brief spoken support reminder at a natural midpoint after useful content, with the compact like/subscribe/bell overlay over moving food or host footage. Speak as Tushar: invite viewers who have stayed to like, subscribe and comment where they agree or disagree; explain warmly that he is a small creator and engagement helps. Keep this concise and conversational rather than interrupting a technique or repeating a full-screen intro.
 
 After the final payoff and episode-specific audience question, include a spoken thanks for watching and invite viewers who stayed to the end to subscribe, like and save the video. Give the closing room to resolve before the watch-next layout. Do not jump abruptly from the final recipe sentence into an unexplained end card.
