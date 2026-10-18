@@ -60,7 +60,7 @@ Keep Marcus speaking as Tushar. Pair concise practical explanation with confirme
 
 ### Payoff, review and learning
 
-Show the finished food clearly, the actual plate split where relevant, and an honest supported verdict. Close the opening question before one relevant CTA. The last minute should deliver something beyond a recap.
+Show the finished food clearly, the actual plate split where relevant, and an honest supported verdict. Close the opening question before the episode's useful destination. The last minute should deliver something beyond a recap. For the confirmed October 18 long-form support treatment, include a brief midpoint like/subscribe/comment reminder, a spoken thank-you with like/subscribe/save at the end, and a resolved saved-music closing. Follow [the canonical CTA/music rule](../../../../docs/video/intro-music-and-cta.md); this is an explicit exception to the older single-CTA default, without crowding the cooking or adding these blocks to short formats.
 
 Save a beat plan with source in/out, viewer question, new information/payoff, narration, real sound, proposed graphic and reason for each major transition. Review the encoded opening, technique reveals, sound gaps, crop changes and final payoff as moving picture and audio.
 

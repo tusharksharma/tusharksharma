@@ -56,6 +56,8 @@ For SDR-derived HDR brightness checks and a complete YouTube upload package, rea
 
 ## Delivery and learning
 
+Confirmed October 18, 2026: include a compact conversational midpoint like/subscribe/comment reminder after useful content, explaining that Tushar is a small creator and engagement helps. End with a spoken thanks and like/subscribe/save invitation, then a resolved musical closing using saved channel music and a native watch-next layout. Follow [Intro, music and subscriber treatment](../../../docs/video/intro-music-and-cta.md) for placement, speech/music clarity and scope; avoid abrupt endings. These are long-form rules, not extra blocks for Shorts or Stories.
+
 For an authorized upload, publication or schedule, use the [YouTube uploader agent](../splitplate-youtube-uploader/SKILL.md). It owns channel verification, the approved master transfer, metadata, captions, processing checks, publication evidence and inventory; editing approval alone does not authorize publication.
 
 After an authorized long-form publication, automatically run [Post-publication promotion](references/post-publication-promotion.md): YouTube Shorts, a Facebook link post, and Instagram/TikTok Stories. Do not turn these promos into Instagram Reels or TikTok feed uploads. This standing follow-up applies to published films; rules-only tasks do not start production.

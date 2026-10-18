@@ -16,6 +16,16 @@ The supplied references show a lower overlay over live host footage, and an outr
 
 ## Reusable music and intro
 
+### Mid-film support and a resolved closing — confirmed October 18, 2026
+
+For future long-form films, include one brief spoken support reminder at a natural midpoint after useful content, with the compact like/subscribe/bell overlay over moving food or host footage. Speak as Tushar: invite viewers who have stayed to like, subscribe and comment where they agree or disagree; explain warmly that he is a small creator and engagement helps. Keep this concise and conversational rather than interrupting a technique or repeating a full-screen intro.
+
+After the final payoff and episode-specific audience question, include a spoken thanks for watching and invite viewers who stayed to the end to subscribe, like and save the video. Give the closing room to resolve before the watch-next layout. Do not jump abruptly from the final recipe sentence into an unexplained end card.
+
+Finish with an appropriate saved Split Plate music arrangement or complete musical phrase. Preserve the musical landing and avoid clipping lyrics or importing a wrapper's silent tail. Music may begin after the spoken thanks; if it overlaps speech, mix/carve it for intelligibility. Keep native end-screen elements within the final eligible window and verify their destinations on authorized upload. Do not impose the Creami pilot's exact timings on other films.
+
+This extends the long-form channel-support exception above to a midpoint and spoken closing. It does not add these blocks to Shorts or Stories or authorize retroactive edits to approved films. New paid voice lines remain subject to the approved wording and the remaining project credit cap; review the revised ending before final rendering.
+
 Canonical source: [Split Plate - Songs Intro and Rules](https://drive.google.com/drive/folders/1wVzemcmjICSLA4tB7DODdSUzmJ2JxAFQ). Exact asset IDs, source hashes and measured streams are in [the library manifest](../../assets/brand-media/library.json). Retrieve through authorized Drive access; these links do not grant public access. Keep large media outside source control and preserve all originals.
 
 - **Split Plate Slam** is the supplied current rock-first opening jingle. Shuffle, The Split Plate and Smash are alternatives; do not mix all four together by default.
