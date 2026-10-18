@@ -19,6 +19,8 @@ Editing approval is distinct from publishing authorization. Reuse the user's exi
 
 Read `docs/video/intro-music-and-cta.md` for the future long-form outro layout. Add and verify the intended native Subscribe and Watch next video/playlist elements in Studio; burned-in artwork alone is not a clickable end screen. Use `docs/video/creator-reactions.md` for the preferred real reaction assets and teeth-preservation check.
 
+Confirmed October 18, 2026: for the two-box Watch next layout, configure actual native elements rather than leaving placeholders: one Best for viewer video, one relevant verified-public specific video or playlist, and the channel Subscribe circle. The appended outro is five seconds maximum. Align the native elements with the artwork, verify saved destinations and timing, and inspect YouTube playback before calling the end screen complete. Record when a player or device omits end screens; never claim the rendered boxes populate automatically. Current-film authorization and visibility still govern upload/publication.
+
 Identify the approved exact master, version, duration and thumbnail. Record a file hash, resolution, measured frame rate, color space and QA evidence. For 4K Atto long form, preserve 3840×2160 landscape and measured approximately 59.94/60 fps; SDR/HDR follows the verified master. Do not transcode, brighten, retag HDR or downscale during upload merely to accelerate transfer.
 
 Prepare a viewer-led title, description, version-specific chapters, English captions, tags, appropriate category, one primary question/comment and end-screen plan. Include actual camera/POV context and relevant recipe destination only when substantiated. Do not invent affiliate disclosures, macros, links or personal claims.
