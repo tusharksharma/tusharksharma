@@ -27,14 +27,17 @@ Verified Meta Business Suite route on October 12, 2026: publish the approved vid
 
 Record canonical assets, real unused reserves where applicable, per-platform live URLs or scheduling receipts, dates/time zones and pending blockers in the video inventory and posting ledger. Verify written records and actual live/scheduled UI. Retrying must check for an existing matching post to avoid duplicates. A click, uploaded file or instruction file alone does not prove publication or an installed unattended automation.
 
-## Weekly long-form cadence — October 18, 2026
+## Weekly long-form cadence â€” October 18, 2026
 
 Long-form films publish Monday and Wednesday at 5 p.m. America/Los_Angeles. Monday's film receives distinct promos Tuesday, Thursday and Saturday at noon. Wednesday's film receives distinct promos Friday at noon, Saturday at 5 p.m., and Sunday at noon. Saturday carries two different films and hooks, separated by five hours; this spacing is the editor's recommendation adopted for this rollout when Tushar asked for judgment. Do not repeat the same promo twice that day.
 
 Start the approved Creami trio film Monday October 19, 2026 at 5 p.m. Pacific. Each release still needs a finished approved film; a calendar slot does not authorize inventing or publishing an unfinished Wednesday film. Keep the established destinations: YouTube Shorts with Related video, Facebook link posts, Instagram Stories only. TikTok remains deferred until Tushar re-enables it. Prepare promos ahead of release; publish them on the film-relative dates after the long film becomes public. Record actual scheduling receipts separately from planned slots. Use local Pacific time across daylight-saving changes, not a fixed UTC offset.
 
-## Build the release package together — October 18, 2026
+## Build the release package together â€” October 18, 2026
 
 Tushar confirmed that promotion content is built with the main film, before release. Select three distinct promo moments during the picture edit; build vertical Shorts/Stories, captions, Story link cards, Facebook link copy and a film-relative rollout. Review the main film and promos together, then schedule approved assets. A release is not package-complete while promos remain merely planned. For an already scheduled film, finish its missing promos promptly and preserve the approved main.
 
 The recurring follow-up verifies public availability and executes the prepared rollout; it must not defer routine promo production until after publication. Keep newly edited promo preview approval, exact-script/new-spend approval where relevant, platform restrictions, and actual scheduling receipts separate from plans. Reusing the approved long-form footage and unchanged narration is the purpose of these excerpt promos; log their source ranges and make the three angles distinct. Do not present such excerpts as newly unused reserve footage or independent new recipe packages.
+# Scheduled-main Related video boundary
+
+If a private scheduled main is absent from the Shorts Related video picker, retain its approved visibility. Schedule the approved Short, record Related video as pending, and assign the existing publication follow-up to attach and verify the exact main after it becomes public, before the first promo. Do not select an unrelated video or claim the link was saved. Verify native Story links after actual publication separately from scheduling receipts.

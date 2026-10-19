@@ -38,6 +38,6 @@ Follow the full thumbnail playbook and current format-specific rules. Keep a 16:
 
 Record selected filename, source dish frame, prompt and final thumbnail version with the production project. Inspect the final at full and small display sizes. The repository contains only these six requested reaction photos, not the full Photos ZIP or unrelated personal photos. Keep originals recoverable.
 
-## Integrated long-form thumbnail — October 18, 2026
+## Integrated long-form thumbnail â€” October 18, 2026
 
 Use a polished single composition: place the verified transparent PNG reaction cutout over the real-food scene, with believable separation/shadow and no portrait side frame, divider, or rectangular photo panel. Crop tightly around the head and shoulders so the face is prominent instead of the torso. Preserve the actual expression, mouth and teeth; do not regenerate the person through a whole-thumbnail AI pass. Keep the food clearly recognizable and text very short; inspect full-size and phone-size. This updates future covers and the specifically requested current Creami cover, not unrelated approved videos.
