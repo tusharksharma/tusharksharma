@@ -71,3 +71,5 @@ Provide the requested master(s), editable timeline, approved script, chapters, c
 Save reviewer feedback against the exact version and timestamps. Classify decisions as confirmed user rules, project-specific choices, observed technical lessons or proposals. Promote reusable confirmed lessons into this skill and standing principles; do not convert a pilot's numeric duration, crop, resolution, HDR preference or budget into an unconditional rule for every future film. Preserve approved previous versions.
 
 Confirmed October 18: use the weekly Monday/Wednesday release and film-relative promo cadence in references/post-publication-promotion.md. Long-form time is 5 p.m. Pacific; ordinary promo time is noon, with Wednesday-film Saturday promo at 5 p.m. Read the reference before calendar work.
+
+Confirmed October 18: build and review the three-promo release package alongside the main film, before publication, using the promotion reference. A scheduled main with unbuilt promos is an incomplete release package. Post-publication follow-up distributes prepared assets and verifies outcomes.
