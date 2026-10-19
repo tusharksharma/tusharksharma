@@ -40,3 +40,7 @@ All three approved promos were conformed from original camera media at 1080x1920
 ## Native main export verified locally
 
 The original-source main master is 3840x2160, 60000/1001fps, 10-bit HEVC BT.709 SDR, 30,475 frames and 508.4246 seconds. Full-file decode passed. Measured audio is -16.98 LUFS integrated, -2.74 dBTP. Encoded picture samples show upright food and readable graphics, with filled recommendation artwork and a 4.9883-second appended outro. This is sampled picture inspection, not a claim of a new uninterrupted audiovisual watch. Private full-quality master transfer is in progress; cloud receipt remains pending at this checkpoint. No publishing or scheduling authorization has been added.
+
+## Cloud delivery outcome
+
+All three native portrait finals and both supporting archives were uploaded privately and read back with matching byte sizes. The 3,874,968,425-byte 4K main upload failed around 87%; an explicit retry restarted and repeatedly lost progress. The unstable retry was canceled. The verified original-source master remains intact locally. Do not claim that the main is in Drive, that the release package is Ready, or that anything was published/scheduled. Main cloud delivery and reserve/inventory gates remain open.
