@@ -32,6 +32,8 @@ For future films, read [Long-form engagement](references/long-form-engagement.md
 
 ## Narration and credits
 
+Before future paid Marcus narration, read the checkout’s `docs/video/marcus-pronunciation.md`. Check food-name pronunciation against Tushar’s speech, including basmati; do not silently default to Americanized Indian food names. Keep verified model-specific pronunciation controls in the private generation record. This future-recording rule does not regenerate approved takes.
+
 For Tushar's personal films, Marcus is the delivery voice and Tushar is the storyteller. Write in Tushar's first person, tied to what he is doing and the confirmed life context behind the decision. Do not turn Marcus into a separate host describing Tushar from outside the scene.
 
 Use a supplied personal reference selectively: one main thread and a few details that explain a choice, connect an action or establish relevant stakes. Respect its CONFIRMED, HISTORICAL, INTERPRETATION and DRAFT labels when present. Historical schedules are not today's itinerary; proposed reflections are not recorded memories. Avoid a biography at the opening, invented family dialogue or a generic busy-parent monologue. Keep the private source reference outside the public repo; save a short source/evidence audit with the project and obtain review for newly written personal statements.

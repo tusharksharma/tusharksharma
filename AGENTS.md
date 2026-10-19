@@ -29,6 +29,8 @@ Path A prompts must **transform** an amateur still into appetizing, editorial fo
 
 ## Video & Cover Standing Rule
 
+For future Marcus narration, follow [food-name pronunciation](docs/video/marcus-pronunciation.md): match Tushar’s intended pronunciation, check uncertain terms before bulk paid generation, and preserve already approved takes unless a new correction is requested.
+
 For short-form edits, start with the [editing instruction snapshot, with October 14 current-rule and style-system updates](docs/video/hyperframes-editing/README.md) and its [CURRENT_RULES](docs/video/hyperframes-editing/flat/CURRENT_RULES.md). Those explicit current preferences supersede older examples below and in mirrored playbooks on grading, compact-cut duration, episode numbering and cover tails. Read the snapshot's complete cover playbook before cover work. The [short-form editing agent](.agents/skills/splitplate-short-form-editor/SKILL.md) applies these rules and the full production/QA gates.
 
 The short-form video rules — production, TikTok editing, the HyperFrames visual system, and the cover/thumbnail playbook — are committed in [docs/video/](docs/video/README.md). **Read [docs/video/SPLITPLATE_THUMBNAIL_PLAYBOOK.md](docs/video/SPLITPLATE_THUMBNAIL_PLAYBOOK.md) in full before generating, choosing, revising, or delivering any cover**; it is authoritative when an older cover or a duplicated rule conflicts. Apply new cover rules going forward — never silently rebuild an approved video or cover. These are mirrors of the working copies in `~/Documents/New project/video-edits/`; a rule change updates both in the same commit.

@@ -28,3 +28,7 @@ The8:28 compiled720p30 SDR review passed full decode, exact15253-frame verificat
 Three captioned portrait promo review files, creator/clean cover choices and Instagram Story-card drafts are saved privately alongside the long-form metadata, captions and thumbnail options. None is marked Ready or published. Original-source4K59.94 main and vertical finals, final audiovisual feedback, reserve/inventory readbacks and later publishing authorization remain pending.
 
 Technical lesson: the detailed composition's browser audit timed out on this8GB laptop; do not call it passed. Preserve that editable project and its original-source EDL. A separate single-file HyperFrames review-player passed browser checks, as did all three promo projects and the card compositions. It is a playback aid, not a replacement for the original-source master pipeline. A moving-food reprise replaced the walking tail under the spoken thanks; the appended end card remains5seconds.
+
+## Final-export approval
+
+Tushar approved the main film, three promos and FROZEN. HOMEMADE. thumbnail for final exports. Publishing and scheduling remain unauthorized for this edition. He requested correct pronunciation for future Marcus recordings, specifically flagging basmati and the unwanted Americanized reading; the reusable pronunciation rule is saved separately. No new voice take was requested for this approved film.

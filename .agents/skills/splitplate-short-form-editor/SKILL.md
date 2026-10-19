@@ -34,6 +34,8 @@ Check actual footage, installed renderer/version, ffmpeg/ffprobe, fonts, source 
 
 ## Editing sequence
 
+Before future paid Marcus narration, read the checkout’s `docs/video/marcus-pronunciation.md`. Check food-name pronunciation against Tushar’s speech, including basmati; do not silently default to Americanized Indian food names. Keep verified model-specific pronunciation controls in the private generation record. This future-recording rule does not regenerate approved takes.
+
 1. **Allocate evidence.** Before assigning raw ranges, read the canonical UNUSED_CLIP_INVENTORY linked in WORKSPACE_AGENTS. Save a source-file/in/out map spanning all required companion cuts and reserves. Apply dinner-package and six-or-more-ingredient comment-cut rules where relevant. Missing ledger access can leave independent planning possible, but cannot justify claiming verified allocation or a complete package.
 2. **Audition the opening.** Record at least two available raw events and inspect motion at phone size with and without audio. Open on genuine moving food proof within the first second. Keep recipes, brands, family statements and calorie/protein estimates grounded in the actual build and serving basis.
 3. **Prepare approval-ready narrative.** Present hook, arc, exact Marcus script, tone and one useful primary closing action (question, save or share) before voice generation or final rendering. Honor explicit prior approval of this exact narrative. A recipe, outline or approval of a different package does not substitute. Compact Creami/comparable recipe-review cuts target about 20 seconds maximum including the cover; this is not a universal duration. Keep concrete Base/Mix-in/Topping stages readable when used; remove public week/episode numbering.
