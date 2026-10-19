@@ -58,3 +58,5 @@ Checked October 13, 2026; consult the actual current documentation when needed:
 - [Video chapters](https://support.google.com/youtube/answer/9884579)
 - [Altered or synthetic content](https://support.google.com/youtube/answer/14328491)
 - [HDR uploads](https://support.google.com/youtube/answer/7126552)
+
+Confirmed October 18: use the weekly Monday/Wednesday release and film-relative promo cadence in ../splitplate-long-form-editor/references/post-publication-promotion.md. Long-form time is 5 p.m. Pacific; ordinary promo time is noon, with Wednesday-film Saturday promo at 5 p.m. Read the reference before calendar work.
