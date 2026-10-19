@@ -1,0 +1,4 @@
+interface:
+  display_name: "Splitplate Music Creator"
+  short_description: "Original music, lyrics and ElevenLabs prompts"
+  default_prompt: "Use $splitplate-music-creator to ask about my reference song, length and intended use, then recommend an arrangement and draft an ElevenLabs music prompt."

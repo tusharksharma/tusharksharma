@@ -65,6 +65,10 @@ For recipe-video planning, production, review, or updates to the reusable workfl
 
 The skill also routes reference-video analysis, evidence-backed hook options, supplied analytics, audience-question research, and persistent learning notes. Use its linked references for those modes; treat performance explanations as hypotheses and keep private source data out of this public repository. The existing Reelrise learning model and current experiments remain authoritative.
 
+## Split Plate Music Creator
+
+For original music briefs, songwriting, lyric revisions and ElevenLabs Music prompts, use [.agents/skills/splitplate-music-creator/SKILL.md](.agents/skills/splitplate-music-creator/SKILL.md). It asks for reference traits, duration, use and speech overlap, then recommends instrumental, vocal or hybrid arrangements and drafts provider-ready instructions. Read its current-provider research before API work. Prompt and rules requests do not start paid generation or replace approved channel music; existing intro/outro rules remain authoritative.
+
 ## Repository Delivery Preference
 
 For changes Tushar requests in this repository, validate the affected work, then commit and push directly to `main`. Do not open a pull request unless he requests one or repository protections require it. Preserve unrelated work, never force-push to bypass a concurrent change or protection, and report a blocked push honestly. This preference does not authorize unrelated edits or social publishing.
