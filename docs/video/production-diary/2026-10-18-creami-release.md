@@ -18,3 +18,7 @@ Outcome at this entry: main scheduled; promo production authorized and in progre
 - Main remains scheduled Monday October 19 at 5 p.m. Pacific. Scheduled assets are not yet public. The private main did not appear in YouTube's Related video picker; active cadence follow-up must attach `2hK03SclfXg` to all three Shorts after the main goes public, before the first promo. Live Story link testing also awaits publication.
 - Canonical exports registered as inventory 716–719; posting plans recorded separately from actual publication. Delivery includes captions, both covers, Story cards, final masters and receipts.
 - Implementation lesson: Meta date/time and caption fields can display uncommitted values. Commit through real keyboard input and verify saved receipts/table entries. Keep native Story stickers clear of the face. Preserve UTF-8 when saving scripts and rules on Windows.
+<<<<<<< HEAD
+=======
+
+>>>>>>> 29c46fa6 (Sync Creami release notes from Drive)
