@@ -32,3 +32,8 @@ Technical lesson: the detailed composition's browser audit timed out on this8GB 
 ## Final-export approval
 
 Tushar approved the main film, three promos and FROZEN. HOMEMADE. thumbnail for final exports. Publishing and scheduling remain unauthorized for this edition. He requested correct pronunciation for future Marcus recordings, specifically flagging basmati and the unwanted Americanized reading; the reusable pronunciation rule is saved separately. No new voice take was requested for this approved film.
+
+## Native promo export update
+
+All three approved promos were conformed from original camera media at 1080x1920, 60000/1001 fps, H.264 BT.709 SDR. Full decode and exact frame-count checks passed; measured audio is approximately -16.8 to -17.8 LUFS with true peaks below -4.6 dBTP. Creator and clean covers and Story cards were exported at 1080x1920. Private Drive uploads were read back with matching byte sizes. Main native 4K export remains in progress at this checkpoint. No new voice charge, publication or schedule.
+

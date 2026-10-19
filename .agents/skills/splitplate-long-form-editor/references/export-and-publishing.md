@@ -34,3 +34,12 @@ Confirmed: Tushar approved the food-led STEAK vs CHICKEN thumbnail with his reac
 Observed: the main cooking footage used was native 3840×2160 (4K) BT.709 SDR, and the final canvas remained 3840×2160. Resolution and dynamic range are separate; the master was transformed into 10-bit BT.2020/PQ using a conservative 100-nit reference. A matching source/export inverse-conversion comparison looked close; this sample does not prove equivalence across the whole film or on YouTube. No creative brightness grade had been applied.
 
 Inference still to verify: conservative HDR luminance mapping and/or platform/display tone mapping may contribute to the reported dimness. The exact cause is not confirmed without the viewing-device comparison. A 4K SDR master and a carefully brighter HDR proof are candidate comparisons, not approved replacements or a new universal grade.
+
+
+## October 19 Atto / AMD AMF export check
+
+Observed on the Golden Garlic Steak Bowls POV pipeline: an AMD AMF Main10 test produced PQ/BT.2020 tags despite BT.709 output flags. The source was verified 10-bit BT.709 SDR and the encoded pixels had no HDR transform. Remuxing with corrected HEVC VUI metadata restored the intended BT.709 tags; verify the actual encoded stream after this repair. Never apply this label-only correction to genuinely HDR pixels or use it as a substitute for tone mapping.
+
+A layered intermediate also retained a 180-degree display matrix after the camera orientation had already been applied physically, causing a second flip in ordinary playback. Clear the duplicate display rotation only after proving the encoded pixels are upright; compare food and text in the encoded result. Preserve original camera metadata and media. In this pipeline, output rotate=0 metadata alone did not remove the inherited matrix; the stream-copy remux needed the FFmpeg input display_rotation override set to zero. Probe the result and inspect the actual encoded picture. A metadata flag alone is not proof that orientation was handled once.
+
+The native 4K subscribe animation exceeded the laptop's memory budget when decoded as a full transparent canvas. Cropping only the transparent margins to an alpha-safe native-resolution strip reduced memory without resizing the visible graphic; restore its exact canvas offset while compositing. These are observed fixes for this pipeline, not universal requirements for other encoders.
