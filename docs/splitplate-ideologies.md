@@ -21,4 +21,14 @@ Personal storytelling comes from the cook's perspective. When Marcus provides th
 
 ## Maintaining these principles
 
+### Frozen ingredients chosen for the job — confirmed October19,2026
+
+Convenience is part of cooking for busy parents. Frozen vegetables help this household reduce waste, save preparation time and keep ingredients available. Choose fresh when the recipe needs fresh crunch; frozen is a useful option when vegetables will be cooked into the dish. This is a texture-and-use decision, not a hierarchy of good and bad ingredients.
+
+Keep nutrition language specific: frozen vegetables **can be just as nutritious as fresh**, not necessarily superior or identical for every product or nutrient. Do not turn the household's preference for cooking at home into a universal claim that all restaurant food is less nutritious.
+
+Measure ingredients even when they are favorites. Enough garlic, onion or ghee should serve the intended result; adding more is not automatically better. Count calorie-dense ingredients across the actual batch and portions rather than implying their calories disappear.
+
+Meal preparation should earn its place in the family's evening. The useful payoff is a meal already handled after work and children's activities, with flexibility in portions and finishes. Use confirmed current personal examples in each film, not invented busy-parent stories.
+
 Save future ideologies when Tushar identifies them as lasting beliefs. Keep an exact statement or faithful paraphrase, its date and practical implications. Treat a proposed assistant interpretation as a proposal until confirmed. Keep personal production records and credentials outside this public document.
