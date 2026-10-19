@@ -1,5 +1,7 @@
 # SplitPlate Production And Scheduling Rules
 
+October18,2026 text-background update: default to unboxed in-video headlines, speech captions, ingredient labels and CTAs, with restrained shadow/fine edges. Only dense comparison/seasoning lists may use tightly fitted20–30%-opaque backing and minimal padding. This supersedes older stronger glass/panel-fill examples; use `CURRENT_RULES.md`. Apply to new builds and requested revisions; preserve approved exports/cover art without a request.
+
 For Reelrise feedback and learning-driven reviews or alternate edits, also read `REAL_RISE_REVIEWER.md`. Append evidence-backed video learnings there; predictions are not measured performance.
 
 For landscape long-form YouTube videos, also read `SPLITPLATE_YOUTUBE_VIDEO_RULES.md`. YouTube Shorts continue to use `SPLITPLATE_TIKTOK_EDIT_RULES.md`.

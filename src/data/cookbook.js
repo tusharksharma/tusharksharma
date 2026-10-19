@@ -1255,80 +1255,265 @@ export const sauces = [
   },
   {
     id: "cowboy-butter",
-    title: "Cowboy Butter",
-    tagline: "High-protein remix. Laughing Cow + bone broth + Parm replace 4 tbsp butter for 1/4 the fat. ~75 cal per 2 tbsp.",
-    heroImage: "/images/pork-chops-cowboy/step5-sear-sauce.webp",
-    flavorProfile: "Creamy + garlic + smoky paprika + Dijon bite + tangy lemon + Worcestershire umami. Smooth pourable consistency, not heavy. Adult version: parsley + chives + chili flakes folded in for color + heat. Kid version: plain cream base.",
-    calories: 450,
-    caloriesPerServing: 75,
-    protein: 4,
-    proteinPerServing: 1,
+    title: "Creamy Cowboy Butter",
+    video: "/videos/cowboy-butter/creamy-cowboy-butter-2026.mp4",
+    tagline: "Thick like softened compound butter. Cottage cheese, real butter and Parmesan; about 50 cal and 4g protein per 2 tbsp, estimated.",
+    heroImage: "/images/cowboy-butter/hero-polished.webp",
+    prepImage: "/images/cowboy-butter/prep-polished.webp",
+    prepImageCaption: "Adding grated Parmesan to the cottage-cheese blender base.",
+    actionImage: "/images/cowboy-butter/spread-polished.webp",
+    actionImageCaption: "The thick sauce spread over steak; steak and sides are separate from the sauce nutrition.",
+    flavorProfile: "Creamy, buttery and savory, with garlic, Parmesan, mustard, Worcestershire, paprika, lemon and Italian seasoning. Optional chili flakes add heat.",
+    calories: 280,
+    caloriesPerServing: 50,
+    protein: 24,
+    proteinPerServing: 4,
     servings: 6,
+    servingSize: "2 tbsp · yield estimated",
     time: "5 min",
     bestFor: [
-      "Pork chops (recipe 39)",
-      "Steak (any cut — sirloin, ribeye, bavette)",
-      "Pan-seared chicken thighs",
-      "Roasted asparagus / broccoli / snap peas",
-      "Smashed potatoes (alt to chili crisp sour cream)",
-      "Baked salmon",
-      "Anywhere a real cowboy butter would go — at 1/3 the calories",
+      "Spreading over cooked steak",
+      "Serving with cooked chicken",
+      "Roasted vegetables",
+      "A thick dip alongside potatoes"
     ],
-    useThisWhen: "You want the cowboy butter mouthfeel (creamy + garlicky + herby) at a macro-honest cost. Real cowboy butter is ~200 cal / 22g fat per 2 tbsp (melted butter + herbs). This is ~75 cal / 7g fat per 2 tbsp — same flavor profile, 1/3 the calories. The Laughing Cow + bone broth + Parm swap is the entire macro lever.",
-    flavorTarget: "Restaurant-style cowboy butter perception: creamy, garlicky, with herb + heat finish. Adults get parsley + chives + chili flakes folded in at the end (color + brightness). Kids get the cream base only — no visible green, no heat. Same mother sauce, two finishes.",
-    splitNote: {
-      adult: "Full recipe + the herb fold: 2 tbsp chopped parsley + 1 tbsp chopped chives + extra chili flakes (to taste). Folded in AT THE END after sauce comes off heat — parsley turns gray if added too early.",
-      kid: "Pull 1/3 of the sauce BEFORE the herb fold. Plain cream base in a separate ramekin or dip well. Kids reject visible herb flecks; the plain version is a Velveeta-mac-cheese cousin they recognize.",
-    },
+    useThisWhen: "You want a thick, creamy steak-night spread with a cottage-cheese base and a little real butter. Blend it smooth and keep it spreadable like softened compound butter; add milk gradually only if needed.",
+    flavorTarget: "Thick and creamy, like softened compound butter. It should spread with a spoon rather than run like a thin sauce. Use Dijon or whole-grain mustard—whichever you have.",
+    allergens: [
+      "dairy"
+    ],
+    warnings: [
+      "Worcestershire may contain anchovies (fish); check the bottle."
+    ],
     ingredients: [
-      "3 Laughing Cow Light wedges (Creamy Swiss)",
-      "4 tbsp Kirkland Chicken Bone Broth (or beef bone broth — richer)",
-      "1 tsp Kirkland Sweet Cream Butter (unsalted)",
-      "2 tbsp grated Kirkland Parmigiano Reggiano Stravecchio (food-processed from wedge)",
-      "2 garlic cloves, minced",
-      "1 tbsp lemon juice",
-      "1/2 tsp lemon zest",
-      "1 tsp Smash Kitchen Dijon Mustard",
-      "1/2 tsp Lea & Perrins Worcestershire Sauce",
-      "1/2 tsp smoked paprika",
-      "1/4 tsp chili flakes (in the base; adult gets MORE folded in)",
-      "Pinch salt + black pepper",
-      "--- ADULT FOLD-INS (end only) ---",
-      "2 tbsp fresh parsley, finely chopped",
-      "1 tbsp fresh chives, finely chopped",
-      "Extra chili flakes (to taste)",
+      "100 g 2% cottage cheese (MULU used)",
+      "1 tbsp butter, softened",
+      "2 tbsp whole ultra-filtered milk (Nurri used), plus a little more only as needed",
+      "½ oz (about 14 g) Parmesan, finely grated",
+      "½ tsp garlic powder",
+      "½ tsp Dijon OR whole-grain mustard (½ tsp total)",
+      "½ tsp Worcestershire sauce",
+      "½ tsp paprika",
+      "½ tsp lemon juice",
+      "½ tsp Italian seasoning",
+      "½ tsp SPG (salt, pepper and garlic seasoning blend)",
+      "Chili flakes, optional, to taste"
     ],
     steps: [
-      "MELT THE BUTTER + BLOOM AROMATICS: Small saucepan, LOW heat. 1 tsp Kirkland butter. When melted, add 2 minced garlic cloves + 1/2 tsp smoked paprika + 1/4 tsp chili flakes. Stir 30 sec — garlic should be fragrant, not browned.",
-      "ADD BONE BROTH + LAUGHING COW: 4 tbsp bone broth + 3 Laughing Cow wedges. Whisk slowly on LOW heat. Don't rush — high heat breaks the cheese. About 90 sec until wedges fully melt and sauce is smooth.",
-      "BUILD THE FLAVOR STACK: 2 tbsp grated Parm + 1 tbsp lemon juice + 1/2 tsp lemon zest + 1 tsp Dijon + 1/2 tsp Worcestershire + pinch S&P. Stir until silky. 60 sec.",
-      "SPLIT THE SAUCE: Spoon 1/3 of the sauce into a small bowl for KIDS — this is the plain version. Set aside.",
-      "ADULT FOLD: Off heat. Into the remaining 2/3, fold 2 tbsp chopped parsley + 1 tbsp chopped chives + extra chili flakes (to taste). Fold gently — don't whip. Parsley should stay green; if it grays, the sauce was too hot.",
-      "SERVE: Adult version in a small bowl with a spoon (drizzle cross-hatched over the protein, NOT poured). Kid version in a dip well or small ramekin — they spoon or dip.",
+      {
+        text: "BUILD THE BASE: Add 100g cottage cheese, 1 tbsp softened butter, 2 tbsp whole ultra-filtered milk and ½ oz finely grated Parmesan to a small blender or food processor.",
+        image: "/images/cowboy-butter/prep-polished.webp",
+        images: [
+          "/images/cowboy-butter/prep-polished.webp"
+        ]
+      },
+      "ADD THE SEASONINGS: Add ½ tsp each garlic powder, Dijon OR whole-grain mustard, Worcestershire, paprika, lemon juice, Italian seasoning and SPG. Add chili flakes only if you want heat.",
+      {
+        text: "BLEND SMOOTH: Blend, stopping to scrape the cup as needed, until the cottage-cheese curds are smooth.",
+        image: "/images/cowboy-butter/blend-polished.webp",
+        images: [
+          "/images/cowboy-butter/blend-polished.webp"
+        ]
+      },
+      {
+        text: "CHECK THE TEXTURE: Aim for thick and creamy, like softened compound butter. If it is too stiff to blend or spread, add milk a teaspoon at a time; stop before it becomes a thin pouring sauce.",
+        image: "/images/cowboy-butter/texture-polished.webp",
+        images: [
+          "/images/cowboy-butter/texture-polished.webp"
+        ]
+      },
+      {
+        text: "SPREAD + SERVE: Spread over cooked steak or serve on the side. Serving size is 2 tbsp; the amount pictured on steak was not measured. Steak and sides have separate nutrition.",
+        image: "/images/cowboy-butter/spread-polished.webp",
+        images: [
+          "/images/cowboy-butter/spread-polished.webp"
+        ]
+      }
     ],
     troubleshooting: [
-      { problem: "Sauce curdled / grainy", fix: "Heat too high when whisking in Laughing Cow. LOW heat only — the wedges need to melt slowly. If already curdled, stir in 1 tbsp cold bone broth + whisk hard; sometimes re-emulsifies. If not, blender + 30 sec on low fixes it." },
-      { problem: "Parsley turned gray + sad", fix: "You folded too early or sauce was too hot. Fold AT THE END, off heat, slightly cooled. Or sprinkle parsley on top at the table." },
-      { problem: "Sauce too thin", fix: "Simmer 60 sec on LOW to reduce. Or add 1/2 more Laughing Cow wedge + whisk. Don't use cornstarch — kills the texture." },
-      { problem: "Sauce too thick / paste-like", fix: "1 more tbsp bone broth, whisk in. Should pour off a spoon in a slow ribbon, not plop." },
-      { problem: "Tastes flat / one-dimensional", fix: "Bump the lemon by 1 tsp + add 1/4 tsp more Dijon. Or hit with extra chili flakes for the adult version. The Worcestershire is doing most of the deep umami work — taste once it's in." },
-      { problem: "Kid version still 'too cheesy' for the kid", fix: "Thin kid portion with 1 more tbsp bone broth. Or sub 1 tbsp plain Greek yogurt for a milder finish — same color, less intensity." },
+      {
+        problem: "Too thick to blend or spread",
+        fix: "Scrape the cup and add milk a teaspoon at a time. Keep the finished sauce thick, like softened compound butter."
+      },
+      {
+        problem: "Still grainy",
+        fix: "Finely grate the Parmesan, use softened butter and blend longer, scraping the cup between short runs."
+      },
+      {
+        problem: "Too salty",
+        fix: "SPG already contains salt and garlic, and Parmesan is salty. Start lighter on SPG if needed, then taste before adding more."
+      },
+      {
+        problem: "Which mustard?",
+        fix: "Dijon or whole-grain mustard both work. Use ½ tsp total of whichever you have."
+      }
     ],
     brands: [
-      { name: "Laughing Cow", item: "Light Creamy Swiss Wedges (6 oz / 8 wedges)", why: "The macro lever. 3 wedges = ~105 cal vs ~400 cal for the 4 tbsp of butter they replace. Spreadable cold, melts smooth when warm.", image: "/images/brands/laughing-cow-light.png", url: "https://www.thelaughingcow.com/product/creamy-light-wedges/" },
-      { name: "Kirkland", item: "Chicken Bone Broth (32 fl oz cartons, 6-pack)", why: "Body without dairy. Beef bone broth also works (richer + darker color). 4 tbsp = ~15 cal — almost free macro-wise.", image: "/images/brands/kirkland-bone-broth.jpg", url: "https://www.costco.com/kirkland-signature-organic-chicken-bone-broth%2C-32-fl-oz%2C-6-count.product.100354502.html" },
-      { name: "Kirkland", item: "Sweet Cream Butter (1 lb, unsalted)", why: "Just 1 tsp — bloom the garlic + paprika. Most of the 'butter' work is done by Laughing Cow; the small pat gives the dish the cowboy-butter aroma.", image: "/images/brands/kirkland-butter.jpg", url: "https://www.costco.com/kirkland-signature-sweet-cream-butter%2C-salted%2C-1-lb%2C-4-count.product.100327851.html" },
-      { name: "Kirkland Signature", item: "Parmigiano Reggiano Stravecchio (aged 36+ months)", why: "2 tbsp grated — salt + umami + nutty depth. Aged Parm specifically; pre-grated tubs are too soft + flavorless for this sauce.", image: "/images/brands/kirkland-parmigiano-stravecchio.jpg", url: "https://www.costcobusinessdelivery.com/kirkland-signature-parmigiano-reggiano-straveccho,-2-lb-avg-wt.product.100113283.html" },
-      { name: "Smash Kitchen", item: "Dijon Mustard", why: "1 tsp Dijon bite. The mustard rounds out the cheese + brings sharpness — the sauce is flat without it.", image: "/images/brands/smash-kitchen-dijon.jpg", url: "https://smashkitchen.com/products/dijon-mustard" },
-      { name: "Lea & Perrins", item: "The Original Worcestershire Sauce (10 oz)", why: "1/2 tsp = molasses + tamarind + anchovy umami depth. Brand specifically because L&P has the right balance — store-brand is watery.", image: "/images/brands/lea-perrins-worcestershire.jpg", url: "https://www.target.com/p/lea-38-perrins-original-worcestershire-sauce-10oz/-/A-13386254" },
+      {
+        name: "MULU",
+        item: "2% Lowfat High Protein Cottage Cheese",
+        why: "The filmed tub supplies 18g protein per ½ cup (113g); the recipe uses 100g. Another 2% cottage cheese works, with different protein.",
+        image: "/images/brands/mulu-2pct-cottage-cheese.jpg",
+        url: "https://www.walmart.com/ip/18966903096"
+      }
     ],
-    macroHonesty: "Per 2-tbsp serving (~75 cal / 4g protein / 7g fat / 2g carbs / 0g net) computed from logged ingredients: 3 Laughing Cow wedges (105 cal) + 4 tbsp bone broth (15 cal) + 1 tsp butter (35 cal) + 2 tbsp Parm (45 cal) + flavor ingredients (lemon, Dijon, etc — ~15 cal combined) = ~215 cal total ÷ 6 servings ≈ ~36 cal per serving as written, ~75 cal per 2-tbsp generous portion. Real cowboy butter at 2 tbsp = ~200 cal / 22g fat. This is ~1/3 the calories.",
+    macroHonesty: "Estimated whole batch: about 280 calories, 24g protein, 18g fat and 7g carbs. Per 2 tbsp: about 50 calories, 4g protein, 3g fat and 1g carbs, assuming roughly ¾ cup finished yield (six servings). Yield was not measured. Calculated from 100g MULU 2% cottage cheese (100 cal/18g protein per 113g), 1 tbsp butter, 2 tbsp Nurri whole ultra-filtered milk, ½ oz Parmesan and a small seasoning allowance. Exact butter/Parmesan labels and SPG ratios vary. One extra tbsp Nurri milk adds about 11 calories to the whole batch and changes yield; ordinary 2% cottage cheese may lower protein. Steak, potatoes and vegetables pictured are excluded. Butter-only benchmark: 2 tbsp butter ≈200 calories, 0g protein and 22g fat before flavor additions; prepared cowboy butter recipes vary. This is the creator’s updated cottage-cheese spread, replacing the former Laughing Cow/broth formula.",
     mealPrep: {
-      storage: "Glass jar with a lid. Fridge. The herb-fold version (adult) is best within 24 hr — parsley + chives darken after 2-3 days. The plain base (kid) holds 5 days.",
-      lasts: "5 days for the plain base. 24-48 hr for the herbed adult version. Best made fresh per cook.",
-      reheat: "Low-heat saucepan + 1 tbsp bone broth splash to loosen. NEVER microwave — breaks the cheese. About 90 sec on low + stir until silky.",
+      storage: "Keep covered and refrigerated; use a clean spoon.",
+      lasts: "Best freshly blended. Follow the shortest use-by guidance on your dairy ingredients.",
+      reheat: "Serve as a spread. If chilled and too firm, stir in a small splash of milk rather than boiling it."
     },
+    socialImages: [
+      "/images/cowboy-butter/prep-polished.webp",
+      "/images/cowboy-butter/blend-polished.webp",
+      "/images/cowboy-butter/texture-polished.webp",
+      "/images/cowboy-butter/spread-polished.webp"
+    ],
+    socialCarousel: {
+      heroBadge: "Creamy steak-night spread",
+      heroAccent: "amber",
+      heroPhoto: "/images/cowboy-butter/hero-polished.webp",
+      heroStats: [
+        {
+          value: "≈50",
+          label: "cal / 2 tbsp"
+        },
+        {
+          value: "4g",
+          label: "protein / 2 tbsp"
+        },
+        {
+          value: "¾ cup",
+          label: "est. batch yield"
+        }
+      ],
+      hook: "A thick cottage-cheese base, real butter and Parmesan. Spread it over steak.",
+      captionTitle: "Creamy Cowboy Butter · estimated 50 calories and 4g protein per 2 tbsp.",
+      captionBody: "Creamy cowboy butter for steak night. Thick like softened compound butter, with cottage cheese, real butter and Parmesan.\n\nEstimated ≈50 calories / 4 g protein per 2 tbsp, assuming roughly ¾ cup per batch. Yield wasn’t measured. Steak and sides excluded.\n\nFor the batch:\n• 100 g 2% cottage cheese (MULU used)\n• 1 tbsp softened butter\n• 2 tbsp whole ultra-filtered milk (Nurri used)\n• ½ oz (about 14 g) finely grated Parmesan\n• ½ tsp EACH garlic powder, Dijon OR whole-grain mustard, Worcestershire sauce, paprika, lemon juice, Italian seasoning and SPG (salt, pepper, garlic blend)\n• Chili flakes, optional, to taste\n\nBlend everything until smooth, stopping to scrape the cup. Keep it thick and creamy like softened compound butter. Add milk a teaspoon at a time only if needed. Spread a measured 2 tbsp over cooked steak or serve alongside chicken or vegetables.\n\nWhole batch: about 280 calories / 24 g protein / 18 g fat / 7 g carbs. Per 2 tbsp: about 50 calories / 4 g protein / 3 g fat / 1 g carbs at the estimated yield. Brands, extra milk and actual yield change these numbers. Regular 2% cottage cheese may provide less protein than MULU.\n\nComparison: 2 tbsp butter alone ≈200 calories / 0 g protein / 22 g fat, before flavor additions. Prepared cowboy-butter recipes vary.\n\nPause the reel for the seasonings. Save this for steak night.\n\nFull recipe: https://thesplitplate.com/cookbook/cowboy-butter",
+      ingredientGroups: [
+        {
+          card: 0,
+          accent: "amber",
+          heading: "The creamy base",
+          items: [
+            {
+              quantity: "100 g",
+              text: "2% cottage cheese (MULU used)"
+            },
+            {
+              quantity: "1 tbsp",
+              text: "Butter, softened"
+            },
+            {
+              quantity: "2 tbsp",
+              text: "Whole ultra-filtered milk"
+            },
+            {
+              quantity: "½ oz",
+              text: "Parmesan, finely grated"
+            }
+          ]
+        },
+        {
+          card: 1,
+          accent: "amber",
+          heading: "½ tsp each · pause here",
+          items: [
+            {
+              quantity: "½ tsp",
+              text: "Garlic powder"
+            },
+            {
+              quantity: "½ tsp",
+              text: "Dijon OR whole-grain mustard"
+            },
+            {
+              quantity: "½ tsp",
+              text: "Worcestershire sauce"
+            },
+            {
+              quantity: "½ tsp",
+              text: "Paprika"
+            },
+            {
+              quantity: "½ tsp",
+              text: "Lemon juice"
+            },
+            {
+              quantity: "½ tsp",
+              text: "Italian seasoning"
+            },
+            {
+              quantity: "½ tsp",
+              text: "SPG (salt, pepper, garlic); chili flakes optional to taste"
+            }
+          ]
+        }
+      ],
+      ingredientCardPhotos: [
+        {
+          src: "/images/cowboy-butter/prep-polished.webp",
+          position: "50% 48%",
+          zoom: 1,
+          layout: "side"
+        },
+        {
+          src: "/images/cowboy-butter/blend-polished.webp",
+          position: "50% 50%",
+          zoom: 1,
+          layout: "side"
+        }
+      ],
+      methodLabel: "BLEND + CHECK",
+      methodGroups: [
+        {
+          card: 0,
+          accent: "amber",
+          heading: "Thick, creamy, spreadable",
+          items: [
+            {
+              number: 1,
+              heading: "Blend smooth",
+              body: "Blend the base and all seasonings; scrape the cup as needed."
+            },
+            {
+              number: 2,
+              heading: "Keep it thick",
+              body: "Aim for softened compound-butter texture. Add milk a teaspoon at a time only if needed."
+            }
+          ]
+        }
+      ],
+      methodCardPhotos: [
+        {
+          src: "/images/cowboy-butter/texture-polished.webp",
+          position: "60% 55%",
+          zoom: 1,
+          layout: "side"
+        }
+      ],
+      servingPhoto: "/images/cowboy-butter/spread-polished.webp",
+      servingGroups: [
+        {
+          accent: "amber",
+          heading: "Spread over steak",
+          items: [
+            {
+              text: "Measure 2 tbsp of sauce. Steak and sides are extra."
+            },
+            {
+              text: "Estimated ≈50 cal / 4g protein per 2 tbsp at roughly ¾ cup yield."
+            },
+            {
+              text: "2 tbsp butter alone: ≈200 cal / 0g protein. Prepared cowboy butter recipes vary."
+            }
+          ]
+        }
+      ],
+      engagementQuestion: "Save this for steak night."
+    }
   },
+
   {
     id: "grillos-pickle-dip-protein-style",
     video: "/videos/grillos-pickle-dip-protein-style/ID.047.-.Grillo-s.Pickle.Dip.Protein.Style.mp4",

@@ -1,5 +1,7 @@
 # The Split Plate TikTok Edit Rules
 
+October18,2026 user update: in-video headlines, speech captions, ingredient labels and CTAs default to no background box. Use restrained text shadow/fine edges and position copy away from food/action. Dense seasoning/comparison lists may use tight20–30%-opaque backing with minimal padding. This supersedes older stronger glass-fill examples below; see `CURRENT_RULES.md`. Apply to new builds and requested revisions, not approved exports/cover art without a request.
+
 Use this before making future TikTok/Reels/Shorts recipe videos for The Split Plate.
 
 Before making or revising a cover, also read `SPLITPLATE_THUMBNAIL_PLAYBOOK.md`; it is the single source of truth for thumbnail art direction, face decisions, palette, safe area, QA, and deliverables.

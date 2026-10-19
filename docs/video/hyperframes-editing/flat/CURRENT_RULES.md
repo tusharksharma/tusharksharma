@@ -1,17 +1,24 @@
 # Current Split Plate editing rules
 
+## Minimal text backgrounds — October 18, 2026
+
+- Default to no background box behind headlines, speech captions, ingredient labels and CTAs. Use a restrained text shadow or fine edge for readability, and place copy away from the food/action.
+- If a dense seasoning list or comparison needs backing, use a tightly fitted warm-black fill at about20–30% opacity (70–80% transparent), with minimal padding. Do not restore the old86%-opaque panels or broad banners automatically; reposition copy first.
+- Apply to new videos and requested revisions, including Creamy Cowboy Butter. Keep typography/colors and readable macro/serving caveats. Existing approved exports and cover art stay unchanged unless requested. This supersedes older stronger glass/text-panel defaults for in-video copy.
+
+
 Updated October 14, 2026. Apply these explicit user preferences when older reference sections disagree. System and developer requirements still apply; current task instructions and applicable project `AGENTS.md` remain in force.
 
 ## Split Plate typography and reference briefs — October 14
 
 - Keep Split Plate typography and colors when adapting pasted concepts, ReelRise suggestions or external reference briefs. A reference's white-outline captions, orange block, stock font or palette is not automatically a new house style. Flag conflicting visual instructions before adopting a different treatment; follow an explicit user-approved exception.
-- Use Butter Chicken 506-v2 as the current typography reference: **Barlow Condensed ExtraBold** for bold headline lines, **DM Serif Display italic** for selected lime emphasis, and **Inter Bold** for readable speech captions. Use warm white `#FFFAF0`, lime `#D8F36A` and warm black `#15120F` with compact translucent text-local backing. Keep the actual product, food, action and label facts visible.
+- Use Butter Chicken 506-v2 as the current typography reference: **Barlow Condensed ExtraBold** for bold headline lines, **DM Serif Display italic** for selected lime emphasis, and **Inter Bold** for readable speech captions. Use warm white `#FFFAF0`, lime `#D8F36A` and warm black `#15120F`; apply the October18 minimal-background rule above. Keep the actual product, food, action and label facts visible.
 - Match the hierarchy and contrast, not that video's recipe, exact words, timestamps, old cover duration or opaque panel settings. The no-full-frame-darkening rule remains in force. Scale and position the text for the current footage, safe area and reading time.
 - Apply this default to future builds and requested updates; do not retrofit already approved or posted videos without a request. This supersedes plain white/black-stroke styling in the October 14 cooking-spray reference brief. Both revised cooking-spray previews were approved by Tushar.
 
 ## Original picture quality
 
-- No always-on full-frame scrim, gradient, tint, opacity wash, routine saturation boost, creative LUT, or grade over original food footage. Use compact local translucent text backing or reposition copy.
+- No always-on full-frame scrim, gradient, tint, opacity wash, routine saturation boost, creative LUT, or grade over original food footage. Prefer unboxed text with a restrained shadow or reposition copy; tightly fitted20–30%-opacity backing is a fallback for dense information only.
 - Preserve original food and skin color, clarity, and sharpness. Inspect source color metadata and make the output color decision deliberately. Preserve native HLG/BT.2020 when delivering HDR; an SDR deliverable requires a verified technical tone map, not a retag or implicit pale conversion.
 - Older style-system default SDR and starting grade adjustments do not authorize automatic conversion or grading. Compare raw source, prepared picture, and encoded posting video at the hook and payoff.
 
