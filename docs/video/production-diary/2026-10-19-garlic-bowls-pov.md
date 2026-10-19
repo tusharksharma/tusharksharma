@@ -1,14 +1,14 @@
-# Golden Garlic Steak Bowls POV edition — October 19, 2026
+# Golden Garlic Steak Bowls POV edition â€” October 19, 2026
 
 ## Confirmed direction
 
 Create a separate conversational POV edition from the October12 Atto cook. Preserve the earlier non-POV publication. The first Downloads/Atto batch was the wrong dinner; the matching cook was located in Pictures/atto and checked against its actual rice and frozen-steak actions.
 
-Tushar confirmed Blanche / Feast in the Middle East's **My Family’s Secret Garlic Turmeric Middle Eastern Rice Recipe!** as the rice inspiration: https://www.youtube.com/watch?v=tLiRpUmr8Cg . Credit it in the film and description without implying a collaboration.
+Tushar confirmed Blanche / Feast in the Middle East's **My Familyâ€™s Secret Garlic Turmeric Middle Eastern Rice Recipe!** as the rice inspiration: https://www.youtube.com/watch?v=tLiRpUmr8Cg . Credit it in the film and description without implying a collaboration.
 
 ## Production evidence
 
-- Source: native3840×2160, approximately59.94fps,10-bit BT709 SDR. Bit depth does not make it HDR.
+- Source: native3840Ã—2160, approximately59.94fps,10-bit BT709 SDR. Bit depth does not make it HDR.
 - Approved first-person narration uses Marcus as delivery voice. Approved stage cap:10,000 ElevenLabs credits including retries. Actual settled use: **3,792 credits**, no retries.
 - Picture review identified phone/camera checks and walking that needed removal. Match the broth/turmeric/rice and Tari/toum mentions to their actual actions. A useful calculator screen insert is preferable to unrelated filler during that explanation.
 - Prepare a lower-resolution private review; conform the final master from originals after finished-preview approval. Preserve the five-second outro ceiling, spoken thanks before it, saved closing music and honest end-screen placeholders/posters.
@@ -37,3 +37,6 @@ Tushar approved the main film, three promos and FROZEN. HOMEMADE. thumbnail for 
 
 All three approved promos were conformed from original camera media at 1080x1920, 60000/1001 fps, H.264 BT.709 SDR. Full decode and exact frame-count checks passed; measured audio is approximately -16.8 to -17.8 LUFS with true peaks below -4.6 dBTP. Creator and clean covers and Story cards were exported at 1080x1920. Private Drive uploads were read back with matching byte sizes. Main native 4K export remains in progress at this checkpoint. No new voice charge, publication or schedule.
 
+## Native main export verified locally
+
+The original-source main master is 3840x2160, 60000/1001fps, 10-bit HEVC BT.709 SDR, 30,475 frames and 508.4246 seconds. Full-file decode passed. Measured audio is -16.98 LUFS integrated, -2.74 dBTP. Encoded picture samples show upright food and readable graphics, with filled recommendation artwork and a 4.9883-second appended outro. This is sampled picture inspection, not a claim of a new uninterrupted audiovisual watch. Private full-quality master transfer is in progress; cloud receipt remains pending at this checkpoint. No publishing or scheduling authorization has been added.
