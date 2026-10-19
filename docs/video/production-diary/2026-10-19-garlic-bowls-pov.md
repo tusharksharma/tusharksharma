@@ -20,3 +20,11 @@ Tushar confirmed Blanche / Feast in the Middle East's **My Family’s Secret Gar
 Production and audiovisual QA are in progress. Thumbnail drafts are in the private review folder. Final preview approval, original-source master exports and the completed release package remain pending. This entry is not a claim of finished render, Ready inventory, YouTube upload, publication or scheduling.
 
 Private narration files, raw family interview, credentials and original media stay outside this public repository. The lasting cooking principles are recorded in docs/splitplate-ideologies.md.
+
+## Review delivery update
+
+The8:28 compiled720p30 SDR review passed full decode, exact15253-frame verification and measured approximately-17LUFS/-3.17dBTP. Its223602795-byte private Drive upload was read back and playback verified at the opening with total8:28. The connector's100MB transfer cap was handled by normal browser upload without recompressing the file.
+
+Three captioned portrait promo review files, creator/clean cover choices and Instagram Story-card drafts are saved privately alongside the long-form metadata, captions and thumbnail options. None is marked Ready or published. Original-source4K59.94 main and vertical finals, final audiovisual feedback, reserve/inventory readbacks and later publishing authorization remain pending.
+
+Technical lesson: the detailed composition's browser audit timed out on this8GB laptop; do not call it passed. Preserve that editable project and its original-source EDL. A separate single-file HyperFrames review-player passed browser checks, as did all three promo projects and the card compositions. It is a playback aid, not a replacement for the original-source master pipeline. A moving-food reprise replaced the walking tail under the spoken thanks; the appended end card remains5seconds.
