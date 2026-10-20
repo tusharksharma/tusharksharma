@@ -69,6 +69,10 @@ The skill also routes reference-video analysis, evidence-backed hook options, su
 
 For original music briefs, songwriting, lyric revisions and ElevenLabs Music prompts, use [.agents/skills/splitplate-music-creator/SKILL.md](.agents/skills/splitplate-music-creator/SKILL.md). It asks for reference traits, duration, use and speech overlap, then recommends instrumental, vocal or hybrid arrangements and drafts provider-ready instructions. Read its current-provider research before API work. Prompt and rules requests do not start paid generation or replace approved channel music; existing intro/outro rules remain authoritative.
 
+## Split Plate Recipe Builder
+
+For recipe ideas, ingredient and brand choices, substitutions, recipe development, and saved cooking feedback, use [.agents/skills/splitplate-recipe-builder/SKILL.md](.agents/skills/splitplate-recipe-builder/SKILL.md). It uses the public recipe corpus and scoped learning notes, distinguishes published recipes from untested proposals, and recalculates nutrition for the final quantities. Refresh its corpus when needed and follow the standing food principles above. This route does not initiate video production or website publishing.
+
 ## Repository Delivery Preference
 
 For changes Tushar requests in this repository, validate the affected work, then commit and push directly to `main`. Do not open a pull request unless he requests one or repository protections require it. Preserve unrelated work, never force-push to bypass a concurrent change or protection, and report a blocked push honestly. This preference does not authorize unrelated edits or social publishing.

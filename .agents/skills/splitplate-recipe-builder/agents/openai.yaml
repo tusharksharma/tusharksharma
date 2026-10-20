@@ -1,0 +1,4 @@
+interface:
+  display_name: "Split Plate Recipe Builder"
+  short_description: "Develop recipes from your brands and cooking habits"
+  default_prompt: "Use $splitplate-recipe-builder to develop a recipe based on my existing Split Plate recipes and saved cooking feedback."
