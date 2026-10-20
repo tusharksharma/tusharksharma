@@ -19,3 +19,6 @@ Outcome at this entry: main scheduled; promo production authorized and in progre
 - Canonical exports registered as inventory 716–719; posting plans recorded separately from actual publication. Delivery includes captions, both covers, Story cards, final masters and receipts.
 - Implementation lesson: Meta date/time and caption fields can display uncommitted values. Commit through real keyboard input and verify saved receipts/table entries. Keep native Story stickers clear of the face. Preserve UTF-8 when saving scripts and rules on Windows.
 
+## October 19 release follow-up
+
+After the approved 5 p.m. Pacific release, refreshed YouTube Studio showed Public for 2hK03SclfXg on channel UCG7iNluWmtF1Tph0RVnuidA. The exact film ID was then searched and selected as Related video on all three already-scheduled Shorts: jo_jiQCa2uA, HrQqRXtwPsY and ZQO44DKMvlg. Each selection showed All changes saved and disabled Save; screenshots and the private upload record retain receipts. The October20/22/24 noon schedules were preserved. Canonical inventory was updated and read back: the main is Posted October19, promos remain Scheduled, and Related video is complete. No duplicate posts or new paid voice requests. Instagram Story sticker checks remain due at their future publication times; no live sticker success is claimed yet.
