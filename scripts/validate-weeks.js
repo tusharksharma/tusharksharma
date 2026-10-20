@@ -147,6 +147,7 @@ const KNOWN_LEFTOVER_CHAINS = new Set([
   72, // Hailey-Inspired Chicken Meatballs — approved video-first dinner handoff; no weekly-planner slot chosen yet.
   73, // Cheesy Spinach & Chicken Orzo — approved main video-first dinner handoff; no weekly-planner slot chosen yet.
   74, // Freezer Backup Chicken Mole Tacos — approved unscheduled website package; single adult four-taco base, no weekly-menu slot requested.
+  75, // Oven-Fried Wings with Family Sauce Finishes — approved video-first family recipe package; no weekly-menu slot requested.
 ]);
 
 const recipesSrc = readFileSync("src/data/recipes.js", "utf-8");
