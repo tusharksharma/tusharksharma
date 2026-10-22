@@ -1,5 +1,7 @@
 # The Split Plate Thumbnail Playbook
 
+**October 21, 2026 creator-face update:** Tushar now requests fresh ImageGen expressions and poses anchored to his real photo/video references, rather than reusing the same reaction every time. Follow [the updated reaction-library rule](../../creator-reactions.md). This supersedes older expression-preservation/no-new-pose restrictions below for his staged thumbnail portraits. Preserve recognizable identity and realistic mouth/teeth; prefer closed-mouth variants rather than inventing teeth. Keep the face prominent and integrated with the subject, without a side frame. Record generated provenance and compare likeness/anatomy against the real references before review.
+
 Read this **before generating or revising any short-form video cover**. This is the source of truth for cover art; the video-edit and production rules link here. A cover is a truthful preview of its specific video, not a separate imagined recipe or scene. Apply new rules going forward; do not silently remake approved older covers.
 
 ## Non-negotiable delivery

@@ -1,5 +1,13 @@
 # Tushar's reusable thumbnail reaction photos
 
+## Fresh ImageGen variations — confirmed October 21, 2026
+
+Tushar explicitly requests fresh ImageGen versions of himself for thumbnails, rather than repeating the same reaction image. Use the real photo/video library as the identity anchor, then generate a story-appropriate new expression, head angle or pose when that improves this particular thumbnail. This supersedes older instructions below that forbid changing an expression or passing the portrait through ImageGen; it does not authorize a lookalike or inaccurate teeth.
+
+Preserve recognizable facial identity, age, skin tone and hair. Prefer a natural closed-mouth expression when new teeth would otherwise be invented; never fabricate, enlarge, whiten or straighten teeth. If teeth are visible, compare their appearance against an actual reference. Make the face prominent with minimal torso, clean transparent edges and a coherent single-scene composition; no portrait side frame. Vary the emotion with the story rather than cycling a fixed exaggerated pose. Check new hands/fingers and full-size/phone-size likeness before use.
+
+Retain the real originals and approved previous thumbnails. Save new variants separately with their source references, ImageGen prompt and generated status; they are staged thumbnail illustrations, never proof of a live meal reaction. Reuse a successful variant when it fits, but inspect recent thumbnails to avoid repetitive faces. The agent owns choosing and generating the suitable variation without routinely asking for new photos. Normal finished-thumbnail review still applies.
+
 ## Preferred real-video library — October 13, 2026
 
 Use [real-2026-10-13](../../assets/creator-reactions/real-2026-10-13/) first. These eight frames were extracted from Tushar's three supplied reaction recordings, oriented once and cropped; their facial pixels have not been generated. Inspect [the source contact sheet](../../assets/creator-reactions/real-2026-10-13/source-contact-sheet.jpg) and [provenance manifest](../../assets/creator-reactions/real-2026-10-13/manifest.json). The raw MOVs remain outside the public repository.
