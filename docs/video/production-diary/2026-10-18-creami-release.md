@@ -1,4 +1,4 @@
-# Creami release decisions — October 18, 2026
+# Creami release decisions â€” October 18, 2026
 
 - Tushar approved the 8:22 Creami trio long-form and confirmed Monday October 19, 5 p.m. America/Los_Angeles. Existing YouTube upload scheduled; native end screens and captions retained.
 - Long-form cadence: Monday/Wednesday 5 p.m.; Monday-film promos Tuesday/Thursday/Saturday noon; Wednesday-film promos Friday/Sunday noon and Saturday 5 p.m. Saturday spacing is the editor recommendation after Tushar requested judgment.
@@ -12,11 +12,11 @@ Outcome at this entry: main scheduled; promo production authorized and in progre
 ## Completed release preparation
 
 - Tushar approved all three promo previews and the October 20/22/24 noon Pacific rollout, then confirmed execution after limits refreshed.
-- Final promos exported at 1080×1920, 60 fps, BT.709 SDR: 14.9s, 16.7s and 16.7s. Exact frames, full decode, audio headroom and encoded caption/CTA/cover snapshots checked. Existing approved Marcus takes reused: zero additional ElevenLabs credits.
+- Final promos exported at 1080Ã—1920, 60 fps, BT.709 SDR: 14.9s, 16.7s and 16.7s. Exact frames, full decode, audio headroom and encoded caption/CTA/cover snapshots checked. Existing approved Marcus takes reused: zero additional ElevenLabs credits.
 - YouTube scheduling receipts verified: `jo_jiQCa2uA` October 20; `HrQqRXtwPsY` October 22; `ZQO44DKMvlg` October 24, all noon America/Los_Angeles. Timed English captions and creator covers saved; platform checks reported no issues.
 - Three Facebook-only text/link posts scheduled for the same dates and times. Three Instagram-only video + native-link photo Story pairs saved and verified in Scheduled Stories. No Instagram feed promos, Facebook Story cross-posts, paid boosts or TikTok work.
 - Main remains scheduled Monday October 19 at 5 p.m. Pacific. Scheduled assets are not yet public. The private main did not appear in YouTube's Related video picker; active cadence follow-up must attach `2hK03SclfXg` to all three Shorts after the main goes public, before the first promo. Live Story link testing also awaits publication.
-- Canonical exports registered as inventory 716–719; posting plans recorded separately from actual publication. Delivery includes captions, both covers, Story cards, final masters and receipts.
+- Canonical exports registered as inventory 716â€“719; posting plans recorded separately from actual publication. Delivery includes captions, both covers, Story cards, final masters and receipts.
 - Implementation lesson: Meta date/time and caption fields can display uncommitted values. Commit through real keyboard input and verify saved receipts/table entries. Keep native Story stickers clear of the face. Preserve UTF-8 when saving scripts and rules on Windows.
 
 ## October 19 release follow-up
@@ -33,3 +33,6 @@ The private upload record and screenshots retain the live URLs and verification 
 
 HrQqRXtwPsY verified Public in Studio; the actual live Short exposes Related video 2hK03SclfXg. The Facebook companion was verified in Published posts at noon Pacific. Instagram's actual video and photo-card Stories are live; refreshed Active Stories shows video12:00 and photo12:01. The native Watch the full film sticker opens Visit link to the exact full Creami film. Publication seconds were not independently measured. Inventory718 and postingrow529 updated and read back. Receipts/screenshots remain private. No duplicate posts or new narration charges. Remaining October24 and other-film schedules are preserved.
 
+## October22 link-card repair
+
+Tushar reported the visible Story sticker was not clickable. The prior audit had verified a native control and destination without proving the visual center was tappable. Rebuilt the photo card with explicit9:16 framing, a direct YouTube watch URL and manually positioned WATCH ON YOUTUBE native sticker. Replacement4013764869283031121 passed a screenshot-grounded center click, Visit link and exact-film navigation. Removed superseded photo4013744578137000829 after the replacement passed; the video, Shorts, Facebook post and future schedules are preserved. Phone-app confirmation remains separate from this verified desktop repair. The promotion playbook now requires this visible-center end-to-end test.

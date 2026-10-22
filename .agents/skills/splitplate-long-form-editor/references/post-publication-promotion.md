@@ -41,3 +41,9 @@ The recurring follow-up verifies public availability and executes the prepared r
 # Scheduled-main Related video boundary
 
 If a private scheduled main is absent from the Shorts Related video picker, retain its approved visibility. Schedule the approved Short, record Related video as pending, and assign the existing publication follow-up to attach and verify the exact main after it becomes public, before the first promo. Do not select an unrelated video or claim the link was saved. Verify native Story links after actual publication separately from scheduling receipts.
+
+## Native Story sticker tap test — October 22, 2026
+
+A saved destination or a successful programmatic click on an invisible native control does not prove that a viewer can tap the visible sticker. Tushar reported the October22 Creami card was not clickable. Desktop inspection found an offset between the visible artwork and native hit area. The replacement used explicit9:16 photo framing, a newly created native link with the direct full YouTube watch URL, and manual placement of WATCH ON YOUTUBE near the lower center. A screenshot-grounded click on its visible center opened Visit link and the exact film; the superseded card was removed after the replacement passed. This is an observed workaround, not a claim about every Meta client.
+
+For every future live Story link, test by clicking/tapping the visible sticker center from the actual viewer, then follow Visit link and verify the exact playable public film. Do not count URI inspection or selecting a native element elsewhere on screen as a pass. If the center is inert, keep the incident unresolved; rebuild/reposition the native sticker and verify the replacement before removing the broken card. Preserve the video Story and other schedules. Record the replaced/new Story IDs and distinguish desktop verification from phone-app confirmation. Do not claim a burned-in label is clickable.
