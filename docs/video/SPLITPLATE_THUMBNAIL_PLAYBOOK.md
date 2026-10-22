@@ -60,3 +60,7 @@ These are layout/energy references, not permission to copy text, fabricate a per
 ## Reusable generation brief
 
 `9:16 premium photoreal editorial video cover for [exact video]. Reference [actual frame(s)] as the factual source. Hero: [real person/food/action]. Face decision: [why shown or absent]. Preserve [specific identity, dish, ingredients, product, proportions]. Warm natural lighting; warm-black #15120F, cream #FFFAF0, lime #D8F36A, optional coral #EF593F for type/accent only. Exact headline: [2-5 words]. Optional verified badge: [number + serving basis]. Keep critical content inside the safe area and central crop. No invented people, ingredients, packaging, results, text, logos, or watermarks.`
+
+## Atto POV camera labeling — October 22, 2026
+
+For future films actually shot as hands-free POV with the XTRA Atto, prominently include a compact **POV • XTRA ATTO** badge in the thumbnail. Keep the food promise and prominent integrated creator face readable; the camera badge must not overwhelm them or sit beneath YouTube UI. In the description, say **“Filmed hands-free in POV with the XTRA Atto camera.”** near the opening context, alongside the matching recipe destination. Verify the actual camera/style per film; do not apply this to ordinary non-POV footage. This is a forward rule and does not silently replace previously approved thumbnails or metadata.

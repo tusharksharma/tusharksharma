@@ -75,3 +75,5 @@ Save reviewer feedback against the exact version and timestamps. Classify decisi
 Confirmed October 18: use the weekly Monday/Wednesday release and film-relative promo cadence in references/post-publication-promotion.md. Long-form time is 5 p.m. Pacific; ordinary promo time is noon, with Wednesday-film Saturday promo at 5 p.m. Read the reference before calendar work.
 
 Confirmed October 18: build and review the three-promo release package alongside the main film, before publication, using the promotion reference. A scheduled main with unbuilt promos is an incomplete release package. Post-publication follow-up distributes prepared assets and verifies outcomes.
+
+For future verified XTRA Atto POV footage, follow the [Atto POV camera-labeling rule](../../../docs/video/SPLITPLATE_THUMBNAIL_PLAYBOOK.md#atto-pov-camera-labeling--october-22-2026): prominent **POV • XTRA ATTO** thumbnail badge and explicit camera/POV description context. Do not label non-POV films or retrofit approved assets without a request.
