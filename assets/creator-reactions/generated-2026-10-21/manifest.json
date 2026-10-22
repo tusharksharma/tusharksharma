@@ -1,0 +1,39 @@
+{
+  "created": "2026-10-21",
+  "authorization": "User explicitly requested fresh ImageGen versions of himself for thumbnails and saving the rule",
+  "source_references": [
+    "../real-2026-10-13/thinking-source.png",
+    "../real-2026-10-13/excited-source.png"
+  ],
+  "method": "Built-in ImageGen; generated staged expression/pose, not extracted live reaction",
+  "prompt_constraints": "Recognizable same identity, age, skin, dark hair, brown cap, jacket and blue collar. Fresh closed-mouth approval expression; thumbs-up variant or hands-out-of-frame confident variant. Transparent background. No invented teeth, text or props. Head/face prominent, minimal torso.",
+  "qa": "Compared visually with both real source references; closed mouths and no visible generated teeth; no facial-lookalike substitution observed. User approval of final thumbnail remains pending.",
+  "assets": [
+    {
+      "file": "amused-thumbs-up.png",
+      "mode": "RGBA",
+      "size": [
+        1181,
+        1331
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "sha256": "7a373be328c445f1f65e4a5b60b3f4e24716c20e8c9f99960fe49cf53dc43a8d"
+    },
+    {
+      "file": "confident-closed-mouth.png",
+      "mode": "RGBA",
+      "size": [
+        1057,
+        1488
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "sha256": "e205d2d69d0ee66f24bc94a2811d75e042227bb2465ccae369881428a47f4273"
+    }
+  ]
+}
