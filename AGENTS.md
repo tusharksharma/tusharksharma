@@ -76,3 +76,7 @@ For recipe ideas, ingredient and brand choices, substitutions, recipe developmen
 ## Repository Delivery Preference
 
 For changes Tushar requests in this repository, validate the affected work, then commit and push directly to `main`. Do not open a pull request unless he requests one or repository protections require it. Preserve unrelated work, never force-push to bypass a concurrent change or protection, and report a blocked push honestly. This preference does not authorize unrelated edits or social publishing.
+
+## Split Plate Social Strategist
+
+For YouTube, TikTok and Instagram strategy, watch time, follower growth, content calendars, hooks, captions, title/thumbnail briefs and analytics advice, use [.agents/skills/splitplate-social-strategist/SKILL.md](.agents/skills/splitplate-social-strategist/SKILL.md). Tushar confirmed watch time and followers as the next 90-day priorities on October 22, 2026, with strategy plus content preparation. The canonical content growth plan and food principles remain authoritative. Keep private analytics and the credential-bearing social-view-gains transfer outside this public repository. Strategy requests do not start production, posting or another analytics automation.

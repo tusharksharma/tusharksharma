@@ -1,0 +1,4 @@
+interface:
+  display_name: "The Split Plate Social Strategist"
+  short_description: "YouTube, TikTok and Instagram strategy and growth"
+  default_prompt: "Use $splitplate-social-strategist to recommend my next content moves for watch time and follower growth, with platform-specific drafts and a measurable test."
