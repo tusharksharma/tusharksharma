@@ -45,3 +45,7 @@ Keep source prompts and earlier HyperFrames intro as historical alternatives in 
 ## Preflight for every new film
 
 Confirm the chosen intro/music version, source hash, visual framing, title/logo spelling, aspect ratio, music seam and speech clarity. Inspect the post-intro overlay on moving footage and the final end-screen layout at phone size. Verify the actual native end-screen destinations after upload. Save the asset choices, timing, mix and QA evidence with the episode.
+
+## Estimated nutrition after the story — October 23, 2026
+
+Follow [Estimated nutrition ending](estimated-nutrition-ending.md). Show the readable, serving-specific calorie/macro/micronutrient estimates after the story payoff and before the separate five-second watch-next card. Use single rounded values, not ranges; retain the estimated label and calculation evidence.
