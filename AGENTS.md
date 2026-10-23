@@ -80,3 +80,7 @@ For changes Tushar requests in this repository, validate the affected work, then
 ## Split Plate Social Strategist
 
 For YouTube, TikTok and Instagram strategy, watch time, follower growth, content calendars, hooks, captions, title/thumbnail briefs and analytics advice, use [.agents/skills/splitplate-social-strategist/SKILL.md](.agents/skills/splitplate-social-strategist/SKILL.md). Tushar confirmed watch time and followers as the next 90-day priorities on October 22, 2026, with strategy plus content preparation. The canonical content growth plan and food principles remain authoritative. Keep private analytics and the credential-bearing social-view-gains transfer outside this public repository. Strategy requests do not start production, posting or another analytics automation.
+
+## Creator Biography and Personal Stories
+
+Before writing personal first-person narration, creator introductions or community replies, read [About Tushar — biography and story source](docs/about-tushar.md). Reuse only relevant confirmed experiences, preserving historical context and the distinction between firsthand observations and untested expectations. Record new owner-confirmed biography details there with dates; do not invent family stories, credentials or tested recipe results. Follow community rules for AI-assisted replies, and keep medical claims separate from household anecdotes.
