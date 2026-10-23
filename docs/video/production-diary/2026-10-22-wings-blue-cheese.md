@@ -34,3 +34,7 @@ Tushar requested a prominent POV • XTRA ATTO thumbnail badge and explicit hand
 ## Future Atto framing preference
 
 Tushar confirmed a gentle 1.10x-1.15x total crop for future wide-angle Atto POV edits, adjusted per shot to reduce clutter while retaining the food and hands. Conform from originals, account for existing crop/stabilization, retain requested 4K/source frame rate, and compare moving encoded output at full size. Digital cropping is not lossless; widen when detail or cooking coverage suffers. Saved in the repository and installed long-form agent. Existing approved films are unchanged.
+
+## Local duplicate cleanup
+
+Tushar explicitly requested removal of used Atto footage, specifically wings. Seven redundant wings MP4 copies matched the retained canonical originals by full SHA256 and byte length. Removed only those extra local copies, reclaiming20,984,899,231 bytes (20.98GB). Kept the seven canonical originals used by the edit, unique XRF camera sidecars, finished main/promos, editable projects, paid narration and receipts. Cloud-original verification remains pending; do not treat this duplicate cleanup as removal of the last local original set or proof of a cloud backup. The private project cleanup manifest records both paths, hashes and deletion verification.
