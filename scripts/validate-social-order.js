@@ -14,3 +14,6 @@ assert.deepEqual(sortSocialRecipes([
 const a={id:'a',initialMainPostDate:'2026-08-01'}, b={id:'b',initialMainPostDate:'2026-08-01'};
 assert.deepEqual(sortSocialRecipes([b,a]),[b,a]);
 console.log('Social ordering verified: original dates, category moves, stable ties and new packages.');
+
+const { creamis } = await import('../src/data/cookbook.js');
+assert.equal(sortSocialRecipes(creamis).at(-1).id, 'fruity-pebbles-cereal-milk-creami');
