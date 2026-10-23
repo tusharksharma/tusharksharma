@@ -53,7 +53,7 @@ Taking a finished edit from `~/Documents/New project/video-edits/` live means re
 
 ## Long-Form YouTube Editing
 
-For local media space management, follow [Local video storage](docs/video/local-storage-cleanup.md). Tushar authorizes ongoing cleanup of unnecessary local working files when space is tight; verify recoverable cloud copies before removing originals or finished assets, and preserve active/pending work and paid narration.
+For local media space management, follow [Local video storage](docs/video/local-storage-cleanup.md). Tushar authorizes scratch cleanup when useful and local raw-footage deletion after the exact finished film is verified Public and companion finals are complete. The October 22 post-publication rule supersedes the cloud-copy prerequisite for that film’s local raw sources; preserve shared active sources, finished exports, project records and paid narration. Scheduled is not Public.
 
 For future long-form episodes, read [Intro, music and subscriber treatment](docs/video/intro-music-and-cta.md): use the supplied reusable music/intro library and include thanks/like/subscribe/bell immediately after the intro and at the outro, with a native watch-next end screen. For covers, prioritize [real creator reactions](docs/video/creator-reactions.md); preserve actual teeth and mouth, never synthesize a grin. These October 13 preferences override older generic CTA/cover examples within this scope.
 

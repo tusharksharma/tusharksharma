@@ -58,7 +58,7 @@ For SDR-derived HDR brightness checks and a complete YouTube upload package, rea
 
 ## Delivery and learning
 
-Follow [Local video storage](../../../docs/video/local-storage-cleanup.md) during large downloads and renders. Tushar authorizes ongoing cleanup of unused, regenerable local working files when space is tight; verify cloud recovery before removing originals or finished assets, preserve active/pending work and paid takes, and record material cleanup.
+Follow [Local video storage](../../../docs/video/local-storage-cleanup.md) during large downloads and renders. Tushar authorizes scratch cleanup when useful and automatic local raw-footage deletion after the exact film is verified Public and its main/promo finals are complete. Follow the October 22 rule in that reference: no repeated cloud-backup prerequisite for post-publication raw cleanup; preserve shared active sources, final exports, project records and paid takes. Scheduled is not Public.
 
 Latest October 18 correction: cap the appended outro/end card at **five seconds maximum**. Keep the spoken thank-you before it over food/host footage and use a short, resolved saved-music ending. Do not pad the ending to fit the full song or the reusable graphic's original length. This supersedes older ten- or twenty-second outro examples.
 
