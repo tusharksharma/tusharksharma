@@ -1,6 +1,6 @@
 # About Tushar — biography and story source
 
-Last updated: October 22, 2026. Purpose: reusable source material for The Split Plate videos, introductions, captions and community replies. This is a living biography, not a complete life history. Preserve the distinction between firsthand experience, personal opinion, existing public biography and untested expectations.
+Last updated: October 23, 2026. Purpose: reusable source material for The Split Plate videos, introductions, captions and community replies. This is a living biography, not a complete life history. Preserve the distinction between firsthand experience, personal opinion, existing public biography and untested expectations.
 
 ## Short introduction
 
@@ -77,6 +77,12 @@ Use "I'd expect" or "my thinking is" when drawing on this entry. Do not say "I f
 4. Personal taste does not establish objective quality, sponsorship or affiliate relationships. Verify actual commercial relationships when needed.
 5. Keep safety/nutrition instructions separate from personal memories and verify them when the requested deliverable needs them. This document does not substantiate nutrition or health claims.
 6. Add future answers as dated entries. Corrections supersede the older wording while retaining enough context to prevent reuse of the error. Do not infer that a one-off preference is a permanent brand rule.
+
+## Learning after each video — confirmed October 23, 2026
+
+After each completed film, review its confirmed interview answers and approved personal narration. Add new learning here with a date, episode and evidence status; merge duplicates and retain corrections. Keep time-specific circumstances historical. Do not promote editorial jokes, untested expectations or unverified nutrition claims into personal facts. Update this Git source and the episode diary as part of delivery, without automatically changing the website About page. Raw interviews and private production records remain outside the public repository.
+
+The keema matar interview is received and its narration approved; its biography extraction remains a delivery task while the film is in production.
 
 ## Questions for expanding the biography
 

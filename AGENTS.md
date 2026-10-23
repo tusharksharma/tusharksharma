@@ -85,4 +85,6 @@ For YouTube, TikTok and Instagram strategy, watch time, follower growth, content
 
 ## Creator Biography and Personal Stories
 
+After every completed video, carry new owner-confirmed personal story learning into [the Git biography](docs/about-tushar.md) as dated, sourced entries. Deduplicate, preserve historical context and corrections, and commit/push with the episode diary. Record this closeout in the private delivery checklist; do not infer biography from invented script wording or modify the website About page as part of this rule.
+
 Before writing personal first-person narration, creator introductions or community replies, read [About Tushar — biography and story source](docs/about-tushar.md). Reuse only relevant confirmed experiences, preserving historical context and the distinction between firsthand observations and untested expectations. Record new owner-confirmed biography details there with dates; do not invent family stories, credentials or tested recipe results. Follow community rules for AI-assisted replies, and keep medical claims separate from household anecdotes.
