@@ -1,0 +1,992 @@
+{
+  "spicy-fajita-chicken-gnocchi": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": null,
+    "firstAddedAt": "2026-09-25"
+  },
+  "chili-cream-tri-tip-penne": {
+    "initialMainPostDate": "2026-09-14",
+    "initialMainCreatedAt": "2026-07-31",
+    "firstAddedAt": "2026-09-25"
+  },
+  "spicy-beef-broccoli-bowls": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": "2026-09-25",
+    "firstAddedAt": "2026-09-25"
+  },
+  "air-fryer-chicken-thighs-cheesy-broccoli": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": "2026-07-29",
+    "firstAddedAt": "2026-09-25"
+  },
+  "chicken-smash-caesar-tacos": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": "2026-06-25",
+    "firstAddedAt": "2026-09-25"
+  },
+  "golden-garlic-rice-bowl-steak": {
+    "initialMainPostDate": "2026-09-21",
+    "initialMainCreatedAt": "2026-07-21",
+    "firstAddedAt": "2026-09-25"
+  },
+  "spicy-chicken-sandwich": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": "2026-07-18",
+    "firstAddedAt": "2026-09-25"
+  },
+  "bavette-steak-fries-chimichurri": {
+    "initialMainPostDate": "2026-06-29",
+    "initialMainCreatedAt": "2026-06-27",
+    "firstAddedAt": "2026-09-25"
+  },
+  "tandoori-chicken-drumsticks": {
+    "initialMainPostDate": "2026-09-08",
+    "initialMainCreatedAt": "2026-08-31",
+    "firstAddedAt": "2026-09-25"
+  },
+  "chipotle-chicken-quesadillas": {
+    "initialMainPostDate": "2026-07-04",
+    "initialMainCreatedAt": "2026-06-28",
+    "firstAddedAt": "2026-09-25"
+  },
+  "indo-chinese-chili-chicken": {
+    "initialMainPostDate": "2026-09-03",
+    "initialMainCreatedAt": "2026-08-04",
+    "firstAddedAt": "2026-09-25"
+  },
+  "split-plate-spicy-protein-ramen-night": {
+    "initialMainPostDate": "2026-10-13",
+    "initialMainCreatedAt": "2026-08-25",
+    "firstAddedAt": "2026-09-25"
+  },
+  "creamy-steak-noodles": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": null,
+    "firstAddedAt": "2026-09-25"
+  },
+  "danos-bone-in-thighs": {
+    "initialMainPostDate": "2026-10-01",
+    "initialMainCreatedAt": "2026-09-28",
+    "firstAddedAt": "2026-09-25"
+  },
+  "next-day-chicken-tacos": {
+    "initialMainPostDate": "2026-10-14",
+    "initialMainCreatedAt": "2026-09-07",
+    "firstAddedAt": "2026-09-25"
+  },
+  "buffalo-wing-night": {
+    "initialMainPostDate": "2026-09-15",
+    "initialMainCreatedAt": "2026-08-03",
+    "firstAddedAt": "2026-09-25"
+  },
+  "emergency-kebab-night": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": null,
+    "firstAddedAt": "2026-09-25"
+  },
+  "tks-sweet-heat-bowl": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": "2026-08-13",
+    "firstAddedAt": "2026-09-25"
+  },
+  "creamy-sausage-spinach-pasta": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": null,
+    "firstAddedAt": "2026-09-25"
+  },
+  "outlaw-grilled-thighs-smashed-potatoes": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": null,
+    "firstAddedAt": "2026-09-25"
+  },
+  "pork-mince-lettuce-wraps": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": null,
+    "firstAddedAt": "2026-09-25"
+  },
+  "herb-garlic-pork-chops-cowboy-butter": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": null,
+    "firstAddedAt": "2026-09-25"
+  },
+  "caesar-crunch-pizza-night": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": null,
+    "firstAddedAt": "2026-09-25"
+  },
+  "creamy-beef-bacon-pasta": {
+    "initialMainPostDate": "2026-06-24",
+    "initialMainCreatedAt": "2026-06-24",
+    "firstAddedAt": "2026-09-25"
+  },
+  "carnitas-taco-plate": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": null,
+    "firstAddedAt": "2026-09-25"
+  },
+  "high-protein-taco-bowls": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": "2026-06-26",
+    "firstAddedAt": "2026-09-25"
+  },
+  "high-protein-halal-cart-chicken-rice-bowls": {
+    "initialMainPostDate": "2026-07-08",
+    "initialMainCreatedAt": "2026-06-15",
+    "firstAddedAt": "2026-09-25"
+  },
+  "garlic-parmesan-chicken-drumsticks-chipotle-corn": {
+    "initialMainPostDate": "2026-08-04",
+    "initialMainCreatedAt": "2026-07-17",
+    "firstAddedAt": "2026-09-25"
+  },
+  "chicken-pot-pie": {
+    "initialMainPostDate": "2026-07-12",
+    "initialMainCreatedAt": "2026-07-02",
+    "firstAddedAt": "2026-09-25"
+  },
+  "smash-burger-split-plate": {
+    "initialMainPostDate": "2026-07-17",
+    "initialMainCreatedAt": "2026-07-03",
+    "firstAddedAt": "2026-09-25"
+  },
+  "fire-grilled-chicken-thighs-frozen-veggies": {
+    "initialMainPostDate": "2026-07-20",
+    "initialMainCreatedAt": "2026-07-08",
+    "firstAddedAt": "2026-09-25"
+  },
+  "high-protein-philly-cheesesteak-sliders": {
+    "initialMainPostDate": "2026-07-22",
+    "initialMainCreatedAt": "2026-07-09",
+    "firstAddedAt": "2026-09-25"
+  },
+  "busy-day-steak-taco-plates": {
+    "initialMainPostDate": "2026-07-27",
+    "initialMainCreatedAt": "2026-07-12",
+    "firstAddedAt": "2026-09-25"
+  },
+  "chili-hot-dogs": {
+    "initialMainPostDate": "2026-07-28",
+    "initialMainCreatedAt": "2026-07-14",
+    "firstAddedAt": "2026-09-25"
+  },
+  "weeknight-picanha-chimichurri-frozen-greens": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": "2026-07-16",
+    "firstAddedAt": "2026-09-25"
+  },
+  "chili-mac-and-cheese": {
+    "initialMainPostDate": "2026-07-29",
+    "initialMainCreatedAt": "2026-07-16",
+    "firstAddedAt": "2026-09-25"
+  },
+  "freezer-shortcut-beef-kebab-pitas": {
+    "initialMainPostDate": "2026-08-09",
+    "initialMainCreatedAt": "2026-07-20",
+    "firstAddedAt": "2026-09-25"
+  },
+  "15-minute-chicken-tikka-masala-split-plate": {
+    "initialMainPostDate": "2026-08-06",
+    "initialMainCreatedAt": "2026-07-28",
+    "firstAddedAt": "2026-09-25"
+  },
+  "viral-tomato-feta-chicken-pasta": {
+    "initialMainPostDate": "2026-08-07",
+    "initialMainCreatedAt": "2026-08-05",
+    "firstAddedAt": "2026-09-25"
+  },
+  "high-protein-beef-potato-slop-bowl": {
+    "initialMainPostDate": "2026-08-29",
+    "initialMainCreatedAt": "2026-08-08",
+    "firstAddedAt": "2026-09-25"
+  },
+  "cilantro-lime-rice-chipotle-chicken-fire-roasted-corn": {
+    "initialMainPostDate": "2026-08-21",
+    "initialMainCreatedAt": "2026-08-10",
+    "firstAddedAt": "2026-09-25"
+  },
+  "viral-dumpling-lasagna-proteinized": {
+    "initialMainPostDate": "2026-08-14",
+    "initialMainCreatedAt": "2026-08-11",
+    "firstAddedAt": "2026-09-25"
+  },
+  "cheeseburger-potato-waffle-meal-prep": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": "2026-08-18",
+    "firstAddedAt": "2026-09-25"
+  },
+  "lomo-saltado-meal-prep": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": "2026-08-22",
+    "firstAddedAt": "2026-09-25"
+  },
+  "chicken-alfredo-crunch-nests": {
+    "initialMainPostDate": "2026-08-30",
+    "initialMainCreatedAt": "2026-08-23",
+    "firstAddedAt": "2026-09-25"
+  },
+  "meatball-parm-puff": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": null,
+    "firstAddedAt": "2026-09-25"
+  },
+  "pizza-leftover-meatballs": {
+    "initialMainPostDate": "2026-09-17",
+    "initialMainCreatedAt": "2026-08-31",
+    "firstAddedAt": "2026-09-25"
+  },
+  "high-protein-pepperoni-mac-meal-prep": {
+    "initialMainPostDate": "2026-10-16",
+    "initialMainCreatedAt": "2026-09-07",
+    "firstAddedAt": "2026-09-25"
+  },
+  "high-protein-butter-chicken": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": null,
+    "firstAddedAt": "2026-09-25"
+  },
+  "peruvian-style-chicken-thighs-roasted-corn": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": "2026-09-10",
+    "firstAddedAt": "2026-09-25"
+  },
+  "mexican-rice-taco-bowls": {
+    "initialMainPostDate": "2026-10-18",
+    "initialMainCreatedAt": "2026-10-07",
+    "firstAddedAt": "2026-09-25"
+  },
+  "10-minute-steak-egg-cheese-breakfast-bowl": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": "2026-09-12",
+    "firstAddedAt": "2026-09-25"
+  },
+  "french-dip-polenta-dunkers": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": null,
+    "firstAddedAt": "2026-09-25"
+  },
+  "viral-proteinized-burger-in-a-bun": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": null,
+    "firstAddedAt": "2026-10-01"
+  },
+  "hailey-inspired-chicken-meatballs": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": null,
+    "firstAddedAt": "2026-10-07"
+  },
+  "cheesy-spinach-chicken-orzo": {
+    "initialMainPostDate": "2026-10-19",
+    "initialMainCreatedAt": "2026-10-08",
+    "firstAddedAt": "2026-10-08"
+  },
+  "freezer-backup-chicken-mole-tacos": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": null,
+    "firstAddedAt": "2026-10-16"
+  },
+  "oven-fried-wings-family-finishes": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": null,
+    "firstAddedAt": "2026-10-20"
+  },
+  "ranch-steak-european-greens-mash": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": null,
+    "firstAddedAt": "2026-10-21"
+  },
+  "keema-matar-phulkas": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": "2026-10-22",
+    "firstAddedAt": "2026-10-23"
+  },
+  "bone-broth-rice": {
+    "initialMainPostDate": "2026-08-13",
+    "initialMainCreatedAt": "2026-08-10",
+    "firstAddedAt": "2026-09-25"
+  },
+  "spicy-umami-fried-rice": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": "2026-08-13",
+    "firstAddedAt": "2026-09-25"
+  },
+  "tks-sweet-heat-chicken": {
+    "initialMainPostDate": "2026-09-04",
+    "initialMainCreatedAt": "2026-08-13",
+    "firstAddedAt": "2026-09-25"
+  },
+  "parmesan-corn-chex-snap-peas": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": null,
+    "firstAddedAt": "2026-09-25"
+  },
+  "caesar-crunch-salad": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": null,
+    "firstAddedAt": "2026-09-25"
+  },
+  "hot-dog-chili-base": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": "2026-07-14",
+    "firstAddedAt": "2026-09-25"
+  },
+  "lean-beef-meatballs-30-piece": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": null,
+    "firstAddedAt": "2026-09-25"
+  },
+  "creamy-chipotle-chicken-ditalini": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": null,
+    "firstAddedAt": "2026-10-02"
+  },
+  "sunny-side-eggs-canadian-bacon-breakfast": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": "2026-09-16",
+    "firstAddedAt": "2026-09-25"
+  },
+  "loaded-steak-egg-skillet": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": "2026-09-12",
+    "firstAddedAt": "2026-09-25"
+  },
+  "protein-cereal-hack": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": "2026-07-12",
+    "firstAddedAt": "2026-09-25"
+  },
+  "high-protein-ham-bagel": {
+    "initialMainPostDate": "2026-09-12",
+    "initialMainCreatedAt": "2026-08-21",
+    "firstAddedAt": "2026-09-25"
+  },
+  "ham-cheese-power-melt": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": "2026-07-17",
+    "firstAddedAt": "2026-09-25"
+  },
+  "fast-food-breakfast-tacos": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": null,
+    "firstAddedAt": "2026-09-25"
+  },
+  "protein-corn-flakes": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": "2026-06-28",
+    "firstAddedAt": "2026-09-25"
+  },
+  "30-30-muffin-mug-bowl": {
+    "initialMainPostDate": "2026-10-15",
+    "initialMainCreatedAt": "2026-07-04",
+    "firstAddedAt": "2026-09-25"
+  },
+  "high-protein-muffin-cup-powerup": {
+    "initialMainPostDate": "2026-10-12",
+    "initialMainCreatedAt": "2026-06-11",
+    "firstAddedAt": "2026-09-25"
+  },
+  "one-pan-breakfast-skillet": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": "2026-06-15",
+    "firstAddedAt": "2026-09-25"
+  },
+  "salmon-cream-cheese-bagel": {
+    "initialMainPostDate": "2026-08-01",
+    "initialMainCreatedAt": "2026-07-17",
+    "firstAddedAt": "2026-09-25"
+  },
+  "7-minute-runny-sunny-eggs-chicken-sausage": {
+    "initialMainPostDate": "2026-09-07",
+    "initialMainCreatedAt": "2026-08-02",
+    "firstAddedAt": "2026-09-25"
+  },
+  "high-protein-japanese-yogurt-hack": {
+    "initialMainPostDate": "2026-09-29",
+    "initialMainCreatedAt": "2026-08-29",
+    "firstAddedAt": "2026-09-25"
+  },
+  "ham-egg-cheese-protein-bagel": {
+    "initialMainPostDate": "2026-10-13",
+    "initialMainCreatedAt": "2026-10-08",
+    "firstAddedAt": "2026-10-08"
+  },
+  "vanilla-cottage-cheese-protein-pancakes": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": null,
+    "firstAddedAt": "2026-10-20"
+  },
+  "biscoff-cookie-butter-protein-creami": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": null,
+    "firstAddedAt": "2026-10-23"
+  },
+  "pumpkin-chocolate-chip-protein-creami": {
+    "initialMainPostDate": "2026-10-11",
+    "initialMainCreatedAt": null,
+    "firstAddedAt": "2026-10-23"
+  },
+  "cinnamon-roll-cookie-protein-creami": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": null,
+    "firstAddedAt": "2026-10-23"
+  },
+  "butterfinger-peanut-butter-milkshake-creami-week13": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": null,
+    "firstAddedAt": "2026-10-04"
+  },
+  "snickerdoodle-cereal-protein-creami-week13": {
+    "initialMainPostDate": "2026-10-18",
+    "initialMainCreatedAt": "2026-10-17",
+    "firstAddedAt": "2026-10-04"
+  },
+  "midnight-smores-protein-creami-week13": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": null,
+    "firstAddedAt": "2026-10-04"
+  },
+  "birthday-cake-cookie-oreo-creami": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": null,
+    "firstAddedAt": "2026-09-27"
+  },
+  "chocolate-chip-cookie-cake-creami": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": null,
+    "firstAddedAt": "2026-09-27"
+  },
+  "cake-batter-blondie-cookie-creami": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": null,
+    "firstAddedAt": "2026-09-27"
+  },
+  "pistachio-kataifi-protein-creami": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": null,
+    "firstAddedAt": "2026-09-25"
+  },
+  "midnight-mix-creami": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": "2026-06-27",
+    "firstAddedAt": "2026-09-25"
+  },
+  "mocha-brownie-protein-creami": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": "2026-08-16",
+    "firstAddedAt": "2026-09-25"
+  },
+  "snickerdoodle-skillet-cookie-creami": {
+    "initialMainPostDate": "2026-09-19",
+    "initialMainCreatedAt": null,
+    "firstAddedAt": "2026-09-25"
+  },
+  "cookie-cream-white-drop-marbled-creami": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": null,
+    "firstAddedAt": "2026-09-25"
+  },
+  "smores-brownie-cookie-protein-creami": {
+    "initialMainPostDate": "2026-09-21",
+    "initialMainCreatedAt": null,
+    "firstAddedAt": "2026-09-25"
+  },
+  "cosmic-brownie-protein-creami": {
+    "initialMainPostDate": "2026-09-11",
+    "initialMainCreatedAt": null,
+    "firstAddedAt": "2026-09-25"
+  },
+  "chocolate-cupcake-protein-creami": {
+    "initialMainPostDate": "2026-09-12",
+    "initialMainCreatedAt": "2026-09-11",
+    "firstAddedAt": "2026-09-25"
+  },
+  "strawberry-shortcake-roll-protein-creami": {
+    "initialMainPostDate": "2026-09-13",
+    "initialMainCreatedAt": null,
+    "firstAddedAt": "2026-09-25"
+  },
+  "minecraft-cookies-and-cream-sandwich-creami": {
+    "initialMainPostDate": "2026-09-04",
+    "initialMainCreatedAt": null,
+    "firstAddedAt": "2026-09-25"
+  },
+  "minecraft-cookie-butter-cookie-creami": {
+    "initialMainPostDate": "2026-09-05",
+    "initialMainCreatedAt": null,
+    "firstAddedAt": "2026-09-25"
+  },
+  "minecraft-cherry-blossom-cookie-creami": {
+    "initialMainPostDate": "2026-09-06",
+    "initialMainCreatedAt": null,
+    "firstAddedAt": "2026-09-25"
+  },
+  "marbled-stuffed-cheesecake-creami": {
+    "initialMainPostDate": "2026-07-14",
+    "initialMainCreatedAt": "2026-07-13",
+    "firstAddedAt": "2026-09-25"
+  },
+  "caramel-shortbread-creami-with-twix": {
+    "initialMainPostDate": "2026-07-15",
+    "initialMainCreatedAt": "2026-07-13",
+    "firstAddedAt": "2026-09-25"
+  },
+  "chocolate-peanut-butter-cookie-creami": {
+    "initialMainPostDate": "2026-10-18",
+    "initialMainCreatedAt": null,
+    "firstAddedAt": "2026-10-15"
+  },
+  "biscoff-skillet-creami": {
+    "initialMainPostDate": "2026-07-16",
+    "initialMainCreatedAt": "2026-07-13",
+    "firstAddedAt": "2026-09-25"
+  },
+  "pineapple-whip-creami": {
+    "initialMainPostDate": "2026-07-18",
+    "initialMainCreatedAt": "2026-07-16",
+    "firstAddedAt": "2026-09-25"
+  },
+  "beach-bum-creami": {
+    "initialMainPostDate": "2026-07-19",
+    "initialMainCreatedAt": "2026-07-18",
+    "firstAddedAt": "2026-09-25"
+  },
+  "key-lime-cheesecake-creami": {
+    "initialMainPostDate": "2026-07-20",
+    "initialMainCreatedAt": "2026-07-19",
+    "firstAddedAt": "2026-09-25"
+  },
+  "mallow-sandwich-cookie-creami": {
+    "initialMainPostDate": "2026-07-24",
+    "initialMainCreatedAt": "2026-07-21",
+    "firstAddedAt": "2026-09-25"
+  },
+  "dubai-style-chocolate-thin-sandwich-cookie-creami": {
+    "initialMainPostDate": "2026-07-26",
+    "initialMainCreatedAt": "2026-07-23",
+    "firstAddedAt": "2026-09-25"
+  },
+  "red-velvet-cookie-thins-creami": {
+    "initialMainPostDate": "2026-07-27",
+    "initialMainCreatedAt": "2026-07-26",
+    "firstAddedAt": "2026-09-25"
+  },
+  "snickers-peanut-butter-cookie-creami": {
+    "initialMainPostDate": "2026-07-30",
+    "initialMainCreatedAt": "2026-07-28",
+    "firstAddedAt": "2026-09-25"
+  },
+  "berry-limeade-cookie-nerds-creami": {
+    "initialMainPostDate": "2026-07-31",
+    "initialMainCreatedAt": "2026-07-30",
+    "firstAddedAt": "2026-09-25"
+  },
+  "white-drop-cookies-n-creme-creami": {
+    "initialMainPostDate": "2026-08-01",
+    "initialMainCreatedAt": "2026-07-31",
+    "firstAddedAt": "2026-09-25"
+  },
+  "pink-berry-cookie-creami": {
+    "initialMainPostDate": "2026-08-06",
+    "initialMainCreatedAt": "2026-08-05",
+    "firstAddedAt": "2026-09-25"
+  },
+  "nilla-bean-float-cookie-creami": {
+    "initialMainPostDate": "2026-08-08",
+    "initialMainCreatedAt": "2026-08-07",
+    "firstAddedAt": "2026-09-25"
+  },
+  "shirley-temple-cookie-creami": {
+    "initialMainPostDate": "2026-08-09",
+    "initialMainCreatedAt": "2026-08-09",
+    "firstAddedAt": "2026-09-25"
+  },
+  "mississippi-mud-pie-cookie-creami": {
+    "initialMainPostDate": "2026-08-14",
+    "initialMainCreatedAt": "2026-08-13",
+    "firstAddedAt": "2026-09-25"
+  },
+  "rainbow-shake-cookie-creami": {
+    "initialMainPostDate": "2026-08-15",
+    "initialMainCreatedAt": "2026-08-14",
+    "firstAddedAt": "2026-09-25"
+  },
+  "peanut-butter-bar-cookie-creami": {
+    "initialMainPostDate": "2026-08-16",
+    "initialMainCreatedAt": "2026-08-14",
+    "firstAddedAt": "2026-09-25"
+  },
+  "cannoli-cookie-creami": {
+    "initialMainPostDate": "2026-08-20",
+    "initialMainCreatedAt": "2026-08-19",
+    "firstAddedAt": "2026-09-25"
+  },
+  "vanilla-chocolate-gelato-cookie-creami": {
+    "initialMainPostDate": "2026-08-21",
+    "initialMainCreatedAt": "2026-08-21",
+    "firstAddedAt": "2026-09-25"
+  },
+  "creme-brulee-cookie-creami": {
+    "initialMainPostDate": "2026-08-23",
+    "initialMainCreatedAt": "2026-08-23",
+    "firstAddedAt": "2026-09-25"
+  },
+  "cookies-and-cream-cookie-creami": {
+    "initialMainPostDate": "2026-08-29",
+    "initialMainCreatedAt": null,
+    "firstAddedAt": "2026-09-25"
+  },
+  "confetti-dunker-cookie-creami": {
+    "initialMainPostDate": "2026-08-29",
+    "initialMainCreatedAt": null,
+    "firstAddedAt": "2026-09-25"
+  },
+  "brown-sugar-cinnamon-cookie-creami": {
+    "initialMainPostDate": "2026-08-30",
+    "initialMainCreatedAt": "2026-08-27",
+    "firstAddedAt": "2026-09-25"
+  },
+  "fruity-pebbles-cereal-milk-creami": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": null,
+    "firstAddedAt": "2026-10-21"
+  },
+  "chocolate-protein-brownie-bowl": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": "2026-07-17",
+    "firstAddedAt": "2026-09-25"
+  },
+  "zero-calorie-shaved-ice": {
+    "initialMainPostDate": "2026-09-15",
+    "initialMainCreatedAt": "2026-09-06",
+    "firstAddedAt": "2026-09-25"
+  },
+  "protein-tiramisu": {
+    "initialMainPostDate": "2026-07-31",
+    "initialMainCreatedAt": "2026-07-14",
+    "firstAddedAt": "2026-09-25"
+  },
+  "high-protein-cheesecake-fudgy-bars": {
+    "initialMainPostDate": "2026-09-11",
+    "initialMainCreatedAt": "2026-09-11",
+    "firstAddedAt": "2026-09-25"
+  },
+  "high-protein-brownie-ice-cream-bowl": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": "2026-06-21",
+    "firstAddedAt": "2026-09-25"
+  },
+  "protein-cheesecake-frosting": {
+    "initialMainPostDate": "2026-06-23",
+    "initialMainCreatedAt": "2026-07-14",
+    "firstAddedAt": "2026-09-25"
+  },
+  "high-protein-viral-dot-cake": {
+    "initialMainPostDate": "2026-06-24",
+    "initialMainCreatedAt": "2026-07-14",
+    "firstAddedAt": "2026-09-25"
+  },
+  "two-ingredient-sugar-free-hot-fudge": {
+    "initialMainPostDate": "2026-08-16",
+    "initialMainCreatedAt": "2026-08-14",
+    "firstAddedAt": "2026-09-25"
+  },
+  "david-vanilla-cookies-cream-hack": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": "2026-08-17",
+    "firstAddedAt": "2026-09-25"
+  },
+  "viral-watermelon-ice-cream-proteinized": {
+    "initialMainPostDate": "2026-08-30",
+    "initialMainCreatedAt": "2026-08-29",
+    "firstAddedAt": "2026-09-25"
+  },
+  "viral-proteinized-rice-paper-mochi": {
+    "initialMainPostDate": "2026-09-17",
+    "initialMainCreatedAt": "2026-09-16",
+    "firstAddedAt": "2026-09-25"
+  },
+  "electrolyte-watermelon-limeade": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": "2026-07-17",
+    "firstAddedAt": "2026-09-25"
+  },
+  "100-calorie-iced-protein-coffee": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": "2026-07-19",
+    "firstAddedAt": "2026-09-25"
+  },
+  "cookie-butter-iced-proffee": {
+    "initialMainPostDate": "2026-08-04",
+    "initialMainCreatedAt": "2026-07-27",
+    "firstAddedAt": "2026-09-25"
+  },
+  "salted-caramel-pretzel-iced-proffee": {
+    "initialMainPostDate": "2026-08-10",
+    "initialMainCreatedAt": "2026-08-03",
+    "firstAddedAt": "2026-09-25"
+  },
+  "peanut-butter-cup-iced-proffee": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": "2026-08-11",
+    "firstAddedAt": "2026-09-25"
+  },
+  "smores-iced-proffee": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": "2026-08-19",
+    "firstAddedAt": "2026-09-25"
+  },
+  "cookies-and-cream-iced-proffee": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": null,
+    "firstAddedAt": "2026-09-25"
+  },
+  "tiramisu-iced-proffee": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": null,
+    "firstAddedAt": "2026-09-25"
+  },
+  "hot-honey-mustard-crispy-chicken-tacos": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": "2026-10-18",
+    "firstAddedAt": "2026-10-18"
+  },
+  "caesar-crunch-wrap": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": null,
+    "firstAddedAt": "2026-09-30"
+  },
+  "steak-quesadilla": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": null,
+    "firstAddedAt": "2026-09-25"
+  },
+  "mexican-lavash-pizza": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": null,
+    "firstAddedAt": "2026-09-25"
+  },
+  "chipotle-ham-sandwich": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": "2026-10-16",
+    "firstAddedAt": "2026-09-25"
+  },
+  "crispy-chicken-money-mustard": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": "2026-09-17",
+    "firstAddedAt": "2026-09-25"
+  },
+  "miyoka-protein-ramen": {
+    "initialMainPostDate": "2026-09-15",
+    "initialMainCreatedAt": "2026-09-04",
+    "firstAddedAt": "2026-09-25"
+  },
+  "high-protein-chili-cheese-toast": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": "2026-07-14",
+    "firstAddedAt": "2026-09-25"
+  },
+  "grillos-pickle-dip-wilde-combo": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": "2026-07-05",
+    "firstAddedAt": "2026-09-25"
+  },
+  "leftover-cheeseburger-tacos": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": "2026-07-06",
+    "firstAddedAt": "2026-09-25"
+  },
+  "leftover-beef-kebab-tacos": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": "2026-07-28",
+    "firstAddedAt": "2026-09-25"
+  },
+  "cajun-chicken-cheese-dog": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": "2026-08-15",
+    "firstAddedAt": "2026-09-25"
+  },
+  "toasted-roast-beef-cheese-sandwich": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": null,
+    "firstAddedAt": "2026-09-25"
+  },
+  "smoky-chipotle-chicken-burritos": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": null,
+    "firstAddedAt": "2026-09-25"
+  },
+  "green-sauce-chipotle-chicken-mini-tacos": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": null,
+    "firstAddedAt": "2026-09-25"
+  },
+  "chipotle-queso-tacos": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": null,
+    "firstAddedAt": "2026-10-04"
+  },
+  "high-protein-chipotle-style-queso": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": null,
+    "firstAddedAt": "2026-09-25"
+  },
+  "high-protein-caesar-dressing": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": null,
+    "firstAddedAt": "2026-09-25"
+  },
+  "high-protein-cilantro-jalapeno-ranch": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": null,
+    "firstAddedAt": "2026-09-25"
+  },
+  "money-mustard": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": null,
+    "firstAddedAt": "2026-09-25"
+  },
+  "hot-honey-mustard-hack": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": "2026-06-15",
+    "firstAddedAt": "2026-09-25"
+  },
+  "no-judge-chimichurri": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": "2026-06-27",
+    "firstAddedAt": "2026-09-25"
+  },
+  "indo-chinese-chili-sauce": {
+    "initialMainPostDate": "2026-09-03",
+    "initialMainCreatedAt": "2026-08-04",
+    "firstAddedAt": "2026-09-25"
+  },
+  "smoky-chipotle-crema": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": "2026-07-02",
+    "firstAddedAt": "2026-09-25"
+  },
+  "high-protein-chipotle-cheddar-sauce": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": "2026-08-24",
+    "firstAddedAt": "2026-09-25"
+  },
+  "golden-umami-stir-fry-sauce": {
+    "initialMainPostDate": "2026-08-31",
+    "initialMainCreatedAt": "2026-08-25",
+    "firstAddedAt": "2026-09-25"
+  },
+  "umami-lemon-heat": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": null,
+    "firstAddedAt": "2026-09-25"
+  },
+  "protein-blue-cheese-crema": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": "2026-08-01",
+    "firstAddedAt": "2026-09-25"
+  },
+  "tks-sauce": {
+    "initialMainPostDate": "2026-09-15",
+    "initialMainCreatedAt": "2026-08-13",
+    "firstAddedAt": "2026-09-25"
+  },
+  "chili-crisp-sour-cream": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": null,
+    "firstAddedAt": "2026-09-25"
+  },
+  "lift-drizzle": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": null,
+    "firstAddedAt": "2026-09-25"
+  },
+  "cowboy-butter": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": "2026-10-18",
+    "firstAddedAt": "2026-09-25"
+  },
+  "grillos-pickle-dip-protein-style": {
+    "initialMainPostDate": "2026-06-23",
+    "initialMainCreatedAt": "2026-06-22",
+    "firstAddedAt": "2026-09-25"
+  },
+  "orchard-cheddar-stackers-snack-box": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": "2026-09-29",
+    "firstAddedAt": "2026-09-29"
+  },
+  "pineapple-ham-cocorolls-snack-box": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": null,
+    "firstAddedAt": "2026-09-25"
+  },
+  "pita-hummus-snack-box": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": "2026-08-23",
+    "firstAddedAt": "2026-09-25"
+  },
+  "strawberry-brownie-cheesecake-snack-box": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": "2026-08-12",
+    "firstAddedAt": "2026-09-25"
+  },
+  "maple-waffle-brunch-box": {
+    "initialMainPostDate": "2026-09-14",
+    "initialMainCreatedAt": "2026-08-12",
+    "firstAddedAt": "2026-09-25"
+  },
+  "fiesta-snack-box": {
+    "initialMainPostDate": "2026-09-09",
+    "initialMainCreatedAt": "2026-08-01",
+    "firstAddedAt": "2026-09-25"
+  },
+  "split-plate-pizza-snack-box": {
+    "initialMainPostDate": "2026-07-07",
+    "initialMainCreatedAt": "2026-07-04",
+    "firstAddedAt": "2026-09-25"
+  },
+  "split-plate-apple-pie-snack-box": {
+    "initialMainPostDate": "2026-07-14",
+    "initialMainCreatedAt": "2026-07-06",
+    "firstAddedAt": "2026-09-25"
+  },
+  "split-plate-berry-power-up-snack-box": {
+    "initialMainPostDate": "2026-07-21",
+    "initialMainCreatedAt": "2026-07-08",
+    "firstAddedAt": "2026-09-25"
+  },
+  "split-plate-ranch-crunch-snack-box": {
+    "initialMainPostDate": "2026-07-23",
+    "initialMainCreatedAt": "2026-07-11",
+    "firstAddedAt": "2026-09-25"
+  },
+  "split-plate-mediterranean-snack-box": {
+    "initialMainPostDate": "2026-08-05",
+    "initialMainCreatedAt": "2026-07-13",
+    "firstAddedAt": "2026-09-25"
+  },
+  "split-plate-vineyard-picnic-snack-box": {
+    "initialMainPostDate": "2026-08-13",
+    "initialMainCreatedAt": "2026-07-16",
+    "firstAddedAt": "2026-09-25"
+  },
+  "split-plate-tropical-chicken-snack-box": {
+    "initialMainPostDate": "2026-08-18",
+    "initialMainCreatedAt": "2026-07-20",
+    "firstAddedAt": "2026-09-25"
+  },
+  "deli-dill-snack-box": {
+    "initialMainPostDate": "2026-08-27",
+    "initialMainCreatedAt": "2026-07-23",
+    "firstAddedAt": "2026-09-25"
+  },
+  "sunshine-snack-box": {
+    "initialMainPostDate": "2026-08-31",
+    "initialMainCreatedAt": "2026-07-27",
+    "firstAddedAt": "2026-09-25"
+  },
+  "summer-moon-inspired-protein-creamer": {
+    "initialMainPostDate": "2026-10-17",
+    "initialMainCreatedAt": "2026-10-07",
+    "firstAddedAt": "2026-10-07"
+  }
+}

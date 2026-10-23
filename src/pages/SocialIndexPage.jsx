@@ -1,3 +1,4 @@
+import { sortSocialRecipes } from "../utils/socialOrder";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { liveRecipes } from "../data/recipes";
@@ -16,28 +17,6 @@ const COOKBOOK_SECTIONS = [
   { label: "Powerups", items: powerups },
   { label: "Snack Boxes", items: snackBoxes },
 ];
-
-// Cookbook entries from the initial catalog keep their authored sequence.
-// Entries from the initial catalog keep their authored sequence. Entries
-// published later use their first publish commit; add new package dates here
-// when they are added to the catalog.
-const COOKBOOK_PUBLISHED_AT = {
-  "birthday-cake-cookie-oreo-creami": 1790608787,
-  "chocolate-chip-cookie-cake-creami": 1790608787,
-  "cake-batter-blondie-cookie-creami": 1790608787,
-  "caesar-crunch-wrap": 1790802980,
-  "creamy-chipotle-chicken-ditalini": 1790976540,
-  "butterfinger-peanut-butter-milkshake-creami-week13": 1791139892,
-  "snickerdoodle-cereal-protein-creami-week13": 1791139892,
-  "midnight-smores-protein-creami-week13": 1791139892,
-  "chipotle-queso-tacos": 1791157424,
-  "summer-moon-inspired-protein-creamer": 1791402593,
-  "ham-egg-cheese-protein-bagel": 1791524081,
-  "cinnamon-roll-cookie-protein-creami": 1791562221,
-  "pumpkin-chocolate-chip-protein-creami": 1791663061,
-  "biscoff-cookie-butter-protein-creami": 1791700759,
-  "orchard-cheddar-stackers-snack-box": 1790739931,
-};
 
 function cookbookSummary(item) {
   const protein = item.proteinPerServing ??
@@ -111,8 +90,8 @@ export default function SocialIndexPage() {
     );
   }
 
-  // Dinner IDs increase with publication order.
-  const allDinners = [...liveRecipes, ...batchPrep.filter((r) => r.mealType === "dinner").map((r) => ({ ...r, slug: r.id, socialUrl: `/social/cookbook/${r.id}`, image: r.heroImage, calories: r.caloriesPerServing, protein: r.proteinPerServing }))].sort((a, b) => a.id - b.id);
+  // Use the original main post date across every category.
+  const allDinners = sortSocialRecipes([...liveRecipes, ...batchPrep.filter((r) => r.mealType === "dinner").map((r) => ({ ...r, slug: r.id, socialUrl: `/social/cookbook/${r.id}`, image: r.heroImage, calories: r.caloriesPerServing, protein: r.proteinPerServing }))]);
   const totalCookbook = COOKBOOK_SECTIONS.reduce((n, s) => n + s.items.length, 0);
 
   // Search filters both dinners and cookbook sections by title. Empty query
@@ -123,15 +102,7 @@ export default function SocialIndexPage() {
   const filteredSections = COOKBOOK_SECTIONS
     .map((s) => ({
       ...s,
-      items: s.items
-        .map((item, index) => ({ item, index }))
-        .filter(({ item }) => matches(item.title))
-        .sort((a, b) => {
-          const aDate = COOKBOOK_PUBLISHED_AT[a.item.id] ?? 0;
-          const bDate = COOKBOOK_PUBLISHED_AT[b.item.id] ?? 0;
-          return aDate - bDate || a.index - b.index;
-        })
-        .map(({ item }) => item),
+      items: sortSocialRecipes(s.items).filter((item) => matches(item.title)),
     }))
     .filter((s) => s.items.length > 0);
   const resultCount = sortedDinners.length + filteredSections.reduce((n, s) => n + s.items.length, 0);

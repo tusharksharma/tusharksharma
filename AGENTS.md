@@ -77,6 +77,8 @@ For recipe ideas, ingredient and brand choices, substitutions, recipe developmen
 
 ## Repository Delivery Preference
 
+Social catalog ordering: follow [social catalog order](docs/social-catalog-order.md). Every category is oldest to newest by the original main recipe post date. New recipes append in the appropriate category; updates and category corrections preserve the original date. Record publication metadata separately from Git dates, array positions and recipe IDs.
+
 For changes Tushar requests in this repository, validate the affected work, then commit and push directly to `main`. Do not open a pull request unless he requests one or repository protections require it. Preserve unrelated work, never force-push to bypass a concurrent change or protection, and report a blocked push honestly. This preference does not authorize unrelated edits or social publishing.
 
 ## Split Plate Social Strategist
