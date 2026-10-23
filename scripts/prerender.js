@@ -1,3 +1,4 @@
+import { buildRecipeSchema } from "../src/utils/recipeSchema.js";
 /**
  * Post-build prerender script.
  * Generates route-specific index.html files with proper meta/OG tags
@@ -23,14 +24,14 @@ const cookbookItems = [
   [batchPrep, "Dinner"], [desserts, "Dessert"], [creamis, "Dessert"],
   [bases, "Base"], [powerups, "Sauce"], [snackBoxes, "Snack"],
 ].flatMap(([items, recipeCategory]) => items.map((item) => ({
-  ...item, recipeCategory, description: item.tagline, image: item.heroImage || "",
+  ...item, recipeCategory, description: item.seoDescription || item.tagline, image: item.heroImage || "",
 })));
 
 // Define all routes with metadata
 const routes = [
   { path: "/", title: "The Split Plate — One Meal. Two Plates.", description: "High-protein family dinners with the Split Cook Method. One cook, two plates — adults and kids from the same workflow." },
   { path: "/dinners", title: "Dinners — The Split Plate", description: "High-protein family dinners with the Split Cook Method. Same cook, different plates for adults and kids." },
-  { path: "/cookbook", title: "Power-Ups — The Split Plate", description: "Sauces, breakfasts, desserts, and quick meals — high-protein upgrades that take 10 minutes or less." },
+  { path: "/cookbook", title: "Power-Ups — The Split Plate", description: "Sauces, breakfasts, Creamis, desserts, quick meals and batch-prep dinners, including make-ahead recipes." },
   { path: "/leftovers", title: "Use Up Leftover Ingredients — The Split Plate", description: "Pick what's in your fridge — we'll find recipes that use it. Search by ingredient or brand across every Split Plate dinner." },
   { path: "/about", title: "About — The Split Plate", description: "One meal. Two plates. The Split Plate is a dinner system for families who want high-protein meals without cooking twice." },
   { path: "/fan", title: "In the Hands of the Fan — The Split Plate", description: "Can't decide what to cook? Spin the fan and let it pick your dinner." },
@@ -75,75 +76,6 @@ const routes = [
     schema: buildRecipeSchema(c, "Cookbook"),
   })),
 ];
-
-// Convert "PREHEAT + RACK: Oven to 425°F." → {name: "Preheat + Rack", text: "Oven to 425°F."}
-// Step text without a colon-prefix label just gets `text`, no `name`.
-function toHowToStep(text) {
-  const colonIdx = text.indexOf(":");
-  if (colonIdx > 0 && colonIdx < 40) {
-    const label = text.slice(0, colonIdx).trim();
-    const body = text.slice(colonIdx + 1).trim();
-    if (body) return { "@type": "HowToStep", name: titleCase(label), text: body };
-  }
-  return { "@type": "HowToStep", text };
-}
-function titleCase(s) {
-  return s.split(/\s+/).map((w) => w.length > 2 ? w[0].toUpperCase() + w.slice(1).toLowerCase() : w.toLowerCase()).join(" ");
-}
-
-function recipeTotalMinutes(r) {
-  if (typeof r?.meta?.totalMinutes === "number") return r.meta.totalMinutes;
-  const raw = r?.time || "";
-  if (/\+|overnight|\d+\s*[-–]\s*\d+/i.test(raw)) return null;
-  const first = raw.match(/^\s*(?:about\s+|~)?(\d+)\s*(hr|hour|min|minute)/i);
-  if (!first) return null;
-  const hours = /^h/i.test(first[2]);
-  const extraMinutes = hours ? Number(raw.slice(first[0].length).match(/^\s*(\d+)\s*min/i)?.[1] || 0) : 0;
-  return Number(first[1]) * (hours ? 60 : 1) + extraMinutes;
-}
-
-function recipeIngredients(r) {
-  const lists = r.splitCook
-    ? [r.splitCook.sharedIngredients, r.splitCook.adult?.extraIngredients, r.splitCook.kid?.extraIngredients]
-    : [r.ingredients];
-  return lists.flatMap((list) => Array.isArray(list) ? list : [])
-    .map((entry) => typeof entry === "string" ? entry : entry?.text)
-    .filter((entry) => entry && !entry.startsWith("---") && !/^[A-Z][^:]{0,45}:$/.test(entry));
-}
-
-function recipeSteps(r) {
-  const lists = r.splitCook
-    ? [r.splitCook.sharedSteps, r.splitCook.adult?.steps, r.splitCook.kid?.steps]
-    : [r.steps];
-  return lists.flatMap((list) => Array.isArray(list) ? list : [])
-    .map((step) => typeof step === "string" ? step : step?.text)
-    .filter(Boolean);
-}
-
-function buildRecipeSchema(r, category) {
-  const ingredients = recipeIngredients(r);
-  const steps = recipeSteps(r);
-  if (!ingredients.length || !steps.length) return null;
-  const minutes = recipeTotalMinutes(r);
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "Recipe",
-    name: r.title,
-    description: r.tagline || r.description || "",
-    image: r.image ? `${DOMAIN}${r.image}` : undefined,
-    ...(minutes ? { totalTime: `PT${minutes}M` } : {}),
-    recipeYield: String(r.servings || 1),
-    author: { "@type": "Person", name: "Tushar Sharma" },
-    recipeCategory: category === "Cookbook" ? r.recipeCategory : category,
-    recipeIngredient: ingredients,
-    recipeInstructions: steps.map(toHowToStep),
-  };
-  if (!r.splitCook && r.caloriesPerServing != null && r.proteinPerServing != null) {
-    schema.nutrition = { "@type": "NutritionInformation", calories: `${r.caloriesPerServing} calories`, proteinContent: `${r.proteinPerServing}g` };
-  }
-  if (r.tags?.length) schema.keywords = r.tags.join(", ");
-  return JSON.stringify(schema).replace(/</g, "\\u003c");
-}
 
 // Google SERP truncates meta descriptions at ~155-160 chars; OG previews
 // truncate ~200. Cap at 155 with smart boundary (sentence > word > hard cut).

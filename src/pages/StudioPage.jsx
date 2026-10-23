@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef } from "react";
 import useMeta from "../hooks/useMeta";
 import { expandCaption, BRAND_TOKENS } from "../data/brandHandles";
 
@@ -188,14 +188,6 @@ export default function StudioPage() {
     typeof window !== "undefined" && sessionStorage.getItem(SESSION_KEY) === "1"
   );
 
-  // noindex — never let this surface in search.
-  useEffect(() => {
-    const el = document.createElement("meta");
-    el.setAttribute("name", "robots");
-    el.setAttribute("content", "noindex, nofollow");
-    document.head.appendChild(el);
-    return () => { document.head.removeChild(el); };
-  }, []);
 
   return unlocked ? <Composer /> : <Gate onUnlock={() => setUnlocked(true)} />;
 }

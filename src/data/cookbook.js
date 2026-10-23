@@ -298,7 +298,8 @@ export const sauces = [
   },
   {
     id: "money-mustard",
-    title: "Money Mustard",
+    title: "Greek Yogurt Honey Mustard Sauce (Money Mustard)",
+    seoDescription: "A creamy Greek yogurt dipping sauce with mustard, smoky BBQ and keto hot honey. Money Mustard works with chicken sandwiches, wraps and bowls.",
     tagline: "High-Protein Chick-fil-A Style Sauce (with a Kick)",
     heroImage: "/images/money-mustard-hero.png",
     flavorProfile: "Creamy, tangy, smoky, slight heat",
@@ -8528,8 +8529,8 @@ const DESSERT_CATALOG = [
   },
   {
     id: "protein-tiramisu",
-    title: "Protein Tiramisu",
-    tagline: "Sunday-night build. 4 servings, overnight chill, 24g protein per ramekin.",
+    title: "Protein Tiramisu Cups with Cottage Cheese",
+    tagline: "Individual tiramisu cups with cottage cheese, Greek yogurt, protein powder, coffee-dipped wafers and cocoa. Prepare ahead and chill overnight.",
     heroImage: "/images/protein-tiramisu/hero-protein-tiramisu-polished.webp",
     prepImage: "/images/protein-tiramisu/step-01-cottage-cheese-polished.webp",
     prepImageCaption: "Cottage cheese goes in ALONE first — blend it silky before anything else, or surviving curds wreck the mousse all week.",

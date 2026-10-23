@@ -26,7 +26,7 @@ function stripBrandSuffix(t) {
   return t.replace(new RegExp(`\\s*[—-]\\s*${BASE_TITLE}\\s*$`), "").trim();
 }
 
-export default function useMeta({ title, description, image, type } = {}) {
+export default function useMeta({ title, description, image, type, schema = null } = {}) {
   const { pathname } = useLocation();
 
   useEffect(() => {
@@ -56,6 +56,7 @@ export default function useMeta({ title, description, image, type } = {}) {
         el.setAttribute("rel", rel);
         document.head.appendChild(el);
       }
+      document.querySelectorAll(`link[rel="${rel}"]`).forEach((node) => { if (node !== el) node.remove(); });
       el.setAttribute("href", href);
     };
 
@@ -68,7 +69,24 @@ export default function useMeta({ title, description, image, type } = {}) {
     setMeta("twitter:card", "summary_large_image");
     if (image) setMeta("og:image", image.startsWith("http") ? image : `${DOMAIN}${image}`);
     setLink("canonical", url);
+    // Reconcile route identity on direct loads and every client transition.
+    const utility = /^\/(social(?:\/|$)|studio(?:\/|$))/.test(pathname);
+    document.querySelectorAll('meta[name="robots"]').forEach((node) => node.remove());
+    setMeta("robots", utility ? "noindex, nofollow" : "index, follow");
+    document.querySelectorAll('script[type="application/ld+json"]').forEach((node) => {
+      try {
+        const data = JSON.parse(node.textContent);
+        if (data["@type"] === "Recipe" || node.id === "route-recipe-schema") node.remove();
+      } catch { if (node.id === "route-recipe-schema") node.remove(); }
+    });
+    if (schema && !utility) {
+      const node = document.createElement("script");
+      node.type = "application/ld+json";
+      node.id = "route-recipe-schema";
+      node.textContent = schema;
+      document.head.appendChild(node);
+    }
 
     return () => { document.title = `${BASE_TITLE} — One Meal. Two Plates.`; };
-  }, [title, description, image, type, pathname]);
+  }, [title, description, image, type, pathname, schema]);
 }

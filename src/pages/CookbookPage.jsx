@@ -84,17 +84,10 @@ function RecipeCard({ item }) {
 }
 
 export default function CookbookPage() {
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
   const tabParam = searchParams.get("tab");
   const paramTab = tabParam ? SLUG_TAB[tabParam] : null;
   const tab = paramTab && TABS.includes(paramTab) ? paramTab : (TABS[0] || "Sauces");
-  const setTab = (t) => {
-    const slug = TAB_SLUG[t];
-    if (!slug) return;
-    const next = new URLSearchParams(searchParams);
-    next.set("tab", slug);
-    setSearchParams(next, { replace: false });
-  };
   const [cookbookSearch, setCookbookSearch] = useState("");
 
   useMeta({
@@ -161,15 +154,16 @@ export default function CookbookPage() {
         {TABS.length > 1 && (
           <div className="flex flex-wrap gap-2 mb-8">
             {TABS.map((t) => (
-              <button
+              <Link
                 key={t}
-                onClick={() => setTab(t)}
+                to={`/cookbook?tab=${TAB_SLUG[t]}`}
+                aria-current={tab === t ? "page" : undefined}
                 className={`px-4 py-2 rounded-lg text-xs font-bold transition-all cursor-pointer whitespace-nowrap ${
                   tab === t ? "bg-brand text-brandink" : "bg-surface2 text-muted hover:bg-line"
                 }`}
               >
                 {t}
-              </button>
+              </Link>
             ))}
           </div>
         )}
@@ -289,6 +283,17 @@ export default function CookbookPage() {
             </div>
           </div>
         )}
+
+        <section className="mt-10 border-t border-line pt-6" aria-label="All cookbook recipes">
+          <h2 className="text-xl font-bold text-ink">Browse the complete cookbook</h2>
+          <div className="mt-4 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {Object.entries({ Bases: bases, Sauces: sauces, Breakfast: breakfasts, Desserts: desserts, Creamis: creamis, "Quick Lunches": quickLunches, "Batch Prep": batchPrep, "Power-Ups": powerups, "Snack Boxes": snackBoxes }).map(([category, entries]) => (
+              <div key={category}><h3 className="font-bold text-sm text-ink">{category}</h3>
+                <ul className="mt-2 space-y-2">{entries.map((entry) => <li key={entry.id}><Link className="text-sm text-brand hover:underline" to={`/cookbook/${entry.id}`}>{entry.id === "money-mustard" ? "Money Mustard: Greek yogurt honey mustard sauce" : entry.id === "protein-tiramisu" ? "Protein tiramisu cups with cottage cheese" : entry.title}</Link></li>)}</ul>
+              </div>
+            ))}
+          </div>
+        </section>
 
         {/* Cross-link to Weekly */}
         <div className="mt-12 text-center bg-surface/30 border border-line rounded-xl py-5 px-4">

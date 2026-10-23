@@ -1,3 +1,4 @@
+import { buildRecipeSchema } from "../utils/recipeSchema.js";
 import { useParams, Link } from "react-router-dom";
 import { useEffect } from "react";
 import { sauces, desserts, creamis, breakfasts, quickLunches, batchPrep, bases, powerups, snackBoxes } from "../data/cookbook";
@@ -20,7 +21,7 @@ function findItem(id) {
 export default function CookbookDetailPage() {
   const { id } = useParams();
   const { item, group } = findItem(id);
-  useMeta(item ? { title: item.title, description: item.useThisWhen, image: item.heroImage } : {});
+  useMeta(item ? { title: item.title, description: item.seoDescription || item.tagline, image: item.heroImage, schema: buildRecipeSchema({ ...item, image: item.heroImage, recipeCategory: group }, "Cookbook") } : {});
   useEffect(() => { if (item) track("recipe_view", { recipe: item.title, slug: id }); }, [item, id]);
 
   if (!item) {

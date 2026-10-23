@@ -2,7 +2,7 @@ import { useState, useMemo, useEffect } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import track from "../hooks/useTrack";
 import { liveRecipes } from "../data/recipes";
-import { creamis, desserts } from "../data/cookbook";
+import { creamis, desserts, sauces, bases, breakfasts, quickLunches, batchPrep, powerups, snackBoxes } from "../data/cookbook";
 import cardImage from "../utils/cardImage";
 import { balanceColumns, buildCookbookModel, buildRecipeModel, flattenSteps, ingredientText, isGroupHeader, parseGroups } from "../utils/recipeModel";
 import CookingMode from "./CookingMode";
@@ -490,7 +490,7 @@ export default function RecipeDetail({ recipe, item, group }) {
             <RelatedRecipes current={recipe} />
           </>
         ) : (
-          <CookbookTail item={item} />
+          <CookbookTail item={item} group={group} />
         )}
 
         {model.tags.length > 0 && (
@@ -1169,23 +1169,26 @@ function StepList({ steps, startAt = 1, tone: toneKey }) {
  * Cookbook counterpart to RelatedRecipes: dinners that mention this item,
  * plus a way back to the index. Same contextual scoring the old page used.
  */
-function CookbookTail({ item }) {
+function CookbookTail({ item, group }) {
   const relatedCookbook = useMemo(() => {
-    const collection = item.id.includes("creami") ? creamis : desserts;
+    const collection = ({ creamis, desserts, sauces, bases, breakfasts, quickLunches, batchPrep, powerups, snackBoxes })[group] || [];
     const words = `${item.title} ${item.tagline || ""}`.toLowerCase().split(/[^a-z]+/).filter((word) => word.length > 4);
     return collection.filter((entry) => entry.id !== item.id)
       .map((entry) => ({ ...entry, score: words.filter((word) => `${entry.title} ${entry.tagline || ""}`.toLowerCase().includes(word)).length }))
+      .filter((entry) => entry.score > 0)
       .sort((a, b) => b.score - a.score)
       .slice(0, 2);
-  }, [item]);
+  }, [item, group]);
   const related = useMemo(() => {
-    const keywords = (item.title || "").toLowerCase().split(/\s+/);
+    const keywords = item.id.toLowerCase().split("-").filter((word) => word.length > 3);
     return liveRecipes
       .filter((r) => r.pillar === "Protein Meals")
       .map((r) => {
         const text = `${r.title} ${r.description || ""} ${(r.tags || []).join(" ")}`.toLowerCase();
-        return { ...r, score: keywords.reduce((s, kw) => s + (text.includes(kw) ? 1 : 0), 0) };
+        const curated = item.id === "money-mustard" && r.slug === "spicy-chicken-sandwich";
+        return { ...r, score: curated ? 100 : keywords.reduce((s, kw) => s + (text.includes(kw) ? 1 : 0), 0) };
       })
+      .filter((entry) => entry.score > 0)
       .sort((a, b) => b.score - a.score)
       .slice(0, 2);
   }, [item]);
@@ -1196,7 +1199,7 @@ function CookbookTail({ item }) {
         {relatedCookbook.map((entry) => (
           <Link key={entry.id} to={`/cookbook/${entry.id}`} className="block overflow-hidden rounded-xl border border-line bg-surface hover:border-brand/40">
             <img {...cardImage(entry.heroImage)} alt={entry.title} width="640" height="360" className="h-36 w-full object-cover" loading="lazy" />
-            <div className="p-3"><h3 className="text-sm font-bold leading-tight text-ink">{entry.title}</h3><p className="mt-2 text-xs text-muted">Another {item.id.includes("creami") ? "Ninja Creami" : "dessert"} recipe</p></div>
+            <div className="p-3"><h3 className="text-sm font-bold leading-tight text-ink">{entry.title}</h3><p className="mt-2 text-xs text-muted">Another {group === "creamis" ? "Ninja Creami" : group === "desserts" ? "dessert" : group === "sauces" ? "sauce" : "cookbook"} recipe</p></div>
           </Link>
         ))}
         {related.map((r) => (

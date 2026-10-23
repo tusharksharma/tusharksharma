@@ -1,3 +1,4 @@
+import { buildRecipeSchema } from "../utils/recipeSchema.js";
 import { useParams, Navigate } from "react-router-dom";
 import { useEffect } from "react";
 import { getBySlug } from "../data/recipes";
@@ -8,7 +9,7 @@ import track from "../hooks/useTrack";
 export default function RecipePage() {
   const { slug } = useParams();
   const recipe = getBySlug(slug);
-  useMeta(recipe ? { title: recipe.title, description: recipe.description, image: recipe.image } : {});
+  useMeta(recipe ? { title: recipe.title, description: recipe.description, image: recipe.image, schema: buildRecipeSchema(recipe, "Dinner") } : {});
   useEffect(() => { if (recipe) track("recipe_view", { recipe: recipe.title, slug }); }, [recipe, slug]);
 
   if (!recipe) {

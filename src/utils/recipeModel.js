@@ -770,3 +770,8 @@ export function flattenSteps(model) {
 }
 
 export default buildRecipeModel;
+
+export function defaultKidLane(kid) {
+  const choices = kidChoices(kid);
+  return choices.find((choice) => choice.steps.length > 0) || choices[0] || null;
+}
