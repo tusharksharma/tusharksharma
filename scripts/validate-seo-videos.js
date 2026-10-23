@@ -6,6 +6,13 @@ import * as cookbook from '../src/data/cookbook.js';
 // This inventory is an official release snapshot, not a playback certificate.
 // Refresh it from GitHub when publishing or replacing these media files.
 const inventory = JSON.parse(readFileSync(new URL('./seo-video-release.json', import.meta.url)));
+if (process.argv.includes('--live')) {
+  const response = await fetch(`https://api.github.com/repos/${inventory.repository}/releases/tags/${inventory.tag}`);
+  assert.ok(response.ok, `Cannot verify live release inventory: HTTP ${response.status}`);
+  const release = await response.json();
+  inventory.assets = release.assets.map((asset) => asset.name);
+  inventory.checkedAt = 'live GitHub release';
+}
 const config = JSON.parse(readFileSync(new URL('../vercel.json', import.meta.url)));
 const directories = ['high-protein-pepperoni-mac-meal-prep', 'protein-tiramisu', 'white-drop-cookies-n-creme-creami', 'sunny-side-eggs-canadian-bacon-breakfast'];
 const paths = JSON.stringify([recipes, ...Object.values(cookbook).filter(Array.isArray)]).match(/\/videos\/[^"\s]+\.mp4/g) || [];

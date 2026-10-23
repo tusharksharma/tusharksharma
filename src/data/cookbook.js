@@ -2963,6 +2963,7 @@ export const breakfasts = [
 export const batchPrep = [
   {
     id: "creamy-chipotle-chicken-ditalini",
+    mealType: "dinner",
     title: "Creamy Chipotle Chicken Ditalini",
     tagline: "A creamy, mild shared-pot chicken pasta for nine equal servings: about 468 calories and 41g protein per serving.",
     heroImage: "/images/creamy-chipotle-chicken-ditalini/hero-polished.webp",
@@ -2981,7 +2982,7 @@ export const batchPrep = [
     ],
     socialHashtags: ["#HighProteinDinner", "#FamilyMealPrep", "#CreamyPasta", "#EasyFamilyDinner", "#ProteinRecipes"],
     socialCarousel: {
-      heroBadge: "Batch Prep",
+      heroBadge: "Family Dinner",
       heroAccent: "coral",
       heroTitle: "Creamy Chipotle Chicken Ditalini",
       heroStats: [

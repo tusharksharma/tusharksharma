@@ -1295,7 +1295,7 @@ function RelatedRecipes({ current }) {
             <span className="text-3xl font-black text-brand">+</span>
           </div>
           <div className="p-3">
-            <h3 className="text-sm font-bold leading-tight text-ink">Money Mustard</h3>
+            <h3 className="text-sm font-bold leading-tight text-ink">Money Mustard chicken dipping sauce</h3>
             <div className="mt-2 flex gap-2 text-[10px] text-faint">
               <span className="font-bold text-brand">Power-Up</span>
               <span>Pairs with everything</span>

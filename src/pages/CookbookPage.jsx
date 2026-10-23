@@ -11,7 +11,7 @@ const TABS = [
   ...(desserts.length > 0 ? ["Desserts"] : []),
   ...(creamis.length > 0 ? ["Creamis"] : []),
   ...(quickLunches.length > 0 ? ["Quick Lunches"] : []),
-  ...(batchPrep.length > 0 ? ["Batch Prep"] : []),
+  ...(batchPrep.filter((item) => item.mealType !== "dinner").length > 0 ? ["Batch Prep"] : []),
   ...(powerups.length > 0 ? ["Power-Ups"] : []),
   ...(snackBoxes.length > 0 ? ["Snack Boxes"] : []),
 ];
@@ -249,11 +249,11 @@ export default function CookbookPage() {
           </div>
         )}
 
-        {tab === "Batch Prep" && batchPrep.length > 0 && (
+        {tab === "Batch Prep" && batchPrep.filter((item) => item.mealType !== "dinner").length > 0 && (
           <div>
             <p className="text-muted text-xs mb-4">Cook one complete batch, then portion it for several meals.</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {filterItems(batchPrep).map((item) => <RecipeCard key={item.id} item={item} />)}
+              {filterItems(batchPrep.filter((item) => item.mealType !== "dinner")).map((item) => <RecipeCard key={item.id} item={item} />)}
             </div>
           </div>
         )}
@@ -287,7 +287,7 @@ export default function CookbookPage() {
         <section className="mt-10 border-t border-line pt-6" aria-label="All cookbook recipes">
           <h2 className="text-xl font-bold text-ink">Browse the complete cookbook</h2>
           <div className="mt-4 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {Object.entries({ Bases: bases, Sauces: sauces, Breakfast: breakfasts, Desserts: desserts, Creamis: creamis, "Quick Lunches": quickLunches, "Batch Prep": batchPrep, "Power-Ups": powerups, "Snack Boxes": snackBoxes }).map(([category, entries]) => (
+            {Object.entries({ Bases: bases, Sauces: sauces, Breakfast: breakfasts, Desserts: desserts, Creamis: creamis, "Quick Lunches": quickLunches, "Batch Prep": batchPrep.filter((entry) => entry.mealType !== "dinner"), "Make-ahead Dinners": batchPrep.filter((entry) => entry.mealType === "dinner"), "Power-Ups": powerups, "Snack Boxes": snackBoxes }).map(([category, entries]) => (
               <div key={category}><h3 className="font-bold text-sm text-ink">{category}</h3>
                 <ul className="mt-2 space-y-2">{entries.map((entry) => <li key={entry.id}><Link className="text-sm text-brand hover:underline" to={`/cookbook/${entry.id}`}>{entry.id === "money-mustard" ? "Money Mustard: Greek yogurt honey mustard sauce" : entry.id === "protein-tiramisu" ? "Protein tiramisu cups with cottage cheese" : entry.title}</Link></li>)}</ul>
               </div>

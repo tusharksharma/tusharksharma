@@ -58,6 +58,8 @@ For SDR-derived HDR brightness checks and a complete YouTube upload package, rea
 
 ## Delivery and learning
 
+For future recipe films, follow [Estimated nutrition ending](../../../docs/video/estimated-nutrition-ending.md): after the cooking/story payoff show estimated calories, macros and supported micronutrients as single rounded values, never ranges, with a clear serving basis and documented calculation. Place this before the separate final watch-next card, which remains five seconds maximum. Do not invent missing nutrient data.
+
 Follow [Local video storage](../../../docs/video/local-storage-cleanup.md) during large downloads and renders. Tushar authorizes scratch cleanup when useful and automatic local raw-footage deletion after the exact film is verified Public and its main/promo finals are complete. Follow the October 22 rule in that reference: no repeated cloud-backup prerequisite for post-publication raw cleanup; preserve shared active sources, final exports, project records and paid takes. Scheduled is not Public.
 
 Latest October 18 correction: cap the appended outro/end card at **five seconds maximum**. Keep the spoken thank-you before it over food/host footage and use a short, resolved saved-music ending. Do not pad the ending to fit the full song or the reusable graphic's original length. This supersedes older ten- or twenty-second outro examples.

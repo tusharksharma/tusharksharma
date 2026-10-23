@@ -1,3 +1,4 @@
+import { batchPrep } from "../data/cookbook";
 import { useState, useMemo } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { liveRecipes } from "../data/recipes";
@@ -9,7 +10,7 @@ import useMeta from "../hooks/useMeta";
 // 10-Minute Steak, Egg & Cheese Breakfast Bowl, mealType "breakfast") still
 // live in recipes.js so their own detail + social pages render, but they must
 // not show up in the Dinners grid or skew its facet counts.
-const dinnerRecipes = liveRecipes.filter((r) => r.mealType !== "breakfast");
+const dinnerRecipes = [...liveRecipes.filter((r) => r.mealType !== "breakfast"), ...batchPrep.filter((r) => r.mealType === "dinner").map((r) => ({ ...r, slug: r.id, detailUrl: `/cookbook/${r.id}`, image: r.heroImage, calories: r.caloriesPerServing, protein: r.proteinPerServing, makeThisWhen: r.useThisWhen, splitFriendly: "portion" }))];
 
 // Chip order is by how many recipes carry the value across the whole library,
 // computed once at module scope so the order never shuffles while a shopper is
@@ -509,7 +510,7 @@ export default function DinnersPage() {
         {filtered.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {filtered.map((r) => (
-              <Link key={r.id} to={`/recipes/${r.slug}`} className="bg-surface border border-line rounded-xl overflow-hidden hover:border-brand/40 transition-all group block">
+              <Link key={r.id} to={r.detailUrl || `/recipes/${r.slug}`} className="bg-surface border border-line rounded-xl overflow-hidden hover:border-brand/40 transition-all group block">
                 {r.image && (
                   <img {...cardImage(r.image)} alt={r.title} width="640" height="400" className={`w-full h-40 object-cover ${r.slug === "french-dip-polenta-dunkers" ? "object-[center_72%]" : ""}`} loading="lazy" />
                 )}
