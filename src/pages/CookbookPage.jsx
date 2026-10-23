@@ -11,7 +11,7 @@ const TABS = [
   ...(desserts.length > 0 ? ["Desserts"] : []),
   ...(creamis.length > 0 ? ["Creamis"] : []),
   ...(quickLunches.length > 0 ? ["Quick Lunches"] : []),
-  ...(batchPrep.length > 0 ? ["Batch Prep"] : []),
+  ...(batchPrep.filter((item) => item.mealType !== "dinner").length > 0 ? ["Batch Prep"] : []),
   ...(powerups.length > 0 ? ["Power-Ups"] : []),
   ...(snackBoxes.length > 0 ? ["Snack Boxes"] : []),
 ];
@@ -255,11 +255,11 @@ export default function CookbookPage() {
           </div>
         )}
 
-        {tab === "Batch Prep" && batchPrep.length > 0 && (
+        {tab === "Batch Prep" && batchPrep.filter((item) => item.mealType !== "dinner").length > 0 && (
           <div>
             <p className="text-muted text-xs mb-4">Cook one complete batch, then portion it for several meals.</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {filterItems(batchPrep).map((item) => <RecipeCard key={item.id} item={item} />)}
+              {filterItems(batchPrep.filter((item) => item.mealType !== "dinner")).map((item) => <RecipeCard key={item.id} item={item} />)}
             </div>
           </div>
         )}

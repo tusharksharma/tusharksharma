@@ -12,7 +12,7 @@ const COOKBOOK_SECTIONS = [
   { label: "Desserts", items: desserts },
   { label: "Creamis", items: creamis },
   { label: "Quick Lunches", items: quickLunches },
-  { label: "Batch Prep", items: batchPrep },
+  { label: "Batch Prep", items: batchPrep.filter((r) => r.mealType !== "dinner") },
   { label: "Powerups", items: powerups },
   { label: "Snack Boxes", items: snackBoxes },
 ];
@@ -112,7 +112,7 @@ export default function SocialIndexPage() {
   }
 
   // Dinner IDs increase with publication order.
-  const allDinners = [...liveRecipes].sort((a, b) => a.id - b.id);
+  const allDinners = [...liveRecipes, ...batchPrep.filter((r) => r.mealType === "dinner").map((r) => ({ ...r, slug: r.id, socialUrl: `/social/cookbook/${r.id}`, image: r.heroImage, calories: r.caloriesPerServing, protein: r.proteinPerServing }))].sort((a, b) => a.id - b.id);
   const totalCookbook = COOKBOOK_SECTIONS.reduce((n, s) => n + s.items.length, 0);
 
   // Search filters both dinners and cookbook sections by title. Empty query
@@ -180,7 +180,7 @@ export default function SocialIndexPage() {
               {sortedDinners.map((r) => (
             <Link
               key={r.id}
-              to={`/social/${r.slug}`}
+              to={r.socialUrl || `/social/${r.slug}`}
               className="bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden hover:border-amber-500/40 transition-all flex group"
             >
               {r.image && (
