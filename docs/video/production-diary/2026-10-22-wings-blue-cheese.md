@@ -30,3 +30,7 @@ Private raw media, family interview, credentials, paid narration and full upload
 ## Future camera labeling
 
 Tushar requested a prominent POV • XTRA ATTO thumbnail badge and explicit hands-free POV/XTRA Atto wording in descriptions for future verified Atto POV films. Saved in the authoritative cover playbook, flat mirror and editor/uploader skills, including installed skill copies. This forward rule preserves the already approved wings thumbnail.
+
+## Future Atto framing preference
+
+Tushar confirmed a gentle 1.10x-1.15x total crop for future wide-angle Atto POV edits, adjusted per shot to reduce clutter while retaining the food and hands. Conform from originals, account for existing crop/stabilization, retain requested 4K/source frame rate, and compare moving encoded output at full size. Digital cropping is not lossless; widen when detail or cooking coverage suffers. Saved in the repository and installed long-form agent. Existing approved films are unchanged.
