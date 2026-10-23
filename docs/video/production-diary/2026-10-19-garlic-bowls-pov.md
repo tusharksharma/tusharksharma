@@ -57,3 +57,7 @@ Three approved Shorts are verified Scheduled: cAHtGw9yMmg October23 noon, pqT8mH
 - At 8:24, the actual public player displayed both populated native recommendations: Best for viewer resolved to Creami 2hK03SclfXg, and the specific original garlic film fBojha2JmOY; the native channel Subscribe circle was also visible.
 - Attached W5UMDmo6QAE to all three scheduled POV Shorts cAHtGw9yMmg, pqT8mH4aCtk and tgmtd0BlF8A. Each exact film selection and All changes saved state verified. Existing schedules preserved.
 - Updated canonical inventory IDs 723-726: only the main is marked Posted. Promos remain Scheduled; their future Instagram native-sticker checks remain due after publication. No duplicates or paid voice charges.
+
+## October23 first-promo verification and Story repair
+
+The first POV promo cAHtGw9yMmg is Public with the correct native Related video W5UMDmo6QAE. Matching Facebook link post122123162757475411 was Published at noon. The scheduled Instagram video/photo pair went live, but a screenshot-grounded click at the visible sticker center on photo4014469428913760696 was inert. Replaced only the photo with4014474787262941876, explicit9:16, direct full YouTube watch URL and manually placed WATCH ON YOUTUBE sticker. The visible-center click opened Visit link and the exact film played; removed the original photo only after that pass, preserving the video and all other schedules. This verifies desktop behavior, not the phone app. Private receipts and inventory724/postingrow537 were updated and read back. No new narration or duplicate promo.

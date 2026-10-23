@@ -9,3 +9,7 @@ Discovery: the public recipe identifies ground goat; the camera folder's generic
 ## Biography closeout rule
 
 Tushar requested that every completed video feed confirmed personal learning back into `docs/about-tushar.md`. Saved in AGENTS and the repository/installed long-form agent. The current keema interview is a pending episode closeout source, not a completed film. Deduplicate, date and attribute personal facts, keep raw interviews private, and commit/push the biography and diary when closing the package.
+
+## One-release distribution experiment and production progress
+
+Tushar approved the narration and a10,000-credit cap. Main and three promo drafts are in production; no export or publication outcome is claimed. He explicitly added TikTok feed and Instagram Reels to this release only to compare performance, alongside the usual package. Preserve existing films and standing destination defaults. Final preview approval, nutrition calculation and release planning remain pending.
