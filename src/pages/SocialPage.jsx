@@ -458,8 +458,8 @@ function drawMacroCard(ctx, recipe) {
     maxLines: 2,
   });
   const m = recipe.meta?.macros || {};
-  drawMetricBox(ctx, 72, 390, `${m.protein || recipe.protein}g`, "Protein", "#fbbf24");
-  drawMetricBox(ctx, 588, 390, `~${m.calories || recipe.calories}`, "Calories");
+  drawMetricBox(ctx, 72, 390, (m.protein ?? recipe.protein) != null ? `${m.protein ?? recipe.protein}g` : "Under review", "Protein", "#fbbf24");
+  drawMetricBox(ctx, 588, 390, (m.calories ?? recipe.calories) != null ? `~${m.calories ?? recipe.calories}` : "Under review", "Calories");
   drawMetricBox(ctx, 72, 608, `${m.netCarbs != null ? m.netCarbs : m.carbs}g`, "Net Carbs", "#6ee7b7");
   drawMetricBox(ctx, 588, 608, recipe.time, "Total");
   if (recipe.meta?.costPerServing) {
@@ -766,11 +766,11 @@ function MacroCardInner({ recipe }) {
         </div>
         <div className="grid grid-cols-2 gap-4 text-center">
           <div className="bg-neutral-900 border border-neutral-800 rounded-xl p-4">
-            <div className="text-amber-400 text-3xl font-black">{m.protein || recipe.protein}g</div>
+            <div className="text-amber-400 text-3xl font-black">{(m.protein ?? recipe.protein) != null ? `${m.protein ?? recipe.protein}g` : "Under review"}</div>
             <div className="text-neutral-500 text-[10px] font-bold uppercase tracking-wider mt-1">Protein</div>
           </div>
           <div className="bg-neutral-900 border border-neutral-800 rounded-xl p-4">
-            <div className="text-white text-3xl font-black">~{m.calories || recipe.calories}</div>
+            <div className="text-white text-3xl font-black">{(m.calories ?? recipe.calories) != null ? `~${m.calories ?? recipe.calories}` : "Under review"}</div>
             <div className="text-neutral-500 text-[10px] font-bold uppercase tracking-wider mt-1">Calories</div>
           </div>
           <div className="bg-neutral-900 border border-neutral-800 rounded-xl p-4">
@@ -922,8 +922,8 @@ function longCaption(recipe, components, platform = "tiktok") {
   lines.push("");
 
   // QUICK STATS
-  lines.push(`✓ ${m.protein || recipe.protein}g protein`);
-  lines.push(`✓ ~${m.calories || recipe.calories} cal per serving`);
+  lines.push(`✓ ${(m.protein ?? recipe.protein) != null ? `${m.protein ?? recipe.protein}g` : "Under review"} protein`);
+  if ((m.calories ?? recipe.calories) != null) lines.push(`✓ ~${m.calories ?? recipe.calories} cal per serving`);
   if (m.netCarbs != null) lines.push(`✓ ~${m.netCarbs}g net carbs`);
   lines.push(`✓ ${recipe.time} · ${recipe.servings} serving${Number(recipe.servings) === 1 ? "" : "s"}`);
   // "One cook, two plates" is the dinner-only split-plate stat. Cookbook

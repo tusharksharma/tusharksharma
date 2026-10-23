@@ -1,5 +1,5 @@
 import { useState, useMemo } from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { liveRecipes } from "../data/recipes";
 import { normalizeEffortTags, normalizeSplitAxes } from "../data/taxonomy";
 import cardImage from "../utils/cardImage";
@@ -200,20 +200,38 @@ function FilterSection({ title, items }) {
   );
 }
 
+function useURLState(params, setParams, key, fallback, choices) {
+    const values = useMemo(() => params.getAll(key).filter((v) => !choices || choices.includes(v)), [params, key, choices]);
+    const value = Array.isArray(fallback) ? values : values[0] ?? fallback;
+    return [value, (next) => setParams((previous) => {
+      const updated = new URLSearchParams(previous);
+      updated.delete(key);
+      for (const v of Array.isArray(next) ? next : [next]) {
+        if (v !== null && v !== "" && v !== fallback) updated.append(key, String(v));
+      }
+      return updated;
+    }, { replace: true })];
+  }
+
 export default function DinnersPage() {
   useMeta({ title: "Dinners", description: "High-protein family dinners with shared cooking and clear adult, kid, or flexible-portion serving paths." });
 
-  const [search, setSearch] = useState("");
-  const [selectedProteins, setSelectedProteins] = useState([]);
-  const [selectedTime, setSelectedTime] = useState(null);
-  const [selectedNetCarbs, setSelectedNetCarbs] = useState(null);
-  const [selectedEffort, setSelectedEffort] = useState([]);
-  const [selectedSplit, setSelectedSplit] = useState([]);
-  const [selectedCost, setSelectedCost] = useState([]);
-  const [selectedDiet, setSelectedDiet] = useState([]);
-  const [excludeAllergens, setExcludeAllergens] = useState([]);
+  const [params, setParams] = useSearchParams();
+  const [search, setSearch] = useURLState(params, setParams, "q", "");
+  const [selectedProteins, setSelectedProteins] = useURLState(params, setParams, "protein", [], PROTEIN_OPTIONS);
+  const [selectedEffort, setSelectedEffort] = useURLState(params, setParams, "effort", [], EFFORT_OPTIONS);
+  const [selectedSplit, setSelectedSplit] = useURLState(params, setParams, "split", [], SPLIT_OPTIONS);
+  const [selectedCost, setSelectedCost] = useURLState(params, setParams, "cost", [], COST_OPTIONS);
+  const [selectedDiet, setSelectedDiet] = useURLState(params, setParams, "diet", [], DIET_OPTIONS);
+  const [excludeAllergens, setExcludeAllergens] = useURLState(params, setParams, "exclude", [], ALLERGEN_OPTIONS);
+  const [timeLabel, setTimeLabel] = useURLState(params, setParams, "time", null, TIME_OPTIONS.map((x) => x.label));
+  const selectedTime = TIME_OPTIONS.find((x) => x.label === timeLabel) || null;
+  const setSelectedTime = (value) => setTimeLabel(value?.label ?? null);
+  const [carbLabel, setCarbLabel] = useURLState(params, setParams, "carbs", null, NET_CARB_OPTIONS.map((x) => x.label));
+  const selectedNetCarbs = NET_CARB_OPTIONS.find((x) => x.label === carbLabel) || null;
+  const setSelectedNetCarbs = (value) => setCarbLabel(value?.label ?? null);
   const [filtersOpen, setFiltersOpen] = useState(false);
-  const [sortKey, setSortKey] = useState("newest");
+  const [sortKey, setSortKey] = useURLState(params, setParams, "sort", "newest", SORT_OPTIONS.map((x) => x.key));
 
   const activeCount =
     (selectedProteins.length) +
@@ -231,15 +249,7 @@ export default function DinnersPage() {
   }
 
   function clearAll() {
-    setSearch("");
-    setSelectedProteins([]);
-    setSelectedTime(null);
-    setSelectedNetCarbs(null);
-    setSelectedEffort([]);
-    setSelectedSplit([]);
-    setSelectedCost([]);
-    setSelectedDiet([]);
-    setExcludeAllergens([]);
+    setParams({}, { replace: true });
   }
 
   // Each active filter becomes a named predicate so a facet's own selection can
@@ -513,9 +523,9 @@ export default function DinnersPage() {
                       whether the macros are estimated. Time gets its own row
                       below so five fragments don't compete in one strip. */}
                   <div className="flex items-center gap-2 mt-2 text-[11px] text-muted">
-                    <span className="text-brand font-black text-xs">{r.meta?.macros?.estimated ? "~" : ""}{r.protein}g protein</span>
+                    <span className="text-brand font-black text-xs">{r.protein == null ? "Nutrition under review" : `${r.meta?.macros?.estimated ? "~" : ""}${r.protein}g protein`}</span>
                     <span className="text-faint">&middot;</span>
-                    <span>{r.meta?.macros?.estimated ? "~" : ""}{r.calories} cal</span>
+                    <span>{r.calories != null ? `${r.meta?.macros?.estimated ? "~" : ""}${r.calories} cal` : ""}</span>
                     {r.meta?.macros && (
                       r.meta.macros.estimated ? (
                         <span className="ml-auto px-1.5 py-0.5 rounded bg-brand/20 text-brand text-[9px] font-bold uppercase tracking-wider" title="Macros are an estimate — calculated, not measured per-ingredient">~ EST</span>

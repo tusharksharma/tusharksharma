@@ -1607,7 +1607,7 @@ export default function GroceryList({ adults = 2, kids = 2, leftovers = true, da
               Clear ({checkedCount})
             </button>
           )}
-          <span className="text-faint text-xs ml-auto">{checkedCount}/{visibleCount}</span>
+          <span role="status" aria-live="polite" className="text-faint text-xs ml-auto">{checkedCount}/{visibleCount}</span>
         </div>
       </div>
 
@@ -1626,10 +1626,10 @@ export default function GroceryList({ adults = 2, kids = 2, leftovers = true, da
                 // Pantry items keep showing (entry.baseQty undefined, qty === "" is normal).
                 if (entry.baseQty != null && qty === "") return null;
                 return (
-                  <li key={idx} onClick={() => toggle(idx)} className="flex items-start gap-3 py-2 px-2 -mx-2 rounded-lg hover:bg-surface2/50 cursor-pointer select-none transition-colors">
-                    <span className={`w-4 h-4 mt-0.5 rounded border flex-shrink-0 flex items-center justify-center text-[10px] transition-colors ${isChecked ? "bg-brand border-brand text-brandink" : "border-line"}`}>
-                      {isChecked && "\u2713"}
-                    </span>
+                  <li key={idx}><label className="flex items-start gap-3 py-2 px-2 -mx-2 rounded-lg hover:bg-surface2/50 cursor-pointer select-none transition-colors">
+                    <input type="checkbox" checked={isChecked} onChange={() => toggle(idx)}
+                      aria-label={`${entry.name}${qty ? `, ${qty}` : ""}, ${entry.meal}`}
+                      className="w-4 h-4 mt-0.5 accent-brand shrink-0 focus-visible:outline-2 focus-visible:outline-brand focus-visible:outline-offset-4" />
                     <div className="flex-1 min-w-0">
                       <span className={`text-xs font-semibold block transition-colors ${isChecked ? "text-faint line-through" : "text-ink"}`}>
                         {entry.name}
@@ -1639,7 +1639,7 @@ export default function GroceryList({ adults = 2, kids = 2, leftovers = true, da
                         <span className="text-[10px] bg-surface2 text-faint px-1.5 py-0 rounded">{entry.meal}</span>
                       </div>
                     </div>
-                  </li>
+                  </label></li>
                 );
               })}
             </ul>

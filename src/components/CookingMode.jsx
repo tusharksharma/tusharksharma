@@ -128,7 +128,7 @@ function StepTimer({ seconds }) {
   );
 }
 
-export default function CookingMode({ steps, ingredients, title, onClose }) {
+export default function CookingMode({ steps, ingredients, title, quantityNote, onClose }) {
   const [index, setIndex] = useState(0);
   const wakeLockRef = useRef(null);
 
@@ -236,6 +236,7 @@ export default function CookingMode({ steps, ingredients, title, onClose }) {
       {/* Step body */}
       <div className="flex-1 overflow-y-auto px-5 py-8">
         <div className="mx-auto max-w-xl">
+          {quantityNote && <p className="mb-4 rounded border border-brand/30 p-3 text-sm text-muted">{quantityNote}</p>}
           <p className="text-xl leading-relaxed text-ink sm:text-2xl">{step.text}</p>
 
           {timerSeconds > 0 && <StepTimer key={index} seconds={timerSeconds} />}

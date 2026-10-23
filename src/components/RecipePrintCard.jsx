@@ -68,7 +68,7 @@ function PrintBanner({ model, adjustedServings }) {
   );
 }
 
-export default function RecipePrintCard({ model, scale = 1, totalServings, baseServings }) {
+export default function RecipePrintCard({ model, scale = 1, totalServings, baseServings, methodIsScaled = false }) {
   const [left, right] = ingredientColumns(model, scale);
   const time = fact(model, "time");
   const yieldFact = fact(model, "yield");
@@ -99,7 +99,7 @@ export default function RecipePrintCard({ model, scale = 1, totalServings, baseS
         {model.keys[0] && (
           <div className="print-rule"><strong>KEY TO SUCCESS:</strong> {model.keys[0]}</div>
         )}
-        {scale !== 1 && <p className="print-scale-note">Ingredients scaled from the original {baseServings}-serving recipe. Cooking times, pan size, and amounts written in the method may need adjustment.</p>}
+        {scale !== 1 && !methodIsScaled && <p className="print-scale-note">Ingredients scaled from the original {baseServings}-serving recipe. Cooking times, pan size, and amounts written in the method may need adjustment.</p>}
         <h2 className="print-section-title">Ingredients</h2>
         <div className="print-ingredients">
           {[left, right].map((column, side) => (
@@ -126,6 +126,7 @@ export default function RecipePrintCard({ model, scale = 1, totalServings, baseS
           <p className="print-method-intro">{model.method.splitPoint || model.makeThisWhen}</p>
         )}
         <h2 className="print-section-title">Method</h2>
+        {scale !== 1 && !methodIsScaled && <p className="print-scale-note">Method quantities describe the original {baseServings}-serving batch. Use the ingredient list scaled by {Number(scale.toFixed(2))}×. Keep temperatures unchanged; check pan capacity and doneness.</p>}
         <div className="print-method-groups">
           {methodGroups(model).map((group, index) => (
             <div key={`${group.label}-${index}`} className="print-method-group">

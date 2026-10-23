@@ -363,7 +363,7 @@ const WEEKS = {
 // A cook day covers the following night when the dish plain-reheats, or when
 // it carries an authored second-night plan for a dish that doesn't. Target
 // shape is 3 dinners covering 6 nights, with Sunday free.
-const coversNextNight = (d) => Boolean(d && (d.reheats || d.leftoverNote || d.repeatCook));
+const coversNextNight = (d) => Boolean(d && (d.reheats || d.repeatCook));
 
 // Both a reheat day and a repeatCook day need double the ingredients: one
 // cooks a double batch, the other cooks the same dish twice. Same shopping
@@ -439,11 +439,11 @@ function CookDay({ day, label, vibe, id, time, reheats, isReheat, fixedBatch, re
                     ))}
                   </div>
                   <div className="mt-2 flex flex-wrap items-center gap-1.5 text-xs">
-                    <span className="text-brand font-bold">{r.protein}g protein</span>
+                    <span className="text-brand font-bold">{r.protein != null ? `${r.protein}g protein` : "Nutrition under review"}</span>
                     <span className="text-faint">&middot;</span>
-                    <span className="text-muted">{r.calories} cal/serving</span>
+                    <span className="text-muted">{r.calories != null ? `${r.calories} cal/serving` : ""}</span>
                     <span className="hidden sm:inline text-faint">&middot;</span>
-                    <span className="hidden sm:inline text-muted">{Math.round((r.protein * 4 / r.calories) * 100)}% PPC</span>
+                    <span className="hidden sm:inline text-muted">{r.protein != null && r.calories ? `${Math.round((r.protein * 4 / r.calories) * 100)}% PPC` : ""}</span>
                   </div>
                 </>
               )}
@@ -712,11 +712,13 @@ export default function YourWeek() {
           // recipe doesn't publish kid macros, that portion contributes 0
           // (substituting adult inflates the total).
           let totalProtein = 0;
+          let proteinKnown = true;
           currentWeek.cookDays.forEach((day, i) => {
             if (!enabledMeals[dayKeys[i]]) return;
             const recipe = recipes.find((r) => r.id === day.id);
             if (!recipe) return;
-            const adultProt = recipe.splitCook?.adult?.protein ?? recipe.protein ?? 0;
+            const adultProt = recipe.splitCook?.adult?.protein ?? recipe.protein;
+            if (adultProt == null) { proteinKnown = false; return; }
             const kidProt = recipe.splitCook?.kid?.protein ?? 0;
             const batchDay = day.fixedBatch || day.isReheat;
             let mealProtein = (batchDay ? 2 : adults) * adultProt + (batchDay ? 2 : kids) * kidProt;
@@ -728,7 +730,7 @@ export default function YourWeek() {
           });
           return (
             <div className="mt-8 flex justify-center gap-4 text-xs text-muted flex-wrap">
-              <span><span className="text-brand font-bold">~{Math.round(totalProtein)}g protein</span> this week</span>
+              <span><span className="text-brand font-bold">{proteinKnown ? `~${Math.round(totalProtein)}g protein` : "Protein total unavailable"}</span> this week</span>
               <span className="text-faint">|</span>
               <span><span className="text-ink font-semibold">{cookCount} cooks</span>{leftoverDays > 0 ? ` + ${leftoverDays} leftover days` : ""}</span>
               <span className="text-faint">|</span>

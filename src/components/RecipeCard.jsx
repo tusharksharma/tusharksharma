@@ -40,7 +40,7 @@ export default function RecipeCard({ recipe }) {
         />
         {/* Protein badge */}
         <div className="absolute top-3 right-3 bg-black/80 backdrop-blur-sm rounded-lg px-2.5 py-1.5 text-center">
-          <div className="text-amber-400 font-black text-lg leading-none">{recipe.protein}g</div>
+          <div className="text-amber-400 font-black text-lg leading-none">{recipe.protein != null ? `${recipe.protein}g` : "Under review"}</div>
           <div className="text-neutral-400 text-[10px] uppercase tracking-wider">protein</div>
         </div>
         {/* Coming Soon badge */}
@@ -76,9 +76,9 @@ export default function RecipeCard({ recipe }) {
         </h2>
         <p className="text-sm text-muted leading-relaxed line-clamp-2">{recipe.description}</p>
         <div className="flex items-center gap-3 mt-4 pt-3 border-t border-line text-xs text-muted">
-          <span>{recipe.calories} cal</span>
+          <span>{recipe.calories != null ? `${recipe.calories} cal` : "Nutrition under review"}</span>
           <span className="text-faint">|</span>
-          <span>{recipe.protein}g protein</span>
+          <span>{recipe.protein != null ? `${recipe.protein}g protein` : "Nutrition under review"}</span>
           <span className="text-faint">|</span>
           <span>{recipe.servings} serving{recipe.servings === 1 ? "" : "s"}</span>
         </div>

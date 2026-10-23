@@ -9,7 +9,7 @@ import CookingMode from "./CookingMode";
 import LeftoversPanel from "./LeftoversPanel";
 import RecipeActionBar, { StickyJump } from "./RecipeActionBar";
 import RecipePrintCard from "./RecipePrintCard";
-import { scaleIngredientText } from "../utils/scaleIngredient";
+import { scaleIngredientText, scaleBatchMethod } from "../utils/scaleIngredient";
 import openRecipePrint from "../utils/printRecipe";
 
 /*
@@ -48,11 +48,7 @@ const tone = (t) => TONE[t] || TONE.muted;
  */
 export default function RecipeDetail({ recipe, item, group }) {
   const [searchParams] = useSearchParams();
-  const model = useMemo(
-    () => (recipe ? buildRecipeModel(recipe) : buildCookbookModel(item, group)),
-    [recipe, item, group]
-  );
-  const isDinner = model.kind === "dinner";
+  const isDinner = !!recipe;
 
   const [adults, setAdults] = useState(() => { const v = searchParams.get("adults"); return v !== null ? Number(v) || 1 : 2; });
   const [kids, setKids] = useState(() => { const v = searchParams.get("kids"); return v !== null ? Number(v) : 2; });
@@ -69,9 +65,16 @@ export default function RecipeDetail({ recipe, item, group }) {
   // still says "one 45-min bake".
   // A cookbook entry's yield IS the recipe (a batch of sauce, a tray of
   // brownies), so it never scales by household — same rule as fixedBatch.
-  const isFixedBatch = !isDinner || !!recipe.meta?.fixedBatch;
-  const totalServings = isFixedBatch ? (isDinner ? Number(batchServings) || baseServings : baseServings) : (adults + kids) * (leftovers ? 2 : 1);
+  const authoredQuantities = !!recipe?.meta?.authoredQuantities;
+  const isFixedBatch = !isDinner || !!recipe.meta?.fixedBatch || authoredQuantities;
+  const totalServings = isFixedBatch ? (isDinner && !authoredQuantities ? Number(batchServings) || baseServings : baseServings) : (adults + kids) * (leftovers ? 2 : 1);
   const scale = isFixedBatch ? (isDinner ? totalServings / baseServings : 1) : totalServings / baseServings;
+
+  const methodIsScaled = recipe?.slug === "high-protein-pepperoni-mac-meal-prep";
+  const model = useMemo(
+    () => recipe ? buildRecipeModel(scaleBatchMethod(recipe, scale)) : buildCookbookModel(item, group),
+    [recipe, scale, item, group]
+  );
 
   const cookSteps = useMemo(() => flattenSteps(model), [model]);
 
@@ -120,7 +123,7 @@ export default function RecipeDetail({ recipe, item, group }) {
     <div className="theme-fade min-h-screen bg-page text-ink">
       <RecipeHeader model={model} onPrint={printRecipe} />
 
-      <RecipePrintCard model={model} scale={scale} totalServings={totalServings} baseServings={baseServings} />
+      <RecipePrintCard model={model} scale={scale} totalServings={totalServings} baseServings={baseServings} methodIsScaled={methodIsScaled} />
 
       <article className="mx-auto max-w-3xl px-4 pb-16 print:hidden">
         {/* ── 1. Hero image. 4:3 on mobile, 16:9 on desktop. The video used to
@@ -218,11 +221,12 @@ export default function RecipeDetail({ recipe, item, group }) {
 
         {/* ── 5. Ingredients. ── */}
         <Section id="ingredients" title="Ingredients">
+          {authoredQuantities && <p className="mb-4 text-sm text-muted">Nutrition is under review. Use the original six-portion batch below; adult and kid nutrition will be recalculated from package labels and measured portions at the next cook.</p>}
           <ServingsControl
             isFixedBatch={isFixedBatch}
             baseServings={baseServings}
             batchServings={batchServings}
-            setBatchServings={isDinner ? setBatchServings : null}
+            setBatchServings={isDinner && !authoredQuantities ? setBatchServings : null}
             adults={adults}
             kids={kids}
             leftovers={leftovers}
@@ -274,6 +278,7 @@ export default function RecipeDetail({ recipe, item, group }) {
         {/* ── 6. Method. ── */}
         {cookSteps.length > 0 && (
           <Section id="method" title="Method">
+            {scale !== 1 && !methodIsScaled && <p className="mb-4 rounded-lg border border-brand/30 p-3 text-sm text-ink">Method quantities below describe the original {baseServings}-serving batch. Your ingredient list is scaled by {Number(scale.toFixed(2))}×. Use the adjusted ingredient amounts; keep temperatures unchanged and check pan capacity and doneness.</p>}
             <button
               type="button"
               onClick={() => { track("cooking_mode_start", { recipe: recipe.title, slug: recipe.slug }); setCooking(true); }}
@@ -504,6 +509,7 @@ export default function RecipeDetail({ recipe, item, group }) {
           steps={cookSteps}
           ingredients={flatIngredients}
           title={model.title}
+          quantityNote={scale !== 1 && !methodIsScaled ? `Method quantities describe the original ${baseServings}-serving batch. Use the ingredient amounts scaled by ${Number(scale.toFixed(2))}×; temperatures stay unchanged.` : null}
           onClose={() => setCooking(false)}
         />
       )}
