@@ -12,4 +12,24 @@ Tushar requested that every completed video feed confirmed personal learning bac
 
 ## One-release distribution experiment and production progress
 
-Tushar approved the narration and a10,000-credit cap. Main and three promo drafts are in production; no export or publication outcome is claimed. He explicitly added TikTok feed and Instagram Reels to this release only to compare performance, alongside the usual package. Preserve existing films and standing destination defaults. Final preview approval, nutrition calculation and release planning remain pending.
+Tushar approved the narration and a 10,000-credit cap. He explicitly added TikTok feed and Instagram Reels to this release only to compare performance, alongside the usual package. Preserve existing films and standing destination defaults.
+
+## Final export approval and thumbnail choice
+
+Tushar approved the main film and all three promos for final export while remote; he did not report watching them. He selected **MUTTON IS BACK** and asked for gimmicky thumbnails. The chosen landscape design integrates an appetizing keema/phulka plate, a prominent fresh closed-mouth portrait and the **POV • XTRA ATTO** badge. Each promo has a bold portrait cover plus a clean alternate. Generated portraits are staged thumbnail treatments, not recorded reactions to the meal.
+
+The picture conform uses original 3840×2160 / 60000/1001 BT709 SDR footage, gentle total 1.10–1.12x crops and a physical correction for the one clip whose rotation metadata did not match its picture. Do not infer HDR from 10-bit files. Review proxies are not the final source.
+
+The approved reference plate is one-eighth of the batch, three 30g Haldiram's phulkas and 100g cucumber. Single-point estimates: 560 calories, 47g protein, 58g carbohydrate, 15g fat and 8g fiber. The selected available-data mineral subtotals are 8.9mg iron, 1210mg potassium and 110mg calcium. These are not laboratory totals; minerals unavailable for broth, ghee and garam masala were excluded, and unweighed added salt prevents a sodium estimate. Calculations and label evidence stay with the private production package.
+
+Marcus request-returned costs total 3,052 credits for the main narration and shared promo closing. The account-wide difference was larger and may include concurrent activity; it is not attributed wholly to this film. No extra voice was purchased for final exports. Audio was measured and transcribed; no independent listening is claimed.
+
+The final ending gives nutrition its own two cards, followed by a watch-next card of no more than five seconds. Native clickable recommendations must still be configured during an authorized YouTube upload. A Story JPG is not a link: add and test the real native sticker after the exact main-film URL exists.
+
+New confirmed interview learning is recorded as BIO-006–BIO-010 in [About Tushar](../../about-tushar.md), with historical context and personal-opinion boundaries. No website About page was changed. Release dates remain unassigned; export approval does not publish or schedule the film. Local raw footage remains protected until the exact film is verified Public and its companion finals are complete.
+
+## Verified export closeout
+
+The original-source main is 8:07.454 at 3840×2160 / 59.94 fps / 10-bit BT709 SDR. Three portrait promos are 14.548s, 20.904s and 11.011s at 1080×1920 / 59.94 fps. All four passed full-file decoding with no errors; encoded representative picture, captions, cover/end states and audio headroom were checked. Main measured -17.19 LUFS / -3.57 dBTP. This is sampled picture review and audio measurement, not independent listening or continuous human viewing. The final watch-next artwork lasts 4.988 seconds.
+
+Final files are registered as inventory 743–746, with readback; posting dates and actual publication fields are blank. Five exported unused reserves remain UC-0597–0601, disjoint from the main. The private Drive delivery includes the selected thumbnail, alternate, promo MP4s, two covers per promo, Story cards, English caption files and release copy. The 5GB 4K master exceeds the connector's 512MB upload limit, so its separate browser transfer remains in progress at this closeout; a rendered local master is not proof that cloud upload completed. No YouTube or social post was created by this export approval.

@@ -82,7 +82,37 @@ Use "I'd expect" or "my thinking is" when drawing on this entry. Do not say "I f
 
 After each completed film, review its confirmed interview answers and approved personal narration. Add new learning here with a date, episode and evidence status; merge duplicates and retain corrections. Keep time-specific circumstances historical. Do not promote editorial jokes, untested expectations or unverified nutrition claims into personal facts. Update this Git source and the episode diary as part of delivery, without automatically changing the website About page. Raw interviews and private production records remain outside the public repository.
 
-The keema matar interview is received and its narration approved; its biography extraction remains a delivery task while the film is in production.
+The keema matar interview and approved first-person narration supply the dated learning below. Production and publication outcomes belong in the episode diary; these entries do not imply the film is live.
+
+## Confirmed firsthand stories — keema matar, October 23, 2026
+
+### BIO-006: Childhood keema and his interest in nutrition
+
+Growing up in India in the 1990s and 2000s, Tushar looked forward to his mother's keema. In his household, mutton meant goat; he does not remember a choice of lean percentages being part of shopping then. Keep that scope personal rather than defining how every household uses the word.
+
+He describes himself as a larger child and connects that experience to his later interest in nutrition. As of this interview, he reports losing 70 pounds and keeping it off for four years. He says that experience motivates The Split Plate and his conversations about food with his children. This is a self-reported history, not a medical explanation, weight-loss prescription or professional qualification. Do not blame one ingredient or his mother's cooking for his childhood weight.
+
+### BIO-007: Finding goat brought a favorite back
+
+Tushar had made keema with lamb and lean beef, but says lean beef did not reproduce the goat flavor he remembered. He recently found lean ground goat at Sprouts and bought six pounds; the filmed recipe used three pounds. He liked the result and expects to make it more often if he can keep finding the product. He also wants to try it in kebabs.
+
+His difficulty finding lean lamb is his own shopping experience, not proof that it is unavailable in the United States. A possible Costco source was not independently established by this story. Do not turn those details into availability claims.
+
+### BIO-008: Measuring for flavor and using a small hand chopper
+
+Tushar measures spices to make flavor repeatable, rather than worrying about tiny calorie contributions. That preference does not establish that spices have no calories. He often uses a compact hand chopper for onions, garlic and peppers when finely diced pieces matter more than exact uniform size. He describes it as roughly ten dollars and useful without taking much space; no specific product endorsement or current price is established.
+
+### BIO-009: Ground meat, peas and different heat levels
+
+In his household experience, ground meat is easier for his older daughter to enjoy than lean red-meat cuts. His younger daughter especially likes peas, and he says his older daughter is becoming more willing to try green ingredients. Do not infer diagnoses, current ages or a guaranteed feeding technique.
+
+For this cook, Tushar separated the children's portions before adding Fresno chilies to the adult finish. This is an example of one cook with different finishes, not a fixed heat tolerance for everyone or a nutrition target for the children.
+
+### BIO-010: Two dinners and the reliable phulka packet
+
+The keema batch made eight adult-sized protein portions. At the time of this cook, a grandmother was visiting: three adults ate one portion each, while two children shared another adult protein portion. That made four portions per dinner and enough for two dinners. This describes this episode's table, not permanent household size or a recommended portion ratio. Adults had three phulkas, and the children had two with a little butter.
+
+Tushar says his household has bought Haldiram's phulkas for about ten years. He values their softness and convenience; his wife prefers fresh phulkas. The script's "packet volunteered" line is an editorial joke, not a recorded exchange. Cucumber with black salt (kala namak) is another household preference he enjoys describing, including its distinctive smell. Do not extend that anecdote into a health claim.
 
 ## Questions for expanding the biography
 
@@ -97,5 +127,6 @@ Ask a few at a time when relevant; unanswered questions are not facts:
 ## Sources
 
 - Tushar's direct answers in the October 22, 2026 Reddit/biography conversation: BIO-001 through BIO-005.
+- Tushar's direct keema matar interview and approved personal narration, October 23, 2026: BIO-006 through BIO-010. The private raw interview and production records are not stored in this repository.
 - Existing public About page: `src/pages/AboutPage.jsx`, reviewed October 22, 2026, for the data/analytics background only.
 - Confirmed standing food principles: `docs/splitplate-ideologies.md`; brand framing in root `AGENTS.md`.
