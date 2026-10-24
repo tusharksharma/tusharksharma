@@ -114,6 +114,28 @@ The keema batch made eight adult-sized protein portions. At the time of this coo
 
 Tushar says his household has bought Haldiram's phulkas for about ten years. He values their softness and convenience; his wife prefers fresh phulkas. The script's "packet volunteered" line is an editorial joke, not a recorded exchange. Cucumber with black salt (kala namak) is another household preference he enjoys describing, including its distinctive smell. Do not extend that anecdote into a health claim.
 
+## Capture answers by default — confirmed October 23, 2026
+
+Default biography capture — confirmed October 23, 2026: whenever Tushar answers a question, extract new reusable personal facts, experiences, preferences and household context into docs/about-tushar.md in the same turn, without asking again or waiting for a finished video. This standing instruction supersedes earlier deferrals of biography work. Add dated, sourced entries, deduplicate existing details, and preserve corrections and the distinction between firsthand experience, personal opinion, historical context and untested expectation. Clear dictated names can be normalized from established context; flag material ambiguity instead of inventing facts. If an answer adds no new biographical information, do not create filler. Keep agent/workflow preferences in operating instructions rather than treating them as life history. Do not copy credentials or sensitive private details into this public repository; retain any such information privately unless publication is explicitly authorized. Validate and commit/push updates to the Git biography; do not change the website About page. Report an unavailable write or sync honestly.
+
+## Confirmed preferences — Reddit answers, October 23, 2026
+
+### BIO-011: Favorite family meal-prep dishes
+
+Tushar names Golden Garlic Rice Bowl with Steak and Creamy Chipotle Chicken Ditalini as a couple of his favorites. He uses Costco's chipotle chicken in the ditalini. These are his own preferences and examples, not a claim that either dish suits every family or has been freezer-tested.
+
+Recipe references verified during the conversation:
+- https://thesplitplate.com/recipes/golden-garlic-rice-bowl-steak
+- https://thesplitplate.com/cookbook/creamy-chipotle-chicken-ditalini
+
+### BIO-012: Avocado and hot sauce in burritos
+
+Tushar describes his burritos as leaning California style. He likes avocado for creaminess and hot sauce to cut through it, calling heat and creaminess together "heaven." He generally chooses Carb Balance tortillas. No specific hot-sauce brand, portion size, nutrition or freezer performance was supplied. This does not establish that he has made the other Reddit user's egg-and-sausage recipe.
+
+### BIO-013: PEScience remains his preferred protein powder
+
+After trying a couple of others, Tushar says he has not found anything better than PEScience. This is a personal preference; he did not name the alternatives, flavors or particular baking tests in this answer. The dictated "B-Signs" is normalized to PEScience from the question's explicit product context. Do not turn it into an affiliate code, claim every competing powder was tested, or invent an alternative recommendation.
+
 ## Questions for expanding the biography
 
 Ask a few at a time when relevant; unanswered questions are not facts:
@@ -127,6 +149,7 @@ Ask a few at a time when relevant; unanswered questions are not facts:
 ## Sources
 
 - Tushar's direct answers in the October 22, 2026 Reddit/biography conversation: BIO-001 through BIO-005.
+- Tushar's direct Reddit answers and default-capture instruction, October 23, 2026: BIO-011 through BIO-013 and the capture rule.
 - Tushar's direct keema matar interview and approved personal narration, October 23, 2026: BIO-006 through BIO-010. The private raw interview and production records are not stored in this repository.
 - Existing public About page: `src/pages/AboutPage.jsx`, reviewed October 22, 2026, for the data/analytics background only.
 - Confirmed standing food principles: `docs/splitplate-ideologies.md`; brand framing in root `AGENTS.md`.
