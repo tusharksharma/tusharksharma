@@ -1,4 +1,4 @@
-import { buildRecipeSchema } from "../src/utils/recipeSchema.js";
+import { buildRecipeSchema, cleanSeoDescription, summarizeSeoDescription } from "../src/utils/recipeSchema.js";
 /**
  * Post-build prerender script.
  * Generates route-specific index.html files with proper meta/OG tags
@@ -24,7 +24,7 @@ const cookbookItems = [
   [batchPrep, "Dinner"], [desserts, "Dessert"], [creamis, "Dessert"],
   [bases, "Base"], [powerups, "Sauce"], [snackBoxes, "Snack"],
 ].flatMap(([items, recipeCategory]) => items.map((item) => ({
-  ...item, recipeCategory, description: item.seoDescription || item.tagline, image: item.heroImage || "",
+  ...item, recipeCategory, description: cleanSeoDescription(item.seoDescription || item.tagline), image: item.heroImage || "",
 })));
 
 // Define all routes with metadata
@@ -48,8 +48,8 @@ const routes = [
   ...recipes.map((r) => {
     return {
       path: `/recipes/${r.slug}`,
-      title: `${r.title} — The Split Plate`,
-      description: r.description || `${r.title} — ${r.protein}g protein, ${r.calories} cal, ${r.time}.`,
+      title: `${r.seoTitle || r.title} — The Split Plate`,
+      description: cleanSeoDescription(r.seoDescription || r.description || `${r.title} — ${r.protein}g protein, ${r.calories} cal, ${r.time}.`),
       image: r.image,
       schema: buildRecipeSchema(r, "Dinner"),
     };
@@ -70,7 +70,7 @@ const routes = [
   })),
   ...cookbookItems.map((c) => ({
     path: `/cookbook/${c.id}`,
-    title: `${c.title} — The Split Plate`,
+    title: `${c.seoTitle || c.title} — The Split Plate`,
     description: c.description,
     image: c.image,
     schema: buildRecipeSchema(c, "Cookbook"),
@@ -82,12 +82,12 @@ const routes = [
 // Mirrors the runtime truncation in src/hooks/useMeta.js so prerendered HTML
 // matches what the client-side hook would render.
 function truncateDesc(s, max = 155) {
-  if (!s || s.length <= max) return s;
-  const slice = s.slice(0, max);
-  const lastPeriod = slice.lastIndexOf(". ");
-  if (lastPeriod > max * 0.55) return slice.slice(0, lastPeriod + 1).trim();
-  const lastSpace = slice.lastIndexOf(" ");
-  return (lastSpace > 0 ? slice.slice(0, lastSpace) : slice).trim() + "…";
+  return summarizeSeoDescription(s, max);
+
+
+
+
+
 }
 
 function generateHTML(route) {

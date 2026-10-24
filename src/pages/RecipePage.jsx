@@ -9,7 +9,7 @@ import track from "../hooks/useTrack";
 export default function RecipePage() {
   const { slug } = useParams();
   const recipe = getBySlug(slug);
-  useMeta(recipe ? { title: recipe.title, description: recipe.description, image: recipe.image, schema: buildRecipeSchema(recipe, "Dinner") } : {});
+  useMeta(recipe ? { title: recipe.seoTitle || recipe.title, description: recipe.seoDescription || recipe.description, image: recipe.image, schema: buildRecipeSchema(recipe, "Dinner") } : {});
   useEffect(() => { if (recipe) track("recipe_view", { recipe: recipe.title, slug }); }, [recipe, slug]);
 
   if (!recipe) {

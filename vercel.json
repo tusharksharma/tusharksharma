@@ -35,11 +35,35 @@
       "destination": "https://github.com/tusharma88/tsp-videos/releases/download/videos/:filename"
     },
     {
-      "source": "/videos/orchard-cheddar-stackers-snack-box/:filename(.+\\.mp4)",
+      "source": "/videos/spicy-chicken-sandwich/ID.502.-.Quick.Lunches.Episode.7-.Spicy.Chicken.Sandwich.mp4",
+      "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/ID.502.-.Quick.Lunches.Episode.7-.Spicy.Chicken.Sandwich.mp4"
+    },
+    {
+      "source": "/videos/lean-beef-meatballs-30-piece/lean-beef-meatballs-30-piece-marcus.mp4",
+      "destination": "https://github.com/tusharma88/tsp-videos/releases/download/videos/lean-beef-meatballs-marcus.mp4"
+    },
+    {
+      "source": "/videos/30-30-muffin-mug-bowl/:filename(.+\\.mp4)",
       "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
     },
     {
-      "source": "/videos/danos-bone-in-thighs/:filename(.+\\.mp4)",
+      "source": "/videos/biscoff-cookie-butter-protein-creami/:filename(.+\\.mp4)",
+      "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
+    },
+    {
+      "source": "/videos/biscoff-skillet-creami/:filename(.+\\.mp4)",
+      "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
+    },
+    {
+      "source": "/videos/buffalo-wing-night/:filename(.+\\.mp4)",
+      "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
+    },
+    {
+      "source": "/videos/busy-day-steak-taco-plates/:filename(.+\\.mp4)",
+      "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
+    },
+    {
+      "source": "/videos/butterfinger-peanut-butter-milkshake-creami-week13/:filename(.+\\.mp4)",
       "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
     },
     {
@@ -51,7 +75,39 @@
       "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
     },
     {
-      "source": "/videos/viral-proteinized-burger-in-a-bun/:filename(.+\\.mp4)",
+      "source": "/videos/cheesy-spinach-chicken-orzo/:filename(.+\\.mp4)",
+      "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
+    },
+    {
+      "source": "/videos/chicken-pot-pie/:filename(.+\\.mp4)",
+      "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
+    },
+    {
+      "source": "/videos/chipotle-chicken-quesadillas/:filename(.+\\.mp4)",
+      "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
+    },
+    {
+      "source": "/videos/chipotle-ham-sandwich/:filename(.+\\.mp4)",
+      "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
+    },
+    {
+      "source": "/videos/chipotle-queso-tacos/:filename(.+\\.mp4)",
+      "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
+    },
+    {
+      "source": "/videos/chocolate-peanut-butter-cookie-creami/:filename(.+\\.mp4)",
+      "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
+    },
+    {
+      "source": "/videos/chocolate-protein-brownie-bowl/:filename(.+\\.mp4)",
+      "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
+    },
+    {
+      "source": "/videos/cinnamon-roll-cookie-protein-creami/:filename(.+\\.mp4)",
+      "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
+    },
+    {
+      "source": "/videos/cowboy-butter/:filename(.+\\.mp4)",
       "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
     },
     {
@@ -63,16 +119,200 @@
       "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
     },
     {
-      "source": "/videos/chipotle-queso-tacos/:filename(.+\\.mp4)",
+      "source": "/videos/danos-bone-in-thighs/:filename(.+\\.mp4)",
+      "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
+    },
+    {
+      "source": "/videos/electrolyte-watermelon-limeade/:filename(.+\\.mp4)",
+      "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
+    },
+    {
+      "source": "/videos/fire-grilled-chicken-thighs-frozen-veggies/:filename(.+\\.mp4)",
+      "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
+    },
+    {
+      "source": "/videos/freezer-backup-chicken-mole-tacos/:filename(.+\\.mp4)",
+      "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
+    },
+    {
+      "source": "/videos/fruity-pebbles-cereal-milk-creami/:filename(.+\\.mp4)",
+      "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
+    },
+    {
+      "source": "/videos/garlic-parmesan-chicken-drumsticks-chipotle-corn/:filename(.+\\.mp4)",
+      "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
+    },
+    {
+      "source": "/videos/green-sauce-chipotle-chicken-mini-tacos/:filename(.+\\.mp4)",
+      "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
+    },
+    {
+      "source": "/videos/grillos-pickle-dip-protein-style/:filename(.+\\.mp4)",
+      "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
+    },
+    {
+      "source": "/videos/grillos-pickle-dip-wilde-combo/:filename(.+\\.mp4)",
+      "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
+    },
+    {
+      "source": "/videos/hailey-inspired-chicken-meatballs/:filename(.+\\.mp4)",
+      "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
+    },
+    {
+      "source": "/videos/ham-cheese-power-melt/:filename(.+\\.mp4)",
+      "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
+    },
+    {
+      "source": "/videos/ham-egg-cheese-protein-bagel/:filename(.+\\.mp4)",
+      "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
+    },
+    {
+      "source": "/videos/high-protein-chili-cheese-toast/:filename(.+\\.mp4)",
+      "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
+    },
+    {
+      "source": "/videos/high-protein-chipotle-cheddar-sauce/:filename(.+\\.mp4)",
+      "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
+    },
+    {
+      "source": "/videos/high-protein-cilantro-jalapeno-ranch/:filename(.+\\.mp4)",
+      "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
+    },
+    {
+      "source": "/videos/high-protein-halal-cart-chicken-rice-bowls/:filename(.+\\.mp4)",
+      "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
+    },
+    {
+      "source": "/videos/high-protein-philly-cheesesteak-sliders/:filename(.+\\.mp4)",
+      "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
+    },
+    {
+      "source": "/videos/high-protein-viral-dot-cake/:filename(.+\\.mp4)",
+      "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
+    },
+    {
+      "source": "/videos/hot-honey-mustard-crispy-chicken-tacos/:filename(.+\\.mp4)",
+      "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
+    },
+    {
+      "source": "/videos/keema-matar-phulkas/:filename(.+\\.mp4)",
+      "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
+    },
+    {
+      "source": "/videos/leftover-cheeseburger-tacos/:filename(.+\\.mp4)",
+      "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
+    },
+    {
+      "source": "/videos/marbled-stuffed-cheesecake-creami/:filename(.+\\.mp4)",
+      "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
+    },
+    {
+      "source": "/videos/midnight-mix-creami/:filename(.+\\.mp4)",
+      "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
+    },
+    {
+      "source": "/videos/mississippi-mud-pie-cookie-creami/:filename(.+\\.mp4)",
+      "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
+    },
+    {
+      "source": "/videos/nilla-bean-float-cookie-creami/:filename(.+\\.mp4)",
+      "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
+    },
+    {
+      "source": "/videos/one-pan-breakfast-skillet/:filename(.+\\.mp4)",
+      "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
+    },
+    {
+      "source": "/videos/orchard-cheddar-stackers-snack-box/:filename(.+\\.mp4)",
+      "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
+    },
+    {
+      "source": "/videos/oven-fried-wings-family/:filename(.+\\.mp4)",
+      "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
+    },
+    {
+      "source": "/videos/pink-berry-cookie-creami/:filename(.+\\.mp4)",
+      "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
+    },
+    {
+      "source": "/videos/protein-blue-cheese-crema/:filename(.+\\.mp4)",
+      "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
+    },
+    {
+      "source": "/videos/protein-cereal-hack/:filename(.+\\.mp4)",
+      "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
+    },
+    {
+      "source": "/videos/protein-cheesecake-frosting/:filename(.+\\.mp4)",
+      "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
+    },
+    {
+      "source": "/videos/pumpkin-chocolate-chip-protein-creami/:filename(.+\\.mp4)",
+      "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
+    },
+    {
+      "source": "/videos/ranch-steak-european-greens-mash/:filename(.+\\.mp4)",
+      "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
+    },
+    {
+      "source": "/videos/salmon-cream-cheese-bagel/:filename(.+\\.mp4)",
+      "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
+    },
+    {
+      "source": "/videos/shirley-temple-cookie-creami/:filename(.+\\.mp4)",
+      "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
+    },
+    {
+      "source": "/videos/smash-burger-split-plate/:filename(.+\\.mp4)",
+      "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
+    },
+    {
+      "source": "/videos/smoky-chipotle-crema/:filename(.+\\.mp4)",
+      "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
+    },
+    {
+      "source": "/videos/snickerdoodle-cookie-creami/:filename(.+\\.mp4)",
+      "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
+    },
+    {
+      "source": "/videos/split-plate-apple-pie-snack-box/:filename(.+\\.mp4)",
+      "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
+    },
+    {
+      "source": "/videos/split-plate-berry-power-up-snack-box/:filename(.+\\.mp4)",
+      "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
+    },
+    {
+      "source": "/videos/split-plate-mediterranean-snack-box/:filename(.+\\.mp4)",
+      "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
+    },
+    {
+      "source": "/videos/split-plate-pizza-snack-box/:filename(.+\\.mp4)",
+      "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
+    },
+    {
+      "source": "/videos/split-plate-ranch-crunch-snack-box/:filename(.+\\.mp4)",
+      "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
+    },
+    {
+      "source": "/videos/summer-moon-inspired-protein-creamer/:filename(.+\\.mp4)",
+      "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
+    },
+    {
+      "source": "/videos/vanilla-cottage-cheese-protein-pancakes/:filename(.+\\.mp4)",
+      "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
+    },
+    {
+      "source": "/videos/viral-proteinized-burger-in-a-bun/:filename(.+\\.mp4)",
       "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
     },
     {
       "source": "/videos/:recipe/:filename(.+\\.mp4)",
-      "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
+      "destination": "https://github.com/tusharma88/tsp-videos/releases/download/videos/:filename"
     },
     {
       "source": "/videos/:recipe/:filename(.+\\.m4a)",
-      "destination": "https://github.com/tusharksharma/tusharksharma/releases/download/site-videos-2026-09/:filename"
+      "destination": "https://github.com/tusharma88/tsp-videos/releases/download/videos/:filename"
     },
     {
       "source": "/(.*)",

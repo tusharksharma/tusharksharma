@@ -1,0 +1,526 @@
+{
+  "schema_version": "1.0.0",
+  "report_id": "thesplitplate-seo-implementation-2026-10-23",
+  "is_example": false,
+  "reviewed_at": "2026-10-23T20:15:00Z",
+  "mode": "implement",
+  "status": "partial",
+  "target": {
+    "url": "https://thesplitplate.com",
+    "repository_commit": "b809be8",
+    "audience": "Busy parents and macro-aware households cooking one shared meal with adult and kid plates",
+    "market_language": "US English (en-US)"
+  },
+  "scope": {
+    "inspected_urls_or_files": [
+      "https://thesplitplate.com/",
+      "https://thesplitplate.com/dinners",
+      "https://thesplitplate.com/cookbook",
+      "https://thesplitplate.com/recipes/spicy-fajita-chicken-gnocchi",
+      "https://thesplitplate.com/recipes/high-protein-pepperoni-mac-meal-prep",
+      "https://thesplitplate.com/recipes/viral-proteinized-burger-in-a-bun",
+      "https://thesplitplate.com/cookbook/money-mustard",
+      "https://thesplitplate.com/cookbook/protein-tiramisu",
+      "https://thesplitplate.com/cookbook/white-drop-cookies-n-creme-creami",
+      "vercel.json",
+      "scripts/prerender.js",
+      "scripts/prerender-content.js",
+      "scripts/validate-seo.js",
+      "scripts/validate-seo-videos.js",
+      "scripts/seo-video-release.json",
+      "src/utils/recipeSchema.js",
+      "src/utils/recipeModel.js",
+      "src/hooks/useMeta.js",
+      "src/pages/RecipePage.jsx",
+      "src/pages/CookbookDetailPage.jsx",
+      "src/pages/DinnersPage.jsx",
+      "src/components/RecipeDetail.jsx",
+      "src/data/taxonomy.js",
+      "src/data/recipes.js",
+      "src/data/cookbook.js"
+    ],
+    "tools_used": [
+      "Repository source and static build inspection",
+      "GitHub Release inventory verification against tusharma88/tsp-videos and tusharksharma/tusharksharma",
+      "Headless Chrome pre-rendering (scripts/prerender-content.js)",
+      "Automated SEO, video, taxonomy, macro, and schema test suites"
+    ],
+    "search_console_access": "unavailable",
+    "data_window": null,
+    "assumptions": [
+      "Vercel deploys static output from dist/ with routing and rewrites governed by vercel.json.",
+      "Recipe videos are hosted across two public GitHub Releases: tusharma88/tsp-videos (videos-v1) and tusharksharma/tusharksharma (site-videos-2026-09)."
+    ],
+    "limitations": [
+      "No Google Search Console property connection or exported query/inspection CSV was provided in this session.",
+      "Actual Google indexation state, Recipe rich-result enhancement counts, and query impression/CTR baselines remain unknown until a Search Console export is supplied."
+    ],
+    "constrained": true
+  },
+  "overall": {
+    "problem_score": 8,
+    "confidence": "high",
+    "provisional": true,
+    "driving_issue": "238 of 334 recipe and step videos routed to 404s due to incomplete vercel.json release rewrites, and 1,006 step images were omitted from HowToStep structured data."
+  },
+  "areas": {
+    "crawl_index": {
+      "status": "assessed",
+      "problem_score": 2,
+      "summary": "213 indexable routes are prerendered with self-referencing canonicals, valid sitemap.xml, and robots.txt; utility routes (/social/*, /studio) carry noindex, nofollow.",
+      "evidence_ids": [
+        "E1",
+        "E4"
+      ]
+    },
+    "rendering_delivery": {
+      "status": "assessed",
+      "problem_score": 3,
+      "summary": "Headless Chrome prerendering populates full recipe body HTML into dist/*/index.html across all 213 sitemap routes before client hydration.",
+      "evidence_ids": [
+        "E1",
+        "E5"
+      ]
+    },
+    "recipe_schema": {
+      "status": "assessed",
+      "problem_score": 6,
+      "summary": "48 recipes with explicit compound or parenthetical durations lacked ISO-8601 totalTime/prepTime/cookTime in Recipe JSON-LD, 128 cookbook items omitted keywords, and cuisine/author URL signals were absent.",
+      "evidence_ids": [
+        "E2"
+      ]
+    },
+    "query_intent": {
+      "status": "assessed",
+      "problem_score": 4,
+      "summary": "41 series-based Cookbook entries led descriptions and visible hooks with internal episode codes rather than dish and method keywords.",
+      "evidence_ids": [
+        "E3"
+      ]
+    },
+    "onpage_content": {
+      "status": "assessed",
+      "problem_score": 5,
+      "summary": "96 of 199 recipe meta descriptions truncated mid-sentence with an ellipsis at 155 characters, and RecipePage/prerender did not read seoTitle/seoDescription overrides.",
+      "evidence_ids": [
+        "E3"
+      ]
+    },
+    "internal_links": {
+      "status": "assessed",
+      "problem_score": 4,
+      "summary": "Every dinner's RelatedRecipes block hardcoded a link only to /cookbook/money-mustard, /dinners lacked a static protein-grouped HTML directory at the bottom, and 4 taxonomy tags triggered warnings.",
+      "evidence_ids": [
+        "E4"
+      ]
+    },
+    "media_discovery": {
+      "status": "assessed",
+      "problem_score": 8,
+      "summary": "vercel.json routed only 4 of 103 tsp-videos directories to tusharma88/tsp-videos, leaving 238 of 334 video paths 404ing against site-videos-2026-09, while 1,006 step images were omitted from HowToStep schema.",
+      "evidence_ids": [
+        "E1",
+        "E2"
+      ]
+    },
+    "mobile_performance": {
+      "status": "partial",
+      "problem_score": 2,
+      "summary": "Hero images use explicit width/height, responsive WebP srcsets, and fetchPriority='high' while below-the-fold step photos lazy-load and videos use preload='none'. Field CrUX data was not exported.",
+      "evidence_ids": [
+        "E5"
+      ]
+    },
+    "authority_trust": {
+      "status": "assessed",
+      "problem_score": 3,
+      "summary": "Allergens, food-safety callouts, and estimated-vs-verified macro disclosures are prominent, and visible author bylines linking to /about plus schema author.url are now wired.",
+      "evidence_ids": [
+        "E2",
+        "E4"
+      ]
+    },
+    "search_measurement": {
+      "status": "not_tested",
+      "problem_score": null,
+      "summary": "No Google Search Console export or property access was provided; query impressions, clicks, CTR, and Google index/enhancement counts cannot be asserted.",
+      "evidence_ids": [
+        "E6"
+      ]
+    }
+  },
+  "evidence": [
+    {
+      "id": "E1",
+      "locator": "vercel.json",
+      "captured_at": "2026-10-23T20:00:00Z",
+      "method": "source",
+      "context": "Cross-checked all 334 /videos/* references in src/data/recipes.js and src/data/cookbook.js against GitHub Release asset inventories in tusharma88/tsp-videos (videos-v1) and tusharksharma/tusharksharma (site-videos-2026-09).",
+      "fact": "248 catalog videos reside in tusharma88/tsp-videos and 85 reside in site-videos-2026-09 (plus 1 renamed file lean-beef-meatballs-marcus.mp4). Prior vercel.json only routed 4 directories to tsp-videos, leaving 238 video URLs unmapped."
+    },
+    {
+      "id": "E2",
+      "locator": "src/utils/recipeSchema.js",
+      "captured_at": "2026-10-23T20:05:00Z",
+      "method": "source",
+      "context": "Evaluated buildRecipeSchema across all 60 live dinners and 139 cookbook entries.",
+      "fact": "toHowToStep previously dropped step.images[0] and step.image across 1,006 pictured steps (326 dinner + 680 cookbook), and recipeTimings skipped 48 recipes with explicit parenthetical totals or compound prep + cook strings."
+    },
+    {
+      "id": "E3",
+      "locator": "scripts/prerender.js",
+      "captured_at": "2026-10-23T20:08:00Z",
+      "method": "source",
+      "context": "Audited generated title, meta description, and JSON-LD description across all 213 indexable routes.",
+      "fact": "41 cookbook items began descriptions with CrumblCreamiCut Week X, Proffee Episode X, or Snack Box Series Ep. X prefixes, and 96 of 199 recipe meta descriptions ended mid-sentence with an ellipsis."
+    },
+    {
+      "id": "E4",
+      "locator": "src/components/RecipeDetail.jsx",
+      "captured_at": "2026-10-23T20:11:00Z",
+      "method": "source",
+      "context": "Inspected internal linking in RelatedRecipes, hub links in src/pages/DinnersPage.jsx, and tag classification in src/data/taxonomy.js.",
+      "fact": "RelatedRecipes linked every dinner exclusively to /cookbook/money-mustard, DinnersPage had no static category directory at the bottom, RecipeDetail lacked a visible author link to /about, and validate-taxonomy.js reported 4 unknown tag warnings."
+    },
+    {
+      "id": "E5",
+      "locator": "dist/sitemap.xml",
+      "captured_at": "2026-10-23T20:15:00Z",
+      "method": "browser",
+      "context": "Executed full build pipeline including vite build, scripts/prerender.js, scripts/prerender-content.js (headless Chrome), scripts/validate-seo.js, and scripts/validate-seo-videos.js.",
+      "fact": "All 213 indexable routes render complete HTML content inside #root with valid canonicals, meta descriptions, and Recipe JSON-LD on recipe routes, and all 334 video paths pass release inventory validation."
+    },
+    {
+      "id": "E6",
+      "locator": "https://thesplitplate.com",
+      "captured_at": "2026-10-23T20:15:00Z",
+      "method": "access_gap",
+      "context": "Search Console access check.",
+      "fact": "No Google Search Console property connection or performance/indexing export was provided during this engagement."
+    }
+  ],
+  "indexing_observations": [
+    {
+      "url": "https://thesplitplate.com/recipes/spicy-fajita-chicken-gnocchi",
+      "technical_indexability": "appears_indexable",
+      "google_index_status": "unknown",
+      "summary": "Prerendered HTML contains HTTP 200 equivalent static markup, index,follow robots meta, self-referencing canonical, complete Recipe JSON-LD, and full body content; Google index state requires Search Console inspection.",
+      "evidence_ids": [
+        "E5",
+        "E6"
+      ]
+    },
+    {
+      "url": "https://thesplitplate.com/cookbook/white-drop-cookies-n-creme-creami",
+      "technical_indexability": "appears_indexable",
+      "google_index_status": "unknown",
+      "summary": "Prerendered HTML contains index,follow robots meta, self-referencing canonical, search-facing Recipe JSON-LD name, and cleaned meta description; Google index state requires Search Console inspection.",
+      "evidence_ids": [
+        "E3",
+        "E5",
+        "E6"
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "rank": 1,
+      "id": "SEO-1",
+      "kind": "observed_issue",
+      "title": "Fix Vercel video rewrites for all 334 catalog videos and emit HowToStep images",
+      "primary_area": "media_discovery",
+      "related_areas": [
+        "rendering_delivery"
+      ],
+      "problem_score": 8,
+      "score_rationale": "238 of 334 recipe and step video URLs routed to 404s in production because vercel.json only mapped 4 directories to tusharma88/tsp-videos, and 1,006 step images were omitted from HowToStep structured data.",
+      "confidence": "high",
+      "evidence_ids": [
+        "E1",
+        "E2",
+        "E5"
+      ],
+      "affected_urls_or_files": [
+        "vercel.json",
+        "scripts/seo-video-release.json",
+        "scripts/validate-seo-videos.js",
+        "src/utils/recipeSchema.js"
+      ],
+      "diagnosis": "Catalog videos are split across tusharma88/tsp-videos (248 files) and tusharksharma/tusharksharma site-videos-2026-09 (85 files, plus 1 renamed meatball asset), while toHowToStep ignored step.images and step.image.",
+      "proposed_change": "Route the 66 site-videos-2026-09 directories and 2 file-level overrides explicitly in vercel.json with the default /videos/:recipe/:filename catch-all pointing to tusharma88/tsp-videos, verify all 334 videos in scripts/validate-seo-videos.js, and include step image URLs in toHowToStep.",
+      "owner_role": "Frontend / SEO engineer",
+      "effort": "M",
+      "effort_assumptions": "Release asset inventories are available via GitHub API and step image paths are already present in recipes.js and cookbook.js.",
+      "dependencies": [],
+      "acceptance_tests": [
+        "node scripts/validate-seo-videos.js verifies all 334 catalog video paths against the dual-release inventory with 0 missing assets.",
+        "Every pictured step in Recipe JSON-LD includes an absolute https://thesplitplate.com/images/... URL on its HowToStep object."
+      ],
+      "measurement": {
+        "metric": "Verified catalog video resolution rate and HowToStep image coverage in generated Recipe JSON-LD",
+        "baseline": "96/334 videos routed (238 broken); 0/1,006 pictured steps emitted HowToStep.image",
+        "baseline_evidence_ids": [
+          "E1",
+          "E2"
+        ],
+        "proposed_target": "334/334 catalog videos routed and verified; 1,006/1,006 pictured steps emit HowToStep.image",
+        "comparison_window": "Immediate build verification and post-deploy HTTP HEAD check; 28-day Search Console video/recipe rich result impressions once connected.",
+        "guardrail": "Never emit broken video or image URLs or invent step images for text-only steps."
+      },
+      "priority_rationale": "Broken media delivery and missing step images directly degrade user playback and rich-result media discovery across the entire catalog.",
+      "previous_status": "improved",
+      "delivery_status": "implemented_locally"
+    },
+    {
+      "rank": 2,
+      "id": "SEO-2",
+      "kind": "observed_issue",
+      "title": "Expand truthful Recipe JSON-LD duration parsing, cuisine inference, keywords, and author URL",
+      "primary_area": "recipe_schema",
+      "related_areas": [
+        "authority_trust"
+      ],
+      "problem_score": 6,
+      "score_rationale": "48 recipes with explicit durations (parenthetical breakdowns or prep + cook) omitted totalTime in Recipe JSON-LD, 128 cookbook items omitted keywords, and recipeCuisine and author.url were missing.",
+      "confidence": "high",
+      "evidence_ids": [
+        "E2",
+        "E4",
+        "E5"
+      ],
+      "affected_urls_or_files": [
+        "src/utils/recipeSchema.js",
+        "scripts/test-seo-fixes.js"
+      ],
+      "diagnosis": "recipeTimings rejected any time string containing '+' or parentheses unless meta.totalMinutes was set, and buildRecipeSchema only read r.tags (ignoring cookbook r.bestFor) and omitted recipeCuisine and author.url.",
+      "proposed_change": "Parse explicit leading totals before parenthetical breakdowns and additive prep + cook segments into ISO-8601 prepTime, cookTime, and totalTime (while keeping overnight/range/unquantified strings omitted), infer conservative recipeCuisine, fall back to r.bestFor for keywords, and add author.url.",
+      "owner_role": "Frontend / SEO engineer",
+      "effort": "S",
+      "effort_assumptions": "Centralized in src/utils/recipeSchema.js.",
+      "dependencies": [],
+      "acceptance_tests": [
+        "Valid ISO-8601 totalTime coverage increases from 44/60 to 54/60 dinners and 62/139 to 104/139 cookbook entries while overnight/range/unquantified times remain undefined.",
+        "node scripts/test-seo-fixes.js passes all 5 structured data assertions."
+      ],
+      "measurement": {
+        "metric": "Recipe JSON-LD recommended property completeness across 199 recipe routes",
+        "baseline": "106/199 recipes with totalTime; 0/199 with prepTime+cookTime; 0/199 with recipeCuisine; 71/199 with keywords",
+        "baseline_evidence_ids": [
+          "E2"
+        ],
+        "proposed_target": "158/199 recipes with truthful totalTime; 32 with explicit prepTime+cookTime; 76 with conservative recipeCuisine; 199/199 with keywords and author.url",
+        "comparison_window": "Immediate build verification; 28-day Search Console Recipe enhancement report after deploy.",
+        "guardrail": "Never fabricate durations for overnight chill, freeze, or unquantified steps, and never emit aggregateRating or single-number nutrition on split-lane dinners."
+      },
+      "priority_rationale": "Structured data completeness directly governs Google Recipe rich-result eligibility and carousel attributes.",
+      "previous_status": "improved",
+      "delivery_status": "implemented_locally"
+    },
+    {
+      "rank": 3,
+      "id": "SEO-3",
+      "kind": "observed_issue",
+      "title": "Strip internal series prefixes and eliminate mid-sentence meta description truncation",
+      "primary_area": "onpage_content",
+      "related_areas": [
+        "query_intent"
+      ],
+      "problem_score": 5,
+      "score_rationale": "41 cookbook items led descriptions and visible hooks with internal series labels (CrumblCreamiCut, Proffee Episode, Snack Box Series), and 96 of 199 recipe meta descriptions ended mid-sentence with an ellipsis.",
+      "confidence": "high",
+      "evidence_ids": [
+        "E3",
+        "E5"
+      ],
+      "affected_urls_or_files": [
+        "src/utils/recipeSchema.js",
+        "src/utils/recipeModel.js",
+        "scripts/prerender.js",
+        "src/hooks/useMeta.js",
+        "src/pages/RecipePage.jsx",
+        "src/pages/CookbookDetailPage.jsx"
+      ],
+      "diagnosis": "Cookbook taglines embedded series/episode numbering at the start of the string, and truncateDesc cut at 155 characters with '…' whenever the second sentence exceeded 155 characters.",
+      "proposed_change": "Extract series labels into model badges in buildCookbookModel, strip series prefixes in cleanSeoDescription, summarize descriptions at clean sentence/clause boundaries<=155 chars in summarizeSeoDescription, and wire seoTitle/seoDescription in prerender.js, RecipePage.jsx, and CookbookDetailPage.jsx.",
+      "owner_role": "Frontend / SEO engineer",
+      "effort": "S",
+      "effort_assumptions": "Shared helper in src/utils/recipeSchema.js consumed by prerender.js, useMeta.js, and recipeModel.js.",
+      "dependencies": [],
+      "acceptance_tests": [
+        "0 of 213 prerendered indexable routes contain mid-sentence '…' truncation in meta[name=description] or og:description.",
+        "0 cookbook meta descriptions, JSON-LD descriptions, or visible hooks begin with CrumblCreamiCut Week, Proffee Episode, or Snack Box Series Ep."
+      ],
+      "measurement": {
+        "metric": "Count of indexable routes with series-prefix-polluted or ellipsis-truncated meta descriptions",
+        "baseline": "41 series-prefix-polluted cookbook descriptions and 96 ellipsis-truncated recipe meta descriptions",
+        "baseline_evidence_ids": [
+          "E3"
+        ],
+        "proposed_target": "0 series-prefix-polluted descriptions and 0 ellipsis-truncated meta descriptions across all 213 indexable routes",
+        "comparison_window": "Immediate build verification across dist/*/index.html; 28-day organic CTR comparison in Search Console once available.",
+        "guardrail": "Keep series identity visible as a badge chip on the page while leading prose and meta descriptions with the actual dish."
+      },
+      "priority_rationale": "Searchers scan titles and snippets for dish identity, protein, and cooking method rather than internal series numbering or cut-off sentences.",
+      "previous_status": "improved",
+      "delivery_status": "implemented_locally"
+    },
+    {
+      "rank": 4,
+      "id": "SEO-4",
+      "kind": "observed_issue",
+      "title": "Strengthen internal linking on /dinners and RecipeDetail, add visible author bylines, and clean taxonomy",
+      "primary_area": "internal_links",
+      "related_areas": [
+        "crawl_index"
+      ],
+      "problem_score": 4,
+      "score_rationale": "All 60 dinners linked exclusively to /cookbook/money-mustard in RelatedRecipes, /dinners lacked a categorized static HTML directory at the bottom, RecipeDetail lacked a visible author link to /about, and 4 taxonomy tags were unclassified.",
+      "confidence": "high",
+      "evidence_ids": [
+        "E4",
+        "E5"
+      ],
+      "affected_urls_or_files": [
+        "src/pages/DinnersPage.jsx",
+        "src/components/RecipeDetail.jsx",
+        "src/data/taxonomy.js"
+      ],
+      "diagnosis": "RelatedRecipes hardcoded Money Mustard for every dinner instead of matching relevant Cookbook sauces/bases, DinnersPage relied only on its card grid without a protein-grouped directory section, and taxonomy.js lacked entries for 'quick', 'high-protein', and 'build'.",
+      "proposed_change": "Add a 'Browse all family dinners by protein' directory section to DinnersPage, make RelatedRecipes surface matching Cookbook sauces/bases (retaining Money Mustard for spicy-chicken-sandwich and default), add a visible 'By Tushar Sharma' link to /about on RecipeDetail, and classify the 4 tags in taxonomy.js.",
+      "owner_role": "Frontend / SEO engineer",
+      "effort": "S",
+      "effort_assumptions": "Template-level updates in DinnersPage.jsx, RecipeDetail.jsx, and taxonomy.js.",
+      "dependencies": [],
+      "acceptance_tests": [
+        "dist/dinners/index.html contains the protein-grouped dinner directory with descriptive links to all dinner recipes.",
+        "node scripts/validate-taxonomy.js reports 0 error(s), 0 warning(s)."
+      ],
+      "measurement": {
+        "metric": "Distinct Cookbook power-ups linked from dinner pages and taxonomy warning count",
+        "baseline": "1 cookbook item linked from dinner RelatedRecipes (/cookbook/money-mustard); 4 taxonomy warnings",
+        "baseline_evidence_ids": [
+          "E4"
+        ],
+        "proposed_target": "Context-matched Cookbook sauces/bases linked across dinners (with Money Mustard retained on spicy-chicken-sandwich and default); 0 taxonomy warnings",
+        "comparison_window": "Immediate build verification in dist/.",
+        "guardrail": "Preserve existing curated link from spicy-chicken-sandwich to /cookbook/money-mustard with descriptive anchor text."
+      },
+      "priority_rationale": "Internal hub and cross-collection links distribute crawl equity and help readers navigate between dinners and component sauces/bases.",
+      "previous_status": "improved",
+      "delivery_status": "implemented_locally"
+    },
+    {
+      "rank": 5,
+      "id": "SEO-5",
+      "kind": "validation_task",
+      "title": "Establish the Google Search Console indexing, rich-result, and query CTR baseline",
+      "primary_area": "search_measurement",
+      "related_areas": [],
+      "problem_score": null,
+      "score_rationale": "Search Console data is unavailable in the repository; severity is null until measured.",
+      "confidence": "high",
+      "evidence_ids": [
+        "E6"
+      ],
+      "affected_urls_or_files": [
+        "https://thesplitplate.com/sitemap.xml"
+      ],
+      "diagnosis": "Technical indexability and schema validity are verified in dist/, but actual Google indexation, Recipe rich-result enhancement counts, and query impressions/CTR require Google Search Console data.",
+      "proposed_change": "Submit https://thesplitplate.com/sitemap.xml in Google Search Console and export 28-day Performance (Queries, Pages, Search Appearance: Recipe rich results / Video) and Page Indexing reports.",
+      "owner_role": "Site owner (Tushar Sharma)",
+      "effort": "S",
+      "effort_assumptions": "Requires Google Search Console property access for thesplitplate.com.",
+      "dependencies": [
+        "Deploy updated dist/ and vercel.json on main to production."
+      ],
+      "acceptance_tests": [
+        "Sitemap https://thesplitplate.com/sitemap.xml is submitted in Google Search Console with 213 discovered URLs.",
+        "28-day Search Console query, page, and Recipe rich-result baseline is exported and recorded without invented numbers."
+      ],
+      "measurement": {
+        "metric": "Google Search Console indexed URL count, valid Recipe rich-result items, and 28-day impressions/CTR",
+        "baseline": null,
+        "baseline_evidence_ids": [],
+        "proposed_target": "All 199 recipe routes indexed and eligible for Recipe rich results with 0 critical enhancement errors.",
+        "comparison_window": "28 days post-deploy compared against the initial post-deploy baseline window.",
+        "guardrail": "Never fabricate Search Console impressions, clicks, positions, or index states."
+      },
+      "priority_rationale": "External search measurement is the final step after resolving all repository-level media, schema, snippet, and internal-linking issues.",
+      "previous_status": "unchanged",
+      "delivery_status": "proposed"
+    }
+  ],
+  "recipe_briefs": [
+    {
+      "action_id": "SEO-3",
+      "target_url": "https://thesplitplate.com/cookbook/white-drop-cookies-n-creme-creami",
+      "primary_query": "cookies and cream protein ice cream ninja creami",
+      "supporting_queries": [
+        "high protein oreo ninja creami recipe",
+        "white chocolate cookies and cream creami"
+      ],
+      "demand_basis": "hypothesis",
+      "evidence_ids": [
+        "E3",
+        "E5"
+      ],
+      "proposed_title": "Cookies and Cream Protein Ice Cream (Ninja Creami) — The Split Plate",
+      "proposed_h1": "White Drop Cookies & Creme Creami",
+      "proposed_meta_description": "White-chocolate cookies-and-cream protein ice cream for the Ninja Creami with Oreo thins, vanilla pudding mix, and 53g protein per pint.",
+      "content_changes": [
+        "Move 'CrumblCreamiCut Week 3, Flavor 6' from the leading hook text into the series badge chip so the visible intro and meta description lead with the dish and protein."
+      ],
+      "internal_links": [
+        {
+          "source_url": "https://thesplitplate.com/cookbook/white-drop-cookies-n-creme-creami",
+          "destination_url": "https://thesplitplate.com/cookbook",
+          "anchor_text": "All cookbook recipes",
+          "purpose": "Return from individual Creami recipe to the main Cookbook hub."
+        }
+      ],
+      "facts_to_verify": [
+        "Verify 28-day impressions and CTR for Ninja Creami queries in Google Search Console after deployment."
+      ]
+    }
+  ],
+  "previous_review": {
+    "reference": "docs/seo-fix-verification-2026-10-23.md",
+    "comparable": true,
+    "reason": "Compared against the earlier 2026-10-23 verification pass on commit cb85952 / b809be8.",
+    "changes": [
+      {
+        "id": "PREV-VIDEO-REWRITES",
+        "status": "resolved",
+        "evidence_ids": [
+          "E1",
+          "E5"
+        ],
+        "summary": "Prior pass verified 11 sample video URLs across 4 directories; full-catalog audit found 238 of 334 video URLs still 404ing and resolved all 334 via complete dual-release rewrites in vercel.json."
+      },
+      {
+        "id": "PREV-RECIPE-SCHEMA",
+        "status": "resolved",
+        "evidence_ids": [
+          "E2",
+          "E5"
+        ],
+        "summary": "Prior pass fixed split-lane ingredients/steps and withheld unverified mixed-batch nutrition; this pass added 1,006 HowToStep images, parsed 48 compound/parenthetical durations into ISO-8601 timings, inferred recipeCuisine on 76 recipes, and added keywords and author.url."
+      },
+      {
+        "id": "PREV-TITLES-SNIPPETS",
+        "status": "resolved",
+        "evidence_ids": [
+          "E3",
+          "E5"
+        ],
+        "summary": "Prior pass added seoTitle on 3 cookbook items; this pass wired seoTitle/seoDescription into prerender.js and RecipePage.jsx, stripped series prefixes from 41 cookbook hooks/descriptions, and eliminated mid-sentence ellipsis truncation across all 213 indexable routes."
+      }
+    ]
+  },
+  "guidance_sources": [
+    "https://developers.google.com/search/docs/appearance/structured-data/recipe",
+    "https://developers.google.com/search/docs/appearance/structured-data/sd-policies",
+    "https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap",
+    "https://developers.google.com/search/docs/appearance/snippet"
+  ]
+}

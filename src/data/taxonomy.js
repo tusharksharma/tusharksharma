@@ -82,14 +82,14 @@ export const DESCRIPTIVE_EFFORT_TAGS = new Set([
   // Duration claims. The Time filter reads meta.totalMinutes and is exact;
   // these are vague and would mis-surface a 25-min recipe under a 15-min chip.
   "fast", "fastest", "low-effort", "hands-off", "shortcut", "convenience",
-  "under-30", "20-min", "10-minute",
+  "under-30", "20-min", "10-minute", "quick",
 
   // Marketing / true-of-everything. Every dinner here is a family dinner and
   // a split plate; a chip that matches the whole library filters nothing.
   "family-dinner", "split-plate", "viral", "comfort",
 
   // Owned by a better control: Sort by protein.
-  "highest-protein",
+  "highest-protein", "high-protein",
 
   // Single-recipe equipment or dish shape. A chip with one result is noise.
   "waffle-iron", "split-bowl-tray", "split-pasta", "burger-night", "shawarma",
@@ -121,6 +121,7 @@ export const SPLIT_AXIS_ALIASES = {
   // How it looks on the plate.
   "plating": "presentation",
   "texture": "presentation",
+  "build": "presentation",
 
   // What carries it — bun, tortilla, wrap, lettuce cup.
   "bun": "vehicle",

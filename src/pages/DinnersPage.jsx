@@ -602,6 +602,34 @@ export default function DinnersPage() {
           </div>
         )}
 
+        <section className="mt-10 border-t border-line pt-6" aria-label="All dinner recipes by protein">
+          <h2 className="text-xl font-bold text-ink">Browse all family dinners by protein</h2>
+          <div className="mt-4 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {Object.entries({
+              "Chicken Dinners": dinnerRecipes.filter((r) => (r.meta?.proteinTags || []).includes("chicken") || /chicken/i.test(r.proteinAnchor || "")),
+              "Beef & Steak Dinners": dinnerRecipes.filter((r) => !((r.meta?.proteinTags || []).includes("chicken") || /chicken/i.test(r.proteinAnchor || "")) && ((r.meta?.proteinTags || []).some((p) => p === "beef" || p === "steak") || /beef|steak/i.test(r.proteinAnchor || ""))),
+              "Pork & Turkey Dinners": dinnerRecipes.filter((r) => !((r.meta?.proteinTags || []).some((p) => p === "chicken" || p === "beef" || p === "steak") || /chicken|beef|steak/i.test(r.proteinAnchor || "")) && ((r.meta?.proteinTags || []).some((p) => p === "pork" || p === "turkey" || p === "bacon") || /pork|turkey|sausage/i.test(r.proteinAnchor || ""))),
+              "Paneer, Pasta & More": [
+                ...dinnerRecipes.filter((r) => !((r.meta?.proteinTags || []).some((p) => ["chicken", "beef", "steak", "pork", "turkey", "bacon"].includes(p)) || /chicken|beef|steak|pork|turkey|sausage/i.test(r.proteinAnchor || ""))),
+                ...liveRecipes.filter((r) => r.mealType === "breakfast"),
+              ],
+            }).map(([category, entries]) => (
+              <div key={category}>
+                <h3 className="font-bold text-sm text-ink">{category}</h3>
+                <ul className="mt-2 space-y-2">
+                  {entries.map((entry) => (
+                    <li key={entry.slug || entry.id}>
+                      <Link className="text-sm text-brand hover:underline" to={entry.detailUrl || `/recipes/${entry.slug}`}>
+                        {entry.seoTitle || entry.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </section>
+
         <div className="mt-12 text-center bg-surface/30 border border-line rounded-xl py-5 px-4">
           <p className="text-muted text-xs">Want the full weekly system?</p>
           <Link to="/" className="text-brand text-sm font-bold hover:underline mt-1 inline-block">

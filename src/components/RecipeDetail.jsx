@@ -180,6 +180,10 @@ export default function RecipeDetail({ recipe, item, group }) {
             {model.title}
           </h1>
 
+          <p className="mt-2 text-xs font-medium text-faint">
+            By <Link to="/about" className="font-semibold text-muted hover:text-brand underline">Tushar Sharma</Link>
+          </p>
+
           {model.hook && (
             <p className="mt-3 text-base leading-relaxed text-muted">{model.hook}</p>
           )}
@@ -1242,6 +1246,33 @@ function CookbookTail({ item, group }) {
 }
 
 function RelatedRecipes({ current }) {
+  const powerUp = useMemo(() => {
+    const defaultPowerUp = {
+      to: "/cookbook/money-mustard",
+      title: "Money Mustard chicken dipping sauce",
+      note: "Pairs with everything",
+    };
+    if (current.slug === "spicy-chicken-sandwich") return defaultPowerUp;
+    const text = `${current.title || ""} ${current.description || ""} ${(current.tags || []).join(" ")}`.toLowerCase();
+    const pool = [...sauces, ...bases].filter((entry) => entry.id !== "money-mustard");
+    const scored = pool
+      .map((entry) => {
+        const words = entry.id.split("-").filter((w) => w.length > 3 && !["high", "protein", "sauce", "base", "greek", "yogurt", "style"].includes(w));
+        const score = words.reduce((acc, w) => acc + (text.includes(w) ? 1 : 0), 0);
+        return { entry, score };
+      })
+      .filter((x) => x.score > 0)
+      .sort((a, b) => b.score - a.score);
+    if (scored.length > 0) {
+      const pick = scored[0].entry;
+      return {
+        to: `/cookbook/${pick.id}`,
+        title: pick.seoTitle || pick.title,
+        note: pick.useThisWhen ? pick.useThisWhen.split(".")[0] : "Cookbook staple",
+      };
+    }
+    return defaultPowerUp;
+  }, [current]);
   const related = useMemo(() => {
     const dinners = liveRecipes.filter(
       (r) => r.pillar === "Protein Meals" && r.id !== current.id
@@ -1288,17 +1319,17 @@ function RelatedRecipes({ current }) {
 
         {/* Power-up: Money Mustard */}
         <Link
-          to="/cookbook/money-mustard"
+          to={powerUp.to}
           className="block overflow-hidden rounded-xl border border-line bg-surface hover:border-brand/40"
         >
           <div className="flex h-36 items-center justify-center bg-brand/10">
             <span className="text-3xl font-black text-brand">+</span>
           </div>
           <div className="p-3">
-            <h3 className="text-sm font-bold leading-tight text-ink">Money Mustard chicken dipping sauce</h3>
+            <h3 className="text-sm font-bold leading-tight text-ink">{powerUp.title}</h3>
             <div className="mt-2 flex gap-2 text-[10px] text-faint">
               <span className="font-bold text-brand">Power-Up</span>
-              <span>Pairs with everything</span>
+              <span className="truncate">{powerUp.note}</span>
             </div>
           </div>
         </Link>

@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { summarizeSeoDescription } from "../utils/recipeSchema.js";
 
 const BASE_TITLE = "The Split Plate";
 const BASE_DESC = "One meal. Two plates. High-protein family dinners using the Split Cook Method.";
@@ -10,12 +11,12 @@ const DOMAIN = "https://thesplitplate.com";
 // Callers that already provide pre-truncated copy via a `seoDescription` field
 // can pass that as `description` — no extra trim happens if input is short.
 function truncateDescription(s, max = 155) {
-  if (!s || s.length <= max) return s;
-  const slice = s.slice(0, max);
-  const lastPeriod = slice.lastIndexOf(". ");
-  if (lastPeriod > max * 0.55) return slice.slice(0, lastPeriod + 1).trim();
-  const lastSpace = slice.lastIndexOf(" ");
-  return (lastSpace > 0 ? slice.slice(0, lastSpace) : slice).trim() + "…";
+  return summarizeSeoDescription(s, max);
+
+
+
+
+
 }
 
 // Idempotent — strips trailing brand suffix if a caller accidentally appends

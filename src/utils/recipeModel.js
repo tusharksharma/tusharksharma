@@ -18,6 +18,8 @@
  * The model is scale-independent — household scaling is applied at render.
  */
 
+import { cleanSeoDescription, extractSeriesPrefix } from "./recipeSchema.js";
+
 const SAFETY_RE =
   /allerg|halal|food-safety|\b\d{3}\s*f\b|heating|\b(dairy|gluten|egg|eggs|soy|sesame|fish|shellfish|peanut|peanuts|nut|nuts|milk|wheat|mustard|pork|alcohol)\b/i;
 const NUTRITION_CAVEAT_RE = /macro|label|packag|vary|recalc|estimat/i;
@@ -490,7 +492,7 @@ export function buildCookbookModel(item, group) {
   /* ── Badges. ── */
   const badges = [];
   const series =
-    typeof item.seriesInfo === "string" ? item.seriesInfo : item.seriesInfo?.series;
+    (typeof item.seriesInfo === "string" ? item.seriesInfo : item.seriesInfo?.series) || extractSeriesPrefix(item.tagline);
   if (series) badges.push({ label: series, tone: "brand" });
   if (item.splitNote) badges.push({ label: "Split Cook Method™", tone: "split" });
   if (COOKBOOK_GROUPS[group]) badges.push({ label: COOKBOOK_GROUPS[group], tone: "muted" });
@@ -656,7 +658,7 @@ export function buildCookbookModel(item, group) {
     breadcrumb: { to: "/cookbook", label: "Cookbook" },
     callouts,
     title: item.title,
-    hook: item.tagline || "",
+    hook: cleanSeoDescription(item.tagline || ""),
     description: item.flavorProfile || "",
     makeThisWhen: item.useThisWhen || "",
     overview: "",

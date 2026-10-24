@@ -21,7 +21,7 @@ function findItem(id) {
 export default function CookbookDetailPage() {
   const { id } = useParams();
   const { item, group } = findItem(id);
-  useMeta(item ? { title: item.title, description: item.seoDescription || item.tagline, image: item.heroImage, schema: buildRecipeSchema({ ...item, image: item.heroImage, recipeCategory: group }, "Cookbook") } : {});
+  useMeta(item ? { title: item.seoTitle || item.title, description: item.seoDescription || item.tagline, image: item.heroImage, schema: buildRecipeSchema({ ...item, image: item.heroImage, recipeCategory: group }, "Cookbook") } : {});
   useEffect(() => { if (item) track("recipe_view", { recipe: item.title, slug: id }); }, [item, id]);
 
   if (!item) {
