@@ -33,6 +33,8 @@ Check existing project records and Studio content for a matching upload before c
 
 ## Execute and verify
 
+For promo covers, verify the actual saved platform thumbnail after Save and reload. A prepared JPG or a cover frame inside the exported video does not prove it is selected. When the current Shorts interface accepts a custom upload, apply the approved portrait cover; do not assume desktop upload is unavailable from older platform behavior. Record any real limitation separately.
+
 1. Verify account/channel and use the approved master file in Create > Upload videos or an equivalent supported interface. Save the assigned video ID, Studio URL and watch URL as soon as available.
 2. Populate metadata and required settings, upload the approved thumbnail and caption track, and apply the relevant playlist/end screen when supported and included in the package. For promotional Shorts, attach the matching full film as Related video; verify the actual selected video.
 3. Inspect the thumbnail, saved text, links, captions and available checks. Diagnose copyright/restriction issues, including reference clips; do not dismiss a warning or dispute a claim without a basis and authorization. A checks pass is not proof of asset rights.

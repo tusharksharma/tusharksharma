@@ -47,3 +47,11 @@ The three approved promo angles are scheduled for October 30 at noon, October 31
 TikTok is signed out. Its login tab was opened for Tushar; no TikTok publication or schedule is claimed. Private receipts and exact post/video IDs are in the local upload record. The recurring release follow-up must attach the matching full film as Related video to all three Shorts after the main becomes Public, then verify saved selections before the first promo. Do not change the main's privacy to force it into the picker.
 
 The Drive master and explicitly labeled remote viewing copy have both completed browser transfer. No local raw footage was deleted: this film is scheduled, not Public, and its reserved cuts remain protected.
+
+## October 24 — promo cover repair and TikTok correction
+
+Tushar spotted missing promo thumbnails. The three YouTube Shorts had auto-selected frames despite prepared portrait covers. Uploaded each approved gimmicky JPG in the current desktop interface, saved and reloaded to verify. Instagram's three Scheduled Reel rows already show the approved covers. A cover asset or embedded tail frame is not proof of native thumbnail selection; the uploader now requires saved-state verification.
+
+The connected TikTok account is verified. All three approved excerpts were scheduled with custom covers and an AI narration label. The first time picker saved 2 p.m. on October 30 instead of noon; Tushar explicitly accepted keeping 2 p.m. The others are October 31 at 5 p.m. and November 1 at noon, Pacific.
+
+The agent incorrectly selected commercial own-brand disclosure on the first two TikTok clips. Tushar clarified that these are editorial cooking clips, not commercial promotional content. The third was scheduled with commercial disclosure off and AI disclosure on. TikTok's desktop interface blocks editing/deleting the first two except in its phone app; their correction remains pending owner app action, with no duplicate recreation until the superseded entries are verified removed. This incident does not change sponsorship disclosure requirements for genuinely commercial future work. Private receipts retain the exact IDs and unresolved state.
