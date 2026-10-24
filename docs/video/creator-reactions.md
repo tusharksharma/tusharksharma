@@ -1,12 +1,16 @@
 # Tushar's reusable thumbnail reaction photos
 
+## Open-mouth reactions allowed — confirmed October 23, 2026
+
+Tushar approves open-mouth reactions and ImageGen updates to his expressions when they fit the story. Closed-mouth poses are not a requirement or a default restriction. Preserve his recognizable likeness and natural-looking mouth/teeth: reject oversized, distorted, unnaturally uniform, over-whitened or otherwise strange teeth. Use the real reaction library to check anatomy and likeness; revise or choose another variation if the mouth looks wrong. This clarification supersedes older closed-mouth preferences and blanket bans on generating a grin below. Keep fresh expressions, a prominent face and an integrated food scene; retain approved thumbnails unless a revision is requested.
+
 ## Fresh ImageGen variations — confirmed October 21, 2026
 
 Tushar explicitly requests fresh ImageGen versions of himself for thumbnails, rather than repeating the same reaction image. Use the real photo/video library as the identity anchor, then generate a story-appropriate new expression, head angle or pose when that improves this particular thumbnail. This supersedes older instructions below that forbid changing an expression or passing the portrait through ImageGen; it does not authorize a lookalike or inaccurate teeth.
 
 First generated candidates: [amused thumbs-up](../../assets/creator-reactions/generated-2026-10-21/amused-thumbs-up.png) and [confident closed-mouth](../../assets/creator-reactions/generated-2026-10-21/confident-closed-mouth.png). Their [manifest](../../assets/creator-reactions/generated-2026-10-21/manifest.json) records real identity references, generation constraints and QA. These are transparent staged derivatives, not actual reactions from the wings footage or approved final thumbnails.
 
-Preserve recognizable facial identity, age, skin tone and hair. Prefer a natural closed-mouth expression when new teeth would otherwise be invented; never fabricate, enlarge, whiten or straighten teeth. If teeth are visible, compare their appearance against an actual reference. Make the face prominent with minimal torso, clean transparent edges and a coherent single-scene composition; no portrait side frame. Vary the emotion with the story rather than cycling a fixed exaggerated pose. Check new hands/fingers and full-size/phone-size likeness before use.
+Preserve recognizable facial identity, age, skin tone and hair. Open- or closed-mouth expressions are allowed; inspect visible teeth against real references for natural proportions and appearance. Make the face prominent with minimal torso, clean transparent edges and a coherent single-scene composition; no portrait side frame. Vary the emotion with the story rather than cycling a fixed exaggerated pose. Check new hands/fingers and full-size/phone-size likeness before use.
 
 Retain the real originals and approved previous thumbnails. Save new variants separately with their source references, ImageGen prompt and generated status; they are staged thumbnail illustrations, never proof of a live meal reaction. Reuse a successful variant when it fits, but inspect recent thumbnails to avoid repetitive faces. The agent owns choosing and generating the suitable variation without routinely asking for new photos. Normal finished-thumbnail review still applies.
 
