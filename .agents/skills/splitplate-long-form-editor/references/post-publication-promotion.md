@@ -13,6 +13,8 @@ These constraints apply to promotion of long-form films, not to independently re
 
 ## Production and execution
 
+Tushar's October 24 caption preference: use "link in bio" in TikTok and Instagram feed/Reel captions instead of pasting website and YouTube URLs. Keep the relevant clickable destinations in native Story stickers, Facebook link posts and YouTube descriptions. A caption's "link in bio" wording is not proof of the current profile destination; inspect that destination when verifying navigation.
+
 For platform disclosure, distinguish an editorial cooking excerpt with an invitation to the full film from commercial branded content. The internal label "promo" does not establish sponsorship or a commercial relationship. Tushar clarified this for the keema clips on October 24: they are editorial content, not commercial promotions. Assess actual sponsorship, payment or product/service marketing against current platform requirements; do not automatically select "Your brand" because a cooking clip points to the channel or recipe. AI narration disclosure is a separate decision. Check the visible saved time immediately before scheduling; TikTok's scrolling time wheel can change during interaction. Confirm the actual content-row receipt afterward.
 
 Choose distinct, footage-backed moments and a single invitation to the full film. Reuse approved narration when it fits; obtain exact-script approval and a stage-specific credit cap for any new paid generation. Reuse an approved thumbnail or make format-appropriate covers through the short-form workflow. Preserve source color and measured frame rate, uncluttered crops, readable captions and genuine action sound. Keep newly invented personal claims out.

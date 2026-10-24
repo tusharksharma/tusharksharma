@@ -55,3 +55,9 @@ Tushar spotted missing promo thumbnails. The three YouTube Shorts had auto-selec
 The connected TikTok account is verified. All three approved excerpts were scheduled with custom covers and an AI narration label. The first time picker saved 2 p.m. on October 30 instead of noon; Tushar explicitly accepted keeping 2 p.m. The others are October 31 at 5 p.m. and November 1 at noon, Pacific.
 
 The agent incorrectly selected commercial own-brand disclosure on the first two TikTok clips. Tushar clarified that these are editorial cooking clips, not commercial promotional content. The third was scheduled with commercial disclosure off and AI disclosure on. TikTok's desktop interface blocks editing/deleting the first two except in its phone app; their correction remains pending owner app action, with no duplicate recreation until the superseded entries are verified removed. This incident does not change sponsorship disclosure requirements for genuinely commercial future work. Private receipts retain the exact IDs and unresolved state.
+
+### Correction completed
+
+Tushar deleted all three initial TikTok schedules and requested captions without website or YouTube URLs: use "link in bio." Verified the old entries absent before recreating all three. The replacements are now verified Scheduled with approved covers, commercial disclosure off and AI narration disclosure on. The accepted October 30 TikTok time remains 2 p.m.; October 31 stays 5 p.m. and November 1 stays noon Pacific. No app-action blocker remains.
+
+Updated all three existing Instagram Reel captions in place to the same link-in-bio approach; reloaded rows confirm the new wording at unchanged dates, with designed covers preserved. Facebook link posts, native Story destinations and YouTube descriptions retain the intended links. The recurring release follow-up and private inventory now use only the replacement TikTok IDs; actual publication remains pending.
