@@ -37,3 +37,13 @@ Final files are registered as inventory 743–746, with readback; posting dates 
 ## Reaction-expression clarification
 
 Tushar clarified that open-mouth reactions and ImageGen expression updates are welcome when the teeth look natural. Closed-mouth poses are not required. Updated the canonical reaction guide, both thumbnail-playbook mirrors, AGENTS and the repository/installed long-form skill. This is a future selection rule; the approved MUTTON IS BACK artwork remains selected.
+
+## Authorized release scheduling — October 24 closeout
+
+Tushar explicitly authorized scheduling the complete approved package. The main film is now scheduled on YouTube for Wednesday October 28, 2026 at 5 p.m. America/Los_Angeles. Studio reports SD, HD and 4K complete, and the authenticated watch player offers 2160p60. English timed captions, the selected thumbnail, chapters and three native end-screen elements are saved. Public playback and native interactions remain a release-time check.
+
+The three approved promo angles are scheduled for October 30 at noon, October 31 at 5 p.m., and November 1 at noon Pacific local time. YouTube Shorts, Facebook link-only posts, Instagram Reels and Instagram video/photo Story pairs are saved and verified in their scheduling interfaces. The Reels addition is this episode's experiment; it does not change standing Instagram promotion defaults. Story cards contain native, manually positioned WATCH ON YOUTUBE stickers to this exact film. Actual visible-center tap tests remain pending until publication.
+
+TikTok is signed out. Its login tab was opened for Tushar; no TikTok publication or schedule is claimed. Private receipts and exact post/video IDs are in the local upload record. The recurring release follow-up must attach the matching full film as Related video to all three Shorts after the main becomes Public, then verify saved selections before the first promo. Do not change the main's privacy to force it into the picker.
+
+The Drive master and explicitly labeled remote viewing copy have both completed browser transfer. No local raw footage was deleted: this film is scheduled, not Public, and its reserved cuts remain protected.
