@@ -19,3 +19,5 @@ The Chicken Pot Pie and High-Protein Halal Cart Chicken Rice Bowls pages lead wi
 - Build the site and confirm every referenced image exists in `public/` and `dist/`.
 - Open the recipe and social URLs at desktop and phone widths. Scroll through the full page so lazy images load. Check the hero crop, supporting-photo crops, every pictured method step, and the social cards. A successful HTTP response alone is insufficient.
 - Confirm there are no broken images or browser page errors, and that captions and macro claims match the version shown.
+
+**Image model rule (Oct 24, 2026):** polish with the Grok image model (image-to-image, the real footage frame as the reference) by default; use built-in ImageGen only when the Grok image model is not accessible. Both must start from a real frame of that recipe and keep the real food, ingredients, quantities, cook stage, plating and truthful colors, to the same polish standard. Never generate a dish from text alone. Record which model made each image (e.g. in the local provenance note / commit message).

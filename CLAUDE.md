@@ -277,6 +277,8 @@ This applies to every recipe, not just new ones. If you spot a missing `url` or 
 
 ## Social Carousel (MANDATORY — every recipe, every time)
 
+**Image model rule (Oct 24, 2026):** polish with the Grok image model (image-to-image, the real footage frame as the reference) by default; use built-in ImageGen only when the Grok image model is not accessible. Both must start from a real frame of that recipe and keep the real food, ingredients, quantities, cook stage, plating and truthful colors, to the same polish standard. Never generate a dish from text alone. Record which model made each image (e.g. in the local provenance note / commit message). Older references below to Gemini/ImageGen "Transform" passes describe the prompt style; the model choice follows this rule.
+
 **Standing rule: every recipe addition ends with a working `/social/{slug}` page.** Tushar uses these for Instagram posts. The page auto-generates from `recipe` data — no per-recipe work unless something's broken.
 
 ### Dinner hero = split-plate composition (NON-NEGOTIABLE)
