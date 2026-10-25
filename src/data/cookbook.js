@@ -1197,7 +1197,7 @@ export const sauces = [
     id: "lift-drizzle",
     title: "Lift Drizzle",
     tagline: "Five ingredients. Bright + salty + fermented + hot. Acid does the lift.",
-    heroImage: "/images/pork-lettuce-wraps/step4-sauce-mise.webp",
+    heroImage: "/images/pork-lettuce-wraps/step4-sauce-mise-polished.webp",
     flavorProfile: "Cold + bright lemon up front, slow fermented depth from fish sauce + soy, lingering chili heat, citrusy aromatic finish from coriander. Pourable, not creamy. Lifts soft + rich dishes; doesn't compete with them.",
     calories: 280,
     caloriesPerServing: 140,

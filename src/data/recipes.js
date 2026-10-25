@@ -4358,6 +4358,7 @@ const recipes = [
     protein: 44,
     calories: 540,
     image: "/images/buffalo-wing-night/hero-split-wing-night-polished.webp",
+    socialCarousel: { servingPhoto: "/images/buffalo-wing-night/final-adult-wing-plate-polished.webp" },
     socialImages: [
       "/images/buffalo-wing-night/context-hot-wing-sauces-polished.webp",
       "/images/buffalo-wing-night/context-mild-wing-sauces-polished.webp",
@@ -4888,13 +4889,13 @@ const recipes = [
     servings: 8,
     protein: 39,
     calories: 510,
-    image: "/images/creamy-sausage-spinach-pasta/hero.webp",
+    image: "/images/creamy-sausage-spinach-pasta/hero-polished.webp",
     socialImages: [
       "/images/creamy-sausage-spinach-pasta/mise-en-place.webp",
-      "/images/creamy-sausage-spinach-pasta/brown-sausage.webp",
-      "/images/creamy-sausage-spinach-pasta/drain-fat.webp",
-      "/images/creamy-sausage-spinach-pasta/two-pans.webp",
-      "/images/creamy-sausage-spinach-pasta/spinach-sausage.webp",
+      "/images/creamy-sausage-spinach-pasta/brown-sausage-polished.webp",
+      "/images/creamy-sausage-spinach-pasta/drain-fat-polished.webp",
+      "/images/creamy-sausage-spinach-pasta/two-pans-polished.webp",
+      "/images/creamy-sausage-spinach-pasta/spinach-sausage-polished.webp",
     ],
     socialCarousel: {
       ingredientGroups: [
@@ -4963,9 +4964,9 @@ const recipes = [
         "Up to 1/2 cup chicken bone broth (added slowly to loosen sauce as needed)",
       ],
       sharedSteps: [
-        { text: "BROWN THE SAUSAGE: All 3 lb in a large skillet over medium-high heat. Break apart finely with a meat masher (kid-bite size). 8-10 min until deeply browned and fond starts forming.", images: ["/images/creamy-sausage-spinach-pasta/brown-sausage.webp"] },
-        { text: "DRAIN THE FAT (NON-NEGOTIABLE): Pour the sausage into a strainer over a bowl. Discard the rendered grease. Return drained sausage to the pan. This step determines whether the meal prep stays creamy or turns oily by day 2.", images: ["/images/creamy-sausage-spinach-pasta/drain-fat.webp"] },
-        { text: "WILT SPINACH SEPARATELY: 12 oz baby spinach in a separate pan over medium heat. 90 seconds, just until bright green. Drain, squeeze excess water. Set aside.", images: ["/images/creamy-sausage-spinach-pasta/spinach-sausage.webp"] },
+        { text: "BROWN THE SAUSAGE: All 3 lb in a large skillet over medium-high heat. Break apart finely with a meat masher (kid-bite size). 8-10 min until deeply browned and fond starts forming.", images: ["/images/creamy-sausage-spinach-pasta/brown-sausage-polished.webp"] },
+        { text: "DRAIN THE FAT (NON-NEGOTIABLE): Pour the sausage into a strainer over a bowl. Discard the rendered grease. Return drained sausage to the pan. This step determines whether the meal prep stays creamy or turns oily by day 2.", images: ["/images/creamy-sausage-spinach-pasta/drain-fat-polished.webp"] },
+        { text: "WILT SPINACH SEPARATELY: 12 oz baby spinach in a separate pan over medium heat. 90 seconds, just until bright green. Drain, squeeze excess water. Set aside.", images: ["/images/creamy-sausage-spinach-pasta/spinach-sausage-polished.webp"] },
         { text: "COOK TWO PASTAS SIMULTANEOUSLY: Pot 1: 6 servings dry Pete's Rotini, salted boiling water, 9-10 min al dente (adult). Pot 2: 3 servings dry Barilla Mini Penne, same timing (kid).", images: [] },
         { text: "BUILD THE SAUCE: Lower heat on the sausage pan. Add the full jar of Rao's + 1 extra serving. Stir until coated. If tight, splash bone broth (2 tbsp at a time, up to 1/2 cup total). Sauce should coat the back of a spoon.", images: [] },
       ],
@@ -4982,8 +4983,8 @@ const recipes = [
           "1/2 tsp Italian seasoning",
         ],
         steps: [
-          { text: "ADULT POT: Toss drained Pete's Rotini with 60% of the sausage-Alfredo from the shared pan. Fold in wilted spinach. Sprinkle a pinch of chili flakes + 1/2 tsp Italian seasoning. Toss until rotini grooves are coated.", images: ["/images/creamy-sausage-spinach-pasta/two-pans.webp"] },
-          { text: "PLATE ADULT: Generous scoop into a wide bowl. Rotini grooves catch the sauce + sausage + spinach. Optional: cracked black pepper + grated Parmesan.", images: ["/images/creamy-sausage-spinach-pasta/hero.webp"] },
+          { text: "ADULT POT: Toss drained Pete's Rotini with 60% of the sausage-Alfredo from the shared pan. Fold in wilted spinach. Sprinkle a pinch of chili flakes + 1/2 tsp Italian seasoning. Toss until rotini grooves are coated.", images: ["/images/creamy-sausage-spinach-pasta/two-pans-polished.webp"] },
+          { text: "PLATE ADULT: Generous scoop into a wide bowl. Rotini grooves catch the sauce + sausage + spinach. Optional: cracked black pepper + grated Parmesan.", images: ["/images/creamy-sausage-spinach-pasta/hero-polished.webp"] },
         ],
       },
       kid: {
@@ -5032,13 +5033,13 @@ const recipes = [
     ],
     steps: [
       { text: "MISE EN PLACE: Falls Brand sausage out, Pete's rotini, Barilla mini penne, Rao's Alfredo, baby spinach, bone broth ready. Two pasta pots filled and salted, sausage pan ready.", images: ["/images/creamy-sausage-spinach-pasta/mise-en-place.webp"] },
-      { text: "BROWN SAUSAGE: 3 lb in large skillet, medium-high. Mash finely with meat masher. 8-10 min, deeply browned with fond.", images: ["/images/creamy-sausage-spinach-pasta/brown-sausage.webp"] },
-      { text: "DRAIN THE FAT: Sausage into strainer over a bowl. Discard grease. Return drained sausage to pan. NON-NEGOTIABLE step.", images: ["/images/creamy-sausage-spinach-pasta/drain-fat.webp"] },
-      { text: "WILT SPINACH: 12 oz in separate pan, medium, 90 sec until bright green. Drain, squeeze.", images: ["/images/creamy-sausage-spinach-pasta/spinach-sausage.webp"] },
+      { text: "BROWN SAUSAGE: 3 lb in large skillet, medium-high. Mash finely with meat masher. 8-10 min, deeply browned with fond.", images: ["/images/creamy-sausage-spinach-pasta/brown-sausage-polished.webp"] },
+      { text: "DRAIN THE FAT: Sausage into strainer over a bowl. Discard grease. Return drained sausage to pan. NON-NEGOTIABLE step.", images: ["/images/creamy-sausage-spinach-pasta/drain-fat-polished.webp"] },
+      { text: "WILT SPINACH: 12 oz in separate pan, medium, 90 sec until bright green. Drain, squeeze.", images: ["/images/creamy-sausage-spinach-pasta/spinach-sausage-polished.webp"] },
       { text: "COOK PASTAS: Pete's Rotini in pot 1, Barilla Mini Penne in pot 2. Both 9-10 min al dente." },
       { text: "BUILD SAUCE: Low heat on sausage pan. Stir in full Rao's jar + 1 extra serving. Loosen with bone broth if tight (2 tbsp at a time, up to 1/2 cup)." },
-      { text: "SPLIT INTO TWO PANS: 60% sausage-Alfredo into adult pan with rotini + spinach + chili flakes + Italian seasoning. 40% into kid pan with mini penne (no spinach, no spice).", images: ["/images/creamy-sausage-spinach-pasta/two-pans.webp"] },
-      { text: "PLATE OR MEAL-PREP: Generous bowls tonight, OR portion into 8 meal-prep containers (~6 adult + ~2 kid) for the week. Reheat with a splash of bone broth to keep the sauce loose.", images: ["/images/creamy-sausage-spinach-pasta/hero.webp"] },
+      { text: "SPLIT INTO TWO PANS: 60% sausage-Alfredo into adult pan with rotini + spinach + chili flakes + Italian seasoning. 40% into kid pan with mini penne (no spinach, no spice).", images: ["/images/creamy-sausage-spinach-pasta/two-pans-polished.webp"] },
+      { text: "PLATE OR MEAL-PREP: Generous bowls tonight, OR portion into 8 meal-prep containers (~6 adult + ~2 kid) for the week. Reheat with a splash of bone broth to keep the sauce loose.", images: ["/images/creamy-sausage-spinach-pasta/hero-polished.webp"] },
     ],
     brands: [
       { name: "Falls Brand", item: "Old Fashioned Recipe Mild Italian Sausage (24 oz / 1.5 lb tray)", why: "Fresh ground pork (not pre-cooked rope sausage). Renders enough fat in 8 min to need draining — that's exactly the macro-balance lever this recipe uses. Gluten-free. Buy two trays for the 3-lb batch.", url: "https://www.walmart.com/ip/Falls-Brand-Fresh-Pork-Sausage-Mild-Italian-24-oz/33856372" },
@@ -5275,12 +5276,12 @@ const recipes = [
     servings: 4,
     protein: 53,
     calories: 491,
-    image: "/images/pork-lettuce-wraps/hero.webp",
+    image: "/images/pork-lettuce-wraps/hero-polished.webp",
     socialImages: [
       "/images/pork-lettuce-wraps/step1-mise.webp",
-      "/images/pork-lettuce-wraps/step4-sauce-mise.webp",
-      "/images/pork-lettuce-wraps/step2-raw-pork.webp",
-      "/images/pork-lettuce-wraps/step3-split.webp",
+      "/images/pork-lettuce-wraps/step4-sauce-mise-polished.webp",
+      "/images/pork-lettuce-wraps/step2-raw-pork-polished.webp",
+      "/images/pork-lettuce-wraps/step3-split-polished.webp",
       "/images/pork-lettuce-wraps/step5-lettuce-pork.webp",
     ],
     socialCarousel: {
@@ -5367,9 +5368,9 @@ const recipes = [
       sharedSteps: [
         { text: "HEAT PAN + SPRAY: Stainless steel pan over medium-high heat. Spray with Chosen Avocado Oil for 4 seconds.", images: ["/images/pork-lettuce-wraps/step1-mise.webp"] },
         { text: "AROMATICS FIRST: Add 2 tbsp Verka ginger garlic paste + 1 cup chopped green onion. Sauté 60-90 sec until fragrant. Don't brown — soften.", images: [] },
-        { text: "ADD PORK + BROWN: Add 32 oz ground pork. Spread in single layer. Don't stir for 90 sec — let crust form. Then break with spatula, brown the rest. 6-8 min total.", images: ["/images/pork-lettuce-wraps/step2-raw-pork.webp"] },
+        { text: "ADD PORK + BROWN: Add 32 oz ground pork. Spread in single layer. Don't stir for 90 sec — let crust form. Then break with spatula, brown the rest. 6-8 min total.", images: ["/images/pork-lettuce-wraps/step2-raw-pork-polished.webp"] },
         { text: "SHARED SEASONING: Add 2 tbsp Red Boat fish sauce + 2 tsp Dynasty sesame chili oil + 3 tbsp ReaLemon + 4 pinches Dan-O's SPG. Stir to coat. Cook 60 sec.", images: [] },
-        { text: "SPLIT MOMENT: Spoon ~1/4 of the pan (~250g cooked) into a deli container. THIS IS THE KID PORTION — set aside. After this, the rest of the pan gets chilies.", images: ["/images/pork-lettuce-wraps/step3-split.webp"] },
+        { text: "SPLIT MOMENT: Spoon ~1/4 of the pan (~250g cooked) into a deli container. THIS IS THE KID PORTION — set aside. After this, the rest of the pan gets chilies.", images: ["/images/pork-lettuce-wraps/step3-split-polished.webp"] },
       ],
       adult: {
         label: "Adult — Lettuce Cup + Lift Drizzle on the Side",
@@ -5385,7 +5386,7 @@ const recipes = [
         ],
         steps: [
           { text: "ADULT FINISH: After the split, add 2 chopped fresh red Thai chilies to the remaining pork. Stir + cook 30 sec.", images: [] },
-          { text: "BUILD LIFT DRIZZLE: In a small bowl, whisk 2 tbsp olive oil + 2 tbsp Kikkoman soy + 1 tbsp Red Boat fish sauce + 3 tbsp ReaLemon + 1/2 tsp Deep Coriander Powder + 2 chopped chilies. Stir until coriander dissolves.", images: ["/images/pork-lettuce-wraps/step4-sauce-mise.webp"] },
+          { text: "BUILD LIFT DRIZZLE: In a small bowl, whisk 2 tbsp olive oil + 2 tbsp Kikkoman soy + 1 tbsp Red Boat fish sauce + 3 tbsp ReaLemon + 1/2 tsp Deep Coriander Powder + 2 chopped chilies. Stir until coriander dissolves.", images: ["/images/pork-lettuce-wraps/step4-sauce-mise-polished.webp"] },
           { text: "SERVE: Plate adult mince in a bowl. Lift Drizzle in a separate small bowl with a spoon. Tanimura & Antle Sweet Gem leaves on a paper-towel-lined platter. Build at the table — leaf, spoon of mince, spoon of drizzle.", images: ["/images/pork-lettuce-wraps/step5-lettuce-pork.webp"] },
         ],
       },
@@ -5446,13 +5447,13 @@ const recipes = [
     steps: [
       { text: "MISE EN PLACE: Everything out — pork packs, Verka paste, green onions chopped, Red Boat, Dynasty, ReaLemon, Dan-O's SPG, Chosen spray, fresh chilies, Sweet Gem lettuce washed, kid sauce ingredients ready.", images: ["/images/pork-lettuce-wraps/step1-mise.webp"] },
       { text: "HEAT PAN + AROMATICS: Stainless steel pan, medium-high. Spray avocado oil 4 sec. Add Verka paste + green onion. Sauté 60-90 sec until fragrant.", images: [] },
-      { text: "BROWN PORK: 32 oz pork into the pan. Spread single layer. Don't stir 90 sec — let crust form. Then break with spatula, brown the rest. 6-8 min total.", images: ["/images/pork-lettuce-wraps/step2-raw-pork.webp"] },
+      { text: "BROWN PORK: 32 oz pork into the pan. Spread single layer. Don't stir 90 sec — let crust form. Then break with spatula, brown the rest. 6-8 min total.", images: ["/images/pork-lettuce-wraps/step2-raw-pork-polished.webp"] },
       { text: "SHARED SEASON: Fish sauce + sesame chili oil + lemon + 4 pinches SPG. Stir to coat. Cook 60 sec.", images: [] },
-      { text: "PULL KID PORTION: ~1/4 of pan into deli container. SPLIT MOMENT.", images: ["/images/pork-lettuce-wraps/step3-split.webp"] },
+      { text: "PULL KID PORTION: ~1/4 of pan into deli container. SPLIT MOMENT.", images: ["/images/pork-lettuce-wraps/step3-split-polished.webp"] },
       { text: "ADULT: Add 2 chopped chilies to remaining pork. Stir 30 sec.", images: [] },
-      { text: "LIFT DRIZZLE: Whisk olive oil + soy + fish sauce + lemon + coriander + 2 chopped chilies in small bowl.", images: ["/images/pork-lettuce-wraps/step4-sauce-mise.webp"] },
+      { text: "LIFT DRIZZLE: Whisk olive oil + soy + fish sauce + lemon + coriander + 2 chopped chilies in small bowl.", images: ["/images/pork-lettuce-wraps/step4-sauce-mise-polished.webp"] },
       { text: "KID SAUCE INTO MINCE: 1 tbsp olive oil + 1 tbsp Herdez Avocado Cilantro + 1 tbsp bone broth stirred into kid's deli container. Should coat, not pool.", images: [] },
-      { text: "SERVE: Adult bowl of mince + Lift Drizzle ramekin + Sweet Gem leaves on platter. Kid bowl of pre-sauced mince + lettuce leaves OR slider rolls. Build at the table.", images: ["/images/pork-lettuce-wraps/hero.webp", "/images/pork-lettuce-wraps/step5-lettuce-pork.webp"] },
+      { text: "SERVE: Adult bowl of mince + Lift Drizzle ramekin + Sweet Gem leaves on platter. Kid bowl of pre-sauced mince + lettuce leaves OR slider rolls. Build at the table.", images: ["/images/pork-lettuce-wraps/hero-polished.webp", "/images/pork-lettuce-wraps/step5-lettuce-pork.webp"] },
     ],
     brands: [
       { name: "NY Style Sausage Co.", item: "95% Lean Ground Pork (16 oz, fresh, made in California)", why: "95% lean is the right ratio — enough fat to brown + flavor the aromatics without rendering a puddle into the wraps. Fresh ground (not frozen), no preservatives, no MSG. Buy 2 packs for the 32 oz batch." },
