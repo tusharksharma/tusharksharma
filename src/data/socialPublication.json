@@ -988,5 +988,15 @@
     "initialMainPostDate": "2026-10-17",
     "initialMainCreatedAt": "2026-10-07",
     "firstAddedAt": "2026-10-07"
+  },
+  "vanilla-mini-mms-protein-creami": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": null,
+    "firstAddedAt": "2026-10-23"
+  },
+  "cookies-cream-white-chip-protein-creami": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": null,
+    "firstAddedAt": "2026-10-23"
   }
 }

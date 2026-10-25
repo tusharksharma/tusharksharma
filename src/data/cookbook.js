@@ -14829,6 +14829,512 @@ const DESSERT_CATALOG = [
     seriesInfo: { series: "CrumblCreamiCut", framing: "A homemade protein cereal-milk Creami inspired by a cookie flavor; not a Crumbl product or collaboration." },
     mealPrep: { storage: "Freeze the unspun base upright and level. Spin and add cereal when ready to eat.", lasts: "Follow your Creami machine's guidance for storing and reprocessing a frozen pint.", reheat: "Do not heat. Let the pint rest briefly before spinning as directed by your machine." },
   },
+  {
+    "id": "vanilla-mini-mms-protein-creami",
+    "title": "Vanilla Mini M&M’s Protein Creami",
+    "tagline": "Lightly tinted vanilla protein ice cream with mini milk-chocolate candies mixed through. Approximately 260 calories and 28g protein for the whole finished pint.",
+    "heroImage": "/images/vanilla-mini-mms-protein-creami/hero-polished.webp",
+    "prepImage": "/images/vanilla-mini-mms-protein-creami/base-polished.webp",
+    "prepImageCaption": "The plain frozen vanilla protein base before the mix-ins are added.",
+    "video": "/videos/vanilla-mini-mms-protein-creami/742-Original-MMs-Cookie-Creami-web-h264.mp4",
+    "videoPoster": "/images/vanilla-mini-mms-protein-creami/hero-polished.webp",
+    "socialHashtags": [
+      "#ProteinCreami",
+      "#NinjaCreami",
+      "#HighProteinDessert",
+      "#TheSplitPlate"
+    ],
+    "socialCarousel": {
+      "heroBadge": "Protein Creami",
+      "heroAccent": "amber",
+      "heroTitle": "Vanilla Mini M&M’s Protein Creami",
+      "heroStats": [
+        {
+          "value": "~260",
+          "label": "cal · whole pint"
+        },
+        {
+          "value": "~28g",
+          "label": "protein · whole pint"
+        },
+        {
+          "value": "1",
+          "label": "finished pint"
+        }
+      ],
+      "hook": "Lightly tinted vanilla protein ice cream with mini milk-chocolate candies mixed through.",
+      "heroPhoto": "/images/vanilla-mini-mms-protein-creami/hero-polished.webp",
+      "captionBody": "Vanilla Mini M&M’s Protein Creami: approximately 260 calories and 28g protein for one whole finished pint, including the listed mix-ins and toppings. Lightly tinted vanilla protein ice cream with mini milk-chocolate candies mixed through. Blend the base, freeze level for 24 hours, spin according to your machine, then add the mix-ins. Use 14g mini M&M’s; no extra topping is counted. Homemade cookie-inspired recipe; not affiliated with Crumbl. Full recipe: thesplitplate.com/cookbook/vanilla-mini-mms-protein-creami",
+      "ingredientGroups": [
+        {
+          "card": 0,
+          "accent": "amber",
+          "heading": "Vanilla Protein Base",
+          "items": [
+            {
+              "quantity": "1 cup",
+              "text": "Fairlife 2% milk"
+            },
+            {
+              "quantity": "1/2 serving",
+              "text": "Opportuniteas whey",
+              "note": "60 cal / 14g protein"
+            },
+            {
+              "quantity": "2 tbsp",
+              "text": "Monk-fruit/erythritol"
+            },
+            {
+              "quantity": "1/8 tsp",
+              "text": "Leveled guar gum"
+            },
+            {
+              "quantity": "1 tsp",
+              "text": "Vanilla extract total"
+            },
+            {
+              "quantity": "Pinch",
+              "text": "Salt"
+            }
+          ]
+        },
+        {
+          "card": 1,
+          "accent": "amber",
+          "heading": "Flavor + Finish",
+          "items": [
+            {
+              "quantity": "1 drop",
+              "text": "Natural brown food coloring",
+              "note": "Blend into the base"
+            },
+            {
+              "quantity": "14g",
+              "text": "Mini milk-chocolate M&M’s",
+              "note": "Mix in after spinning; no extra topping"
+            }
+          ]
+        }
+      ],
+      "ingredientCardPhotos": [
+        {
+          "src": "/images/vanilla-mini-mms-protein-creami/base-polished.webp",
+          "layout": "side"
+        },
+        {
+          "src": "/images/vanilla-mini-mms-protein-creami/mix-in-polished.webp",
+          "layout": "side"
+        }
+      ],
+      "methodLabel": "HOW TO MAKE",
+      "methodGroups": [
+        {
+          "accent": "amber",
+          "heading": "Blend, Freeze + Spin",
+          "items": [
+            {
+              "number": 1,
+              "heading": "BLEND",
+              "body": "Blend milk, whey, sweetener, guar gum, vanilla, salt and one drop brown food coloring until smooth."
+            },
+            {
+              "number": 2,
+              "heading": "FREEZE",
+              "body": "Freeze upright and level for 24 hours in a compatible Creami pint, below the max-fill line."
+            },
+            {
+              "number": 3,
+              "heading": "SPIN",
+              "body": "Rest five minutes on the counter without a hot-water bath. Run Regular Ice Cream; Respin without added liquid as needed, following your machine instructions."
+            }
+          ]
+        },
+        {
+          "accent": "amber",
+          "heading": "Mix In + Finish",
+          "items": [
+            {
+              "number": 4,
+              "heading": "MIX IN",
+              "body": "Add 14g mini M&M’s and incorporate with the creator’s no-water Respin method, within the machine instructions."
+            },
+            {
+              "number": 5,
+              "heading": "SERVE",
+              "body": "Scoop and serve. The whole-pint estimate includes the candies; no additional topping is counted."
+            }
+          ]
+        }
+      ],
+      "methodCardPhotos": [
+        {
+          "src": "/images/vanilla-mini-mms-protein-creami/scoop-polished.webp",
+          "layout": "side"
+        },
+        {
+          "src": "/images/vanilla-mini-mms-protein-creami/hero-polished.webp",
+          "layout": "side"
+        }
+      ],
+      "servingPhoto": {
+        "src": "/images/vanilla-mini-mms-protein-creami/hero-polished.webp",
+        "layout": "band"
+      },
+      "servingGroups": [
+        {
+          "accent": "amber",
+          "heading": "One Whole Finished Pint",
+          "items": [
+            {
+              "text": "Approximately 260 calories and 28g protein, including the listed mix-ins and toppings."
+            },
+            {
+              "text": "Label-based estimate; exact products and amounts can change the total."
+            },
+            {
+              "text": "No extra topping is counted; one drop brown coloring is treated as negligible."
+            }
+          ]
+        }
+      ],
+      "engagementQuestion": "What would you pair with mini M&M’s in a Creami?"
+    },
+    "socialImages": [
+      "/images/vanilla-mini-mms-protein-creami/base-polished.webp",
+      "/images/vanilla-mini-mms-protein-creami/mix-in-polished.webp",
+      "/images/vanilla-mini-mms-protein-creami/scoop-polished.webp"
+    ],
+    "flavorProfile": "Lightly tinted vanilla protein ice cream with mini milk-chocolate candies mixed through.",
+    "calories": 260,
+    "caloriesPerServing": 260,
+    "protein": 28,
+    "proteinPerServing": 28,
+    "servings": 1,
+    "servingSize": "1 whole finished Creami pint",
+    "time": "10 min active + 24 hr freeze",
+    "bestFor": [
+      "Protein Creami",
+      "Whole-pint dessert",
+      "Make-ahead"
+    ],
+    "useThisWhen": "Lightly tinted vanilla protein ice cream with mini milk-chocolate candies mixed through.",
+    "flavorTarget": "Lightly tinted vanilla protein ice cream with mini milk-chocolate candies mixed through.",
+    "ingredients": [
+      "1 cup Fairlife 2% ultra-filtered milk",
+      "1/2 serving Opportuniteas unflavored whey isolate (60 calories / 14g protein)",
+      "2 tbsp monk-fruit/erythritol sweetener",
+      "1/8 tsp leveled guar gum",
+      "1 tsp vanilla extract total",
+      "Pinch of salt",
+      "1 drop natural brown food coloring",
+      "14g mini milk-chocolate M&M’s, for the mix-in"
+    ],
+    "steps": [
+      {
+        "text": "BLEND: Blend milk, whey, sweetener, guar gum, vanilla, salt and one drop brown food coloring until smooth.",
+        "image": "/images/vanilla-mini-mms-protein-creami/base-polished.webp",
+        "imageAlt": "Vanilla Mini M&M’s Protein Creami: blend"
+      },
+      "FREEZE: Freeze upright and level for 24 hours in a compatible Creami pint, below the max-fill line.",
+      "SPIN: Rest five minutes on the counter without a hot-water bath. Run Regular Ice Cream; Respin without added liquid as needed, following your machine instructions.",
+      {
+        "text": "MIX IN: Add 14g mini M&M’s and incorporate with the creator’s no-water Respin method, within the machine instructions.",
+        "image": "/images/vanilla-mini-mms-protein-creami/mix-in-polished.webp",
+        "imageAlt": "Vanilla Mini M&M’s Protein Creami: mix in"
+      },
+      {
+        "text": "SERVE: Scoop and serve. The whole-pint estimate includes the candies; no additional topping is counted.",
+        "image": "/images/vanilla-mini-mms-protein-creami/scoop-polished.webp",
+        "imageAlt": "Vanilla Mini M&M’s Protein Creami: serve"
+      }
+    ],
+    "executionRules": [
+      "Amounts and nutrition refer to one complete finished pint.",
+      "Freeze upright and level for 24 hours, within the machine’s fill line.",
+      "Follow your Creami model’s safety and processing instructions."
+    ],
+    "macroHonesty": "Approximately 260 calories and 28g protein for the whole finished pint. Uses Fairlife 2% milk (120 cal / 13g protein), half a serving of the creator’s Opportuniteas whey (60 / 14), vanilla (about 12 calories), guar gum (about 1), and 14g mini milk-chocolate M&M’s (about 67–70 calories and a small protein contribution). One drop of unspecified coloring is treated as negligible. Exact candy labels and ingredient rounding vary; no unreported toppings are included.",
+    "warnings": [
+      "Contains milk. Check current whey, cookie, candy and topping labels for other allergens."
+    ],
+    "allergens": [
+      "milk",
+      "soy"
+    ],
+    "dietTags": [
+      "high-protein",
+      "make-ahead",
+      "frozen-dessert"
+    ],
+    "seriesInfo": {
+      "series": "CrumblCreamiCut",
+      "framing": "Independent homemade protein Creami inspired by a cookie flavor. A Crumbl cookie is not an ingredient; no sponsorship or affiliation is implied."
+    },
+    "mealPrep": {
+      "storage": "Freeze the unspun base upright and level. Spin and finish when ready to eat.",
+      "lasts": "Follow the Creami machine guidance for storage and reprocessing.",
+      "reheat": "Do not heat the pint."
+    }
+  },
+  {
+    "id": "cookies-cream-white-chip-protein-creami",
+    "title": "Cookies & Cream White Chip Protein Creami",
+    "tagline": "Vanilla protein Creami with chocolate sandwich-cookie flecks and a white chocolate coconut-oil shell. Approximately 310 calories and 28g protein for the whole finished pint.",
+    "heroImage": "/images/cookies-cream-white-chip-protein-creami/hero-polished.webp",
+    "prepImage": "/images/cookies-cream-white-chip-protein-creami/base-polished.webp",
+    "prepImageCaption": "The plain frozen vanilla protein base before the mix-ins are added.",
+    "video": "/videos/cookies-cream-white-chip-protein-creami/747-Cookies-Cream-White-Chip-Creami-web-h264.mp4",
+    "videoPoster": "/images/cookies-cream-white-chip-protein-creami/hero-polished.webp",
+    "socialHashtags": [
+      "#ProteinCreami",
+      "#NinjaCreami",
+      "#HighProteinDessert",
+      "#TheSplitPlate"
+    ],
+    "socialCarousel": {
+      "heroBadge": "Protein Creami",
+      "heroAccent": "coral",
+      "heroTitle": "Cookies & Cream White Chip Protein Creami",
+      "heroStats": [
+        {
+          "value": "~310",
+          "label": "cal · whole pint"
+        },
+        {
+          "value": "~28g",
+          "label": "protein · whole pint"
+        },
+        {
+          "value": "1",
+          "label": "finished pint"
+        }
+      ],
+      "hook": "Vanilla protein Creami with chocolate sandwich-cookie flecks and a white chocolate coconut-oil shell.",
+      "heroPhoto": "/images/cookies-cream-white-chip-protein-creami/hero-polished.webp",
+      "captionBody": "Cookies & Cream White Chip Protein Creami: approximately 310 calories and 28g protein for one whole finished pint, including the listed mix-ins and toppings. Vanilla protein Creami with chocolate sandwich-cookie flecks and a white chocolate coconut-oil shell. Blend the base, freeze level for 24 hours, spin according to your machine, then add the mix-ins. Melt the white chips with one teaspoon coconut oil, drizzle over the scoops, and let the shell firm. Homemade cookie-inspired recipe; not affiliated with Crumbl. Full recipe: thesplitplate.com/cookbook/cookies-cream-white-chip-protein-creami",
+      "ingredientGroups": [
+        {
+          "card": 0,
+          "accent": "coral",
+          "heading": "Vanilla Protein Base",
+          "items": [
+            {
+              "quantity": "1 cup",
+              "text": "Fairlife 2% milk"
+            },
+            {
+              "quantity": "1/2 serving",
+              "text": "Opportuniteas whey",
+              "note": "60 cal / 14g protein"
+            },
+            {
+              "quantity": "2 tbsp",
+              "text": "Monk-fruit/erythritol"
+            },
+            {
+              "quantity": "1/8 tsp",
+              "text": "Leveled guar gum"
+            },
+            {
+              "quantity": "1 tsp",
+              "text": "Vanilla extract total"
+            },
+            {
+              "quantity": "Pinch",
+              "text": "Salt"
+            }
+          ]
+        },
+        {
+          "card": 1,
+          "accent": "amber",
+          "heading": "Flavor + Finish",
+          "items": [
+            {
+              "quantity": "2",
+              "text": "HighKey Original sandwich cookies",
+              "note": "Mix into the spun pint"
+            },
+            {
+              "quantity": "7g",
+              "text": "Lily’s white chocolate style baking chips"
+            },
+            {
+              "quantity": "1 tsp",
+              "text": "Coconut oil",
+              "note": "Melt with the white chips; included in macros"
+            }
+          ]
+        }
+      ],
+      "ingredientCardPhotos": [
+        {
+          "src": "/images/cookies-cream-white-chip-protein-creami/base-polished.webp",
+          "layout": "side"
+        },
+        {
+          "src": "/images/cookies-cream-white-chip-protein-creami/mix-in-polished.webp",
+          "layout": "side"
+        }
+      ],
+      "methodLabel": "HOW TO MAKE",
+      "methodGroups": [
+        {
+          "accent": "coral",
+          "heading": "Blend, Freeze + Spin",
+          "items": [
+            {
+              "number": 1,
+              "heading": "BLEND",
+              "body": "Blend milk, whey, sweetener, guar gum, vanilla and salt until smooth. The one teaspoon vanilla is the total amount."
+            },
+            {
+              "number": 2,
+              "heading": "FREEZE",
+              "body": "Freeze upright and level for 24 hours in a compatible Creami pint, below its fill limit."
+            },
+            {
+              "number": 3,
+              "heading": "SPIN",
+              "body": "Process on Ice Cream and Respin as needed, following your model’s instructions."
+            }
+          ]
+        },
+        {
+          "accent": "amber",
+          "heading": "Mix In + Finish",
+          "items": [
+            {
+              "number": 4,
+              "heading": "MIX IN",
+              "body": "Incorporate the two HighKey sandwich cookies into the spun vanilla base."
+            },
+            {
+              "number": 5,
+              "heading": "MAKE THE SHELL",
+              "body": "Gently melt 7g Lily’s white chocolate style chips with 1 tsp coconut oil. Stir until smooth."
+            },
+            {
+              "number": 6,
+              "heading": "FINISH",
+              "body": "Scoop the cookies-and-cream ice cream, drizzle over the melted topping, then let it firm on the cold ice cream."
+            }
+          ]
+        }
+      ],
+      "methodCardPhotos": [
+        {
+          "src": "/images/cookies-cream-white-chip-protein-creami/spin-polished.webp",
+          "layout": "side"
+        },
+        {
+          "src": "/images/cookies-cream-white-chip-protein-creami/hero-polished.webp",
+          "layout": "side"
+        }
+      ],
+      "servingPhoto": {
+        "src": "/images/cookies-cream-white-chip-protein-creami/hero-polished.webp",
+        "layout": "band"
+      },
+      "servingGroups": [
+        {
+          "accent": "coral",
+          "heading": "One Whole Finished Pint",
+          "items": [
+            {
+              "text": "Approximately 310 calories and 28g protein, including the listed mix-ins and toppings."
+            },
+            {
+              "text": "Label-based estimate; exact products and amounts can change the total."
+            },
+            {
+              "text": "The teaspoon of coconut oil is included. Vanilla is one teaspoon total."
+            }
+          ]
+        }
+      ],
+      "engagementQuestion": "Would you try the white chocolate shell on your next Creami?"
+    },
+    "socialImages": [
+      "/images/cookies-cream-white-chip-protein-creami/base-polished.webp",
+      "/images/cookies-cream-white-chip-protein-creami/mix-in-polished.webp",
+      "/images/cookies-cream-white-chip-protein-creami/spin-polished.webp"
+    ],
+    "flavorProfile": "Vanilla protein Creami with chocolate sandwich-cookie flecks and a white chocolate coconut-oil shell.",
+    "calories": 310,
+    "caloriesPerServing": 310,
+    "protein": 28,
+    "proteinPerServing": 28,
+    "servings": 1,
+    "servingSize": "1 whole finished Creami pint",
+    "time": "10 min active + 24 hr freeze",
+    "bestFor": [
+      "Protein Creami",
+      "Whole-pint dessert",
+      "Make-ahead"
+    ],
+    "useThisWhen": "Vanilla protein Creami with chocolate sandwich-cookie flecks and a white chocolate coconut-oil shell.",
+    "flavorTarget": "Vanilla protein Creami with chocolate sandwich-cookie flecks and a white chocolate coconut-oil shell.",
+    "ingredients": [
+      "1 cup Fairlife 2% ultra-filtered milk",
+      "1/2 serving Opportuniteas unflavored whey isolate (60 calories / 14g protein)",
+      "2 tbsp monk-fruit/erythritol sweetener",
+      "1/8 tsp leveled guar gum",
+      "1 tsp vanilla extract total",
+      "Pinch of salt",
+      "2 HighKey Original sandwich cookies, for the mix-in",
+      "7g Lily’s white chocolate style baking chips, for the topping",
+      "1 tsp coconut oil, for the topping"
+    ],
+    "steps": [
+      {
+        "text": "BLEND: Blend milk, whey, sweetener, guar gum, vanilla and salt until smooth. The one teaspoon vanilla is the total amount.",
+        "image": "/images/cookies-cream-white-chip-protein-creami/base-polished.webp",
+        "imageAlt": "Cookies & Cream White Chip Protein Creami: blend"
+      },
+      "FREEZE: Freeze upright and level for 24 hours in a compatible Creami pint, below its fill limit.",
+      "SPIN: Process on Ice Cream and Respin as needed, following your model’s instructions.",
+      {
+        "text": "MIX IN: Incorporate the two HighKey sandwich cookies into the spun vanilla base.",
+        "image": "/images/cookies-cream-white-chip-protein-creami/mix-in-polished.webp",
+        "imageAlt": "Cookies & Cream White Chip Protein Creami: mix in"
+      },
+      "MAKE THE SHELL: Gently melt 7g Lily’s white chocolate style chips with 1 tsp coconut oil. Stir until smooth.",
+      {
+        "text": "FINISH: Scoop the cookies-and-cream ice cream, drizzle over the melted topping, then let it firm on the cold ice cream.",
+        "image": "/images/cookies-cream-white-chip-protein-creami/hero-polished.webp",
+        "imageAlt": "Cookies & Cream White Chip Protein Creami: finish"
+      }
+    ],
+    "executionRules": [
+      "Amounts and nutrition refer to one complete finished pint.",
+      "Freeze upright and level for 24 hours, within the machine’s fill line.",
+      "Follow your Creami model’s safety and processing instructions."
+    ],
+    "macroHonesty": "Approximately 310 calories and 28g protein for the whole finished pint, including all toppings. Milk: 120 calories / 13g protein; half-serving whey: 60 / 14; vanilla: about 12; guar: about 1; two HighKey cookies: about 47 using the creator’s prior 70-calorie/three-cookie label; 7g Lily’s white chips: about 30; coconut oil: 40. Current cookie packaging was not separately photographed, so retain the approximation. Do not infer precise carbohydrate/fat totals from incomplete labels. Vanilla is one teaspoon total, not two.",
+    "warnings": [
+      "Contains milk. Check current whey, cookie, candy and topping labels for other allergens."
+    ],
+    "allergens": [
+      "milk",
+      "tree-nuts",
+      "soy"
+    ],
+    "dietTags": [
+      "high-protein",
+      "make-ahead",
+      "frozen-dessert"
+    ],
+    "seriesInfo": {
+      "series": "CrumblCreamiCut",
+      "framing": "Independent homemade protein Creami inspired by a cookie flavor. A Crumbl cookie is not an ingredient; no sponsorship or affiliation is implied."
+    },
+    "mealPrep": {
+      "storage": "Freeze the unspun base upright and level. Spin and finish when ready to eat.",
+      "lasts": "Follow the Creami machine guidance for storage and reprocessing.",
+      "reheat": "Do not heat the pint."
+    }
+  },
 ];
 
 // Creamis have their own browsing section while other sweets remain Desserts.

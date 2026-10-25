@@ -16,4 +16,4 @@ assert.deepEqual(sortSocialRecipes([b,a]),[b,a]);
 console.log('Social ordering verified: original dates, category moves, stable ties and new packages.');
 
 const { creamis } = await import('../src/data/cookbook.js');
-assert.equal(sortSocialRecipes(creamis).at(-1).id, 'fruity-pebbles-cereal-milk-creami');
+assert.deepEqual(sortSocialRecipes(creamis).slice(-3).map(r => r.id), ['fruity-pebbles-cereal-milk-creami', 'vanilla-mini-mms-protein-creami', 'cookies-cream-white-chip-protein-creami']);
