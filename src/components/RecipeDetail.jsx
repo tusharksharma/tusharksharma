@@ -1178,7 +1178,7 @@ function CookbookTail({ item, group }) {
     const collection = ({ creamis, desserts, sauces, bases, breakfasts, quickLunches, batchPrep, powerups, snackBoxes })[group] || [];
     const words = `${item.title} ${item.tagline || ""}`.toLowerCase().split(/[^a-z]+/).filter((word) => word.length > 4);
     return collection.filter((entry) => entry.id !== item.id)
-      .map((entry) => ({ ...entry, score: words.filter((word) => `${entry.title} ${entry.tagline || ""}`.toLowerCase().includes(word)).length }))
+      .map((entry) => ({ ...entry, score: (item.relatedIds || []).includes(entry.id) ? 100 : words.filter((word) => `${entry.title} ${entry.tagline || ""}`.toLowerCase().includes(word)).length }))
       .filter((entry) => entry.score > 0)
       .sort((a, b) => b.score - a.score)
       .slice(0, 2);

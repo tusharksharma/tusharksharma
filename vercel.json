@@ -23,6 +23,10 @@
       "destination": "https://github.com/tusharma88/tsp-videos/releases/download/videos/:filename"
     },
     {
+      "source": "/videos/open-faced-ham-egg-cheese-stacks/:filename(.+\\.mp4)",
+      "destination": "https://github.com/tusharma88/tsp-videos/releases/download/videos/:filename"
+    },
+    {
       "source": "/videos/protein-tiramisu/:filename(.+\\.mp4)",
       "destination": "https://github.com/tusharma88/tsp-videos/releases/download/videos/:filename"
     },
