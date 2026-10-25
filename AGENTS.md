@@ -1,5 +1,9 @@
 # AGENTS.md - The Split Plate
 
+## Carousel Builder and QA
+
+For website carousel building or repair, use [.claude/agents/social-carousel-builder.md](.claude/agents/social-carousel-builder.md). Verify every rendered card, centered food crops at desktop/phone sizes, referenced image downloads and completed Save All exports. A local render does not establish deployed verification. Social scheduling remains a separate requested workflow.
+
 ## Standing Food Principles
 
 Read [The Split Plate ideologies](docs/splitplate-ideologies.md) for confirmed brand beliefs. Anything cooked at home counts as a home-cooked meal, including frozen/convenience ingredients. Put effort into the star of the plate and use practical shortcuts for straightforward sides. Apply this without inventing per-recipe or family claims.
