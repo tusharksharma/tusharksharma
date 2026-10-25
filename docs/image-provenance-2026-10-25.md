@@ -15,3 +15,5 @@ All images below: model=grok (Grok image model, image-to-image), reference = the
 | pork-lettuce-wraps/step4-sauce-mise-polished.webp (+ -sm) | pork-lettuce-wraps/step4-sauce-mise.webp | grok |
 
 Rejected (kept raw): creamy mise-en-place, pork step1-mise, pork step5-lettuce-pork — the model garbled or added package/label text.
+
+| air-fryer-chicken-thighs-cheesy-broccoli/step-10-final-split-plates-polished.webp (1080×1920) | air-fryer-chicken-thighs-cheesy-broccoli/step-10-final-split-plates.webp | grok |

@@ -1599,11 +1599,13 @@ const recipes = [
     calories: 380,
     image: "/images/air-fryer-chicken-thighs-cheesy-broccoli/hero-split-adult-kid-plates-polished.webp",
     prepImage: "/images/air-fryer-chicken-thighs-cheesy-broccoli/step-05-load-air-fryers-polished.webp",
+    socialCarousel: { servingPhoto: "/images/air-fryer-chicken-thighs-cheesy-broccoli/step-10-final-split-plates-polished.webp" },
     socialImages: [
       "/images/air-fryer-chicken-thighs-cheesy-broccoli/step-02-season-two-ways-polished.webp",
       "/images/air-fryer-chicken-thighs-cheesy-broccoli/step-04-season-frozen-broccoli-polished.webp",
       "/images/air-fryer-chicken-thighs-cheesy-broccoli/step-05-load-air-fryers-polished.webp",
       "/images/air-fryer-chicken-thighs-cheesy-broccoli/step-09-slice-adult-chicken-polished.webp",
+      "/images/air-fryer-chicken-thighs-cheesy-broccoli/step-10-final-split-plates-polished.webp",
     ],
     video: "/videos/air-fryer-chicken-thighs-cheesy-broccoli/air-fryer-chicken-thighs-cheesy-broccoli-380cal-42protein-updated-marcus.mp4",
     role: "The Hands-Off Winner",
