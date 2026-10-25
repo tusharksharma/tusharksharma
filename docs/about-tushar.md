@@ -198,6 +198,30 @@ Tushar chooses three flavors from the weekly six-option Crumbl selection, combin
 
 Most earlier creations exist as short videos rather than long-form coverage. He is open to using that archive for a top-ten, best-mix-ins or favorite-flavors compilation if viewers want it. Do not imply unseen original long-form footage exists or that an archive compilation has already been made.
 
+## Confirmed firsthand stories — Creami family follow-up, October 25, 2026
+
+### BIO-025: A picky childhood informs how he offers food
+
+Tushar describes himself as a very picky child who initially avoided vegetables and did not want to try meat. Butter with rice or bread were staple preferences; he also recalls cereal at breakfast. Once introduced to meat, he came to love it and often ate chicken with rice or bread. He remembers little nutrition education and associates being forced to eat pulses and vegetables with his dislike of them. This is his recollection and interpretation, not an established cause of picky eating in other children.
+
+With his own children, he tries to include something they like alongside other foods they can choose to try, encourages repeated opportunities without forcing them, and emphasizes moderation. He wants a different relationship with food from the one he remembers. His impression that today's information and product choices make suitable eating easier is personal perspective, not a universal claim that weight loss is easy.
+
+### BIO-026: Maintaining weight loss was the difficult part
+
+Tushar says he has repeatedly been motivated to exercise and lose weight, but historically struggled to maintain the loss after short periods of restrictive dieting. His current focus is making ordinary food taste good while fitting his nutrition goals so the routine is sustainable. This adds context to his earlier self-reported 70-pound loss and four-year maintenance; it does not establish a new measurement or timeline.
+
+He has tried keto and carnivore diets and did not find them sustainable for himself. He no longer views carbohydrates as the enemy. He values moderation, a balanced diet, tracking intake and understanding his own macronutrient goals. Record these as his experience and preferences, not a prescription or a claim about every diet's effectiveness.
+
+### BIO-027: Dessert is not payment for finishing dinner
+
+As of this answer, Tushar does not want to promise dessert in exchange for finishing dinner. On a planned dessert day, the children receive dessert without that bargain. On other evenings, if they remain hungry, he offers fruit, a banana or another suitable food rather than automatically offering ice cream. He does not want to restrict additional food solely because dinner has ended. This clarifies earlier statements about offering dessert regularly: it does not mean serving it every day or making it contingent on cleaning the plate.
+
+### BIO-028: Activity and family filming are ordinary life
+
+Tushar says his children participate in five or six sports and he places high importance on building an active lifestyle. Do not imply food must be earned through exercise, that sport cancels nutritional needs, or that his activity-versus-food comparison establishes a clinical rule. His emphasis here is on habits.
+
+He says his wife sometimes acts funny when the camera is on and filming has become part of their lifestyle; he did not identify a recurring joke. An ambiguous dictated comment about food feeling like egg is not established as a reusable quote or complaint.
+
 ## Questions for expanding the biography
 
 Ask a few at a time when relevant; unanswered questions are not facts:
@@ -209,6 +233,8 @@ Ask a few at a time when relevant; unanswered questions are not facts:
 - What family details should stay private or out of videos?
 
 ## Sources
+
+- Tushar's direct answers to five general family/nutrition follow-up questions for the Creami trio film, October 25, 2026: BIO-025 through BIO-028. Preserve household experience and historical context; do not infer medical advice from the interview.
 
 - Tushar's direct Creami trio story interview, October 25, 2026: BIO-019 through BIO-024. Raw interview and production evidence stay outside the public repository.
 
