@@ -1,6 +1,6 @@
 # About Tushar — biography and story source
 
-Last updated: October 23, 2026. Purpose: reusable source material for The Split Plate videos, introductions, captions and community replies. This is a living biography, not a complete life history. Preserve the distinction between firsthand experience, personal opinion, existing public biography and untested expectations.
+Last updated: October 25, 2026. Purpose: reusable source material for The Split Plate videos, introductions, captions and community replies. This is a living biography, not a complete life history. Preserve the distinction between firsthand experience, personal opinion, existing public biography and untested expectations.
 
 ## Short introduction
 
@@ -150,6 +150,20 @@ Tushar's approach is to count calories so pizza fits ordinary days. He aims for 
 
 Most of the time the family uses a normal thin-crust pizza. His tip: start with a plain mozzarella/cheese thin crust, add extra low-fat mozzarella and turkey pepperoni on top to make a frozen pizza feel like a meal. Bettergoods (Walmart) thin crust is one of his favorite brands but is often out of stock in his experience. He sometimes uses Yough! Greek-yogurt-crust frozen pizza from Target (dictated "Yo"/"Y O U G H"; brand name verified October 24, 2026 at eatyough.com and Target listings), but says it is not a great pizza and would recommend any thin crust you like instead. Personal taste only; no sponsorship or nutrition values established.
 
+## Confirmed firsthand preferences — Reddit answers, October 25, 2026
+
+### BIO-017: A cold ham-and-cheese sandwich with crunch
+
+A ham-and-cheese sandwich is one of Tushar's go-to cold lunches. He likes hot sauce and kettle chips for crunch, and chooses bread to add protein. He described this as one of his favorite cold-sandwich hacks. He did not specify a packing method, when he adds the chips, or how long he stores the sandwich; do not invent a tested anti-sogginess technique.
+
+The bread name was dictated as "soda breads" and is unresolved. He recalled 40 calories and 4 grams of protein per slice; these are unverified recollections for an unidentified product, not established nutrition for use in recipes or public claims. Confirm the product and label before using those figures.
+
+### BIO-018: Meal replacements have not suited him
+
+Tushar says he has tried meal replacements a couple of times and they have not worked out for him. He did not name the products or specify whether the problem was taste, fullness, cost or another factor. Do not invent those outcomes or treat his personal preference as evidence that meal replacements do not work for others.
+
+He generally prefers a protein shake with a pack of chips or another snack. He described the chips as "healthy," without naming a product or establishing a nutritional comparison. A protein shake and chips are his personal convenience choice, not a substantiated nutritionally complete meal replacement.
+
 ## Questions for expanding the biography
 
 Ask a few at a time when relevant; unanswered questions are not facts:
@@ -161,6 +175,8 @@ Ask a few at a time when relevant; unanswered questions are not facts:
 - What family details should stay private or out of videos?
 
 ## Sources
+
+- Tushar's direct answers to the October 24 Reddit questions, supplied October 25, 2026: BIO-017 and BIO-018. Bread identity remains pending clarification.
 
 - Tushar's direct answers in the October 22, 2026 Reddit/biography conversation: BIO-001 through BIO-005.
 - Tushar's direct Reddit answers and default-capture instruction, October 23, 2026: BIO-011 through BIO-013 and the capture rule.
