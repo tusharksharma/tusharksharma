@@ -136,6 +136,20 @@ Tushar describes his burritos as leaning California style. He likes avocado for 
 
 After trying a couple of others, Tushar says he has not found anything better than PEScience. This is a personal preference; he did not name the alternatives, flavors or particular baking tests in this answer. The dictated "B-Signs" is normalized to PEScience from the question's explicit product context. Do not turn it into an affiliate code, claim every competing powder was tested, or invent an alternative recommendation.
 
+## Confirmed firsthand stories — weekly pizza short, October 24, 2026
+
+### BIO-014: Pizza is a weekly meal, not a cheat meal
+
+Tushar says pizza is not treated as a cheat meal in his household; the family eats it weekly, and he believes that is why nobody there craves it. This is his household experience and opinion, not a universal claim about cravings. His children usually eat three kid-sized pizzas once a week (a household routine as of this answer; do not infer ages or portions per child).
+
+### BIO-015: Calorie-counted pizza around 600 per serving
+
+Tushar's approach is to count calories so pizza fits ordinary days. He aims for about 600 calories per adult serving (sometimes stating "under 600–700"). A target he uses, not verified nutrition for any specific pizza; check the actual package before putting numbers on screen.
+
+### BIO-016: Upgrading a plain thin-crust frozen pizza
+
+Most of the time the family uses a normal thin-crust pizza. His tip: start with a plain mozzarella/cheese thin crust, add extra low-fat mozzarella and turkey pepperoni on top to make a frozen pizza feel like a meal. Bettergoods (Walmart) thin crust is one of his favorite brands but is often out of stock in his experience. He sometimes uses Yough! Greek-yogurt-crust frozen pizza from Target (dictated "Yo"/"Y O U G H"; brand name verified October 24, 2026 at eatyough.com and Target listings), but says it is not a great pizza and would recommend any thin crust you like instead. Personal taste only; no sponsorship or nutrition values established.
+
 ## Questions for expanding the biography
 
 Ask a few at a time when relevant; unanswered questions are not facts:
@@ -151,5 +165,6 @@ Ask a few at a time when relevant; unanswered questions are not facts:
 - Tushar's direct answers in the October 22, 2026 Reddit/biography conversation: BIO-001 through BIO-005.
 - Tushar's direct Reddit answers and default-capture instruction, October 23, 2026: BIO-011 through BIO-013 and the capture rule.
 - Tushar's direct keema matar interview and approved personal narration, October 23, 2026: BIO-006 through BIO-010. The private raw interview and production records are not stored in this repository.
+- Tushar's direct answers for the weekly pizza short, October 24, 2026: BIO-014 through BIO-016.
 - Existing public About page: `src/pages/AboutPage.jsx`, reviewed October 22, 2026, for the data/analytics background only.
 - Confirmed standing food principles: `docs/splitplate-ideologies.md`; brand framing in root `AGENTS.md`.
