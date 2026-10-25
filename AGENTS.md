@@ -1,5 +1,10 @@
 # AGENTS.md - The Split Plate
 
+## Recipe Package Uploader
+
+For recipe ZIP uploads from Drive or Downloads, follow [.claude/agents/recipe-package-uploader.md](.claude/agents/recipe-package-uploader.md), also available as [.agents/skills/splitplate-recipe-uploader/SKILL.md](.agents/skills/splitplate-recipe-uploader/SKILL.md). Own intake through recipe/social/category integration, transformed images, video/CDN upload, complete build checks, GitHub publishing and exact-commit Vercel/live verification. Preserve canonical recipe URLs and original publication dates on updates. Creating or editing these instructions does not start a package upload or social scheduling.
+
+
 ## Carousel Builder and QA
 
 For website carousel building or repair, use [.claude/agents/social-carousel-builder.md](.claude/agents/social-carousel-builder.md). Verify every rendered card, centered food crops at desktop/phone sizes, referenced image downloads and completed Save All exports. A local render does not establish deployed verification. Social scheduling remains a separate requested workflow.

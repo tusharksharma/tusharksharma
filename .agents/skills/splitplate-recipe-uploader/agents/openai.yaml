@@ -1,0 +1,4 @@
+interface:
+  display_name: "Split Plate Recipe Uploader"
+  short_description: "Publish recipe ZIPs through verified website delivery"
+  default_prompt: "Use $splitplate-recipe-uploader to inspect this recipe ZIP, update the recipe and socials, publish to GitHub, and verify Vercel and the live pages."
