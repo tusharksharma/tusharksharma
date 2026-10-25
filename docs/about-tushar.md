@@ -156,7 +156,7 @@ Most of the time the family uses a normal thin-crust pizza. His tip: start with 
 
 A ham-and-cheese sandwich is one of Tushar's go-to cold lunches. He likes hot sauce and kettle chips for crunch, and chooses bread to add protein. He described this as one of his favorite cold-sandwich hacks. He did not specify a packing method, when he adds the chips, or how long he stores the sandwich; do not invent a tested anti-sogginess technique.
 
-The bread name was dictated as "soda breads" and is unresolved. He recalled 40 calories and 4 grams of protein per slice; these are unverified recollections for an unidentified product, not established nutrition for use in recipes or public claims. Confirm the product and label before using those figures.
+Correction confirmed directly by Tushar on October 25, 2026: the bread brand is Sola; the earlier dictation "soda breads" should not be reused. The specific loaf/variety remains unspecified. He recalled 40 calories and 4 grams of protein per slice; these remain unverified label recollections, not established nutrition for use in recipes or public claims. Confirm the specific product and label before using those figures.
 
 ### BIO-018: Meal replacements have not suited him
 
@@ -176,7 +176,7 @@ Ask a few at a time when relevant; unanswered questions are not facts:
 
 ## Sources
 
-- Tushar's direct answers to the October 24 Reddit questions, supplied October 25, 2026: BIO-017 and BIO-018. Bread identity remains pending clarification.
+- Tushar's direct answers to the October 24 Reddit questions, supplied October 25, 2026: BIO-017 and BIO-018. Tushar clarified the bread brand as Sola later on October 25; the loaf/variety remains unspecified.
 
 - Tushar's direct answers in the October 22, 2026 Reddit/biography conversation: BIO-001 through BIO-005.
 - Tushar's direct Reddit answers and default-capture instruction, October 23, 2026: BIO-011 through BIO-013 and the capture rule.
