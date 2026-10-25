@@ -1,5 +1,13 @@
 # Tushar's reusable thumbnail reaction photos
 
+## Reaction variety, clothes and anatomy — confirmed October 25, 2026
+
+Tushar rejected the repeated brown-hat, dark-jacket, hand-on-chin treatment and malformed hands in the Creami cover drafts. For this revised package, remove the hat, change clothes, and use substantially different story-appropriate expressions, head angles and compositions across the main and companion covers. In future packages vary the styling rather than treating any single outfit, hat or reaction as mandatory. Real hat-free references already exist in `01-shocked.png` and `02-excited.png`; use them for hair/identity when appropriate instead of routinely requesting more photos.
+
+Make the creator recognizable and keep the face prominent with little torso. When a hand adds no useful story information, compose a head-and-shoulders portrait behind food resting on the counter with no hands or arms in frame. If a hand is useful, inspect the complete anatomy: two arms/hands maximum for one person, sensible connections, natural fingers and believable object support. Reject extra hands, merged fingers, detached limbs and floating bowls before delivery. Inspect open mouths and teeth against real references too. A technical check or successful generation is not an anatomy/likeness pass.
+
+These are staged, explicitly authorized portrait derivatives; do not claim a generated reaction happened in the footage. Preserve older approved images and rejected drafts separately; update only the requested package and future rules. Do not cycle the same expression through different headlines and call that variety.
+
 ## Open-mouth reactions allowed — confirmed October 23, 2026
 
 Tushar approves open-mouth reactions and ImageGen updates to his expressions when they fit the story. Closed-mouth poses are not a requirement or a default restriction. Preserve his recognizable likeness and natural-looking mouth/teeth: reject oversized, distorted, unnaturally uniform, over-whitened or otherwise strange teeth. Use the real reaction library to check anatomy and likeness; revise or choose another variation if the mouth looks wrong. This clarification supersedes older closed-mouth preferences and blanket bans on generating a grin below. Keep fresh expressions, a prominent face and an integrated food scene; retain approved thumbnails unless a revision is requested.
