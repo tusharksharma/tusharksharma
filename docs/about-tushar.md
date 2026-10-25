@@ -164,6 +164,40 @@ Tushar says he has tried meal replacements a couple of times and they have not w
 
 He generally prefers a protein shake with a pack of chips or another snack. He described the chips as "healthy," without naming a product or establishing a nutritional comparison. A protein shake and chips are his personal convenience choice, not a substantiated nutritionally complete meal replacement.
 
+## Confirmed firsthand stories — Creami trio interview, October 25, 2026
+
+### BIO-019: Crunch can change his verdict
+
+For the filmed Fruity Pebbles, vanilla mini M&M's and cookies-and-cream white-chip pints, Tushar confirms scores of 9.5, 7.6 and 10 respectively. He is not normally drawn to fruity desserts and had hesitated to try Fruity Pebbles despite hearing it was a good topping. The current Crumbl lineup prompted the experiment. He says the cereal crunch and colorful appearance grew on him until he looked forward to the next bite, and he would make it again. His view that appearance improves his experience is a personal observation, not a measured psychological result.
+
+He prefers the cereal/cracker-style crunch here to the hard candy crunch of M&M's alone. M&M's work better for him alongside other textures, as in his Midnight Mix Creami with brownie pieces and pretzels. These are personal judgments about these builds, not ratings for every M&M's recipe.
+
+### BIO-020: Forty calories that earned their place
+
+Tushar had avoided using coconut oil to melt chocolate chips because the approximately 40 extra calories felt difficult to justify. He previously used a tablespoon of milk, but found that finish less satisfying. After trying white chips melted with coconut oil, he loved the thin layer setting on the cold ice cream. He now considers that addition worthwhile for future melted-chip toppings. Forty calories is his stated approximate ingredient tradeoff, not a universal finished-shell total; the chocolate chips also contribute calories.
+
+### BIO-021: Unflavored whey as a blank canvas
+
+For his Creamis, Tushar likes unflavored whey so he can choose the flavor himself. He recalls making iced coffee with unflavored whey and instant coffee. He continues using Opportuniteas grass-fed unflavored whey because it mixes well and lets him add his own flavors. He originally chose it a couple of years earlier during a period when grass-fed, pasture-raised and organic labels strongly influenced his shopping; he now places less importance on those labels. This records his changing priorities, not evidence that those labels are nutritionally meaningless.
+
+Scope clarification to BIO-013: the earlier PEScience preference remains a separately sourced answer. This interview establishes Opportuniteas as his continuing unflavored Creami choice; do not describe either as his exclusive powder for every use or silently erase the other context.
+
+### BIO-022: The after-bedtime Creami ritual
+
+As of this interview, Tushar is the person who regularly eats these protein pints. He generally prepares bases after dinner, often on Mondays while the children are still around, freezes them, then spins and eats his Creami after the children go to bed while watching something on Netflix. This is a usual routine, not the exact itinerary of every filmed evening.
+
+His children have enjoyed occasional tastes while he is making Creamis, but he gives them regular ice cream rather than making protein dessert their normal serving. Do not claim they tasted or scored these three specific flavors unless that event is separately verified. His wife prefers sticking with one regular ice-cream flavor and is not particularly interested in the Creami experiments. This adds nuance to the earlier regular-ice-cream story; do not invent a filmed disagreement.
+
+### BIO-023: A smaller protein checkpoint still matters to him
+
+Tushar says he reduced his usual Creami protein target from about 40 grams to about 30 because he now gets more protein throughout the rest of his day. Dessert remains a protein checkpoint that helps him reach his personal approximately 200-gram daily target. This is his self-reported routine, not a recommendation for viewers or his children. The three website pints currently state an estimated 28 grams each; do not silently replace their recipe estimate with the rounded 30-gram personal target.
+
+### BIO-024: How he chooses the next cookie experiment
+
+Tushar chooses three flavors from the weekly six-option Crumbl selection, combining familiar favorites with flavors he has wanted to try. He generally focuses on cookie flavors rather than cake or tres leches options, and avoids banana in desserts because he does not enjoy it. He describes the current series as roughly its fourteenth week, with around forty earlier creations; these are his recollections, not an independently audited episode count.
+
+Most earlier creations exist as short videos rather than long-form coverage. He is open to using that archive for a top-ten, best-mix-ins or favorite-flavors compilation if viewers want it. Do not imply unseen original long-form footage exists or that an archive compilation has already been made.
+
 ## Questions for expanding the biography
 
 Ask a few at a time when relevant; unanswered questions are not facts:
@@ -175,6 +209,8 @@ Ask a few at a time when relevant; unanswered questions are not facts:
 - What family details should stay private or out of videos?
 
 ## Sources
+
+- Tushar's direct Creami trio story interview, October 25, 2026: BIO-019 through BIO-024. Raw interview and production evidence stay outside the public repository.
 
 - Tushar's direct answers to the October 24 Reddit questions, supplied October 25, 2026: BIO-017 and BIO-018. Tushar clarified the bread brand as Sola later on October 25; the loaf/variety remains unspecified.
 
