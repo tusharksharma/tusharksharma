@@ -1,5 +1,13 @@
 # Current Split Plate editing rules
 
+## Opening cover and quiet natural sound — October 24, 2026
+
+Tushar set these two standing overrides on October 24, 2026. Apply them to new shorts and to revisions he requests. Do not rebuild an already approved or posted export to apply them. Cover truthfulness, likeness, palette, copy, safe area, both JPG options, and the rest of `SPLITPLATE_THUMBNAIL_PLAYBOOK.md` still apply. This section wins when the Covers and Sound sections below disagree, and when an older playbook, production rule, reviewer note, series note, or QA line still describes an end tail or a louder bed.
+
+- **Opening cover.** Every short starts with the gimmicky/bold thumbnail cover for **0.2 seconds** (six frames at 30fps) at the very beginning. Keep the start and end on whole frames. At another output frame rate, use the whole-frame count nearest 0.2 seconds. Keep the standalone JPG. The moving food hook follows immediately and is underway within the first second; the still precedes that hook and does not replace it. Verify the encoded opening duration and frame count. Do not also append a cover at the end.
+- This replaces the October 10, 2026 instruction to append the bold cover for about **0.3 seconds** (nine frames at 30fps) at the end. That October 10 tail had replaced the one-frame/0.03-second end frame because the one-frame tail was too short to select in the cover slider. Keep those earlier decisions as provenance only. The same replacement covers the end-tail sentences in `SPLITPLATE_THUMBNAIL_PLAYBOOK.md`, `SPLITPLATE_PRODUCTION_RULES.md`, `SPLITPLATE_VIDEO_QA_CHECKLIST.md`, `REAL_RISE_REVIEWER.md`, and `CRUMBL_CREAMI_CUT_SERIES_RULES.md`. Compact-cut maxima still include the cover; count this 0.2-second opening, not the old 0.3-second tail. A package that used to bake a cover into frame 0 only when separately called for now has that call: every new short opens on this frame, including dinners. Standalone manual-upload JPGs are still delivered.
+- **Natural sound and music.** Keep the clips' original/natural sound very low, about **-22 dB** and well under Marcus, because the footage often includes kids' noise. Keep music beds very light under Marcus so the voiceover dominates. Briefly lift a genuine sensory sound only when it is not kids' noise, and only at its action time. Do not fabricate a texture or a reaction with sound effects. Judge the decoded mix, not the fader label. Earlier guidance to elevate kitchen sounds, and the roughly 10% linear-gain music starting point, do not authorize raising kids' noise or a bed that competes with Marcus.
+
 ## Minimal text backgrounds — October 18, 2026
 
 - Default to no background box behind headlines, speech captions, ingredient labels and CTAs. Use a restrained text shadow or fine edge for readability, and place copy away from the food/action.
@@ -30,7 +38,7 @@ Updated October 14, 2026. Apply these explicit user preferences when older refer
 - For relevant emotional connection, consult `PERSONAL_LIFE_STORY_RULES.md` and Tushar’s linked biography. Use one supported personal thread that explains a visible choice. Do not automatically insert life history, draft quotes, old schedules or unconfirmed child reactions.
 
 - For upcoming short Creami and comparable compact recipe/review cuts, target a maximum of about 20 seconds including the cover. This is not a blanket limit for informational videos or long-form YouTube.
-- Lead with a real moving food payoff: cheese scoop/pull, spoon drag, pour, or another visible sensory event. Voice or a title alone is not the hero.
+- After the October 24 0.2-second opening cover, lead with a real moving food payoff: cheese scoop/pull, spoon drag, pour, or another visible sensory event. Voice or a title alone is not the hero.
 - When using three assembly stages, show concrete Base, Mix-in and Topping ingredients for about 1.5 seconds each. Keep the method readable and Marcus aligned to the action; do not introduce unexplained silence just to extend text reading time.
 - Use expressive Marcus ElevenLabs `eleven_v4` with an appropriate emotional arc, speech-synced readable captions and one useful primary closing action. Choose a question, save or share invitation to fit the story rather than requiring a question every time. Keep exact amounts and complete instructions in the posting recipe.
 - Remove week/episode numbering from current short-form audience-facing copy. Use natural wording such as “this week” when appropriate. Older numbered examples are references, not permission to restore numbering.
@@ -45,14 +53,15 @@ Updated October 14, 2026. Apply these explicit user preferences when older refer
 
 - Select bold by default. Use a visibly polished, truthful ImageGen photographic hero. Already approved ImageGen-polished assets can be reused; a raw still plus text does not meet the polish requirement.
 - A creator-style cover should be heightened and studio-like. Use a genuine same-person reference and an appropriate expressive face when it earns the cover; do not synthesize a lookalike. Obtain likeness approval when an expression is changed.
-- Keep a standalone cover image and append the selected bold cover for approximately **0.3 seconds**, frame-aligned: nine frames at 30fps. This supersedes the one-frame/0.03-second rule because that tail was too short to select.
-- Verify the exact encoded end frame and duration. Do not retrofit previously approved exports unless asked.
+- Keep a standalone cover image. Placement and duration follow the October 24, 2026 opening-cover override above: **0.2 seconds** (six frames at 30fps) at the start of every new short. The previous instruction in this section was to append approximately **0.3 seconds** (nine frames at 30fps) at the end. That October 10 rule superseded the one-frame/0.03-second tail because the tail was too short to select, and it remains here as provenance only.
+- Verify the encoded opening cover duration and frame count, and confirm no cover still remains appended at the end. Do not retrofit previously approved exports unless asked.
 
 ## Sound
 
-- Evaluate music for each cut; rotate the user's original tracks by mood and fit instead of using one universal bed. Around 10% linear gain is a starting point, not a loudness guarantee.
-- Preserve and elevate genuine kitchen sounds at their actual action time when useful. Listen to the final mix; timeline presence, a large fader number, or waveform height does not prove audibility.
-- Stylized whooshes/chimes may support cuts and graphics. Artificial sounds must not fabricate a food crack, crunch, texture, child reaction or other evidence. Use real sensory sound when available.
+- Level follows the October 24, 2026 override above. Keep original/natural clip sound about **-22 dB**, well under Marcus, because the footage often includes kids' noise. Keep music very light so the voiceover dominates. Kids' noise stays down. A genuine sensory sound that is not kids' noise may be lifted briefly at its action.
+- Evaluate music for each cut; rotate the user's original tracks by mood and fit instead of using one universal bed. The older roughly 10% linear-gain starting point is not a loudness target that can compete with Marcus.
+- Listen to the final decoded mix; timeline presence, a large fader number, or waveform height does not prove audibility. Earlier wording that said to preserve and elevate genuine kitchen sounds does not authorize raising kids' noise.
+- Stylized whooshes/chimes may support cuts and graphics. Artificial sounds must not fabricate a food crack, crunch, texture, child reaction or other evidence. Use real sensory sound when available, under the October 24 level rule.
 - Keep Marcus intelligible and peak headroom intact. Measure final decoded audio and check phone audibility; asset-specific gains and a reviewer's LUFS claim are not universal mix settings.
 
 ## Food-texture and family-proof review — October 12, IMG_8923
@@ -62,8 +71,8 @@ Updated October 14, 2026. Apply these explicit user preferences when older refer
 - Transfer the orzo review's principles to pepperoni mac 495; do not edit approved orzo 680. Open tightly enough that real moving food dominates. Audition an action-centered 10–12% punch-in as an option, not a mandatory amount; preserve the complete scoop/pull, hands and crop continuity.
 - Emphasize the actual sauce-to-pasta transformation at its new timeline position. Do not import orzo's cottage-cheese ingredient, cheese-pull claim or 25-second timestamp into another recipe.
 - Show actual full and smaller family portions together when available. Prefer the recorded paired view; otherwise label a designed two-up honestly. A smaller portion is not a different recipe, and children do not inherit adult macro targets.
-- Measure the preview and final decoded mix before changing gain. Approximately −14 LUFS with safe true-peak headroom is a working mix target, not a universal platform requirement. Do not accept a screenshot's −19.7 LUFS as a measurement of the new video.
-- These are user-authorized creative/QA rules, not measured retention outcomes. Preserve original color, readable local translucent captions, the selectable .3-second bold tail, and narrative/preview approval gates.
+- Measure the preview and final decoded mix before changing gain. Approximately −14 LUFS with safe true-peak headroom is an older working program target, not a universal platform requirement, and it does not raise original clip sound or kids' noise above the October 24 level. Do not accept a screenshot's −19.7 LUFS as a measurement of the new video.
+- These are user-authorized creative/QA rules, not measured retention outcomes. Preserve original color, readable local translucent captions, the October 24 opening cover, and narrative/preview approval gates. The selectable .3-second bold end tail named here on October 12 is provenance only.
 
 ## Versions and approvals
 
