@@ -9474,8 +9474,8 @@ const recipes = [
         },
       ],
       ingredientCardPhotos: [
-        "/images/viral-tomato-feta-chicken-pasta/context-homegrown-tomatoes.webp",
-        "/images/viral-tomato-feta-chicken-pasta/context-adult-kid-pasta-split.webp",
+        "/images/viral-tomato-feta-chicken-pasta/step-01-add-feta-polished.webp",
+        "/images/viral-tomato-feta-chicken-pasta/step-06-divide-sauce-polished.webp",
       ],
       methodCardPhotos: [
         "/images/viral-tomato-feta-chicken-pasta/step-02-baked-tomatoes-feta-polished.webp",
