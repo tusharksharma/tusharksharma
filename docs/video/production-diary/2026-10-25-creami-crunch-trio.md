@@ -55,3 +55,22 @@ The owner asked about promotional shorts and scheduling after the main export. S
 The three pending promo previews were repaired before requesting review: remove the obsolete closing cover, retain a real0.2s opening cover before moving food, use current hat-free reaction assets (Fruity CRUNCH WINS v3), and apply house typography. M&M filming setup was replaced by genuine scooping/finished-pint footage; Fruity's ending now shows the finished cereal pint. Existing approved audio is reused with actual media durations; no additional voice spending. Review lengths12.5/14.1/15.5s. Standalone Story photo assets and platform copy are prepared.
 
 Shorts, Instagram Stories with actual native links, and Facebook link posts remain the destinations. No Reels/TikTok-feed expansion from the keema-only experiment. Finished-preview and proposed-release approval are pending; nothing newly uploaded or scheduled in this preparation.
+
+
+## October 26 — approved rollout scheduled
+
+Owner approved all three finished promo previews and the full November rollout. Main **lcbIqnUgyqk** is verified Scheduled for November 2, 2026 at 5 p.m. America/Los_Angeles. The exact original-source 3840×2160/59.94 SDR master transferred completely; Studio reports SD/HD/4K complete and authenticated playback offered and played 2160p60. English timed captions and three native end-screen elements were saved and reopened: Best for viewer, Golden Garlic Steak Bowls POV, and Subscribe. Scheduled remains private; public end-screen playback is a release-time check.
+
+All three approved native 1080×1920/59.94 SDR excerpts passed full decoding and encoded-frame inspection. Opening cover is 0.2 seconds; no cover tail. Distinct approved custom covers were uploaded and visually checked after reloading Studio. English SRT tracks saved. No additional paid narration.
+
+| Promo | YouTube ID | Saved release, Pacific | Other saved destinations |
+|---|---|---|---|
+| Worth 40 cal? | nSFM3OBmlYw | November 3, noon | Facebook link post; Instagram video + native-link photo Story |
+| Fruity surprise | MMsj8zgbcis | November 5, noon | Facebook link post; Instagram video + native-link photo Story |
+| M&Ms need backup | FDZAU8xLRO8 | November 7, noon | Facebook link post; Instagram video + native-link photo Story |
+
+Meta scheduled lists were read back for the three exact Facebook captions/links and all six Instagram Stories. Cards use native WATCH ON YOUTUBE stickers with the direct full watch URL, explicit 9:16 framing and manual lower-center placement. Scheduled previews do not establish live tap behavior. No Reels/TikTok for this episode. Existing Wings/Keema schedules were preserved.
+
+Exact main was absent from the private scheduled Related-video picker. The existing release heartbeat was updated to verify main Public on November 2, then attach exact Related video to all three Shorts before the first promo, and test each live Story at its screenshot-visible sticker center through Visit link to actual destination playback. Do not change main privacy or choose an unrelated film.
+
+Inventory 757–760 (rows 750–753) and posting rows 589–592 were written and read back. Future actual-publication cells remain blank. Private project upload records, hashes, final receipts and UI screenshots remain outside this public repository. Raw sources and reserved cuts remain protected until publication and active-edit checks permit cleanup.
