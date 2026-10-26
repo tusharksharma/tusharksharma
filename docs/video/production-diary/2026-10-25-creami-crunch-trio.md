@@ -9,3 +9,10 @@ Four new owner-supplied hat-free reaction photos were saved in the private produ
 Current production package: `outputs/creami-weekly-trio-longform-2026-10-25`. Final contract remains original-source 4K/59.94 BT.709 SDR; the review is 720p/30. Final picture/cover approval and original-source exports remain separate from any later publication request. The one-release keema Reels/TikTok experiment does not broaden this package’s standing destinations.
 
 Technical learning: allocate review frames using rounded absolute timeline boundaries. Per-cut encoder truncation can accumulate into seconds of drift even when every individual clip looks close to its planned duration. Keep the narration unchanged and correct picture timing rather than slowing the whole film.
+
+
+## Owner rejection and chronological rebuild
+
+The owner rejected the nine-minute picture even after overlap and card repairs: different timecodes still felt repetitive, and recipe/stories did not match the visible action. This supersedes earlier review-ready wording. The actual seven camera files total35:59.108: shared base8:28, Fruity8:16, M&M7:09, white-chip12:06. Inspection of complete linear sources revealed regular Blue Bunny serving during the Creami cycle and preparation in the first M&M file that the earlier assembly had largely omitted.
+
+A fresh picture-first review retains17:32 of forward-only cooking in41 longer source runs; supplied intro/nutrition/endcard make18:02. Approved Marcus passages are split and placed against real steps, with personal stories in actual process intervals. No paid voice was regenerated. This is a new unapproved review, not a final master or publication. Full-source4K/59.94 SDR remains the delivery contract. All raws remain active. The generic chronological-first rule is already saved in the long-form agent; zero source overlap and passing technical checks are expressly insufficient evidence of a good edit.
