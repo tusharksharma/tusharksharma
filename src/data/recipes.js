@@ -4695,6 +4695,7 @@ const recipes = [
       ],
     },
     slug: "tks-sweet-heat-bowl",
+    socialCarousel: { servingPhoto: "/images/tks-sweet-heat-bowl/adult-finished-tks-bowl-polished.webp" },
     proteinAnchor: "chicken",
     mealType: "other",
     flavorDirection: "smoky-southwest",
@@ -6394,6 +6395,19 @@ const recipes = [
       ],
     },
     slug: "high-protein-taco-bowls",
+    socialCarousel: {
+      ingredientCardPhotos: ["/images/high-protein-taco-bowls/context-danos-tac-o-seasoning-polished.webp", "/images/high-protein-taco-bowls/step-10-loaded-taco-protein-chips-polished.webp"],
+      methodCardPhotos: ["/images/high-protein-taco-bowls/step-03-brown-ground-beef-polished.webp", "/images/high-protein-taco-bowls/step-11-hot-cheesy-beef-polished.webp"],
+      methodGroups: [{ accent: "amber", heading: "One Pan, Two Plates", items: [
+        { number: 1, heading: "Season", body: "Mix 1.25 lb 93/7 beef with 2 tbsp Spiceology Taco Seasoning and a pinch of kosher salt." },
+        { number: 2, heading: "Prep Veg", body: "Dice 2 Roma tomatoes and shred 1 head iceberg. Toss with a pinch of salt." },
+        { number: 3, heading: "Brown", body: "Medium-high skillet with cooking spray, 6-8 min until cooked through. No drain needed." },
+        { number: 4, heading: "Braise", body: "Pour in 1/3 cup Kirkland Sipping Bone Broth and reduce 60 sec." },
+        { number: 5, heading: "Cheese Split", body: "Adult zone (~70%): 2 oz Kraft Fat-Free Cheddar. Kid zone (~30%): 1 oz Tillamook Medium. Cover 60 sec." },
+        { number: 6, heading: "Plate", body: "Adults: 1 bag Quest chips, ~6 oz beef, lettuce, tomato, 1 guac mini. Kids: tray of Tostitos, 3 oz beef, guac mini." },
+      ] }],
+      servingPhoto: "/images/high-protein-taco-bowls/step-13-split-adult-guacamole-polished.webp",
+    },
     // Polished-only — the social carousel pulls ONLY from this list, in order.
     // Each entry is a Gemini Path A polish (5-part canonical, no composition-lock).
     // The hero (hero-split-plate-polished) is recipe.image below, NOT in this list
