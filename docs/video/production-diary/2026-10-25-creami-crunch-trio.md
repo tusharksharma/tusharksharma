@@ -46,3 +46,12 @@ The approved8:43 main is now exported from original camera media at3840x2160,600
 Technical observation: separately rendering animated graphics requires preserving the approved entrance, full hold and exit in the native conform. A short proof caught a truncated alpha hold before the full run; frame-indexed HyperFrames samples corrected it, and all19 holds were checked. Absolute frame-boundary budgets prevent accumulated NTSC drift.
 
 This closes the main export, not publication or the whole release package. Existing three companion previews still need their own finished-preview approval. No upload/schedule was created, and active/reserved camera originals were preserved. Biography learning BIO019-028 was already saved for this episode; these final edit changes add no new personal facts.
+
+
+## Promo release preparation resumed October26
+
+The owner asked about promotional shorts and scheduling after the main export. Studio confirmed Wings remains scheduled October26 and Keema October28; the current Creami film has no upload among the six long forms. Proposed next standard slot: Monday November2 at5PM Pacific, with three distinct promos November3/5/7 atnoon. These are proposed dates, not actual platform receipts.
+
+The three pending promo previews were repaired before requesting review: remove the obsolete closing cover, retain a real0.2s opening cover before moving food, use current hat-free reaction assets (Fruity CRUNCH WINS v3), and apply house typography. M&M filming setup was replaced by genuine scooping/finished-pint footage; Fruity's ending now shows the finished cereal pint. Existing approved audio is reused with actual media durations; no additional voice spending. Review lengths12.5/14.1/15.5s. Standalone Story photo assets and platform copy are prepared.
+
+Shorts, Instagram Stories with actual native links, and Facebook link posts remain the destinations. No Reels/TikTok-feed expansion from the keema-only experiment. Finished-preview and proposed-release approval are pending; nothing newly uploaded or scheduled in this preparation.
