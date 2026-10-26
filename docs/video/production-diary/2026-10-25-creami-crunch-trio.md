@@ -37,3 +37,12 @@ The new17.47-second voiced opening uses four real finished-pint shots, followed 
 The owner approved the 8:42.67 introduction/topic-overlay cut: “lgtm - build it and save the learning in git.” Final export is authorized; publication and scheduling are separate. The approved map keeps all 34 established main voice/picture relationships, the two actual-action fixes and the opening-only finished-pint reuse. Delivery is being conformed from original 4K/59.94 ten-bit BT.709 SDR files, with native-resolution HyperFrames graphics; the 720p review backbone is not the master source. No new narration charges.
 
 The canonical long-form skill now explicitly saves gap-rippling without changing voice/action matches, chapter and family-topic text overlays, and filmed-week flavor-name verification for the concise series intro. These are reusable decisions; this episode’s precise duration and title count are not universal targets. Final encoding/verification outcomes will be recorded after completion.
+
+
+## Native main delivery completed October 26
+
+The approved8:43 main is now exported from original camera media at3840x2160,60000/1001fps,HEVC Main10,BT709 SDR. Exact duration522.67215s;31329 frames. Full video/audio decode passed, and31 encoded samples covering opening animation/holds, topic changes, actual actions, corrected stir/scoop, nutrition and populated five-second ending were visually inspected. Final mix measures-16.9LUFS and-3.7dBTP; the agent did not independently hear it. No new voice generation during delivery; episode usage4071/10000. Main master SHA256 `c03904048229eba7a149ae2716dbedac355a5ce423b3602a826ef246d2f0edf3`. Private source maps, approval, render receipts and files stay outside Git.
+
+Technical observation: separately rendering animated graphics requires preserving the approved entrance, full hold and exit in the native conform. A short proof caught a truncated alpha hold before the full run; frame-indexed HyperFrames samples corrected it, and all19 holds were checked. Absolute frame-boundary budgets prevent accumulated NTSC drift.
+
+This closes the main export, not publication or the whole release package. Existing three companion previews still need their own finished-preview approval. No upload/schedule was created, and active/reserved camera originals were preserved. Biography learning BIO019-028 was already saved for this episode; these final edit changes add no new personal facts.
