@@ -4900,6 +4900,8 @@ const recipes = [
       "/images/creamy-sausage-spinach-pasta/spinach-sausage-polished.webp",
     ],
     socialCarousel: {
+      servingPhoto: "/images/creamy-sausage-spinach-pasta/two-pans-polished.webp",
+      methodCardPhotos: ["/images/creamy-sausage-spinach-pasta/brown-sausage-polished.webp", "/images/creamy-sausage-spinach-pasta/drain-fat-polished.webp", "/images/creamy-sausage-spinach-pasta/spinach-sausage-polished.webp"],
       ingredientGroups: [
         { card: 0, accent: "amber", heading: "Shared", items: [
           { quantity: "3 lb", text: "Falls Brand Mild Italian Sausage" },
@@ -7745,7 +7747,16 @@ const recipes = [
       "/images/fire-grilled-chicken-thighs-frozen-veggies/step-04-grill-chicken-polished.webp",
       "/images/fire-grilled-chicken-thighs-frozen-veggies/step-05-slice-chicken-polished.webp",
       "/images/fire-grilled-chicken-thighs-frozen-veggies/final-adult-kid-plates-polished.webp",
+      "/images/fire-grilled-chicken-thighs-frozen-veggies/hero-split-adult-kid-plates-alt-polished.webp",
     ],
+    socialCarousel: {
+      servingPhoto: "/images/fire-grilled-chicken-thighs-frozen-veggies/final-adult-kid-plates-polished.webp",
+      ingredientGroups: [
+        { card: 0, accent: "amber", heading: "Shared", items: [{ quantity: "", text: "6 boneless skinless chicken thighs" }, { quantity: "", text: "1 bag frozen vegetable blend" }, { quantity: "", text: "Avocado oil spray" }, { quantity: "1 tbsp", text: "paprika" }, { quantity: "1/2 tbsp", text: "garlic powder" }, { quantity: "1/2 tbsp", text: "onion powder" }, { quantity: "1 tsp", text: "dried oregano" }, { quantity: "1 tsp", text: "cumin" }] },
+        { card: 1, accent: "amber", heading: "Shared", items: [{ quantity: "1 tsp", text: "salt" }, { quantity: "1 tsp", text: "brown sugar" }, { quantity: "1/2 tsp", text: "cayenne" }] },
+        { card: 1, accent: "green", heading: "Smaller Plate", items: [{ quantity: "2 slices", text: "bread OR 2 dinner rolls" }, { quantity: "2 tbsp", text: "dip of choice" }] },
+      ],
+    },
     proteinAnchor: "chicken",
     mealType: "grill",
     flavorDirection: "smoky-savory",
@@ -8166,6 +8177,14 @@ const recipes = [
       "/images/busy-day-steak-taco-plates/step-05-portion-steak-polished.webp",
       "/images/busy-day-steak-taco-plates/final-adult-kid-plates-polished.webp",
     ],
+    socialCarousel: {
+      servingPhoto: "/images/busy-day-steak-taco-plates/final-adult-kid-plates-polished.webp",
+      ingredientGroups: [
+        { card: 0, accent: "amber", heading: "Shared", items: [{ quantity: "", text: "1 family pack / 22 oz Soules Kitchen Street Taco Steak with Salsa Roja" }, { quantity: "1/4 cup", text: "chicken bone broth" }] },
+        { card: 0, accent: "coral", heading: "Adult", items: [{ quantity: "", text: "6 La Banderita Carb Counter Street Taco tortillas" }, { quantity: "", text: "Included Soules Kitchen salsa roja packets" }, { quantity: "1 serving", text: "Khloud Nacho Protein Chips" }] },
+        { card: 1, accent: "green", heading: "Smaller Plate", items: [{ quantity: "", text: "4 Mission regular Street Taco flour tortillas" }, { quantity: "", text: "2 Wholly Guacamole minis" }, { quantity: "1 serving", text: "regular tortilla chips" }] },
+      ],
+    },
     proteinAnchor: "beef",
     mealType: "stovetop",
     flavorDirection: "smoky-savory",
@@ -8352,6 +8371,7 @@ const recipes = [
       "/images/chili-hot-dogs/split-kids-build-their-own-polished.webp",
       "/images/chili-hot-dogs/final-adult-chili-hot-dogs-polished.webp",
     ],
+    socialCarousel: { servingPhoto: "/images/chili-hot-dogs/final-adult-chili-hot-dogs-polished.webp", ingredientCardPhotos: ["/images/chili-hot-dogs/step-02-season-beef-polished.webp"], methodCardPhotos: ["/images/chili-hot-dogs/step-09-air-fry-dogs-polished.webp", "/images/chili-hot-dogs/step-13-spoon-chili-polished.webp", "/images/chili-hot-dogs/split-kids-build-their-own-polished.webp"] },
     proteinAnchor: "beef",
     mealType: "air-fryer",
     flavorDirection: "comfort-savory",
@@ -9212,6 +9232,7 @@ const recipes = [
       "/images/15-minute-chicken-tikka-masala-split-plate/step-06-plate-adult-tikka-polished.webp",
       "/images/15-minute-chicken-tikka-masala-split-plate/payoff-adult-tikka-roti-polished.webp",
     ],
+    socialCarousel: { servingPhoto: "/images/15-minute-chicken-tikka-masala-split-plate/payoff-adult-tikka-roti-polished.webp" },
     proteinAnchor: "chicken",
     mealType: "stovetop-shortcut",
     flavorDirection: "north-indian",
