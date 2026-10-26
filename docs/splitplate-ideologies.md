@@ -32,3 +32,10 @@ Measure ingredients even when they are favorites. Enough garlic, onion or ghee s
 Meal preparation should earn its place in the family's evening. The useful payoff is a meal already handled after work and children's activities, with flexibility in portions and finishes. Use confirmed current personal examples in each film, not invented busy-parent stories.
 
 Save future ideologies when Tushar identifies them as lasting beliefs. Keep an exact statement or faithful paraphrase, its date and practical implications. Treat a proposed assistant interpretation as a proposal until confirmed. Keep personal production records and credentials outside this public document.
+
+
+## Make the cooking session count — confirmed October 26, 2026
+
+For Tushar's household, a substantial cooking session should provide at least two dinners. Cook a reusable main component in a batch, then finish or serve it again in a way the family enjoys. This is the household's practical goal, not a requirement that every snack or small recipe produce leftovers. Show each actual day's preparation honestly rather than presenting reheating already-cooked food as a new raw cook.
+
+Adult serving and nutrition estimates do not set children's calorie targets. Tushar uses appetite and flexible protein portions for the children; meatball size or an old recipe's piece count does not establish the current serving.

@@ -9,3 +9,12 @@ Use the corrected picture-first chronological approach: remove setup/phone/deadt
 Ten interview questions sent:five on this dinner andfive broader family/cooking-life stories. Await firsthand answers before writing personal narration. The two-date prep/cook sequence and actual portions need confirmation. Recipe nutrition is based on6.67trackedservings from20meatballs and includes bread/sauce/finishes; do not silently use it for sixequalplates.
 
 Build the main and three distinct promo previews together, with fresh polished reaction thumbnails, captions,metadata and Story/link copy. No paid narration generated; exact-script and current-episode spending approval still required. Private source manifest, recipe snapshot and intake evidence remain outsideGit. Existing scheduled films and raw/reserved footage untouched.
+
+
+## Complete interview and exact narration draft
+
+All ten answers received. Owner confirmed Hailey Bieber inspiration, ordinary corn flakes and cottage-for-ricotta swaps, second attempt with larger meatballs, two dinners using already-cooked meatballs on the next evening, and flexible children's portions without calorie targets. Recipe name stays unchanged. Broader conversation covers Wednesday's cooking window, enjoying cooking while finding prep/cleanup harder, rock/metal preferences, supportive family/protein tradeoffs and blending cottage cheese. New confirmed learning saved as BIO-029–035, with the two-dinner practical principle added to the ideologies. No new factual claim is inferred from script humor.
+
+Private exact narration draft is about1,225words with a shared promo closing. Owner wording and a new episode-specific10,000credit maximum requested before any paidMarcusgeneration. Currentstate is pendingapproval, not audio-produced or rendered. An unclear second cottage-cheese brand is omitted pending confirmation; GoodCulture preference is distinguished from the recipe-record Nancy's.
+
+Dense timestamped picture samples inspected at meaningful prep,browning,sauce,bread,portioning andpayoff intervals. A chronological disjoint candidate pool is saved privately; it is not a final timeline and its full duration must not be exported as a padded film. Match narration to actualaction, keep later footage labelednextday, and tighten waiting after speech alignment. All9originals remain intact.

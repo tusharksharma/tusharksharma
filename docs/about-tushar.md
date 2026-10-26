@@ -222,6 +222,40 @@ Tushar says his children participate in five or six sports and he places high im
 
 He says his wife sometimes acts funny when the camera is on and filming has become part of their lifestyle; he did not identify a recurring joke. An ambiguous dictated comment about food feeling like egg is not established as a reusable quote or complaint.
 
+## Confirmed firsthand stories — meatball interview, October 26, 2026
+
+### BIO-029: A viral experiment became a repeat dinner
+
+Tushar previously ran a short-form series adapting viral recipes to fit his protein goals. Hailey Bieber's chicken meatballs inspired this version, with blended cottage cheese replacing ricotta and ordinary corn flakes replacing breadcrumbs. The corn flakes are not a special protein cereal. This filmed cook was his second attempt, and he considers it a repeat-worthy staple rather than just another trend. He rarely repeats dishes from that series, so making it again is his evidence that he enjoyed it. Keep the existing website recipe name unchanged unless he separately requests a rename.
+
+### BIO-030: Kitchen effort should cover at least two dinners
+
+Tushar wants a substantial cooking session to serve at least two dinners. In this episode, he prepared and cooked meatballs on the first day, ate some, then used already-cooked meatballs with a fresh sauce-and-bread preparation the next day. Do not imply that the later footage shows raw meatballs being cooked for the first time or that both nights occurred in one continuous session.
+
+His usual protein-serving starting point is two children sharing roughly one adult portion, adjusted for appetite; he does not assign calorie targets to the children. Meatball counts vary with their size, and the second attempt used fewer, larger meatballs. The website's original count is not proof of the filmed batch's exact count. This expands the general approach previously described in BIO-010 without changing that episode's specific portions.
+
+### BIO-031: Wednesday is a useful cooking window
+
+For the filmed Wednesday, he started cooking after a child's soccer activity while his wife handled the older child's gymnastics. That gave him roughly a ninety-minute cooking window. Weekday cooking overlaps with playing with the younger child, his job and working on videos. Record this as the episode's routine, not a permanent timetable or evidence of who was present in every shot.
+
+### BIO-032: Cooking is relaxing; the surrounding work is harder
+
+Tushar enjoys cooking and learning new dishes. He does not recall cooking itself being intimidating; planning, having ingredients ready, preparation and cleanup are the more difficult parts. He usually chooses boxed or frozen dough and pasta options instead of making those from scratch. When alone in the kitchen, he finds cooking relaxing and often listens to music with a Lagunitas Hoppy Refresher or a diet soda.
+
+### BIO-033: His kitchen playlist
+
+He still enjoys the rock and metal he associates with the early 2000s: Metallica, System of a Down, Linkin Park and Slipknot are four favorites. Electric Callboy is a newer addition to his usual listening. This describes his taste; it does not grant rights to use their recordings in the videos or establish that any particular track is audible in the footage.
+
+### BIO-034: Supportive partnership and the protein conversation
+
+Tushar describes his wife as supportive of his cooking and generally willing to trust his choices. Some Asian-style dishes and seafood he enjoys are less appealing to her, so he tends to avoid those for their shared dinners. He says she sometimes feels he focuses heavily on protein while also having her own goal of about 150 grams per day. This is his report of their household's preferences, not a nutrition target for viewers or a verbatim recorded conversation.
+
+### BIO-035: Blended cottage cheese earned a regular role
+
+Tushar values blended cottage cheese for creaminess, cheesy flavor and protein across many recipes. He finds that choosing a brand he likes and blending it smooth matters to his enjoyment. Good Culture is a current preference when available. A second Walmart brand was dictated unclearly and remains unconfirmed; do not guess its name or silently substitute it for the Nancy's used in the filmed recipe. Cottage cheese also contains nutrients and calories beyond protein; do not repeat the phrase "only added protein" as a compositional claim.
+
+His proposed audience question is what ingredient or food people once avoided, then came to enjoy as part of their normal routine.
+
 ## Questions for expanding the biography
 
 Ask a few at a time when relevant; unanswered questions are not facts:
@@ -233,6 +267,8 @@ Ask a few at a time when relevant; unanswered questions are not facts:
 - What family details should stay private or out of videos?
 
 ## Sources
+
+- Tushar's direct ten-question meatball/family-life interview, October 26, 2026: BIO-029 through BIO-035. Recipe name retained; second cottage-cheese brand and exact seasoning quantities remain unconfirmed. Raw answers remain private.
 
 - Tushar's direct answers to five general family/nutrition follow-up questions for the Creami trio film, October 25, 2026: BIO-025 through BIO-028. Preserve household experience and historical context; do not infer medical advice from the interview.
 
