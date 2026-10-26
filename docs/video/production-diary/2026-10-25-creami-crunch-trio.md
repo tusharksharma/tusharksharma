@@ -21,3 +21,5 @@ A fresh picture-first review retains17:32 of forward-only cooking in41 longer so
 ## Tighten after establishing the continuous action match
 
 The owner then requested removing every cooking interval without Marcus while keeping his narration on the currently correct clips. The episode-specific recut keeps all34 existing voice passages and their matching picture, then ripples the gaps out. It targets8:25.2 including the supplied intro, nutrition ending and five-second outro, removing9:36.8 from18:02. This is a pacing refinement after the chronological rebuild, not permission to fill narration with earlier footage or a standing ban on intentional kitchen sound. No new paid narration. Finished-review approval is still separate from final4K export and publication.
+
+Gap-trim spot-check refinement: two pre-existing camera movements under the short stir/scoop phrases were replaced by the actual same-take actions. All34 audio passages remain unchanged;32 picture matches remain exact, and the two corrected source ranges are recorded for original-source conform. Total8:25.2 and no source overlap are unchanged.
