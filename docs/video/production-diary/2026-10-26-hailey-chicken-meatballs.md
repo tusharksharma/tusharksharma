@@ -40,3 +40,9 @@ Moving-picture checks also caught a lid-handling shot where the narration called
 ## Nutrition ending correction — October 26
 
 Owner requested music during estimated nutrition and real moving footage behind the overlay for about 7–8 seconds. Applied an eight-second overlay after the existing story payoff, with a separate unused eight-second bread/plate action from the same cook. Reused the final thirteen seconds of the saved Split Plate Slam outro arrangement, continuing through the separate five-second watch-next card. No new paid narration or music. Main review now runs 7:51 instead of 8:00; the three promos are unchanged. Saved this as a future rule in estimated-nutrition-ending.md, intro-music-and-cta.md and the long-form agent. This is a requested revision, not final-export or publishing approval.
+
+## Hard minimum and family-table addition — supersedes shorter candidate
+
+Owner clarified that this main film's eight-minute minimum is non-negotiable. Shortening the nutrition hold must not reduce the film below480seconds. The7:51 candidate is therefore not acceptable for export. Preserve the eight-second moving nutrition/music treatment and five-second watch-next ending; restore time through useful real footage and confirmed story, not loops. Record the measured post-revision duration before another final-export approval request.
+
+Tushar supplied a new family detail: dinner check-ins cover good things, bad things and what everyone looks forward to tomorrow; the youngest decides the turn order. Saved as BIO-036. A short first-person passage is drafted for exact-wording approval before new paid Marcus generation under the existing total cap. No claim that the family dialogue itself was captured. The proposed chairperson joke is script interpretation, not an additional biographical fact.

@@ -256,6 +256,10 @@ Tushar values blended cottage cheese for creaminess, cheesy flavor and protein a
 
 His proposed audience question is what ingredient or food people once avoided, then came to enjoy as part of their normal routine.
 
+### BIO-036: Dinner includes a family check-in
+
+At dinner, the family shares good things, bad things, and what each person is looking forward to tomorrow. Tushar's youngest chooses the order in which everyone takes a turn. Confirmed directly during the meatball film's closing-story follow-up, October 26, 2026. Do not invent anyone's answers or imply that this conversation was recorded in the cooking footage.
+
 ## Questions for expanding the biography
 
 Ask a few at a time when relevant; unanswered questions are not facts:
