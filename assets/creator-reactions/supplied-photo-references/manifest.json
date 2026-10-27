@@ -1,0 +1,48 @@
+{
+  "authority": "Owner supplied photos for thumbnail modeling; standing request to retain reaction images in Git for future agents",
+  "generated": false,
+  "identity_qa": "Photos2/3 were the authoritative references for meatball promo replacements after owner rejected earlier generated likenesses",
+  "privacy": "EXIF/XMP/IPTC/comment metadata removed; decoded image pixels verified identical to original uploads",
+  "photos": [
+    {
+      "file": "01-surprised-front.jpg",
+      "source_filename": "1-Photo-1.jpg",
+      "kind": "Unmodified real supplied photo; JPEG metadata removed without recompressing image data",
+      "dimensions": [
+        960,
+        1280
+      ],
+      "sha256": "cd1fa70fe7d4a7176f83a6f87d0777ff98bfa666f472d11102a570ee3e436e94"
+    },
+    {
+      "file": "02-pursed-surprise.jpg",
+      "source_filename": "2-Photo-2.jpg",
+      "kind": "Unmodified real supplied photo; JPEG metadata removed without recompressing image data",
+      "dimensions": [
+        960,
+        1280
+      ],
+      "sha256": "cf1157b98708fbc3f585d06eebdeb7f924837cd34198bad8f46d9136fdd90298"
+    },
+    {
+      "file": "03-surprised-three-quarter.jpg",
+      "source_filename": "3-Photo-3.jpg",
+      "kind": "Unmodified real supplied photo; JPEG metadata removed without recompressing image data",
+      "dimensions": [
+        960,
+        1280
+      ],
+      "sha256": "43b0505a109a880103dad6cc296072aa8c1e8af9892eed53b22e38535c21b4a6"
+    },
+    {
+      "file": "04-wink.jpg",
+      "source_filename": "4-Photo-4.jpg",
+      "kind": "Unmodified real supplied photo; JPEG metadata removed without recompressing image data",
+      "dimensions": [
+        960,
+        1280
+      ],
+      "sha256": "90e0713b1ad564e015085b50ad76f6c1fc09c4d1784014b0e8d825f3d015cf0b"
+    }
+  ]
+}

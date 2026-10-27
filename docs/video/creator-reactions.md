@@ -2,6 +2,8 @@
 
 ## Likeness correction — October 26, 2026
 
+The four additional real photos are now retained in [supplied-photo-references](../../assets/creator-reactions/supplied-photo-references/), with [provenance](../../assets/creator-reactions/supplied-photo-references/manifest.json). They include front surprise, pursed surprise, three-quarter open-mouth surprise and a wink. JPEG personal metadata was removed without recompressing the image data; decoded pixels were verified identical. Use Photos2/3 as the exact identity/expression anchors for the two corrected meatball promo portraits, rather than using a rejected generated face as a reference.
+
 Tushar rejected the meatball promo portraits headed “ONE COOK. TWO DINNERS.” and “BLEND IT. THEN JUDGE.” because they did not look like him. Styling variety does not establish likeness. For that revision, anchor directly to the supplied real photos, preserving their facial proportions, expression, angle and hair rather than inventing another face; retain the original clothing when that helps. Make the variation through the chosen real reaction and composition. Keep rejected versions separate and treat replacements as candidates until owner review, not as automatically approved likeness. This does not revoke his permission for future fresh expressions and outfits that remain recognizable.
 
 ## Reaction variety, clothes and anatomy — confirmed October 25, 2026
