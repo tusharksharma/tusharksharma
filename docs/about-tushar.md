@@ -252,7 +252,7 @@ Tushar describes his wife as supportive of his cooking and generally willing to 
 
 ### BIO-035: Blended cottage cheese earned a regular role
 
-Tushar values blended cottage cheese for creaminess, cheesy flavor and protein across many recipes. He finds that choosing a brand he likes and blending it smooth matters to his enjoyment. Good Culture is a current preference when available. A second Walmart brand was dictated unclearly and remains unconfirmed; do not guess its name or silently substitute it for the Nancy's used in the filmed recipe. Cottage cheese also contains nutrients and calories beyond protein; do not repeat the phrase "only added protein" as a compositional claim.
+Tushar values blended cottage cheese for creaminess, cheesy flavor and protein across many recipes. He finds that choosing a brand he likes and blending it smooth matters to his enjoyment. Good Culture is a current preference when available. Tushar confirmed the second Walmart brand as MULU later on October 26. Keep this current preference separate from the Nancy's used in the filmed recipe. Cottage cheese also contains nutrients and calories beyond protein; do not repeat the phrase "only added protein" as a compositional claim.
 
 His proposed audience question is what ingredient or food people once avoided, then came to enjoy as part of their normal routine.
 
@@ -268,7 +268,7 @@ Ask a few at a time when relevant; unanswered questions are not facts:
 
 ## Sources
 
-- Tushar's direct ten-question meatball/family-life interview, October 26, 2026: BIO-029 through BIO-035. Recipe name retained; second cottage-cheese brand and exact seasoning quantities remain unconfirmed. Raw answers remain private.
+- Tushar's direct ten-question meatball/family-life interview, October 26, 2026: BIO-029 through BIO-035. Recipe name retained; second cottage-cheese brand confirmed as MULU later that day; exact seasoning quantities remain unconfirmed. Raw answers remain private.
 
 - Tushar's direct answers to five general family/nutrition follow-up questions for the Creami trio film, October 25, 2026: BIO-025 through BIO-028. Preserve household experience and historical context; do not infer medical advice from the interview.
 

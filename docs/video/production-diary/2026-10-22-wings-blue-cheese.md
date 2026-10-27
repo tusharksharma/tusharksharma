@@ -38,3 +38,11 @@ Tushar confirmed a gentle 1.10x-1.15x total crop for future wide-angle Atto POV 
 ## Local duplicate cleanup
 
 Tushar explicitly requested removal of used Atto footage, specifically wings. Seven redundant wings MP4 copies matched the retained canonical originals by full SHA256 and byte length. Removed only those extra local copies, reclaiming20,984,899,231 bytes (20.98GB). Kept the seven canonical originals used by the edit, unique XRF camera sidecars, finished main/promos, editable projects, paid narration and receipts. Cloud-original verification remains pending; do not treat this duplicate cleanup as removal of the last local original set or proof of a cloud backup. The private project cleanup manifest records both paths, hashes and deletion verification.
+
+## October 26 public release and canonical raw retirement
+
+After the scheduled 5 p.m. Pacific release, exact film NE9dNzA2VsM was verified Public. The watch player offered and played 2160p60; English captions, chapters and the actual two-video-plus-subscribe native end screen were checked. Exact Related video NE9dNzA2VsM was then selected on owjDTzSqTRs, 1EBEKi8sCOc and X8yNZhid4jE; all three editors confirmed All changes saved. Their existing schedules were preserved.
+
+Under Tushar's later confirmed post-publication cleanup rule, seven remaining canonical Atto wings originals were checked against the source manifest and prior hashes, checked for active edit dependencies, then deleted locally. This reclaimed another 20,984,899,231 bytes. This second cleanup is distinct from the earlier duplicate-copy deletion above. The private raw-retirement receipt lists exact paths, hashes and bytes; source paths are marked retired. Main/promo finals, editable projects, captions, thumbnails, paid narration, approvals and receipts remain. Cloud libraries, other cooks and unique sidecars were left alone. No cloud-backup verification is claimed.
+
+The main inventory/posting rows now record actual publication separately from planned dates. Live Instagram sticker audits for the October 27/29/31 promos remain pending their publication; scheduling is not live tap verification. The existing heartbeat was updated to avoid repeating completed Related-video or raw-cleanup work.
