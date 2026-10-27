@@ -1,5 +1,9 @@
 # Tushar's reusable thumbnail reaction photos
 
+## Likeness correction — October 26, 2026
+
+Tushar rejected the meatball promo portraits headed “ONE COOK. TWO DINNERS.” and “BLEND IT. THEN JUDGE.” because they did not look like him. Styling variety does not establish likeness. For that revision, anchor directly to the supplied real photos, preserving their facial proportions, expression, angle and hair rather than inventing another face; retain the original clothing when that helps. Make the variation through the chosen real reaction and composition. Keep rejected versions separate and treat replacements as candidates until owner review, not as automatically approved likeness. This does not revoke his permission for future fresh expressions and outfits that remain recognizable.
+
 ## Reaction variety, clothes and anatomy — confirmed October 25, 2026
 
 Tushar rejected the repeated brown-hat, dark-jacket, hand-on-chin treatment and malformed hands in the Creami cover drafts. For this revised package, remove the hat, change clothes, and use substantially different story-appropriate expressions, head angles and compositions across the main and companion covers. In future packages vary the styling rather than treating any single outfit, hat or reaction as mandatory. Real hat-free references already exist in `01-shocked.png` and `02-excited.png`; use them for hair/identity when appropriate instead of routinely requesting more photos.
