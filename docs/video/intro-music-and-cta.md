@@ -49,3 +49,5 @@ Confirm the chosen intro/music version, source hash, visual framing, title/logo 
 ## Estimated nutrition after the story — October 23, 2026
 
 Follow [Estimated nutrition ending](estimated-nutrition-ending.md). Show the readable, serving-specific calorie/macro/micronutrient estimates after the story payoff and before the separate five-second watch-next card. Use single rounded values, not ranges; retain the estimated label and calculation evidence.
+
+October 26 correction: this nutrition overlay lasts about 7–8 seconds over relevant moving real footage, with saved channel music underneath. Carry the music naturally into the separate maximum-five-second watch-next ending. Avoid a long silent still-photo hold; keep the serving basis and supported values readable.
