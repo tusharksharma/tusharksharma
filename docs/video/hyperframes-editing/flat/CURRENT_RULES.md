@@ -98,3 +98,8 @@ Updated October 14, 2026. Apply these explicit user preferences when older refer
 The Spanish muffin's static nested text clips looked correct in Studio but overlapped in the native-HDR layered export. The corrected project loads GSAP and registers matching composition timelines, with timed opacity on inner panels/spans rather than the framework-owned clip visibility. The revised encoded file was inspected and delivered.
 
 Treat missing sub-composition timelines and preview/export discrepancies as a QA investigation, not harmless warnings by default. Inspect encoded text at the opening, each method stage, CTA and cover. Preserve this fix when rebuilding the muffin; do not run an older generator that restores the defective structure. This is an observed project-specific export lesson, not a claim that every static no-timeline composition is broken.
+
+
+## Marcus delivery — October 27, 2026
+
+Confirmed October 27, 2026: Marcus must always play at regular speed (provider speed 1.0 and timeline playback rate 1.0). Never slow his narration with atempo, time-stretching or added silence to reach a duration target. Keep pauses within and between narration excerpts at no more than one second; trim excess quiet and ripple picture/captions while preserving the correct cooking-action match. Measure the rendered narration gaps and review the joins. Intentional branded intro, genuine recorded dialogue, and the requested music-backed nutrition/watch-next sequence are separate scenes, not excuses for narration padding. If the required runtime needs more content, ask Tushar for real stories and obtain approval for exact added paid narration. Do not silently shorten a film below his minimum or retrofit previously approved releases.

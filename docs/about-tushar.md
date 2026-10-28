@@ -274,6 +274,14 @@ Both children say they want to be chefs and enjoy helping. Tushar says they can 
 
 Adding context to BIO-030, Tushar usually prefers the same cook to cover two dinners. Sometimes he stretches it to three when one fewer adult is home; while a grandmother is visiting, two is typical. In this particular ditalini cook he started around 3 p.m. after meetings, before his older child's soccer, then reheated dinner after returning around 6:30–6:45 that same evening. This is episode-specific timing, not a permanent weekly appointment.
 
+### BIO-040: Meal prep coexists with takeout
+
+Tushar is not completely against ordering food. When the plan falls apart, Taco Bell or McDonald's can be a practical backup. Before his current routine, dinners also included DoorDash, Blue Apron, HelloFresh, Home Chef and TV dinners. He still describes an approximately monthly DoorDash splurge, sometimes around $150, as a special family treat. This is his household's reported experience, not a fixed budget or a rule that food must be earned. Confirmed directly October 27, 2026 during the ditalini follow-up.
+
+### BIO-041: Future sous-chef jobs
+
+Adding to BIO-038, Tushar would like the children to grow into making rice, retrieving pantry ingredients and assembling their own snack boxes. These are future hopes, not claims that every job is already independent or was filmed. Confirmed October 27, 2026.
+
 ## Questions for expanding the biography
 
 Ask a few at a time when relevant; unanswered questions are not facts:

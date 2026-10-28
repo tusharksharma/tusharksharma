@@ -9,3 +9,8 @@ Keep the audience-facing script spelling correct. If generation needs an alterna
 For a new or uncertain term, audition a short representative passage before generating the full read, within the approved stage credit cap. Carry a verified pronunciation across later films. If the intended pronunciation is still unclear and no usable recording exists, ask one focused question before spending on the bulk take.
 
 This correction applies to future recordings. It does not request new paid takes or retroactive changes to the approved POV film. Marcus remains the delivery voice, speaking as Tushar.
+
+
+## Delivery speed and pauses — October 27, 2026
+
+Confirmed October 27, 2026: Marcus must always play at regular speed (provider speed 1.0 and timeline playback rate 1.0). Never slow his narration with atempo, time-stretching or added silence to reach a duration target. Keep pauses within and between narration excerpts at no more than one second; trim excess quiet and ripple picture/captions while preserving the correct cooking-action match. Measure the rendered narration gaps and review the joins. Intentional branded intro, genuine recorded dialogue, and the requested music-backed nutrition/watch-next sequence are separate scenes, not excuses for narration padding. If the required runtime needs more content, ask Tushar for real stories and obtain approval for exact added paid narration. Do not silently shorten a film below his minimum or retrofit previously approved releases.

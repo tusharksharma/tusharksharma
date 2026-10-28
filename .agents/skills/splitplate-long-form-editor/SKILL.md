@@ -5,6 +5,8 @@ description: Edit or review The Split Plate long-form YouTube videos from real f
 
 # Split Plate long-form editor
 
+Confirmed October 27, 2026: Marcus must always play at regular speed (provider speed 1.0 and timeline playback rate 1.0). Never slow his narration with atempo, time-stretching or added silence to reach a duration target. Keep pauses within and between narration excerpts at no more than one second; trim excess quiet and ripple picture/captions while preserving the correct cooking-action match. Measure the rendered narration gaps and review the joins. Intentional branded intro, genuine recorded dialogue, and the requested music-backed nutrition/watch-next sequence are separate scenes, not excuses for narration padding. If the required runtime needs more content, ask Tushar for real stories and obtain approval for exact added paid narration. Do not silently shorten a film below his minimum or retrofit previously approved releases.
+
 ## Ground the project
 
 For thumbnail reactions, follow [Tushar's reaction library and October 23 clarification](../../../docs/video/creator-reactions.md). Use the real-video frames as identity references and generate fresh, story-appropriate ImageGen expressions/poses so thumbnails do not repeat the same face. Open-mouth reactions are allowed; closed-mouth poses are not required. Preserve recognizable identity and natural mouth/teeth, rejecting strange or distorted teeth; inspect likeness/anatomy against originals. Keep the face prominent and integrated into one thumbnail scene; do not routinely ask for new photos.
