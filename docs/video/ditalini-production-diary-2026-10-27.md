@@ -19,3 +19,9 @@ Owner approved the revised main and all three promo exports. The completed main 
 Full-file decode, audio metrics, encoded visual contacts and representative moving playback passed. Final picture QA replaced a camera-check moment with the adjacent pasta pour and kept the first promo on food through its closing. These are recorded source-range corrections, with no new narration or timing change. Independent listening is not claimed.
 
 PASTA MATH wink portrait is selected. Delivery includes main, three promos, English captions, covers, Story cards and release copy. No upload or scheduling was authorized or performed. Eight raw originals and three registered unused reserves remain active. Existing releases and website recipe are unchanged.
+
+## October 28 authorized release progress
+
+Owner requested upload and scheduling. The next open cadence slot is November 9 at 5 p.m. Pacific, with November 10/12/14 noon promos. YouTube accepted the exact main schedule and transfer completed; checks showed no issues, with 4K processing still pending at the last observation. Three Shorts and three Facebook link posts have scheduling receipts. The first Instagram video/link-photo pair has a success receipt; two pairs remain unfinished. Native end-screen save, final playback and remaining platform readbacks are also pending. Global in-app-browser navigation/focus timeouts persisted after supported recovery attempts. The private receipt and existing recurring continuation record the precise remaining work and duplicate-avoidance boundaries. Do not call this a completed package rollout yet.
+
+Biography audit backfilled older interviews in BIO042–051 (commit973c993f), while confirming recent keema, Creami, meatball and pasta stories were already captured. Planned dates remain distinct from actual publication. Raw footage stays active.
