@@ -1,10 +1,10 @@
-# About Tushar — biography and story source
+# About Tushar â€” biography and story source
 
-Last updated: October 25, 2026. Purpose: reusable source material for The Split Plate videos, introductions, captions and community replies. This is a living biography, not a complete life history. Preserve the distinction between firsthand experience, personal opinion, existing public biography and untested expectations.
+Last updated: October 28, 2026. Purpose: reusable source material for The Split Plate videos, introductions, captions and community replies. This is a living biography, not a complete life history. Preserve the distinction between firsthand experience, personal opinion, existing public biography and untested expectations.
 
 ## Short introduction
 
-I'm Tushar, the person behind The Split Plate. I build practical ways to make high-protein eating work alongside family dinners. One shared cook can become different plates, portions or finishes without making everyone's preferences a problem. Convenience ingredients belong in that system, and taste matters enough that I'll try small changes—like warming a protein brownie—to make something more enjoyable.
+I'm Tushar, the person behind The Split Plate. I build practical ways to make high-protein eating work alongside family dinners. One shared cook can become different plates, portions or finishes without making everyone's preferences a problem. Convenience ingredients belong in that system, and taste matters enough that I'll try small changesâ€”like warming a protein brownieâ€”to make something more enjoyable.
 
 Editorial wording based on the confirmed brand principles and experiences below. It does not establish an origin date, qualification, transformation story or professional nutrition credential.
 
@@ -22,14 +22,14 @@ The repository's existing `src/pages/AboutPage.jsx`, reviewed October 22, 2026, 
 
 The established brand principles are maintained in `docs/splitplate-ideologies.md`. That file remains the source for standing food beliefs. This biography supplies personal context and story examples rather than creating competing recipe or production rules.
 
-## Confirmed firsthand stories — October 22, 2026
+## Confirmed firsthand stories â€” October 22, 2026
 
 ### BIO-001: Warm Prime Bites brownies
 
-- Tushar has tried warming Prime Bites protein brownies for approximately 15–20 seconds.
+- Tushar has tried warming Prime Bites protein brownies for approximately 15â€“20 seconds.
 - He says warming makes a huge difference and describes them as "two times better." This is an enthusiastic personal taste judgment, not a measured twofold improvement.
 - He spoke broadly about the brand's brownies; no individual flavors, microwave wattage or exhaustive flavor testing were specified.
-- Faithful first-person line: "Prime Bites brownies are a great example for me. About 15–20 seconds warmed up makes a huge difference."
+- Faithful first-person line: "Prime Bites brownies are a great example for me. About 15â€“20 seconds warmed up makes a huge difference."
 - Useful contexts: protein-dessert texture discussion, honest snack comparison, simple food experiment.
 - Boundary: describe his own timing, not a universal product instruction. Check the specific package before producing a cooking demonstration.
 
@@ -78,13 +78,13 @@ Use "I'd expect" or "my thinking is" when drawing on this entry. Do not say "I f
 5. Keep safety/nutrition instructions separate from personal memories and verify them when the requested deliverable needs them. This document does not substantiate nutrition or health claims.
 6. Add future answers as dated entries. Corrections supersede the older wording while retaining enough context to prevent reuse of the error. Do not infer that a one-off preference is a permanent brand rule.
 
-## Learning after each video — confirmed October 23, 2026
+## Learning after each video â€” confirmed October 23, 2026
 
 After each completed film, review its confirmed interview answers and approved personal narration. Add new learning here with a date, episode and evidence status; merge duplicates and retain corrections. Keep time-specific circumstances historical. Do not promote editorial jokes, untested expectations or unverified nutrition claims into personal facts. Update this Git source and the episode diary as part of delivery, without automatically changing the website About page. Raw interviews and private production records remain outside the public repository.
 
 The keema matar interview and approved first-person narration supply the dated learning below. Production and publication outcomes belong in the episode diary; these entries do not imply the film is live.
 
-## Confirmed firsthand stories — keema matar, October 23, 2026
+## Confirmed firsthand stories â€” keema matar, October 23, 2026
 
 ### BIO-006: Childhood keema and his interest in nutrition
 
@@ -114,11 +114,11 @@ The keema batch made eight adult-sized protein portions. At the time of this coo
 
 Tushar says his household has bought Haldiram's phulkas for about ten years. He values their softness and convenience; his wife prefers fresh phulkas. The script's "packet volunteered" line is an editorial joke, not a recorded exchange. Cucumber with black salt (kala namak) is another household preference he enjoys describing, including its distinctive smell. Do not extend that anecdote into a health claim.
 
-## Capture answers by default — confirmed October 23, 2026
+## Capture answers by default â€” confirmed October 23, 2026
 
-Default biography capture — confirmed October 23, 2026: whenever Tushar answers a question, extract new reusable personal facts, experiences, preferences and household context into docs/about-tushar.md in the same turn, without asking again or waiting for a finished video. This standing instruction supersedes earlier deferrals of biography work. Add dated, sourced entries, deduplicate existing details, and preserve corrections and the distinction between firsthand experience, personal opinion, historical context and untested expectation. Clear dictated names can be normalized from established context; flag material ambiguity instead of inventing facts. If an answer adds no new biographical information, do not create filler. Keep agent/workflow preferences in operating instructions rather than treating them as life history. Do not copy credentials or sensitive private details into this public repository; retain any such information privately unless publication is explicitly authorized. Validate and commit/push updates to the Git biography; do not change the website About page. Report an unavailable write or sync honestly.
+Default biography capture â€” confirmed October 23, 2026: whenever Tushar answers a question, extract new reusable personal facts, experiences, preferences and household context into docs/about-tushar.md in the same turn, without asking again or waiting for a finished video. This standing instruction supersedes earlier deferrals of biography work. Add dated, sourced entries, deduplicate existing details, and preserve corrections and the distinction between firsthand experience, personal opinion, historical context and untested expectation. Clear dictated names can be normalized from established context; flag material ambiguity instead of inventing facts. If an answer adds no new biographical information, do not create filler. Keep agent/workflow preferences in operating instructions rather than treating them as life history. Do not copy credentials or sensitive private details into this public repository; retain any such information privately unless publication is explicitly authorized. Validate and commit/push updates to the Git biography; do not change the website About page. Report an unavailable write or sync honestly.
 
-## Confirmed preferences — Reddit answers, October 23, 2026
+## Confirmed preferences â€” Reddit answers, October 23, 2026
 
 ### BIO-011: Favorite family meal-prep dishes
 
@@ -136,7 +136,7 @@ Tushar describes his burritos as leaning California style. He likes avocado for 
 
 After trying a couple of others, Tushar says he has not found anything better than PEScience. This is a personal preference; he did not name the alternatives, flavors or particular baking tests in this answer. The dictated "B-Signs" is normalized to PEScience from the question's explicit product context. Do not turn it into an affiliate code, claim every competing powder was tested, or invent an alternative recommendation.
 
-## Confirmed firsthand stories — weekly pizza short, October 24, 2026
+## Confirmed firsthand stories â€” weekly pizza short, October 24, 2026
 
 ### BIO-014: Pizza is a weekly meal, not a cheat meal
 
@@ -144,13 +144,13 @@ Tushar says pizza is not treated as a cheat meal in his household; the family ea
 
 ### BIO-015: Calorie-counted pizza around 600 per serving
 
-Tushar's approach is to count calories so pizza fits ordinary days. He aims for about 600 calories per adult serving (sometimes stating "under 600–700"). A target he uses, not verified nutrition for any specific pizza; check the actual package before putting numbers on screen.
+Tushar's approach is to count calories so pizza fits ordinary days. He aims for about 600 calories per adult serving (sometimes stating "under 600â€“700"). A target he uses, not verified nutrition for any specific pizza; check the actual package before putting numbers on screen.
 
 ### BIO-016: Upgrading a plain thin-crust frozen pizza
 
 Most of the time the family uses a normal thin-crust pizza. His tip: start with a plain mozzarella/cheese thin crust, add extra low-fat mozzarella and turkey pepperoni on top to make a frozen pizza feel like a meal. Bettergoods (Walmart) thin crust is one of his favorite brands but is often out of stock in his experience. He sometimes uses Yough! Greek-yogurt-crust frozen pizza from Target (dictated "Yo"/"Y O U G H"; brand name verified October 24, 2026 at eatyough.com and Target listings), but says it is not a great pizza and would recommend any thin crust you like instead. Personal taste only; no sponsorship or nutrition values established.
 
-## Confirmed firsthand preferences — Reddit answers, October 25, 2026
+## Confirmed firsthand preferences â€” Reddit answers, October 25, 2026
 
 ### BIO-017: A cold ham-and-cheese sandwich with crunch
 
@@ -164,7 +164,7 @@ Tushar says he has tried meal replacements a couple of times and they have not w
 
 He generally prefers a protein shake with a pack of chips or another snack. He described the chips as "healthy," without naming a product or establishing a nutritional comparison. A protein shake and chips are his personal convenience choice, not a substantiated nutritionally complete meal replacement.
 
-## Confirmed firsthand stories — Creami trio interview, October 25, 2026
+## Confirmed firsthand stories â€” Creami trio interview, October 25, 2026
 
 ### BIO-019: Crunch can change his verdict
 
@@ -198,7 +198,7 @@ Tushar chooses three flavors from the weekly six-option Crumbl selection, combin
 
 Most earlier creations exist as short videos rather than long-form coverage. He is open to using that archive for a top-ten, best-mix-ins or favorite-flavors compilation if viewers want it. Do not imply unseen original long-form footage exists or that an archive compilation has already been made.
 
-## Confirmed firsthand stories — Creami family follow-up, October 25, 2026
+## Confirmed firsthand stories â€” Creami family follow-up, October 25, 2026
 
 ### BIO-025: A picky childhood informs how he offers food
 
@@ -222,7 +222,7 @@ Tushar says his children participate in five or six sports and he places high im
 
 He says his wife sometimes acts funny when the camera is on and filming has become part of their lifestyle; he did not identify a recurring joke. An ambiguous dictated comment about food feeling like egg is not established as a reusable quote or complaint.
 
-## Confirmed firsthand stories — meatball interview, October 26, 2026
+## Confirmed firsthand stories â€” meatball interview, October 26, 2026
 
 ### BIO-029: A viral experiment became a repeat dinner
 
@@ -272,7 +272,7 @@ Both children say they want to be chefs and enjoy helping. Tushar says they can 
 
 ### BIO-039: Two dinners is usually the sweet spot
 
-Adding context to BIO-030, Tushar usually prefers the same cook to cover two dinners. Sometimes he stretches it to three when one fewer adult is home; while a grandmother is visiting, two is typical. In this particular ditalini cook he started around 3 p.m. after meetings, before his older child's soccer, then reheated dinner after returning around 6:30–6:45 that same evening. This is episode-specific timing, not a permanent weekly appointment.
+Adding context to BIO-030, Tushar usually prefers the same cook to cover two dinners. Sometimes he stretches it to three when one fewer adult is home; while a grandmother is visiting, two is typical. In this particular ditalini cook he started around 3 p.m. after meetings, before his older child's soccer, then reheated dinner after returning around 6:30â€“6:45 that same evening. This is episode-specific timing, not a permanent weekly appointment.
 
 ### BIO-040: Meal prep coexists with takeout
 
@@ -281,6 +281,50 @@ Tushar is not completely against ordering food. When the plan falls apart, Taco 
 ### BIO-041: Future sous-chef jobs
 
 Adding to BIO-038, Tushar would like the children to grow into making rice, retrieving pantry ingredients and assembling their own snack boxes. These are future hopes, not claims that every job is already independent or was filmed. Confirmed October 27, 2026.
+
+## Backfilled firsthand stories — audit October 28, 2026
+
+These entries recover direct answers from the earlier Creami, Golden Garlic POV and wing-night interviews in this chat. The audit date is not the date of the cook. They supplement existing entries and preserve historical shopping, household routines and personal tastes rather than claiming current availability or universal nutrition advice.
+
+### BIO-042: Why Crumbl Creami Cut began
+
+Tushar started the series after becoming bored with his regular Creami flavors and wanting a creative project. He had seen cookie recipes recreated as lower-calorie cookies and wanted to turn cookie flavors into ice cream. His statement that he had not seen others do it explains his inspiration; do not claim he invented cookie-inspired ice cream. In the first trio he rated Twix-inspired 9.2, snickerdoodle 9.5 and chocolate peanut butter 9.8. These are personal scores for that episode.
+
+### BIO-043: Regular ice cream belongs in the same household
+
+During the first Creami interview, Tushar said his wife fits an approximately 200-calorie regular ice cream into her day while his Creami serves as a protein checkpoint. He described checkpoints as protein targets across meals, including dessert. Her choice was Blue Bunny chocolate brownie fudge after a Favorite Day chocolate fudge product they enjoyed became unavailable to them. They were still looking for something with a similarly satisfying fudge element and wanted audience suggestions. Do not establish a manufacturer discontinuation as fact, turn her portion into a recommendation, or contradict the later clarification that she generally sticks with one flavor and is not particularly interested in Creami experiments.
+
+### BIO-044: The freezer supports convenient home cooking
+
+Tushar buys frozen vegetables to reduce waste, save preparation time and keep ingredients available in a deep freezer. Most of his meal prep cooks the vegetables through, so their fresh crunch is less important; he buys fresh when a recipe needs that crunch. This is his use case, not proof that all frozen and fresh products have identical nutrition. He considers single-ingredient frozen vegetables real food and convenience compatible with home cooking.
+
+### BIO-045: Household freezer staples and shopping experiments
+
+In the Golden Garlic interview, he reported a Good Chop meat subscription, keeping Walmart 93/7 grass-fed ground beef on hand, and bulk-cooking ground beef roughly every two weeks for about three meals. He usually bought chicken at Whole Foods and preferred air-chilled options; trying Costco frozen thighs was a future plan, not a completed test. He also freezes ordinary bread or brioche buns for the children while the adults often choose keto bread. Keep these reported shopping habits separate from current stock, price claims or a recommendation that children follow an adult diet.
+
+### BIO-046: Golden garlic rice became a repeat base
+
+When learning to cook a few years earlier, Tushar enjoyed kebabs and Mediterranean-style yellow rice. He learned a garlicky turmeric rice from Blanche / Feast in the Middle East and confirmed the video “My Family’s Secret Garlic Turmeric Middle Eastern Rice Recipe!” (https://www.youtube.com/watch?v=tLiRpUmr8Cg). He now uses that rice idea across three dinners and says the children enjoy it. Attribute the inspiration; do not imply the original rice recipe was his creation or infer exact fat/calorie totals from his enthusiastic description.
+
+### BIO-047: Visiting grandmothers change the serving calculator
+
+Both grandmothers live in India and alternate visits roughly every six months, staying about two to three months in his recollection. A visit changes the household meal-planning count, which is one reason he values the website portion calculator. He also measures ingredients such as garlic for repeatable flavor and to avoid using more than the food needs. Do not infer today's visitor or a fixed future travel schedule.
+
+### BIO-048: Finding a useful frozen steak shortcut
+
+Tushar enjoys Sam the Cooking Guy and noticed his use of thinly sliced steak. While looking for a version that fit his preferences, he discovered Gary's QuickSteak through an online grocery suggestion. At the interview he ordered it in bulk through Instacart from Sam's Club because he knew he would use it. This is a discovery story, not evidence of exclusive retail availability or sponsorship. Weekday activities often bring the family home around 6:30–6:45; having a prepared dinner ready to reheat feels like a win to him.
+
+### BIO-049: Wing night is regular dinner
+
+Tushar makes wings at least monthly when he can find the wings he likes and considers them a normal dinner, rather than a cheat meal. Kenji López-Alt's oven-fried wings video inspired his baking-powder approach around the COVID period, when the household was going out less for wings and beer. He enjoys the low active work of oven cooking and pairs the meal with Lagunitas hop water. The specific filmed evening overlapped with his daughter's gymnastics; it is not a permanent timetable. Do not convert his recollection of leaving during baking into an instructional recommendation.
+
+### BIO-050: His preferred wings and the family sauce split
+
+Tushar particularly likes Mary's air-chilled wings for consistent size and his own cooking results. He recalled finding them at Whole Foods, Good Eggs or Sprouts; availability is historical. He remains the ghost-pepper person, while his wife now prefers milder Buffalo with an occasional hotter piece. The children did not enjoy the bottled Parmesan Garlic sauce alone, so he warmed it with butter for their finish. Sauce brand names not explicitly confirmed should be checked against the footage or package before naming them.
+
+### BIO-051: Proper blue cheese and the divided tray
+
+Tushar strongly prefers blue cheese dressing and considers his own high-protein version a favorite because it has pronounced blue-cheese flavor. Carrots and celery are part of his wing-night ritual, and he says the children readily enjoy those crunchy vegetables. His older child prefers foods not touching, so divided trays still help. He calls wings with his dressing one of his best dinners while attributing the wing technique to its inspiration. These are personal preferences, not comparative product facts or invented reactions in a specific shot.
 
 ## Questions for expanding the biography
 
@@ -293,6 +337,9 @@ Ask a few at a time when relevant; unanswered questions are not facts:
 - What family details should stay private or out of videos?
 
 ## Sources
+
+- October 28, 2026 backfill audit of direct first Creami, Golden Garlic POV and wing-night answers in this chat: BIO-042–051. Historical cook dates are kept separate from audit date.
+- Direct ditalini follow-up and meatball closing answers: BIO-036 and BIO-040–041; verified present during the October 28 audit.
 
 - Tushar's direct ditalini interview and approved narration correction, October 27, 2026: BIO-037 through BIO-039. Higher-protein pasta like Pete's explicitly assigned three. Raw answers and production records remain private; film review was still pending at capture.
 
