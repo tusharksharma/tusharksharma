@@ -326,6 +326,20 @@ Tushar particularly likes Mary's air-chilled wings for consistent size and his o
 
 Tushar strongly prefers blue cheese dressing and considers his own high-protein version a favorite because it has pronounced blue-cheese flavor. Carrots and celery are part of his wing-night ritual, and he says the children readily enjoy those crunchy vegetables. His older child prefers foods not touching, so divided trays still help. He calls wings with his dressing one of his best dinners while attributing the wing technique to its inspiration. These are personal preferences, not comparative product facts or invented reactions in a specific shot.
 
+## Confirmed dessert-test follow-up — October 28, 2026
+
+### BIO-052: A family test can have more than one useful result
+
+For the three-dessert test, the children rejected the warmed BUILT Cookie Dough Chunk Puff s'more, while Tushar liked it and would eat it again, consistent with BIO-003. The mango protein Creami was enjoyed by the whole family. The PRIME Cookies & Cream shake pudding tasted very off to him and was a flop for everyone; he does not know whether he made a preparation mistake. Do not invent specific child dialogue, a diagnosed reason for failure, or a verdict on every protein pudding.
+
+### BIO-053: Taste masking is his hypothesis, not a proven explanation
+
+Tushar noted that the protein bar dominated the s'more and the protein shake dominated the pudding, while milk was the main ingredient in the mango Creami. He suspects this difference affected how well the protein flavor was masked. Preserve this as his untested interpretation of these three different recipes, not an established mechanism or proof that one protein type is better.
+
+### BIO-054: Dessert earns a repeat through enjoyment and practicality
+
+Tushar ran the experiment because he was curious which desserts his children would like and thought it would make good content. His repeat criteria are that someone enjoys the dessert, it is easy and repeatable, and it satisfies a craving. The s'more remains useful to him despite the children's rejection; universal family approval is not required.
+
 ## Questions for expanding the biography
 
 Ask a few at a time when relevant; unanswered questions are not facts:
@@ -337,6 +351,8 @@ Ask a few at a time when relevant; unanswered questions are not facts:
 - What family details should stay private or out of videos?
 
 ## Sources
+
+- Direct three-dessert long-form pilot follow-up, October 28, 2026: BIO-052–054. Household verdicts and repeat criteria are confirmed; the masking explanation remains explicitly untested. Recipe measurements and raw production notes remain outside this biography.
 
 - October 28, 2026 backfill audit of direct first Creami, Golden Garlic POV and wing-night answers in this chat: BIO-042–051. Historical cook dates are kept separate from audit date.
 - Direct ditalini follow-up and meatball closing answers: BIO-036 and BIO-040–041; verified present during the October 28 audit.
