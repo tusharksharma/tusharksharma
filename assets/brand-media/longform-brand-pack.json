@@ -1,0 +1,240 @@
+{
+  "version": "longform-brand-pack-v1.1",
+  "updated": "2026-10-28",
+  "scope": "Future films; preserve approved exports",
+  "library_folder": "https://drive.google.com/drive/folders/1wVzemcmjICSLA4tB7DODdSUzmJ2JxAFQ",
+  "music_and_intro": {
+    "gemini-intro-original.mp4": {
+      "file": "gemini-intro-original.mp4",
+      "bytes": 2335791,
+      "sha256": "f6c4df05efa4555339de102e993f063165677feb8b0bbc07bdc3044550647ffc",
+      "duration_seconds": 10.005,
+      "streams": [
+        {
+          "type": "video",
+          "codec": "h264",
+          "width": 1280,
+          "height": 720,
+          "fps": "24/1",
+          "start_seconds": 0.0,
+          "duration_seconds": 10.0
+        },
+        {
+          "type": "audio",
+          "codec": "aac",
+          "sample_rate": 48000,
+          "channels": 2,
+          "start_seconds": 0.0,
+          "duration_seconds": 10.005
+        }
+      ],
+      "decoded_frames": {
+        "VideoFrame": 240,
+        "AudioFrame": 469
+      },
+      "decode": "complete",
+      "drive_id": "1pDgTL5gQ4Eui-UR6lNkQxW9CtHKR9chz",
+      "drive_url": "https://drive.google.com/file/d/1pDgTL5gQ4Eui-UR6lNkQxW9CtHKR9chz/view",
+      "storage": "canonical bytes in authorized Drive; local downloads not committed"
+    },
+    "slam.mp4": {
+      "file": "slam.mp4",
+      "bytes": 275326,
+      "sha256": "06dae6523079ff929f52d7da36e4afd29f09a7f523feda8f0413f7604147d33d",
+      "duration_seconds": 15.2,
+      "streams": [
+        {
+          "type": "video",
+          "codec": "h264",
+          "width": 960,
+          "height": 540,
+          "fps": "10/1",
+          "start_seconds": 0.0,
+          "duration_seconds": 15.2
+        },
+        {
+          "type": "audio",
+          "codec": "aac",
+          "sample_rate": 48000,
+          "channels": 2,
+          "start_seconds": 0.0,
+          "duration_seconds": 10.8
+        }
+      ],
+      "decoded_frames": {
+        "VideoFrame": 152,
+        "AudioFrame": 507
+      },
+      "decode": "complete",
+      "drive_id": "1VUQInTonJNxWF4K0CAihVIDnPp6NtHR5",
+      "drive_url": "https://drive.google.com/file/d/1VUQInTonJNxWF4K0CAihVIDnPp6NtHR5/view",
+      "storage": "canonical bytes in authorized Drive; local downloads not committed"
+    },
+    "slam-outro.wav": {
+      "file": "slam-outro.wav",
+      "bytes": 4608078,
+      "sha256": "023bceb85c8247b18494e7c899a936351f98ccf16a2ab7a10a4580048b1b9e14",
+      "duration_seconds": 24.0,
+      "streams": [
+        {
+          "type": "audio",
+          "codec": "pcm_s16le",
+          "sample_rate": 48000,
+          "channels": 2,
+          "start_seconds": 0,
+          "duration_seconds": 24.0
+        }
+      ],
+      "decoded_frames": {
+        "AudioFrame": 282
+      },
+      "decode": "complete",
+      "drive_id": "1JQj8wNgFSlHD8WsbLCQZ2GN639aco7x3",
+      "drive_url": "https://drive.google.com/file/d/1JQj8wNgFSlHD8WsbLCQZ2GN639aco7x3/view",
+      "storage": "canonical bytes in authorized Drive; local downloads not committed"
+    }
+  },
+  "engagement_overlay": {
+    "file": "subscribe-overlay-4s-alpha.mov",
+    "drive_id": "1ap-XgdM0LgsFhC_WTGSlpwBL64lG8_gh",
+    "drive_url": "https://drive.google.com/file/d/1ap-XgdM0LgsFhC_WTGSlpwBL64lG8_gh/view?usp=drivesdk",
+    "bytes": 16128828,
+    "sha256": "eb082bffc588b16276437d81188c97573b0d4ff633edbda7f43f763ba327806a",
+    "width": 3840,
+    "height": 2160,
+    "fps": "60/1",
+    "frames": 240,
+    "duration": 4,
+    "codec": "qtrle",
+    "pixel_format": "argb",
+    "full_decode": "pass",
+    "sampled_alpha": {
+      "0": {
+        "extrema": [
+          0,
+          0
+        ],
+        "outside": 0
+      },
+      "36": {
+        "extrema": [
+          0,
+          255
+        ],
+        "outside": 0
+      },
+      "72": {
+        "extrema": [
+          0,
+          255
+        ],
+        "outside": 0
+      },
+      "114": {
+        "extrema": [
+          0,
+          255
+        ],
+        "outside": 0
+      },
+      "162": {
+        "extrema": [
+          0,
+          255
+        ],
+        "outside": 0
+      },
+      "228": {
+        "extrema": [
+          0,
+          22
+        ],
+        "outside": 0
+      },
+      "239": {
+        "extrema": [
+          0,
+          0
+        ],
+        "outside": 0
+      }
+    }
+  },
+  "watch_next_source": {
+    "file": "watch-next-outro-10s.mp4",
+    "drive_id": "1bXgetbcCIdAviGkWkG7fDmasfc17CaOI",
+    "drive_url": "https://drive.google.com/file/d/1bXgetbcCIdAviGkWkG7fDmasfc17CaOI/view?usp=drivesdk",
+    "bytes": 399898,
+    "sha256": "28885110f086e030e7461ac6bb492004e803a5a82b0932b6a8625530ef464bd8",
+    "width": 3840,
+    "height": 2160,
+    "fps": "60/1",
+    "frames": 600,
+    "duration": 10,
+    "codec": "h264",
+    "pixel_format": "yuv420p",
+    "full_decode": "pass",
+    "sampled_alpha": {}
+  },
+  "watch_next_max_seconds": 5,
+  "save_badge": {
+    "save-badge-v1.svg": {
+      "repo_path": "assets/subscriber-graphics/save-badge-v1.svg",
+      "sha256": "e62ad7f69efe304d678e401cff3e8409eeb15fb17278f303bd319f3697b60cfa"
+    },
+    "save-badge-v1.png": {
+      "repo_path": "assets/subscriber-graphics/save-badge-v1.png",
+      "sha256": "d2da19404797877bae33839051f9e77fdf3f7697cf7c1e04cb29f110c82e82a1"
+    }
+  },
+  "music_edits": {
+    "intro": {
+      "source": "slam.mp4 audio",
+      "source_in": 0,
+      "duration": 10,
+      "fade_in": 0.1,
+      "fade_out_start": 9.6,
+      "fade_out_duration": 0.4
+    },
+    "nutrition_and_ending": {
+      "source": "slam-outro.wav",
+      "source_in": 11,
+      "source_out": 24,
+      "duration": 13,
+      "fade_in": 0.25,
+      "fade_out_start": 12.8,
+      "fade_out_duration": 0.2
+    }
+  },
+  "placement": {
+    "start": "Immediately after intro: full4s engagement animation plus Save badge over moving food",
+    "middle": "Full4s engagement animation plus Save badge at approved spoken support reminder",
+    "end": "Full4s engagement animation plus Save badge over final moving food/thanks; then7\u20138s nutrition/music; separate<=5s watch-next"
+  },
+  "episode_manifest_required": [
+    "pack_version",
+    "source_drive_id_or_repo_path",
+    "source_sha256",
+    "derived_sha256",
+    "source_in_out",
+    "timeline_start_duration",
+    "gain_fades_ducking",
+    "crop_scale_position",
+    "frame_rate",
+    "QA_evidence"
+  ],
+  "reference_episode_derivatives": {
+    "intro-music.wav": {
+      "sha256": "65154f96749f040d80cf8ec1d09e6c467beb0ab33026d90664bbe93222ae2c5b",
+      "reference_only": "Existing pasta derivative; large bytes outside Git"
+    },
+    "nutrition-and-ending-music.wav": {
+      "sha256": "3ba90ece64d2480c641c9ad970cc01a76910487f29895d5d5c48fd9d77c866fc",
+      "reference_only": "Existing pasta derivative; large bytes outside Git"
+    },
+    "subscribe-overlay.webm": {
+      "sha256": "6b7d1d8c7eff0c753fd69ab69a3f97674457f6e01c70c22a7ce39d9f6d0b799f",
+      "reference_only": "Existing pasta derivative; large bytes outside Git"
+    }
+  }
+}

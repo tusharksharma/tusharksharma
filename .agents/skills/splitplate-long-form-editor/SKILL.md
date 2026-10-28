@@ -11,6 +11,8 @@ Confirmed October 26 and reinforced October 27, 2026: future long-form films mus
 
 ## Ground the project
 
+Confirmed October 28: reuse the exact music and like/subscribe/bell plus Save graphics pinned in `assets/brand-media/longform-brand-pack.json` at start, midpoint and spoken closing. Follow the shared artifact contract in `docs/video/intro-music-and-cta.md`. Include actual assets or verified canonical retrieval paths and `brand-asset-manifest.json` in every private project handoff so another agent can reproduce the same package; do not silently regenerate or substitute brand artifacts.
+
 For thumbnail reactions, follow [Tushar's reaction library and October 23 clarification](../../../docs/video/creator-reactions.md). Use the real-video frames as identity references and generate fresh, story-appropriate ImageGen expressions/poses so thumbnails do not repeat the same face. Open-mouth reactions are allowed; closed-mouth poses are not required. Preserve recognizable identity and natural mouth/teeth, rejecting strange or distorted teeth; inspect likeness/anatomy against originals. Keep the face prominent and integrated into one thumbnail scene; do not routinely ask for new photos.
 
 Read [Intro, music and subscriber treatment](../../../docs/video/intro-music-and-cta.md) before planning every future long-form opening/outro. Use the supplied Drive intro/music library, show the compact thanks/like/subscribe/bell animation immediately after the intro and at the outro, and leave a real native end-screen layout. These confirmed rules supersede older CTA/intro examples; they do not retrofit approved films or initiate paid generation.
