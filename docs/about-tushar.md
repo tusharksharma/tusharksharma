@@ -260,6 +260,20 @@ His proposed audience question is what ingredient or food people once avoided, t
 
 At dinner, the family shares good things, bad things, and what each person is looking forward to tomorrow. Tushar's youngest chooses the order in which everyone takes a turn. Confirmed directly during the meatball film's closing-story follow-up, October 26, 2026. Do not invent anyone's answers or imply that this conversation was recorded in the cooking footage.
 
+### BIO-037: Pasta combinations are a personal planning shorthand
+
+In the October 27, 2026 ditalini interview, Tushar described combining pasta, sauce and meat with rough one-to-three points for each, aiming around six. Regular pasta gets one, a higher-fiber/lower-carb option gets two, and a higher-protein pasta like Pete's gets three. A cottage-cheese-based sauce gets three, a cottage-cheese/Alfredo combination two, and Alfredo one. Leaner meats sit higher in his shorthand. This is his personal way to think about combinations, not a validated nutrition score or a guarantee about every product. For this cook he assigned regular ditalini one, cottage-cheese sauce three and the prepared chipotle chicken two; that placement does not establish the chicken's anatomical cut.
+
+He has increasingly enjoyed regular pasta while changing the surrounding sauce and protein, rather than making every ingredient a protein substitute. He applies a similar idea to white rice.
+
+### BIO-038: Children want more opportunities to cook
+
+Both children say they want to be chefs and enjoy helping. Tushar says they can make their own noodles, mac and cheese, and eggs. Much meal prep happens while they are away, so they often join at reheating or garnishing instead. Do not turn this into an unsupervised-cooking claim or invent recorded dialogue. Confirmed October 27, 2026.
+
+### BIO-039: Two dinners is usually the sweet spot
+
+Adding context to BIO-030, Tushar usually prefers the same cook to cover two dinners. Sometimes he stretches it to three when one fewer adult is home; while a grandmother is visiting, two is typical. In this particular ditalini cook he started around 3 p.m. after meetings, before his older child's soccer, then reheated dinner after returning around 6:30–6:45 that same evening. This is episode-specific timing, not a permanent weekly appointment.
+
 ## Questions for expanding the biography
 
 Ask a few at a time when relevant; unanswered questions are not facts:
@@ -271,6 +285,8 @@ Ask a few at a time when relevant; unanswered questions are not facts:
 - What family details should stay private or out of videos?
 
 ## Sources
+
+- Tushar's direct ditalini interview and approved narration correction, October 27, 2026: BIO-037 through BIO-039. Higher-protein pasta like Pete's explicitly assigned three. Raw answers and production records remain private; film review was still pending at capture.
 
 - Tushar's direct ten-question meatball/family-life interview, October 26, 2026: BIO-029 through BIO-035. Recipe name retained; second cottage-cheese brand confirmed as MULU later that day; exact seasoning quantities remain unconfirmed. Raw answers remain private.
 
