@@ -13,3 +13,7 @@ Keep the supplied main, caption track, sources and all delivery records. Before 
 Final private-upload QA: authenticated1080p selected and actual1920x1080 readyState4 playback verified. English captions and corrected chapters visible. Native three-element end screen saved/reopened at8:58:06–9:03:06; actual public behavior remains pending. Inventory780 row777 and posting612 readback matched. No publication or schedule assigned.
 
 Owner then explicitly requested scheduling. Existing xYm7vbw0-js verified Scheduled Monday November16 2026 at17:00 America/Los_Angeles in reopened Studio visibility controls. Existing releases preserved. Inventory780/posting612 and persistent release followup updated. Promos remain unbuilt/unapproved; planned November17/19/21noon are not actual schedules. Public playback/endscreen/Related checks remain release-time duties.
+
+## Companion build
+
+Owner requested three promos. Prepared distinct pancake verdict, larger delicate chicken meatballs, and family pasta result. Existing Marcus audio remains1.0x; no new paid voice. Clean and varied reaction covers, captions, editable HyperFrames projects, Story card artwork and full posting copy saved privately. Planned November17/19/21noonPacific remains a plan; finished-preview and likeness approval, final exports and actual scheduling pending. Main unchanged. Intentional master-to-promo reuse; no new raw allocations or reserves claimed.
