@@ -10,6 +10,7 @@ Split Plate Recipe Package Uploader for Tushar Sharma's brand The Split Plate (t
 - The bot's computer has no git credentials; push repo changes through a Cursor cloud agent.
 - Recipe images must be AI-recreated, social-ready images (not just polished/upscaled stills); they need not be fully real but must look great and stay faithful to the actual dish and ingredients.
 - Recipe videos live in the `videos` release of `tusharma88/tsp-videos` (Tushar's corporate account; `tusharksharma` is a collaborator). The Cursor GitHub app can't write there, so put the video in the Drive exports folder and give Tushar a ready-to-paste ChatGPT instruction to upload it.
+- For any carousel work, always work with the Carousel Builder Specialist agent instead of building carousels myself.
 - Whenever instructions, routines or skills change, update this file with a short commit message.
 
 ## Routines
