@@ -1,6 +1,6 @@
 # About Tushar â€” biography and story source
 
-Last updated: October 28, 2026. Purpose: reusable source material for The Split Plate videos, introductions, captions and community replies. This is a living biography, not a complete life history. Preserve the distinction between firsthand experience, personal opinion, existing public biography and untested expectations.
+Last updated: October 29, 2026. Purpose: reusable source material for The Split Plate videos, introductions, captions and community replies. This is a living biography, not a complete life history. Preserve the distinction between firsthand experience, personal opinion, existing public biography and untested expectations.
 
 ## Short introduction
 
@@ -373,3 +373,51 @@ Ask a few at a time when relevant; unanswered questions are not facts:
 - Tushar's direct answers for the weekly pizza short, October 24, 2026: BIO-014 through BIO-016.
 - Existing public About page: `src/pages/AboutPage.jsx`, reviewed October 22, 2026, for the data/analytics background only.
 - Confirmed standing food principles: `docs/splitplate-ideologies.md`; brand framing in root `AGENTS.md`.
+
+## Cottage cheese three ways — delivery biography audit, October 29, 2026
+
+Source for BIO-055–065: Tushar-supplied `ABOUT_TUSHAR_COTTAGE_CHEESE_SUPPLEMENT.md` and final approved narration in the October 29 Cottage Cheese Three Ways delivery. The supplement records direct interview/follow-up answers; this audit did not independently conduct that interview. These entries extend BIO-035 and preserve the source's uncertainty.
+
+### BIO-055: Cottage cheese became useful without being enjoyable plain
+
+He dislikes cottage cheese on its own. He tried it during the craze, began adding it to omelettes, and continued trying it in other dishes. No specific starting year is established.
+
+### BIO-056: A cheesier, less sour taste is his preference
+
+He prefers cottage cheese to Greek yogurt in these dishes because it tastes cheesier and less sour to him. This is personal taste, not a universal substitution claim.
+
+### BIO-057: Blending matters more than brand to him
+
+Brand matters, but he considers proper blending more important. His Beast blender works well; an immersion blender also works. Recipe-appropriate Fairlife milk or bone broth can help it blend. No universal liquid ratio or blending time was confirmed.
+
+### BIO-058: Overheating taught him a practical limit
+
+He has experienced cottage-cheese mixtures breaking when overheated. BIO-062 records his more detailed recollection; do not invent a filmed failure or guaranteed rescue.
+
+### BIO-059: Different meals do different jobs
+
+He would repeat all three rather than rank them: pancakes for breakfast, meatballs as a main protein, and ditalini as a complete pasta dinner. Separately, his family loved the filmed ditalini and did not notice the cottage cheese. This is not a family ranking of all three dishes.
+
+### BIO-060: Familiar pancakes with a small egg-flavor caveat
+
+He found the texture, fluffiness and golden color close to regular pancakes, with a slightly stronger egg flavor. His thoughts about flour or toppings masking that flavor are hypotheses, not controlled comparisons.
+
+### BIO-061: His daughter enjoyed mini pancakes but preferred regular ones
+
+After liking his first batch, he made about five or six minis for his pancake-loving daughter, who ate around four. She still preferred regular pancakes but enjoyed these. He would offer them as pancakes to try, not a child's protein target. He used Maple Grove Farms sugar-free syrup; she had whipped butter and regular maple syrup. These approximate minis are separate from the adult three-pancake recipe serving.
+
+### BIO-062: A split sauce changed his pasta finish
+
+Roughly a year before the interview, an unidentified cottage-cheese pasta split into tiny curds and liquid. He is fairly sure he ate it; the appearance bothered him more than the taste. He does not remember rescuing it. He now prefers taking pasta off heat before adding cottage cheese, while acknowledging that others heat it successfully and his own experience is hit-or-miss.
+
+### BIO-063: Whole-mixture circulation is his blending check
+
+He wants silky smooth texture without noticeable curds. When only one section spins, he checks whether the mixture needs more liquid. He can move an immersion blender through the mixture, but prefers a regular blender. His Beast works well but feels small. He has not used a Vitamix and cannot compare one directly.
+
+### BIO-064: Fewer, larger meatballs are easier to manage
+
+He now prefers larger meatballs: fewer to turn and a useful portion remains if some breaks off. He describes the mixture as delicate and handles it gently. The filmed larger count is unknown; twenty is the original yield. Do not transfer a three-piece nutrition estimate to three larger meatballs.
+
+### BIO-065: Ditalini earns repeats through convenience and flavor
+
+He enjoys the small shape and the convenience of pasta, cheeses and cooked chicken already on hand. Chipotle brings it together for him without needing more seasoning. This taste preference does not change the exact published recipe, ingredient quantities or measured nutrition basis.
