@@ -15493,8 +15493,9 @@ const DESSERT_CATALOG = [
       "methodLabel": "HOW TO MAKE",
       "methodGroups": [
         {
+          "card": 0,
           "accent": "amber",
-          "heading": "From Base to Finished Pint",
+          "heading": "Blend, Freeze, Spin",
           "items": [
             {
               "number": 1,
@@ -15503,11 +15504,23 @@ const DESSERT_CATALOG = [
             },
             {
               "number": 2,
-              "heading": "SPIN + MIX",
-              "body": "Process on Regular Ice Cream. Add the brownie after the first spin and Respin without added water. Repeat as needed for your texture."
-            },
+              "heading": "SPIN",
+              "body": "Process on Regular Ice Cream."
+            }
+          ]
+        },
+        {
+          "card": 1,
+          "accent": "coral",
+          "heading": "Mix-in + Shell",
+          "items": [
             {
               "number": 3,
+              "heading": "MIX IN",
+              "body": "Add the brownie after the first spin and Respin without added water. Repeat as needed for your texture."
+            },
+            {
+              "number": 4,
               "heading": "SHELL + FINISH",
               "body": "Melt 7g Lily’s white chips with 1 tsp coconut oil in short microwave bursts. Drizzle over the scoops, let the shell set, then finish with red coloring drops."
             }
@@ -15525,7 +15538,7 @@ const DESSERT_CATALOG = [
         }
       ],
       "servingPhoto": {
-        "src": "/images/halloween-red-velvet-creami/hero-polished.webp",
+        "src": "/images/halloween-red-velvet-creami/finish-red-drops-polished.webp",
         "layout": "band"
       },
       "servingGroups": [
@@ -15534,13 +15547,10 @@ const DESSERT_CATALOG = [
           "heading": "One Whole Finished Pint",
           "items": [
             {
-              "text": "With Nurri 2% (filmed): about 360 calories and 40g protein, including mix-in and topping."
+              "text": "Nurri 2% (filmed): about 360 cal / 40g protein, mix-in + topping included."
             },
             {
-              "text": "With Fairlife 2%: about 330 calories and 33g protein. Ultra-filtered milk brands vary — use your carton’s label."
-            },
-            {
-              "text": "Rounded estimates; emulsion/coloring labels and brownie portion may vary."
+              "text": "Fairlife 2%: about 330 cal / 33g protein. Milk brands vary — use your label."
             }
           ]
         }
@@ -15551,6 +15561,7 @@ const DESSERT_CATALOG = [
       "/images/halloween-red-velvet-creami/base-polished.webp",
       "/images/halloween-red-velvet-creami/mix-in-polished.webp",
       "/images/halloween-red-velvet-creami/spin-polished.webp",
+      "/images/halloween-red-velvet-creami/shell-measure-polished.webp",
       "/images/halloween-red-velvet-creami/shell-drizzle-polished.webp",
       "/images/halloween-red-velvet-creami/finish-red-drops-polished.webp"
     ],
