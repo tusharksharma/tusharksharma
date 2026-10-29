@@ -15381,6 +15381,273 @@ const DESSERT_CATALOG = [
       "reheat": "Do not heat the pint."
     }
   },
+  {
+    "id": "halloween-red-velvet-creami",
+    "title": "Halloween Red Velvet Creami",
+    "tagline": "Red velvet protein Creami with a chocolate brownie mix-in and a white chocolate coconut-oil shell. Approximately 360 calories and 40g protein for the whole finished pint with Nurri 2% (filmed).",
+    "heroImage": "/images/halloween-red-velvet-creami/hero-polished.webp",
+    "prepImage": "/images/halloween-red-velvet-creami/base-polished.webp",
+    "prepImageCaption": "The red velvet protein base blended smooth before the 24-hour freeze.",
+    "video": "/videos/halloween-red-velvet-creami/halloween-red-velvet-creami-360cal-40protein-marcus.mp4",
+    "videoPoster": "/images/halloween-red-velvet-creami/hero-polished.webp",
+    "socialHashtags": [
+      "#TheSplitPlate",
+      "#CrumblCreamiCut",
+      "#NinjaCreami",
+      "#RedVelvet",
+      "#HalloweenDessert"
+    ],
+    "socialCarousel": {
+      "heroBadge": "Protein Creami · Halloween",
+      "heroAccent": "coral",
+      "heroTitle": "Halloween Red Velvet Creami",
+      "heroStats": [
+        {
+          "value": "~360",
+          "label": "cal · whole pint · Nurri 2%"
+        },
+        {
+          "value": "~40g",
+          "label": "protein · whole pint · Nurri 2%"
+        },
+        {
+          "value": "1",
+          "label": "finished pint"
+        }
+      ],
+      "hook": "Red velvet protein Creami with a chocolate brownie mix-in and a white chocolate coconut-oil shell.",
+      "heroPhoto": "/images/halloween-red-velvet-creami/hero-polished.webp",
+      "captionBody": "Halloween Red Velvet Creami: approximately 360 calories and 40g protein for one whole finished pint with Nurri 2% (filmed), including the brownie mix-in and white chocolate shell. With Fairlife 2%, about 330 calories and 33g protein. Ultra-filtered milk brands vary — use your carton’s label. Blend the red velvet base (no added cocoa or vanilla), freeze level for 24 hours, rest 5 minutes, spin on Regular Ice Cream, mix in one-third of a Prime Bites Chocolate Cookie Monster brownie, then drizzle a Lily’s white chip + coconut oil shell and finish with red coloring drops. Homemade cookie-inspired recipe; not affiliated with Crumbl. Full recipe: thesplitplate.com/cookbook/halloween-red-velvet-creami",
+      "ingredientGroups": [
+        {
+          "card": 0,
+          "accent": "coral",
+          "heading": "Red Velvet Protein Base",
+          "items": [
+            {
+              "quantity": "1 cup",
+              "text": "Ultra-filtered 2% milk",
+              "note": "Filmed: Nurri 2%"
+            },
+            {
+              "quantity": "1/2 serving",
+              "text": "Opportuniteas unflavored whey isolate",
+              "note": "Label: 60 cal / 14g protein"
+            },
+            {
+              "quantity": "2 tbsp",
+              "text": "Monk-fruit/erythritol sweetener"
+            },
+            {
+              "quantity": "1/8 tsp",
+              "text": "Guar gum"
+            },
+            {
+              "quantity": "Pinch",
+              "text": "Salt"
+            },
+            {
+              "quantity": "1/2 tsp",
+              "text": "Red velvet emulsion",
+              "note": "No added cocoa or vanilla"
+            }
+          ]
+        },
+        {
+          "card": 1,
+          "accent": "amber",
+          "heading": "Mix-in + Shell",
+          "items": [
+            {
+              "quantity": "1/3",
+              "text": "Prime Bites Chocolate Cookie Monster brownie",
+              "note": "About 22g"
+            },
+            {
+              "quantity": "7g",
+              "text": "Lily’s white chocolate style chips"
+            },
+            {
+              "quantity": "1 tsp",
+              "text": "Coconut oil",
+              "note": "Melt with the white chips; included in macros"
+            },
+            {
+              "quantity": "A few drops",
+              "text": "Natural red food coloring",
+              "note": "Halloween finish on the shell"
+            }
+          ]
+        }
+      ],
+      "ingredientCardPhotos": [
+        {
+          "src": "/images/halloween-red-velvet-creami/base-polished.webp",
+          "layout": "side"
+        },
+        {
+          "src": "/images/halloween-red-velvet-creami/mix-in-polished.webp",
+          "layout": "side"
+        }
+      ],
+      "methodLabel": "HOW TO MAKE",
+      "methodGroups": [
+        {
+          "accent": "amber",
+          "heading": "From Base to Finished Pint",
+          "items": [
+            {
+              "number": 1,
+              "heading": "BLEND + FREEZE",
+              "body": "Blend the base until smooth — no added cocoa or vanilla. Freeze upright and level for 24 hours. Rest on the counter for 5 minutes."
+            },
+            {
+              "number": 2,
+              "heading": "SPIN + MIX",
+              "body": "Process on Regular Ice Cream. Add the brownie after the first spin and Respin without added water. Repeat as needed for your texture."
+            },
+            {
+              "number": 3,
+              "heading": "SHELL + FINISH",
+              "body": "Melt 7g Lily’s white chips with 1 tsp coconut oil in short microwave bursts. Drizzle over the scoops, let the shell set, then finish with red coloring drops."
+            }
+          ]
+        }
+      ],
+      "methodCardPhotos": [
+        {
+          "src": "/images/halloween-red-velvet-creami/spin-polished.webp",
+          "layout": "side"
+        },
+        {
+          "src": "/images/halloween-red-velvet-creami/shell-drizzle-polished.webp",
+          "layout": "side"
+        }
+      ],
+      "servingPhoto": {
+        "src": "/images/halloween-red-velvet-creami/hero-polished.webp",
+        "layout": "band"
+      },
+      "servingGroups": [
+        {
+          "accent": "coral",
+          "heading": "One Whole Finished Pint",
+          "items": [
+            {
+              "text": "With Nurri 2% (filmed): about 360 calories and 40g protein, including mix-in and topping."
+            },
+            {
+              "text": "With Fairlife 2%: about 330 calories and 33g protein. Ultra-filtered milk brands vary — use your carton’s label."
+            },
+            {
+              "text": "Rounded estimates; emulsion/coloring labels and brownie portion may vary."
+            }
+          ]
+        }
+      ],
+      "engagementQuestion": "Would you try the white chocolate shell on your next Halloween Creami?"
+    },
+    "socialImages": [
+      "/images/halloween-red-velvet-creami/base-polished.webp",
+      "/images/halloween-red-velvet-creami/mix-in-polished.webp",
+      "/images/halloween-red-velvet-creami/spin-polished.webp",
+      "/images/halloween-red-velvet-creami/shell-drizzle-polished.webp",
+      "/images/halloween-red-velvet-creami/finish-red-drops-polished.webp"
+    ],
+    "flavorProfile": "Red velvet protein Creami with a chocolate brownie mix-in and a white chocolate coconut-oil shell.",
+    "calories": 360,
+    "caloriesPerServing": 360,
+    "protein": 40,
+    "proteinPerServing": 40,
+    "servings": 1,
+    "servingSize": "1 whole finished Creami pint",
+    "time": "5 min rest + 24 hr freeze",
+    "bestFor": [
+      "Protein Creami",
+      "Halloween dessert",
+      "Whole-pint dessert",
+      "Make-ahead"
+    ],
+    "useThisWhen": "You want a Halloween red velvet Creami with a brownie mix-in and a snap-on white chocolate shell.",
+    "flavorTarget": "Red velvet protein Creami with a chocolate brownie mix-in and a white chocolate coconut-oil shell.",
+    "ingredients": [
+      "1 cup ultra-filtered 2% milk (filmed: Nurri 2%)",
+      "1/2 serving Opportuniteas unflavored whey isolate (label: 60 calories / 14g protein)",
+      "2 tbsp monk-fruit/erythritol sweetener",
+      "1/8 tsp guar gum",
+      "Pinch of salt",
+      "1/2 tsp red velvet emulsion",
+      "1/3 Prime Bites Chocolate Cookie Monster brownie (about 22g), for the mix-in",
+      "7g Lily’s white chocolate style chips, for the topping",
+      "1 tsp coconut oil, for the topping",
+      "A few drops natural red food coloring, for the Halloween finish"
+    ],
+    "steps": [
+      {
+        "text": "BLEND: Blend milk, whey, sweetener, guar gum, salt and red velvet emulsion until smooth. No extra cocoa or vanilla in this one.",
+        "image": "/images/halloween-red-velvet-creami/base-polished.webp",
+        "imageAlt": "Halloween Red Velvet Creami: blend the red velvet base"
+      },
+      "FREEZE: Freeze the pint upright and level for 24 hours. Rest on the counter for 5 minutes.",
+      {
+        "text": "SPIN: Process on Regular Ice Cream.",
+        "image": "/images/halloween-red-velvet-creami/spin-polished.webp",
+        "imageAlt": "Halloween Red Velvet Creami: first spin"
+      },
+      {
+        "text": "MIX IN: Add one-third of a Prime Bites Chocolate Cookie Monster brownie after the first spin and Respin without added water. Repeat as needed for your texture.",
+        "image": "/images/halloween-red-velvet-creami/mix-in-polished.webp",
+        "imageAlt": "Halloween Red Velvet Creami: brownie mix-in"
+      },
+      {
+        "text": "MAKE THE SHELL: Melt 7g Lily’s white chocolate style chips with 1 tsp coconut oil in short microwave bursts, stirring until smooth.",
+        "image": "/images/halloween-red-velvet-creami/shell-measure-polished.webp",
+        "imageAlt": "Halloween Red Velvet Creami: measure white chips and coconut oil"
+      },
+      {
+        "text": "FINISH: Drizzle the melted shell over the scoops and let it set. Finish with a few drops of natural red food coloring.",
+        "image": "/images/halloween-red-velvet-creami/finish-red-drops-polished.webp",
+        "imageAlt": "Halloween Red Velvet Creami: shell with red drops"
+      }
+    ],
+    "executionRules": [
+      "Amounts and nutrition refer to one complete finished pint.",
+      "Freeze upright and level for 24 hours, within the machine’s fill line.",
+      "Follow your Creami model’s safety and processing instructions.",
+      "No added cocoa or vanilla in the base — red velvet emulsion only."
+    ],
+    "macroHonesty": "Approximately 360 calories and 40g protein for the whole finished pint with Nurri 2% (filmed), including mix-in and topping. With Fairlife 2%: about 330 calories and 33g protein. Package breakdown (Nurri build): Nurri 2% milk 150 cal / 20g protein per cup; half-serving Opportuniteas whey 60 / 14; monk-fruit/erythritol 0; guar + salt ~1; red velvet emulsion negligible estimate; 1/3 Prime Bites Chocolate Cookie Monster (~22g of 65g brownie) ~76.7 cal / 6.3g protein from the official 230 cal / 19g per 65g panel; 7g Lily’s white chips ~30 cal; 1 tsp coconut oil 40 cal; red coloring negligible estimate. Rounded totals ≈358 → about 360 cal / ≈40g protein. Ultra-filtered milk brands are not nutritionally interchangeable — use your carton’s label. Emulsion/color brand and exact drops were not supplied; their contribution is approximated. Full carbs/fat not published from incomplete whey/emulsion information. Cookie is flavor inspiration only; no Crumbl cookie or cream cheese in the pint, and no borrowed cookie macros.",
+    "warnings": [
+      "Contains milk. Prime Bites brownie and topping labels typically also list eggs, wheat, soy and tree nuts (including almond and coconut) — check current labels.",
+      "Homemade cookie-inspired recipe; not affiliated with Crumbl. No cream cheese frosting in this pint."
+    ],
+    "allergens": [
+      "milk",
+      "eggs",
+      "wheat",
+      "soy",
+      "tree-nuts"
+    ],
+    "dietTags": [
+      "high-protein",
+      "make-ahead",
+      "frozen-dessert"
+    ],
+    "relatedIds": [
+      "red-velvet-cookie-thins-creami",
+      "cookies-cream-white-chip-protein-creami"
+    ],
+    "seriesInfo": {
+      "series": "CrumblCreamiCut",
+      "framing": "Independent homemade protein Creami inspired by Crumbl’s Halloween Red Velvet Cookie. A Crumbl cookie is not an ingredient; no sponsorship or affiliation is implied. This remake uses a white-chocolate-style shell instead of cream cheese frosting."
+    },
+    "mealPrep": {
+      "storage": "Freeze the unspun base upright and level. Spin and finish when ready to eat.",
+      "lasts": "Follow the Creami machine guidance for storage and reprocessing.",
+      "reheat": "Do not heat the pint."
+    }
+  },
+
 ];
 
 // Creamis have their own browsing section while other sweets remain Desserts.
