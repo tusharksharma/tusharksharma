@@ -12,4 +12,3 @@ Owner subsequently authorized upload and scheduling. October29 closeout: unchang
 
 
 Three Shorts Scheduled: 0jXjq51Xkp4 November13 noon, cXECHcNayxE November14 at17:00, 0leXvhkSYqo November15 noon, Pacific. All three English timed tracks and approved custom covers saved; covers reloaded visually verified. Three Facebook-only direct-watch-link posts and six Instagram-only video/native-link-photo Story rows verified Scheduled for matching dates/times. Cards use explicit9:16 and native WATCH ON YOUTUBE with the exact main full-watch URL. Manual positioning is not verified; screenshot-visible-center tap through Visit link to exact actual playable main remains a live-release requirement. No TikTok/Reels, new narration or duplicate upload. Inventory775–778 and posting607–610 readback matched. Existing release heartbeat updated to verify main Public November11 and attach exact Related to all three Shorts before November13 noon. Actual publication fields remain blank.
-
