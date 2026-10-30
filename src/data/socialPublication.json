@@ -1013,5 +1013,10 @@
     "initialMainPostDate": null,
     "initialMainCreatedAt": null,
     "firstAddedAt": "2026-10-29"
+  },
+  "chicken-milanese-arugula": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": "2026-10-30",
+    "firstAddedAt": "2026-10-30"
   }
 }

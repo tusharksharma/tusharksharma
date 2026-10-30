@@ -13133,6 +13133,398 @@ const recipes = [
       "Recipe and carousel images are ImageGen transformations of the approved real cooking footage. The page and carousel preserve the actual portions and show the mild portions set aside before Fresno chilies are added.",
     ],
   },
+{
+  "id": 78,
+  "status": "live",
+  "slug": "chicken-milanese-arugula",
+  "title": "Chicken Milanese with Arugula Salad",
+  "category": "Family Dinner",
+  "pillar": "Family Dinners",
+  "mealType": "dinner",
+  "proteinAnchor": "chicken",
+  "flavorDirection": "crispy-lemon-parmesan",
+  "carbLevel": "moderate",
+  "splitFriendly": "portion",
+  "tags": [
+    "chicken-milanese",
+    "cornflake-chicken",
+    "family-dinner",
+    "arugula-salad"
+  ],
+  "servings": 4,
+  "servingSize": "1½ cutlets + ¼ salad (planned adult plate)",
+  "protein": 68,
+  "calories": 660,
+  "time": "Cook to 165°F; timing varies by thickness",
+  "image": "/images/chicken-milanese-arugula/hero-polished.webp",
+  "imagePosition": "center 55%",
+  "video": "/videos/chicken-milanese-arugula/784-chicken-milanese-arugula-web-h264.mp4",
+  "videoPoster": "/images/chicken-milanese-arugula/hero-polished.webp",
+  "role": "Crisp cornflake chicken, with the same cook served as tender-style strips for kids",
+  "makeThisWhen": "You have time for a hands-on chicken dinner and want one shared cook with different portions at the table.",
+  "hook": "Golden cornflake coating, juicy chicken, Parmesan and lemon, with a bright arugula salad. This is a hands-on dinner worth planning time for.",
+  "description": "Six thin chicken cutlets coated in seasoned cornflakes, pan-cooked and served with Parmesan, lemon and arugula salad. Keep the cook shared: adult cutlets and salad, tender-style strips and optional rolls for kids. The package describes this as an occasional project dinner rather than a quick shortcut.",
+  "ingredients": [
+    "6 thin-sliced boneless skinless chicken breasts, about 6 oz each (36 oz / approximately 1,020g total raw)",
+    "84g all-purpose flour for dredging (approximately 42g retained in the nutrition estimate)",
+    "3 large eggs, beaten (approximately half the wash retained in the estimate)",
+    "6 oz / 170g cornflakes, crushed",
+    "Creole seasoning and salt, to taste",
+    "Avocado oil spray: allow up to 2 tbsp total across preparation and cooking",
+    "1 oz / 28g Parmesan, finely grated, across the chicken",
+    "Lemon and flaky salt, to finish",
+    "5 oz / 142g arugula",
+    "10–15 cherry tomatoes, halved",
+    "1 oz / 28g pickled onions",
+    "1 tbsp olive oil for the salad",
+    "1 tbsp lemon juice for the salad",
+    "Salt for the salad, to taste",
+    "Optional kids’ side: brioche slider rolls and butter (additional to adult nutrition)"
+  ],
+  "steps": [
+    {
+      "text": "POUND: Lightly oil the inside of a food-safe bag. Pound each chicken breast evenly to about ¼ inch thick."
+    },
+    {
+      "text": "SET UP + COAT: Put flour, beaten eggs and seasoned crushed cornflakes in separate shallow dishes. Dredge chicken in flour, shake off excess, dip in egg, then press into cornflakes. Discard leftover coating ingredients that touched raw chicken.",
+      "images": [
+        "/images/chicken-milanese-arugula/egg-wash-polished.webp",
+        "/images/chicken-milanese-arugula/coated-tray-polished.webp"
+      ]
+    },
+    {
+      "text": "PAN-COOK: Preheat a large nonstick pan over medium heat and lightly spray with avocado oil. Cook without overcrowding; adjust heat so the cornflakes brown without burning and turn as needed. Check the thickest part with a thermometer: chicken must reach 165°F. Timing depends on thickness and the pan.",
+      "images": [
+        "/images/chicken-milanese-arugula/pan-flip-polished.webp"
+      ]
+    },
+    {
+      "text": "HOLD BRIEFLY: If cutlets finish at different times, briefly keep the cooked pieces warm on a rack in a 250°F oven while finishing the rest. This warming step does not replace checking doneness."
+    },
+    {
+      "text": "TOSS + FINISH: Toss arugula, tomatoes, pickled onions, olive oil, lemon juice and salt. Finish chicken with the Parmesan, a squeeze of lemon and flaky salt as needed.",
+      "images": [
+        "/images/chicken-milanese-arugula/salad-polished.webp",
+        "/images/chicken-milanese-arugula/parmesan-polished.webp"
+      ]
+    },
+    {
+      "text": "SERVE TWO WAYS: The planned adult portion is 1½ cutlets with ¼ of the salad. Cut the same chicken into long tender-style strips for children and portion for their appetite. The filmed family served brioche slider rolls with butter on the side; those are extra.",
+      "images": [
+        "/images/chicken-milanese-arugula/family-polished.webp"
+      ]
+    }
+  ],
+  "meta": {
+    "fixedBatch": true,
+    "macros": {
+      "protein": 68,
+      "calories": 660,
+      "carbs": 49,
+      "fat": 21,
+      "netCarbs": null,
+      "estimated": true
+    },
+    "allergens": [
+      "dairy",
+      "egg",
+      "wheat",
+      "gluten"
+    ],
+    "warnings": [
+      "estimated-macros",
+      "coating-retention-estimated",
+      "oil-allowance-estimated",
+      "kid-sides-extra"
+    ],
+    "dietTags": [],
+    "proteinTags": [
+      "chicken"
+    ],
+    "splitAxes": [
+      "portion"
+    ],
+    "effortTags": [
+      "stovetop",
+      "family-dinner"
+    ],
+    "costTier": "moderate",
+    "macroHonesty": "Estimated planned adult plate: 1½ cutlets plus ¼ of the salad, approximately 660 cal, 68g protein, 49g carbs and 21g fat. The chicken batch includes all 170g cornflakes, 28g Parmesan and a full 2 tbsp avocado-oil allowance, plus separate salad oil. Estimates assume 42g retained flour from 84g set out and 1½ retained eggs from 3 set out. Oil absorption, chicken weights, coating retention and brands vary. This is not measured nutrition for the two-piece plate on camera. Using 1 tbsp chicken oil gives approximately 630 cal per planned plate. Children’s brioche rolls and butter are additional; no children’s macro targets are given.",
+    "substitutionNotes": [
+      "For the entire 170g cornflake batch, an optional seasoning substitute is 1 tsp paprika, ½ tsp garlic powder, ½ tsp onion powder, ¼ tsp black pepper and ½ tsp salt. This is a suggested substitute, not the creator’s unmeasured Creole seasoning. Adjust salt if your blend already contains it.",
+      "Changing chicken weights, coating brands, retained flour/egg or cooking oil changes the nutrition estimate."
+    ]
+  },
+  "executionRules": [
+    "Pound evenly and avoid overcrowding the pan.",
+    "Use a thermometer at the thickest part: 165°F for chicken. The 250°F oven is only a brief warming hold for already cooked cutlets.",
+    "Count the cooking-oil allowance separately from the 1 tbsp salad olive oil.",
+    "Adult nutrition describes a planned serving, not the photographed two-piece plate."
+  ],
+  "splitCook": {
+    "splitPoint": "Finish the shared chicken, then portion and cut at the table.",
+    "sharedIngredients": [
+      "6 thin-sliced boneless skinless chicken breasts, about 6 oz each (36 oz / approximately 1,020g total raw)",
+      "84g all-purpose flour for dredging (approximately 42g retained in the nutrition estimate)",
+      "3 large eggs, beaten (approximately half the wash retained in the estimate)",
+      "6 oz / 170g cornflakes, crushed",
+      "Creole seasoning and salt, to taste",
+      "Avocado oil spray: allow up to 2 tbsp total across preparation and cooking",
+      "1 oz / 28g Parmesan, finely grated, across the chicken",
+      "Lemon and flaky salt, to finish",
+      "5 oz / 142g arugula",
+      "10–15 cherry tomatoes, halved",
+      "1 oz / 28g pickled onions",
+      "1 tbsp olive oil for the salad",
+      "1 tbsp lemon juice for the salad",
+      "Salt for the salad, to taste"
+    ],
+    "sharedSteps": [
+      {
+        "text": "POUND: Lightly oil the inside of a food-safe bag. Pound each chicken breast evenly to about ¼ inch thick."
+      },
+      {
+        "text": "SET UP + COAT: Put flour, beaten eggs and seasoned crushed cornflakes in separate shallow dishes. Dredge chicken in flour, shake off excess, dip in egg, then press into cornflakes. Discard leftover coating ingredients that touched raw chicken.",
+        "images": [
+          "/images/chicken-milanese-arugula/egg-wash-polished.webp",
+          "/images/chicken-milanese-arugula/coated-tray-polished.webp"
+        ]
+      },
+      {
+        "text": "PAN-COOK: Preheat a large nonstick pan over medium heat and lightly spray with avocado oil. Cook without overcrowding; adjust heat so the cornflakes brown without burning and turn as needed. Check the thickest part with a thermometer: chicken must reach 165°F. Timing depends on thickness and the pan.",
+        "images": [
+          "/images/chicken-milanese-arugula/pan-flip-polished.webp"
+        ]
+      },
+      {
+        "text": "HOLD BRIEFLY: If cutlets finish at different times, briefly keep the cooked pieces warm on a rack in a 250°F oven while finishing the rest. This warming step does not replace checking doneness."
+      },
+      {
+        "text": "TOSS + FINISH: Toss arugula, tomatoes, pickled onions, olive oil, lemon juice and salt. Finish chicken with the Parmesan, a squeeze of lemon and flaky salt as needed.",
+        "images": [
+          "/images/chicken-milanese-arugula/salad-polished.webp",
+          "/images/chicken-milanese-arugula/parmesan-polished.webp"
+        ]
+      }
+    ],
+    "adult": {
+      "label": "Adult — planned 1½ cutlets + ¼ salad",
+      "extraIngredients": [],
+      "steps": [
+        "Finish the chicken with Parmesan and lemon. Serve the planned adult portion with salad."
+      ]
+    },
+    "kid": {
+      "label": "Kids — the same chicken, cut into tender-style strips",
+      "extraIngredients": [
+        "Optional brioche slider rolls and butter; nutrition additional"
+      ],
+      "steps": [
+        "Cut the cooked chicken into long strips and portion for appetite. Rolls and butter were served alongside in this family meal."
+      ]
+    }
+  },
+  "mealPrep": {
+    "storage": "Refrigerate leftovers promptly in covered containers; keep salad and cooked chicken separate.",
+    "reheat": "Reheat chicken thoroughly using your preferred method. Dress the salad close to serving."
+  },
+  "notes": [
+    "Estimated planned adult plate: 1½ cutlets plus ¼ of the salad, approximately 660 cal, 68g protein, 49g carbs and 21g fat. The chicken batch includes all 170g cornflakes, 28g Parmesan and a full 2 tbsp avocado-oil allowance, plus separate salad oil. Estimates assume 42g retained flour from 84g set out and 1½ retained eggs from 3 set out. Oil absorption, chicken weights, coating retention and brands vary. This is not measured nutrition for the two-piece plate on camera. Using 1 tbsp chicken oil gives approximately 630 cal per planned plate. Children’s brioche rolls and butter are additional; no children’s macro targets are given.",
+    "Package 784 includes one approved main video. Website publication does not publish or schedule social posts.",
+    "All eight website photos are ImageGen transformations of inspected real footage frames. The original video remains preserved; the website copy is a browser-compatible SDR encode."
+  ],
+  "socialImages": [
+    "/images/chicken-milanese-arugula/ingredients-polished.webp",
+    "/images/chicken-milanese-arugula/egg-wash-polished.webp",
+    "/images/chicken-milanese-arugula/coated-tray-polished.webp",
+    "/images/chicken-milanese-arugula/pan-flip-polished.webp",
+    "/images/chicken-milanese-arugula/salad-polished.webp",
+    "/images/chicken-milanese-arugula/parmesan-polished.webp",
+    "/images/chicken-milanese-arugula/family-polished.webp"
+  ],
+  "socialHashtags": [
+    "#TheSplitPlate",
+    "#ChickenMilanese",
+    "#FamilyDinner",
+    "#ChickenRecipes"
+  ],
+  "socialCarousel": {
+    "heroBadge": "Family dinner · one shared cook",
+    "heroTitle": "Chicken Milanese + Arugula",
+    "heroPhoto": "/images/chicken-milanese-arugula/hero-polished.webp",
+    "heroStats": [
+      {
+        "value": "~660",
+        "label": "cal · planned adult plate"
+      },
+      {
+        "value": "68g",
+        "label": "protein · planned adult plate"
+      },
+      {
+        "value": "6",
+        "label": "chicken cutlets in batch"
+      }
+    ],
+    "hook": "Crispy cornflake chicken with Parmesan, lemon and arugula. The same cook becomes tender-style strips for the kids.",
+    "captionTitle": "Chicken Milanese with Arugula Salad",
+    "captionBody": "# Caption\n\nMy kids called these the best chicken tenders they’ve ever had. It was chicken Milanese—and honestly, one of the best chicken breast meals I’ve made. Crispy cornflake coating, juicy chicken, Parmesan, lemon and a bright arugula salad.\n\nThe honest catch: this takes work. I’d happily make it again, but it’s my once-a-quarter dinner rather than a quick weeknight shortcut.\n\n**Full recipe — 6 cutlets**\nMy family allocation was 1½ cutlets per adult and ¾ per child: 3 adults and 2 kids. Adjust portions for your family.\n\nChicken:\n- 6 boneless, skinless thin-sliced chicken breasts, about 6oz each (36oz/approximately 1,020g total raw)\n- 84g all-purpose flour, for dredging; approximately 42g actually adhered\n- 3 large eggs, beaten; approximately half the wash actually adhered\n- 6oz/170g cornflakes, crushed\n- Creole seasoning and salt, to taste\n- Avocado oil spray; allow up to 2tbsp total across preparation and cooking\n- 1oz/28g Parmesan, finely grated, across the finished chicken\n- Lemon and flaky salt, to finish\n\nOptional seasoning substitute for the entire 170g cornflake batch:1tsp paprika,½tsp garlic powder,½tsp onion powder,¼tsp black pepper and½tsp salt. This is a suggested substitute—not the exact unmeasured Creole seasoning I used. Adjust salt if your blend already contains it.\n\nSalad — 4 adult-equivalent portions:\n- 5oz/142g arugula\n- 10–15 cherry tomatoes, halved\n- 1oz/28g pickled onions\n- 1tbsp olive oil\n- 1tbsp lemon juice\n- Salt, to taste\n\nMethod:\n1. Lightly oil the inside of a food-safe bag. Pound each chicken breast evenly to about ¼ inch thick.\n2. Put flour, beaten eggs and seasoned crushed cornflakes in three separate shallow dishes. Dredge chicken in flour, shake off excess, dip in egg, then press into the cornflakes. Discard leftover coating ingredients that touched raw chicken.\n3. Preheat a large nonstick pan over medium heat and lightly spray with avocado oil. Cook without overcrowding, adjusting heat to brown the cornflakes without burning. Turn as needed. Check the thickest part with a thermometer: cook chicken to 165°F. Cooking time depends on thickness and your pan.\n4. If some cutlets finish first, keep them briefly warm on a rack in a 250°F oven while you finish the rest. This warming step does not replace checking doneness.\n5. Toss arugula, tomatoes, onions, olive oil, lemon juice and salt. Finish chicken with Parmesan, a squeeze of lemon and flaky salt as needed.\n6. For the kids, cut chicken into long tender-style strips. I added brioche slider rolls with butter on the side; those are additional to the adult macros below.\n\n**Estimated planned adult plate:** 1½ cutlets plus ¼ of the salad:about 660 calories, 68g protein, 49g carbs and 21g fat. Includes the full 2tbsp chicken-oil allowance, separate salad oil, all cornflakes and allocated Parmesan. If chicken preparation used 1tbsp oil, the same planned plate is approximately 630 calories. Retained flour/egg, raw chicken weights and oil are estimates; these are not measured nutrition for the two-piece plate on camera. Cornflake brand and exact seasoning vary.\n\nFull recipe with quantities above—save this for a night you have time.\n\n#TheSplitPlate #ChickenMilanese #HighProteinRecipes #FamilyDinner #ChickenRecipes\n\n\nRecipe: thesplitplate.com/recipes/chicken-milanese-arugula",
+    "ingredientGroups": [
+      {
+        "card": 1,
+        "accent": "amber",
+        "heading": "Chicken + crunchy coating",
+        "items": [
+          {
+            "quantity": "6 × ~6 oz",
+            "text": "Thin chicken breasts",
+            "note": "36 oz / ~1,020g raw total"
+          },
+          {
+            "quantity": "84g",
+            "text": "All-purpose flour",
+            "note": "~42g retained for estimate"
+          },
+          {
+            "quantity": "3",
+            "text": "Eggs, beaten",
+            "note": "~half the wash retained"
+          },
+          {
+            "quantity": "170g",
+            "text": "Cornflakes, crushed"
+          },
+          {
+            "quantity": "To taste",
+            "text": "Creole seasoning + salt"
+          },
+          {
+            "quantity": "Up to 2 tbsp",
+            "text": "Avocado oil spray",
+            "note": "Total chicken allowance"
+          }
+        ]
+      },
+      {
+        "card": 2,
+        "accent": "green",
+        "heading": "Salad + Parmesan finish",
+        "items": [
+          {
+            "quantity": "28g",
+            "text": "Parmesan across all chicken"
+          },
+          {
+            "quantity": "142g",
+            "text": "Arugula"
+          },
+          {
+            "quantity": "10–15",
+            "text": "Cherry tomatoes, halved"
+          },
+          {
+            "quantity": "28g",
+            "text": "Pickled onions"
+          },
+          {
+            "quantity": "1 tbsp each",
+            "text": "Olive oil + lemon juice",
+            "note": "Salad dressing"
+          },
+          {
+            "quantity": "To taste",
+            "text": "Salt; lemon + flaky salt to finish"
+          }
+        ]
+      }
+    ],
+    "ingredientCardPhotos": [
+      {
+        "src": "/images/chicken-milanese-arugula/ingredients-polished.webp",
+        "layout": "side"
+      },
+      {
+        "src": "/images/chicken-milanese-arugula/salad-polished.webp",
+        "layout": "side"
+      }
+    ],
+    "methodLabel": "POUND · COAT · PAN-COOK",
+    "methodGroups": [
+      {
+        "accent": "amber",
+        "heading": "Build the cornflake crust",
+        "items": [
+          {
+            "number": 1,
+            "heading": "Pound evenly",
+            "body": "Lightly oil a food-safe bag; pound chicken to about ¼ inch thick."
+          },
+          {
+            "number": 2,
+            "heading": "Dredge + coat",
+            "body": "Flour, beaten egg, then seasoned crushed cornflakes. Discard coating that touched raw chicken."
+          }
+        ]
+      },
+      {
+        "accent": "coral",
+        "heading": "Pan-cook the cutlets",
+        "items": [
+          {
+            "number": 3,
+            "heading": "Brown in batches",
+            "body": "Medium heat, light oil spray, no overcrowding. Adjust heat so crumbs brown without burning."
+          },
+          {
+            "number": 4,
+            "heading": "Check 165°F",
+            "body": "Turn as needed. Verify the thickest part reaches 165°F. Hold cooked pieces briefly on a rack at 250°F if needed."
+          }
+        ]
+      },
+      {
+        "accent": "green",
+        "heading": "Toss, finish + split",
+        "items": [
+          {
+            "number": 5,
+            "heading": "Dress the salad",
+            "body": "Toss arugula, tomatoes and pickled onions with 1 tbsp each olive oil and lemon juice; salt to taste."
+          },
+          {
+            "number": 6,
+            "heading": "Parmesan + lemon",
+            "body": "Finish chicken with Parmesan, lemon and flaky salt. Cut kids’ portions into tender-style strips."
+          }
+        ]
+      }
+    ],
+    "methodCardPhotos": [
+      "/images/chicken-milanese-arugula/egg-wash-polished.webp",
+      "/images/chicken-milanese-arugula/pan-flip-polished.webp",
+      "/images/chicken-milanese-arugula/parmesan-polished.webp"
+    ],
+    "servingPhoto": "/images/chicken-milanese-arugula/family-polished.webp",
+    "servingGroups": [
+      {
+        "accent": "amber",
+        "heading": "One cook, family portions",
+        "items": [
+          {
+            "text": "Planned adult plate: 1½ cutlets + ¼ salad, ~660 cal / 68g protein / 49g carbs / 21g fat."
+          },
+          {
+            "text": "Includes the full 2 tbsp chicken-oil allowance plus salad oil. Coating retention, weights and oil absorption are estimates."
+          },
+          {
+            "text": "The two-piece plate on camera was not weighed. Kids’ brioche rolls and butter are extra; no kids’ macro target."
+          }
+        ]
+      }
+    ],
+    "engagementQuestion": "Would your family call these chicken tenders, too?"
+  }
+}
 ];
 
 export default recipes;
