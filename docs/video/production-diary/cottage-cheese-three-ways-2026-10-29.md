@@ -17,3 +17,17 @@ Owner then explicitly requested scheduling. Existing xYm7vbw0-js verified Schedu
 ## Companion build
 
 Owner requested three promos. Prepared distinct pancake verdict, larger delicate chicken meatballs, and family pasta result. Existing Marcus audio remains1.0x; no new paid voice. Clean and varied reaction covers, captions, editable HyperFrames projects, Story card artwork and full posting copy saved privately. Planned November17/19/21noonPacific remains a plan; finished-preview and likeness approval, final exports and actual scheduling pending. Main unchanged. Intentional master-to-promo reuse; no new raw allocations or reserves claimed.
+
+
+## October 29 approved rollout complete
+
+Owner approved all three finished previews, cover likeness and rollout. Final 1080x1920/30 SDR exports passed native checks, full decode and encoded frame inspection. Existing Marcus stays 1.0x; no new voice charges.
+
+- Main xYm7vbw0-js remains Scheduled November16 at17:00 Pacific.
+- Shorts DX8FmTOjSjs / MoWrRMLcLW0 / 4xr7xqAwQEo verified Scheduled November17/19/21 at12:00 Pacific; approved covers reloaded, English timed tracks saved, SD/HD complete.
+- Three Facebook-only exact-watch-link posts and all six Instagram video/photo native WATCH ON YOUTUBE Story rows verified Scheduled at those times. Second pair initially showed16:00; both existing rows corrected in place and refreshed readback verified12:00. No duplicate posts.
+- Story cards explicit9:16, exact https://www.youtube.com/watch?v=xYm7vbw0-js. Drag returned browser errors but screenshots showed stickers moved downward. No live tap claim. After publication test screenshot-visible center -> Visit link -> exact playable film; repair if inert before removing old card.
+- Exact Related picker has no match while main private Scheduled. After November16 public release verify exact main/playback1080p/metadata/captions/native end screen, then save exact Related on all three Shorts before November17 noon.
+- Inventory781-783 rows778-780; posting613-615. Actual publication blank. No Reels/TikTok. Supplied finished master retained. Biography BIO055-065 already deduplicated; no new facts in this closeout.
+
+Private receipts: promo-upload-record.json, upload-record.json, final-export-approval.json and schedule screenshots.
