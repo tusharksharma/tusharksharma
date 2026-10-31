@@ -1,4 +1,4 @@
-# X Posting Agent
+# Daily Thought Writer (formerly X Posting Agent)
 
 _Grok Bot instructions backup. Contains no secrets, tokens or contact details._
 
