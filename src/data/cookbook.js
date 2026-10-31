@@ -16079,12 +16079,12 @@ const DESSERT_CATALOG = [
         "layout": "side"
       },
       {
-        "src": "/images/peanut-butter-cup-blondie-cookie-creami/chocolate-drizzle-polished.webp",
+        "src": "/images/peanut-butter-cup-blondie-cookie-creami/pb-drizzle-polished.webp",
         "layout": "side"
       }
     ],
     "servingPhoto": {
-      "src": "/images/peanut-butter-cup-blondie-cookie-creami/hero-polished.webp",
+      "src": "/images/peanut-butter-cup-blondie-cookie-creami/scoop-polished.webp",
       "layout": "band"
     },
     "servingGroups": [
@@ -16162,7 +16162,7 @@ const DESSERT_CATALOG = [
     },
     {
       "text": "FINISH: Scoop and finish with the PBfit drizzle and 1/2 tbsp Hershey’s sugar-free chocolate syrup.",
-      "image": "/images/peanut-butter-cup-blondie-cookie-creami/hero-polished.webp",
+      "image": "/images/peanut-butter-cup-blondie-cookie-creami/scoop-polished.webp",
       "imageAlt": "Peanut Butter Cup Blondie Cookie Creami: finished with both drizzles"
     }
   ],
