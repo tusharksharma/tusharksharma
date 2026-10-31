@@ -1018,5 +1018,15 @@
     "initialMainPostDate": null,
     "initialMainCreatedAt": "2026-10-30",
     "firstAddedAt": "2026-10-30"
+  },
+  "dirt-cake-cookie-creami": {
+    "initialMainPostDate": "2026-10-30",
+    "initialMainCreatedAt": null,
+    "firstAddedAt": "2026-10-31"
+  },
+  "peanut-butter-cup-blondie-cookie-creami": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": null,
+    "firstAddedAt": "2026-10-31"
   }
 }

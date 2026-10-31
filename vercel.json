@@ -19,6 +19,14 @@
   ],
   "rewrites": [
     {
+      "source": "/videos/dirt-cake-cookie-creami/:filename(.+\\.mp4)",
+      "destination": "https://github.com/tusharma88/tsp-videos/releases/download/videos/:filename"
+    },
+    {
+      "source": "/videos/peanut-butter-cup-blondie-cookie-creami/:filename(.+\\.mp4)",
+      "destination": "https://github.com/tusharma88/tsp-videos/releases/download/videos/:filename"
+    },
+    {
       "source": "/videos/high-protein-pepperoni-mac-meal-prep/:filename(.+\\.mp4)",
       "destination": "https://github.com/tusharma88/tsp-videos/releases/download/videos/:filename"
     },

@@ -35,6 +35,7 @@ export const BRANDS = {
   anthonys:       { name: "Anthony's",          ig: "@anthonys.organic" },
   lilys:          { name: "Lily's",             ig: "@lilyssweets" },
   thrivemarket:   { name: "Thrive Market",      ig: "@thrivemarket",            tt: "@thrivemarket" },
+  nurri:          { name: "Nurri",              ig: "@drinknurri",              tt: "@drinknurri" },
   fairlife:       { name: "Fairlife",           ig: "@fairlife",                tt: "@fairlifeofficial" },
   nakano:         { name: "Nakano",             ig: "@nakanorice" },
   tasteflavor:    { name: "Taste Flavor Co.",   ig: "@tasteflavorco" },

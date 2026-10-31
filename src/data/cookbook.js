@@ -15658,6 +15658,550 @@ const DESSERT_CATALOG = [
       "reheat": "Do not heat the pint."
     }
   },
+{
+  "id": "dirt-cake-cookie-creami",
+  "title": "Dirt Cake Cookie Creami",
+  "tagline": "Black-cocoa protein Creami with a HighKey cookie mix-in, homemade fudge, and Oreo cookie dirt. Approximately 325 calories and 38g protein for the whole finished pint with Nurri 2% (filmed).",
+  "heroImage": "/images/dirt-cake-cookie-creami/hero-polished.webp",
+  "prepImage": "/images/dirt-cake-cookie-creami/base-polished.webp",
+  "prepImageCaption": "The black-cocoa protein base blended smooth before the 24-hour freeze.",
+  "video": "/videos/dirt-cake-cookie-creami/dirt-cake-cookie-creami-325cal-38protein-marcus.mp4",
+  "videoPoster": "/images/dirt-cake-cookie-creami/hero-polished.webp",
+  "socialHashtags": [
+    "#TheSplitPlate",
+    "#CrumblCreamiCut",
+    "#NinjaCreami",
+    "#DirtCake",
+    "#ProteinIceCream"
+  ],
+  "socialCarousel": {
+    "heroBadge": "Protein Creami · Dirt Cake",
+    "heroAccent": "amber",
+    "heroTitle": "Dirt Cake Cookie Creami",
+    "heroStats": [
+      {
+        "value": "~325",
+        "label": "cal · whole pint · Nurri 2%"
+      },
+      {
+        "value": "~38g",
+        "label": "protein · whole pint · Nurri 2%"
+      },
+      {
+        "value": "1",
+        "label": "finished pint"
+      }
+    ],
+    "hook": "Black-cocoa protein Creami with a HighKey cookie mix-in, homemade fudge, and Oreo cookie dirt.",
+    "heroPhoto": "/images/dirt-cake-cookie-creami/hero-polished.webp",
+    "captionBody": "Dirt Cake Cookie Creami: approximately 325 calories and 38g protein for one whole finished pint with Nurri 2% (filmed), including the HighKey cookie, homemade fudge, and Oreo dust. With Fairlife 2%, about 295 calories and 31g protein. Ultra-filtered milk brands vary — use your carton’s label. Blend the black-cocoa base (no added vanilla), freeze level for 24 hours, rest 5 minutes, spin on Regular Ice Cream, mix in one HighKey Original sandwich cookie, then spoon homemade Dutch-cocoa fudge over scoops and finish with Oreo dust measured to 40 calories. Homemade cookie-inspired recipe; not affiliated with Crumbl. No gummy worm in this version. Full recipe: thesplitplate.com/cookbook/dirt-cake-cookie-creami",
+    "ingredientGroups": [
+      {
+        "card": 0,
+        "accent": "amber",
+        "heading": "Black Cocoa Protein Base",
+        "items": [
+          {
+            "quantity": "1 cup",
+            "text": "Ultra-filtered 2% milk",
+            "note": "Filmed: Nurri 2%"
+          },
+          {
+            "quantity": "1/2 serving",
+            "text": "Opportuniteas unflavored whey isolate",
+            "note": "Label: 60 cal / 14g protein"
+          },
+          {
+            "quantity": "2 tbsp",
+            "text": "Monk-fruit/erythritol sweetener"
+          },
+          {
+            "quantity": "1/8 tsp",
+            "text": "Guar gum"
+          },
+          {
+            "quantity": "Pinch",
+            "text": "Salt"
+          },
+          {
+            "quantity": "1 tbsp",
+            "text": "Anthony’s black cocoa",
+            "note": "No added vanilla"
+          }
+        ]
+      },
+      {
+        "card": 1,
+        "accent": "coral",
+        "heading": "Mix-in + Fudge + Dirt",
+        "items": [
+          {
+            "quantity": "1",
+            "text": "HighKey Original sandwich cookie",
+            "note": "Creator label: 70 cal per 3 cookies"
+          },
+          {
+            "quantity": "1 tbsp",
+            "text": "Ghirardelli Dutch-process unsweetened cocoa"
+          },
+          {
+            "quantity": "1 tbsp",
+            "text": "Maple Grove Farms sugar-free maple-flavored syrup"
+          },
+          {
+            "quantity": "To 40 cal",
+            "text": "Oreo cookie dust",
+            "note": "Measure using your package label"
+          }
+        ]
+      }
+    ],
+    "ingredientCardPhotos": [
+      {
+        "src": "/images/dirt-cake-cookie-creami/base-polished.webp",
+        "layout": "side"
+      },
+      {
+        "src": "/images/dirt-cake-cookie-creami/mix-in-polished.webp",
+        "layout": "side"
+      }
+    ],
+    "methodLabel": "HOW TO MAKE",
+    "methodGroups": [
+      {
+        "card": 0,
+        "accent": "amber",
+        "heading": "Blend, Freeze, Spin",
+        "items": [
+          {
+            "number": 1,
+            "heading": "BLEND + FREEZE",
+            "body": "Blend the base until smooth — no added vanilla. Freeze upright and level for 24 hours. Rest on the counter for 5 minutes."
+          },
+          {
+            "number": 2,
+            "heading": "SPIN",
+            "body": "Process on Regular Ice Cream."
+          }
+        ]
+      },
+      {
+        "card": 1,
+        "accent": "coral",
+        "heading": "Mix-in + Fudge + Dirt",
+        "items": [
+          {
+            "number": 3,
+            "heading": "MIX IN",
+            "body": "Add the HighKey cookie after the first spin, then Respin without added liquid. Repeat if needed for your texture."
+          },
+          {
+            "number": 4,
+            "heading": "FUDGE + DIRT",
+            "body": "Stir Dutch cocoa and sugar-free syrup until smooth. Spoon over scoops and finish with Oreo dust measured to 40 calories."
+          }
+        ]
+      }
+    ],
+    "methodCardPhotos": [
+      {
+        "src": "/images/dirt-cake-cookie-creami/spin-polished.webp",
+        "layout": "side"
+      },
+      {
+        "src": "/images/dirt-cake-cookie-creami/fudge-drizzle-polished.webp",
+        "layout": "side"
+      }
+    ],
+    "servingPhoto": {
+      "src": "/images/dirt-cake-cookie-creami/finish-dust-polished.webp",
+      "layout": "band"
+    },
+    "servingGroups": [
+      {
+        "accent": "amber",
+        "heading": "One Whole Finished Pint",
+        "items": [
+          {
+            "text": "Nurri 2% (filmed): about 325 cal / 38g protein, including fudge and cookie dust."
+          },
+          {
+            "text": "Fairlife 2%: about 295 cal / 31g protein. Milk brands vary — use your label."
+          }
+        ]
+      }
+    ],
+    "engagementQuestion": "Would you add a gummy worm, or keep the dirt cake clean like this?"
+  },
+  "socialImages": [
+    "/images/dirt-cake-cookie-creami/base-polished.webp",
+    "/images/dirt-cake-cookie-creami/mix-in-polished.webp",
+    "/images/dirt-cake-cookie-creami/spin-polished.webp",
+    "/images/dirt-cake-cookie-creami/fudge-prep-polished.webp",
+    "/images/dirt-cake-cookie-creami/fudge-drizzle-polished.webp",
+    "/images/dirt-cake-cookie-creami/finish-dust-polished.webp"
+  ],
+  "flavorProfile": "Black-cocoa protein Creami with a HighKey cookie mix-in, homemade fudge, and Oreo cookie dirt.",
+  "calories": 325,
+  "caloriesPerServing": 325,
+  "protein": 38,
+  "proteinPerServing": 38,
+  "servings": 1,
+  "servingSize": "1 whole finished Creami pint",
+  "time": "5 min rest + 24 hr freeze",
+  "bestFor": [
+    "Protein Creami",
+    "Cookie-inspired dessert",
+    "Whole-pint dessert",
+    "Make-ahead"
+  ],
+  "useThisWhen": "You want a dirt-cake Cookie Creami with black cocoa, homemade fudge, and Oreo dirt.",
+  "flavorTarget": "Black-cocoa protein Creami with a HighKey cookie mix-in, homemade fudge, and Oreo cookie dirt.",
+  "ingredients": [
+    "1 cup ultra-filtered 2% milk (filmed: Nurri 2%)",
+    "1/2 serving Opportuniteas unflavored whey isolate (label: 60 calories / 14g protein)",
+    "2 tbsp monk-fruit/erythritol sweetener",
+    "1/8 tsp guar gum",
+    "Pinch of salt",
+    "1 tbsp Anthony’s black cocoa",
+    "1 HighKey Original sandwich cookie, for the mix-in",
+    "1 tbsp Ghirardelli Dutch-process unsweetened cocoa, for the fudge",
+    "1 tbsp Maple Grove Farms sugar-free maple-flavored syrup, for the fudge",
+    "Oreo dust measured to 40 calories using your package label"
+  ],
+  "steps": [
+    {
+      "text": "BLEND: Blend milk, whey, sweetener, guar gum, salt and Anthony’s black cocoa until smooth. No added vanilla in this flavor.",
+      "image": "/images/dirt-cake-cookie-creami/base-polished.webp",
+      "imageAlt": "Dirt Cake Cookie Creami: blend the black-cocoa base"
+    },
+    "FREEZE: Freeze the pint upright and level for 24 hours. Rest on the counter for 5 minutes.",
+    {
+      "text": "SPIN: Process on Regular Ice Cream.",
+      "image": "/images/dirt-cake-cookie-creami/spin-polished.webp",
+      "imageAlt": "Dirt Cake Cookie Creami: first spin"
+    },
+    {
+      "text": "MIX IN: Add one HighKey Original sandwich cookie after the first spin, then Respin without added liquid. Repeat if needed for your texture.",
+      "image": "/images/dirt-cake-cookie-creami/mix-in-polished.webp",
+      "imageAlt": "Dirt Cake Cookie Creami: HighKey cookie mix-in"
+    },
+    {
+      "text": "MAKE THE FUDGE: Stir 1 tbsp Ghirardelli Dutch-process cocoa with 1 tbsp Maple Grove Farms sugar-free maple-flavored syrup until smooth.",
+      "image": "/images/dirt-cake-cookie-creami/fudge-prep-polished.webp",
+      "imageAlt": "Dirt Cake Cookie Creami: homemade fudge"
+    },
+    {
+      "text": "FINISH: Spoon the fudge over your scoops and finish with Oreo dust measured to 40 calories on your package label.",
+      "image": "/images/dirt-cake-cookie-creami/finish-dust-polished.webp",
+      "imageAlt": "Dirt Cake Cookie Creami: fudge and Oreo dirt"
+    }
+  ],
+  "executionRules": [
+    "Amounts and nutrition refer to one complete finished pint.",
+    "Freeze upright and level for 24 hours, within the machine’s fill line.",
+    "Follow your Creami model’s safety and processing instructions.",
+    "No added vanilla in the base — black cocoa only for this flavor.",
+    "No gummy worm in this version."
+  ],
+  "macroHonesty": "Approximately 325 calories and 38g protein for the whole finished pint with Nurri 2% (filmed), including HighKey cookie, homemade fudge, and Oreo dust. With Fairlife 2%: about 295 calories and 31g protein. Package MACRO_CHECK (Nurri build): Nurri plain 2% 150 cal / 20g protein per cup; half-serving Opportuniteas whey 60 / 14; monk-fruit/erythritol 0; guar + salt ~1; Anthony’s black cocoa 1 tbsp (8 g panel) 30 / 2; HighKey Original sandwich cookie ~23.3 cal (70 cal per 3 on creator package) with small estimated protein; Ghirardelli Dutch cocoa ~15 cal / ~1g protein (secondary label estimate); Maple Grove Farms sugar-free syrup 1 tbsp 5 cal; Oreo dust creator-measured 40 cal with small estimated protein. Rounded totals ≈324 → about 325 cal / approximately 38g protein. Ultra-filtered milk brands are not nutritionally interchangeable — use your carton’s label. Full carbs/fat not published from incomplete whey and cookie-dust label data. Cookie is flavor inspiration only; no Crumbl cookie in the pint, and no borrowed cookie macros.",
+  "warnings": [
+    "Contains milk. HighKey cookie and Oreo dust labels typically also list wheat and soy — check current labels.",
+    "Homemade cookie-inspired recipe; not affiliated with Crumbl. No gummy worm in this version."
+  ],
+  "allergens": [
+    "milk",
+    "wheat",
+    "soy"
+  ],
+  "dietTags": [
+    "high-protein",
+    "make-ahead",
+    "frozen-dessert"
+  ],
+  "relatedIds": [
+    "halloween-red-velvet-creami",
+    "cookies-cream-white-chip-protein-creami",
+    "chocolate-peanut-butter-cookie-creami"
+  ],
+  "seriesInfo": {
+    "series": "CrumblCreamiCut",
+    "framing": "Independent homemade protein Creami inspired by Crumbl’s Dirt Cake Cookie. A Crumbl cookie is not an ingredient; no sponsorship or affiliation is implied. No gummy worm in this remake."
+  },
+  "mealPrep": {
+    "storage": "Freeze the unspun base upright and level. Spin and finish when ready to eat.",
+    "lasts": "Follow the Creami machine guidance for storage and reprocessing.",
+    "reheat": "Do not heat the pint."
+  }
+},
+{
+  "id": "peanut-butter-cup-blondie-cookie-creami",
+  "title": "Peanut Butter Cup Blondie Cookie Creami",
+  "tagline": "PBfit protein Creami with two Reese’s Thins mixed in, finished with peanut-butter and chocolate drizzles. Approximately 380 calories and 41g protein for the whole finished pint with Nurri 2%.",
+  "heroImage": "/images/peanut-butter-cup-blondie-cookie-creami/hero-polished.webp",
+  "prepImage": "/images/peanut-butter-cup-blondie-cookie-creami/base-polished.webp",
+  "prepImageCaption": "The PBfit peanut-butter protein base after the Regular Ice Cream spin.",
+  "video": "/videos/peanut-butter-cup-blondie-cookie-creami/peanut-butter-cup-blondie-cookie-creami-380cal-41protein-marcus.mp4",
+  "videoPoster": "/images/peanut-butter-cup-blondie-cookie-creami/hero-polished.webp",
+  "socialHashtags": [
+    "#TheSplitPlate",
+    "#CrumblCreamiCut",
+    "#NinjaCreami",
+    "#PeanutButterCup",
+    "#ProteinIceCream"
+  ],
+  "socialCarousel": {
+    "heroBadge": "Protein Creami · PB Cup Blondie",
+    "heroAccent": "amber",
+    "heroTitle": "Peanut Butter Cup Blondie Cookie Creami",
+    "heroStats": [
+      {
+        "value": "~380",
+        "label": "cal · whole pint · Nurri 2%"
+      },
+      {
+        "value": "~41g",
+        "label": "protein · whole pint · Nurri 2%"
+      },
+      {
+        "value": "1",
+        "label": "finished pint"
+      }
+    ],
+    "hook": "PBfit in the base, two Reese’s Thins mixed in, then peanut butter and chocolate drizzles.",
+    "heroPhoto": "/images/peanut-butter-cup-blondie-cookie-creami/hero-polished.webp",
+    "captionBody": "Peanut Butter Cup Blondie Cookie Creami: approximately 380 calories and 41g protein for one whole finished pint with Nurri 2%, including two Reese’s milk-chocolate Thins and both drizzles. With Fairlife 2%, about 350 calories and 34g protein. Ultra-filtered milk brands vary — use your carton’s label. Blend the PBfit base, freeze level for 24 hours, rest 5 minutes, spin on Regular Ice Cream, mix in two Reese’s Thins, then finish with a PBfit-water drizzle and Hershey’s sugar-free chocolate syrup. Features @drinknurri. Homemade cookie-inspired recipe; not affiliated with Crumbl. Personal review; no sponsorship implied. Full recipe: thesplitplate.com/cookbook/peanut-butter-cup-blondie-cookie-creami",
+    "ingredientGroups": [
+      {
+        "card": 0,
+        "accent": "amber",
+        "heading": "PBfit Protein Base",
+        "items": [
+          {
+            "quantity": "1 cup",
+            "text": "Ultra-filtered 2% milk",
+            "note": "Nurri for this estimate; @drinknurri"
+          },
+          {
+            "quantity": "1/2 serving",
+            "text": "Opportuniteas unflavored whey isolate",
+            "note": "Label: 60 cal / 14g protein"
+          },
+          {
+            "quantity": "2 tbsp",
+            "text": "Monk-fruit/erythritol sweetener"
+          },
+          {
+            "quantity": "1/8 tsp",
+            "text": "Guar gum"
+          },
+          {
+            "quantity": "Pinch",
+            "text": "Salt"
+          },
+          {
+            "quantity": "1 tbsp",
+            "text": "PBfit peanut butter powder"
+          }
+        ]
+      },
+      {
+        "card": 1,
+        "accent": "coral",
+        "heading": "Mix-in + Drizzles",
+        "items": [
+          {
+            "quantity": "2",
+            "text": "Reese’s milk-chocolate Thins"
+          },
+          {
+            "quantity": "1/2 tbsp",
+            "text": "PBfit",
+            "note": "Mixed with water a little at a time for drizzle"
+          },
+          {
+            "quantity": "1/2 tbsp",
+            "text": "Hershey’s sugar-free chocolate syrup"
+          }
+        ]
+      }
+    ],
+    "ingredientCardPhotos": [
+      {
+        "src": "/images/peanut-butter-cup-blondie-cookie-creami/base-polished.webp",
+        "layout": "side"
+      },
+      {
+        "src": "/images/peanut-butter-cup-blondie-cookie-creami/mix-in-polished.webp",
+        "layout": "side"
+      }
+    ],
+    "methodLabel": "HOW TO MAKE",
+    "methodGroups": [
+      {
+        "card": 0,
+        "accent": "amber",
+        "heading": "Blend, Freeze, Spin",
+        "items": [
+          {
+            "number": 1,
+            "heading": "BLEND + FREEZE",
+            "body": "Blend the base until smooth. Freeze upright and level for 24 hours. Rest on the counter for 5 minutes."
+          },
+          {
+            "number": 2,
+            "heading": "SPIN",
+            "body": "Process on Regular Ice Cream."
+          }
+        ]
+      },
+      {
+        "card": 1,
+        "accent": "coral",
+        "heading": "Mix-in + Drizzles",
+        "items": [
+          {
+            "number": 3,
+            "heading": "MIX IN",
+            "body": "Add the Reese’s Thins after the first spin, then Respin without added liquid. Repeat if needed for your texture."
+          },
+          {
+            "number": 4,
+            "heading": "DRIZZLE + SERVE",
+            "body": "Mix 1/2 tbsp PBfit with water a little at a time for a drizzle. Scoop and finish with the PBfit drizzle and 1/2 tbsp Hershey’s sugar-free chocolate syrup."
+          }
+        ]
+      }
+    ],
+    "methodCardPhotos": [
+      {
+        "src": "/images/peanut-butter-cup-blondie-cookie-creami/texture-polished.webp",
+        "layout": "side"
+      },
+      {
+        "src": "/images/peanut-butter-cup-blondie-cookie-creami/chocolate-drizzle-polished.webp",
+        "layout": "side"
+      }
+    ],
+    "servingPhoto": {
+      "src": "/images/peanut-butter-cup-blondie-cookie-creami/hero-polished.webp",
+      "layout": "band"
+    },
+    "servingGroups": [
+      {
+        "accent": "amber",
+        "heading": "One Whole Finished Pint",
+        "items": [
+          {
+            "text": "Nurri 2%: about 380 cal / 41g protein, including mix-ins and toppings."
+          },
+          {
+            "text": "Fairlife 2%: about 350 cal / 34g protein. Milk brands vary — use your label."
+          }
+        ]
+      }
+    ],
+    "engagementQuestion": "Did Nurri change your Creami texture this week, or was it the mix-ins?"
+  },
+  "socialImages": [
+    "/images/peanut-butter-cup-blondie-cookie-creami/base-polished.webp",
+    "/images/peanut-butter-cup-blondie-cookie-creami/mix-in-polished.webp",
+    "/images/peanut-butter-cup-blondie-cookie-creami/texture-polished.webp",
+    "/images/peanut-butter-cup-blondie-cookie-creami/pb-drizzle-polished.webp",
+    "/images/peanut-butter-cup-blondie-cookie-creami/chocolate-drizzle-polished.webp",
+    "/images/peanut-butter-cup-blondie-cookie-creami/scoop-polished.webp"
+  ],
+  "flavorProfile": "PBfit protein Creami with two Reese’s Thins mixed in, finished with peanut-butter and chocolate drizzles.",
+  "calories": 380,
+  "caloriesPerServing": 380,
+  "protein": 41,
+  "proteinPerServing": 41,
+  "servings": 1,
+  "servingSize": "1 whole finished Creami pint",
+  "time": "5 min rest + 24 hr freeze",
+  "bestFor": [
+    "Protein Creami",
+    "Peanut butter dessert",
+    "Whole-pint dessert",
+    "Make-ahead"
+  ],
+  "useThisWhen": "You want a peanut butter cup blondie Cookie Creami with PBfit, Reese’s Thins, and two drizzles.",
+  "flavorTarget": "PBfit protein Creami with two Reese’s Thins mixed in, finished with peanut-butter and chocolate drizzles.",
+  "ingredients": [
+    "1 cup ultra-filtered 2% milk (Nurri for this estimate)",
+    "1/2 serving Opportuniteas unflavored whey isolate (label: 60 calories / 14g protein)",
+    "2 tbsp monk-fruit/erythritol sweetener",
+    "1/8 tsp guar gum",
+    "Pinch of salt",
+    "1 tbsp PBfit peanut butter powder",
+    "2 Reese’s milk-chocolate Thins, for the mix-in",
+    "1/2 tbsp PBfit, mixed with water a little at a time for drizzle",
+    "1/2 tbsp Hershey’s sugar-free chocolate syrup"
+  ],
+  "steps": [
+    {
+      "text": "BLEND: Blend milk, whey, sweetener, guar gum, salt and 1 tbsp PBfit until smooth.",
+      "image": "/images/peanut-butter-cup-blondie-cookie-creami/base-polished.webp",
+      "imageAlt": "Peanut Butter Cup Blondie Cookie Creami: PBfit base"
+    },
+    "FREEZE: Freeze the pint upright and level for 24 hours. Rest on the counter for 5 minutes.",
+    {
+      "text": "SPIN: Process on Regular Ice Cream.",
+      "image": "/images/peanut-butter-cup-blondie-cookie-creami/texture-polished.webp",
+      "imageAlt": "Peanut Butter Cup Blondie Cookie Creami: spun texture"
+    },
+    {
+      "text": "MIX IN: Add two Reese’s milk-chocolate Thins after the first spin, then Respin without added liquid. Repeat if needed for your texture.",
+      "image": "/images/peanut-butter-cup-blondie-cookie-creami/mix-in-polished.webp",
+      "imageAlt": "Peanut Butter Cup Blondie Cookie Creami: Reese’s Thins mix-in"
+    },
+    {
+      "text": "PB DRIZZLE: Mix 1/2 tbsp PBfit with water a little at a time until pourable.",
+      "image": "/images/peanut-butter-cup-blondie-cookie-creami/pb-drizzle-polished.webp",
+      "imageAlt": "Peanut Butter Cup Blondie Cookie Creami: peanut butter drizzle"
+    },
+    {
+      "text": "FINISH: Scoop and finish with the PBfit drizzle and 1/2 tbsp Hershey’s sugar-free chocolate syrup.",
+      "image": "/images/peanut-butter-cup-blondie-cookie-creami/hero-polished.webp",
+      "imageAlt": "Peanut Butter Cup Blondie Cookie Creami: finished with both drizzles"
+    }
+  ],
+  "executionRules": [
+    "Amounts and nutrition refer to one complete finished pint.",
+    "Freeze upright and level for 24 hours, within the machine’s fill line.",
+    "Follow your Creami model’s safety and processing instructions.",
+    "Any Nurri texture note is a creator hypothesis, not a controlled milk comparison."
+  ],
+  "macroHonesty": "Approximately 380 calories and 41g protein for the whole finished pint with Nurri 2%, including mix-ins and toppings. With Fairlife 2%: about 350 calories and 34g protein. Package MACRO_CHECK (Nurri build): Nurri plain 2% 150 cal / 20g protein per cup; half-serving Opportuniteas whey 60 / 14; PBfit Classic base 1 tbsp / 8g 30 / 4; Reese’s milk-chocolate Thins 2 pieces ~22g 120 / ~1.3; PBfit topping 1/2 tbsp / 4g 15 / 2; Hershey’s Zero Sugar Chocolate Syrup 1/2 tbsp / 7.5g 2.5 / 0; monk-fruit/erythritol 0; guar + salt ~1; water in drizzle 0. Rounded totals ≈378.5 → about 380 cal / ≈41g protein. Ultra-filtered milk brands are not nutritionally interchangeable — use your carton’s label. Candy piece weights vary. Full carbs/fat not published from incomplete whey label data. Cookie is flavor inspiration only; no Crumbl cookie in the pint. Tagging @drinknurri is a personal review mention — no sponsorship implied. Nurri texture effect is a hypothesis, not a controlled comparison.",
+  "warnings": [
+    "Contains milk and peanuts. Reese’s Thins and PBfit labels typically also list soy — check current labels.",
+    "Homemade cookie-inspired recipe; not affiliated with Crumbl. Personal review; tagging @drinknurri does not imply sponsorship."
+  ],
+  "allergens": [
+    "milk",
+    "peanut",
+    "soy"
+  ],
+  "dietTags": [
+    "high-protein",
+    "make-ahead",
+    "frozen-dessert"
+  ],
+  "relatedIds": [
+    "chocolate-peanut-butter-cookie-creami",
+    "dirt-cake-cookie-creami",
+    "cookies-cream-white-chip-protein-creami"
+  ],
+  "seriesInfo": {
+    "series": "CrumblCreamiCut",
+    "framing": "Independent homemade protein Creami inspired by Crumbl’s Peanut Butter Cup Blondie Cookie. A Crumbl cookie is not an ingredient; no sponsorship or affiliation is implied. Features @drinknurri as a personal review tag only."
+  },
+  "mealPrep": {
+    "storage": "Freeze the unspun base upright and level. Spin and finish when ready to eat.",
+    "lasts": "Follow the Creami machine guidance for storage and reprocessing.",
+    "reheat": "Do not heat the pint."
+  }
+},
 
 ];
 
