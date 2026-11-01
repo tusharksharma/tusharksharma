@@ -101,3 +101,6 @@ Confirmed October 18: use the weekly Monday/Wednesday release and film-relative 
 Confirmed October 18: build and review the three-promo release package alongside the main film, before publication, using the promotion reference. A scheduled main with unbuilt promos is an incomplete release package. Post-publication follow-up distributes prepared assets and verifies outcomes.
 
 For future verified XTRA Atto POV footage, follow the [Atto POV camera-labeling rule](../../../docs/video/SPLITPLATE_THUMBNAIL_PLAYBOOK.md#atto-pov-camera-labeling--october-22-2026): prominent **POV • XTRA ATTO** thumbnail badge and explicit camera/POV description context. Do not label non-POV films or retrofit approved assets without a request.
+
+Confirmed November 1, 2026: follow the checkout's docs/video/recipe-led-longform-continuity.md. Recipe steps lead; stories fill natural process gaps. Close each finished pint vocally with Marcus and name the next, reinforced by advance notice, numbered reveal and a small flavor label. Match mix-in and topping speech to the actual action, keep Marcus at 1.0x with narration gaps <=1 second, and verify intro/outro music in the assembled/encoded program. Preserve approved stems and exact paid-read approval scope.
+

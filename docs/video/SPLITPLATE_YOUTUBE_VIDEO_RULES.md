@@ -48,3 +48,8 @@ Use this for landscape, long-form YouTube recipe videos. These rules are separat
 - Inventory the long-form export separately from its short-form family. Link related recipe and short-form inventory IDs without marking them as duplicates.
 - Record which footage is reused from short-form and which clips are new or supplemental. Reuse is allowed, but provenance must remain traceable.
 - Keep all on-screen text inside YouTube title-safe areas and verify the final video on desktop and mobile playback before delivery.
+
+## Recipe-led continuity and recipe switches — November 1, 2026
+
+Follow [Recipe-led long-form continuity](recipe-led-longform-continuity.md) for action-matched recipe narration, spoken and visual pint transitions, normal-speed Marcus, source provenance, assembled music verification and approval scope.
+
