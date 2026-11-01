@@ -1,6 +1,6 @@
 # About Tushar â€” biography and story source
 
-Last updated: October 29, 2026. Purpose: reusable source material for The Split Plate videos, introductions, captions and community replies. This is a living biography, not a complete life history. Preserve the distinction between firsthand experience, personal opinion, existing public biography and untested expectations.
+Last updated: October 31, 2026. Purpose: reusable source material for The Split Plate videos, introductions, captions and community replies. This is a living biography, not a complete life history. Preserve the distinction between firsthand experience, personal opinion, existing public biography and untested expectations.
 
 ## Short introduction
 
@@ -421,3 +421,35 @@ He now prefers larger meatballs: fewer to turn and a useful portion remains if s
 ### BIO-065: Ditalini earns repeats through convenience and flavor
 
 He enjoys the small shape and the convenience of pasta, cheeses and cooked chicken already on hand. Chipotle brings it together for him without needing more seasoning. This taste preference does not change the exact published recipe, ingredient quantities or measured nutrition basis.
+
+## Confirmed firsthand stories — Halloween Creami interview, October 31, 2026
+
+Source: Tushar's direct fifteen numbered answers in this chat, followed by approval of the episode's narration draft. These extend BIO-022, BIO-023, BIO-042 and BIO-043; they do not replace historical accounts or establish recipe-label facts. Raw interview and production records remain private.
+
+### BIO-066: Adapting the inspiration to ice cream
+
+He uses Crumbl flavors as a starting point rather than copying every cookie component. For Halloween Red Velvet, he preferred a white-chocolate shell to cream-cheese frosting on ice cream, preserving the visual inspiration while adapting the format. Adding brownie pieces was his own choice; he liked their distribution after they broke down during mixing. He also sometimes chooses a familiar peanut-butter-and-chocolate combination because he wants something he expects to enjoy, rather than making every flavor an unfamiliar experiment.
+
+### BIO-067: Three personal tens, with a preference order
+
+For this Halloween trio, he scored all three 10/10 and would repeat them. His order was Halloween Red Velvet, Peanut Butter Cup Blondie, then Dirt Cake. Familiarity may explain Dirt Cake's third place; he did not identify a defect. The quick sugar-free-maple-syrup/Dutch-cocoa fudge brought Dirt Cake together for him, with Oreo dust contributing flavor and texture. These are his scores alone, not a family tasting or an objective ranking.
+
+### BIO-068: Separate desserts remain a normal household choice
+
+His wife still prefers regular store-bought chocolate fudge or fudge brownie ice cream and generally declines Creami samples. In this interview, he said they had not found her usual Blue Bunny flavor in the Bay Area stores they checked; she disliked the Halo Top alternative they tried. The separate Halo Top scoops in the footage were hers, not an ingredient in his red velvet pint. No kids' tasting reactions were recorded for these three flavors. BIO-043 retains a separately sourced historical Favorite Day name; this interview did not clearly identify that earlier product, and neither account proves manufacturer discontinuation.
+
+### BIO-069: The nighttime checkpoint and usual filming rhythm
+
+As of this interview, he generally eats a whole Creami pint himself after the children are in bed, describing roughly35–40g protein depending on the recipe. This supplements the earlier approximately30g personal target in BIO-023 without rewriting it or turning either figure into a recipe calculation. He usually prepares series bases Monday when ingredients are available, otherwise Tuesday; films/eats three flavors Thursday through Saturday and publishes the short videos Friday through Sunday. A coffee-based Creami often brings him to about four Creami nights a week. These are self-reported usual patterns, not release instructions or a fixed itinerary.
+
+### BIO-070: Bedtime does not mean everyone is asleep
+
+His younger daughter sometimes calls from her room, "What is that loud noise?" when he starts the Ninja Creami after the children go to bed. This is his recalled recurring moment, not dialogue captured in the supplied cook clips. He has tried a couple of other ice cream machines but has not enjoyed their results as much as the Ninja at its price. Models, a controlled comparison and a universal quality claim were not established.
+
+### BIO-071: Participate in the occasion, then return to routine
+
+He wants to enjoy ordinary Halloween candy with his children, not replace trick-or-treating treats with protein desserts. He describes eating his usual meals during the day, participating in the occasion, then returning to normal habits. Keep this personal and avoid moralizing foods or presenting it as a nutrition prescription.
+
+### BIO-072: Creaminess is an observation, its cause is a theory
+
+He used Nurri protein2% for this trio and thought the result seemed creamier. He suspects the milk may have contributed but has not isolated it from the other ingredient/flavor changes. His recalled calorie/protein difference versus Fairlife requires exact product and serving-label verification before publication; do not promote it into a verified comparison. During the interview week, dessert viewing included From and Thursday catch-up viewing of Survivor on Paramount+; those are dated context, not permanent schedules.
