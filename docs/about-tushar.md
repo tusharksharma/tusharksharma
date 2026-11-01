@@ -461,3 +461,7 @@ In a same-day follow-up, he identified a Cuisinart as one machine he tried. He b
 ### BIO-074: Nightly ice cream predates the protein versions
 
 He recalls a nightly ice-cream ritual lasting five or six years, possibly longer, including before he changed his eating habits. He wanted to improve things around a routine he enjoyed rather than give it up. He now strongly prefers having ice cream every day and takes it camping with the household. This extends BIO-069: roughly four weekly Creami nights does not mean only four nights of ice cream. It does not establish how ice cream is transported or stored while camping, an exact start year, or a nutrition recommendation.
+
+### BIO-075: Peanut powders are a practical swap
+
+In the October 31, 2026 Halloween Creami review, Tushar clarified that the filmed peanut powder was PB2 and the drizzle used water, not almond milk. He uses PB2 and PBfit interchangeably in his cooking. Treat that as his practical ingredient preference, not proof that the two brands have identical nutrition; use the actual product label for each recipe calculation. Source: direct same-chat correction during the recipe-led narration revision.

@@ -22,6 +22,8 @@ Use this for landscape, long-form YouTube recipe videos. These rules are separat
 
 ## Long-Form Recipe Structure
 
+**October 31, 2026 — recipe leads, stories support:** narrate the actual recipe as it is shown: ingredient/action, verified quantity or method, and useful checkpoint. Personal stories belong in genuine preparation/processing waits after key instructions are covered. Do not leave measuring, blending, spinning, mix-ins or finishing unexplained while telling a long story. Map chronological actions and narration before inserting stories, and do not describe a completed texture change before the relevant processing step happens. Review each major action-to-narration match. An eight-minute minimum is not a reason to let anecdotes displace teaching.
+
 - The YouTube video is a teaching expansion of the recipe page, not a stretched short-form edit.
 - Start with the finished result and a concise promise: what the dish is, who it helps, and the practical or macro payoff.
 - Use the canonical recipe page as the factual source for ingredients, quantities, method, serving count, macros, substitutions, and food-safety details. Apply the user's latest corrections over older page copy and update the website handoff when they conflict.
