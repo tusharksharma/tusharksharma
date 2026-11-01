@@ -27,6 +27,10 @@
       "destination": "https://github.com/tusharma88/tsp-videos/releases/download/videos/:filename"
     },
     {
+      "source": "/videos/cottage-cheese-protein-waffles/:filename(.+\\.mp4)",
+      "destination": "https://github.com/tusharma88/tsp-videos/releases/download/videos/:filename"
+    },
+    {
       "source": "/videos/high-protein-pepperoni-mac-meal-prep/:filename(.+\\.mp4)",
       "destination": "https://github.com/tusharma88/tsp-videos/releases/download/videos/:filename"
     },
