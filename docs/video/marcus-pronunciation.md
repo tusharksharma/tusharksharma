@@ -1,5 +1,9 @@
 # Marcus pronunciation — confirmed October19,2026
 
+## Creami plural — confirmed October 31, 2026
+
+Tushar corrected the Halloween Creami review: pronounce **Creamis** as **“creamies” (cream-eez)**. Keep the public brand spelling **Creami / Creamis** in scripts, captions and titles. If Marcus misreads the plural, use **Creamies** as a private TTS pronunciation spelling and retain that substitution beside the request and alignment. Audition the result rather than treating correct text as proof of correct audio. Apply this to the current review and future narration; preserve approved published films. Marcus remains at provider and playback speed 1.0, with pauses no longer than one second.
+
 Tushar approved the Golden Garlic Steak Bowls POV edit and asked that **future** narration use the correct food-name pronunciation. His example was **basmati**: do not default to an Americanized reading of Indian food names when speaking as him.
 
 Before bulk paid narration, identify food names, brands and regional terms that can be misread. Prefer Tushar’s recorded pronunciation or an explicitly confirmed pronunciation reference. Maintain a small project pronunciation watchlist, including the intended spoken form and its evidence. Do not invent a preferred phonetic spelling or stress pattern that Tushar has not supplied.
