@@ -17,4 +17,6 @@ This correction applies to future recordings. It does not request new paid takes
 
 ## Delivery speed and pauses — October 27, 2026
 
+Reconfirmed October 31: topic changes must not introduce a narration pause longer than one second. Check joins after moving passages onto newly added footage; do not add silent topic-card holds.
+
 Confirmed October 27, 2026: Marcus must always play at regular speed (provider speed 1.0 and timeline playback rate 1.0). Never slow his narration with atempo, time-stretching or added silence to reach a duration target. Keep pauses within and between narration excerpts at no more than one second; trim excess quiet and ripple picture/captions while preserving the correct cooking-action match. Measure the rendered narration gaps and review the joins. Intentional branded intro, genuine recorded dialogue, and the requested music-backed nutrition/watch-next sequence are separate scenes, not excuses for narration padding. If the required runtime needs more content, ask Tushar for real stories and obtain approval for exact added paid narration. Do not silently shorten a film below his minimum or retrofit previously approved releases.
