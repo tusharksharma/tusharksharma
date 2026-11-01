@@ -453,3 +453,11 @@ He wants to enjoy ordinary Halloween candy with his children, not replace trick-
 ### BIO-072: Creaminess is an observation, its cause is a theory
 
 He used Nurri protein2% for this trio and thought the result seemed creamier. He suspects the milk may have contributed but has not isolated it from the other ingredient/flavor changes. His recalled calorie/protein difference versus Fairlife requires exact product and serving-label verification before publication; do not promote it into a verified comparison. During the interview week, dessert viewing included From and Thursday catch-up viewing of Survivor on Paramount+; those are dated context, not permanent schedules.
+
+### BIO-073: A smaller machine did not simplify his own preparation
+
+In a same-day follow-up, he identified a Cuisinart as one machine he tried. He bought it hoping its smaller container would suit his usual one-cup-of-milk base. He reports needing roughly nine or ten repeated activations to get his desired result, and milk spilling when he put his immersion blender into the container. These are his experiences, not a diagnosis of motor performance or a claim about every Cuisinart. The exact model and capacity remain unverified; his dictated capacity figures were ambiguous and must not be published as specifications. Other options seemed too bulky or expensive to him, making the Ninja feel like the right size for his use.
+
+### BIO-074: Nightly ice cream predates the protein versions
+
+He recalls a nightly ice-cream ritual lasting five or six years, possibly longer, including before he changed his eating habits. He wanted to improve things around a routine he enjoyed rather than give it up. He now strongly prefers having ice cream every day and takes it camping with the household. This extends BIO-069: roughly four weekly Creami nights does not mean only four nights of ice cream. It does not establish how ice cream is transported or stored while camping, an exact start year, or a nutrition recommendation.
