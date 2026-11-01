@@ -3072,8 +3072,14 @@ export const breakfasts = [
       heroBadge: "2-Waffle Batch",
       heroAccent: "amber",
       heroTitle: "Cottage Cheese Protein Waffles",
+      heroStats: [
+        { value: "~390", label: "cal · both plain" },
+        { value: "~41g", label: "protein · both plain" },
+        { value: "2", label: "waffles" },
+      ],
       hook: "Two waffles · ≈390 calories · ≈41g protein for both, before toppings.",
-      heroPhoto: "/images/cottage-cheese-protein-waffles/social-hero-waffles-polished.webp",
+      // Handoff has no adult+kid split-plate cover; plated two-waffle finish is the best available centered cover.
+      heroPhoto: "/images/cottage-cheese-protein-waffles/hero-waffles-plated-polished.webp",
       captionTitle: "Cottage Cheese Protein Waffles",
       captionBody: "Boxed protein waffle test? Plot twist: there's no box. These are my homemade vanilla cottage cheese protein waffles.\n\nCrisp and airy—the best protein waffles I've made. Better than a hotel waffle bar? No. But they hit that craving, and I'll still mix up breakfast.\n\nMakes 2 waffles. Estimated nutrition for BOTH, before toppings: ≈390 calories · 41g protein · 31g carbs · 11g fat.\n\nBlend the cottage cheese, egg and milk smooth. Combine the ground oats, protein powder, baking powder and salt. Stir in the blended mixture and vanilla until thick, smooth and pourable. Cook as two waffles in a preheated waffle maker. No butter or cooking spray used.\n\nPowdered sweetener and syrup shown are unmeasured toppings and are excluded. Nutrition is an estimate and varies by brand. Save this for breakfast.",
       ingredientGroups: [
@@ -3095,11 +3101,20 @@ export const breakfasts = [
         {
           card: 0,
           accent: "amber",
-          heading: "Mix + Cook",
+          heading: "Blend, Mix, Pour",
           items: [
             { number: 1, heading: "Blend liquids", body: "Blend the cottage cheese, egg and milk until smooth." },
             { number: 2, heading: "Combine dry", body: "In a glass bowl, combine ground oats, protein powder, baking powder and salt. Stir in the blended liquids and vanilla until thick, smooth and pourable." },
-            { number: 3, heading: "Cook two waffles", body: "Pour into a preheated waffle maker following its fill mark and doneness instructions. No butter or cooking spray. Remove both when ready." },
+            { number: 3, heading: "Pour", body: "Pour into a preheated waffle maker following its fill mark. No butter or cooking spray." },
+          ],
+        },
+        {
+          card: 1,
+          accent: "amber",
+          heading: "Cook + Lift",
+          items: [
+            { number: 4, heading: "Cook two waffles", body: "Cook to the maker's doneness cue until the crust is set." },
+            { number: 5, heading: "Lift both", body: "Remove both waffles when ready and plate them." },
           ],
         },
       ],
@@ -3108,6 +3123,7 @@ export const breakfasts = [
       ],
       methodCardPhotos: [
         { src: "/images/cottage-cheese-protein-waffles/step-pour-iron-polished.webp", position: "50% 50%", zoom: 1.02, layout: "side" },
+        { src: "/images/cottage-cheese-protein-waffles/step-lift-waffle-polished.webp", position: "50% 45%", zoom: 1.02, layout: "side" },
       ],
       methodLabel: "HOW TO COOK",
       servingPhoto: { src: "/images/cottage-cheese-protein-waffles/step-cut-serve-polished.webp", position: "50% 50%", zoom: 1.02, layout: "side" },
@@ -3117,7 +3133,7 @@ export const breakfasts = [
           heading: "Serve Both Waffles",
           items: [
             { text: "One batch makes 2 waffles — nutrition is for both before toppings." },
-            { text: "Estimated ≈390 calories and 41g protein for the plain batch." },
+            { text: "Estimated ≈390 calories · 41g protein · 31g carbs · 11g fat for the plain batch (≈195 cal / 21g protein each)." },
             { text: "Swerve dust and sugar-free syrup shown are unmeasured extras and are excluded." },
           ],
         },
@@ -3131,6 +3147,7 @@ export const breakfasts = [
       "/images/cottage-cheese-protein-waffles/step-lift-waffle-polished.webp",
       "/images/cottage-cheese-protein-waffles/step-dust-swerve-polished.webp",
       "/images/cottage-cheese-protein-waffles/step-cut-serve-polished.webp",
+      "/images/cottage-cheese-protein-waffles/hero-waffles-plated-polished.webp",
     ],
     flavorProfile: "Vanilla-forward cottage-cheese protein waffles with a crisp edge and airy middle from a vertical waffle maker. Powdered sweetener and sugar-free syrup are optional toppings and are not included in the nutrition estimate.",
     calories: 390,
