@@ -3922,7 +3922,7 @@ const recipes = [
     servings: 4,
     protein: 38,
     calories: 480,
-    image: "/images/danos-thighs/plated-split.webp",
+    image: "/images/danos-thighs-2026/split-plate-cover-polished.webp",
     video: "/videos/danos-bone-in-thighs/danos-split-cook-method-family-dinner.mp4",
     videoVariants: [
       { label: "Adult dinner cut", src: "/videos/danos-bone-in-thighs/danos-bone-in-thighs-adult-dinner.mp4" },
@@ -3942,7 +3942,7 @@ const recipes = [
       heroTitle: "Dan-O's Bone-In Thighs",
       heroStats: [{ value: "1", label: "shared pan" }, { value: "2", label: "family dinners" }, { value: "165°F", label: "safe temp" }],
       hook: "One pan of chicken. Mild for kids, spicy for adults. Save the juices for dinner two.",
-      heroPhoto: "/images/danos-thighs-2026/hero-polished-v2.webp",
+      heroPhoto: "/images/danos-thighs-2026/split-plate-cover-polished.webp",
       captionBody: "Dan-O's bone-in thighs are our one-cook, two-plate dinner: Original seasoning for the kids, Spicy for adults. The filmed batch used one pan and roasted at 350°F; cook to 165°F in the thickest thigh rather than relying on a fixed time. Adult asparagus gets Umami Lemon Heat; the kid plate stays plain. Save chicken and pan juices for a second dinner, then reheat leftovers to 165°F. The filmed portions were not weighed, so the page's adult and kid macros are estimates from the original recipe. Recipe: thesplitplate.com/recipes/danos-bone-in-thighs",
       ingredientGroups: [
         { card: 0, accent: "amber", heading: "The shared pan", items: [
