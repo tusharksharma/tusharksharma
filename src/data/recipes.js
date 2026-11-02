@@ -6318,6 +6318,37 @@ const recipes = [
           { quantity: "1", text: "Wholly Guacamole Classic Mini" },
         ] },
       ],
+      methodGroups: [
+        { accent: "amber", heading: "Skillet to plate", items: [
+          { number: 1, heading: "Sear + drain", body: "Drop Del Real blocks into a hot skillet ~2 min, then spoon out rendered fat." },
+          { number: 2, heading: "Shred + broth", body: "Shred, add 1/4 cup bone broth, cover 2-3 min, then dry the surface briefly." },
+          { number: 3, heading: "Warm + plate", body: "Warm tortillas ~30 sec/side. Adult plate with onions + heat; kid tray with components separate." },
+        ] },
+      ],
+      ingredientCardPhotos: [
+        "/images/carnitas-taco-plate/mise-tortillas-toppings-polished.webp",
+        "/images/carnitas-taco-plate/skillet-frozen-blocks-polished.webp",
+      ],
+      methodCardPhotos: [
+        "/images/carnitas-taco-plate/skillet-shredded-broth-polished.webp",
+      ],
+      servingPhoto: "/images/carnitas-taco-plate/split-plate-cover-polished.webp",
+      servingGroups: [
+        { accent: "coral", heading: "Adult plate", items: [
+          { text: "About 5 oz carnitas, 3-4 corn tortillas, Wholly mini, pickled onions, Lucky Dog. ~565 cal / 30g protein." },
+        ] },
+        { accent: "green", heading: "Kid tray", items: [
+          { text: "About 2.5 oz carnitas, 2-3 tortillas, Wholly mini in compartments. No onions, no hot sauce." },
+        ] },
+      ],
+      engagementQuestion: "Build-your-own taco night — what topping stays adult-only at your table?",
+      heroBadge: "15-min build-your-own",
+      heroAccent: "amber",
+      heroTitle: "Carnitas Taco Plate",
+      heroStats: [{ value: "~565", label: "cal adult" }, { value: "~30g", label: "protein" }, { value: "15", label: "min" }],
+      hook: "Del Real carnitas in a skillet, then build-your-own: adult plate with onions + heat, kid tray with components separate.",
+      heroPhoto: "/images/carnitas-taco-plate/split-plate-cover-polished.webp",
+      captionBody: "Carnitas taco plate is a 15-minute build-your-own dinner: Del Real Slow-Cooked Carnitas seared and broth-braised, Mission yellow corn tortillas, and Wholly guac minis. Adults add Mezzetta pickled onions and Lucky Dog; kids get a compartment tray with no heat and no onions. Adult plate estimate ~565 cal / 30g protein. Recipe: thesplitplate.com/recipes/carnitas-taco-plate",
     },
     proteinAnchor: "pork",
     mealType: "tacos",
@@ -6331,7 +6362,7 @@ const recipes = [
     servings: 4,
     protein: 30,
     calories: 565,
-    image: "/images/carnitas-taco-plate/split-plate-build-your-own-polished.webp",
+    image: "/images/carnitas-taco-plate/split-plate-cover-polished.webp",
     role: "The 15-Minute Build-Your-Own Taco Plate",
     makeThisWhen: "Taco night, kids are hangry, you have 15 minutes. One Del Real tray + corn tortillas + Wholly guac minis. Adults plate with onions + Lucky Dog; kids get a compartment tray with separate components (no heat, no onions). Assemble at the table.",
     hook: "Del Real tray seared frozen, fat drained, broth-braised under a glass lid = real carnitas texture in 8 active minutes. The kid compartment tray IS the brand thesis — parent picks what's available, kid picks the assembly order.",
