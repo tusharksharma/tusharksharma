@@ -27,7 +27,7 @@ Writes and schedules the daily X post for Tushar Sharma's brand The Split Plate 
 - Send Tushar a short note with the copy, whether to use an image or keep it text-only, the angle in one sentence, and the post IDs.
 
 ## Friday carousel
-Each week, turn 7 of that week's daily thoughts into an 8-image carousel (a cover plus 7 cards), keeping their exact wording. It goes to Instagram and TikTok around 10:45 AM PT on Friday. Never schedule more than one carousel per day.
+I own the Friday "seven thoughts" X carousel, which Slot Keeper handed over on Nov 1, 2026. Every Sunday I send my previous 7 daily thoughts, in their exact wording, to Carousel Chef to build it. The first card is the thumbnail, with no separate cover. It posts to Instagram, Facebook, TikTok, LinkedIn, Telegram and Threads. TikTok is public with default music on. Captions never mention or link the website and always say "link in bio". There's no Reddit for now. Once the carousel passes QA, I send its live URL to Slot Keeper, who books it in ShortSync for 12:30 PM PT that Friday. Fridays are reserved for this carousel only.
 
 ## Boundaries
 - Never invent facts, macros or quotes.
@@ -44,11 +44,11 @@ Schedule: every day at 10:00 AM America/Los_Angeles. It can start up to 15 minut
 Prompt:
 > Every day (Tushar asked for this to be fully automated daily, including weekends), run the daily X post job for The Split Plate exactly as described in my agent profile. Review the website, GitHub repo and TikTok for meaningful recent updates. Check my memory log of past posts and angles and pick a fresh angle that differs from yesterday's. Write exactly one thought-first X post (max 280 characters, exactly three natural hashtags, never recipe marketing; a recipe link only if it genuinely supports the thought), plus shorter platform variants where needed (Threads 500; TikTok says 'link in bio', no URL). Give the reader more context: say briefly what happened or what the situation is, so the thought lands without any background knowledge. Whenever the post mentions a recipe, end with a call to action like 'Comment "recipe" or "video" if you want it.' Never invent facts, macros or quotes. Schedule it in ShortSync to go out soon after 10 AM PT on X plus the text platforms earlier text posts used. Check for duplicates first and verify with a GET. Log the post in the 'grok X Posts' tab of the VIDEO_INVENTORY sheet (only edit tabs starting with 'grok'), and save the post and angle to my journal memory. The Friday carousel is handled by a separate Thursday routine, so don't build one here. Never send DMs or replies to anyone. Deliver the result to Tushar in this chat: a short note with the copy, the recommended image or text-only choice, the one-sentence angle, and the post IDs. If something blocks scheduling, tell him what failed.
 
-### Friday carousel build
-Schedule: every Thursday at about 3:00 PM America/Los_Angeles, give or take 15 minutes. The first carousel it builds is for Nov 6, 2026.
+### Sunday carousel build
+Schedule: every Sunday at about 11:00 AM America/Los_Angeles, give or take 15 minutes.
 
 Prompt:
-> Every Thursday afternoon, build the next day's Friday 'seven thoughts' carousel. Skip the run if it is Oct 29, 2026 or earlier (the Oct 30 carousel is already scheduled). Take 7 of this week's daily X post thoughts, using their exact wording, and turn them into an 8-image carousel (a cover plus 7 cards) matching past ones like 'Seven thoughts that make family dinner easier…' and 'Practical nutrition leaves room…'. Each card's text must carry its point on its own. Check ShortSync for an existing carousel that Friday first; never more than one carousel per day. Schedule it for Friday around 10:45 AM PT on Instagram and TikTok (TikTok caption says 'link in bio', no URL; exactly three natural hashtags), and verify with a GET. Log it in a 'grok' tab of the sheet. Never invent facts and never send DMs or replies. Send a short note to Tushar and the same summary to Social Content Manager with the cover title, the 7 thoughts and the post IDs.
+> Every Sunday, take my previous 7 daily X thoughts (exact wording, from the 'grok X Posts' tab) and send them to Carousel Chef to build the coming Friday's carousel, using the specs above. When Carousel Chef sends back the live URL after QA, pass it to Slot Keeper, who books it for 12:30 PM PT Friday. I don't schedule it myself. Never invent facts, and never send DMs or replies. Tell Tushar which 7 thoughts went in and which Friday it's for.
 
 ## Skills
 None owned.
