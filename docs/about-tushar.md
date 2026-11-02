@@ -1,6 +1,6 @@
 # About Tushar â€” biography and story source
 
-Last updated: October 31, 2026. Purpose: reusable source material for The Split Plate videos, introductions, captions and community replies. This is a living biography, not a complete life history. Preserve the distinction between firsthand experience, personal opinion, existing public biography and untested expectations.
+Last updated: November 2, 2026. Purpose: reusable source material for The Split Plate videos, introductions, captions and community replies. This is a living biography, not a complete life history. Preserve the distinction between firsthand experience, personal opinion, existing public biography and untested expectations.
 
 ## Short introduction
 
@@ -465,3 +465,31 @@ He recalls a nightly ice-cream ritual lasting five or six years, possibly longer
 ### BIO-075: Peanut powders are a practical swap
 
 In the October 31, 2026 Halloween Creami review, Tushar clarified that the filmed peanut powder was PB2 and the drizzle used water, not almond milk. He uses PB2 and PBfit interchangeably in his cooking. Treat that as his practical ingredient preference, not proof that the two brands have identical nutrition; use the actual product label for each recipe calculation. Source: direct same-chat correction during the recipe-led narration revision.
+
+## Confirmed firsthand stories — tomato soup and grilled cheese
+
+Source: Tushar's ten numbered answers in the tomato-soup/grilled-cheese production chat, supplied before the approved narration. Captured in the biography November 2, 2026; the inherited interview transcript does not establish a more precise interview date. Raw interview and production records remain private.
+
+### BIO-076: Bread testing finally prompted the soup experiment
+
+He had been curious about cottage-cheese tomato soup after seeing videos, but delayed trying it because he is not a big soup fan. Testing keto breads for grilled cheese and using bread already on hand finally prompted this dinner. He sees it as a warm fall/winter option, but would generally repeat the full soup dinner if his wife or someone else requested it rather than choosing it himself. Grilled cheese is something he would happily repeat, even for breakfast with mustard and ketchup.
+
+### BIO-077: Grilled cheese at home, tomato soup on trains
+
+He recalls eating grilled cheese regularly, almost every day, with sweetened iced drinks when growing up. He describes those richer meals and drinks as part of his eating pattern when he was heavier; this does not establish one food as the cause. Tomato soup was less common at home and reminds him of long train journeys in India, where it was served. He still enjoys grilled cheese and now adapts the ingredients to his own goals.
+
+### BIO-078: Real butter and the brushing tip
+
+For grilled cheese, he wants real butter's flavor, especially when he is already changing the bread. He used approximately half a tablespoon per sandwich and prefers melting it completely, then brushing it evenly over the bread with a pastry/basting brush instead of placing pats on it. He did not describe a controlled comparison against light butter. The butter remains part of the recipe and its nutrition calculation.
+
+### BIO-079: Practical cheese and bread choices
+
+Velveeta is a fridge staple because he likes its melt and macros. Thin provolone also suited him, but this dinner used leftovers from Philly cheesesteak sliders. He tested seeded keto bread, white-style keto bread and bake-at-home sourdough; seeded keto was his favorite. The kids had brioche slider buns. He reserved the detailed bread review for later and did not provide comparative crispness or dunking results.
+
+### BIO-080: Good soup, but he wanted more tomato
+
+He liked the soup and could not taste the cottage cheese, but wanted a stronger tomato flavor: it felt more like warm creamy broth with subtle tomato. It was smooth in his mouth despite small white particles and a little visible separation; thickness was not his complaint. He considered cooking tomato paste earlier next time, with no tested extra quantity. Blending then warming in the microwave was an idea to test, not a confirmed better method.
+
+### BIO-081: One dinner can have different verdicts
+
+His wife and mother-in-law finished their soup. The kids liked it and ate a decent serving, although they may not have finished it. Everyone finished their grilled cheese; he may have left a little soup. Dipping grilled cheese into the soup was his favorite part: the combination felt comforting even though soup alone was less exciting to him. These are his reported reactions, not invented recorded dialogue.
