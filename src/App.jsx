@@ -14,6 +14,7 @@ const DinnersPage = lazy(() => import("./pages/DinnersPage"));
 const AboutPage = lazy(() => import("./pages/AboutPage"));
 const FanPage = lazy(() => import("./pages/FanPage"));
 const SocialPage = lazy(() => import("./pages/SocialPage"));
+const SocialSlugGate = lazy(() => import("./pages/SocialSlugGate"));
 const SocialIndexPage = lazy(() => import("./pages/SocialIndexPage"));
 const LeftoversPage = lazy(() => import("./pages/LeftoversPage"));
 const PrivacyPage = lazy(() => import("./pages/PrivacyPage"));
@@ -72,7 +73,7 @@ function App() {
           <Route path="/recipes/:slug" element={<RecipePage />} />
           <Route path="/social" element={<SocialIndexPage />} />
           <Route path="/social/cookbook/:id" element={<SocialPage />} />
-          <Route path="/social/:slug" element={<SocialPage />} />
+          <Route path="/social/:slug" element={<SocialSlugGate />} />
           <Route path="/privacy" element={<PrivacyPage />} />
           <Route path="/terms" element={<TermsPage />} />
           <Route path="/studio" element={<StudioPage />} />

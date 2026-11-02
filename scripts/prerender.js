@@ -10,6 +10,7 @@ import { readFileSync, writeFileSync, mkdirSync } from "fs";
 import { join, dirname } from "path";
 import { sauces, breakfasts, quickLunches, batchPrep, desserts, creamis, bases, powerups, snackBoxes } from "../src/data/cookbook.js";
 import { liveRecipes } from "../src/data/recipes.js";
+import { xThoughtCarousels } from "../src/data/xThoughts.js";
 
 const DIST = "dist";
 const DOMAIN = "https://thesplitplate.com";
@@ -66,6 +67,13 @@ const routes = [
     title: `Social Carousel — ${c.title} — The Split Plate`,
     description: `Instagram carousel for ${c.title}.`,
     image: c.image,
+    noindex: true,
+  })),
+  ...xThoughtCarousels.map((c) => ({
+    path: `/social/${c.slug}`,
+    title: `Social Carousel — ${c.title} — The Split Plate`,
+    description: c.subtitle || `Friday X thoughts carousel — ${c.title}.`,
+    image: c.cards?.[0]?.src,
     noindex: true,
   })),
   ...cookbookItems.map((c) => ({

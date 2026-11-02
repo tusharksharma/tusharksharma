@@ -1,4 +1,5 @@
 import { sortSocialRecipes } from "../utils/socialOrder";
+import { xThoughtCarousels } from "../data/xThoughts";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { liveRecipes } from "../data/recipes";
@@ -105,7 +106,15 @@ export default function SocialIndexPage() {
       items: sortSocialRecipes(s.items).filter((item) => matches(item.title)),
     }))
     .filter((s) => s.items.length > 0);
-  const resultCount = sortedDinners.length + filteredSections.reduce((n, s) => n + s.items.length, 0);
+  const sortedXThoughts = sortSocialRecipes(
+    xThoughtCarousels.map((c) => ({
+      ...c,
+      id: c.slug,
+      image: c.cards?.[0]?.src,
+      socialUrl: `/social/${c.slug}`,
+    })),
+  ).filter((c) => matches(c.title));
+  const resultCount = sortedDinners.length + sortedXThoughts.length + filteredSections.reduce((n, s) => n + s.items.length, 0);
 
   return (
     <div className="min-h-screen bg-neutral-950 text-neutral-100 py-10 px-4">
@@ -116,7 +125,7 @@ export default function SocialIndexPage() {
             <p className="text-neutral-500 text-sm mt-1">
               {q
                 ? `${resultCount} match${resultCount === 1 ? "" : "es"} for "${query.trim()}"`
-                : `${allDinners.length} dinners + ${totalCookbook} power-ups · click to open and screenshot`}
+                : `${allDinners.length} dinners + ${totalCookbook} power-ups + ${xThoughtCarousels.length} X thoughts · click to open and screenshot`}
             </p>
           </div>
           <button onClick={lock} className="text-neutral-500 text-xs hover:text-amber-400 cursor-pointer">Lock</button>
@@ -142,6 +151,30 @@ export default function SocialIndexPage() {
 
         {resultCount === 0 && (
           <p className="text-neutral-500 text-sm">No carousels match &ldquo;{query.trim()}&rdquo;. Try a shorter word.</p>
+        )}
+
+        {sortedXThoughts.length > 0 && (
+          <>
+            <h2 className="text-amber-400 text-xs font-black uppercase tracking-[0.2em] mb-3">X Thoughts ({sortedXThoughts.length})</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-10">
+              {sortedXThoughts.map((c) => (
+            <Link
+              key={c.slug}
+              to={`/social/${c.slug}`}
+              className="bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden hover:border-amber-500/40 transition-all flex group"
+            >
+              {c.image && (
+                <img src={c.image} alt={c.title} width="96" height="120" className="w-24 h-24 object-cover object-top flex-shrink-0 bg-[#f9f4ee]" loading="lazy" />
+              )}
+              <div className="p-3 flex flex-col justify-center min-w-0">
+                <h3 className="text-white font-bold text-sm group-hover:text-amber-400 transition-colors truncate">{c.title}</h3>
+                <p className="text-neutral-500 text-[10px] mt-0.5">{c.weekLabel} · 7 cards</p>
+                <p className="text-amber-400 text-[10px] mt-1 group-hover:underline">Open carousel →</p>
+              </div>
+            </Link>
+              ))}
+            </div>
+          </>
         )}
 
         {sortedDinners.length > 0 && (

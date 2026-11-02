@@ -1033,5 +1033,10 @@
     "initialMainPostDate": null,
     "initialMainCreatedAt": null,
     "firstAddedAt": "2026-11-01"
+  },
+  "seven-thoughts-that-make-family-dinner-easier": {
+    "initialMainPostDate": "2026-11-06",
+    "initialMainCreatedAt": "2026-11-06",
+    "firstAddedAt": "2026-11-06"
   }
 }
