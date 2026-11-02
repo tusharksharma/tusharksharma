@@ -69,13 +69,16 @@ const routes = [
     image: c.image,
     noindex: true,
   })),
-  ...xThoughtCarousels.map((c) => ({
-    path: `/social/${c.slug}`,
-    title: `Social Carousel — ${c.title} — The Split Plate`,
-    description: c.subtitle || `Friday X thoughts carousel — ${c.title}.`,
-    image: c.cards?.[0]?.src,
-    noindex: true,
-  })),
+  ...xThoughtCarousels.flatMap((c) => {
+    const entry = {
+      title: `Social Carousel — ${c.title} — The Split Plate`,
+      description: c.subtitle || `Friday X thoughts carousel — ${c.title}.`,
+      image: c.cards?.[0]?.src,
+      noindex: true,
+    };
+    const slugs = [c.slug, ...(c.aliases || [])];
+    return slugs.map((slug) => ({ ...entry, path: `/social/${slug}` }));
+  }),
   ...cookbookItems.map((c) => ({
     path: `/cookbook/${c.id}`,
     title: `${c.seoTitle || c.title} — The Split Plate`,

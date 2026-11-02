@@ -5,8 +5,8 @@ import { downloadBlob, isMobileDevice, zipFiles } from "../utils/downloadFiles";
 
 /**
  * Friday X-thoughts carousel page.
- * Renders pre-built 1080×1350 text slides (matching past ShortSync X carousels).
- * First card is the thumbnail; there is no separate cover card.
+ * Renders pre-built 1080×1350 slides (matching past ShortSync X carousels).
+ * Card 1 is the cover thumbnail; remaining cards are the week's thoughts.
  */
 export default function XThoughtsSocialPage({ carousel }) {
   const [saveAllBusy, setSaveAllBusy] = useState(false);
@@ -82,8 +82,8 @@ export default function XThoughtsSocialPage({ carousel }) {
           <p className="text-neutral-500 text-sm mt-0.5">{carousel.subtitle}</p>
         ) : null}
         <p className="text-neutral-500 text-xs mt-2">
-          {cards.length} cards · 1080×1350 each. First card is the thumbnail — no separate cover.{" "}
-          <span className="text-amber-400">Text slides match the past @splitplates X carousel format (handle, date, page number; no food photos).</span>
+          {cards.length} cards · 1080×1350 each. Card 1 is the cover thumbnail; cards 2–8 are the week's thoughts.{" "}
+          <span className="text-amber-400">Slides match the past @splitplates X carousel format (food-photo background, cream/dark panel, THE SPLIT PLATE footer).</span>
         </p>
         <p className="text-neutral-600 text-[10px] mt-1">
           Week of {carousel.weekLabel}. On desktop, Save all downloads one ZIP with all {cards.length} images.

@@ -7,6 +7,11 @@
   "cleanUrls": true,
   "redirects": [
     {
+      "source": "/social/seven-thoughts-that-make-family-dinner-easier",
+      "destination": "/social/seven-dinner-rules-that-survive-a-real-week",
+      "permanent": true
+    },
+    {
       "source": "/shop",
       "destination": "/favorites",
       "permanent": true
