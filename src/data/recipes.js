@@ -4173,16 +4173,72 @@ const recipes = [
     servings: 4,
     protein: 35,
     calories: 400,
-    image: "/images/next-day-tacos/hero-air-fryer-chicken-tacos.webp",
+    image: "/images/next-day-tacos/split-plate-cover-polished.webp",
+    socialImages: [
+      "/images/next-day-tacos/step-season-chicken-polished.webp",
+      "/images/next-day-tacos/step-onion-cilantro-polished.webp",
+      "/images/next-day-tacos/step-air-fry-chicken-polished.webp",
+      "/images/next-day-tacos/step-chop-chicken-polished.webp",
+      "/images/next-day-tacos/step-ghee-kid-tortilla-polished.webp",
+      "/images/next-day-tacos/adult-air-fryer-chicken-tacos-polished.webp",
+      "/images/next-day-tacos/kid-tray-polished.webp",
+    ],
     socialCarousel: {
+      heroBadge: "Air-fryer taco night",
+      heroAccent: "amber",
+      heroTitle: "Next Day Chicken Tacos",
+      heroStats: [{ value: "~400", label: "cal adult" }, { value: "~35g", label: "protein" }, { value: "30", label: "min" }],
+      hook: "One air-fryer chicken cook. Adults get four built tacos; kids get deconstructed plates.",
+      heroPhoto: "/images/next-day-tacos/split-plate-cover-polished.webp",
+      captionBody: "Taco-seasoned air-fryer chicken thighs make one shared cook for two adult plates and two kid plates. Adults get four tacos with about 6 oz cooked chicken, cilantro-onion, and optional green sauce (~400 cal / 35g protein). Kids get 2 oz chicken each, deconstructed with guacamole and a lightly ghee-brushed corn tortilla. Recipe: thesplitplate.com/recipes/next-day-chicken-tacos",
+      ingredientGroups: [
+        { card: 0, accent: "amber", heading: "Shared chicken", items: [
+          { quantity: "1 1/2 lb", text: "Boneless skinless chicken thighs", note: "Yield ≥16 oz cooked" },
+          { quantity: "2 tbsp", text: "Taco seasoning" },
+          { quantity: "1 tbsp", text: "Avocado oil" },
+          { quantity: "8+2-4", text: "Small corn tortillas", note: "Adults + kids" },
+        ] },
+        { card: 1, accent: "coral", heading: "Adult finish", items: [
+          { quantity: "1/2 cup", text: "White onion, finely diced" },
+          { quantity: "1/4 cup", text: "Fresh cilantro, chopped" },
+          { quantity: "1 tbsp", text: "Lime juice" },
+          { quantity: "optional", text: "High-Protein Cilantro Jalapeño Ranch" },
+        ] },
+        { card: 1, accent: "green", heading: "Kid plate", items: [
+          { quantity: "2 oz", text: "Cooked chicken per child" },
+          { quantity: "to taste", text: "Guacamole" },
+          { quantity: "light brush", text: "Melted ghee on kid tortillas" },
+        ] },
+      ],
+      methodGroups: [
+        { accent: "amber", heading: "Shared cook", items: [
+          { number: 1, heading: "Season", body: "Pat thighs dry, coat with oil, season with taco seasoning." },
+          { number: 2, heading: "Air-fry", body: "390°F about 14-18 min until the thickest thigh hits 165°F." },
+          { number: 3, heading: "Rest + chop", body: "Rest 5 minutes, then chop and weigh portions." },
+        ] },
+        { accent: "amber", heading: "Plate the split", items: [
+          { number: 4, heading: "Adult tacos", body: "1.5 oz chicken per taco × 4, cilantro-onion, optional green sauce." },
+          { number: 5, heading: "Kid trays", body: "2 oz chicken deconstructed with guacamole and a lightly ghee-brushed tortilla." },
+        ] },
+      ],
       ingredientCardPhotos: [
-        "/images/next-day-tacos/step-season-chicken.webp",
-        "/images/next-day-tacos/step-onion-cilantro.webp",
+        "/images/next-day-tacos/step-season-chicken-polished.webp",
+        "/images/next-day-tacos/step-onion-cilantro-polished.webp",
       ],
       methodCardPhotos: [
-        "/images/next-day-tacos/step-air-fry-chicken.webp",
-        "/images/next-day-tacos/step-chop-chicken.webp",
+        "/images/next-day-tacos/step-air-fry-chicken-polished.webp",
+        "/images/next-day-tacos/step-chop-chicken-polished.webp",
       ],
+      servingPhoto: "/images/next-day-tacos/adult-air-fryer-chicken-tacos-polished.webp",
+      servingGroups: [
+        { accent: "coral", heading: "Adult plate", items: [
+          { text: "Four tacos, about 6 oz cooked chicken total. ~400 cal / 35g protein." },
+        ] },
+        { accent: "green", heading: "Kid plate", items: [
+          { text: "2 oz chicken deconstructed with guacamole and a lightly ghee-brushed corn tortilla. Kid macros intentionally not published." },
+        ] },
+      ],
+      engagementQuestion: "Built tacos or deconstructed — which plate are you making tonight?",
     },
     video: "/videos/next-day-chicken-tacos/air-fryer-chicken-tacos-marcus.mp4",
     teaserVideo: "/videos/next-day-chicken-tacos/air-fryer-chicken-tacos-7-second-teaser.mp4",
