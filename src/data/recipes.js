@@ -4594,7 +4594,62 @@ const recipes = [
     servings: 4,
     protein: 32,
     calories: 460,
-    image: "/images/emergency-kebab-night/hero.webp",
+    image: "/images/emergency-kebab-night/split-plate-cover-polished.webp",
+    socialImages: [
+      "/images/emergency-kebab-night/mise-en-place-polished.webp",
+      "/images/emergency-kebab-night/hero-polished.webp",
+      "/images/emergency-kebab-night/adult-plate-polished.webp",
+      "/images/emergency-kebab-night/kid-tray-polished.webp",
+    ],
+    socialCarousel: {
+      heroBadge: "20-min emergency dinner",
+      heroAccent: "amber",
+      heroTitle: "Emergency Kebab Night",
+      heroStats: [{ value: "20", label: "min" }, { value: "~460", label: "cal adult" }, { value: "~32g", label: "protein" }],
+      hook: "Frozen seekh + rumali + a 5-minute onion-cucumber salad. Adults get chicken heat; kids get mild beef.",
+      heroPhoto: "/images/emergency-kebab-night/split-plate-cover-polished.webp",
+      captionBody: "Emergency kebab night is freezer-to-plate: Colonel Kababz chicken seekh for adults, beef seekh for kids, both air-fried for char, with Vadilal rumali and a quick onion-cucumber-chutney salad. Adult plate estimate ~460 cal / 32g protein from the recipe macros. Recipe: thesplitplate.com/recipes/emergency-kebab-night",
+      ingredientGroups: [
+        { card: 0, accent: "amber", heading: "Freezer protein + carb", items: [
+          { quantity: "1 box", text: "Colonel Kababz Chicken Seekh", note: "Adult — slight kick" },
+          { quantity: "1 box", text: "Colonel Kababz Beef Seekh", note: "Kid — milder" },
+          { quantity: "1 pack", text: "Vadilal Rumali Roti" },
+        ] },
+        { card: 1, accent: "coral", heading: "Fresh finish", items: [
+          { quantity: "1", text: "Red onion, paper-thin" },
+          { quantity: "1", text: "Cucumber" },
+          { quantity: "to taste", text: "Store-bought green chutney" },
+        ] },
+      ],
+      methodGroups: [
+        { accent: "amber", heading: "Air-fry for char", items: [
+          { number: 1, heading: "Air-fry both boxes", body: "400°F, 12 min total. Shake at 6 min. The last 5 min builds the char." },
+          { number: 2, heading: "Slice + salt onion", body: "Paper-thin half-moons; salt and rest while kebabs finish." },
+        ] },
+        { accent: "amber", heading: "Warm + plate", items: [
+          { number: 3, heading: "Warm rumali", body: "Damp paper towel, microwave ~30 sec. Don't over-warm." },
+          { number: 4, heading: "Split plates", body: "Adult: wrap one chicken seekh + onion-chutney salad. Kid: beef seekh + plain rumali + cucumber sticks." },
+        ] },
+      ],
+      ingredientCardPhotos: [
+        "/images/emergency-kebab-night/mise-en-place-polished.webp",
+        "/images/emergency-kebab-night/hero-polished.webp",
+      ],
+      methodCardPhotos: [
+        "/images/emergency-kebab-night/kid-tray-polished.webp",
+        "/images/emergency-kebab-night/adult-plate-polished.webp",
+      ],
+      servingPhoto: "/images/emergency-kebab-night/split-plate-cover-polished.webp",
+      servingGroups: [
+        { accent: "coral", heading: "Adult plate", items: [
+          { text: "Wrapped chicken seekh + extra seekh + onion-cucumber-chutney salad. ~460 cal / 32g protein (recipe estimate)." },
+        ] },
+        { accent: "green", heading: "Kid tray", items: [
+          { text: "Beef seekh + plain folded rumali + cucumber sticks. Skip onion salad and chutney." },
+        ] },
+      ],
+      engagementQuestion: "What is your go-to 20-minute freezer dinner?",
+    },
     role: "The 6 PM Emergency Dinner",
     makeThisWhen: "It's 6 PM, nobody planned, everyone's tired, and the DoorDash math is heading toward $80 for mediocre food. You don't need to cook — you need to ASSEMBLE. Frozen kebab + frozen rumali + a 5-minute onion-cucumber salad = a real Indian family dinner in 20 minutes.",
     hook: "Same brand. Two SKUs. Adults get Colonel Kababz Chicken Seekh (slight kick). Kids get Colonel Kababz Beef Seekh (mild, less spicy). Same macros, different heat — the rare frozen split where the brand does the work for you.",
