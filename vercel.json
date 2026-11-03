@@ -36,6 +36,10 @@
       "destination": "https://github.com/tusharma88/tsp-videos/releases/download/videos/:filename"
     },
     {
+      "source": "/videos/grilled-cheese-protein-tomato-soup/:filename(.+\\.mp4)",
+      "destination": "https://github.com/tusharma88/tsp-videos/releases/download/videos/:filename"
+    },
+    {
       "source": "/videos/high-protein-pepperoni-mac-meal-prep/:filename(.+\\.mp4)",
       "destination": "https://github.com/tusharma88/tsp-videos/releases/download/videos/:filename"
     },
