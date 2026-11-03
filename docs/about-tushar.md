@@ -512,7 +512,7 @@ He reports eating roughly2oz cornflakes with a can of protein milk about an hour
 
 ### BIO-085: The breading earned its payoff
 
-Handling the thin delicate cutlets through flour, egg coating and crushed cornflakes was the hardest part for him. He enjoyed the juicy chicken and crust and would keep the basic method, with stronger seasoning next time and attention to heat because the flakes can burn. His exact egg-coating recollections conflict and require recipe clarification; do not turn the phrase egg white into a confirmed recipe change.
+Handling the thin delicate cutlets through flour, egg coating and crushed cornflakes was the hardest part for him. He enjoyed the juicy chicken and crust and would keep the basic method, with stronger seasoning next time and attention to heat because the flakes can burn. On November 2, 2026 he clarified that the coating used whole eggs; the earlier dictated egg-white wording is superseded.
 
 ### BIO-086: Planned portions were more than everyone wanted
 
