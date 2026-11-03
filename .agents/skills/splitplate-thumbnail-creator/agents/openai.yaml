@@ -1,0 +1,4 @@
+interface:
+  display_name: "Split Plate Thumbnail Creator"
+  short_description: "Create covers with Tushar's real face references"
+  default_prompt: "Use $splitplate-thumbnail-creator to make a story-specific thumbnail using the bundled real face references."

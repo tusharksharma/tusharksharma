@@ -38,6 +38,8 @@ Path A prompts must **transform** an amateur still into appetizing, editorial fo
 
 ## Video & Cover Standing Rule
 
+For thumbnail or social-cover artwork, use [.agents/skills/splitplate-thumbnail-creator/SKILL.md](.agents/skills/splitplate-thumbnail-creator/SKILL.md). Its self-contained bundle includes twelve real face/reaction references, three approved generated style examples, image provenance and ImageGen likeness/composition rules. Carry the entire skill folder to another agent; generated examples are style references, never the sole identity authority. Creating artwork does not authorize video edits or publishing.
+
 For future Marcus narration, follow [food-name pronunciation](docs/video/marcus-pronunciation.md): match Tushar’s intended pronunciation, check uncertain terms before bulk paid generation, and preserve already approved takes unless a new correction is requested.
 
 For short-form edits, start with the [editing instruction snapshot, with October 14 current-rule and style-system updates](docs/video/hyperframes-editing/README.md) and its [CURRENT_RULES](docs/video/hyperframes-editing/flat/CURRENT_RULES.md). Those explicit current preferences supersede older examples below and in mirrored playbooks on grading, compact-cut duration, episode numbering and cover tails. Read the snapshot's complete cover playbook before cover work. The [short-form editing agent](.agents/skills/splitplate-short-form-editor/SKILL.md) applies these rules and the full production/QA gates.

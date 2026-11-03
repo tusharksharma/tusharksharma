@@ -1,0 +1,180 @@
+{
+  "recorded_date": "2026-10-13",
+  "assets": [
+    {
+      "id": "surprised",
+      "source_video": "IMG_8996.MOV",
+      "source_time_seconds": 6,
+      "orientation": "90 degrees clockwise",
+      "source_still": "surprised-source.png",
+      "sha256": "99529a55b0c6c81ce06a371575b0d8958c919f0081ef52799fefaca997de007b",
+      "width": 1137,
+      "height": 1600,
+      "transformation": "orientation, crop and resize only; no facial generation",
+      "source_time_precision": "sample target, approximately; extracted first decoded frame at/after target",
+      "cutout": {
+        "file": "surprised-cutout.png",
+        "sha256": "0e574946de36b2c6657d9eb2c385f066d56e0a1758e71e036510626426b1119b",
+        "width": 1057,
+        "height": 1488,
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "tool": "built-in ImageGen",
+        "status": "visually reviewed derivative; source pixels remain identity authority; inspect face/teeth again in final thumbnail"
+      }
+    },
+    {
+      "id": "facepalm",
+      "source_video": "IMG_8996.MOV",
+      "source_time_seconds": 12,
+      "orientation": "90 degrees clockwise",
+      "source_still": "facepalm-source.png",
+      "sha256": "d98c13f2955faa25210224285bc69c84e18c8b69503c36a1161a1a5925d4abda",
+      "width": 1137,
+      "height": 1600,
+      "transformation": "orientation, crop and resize only; no facial generation",
+      "source_time_precision": "sample target, approximately; extracted first decoded frame at/after target",
+      "cutout": {
+        "file": "facepalm-cutout.png",
+        "sha256": "4cfab783435803c9713acea8c9e3688b71d09b305804dc1b14ae7da43177f13e",
+        "width": 1057,
+        "height": 1488,
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "tool": "built-in ImageGen",
+        "status": "visually reviewed derivative; source pixels remain identity authority; inspect face/teeth again in final thumbnail"
+      }
+    },
+    {
+      "id": "excited",
+      "source_video": "IMG_8997.MOV",
+      "source_time_seconds": 4,
+      "orientation": "90 degrees clockwise",
+      "source_still": "excited-source.png",
+      "sha256": "771b0d86d6ef38127c30ac49be3c84bba5c650e0a3ad40e7ce9b6865a313fa53",
+      "width": 1137,
+      "height": 1600,
+      "transformation": "orientation, crop and resize only; no facial generation",
+      "source_time_precision": "sample target, approximately; extracted first decoded frame at/after target",
+      "cutout": {
+        "file": "excited-cutout.png",
+        "sha256": "6da9e237945af8b18e05362e91c4ce4d41837da886c70653d1206f6e6983b7b3",
+        "width": 1058,
+        "height": 1487,
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "tool": "built-in ImageGen",
+        "status": "visually reviewed derivative; source pixels remain identity authority; inspect face/teeth again in final thumbnail"
+      }
+    },
+    {
+      "id": "pointing",
+      "source_video": "IMG_8997.MOV",
+      "source_time_seconds": 22,
+      "orientation": "90 degrees clockwise",
+      "source_still": "pointing-source.png",
+      "sha256": "dd8047f3cda38efe875f1eb96df450b284be381aa9bf91c60b138a7f51463fa7",
+      "width": 1137,
+      "height": 1600,
+      "transformation": "orientation, crop and resize only; no facial generation",
+      "source_time_precision": "sample target, approximately; extracted first decoded frame at/after target",
+      "cutout": {
+        "file": "pointing-cutout.png",
+        "sha256": "a55000d9f18cd3b98a709e5195b234d5176abc0b33513a13c2ae36b184b0abc4",
+        "width": 1058,
+        "height": 1487,
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "tool": "built-in ImageGen",
+        "status": "visually reviewed derivative; source pixels remain identity authority; inspect face/teeth again in final thumbnail"
+      }
+    },
+    {
+      "id": "skeptical",
+      "source_video": "IMG_8998.MOV",
+      "source_time_seconds": 28,
+      "orientation": "90 degrees clockwise",
+      "source_still": "skeptical-source.png",
+      "sha256": "7b3123c850326678eed1bdc3df8a4c16dbd4ab4af18fc76593f913f601ab231d",
+      "width": 1137,
+      "height": 1600,
+      "transformation": "orientation, crop and resize only; no facial generation",
+      "source_time_precision": "sample target, approximately; extracted first decoded frame at/after target",
+      "cutout": {
+        "file": "skeptical-cutout.png",
+        "sha256": "b09949588934785af6a8489a2966746db58e9fec6c53b04a759d78ce958d624b",
+        "width": 1057,
+        "height": 1488,
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "tool": "built-in ImageGen",
+        "status": "visually reviewed derivative; source pixels remain identity authority; inspect face/teeth again in final thumbnail"
+      }
+    },
+    {
+      "id": "animated-emphasis",
+      "source_video": "IMG_8998.MOV",
+      "source_time_seconds": 40,
+      "orientation": "90 degrees clockwise",
+      "source_still": "animated-emphasis-source.png",
+      "sha256": "fe98c135f2fcc921473fd787e5560c47f608a7b92f48c5a5c539201d9bab60a3",
+      "width": 1137,
+      "height": 1600,
+      "transformation": "orientation, crop and resize only; no facial generation",
+      "source_time_precision": "sample target, approximately; extracted first decoded frame at/after target"
+    },
+    {
+      "id": "thinking",
+      "source_video": "IMG_8998.MOV",
+      "source_time_seconds": 34,
+      "orientation": "90 degrees clockwise",
+      "source_still": "thinking-source.png",
+      "sha256": "441de801bc3a79db9f54adf4b6edcf5ef619adf8731962b534c549e29fb6a4fc",
+      "width": 1137,
+      "height": 1600,
+      "transformation": "orientation, crop and resize only; no facial generation",
+      "source_time_precision": "sample target, approximately; extracted first decoded frame at/after target",
+      "cutout": {
+        "file": "thinking-cutout.png",
+        "sha256": "32d97c7b4e41ca15cd4b210580f00c1f3a48885362a2c813b37bcbd63a16e950",
+        "width": 1057,
+        "height": 1488,
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "tool": "built-in ImageGen",
+        "status": "visually reviewed derivative; source pixels remain identity authority; inspect face/teeth again in final thumbnail"
+      }
+    },
+    {
+      "id": "hands-on-cheeks",
+      "source_video": "IMG_8997.MOV",
+      "source_time_seconds": 14,
+      "orientation": "90 degrees clockwise",
+      "source_still": "hands-on-cheeks-source.png",
+      "sha256": "0bc4f77a360d28d1edf61dbb3fee27db63b93141d23275a544d47bb180e452a1",
+      "width": 1137,
+      "height": 1600,
+      "transformation": "orientation, crop and resize only; no facial generation",
+      "source_time_precision": "sample target, approximately; extracted first decoded frame at/after target"
+    }
+  ],
+  "selection_rule": "Prefer real source faces; do not generate a new smile or teeth. Derivatives are not pixel-identical originals."
+}

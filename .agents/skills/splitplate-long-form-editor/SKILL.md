@@ -5,6 +5,8 @@ description: Edit or review The Split Plate long-form YouTube videos from real f
 
 # Split Plate long-form editor
 
+For thumbnail artwork, use [splitplate-thumbnail-creator](../splitplate-thumbnail-creator/SKILL.md). It bundles Tushar's real face references, approved reaction examples and current ImageGen likeness rules; create a separate landscape composition for the main film.
+
 Confirmed October 27, 2026: Marcus must always play at regular speed (provider speed 1.0 and timeline playback rate 1.0). Never slow his narration with atempo, time-stretching or added silence to reach a duration target. Keep pauses within and between narration excerpts at no more than one second; trim excess quiet and ripple picture/captions while preserving the correct cooking-action match. Measure the rendered narration gaps and review the joins. Intentional branded intro, genuine recorded dialogue, and the requested music-backed nutrition/watch-next sequence are separate scenes, not excuses for narration padding. If the required runtime needs more content, ask Tushar for real stories and obtain approval for exact added paid narration. Do not silently shorten a film below his minimum or retrofit previously approved releases.
 
 Confirmed October 26 and reinforced October 27, 2026: future long-form films must finish at least eight minutes (480 seconds), unless Tushar explicitly changes that requirement. Measure the encoded final after all silence trimming and ending changes. Reach it with useful footage and approved real stories at regular narration speed; ask for more story answers when needed. Do not pad with loops, prolonged cards, slowed narration or excess quiet. This does not retrofit published films.

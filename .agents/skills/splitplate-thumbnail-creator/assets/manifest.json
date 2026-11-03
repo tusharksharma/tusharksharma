@@ -1,0 +1,180 @@
+{
+  "owner": "Tushar Sharma / The Split Plate",
+  "packaged_date": "2026-11-02",
+  "authority": "Owner requested reusable skill containing face references for other agents; no unrelated publication authorized",
+  "identity_source_count": 12,
+  "assets": [
+    {
+      "file": "assets/real-video/animated-emphasis-source.png",
+      "kind": "real video frame; no facial generation",
+      "role": "identity anchor",
+      "sha256": "fe98c135f2fcc921473fd787e5560c47f608a7b92f48c5a5c539201d9bab60a3",
+      "dimensions": [
+        1137,
+        1600
+      ]
+    },
+    {
+      "file": "assets/real-video/excited-source.png",
+      "kind": "real video frame; no facial generation",
+      "role": "identity anchor",
+      "sha256": "771b0d86d6ef38127c30ac49be3c84bba5c650e0a3ad40e7ce9b6865a313fa53",
+      "dimensions": [
+        1137,
+        1600
+      ]
+    },
+    {
+      "file": "assets/real-video/facepalm-source.png",
+      "kind": "real video frame; no facial generation",
+      "role": "identity anchor",
+      "sha256": "d98c13f2955faa25210224285bc69c84e18c8b69503c36a1161a1a5925d4abda",
+      "dimensions": [
+        1137,
+        1600
+      ]
+    },
+    {
+      "file": "assets/real-video/hands-on-cheeks-source.png",
+      "kind": "real video frame; no facial generation",
+      "role": "identity anchor",
+      "sha256": "0bc4f77a360d28d1edf61dbb3fee27db63b93141d23275a544d47bb180e452a1",
+      "dimensions": [
+        1137,
+        1600
+      ]
+    },
+    {
+      "file": "assets/real-video/pointing-source.png",
+      "kind": "real video frame; no facial generation",
+      "role": "identity anchor",
+      "sha256": "dd8047f3cda38efe875f1eb96df450b284be381aa9bf91c60b138a7f51463fa7",
+      "dimensions": [
+        1137,
+        1600
+      ]
+    },
+    {
+      "file": "assets/real-video/skeptical-source.png",
+      "kind": "real video frame; no facial generation",
+      "role": "identity anchor",
+      "sha256": "7b3123c850326678eed1bdc3df8a4c16dbd4ab4af18fc76593f913f601ab231d",
+      "dimensions": [
+        1137,
+        1600
+      ]
+    },
+    {
+      "file": "assets/real-video/surprised-source.png",
+      "kind": "real video frame; no facial generation",
+      "role": "identity anchor",
+      "sha256": "99529a55b0c6c81ce06a371575b0d8958c919f0081ef52799fefaca997de007b",
+      "dimensions": [
+        1137,
+        1600
+      ]
+    },
+    {
+      "file": "assets/real-video/thinking-source.png",
+      "kind": "real video frame; no facial generation",
+      "role": "identity anchor",
+      "sha256": "441de801bc3a79db9f54adf4b6edcf5ef619adf8731962b534c549e29fb6a4fc",
+      "dimensions": [
+        1137,
+        1600
+      ]
+    },
+    {
+      "file": "assets/real-video/source-contact-sheet.jpg",
+      "kind": "real source contact sheet",
+      "role": "selection guide",
+      "sha256": "7d8614613800f8c109c15e337e4ed443ba275ce0283b2597ed89a775955160ff",
+      "dimensions": [
+        1200,
+        810
+      ]
+    },
+    {
+      "file": "assets/real-video/source-provenance.json",
+      "kind": "source provenance",
+      "role": "record",
+      "sha256": "d496715dadca2381f14fdaa3c032447c5d96700aecdb5d6269494de4abeb31d7"
+    },
+    {
+      "file": "assets/supplied-photos/01-surprised-front.jpg",
+      "kind": "real owner-supplied photo, personal metadata removed",
+      "role": "identity anchor",
+      "sha256": "cd1fa70fe7d4a7176f83a6f87d0777ff98bfa666f472d11102a570ee3e436e94",
+      "dimensions": [
+        960,
+        1280
+      ]
+    },
+    {
+      "file": "assets/supplied-photos/02-pursed-surprise.jpg",
+      "kind": "real owner-supplied photo, personal metadata removed",
+      "role": "identity anchor",
+      "sha256": "cf1157b98708fbc3f585d06eebdeb7f924837cd34198bad8f46d9136fdd90298",
+      "dimensions": [
+        960,
+        1280
+      ]
+    },
+    {
+      "file": "assets/supplied-photos/03-surprised-three-quarter.jpg",
+      "kind": "real owner-supplied photo, personal metadata removed",
+      "role": "identity anchor",
+      "sha256": "43b0505a109a880103dad6cc296072aa8c1e8af9892eed53b22e38535c21b4a6",
+      "dimensions": [
+        960,
+        1280
+      ]
+    },
+    {
+      "file": "assets/supplied-photos/04-wink.jpg",
+      "kind": "real owner-supplied photo, personal metadata removed",
+      "role": "identity anchor",
+      "sha256": "90e0713b1ad564e015085b50ad76f6c1fc09c4d1784014b0e8d825f3d015cf0b",
+      "dimensions": [
+        960,
+        1280
+      ]
+    },
+    {
+      "file": "assets/supplied-photos/source-provenance.json",
+      "kind": "source provenance",
+      "role": "record",
+      "sha256": "4b53c2cec8cf25f8e04c6c73110db55ce5ca19a8556b23867178675542fe2bfd"
+    },
+    {
+      "file": "assets/approved-examples/brownie-reaction.png",
+      "kind": "generated staged cover; owner Lgtm approved November2 2026",
+      "role": "style only; never sole identity anchor",
+      "sha256": "5c24182c011ae96a42f6d9eff930e2dbc3f9ae998c6f29f90c631a1a6a527934",
+      "dimensions": [
+        941,
+        1672
+      ]
+    },
+    {
+      "file": "assets/approved-examples/fudge-reaction.png",
+      "kind": "generated staged cover; owner Lgtm approved November2 2026",
+      "role": "style only; never sole identity anchor",
+      "sha256": "fe70c8830b3b75f39d8641947ebb718b9d3d5e21d5a56617b38f0680fa732e7f",
+      "dimensions": [
+        941,
+        1672
+      ]
+    },
+    {
+      "file": "assets/approved-examples/drizzle-reaction.png",
+      "kind": "generated staged cover; owner Lgtm approved November2 2026",
+      "role": "style only; never sole identity anchor",
+      "sha256": "4c57a33a00f9d54d68935a2e39a5224ff56e40dc646e1f83c1f53550c9378124",
+      "dimensions": [
+        941,
+        1672
+      ]
+    }
+  ]
+}
