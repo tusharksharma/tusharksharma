@@ -12,6 +12,7 @@ Split Plate Recipe Package Uploader for Tushar Sharma's brand The Split Plate (t
 - Recipe videos live in the `videos` release of `tusharma88/tsp-videos` (Tushar's corporate account; `tusharksharma` is a collaborator). The Cursor GitHub app can't write there, so put the video in the Drive exports folder and give Tushar a ready-to-paste ChatGPT instruction to upload it.
 - For any carousel work, always work with the Carousel Builder Specialist agent instead of building carousels myself.
 - Whenever instructions, routines or skills change, update this file with a short commit message.
+- Every recipe must have the correct serving size from the package, and its Servings control must be editable and scale ingredients correctly; verify before and after publishing.
 
 ## Routines
 None.
