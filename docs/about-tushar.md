@@ -493,3 +493,31 @@ He liked the soup and could not taste the cottage cheese, but wanted a stronger 
 ### BIO-081: One dinner can have different verdicts
 
 His wife and mother-in-law finished their soup. The kids liked it and ate a decent serving, although they may not have finished it. Everyone finished their grilled cheese; he may have left a little soup. Dipping grilled cheese into the soup was his favorite part: the combination felt comforting even though soup alone was less exciting to him. These are his reported reactions, not invented recorded dialogue.
+
+## Confirmed firsthand stories — chicken Milanese
+
+Source: Tushar's ten numbered Milanese answers in this chat, received November 2, 2026. The filmed cook is dated October 28, 2026 in its source filenames. Raw interview and footage remain in the private production project. These extend the existing weight-loss and shared-family-meal accounts without turning personal preferences into general dietary advice.
+
+### BIO-082: Thighs are his usual preference; breast was available
+
+He normally prefers chicken thighs because he enjoys their taste and finds them easy to keep eating consistently. He reports regularly eating thighs during his70-pound weight loss; this adds context to the earlier self-reported history, not a claim that thighs caused it. He does not consider chicken breast a requirement of his own eating pattern. For this Milanese, breast was already in the fridge.
+
+### BIO-083: Broken cereal gave an occasional project a purpose
+
+Broken cornflakes had accumulated at the bottom of a bag. He did not enjoy the tiny pieces as cereal but wanted to use them rather than throw them away. A remembered Milanese video from Sam the Cooking Guy, whom he calls his favorite cooking YouTuber, helped inspire this dinner. He would repeat it after saving enough broken flakes, about6oz for this batch. His earlier roughly-once-every-three-months estimate describes an occasional project, not a fixed calendar or quick weekly staple.
+
+### BIO-084: Cornflakes also fit his pre-workout routine
+
+He reports eating roughly2oz cornflakes with a can of protein milk about an hour before training, around four times a week. The milk product and recalled nutrition are not confirmed, so this is a routine description rather than a calorie/protein prescription. He likes cornflakes' texture and how they fit his own food preferences; no verified nutritional advantage over breadcrumbs was established.
+
+### BIO-085: The breading earned its payoff
+
+Handling the thin delicate cutlets through flour, egg coating and crushed cornflakes was the hardest part for him. He enjoyed the juicy chicken and crust and would keep the basic method, with stronger seasoning next time and attention to heat because the flakes can burn. His exact egg-coating recollections conflict and require recipe clarification; do not turn the phrase egg white into a confirmed recipe change.
+
+### BIO-086: Planned portions were more than everyone wanted
+
+For three adults and two kids, he initially planned1.5cutlets per adult and0.75per child from six cutlets. His wife and mother-in-law each ate approximately one, and the kids left some too. He reports everyone enjoyed dinner; the kids' chicken was sliced into strips, which they called their best chicken tenders. This is his reported family response, not dialogue verified in the cooking footage. He and his wife ate leftover chicken the next day; exact leftover allocation and reheating method were not established.
+
+### BIO-087: A ninety-minute Wednesday cooking window
+
+On the filmed Wednesday, his wife took their older daughter to gymnastics and he had roughly90minutes to prepare dinner. It was enough time, but he emphasizes that Milanese was a hands-on project worth the effort, not an effortless quick dinner. Keep this event tied to this cook rather than treating it as a permanent household schedule.
