@@ -128,7 +128,10 @@ export default function SocialIndexPage() {
                 : `${allDinners.length} dinners + ${totalCookbook} power-ups + ${xThoughtCarousels.length} X thoughts · click to open and screenshot`}
             </p>
           </div>
-          <button onClick={lock} className="text-neutral-500 text-xs hover:text-amber-400 cursor-pointer">Lock</button>
+          <div className="flex items-center gap-3">
+            <Link to="/analytics" className="text-amber-400 text-xs font-bold hover:underline">Analytics →</Link>
+            <button onClick={lock} className="text-neutral-500 text-xs hover:text-amber-400 cursor-pointer">Lock</button>
+          </div>
         </div>
 
         <div className="relative mb-8">

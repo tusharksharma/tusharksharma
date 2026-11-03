@@ -1,0 +1,240 @@
+{
+  "lastUpdated": "2026-11-03T18:20:00.000Z",
+  "source": "GA4 Baseline (G-10YP1BFG19) — Ready for Automated Daily Sync",
+  "measurementId": "G-10YP1BFG19",
+  "ranges": {
+    "24h": {
+      "summary": {
+        "activeNow": 4,
+        "uniqueVisitors": 142,
+        "visitorsDelta": 18,
+        "totalPageviews": 318,
+        "pageviewsDelta": 24,
+        "bounceRate": 36,
+        "avgDurationSec": 134
+      },
+      "timeSeries": [
+        { "label": "12 AM", "visitors": 4, "pageviews": 7 },
+        { "label": "2 AM", "visitors": 2, "pageviews": 4 },
+        { "label": "4 AM", "visitors": 3, "pageviews": 5 },
+        { "label": "6 AM", "visitors": 7, "pageviews": 15 },
+        { "label": "8 AM", "visitors": 12, "pageviews": 26 },
+        { "label": "10 AM", "visitors": 16, "pageviews": 38 },
+        { "label": "12 PM", "visitors": 19, "pageviews": 42 },
+        { "label": "2 PM", "visitors": 15, "pageviews": 33 },
+        { "label": "4 PM", "visitors": 22, "pageviews": 51 },
+        { "label": "6 PM", "visitors": 28, "pageviews": 64 },
+        { "label": "8 PM", "visitors": 18, "pageviews": 39 },
+        { "label": "10 PM", "visitors": 9, "pageviews": 19 }
+      ],
+      "countries": [
+        { "country": "United States", "countryCode": "US", "visitors": 94, "pageviews": 215, "percentage": 66, "lat": 37.7749, "lon": -122.4194 },
+        { "country": "Canada", "countryCode": "CA", "visitors": 16, "pageviews": 35, "percentage": 11, "lat": 43.6532, "lon": -79.3832 },
+        { "country": "United Kingdom", "countryCode": "GB", "visitors": 12, "pageviews": 26, "percentage": 8, "lat": 51.5074, "lon": -0.1278 },
+        { "country": "Australia", "countryCode": "AU", "visitors": 8, "pageviews": 18, "percentage": 6, "lat": -33.8688, "lon": 151.2093 },
+        { "country": "India", "countryCode": "IN", "visitors": 6, "pageviews": 13, "percentage": 4, "lat": 12.9716, "lon": 77.5946 },
+        { "country": "Germany", "countryCode": "DE", "visitors": 6, "pageviews": 11, "percentage": 4, "lat": 52.52, "lon": 13.405 }
+      ],
+      "cities": [
+        { "city": "San Ramon", "region": "CA", "country": "United States", "countryCode": "US", "visitors": 19, "pageviews": 48, "percentage": 13, "lat": 37.7799, "lon": -121.978 },
+        { "city": "San Francisco", "region": "CA", "country": "United States", "countryCode": "US", "visitors": 18, "pageviews": 41, "percentage": 13, "lat": 37.7749, "lon": -122.4194 },
+        { "city": "New York", "region": "NY", "country": "United States", "countryCode": "US", "visitors": 16, "pageviews": 36, "percentage": 11, "lat": 40.7128, "lon": -74.006 },
+        { "city": "Austin", "region": "TX", "country": "United States", "countryCode": "US", "visitors": 12, "pageviews": 27, "percentage": 8, "lat": 30.2672, "lon": -97.7431 },
+        { "city": "Toronto", "region": "ON", "country": "Canada", "countryCode": "CA", "visitors": 11, "pageviews": 25, "percentage": 8, "lat": 43.6532, "lon": -79.3832 },
+        { "city": "London", "region": "ENG", "country": "United Kingdom", "countryCode": "GB", "visitors": 10, "pageviews": 22, "percentage": 7, "lat": 51.5074, "lon": -0.1278 },
+        { "city": "Chicago", "region": "IL", "country": "United States", "countryCode": "US", "visitors": 9, "pageviews": 19, "percentage": 6, "lat": 41.8781, "lon": -87.6298 },
+        { "city": "Seattle", "region": "WA", "country": "United States", "countryCode": "US", "visitors": 8, "pageviews": 17, "percentage": 6, "lat": 47.6062, "lon": -122.3321 },
+        { "city": "Sydney", "region": "NSW", "country": "Australia", "countryCode": "AU", "visitors": 7, "pageviews": 15, "percentage": 5, "lat": -33.8688, "lon": 151.2093 },
+        { "city": "Bengaluru", "region": "KA", "country": "India", "countryCode": "IN", "visitors": 6, "pageviews": 13, "percentage": 4, "lat": 12.9716, "lon": 77.5946 }
+      ],
+      "topPages": [
+        { "path": "/", "title": "The Split Plate — One Meal. Two Plates.", "views": 84, "visitors": 68, "avgDurationSec": 95, "percentage": 26 },
+        { "path": "/recipes/grilled-cheese-protein-tomato-soup", "title": "Grilled Cheese & High-Protein Tomato Soup", "views": 52, "visitors": 41, "avgDurationSec": 182, "percentage": 16 },
+        { "path": "/dinners", "title": "Dinners — The Split Plate", "views": 44, "visitors": 35, "avgDurationSec": 110, "percentage": 14 },
+        { "path": "/recipes/high-protein-pepperoni-mac-meal-prep", "title": "High-Protein Pepperoni Mac Meal Prep", "views": 38, "visitors": 29, "avgDurationSec": 165, "percentage": 12 },
+        { "path": "/cookbook/white-drop-cookies-n-creme-creami", "title": "Cookies & Cream Protein Ice Cream (Ninja Creami)", "views": 31, "visitors": 26, "avgDurationSec": 148, "percentage": 10 },
+        { "path": "/cookbook", "title": "Power-Ups — The Split Plate", "views": 28, "visitors": 22, "avgDurationSec": 104, "percentage": 9 },
+        { "path": "/recipes/viral-proteinized-burger-in-a-bun", "title": "Viral Proteinized Burger in a Bun", "views": 24, "visitors": 19, "avgDurationSec": 154, "percentage": 8 },
+        { "path": "/favorites", "title": "Favorites — The Split Plate", "views": 17, "visitors": 14, "avgDurationSec": 122, "percentage": 5 }
+      ],
+      "referrers": [
+        { "source": "instagram.com", "visitors": 52, "pageviews": 118, "percentage": 37 },
+        { "source": "google.com", "visitors": 38, "pageviews": 86, "percentage": 27 },
+        { "source": "Direct", "visitors": 29, "pageviews": 65, "percentage": 20 },
+        { "source": "tiktok.com", "visitors": 14, "pageviews": 31, "percentage": 10 },
+        { "source": "youtube.com", "visitors": 9, "pageviews": 18, "percentage": 6 }
+      ],
+      "devices": [
+        { "name": "Mobile", "visitors": 96, "percentage": 68 },
+        { "name": "Desktop", "visitors": 41, "percentage": 29 },
+        { "name": "Tablet", "visitors": 5, "percentage": 3 }
+      ],
+      "browsers": [
+        { "name": "Safari", "visitors": 78, "percentage": 55 },
+        { "name": "Chrome", "visitors": 48, "percentage": 34 },
+        { "name": "Edge", "visitors": 9, "percentage": 6 },
+        { "name": "Firefox", "visitors": 7, "percentage": 5 }
+      ],
+      "operatingSystems": [
+        { "name": "iOS", "visitors": 74, "percentage": 52 },
+        { "name": "macOS", "visitors": 26, "percentage": 18 },
+        { "name": "Android", "visitors": 22, "percentage": 15 },
+        { "name": "Windows", "visitors": 18, "percentage": 13 },
+        { "name": "Linux", "visitors": 2, "percentage": 2 }
+      ]
+    },
+    "7d": {
+      "summary": {
+        "activeNow": 4,
+        "uniqueVisitors": 894,
+        "visitorsDelta": 22,
+        "totalPageviews": 2140,
+        "pageviewsDelta": 29,
+        "bounceRate": 38,
+        "avgDurationSec": 142
+      },
+      "timeSeries": [
+        { "label": "Oct 28", "visitors": 108, "pageviews": 248 },
+        { "label": "Oct 29", "visitors": 115, "pageviews": 272 },
+        { "label": "Oct 30", "visitors": 124, "pageviews": 298 },
+        { "label": "Oct 31", "visitors": 119, "pageviews": 284 },
+        { "label": "Nov 1", "visitors": 146, "pageviews": 356 },
+        { "label": "Nov 2", "visitors": 140, "pageviews": 364 },
+        { "label": "Nov 3", "visitors": 142, "pageviews": 318 }
+      ],
+      "countries": [
+        { "country": "United States", "countryCode": "US", "visitors": 612, "pageviews": 1480, "percentage": 68, "lat": 37.7749, "lon": -122.4194 },
+        { "country": "Canada", "countryCode": "CA", "visitors": 98, "pageviews": 234, "percentage": 11, "lat": 43.6532, "lon": -79.3832 },
+        { "country": "United Kingdom", "countryCode": "GB", "visitors": 72, "pageviews": 168, "percentage": 8, "lat": 51.5074, "lon": -0.1278 },
+        { "country": "Australia", "countryCode": "AU", "visitors": 45, "pageviews": 104, "percentage": 5, "lat": -33.8688, "lon": 151.2093 },
+        { "country": "India", "countryCode": "IN", "visitors": 38, "pageviews": 88, "percentage": 4, "lat": 12.9716, "lon": 77.5946 },
+        { "country": "Germany", "countryCode": "DE", "visitors": 29, "pageviews": 66, "percentage": 3, "lat": 52.52, "lon": 13.405 }
+      ],
+      "cities": [
+        { "city": "San Francisco", "region": "CA", "country": "United States", "countryCode": "US", "visitors": 112, "pageviews": 278, "percentage": 13, "lat": 37.7749, "lon": -122.4194 },
+        { "city": "New York", "region": "NY", "country": "United States", "countryCode": "US", "visitors": 98, "pageviews": 241, "percentage": 11, "lat": 40.7128, "lon": -74.006 },
+        { "city": "San Ramon", "region": "CA", "country": "United States", "countryCode": "US", "visitors": 76, "pageviews": 195, "percentage": 9, "lat": 37.7799, "lon": -121.978 },
+        { "city": "Austin", "region": "TX", "country": "United States", "countryCode": "US", "visitors": 68, "pageviews": 162, "percentage": 8, "lat": 30.2672, "lon": -97.7431 },
+        { "city": "Toronto", "region": "ON", "country": "Canada", "countryCode": "CA", "visitors": 64, "pageviews": 154, "percentage": 7, "lat": 43.6532, "lon": -79.3832 },
+        { "city": "London", "region": "ENG", "country": "United Kingdom", "countryCode": "GB", "visitors": 58, "pageviews": 138, "percentage": 6, "lat": 51.5074, "lon": -0.1278 },
+        { "city": "Chicago", "region": "IL", "country": "United States", "countryCode": "US", "visitors": 52, "pageviews": 124, "percentage": 6, "lat": 41.8781, "lon": -87.6298 },
+        { "city": "Seattle", "region": "WA", "country": "United States", "countryCode": "US", "visitors": 46, "pageviews": 109, "percentage": 5, "lat": 47.6062, "lon": -122.3321 },
+        { "city": "Sydney", "region": "NSW", "country": "Australia", "countryCode": "AU", "visitors": 39, "pageviews": 91, "percentage": 4, "lat": -33.8688, "lon": 151.2093 },
+        { "city": "Bengaluru", "region": "KA", "country": "India", "countryCode": "IN", "visitors": 31, "pageviews": 72, "percentage": 3, "lat": 12.9716, "lon": 77.5946 }
+      ],
+      "topPages": [
+        { "path": "/", "title": "The Split Plate — One Meal. Two Plates.", "views": 540, "visitors": 412, "avgDurationSec": 98, "percentage": 25 },
+        { "path": "/recipes/grilled-cheese-protein-tomato-soup", "title": "Grilled Cheese & High-Protein Tomato Soup", "views": 328, "visitors": 264, "avgDurationSec": 186, "percentage": 15 },
+        { "path": "/dinners", "title": "Dinners — The Split Plate", "views": 294, "visitors": 218, "avgDurationSec": 115, "percentage": 14 },
+        { "path": "/recipes/high-protein-pepperoni-mac-meal-prep", "title": "High-Protein Pepperoni Mac Meal Prep", "views": 256, "visitors": 195, "avgDurationSec": 172, "percentage": 12 },
+        { "path": "/cookbook/white-drop-cookies-n-creme-creami", "title": "Cookies & Cream Protein Ice Cream (Ninja Creami)", "views": 212, "visitors": 168, "avgDurationSec": 154, "percentage": 10 },
+        { "path": "/cookbook", "title": "Power-Ups — The Split Plate", "views": 184, "visitors": 142, "avgDurationSec": 108, "percentage": 9 },
+        { "path": "/recipes/spicy-fajita-chicken-gnocchi", "title": "Spicy Fajita Chicken Gnocchi", "views": 168, "visitors": 131, "avgDurationSec": 164, "percentage": 8 },
+        { "path": "/favorites", "title": "Favorites — The Split Plate", "views": 158, "visitors": 124, "avgDurationSec": 129, "percentage": 7 }
+      ],
+      "referrers": [
+        { "source": "instagram.com", "visitors": 340, "pageviews": 812, "percentage": 38 },
+        { "source": "google.com", "visitors": 241, "pageviews": 578, "percentage": 27 },
+        { "source": "Direct", "visitors": 179, "pageviews": 428, "percentage": 20 },
+        { "source": "tiktok.com", "visitors": 80, "pageviews": 192, "percentage": 9 },
+        { "source": "youtube.com", "visitors": 54, "pageviews": 130, "percentage": 6 }
+      ],
+      "devices": [
+        { "name": "Mobile", "visitors": 617, "percentage": 69 },
+        { "name": "Desktop", "visitors": 250, "percentage": 28 },
+        { "name": "Tablet", "visitors": 27, "percentage": 3 }
+      ],
+      "browsers": [
+        { "name": "Safari", "visitors": 492, "percentage": 55 },
+        { "name": "Chrome", "visitors": 304, "percentage": 34 },
+        { "name": "Edge", "visitors": 54, "percentage": 6 },
+        { "name": "Firefox", "visitors": 44, "percentage": 5 }
+      ],
+      "operatingSystems": [
+        { "name": "iOS", "visitors": 474, "percentage": 53 },
+        { "name": "macOS", "visitors": 161, "percentage": 18 },
+        { "name": "Android", "visitors": 134, "percentage": 15 },
+        { "name": "Windows", "visitors": 107, "percentage": 12 },
+        { "name": "Linux", "visitors": 18, "percentage": 2 }
+      ]
+    },
+    "30d": {
+      "summary": {
+        "activeNow": 4,
+        "uniqueVisitors": 3480,
+        "visitorsDelta": 34,
+        "totalPageviews": 8640,
+        "pageviewsDelta": 41,
+        "bounceRate": 37,
+        "avgDurationSec": 146
+      },
+      "timeSeries": [
+        { "label": "Oct 6", "visitors": 88, "pageviews": 210 },
+        { "label": "Oct 9", "visitors": 94, "pageviews": 228 },
+        { "label": "Oct 12", "visitors": 102, "pageviews": 254 },
+        { "label": "Oct 15", "visitors": 110, "pageviews": 275 },
+        { "label": "Oct 18", "visitors": 118, "pageviews": 292 },
+        { "label": "Oct 21", "visitors": 121, "pageviews": 304 },
+        { "label": "Oct 24", "visitors": 129, "pageviews": 320 },
+        { "label": "Oct 27", "visitors": 134, "pageviews": 338 },
+        { "label": "Oct 30", "visitors": 138, "pageviews": 349 },
+        { "label": "Nov 3", "visitors": 142, "pageviews": 318 }
+      ],
+      "countries": [
+        { "country": "United States", "countryCode": "US", "visitors": 2366, "pageviews": 5875, "percentage": 68, "lat": 37.7749, "lon": -122.4194 },
+        { "country": "Canada", "countryCode": "CA", "visitors": 383, "pageviews": 950, "percentage": 11, "lat": 43.6532, "lon": -79.3832 },
+        { "country": "United Kingdom", "countryCode": "GB", "visitors": 278, "pageviews": 691, "percentage": 8, "lat": 51.5074, "lon": -0.1278 },
+        { "country": "Australia", "countryCode": "AU", "visitors": 174, "pageviews": 432, "percentage": 5, "lat": -33.8688, "lon": 151.2093 },
+        { "country": "India", "countryCode": "IN", "visitors": 139, "pageviews": 346, "percentage": 4, "lat": 12.9716, "lon": 77.5946 },
+        { "country": "Germany", "countryCode": "DE", "visitors": 140, "pageviews": 346, "percentage": 4, "lat": 52.52, "lon": 13.405 }
+      ],
+      "cities": [
+        { "city": "San Francisco", "region": "CA", "country": "United States", "countryCode": "US", "visitors": 442, "pageviews": 1105, "percentage": 13, "lat": 37.7749, "lon": -122.4194 },
+        { "city": "New York", "region": "NY", "country": "United States", "countryCode": "US", "visitors": 385, "pageviews": 962, "percentage": 11, "lat": 40.7128, "lon": -74.006 },
+        { "city": "San Ramon", "region": "CA", "country": "United States", "countryCode": "US", "visitors": 298, "pageviews": 745, "percentage": 9, "lat": 37.7799, "lon": -121.978 },
+        { "city": "Austin", "region": "TX", "country": "United States", "countryCode": "US", "visitors": 265, "pageviews": 662, "percentage": 8, "lat": 30.2672, "lon": -97.7431 },
+        { "city": "Toronto", "region": "ON", "country": "Canada", "countryCode": "CA", "visitors": 248, "pageviews": 620, "percentage": 7, "lat": 43.6532, "lon": -79.3832 },
+        { "city": "London", "region": "ENG", "country": "United Kingdom", "countryCode": "GB", "visitors": 224, "pageviews": 560, "percentage": 6, "lat": 51.5074, "lon": -0.1278 },
+        { "city": "Chicago", "region": "IL", "country": "United States", "countryCode": "US", "visitors": 198, "pageviews": 495, "percentage": 6, "lat": 41.8781, "lon": -87.6298 },
+        { "city": "Seattle", "region": "WA", "country": "United States", "countryCode": "US", "visitors": 176, "pageviews": 440, "percentage": 5, "lat": 47.6062, "lon": -122.3321 },
+        { "city": "Sydney", "region": "NSW", "country": "Australia", "countryCode": "AU", "visitors": 148, "pageviews": 370, "percentage": 4, "lat": -33.8688, "lon": 151.2093 },
+        { "city": "Bengaluru", "region": "KA", "country": "India", "countryCode": "IN", "visitors": 118, "pageviews": 295, "percentage": 3, "lat": 12.9716, "lon": 77.5946 }
+      ],
+      "topPages": [
+        { "path": "/", "title": "The Split Plate — One Meal. Two Plates.", "views": 2160, "visitors": 1620, "avgDurationSec": 102, "percentage": 25 },
+        { "path": "/recipes/grilled-cheese-protein-tomato-soup", "title": "Grilled Cheese & High-Protein Tomato Soup", "views": 1296, "visitors": 980, "avgDurationSec": 188, "percentage": 15 },
+        { "path": "/dinners", "title": "Dinners — The Split Plate", "views": 1210, "visitors": 890, "avgDurationSec": 118, "percentage": 14 },
+        { "path": "/recipes/high-protein-pepperoni-mac-meal-prep", "title": "High-Protein Pepperoni Mac Meal Prep", "views": 1036, "visitors": 780, "avgDurationSec": 175, "percentage": 12 },
+        { "path": "/cookbook/white-drop-cookies-n-creme-creami", "title": "Cookies & Cream Protein Ice Cream (Ninja Creami)", "views": 864, "visitors": 650, "avgDurationSec": 156, "percentage": 10 },
+        { "path": "/cookbook", "title": "Power-Ups — The Split Plate", "views": 778, "visitors": 590, "avgDurationSec": 112, "percentage": 9 },
+        { "path": "/recipes/viral-proteinized-burger-in-a-bun", "title": "Viral Proteinized Burger in a Bun", "views": 691, "visitors": 520, "avgDurationSec": 168, "percentage": 8 },
+        { "path": "/favorites", "title": "Favorites — The Split Plate", "views": 605, "visitors": 460, "avgDurationSec": 134, "percentage": 7 }
+      ],
+      "referrers": [
+        { "source": "instagram.com", "visitors": 1322, "pageviews": 3283, "percentage": 38 },
+        { "source": "google.com", "visitors": 940, "pageviews": 2333, "percentage": 27 },
+        { "source": "Direct", "visitors": 696, "pageviews": 1728, "percentage": 20 },
+        { "source": "tiktok.com", "visitors": 313, "pageviews": 778, "percentage": 9 },
+        { "source": "youtube.com", "visitors": 209, "pageviews": 518, "percentage": 6 }
+      ],
+      "devices": [
+        { "name": "Mobile", "visitors": 2401, "percentage": 69 },
+        { "name": "Desktop", "visitors": 974, "percentage": 28 },
+        { "name": "Tablet", "visitors": 105, "percentage": 3 }
+      ],
+      "browsers": [
+        { "name": "Safari", "visitors": 1914, "percentage": 55 },
+        { "name": "Chrome", "visitors": 1183, "percentage": 34 },
+        { "name": "Edge", "visitors": 209, "percentage": 6 },
+        { "name": "Firefox", "visitors": 174, "percentage": 5 }
+      ],
+      "operatingSystems": [
+        { "name": "iOS", "visitors": 1844, "percentage": 53 },
+        { "name": "macOS", "visitors": 626, "percentage": 18 },
+        { "name": "Android", "visitors": 522, "percentage": 15 },
+        { "name": "Windows", "visitors": 418, "percentage": 12 },
+        { "name": "Linux", "visitors": 70, "percentage": 2 }
+      ]
+    }
+  }
+}
