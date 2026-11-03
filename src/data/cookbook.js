@@ -3428,7 +3428,7 @@ export const batchPrep = [
       "2 cups 2% cottage cheese (Good Culture used in the package)",
       "2 cups chicken bone broth (Kirkland used in the package)",
       "Salt and black pepper, to taste",
-      "16 slices Sola Sweet & Buttery bread (8 sandwiches)",
+      "16 slices Sola Sweet & Buttery bread",
       "4 tbsp butter (½ tbsp per sandwich)",
       "8 slices Velveeta Original",
       "8 slices Sargento Ultra Thin provolone",
