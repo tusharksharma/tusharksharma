@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { Link, useSearchParams } from "react-router-dom";
+import { Link, useLocation, useSearchParams } from "react-router-dom";
 import useMeta from "../hooks/useMeta";
 import { sauces, quickLunches, batchPrep, desserts, creamis, breakfasts, bases, powerups, snackBoxes } from "../data/cookbook";
 import cardImage from "../utils/cardImage";
@@ -36,7 +35,7 @@ function netCarbColor(nc) {
   return "bg-adultsoft text-adult";
 }
 
-function RecipeCard({ item }) {
+function RecipeCard({ item, fromSearch }) {
   // Per-serving protein: use explicit proteinPerServing, fall back to batch/servings,
   // then to single-serving items where protein IS the per-serving value.
   const pps = item.proteinPerServing != null
@@ -47,7 +46,7 @@ function RecipeCard({ item }) {
     : null;
   const netCarbs = item.netCarbs ?? item.macros?.netCarbs;
   return (
-    <Link to={`/cookbook/${item.id}`} className="text-left bg-surface border border-line rounded-xl overflow-hidden hover:border-brand/40 transition-all group w-full block">
+    <Link to={`/cookbook/${item.id}`} state={fromSearch ? { fromSearch } : undefined} className="text-left bg-surface border border-line rounded-xl overflow-hidden hover:border-brand/40 transition-all group w-full block">
       {item.heroImage && (
         <img {...cardImage(item.heroImage)} alt={item.title} width="640" height="360" className="w-full h-36 object-cover" loading="lazy" />
       )}
@@ -84,11 +83,20 @@ function RecipeCard({ item }) {
 }
 
 export default function CookbookPage() {
-  const [searchParams] = useSearchParams();
+  const location = useLocation();
+  const [searchParams, setSearchParams] = useSearchParams();
   const tabParam = searchParams.get("tab");
   const paramTab = tabParam ? SLUG_TAB[tabParam] : null;
   const tab = paramTab && TABS.includes(paramTab) ? paramTab : (TABS[0] || "Sauces");
-  const [cookbookSearch, setCookbookSearch] = useState("");
+  const cookbookSearch = searchParams.get("q") || "";
+  const setCookbookSearch = (nextQ) => {
+    setSearchParams((prev) => {
+      const updated = new URLSearchParams(prev);
+      if (nextQ) updated.set("q", nextQ);
+      else updated.delete("q");
+      return updated;
+    }, { replace: true });
+  };
 
   useMeta({
     title: tab === (TABS[0] || "Sauces") ? "Power-Ups" : `${tab} — Power-Ups`,
@@ -153,10 +161,14 @@ export default function CookbookPage() {
 
         {TABS.length > 1 && (
           <div className="flex flex-wrap gap-2 mb-8">
-            {TABS.map((t) => (
+            {TABS.map((t) => {
+              const tabSearch = new URLSearchParams();
+              tabSearch.set("tab", TAB_SLUG[t]);
+              if (cookbookSearch) tabSearch.set("q", cookbookSearch);
+              return (
               <Link
                 key={t}
-                to={`/cookbook?tab=${TAB_SLUG[t]}`}
+                to={`/cookbook?${tabSearch.toString()}`}
                 aria-current={tab === t ? "page" : undefined}
                 className={`px-4 py-2 rounded-lg text-xs font-bold transition-all cursor-pointer whitespace-nowrap ${
                   tab === t ? "bg-brand text-brandink" : "bg-surface2 text-muted hover:bg-line"
@@ -164,7 +176,8 @@ export default function CookbookPage() {
               >
                 {t}
               </Link>
-            ))}
+              );
+            })}
           </div>
         )}
 
@@ -175,7 +188,7 @@ export default function CookbookPage() {
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {filterItems(bases).map((b) => (
-                <RecipeCard key={b.id} item={b} />
+                <RecipeCard key={b.id} item={b} fromSearch={location.search} />
               ))}
             </div>
           </div>
@@ -188,7 +201,7 @@ export default function CookbookPage() {
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {filterItems(sauces).map((s) => (
-                <RecipeCard key={s.id} item={s} />
+                <RecipeCard key={s.id} item={s} fromSearch={location.search} />
               ))}
             </div>
           </div>
@@ -201,7 +214,7 @@ export default function CookbookPage() {
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {filterItems(breakfasts).map((b) => (
-                <RecipeCard key={b.id} item={b} />
+                <RecipeCard key={b.id} item={b} fromSearch={location.search} />
               ))}
             </div>
           </div>
@@ -214,7 +227,7 @@ export default function CookbookPage() {
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {filterItems(desserts).map((d) => (
-                <RecipeCard key={d.id} item={d} />
+                <RecipeCard key={d.id} item={d} fromSearch={location.search} />
               ))}
             </div>
           </div>
@@ -227,11 +240,11 @@ export default function CookbookPage() {
               <h2 className="text-ink text-base font-black">Week 13 · Three Crumbl-inspired protein pints</h2>
               <p className="mt-1 mb-4 text-xs text-muted">One repeatable Fairlife-and-whey base, three separate flavor builds. Each card shows nutrition for the whole finished pint.</p>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                {filterItems(creamis.filter((item) => item.id.endsWith("-week13"))).map((item) => <RecipeCard key={item.id} item={item} />)}
+                {filterItems(creamis.filter((item) => item.id.endsWith("-week13"))).map((item) => <RecipeCard key={item.id} item={item} fromSearch={location.search} />)}
               </div>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {filterItems(creamis.filter((item) => !item.id.endsWith("-week13"))).map((item) => <RecipeCard key={item.id} item={item} />)}
+              {filterItems(creamis.filter((item) => !item.id.endsWith("-week13"))).map((item) => <RecipeCard key={item.id} item={item} fromSearch={location.search} />)}
             </div>
           </div>
         )}
@@ -243,7 +256,7 @@ export default function CookbookPage() {
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {filterItems(quickLunches).map((q) => (
-                <RecipeCard key={q.id} item={q} />
+                <RecipeCard key={q.id} item={q} fromSearch={location.search} />
               ))}
             </div>
           </div>
@@ -253,7 +266,7 @@ export default function CookbookPage() {
           <div>
             <p className="text-muted text-xs mb-4">Cook one complete batch, then portion it for several meals.</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {filterItems(batchPrep.filter((item) => item.mealType !== "dinner")).map((item) => <RecipeCard key={item.id} item={item} />)}
+              {filterItems(batchPrep.filter((item) => item.mealType !== "dinner")).map((item) => <RecipeCard key={item.id} item={item} fromSearch={location.search} />)}
             </div>
           </div>
         )}
@@ -265,7 +278,7 @@ export default function CookbookPage() {
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {filterItems(powerups).map((p) => (
-                <RecipeCard key={p.id} item={p} />
+                <RecipeCard key={p.id} item={p} fromSearch={location.search} />
               ))}
             </div>
           </div>
@@ -278,7 +291,7 @@ export default function CookbookPage() {
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {filterItems(snackBoxes).map((s) => (
-                <RecipeCard key={s.id} item={s} />
+                <RecipeCard key={s.id} item={s} fromSearch={location.search} />
               ))}
             </div>
           </div>

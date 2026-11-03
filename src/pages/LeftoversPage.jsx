@@ -220,7 +220,7 @@ export default function LeftoversPage() {
             {selected.length > 0 && <button onClick={() => setShowPicker((value) => !value)} aria-expanded={showPicker} className="shrink-0 rounded-lg border border-line bg-surface px-3 py-2 text-sm font-bold text-ink">{showPicker ? "Hide" : "Browse"}</button>}
           </div>
           {showPicker && <>
-          {!query && <button onClick={() => setShowBrands((value) => !value)} aria-pressed={showBrands} className="text-brand text-sm font-bold underline underline-offset-4">{showBrands ? "Show common ingredients only" : "Show branded products too"}</button>}
+          {!query && <button onClick={() => setShowBrands((value) => !value)} aria-pressed={showBrands} className="inline-flex min-h-[32px] items-center py-1.5 text-brand text-sm font-bold underline underline-offset-4 cursor-pointer">{showBrands ? "Show common ingredients only" : "Show branded products too"}</button>}
           {filteredGroups.length === 0 ? (
             <div className="text-muted text-sm text-center py-8">
               No ingredients match "{query}". Try a different search.

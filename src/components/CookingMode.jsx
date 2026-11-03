@@ -131,6 +131,8 @@ function StepTimer({ seconds }) {
 export default function CookingMode({ steps, ingredients, title, quantityNote, onClose }) {
   const [index, setIndex] = useState(0);
   const wakeLockRef = useRef(null);
+  const dialogRef = useRef(null);
+  const exitBtnRef = useRef(null);
 
   const step = steps[index];
   const total = steps.length;
@@ -138,12 +140,36 @@ export default function CookingMode({ steps, ingredients, title, quantityNote, o
   const next = useCallback(() => setIndex((i) => Math.min(i + 1, total - 1)), [total]);
   const prev = useCallback(() => setIndex((i) => Math.max(i - 1, 0)), []);
 
-  /* Keyboard: arrows to move, Escape to leave. */
+  /* Focus management: focus Exit on open, trap Tab inside dialog, restore focus on close. */
+  useEffect(() => {
+    const prevFocus = document.activeElement;
+    exitBtnRef.current?.focus();
+    return () => {
+      prevFocus?.focus?.();
+    };
+  }, []);
+
+  /* Keyboard: arrows to move, Escape to leave, Tab trapped within dialog. */
   useEffect(() => {
     const onKey = (e) => {
       if (e.key === "ArrowRight") next();
       else if (e.key === "ArrowLeft") prev();
       else if (e.key === "Escape") onClose();
+      else if (e.key === "Tab" && dialogRef.current) {
+        const focusable = dialogRef.current.querySelectorAll(
+          'button:not([disabled]), [href], input:not([disabled]), [tabindex]:not([tabindex="-1"])'
+        );
+        if (focusable.length === 0) return;
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
     };
     document.addEventListener("keydown", onKey);
     return () => document.removeEventListener("keydown", onKey);
@@ -199,6 +225,7 @@ export default function CookingMode({ steps, ingredients, title, quantityNote, o
 
   return (
     <div
+      ref={dialogRef}
       className="theme-fade fixed inset-0 z-50 flex flex-col bg-page text-ink"
       role="dialog"
       aria-modal="true"
@@ -217,6 +244,7 @@ export default function CookingMode({ steps, ingredients, title, quantityNote, o
           </p>
         </div>
         <button
+          ref={exitBtnRef}
           type="button"
           onClick={onClose}
           className="rounded-full border border-line px-3 py-1.5 text-xs font-bold text-muted hover:text-ink cursor-pointer"
@@ -262,7 +290,7 @@ export default function CookingMode({ steps, ingredients, title, quantityNote, o
                 <img
                   key={i}
                   src={src}
-                  alt=""
+                  alt={`${title} — step ${step.number} photo ${i + 1}`}
                   loading="lazy"
                   className="h-40 w-40 flex-shrink-0 rounded-xl border border-line object-cover"
                 />

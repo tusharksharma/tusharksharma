@@ -2095,6 +2095,7 @@ const recipes = [
       proteinTags: ["beef", "steak"],
       splitAxes: ["portion", "sauce"],
       effortTags: ["meal-prep", "make-once-eat-twice", "family-batch"],
+      fixedBatch: true,
       costTier: "moderate",
       costPerServing: "$6.00",
       substitutionNotes: [
@@ -3741,6 +3742,7 @@ const recipes = [
       proteinTags: ["beef", "steak"],
       splitAxes: ["spice"],
       effortTags: ["meal-prep"],
+      fixedBatch: true,
       costTier: "moderate",
       costPerServing: "$5.50",
       substitutionNotes: ["use GF noodles for gluten-free", "swap steak for chicken or mushrooms", "use lactose-free cottage cheese + milk for lactose-sensitive"],
@@ -4989,6 +4991,7 @@ const recipes = [
       proteinTags: ["pork"],
       splitAxes: ["pasta", "spice"],
       effortTags: ["meal-prep", "one-pot-base", "weeknight", "split-pasta"],
+      fixedBatch: true,
       costTier: "moderate",
       costPerServing: "$5.00",
       substitutionNotes: [
@@ -7219,6 +7222,7 @@ const recipes = [
       // size: full adult serving vs half-serving for small kids.
       splitAxes: ["portion"],
       effortTags: ["weeknight", "shortcut", "meal-prep", "family-batch"],
+      fixedBatch: true,
       costTier: "moderate",
       costPerServing: "$3.50",
       substitutionNotes: [
@@ -8964,6 +8968,7 @@ const recipes = [
       proteinTags: ["beef"],
       splitAxes: ["carb", "portion"],
       effortTags: ["meal-prep", "batch-cook", "one-pot", "reheats", "chain-from"],
+      fixedBatch: true,
       costTier: "budget",
       costPerServing: "$3.50",
       substitutionNotes: [
@@ -10258,6 +10263,7 @@ const recipes = [
       effortTags: ["oven", "layered-bake", "one-pan", "family-dinner", "batch-cook", "viral"],
       costTier: "moderate",
       costPerServing: "$3.50",
+      fixedBatch: true,
       substitutionNotes: [
         "1 lb 93/7 lean ground chicken (shared filling — the leaner half of the 50/50 mix).",
         "1 lb 95/5 lean ground pork (shared filling — the pork-dumpling flavor spine).",
@@ -12090,7 +12096,7 @@ const recipes = [
     carbLevel: "low",
     meta: {
       macros: { protein: 40, calories: 350, fat: 18, carbs: 4, netCarbs: 4, estimated: true },
-      fixedBatch: false,
+      fixedBatch: true,
       allergens: ["eggs", "dairy"],
       warnings: ["high-sodium", "verify-package-labels", "branded-macros-vary"],
       dietTags: ["high-protein", "low-carb"],
@@ -13145,6 +13151,7 @@ const recipes = [
       proteinTags: ["goat"],
       splitAxes: ["heat", "portion"],
       effortTags: ["batch-cook", "stovetop", "family-dinner"],
+      fixedBatch: true,
       costTier: "moderate",
       macroHonesty: "The estimate is approximately 290 calories and 38g protein per one-eighth of the keema batch, including all 3 tbsp ghee. It excludes phulkas, whose exact label was not supplied, and cucumber. Ingredient brands, onion size, and measured amounts can change the result. The package estimates three phulkas at about 210–255 calories total, but that is not included in the keema macros. Children's portions are not assigned nutrition targets.",
       substitutionNotes: [

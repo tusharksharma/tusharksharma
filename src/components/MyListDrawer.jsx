@@ -19,6 +19,15 @@ export default function MyListDrawer() {
     if (total === 0 && open) setOpen(false);
   }, [total, open]);
 
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, [open]);
+
   if (total === 0) return null;
 
   const groups = grocery.reduce((acc, g) => {
@@ -70,7 +79,7 @@ export default function MyListDrawer() {
                 Saved ({saved.length})
               </button>
             </div>
-            <button type="button" onClick={() => setOpen(false)} aria-label="Close" className="text-faint hover:text-ink text-xl leading-none">
+            <button type="button" onClick={() => setOpen(false)} aria-label="Close" className="inline-flex h-7 w-7 items-center justify-center rounded text-faint hover:text-ink text-xl leading-none cursor-pointer">
               &times;
             </button>
           </div>
@@ -87,14 +96,16 @@ export default function MyListDrawer() {
                       <ul className="space-y-1">
                         {items.map((g) => (
                           <li key={g.id} className="flex items-start gap-2 text-sm">
-                            <input
-                              type="checkbox"
-                              checked={g.checked}
-                              onChange={() => toggleGrocery(g.id)}
-                              className="mt-1 accent-amber-500"
-                            />
-                            <span className={`flex-1 ${g.checked ? "text-faint line-through" : "text-ink"}`}>{g.line}</span>
-                            <button type="button" onClick={() => removeGrocery(g.id)} aria-label="Remove" className="text-faint hover:text-ink">
+                            <label className="flex flex-1 cursor-pointer items-start gap-2">
+                              <input
+                                type="checkbox"
+                                checked={g.checked}
+                                onChange={() => toggleGrocery(g.id)}
+                                className="mt-1 h-4 w-4 flex-shrink-0 cursor-pointer accent-amber-500"
+                              />
+                              <span className={`flex-1 ${g.checked ? "text-faint line-through" : "text-ink"}`}>{g.line}</span>
+                            </label>
+                            <button type="button" onClick={() => removeGrocery(g.id)} aria-label={`Remove ${g.line}`} className="inline-flex h-7 w-7 flex-shrink-0 items-center justify-center rounded text-faint hover:text-ink cursor-pointer">
                               &times;
                             </button>
                           </li>
@@ -115,7 +126,7 @@ export default function MyListDrawer() {
                       <Link to={s.href} onClick={() => setOpen(false)} className="flex-1 text-ink hover:text-brand">
                         {s.title}
                       </Link>
-                      <button type="button" onClick={() => removeSaved(s.key)} aria-label="Remove" className="text-faint hover:text-ink">
+                      <button type="button" onClick={() => removeSaved(s.key)} aria-label={`Remove ${s.title}`} className="inline-flex h-7 w-7 flex-shrink-0 items-center justify-center rounded text-faint hover:text-ink cursor-pointer">
                         &times;
                       </button>
                     </li>

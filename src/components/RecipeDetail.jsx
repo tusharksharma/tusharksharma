@@ -1,5 +1,5 @@
-import { useState, useMemo, useEffect } from "react";
-import { Link, useSearchParams } from "react-router-dom";
+import { useState, useMemo, useEffect, useRef } from "react";
+import { Link, useLocation, useSearchParams } from "react-router-dom";
 import track from "../hooks/useTrack";
 import { liveRecipes } from "../data/recipes";
 import { creamis, desserts, sauces, bases, breakfasts, quickLunches, batchPrep, powerups, snackBoxes } from "../data/cookbook";
@@ -46,7 +46,12 @@ const tone = (t) => TONE[t] || TONE.muted;
  * (household scaling, leftovers, related dinners, print card) are the only
  * things gated on which one it is.
  */
-export default function RecipeDetail({ recipe, item, group }) {
+export default function RecipeDetail(props) {
+  const recipeKey = props.recipe?.slug || props.item?.id;
+  return <RecipeDetailInner key={recipeKey} {...props} />;
+}
+
+function RecipeDetailInner({ recipe, item, group }) {
   const [searchParams] = useSearchParams();
   const isDinner = !!recipe;
 
@@ -59,16 +64,17 @@ export default function RecipeDetail({ recipe, item, group }) {
 
   const baseServings = (recipe || item).servings || 4;
   const [batchServings, setBatchServings] = useState(baseServings);
+
   // fixedBatch recipes (e.g. one-bake meal preps that yield N containers) do
   // NOT scale by household size or leftovers — the batch quantity IS the
   // recipe. Scaling would ask the shopper to buy 2x tomatoes but the recipe
   // still says "one 45-min bake".
   // A cookbook entry's yield IS the recipe (a batch of sauce, a tray of
-  // brownies), so it never scales by household — same rule as fixedBatch.
+  // brownies), so it uses the direct Servings control rather than Adults/Kids.
   const authoredQuantities = !!recipe?.meta?.authoredQuantities;
-  const isFixedBatch = !isDinner || !!recipe.meta?.fixedBatch || authoredQuantities;
-  const totalServings = isFixedBatch ? (isDinner && !authoredQuantities ? Number(batchServings) || baseServings : baseServings) : (adults + kids) * (leftovers ? 2 : 1);
-  const scale = isFixedBatch ? (isDinner ? totalServings / baseServings : 1) : totalServings / baseServings;
+  const isFixedBatch = !isDinner || !!recipe.meta?.fixedBatch || authoredQuantities || baseServings !== 4;
+  const totalServings = isFixedBatch ? (Number(batchServings) || baseServings) : (adults + kids) * (leftovers ? 2 : 1);
+  const scale = totalServings / baseServings;
 
   const methodIsScaled = recipe?.slug === "high-protein-pepperoni-mac-meal-prep";
   const model = useMemo(
@@ -76,12 +82,25 @@ export default function RecipeDetail({ recipe, item, group }) {
     [recipe, scale, item, group]
   );
 
-  const cookSteps = useMemo(() => flattenSteps(model), [model]);
+  const displayFacts = useMemo(
+    () =>
+      model.facts.map((f) =>
+        f.key === "yield"
+          ? {
+              ...f,
+              value: `${totalServings} serving${totalServings === 1 ? "" : "s"}${totalServings !== baseServings ? ` (orig. ${baseServings})` : ""}`,
+            }
+          : f
+      ),
+    [model.facts, totalServings, baseServings]
+  );
+
+  const cookSteps = useMemo(() => flattenSteps(model, kidChoice), [model, kidChoice]);
 
   // Shared + adult groups, then the selected kid lane, balanced across two
   // desktop columns as one list.
   const ingredientColumns = useMemo(() => {
-    const choice = model.kidIngredientChoices[kidChoice];
+    const choice = model.kidIngredientChoices[kidChoice] || model.kidIngredientChoices[0];
     const kidGroups = choice
       ? parseGroups(choice.extraIngredients, {
           fallbackTitle: model.split?.kid.label || "Kid plate",
@@ -93,10 +112,17 @@ export default function RecipeDetail({ recipe, item, group }) {
   }, [model, kidChoice]);
 
   const flatIngredients = useMemo(() => {
-    const all = model.ingredientGroups.flatMap((g) => g.items);
-    for (const choice of model.kidIngredientChoices) all.push(...choice.extraIngredients);
-    return all.map((i) => scaleIngredientText(ingredientText(i), scale));
-  }, [model, scale]);
+    const all = [...model.ingredientGroups.flatMap((g) => g.items)];
+    const activeKidChoice = model.kidIngredientChoices[kidChoice] || model.kidIngredientChoices[0];
+    if (activeKidChoice) {
+      all.push(...activeKidChoice.extraIngredients);
+    }
+    return all
+      .filter((i) => !isGroupHeader(i))
+      .map((i) => ingredientText(i))
+      .filter((text) => text && !text.startsWith("  "))
+      .map((text) => scaleIngredientText(text, scale));
+  }, [model, scale, kidChoice]);
 
   const saveEntry = useMemo(
     () =>
@@ -198,7 +224,7 @@ export default function RecipeDetail({ recipe, item, group }) {
           )}
 
           {/* ── 3. At-a-glance facts. ── */}
-          {model.facts.length > 0 && <FactsRow facts={model.facts} />}
+          {displayFacts.length > 0 && <FactsRow facts={displayFacts} />}
 
           {/* ── 4. Safety. Allergens and food-safety warnings stay visible;
                  label/macro caveats moved into Nutrition details. ── */}
@@ -217,7 +243,7 @@ export default function RecipeDetail({ recipe, item, group }) {
           ))}
 
           {/* ── Reader actions: save, share, push ingredients to the list. ── */}
-          <RecipeActionBar saveEntry={saveEntry} ingredients={flatIngredients} onPrint={printRecipe} printServings={totalServings} canAdjustServings={isDinner} />
+          <RecipeActionBar saveEntry={saveEntry} ingredients={flatIngredients} onPrint={printRecipe} printServings={totalServings} canAdjustServings={true} />
         </header>
 
         {/* Sticky jump between the two long sections. */}
@@ -230,7 +256,7 @@ export default function RecipeDetail({ recipe, item, group }) {
             isFixedBatch={isFixedBatch}
             baseServings={baseServings}
             batchServings={batchServings}
-            setBatchServings={isDinner && !authoredQuantities ? setBatchServings : null}
+            setBatchServings={setBatchServings}
             adults={adults}
             kids={kids}
             leftovers={leftovers}
@@ -285,7 +311,7 @@ export default function RecipeDetail({ recipe, item, group }) {
             {scale !== 1 && !methodIsScaled && <p className="mb-4 rounded-lg border border-brand/30 p-3 text-sm text-ink">Method quantities below describe the original {baseServings}-serving batch. Your ingredient list is scaled by {Number(scale.toFixed(2))}×. Use the adjusted ingredient amounts; keep temperatures unchanged and check pan capacity and doneness.</p>}
             <button
               type="button"
-              onClick={() => { track("cooking_mode_start", { recipe: recipe.title, slug: recipe.slug }); setCooking(true); }}
+              onClick={() => { track("cooking_mode_start", { recipe: model.title, slug: model.slug }); setCooking(true); }}
               className="mb-5 flex w-full items-center justify-center gap-2 rounded-xl bg-brand py-3.5 text-base font-black text-brandink cursor-pointer sm:w-auto sm:px-6"
             >
               Start cooking
@@ -311,6 +337,8 @@ export default function RecipeDetail({ recipe, item, group }) {
                 <MethodPhase
                   key={phase.id}
                   phase={phase}
+                  activeChoice={kidChoice}
+                  onChoice={setKidChoice}
                   // A lone generic phase just repeats the "Method" heading above it.
                   hideLabel={model.method.phases.length === 1 && phase.label === "Method"}
                 />
@@ -361,7 +389,7 @@ export default function RecipeDetail({ recipe, item, group }) {
         )}
 
         {/* ── 7. The signature: Adult Plate | Kid Plate. ── */}
-        {model.split && <SplitPlates split={model.split} scale={scale} />}
+        {model.split && <SplitPlates split={model.split} scale={scale} kidChoice={kidChoice} setKidChoice={setKidChoice} />}
 
         {/* ── 8. Three keys to success. The short version stays visible; the
                full diagnostic material is one tap down. ── */}
@@ -526,8 +554,10 @@ export default function RecipeDetail({ recipe, item, group }) {
    ════════════════════════════════════════════ */
 
 function RecipeHeader({ model, onPrint }) {
+  const location = useLocation();
+  const backSearch = location.state?.fromSearch || "";
   return (
-    <div className="theme-fade sticky top-0 z-10 border-b border-line bg-page/90 backdrop-blur-sm print:hidden">
+    <div className="theme-fade sticky top-[57px] z-10 border-b border-line bg-page/90 backdrop-blur-sm print:hidden">
       <div className="mx-auto flex max-w-3xl items-center gap-2 px-4 py-3">
         {/* Breadcrumb — the current recipe is the last crumb, unlinked. */}
         <nav aria-label="Breadcrumb" className="min-w-0 flex-1">
@@ -540,7 +570,7 @@ function RecipeHeader({ model, onPrint }) {
               <span aria-hidden="true">/</span>
             </li>
             <li className="flex items-center gap-1.5">
-              <Link to={model.breadcrumb.to} className="hover:text-brand">{model.breadcrumb.label}</Link>
+              <Link to={`${model.breadcrumb.to}${backSearch}`} className="hover:text-brand">{model.breadcrumb.label}</Link>
               <span aria-hidden="true">/</span>
             </li>
             <li className="min-w-0 truncate text-muted" aria-current="page">{model.title}</li>
@@ -685,6 +715,7 @@ function SafetyBand({ safety }) {
 function ServingsControl({ isFixedBatch, baseServings, batchServings, setBatchServings, adults, kids, leftovers, scale, setAdults, setKids, setLeftovers }) {
   if (isFixedBatch) {
     const singleServing = baseServings === 1;
+    const currentVal = Number(batchServings) || baseServings;
     return (
       <div className="flex flex-wrap items-center gap-x-3 gap-y-2 rounded-xl border border-line bg-surface2 px-4 py-3">
         <span className="rounded border border-brand/30 bg-brand/15 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-brand">
@@ -693,15 +724,44 @@ function ServingsControl({ isFixedBatch, baseServings, batchServings, setBatchSe
         {setBatchServings ? (
           <>
             <label htmlFor="batch-servings" className="text-xs font-semibold text-ink">Servings</label>
-            <input id="batch-servings" type="number" min="1" max="24" step="any" value={batchServings}
-              onChange={(event) => {
-                if (event.target.value === "") { setBatchServings(""); return; }
-                const next = Number(event.target.value);
-                if (Number.isFinite(next) && next >= 1 && next <= 24) setBatchServings(next);
-              }}
-              onBlur={() => { if (!batchServings) setBatchServings(baseServings); }}
-              className="w-16 rounded border border-line bg-surface px-2 py-1 text-sm text-ink" />
-            <span className="text-xs text-muted">Original yield: {baseServings}. Adjusted ingredients will appear in print; check pan size and cooking time.</span>
+            <div className="flex items-center gap-1">
+              <button
+                type="button"
+                onClick={() => setBatchServings(Math.max(1, Math.ceil(currentVal - 1)))}
+                disabled={currentVal <= 1}
+                aria-label="Decrease servings"
+                className="flex h-7 w-7 items-center justify-center rounded border border-line bg-surface text-sm font-bold text-ink hover:border-brand/40 disabled:opacity-40 cursor-pointer disabled:cursor-default"
+              >
+                &minus;
+              </button>
+              <input id="batch-servings" type="number" min="1" max="24" step="any" value={batchServings}
+                onChange={(event) => {
+                  if (event.target.value === "") { setBatchServings(""); return; }
+                  const next = Number(event.target.value);
+                  if (Number.isFinite(next) && next >= 1 && next <= 24) setBatchServings(next);
+                }}
+                onBlur={() => { if (!batchServings) setBatchServings(baseServings); }}
+                className="w-16 rounded border border-line bg-surface px-2 py-1 text-center text-sm font-bold text-ink" />
+              <button
+                type="button"
+                onClick={() => setBatchServings(Math.min(24, Math.floor(currentVal + 1)))}
+                disabled={currentVal >= 24}
+                aria-label="Increase servings"
+                className="flex h-7 w-7 items-center justify-center rounded border border-line bg-surface text-sm font-bold text-ink hover:border-brand/40 disabled:opacity-40 cursor-pointer disabled:cursor-default"
+              >
+                +
+              </button>
+            </div>
+            {scale !== 1 && (
+              <button
+                type="button"
+                onClick={() => setBatchServings(baseServings)}
+                className="rounded border border-brand/40 bg-brand/10 px-2.5 py-1 text-xs font-bold text-brand hover:bg-brand/20 cursor-pointer"
+              >
+                Reset ({baseServings})
+              </button>
+            )}
+            <span className="text-xs text-muted">Original yield: {baseServings}. Ingredient quantities below and in print adjust automatically; check pan size and cooking time.</span>
           </>
         ) : <span className="text-xs text-muted">Yields {baseServings} {baseServings === 1 ? "serving" : "servings"} — quantities below {singleServing ? "make one serving." : "are the full batch."}</span>}
       </div>
@@ -809,10 +869,12 @@ function IngredientGroup({ group, scale, checked, onToggle, accent }) {
   );
 }
 
-function MethodPhase({ phase, hideLabel = false }) {
-  const [active, setActive] = useState(0);
+function MethodPhase({ phase, activeChoice = 0, onChoice, hideLabel = false }) {
+  const [localActive, setLocalActive] = useState(0);
+  const active = onChoice ? Math.min(activeChoice, Math.max(0, (phase.choices?.length || 1) - 1)) : localActive;
+  const setActive = onChoice || setLocalActive;
   const t = tone(phase.tone);
-  const steps = phase.choices ? phase.choices[active].steps : phase.steps;
+  const steps = phase.choices ? (phase.choices[active] || phase.choices[0]).steps : phase.steps;
 
   return (
     <div>
@@ -847,8 +909,7 @@ function MethodPhase({ phase, hideLabel = false }) {
 }
 
 /** The signature element: two parallel plates, terracotta and sage. */
-function SplitPlates({ split, scale }) {
-  const [kidChoice, setKidChoice] = useState(0);
+function SplitPlates({ split, scale, kidChoice = 0, setKidChoice }) {
   const kid = split.kid.choices[kidChoice] || split.kid.choices[0];
 
   return (
@@ -1091,11 +1152,23 @@ function Brands({ brands }) {
 
 function StepImages({ images }) {
   const [expanded, setExpanded] = useState(null);
+  const closeBtnRef = useRef(null);
   useEffect(() => {
     if (!expanded) return;
-    const onKey = (e) => { if (e.key === "Escape") setExpanded(null); };
+    const prevFocus = document.activeElement;
+    closeBtnRef.current?.focus();
+    const onKey = (e) => {
+      if (e.key === "Escape") setExpanded(null);
+      else if (e.key === "Tab") {
+        e.preventDefault();
+        closeBtnRef.current?.focus();
+      }
+    };
     document.addEventListener("keydown", onKey);
-    return () => document.removeEventListener("keydown", onKey);
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      prevFocus?.focus?.();
+    };
   }, [expanded]);
   if (!images || images.length === 0) return null;
   const stepLabel = (src) => {
@@ -1127,10 +1200,11 @@ function StepImages({ images }) {
         >
           <img src={expanded} alt={stepLabel(expanded)} className="max-h-[90vh] max-w-full rounded-xl object-contain" />
           <button
+            ref={closeBtnRef}
             type="button"
             onClick={(e) => { e.stopPropagation(); setExpanded(null); }}
             aria-label="Close expanded photo"
-            className="absolute right-4 top-4 text-2xl font-bold text-white/70 hover:text-white"
+            className="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full bg-black/60 text-2xl font-bold text-white/80 hover:text-white cursor-pointer"
           >&times;</button>
         </div>
       )}

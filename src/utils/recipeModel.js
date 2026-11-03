@@ -760,10 +760,11 @@ export function balanceColumns(groups, count = 2) {
  * Split recipes keep their lane label on each step so the cook always knows
  * which plate they're building.
  */
-export function flattenSteps(model) {
+export function flattenSteps(model, kidChoice = 0) {
   const out = [];
   for (const phase of model.method.phases) {
-    const steps = phase.choices ? phase.choices[0].steps : phase.steps;
+    const activeChoice = phase.choices ? (phase.choices[kidChoice] || phase.choices[0]) : null;
+    const steps = activeChoice ? activeChoice.steps : phase.steps;
     steps.forEach((s, i) => {
       out.push({ ...s, lane: phase.label, tone: phase.tone, number: phase.startAt + i });
     });

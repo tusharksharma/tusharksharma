@@ -387,20 +387,24 @@ function CookDay({ day, label, vibe, id, time, reheats, isReheat, fixedBatch, re
   return (
     <div className={`transition-all ${enabled ? "" : "opacity-40"}`}>
       <div className="flex items-center gap-2 mb-1 sm:pl-12">
-        <button
-          onClick={(e) => { e.preventDefault(); onToggle(); }}
-          aria-label={`${day}: ${label} — ${enabled ? "included in this week" : "skipped"}`}
-          aria-pressed={enabled}
-          className={`w-7 h-7 rounded border flex-shrink-0 flex items-center justify-center text-sm cursor-pointer transition-colors ${
-            enabled ? "bg-brand border-brand text-brandink" : "border-line bg-surface2"
-          }`}
-        >
-          <span aria-hidden="true">{enabled && "\u2713"}</span>
-        </button>
         {!isReheatDay ? (
-          <span className="text-muted text-xs">{enabled ? "Included" : "Skipped — removed from grocery"}</span>
+          <>
+            <button
+              onClick={(e) => { e.preventDefault(); onToggle(); }}
+              aria-label={`${day}: ${label} — ${enabled ? "included in this week" : "skipped"}`}
+              aria-pressed={enabled}
+              className={`w-7 h-7 rounded border flex-shrink-0 flex items-center justify-center text-sm cursor-pointer transition-colors ${
+                enabled ? "bg-brand border-brand text-brandink" : "border-line bg-surface2"
+              }`}
+            >
+              <span aria-hidden="true">{enabled && "\u2713"}</span>
+            </button>
+            <span className="text-muted text-xs">{enabled ? "Included" : "Skipped — removed from grocery"}</span>
+          </>
         ) : (
-          <span className="text-kid text-xs font-semibold">Reheats from {reheatOf} batch — no new grocery</span>
+          <span className="text-kid text-xs font-semibold">
+            {enabled ? `Reheats from ${reheatOf} batch — no new grocery` : `Skipped with ${reheatOf} batch`}
+          </span>
         )}
       </div>
       <Link to={enabled ? `/recipes/${r.slug}?adults=${authoredBatchDay ? 2 : adults}&kids=${authoredBatchDay ? 2 : kids}&leftovers=${leftovers ? 1 : 0}` : "#"} className={`block ${enabled ? "group" : "pointer-events-none"}`}>
@@ -517,6 +521,8 @@ export default function YourWeek() {
   const hasFixedBatch = currentWeek.cookDays.some((day) => day.fixedBatch);
   const batchHouseholdDiffers = hasFixedBatch && (adults !== 2 || kids !== 2);
   // Build per-day reheats map for grocery scaling
+  const isDayEnabled = (day, dayKey) =>
+    day.isReheat ? Boolean(enabledMeals[day.reheatOf || dayKey] && leftovers) : Boolean(enabledMeals[dayKey]);
   const dayReheats = { Mon: needsDoubleGroceries(currentWeek.cookDays[0]), Wed: needsDoubleGroceries(currentWeek.cookDays[1]), Fri: needsDoubleGroceries(currentWeek.cookDays[2]) };
   const enabledCount = Object.values(enabledMeals).filter(Boolean).length;
   const leftoverMsgs = getLeftoverMsg(leftovers);
@@ -674,22 +680,22 @@ export default function YourWeek() {
           <div className="absolute left-6 top-4 bottom-4 w-px bg-surface2 hidden sm:block" />
           <div className="space-y-2 relative">
             {/* Monday */}
-            <TimelineDot type="cook" enabled={enabledMeals.Mon && !(currentWeek.cookDays[0].isReheat && !leftovers)} />
-            <CookDay {...currentWeek.cookDays[0]} servings={servings} enabled={enabledMeals.Mon && !(currentWeek.cookDays[0].isReheat && !leftovers)} onToggle={() => toggleMeal("Mon")} adults={adults} kids={kids} leftovers={leftovers} />
-            <TimelineDot type="leftover" enabled={enabledMeals.Mon} />
-            <LeftoverDay day="Tuesday" meal={leftoverMsgs.tue} visible={leftovers && enabledMeals.Mon && coversNextNight(currentWeek.cookDays[0])} chain={currentWeek.cookDays[0].chainTo} note={currentWeek.cookDays[0].leftoverNote} repeat={currentWeek.cookDays[0].repeatCook} />
+            <TimelineDot type="cook" enabled={isDayEnabled(currentWeek.cookDays[0], "Mon")} />
+            <CookDay {...currentWeek.cookDays[0]} servings={servings} enabled={isDayEnabled(currentWeek.cookDays[0], "Mon")} onToggle={() => toggleMeal("Mon")} adults={adults} kids={kids} leftovers={leftovers} />
+            <TimelineDot type="leftover" enabled={isDayEnabled(currentWeek.cookDays[0], "Mon")} />
+            <LeftoverDay day="Tuesday" meal={leftoverMsgs.tue} visible={leftovers && isDayEnabled(currentWeek.cookDays[0], "Mon") && coversNextNight(currentWeek.cookDays[0])} chain={currentWeek.cookDays[0].chainTo} note={currentWeek.cookDays[0].leftoverNote} repeat={currentWeek.cookDays[0].repeatCook} />
 
             {/* Wednesday */}
-            <TimelineDot type="cook" enabled={enabledMeals.Wed && !(currentWeek.cookDays[1].isReheat && !leftovers)} />
-            <CookDay {...currentWeek.cookDays[1]} servings={servings} enabled={enabledMeals.Wed && !(currentWeek.cookDays[1].isReheat && !leftovers)} onToggle={() => toggleMeal("Wed")} adults={adults} kids={kids} leftovers={leftovers} />
-            <TimelineDot type="leftover" enabled={enabledMeals.Wed} />
-            <LeftoverDay day="Thursday" meal={leftoverMsgs.thu} visible={leftovers && enabledMeals.Wed && coversNextNight(currentWeek.cookDays[1])} chain={currentWeek.cookDays[1].chainTo} note={currentWeek.cookDays[1].leftoverNote} repeat={currentWeek.cookDays[1].repeatCook} />
+            <TimelineDot type="cook" enabled={isDayEnabled(currentWeek.cookDays[1], "Wed")} />
+            <CookDay {...currentWeek.cookDays[1]} servings={servings} enabled={isDayEnabled(currentWeek.cookDays[1], "Wed")} onToggle={() => toggleMeal("Wed")} adults={adults} kids={kids} leftovers={leftovers} />
+            <TimelineDot type="leftover" enabled={isDayEnabled(currentWeek.cookDays[1], "Wed")} />
+            <LeftoverDay day="Thursday" meal={leftoverMsgs.thu} visible={leftovers && isDayEnabled(currentWeek.cookDays[1], "Wed") && coversNextNight(currentWeek.cookDays[1])} chain={currentWeek.cookDays[1].chainTo} note={currentWeek.cookDays[1].leftoverNote} repeat={currentWeek.cookDays[1].repeatCook} />
 
             {/* Friday */}
-            <TimelineDot type="cook" enabled={enabledMeals.Fri && !(currentWeek.cookDays[2].isReheat && !leftovers)} />
-            <CookDay {...currentWeek.cookDays[2]} servings={servings} enabled={enabledMeals.Fri && !(currentWeek.cookDays[2].isReheat && !leftovers)} onToggle={() => toggleMeal("Fri")} adults={adults} kids={kids} leftovers={leftovers} />
-            <TimelineDot type="leftover" enabled={enabledMeals.Fri} />
-            <LeftoverDay day="Saturday" meal={leftoverMsgs.sat} visible={leftovers && enabledMeals.Fri && coversNextNight(currentWeek.cookDays[2])} chain={currentWeek.cookDays[2].chainTo} note={currentWeek.cookDays[2].leftoverNote} repeat={currentWeek.cookDays[2].repeatCook} />
+            <TimelineDot type="cook" enabled={isDayEnabled(currentWeek.cookDays[2], "Fri")} />
+            <CookDay {...currentWeek.cookDays[2]} servings={servings} enabled={isDayEnabled(currentWeek.cookDays[2], "Fri")} onToggle={() => toggleMeal("Fri")} adults={adults} kids={kids} leftovers={leftovers} />
+            <TimelineDot type="leftover" enabled={isDayEnabled(currentWeek.cookDays[2], "Fri")} />
+            <LeftoverDay day="Saturday" meal={leftoverMsgs.sat} visible={leftovers && isDayEnabled(currentWeek.cookDays[2], "Fri") && coversNextNight(currentWeek.cookDays[2])} chain={currentWeek.cookDays[2].chainTo} note={currentWeek.cookDays[2].leftoverNote} repeat={currentWeek.cookDays[2].repeatCook} />
 
             {/* Sunday */}
             <TimelineDot type="flex" />
@@ -702,11 +708,11 @@ export default function YourWeek() {
           const dayKeys = ["Mon", "Wed", "Fri"];
           // isReheat cards ARE the leftover day (fixedBatch pattern) — exclude
           // from cook count and count as leftover days regardless of toggle.
-          const cookCount = currentWeek.cookDays.filter((d, i) => enabledMeals[dayKeys[i]] && !d.isReheat).length;
+          const cookCount = currentWeek.cookDays.filter((d, i) => isDayEnabled(d, dayKeys[i]) && !d.isReheat).length;
           // isReheat cards contribute to the leftover-count only when the
           // "make leftovers" toggle is on; when off, they collapse (see render).
-          const legacyLeftoverDays = leftovers ? currentWeek.cookDays.filter((d, i) => enabledMeals[dayKeys[i]] && coversNextNight(d)).length : 0;
-          const inlineReheatDays = leftovers ? currentWeek.cookDays.filter((d, i) => enabledMeals[dayKeys[i]] && d.isReheat).length : 0;
+          const legacyLeftoverDays = leftovers ? currentWeek.cookDays.filter((d, i) => isDayEnabled(d, dayKeys[i]) && coversNextNight(d)).length : 0;
+          const inlineReheatDays = leftovers ? currentWeek.cookDays.filter((d, i) => isDayEnabled(d, dayKeys[i]) && d.isReheat).length : 0;
           const leftoverDays = legacyLeftoverDays + inlineReheatDays;
           // Real protein sum: enabled cook days × recipe-specific adult/kid macros × leftover doubling.
           // Adult falls back to top-level recipe.protein; kid does NOT — if the
@@ -715,7 +721,7 @@ export default function YourWeek() {
           let totalProtein = 0;
           let proteinKnown = true;
           currentWeek.cookDays.forEach((day, i) => {
-            if (!enabledMeals[dayKeys[i]]) return;
+            if (!isDayEnabled(day, dayKeys[i])) return;
             const recipe = recipes.find((r) => r.id === day.id);
             if (!recipe) return;
             const adultProt = recipe.splitCook?.adult?.protein ?? recipe.protein;
@@ -774,16 +780,16 @@ export default function YourWeek() {
         {/* Completion */}
         {(() => {
           const dayKeys = ["Mon", "Wed", "Fri"];
-          const cookCount = currentWeek.cookDays.filter((d, i) => enabledMeals[dayKeys[i]] && !d.isReheat).length;
+          const cookCount = currentWeek.cookDays.filter((d, i) => isDayEnabled(d, dayKeys[i]) && !d.isReheat).length;
           // isReheat cards contribute to the leftover-count only when the
           // "make leftovers" toggle is on; when off, they collapse (see render).
-          const legacyLeftoverDays = leftovers ? currentWeek.cookDays.filter((d, i) => enabledMeals[dayKeys[i]] && coversNextNight(d)).length : 0;
-          const inlineReheatDays = leftovers ? currentWeek.cookDays.filter((d, i) => enabledMeals[dayKeys[i]] && d.isReheat).length : 0;
+          const legacyLeftoverDays = leftovers ? currentWeek.cookDays.filter((d, i) => isDayEnabled(d, dayKeys[i]) && coversNextNight(d)).length : 0;
+          const inlineReheatDays = leftovers ? currentWeek.cookDays.filter((d, i) => isDayEnabled(d, dayKeys[i]) && d.isReheat).length : 0;
           const leftoverDays = legacyLeftoverDays + inlineReheatDays;
           // Fresh-only cooks = enabled cook cards with no leftover mechanism
           // (neither legacy `reheats` nor a downstream `batchCoversDays`).
           const nonReheatDays = leftovers ? currentWeek.cookDays.filter((d, i) =>
-            enabledMeals[dayKeys[i]] && !d.isReheat && !d.reheats && !d.batchCoversDays
+            isDayEnabled(d, dayKeys[i]) && !d.isReheat && !d.reheats && !d.batchCoversDays
           ).length : 0;
           return (
             <div className="mt-6 text-center py-6 bg-brand/5 border border-brand/20 rounded-xl">
