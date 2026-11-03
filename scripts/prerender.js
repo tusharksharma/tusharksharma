@@ -1,4 +1,4 @@
-import { buildRecipeSchema, cleanSeoDescription, summarizeSeoDescription } from "../src/utils/recipeSchema.js";
+import { buildRecipeSchema, buildCookbookSeoDescription, buildBreadcrumbSchema, buildHubSchema, cleanSeoDescription, summarizeSeoDescription } from "../src/utils/recipeSchema.js";
 /**
  * Post-build prerender script.
  * Generates route-specific index.html files with proper meta/OG tags
@@ -25,7 +25,7 @@ const cookbookItems = [
   [batchPrep, "Dinner"], [desserts, "Dessert"], [creamis, "Dessert"],
   [bases, "Base"], [powerups, "Sauce"], [snackBoxes, "Snack"],
 ].flatMap(([items, recipeCategory]) => items.map((item) => ({
-  ...item, recipeCategory, description: cleanSeoDescription(item.seoDescription || item.tagline), image: item.heroImage || "",
+  ...item, recipeCategory, description: buildCookbookSeoDescription(item), image: item.heroImage || "",
 })));
 
 // Define all routes with metadata
@@ -119,6 +119,8 @@ function generateHTML(route) {
   );
 
   // Insert OG tags + canonical + schema before </head>
+  const breadcrumbSchema = !noindex ? buildBreadcrumbSchema(path, title) : null;
+  const hubSchema = !noindex ? buildHubSchema(path) : null;
   const headInsert = [
     `<link rel="canonical" href="${url}" />`,
     `<meta property="og:title" content="${escapeAttr(title)}" />`,
@@ -128,8 +130,13 @@ function generateHTML(route) {
     `<meta property="og:image" content="${ogImage}" />`,
     `<meta property="og:site_name" content="The Split Plate" />`,
     `<meta name="twitter:card" content="summary_large_image" />`,
+    `<meta name="twitter:title" content="${escapeAttr(title)}" />`,
+    `<meta name="twitter:description" content="${escapeAttr(seoDescription)}" />`,
+    `<meta name="twitter:image" content="${ogImage}" />`,
     noindex ? `<meta name="robots" content="noindex, nofollow" />` : "",
     schema ? `<script type="application/ld+json">${schema}</script>` : "",
+    breadcrumbSchema ? `<script type="application/ld+json">${breadcrumbSchema}</script>` : "",
+    hubSchema ? `<script type="application/ld+json">${hubSchema}</script>` : "",
   ].filter(Boolean).join("\n    ");
 
   html = html.replace("</head>", `    ${headInsert}\n  </head>`);

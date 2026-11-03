@@ -37,6 +37,7 @@ export function summarizeSeoDescription(raw, max = 155) {
   if (!s || s.length <= max) return s;
 
   const compact = s
+    .replace(/\s*\([^)]{15,}\) /g, " ")
     .replace(/\s*\([^)]{15,}\)/g, "")
     .replace(/\s+—\s+(?:creator|highest-protein|original|honest verdict|first cross-recipe|compare|per-container|all numbers)[^.]*\./gi, ".")
     .replace(/\s+/g, " ")
@@ -63,6 +64,19 @@ export function summarizeSeoDescription(raw, max = 155) {
   }
   const lastSpace = slice.lastIndexOf(" ");
   return (lastSpace > 0 ? slice.slice(0, lastSpace) : slice).replace(/[,;—–-\s]+$/, "") + ".";
+}
+
+/**
+ * Enrich short (< 55 char) cookbook taglines with flavorProfile so SERP snippets
+ * have complete dish and macro context within 55-155 chars.
+ */
+export function buildCookbookSeoDescription(item) {
+  const primary = cleanSeoDescription(item?.seoDescription || item?.tagline || item?.description || "");
+  if (primary.length >= 55 || !item?.flavorProfile) return primary;
+  const extra = cleanSeoDescription(item.flavorProfile);
+  if (!extra) return primary;
+  const base = /[.!?]$/.test(primary) ? primary : `${primary}.`;
+  return summarizeSeoDescription(`${base} ${extra}`, 155);
 }
 
 // Convert "PREHEAT + RACK: Oven to 425°F." → {name: "Preheat + Rack", text: "Oven to 425°F."}
@@ -161,23 +175,25 @@ export function recipeTimings(r) {
 
 const CUISINE_PATTERNS = [
   [/\bindo[-\s]chinese\b/i, "Indo-Chinese"],
-  [/\b(?:tandoori|tikka\s+masala|butter\s+chicken|keema\s+matar|phulka|rumali\s+roti|paneer|chana|dal|masala)\b/i, "Indian"],
-  [/\b(?:peruvian|lomo\s+saltado)\b/i, "Peruvian"],
+  [/\b(?:tandoori|tikka\s+masala|butter\s+chicken|keema\s+matar|phulkas?|rumali\s+roti|paneer|chana|dal|masala|chaat|chutney)\b/i, "Indian"],
+  [/\b(?:peruvian|lomo\s+saltado|aji\s+verde)\b/i, "Peruvian"],
+  [/\b(?:chimichurri|picanha|bavette)\b/i, "South American"],
   [/\b(?:korean|buldak|gochujang)\b/i, "Korean"],
-  [/\b(?:japanese)\b/i, "Japanese"],
-  [/\b(?:halal\s+cart|shawarma|kebab\s+pitas)\b/i, "Middle Eastern"],
+  [/\b(?:japanese|ramen|miyoka|mochi|teriyaki)\b/i, "Japanese"],
+  [/\b(?:halal\s+cart|shawarma|kebabs?|pitas?|kataifi)\b/i, "Middle Eastern"],
   [/\b(?:mediterranean|tzatziki|greek)\b/i, "Mediterranean"],
-  [/\b(?:taco|quesadilla|fajita|burrito|enchilada|mexican|mole\s+tacos|carnitas)\b/i, "Mexican"],
-  [/\b(?:gnocchi|orzo|ditalini|penne|alfredo|marinara|margherita|tiramisu|lasagna|bolognese|italian)\b/i, "Italian"],
+  [/\b(?:tacos?|quesadillas?|fajitas?|burritos?|enchiladas?|mexican|mole|carnitas|chipotle|cilantro[-\s]lime|taqueria|queso)\b/i, "Mexican"],
+  [/\b(?:gnocchi|orzo|ditalini|penne|alfredo|marinara|margherita|tiramisu|lasagna|bolognese|italian|milanese|pizza|pepperoni|parm|parmesan|polenta|cannoli)\b/i, "Italian"],
+  [/\b(?:beef\s*(?:&|and)\s*broccoli|lettuce\s+wraps|fried\s+rice|sesame\s+chili|umami|dumpling)\b/i, "Asian"],
 ];
 
 function inferRecipeCuisine(r) {
   if (r.cuisine) return r.cuisine;
-  const hay = `${r.title || ""} ${(r.tags || []).join(" ")} ${r.category || ""}`;
+  const hay = `${r.title || ""} ${(r.tags || []).join(" ")} ${(r.bestFor || []).join(" ")} ${r.category || ""}`;
   for (const [re, cuisine] of CUISINE_PATTERNS) {
     if (re.test(hay)) return cuisine;
   }
-  return undefined;
+  return "American";
 }
 
 function recipeIngredients(r) {
@@ -208,7 +224,7 @@ export function buildRecipeSchema(r, category) {
     "@context": "https://schema.org",
     "@type": "Recipe",
     name: r.seoTitle || r.title,
-    description: cleanSeoDescription(r.seoDescription || r.tagline || r.description || ""),
+    description: category === "Cookbook" ? buildCookbookSeoDescription(r) : cleanSeoDescription(r.seoDescription || r.tagline || r.description || ""),
     image: r.image ? `${DOMAIN}${r.image}` : undefined,
     ...timings,
     recipeYield: String(r.servings || 1),
@@ -218,9 +234,67 @@ export function buildRecipeSchema(r, category) {
     recipeIngredient: ingredients,
     recipeInstructions: steps.map(toHowToStep),
   };
-  if (!r.splitCook && r.caloriesPerServing != null && r.proteinPerServing != null) {
-    schema.nutrition = { "@type": "NutritionInformation", calories: `${r.caloriesPerServing} calories`, proteinContent: `${r.proteinPerServing}g` };
+  const calPerServing = r.caloriesPerServing ?? (r.servings === 1 ? r.calories : null);
+  const protPerServing = r.proteinPerServing ?? (r.servings === 1 ? (r.protein ?? r.proteinBaseEstimate) : null);
+  if (!r.splitCook && calPerServing != null && protPerServing != null) {
+    schema.nutrition = { "@type": "NutritionInformation", calories: `${calPerServing} calories`, proteinContent: `${protPerServing}g` };
   }
   if (keywordsList?.length) schema.keywords = keywordsList.join(", ");
   return JSON.stringify(schema).replace(/</g, "\\u003c");
+}
+
+export function buildBreadcrumbSchema(pathname, currentTitle) {
+  if (!pathname || pathname === "/") return null;
+  const cleanLeaf = (currentTitle || "").replace(/\s*[—-]\s*The Split Plate\s*$/i, "").trim();
+  const items = [{ "@type": "ListItem", position: 1, name: "Home", item: `${DOMAIN}/` }];
+  if (pathname.startsWith("/recipes/")) {
+    items.push({ "@type": "ListItem", position: 2, name: "Dinners", item: `${DOMAIN}/dinners` });
+    items.push({ "@type": "ListItem", position: 3, name: cleanLeaf || "Recipe", item: `${DOMAIN}${pathname}` });
+  } else if (pathname.startsWith("/cookbook/") && pathname !== "/cookbook") {
+    items.push({ "@type": "ListItem", position: 2, name: "Cookbook", item: `${DOMAIN}/cookbook` });
+    items.push({ "@type": "ListItem", position: 3, name: cleanLeaf || "Recipe", item: `${DOMAIN}${pathname}` });
+  } else if (pathname.startsWith("/favorites/") && pathname !== "/favorites") {
+    items.push({ "@type": "ListItem", position: 2, name: "Favorites", item: `${DOMAIN}/favorites` });
+    items.push({ "@type": "ListItem", position: 3, name: cleanLeaf || "Collection", item: `${DOMAIN}${pathname}` });
+  } else {
+    items.push({ "@type": "ListItem", position: 2, name: cleanLeaf || pathname.slice(1), item: `${DOMAIN}${pathname}` });
+  }
+  return JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items,
+  }).replace(/</g, "\\u003c");
+}
+
+export function buildHubSchema(pathname) {
+  if (pathname === "/") {
+    return JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      name: "The Split Plate",
+      url: `${DOMAIN}/`,
+      description: "High-protein family dinners with the Split Cook Method. One cook, two plates — adults and kids from the same workflow.",
+      publisher: {
+        "@type": "Organization",
+        name: "The Split Plate",
+        url: `${DOMAIN}/`,
+        logo: { "@type": "ImageObject", url: `${DOMAIN}/images/logo.png` },
+      },
+    }).replace(/</g, "\\u003c");
+  }
+  if (pathname === "/about") {
+    return JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      name: "About The Split Plate",
+      url: `${DOMAIN}/about`,
+      mainEntity: {
+        "@type": "Person",
+        name: "Tushar Sharma",
+        url: `${DOMAIN}/about`,
+        worksFor: { "@type": "Organization", name: "The Split Plate", url: `${DOMAIN}/` },
+      },
+    }).replace(/</g, "\\u003c");
+  }
+  return null;
 }

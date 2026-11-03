@@ -4406,6 +4406,7 @@ export const quickLunches = [
   {
     id: "spicy-chicken-sandwich",
     title: "Spicy Chicken Sandwich",
+    seoTitle: "Spicy Chicken Sandwich (Quick Lunch)",
     tagline: "250 cal / 26g protein. One crispy air-fryer sandwich, almost no effort.",
     heroImage: "/images/spicy-chicken-sandwich/hero-spicy-chicken-sandwich.webp",
     prepImage: "/images/spicy-chicken-sandwich/context-bettergoods-chicken-fillet.webp",

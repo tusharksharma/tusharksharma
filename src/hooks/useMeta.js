@@ -40,7 +40,7 @@ export default function useMeta({ title, description, image, type, schema = null
     document.title = fullTitle;
 
     const setMeta = (property, content) => {
-      const attr = property.startsWith("og:") || property.startsWith("twitter:") ? "property" : "name";
+      const attr = property.startsWith("og:") ? "property" : "name";
       let el = document.querySelector(`meta[${attr}="${property}"]`);
       if (!el) {
         el = document.createElement("meta");
@@ -67,8 +67,12 @@ export default function useMeta({ title, description, image, type, schema = null
     setMeta("og:type", ogType);
     setMeta("og:url", url);
     setMeta("og:site_name", BASE_TITLE);
+    const fullImage = image ? (image.startsWith("http") ? image : `${DOMAIN}${image}`) : `${DOMAIN}/images/logo.png`;
     setMeta("twitter:card", "summary_large_image");
-    if (image) setMeta("og:image", image.startsWith("http") ? image : `${DOMAIN}${image}`);
+    setMeta("twitter:title", fullTitle);
+    setMeta("twitter:description", desc);
+    setMeta("twitter:image", fullImage);
+    if (image) setMeta("og:image", fullImage);
     setLink("canonical", url);
     // Reconcile route identity on direct loads and every client transition.
     const utility = /^\/(social(?:\/|$)|studio(?:\/|$))/.test(pathname);
