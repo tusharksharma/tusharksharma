@@ -16514,6 +16514,13 @@ const DESSERT_CATALOG = [
       "#CoffeeIceCream",
       "#HaagenDazs"
     ],
+    "socialImages": [
+      "/images/coffee-chocolate-brownie-protein-creami/base-polished.webp",
+      "/images/coffee-chocolate-brownie-protein-creami/mix-in-polished.webp",
+      "/images/coffee-chocolate-brownie-protein-creami/texture-polished.webp",
+      "/images/coffee-chocolate-brownie-protein-creami/fudge-drizzle-polished.webp",
+      "/images/coffee-chocolate-brownie-protein-creami/scoop-polished.webp"
+    ],
     "socialCarousel": {
       "heroBadge": "Protein Creami · Coffee Brownie",
       "heroAccent": "amber",
@@ -16665,7 +16672,9 @@ const DESSERT_CATALOG = [
       ],
       "servingPhoto": {
         "src": "/images/coffee-chocolate-brownie-protein-creami/scoop-polished.webp",
-        "layout": "band"
+        "position": "50% 50%",
+        "zoom": 1,
+        "layout": "side"
       },
       "servingGroups": [
         {
