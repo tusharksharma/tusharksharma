@@ -16498,6 +16498,284 @@ const DESSERT_CATALOG = [
   }
 },
 
+  {
+    "id": "coffee-chocolate-brownie-protein-creami",
+    "title": "Coffee Chocolate Brownie Protein Creami",
+    "tagline": "Decaf coffee protein ice cream, brownie pieces, chocolate chips and an espresso-fudge drizzle. Approximately 330 calories and 41g protein for the whole finished pint.",
+    "heroImage": "/images/coffee-chocolate-brownie-protein-creami/hero-polished.webp",
+    "prepImage": "/images/coffee-chocolate-brownie-protein-creami/base-polished.webp",
+    "prepImageCaption": "The decaf coffee protein base after freezing and the Regular Ice Cream spin.",
+    "video": "/videos/coffee-chocolate-brownie-protein-creami/802-Coffee-Chocolate-Brownie-Creami.mp4",
+    "videoPoster": "/images/coffee-chocolate-brownie-protein-creami/hero-polished.webp",
+    "socialHashtags": [
+      "#TheSplitPlate",
+      "#NinjaCreami",
+      "#ProteinIceCream",
+      "#CoffeeIceCream",
+      "#HaagenDazs"
+    ],
+    "socialCarousel": {
+      "heroBadge": "Protein Creami · Coffee Brownie",
+      "heroAccent": "amber",
+      "heroTitle": "Coffee Chocolate Brownie Protein Creami",
+      "heroStats": [
+        {
+          "value": "~330",
+          "label": "cal · whole pint"
+        },
+        {
+          "value": "41g",
+          "label": "protein · whole pint"
+        },
+        {
+          "value": "1",
+          "label": "finished pint"
+        }
+      ],
+      "hook": "Favorite Häagen-Dazs remade: decaf coffee ice cream, brownie, chocolate chips + espresso fudge.",
+      "heroPhoto": "/images/coffee-chocolate-brownie-protein-creami/hero-polished.webp",
+      "captionBody": "Coffee Chocolate Brownie Protein Creami: approximately 330 calories and 41g protein for the whole finished pint with Nurri plain 2%, including mix-ins and espresso-fudge drizzle. Compared to ⅔ of Häagen-Dazs' 14-fl-oz carton (660 cal, 11g protein, 39g fat, 69g carbs, 59g sugar) matched by volume. Decaf coffee ice cream, ⅓ Prime Bites Chocolate Cookie Monster brownie, 7g Lily's semisweet baking chips and Dutch cocoa fudge. Save the recipe: thesplitplate.com/cookbook/coffee-chocolate-brownie-protein-creami",
+      "ingredientGroups": [
+        {
+          "card": 0,
+          "accent": "amber",
+          "heading": "Decaf Coffee Protein Base",
+          "items": [
+            {
+              "quantity": "1 cup",
+              "text": "Nurri plain 2% ultra-filtered milk",
+              "note": "240ml · 150 cal / 20g protein"
+            },
+            {
+              "quantity": "1/2 serving",
+              "text": "Opportuniteas unflavored whey isolate",
+              "note": "15g · 60 cal / 14g protein"
+            },
+            {
+              "quantity": "2 tbsp",
+              "text": "Whole Earth monk-fruit/erythritol sweetener"
+            },
+            {
+              "quantity": "1/8 tsp",
+              "text": "Guar gum"
+            },
+            {
+              "quantity": "Pinch",
+              "text": "Salt"
+            },
+            {
+              "quantity": "2/3 tbsp",
+              "text": "Decaf instant coffee",
+              "note": "2 tsp Nescafé Taster's Choice"
+            }
+          ]
+        },
+        {
+          "card": 1,
+          "accent": "coral",
+          "heading": "Mix-ins + Espresso Fudge",
+          "items": [
+            {
+              "quantity": "1/3",
+              "text": "Prime Bites Chocolate Cookie Monster brownie",
+              "note": "About 22g · ~77 cal / 6.3g protein"
+            },
+            {
+              "quantity": "7g",
+              "text": "Lily's semisweet-style baking chips",
+              "note": "25 cal / 2g fat"
+            },
+            {
+              "quantity": "1 tsp",
+              "text": "Unsweetened Dutch cocoa"
+            },
+            {
+              "quantity": "1/2 tsp",
+              "text": "Decaf instant coffee"
+            },
+            {
+              "quantity": "1/2 tbsp",
+              "text": "Sugar-free syrup",
+              "note": "Skinny French Vanilla filmed"
+            },
+            {
+              "quantity": "1/2 tbsp",
+              "text": "Water",
+              "note": "To thin fudge drizzle"
+            }
+          ]
+        }
+      ],
+      "ingredientCardPhotos": [
+        {
+          "src": "/images/coffee-chocolate-brownie-protein-creami/base-polished.webp",
+          "layout": "side"
+        },
+        {
+          "src": "/images/coffee-chocolate-brownie-protein-creami/mix-in-polished.webp",
+          "layout": "side"
+        }
+      ],
+      "methodLabel": "HOW TO MAKE",
+      "methodGroups": [
+        {
+          "card": 0,
+          "accent": "amber",
+          "heading": "Blend, Freeze, Spin",
+          "items": [
+            {
+              "number": 1,
+              "heading": "BLEND + FREEZE",
+              "body": "Blend milk, whey, sweetener, guar gum, salt and decaf coffee until smooth. Freeze upright and level for 24 hours."
+            },
+            {
+              "number": 2,
+              "heading": "REST + SPIN",
+              "body": "Rest on the counter for 5 minutes, then process on Regular Ice Cream."
+            }
+          ]
+        },
+        {
+          "card": 1,
+          "accent": "coral",
+          "heading": "Mix-ins + Espresso Fudge",
+          "items": [
+            {
+              "number": 3,
+              "heading": "MIX IN",
+              "body": "Add chopped brownie and Lily's chocolate chips, then Respin without extra liquid. Repeat if needed for your preferred texture."
+            },
+            {
+              "number": 4,
+              "heading": "FUDGE + DRIZZLE",
+              "body": "Stir Dutch cocoa, decaf coffee, sugar-free syrup and water until smooth. Scoop into a bowl and drizzle fudge over the top."
+            }
+          ]
+        }
+      ],
+      "methodCardPhotos": [
+        {
+          "src": "/images/coffee-chocolate-brownie-protein-creami/texture-polished.webp",
+          "layout": "side"
+        },
+        {
+          "src": "/images/coffee-chocolate-brownie-protein-creami/fudge-drizzle-polished.webp",
+          "layout": "side"
+        }
+      ],
+      "servingPhoto": {
+        "src": "/images/coffee-chocolate-brownie-protein-creami/scoop-polished.webp",
+        "layout": "band"
+      },
+      "servingGroups": [
+        {
+          "accent": "amber",
+          "heading": "Creator Verdict: 9.9 / 10",
+          "items": [
+            {
+              "text": "When favorite Häagen-Dazs Coffee Chocolate Brownie is a 10/10, this Creami scores 9.9."
+            },
+            {
+              "text": "Whole homemade batch: ~330 cal, 41g protein, 11g fat, 43g total carbs, 6g sugar. Volume matches 2/3 of a 14-fl-oz carton (660 cal, 11P, 39F, 69C, 59sugar)."
+            }
+          ]
+        }
+      ],
+      "engagementQuestion": "Coffee ice cream fans—are you taking this over the pint from the freezer aisle?"
+    },
+    "flavorProfile": "Rich decaf coffee ice cream with chewy protein brownie chunks, crunchy chocolate chips and an espresso-fudge drizzle",
+    "calories": 330,
+    "caloriesPerServing": 330,
+    "protein": 41,
+    "proteinPerServing": 41,
+    "servings": 1,
+    "servingSize": "1 whole finished Creami pint",
+    "time": "24 hr freeze + 5 min rest + blend and spin",
+    "bestFor": [
+      "Protein Creami",
+      "Coffee dessert",
+      "Whole-pint dessert",
+      "Make-ahead"
+    ],
+    "useThisWhen": "You want a high-protein remake of Häagen-Dazs Coffee Chocolate Brownie with decaf coffee, brownie chunks, chocolate chips and an espresso-fudge topping.",
+    "flavorTarget": "Decaf coffee ice cream with brownie pieces, chocolate chips and espresso fudge drizzle.",
+    "ingredients": [
+      "1 cup (240ml) Nurri plain 2% ultra-filtered milk",
+      "1/2 serving (about 15g) Opportuniteas unflavored whey isolate (60 calories / 14g protein)",
+      "2 tbsp Whole Earth monk-fruit sweetener with erythritol",
+      "1/8 tsp guar gum",
+      "Pinch of salt",
+      "2/3 tbsp (2 tsp) Nescafé Taster's Choice decaf instant coffee",
+      "1/3 Prime Bites Chocolate Cookie Monster brownie (about 22g)",
+      "7g Lily's semisweet-style baking chips",
+      "1 tsp unsweetened Dutch cocoa",
+      "1/2 tsp decaf instant coffee (for fudge)",
+      "1/2 tbsp sugar-free syrup (Skinny French Vanilla filmed)",
+      "1/2 tbsp water to thin"
+    ],
+    "steps": [
+      {
+        "text": "BLEND: Blend milk, whey, sweetener, guar gum, salt and decaf coffee until smooth. Keep below the pint fill line.",
+        "image": "/images/coffee-chocolate-brownie-protein-creami/base-polished.webp",
+        "imageAlt": "Coffee Chocolate Brownie Protein Creami: decaf coffee base"
+      },
+      "FREEZE: Freeze the pint upright and level for 24 hours. Rest on the counter for 5 minutes.",
+      {
+        "text": "SPIN: Process on Regular Ice Cream until smooth and creamy.",
+        "image": "/images/coffee-chocolate-brownie-protein-creami/texture-polished.webp",
+        "imageAlt": "Coffee Chocolate Brownie Protein Creami: spun texture"
+      },
+      {
+        "text": "MIX IN: Add 1/3 chopped Prime Bites brownie and 7g Lily's chocolate chips, then Respin without extra liquid. Repeat if needed for your preferred texture.",
+        "image": "/images/coffee-chocolate-brownie-protein-creami/mix-in-polished.webp",
+        "imageAlt": "Coffee Chocolate Brownie Protein Creami: brownie and chip mix-ins"
+      },
+      {
+        "text": "FUDGE DRIZZLE: Stir Dutch cocoa, decaf coffee, sugar-free syrup and water until smooth.",
+        "image": "/images/coffee-chocolate-brownie-protein-creami/fudge-drizzle-polished.webp",
+        "imageAlt": "Coffee Chocolate Brownie Protein Creami: espresso fudge drizzle"
+      },
+      {
+        "text": "FINISH: Scoop into a bowl and drizzle the espresso fudge over the top.",
+        "image": "/images/coffee-chocolate-brownie-protein-creami/scoop-polished.webp",
+        "imageAlt": "Coffee Chocolate Brownie Protein Creami: finished scoop with espresso fudge"
+      }
+    ],
+    "executionRules": [
+      "Amounts and nutrition refer to one complete finished pint.",
+      "Freeze upright and level for 24 hours, within the machine’s fill line.",
+      "Follow your Creami model’s safety and processing instructions."
+    ],
+    "macroHonesty": "Estimated whole homemade pint: ~330 calories, 41g protein, ~11g fat, ~43g total carbs, ~6g sugars. All mix-ins and espresso-fudge topping are included. Total carbs include ~29g erythritol and fiber from Whole Earth monk fruit, brownie, and Lily's chips (zero net carbs does not mean zero total carbs). Comparison portion is 2/3 of a 14-fl-oz Häagen-Dazs carton (660 cal, 11g protein, 39g fat, 69g total carbs, 59g sugar), which the creator confirmed matches their full homemade Creami batch by volume. No equal-volume or equal-weight claim is made. Creator verdict 9.9/10 when favorite commercial original is 10/10.",
+    "warnings": [
+      "Contains dairy, wheat, and soy. Check ingredient labels for additional allergens or manufacturing warnings.",
+      "Brand reference to Häagen-Dazs is a flavor inspiration and macro comparison; no sponsorship or affiliation is implied."
+    ],
+    "allergens": [
+      "dairy",
+      "wheat",
+      "soy"
+    ],
+    "dietTags": [
+      "high-protein",
+      "make-ahead",
+      "frozen-dessert"
+    ],
+    "relatedIds": [
+      "mocha-brownie-protein-creami",
+      "cosmic-brownie-protein-creami",
+      "peanut-butter-cup-blondie-cookie-creami"
+    ],
+    "seriesInfo": {
+      "series": "Favorite Remake",
+      "framing": "High-protein homemade remake of Häagen-Dazs Coffee Chocolate Brownie with whole-pint nutrition comparison."
+    },
+    "mealPrep": {
+      "storage": "Freeze the unspun base upright and level. Spin and finish when ready to eat.",
+      "lasts": "Follow the Creami machine guidance for storage and reprocessing.",
+      "reheat": "Do not heat the pint."
+    }
+  },
 ];
 
 // Creamis have their own browsing section while other sweets remain Desserts.
