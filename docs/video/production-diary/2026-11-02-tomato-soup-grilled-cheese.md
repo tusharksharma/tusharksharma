@@ -32,22 +32,25 @@ Following user authorization, the complete package was retrieved from Google Dri
   - **Facebook Link Post**: Scheduled on Facebook Page "The Split Plate" for **Friday, Nov 27, 2026 at 12:00 PM PT** linking to `https://www.youtube.com/watch?v=BTQFCKhCuVg`.
   - **Instagram Story**: Video Story (`02-Promo-butter-tip.mp4`) scheduled on Instagram `splitplates` for **Friday, Nov 27, 2026 at 12:00 PM PT**.
   - **Instagram Reel**: Scheduled on Instagram `splitplates` for **Friday, Nov 27, 2026 at 12:00 PM PT** with exact link-in-bio caption (`Real butter stays in my grilled cheese...`) and hashtags.
+  - **TikTok Feed Video**: Scheduled on TikTok `@tusharsharma1139` for **Friday, Nov 27, 2026 at 12:00 PM PT** with AI-generated content (AIGC) disclosed and link-in-bio caption (`Real butter stays in my grilled cheese...`) and hashtags.
   - **Native Story Link Card**: `02-Story-Link-Card-butter-tip.jpg` prepared in `release/native-instagram-link-handoff/` for release-time native Instagram phone-app link sticker posting per the November 3 gate.
 - **Promo 2 (honest-soup, ID 796)**:
   - **YouTube Short**: `x1vgyydWEhk` ([Short Link](https://youtube.com/shorts/x1vgyydWEhk)) scheduled for **Saturday, Nov 28, 2026 at 5:00 PM PT** with custom cover (`03-Approved-Cover-honest-soup.jpg`) and English captions (`03-Promo-honest-soup.en.srt`).
   - **Facebook Link Post**: Scheduled on Facebook Page "The Split Plate" for **Saturday, Nov 28, 2026 at 5:00 PM PT** linking to `https://www.youtube.com/watch?v=BTQFCKhCuVg`.
   - **Instagram Story**: Video Story (`03-Promo-honest-soup.mp4`) scheduled on Instagram `splitplates` for **Saturday, Nov 28, 2026 at 5:00 PM PT**.
   - **Instagram Reel**: Scheduled on Instagram `splitplates` for **Saturday, Nov 28, 2026 at 5:00 PM PT** with exact link-in-bio caption (`I couldn’t taste cottage cheese, but I still wanted more tomato...`) and hashtags.
+  - **TikTok Feed Video**: Scheduled on TikTok `@tusharsharma1139` for **Saturday, Nov 28, 2026 at 5:00 PM PT** with AI-generated content (AIGC) disclosed and link-in-bio caption (`I couldn’t taste cottage cheese, but I still wanted more tomato...`) and hashtags.
   - **Native Story Link Card**: `03-Story-Link-Card-honest-soup.jpg` prepared in `release/native-instagram-link-handoff/` for release-time native Instagram phone-app link sticker posting per the November 3 gate.
 - **Promo 3 (family-verdict, ID 797)**:
   - **YouTube Short**: `s2erNyvDPoo` ([Short Link](https://youtube.com/shorts/s2erNyvDPoo)) scheduled for **Sunday, Nov 29, 2026 at 12:00 PM PT** with custom cover (`04-Approved-Cover-family-verdict.jpg`) and English captions (`04-Promo-family-verdict.en.srt`).
   - **Facebook Link Post**: Scheduled on Facebook Page "The Split Plate" for **Sunday, Nov 29, 2026 at 12:00 PM PT** linking to `https://www.youtube.com/watch?v=BTQFCKhCuVg`.
   - **Instagram Story**: Video Story (`04-Promo-family-verdict.mp4`) scheduled on Instagram `splitplates` for **Sunday, Nov 29, 2026 at 12:00 PM PT**.
   - **Instagram Reel**: Scheduled on Instagram `splitplates` for **Sunday, Nov 29, 2026 at 12:00 PM PT** with exact link-in-bio caption (`My family liked this dinner more than I did...`) and hashtags.
+  - **TikTok Feed Video**: Scheduled on TikTok `@tusharsharma1139` for **Sunday, Nov 29, 2026 at 12:00 PM PT** with AI-generated content (AIGC) disclosed and link-in-bio caption (`My family liked this dinner more than I did...`) and hashtags.
   - **Native Story Link Card**: `04-Story-Link-Card-family-verdict.jpg` prepared in `release/native-instagram-link-handoff/` for release-time native Instagram phone-app link sticker posting per the November 3 gate.
 
 ### 3. Inventory and Policy Compliance Audit
-- **Canonical Inventory**: Updated `VIDEO_INVENTORY` rows 787–790 (IDs 794–797) and `POSTING INVENTORY` rows 651–654 via `gsheets` CLI with exact readback verification. Format updated to include `IG Reel`.
+- **Canonical Inventory**: Updated `VIDEO_INVENTORY` rows 787–790 (IDs 794–797) and `POSTING INVENTORY` rows 651–654 via `gsheets` CLI with exact readback verification. Platforms updated to include `Instagram Reels` and `TikTok` (`SCHEDULED`).
 - **Verification Rule Preserved**: `Actual posted date` and `posted_date` columns remain strictly blank while items are Scheduled.
-- **Policy Boundaries**: Zero paid narration or image generation charges incurred ($0); Instagram Reels expansion authorized by explicit user request and successfully scheduled to `splitplates`; TikTok requires user browser sign-in to `@tusharsharma1139` at `https://www.tiktok.com/login`; photo Story link cards deferred to native phone-app posting at release.
+- **Policy Boundaries**: Zero paid narration or image generation charges incurred ($0); Instagram Reels expansion and TikTok scheduling authorized by explicit user requests and successfully scheduled; photo Story link cards deferred to native phone-app posting at release.
 - **Release-Time Checklist**: When `BTQFCKhCuVg` goes Public on November 25, 2026 at 5:00 PM PT, attach `BTQFCKhCuVg` as the Related video to Shorts `hR9XBZ3VFhw`, `x1vgyydWEhk`, and `s2erNyvDPoo` before Promo 1 drops on November 27.
