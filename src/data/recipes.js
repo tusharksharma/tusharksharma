@@ -13682,7 +13682,183 @@ const recipes = [
     ],
     "engagementQuestion": "Would your family call these chicken tenders, too?"
   }
-}
+},
+  {
+    id: 79,
+    status: "live",
+    meta: {
+      fixedBatch: true,
+      macros: { protein: 50, calories: 540, fat: 21, carbs: 38, netCarbs: 33, estimated: true },
+      allergens: ["dairy"],
+      warnings: ["contains-dairy", "estimated-adult-plate-only", "kid-macros-not-published"],
+      dietTags: ["high-protein", "gluten-free"],
+      proteinTags: ["beef"],
+      splitAxes: ["spice", "portion", "cheese"],
+      effortTags: ["sheet-pan", "skillet", "batch-cook", "family-dinner", "weeknight"],
+      costTier: "moderate",
+      costPerServing: "$4.75",
+      macroHonesty: "Estimated adult bowl: approximately 540 calories and 50g protein. The estimate divides the full batch into 6 adult bowls and 4 smaller kid bowls over two nights, giving each adult 1/8 of the beef batch (~170g raw equivalent) and 1/8 of the sweet potato batch (~110g raw equivalent), plus 80g blended MULU 2% cottage cheese, 1/2 mini Wholly Guacamole cup, 10g Mike's Hot Honey, and 1/8 of the total batch cooking oil. Cooked weights shrink; raw-equivalent shares divide the ingredient batch. Exact package formulations and seasoning brands vary. Children's portions are not assigned nutrition targets.",
+      substitutionNotes: [
+        "Beef portion: 1/8 of the cooked beef batch per adult bowl (equivalent to ~170g raw 93/7 beef); 1/16 per kid bowl (~85g raw beef equivalent). Do not use 1/6.",
+        "Potatoes: 880g raw peeled diced sweet potatoes roasted across two sheet pans; raw shares are ~110g adult / ~55g kid. Cooked weights will be lower.",
+        "MULU 2% cottage cheese: Whipped smooth with an immersion blender; 80g per adult bowl provides ~13g protein and a cool, creamy contrast to the spicy honey.",
+        "Mike's Hot Honey: 10g drizzled over the adult bowl. Omitted entirely from the kid plates.",
+        "Tillamook shredded cheddar: 28g melted over each kid portion in place of cottage cheese and hot honey.",
+      ],
+    },
+    slug: "hot-honey-beef-sweet-potato-bowls",
+    proteinAnchor: "beef",
+    mealType: "dinner",
+    flavorDirection: "smoky-southwest",
+    splitFriendly: "full",
+    title: "Hot-Honey Beef & Sweet Potato Family Bowls",
+    category: "Family Dinner",
+    pillar: "Family Dinners",
+    tags: ["ground-beef", "sweet-potato", "hot-honey", "cottage-cheese", "family-dinner", "meal-prep", "batch-cook", "two-night-dinner"],
+    time: "35 min",
+    servings: 1,
+    protein: 50,
+    calories: 540,
+    image: "/images/hot-honey-beef-sweet-potato-bowls/hero-polished.webp",
+    imagePosition: "center center",
+    prepImage: "/images/hot-honey-beef-sweet-potato-bowls/kid-plate-polished.webp",
+    prepImageCaption: "The kids' plate with melted cheddar and guacamole alongside the shared beef and roasted sweet potatoes.",
+    video: "/videos/hot-honey-beef-sweet-potato-bowls/806-Hot-Honey-Beef-Family-Bowls.mp4",
+    role: "Hot honey and whipped cottage cheese for me, cheddar for the kids",
+    makeThisWhen: "You want a big two-night family dinner where one batch of roasted sweet potatoes and taco beef powers two nights of meals with customizable adult and kid finishes.",
+    hook: "Hot honey for me, cheddar for the kids. One big batch of seasoned ground beef and roasted sweet potatoes covers dinner for two nights.",
+    description: "Toss diced sweet potatoes with avocado oil and smoked paprika, then roast until caramelized. Brown lean 93/7 ground beef with taco seasoning and chicken bone broth for a glossy finish. Whip MULU cottage cheese until silky. Adults get 1/8 of the beef and potatoes topped with whipped cottage cheese, guacamole, and Mike's Hot Honey (~540 cal, 50g protein); kids get a half portion topped with melted Tillamook cheddar and mild guacamole.",
+    ingredients: [
+      "1,361g / 3 lb 93/7 lean ground beef",
+      "880g sweet potatoes, peeled and small diced",
+      "38g Spiceology Taco Seasoning",
+      "190g / ~3/4 cup Kirkland chicken bone broth",
+      "1 tbsp avocado oil (across the full potato batch)",
+      "1/2 tsp smoked paprika, salt and black pepper",
+      "480g MULU 2% cottage cheese (for adult bowls)",
+      "5 mini Wholly Guacamole cups (57g each, shared across bowls)",
+      "60g Mike's Hot Honey (for adult bowls)",
+      "112g Tillamook shredded cheddar cheese (for kid bowls)",
+    ],
+    executionRules: [
+      "Toss sweet potatoes with avocado oil, paprika, salt, and pepper; roast at 425°F for 25–30 minutes, flipping once for browned edges.",
+      "Brown ground beef 8–10 minutes in a large skillet; do not drain pan juices. Stir in taco seasoning and bone broth and simmer 1–2 minutes until glossy.",
+      "Blend cottage cheese with salt and optional lime juice until velvety smooth; chill until serving.",
+      "Divide beef and sweet potatoes evenly: reserve half in separate containers for night two (refrigerate promptly).",
+      "Adult bowl: 1/8 cooked potatoes + 1/8 cooked beef + 80g blended cottage cheese + 1/2 guacamole cup + 10g hot honey drizzle.",
+      "Kid plate: half adult potato and beef portions + 28g shredded cheddar (melted) + 1/2 guacamole cup; no hot honey.",
+    ],
+    troubleshooting: [
+      { problem: "Potatoes steaming instead of browning", fix: "Spread across two sheet pans so the cubes are not crowded. Roast at 425°F and don't skip the flip." },
+      { problem: "Ground beef dries out after simmering", fix: "Do not drain the beef juices before adding the bone broth; simmer only 1–2 minutes until glossy." },
+      { problem: "Cottage cheese looks grainy", fix: "Use a high-speed immersion blender in a narrow cup for 45–60 seconds until completely silky and smooth." },
+    ],
+    splitCook: {
+      adult: {
+        label: "Adult Hot-Honey Bowl",
+        extraIngredients: [
+          "80g blended MULU 2% cottage cheese",
+          "1/2 mini Wholly Guacamole cup (28.5g)",
+          "10g Mike's Hot Honey",
+        ],
+        steps: [
+          "Layer 1/8 cooked sweet potatoes and 1/8 cooked taco beef in an adult bowl.",
+          "Add 80g blended smooth cottage cheese and 1/2 guacamole cup.",
+          "Drizzle with 10g Mike's Hot Honey and serve immediately.",
+        ],
+      },
+      kid: {
+        label: "Kid Melted Cheddar Plate",
+        extraIngredients: [
+          "28g Tillamook shredded cheddar cheese",
+          "1/2 mini Wholly Guacamole cup (28.5g)",
+        ],
+        steps: [
+          "Layer half the adult portions of beef and sweet potatoes on a plate.",
+          "Top with 28g shredded cheddar; cover briefly to melt the cheese.",
+          "Serve with 1/2 mini guacamole cup on the side; no hot honey.",
+        ],
+      },
+      sharedIngredients: [
+        "1,361g / 3 lb 93/7 lean ground beef",
+        "880g sweet potatoes, peeled and diced",
+        "38g Spiceology Taco Seasoning",
+        "190g chicken bone broth",
+        "1 tbsp avocado oil, paprika, salt, and pepper",
+      ],
+      sharedSteps: [
+        "Toss diced sweet potatoes with avocado oil, paprika, salt and pepper. Roast at 425°F for 25–30 min.",
+        "Brown beef in a large skillet 8–10 min; add taco seasoning and bone broth, simmering 1–2 min.",
+        "Whip cottage cheese until velvety smooth.",
+        "Divide batch: reserve half for night two, build night one bowls according to adult/kid finishes.",
+      ],
+    },
+    socialCarousel: {
+      heroBadge: "Two-night dinner · family bowls",
+      heroTitle: "Hot-Honey Beef & Sweet Potato Bowls",
+      heroStats: [
+        { value: "6 + 4", label: "bowls across 2 nights" },
+        { value: "~540 cal", label: "per adult bowl" },
+        { value: "~50g protein", label: "per adult bowl" },
+      ],
+      heroPhoto: "/images/hot-honey-beef-sweet-potato-bowls/hero-polished.webp",
+      hook: "Hot honey for me, cheddar for the kids. One batch of beef and sweet potatoes covers two nights of dinner.",
+      captionTitle: "Hot-Honey Beef & Sweet Potato Bowls — Two-Night Family Dinner",
+      captionBody: "Hot honey for me, cheddar for the kids. One batch of beef and sweet potatoes covers two nights of dinner.\n\nMy adult bowl: approximately 540 calories and 50g protein, including guacamole, hot honey and cooking oil. Estimates vary with exact beef, seasoning and avocado cup labels.\n\nFULL RECIPE — 6 adult bowls + 4 smaller kid bowls across 2 nights:\n• 1,361g / 3 lb 93/7 ground beef\n• 880g peeled diced sweet potato\n• 38g Spiceology Taco Seasoning\n• 190g / ~3/4 cup Kirkland chicken bone broth\n• 1 tbsp avocado oil across whole batch\n• 1/2 tsp smoked paprika, salt and pepper\n• 480g MULU 2% cottage cheese, pinch of salt, optional lime\n• 5 mini Wholly Guacamole cups\n• 60g Mike's Hot Honey for adults\n• 112g shredded Tillamook cheddar for kids\n\n1. Toss potatoes with oil, paprika, salt and pepper. Spread on two sheet pans. Roast at 425°F for 25–30 min, flipping once.\n2. Brown beef 8–10 min. Keep juices. Add taco seasoning and broth; simmer 1–2 min until glossy.\n3. Blend cottage cheese with salt and optional lime until smooth. Refrigerate.\n4. Keep half cooked beef and potatoes separately for night two. Refrigerate promptly.\n5. Adult bowl: 1/8 total beef and potato batches (~170g raw beef + 110g raw potato equiv), 80g blended cottage cheese, 1/2 guac cup, 10g hot honey.\n6. Kid bowl: half adult portions, 28g cheddar, 1/2 guac cup. Cover briefly to melt cheese. No hot honey.\n\nRaw-equivalent portions divide measured ingredients; cooked weights will be lower. Adult share is 1/8 batch per adult, not 1/6.\n\nSave this for your next two-night dinner.\n\n@mikeshothoney @muluprotein\n#TheSplitPlate #HighProteinDinner #FamilyDinner #BeefBowls #MealPrep",
+      ingredientGroups: [
+        { card: 1, accent: "amber", heading: "Shared base batch (2 nights)", items: [
+          { quantity: "3 lb / 1,361g", text: "93/7 lean ground beef" },
+          { quantity: "880g", text: "Peeled diced sweet potatoes" },
+          { quantity: "38g", text: "Spiceology Taco Seasoning" },
+          { quantity: "190g / 3/4 cup", text: "Chicken bone broth" },
+          { quantity: "1 tbsp", text: "Avocado oil + smoked paprika" },
+        ] },
+        { card: 2, accent: "green", heading: "Finishes (adult vs kid)", items: [
+          { quantity: "480g", text: "MULU 2% cottage cheese (whipped)" },
+          { quantity: "60g", text: "Mike's Hot Honey (adult drizzle)" },
+          { quantity: "112g", text: "Tillamook shredded cheddar (kids)" },
+          { quantity: "5 mini cups", text: "Wholly Guacamole (split 1/2 per bowl)" },
+        ] },
+      ],
+      ingredientCardPhotos: [
+        "/images/hot-honey-beef-sweet-potato-bowls/potatoes-polished.webp",
+        "/images/hot-honey-beef-sweet-potato-bowls/beef-skillet-polished.webp",
+      ],
+      methodGroups: [
+        { card: 1, accent: "amber", heading: "Roast + brown", items: [
+          { number: 1, heading: "Roast sweet potatoes", body: "Toss potato cubes with oil and paprika. Roast on two sheet pans at 425°F for 25–30 min until caramelized." },
+          { number: 2, heading: "Brown + simmer beef", body: "Brown 93/7 beef 8–10 min, keeping pan juices. Simmer with taco seasoning and bone broth 1–2 min until glossy." },
+        ] },
+        { card: 2, accent: "coral", heading: "Split + finish", items: [
+          { number: 3, heading: "Whip cottage cheese", body: "Immersion blend MULU cottage cheese with salt and optional lime until velvety smooth." },
+          { number: 4, heading: "Plate adult vs kid", body: "Adult: 1/8 beef + potatoes, whipped cottage cheese, guac, hot honey. Kid: half portion + melted cheddar + guac." },
+        ] },
+      ],
+      methodCardPhotos: [
+        "/images/hot-honey-beef-sweet-potato-bowls/cottage-cheese-polished.webp",
+        "/images/hot-honey-beef-sweet-potato-bowls/kid-plate-polished.webp",
+      ],
+      servingPhoto: {
+        src: "/images/hot-honey-beef-sweet-potato-bowls/adult-bowl-polished.webp",
+        layout: "side"
+      },
+      servingGroups: [
+        { accent: "coral", heading: "Adult hot-honey bowl", items: [{ text: "Estimated ~540 cal / 50g protein with 1/8 beef (~170g raw), 1/8 potatoes, cottage cheese, guacamole and hot honey." }] },
+        { accent: "green", heading: "Kids' cheddar plate", items: [{ text: "Half beef/potato portions with melted cheddar and guacamole. No hot honey. No child macro claims." }] },
+      ],
+      engagementQuestion: "Hot honey and cottage cheese, or classic melted cheddar: how would your family split these bowls?",
+    },
+    mealPrep: {
+      storage: "Store the second-night beef and roasted sweet potatoes in separate airtight containers in the refrigerator for up to 3–4 days. Store blended cottage cheese covered.",
+      reheat: "Reheat beef and sweet potatoes in a skillet or microwave until steaming hot (165°F). Add cold cottage cheese, guacamole, and hot honey fresh after reheating.",
+      lasts: "3–4 days refrigerated in sealed containers.",
+    },
+    editorialNotes: [
+      "Inventory 806 package: Hot-Honey Beef & Sweet Potato Bowls — Two-Night Family Dinner. Video: 806-Hot-Honey-Beef-Family-Bowls.mp4.",
+      "The adult bowl estimate is approximately 540 calories and 50g protein. Correct beef share is 1/8 of batch (~170g raw equivalent), not 1/6.",
+      "Images generated via Path A image-to-image pipeline from native 4K footage frames. Verified brand tags: @mikeshothoney and @muluprotein.",
+    ],
+  }
 ];
 
 export default recipes;
