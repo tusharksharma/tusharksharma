@@ -16785,6 +16785,280 @@ const DESSERT_CATALOG = [
       "reheat": "Do not heat the pint."
     }
   },
+  {
+    id: "monster-candy-cookie-dough-bites",
+    title: "Monster Candy Cookie Dough Bites",
+    tagline: "Edible protein monster cookie dough bites made with blended cottage cheese, almond flour, vanilla protein and leftover Halloween candy. Approximately 180 calories and 15g protein per ball.",
+    heroImage: "/images/monster-candy-cookie-dough-bites/hero-polished.webp",
+    prepImage: "/images/monster-candy-cookie-dough-bites/base-polished.webp",
+    prepImageCaption: "Blended cottage cheese and milk create the silky, high-protein moisture base for the cookie dough.",
+    video: "/videos/monster-candy-cookie-dough-bites/804-Monster-Cookie-Dough-Recipe.mp4",
+    videoPoster: "/images/monster-candy-cookie-dough-bites/hero-polished.webp",
+    socialHashtags: [
+      "#TheSplitPlate",
+      "#LeftoverCandy",
+      "#ProteinCookieDough",
+      "#HalloweenTreats",
+      "#CottageCheeseRecipes"
+    ],
+    socialImages: [
+      "/images/monster-candy-cookie-dough-bites/base-polished.webp",
+      "/images/monster-candy-cookie-dough-bites/candy-polished.webp",
+      "/images/monster-candy-cookie-dough-bites/dough-polished.webp",
+      "/images/monster-candy-cookie-dough-bites/portion-polished.webp",
+      "/images/monster-candy-cookie-dough-bites/serving-polished.webp"
+    ],
+    socialCarousel: {
+      heroBadge: "Protein Power-Up \u00b7 Halloween",
+      heroAccent: "amber",
+      heroTitle: "Monster Candy Cookie Dough Bites",
+      heroStats: [
+        {
+          value: "~180",
+          label: "cal / bite"
+        },
+        {
+          value: "15g",
+          label: "protein / bite"
+        },
+        {
+          value: "10",
+          label: "balls total"
+        }
+      ],
+      hook: "Leftover Halloween candy meets protein monster cookie dough: blended cottage cheese, almond flour, and 15g protein per ball.",
+      captionTitle: "Monster Candy Cookie Dough Bites \u00b7 ~180 cal / 15g protein",
+      captionBody: "Leftover Halloween candy, meet monster cookie dough. A fun way to use up the stash and make something with the kids.\n\nMakes 10 balls:\n\u2022 300g 2% cottage cheese (MULU used)\n\u2022 45g fat-free ultra-filtered milk (Fairlife)\n\u2022 60g sugar-free syrup\n\u2022 108g almond flour\n\u2022 93g vanilla protein powder (PEScience)\n\u2022 1 small candy each: Twix, Reese's, KitKat, Milky Way, Snickers, and a small pack of M&M's\u2014all chopped\n\u2022 Candy eyes\n\nBlend the cottage cheese and milk until smooth. Mix the almond flour and protein powder in a bowl. Stir in the blended cottage cheese and syrup to form dough. Fold in the chopped candy, divide into 10 balls, and add the eyes. Keep refrigerated.\n\nEstimated per ball: about 180 calories and 15g protein, assuming 10 equal balls and typical fun-size candies. Candy sizes, syrup, and decorations can change the numbers. Save this for your leftover Halloween stash: thesplitplate.com/cookbook/monster-candy-cookie-dough-bites",
+      heroPhoto: "/images/monster-candy-cookie-dough-bites/hero-polished.webp",
+      ingredientGroups: [
+        {
+          card: 0,
+          accent: "amber",
+          heading: "Protein Dough Base",
+          items: [
+            {
+              quantity: "300g",
+              text: "2% cottage cheese",
+              note: "MULU filmed \u00b7 266 cal / 48g P"
+            },
+            {
+              quantity: "45g",
+              text: "Fat-free ultra-filtered milk",
+              note: "Fairlife filmed"
+            },
+            {
+              quantity: "60g",
+              text: "Sugar-free syrup"
+            },
+            {
+              quantity: "108g",
+              text: "Almond flour",
+              note: "~1 cup"
+            },
+            {
+              quantity: "93g",
+              text: "Vanilla protein powder",
+              note: "PEScience filmed \u00b7 360 cal / 72g P"
+            }
+          ]
+        },
+        {
+          card: 1,
+          accent: "coral",
+          heading: "Halloween Candies & Finish",
+          items: [
+            {
+              quantity: "1 small each",
+              text: "Twix, Reese's, KitKat, Milky Way, Snickers",
+              note: "Chopped fun-size"
+            },
+            {
+              quantity: "1 small pack",
+              text: "M&M's",
+              note: "Chopped"
+            },
+            {
+              quantity: "20 pieces",
+              text: "Candy eyes",
+              note: "2 per ball"
+            }
+          ]
+        }
+      ],
+      ingredientCardPhotos: [
+        {
+          src: "/images/monster-candy-cookie-dough-bites/base-polished.webp",
+          position: "50% 50%",
+          zoom: 1,
+          layout: "side"
+        },
+        {
+          src: "/images/monster-candy-cookie-dough-bites/candy-polished.webp",
+          position: "50% 50%",
+          zoom: 1,
+          layout: "side"
+        }
+      ],
+      methodLabel: "HOW TO MAKE",
+      methodGroups: [
+        {
+          card: 0,
+          accent: "amber",
+          heading: "Blend Base & Form Dough",
+          items: [
+            {
+              number: 1,
+              heading: "BLEND BASE",
+              body: "Blend cottage cheese and milk until completely smooth and creamy with no remaining curds."
+            },
+            {
+              number: 2,
+              heading: "FORM DOUGH",
+              body: "Whisk almond flour and protein powder in a bowl. Stir in the blended base and sugar-free syrup until a thick, cohesive dough forms."
+            }
+          ]
+        },
+        {
+          card: 1,
+          accent: "coral",
+          heading: "Fold Candy & Decorate",
+          items: [
+            {
+              number: 3,
+              heading: "FOLD CANDY",
+              body: "Gently fold the chopped Halloween candy assortment and M&M's into the dough until evenly distributed."
+            },
+            {
+              number: 4,
+              heading: "PORTION & SERVE",
+              body: "Divide dough into 10 equal balls (about 65g each). Press candy eyes onto each ball and store chilled in an airtight container."
+            }
+          ]
+        }
+      ],
+      methodCardPhotos: [
+        {
+          src: "/images/monster-candy-cookie-dough-bites/dough-polished.webp",
+          position: "50% 50%",
+          zoom: 1,
+          layout: "side"
+        },
+        {
+          src: "/images/monster-candy-cookie-dough-bites/portion-polished.webp",
+          position: "50% 50%",
+          zoom: 1,
+          layout: "side"
+        }
+      ],
+      servingPhoto: {
+        src: "/images/monster-candy-cookie-dough-bites/serving-polished.webp",
+        position: "50% 50%",
+        zoom: 1,
+        layout: "side"
+      },
+      servingGroups: [
+        {
+          accent: "amber",
+          heading: "Batch Yield: 10 Monster Balls",
+          items: [
+            {
+              text: "Estimated ~180 calories and 15g protein per ball (batch ~1740\u20131840 cal / 147\u2013153g protein)."
+            },
+            {
+              text: "Store in an airtight container in the refrigerator for up to 5 days."
+            }
+          ]
+        }
+      ],
+      engagementQuestion: "Which leftover Halloween candy are you folding into your cookie dough first?"
+    },
+    flavorProfile: "Sweet vanilla cookie dough with rich chocolate chunks, crunchy candy shell pieces, and peanut butter pockets",
+    calories: 1800,
+    caloriesPerServing: 180,
+    protein: 150,
+    proteinPerServing: 15,
+    fat: 70,
+    fatPerServing: 7,
+    carbs: 140,
+    carbsPerServing: 14,
+    sugar: 60,
+    sugarPerServing: 6,
+    servings: 10,
+    servingSize: "1 monster cookie dough ball",
+    time: "10 min prep (no-bake)",
+    bestFor: [
+      "High-protein dessert",
+      "Meal prep snacks",
+      "Leftover candy",
+      "Kid-friendly",
+      "No-bake"
+    ],
+    useThisWhen: "You want a high-protein, no-bake sweet treat that turns leftover Halloween candy into a macro-friendly snack.",
+    ingredients: [
+      "300g (about 1 1/4 cups) 2% cottage cheese (MULU filmed)",
+      "45g (about 3 tbsp) fat-free ultra-filtered milk (Fairlife filmed)",
+      "60g (about 3 tbsp) sugar-free syrup",
+      "108g (about 1 cup) almond flour",
+      "93g (about 3 scoops) vanilla protein powder (PEScience filmed)",
+      "1 small fun-size Twix bar, chopped",
+      "1 small snack-size Reese's peanut butter cup, chopped",
+      "1 small snack-size KitKat bar, chopped",
+      "1 small fun-size Milky Way bar, chopped",
+      "1 small fun-size Snickers bar, chopped",
+      "1 small fun-size pack of M&M's, chopped",
+      "20 candy eyes, for decorating"
+    ],
+    steps: [
+      {
+        text: "BLEND BASE: Blend cottage cheese and ultra-filtered milk in a blender until silky smooth with no graininess.",
+        image: "/images/monster-candy-cookie-dough-bites/base-polished.webp",
+        imageAlt: "Monster Candy Cookie Dough Bites: smooth blended cottage cheese base"
+      },
+      {
+        text: "CHOP CANDY & PREP: Chop the fun-size Halloween candies into bite-size pieces.",
+        image: "/images/monster-candy-cookie-dough-bites/candy-polished.webp",
+        imageAlt: "Monster Candy Cookie Dough Bites: chopped candy pieces"
+      },
+      {
+        text: "FORM DOUGH: Whisk almond flour and protein powder in a mixing bowl. Pour in the blended cottage cheese base and syrup, stirring with a spatula until a thick dough forms.",
+        image: "/images/monster-candy-cookie-dough-bites/dough-polished.webp",
+        imageAlt: "Monster Candy Cookie Dough Bites: mixing the cookie dough"
+      },
+      {
+        text: "FOLD CANDY & PORTION: Fold in the chopped candies and M&M's. Divide and roll into 10 equal balls (about 65g each).",
+        image: "/images/monster-candy-cookie-dough-bites/portion-polished.webp",
+        imageAlt: "Monster Candy Cookie Dough Bites: rolling dough into 10 balls"
+      },
+      {
+        text: "DECORATE & CHILL: Press two candy eyes onto each ball. Refrigerate in an airtight container for up to 5 days.",
+        image: "/images/monster-candy-cookie-dough-bites/serving-polished.webp",
+        imageAlt: "Monster Candy Cookie Dough Bites: decorated tray of monster balls"
+      }
+    ],
+    allergens: [
+      "dairy",
+      "peanuts",
+      "tree-nuts",
+      "wheat",
+      "soy"
+    ],
+    dietTags: [
+      "high-protein",
+      "no-bake",
+      "meal-prep",
+      "dessert"
+    ],
+    relatedIds: [
+      "chocolate-protein-brownie-bowl",
+      "halloween-red-velvet-creami",
+      "protein-tiramisu"
+    ],
+    mealPrep: {
+      storage: "Store in an airtight container in the refrigerator.",
+      lasts: "Up to 5 days chilled.",
+      reheat: "Enjoy chilled directly from the fridge; do not heat."
+    }
+  },
 ];
 
 // Creamis have their own browsing section while other sweets remain Desserts.
