@@ -17059,6 +17059,287 @@ const DESSERT_CATALOG = [
       reheat: "Enjoy chilled directly from the fridge; do not heat."
     }
   },
+  {
+    id: "brookies-and-cream-protein-creami",
+    title: "Brookies & Cream Protein Creami",
+    tagline: "Brown-butter vanilla protein Creami packed with HighKey chocolate-chip mini cookies, Prime Bites brownie, crushed sandwich cookie, and Barebells Brownie Batter bar. Approximately 390 calories and 47g protein for the whole pint.",
+    heroImage: "/images/brookies-and-cream-protein-creami/hero-polished.webp",
+    prepImage: "/images/brookies-and-cream-protein-creami/base-polished.webp",
+    prepImageCaption: "The blended brown-butter vanilla protein base ready for the 24-hour freeze and Creami spin.",
+    video: "/videos/brookies-and-cream-protein-creami/805-Brookies-and-Cream.mp4",
+    videoPoster: "/images/brookies-and-cream-protein-creami/hero-polished.webp",
+    socialHashtags: [
+      "#TheSplitPlate",
+      "#CrumblCreamiCut",
+      "#NinjaCreami",
+      "#ProteinIceCream",
+      "#CookiesAndCream"
+    ],
+    socialImages: [
+      "/images/brookies-and-cream-protein-creami/base-polished.webp",
+      "/images/brookies-and-cream-protein-creami/mix-in-polished.webp",
+      "/images/brookies-and-cream-protein-creami/texture-polished.webp",
+      "/images/brookies-and-cream-protein-creami/toppings-polished.webp",
+      "/images/brookies-and-cream-protein-creami/scoop-polished.webp"
+    ],
+    socialCarousel: {
+      heroBadge: "Protein Creami \u00b7 Brookies & Cream",
+      heroAccent: "amber",
+      heroTitle: "Brookies & Cream Protein Creami",
+      heroStats: [
+        {
+          value: "~390",
+          label: "cal \u00b7 whole pint"
+        },
+        {
+          value: "47g",
+          label: "protein \u00b7 whole pint"
+        },
+        {
+          value: "1",
+          label: "finished pint"
+        }
+      ],
+      hook: "Crumbl's Brookies & Cream remade: brown-butter vanilla base, chocolate chip mini cookies, brownie, and Barebells topping.",
+      captionTitle: "Brookies & Cream Protein Creami \u00b7 ~390 cal / 47g protein",
+      captionBody: "Brookies & Cream, but the team might be TOO stacked \ud83d\ude05 Haaland, Mbapp\u00e9 and Kane in one pint. 9.7/10\u2014the HighKey minis got lost, but everything else worked.\n\nMy remake of Crumbl's Brookies & Cream Cookie ft. OREO\u00ae: approximately 390 calories and 47g protein for the whole finished pint using the Nurri base. Estimates vary with exact products and portions. OREO is the original cookie reference; I used HighKey sandwich cookies in my version.\n\nFull recipe \u2014 1 pint:\nBase:\n\u2022 1 cup plain Nurri 2% ultra-filtered milk\n\u2022 1/2 serving Opportuniteas whey isolate (60 cal, 14g P)\n\u2022 2 tbsp monk-fruit sweetener blend\n\u2022 1/8 tsp guar gum\n\u2022 Pinch of salt\n\u2022 1/2 tsp brown butter emulsion\n\u2022 1 drop natural brown food coloring\n\nMix-ins:\n\u2022 2 HighKey chocolate-chip protein mini cookies\n\u2022 1/4 Prime Bites Chocolate Cookie Monster brownie\n\nToppings:\n\u2022 1 HighKey sandwich cookie, crushed\n\u2022 1/4 Barebells Brownie Batter bar, chopped\n\nBlend the base and freeze level for 24 hours. Let sit about 5 minutes, then spin on Ice Cream. Re-spin as needed for a creamy texture. Add the mix-ins and incorporate, then scoop and finish with the cookie crumbs and chopped bar.\n\nSave this for your next Creami: thesplitplate.com/cookbook/brookies-and-cream-protein-creami",
+      heroPhoto: "/images/brookies-and-cream-protein-creami/hero-polished.webp",
+      ingredientGroups: [
+        {
+          card: 0,
+          accent: "amber",
+          heading: "Brown-Butter Protein Base",
+          items: [
+            {
+              quantity: "1 cup",
+              text: "Nurri plain 2% ultra-filtered milk",
+              note: "240ml \u00b7 150 cal / 20g protein"
+            },
+            {
+              quantity: "1/2 serving",
+              text: "Opportuniteas unflavored whey isolate",
+              note: "15g \u00b7 60 cal / 14g protein"
+            },
+            {
+              quantity: "2 tbsp",
+              text: "Whole Earth monk-fruit/erythritol sweetener"
+            },
+            {
+              quantity: "1/8 tsp",
+              text: "Guar gum"
+            },
+            {
+              quantity: "Pinch",
+              text: "Salt"
+            },
+            {
+              quantity: "1/2 tsp",
+              text: "Brown butter emulsion"
+            },
+            {
+              quantity: "1 drop",
+              text: "Natural brown food coloring"
+            }
+          ]
+        },
+        {
+          card: 1,
+          accent: "coral",
+          heading: "Mix-ins & Toppings",
+          items: [
+            {
+              quantity: "2 mini",
+              text: "HighKey chocolate-chip protein mini cookies",
+              note: "Mix-in \u00b7 ~43 cal / 2.7g P"
+            },
+            {
+              quantity: "1/4",
+              text: "Prime Bites Chocolate Cookie Monster brownie",
+              note: "Mix-in \u00b7 ~58 cal / 4.8g P"
+            },
+            {
+              quantity: "1 cookie",
+              text: "HighKey chocolate sandwich cookie",
+              note: "Topping (crushed) \u00b7 ~23 cal"
+            },
+            {
+              quantity: "1/4 bar",
+              text: "Barebells Brownie Batter protein bar",
+              note: "Topping (chopped) \u00b7 ~53 cal / 5g P"
+            }
+          ]
+        }
+      ],
+      ingredientCardPhotos: [
+        {
+          src: "/images/brookies-and-cream-protein-creami/base-polished.webp",
+          position: "50% 50%",
+          zoom: 1,
+          layout: "side"
+        },
+        {
+          src: "/images/brookies-and-cream-protein-creami/mix-in-polished.webp",
+          position: "50% 50%",
+          zoom: 1,
+          layout: "side"
+        }
+      ],
+      methodLabel: "HOW TO MAKE",
+      methodGroups: [
+        {
+          card: 0,
+          accent: "amber",
+          heading: "Blend, Freeze & Spin",
+          items: [
+            {
+              number: 1,
+              heading: "BLEND & FREEZE",
+              body: "Blend milk, whey isolate, monk-fruit sweetener, guar gum, salt, brown butter emulsion and color drop until smooth. Freeze upright for 24 hours."
+            },
+            {
+              number: 2,
+              heading: "REST & SPIN",
+              body: "Rest 5 minutes on the counter, then process on Regular Ice Cream. Re-spin if needed until creamy."
+            }
+          ]
+        },
+        {
+          card: 1,
+          accent: "coral",
+          heading: "Mix-ins & Toppings",
+          items: [
+            {
+              number: 3,
+              heading: "MIX IN",
+              body: "Add 2 HighKey chocolate-chip mini cookies and 1/4 Prime Bites brownie. Process on Mix-In."
+            },
+            {
+              number: 4,
+              heading: "SCOOP & TOP",
+              body: "Scoop into a bowl, then top with 1 crushed HighKey sandwich cookie and 1/4 chopped Barebells bar."
+            }
+          ]
+        }
+      ],
+      methodCardPhotos: [
+        {
+          src: "/images/brookies-and-cream-protein-creami/texture-polished.webp",
+          position: "50% 50%",
+          zoom: 1,
+          layout: "side"
+        },
+        {
+          src: "/images/brookies-and-cream-protein-creami/toppings-polished.webp",
+          position: "50% 50%",
+          zoom: 1,
+          layout: "side"
+        }
+      ],
+      servingPhoto: {
+        src: "/images/brookies-and-cream-protein-creami/scoop-polished.webp",
+        position: "50% 50%",
+        zoom: 1,
+        layout: "side"
+      },
+      servingGroups: [
+        {
+          accent: "amber",
+          heading: "Creator Score: 9.7 / 10",
+          items: [
+            {
+              text: "Haaland, Mbapp\u00e9 and Kane in one pint \u2014 loaded with brownie, mini cookies, and protein bar."
+            },
+            {
+              text: "Whole finished pint: ~390 calories and 47g protein with Nurri 2% (about 360 cal / 40g P with Fairlife 2%)."
+            }
+          ]
+        }
+      ],
+      engagementQuestion: "Too many superstars in one pint? Which mix-in would you bench?"
+    },
+    flavorProfile: "Rich brown-butter vanilla ice cream loaded with chocolate-chip cookie bites, chewy brownie pieces, and sandwich cookie crumbs",
+    calories: 390,
+    caloriesPerServing: 390,
+    protein: 47,
+    proteinPerServing: 47,
+    fat: 13,
+    fatPerServing: 13,
+    carbs: 48,
+    carbsPerServing: 48,
+    sugar: 6,
+    sugarPerServing: 6,
+    servings: 1,
+    servingSize: "1 whole finished Creami pint",
+    time: "24 hr freeze + 5 min rest + spin",
+    bestFor: [
+      "Protein Creami",
+      "Cookies and cream",
+      "Whole-pint dessert",
+      "Make-ahead"
+    ],
+    useThisWhen: "You want a high-protein homemade remake of Crumbl's Brookies & Cream Cookie with brown butter ice cream, brownie chunks, and cookie crumbles.",
+    flavorTarget: "Brown-butter vanilla ice cream loaded with chocolate-chip cookie bites, chewy brownie pieces, and sandwich cookie crumbs.",
+    ingredients: [
+      "1 cup (240ml) Nurri plain 2% ultra-filtered milk",
+      "1/2 serving (about 15g) Opportuniteas unflavored whey isolate (60 cal / 14g protein)",
+      "2 tbsp Whole Earth monk-fruit/erythritol sweetener",
+      "1/8 tsp guar gum",
+      "Pinch of salt",
+      "1/2 tsp brown butter emulsion",
+      "1 drop natural brown food coloring",
+      "2 HighKey chocolate-chip protein mini cookies",
+      "1/4 Prime Bites Chocolate Cookie Monster brownie (about 16g)",
+      "1 HighKey chocolate sandwich cookie, crushed",
+      "1/4 Barebells Brownie Batter protein bar, chopped (about 14g)"
+    ],
+    steps: [
+      {
+        text: "BLEND BASE: Blend milk, whey isolate, monk-fruit sweetener, guar gum, salt, brown butter emulsion and natural food coloring until completely smooth.",
+        image: "/images/brookies-and-cream-protein-creami/base-polished.webp",
+        imageAlt: "Brookies & Cream Protein Creami: brown-butter base"
+      },
+      {
+        text: "FREEZE: Freeze upright on a level surface for 24 hours.",
+        image: "/images/brookies-and-cream-protein-creami/base-polished.webp",
+        imageAlt: "Brookies & Cream Protein Creami: freeze pint"
+      },
+      {
+        text: "REST & SPIN: Rest pint on the counter for 5 minutes, then spin on Regular Ice Cream. Run a Re-spin without added liquid if needed until creamy.",
+        image: "/images/brookies-and-cream-protein-creami/texture-polished.webp",
+        imageAlt: "Brookies & Cream Protein Creami: spun texture"
+      },
+      {
+        text: "MIX-IN: Add 2 HighKey chocolate-chip mini cookies and 1/4 Prime Bites brownie. Process on the Mix-In setting.",
+        image: "/images/brookies-and-cream-protein-creami/mix-in-polished.webp",
+        imageAlt: "Brookies & Cream Protein Creami: mix-ins"
+      },
+      {
+        text: "TOP & SERVE: Scoop into a bowl, then scatter 1 crushed HighKey sandwich cookie and 1/4 chopped Barebells Brownie Batter bar on top.",
+        image: "/images/brookies-and-cream-protein-creami/toppings-polished.webp",
+        imageAlt: "Brookies & Cream Protein Creami: toppings"
+      }
+    ],
+    allergens: [
+      "dairy",
+      "wheat",
+      "soy"
+    ],
+    dietTags: [
+      "high-protein",
+      "make-ahead",
+      "frozen-dessert"
+    ],
+    relatedIds: [
+      "coffee-chocolate-brownie-protein-creami",
+      "cosmic-brownie-protein-creami",
+      "cookies-and-cream-cookie-creami"
+    ],
+    mealPrep: {
+      storage: "Freeze the unspun base upright and level. Spin and add toppings when ready to eat.",
+      lasts: "Follow the Creami machine guidance for storage and reprocessing.",
+      reheat: "Do not heat the pint."
+    }
+  },
 ];
 
 // Creamis have their own browsing section while other sweets remain Desserts.
