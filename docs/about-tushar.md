@@ -525,7 +525,7 @@ On the filmed Wednesday, his wife took their older daughter to gymnastics and he
 
 ## Confirmed firsthand stories — hot-honey beef and sweet potato bowls, November 5, 2026
 
-Source: Tushar's ten direct answers and follow-up confirmations in this chat, supplied before the exact main/promo reads were approved. The filmed cook is dated November 3 in its source filenames. These extend BIO-030,035,044 and047; they do not replace prior family, shopping or cottage-cheese accounts. Interview/source records remain in the private production folder.
+Source: Tushar's ten direct answers and follow-up confirmations in this chat, supplied before the exact main/promo reads were approved. The filmed cook is dated November 3 in its source filenames. These extend BIO-030, BIO-035, BIO-044 and BIO-047; they do not replace prior family, shopping or cottage-cheese accounts. Interview/source records remain in the private production folder.
 
 ### BIO-088: A first try that earned a monthly repeat
 
@@ -533,7 +533,7 @@ He had seen beef, sweet potato, cottage cheese, avocado and hot honey combined o
 
 ### BIO-089: A Tuesday cooking window after swimming
 
-On this Tuesday he took both daughters swimming, got home around5:15, fitted in a walk and had dinner ready by6:30. He said they were moving his older daughter's martial arts from Tuesday to Friday, opening Tuesday evenings for a cook that could cover the following night. He did not separately time cooking, so this story does not verify the website's35-minute total. A grandmother was staying until Christmas at the time; this dated detail extends BIO-047 rather than establishing a permanent household count or travel schedule.
+On this Tuesday he took both daughters swimming, got home around 5:15, fitted in a walk and had dinner ready by 6:30. He said they were moving his older daughter's martial arts from Tuesday to Friday, opening Tuesday evenings for a cook that could cover the following night. He did not separately time cooking, so this story does not verify the website's 35-minute total. A grandmother was staying until Christmas at the time; this dated detail extends BIO-047 rather than establishing a permanent household count or travel schedule.
 
 ### BIO-090: Familiar components make ground-beef dinners useful
 
@@ -545,4 +545,4 @@ He is a strong hot-honey fan. Ten grams of Mike's Extra Hot Honey gave his own b
 
 ### BIO-092: Batch-blending makes the second dinner easier
 
-Blending cottage cheese was the fiddliest step in an otherwise easy dinner. He would prepare enough smooth cottage cheese for both nights to avoid getting the blender out twice, with plain purchased mashed avocado ready too. He stored beef and sweet potatoes separately, reheating potatoes in the air fryer and beef in a pan; about five minutes was his estimate. Cold toppings were added when assembling. MULU2% was confirmed, but the exact butter-seasoning name was not; do not promote the recalled name into a verified product fact.
+Blending cottage cheese was the fiddliest step in an otherwise easy dinner. He would prepare enough smooth cottage cheese for both nights to avoid getting the blender out twice, with plain purchased mashed avocado ready too. He stored beef and sweet potatoes separately, reheating potatoes in the air fryer and beef in a pan; about five minutes was his estimate. Cold toppings were added when assembling. MULU 2% was confirmed, but the exact butter-seasoning name was not; do not promote the recalled name into a verified product fact.
