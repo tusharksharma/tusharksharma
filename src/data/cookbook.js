@@ -16498,6 +16498,848 @@ const DESSERT_CATALOG = [
   }
 },
 
+  {
+    "id": "coffee-chocolate-brownie-protein-creami",
+    "title": "Coffee Chocolate Brownie Protein Creami",
+    "tagline": "Decaf coffee protein ice cream, brownie pieces, chocolate chips and an espresso-fudge drizzle. Approximately 330 calories and 41g protein for the whole finished pint.",
+    "heroImage": "/images/coffee-chocolate-brownie-protein-creami/hero-polished.webp",
+    "prepImage": "/images/coffee-chocolate-brownie-protein-creami/base-polished.webp",
+    "prepImageCaption": "The decaf coffee protein base after freezing and the Regular Ice Cream spin.",
+    "video": "/videos/coffee-chocolate-brownie-protein-creami/802-Coffee-Chocolate-Brownie-Creami.mp4",
+    "videoPoster": "/images/coffee-chocolate-brownie-protein-creami/hero-polished.webp",
+    "socialHashtags": [
+      "#TheSplitPlate",
+      "#NinjaCreami",
+      "#ProteinIceCream",
+      "#CoffeeIceCream",
+      "#HaagenDazs"
+    ],
+    "socialImages": [
+      "/images/coffee-chocolate-brownie-protein-creami/base-polished.webp",
+      "/images/coffee-chocolate-brownie-protein-creami/mix-in-polished.webp",
+      "/images/coffee-chocolate-brownie-protein-creami/texture-polished.webp",
+      "/images/coffee-chocolate-brownie-protein-creami/fudge-drizzle-polished.webp",
+      "/images/coffee-chocolate-brownie-protein-creami/scoop-polished.webp"
+    ],
+    "socialCarousel": {
+      "heroBadge": "Protein Creami · Coffee Brownie",
+      "heroAccent": "amber",
+      "heroTitle": "Coffee Chocolate Brownie Protein Creami",
+      "heroStats": [
+        {
+          "value": "~330",
+          "label": "cal · whole pint"
+        },
+        {
+          "value": "41g",
+          "label": "protein · whole pint"
+        },
+        {
+          "value": "1",
+          "label": "finished pint"
+        }
+      ],
+      "hook": "Favorite Häagen-Dazs remade: decaf coffee ice cream, brownie, chocolate chips + espresso fudge.",
+      "heroPhoto": "/images/coffee-chocolate-brownie-protein-creami/hero-polished.webp",
+      "captionBody": "Coffee Chocolate Brownie Protein Creami: approximately 330 calories and 41g protein for the whole finished pint with Nurri plain 2%, including mix-ins and espresso-fudge drizzle. Compared to ⅔ of Häagen-Dazs' 14-fl-oz carton (660 cal, 11g protein, 39g fat, 69g carbs, 59g sugar) matched by volume. Decaf coffee ice cream, ⅓ Prime Bites Chocolate Cookie Monster brownie, 7g Lily's semisweet baking chips and Dutch cocoa fudge. Save the recipe: thesplitplate.com/cookbook/coffee-chocolate-brownie-protein-creami",
+      "ingredientGroups": [
+        {
+          "card": 0,
+          "accent": "amber",
+          "heading": "Decaf Coffee Protein Base",
+          "items": [
+            {
+              "quantity": "1 cup",
+              "text": "Nurri plain 2% ultra-filtered milk",
+              "note": "240ml · 150 cal / 20g protein"
+            },
+            {
+              "quantity": "1/2 serving",
+              "text": "Opportuniteas unflavored whey isolate",
+              "note": "15g · 60 cal / 14g protein"
+            },
+            {
+              "quantity": "2 tbsp",
+              "text": "Whole Earth monk-fruit/erythritol sweetener"
+            },
+            {
+              "quantity": "1/8 tsp",
+              "text": "Guar gum"
+            },
+            {
+              "quantity": "Pinch",
+              "text": "Salt"
+            },
+            {
+              "quantity": "2/3 tbsp",
+              "text": "Decaf instant coffee",
+              "note": "2 tsp Nescafé Taster's Choice"
+            }
+          ]
+        },
+        {
+          "card": 1,
+          "accent": "coral",
+          "heading": "Mix-ins + Espresso Fudge",
+          "items": [
+            {
+              "quantity": "1/3",
+              "text": "Prime Bites Chocolate Cookie Monster brownie",
+              "note": "About 22g · ~77 cal / 6.3g protein"
+            },
+            {
+              "quantity": "7g",
+              "text": "Lily's semisweet-style baking chips",
+              "note": "25 cal / 2g fat"
+            },
+            {
+              "quantity": "1 tsp",
+              "text": "Unsweetened Dutch cocoa"
+            },
+            {
+              "quantity": "1/2 tsp",
+              "text": "Decaf instant coffee"
+            },
+            {
+              "quantity": "1/2 tbsp",
+              "text": "Sugar-free syrup",
+              "note": "Skinny French Vanilla filmed"
+            },
+            {
+              "quantity": "1/2 tbsp",
+              "text": "Water",
+              "note": "To thin fudge drizzle"
+            }
+          ]
+        }
+      ],
+      "ingredientCardPhotos": [
+        {
+          "src": "/images/coffee-chocolate-brownie-protein-creami/base-polished.webp",
+          "layout": "side"
+        },
+        {
+          "src": "/images/coffee-chocolate-brownie-protein-creami/mix-in-polished.webp",
+          "layout": "side"
+        }
+      ],
+      "methodLabel": "HOW TO MAKE",
+      "methodGroups": [
+        {
+          "card": 0,
+          "accent": "amber",
+          "heading": "Blend, Freeze, Spin",
+          "items": [
+            {
+              "number": 1,
+              "heading": "BLEND + FREEZE",
+              "body": "Blend milk, whey, sweetener, guar gum, salt and decaf coffee until smooth. Freeze upright and level for 24 hours."
+            },
+            {
+              "number": 2,
+              "heading": "REST + SPIN",
+              "body": "Rest on the counter for 5 minutes, then process on Regular Ice Cream."
+            }
+          ]
+        },
+        {
+          "card": 1,
+          "accent": "coral",
+          "heading": "Mix-ins + Espresso Fudge",
+          "items": [
+            {
+              "number": 3,
+              "heading": "MIX IN",
+              "body": "Add chopped brownie and Lily's chocolate chips, then Respin without extra liquid. Repeat if needed for your preferred texture."
+            },
+            {
+              "number": 4,
+              "heading": "FUDGE + DRIZZLE",
+              "body": "Stir Dutch cocoa, decaf coffee, sugar-free syrup and water until smooth. Scoop into a bowl and drizzle fudge over the top."
+            }
+          ]
+        }
+      ],
+      "methodCardPhotos": [
+        {
+          "src": "/images/coffee-chocolate-brownie-protein-creami/texture-polished.webp",
+          "layout": "side"
+        },
+        {
+          "src": "/images/coffee-chocolate-brownie-protein-creami/fudge-drizzle-polished.webp",
+          "layout": "side"
+        }
+      ],
+      "servingPhoto": {
+        "src": "/images/coffee-chocolate-brownie-protein-creami/scoop-polished.webp",
+        "position": "50% 50%",
+        "zoom": 1,
+        "layout": "side"
+      },
+      "servingGroups": [
+        {
+          "accent": "amber",
+          "heading": "Creator Verdict: 9.9 / 10",
+          "items": [
+            {
+              "text": "When favorite Häagen-Dazs Coffee Chocolate Brownie is a 10/10, this Creami scores 9.9."
+            },
+            {
+              "text": "Whole homemade batch: ~330 cal, 41g protein, 11g fat, 43g total carbs, 6g sugar. Volume matches 2/3 of a 14-fl-oz carton (660 cal, 11P, 39F, 69C, 59sugar)."
+            }
+          ]
+        }
+      ],
+      "engagementQuestion": "Coffee ice cream fans—are you taking this over the pint from the freezer aisle?"
+    },
+    "flavorProfile": "Rich decaf coffee ice cream with chewy protein brownie chunks, crunchy chocolate chips and an espresso-fudge drizzle",
+    "calories": 330,
+    "caloriesPerServing": 330,
+    "protein": 41,
+    "proteinPerServing": 41,
+    "servings": 1,
+    "servingSize": "1 whole finished Creami pint",
+    "time": "24 hr freeze + 5 min rest + blend and spin",
+    "bestFor": [
+      "Protein Creami",
+      "Coffee dessert",
+      "Whole-pint dessert",
+      "Make-ahead"
+    ],
+    "useThisWhen": "You want a high-protein remake of Häagen-Dazs Coffee Chocolate Brownie with decaf coffee, brownie chunks, chocolate chips and an espresso-fudge topping.",
+    "flavorTarget": "Decaf coffee ice cream with brownie pieces, chocolate chips and espresso fudge drizzle.",
+    "ingredients": [
+      "1 cup (240ml) Nurri plain 2% ultra-filtered milk",
+      "1/2 serving (about 15g) Opportuniteas unflavored whey isolate (60 calories / 14g protein)",
+      "2 tbsp Whole Earth monk-fruit sweetener with erythritol",
+      "1/8 tsp guar gum",
+      "Pinch of salt",
+      "2/3 tbsp (2 tsp) Nescafé Taster's Choice decaf instant coffee",
+      "1/3 Prime Bites Chocolate Cookie Monster brownie (about 22g)",
+      "7g Lily's semisweet-style baking chips",
+      "1 tsp unsweetened Dutch cocoa",
+      "1/2 tsp decaf instant coffee (for fudge)",
+      "1/2 tbsp sugar-free syrup (Skinny French Vanilla filmed)",
+      "1/2 tbsp water to thin"
+    ],
+    "steps": [
+      {
+        "text": "BLEND: Blend milk, whey, sweetener, guar gum, salt and decaf coffee until smooth. Keep below the pint fill line.",
+        "image": "/images/coffee-chocolate-brownie-protein-creami/base-polished.webp",
+        "imageAlt": "Coffee Chocolate Brownie Protein Creami: decaf coffee base"
+      },
+      "FREEZE: Freeze the pint upright and level for 24 hours. Rest on the counter for 5 minutes.",
+      {
+        "text": "SPIN: Process on Regular Ice Cream until smooth and creamy.",
+        "image": "/images/coffee-chocolate-brownie-protein-creami/texture-polished.webp",
+        "imageAlt": "Coffee Chocolate Brownie Protein Creami: spun texture"
+      },
+      {
+        "text": "MIX IN: Add 1/3 chopped Prime Bites brownie and 7g Lily's chocolate chips, then Respin without extra liquid. Repeat if needed for your preferred texture.",
+        "image": "/images/coffee-chocolate-brownie-protein-creami/mix-in-polished.webp",
+        "imageAlt": "Coffee Chocolate Brownie Protein Creami: brownie and chip mix-ins"
+      },
+      {
+        "text": "FUDGE DRIZZLE: Stir Dutch cocoa, decaf coffee, sugar-free syrup and water until smooth.",
+        "image": "/images/coffee-chocolate-brownie-protein-creami/fudge-drizzle-polished.webp",
+        "imageAlt": "Coffee Chocolate Brownie Protein Creami: espresso fudge drizzle"
+      },
+      {
+        "text": "FINISH: Scoop into a bowl and drizzle the espresso fudge over the top.",
+        "image": "/images/coffee-chocolate-brownie-protein-creami/scoop-polished.webp",
+        "imageAlt": "Coffee Chocolate Brownie Protein Creami: finished scoop with espresso fudge"
+      }
+    ],
+    "executionRules": [
+      "Amounts and nutrition refer to one complete finished pint.",
+      "Freeze upright and level for 24 hours, within the machine’s fill line.",
+      "Follow your Creami model’s safety and processing instructions."
+    ],
+    "macroHonesty": "Estimated whole homemade pint: ~330 calories, 41g protein, ~11g fat, ~43g total carbs, ~6g sugars. All mix-ins and espresso-fudge topping are included. Total carbs include ~29g erythritol and fiber from Whole Earth monk fruit, brownie, and Lily's chips (zero net carbs does not mean zero total carbs). Comparison portion is 2/3 of a 14-fl-oz Häagen-Dazs carton (660 cal, 11g protein, 39g fat, 69g total carbs, 59g sugar), which the creator confirmed matches their full homemade Creami batch by volume. No equal-volume or equal-weight claim is made. Creator verdict 9.9/10 when favorite commercial original is 10/10.",
+    "warnings": [
+      "Contains dairy, wheat, and soy. Check ingredient labels for additional allergens or manufacturing warnings.",
+      "Brand reference to Häagen-Dazs is a flavor inspiration and macro comparison; no sponsorship or affiliation is implied."
+    ],
+    "allergens": [
+      "dairy",
+      "wheat",
+      "soy"
+    ],
+    "dietTags": [
+      "high-protein",
+      "make-ahead",
+      "frozen-dessert"
+    ],
+    "relatedIds": [
+      "mocha-brownie-protein-creami",
+      "cosmic-brownie-protein-creami",
+      "peanut-butter-cup-blondie-cookie-creami"
+    ],
+    "seriesInfo": {
+      "series": "Favorite Remake",
+      "framing": "High-protein homemade remake of Häagen-Dazs Coffee Chocolate Brownie with whole-pint nutrition comparison."
+    },
+    "mealPrep": {
+      "storage": "Freeze the unspun base upright and level. Spin and finish when ready to eat.",
+      "lasts": "Follow the Creami machine guidance for storage and reprocessing.",
+      "reheat": "Do not heat the pint."
+    }
+  },
+  {
+    id: "monster-candy-cookie-dough-bites",
+    title: "Monster Candy Cookie Dough Bites",
+    tagline: "Edible protein monster cookie dough bites made with blended cottage cheese, almond flour, vanilla protein and leftover Halloween candy. Approximately 180 calories and 15g protein per ball.",
+    heroImage: "/images/monster-candy-cookie-dough-bites/hero-polished.webp",
+    prepImage: "/images/monster-candy-cookie-dough-bites/base-polished.webp",
+    prepImageCaption: "Blended cottage cheese and milk create the silky, high-protein moisture base for the cookie dough.",
+    video: "/videos/monster-candy-cookie-dough-bites/804-Monster-Cookie-Dough-Recipe.mp4",
+    videoPoster: "/images/monster-candy-cookie-dough-bites/hero-polished.webp",
+    socialHashtags: [
+      "#TheSplitPlate",
+      "#LeftoverCandy",
+      "#ProteinCookieDough",
+      "#HalloweenTreats",
+      "#CottageCheeseRecipes"
+    ],
+    socialImages: [
+      "/images/monster-candy-cookie-dough-bites/base-polished.webp",
+      "/images/monster-candy-cookie-dough-bites/candy-polished.webp",
+      "/images/monster-candy-cookie-dough-bites/dough-polished.webp",
+      "/images/monster-candy-cookie-dough-bites/portion-polished.webp",
+      "/images/monster-candy-cookie-dough-bites/serving-polished.webp"
+    ],
+    socialCarousel: {
+      heroBadge: "Protein Power-Up \u00b7 Halloween",
+      heroAccent: "amber",
+      heroTitle: "Monster Candy Cookie Dough Bites",
+      heroStats: [
+        {
+          value: "~180",
+          label: "cal / bite"
+        },
+        {
+          value: "15g",
+          label: "protein / bite"
+        },
+        {
+          value: "10",
+          label: "balls total"
+        }
+      ],
+      hook: "Leftover Halloween candy meets protein monster cookie dough: blended cottage cheese, almond flour, and 15g protein per ball.",
+      captionTitle: "Monster Candy Cookie Dough Bites \u00b7 ~180 cal / 15g protein",
+      captionBody: "Leftover Halloween candy, meet monster cookie dough. A fun way to use up the stash and make something with the kids.\n\nMakes 10 balls:\n\u2022 300g 2% cottage cheese (MULU used)\n\u2022 45g fat-free ultra-filtered milk (Fairlife)\n\u2022 60g sugar-free syrup\n\u2022 108g almond flour\n\u2022 93g vanilla protein powder (PEScience)\n\u2022 1 small candy each: Twix, Reese's, KitKat, Milky Way, Snickers, and a small pack of M&M's\u2014all chopped\n\u2022 Candy eyes\n\nBlend the cottage cheese and milk until smooth. Mix the almond flour and protein powder in a bowl. Stir in the blended cottage cheese and syrup to form dough. Fold in the chopped candy, divide into 10 balls, and add the eyes. Keep refrigerated.\n\nEstimated per ball: about 180 calories and 15g protein, assuming 10 equal balls and typical fun-size candies. Candy sizes, syrup, and decorations can change the numbers. Save this for your leftover Halloween stash: thesplitplate.com/cookbook/monster-candy-cookie-dough-bites",
+      heroPhoto: "/images/monster-candy-cookie-dough-bites/hero-polished.webp",
+      ingredientGroups: [
+        {
+          card: 0,
+          accent: "amber",
+          heading: "Protein Dough Base",
+          items: [
+            {
+              quantity: "300g",
+              text: "2% cottage cheese",
+              note: "MULU filmed \u00b7 266 cal / 48g P"
+            },
+            {
+              quantity: "45g",
+              text: "Fat-free ultra-filtered milk",
+              note: "Fairlife filmed"
+            },
+            {
+              quantity: "60g",
+              text: "Sugar-free syrup"
+            },
+            {
+              quantity: "108g",
+              text: "Almond flour",
+              note: "~1 cup"
+            },
+            {
+              quantity: "93g",
+              text: "Vanilla protein powder",
+              note: "PEScience filmed \u00b7 360 cal / 72g P"
+            }
+          ]
+        },
+        {
+          card: 1,
+          accent: "coral",
+          heading: "Halloween Candies & Finish",
+          items: [
+            {
+              quantity: "1 small each",
+              text: "Twix, Reese's, KitKat, Milky Way, Snickers",
+              note: "Chopped fun-size"
+            },
+            {
+              quantity: "1 small pack",
+              text: "M&M's",
+              note: "Chopped"
+            },
+            {
+              quantity: "20 pieces",
+              text: "Candy eyes",
+              note: "2 per ball"
+            }
+          ]
+        }
+      ],
+      ingredientCardPhotos: [
+        {
+          src: "/images/monster-candy-cookie-dough-bites/base-polished.webp",
+          position: "50% 50%",
+          zoom: 1,
+          layout: "side"
+        },
+        {
+          src: "/images/monster-candy-cookie-dough-bites/candy-polished.webp",
+          position: "50% 50%",
+          zoom: 1,
+          layout: "side"
+        }
+      ],
+      methodLabel: "HOW TO MAKE",
+      methodGroups: [
+        {
+          card: 0,
+          accent: "amber",
+          heading: "Blend Base & Form Dough",
+          items: [
+            {
+              number: 1,
+              heading: "BLEND BASE",
+              body: "Blend cottage cheese and milk until completely smooth and creamy with no remaining curds."
+            },
+            {
+              number: 2,
+              heading: "FORM DOUGH",
+              body: "Whisk almond flour and protein powder in a bowl. Stir in the blended base and sugar-free syrup until a thick, cohesive dough forms."
+            }
+          ]
+        },
+        {
+          card: 1,
+          accent: "coral",
+          heading: "Fold Candy & Decorate",
+          items: [
+            {
+              number: 3,
+              heading: "FOLD CANDY",
+              body: "Gently fold the chopped Halloween candy assortment and M&M's into the dough until evenly distributed."
+            },
+            {
+              number: 4,
+              heading: "PORTION & SERVE",
+              body: "Divide dough into 10 equal balls (about 65g each). Press candy eyes onto each ball and store chilled in an airtight container."
+            }
+          ]
+        }
+      ],
+      methodCardPhotos: [
+        {
+          src: "/images/monster-candy-cookie-dough-bites/dough-polished.webp",
+          position: "50% 50%",
+          zoom: 1,
+          layout: "side"
+        },
+        {
+          src: "/images/monster-candy-cookie-dough-bites/portion-polished.webp",
+          position: "50% 50%",
+          zoom: 1,
+          layout: "side"
+        }
+      ],
+      servingPhoto: {
+        src: "/images/monster-candy-cookie-dough-bites/serving-polished.webp",
+        position: "50% 50%",
+        zoom: 1,
+        layout: "side"
+      },
+      servingGroups: [
+        {
+          accent: "amber",
+          heading: "Batch Yield: 10 Monster Balls",
+          items: [
+            {
+              text: "Estimated ~180 calories and 15g protein per ball (batch ~1740\u20131840 cal / 147\u2013153g protein)."
+            },
+            {
+              text: "Store in an airtight container in the refrigerator for up to 5 days."
+            }
+          ]
+        }
+      ],
+      engagementQuestion: "Which leftover Halloween candy are you folding into your cookie dough first?"
+    },
+    flavorProfile: "Sweet vanilla cookie dough with rich chocolate chunks, crunchy candy shell pieces, and peanut butter pockets",
+    calories: 1800,
+    caloriesPerServing: 180,
+    protein: 150,
+    proteinPerServing: 15,
+    fat: 70,
+    fatPerServing: 7,
+    carbs: 140,
+    carbsPerServing: 14,
+    sugar: 60,
+    sugarPerServing: 6,
+    servings: 10,
+    servingSize: "1 monster cookie dough ball",
+    time: "10 min prep (no-bake)",
+    bestFor: [
+      "High-protein dessert",
+      "Meal prep snacks",
+      "Leftover candy",
+      "Kid-friendly",
+      "No-bake"
+    ],
+    useThisWhen: "You want a high-protein, no-bake sweet treat that turns leftover Halloween candy into a macro-friendly snack.",
+    ingredients: [
+      "300g (about 1 1/4 cups) 2% cottage cheese (MULU filmed)",
+      "45g (about 3 tbsp) fat-free ultra-filtered milk (Fairlife filmed)",
+      "60g (about 3 tbsp) sugar-free syrup",
+      "108g (about 1 cup) almond flour",
+      "93g (about 3 scoops) vanilla protein powder (PEScience filmed)",
+      "1 small fun-size Twix bar, chopped",
+      "1 small snack-size Reese's peanut butter cup, chopped",
+      "1 small snack-size KitKat bar, chopped",
+      "1 small fun-size Milky Way bar, chopped",
+      "1 small fun-size Snickers bar, chopped",
+      "1 small fun-size pack of M&M's, chopped",
+      "20 candy eyes, for decorating"
+    ],
+    steps: [
+      {
+        text: "BLEND BASE: Blend cottage cheese and ultra-filtered milk in a blender until silky smooth with no graininess.",
+        image: "/images/monster-candy-cookie-dough-bites/base-polished.webp",
+        imageAlt: "Monster Candy Cookie Dough Bites: smooth blended cottage cheese base"
+      },
+      {
+        text: "CHOP CANDY & PREP: Chop the fun-size Halloween candies into bite-size pieces.",
+        image: "/images/monster-candy-cookie-dough-bites/candy-polished.webp",
+        imageAlt: "Monster Candy Cookie Dough Bites: chopped candy pieces"
+      },
+      {
+        text: "FORM DOUGH: Whisk almond flour and protein powder in a mixing bowl. Pour in the blended cottage cheese base and syrup, stirring with a spatula until a thick dough forms.",
+        image: "/images/monster-candy-cookie-dough-bites/dough-polished.webp",
+        imageAlt: "Monster Candy Cookie Dough Bites: mixing the cookie dough"
+      },
+      {
+        text: "FOLD CANDY & PORTION: Fold in the chopped candies and M&M's. Divide and roll into 10 equal balls (about 65g each).",
+        image: "/images/monster-candy-cookie-dough-bites/portion-polished.webp",
+        imageAlt: "Monster Candy Cookie Dough Bites: rolling dough into 10 balls"
+      },
+      {
+        text: "DECORATE & CHILL: Press two candy eyes onto each ball. Refrigerate in an airtight container for up to 5 days.",
+        image: "/images/monster-candy-cookie-dough-bites/serving-polished.webp",
+        imageAlt: "Monster Candy Cookie Dough Bites: decorated tray of monster balls"
+      }
+    ],
+    allergens: [
+      "dairy",
+      "peanuts",
+      "tree-nuts",
+      "wheat",
+      "soy"
+    ],
+    dietTags: [
+      "high-protein",
+      "no-bake",
+      "meal-prep",
+      "dessert"
+    ],
+    relatedIds: [
+      "chocolate-protein-brownie-bowl",
+      "halloween-red-velvet-creami",
+      "protein-tiramisu"
+    ],
+    mealPrep: {
+      storage: "Store in an airtight container in the refrigerator.",
+      lasts: "Up to 5 days chilled.",
+      reheat: "Enjoy chilled directly from the fridge; do not heat."
+    }
+  },
+  {
+    id: "brookies-and-cream-protein-creami",
+    title: "Brookies & Cream Protein Creami",
+    tagline: "Brown-butter vanilla protein Creami packed with HighKey chocolate-chip mini cookies, Prime Bites brownie, crushed sandwich cookie, and Barebells Brownie Batter bar. Approximately 390 calories and 47g protein for the whole pint.",
+    heroImage: "/images/brookies-and-cream-protein-creami/hero-polished.webp",
+    prepImage: "/images/brookies-and-cream-protein-creami/base-polished.webp",
+    prepImageCaption: "The blended brown-butter vanilla protein base ready for the 24-hour freeze and Creami spin.",
+    video: "/videos/brookies-and-cream-protein-creami/805-Brookies-and-Cream.mp4",
+    videoPoster: "/images/brookies-and-cream-protein-creami/hero-polished.webp",
+    socialHashtags: [
+      "#TheSplitPlate",
+      "#CrumblCreamiCut",
+      "#NinjaCreami",
+      "#ProteinIceCream",
+      "#CookiesAndCream"
+    ],
+    socialImages: [
+      "/images/brookies-and-cream-protein-creami/base-polished.webp",
+      "/images/brookies-and-cream-protein-creami/mix-in-polished.webp",
+      "/images/brookies-and-cream-protein-creami/texture-polished.webp",
+      "/images/brookies-and-cream-protein-creami/toppings-polished.webp",
+      "/images/brookies-and-cream-protein-creami/scoop-polished.webp"
+    ],
+    socialCarousel: {
+      heroBadge: "Protein Creami \u00b7 Brookies & Cream",
+      heroAccent: "amber",
+      heroTitle: "Brookies & Cream Protein Creami",
+      heroStats: [
+        {
+          value: "~390",
+          label: "cal \u00b7 whole pint"
+        },
+        {
+          value: "47g",
+          label: "protein \u00b7 whole pint"
+        },
+        {
+          value: "1",
+          label: "finished pint"
+        }
+      ],
+      hook: "Crumbl's Brookies & Cream remade: brown-butter vanilla base, chocolate chip mini cookies, brownie, and Barebells topping.",
+      captionTitle: "Brookies & Cream Protein Creami \u00b7 ~390 cal / 47g protein",
+      captionBody: "Brookies & Cream, but the team might be TOO stacked \ud83d\ude05 Haaland, Mbapp\u00e9 and Kane in one pint. 9.7/10\u2014the HighKey minis got lost, but everything else worked.\n\nMy remake of Crumbl's Brookies & Cream Cookie ft. OREO\u00ae: approximately 390 calories and 47g protein for the whole finished pint using the Nurri base. Estimates vary with exact products and portions. OREO is the original cookie reference; I used HighKey sandwich cookies in my version.\n\nFull recipe \u2014 1 pint:\nBase:\n\u2022 1 cup plain Nurri 2% ultra-filtered milk\n\u2022 1/2 serving Opportuniteas whey isolate (60 cal, 14g P)\n\u2022 2 tbsp monk-fruit sweetener blend\n\u2022 1/8 tsp guar gum\n\u2022 Pinch of salt\n\u2022 1/2 tsp brown butter emulsion\n\u2022 1 drop natural brown food coloring\n\nMix-ins:\n\u2022 2 HighKey chocolate-chip protein mini cookies\n\u2022 1/4 Prime Bites Chocolate Cookie Monster brownie\n\nToppings:\n\u2022 1 HighKey sandwich cookie, crushed\n\u2022 1/4 Barebells Brownie Batter bar, chopped\n\nBlend the base and freeze level for 24 hours. Let sit about 5 minutes, then spin on Ice Cream. Re-spin as needed for a creamy texture. Add the mix-ins and incorporate, then scoop and finish with the cookie crumbs and chopped bar.\n\nSave this for your next Creami: thesplitplate.com/cookbook/brookies-and-cream-protein-creami",
+      heroPhoto: "/images/brookies-and-cream-protein-creami/hero-polished.webp",
+      ingredientGroups: [
+        {
+          card: 0,
+          accent: "amber",
+          heading: "Brown-Butter Protein Base",
+          items: [
+            {
+              quantity: "1 cup",
+              text: "Nurri plain 2% ultra-filtered milk",
+              note: "240ml \u00b7 150 cal / 20g protein"
+            },
+            {
+              quantity: "1/2 serving",
+              text: "Opportuniteas unflavored whey isolate",
+              note: "15g \u00b7 60 cal / 14g protein"
+            },
+            {
+              quantity: "2 tbsp",
+              text: "Whole Earth monk-fruit/erythritol sweetener"
+            },
+            {
+              quantity: "1/8 tsp",
+              text: "Guar gum"
+            },
+            {
+              quantity: "Pinch",
+              text: "Salt"
+            },
+            {
+              quantity: "1/2 tsp",
+              text: "Brown butter emulsion"
+            },
+            {
+              quantity: "1 drop",
+              text: "Natural brown food coloring"
+            }
+          ]
+        },
+        {
+          card: 1,
+          accent: "coral",
+          heading: "Mix-ins & Toppings",
+          items: [
+            {
+              quantity: "2 mini",
+              text: "HighKey chocolate-chip protein mini cookies",
+              note: "Mix-in \u00b7 ~43 cal / 2.7g P"
+            },
+            {
+              quantity: "1/4",
+              text: "Prime Bites Chocolate Cookie Monster brownie",
+              note: "Mix-in \u00b7 ~58 cal / 4.8g P"
+            },
+            {
+              quantity: "1 cookie",
+              text: "HighKey chocolate sandwich cookie",
+              note: "Topping (crushed) \u00b7 ~23 cal"
+            },
+            {
+              quantity: "1/4 bar",
+              text: "Barebells Brownie Batter protein bar",
+              note: "Topping (chopped) \u00b7 ~53 cal / 5g P"
+            }
+          ]
+        }
+      ],
+      ingredientCardPhotos: [
+        {
+          src: "/images/brookies-and-cream-protein-creami/base-polished.webp",
+          position: "50% 50%",
+          zoom: 1,
+          layout: "side"
+        },
+        {
+          src: "/images/brookies-and-cream-protein-creami/mix-in-polished.webp",
+          position: "50% 50%",
+          zoom: 1,
+          layout: "side"
+        }
+      ],
+      methodLabel: "HOW TO MAKE",
+      methodGroups: [
+        {
+          card: 0,
+          accent: "amber",
+          heading: "Blend, Freeze & Spin",
+          items: [
+            {
+              number: 1,
+              heading: "BLEND & FREEZE",
+              body: "Blend milk, whey isolate, monk-fruit sweetener, guar gum, salt, brown butter emulsion and color drop until smooth. Freeze upright for 24 hours."
+            },
+            {
+              number: 2,
+              heading: "REST & SPIN",
+              body: "Rest 5 minutes on the counter, then process on Regular Ice Cream. Re-spin if needed until creamy."
+            }
+          ]
+        },
+        {
+          card: 1,
+          accent: "coral",
+          heading: "Mix-ins & Toppings",
+          items: [
+            {
+              number: 3,
+              heading: "MIX IN",
+              body: "Add 2 HighKey chocolate-chip mini cookies and 1/4 Prime Bites brownie. Process on Mix-In."
+            },
+            {
+              number: 4,
+              heading: "SCOOP & TOP",
+              body: "Scoop into a bowl, then top with 1 crushed HighKey sandwich cookie and 1/4 chopped Barebells bar."
+            }
+          ]
+        }
+      ],
+      methodCardPhotos: [
+        {
+          src: "/images/brookies-and-cream-protein-creami/texture-polished.webp",
+          position: "50% 50%",
+          zoom: 1,
+          layout: "side"
+        },
+        {
+          src: "/images/brookies-and-cream-protein-creami/toppings-polished.webp",
+          position: "50% 50%",
+          zoom: 1,
+          layout: "side"
+        }
+      ],
+      servingPhoto: {
+        src: "/images/brookies-and-cream-protein-creami/scoop-polished.webp",
+        position: "50% 50%",
+        zoom: 1,
+        layout: "side"
+      },
+      servingGroups: [
+        {
+          accent: "amber",
+          heading: "Creator Score: 9.7 / 10",
+          items: [
+            {
+              text: "Haaland, Mbapp\u00e9 and Kane in one pint \u2014 loaded with brownie, mini cookies, and protein bar."
+            },
+            {
+              text: "Whole finished pint: ~390 calories and 47g protein with Nurri 2% (about 360 cal / 40g P with Fairlife 2%)."
+            }
+          ]
+        }
+      ],
+      engagementQuestion: "Too many superstars in one pint? Which mix-in would you bench?"
+    },
+    flavorProfile: "Rich brown-butter vanilla ice cream loaded with chocolate-chip cookie bites, chewy brownie pieces, and sandwich cookie crumbs",
+    calories: 390,
+    caloriesPerServing: 390,
+    protein: 47,
+    proteinPerServing: 47,
+    fat: 13,
+    fatPerServing: 13,
+    carbs: 48,
+    carbsPerServing: 48,
+    sugar: 6,
+    sugarPerServing: 6,
+    servings: 1,
+    servingSize: "1 whole finished Creami pint",
+    time: "24 hr freeze + 5 min rest + spin",
+    bestFor: [
+      "Protein Creami",
+      "Cookies and cream",
+      "Whole-pint dessert",
+      "Make-ahead"
+    ],
+    useThisWhen: "You want a high-protein homemade remake of Crumbl's Brookies & Cream Cookie with brown butter ice cream, brownie chunks, and cookie crumbles.",
+    flavorTarget: "Brown-butter vanilla ice cream loaded with chocolate-chip cookie bites, chewy brownie pieces, and sandwich cookie crumbs.",
+    ingredients: [
+      "1 cup (240ml) Nurri plain 2% ultra-filtered milk",
+      "1/2 serving (about 15g) Opportuniteas unflavored whey isolate (60 cal / 14g protein)",
+      "2 tbsp Whole Earth monk-fruit/erythritol sweetener",
+      "1/8 tsp guar gum",
+      "Pinch of salt",
+      "1/2 tsp brown butter emulsion",
+      "1 drop natural brown food coloring",
+      "2 HighKey chocolate-chip protein mini cookies",
+      "1/4 Prime Bites Chocolate Cookie Monster brownie (about 16g)",
+      "1 HighKey chocolate sandwich cookie, crushed",
+      "1/4 Barebells Brownie Batter protein bar, chopped (about 14g)"
+    ],
+    steps: [
+      {
+        text: "BLEND BASE: Blend milk, whey isolate, monk-fruit sweetener, guar gum, salt, brown butter emulsion and natural food coloring until completely smooth.",
+        image: "/images/brookies-and-cream-protein-creami/base-polished.webp",
+        imageAlt: "Brookies & Cream Protein Creami: brown-butter base"
+      },
+      {
+        text: "FREEZE: Freeze upright on a level surface for 24 hours.",
+        image: "/images/brookies-and-cream-protein-creami/base-polished.webp",
+        imageAlt: "Brookies & Cream Protein Creami: freeze pint"
+      },
+      {
+        text: "REST & SPIN: Rest pint on the counter for 5 minutes, then spin on Regular Ice Cream. Run a Re-spin without added liquid if needed until creamy.",
+        image: "/images/brookies-and-cream-protein-creami/texture-polished.webp",
+        imageAlt: "Brookies & Cream Protein Creami: spun texture"
+      },
+      {
+        text: "MIX-IN: Add 2 HighKey chocolate-chip mini cookies and 1/4 Prime Bites brownie. Process on the Mix-In setting.",
+        image: "/images/brookies-and-cream-protein-creami/mix-in-polished.webp",
+        imageAlt: "Brookies & Cream Protein Creami: mix-ins"
+      },
+      {
+        text: "TOP & SERVE: Scoop into a bowl, then scatter 1 crushed HighKey sandwich cookie and 1/4 chopped Barebells Brownie Batter bar on top.",
+        image: "/images/brookies-and-cream-protein-creami/toppings-polished.webp",
+        imageAlt: "Brookies & Cream Protein Creami: toppings"
+      }
+    ],
+    allergens: [
+      "dairy",
+      "wheat",
+      "soy"
+    ],
+    dietTags: [
+      "high-protein",
+      "make-ahead",
+      "frozen-dessert"
+    ],
+    relatedIds: [
+      "coffee-chocolate-brownie-protein-creami",
+      "cosmic-brownie-protein-creami",
+      "cookies-and-cream-cookie-creami"
+    ],
+    mealPrep: {
+      storage: "Freeze the unspun base upright and level. Spin and add toppings when ready to eat.",
+      lasts: "Follow the Creami machine guidance for storage and reprocessing.",
+      reheat: "Do not heat the pint."
+    }
+  },
 ];
 
 // Creamis have their own browsing section while other sweets remain Desserts.

@@ -1,86 +1,171 @@
 {
-  "lastUpdated": "2026-11-03T19:02:55.397Z",
+  "lastUpdated": "2026-11-06T15:45:01.258Z",
   "source": "Google Analytics 4 Live Sync (G-10YP1BFG19)",
   "measurementId": "G-10YP1BFG19",
   "ranges": {
     "24h": {
       "summary": {
         "activeNow": 1,
-        "uniqueVisitors": 4,
-        "visitorsDelta": 33,
-        "totalPageviews": 6,
-        "pageviewsDelta": -70,
-        "bounceRate": 75,
-        "avgDurationSec": 3
+        "uniqueVisitors": 16,
+        "visitorsDelta": 167,
+        "totalPageviews": 22,
+        "pageviewsDelta": -12,
+        "bounceRate": 79,
+        "avgDurationSec": 5
       },
       "timeSeries": [
         {
-          "label": "12 AM",
-          "visitors": 2,
+          "label": "10 AM",
+          "visitors": 1,
+          "pageviews": 4
+        },
+        {
+          "label": "11 AM",
+          "visitors": 1,
           "pageviews": 2
         },
         {
-          "label": "4 PM",
-          "visitors": 1,
-          "pageviews": 1
+          "label": "12 PM",
+          "visitors": 5,
+          "pageviews": 5
         },
         {
           "label": "5 PM",
           "visitors": 1,
-          "pageviews": 3
+          "pageviews": 1
+        },
+        {
+          "label": "6 PM",
+          "visitors": 1,
+          "pageviews": 1
+        },
+        {
+          "label": "8 PM",
+          "visitors": 1,
+          "pageviews": 1
+        },
+        {
+          "label": "7 AM",
+          "visitors": 0,
+          "pageviews": 1
+        },
+        {
+          "label": "8 AM",
+          "visitors": 0,
+          "pageviews": 1
+        },
+        {
+          "label": "9 AM",
+          "visitors": 6,
+          "pageviews": 6
         }
       ],
       "countries": [
         {
-          "country": "China",
-          "countryCode": "CN",
-          "visitors": 2,
-          "pageviews": 2,
-          "percentage": 50,
-          "lat": 37.7749,
-          "lon": -122.4194
-        },
-        {
-          "country": "South Korea",
-          "countryCode": "KR",
-          "visitors": 1,
-          "pageviews": 1,
-          "percentage": 25,
-          "lat": 37.7749,
-          "lon": -122.4194
-        },
-        {
           "country": "United States",
           "countryCode": "US",
-          "visitors": 1,
-          "pageviews": 3,
-          "percentage": 25,
+          "visitors": 14,
+          "pageviews": 20,
+          "percentage": 88,
           "lat": 37.7749,
           "lon": -122.4194
+        },
+        {
+          "country": "Canada",
+          "countryCode": "CA",
+          "visitors": 1,
+          "pageviews": 1,
+          "percentage": 6,
+          "lat": 43.6532,
+          "lon": -79.3832
+        },
+        {
+          "country": "United Kingdom",
+          "countryCode": "GB",
+          "visitors": 1,
+          "pageviews": 1,
+          "percentage": 6,
+          "lat": 51.5074,
+          "lon": -0.1278
         }
       ],
       "cities": [
         {
-          "city": "Incheon",
-          "region": "Incheon",
-          "country": "South Korea",
-          "countryCode": "KR",
-          "visitors": 1,
-          "pageviews": 1,
-          "percentage": 25,
+          "city": "Ashburn",
+          "region": "Virginia",
+          "country": "United States",
+          "countryCode": "US",
+          "visitors": 10,
+          "pageviews": 10,
+          "percentage": 63,
           "lat": 37.7749,
           "lon": -122.4194
         },
         {
-          "city": "San Francisco",
+          "city": "Boardman",
+          "region": "Oregon",
+          "country": "United States",
+          "countryCode": "US",
+          "visitors": 1,
+          "pageviews": 1,
+          "percentage": 6,
+          "lat": 37.7749,
+          "lon": -122.4194
+        },
+        {
+          "city": "Burnaby",
+          "region": "British Columbia",
+          "country": "Canada",
+          "countryCode": "CA",
+          "visitors": 1,
+          "pageviews": 1,
+          "percentage": 6,
+          "lat": 43.6532,
+          "lon": -79.3832
+        },
+        {
+          "city": "Milton Keynes",
+          "region": "England",
+          "country": "United Kingdom",
+          "countryCode": "GB",
+          "visitors": 1,
+          "pageviews": 1,
+          "percentage": 6,
+          "lat": 51.5074,
+          "lon": -0.1278
+        },
+        {
+          "city": "Reston",
+          "region": "Virginia",
+          "country": "United States",
+          "countryCode": "US",
+          "visitors": 1,
+          "pageviews": 1,
+          "percentage": 6,
+          "lat": 37.7749,
+          "lon": -122.4194
+        },
+        {
+          "city": "San Jose",
+          "region": "California",
+          "country": "United States",
+          "countryCode": "US",
+          "visitors": 1,
+          "pageviews": 5,
+          "percentage": 6,
+          "lat": 37.7749,
+          "lon": -122.4194
+        },
+        {
+          "city": "San Ramon",
           "region": "California",
           "country": "United States",
           "countryCode": "US",
           "visitors": 1,
           "pageviews": 3,
-          "percentage": 25,
-          "lat": 37.7749,
-          "lon": -122.4194
+          "percentage": 6,
+          "lat": 37.7799,
+          "lon": -121.978
         }
       ],
       "topPages": [
@@ -89,114 +174,171 @@
           "title": "The Split Plate — One Meal. Two Plates.",
           "views": 4,
           "visitors": 4,
-          "avgDurationSec": 1,
-          "percentage": 67
+          "avgDurationSec": 6,
+          "percentage": 18
+        },
+        {
+          "path": "/cookbook",
+          "title": "Creamis — Power-Ups — The Split Plate",
+          "views": 1,
+          "visitors": 1,
+          "avgDurationSec": 0,
+          "percentage": 5
         },
         {
           "path": "/cookbook",
           "title": "Power-Ups — The Split Plate",
           "views": 1,
           "visitors": 1,
-          "avgDurationSec": 11,
-          "percentage": 17
+          "avgDurationSec": 0,
+          "percentage": 5
         },
         {
-          "path": "/dinners",
-          "title": "Dinners — The Split Plate",
+          "path": "/cookbook/brookies-and-cream-protein-creami",
+          "title": "Brookies & Cream Protein Creami — The Split Plate",
+          "views": 1,
+          "visitors": 1,
+          "avgDurationSec": 10,
+          "percentage": 5
+        },
+        {
+          "path": "/cookbook/crispy-chicken-money-mustard",
+          "title": "Crispy Chicken + Hot Honey Mustard — The Split Plate",
           "views": 1,
           "visitors": 1,
           "avgDurationSec": 0,
-          "percentage": 17
+          "percentage": 5
+        },
+        {
+          "path": "/cookbook/hot-honey-mustard-crispy-chicken-tacos",
+          "title": "Hot Honey Mustard Crispy Chicken Tacos — The Split Plate",
+          "views": 1,
+          "visitors": 1,
+          "avgDurationSec": 0,
+          "percentage": 5
+        },
+        {
+          "path": "/cookbook/mexican-lavash-pizza",
+          "title": "Mexican Lavash Pizza — The Split Plate",
+          "views": 1,
+          "visitors": 1,
+          "avgDurationSec": 0,
+          "percentage": 5
+        },
+        {
+          "path": "/cookbook/monster-candy-cookie-dough-bites",
+          "title": "Monster Candy Cookie Dough Bites — The Split Plate",
+          "views": 1,
+          "visitors": 0,
+          "avgDurationSec": 6,
+          "percentage": 5
+        },
+        {
+          "path": "/cookbook/open-faced-ham-egg-cheese-stacks",
+          "title": "Open-Faced Ham, Egg & Cheese Stacks — The Split Plate",
+          "views": 1,
+          "visitors": 1,
+          "avgDurationSec": 0,
+          "percentage": 5
+        },
+        {
+          "path": "/cookbook/smoky-chipotle-chicken-burritos",
+          "title": "365-Calorie Smoky Chipotle Chicken Burritos — The Split Plate",
+          "views": 1,
+          "visitors": 1,
+          "avgDurationSec": 0,
+          "percentage": 5
         }
       ],
       "referrers": [
         {
           "source": "Direct",
-          "visitors": 2,
-          "pageviews": 2,
-          "percentage": 50
+          "visitors": 13,
+          "pageviews": 15,
+          "percentage": 81
         },
         {
           "source": "chatgpt.com",
           "visitors": 1,
           "pageviews": 1,
-          "percentage": 25
+          "percentage": 6
+        },
+        {
+          "source": "encurtador.dev",
+          "visitors": 1,
+          "pageviews": 4,
+          "percentage": 6
         },
         {
           "source": "google",
           "visitors": 1,
-          "pageviews": 3,
-          "percentage": 25
+          "pageviews": 2,
+          "percentage": 6
         }
       ],
       "devices": [
         {
           "name": "Desktop",
-          "visitors": 3,
-          "percentage": 75
+          "visitors": 15,
+          "percentage": 94
         },
         {
           "name": "Mobile",
           "visitors": 1,
-          "percentage": 25
+          "percentage": 6
         }
       ],
       "browsers": [
         {
+          "name": "(not set)",
+          "visitors": 10,
+          "percentage": 63
+        },
+        {
           "name": "Chrome",
-          "visitors": 3,
-          "percentage": 75
+          "visitors": 4,
+          "percentage": 25
         },
         {
           "name": "Safari",
-          "visitors": 1,
-          "percentage": 25
+          "visitors": 2,
+          "percentage": 13
         }
       ],
       "operatingSystems": [
         {
-          "name": "Windows",
-          "visitors": 2,
-          "percentage": 50
+          "name": "Other",
+          "visitors": 10,
+          "percentage": 63
         },
         {
           "name": "Macintosh",
-          "visitors": 1,
-          "percentage": 25
+          "visitors": 3,
+          "percentage": 19
+        },
+        {
+          "name": "Linux",
+          "visitors": 2,
+          "percentage": 13
         },
         {
           "name": "IOS",
           "visitors": 1,
-          "percentage": 25
+          "percentage": 6
         }
       ]
     },
     "7d": {
       "summary": {
         "activeNow": 1,
-        "uniqueVisitors": 36,
-        "visitorsDelta": 71,
-        "totalPageviews": 239,
-        "pageviewsDelta": 223,
-        "bounceRate": 44,
-        "avgDurationSec": 152
+        "uniqueVisitors": 38,
+        "visitorsDelta": 27,
+        "totalPageviews": 218,
+        "pageviewsDelta": 90,
+        "bounceRate": 49,
+        "avgDurationSec": 138
       },
       "timeSeries": [
-        {
-          "label": "Oct 27",
-          "visitors": 5,
-          "pageviews": 15
-        },
-        {
-          "label": "Oct 28",
-          "visitors": 2,
-          "pageviews": 2
-        },
-        {
-          "label": "Oct 29",
-          "visitors": 8,
-          "pageviews": 15
-        },
         {
           "label": "Oct 30",
           "visitors": 4,
@@ -219,17 +361,27 @@
         },
         {
           "label": "Nov 3",
-          "visitors": 2,
-          "pageviews": 2
+          "visitors": 7,
+          "pageviews": 28
+        },
+        {
+          "label": "Nov 4",
+          "visitors": 6,
+          "pageviews": 25
+        },
+        {
+          "label": "Nov 5",
+          "visitors": 16,
+          "pageviews": 22
         }
       ],
       "countries": [
         {
           "country": "United States",
           "countryCode": "US",
-          "visitors": 14,
-          "pageviews": 65,
-          "percentage": 39,
+          "visitors": 22,
+          "pageviews": 105,
+          "percentage": 58,
           "lat": 37.7749,
           "lon": -122.4194
         },
@@ -238,9 +390,18 @@
           "countryCode": "CN",
           "visitors": 2,
           "pageviews": 2,
-          "percentage": 6,
+          "percentage": 5,
           "lat": 37.7749,
           "lon": -122.4194
+        },
+        {
+          "country": "United Kingdom",
+          "countryCode": "GB",
+          "visitors": 2,
+          "pageviews": 4,
+          "percentage": 5,
+          "lat": 51.5074,
+          "lon": -0.1278
         },
         {
           "country": "Canada",
@@ -252,13 +413,13 @@
           "lon": -79.3832
         },
         {
-          "country": "Germany",
-          "countryCode": "DE",
+          "country": "India",
+          "countryCode": "IN",
           "visitors": 1,
-          "pageviews": 3,
+          "pageviews": 1,
           "percentage": 3,
-          "lat": 52.52,
-          "lon": 13.405
+          "lat": 12.9716,
+          "lon": 77.5946
         },
         {
           "country": "Philippines",
@@ -277,26 +438,28 @@
           "percentage": 3,
           "lat": 37.7749,
           "lon": -122.4194
-        },
-        {
-          "country": "United Kingdom",
-          "countryCode": "GB",
-          "visitors": 1,
-          "pageviews": 1,
-          "percentage": 3,
-          "lat": 51.5074,
-          "lon": -0.1278
         }
       ],
       "cities": [
+        {
+          "city": "Ashburn",
+          "region": "Virginia",
+          "country": "United States",
+          "countryCode": "US",
+          "visitors": 10,
+          "pageviews": 10,
+          "percentage": 26,
+          "lat": 37.7749,
+          "lon": -122.4194
+        },
         {
           "city": "Dublin",
           "region": "California",
           "country": "United States",
           "countryCode": "US",
-          "visitors": 3,
-          "pageviews": 27,
-          "percentage": 8,
+          "visitors": 5,
+          "pageviews": 37,
+          "percentage": 13,
           "lat": 37.7749,
           "lon": -122.4194
         },
@@ -305,20 +468,9 @@
           "region": "Virginia",
           "country": "United States",
           "countryCode": "US",
-          "visitors": 3,
-          "pageviews": 14,
-          "percentage": 8,
-          "lat": 37.7749,
-          "lon": -122.4194
-        },
-        {
-          "city": "San Francisco",
-          "region": "California",
-          "country": "United States",
-          "countryCode": "US",
-          "visitors": 3,
-          "pageviews": 9,
-          "percentage": 8,
+          "visitors": 4,
+          "pageviews": 40,
+          "percentage": 11,
           "lat": 37.7749,
           "lon": -122.4194
         },
@@ -327,37 +479,37 @@
           "region": "California",
           "country": "United States",
           "countryCode": "US",
-          "visitors": 3,
-          "pageviews": 8,
-          "percentage": 8,
+          "visitors": 4,
+          "pageviews": 9,
+          "percentage": 11,
           "lat": 37.7749,
           "lon": -122.4194
         },
         {
-          "city": "Birmingham",
+          "city": "Oxford",
           "region": "England",
           "country": "United Kingdom",
           "countryCode": "GB",
-          "visitors": 1,
-          "pageviews": 1,
-          "percentage": 3,
+          "visitors": 2,
+          "pageviews": 3,
+          "percentage": 5,
           "lat": 51.5074,
           "lon": -0.1278
         },
         {
-          "city": "Braunschweig",
-          "region": "Lower Saxony",
-          "country": "Germany",
-          "countryCode": "DE",
+          "city": "Boardman",
+          "region": "Oregon",
+          "country": "United States",
+          "countryCode": "US",
           "visitors": 1,
-          "pageviews": 3,
+          "pageviews": 1,
           "percentage": 3,
-          "lat": 52.52,
-          "lon": 13.405
+          "lat": 37.7749,
+          "lon": -122.4194
         },
         {
-          "city": "Burlington",
-          "region": "Ontario",
+          "city": "Burnaby",
+          "region": "British Columbia",
           "country": "Canada",
           "countryCode": "CA",
           "visitors": 1,
@@ -367,37 +519,15 @@
           "lon": -79.3832
         },
         {
-          "city": "Forest City",
-          "region": "North Carolina",
-          "country": "United States",
-          "countryCode": "US",
+          "city": "Hyderabad",
+          "region": "Telangana",
+          "country": "India",
+          "countryCode": "IN",
           "visitors": 1,
           "pageviews": 1,
           "percentage": 3,
-          "lat": 37.7749,
-          "lon": -122.4194
-        },
-        {
-          "city": "Fort Worth",
-          "region": "Texas",
-          "country": "United States",
-          "countryCode": "US",
-          "visitors": 1,
-          "pageviews": 1,
-          "percentage": 3,
-          "lat": 37.7749,
-          "lon": -122.4194
-        },
-        {
-          "city": "Huntington Beach",
-          "region": "California",
-          "country": "United States",
-          "countryCode": "US",
-          "visitors": 1,
-          "pageviews": 1,
-          "percentage": 3,
-          "lat": 37.7749,
-          "lon": -122.4194
+          "lat": 12.9716,
+          "lon": 77.5946
         },
         {
           "city": "Incheon",
@@ -411,15 +541,15 @@
           "lon": -122.4194
         },
         {
-          "city": "Kansas City",
-          "region": "Missouri",
-          "country": "United States",
-          "countryCode": "US",
+          "city": "Milton Keynes",
+          "region": "England",
+          "country": "United Kingdom",
+          "countryCode": "GB",
           "visitors": 1,
           "pageviews": 1,
           "percentage": 3,
-          "lat": 37.7749,
-          "lon": -122.4194
+          "lat": 51.5074,
+          "lon": -0.1278
         },
         {
           "city": "Quezon City",
@@ -433,12 +563,34 @@
           "lon": -122.4194
         },
         {
-          "city": "Springfield",
-          "region": "Nebraska",
+          "city": "San Francisco",
+          "region": "California",
           "country": "United States",
           "countryCode": "US",
           "visitors": 1,
-          "pageviews": 1,
+          "pageviews": 3,
+          "percentage": 3,
+          "lat": 37.7749,
+          "lon": -122.4194
+        },
+        {
+          "city": "San Ramon",
+          "region": "California",
+          "country": "United States",
+          "countryCode": "US",
+          "visitors": 1,
+          "pageviews": 3,
+          "percentage": 3,
+          "lat": 37.7799,
+          "lon": -121.978
+        },
+        {
+          "city": "Sterling Heights",
+          "region": "Michigan",
+          "country": "United States",
+          "countryCode": "US",
+          "visitors": 1,
+          "pageviews": 2,
           "percentage": 3,
           "lat": 37.7749,
           "lon": -122.4194
@@ -449,116 +601,108 @@
           "path": "/",
           "title": "The Split Plate — One Meal. Two Plates.",
           "views": 23,
-          "visitors": 14,
-          "avgDurationSec": 7,
-          "percentage": 10
+          "visitors": 13,
+          "avgDurationSec": 11,
+          "percentage": 11
         },
         {
           "path": "/dinners",
           "title": "Dinners — The Split Plate",
-          "views": 10,
-          "visitors": 2,
-          "avgDurationSec": 8,
-          "percentage": 4
+          "views": 15,
+          "visitors": 3,
+          "avgDurationSec": 12,
+          "percentage": 7
         },
         {
           "path": "/cookbook",
           "title": "Power-Ups — The Split Plate",
           "views": 7,
-          "visitors": 4,
-          "avgDurationSec": 4,
+          "visitors": 5,
+          "avgDurationSec": 3,
           "percentage": 3
         },
         {
           "path": "/cookbook",
           "title": "Creamis — Power-Ups — The Split Plate",
-          "views": 4,
-          "visitors": 2,
-          "avgDurationSec": 53,
+          "views": 5,
+          "visitors": 4,
+          "avgDurationSec": 37,
           "percentage": 2
         },
         {
-          "path": "/cookbook/chipotle-queso-tacos",
-          "title": "Chipotle Queso Tacos — The Split Plate",
+          "path": "/recipes/high-protein-butter-chicken",
+          "title": "High-Protein Weeknight Butter Chicken — The Split Plate",
           "views": 4,
           "visitors": 2,
-          "avgDurationSec": 67,
+          "avgDurationSec": 28,
           "percentage": 2
         },
         {
-          "path": "/cookbook/halloween-red-velvet-creami",
-          "title": "Halloween Red Velvet Creami — The Split Plate",
-          "views": 3,
-          "visitors": 1,
-          "avgDurationSec": 12,
-          "percentage": 1
-        },
-        {
-          "path": "/cookbook",
-          "title": "Quick Lunches — Power-Ups — The Split Plate",
+          "path": "/cookbook/grilled-cheese-protein-tomato-soup",
+          "title": "Grilled Cheese + Protein Tomato Soup — The Split Plate",
           "views": 2,
-          "visitors": 2,
-          "avgDurationSec": 3,
-          "percentage": 1
-        },
-        {
-          "path": "/recipes/oven-fried-wings-family-finishes",
-          "title": "Oven-Fried Wings with Family Sauce Finishes — The Split Plate",
-          "views": 2,
-          "visitors": 2,
-          "avgDurationSec": 8,
-          "percentage": 1
-        },
-        {
-          "path": "/cookbook",
-          "title": "Breakfast — Power-Ups — The Split Plate",
-          "views": 1,
-          "visitors": 1,
-          "avgDurationSec": 0,
-          "percentage": 0
-        },
-        {
-          "path": "/cookbook/creamy-chipotle-chicken-ditalini",
-          "title": "Creamy Chipotle Chicken Ditalini — The Split Plate",
-          "views": 1,
           "visitors": 1,
           "avgDurationSec": 5,
-          "percentage": 0
+          "percentage": 1
+        },
+        {
+          "path": "/cookbook/monster-candy-cookie-dough-bites",
+          "title": "Monster Candy Cookie Dough Bites — The Split Plate",
+          "views": 2,
+          "visitors": 1,
+          "avgDurationSec": 6,
+          "percentage": 1
+        },
+        {
+          "path": "/recipes/chicken-milanese-arugula",
+          "title": "Chicken Milanese with Arugula Salad — The Split Plate",
+          "views": 2,
+          "visitors": 2,
+          "avgDurationSec": 13,
+          "percentage": 1
+        },
+        {
+          "path": "/recipes/emergency-kebab-night",
+          "title": "Split Plate Emergency Kebab Night — The Split Plate",
+          "views": 2,
+          "visitors": 1,
+          "avgDurationSec": 19,
+          "percentage": 1
         }
       ],
       "referrers": [
         {
           "source": "Direct",
-          "visitors": 7,
-          "pageviews": 18,
-          "percentage": 19
-        },
-        {
-          "source": "google",
-          "visitors": 4,
-          "pageviews": 43,
-          "percentage": 11
-        },
-        {
-          "source": "youtube.com",
-          "visitors": 4,
-          "pageviews": 6,
-          "percentage": 11
-        },
-        {
-          "source": "m.facebook.com",
-          "visitors": 3,
-          "pageviews": 3,
-          "percentage": 8
+          "visitors": 21,
+          "pageviews": 45,
+          "percentage": 55
         },
         {
           "source": "chatgpt.com",
-          "visitors": 2,
-          "pageviews": 3,
-          "percentage": 6
+          "visitors": 4,
+          "pageviews": 7,
+          "percentage": 11
+        },
+        {
+          "source": "google",
+          "visitors": 3,
+          "pageviews": 51,
+          "percentage": 8
+        },
+        {
+          "source": "encurtador.dev",
+          "visitors": 1,
+          "pageviews": 10,
+          "percentage": 3
         },
         {
           "source": "ig",
+          "visitors": 1,
+          "pageviews": 1,
+          "percentage": 3
+        },
+        {
+          "source": "youtube.com",
           "visitors": 1,
           "pageviews": 1,
           "percentage": 3
@@ -567,101 +711,86 @@
       "devices": [
         {
           "name": "Desktop",
-          "visitors": 11,
-          "percentage": 31
+          "visitors": 24,
+          "percentage": 63
         },
         {
           "name": "Mobile",
-          "visitors": 10,
-          "percentage": 28
+          "visitors": 6,
+          "percentage": 16
         }
       ],
       "browsers": [
         {
           "name": "Chrome",
+          "visitors": 13,
+          "percentage": 34
+        },
+        {
+          "name": "(not set)",
           "visitors": 10,
-          "percentage": 28
+          "percentage": 26
         },
         {
           "name": "Safari",
           "visitors": 5,
-          "percentage": 14
+          "percentage": 13
         },
         {
-          "name": "(not set)",
-          "visitors": 2,
-          "percentage": 6
-        },
-        {
-          "name": "Edge",
-          "visitors": 2,
-          "percentage": 6
-        },
-        {
-          "name": "Firefox",
+          "name": "Android Webview",
           "visitors": 1,
           "percentage": 3
         },
         {
-          "name": "Samsung Internet",
+          "name": "Firefox",
           "visitors": 1,
           "percentage": 3
         }
       ],
       "operatingSystems": [
         {
-          "name": "IOS",
-          "visitors": 8,
-          "percentage": 22
-        },
-        {
-          "name": "Windows",
-          "visitors": 6,
-          "percentage": 17
+          "name": "Other",
+          "visitors": 10,
+          "percentage": 26
         },
         {
           "name": "Macintosh",
+          "visitors": 7,
+          "percentage": 18
+        },
+        {
+          "name": "Windows",
           "visitors": 4,
           "percentage": 11
         },
         {
-          "name": "Android",
-          "visitors": 2,
-          "percentage": 6
+          "name": "IOS",
+          "visitors": 4,
+          "percentage": 11
         },
         {
           "name": "Linux",
-          "visitors": 1,
-          "percentage": 3
+          "visitors": 3,
+          "percentage": 8
+        },
+        {
+          "name": "Android",
+          "visitors": 2,
+          "percentage": 5
         }
       ]
     },
     "30d": {
       "summary": {
         "activeNow": 2,
-        "uniqueVisitors": 98,
-        "visitorsDelta": 78,
-        "totalPageviews": 588,
-        "pageviewsDelta": -32,
+        "uniqueVisitors": 105,
+        "visitorsDelta": 67,
+        "totalPageviews": 599,
+        "pageviewsDelta": -30,
         "bounceRate": 49,
-        "avgDurationSec": 141
+        "avgDurationSec": 110
       },
       "timeSeries": [
-        {
-          "label": "Oct 4",
-          "visitors": 5,
-          "pageviews": 24
-        },
-        {
-          "label": "Oct 5",
-          "visitors": 8,
-          "pageviews": 21
-        },
-        {
-          "label": "Oct 6",
-          "visitors": 5,
-          "pageviews": 17
-        },
         {
           "label": "Oct 7",
           "visitors": 2,
@@ -799,17 +928,27 @@
         },
         {
           "label": "Nov 3",
-          "visitors": 2,
-          "pageviews": 2
+          "visitors": 7,
+          "pageviews": 28
+        },
+        {
+          "label": "Nov 4",
+          "visitors": 6,
+          "pageviews": 25
+        },
+        {
+          "label": "Nov 5",
+          "visitors": 16,
+          "pageviews": 22
         }
       ],
       "countries": [
         {
           "country": "United States",
           "countryCode": "US",
-          "visitors": 70,
-          "pageviews": 555,
-          "percentage": 71,
+          "visitors": 73,
+          "pageviews": 560,
+          "percentage": 70,
           "lat": 37.7749,
           "lon": -122.4194
         },
@@ -832,6 +971,15 @@
           "lon": 103.8198
         },
         {
+          "country": "Canada",
+          "countryCode": "CA",
+          "visitors": 3,
+          "pageviews": 3,
+          "percentage": 3,
+          "lat": 43.6532,
+          "lon": -79.3832
+        },
+        {
           "country": "China",
           "countryCode": "CN",
           "visitors": 3,
@@ -841,13 +989,22 @@
           "lon": -122.4194
         },
         {
-          "country": "Canada",
-          "countryCode": "CA",
+          "country": "United Kingdom",
+          "countryCode": "GB",
+          "visitors": 3,
+          "pageviews": 5,
+          "percentage": 3,
+          "lat": 51.5074,
+          "lon": -0.1278
+        },
+        {
+          "country": "India",
+          "countryCode": "IN",
           "visitors": 2,
           "pageviews": 2,
           "percentage": 2,
-          "lat": 43.6532,
-          "lon": -79.3832
+          "lat": 12.9716,
+          "lon": 77.5946
         },
         {
           "country": "Iran",
@@ -893,46 +1050,28 @@
           "percentage": 1,
           "lat": 37.7749,
           "lon": -122.4194
-        },
-        {
-          "country": "India",
-          "countryCode": "IN",
-          "visitors": 1,
-          "pageviews": 1,
-          "percentage": 1,
-          "lat": 12.9716,
-          "lon": 77.5946
-        },
-        {
-          "country": "Netherlands",
-          "countryCode": "NL",
-          "visitors": 1,
-          "pageviews": 1,
-          "percentage": 1,
-          "lat": 52.3676,
-          "lon": 4.9041
         }
       ],
       "cities": [
         {
-          "city": "San Ramon",
-          "region": "California",
+          "city": "Ashburn",
+          "region": "Virginia",
           "country": "United States",
           "countryCode": "US",
           "visitors": 11,
-          "pageviews": 139,
-          "percentage": 11,
-          "lat": 37.7799,
-          "lon": -121.978
+          "pageviews": 16,
+          "percentage": 10,
+          "lat": 37.7749,
+          "lon": -122.4194
         },
         {
           "city": "Dublin",
           "region": "California",
           "country": "United States",
           "countryCode": "US",
-          "visitors": 8,
-          "pageviews": 273,
-          "percentage": 8,
+          "visitors": 10,
+          "pageviews": 288,
+          "percentage": 10,
           "lat": 37.7749,
           "lon": -122.4194
         },
@@ -941,22 +1080,22 @@
           "region": "California",
           "country": "United States",
           "countryCode": "US",
-          "visitors": 7,
-          "pageviews": 17,
-          "percentage": 7,
+          "visitors": 8,
+          "pageviews": 24,
+          "percentage": 8,
           "lat": 37.7749,
           "lon": -122.4194
         },
         {
-          "city": "Prineville",
-          "region": "Oregon",
+          "city": "San Ramon",
+          "region": "California",
           "country": "United States",
           "countryCode": "US",
-          "visitors": 5,
-          "pageviews": 5,
-          "percentage": 5,
-          "lat": 37.7749,
-          "lon": -122.4194
+          "visitors": 8,
+          "pageviews": 92,
+          "percentage": 8,
+          "lat": 37.7799,
+          "lon": -121.978
         },
         {
           "city": "Singapore",
@@ -975,7 +1114,7 @@
           "country": "United States",
           "countryCode": "US",
           "visitors": 4,
-          "pageviews": 24,
+          "pageviews": 55,
           "percentage": 4,
           "lat": 37.7749,
           "lon": -122.4194
@@ -1025,12 +1164,23 @@
           "lon": -122.4194
         },
         {
+          "city": "Prineville",
+          "region": "Oregon",
+          "country": "United States",
+          "countryCode": "US",
+          "visitors": 3,
+          "pageviews": 3,
+          "percentage": 3,
+          "lat": 37.7749,
+          "lon": -122.4194
+        },
+        {
           "city": "San Francisco",
           "region": "California",
           "country": "United States",
           "countryCode": "US",
           "visitors": 3,
-          "pageviews": 22,
+          "pageviews": 18,
           "percentage": 3,
           "lat": 37.7749,
           "lon": -122.4194
@@ -1051,49 +1201,57 @@
         {
           "path": "/",
           "title": "The Split Plate — One Meal. Two Plates.",
-          "views": 120,
+          "views": 117,
           "visitors": 57,
-          "avgDurationSec": 56,
+          "avgDurationSec": 24,
           "percentage": 20
         },
         {
           "path": "/dinners",
           "title": "Dinners — The Split Plate",
-          "views": 43,
+          "views": 47,
           "visitors": 14,
           "avgDurationSec": 25,
-          "percentage": 7
+          "percentage": 8
         },
         {
           "path": "/cookbook",
           "title": "Power-Ups — The Split Plate",
-          "views": 34,
-          "visitors": 15,
+          "views": 35,
+          "visitors": 13,
           "avgDurationSec": 11,
           "percentage": 6
         },
         {
           "path": "/recipes/golden-garlic-rice-bowl-steak",
           "title": "Golden Garlic Rice Bowl with Steak — The Split Plate",
-          "views": 10,
-          "visitors": 9,
-          "avgDurationSec": 16,
+          "views": 9,
+          "visitors": 8,
+          "avgDurationSec": 17,
           "percentage": 2
+        },
+        {
+          "path": "/cookbook",
+          "title": "Creamis — Power-Ups — The Split Plate",
+          "views": 8,
+          "visitors": 4,
+          "avgDurationSec": 39,
+          "percentage": 1
         },
         {
           "path": "/recipes/high-protein-pepperoni-mac-meal-prep",
           "title": "High-Protein Pepperoni Mac Meal Prep — The Split Plate",
-          "views": 9,
-          "visitors": 4,
-          "avgDurationSec": 217,
-          "percentage": 2
+          "views": 8,
+          "visitors": 3,
+          "avgDurationSec": 286,
+          "percentage": 1
         },
         {
-          "path": "/cookbook/chipotle-queso-tacos",
-          "title": "Chipotle Queso Tacos — The Split Plate",
+          "path": "/cookbook/open-faced-ham-egg-cheese-stacks",
+          "title": "Open-Faced Ham, Egg & Cheese Stacks — The Split Plate",
           "views": 7,
-          "visitors": 5,
-          "avgDurationSec": 35,
+          "visitors": 3,
+          "avgDurationSec": 253,
           "percentage": 1
         },
         {
@@ -1102,14 +1260,6 @@
           "views": 6,
           "visitors": 4,
           "avgDurationSec": 4,
-          "percentage": 1
-        },
-        {
-          "path": "/cookbook",
-          "title": "Creamis — Power-Ups — The Split Plate",
-          "views": 6,
-          "visitors": 2,
-          "avgDurationSec": 57,
           "percentage": 1
         },
         {
@@ -1124,33 +1274,33 @@
       "referrers": [
         {
           "source": "Direct",
-          "visitors": 53,
-          "pageviews": 259,
-          "percentage": 54
+          "visitors": 62,
+          "pageviews": 270,
+          "percentage": 59
         },
         {
           "source": "m.facebook.com",
-          "visitors": 13,
-          "pageviews": 13,
-          "percentage": 13
+          "visitors": 11,
+          "pageviews": 11,
+          "percentage": 10
         },
         {
           "source": "chatgpt.com",
-          "visitors": 8,
-          "pageviews": 12,
-          "percentage": 8
+          "visitors": 10,
+          "pageviews": 16,
+          "percentage": 10
         },
         {
           "source": "google",
-          "visitors": 8,
-          "pageviews": 158,
-          "percentage": 8
+          "visitors": 7,
+          "pageviews": 157,
+          "percentage": 7
         },
         {
           "source": "ig",
-          "visitors": 5,
-          "pageviews": 9,
-          "percentage": 5
+          "visitors": 6,
+          "pageviews": 10,
+          "percentage": 6
         },
         {
           "source": "youtube.com",
@@ -1159,40 +1309,45 @@
           "percentage": 5
         },
         {
-          "source": "facebook.com",
-          "visitors": 4,
-          "pageviews": 4,
-          "percentage": 4
-        },
-        {
           "source": "(not set)",
           "visitors": 3,
           "pageviews": 5,
+          "percentage": 3
+        },
+        {
+          "source": "facebook.com",
+          "visitors": 3,
+          "pageviews": 3,
           "percentage": 3
         }
       ],
       "devices": [
         {
           "name": "Desktop",
-          "visitors": 53,
-          "percentage": 54
+          "visitors": 63,
+          "percentage": 60
         },
         {
           "name": "Mobile",
-          "visitors": 45,
-          "percentage": 46
+          "visitors": 42,
+          "percentage": 40
         }
       ],
       "browsers": [
         {
           "name": "Chrome",
-          "visitors": 54,
-          "percentage": 55
+          "visitors": 51,
+          "percentage": 49
         },
         {
           "name": "Safari",
           "visitors": 32,
-          "percentage": 33
+          "percentage": 30
+        },
+        {
+          "name": "(not set)",
+          "visitors": 13,
+          "percentage": 12
         },
         {
           "name": "Edge",
@@ -1200,46 +1355,46 @@
           "percentage": 4
         },
         {
-          "name": "(not set)",
-          "visitors": 3,
-          "percentage": 3
-        },
-        {
-          "name": "Firefox",
+          "name": "Android Webview",
           "visitors": 2,
           "percentage": 2
         },
         {
-          "name": "Samsung Internet",
+          "name": "Firefox",
           "visitors": 2,
           "percentage": 2
         }
       ],
       "operatingSystems": [
         {
-          "name": "Windows",
-          "visitors": 35,
-          "percentage": 36
+          "name": "IOS",
+          "visitors": 33,
+          "percentage": 31
         },
         {
-          "name": "IOS",
-          "visitors": 35,
-          "percentage": 36
+          "name": "Windows",
+          "visitors": 31,
+          "percentage": 30
         },
         {
           "name": "Macintosh",
-          "visitors": 11,
-          "percentage": 11
+          "visitors": 13,
+          "percentage": 12
         },
         {
-          "name": "Android",
+          "name": "Other",
           "visitors": 10,
           "percentage": 10
         },
         {
+          "name": "Android",
+          "visitors": 9,
+          "percentage": 9
+        },
+        {
           "name": "Linux",
-          "visitors": 7,
-          "percentage": 7
+          "visitors": 9,
+          "percentage": 9
         }
       ]
     }
