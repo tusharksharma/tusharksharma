@@ -59,3 +59,5 @@ Use the user's production project, outside the public source repo for private ma
 Tie reviewer timestamps to the exact export. Record accept/adapt/reject/defer decisions for material feedback; predictions are not measured retention or guaranteed outcomes. Revise only affected stages. Report what was actually inspected and any remaining limitations.
 
 For instruction refreshes, preserve the flat snapshot's source notices and provenance, compare substantive changes, and update routing when precedence changes. Do not silently modify approved videos to apply new standing rules.
+
+Confirmed November 5, 2026: when Tushar says “lgtm” or approves the presented preview, record that approval and continue immediately to the next authorized production stage in the same turn. Do not stop after an acknowledgment or ask again for unchanged approved material. Final export/QA follows preview approval; carry existing explicit rollout authorization when present. Approval of an edit alone does not invent authorization for paid generation or public publication.
