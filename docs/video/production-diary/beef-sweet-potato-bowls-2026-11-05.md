@@ -1,0 +1,7 @@
+# Beef and sweet potato bowls — November 5, 2026
+
+Owner supplied ten interview answers and confirmed MULU2%, plain mashed avocado and adult cottage-cheese usage. Exact Marcus main/three promo reads and serving supplement approved inside a10000-credit cap; returned usage4100, no additional generation. New facts deduplicated against BIO-030/035/044/047 and captured as BIO-088–092 in docs/about-tushar.md.
+
+Owner feedback corrected excessive speech quiet, missing context labels and hidden nutrition/outro. Context breaks measured at one second; normal sentence gaps shorter; speed1.0. The falsely narrated potato-check insert was actually shredded cheese and was removed. Twenty continuous main shots replaced116 sentence-linked picture fragments. Main preview488.166seconds approved. Three promo cuts/reaction covers and revised nutrition ending subsequently approved; “lgtm” means continue immediately to the next authorized production stage.
+
+Final source-quality exports and QA are in progress; no main upload or schedule is claimed. Private canonical project: outputs/hot-honey-beef-sweet-potato-longform-2026-11-05. All originals retained. Use the current private approvals, source map and export receipts; do not restart old assembly scripts or regenerate approved voice.

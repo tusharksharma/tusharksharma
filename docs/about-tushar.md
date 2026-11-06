@@ -521,3 +521,28 @@ For three adults and two kids, he initially planned1.5cutlets per adult and0.75p
 ### BIO-087: A ninety-minute Wednesday cooking window
 
 On the filmed Wednesday, his wife took their older daughter to gymnastics and he had roughly90minutes to prepare dinner. It was enough time, but he emphasizes that Milanese was a hands-on project worth the effort, not an effortless quick dinner. Keep this event tied to this cook rather than treating it as a permanent household schedule.
+
+
+## Confirmed firsthand stories — hot-honey beef and sweet potato bowls, November 5, 2026
+
+Source: Tushar's ten direct answers and follow-up confirmations in this chat, supplied before the exact main/promo reads were approved. The filmed cook is dated November 3 in its source filenames. These extend BIO-030,035,044 and047; they do not replace prior family, shopping or cottage-cheese accounts. Interview/source records remain in the private production folder.
+
+### BIO-088: A first try that earned a monthly repeat
+
+He had seen beef, sweet potato, cottage cheese, avocado and hot honey combined online, without naming a particular creator. His first attempt was one of his favorite flavor combinations, and he could see repeating it monthly. Precut sweet potato cubes from Walmart made it feel approachable. He also wanted to try a new large Dash pan from Costco, which comfortably held three pounds of beef. These are his experience and repeat intention, not a tested product comparison or a permanent monthly schedule.
+
+### BIO-089: A Tuesday cooking window after swimming
+
+On this Tuesday he took both daughters swimming, got home around5:15, fitted in a walk and had dinner ready by6:30. He said they were moving his older daughter's martial arts from Tuesday to Friday, opening Tuesday evenings for a cook that could cover the following night. He did not separately time cooking, so this story does not verify the website's35-minute total. A grandmother was staying until Christmas at the time; this dated detail extends BIO-047 rather than establishing a permanent household count or travel schedule.
+
+### BIO-090: Familiar components make ground-beef dinners useful
+
+Ground beef and mashed avocado are familiar foods both children enjoy, and the family already likes sweet potatoes. His younger daughter enjoys vegetables but finds meat harder; she ate the sweet potatoes. Vegetables are harder for his older daughter, who ate a decent amount of potato but may not have finished it. No preference for mixed versus separated components or specific cheddar reaction was established. Keep those nuances rather than inventing a clean-plate verdict.
+
+### BIO-091: Sweet heat for him, chili flakes for his wife
+
+He is a strong hot-honey fan. Ten grams of Mike's Extra Hot Honey gave his own bowl enough sweetness and heat without overpowering the other ingredients. His wife dislikes that sweetness in savory food and chose chili flakes instead. This is a taste difference resolved at plating, not a claim that one finish is nutritionally or universally better.
+
+### BIO-092: Batch-blending makes the second dinner easier
+
+Blending cottage cheese was the fiddliest step in an otherwise easy dinner. He would prepare enough smooth cottage cheese for both nights to avoid getting the blender out twice, with plain purchased mashed avocado ready too. He stored beef and sweet potatoes separately, reheating potatoes in the air fryer and beef in a pan; about five minutes was his estimate. Cold toppings were added when assembling. MULU2% was confirmed, but the exact butter-seasoning name was not; do not promote the recalled name into a verified product fact.
