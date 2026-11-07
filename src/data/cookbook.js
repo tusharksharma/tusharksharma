@@ -17340,6 +17340,184 @@ const DESSERT_CATALOG = [
       reheat: "Do not heat the pint."
     }
   },
+  {
+    id: "frozen-hot-chocolate-cookie-creami",
+    title: "Frozen Hot Chocolate Cookie Creami",
+    tagline: "Creami remake of Crumbl's Frozen Hot Chocolate Cookie: rich Dutch-cocoa protein ice cream topped with a two-ingredient warm hot fudge drizzle and crisp cereal marshmallows. Approximately 255 calories and 36g protein for the whole finished pint.",
+    heroImage: "/images/frozen-hot-chocolate-cookie-creami/hero-polished.webp",
+    prepImage: "/images/frozen-hot-chocolate-cookie-creami/base-polished.webp",
+    prepImageCaption: "The blended Dutch-cocoa protein milk base ready for the 24-hour freeze and Creami spin.",
+    video: "/videos/frozen-hot-chocolate-cookie-creami/813-Frozen-Hot-Chocolate-Cookie-Creami.mp4",
+    videoPoster: "/images/frozen-hot-chocolate-cookie-creami/hero-polished.webp",
+    socialHashtags: [
+      "#TheSplitPlate",
+      "#CrumblCreamiCut",
+      "#NinjaCreami",
+      "#HotChocolate",
+      "#ProteinIceCream"
+    ],
+    socialImages: [
+      "/images/frozen-hot-chocolate-cookie-creami/base-polished.webp",
+      "/images/frozen-hot-chocolate-cookie-creami/fudge-polished.webp",
+      "/images/frozen-hot-chocolate-cookie-creami/texture-polished.webp",
+      "/images/frozen-hot-chocolate-cookie-creami/toppings-polished.webp",
+      "/images/frozen-hot-chocolate-cookie-creami/scoop-polished.webp"
+    ],
+    socialCarousel: {
+      heroBadge: "Protein Creami • Hot Chocolate",
+      heroAccent: "amber",
+      heroTitle: "Frozen Hot Chocolate Cookie Creami",
+      heroStats: [
+        {
+          value: "~255",
+          label: "cal • whole pint"
+        },
+        {
+          value: "36g",
+          label: "protein • whole pint"
+        },
+        {
+          value: "1",
+          label: "finished pint"
+        }
+      ],
+      hook: "This week's Crumbl Frozen Hot Chocolate Cookie, Creami-style: rich chocolate base, two-ingredient fudge, and cereal marshmallows.",
+      captionTitle: "Frozen Hot Chocolate Cookie Creami • ~255 cal / 36g protein",
+      captionBody: "This week’s @crumbl Frozen Hot Chocolate Cookie, Creami-style 🍫\n\nChocolate base, no mix-ins, a two-ingredient hot-fudge topping and dried marshmallows. Simple build. My score: 7.8/10.\n\nAbout 255 calories and 36g protein for the whole finished pint, including the fudge and marshmallows.\n\nFULL RECIPE — makes 1 pint / 1 serving\n\nBASE\n• 1 cup (240 ml) Nurri 2% ultra-filtered protein milk\n• 2 tbsp monk-fruit/erythritol sweetener\n• ½ serving Opportuniteas unflavored whey isolate (60 calories, 14g protein)\n• ⅛ tsp guar gum, leveled\n• Pinch of salt\n• 1 tbsp Dutch-process cocoa powder\n\nMIX-IN\n• None\n\nTOPPING\n• 1 tbsp Dutch-process cocoa powder\n• 1 tbsp warmed sugar-free syrup — I used Syruvia; any sugar-free syrup works\n• 5g dried cereal marshmallows — I used Yummallo\n\nMETHOD\n1. Blend all base ingredients until smooth. Pour into a Creami pint, staying below its max-fill line, and freeze upright and level for 24 hours.\n2. Rest on the counter for 5 minutes. Run Regular Ice Cream, then Respin without adding liquid. No hot-water bath and no mix-in cycle.\n3. Warm the syrup and stir it with the topping cocoa until smooth to make the fudge.\n4. Scoop the Creami into a serving dish. Add all the fudge and the 5g dried marshmallows.\n\nNutrition is an estimate for the whole finished pint. Milk, whey, cocoa, marshmallow and syrup labels affect totals; the estimate assumes a zero-calorie sugar-free syrup. The original Crumbl cookie is the flavor inspiration, not an ingredient.\n\nSave this for your next chocolate craving.\n\n#CrumblCreamiCut #NinjaCreami #HotChocolate #ProteinIceCream #TheSplitPlate",
+      heroPhoto: "/images/frozen-hot-chocolate-cookie-creami/hero-polished.webp",
+      ingredientGroups: [
+        {
+          card: 1,
+          accent: "amber",
+          heading: "Base Ingredients (1 Pint)",
+          items: [
+            { quantity: "1 cup (240ml)", text: "Nurri 2% protein milk" },
+            { quantity: "1/2 serving", text: "Opportuniteas whey isolate" },
+            { quantity: "1 tbsp", text: "Dutch-process cocoa powder" },
+            { quantity: "2 tbsp", text: "Monk-fruit blend sweetener" },
+            { quantity: "1/8 tsp + pinch", text: "Guar gum + salt" }
+          ]
+        },
+        {
+          card: 2,
+          accent: "coral",
+          heading: "Fudge & Marshmallows",
+          items: [
+            { quantity: "1 tbsp", text: "Dutch-process cocoa powder" },
+            { quantity: "1 tbsp", text: "Warmed sugar-free syrup (Syruvia)" },
+            { quantity: "5g", text: "Yummallo dried cereal marshmallows" }
+          ]
+        }
+      ],
+      ingredientCardPhotos: [
+        "/images/frozen-hot-chocolate-cookie-creami/base-polished.webp",
+        "/images/frozen-hot-chocolate-cookie-creami/fudge-polished.webp"
+      ],
+      methodGroups: [
+        {
+          card: 1,
+          accent: "amber",
+          heading: "Blend + freeze",
+          items: [
+            { number: 1, heading: "Blend chocolate base", body: "Blend milk, whey isolate, cocoa, sweetener, guar gum and salt until velvety smooth." },
+            { number: 2, heading: "Freeze 24 hours", body: "Pour into Creami pint below the max-fill line. Freeze level and upright for 24 hours." }
+          ]
+        },
+        {
+          card: 2,
+          accent: "coral",
+          heading: "Spin + toppings",
+          items: [
+            { number: 3, heading: "Spin on ice cream", body: "Rest 5 min, spin on Regular Ice Cream, then Re-spin without liquid until thick and creamy." },
+            { number: 4, heading: "Fudge & marshmallow finish", body: "Whisk warm syrup and cocoa into fudge. Scoop pint, drizzle fudge, and top with marshmallows." }
+          ]
+        }
+      ],
+      methodCardPhotos: [
+        "/images/frozen-hot-chocolate-cookie-creami/texture-polished.webp",
+        "/images/frozen-hot-chocolate-cookie-creami/toppings-polished.webp"
+      ],
+      servingPhoto: {
+        src: "/images/frozen-hot-chocolate-cookie-creami/scoop-polished.webp",
+        layout: "side"
+      },
+      servingGroups: [
+        {
+          accent: "coral",
+          heading: "Whole finished pint",
+          items: [
+            { text: "Approximately 255 calories and 36g protein for the entire pint including hot fudge and marshmallows." }
+          ]
+        }
+      ],
+      engagementQuestion: "7.8/10 on the Crumbl scale: would you keep it simple with marshmallows or add crushed chocolate cookies?"
+    },
+    calories: 255,
+    caloriesPerServing: 255,
+    protein: 36,
+    proteinPerServing: 36,
+    fat: 4,
+    fatPerServing: 4,
+    carbs: 18,
+    carbsPerServing: 18,
+    sugar: 4,
+    sugarPerServing: 4,
+    servings: 1,
+    servingSize: "1 whole finished Creami pint",
+    time: "24 hr freeze + 5 min rest + spin",
+    bestFor: [
+      "Crumbl remake",
+      "high-protein dessert",
+      "chocolate lovers",
+      "post-workout treat"
+    ],
+    steps: [
+      {
+        text: "BLEND BASE: Blend Nurri 2% protein milk, monk-fruit sweetener, Opportuniteas whey isolate, Dutch-process cocoa powder, guar gum, and a pinch of salt until completely smooth.",
+        image: "/images/frozen-hot-chocolate-cookie-creami/base-polished.webp",
+        imageAlt: "Frozen Hot Chocolate Cookie Creami: blended chocolate base"
+      },
+      {
+        text: "FREEZE: Pour into a Creami pint below the max-fill line and freeze upright on a level surface for 24 hours.",
+        image: "/images/frozen-hot-chocolate-cookie-creami/base-polished.webp",
+        imageAlt: "Frozen Hot Chocolate Cookie Creami: freezing pint"
+      },
+      {
+        text: "REST & SPIN: Rest the pint on the counter for 5 minutes. Spin on Regular Ice Cream, then run a Re-spin without adding liquid until velvety and thick. No mix-in cycle required.",
+        image: "/images/frozen-hot-chocolate-cookie-creami/texture-polished.webp",
+        imageAlt: "Frozen Hot Chocolate Cookie Creami: spun texture"
+      },
+      {
+        text: "TWO-INGREDIENT FUDGE: Warm 1 tbsp sugar-free syrup and stir together with 1 tbsp Dutch-process cocoa powder until a glossy, thick hot fudge forms.",
+        image: "/images/frozen-hot-chocolate-cookie-creami/fudge-polished.webp",
+        imageAlt: "Frozen Hot Chocolate Cookie Creami: warm fudge topping"
+      },
+      {
+        text: "TOP & SERVE: Scoop the Creami into a serving bowl. Drizzle with the warm fudge and scatter 5g dried cereal marshmallows over the top.",
+        image: "/images/frozen-hot-chocolate-cookie-creami/toppings-polished.webp",
+        imageAlt: "Frozen Hot Chocolate Cookie Creami: toppings"
+      }
+    ],
+    allergens: [
+      "dairy"
+    ],
+    dietTags: [
+      "high-protein",
+      "make-ahead",
+      "frozen-dessert",
+      "vegetarian"
+    ],
+    relatedIds: [
+      "coffee-chocolate-brownie-protein-creami",
+      "brookies-and-cream-protein-creami",
+      "cosmic-brownie-protein-creami"
+    ],
+    mealPrep: {
+      storage: "Freeze the unspun base upright and level. Spin and add warm fudge and marshmallows when ready to eat.",
+      lasts: "Follow the Creami machine guidance for storage and reprocessing.",
+      reheat: "Do not heat the pint."
+    }
+  },
 ];
 
 // Creamis have their own browsing section while other sweets remain Desserts.
