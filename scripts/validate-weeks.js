@@ -151,6 +151,8 @@ const KNOWN_LEFTOVER_CHAINS = new Set([
   75, // Oven-Fried Wings with Family Sauce Finishes — approved video-first family recipe package; no weekly-menu slot requested.
   76, // Ranch Steak, Greens + Mash — approved video-first family dinner package; no weekly-menu slot requested.
   77, // Ground Goat Keema Matar with Phulkas — approved video-first family dinner package; no weekly-menu slot requested.
+  79, // Hot-Honey Beef & Sweet Potato Family Bowls — approved video-first family dinner package; no weekly-menu slot requested.
+  80, // Frozen Queso Mac + Steak Upgrade — approved video-first fast meal package; no weekly-menu slot requested.
 ]);
 
 const recipesSrc = readFileSync("src/data/recipes.js", "utf-8");
