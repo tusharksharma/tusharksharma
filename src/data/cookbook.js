@@ -17518,6 +17518,201 @@ const DESSERT_CATALOG = [
       reheat: "Do not heat the pint."
     }
   },
+  {
+    id: "protein-gulab-jamun",
+    title: "Protein Gulab Jamun",
+    tagline: "Air-fried protein gulab jamuns made with blended cottage cheese, milk powder, and vanilla protein, soaked in an aromatic allulose rose-cardamom syrup. Approximately 77 calories and 8g protein per ball.",
+    heroImage: "/images/protein-gulab-jamun/hero-polished.webp",
+    prepImage: "/images/protein-gulab-jamun/dough-polished.webp",
+    prepImageCaption: "Blended cottage cheese and milk mixed with milk powder, flour, and vanilla protein into a smooth dough.",
+    video: "/videos/protein-gulab-jamun/814-Protein-Gulab-Jamun.mp4",
+    videoPoster: "/images/protein-gulab-jamun/hero-polished.webp",
+    socialHashtags: [
+      "#TheSplitPlate",
+      "#HappyDiwali",
+      "#GulabJamun",
+      "#ProteinDessert",
+      "#IndianDessert"
+    ],
+    socialImages: [
+      "/images/protein-gulab-jamun/dough-polished.webp",
+      "/images/protein-gulab-jamun/formed-polished.webp",
+      "/images/protein-gulab-jamun/baked-polished.webp",
+      "/images/protein-gulab-jamun/syrup-polished.webp",
+      "/images/protein-gulab-jamun/serving-polished.webp"
+    ],
+    socialCarousel: {
+      heroBadge: "High Protein • Gulab Jamun",
+      heroAccent: "amber",
+      heroTitle: "Protein Gulab Jamun",
+      heroStats: [
+        {
+          value: "~77",
+          label: "cal • per ball"
+        },
+        {
+          value: "7.7g",
+          label: "protein • per ball"
+        },
+        {
+          value: "9",
+          label: "balls total"
+        }
+      ],
+      hook: "Happy Diwali! Protein gulab jamun made from blended cottage cheese and milk powder, air-fried and soaked in rose-cardamom syrup.",
+      captionTitle: "Happy Diwali — Protein Gulab Jamun • ~77 cal / 7.7g protein",
+      captionBody: "Happy Diwali 🪔 I’ve officially gone crazy on this day: protein gulab jamun.\n\nAnd yes, the spit-out ending is a joke. They weren’t that bad. A little… but I ate them 😂\n\nMACRO HONESTY\nI made 9 balls. About 77 calories and 7.7g protein each — approximately 690 calories and 69g protein for the complete recipe. That counts all the syrup and all 10g of ghee. I didn’t measure syrup absorption, so I’m not pretending each ball soaked up an exact amount.\n\nTHE EXPERIMENT — makes 9\n\nDOUGH\n• 150g MULU 2% cottage cheese, not drained\n• 2 tbsp (about 30ml) Fairlife fat-free milk, to help blend\n• 40g nonfat milk powder\n• 40g maida / all-purpose flour\n• 32g PEScience Select Gourmet Vanilla protein powder\n• 5g melted ghee\n• ¼ tsp baking powder\n• Another 5g ghee for brushing the entire batch\n\nSYRUP\n• 100g pure allulose\n• 240ml water\n• ¼ tsp ground cardamom\n• 1 tsp food-grade rosewater\n\nMETHOD\n1. Blend the cottage cheese and milk completely smooth, without draining the cottage cheese.\n2. Combine the milk powder, flour, protein powder and baking powder. Mix in the blended cottage cheese and 5g melted ghee to make the dough.\n3. Divide into 9 and roll into balls. Brush the batch with the remaining 5g ghee.\n4. Air-fry at 325°F for 10 minutes. Check your own appliance and the centers for doneness; these are the settings I used.\n5. Warm the allulose, water and cardamom until the allulose dissolves. Add the food-grade rosewater.\n6. Put the cooked balls in a heat-safe container, pour the warm syrup over them and let them soak before eating. My exact soak duration wasn’t recorded.\n\nEstimates use the stated ingredients and the complete nine-ball yield. The allulose contributes about 40 calories for the batch using 0.4 calories per gram. Milk-powder/flour brands and your actual labels can change the totals. These are protein-enriched, allulose-sweetened gulab jamun experiments; the dairy still contains natural sugars.\n\nMusic: “Jai Hanuman” — Tushar Sharma, my published ElevenLabs track.\n\nWould you try this version?\n\n#TheSplitPlate #HappyDiwali #GulabJamun #ProteinDessert #IndianDessert",
+      heroPhoto: "/images/protein-gulab-jamun/hero-polished.webp",
+      ingredientGroups: [
+        {
+          card: 1,
+          accent: "amber",
+          heading: "Dough (Makes 9)",
+          items: [
+            { quantity: "150g", text: "MULU 2% cottage cheese (undrained)" },
+            { quantity: "2 tbsp (30ml)", text: "Fairlife fat-free milk" },
+            { quantity: "40g", text: "Nonfat milk powder" },
+            { quantity: "40g", text: "Maida / all-purpose flour" },
+            { quantity: "32g", text: "PEScience Select Vanilla protein" },
+            { quantity: "10g", text: "Ghee (5g in dough, 5g to brush)" },
+            { quantity: "1/4 tsp", text: "Baking powder" }
+          ]
+        },
+        {
+          card: 2,
+          accent: "coral",
+          heading: "Rose-Cardamom Syrup",
+          items: [
+            { quantity: "100g", text: "Pure allulose" },
+            { quantity: "240ml", text: "Water" },
+            { quantity: "1/4 tsp", text: "Ground cardamom" },
+            { quantity: "1 tsp", text: "Food-grade rosewater" }
+          ]
+        }
+      ],
+      ingredientCardPhotos: [
+        "/images/protein-gulab-jamun/dough-polished.webp",
+        "/images/protein-gulab-jamun/formed-polished.webp"
+      ],
+      methodGroups: [
+        {
+          card: 1,
+          accent: "amber",
+          heading: "Blend, mix & roll",
+          items: [
+            { number: 1, heading: "Blend dairy base", body: "Blend undrained cottage cheese and milk until completely smooth." },
+            { number: 2, heading: "Form 9 balls", body: "Mix with milk powder, flour, protein powder, baking powder and 5g ghee. Divide into 9 balls; brush with 5g ghee." }
+          ]
+        },
+        {
+          card: 2,
+          accent: "coral",
+          heading: "Air fry & syrup soak",
+          items: [
+            { number: 3, heading: "Air-fry 10 mins", body: "Air-fry at 325°F for 10 minutes until golden brown and cooked through." },
+            { number: 4, heading: "Simmer & soak", body: "Dissolve allulose, water and cardamom; add rosewater. Submerge cooked balls in warm syrup to soak." }
+          ]
+        }
+      ],
+      methodCardPhotos: [
+        "/images/protein-gulab-jamun/baked-polished.webp",
+        "/images/protein-gulab-jamun/syrup-polished.webp"
+      ],
+      servingPhoto: {
+        src: "/images/protein-gulab-jamun/serving-polished.webp",
+        layout: "side"
+      },
+      servingGroups: [
+        {
+          accent: "coral",
+          heading: "Macros per ball",
+          items: [
+            { text: "Approximately 77 cal and 7.7g protein per ball (690 cal / 69g protein for all 9, counting all syrup and ghee)." }
+          ]
+        }
+      ],
+      engagementQuestion: "Happy Diwali! Would you try this air-fried protein twist on traditional gulab jamun?"
+    },
+    calories: 690,
+    caloriesPerServing: 77,
+    protein: 69,
+    proteinPerServing: 8,
+    fat: 15,
+    fatPerServing: 2,
+    carbs: 72,
+    carbsPerServing: 8,
+    sugar: 27,
+    sugarPerServing: 3,
+    servings: 9,
+    servingSize: "1 gulab jamun with syrup (1 of 9 balls)",
+    time: "25 min",
+    bestFor: [
+      "Diwali celebration",
+      "high-protein dessert",
+      "Indian sweets remake",
+      "macro-friendly treat"
+    ],
+    ingredients: [
+      "--- DOUGH ---",
+      "150g MULU 2% cottage cheese (not drained)",
+      "2 tbsp (about 30ml) Fairlife fat-free milk (to help blend)",
+      "40g nonfat milk powder",
+      "40g maida / all-purpose flour",
+      "32g PEScience Select Gourmet Vanilla protein powder",
+      "5g melted ghee (plus 5g more for brushing)",
+      "1/4 tsp baking powder",
+      "--- SYRUP ---",
+      "100g pure allulose",
+      "240ml water",
+      "1/4 tsp ground cardamom",
+      "1 tsp food-grade rosewater"
+    ],
+    steps: [
+      {
+        text: "BLEND DAIRY: Blend the cottage cheese and milk completely smooth without draining the cottage cheese.",
+        image: "/images/protein-gulab-jamun/dough-polished.webp",
+        imageAlt: "Protein Gulab Jamun: mixing dough"
+      },
+      {
+        text: "MIX & SHAPE: Combine milk powder, flour, protein powder and baking powder. Mix in blended cottage cheese and 5g melted ghee. Divide into 9 balls and brush with remaining 5g ghee.",
+        image: "/images/protein-gulab-jamun/formed-polished.webp",
+        imageAlt: "Protein Gulab Jamun: formed dough balls"
+      },
+      {
+        text: "AIR-FRY: Air-fry at 325°F for 10 minutes until golden brown and cooked through in the center.",
+        image: "/images/protein-gulab-jamun/baked-polished.webp",
+        imageAlt: "Protein Gulab Jamun: air-fried golden balls"
+      },
+      {
+        text: "MAKE SYRUP: Warm allulose, water and ground cardamom until allulose completely dissolves. Remove from heat and stir in food-grade rosewater.",
+        image: "/images/protein-gulab-jamun/syrup-polished.webp",
+        imageAlt: "Protein Gulab Jamun: warm rose-cardamom syrup pour"
+      },
+      {
+        text: "SOAK & SERVE: Place cooked balls into a heat-safe bowl, pour warm syrup over them, and allow to soak before serving.",
+        image: "/images/protein-gulab-jamun/serving-polished.webp",
+        imageAlt: "Protein Gulab Jamun: soaked gulab jamuns ready to enjoy"
+      }
+    ],
+    allergens: [
+      "dairy",
+      "gluten"
+    ],
+    dietTags: [
+      "high-protein",
+      "vegetarian"
+    ],
+    relatedIds: [
+      "frozen-hot-chocolate-cookie-creami",
+      "coffee-chocolate-brownie-protein-creami",
+      "brookies-and-cream-protein-creami"
+    ],
+    mealPrep: {
+      storage: "Store soaked gulab jamuns in an airtight container in the refrigerator submerged in syrup.",
+      lasts: "Up to 4-5 days refrigerated.",
+      reheat: "Microwave gently for 10-15 seconds to enjoy warm."
+    }
+  },
 ];
 
 // Creamis have their own browsing section while other sweets remain Desserts.
