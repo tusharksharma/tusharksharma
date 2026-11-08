@@ -3195,6 +3195,208 @@ export const breakfasts = [
       "Creator verdict preserved from package: crisp and airy; best protein waffles made so far; would not choose them over hotel waffle-bar waffles, but they evoke that craving; not an exclusive future breakfast.",
     ],
   },
+  {
+    id: "microwave-protein-pancake-bowl",
+    title: "Microwave Protein Pancake Bowl",
+    tagline: "Pancakes without the pan: fluffy, 2-minute microwave protein pancake bowl with a split adult PBfit finish (~404 cal / 46g protein) and kid-friendly maple sprinkle option.",
+    heroImage: "/images/microwave-protein-pancake-bowl/hero-polished.webp",
+    prepImage: "/images/microwave-protein-pancake-bowl/batter-polished.webp",
+    prepImageCaption: "Whisked egg, Fairlife milk, Greek yogurt, flour, vanilla protein, and baking powder batter ready for the microwave.",
+    video: "/videos/microwave-protein-pancake-bowl/815-Microwave-Protein-Pancake-Bowl.mp4",
+    videoPoster: "/images/microwave-protein-pancake-bowl/hero-polished.webp",
+    socialHashtags: [
+      "#TheSplitPlate",
+      "#ProteinPancakes",
+      "#MicrowavePancake",
+      "#FamilyBreakfast"
+    ],
+    socialImages: [
+      "/images/microwave-protein-pancake-bowl/whisk-polished.webp",
+      "/images/microwave-protein-pancake-bowl/batter-polished.webp",
+      "/images/microwave-protein-pancake-bowl/cooked-polished.webp",
+      "/images/microwave-protein-pancake-bowl/kids-polished.webp",
+      "/images/microwave-protein-pancake-bowl/adult-polished.webp"
+    ],
+    socialCarousel: {
+      heroBadge: "Quick Protein • Breakfast",
+      heroAccent: "amber",
+      heroTitle: "Microwave Protein Pancake Bowl",
+      heroStats: [
+        {
+          value: "404",
+          label: "cal • adult bowl"
+        },
+        {
+          value: "46g",
+          label: "protein • adult bowl"
+        },
+        {
+          value: "2 min",
+          label: "microwave time"
+        }
+      ],
+      hook: "Pancakes without the pan 🥞 PBfit for me, maple and sprinkles for the kids. 2 minutes in the microwave.",
+      captionTitle: "Microwave Protein Pancake Bowl • 404 cal / 46g protein",
+      captionBody: "Pancakes without the pan 🥞 PBfit for me, maple and sprinkles for the kids. Save this for a pancake morning.\n\nInspired by @eliya.eats; I changed the ingredients and finishes. The protein math is for my version.\n\nFULL RECIPE\nBASE — per full bowl\n• 1 large egg\n• 50g Oikos Triple Zero vanilla nonfat Greek yogurt\n• ¼ cup (60ml) Fairlife fat-free ultra-filtered milk\n• 1 scoop (31g) vanilla PEScience Select\n• 35g all-purpose flour\n• 1 tsp baking powder\n• 1 tbsp zero-calorie monk-fruit/erythritol sweetener per full base\n\nWhisk egg, milk and yogurt in a microwave-safe bowl with room to rise. Stir in the remaining base ingredients. Microwave 2 minutes at regular power, the setting I used. Check the center and cool before eating; appliances vary.\n\nMY FINISH — 1 adult serving\nMix 1 tbsp (8g) PBfit + 30g Maple Grove Farms low-calorie syrup; spoon over the cooked pancake.\n\nKIDS’ FINISH — 2 servings total\nUse one full base bowl. Replace the adult finish with 2 tbsp regular maple syrup + 1 tsp sprinkles across the ENTIRE bowl, then divide in two. I used Kirkland maple syrup.\n\nFor 1 adult bowl + 2 kids’ servings, make the base TWICE.\n\nESTIMATES, TOPPINGS INCLUDED\nAdult full bowl: 404 cal /46g protein /8g fat.\nKids per ½ bowl: 247 cal /21g protein /4g fat. Whole kids’ bowl: 494 cal /42g protein.\n\nCalories/protein use my confirmed recipe log. Kids’ math assumes a standard 1 tsp/about4g sprinkle portion. Total carbs, assuming 1 tbsp sweetener ≈12g erythritol: adult ≈51g (includes12g sugar alcohols); kids ≈38g each (includes6g). Actual sweetener labels/weights change those totals. These are recipe estimates, not child nutrition targets.\n\n#TheSplitPlate #ProteinPancakes #MicrowavePancake #FamilyBreakfast",
+      heroPhoto: "/images/microwave-protein-pancake-bowl/hero-polished.webp",
+      ingredientGroups: [
+        {
+          card: 1,
+          accent: "amber",
+          heading: "Base (Per Full Bowl)",
+          items: [
+            { quantity: "1 large", text: "Egg" },
+            { quantity: "50g", text: "Oikos Triple Zero vanilla Greek yogurt" },
+            { quantity: "1/4 cup (60ml)", text: "Fairlife fat-free milk" },
+            { quantity: "1 scoop (31g)", text: "PEScience Select Vanilla protein" },
+            { quantity: "35g", text: "All-purpose flour" },
+            { quantity: "1 tsp", text: "Baking powder" },
+            { quantity: "1 tbsp", text: "Zero-cal monk-fruit sweetener" }
+          ]
+        },
+        {
+          card: 2,
+          accent: "coral",
+          heading: "Finishes (Adult vs Kids)",
+          items: [
+            { quantity: "1 tbsp (8g)", text: "PBfit (Adult finish)" },
+            { quantity: "30g", text: "Maple Grove Farms low-cal syrup (Adult)" },
+            { quantity: "2 tbsp", text: "Regular maple syrup (Kids bowl)" },
+            { quantity: "1 tsp (4g)", text: "Rainbow sprinkles (Kids bowl)" }
+          ]
+        }
+      ],
+      ingredientCardPhotos: [
+        "/images/microwave-protein-pancake-bowl/whisk-polished.webp",
+        "/images/microwave-protein-pancake-bowl/batter-polished.webp"
+      ],
+      methodGroups: [
+        {
+          card: 1,
+          accent: "amber",
+          heading: "Whisk & microwave",
+          items: [
+            { number: 1, heading: "Whisk wet base", body: "Whisk egg, milk and yogurt in a microwave-safe bowl with room to rise." },
+            { number: 2, heading: "Stir & cook 2 min", body: "Mix in flour, protein powder, baking powder and sweetener. Microwave 2 minutes at regular power." }
+          ]
+        },
+        {
+          card: 2,
+          accent: "coral",
+          heading: "Finish & split",
+          items: [
+            { number: 3, heading: "Adult PBfit finish", body: "Mix 1 tbsp PBfit with 30g low-calorie syrup and spoon over the warm cooked pancake." },
+            { number: 4, heading: "Kids maple finish", body: "Top second bowl with 2 tbsp maple syrup and 1 tsp sprinkles, then divide into two servings." }
+          ]
+        }
+      ],
+      methodCardPhotos: [
+        "/images/microwave-protein-pancake-bowl/cooked-polished.webp",
+        "/images/microwave-protein-pancake-bowl/kids-polished.webp"
+      ],
+      servingPhoto: {
+        src: "/images/microwave-protein-pancake-bowl/adult-polished.webp",
+        layout: "side"
+      },
+      servingGroups: [
+        {
+          accent: "coral",
+          heading: "Split nutrition",
+          items: [
+            { text: "Adult full bowl: 404 cal / 46g protein / 8g fat. Kids (per 1/2 bowl): 247 cal / 21g protein / 4g fat." }
+          ]
+        }
+      ],
+      engagementQuestion: "Pancakes without the pan: would you do PBfit drizzle or classic maple and sprinkles?"
+    },
+    flavorProfile: "Fluffy, cake-like microwave pancake topped with rich peanut butter maple sauce for adults or sweet maple syrup and sprinkles for kids.",
+    calories: 404,
+    caloriesPerServing: 404,
+    protein: 46,
+    proteinPerServing: 46,
+    fat: 8,
+    fatPerServing: 8,
+    carbs: 39,
+    carbsPerServing: 39,
+    sugar: 5,
+    sugarPerServing: 5,
+    servings: 1,
+    servingSize: "1 full adult pancake bowl with PBfit syrup finish",
+    time: "5 min (2 min cook)",
+    bestFor: [
+      "Quick breakfast",
+      "High protein",
+      "Kid-friendly split",
+      "Meal prep"
+    ],
+    splitNote: {
+      adult: "Full base bowl topped with 1 tbsp PBfit and 30g low-calorie syrup (404 cal / 46g protein).",
+      kid: "Full base bowl topped with 2 tbsp pure maple syrup and 1 tsp sprinkles, divided into two servings (247 cal / 21g protein each)."
+    },
+    ingredients: [
+      "--- BASE (PER FULL BOWL) ---",
+      "1 large egg (about 50g)",
+      "50g Oikos Triple Zero vanilla nonfat Greek yogurt",
+      "1/4 cup (60ml) Fairlife fat-free ultra-filtered milk",
+      "1 scoop (31g) PEScience Select Gourmet Vanilla protein powder",
+      "35g all-purpose flour",
+      "1 tsp baking powder",
+      "1 tbsp zero-calorie monk-fruit/erythritol sweetener",
+      "--- ADULT FINISH (1 SERVING) ---",
+      "1 tbsp (8g) PBfit powdered peanut butter",
+      "30g Maple Grove Farms low-calorie syrup",
+      "--- KIDS FINISH (2 SERVINGS TOTAL) ---",
+      "2 tbsp (30ml) pure maple syrup (e.g. Kirkland)",
+      "1 tsp (about 4g) rainbow sprinkles"
+    ],
+    steps: [
+      {
+        text: "WHISK WET BASE: In a microwave-safe bowl with room to rise, whisk the egg, Fairlife milk, and vanilla Greek yogurt until smooth.",
+        image: "/images/microwave-protein-pancake-bowl/whisk-polished.webp",
+        imageAlt: "Microwave Protein Pancake Bowl: whisking wet base"
+      },
+      {
+        text: "COMBINE BATTER: Add flour, vanilla protein powder, baking powder, and sweetener. Stir thoroughly until a smooth, velvety batter forms.",
+        image: "/images/microwave-protein-pancake-bowl/batter-polished.webp",
+        imageAlt: "Microwave Protein Pancake Bowl: mixed batter"
+      },
+      {
+        text: "MICROWAVE: Microwave on regular power for 2 minutes until risen, puffy, and fully set in the center.",
+        image: "/images/microwave-protein-pancake-bowl/cooked-polished.webp",
+        imageAlt: "Microwave Protein Pancake Bowl: freshly microwaved pancake"
+      },
+      {
+        text: "KIDS' FINISH (OPTIONAL): For kids, top the full bowl with 2 tbsp maple syrup and 1 tsp sprinkles, then divide into two equal portions (247 cal / 21g protein each).",
+        image: "/images/microwave-protein-pancake-bowl/kids-polished.webp",
+        imageAlt: "Microwave Protein Pancake Bowl: kids finish with maple and sprinkles"
+      },
+      {
+        text: "ADULT FINISH: Stir 1 tbsp PBfit into 30g low-calorie syrup until glossy and spoon over the warm adult pancake bowl.",
+        image: "/images/microwave-protein-pancake-bowl/adult-polished.webp",
+        imageAlt: "Microwave Protein Pancake Bowl: adult finish with PBfit syrup"
+      }
+    ],
+    allergens: [
+      "dairy",
+      "egg",
+      "gluten",
+      "peanut"
+    ],
+    dietTags: [
+      "high-protein",
+      "vegetarian"
+    ],
+    relatedIds: [
+      "vanilla-cottage-cheese-protein-pancakes",
+      "cottage-cheese-protein-waffles",
+      "fast-food-breakfast-tacos"
+    ],
+    mealPrep: {
+      storage: "Best enjoyed fresh, or cool and store covered in the refrigerator for up to 3 days.",
+      lasts: "3 days refrigerated.",
+      reheat: "Microwave for 20-30 seconds to warm through."
+    }
+  },
 ];
 
 export const batchPrep = [
