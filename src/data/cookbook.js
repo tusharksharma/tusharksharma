@@ -17915,6 +17915,203 @@ const DESSERT_CATALOG = [
       reheat: "Microwave gently for 10-15 seconds to enjoy warm."
     }
   },
+  {
+    id: "sea-salt-toffee-skillet-cookie-creami",
+    title: "Sea Salt Toffee Skillet Cookie Creami",
+    tagline: "Creami remake of Crumbl's Sea Salt Toffee Skillet Cookie: brown-butter vanilla ice cream folded with gooey marshmallow creme, crunchy Heath toffee bits, and flaky sea salt. Approximately 320 calories and 34g protein for the entire pint.",
+    heroImage: "/images/sea-salt-toffee-skillet-cookie-creami/hero-polished.webp",
+    prepImage: "/images/sea-salt-toffee-skillet-cookie-creami/base-polished.webp",
+    prepImageCaption: "The blended brown-butter vanilla protein milk base ready for the 24-hour freeze.",
+    video: "/videos/sea-salt-toffee-skillet-cookie-creami/817-Sea-Salt-Toffee-Skillet-Cookie-Creami.mp4",
+    videoPoster: "/images/sea-salt-toffee-skillet-cookie-creami/hero-polished.webp",
+    socialHashtags: [
+      "#TheSplitPlate",
+      "#CrumblCreamiCut",
+      "#NinjaCreami",
+      "#ToffeeIceCream",
+      "#ProteinIceCream"
+    ],
+    socialImages: [
+      "/images/sea-salt-toffee-skillet-cookie-creami/base-polished.webp",
+      "/images/sea-salt-toffee-skillet-cookie-creami/mixins-polished.webp",
+      "/images/sea-salt-toffee-skillet-cookie-creami/spin-polished.webp",
+      "/images/sea-salt-toffee-skillet-cookie-creami/topping-polished.webp",
+      "/images/sea-salt-toffee-skillet-cookie-creami/scoop-polished.webp"
+    ],
+    socialCarousel: {
+      heroBadge: "CrumblCreamiCut • 10/10",
+      heroAccent: "amber",
+      heroTitle: "Sea Salt Toffee Skillet Cookie Creami",
+      heroStats: [
+        {
+          value: "~320",
+          label: "cal • whole pint"
+        },
+        {
+          value: "34g",
+          label: "protein • whole pint"
+        },
+        {
+          value: "1",
+          label: "finished pint"
+        }
+      ],
+      hook: "Sticky inside, crunchy outside. My 10/10 toffee pint inspired by Crumbl's Sea Salt Toffee Skillet Cookie.",
+      captionTitle: "Sea Salt Toffee Skillet Cookie Creami • ~320 cal / 34g protein",
+      captionBody: "Sticky inside, crunchy outside. My last CrumblCreamiCut of this week was amazing: 10/10 🍨\n\nInspired by @crumbl’s Sea Salt Toffee Skillet Cookie. About 320 calories and 34g protein for the WHOLE finished pint, including every mix-in and topping.\n\nFULL RECIPE — 1 pint / 1 serving\nBASE\n• 1 cup (240ml) Nurri plain 2% ultra-filtered milk\n• ½ serving Opportuniteas unflavored whey isolate (60 cal, 14g protein)\n• 2 tbsp monk-fruit/erythritol sweetener\n• ⅛ tsp guar gum, leveled\n• Pinch of salt\n• ¼ tsp brown-butter emulsion/flavoring\n• ½ tsp vanilla\n\nMIX-IN\n• 7.5g HEATH Chocolatey English Toffee Bits\n• 1 tbsp Jet-Puffed Marshmallow Creme\n\nTOPPING\n• 7.6g HEATH Chocolatey English Toffee Bits\n\nMETHOD\n1. Blend the base until smooth. Freeze upright and level for 24 hours.\n2. Rest 5 minutes on the counter, then run Regular Ice Cream.\n3. Add the 7.5g Heath and 1 tbsp marshmallow creme. Respin to incorporate, without adding liquid. No hot-water bath.\n4. Scoop into a serving dish and add the remaining 7.6g Heath on top.\n\nNutrition is an estimate for the complete finished pint. My usual Nurri/whey base is used; milk, whey and flavoring labels change totals. The vanilla type wasn’t specified, so the estimate includes a small flavoring allowance. The Crumbl cookie is inspiration, not an ingredient.\n\nSave this for your next toffee craving.\n\n#CrumblCreamiCut #NinjaCreami #ToffeeIceCream #ProteinIceCream #TheSplitPlate",
+      heroPhoto: "/images/sea-salt-toffee-skillet-cookie-creami/hero-polished.webp",
+      ingredientGroups: [
+        {
+          card: 1,
+          accent: "amber",
+          heading: "Base (1 Pint)",
+          items: [
+            { quantity: "1 cup (240ml)", text: "Nurri plain 2% protein milk" },
+            { quantity: "1/2 serving", text: "Opportuniteas whey isolate" },
+            { quantity: "2 tbsp", text: "Monk-fruit blend sweetener" },
+            { quantity: "1/8 tsp + pinch", text: "Guar gum + pinch salt" },
+            { quantity: "1/4 tsp", text: "Brown-butter flavoring" },
+            { quantity: "1/2 tsp", text: "Vanilla extract" }
+          ]
+        },
+        {
+          card: 2,
+          accent: "coral",
+          heading: "Mix-in & Topping",
+          items: [
+            { quantity: "7.5g", text: "HEATH English Toffee Bits (mix-in)" },
+            { quantity: "1 tbsp", text: "Jet-Puffed Marshmallow Creme" },
+            { quantity: "7.6g", text: "HEATH English Toffee Bits (topping)" },
+            { quantity: "Pinch", text: "Flaky sea salt (finish)" }
+          ]
+        }
+      ],
+      ingredientCardPhotos: [
+        "/images/sea-salt-toffee-skillet-cookie-creami/base-polished.webp",
+        "/images/sea-salt-toffee-skillet-cookie-creami/mixins-polished.webp"
+      ],
+      methodGroups: [
+        {
+          card: 1,
+          accent: "amber",
+          heading: "Blend & freeze",
+          items: [
+            { number: 1, heading: "Blend brown-butter base", body: "Blend milk, whey isolate, sweetener, guar gum, salt, brown-butter and vanilla until smooth." },
+            { number: 2, heading: "Freeze 24 hours", body: "Pour into Creami pint below max-fill line. Freeze level and upright for 24 hours." }
+          ]
+        },
+        {
+          card: 2,
+          accent: "coral",
+          heading: "Spin & mix-ins",
+          items: [
+            { number: 3, heading: "Spin on ice cream", body: "Rest 5 min, spin on Regular Ice Cream. Add 7.5g Heath toffee and 1 tbsp marshmallow creme, then Respin." },
+            { number: 4, heading: "Toffee topping finish", body: "Scoop into a bowl, scatter remaining 7.6g Heath toffee and flaky sea salt over the top." }
+          ]
+        }
+      ],
+      methodCardPhotos: [
+        "/images/sea-salt-toffee-skillet-cookie-creami/spin-polished.webp",
+        "/images/sea-salt-toffee-skillet-cookie-creami/topping-polished.webp"
+      ],
+      servingPhoto: {
+        src: "/images/sea-salt-toffee-skillet-cookie-creami/scoop-polished.webp",
+        layout: "side"
+      },
+      servingGroups: [
+        {
+          accent: "coral",
+          heading: "Whole finished pint",
+          items: [
+            { text: "Approximately 320 calories and 34g protein for the entire pint including all Heath toffee bits and marshmallow creme." }
+          ]
+        }
+      ],
+      engagementQuestion: "10/10 Crumbl score: do you prefer sticky marshmallow swirls or crunchy toffee bits?"
+    },
+    calories: 320,
+    caloriesPerServing: 320,
+    protein: 34,
+    proteinPerServing: 34,
+    fat: 6,
+    fatPerServing: 6,
+    carbs: 28,
+    carbsPerServing: 28,
+    sugar: 12,
+    sugarPerServing: 12,
+    servings: 1,
+    servingSize: "1 whole finished Creami pint",
+    time: "24 hr freeze + 5 min rest + spin",
+    bestFor: [
+      "Crumbl remake",
+      "high-protein dessert",
+      "toffee lovers",
+      "Ninja Creami treat"
+    ],
+    ingredients: [
+      "--- BASE ---",
+      "1 cup (240ml) Nurri plain 2% ultra-filtered milk",
+      "1/2 serving Opportuniteas unflavored whey isolate (60 cal, 14g protein)",
+      "2 tbsp monk-fruit/erythritol sweetener",
+      "1/8 tsp guar gum, leveled",
+      "Pinch of salt",
+      "1/4 tsp brown-butter flavoring/emulsion",
+      "1/2 tsp vanilla extract",
+      "--- MIX-IN ---",
+      "7.5g HEATH Chocolatey English Toffee Bits",
+      "1 tbsp Jet-Puffed Marshmallow Creme",
+      "--- TOPPING ---",
+      "7.6g HEATH Chocolatey English Toffee Bits",
+      "Pinch flaky sea salt (optional garnish)"
+    ],
+    steps: [
+      {
+        text: "BLEND BASE: Blend Nurri 2% protein milk, whey isolate, monk-fruit sweetener, guar gum, salt, brown-butter flavoring, and vanilla until smooth.",
+        image: "/images/sea-salt-toffee-skillet-cookie-creami/base-polished.webp",
+        imageAlt: "Sea Salt Toffee Skillet Cookie Creami: blended base"
+      },
+      {
+        text: "FREEZE: Pour into a Creami pint below the max-fill line and freeze upright on a level surface for 24 hours.",
+        image: "/images/sea-salt-toffee-skillet-cookie-creami/base-polished.webp",
+        imageAlt: "Sea Salt Toffee Skillet Cookie Creami: freezing pint"
+      },
+      {
+        text: "FIRST SPIN & MIX-INS: Rest the pint on the counter for 5 minutes. Run Regular Ice Cream. Add 7.5g Heath toffee bits and 1 tbsp marshmallow creme into the center.",
+        image: "/images/sea-salt-toffee-skillet-cookie-creami/mixins-polished.webp",
+        imageAlt: "Sea Salt Toffee Skillet Cookie Creami: adding mix-ins"
+      },
+      {
+        text: "RESPIN: Run a Respin cycle without adding liquid to fold the sticky marshmallow creme and toffee into the ice cream.",
+        image: "/images/sea-salt-toffee-skillet-cookie-creami/spin-polished.webp",
+        imageAlt: "Sea Salt Toffee Skillet Cookie Creami: spun texture"
+      },
+      {
+        text: "TOP & SERVE: Scoop the Creami into a serving bowl. Scatter the remaining 7.6g Heath toffee bits and a light pinch of flaky sea salt over the top.",
+        image: "/images/sea-salt-toffee-skillet-cookie-creami/topping-polished.webp",
+        imageAlt: "Sea Salt Toffee Skillet Cookie Creami: toffee topping"
+      }
+    ],
+    allergens: [
+      "dairy",
+      "soy"
+    ],
+    dietTags: [
+      "high-protein",
+      "make-ahead",
+      "frozen-dessert",
+      "vegetarian"
+    ],
+    relatedIds: [
+      "frozen-hot-chocolate-cookie-creami",
+      "coffee-chocolate-brownie-protein-creami",
+      "brookies-and-cream-protein-creami"
+    ],
+    mealPrep: {
+      storage: "Freeze the unspun base upright and level. Spin and add toppings when ready to eat.",
+      lasts: "Follow the Creami machine guidance for storage and reprocessing.",
+      reheat: "Do not heat the pint."
+    }
+  },
 ];
 
 // Creamis have their own browsing section while other sweets remain Desserts.
