@@ -171,7 +171,7 @@ export default function SocialIndexPage() {
               )}
               <div className="p-3 flex flex-col justify-center min-w-0">
                 <h3 className="text-white font-bold text-sm group-hover:text-amber-400 transition-colors truncate">{c.title}</h3>
-                <p className="text-neutral-500 text-[10px] mt-0.5">{c.weekLabel} · 7 cards</p>
+                <p className="text-neutral-500 text-[10px] mt-0.5">{c.weekLabel} · {c.cards?.length || 0} cards</p>
                 <p className="text-amber-400 text-[10px] mt-1 group-hover:underline">Open carousel →</p>
               </div>
             </Link>

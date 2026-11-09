@@ -31,6 +31,30 @@ export const xThoughtCarousels = [
         "Seven dinner rules that survive a real week—stove splits, lunch slots, ugly bowls and all. Save this for the next 5:30 scramble. Full notes: link in bio.\n\n#WeeknightDinner #FamilyMeals #RealLifeFood",
     },
   },
+  {
+    slug: "seven-small-dinner-moves-that-get-made",
+    title: "Seven small dinner moves that get made",
+    subtitle: "A fresh side, a second finish, crunch worth protecting—what got dinner done Nov 2–8.",
+    // Friday publish date for this carousel (not the first daily thought date).
+    initialMainPostDate: "2026-11-13",
+    weekLabel: "Nov 2 – Nov 8, 2026",
+    // First card is the thumbnail (no separate cover); cards 1–7 are the seven daily thoughts.
+    cards: [
+      { src: "/images/x-thoughts-2026-11-13/x-01.jpg", date: "Nov 2, 2026", label: "1 / 7" },
+      { src: "/images/x-thoughts-2026-11-13/x-02.jpg", date: "Nov 3, 2026", label: "2 / 7" },
+      { src: "/images/x-thoughts-2026-11-13/x-03.jpg", date: "Nov 4, 2026", label: "3 / 7" },
+      { src: "/images/x-thoughts-2026-11-13/x-04.jpg", date: "Nov 5, 2026", label: "4 / 7" },
+      { src: "/images/x-thoughts-2026-11-13/x-05.jpg", date: "Nov 6, 2026", label: "5 / 7" },
+      { src: "/images/x-thoughts-2026-11-13/x-06.jpg", date: "Nov 7, 2026", label: "6 / 7" },
+      { src: "/images/x-thoughts-2026-11-13/x-07.jpg", date: "Nov 8, 2026", label: "7 / 7" },
+    ],
+    caption: {
+      default:
+        "Seven small dinner moves from this week: a fresh side for freezer nights, a second finish instead of a second dinner, and crunch worth protecting. Save this for the next 5:30 scramble. Full recipes: link in bio.\n\n#FamilyDinner #WeeknightDinner #CookingTips",
+      tiktok:
+        "Seven small dinner moves from this week: a fresh side for freezer nights, a second finish instead of a second dinner, and crunch worth protecting. Save this for the next 5:30 scramble. Full recipes: link in bio.\n\n#FamilyDinner #WeeknightDinner #CookingTips",
+    },
+  },
 ];
 
 export function findXThoughtCarousel(slug) {

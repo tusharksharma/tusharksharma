@@ -82,7 +82,8 @@ export default function XThoughtsSocialPage({ carousel }) {
           <p className="text-neutral-500 text-sm mt-0.5">{carousel.subtitle}</p>
         ) : null}
         <p className="text-neutral-500 text-xs mt-2">
-          {cards.length} cards · 1080×1350 each. Card 1 is the cover thumbnail; cards 2–8 are the week's thoughts.{" "}
+          {cards.length} cards · 1080×1350 each. First card is the thumbnail
+          {cards.length > 1 ? ` — remaining cards are the week's thoughts` : ""}.{" "}
           <span className="text-amber-400">Slides match the past @splitplates X carousel format (food-photo background, cream/dark panel, THE SPLIT PLATE footer).</span>
         </p>
         <p className="text-neutral-600 text-[10px] mt-1">
