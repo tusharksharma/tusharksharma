@@ -90,3 +90,10 @@ Owner confirmed: long-form films remain Monday/Wednesday at 5 p.m. America/Los_A
 Film-relative promo days: Monday film → Tuesday, Thursday, Saturday; Wednesday film → Friday, Saturday, Sunday; Friday film → Sunday, Monday, Wednesday. A day with one film promo uses noon Pacific. A day with two distinct film promos uses 10 a.m. and 2 p.m. Pacific, superseding all older noon/5 p.m. exceptions. Count a matching cross-platform companion package as one promo, not one per platform. Keep that package's Shorts/Facebook/Instagram/TikTok entries aligned. For the established steady cadence, Saturday is Monday-film10 a.m./Wednesday-film2 p.m.; Sunday is Wednesday-film10 a.m./Friday-film2 p.m. Actual occupancy governs single-promo days. Recheck dates through Pacific daylight-saving changes.
 
 Before changing existing schedules, read exact local IDs and actual platform rows. Edit the existing entries in place; preserve approved assets, captions, other dates and published outcomes, and do not recreate posts. Record a migration as pending until every affected platform has a verified receipt. A rule update alone does not reschedule existing posts. Native photo Story link cards remain governed by the November3 native-app release gate above.
+
+
+## Observed scheduling form behavior — November 10, 2026
+
+In the current Meta composer, assigning a date or time value can leave the displayed value unchanged after Save. Enter the value through the actual field, commit it with Tab/blur, and read back the displayed date, hour, minute and AM/PM before scheduling. Verify the success receipt and scheduled row afterward. Use the same check for Story fields; do not treat a successful input call as a changed schedule. This is an observed UI recovery, not a requirement to use one input method on every platform.
+
+A Story upload can remain in Processing media while the schedule button is disabled. Preserve that composer and work on independent companions; resume only once the exact media is ready. A scheduling-in-progress notice is not the final scheduled-row audit.

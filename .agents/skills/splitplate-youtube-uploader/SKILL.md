@@ -42,6 +42,8 @@ For promo covers, verify the actual saved platform thumbnail after Save and relo
 5. Publish or schedule exactly as authorized. For scheduling, verify the calendar date, clock time and selected time zone in Studio; use America/Los_Angeles unless the brief specifies otherwise. Read the success receipt and actual content-row status. Scheduled is not public.
 6. After publication, inspect the actual watch page: intended channel, title, thumbnail, public status, available resolution, chapters, captions and working links. Save a screenshot and live URL. Add and pin the prepared comment when included in the authorized package and supported; report an unavailable feature rather than claiming it succeeded.
 
+Observed November 10, 2026: when importing an end screen from another film, reopen the saved editor against the destination master. Confirm all three element destinations and the final-five-second interval using the destination frame rate; source and destination timecode frame digits can differ without changing the duration. A saved private-film editor is proof of configuration, not public watch-page display.
+
 If a transfer or browser operation fails, inspect whether an upload already exists before retrying. Resume the existing draft when possible. Keep the draft and completed package recoverable, and report the concrete limitation if current access cannot finish the job. Do not launch another chat or hand off by default.
 
 ## Record and continue
