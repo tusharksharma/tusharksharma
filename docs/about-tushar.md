@@ -546,3 +546,24 @@ He is a strong hot-honey fan. Ten grams of Mike's Extra Hot Honey gave his own b
 ### BIO-092: Batch-blending makes the second dinner easier
 
 Blending cottage cheese was the fiddliest step in an otherwise easy dinner. He would prepare enough smooth cottage cheese for both nights to avoid getting the blender out twice, with plain purchased mashed avocado ready too. He stored beef and sweet potatoes separately, reheating potatoes in the air fryer and beef in a pan; about five minutes was his estimate. Cold toppings were added when assembling. MULU 2% was confirmed, but the exact butter-seasoning name was not; do not promote the recalled name into a verified product fact.
+
+
+## Confirmed firsthand stories — Brookies, Frozen Hot Chocolate and Sea Salt Toffee, November 9, 2026
+
+Source: Tushar's direct seven-part interview answers in this chat, followed by approval of the exact main/promo narration and recipe supplement. The shared base was filmed November 2; flavor sessions were November 3, 6 and 7. Raw interview and production records remain private. These extend BIO-001, BIO-019–024 and BIO-066–070 without replacing their dated accounts.
+
+### BIO-093: New flavors, usually chocolate or vanilla
+
+After many Creami experiments, he feels he has a better sense of what he would enjoy recreating. He usually chooses a flavor he has not made before, leaning toward chocolate and vanilla rather than fruit. This is his usual preference, not a rule that excludes familiar combinations; BIO-066 retains his separately reported occasional choice of a familiar peanut-butter/chocolate flavor. He did not remember the other options in this week's lineup.
+
+### BIO-094: A loaded Brookies pint can be simplified
+
+For this Brookies & Cream build, he scored it 9.7/10. Prime Bites brownie and HighKey Oreo-style sandwich cookies were joint first among the additions. The brownie broke down and distributed through the pint; the sandwich cookies worked better for him in ice cream than alone, and he could not tell them from regular Oreos in this context. Barebells came next and was clearly detectable. The HighKey chewy chocolate-chip cookies disappeared among the other additions, so he would omit those next time. No specific calorie comparison with regular cookies was completed or verified.
+
+### BIO-095: Marshmallow creme earned another experiment
+
+Sea Salt Toffee scored 10/10 for him. Marshmallow creme incorporated after the first processing made the texture thicker, gooier and stickier; this was the standout change he would consider trying in other builds. Heath toffee bits also added excellent crunch, a familiar result because he had used them before. In contrast, the freeze-dried marshmallow topping in Frozen Hot Chocolate was not especially exciting to him. That pint scored 7.8/10; he did not establish that the marshmallows were the only reason or give a separate fudge verdict. The dried marshmallows might work alongside stronger additions rather than as the main feature.
+
+### BIO-096: The whole pint remains his serving context
+
+He confirmed that each of these finished pints was one serving for himself, starting with one cup of milk, and that he ate the whole finished pint. This adds the milk amount to BIO-069's existing serving context without creating a new protein target. Ice cream and a show after the children are in bed is an established routine, not a new weekly anecdote. His younger daughter has become accustomed to the Creami sound. No additional family tasting reactions were supplied for this trio.
