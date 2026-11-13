@@ -15057,6 +15057,270 @@ const recipes = [
       "The whole upgraded bowl is approximately 490 calories and 50g protein before optional chili flakes.",
       "Images generated via Path A image-to-image pipeline from native 4K footage frames. Verified brand tags: @stealth_health_life and @eatcounter.",
     ],
+  },
+  {
+    "id": 81,
+    "status": "live",
+    "slug": "costco-chicken-family-wraps",
+    "proteinAnchor": "chicken",
+    "mealType": "dinner",
+    "flavorDirection": "mediterranean-harissa",
+    "splitFriendly": "full",
+    "title": "Costco Chicken-Skewer Family Wraps",
+    "category": "Family Dinner",
+    "pillar": "Fast Family Plates",
+    "tags": [
+      "chicken",
+      "costco",
+      "wraps",
+      "harissa",
+      "toum",
+      "family-dinner",
+      "high-protein",
+      "weeknight-shortcut"
+    ],
+    "time": "15 min",
+    "servings": 1,
+    "protein": 62,
+    "calories": 500,
+    "image": "/images/costco-chicken-family-wraps/hero-polished.webp",
+    "imagePosition": "center center",
+    "prepImage": "/images/costco-chicken-family-wraps/kid-plate-polished.webp",
+    "prepImageCaption": "The kids' compartment plate with two grilled chicken skewers, sliced baby cucumber, and Mezete toum garlic dip alongside two Street Tacos flour tortillas.",
+    "video": "/videos/costco-chicken-family-wraps/829-Costco-Chicken-Family-Wraps.mp4",
+    "videoPoster": "/images/costco-chicken-family-wraps/hero-polished.webp",
+    "role": "Same Costco chicken skewers, split into cucumber-ranch harissa wraps for adults and toum dipping plates for kids",
+    "makeThisWhen": "You want a high-protein family wrap night using ready-cooked Costco grilled chicken skewers with zero raw-meat prep and two distinct table finishes.",
+    "hook": "My Costco shortcut for family wrap night: same chicken, different finishes.",
+    "description": "Heat 16 ready-cooked WestEnd Mediterranean-style grilled chicken skewers from Costco in the air fryer. Adults get 4 skewers divided across two Mission Carb Balance tortillas with shredded iceberg, cherry tomatoes, pickled red onion, Bolthouse Farms Cucumber Ranch, and SHUUG Original Harissa (~500 cal, 62g protein for two wraps). Kids get 2 skewers served with two Mission Street Tacos flour tortillas, baby cucumber, and Mezete toum garlic dip (~340 cal, 28g protein).",
+    "ingredients": [
+      "16 WestEnd Mediterranean-style grilled chicken skewers from Costco",
+      "6 Mission Carb Balance Soft Taco Flour tortillas (2 per adult)",
+      "4 Mission Street Tacos Flour tortillas (2 per kid)",
+      "3 tbsp Bolthouse Farms Cucumber Ranch (1 tbsp per adult)",
+      "2 tbsp SHUUG Original Harissa total (1 tsp per adult wrap; 2 tsp per adult)",
+      "2 cups shredded iceberg lettuce",
+      "1 cup halved cherry tomatoes",
+      "1/3 cup drained pickled red onion",
+      "2 tbsp Mezete TOUM garlic sauce (1 tbsp per kid)",
+      "Baby cucumber, cut to fill each kid's vegetable compartment"
+    ],
+    "executionRules": [
+      "Heat the ready-cooked WestEnd chicken skewers following package instructions (air fryer used here).",
+      "Combine shredded iceberg lettuce, halved cherry tomatoes, and drained pickled red onion; divide equally across the 3 adult servings.",
+      "Adult build (per adult): remove sticks from 4 skewers and divide chicken across 2 Mission Carb Balance tortillas. Top with 1/3 of the salad, 1 tbsp cucumber ranch across the pair, and 1 tsp harissa per wrap (2 tsp total).",
+      "Kid build (per kid): remove sticks from 2 skewers and cut chicken as appropriate. Serve with 2 Mission Street Tacos flour tortillas, cut baby cucumber, and 1 tbsp Mezete toum garlic sauce on the side."
+    ],
+    "troubleshooting": [
+      {
+        "problem": "Chicken skewers dry out during reheating",
+        "fix": "Since the WestEnd skewers are already fully cooked, heat them just until warmed through in the air fryer rather than over-roasting."
+      },
+      {
+        "problem": "Wraps get soggy from pickled onions and dressing",
+        "fix": "Drain the pickled red onions thoroughly before tossing the salad, and layer the chicken first on the warm tortilla before adding salad and ranch."
+      }
+    ],
+    "splitCook": {
+      "adult": {
+        "label": "Adult Cucumber-Ranch & Harissa Wraps (2 Wraps)",
+        "extraIngredients": [
+          "2 Mission Carb Balance Soft Taco Flour tortillas",
+          "1/3 of the iceberg, cherry tomato & pickled red onion salad",
+          "1 tbsp Bolthouse Farms Cucumber Ranch (across both wraps)",
+          "2 tsp SHUUG Original Harissa (1 tsp per wrap)"
+        ],
+        "steps": [
+          "Slide the warm chicken off 4 skewers and divide between 2 Carb Balance tortillas.",
+          "Pile on 1/3 of the crisp lettuce, tomato, and pickled onion salad.",
+          "Drizzle 1 tbsp cucumber ranch across the pair and 1 tsp harissa per wrap, then fold and serve."
+        ]
+      },
+      "kid": {
+        "label": "Kid Skewer, Tortilla & Toum Plate",
+        "extraIngredients": [
+          "2 Mission Street Tacos Flour tortillas (served alongside)",
+          "1 tbsp Mezete TOUM garlic sauce",
+          "Cut baby cucumber sticks"
+        ],
+        "steps": [
+          "Plate 2 warm chicken skewers (remove sticks and cut as appropriate for your child) with fresh baby cucumber.",
+          "Add 1 tbsp Mezete toum garlic dip in the side cup and serve with 2 Street Tacos flour tortillas."
+        ]
+      },
+      "sharedIngredients": [
+        "16 WestEnd Mediterranean-style grilled chicken skewers from Costco"
+      ],
+      "sharedSteps": [
+        "Heat all 16 ready-cooked chicken skewers in the air fryer according to package directions."
+      ]
+    },
+    "socialImages": [
+      "/images/costco-chicken-family-wraps/skewers-polished.webp",
+      "/images/costco-chicken-family-wraps/salad-build-polished.webp",
+      "/images/costco-chicken-family-wraps/ranch-harissa-polished.webp",
+      "/images/costco-chicken-family-wraps/kid-plate-polished.webp",
+      "/images/costco-chicken-family-wraps/adult-wraps-polished.webp"
+    ],
+    "socialCarousel": {
+      "heroBadge": "Costco shortcut • family wrap night",
+      "heroAccent": "amber",
+      "heroTitle": "Costco Chicken-Skewer Family Wraps",
+      "heroStats": [
+        {
+          "value": "~500 cal",
+          "label": "adult • 2 wraps"
+        },
+        {
+          "value": "62g protein",
+          "label": "adult • 2 wraps"
+        },
+        {
+          "value": "3 + 2",
+          "label": "adult + kid plates"
+        }
+      ],
+      "heroPhoto": "/images/costco-chicken-family-wraps/hero-polished.webp",
+      "hook": "My Costco shortcut for family wrap night: same chicken, different finishes.",
+      "captionTitle": "Costco Chicken-Skewer Family Wraps — ~500 cal / 62g protein (Adult)",
+      "captionBody": "My Costco shortcut for family wrap night: same chicken, different finishes.\n\nMAKES 3 ADULT SERVINGS + 2 KID SERVINGS\nAdults: about 500 cal / 62g protein for TWO wraps.\nKids: about 340 cal / 28g protein per plate, including both tortillas and dip.\n\nINGREDIENTS\n• 16 WestEnd Mediterranean-style grilled chicken skewers from Costco\n• 6 Mission Carb Balance Soft Taco Flour tortillas (2 per adult)\n• 4 Mission Street Tacos Flour tortillas (2 per kid)\n• 3 tbsp Bolthouse Farms Cucumber Ranch (1 tbsp per adult)\n• 2 tbsp SHUUG Original Harissa (1 tsp per adult wrap)\n• 2 cups shredded iceberg, 1 cup halved cherry tomatoes and ⅓ cup drained pickled red onion, shared across the 3 adults\n• 2 tbsp Mezete TOUM garlic sauce (1 tbsp per kid)\n• Baby cucumber to fill each kid’s vegetable compartment\n\nMETHOD\n1. Heat the ready-cooked skewers following your package directions; I used the air fryer.\n2. Mix the lettuce, tomatoes and onion. For each adult, remove the sticks from 4 skewers and divide between 2 Carb Balance tortillas. Add a third of the salad, 1 tbsp ranch across the pair, and 1 tsp harissa per wrap. Fold and serve.\n3. For each kid, remove the sticks from 2 skewers and cut the chicken as appropriate. Serve with 2 Street Tacos flour tortillas, cucumber and 1 tbsp toum on the side. Their tortillas aren’t on the filmed compartment plate.\n\nMacro honesty: chicken uses Costco’s 24g protein / 150 cal per 2-skewer listing basis; your package may vary. Tortilla and sauce labels are included. Produce is estimated: cucumber wasn’t weighed (~50g per kid assumed for calculation). Pickling-brine sugar isn’t counted. Adult estimate ~500 cal / 61.6g protein; kid ~343 cal / 28.3g, rounded above.\n\nSave this for your next family wrap night.\n\n@MissionFoodsUS @shuugsauce @mezete_global\n\n#CostcoMeals #ChickenWraps #FamilyDinner #EasyDinner #TheSplitPlate",
+      "ingredientGroups": [
+        {
+          "card": 1,
+          "accent": "amber",
+          "heading": "Chicken & Tortillas (3 Adults + 2 Kids)",
+          "items": [
+            {
+              "quantity": "16 skewers",
+              "text": "WestEnd Mediterranean grilled chicken skewers (Costco)"
+            },
+            {
+              "quantity": "6 tortillas",
+              "text": "Mission Carb Balance Soft Taco Flour (2 per adult)"
+            },
+            {
+              "quantity": "4 tortillas",
+              "text": "Mission Street Tacos Flour (2 per kid)"
+            }
+          ]
+        },
+        {
+          "card": 2,
+          "accent": "green",
+          "heading": "Salad & Split Sauces",
+          "items": [
+            {
+              "quantity": "2c + 1c + 1/3c",
+              "text": "Shredded iceberg, halved cherry tomatoes, drained pickled red onion"
+            },
+            {
+              "quantity": "3 tbsp",
+              "text": "Bolthouse Farms Cucumber Ranch (1 tbsp per adult)"
+            },
+            {
+              "quantity": "2 tbsp",
+              "text": "SHUUG Original Harissa (1 tsp per adult wrap)"
+            },
+            {
+              "quantity": "2 tbsp + veg",
+              "text": "Mezete TOUM garlic sauce (1 tbsp per kid) + baby cucumber"
+            }
+          ]
+        }
+      ],
+      "ingredientCardPhotos": [
+        "/images/costco-chicken-family-wraps/skewers-polished.webp",
+        "/images/costco-chicken-family-wraps/salad-build-polished.webp"
+      ],
+      "methodGroups": [
+        {
+          "card": 1,
+          "accent": "amber",
+          "heading": "Heat & Build Adult Wraps",
+          "items": [
+            {
+              "number": 1,
+              "heading": "Air-fry the skewers",
+              "body": "Heat the 16 ready-cooked chicken skewers following package directions, and toss the iceberg, tomatoes, and pickled onion."
+            },
+            {
+              "number": 2,
+              "heading": "Assemble adult wraps",
+              "body": "Pull 4 skewers per adult across 2 Carb Balance tortillas. Top with 1/3 salad, 1 tbsp cucumber ranch, and 1 tsp harissa per wrap."
+            }
+          ]
+        },
+        {
+          "card": 2,
+          "accent": "coral",
+          "heading": "Plate Kid Portions",
+          "items": [
+            {
+              "number": 3,
+              "heading": "2 skewers + cucumber + toum",
+              "body": "Give each kid 2 skewers (sticks removed and cut as needed) with baby cucumber and 1 tbsp Mezete toum garlic dip."
+            },
+            {
+              "number": 4,
+              "heading": "Serve with Street Tacos",
+              "body": "Serve each kid plate alongside 2 Mission Street Tacos flour tortillas."
+            }
+          ]
+        }
+      ],
+      "methodCardPhotos": [
+        "/images/costco-chicken-family-wraps/ranch-harissa-polished.webp",
+        "/images/costco-chicken-family-wraps/kid-plate-polished.webp"
+      ],
+      "servingPhoto": {
+        "src": "/images/costco-chicken-family-wraps/adult-wraps-polished.webp",
+        "layout": "side"
+      },
+      "servingGroups": [
+        {
+          "accent": "coral",
+          "heading": "Adult serving (2 wraps)",
+          "items": [
+            {
+              "text": "Approximately 500 cal and 62g protein (4 skewers: 300 cal / 48g protein + 2 Carb Balance tortillas: 140 cal / 12g protein + ranch, harissa & salad)."
+            }
+          ]
+        },
+        {
+          "accent": "green",
+          "heading": "Kid serving (plate + 2 tortillas)",
+          "items": [
+            {
+              "text": "Approximately 340 cal and 28g protein including 2 skewers (150 cal / 24g protein), 2 Street Tacos flour tortillas (150 cal / 4g protein), 1 tbsp toum (35 cal), and cucumber."
+            }
+          ]
+        }
+      ],
+      "engagementQuestion": "Family wrap night: are you reaching for cucumber ranch + harissa or the toum garlic dip?"
+    },
+    "meta": {
+      "macros": {
+        "calories": 500,
+        "protein": 62,
+        "estimated": true
+      },
+      "macroHonesty": "Yield: 3 adult servings + 2 kid servings. Adult 2-wrap serving is ~500 kcal / 61.6g protein (displayed as ~500 cal / 62g protein): 4 WestEnd skewers (300 kcal / 48g protein on Costco's 150 kcal / 24g per 2-skewer basis) + 2 Mission Carb Balance Soft Taco Flour tortillas (140 kcal / 12g protein) + 1 tbsp Bolthouse Cucumber Ranch (17.5 kcal / 0.5g protein) + 2 tsp SHUUG Original Harissa (20 kcal / 0g protein) + 1/3 produce salad (~23 kcal / ~1.1g protein). Kid serving is ~343 kcal / 28.3g protein (displayed as ~340 cal / 28g protein): 2 skewers (150 kcal / 24g protein) + 2 Mission Street Tacos Flour tortillas (150 kcal / 4g protein) + 1 tbsp Mezete TOUM garlic sauce (35 kcal / 0g protein) + ~50g assumed cucumber (~7.5 kcal / 0.3g protein). Pickling-brine sugar is uncounted.",
+      "substitutionNotes": [
+        "WestEnd Mediterranean chicken skewers: 16 skewers total (4 per adult, 2 per kid). Any pre-cooked grilled chicken breast skewers work if checking your package label.",
+        "Tortilla split: Mission Carb Balance Soft Taco Flour for adults (70 cal, 6g protein, 17g fiber per tortilla) and Mission Street Tacos Flour for kids (150 cal, 4g protein per 2 tortillas).",
+        "Mezete TOUM is a fluffy Levantine garlic sauce (35 cal per tbsp), not hummus."
+      ]
+    },
+    "mealPrep": {
+      "storage": "Store leftover heated skewers and dressed salad in separate airtight containers in the refrigerator for up to 3 days.",
+      "reheat": "Reheat chicken skewers in the air fryer for 2–3 minutes until warm, then assemble wraps fresh.",
+      "lasts": "3 days refrigerated when components are stored separately."
+    },
+    "editorialNotes": [
+      "Inventory 829 package: Costco Chicken-Skewer Family Wraps. Video: 829-Costco-Chicken-Family-Wraps.mp4.",
+      "Makes 3 adult servings (~500 cal / 62g protein for two wraps) and 2 kid servings (~340 cal / 28g protein including two Street Tacos flour tortillas and 1 tbsp toum).",
+      "Verified platform tags: Instagram @MissionFoodsUS @shuugsauce @mezete_global; TikTok @missionfoods @shuugsauce."
+    ]
   }
 ];
 
