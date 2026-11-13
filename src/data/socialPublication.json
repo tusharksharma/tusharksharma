@@ -1098,5 +1098,15 @@
     "initialMainPostDate": "2026-11-13",
     "initialMainCreatedAt": "2026-11-13",
     "firstAddedAt": "2026-11-13"
+  },
+  "fluffy-scrambled-eggs-three-hacks": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": "2026-11-09",
+    "firstAddedAt": "2026-11-12"
+  },
+  "churro-cookie-creami": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": "2026-11-12",
+    "firstAddedAt": "2026-11-12"
   }
 }

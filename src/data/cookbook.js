@@ -3397,6 +3397,238 @@ export const breakfasts = [
       reheat: "Microwave for 20-30 seconds to warm through."
     }
   },
+  {
+    "id": "fluffy-scrambled-eggs-three-hacks",
+    "title": "Fluffy Scrambled Eggs (Three Hacks)",
+    "tagline": "Three simple technique changes for soft, custardy scrambled eggs my kids loved: thorough bowl whisking, gentle low-heat spatula folds in butter, and a 1 tbsp whipped cream cheese finish. About 150 cal and 10g protein per half-batch portion.",
+    "heroImage": "/images/fluffy-scrambled-eggs-three-hacks/hero-polished.webp",
+    "prepImage": "/images/fluffy-scrambled-eggs-three-hacks/hack1-whisk-polished.webp",
+    "prepImageCaption": "Hack #1: Three whole eggs whisked thoroughly in a bowl until completely uniform with zero separate streaks of white.",
+    "video": "/videos/fluffy-scrambled-eggs-three-hacks/818-Fluffy-Scrambled-Eggs-Three-Hacks.mp4",
+    "videoPoster": "/images/fluffy-scrambled-eggs-three-hacks/hero-polished.webp",
+    "socialHashtags": [
+      "#TheSplitPlate",
+      "#ScrambledEggs",
+      "#BreakfastIdeas",
+      "#FamilyBreakfast",
+      "#EggRecipes"
+    ],
+    "socialImages": [
+      "/images/fluffy-scrambled-eggs-three-hacks/hack1-whisk-polished.webp",
+      "/images/fluffy-scrambled-eggs-three-hacks/hack2-butter-polished.webp",
+      "/images/fluffy-scrambled-eggs-three-hacks/hack2-folds-polished.webp",
+      "/images/fluffy-scrambled-eggs-three-hacks/hack3-cream-cheese-polished.webp",
+      "/images/fluffy-scrambled-eggs-three-hacks/plated-polished.webp"
+    ],
+    "socialCarousel": {
+      "heroBadge": "3 Egg Hacks • Family Split",
+      "heroAccent": "amber",
+      "heroTitle": "Fluffy Scrambled Eggs (Three Hacks)",
+      "heroStats": [
+        {
+          "value": "~150",
+          "label": "cal • per 1/2 batch"
+        },
+        {
+          "value": "10g",
+          "label": "protein • per 1/2 batch"
+        },
+        {
+          "value": "2",
+          "label": "portions"
+        }
+      ],
+      "hook": "Three small technique upgrades that turn 3 everyday eggs into soft, custardy scrambled eggs my kids devour.",
+      "captionTitle": "Fluffy Scrambled Eggs (Three Hacks) • ~150 cal / 10g protein per half batch",
+      "captionBody": "Three hacks for fluffy scrambled eggs my kids loved 🥚\n\nMakes 2 portions from this batch:\n• 3 whole eggs\n• ½ tbsp butter for the whole pan\n• 1 tbsp whipped cream cheese, optional (I used it)\n• Salt to taste\n• Classic white bread to serve, counted separately\n\n1️⃣ Whisk the eggs really well in a bowl until combined, with no separate streaks of white.\n2️⃣ Melt butter in a nonstick pan over gentle heat. Pour in the eggs and let them start to set. Gently push and fold with a spatula instead of constantly stirring.\n3️⃣ Fold in the cream cheese near the finish. Reduce/remove heat as needed and cook until soft but fully set, with no liquid egg left. Salt to taste at the end, then divide between two plates and serve with bread.\n\nMACRO HONESTY (per ½ batch; bread excluded):\nEggs alone ≈108 cal / 9.5 g protein.\nWith all the pan butter + cream cheese ≈150 cal / 10 g protein / 12 g fat / 1 g carbs.\nWithout cream cheese, with butter ≈133 cal / 9.5 g protein.\n\nSave this for an easy egg breakfast.\n\n#ScrambledEggs #BreakfastIdeas #FamilyBreakfast #EggRecipes #TheSplitPlate",
+      "heroPhoto": "/images/fluffy-scrambled-eggs-three-hacks/hero-polished.webp",
+      "ingredientGroups": [
+        {
+          "card": 1,
+          "accent": "amber",
+          "heading": "Skillet Batch (2 Portions)",
+          "items": [
+            {
+              "quantity": "3 large",
+              "text": "Whole eggs"
+            },
+            {
+              "quantity": "1/2 tbsp",
+              "text": "Butter (for the whole pan)"
+            },
+            {
+              "quantity": "1 tbsp",
+              "text": "Whipped cream cheese (~10g)"
+            },
+            {
+              "quantity": "To taste",
+              "text": "Salt (added at the end)"
+            }
+          ]
+        },
+        {
+          "card": 2,
+          "accent": "coral",
+          "heading": "Serve & Split Options",
+          "items": [
+            {
+              "quantity": "Kids plate",
+              "text": "Serve with classic white bread (counted separately)"
+            },
+            {
+              "quantity": "Adult plate",
+              "text": "Optional keto/protein bread, chopped ham, or fat-free cheese"
+            },
+            {
+              "quantity": "Lower cal",
+              "text": "Skip butter on nonstick (~108 cal / 9.5g protein eggs alone)"
+            }
+          ]
+        }
+      ],
+      "ingredientCardPhotos": [
+        "/images/fluffy-scrambled-eggs-three-hacks/hack1-whisk-polished.webp",
+        "/images/fluffy-scrambled-eggs-three-hacks/hack2-butter-polished.webp"
+      ],
+      "methodGroups": [
+        {
+          "card": 1,
+          "accent": "amber",
+          "heading": "Hacks 1 & 2: Whisk & Fold",
+          "items": [
+            {
+              "number": 1,
+              "heading": "Whisk until uniform",
+              "body": "Beat 3 eggs in a bowl until yolks and whites are completely combined with no streaks."
+            },
+            {
+              "number": 2,
+              "heading": "Gentle heat & spatula folds",
+              "body": "Melt 1/2 tbsp butter over low heat. Pour in eggs and gently push and fold curds—do not stir constantly."
+            }
+          ]
+        },
+        {
+          "card": 2,
+          "accent": "coral",
+          "heading": "Hack 3: Cream Cheese Finish",
+          "items": [
+            {
+              "number": 3,
+              "heading": "Fold in whipped cream cheese",
+              "body": "Near the finish, fold in 1 tbsp whipped cream cheese off or on very low heat until soft and fully set."
+            },
+            {
+              "number": 4,
+              "heading": "Salt at the end & plate",
+              "body": "Season with salt to taste at the end and divide between two plates."
+            }
+          ]
+        }
+      ],
+      "methodCardPhotos": [
+        "/images/fluffy-scrambled-eggs-three-hacks/hack2-folds-polished.webp",
+        "/images/fluffy-scrambled-eggs-three-hacks/hack3-cream-cheese-polished.webp"
+      ],
+      "servingPhoto": {
+        "src": "/images/fluffy-scrambled-eggs-three-hacks/plated-polished.webp",
+        "layout": "side"
+      },
+      "servingGroups": [
+        {
+          "accent": "coral",
+          "heading": "Macro breakdown (per 1/2 batch)",
+          "items": [
+            {
+              "text": "With butter & cream cheese: ~150 cal, 10g protein, 12g fat, 1g carbs. Eggs alone: ~108 cal, 9.5g protein. Whole 3-egg pan: ~302 cal, ~20g protein."
+            }
+          ]
+        }
+      ],
+      "engagementQuestion": "How do you finish your scrambled eggs—cream cheese, cottage cheese, or just butter?"
+    },
+    "flavorProfile": "Velvety, custard-soft golden curds with a mild, creamy tang from whipped cream cheese and rich butter.",
+    "calories": 302,
+    "caloriesPerServing": 150,
+    "protein": 20,
+    "proteinPerServing": 10,
+    "fat": 24,
+    "fatPerServing": 12,
+    "carbs": 2,
+    "carbsPerServing": 1,
+    "sugar": 1,
+    "sugarPerServing": 1,
+    "servings": 2,
+    "servingSize": "1/2 batch (1.5 eggs + half of pan butter and cream cheese; bread excluded)",
+    "time": "5 min",
+    "bestFor": [
+      "Kid-approved breakfast",
+      "5-minute weekday morning",
+      "Soft scrambled egg technique",
+      "Customizable split plate"
+    ],
+    "splitNote": {
+      "adult": "Eat the full 3-egg batch (~302 cal / 20g protein) or skip the pan butter on nonstick and add chopped ham, fat-free cheese, or protein toast.",
+      "kid": "Divide the 3-egg batch across two kid plates (~150 cal / 10g protein each) alongside classic white toast."
+    },
+    "ingredients": [
+      "--- EGG BATCH (MAKES 2 PORTIONS) ---",
+      "3 whole large eggs",
+      "1/2 tbsp butter (for the entire pan)",
+      "1 tbsp whipped cream cheese (~10g, optional; used in filmed batch)",
+      "Salt, to taste (added at the end)",
+      "--- TO SERVE (COUNTED SEPARATELY) ---",
+      "Classic white bread for kids, or keto/protein bread for adults"
+    ],
+    "steps": [
+      {
+        "text": "HACK 1 — WHISK THOROUGHLY: Crack 3 large eggs into a bowl and whisk until the yolks and whites are completely uniform with zero separate streaks of white.",
+        "image": "/images/fluffy-scrambled-eggs-three-hacks/hack1-whisk-polished.webp",
+        "imageAlt": "Fluffy Scrambled Eggs: whisking eggs in a glass bowl until uniform"
+      },
+      {
+        "text": "MELT BUTTER OVER LOW HEAT: Warm a nonstick skillet over gentle low heat and melt 1/2 tbsp butter across the surface, then pour in the whisked eggs.",
+        "image": "/images/fluffy-scrambled-eggs-three-hacks/hack2-butter-polished.webp",
+        "imageAlt": "Fluffy Scrambled Eggs: pouring eggs into melted butter over gentle heat"
+      },
+      {
+        "text": "HACK 2 — PUSH & FOLD: Let the eggs begin to set slightly, then gently push and fold across the pan with a silicone spatula to form soft, ribboned curds instead of scrambling frantically.",
+        "image": "/images/fluffy-scrambled-eggs-three-hacks/hack2-folds-polished.webp",
+        "imageAlt": "Fluffy Scrambled Eggs: gently folding soft golden curds with a spatula"
+      },
+      {
+        "text": "HACK 3 — FOLD IN WHIPPED CREAM CHEESE: Just before the eggs finish setting, add 1 tbsp whipped cream cheese and fold gently over low/off heat until melted and no liquid egg remains.",
+        "image": "/images/fluffy-scrambled-eggs-three-hacks/hack3-cream-cheese-polished.webp",
+        "imageAlt": "Fluffy Scrambled Eggs: folding whipped cream cheese into soft curds"
+      },
+      {
+        "text": "SALT AT THE END & PLATE: Season with salt to taste at the very end so you can judge the saltiness with the cheese, then divide between two plates.",
+        "image": "/images/fluffy-scrambled-eggs-three-hacks/plated-polished.webp",
+        "imageAlt": "Fluffy Scrambled Eggs: plated golden scrambled eggs"
+      }
+    ],
+    "macroHonesty": "Per half batch (bread excluded): ~150 calories, 10g protein, 12g fat, 1g carbs with all pan butter and 1 tbsp whipped cream cheese (~10g USDA generic measure). Eggs alone contribute ~108 calories and 9.5g protein per half batch (~133 cal with butter, without cream cheese). Whole 3-egg pan is ~302 calories and ~19.6g protein.",
+    "allergens": [
+      "egg",
+      "dairy"
+    ],
+    "dietTags": [
+      "vegetarian",
+      "gluten-free",
+      "kid-friendly",
+      "low-carb"
+    ],
+    "relatedIds": [
+      "sunny-side-eggs-canadian-bacon-breakfast",
+      "7-minute-runny-sunny-eggs-chicken-sausage",
+      "microwave-protein-pancake-bowl"
+    ],
+    "mealPrep": {
+      "storage": "Best cooked and eaten fresh in 5 minutes; scrambled eggs lose their soft custard texture when refrigerated.",
+      "lasts": "Best fresh; up to 2 days refrigerated in an airtight container if needed.",
+      "reheat": "Warm gently in 15-second microwave bursts at 50% power so the curds do not toughen."
+    }
+  },
 ];
 
 export const batchPrep = [
@@ -18110,6 +18342,234 @@ const DESSERT_CATALOG = [
       storage: "Freeze the unspun base upright and level. Spin and add toppings when ready to eat.",
       lasts: "Follow the Creami machine guidance for storage and reprocessing.",
       reheat: "Do not heat the pint."
+    }
+  },
+  {
+    "id": "churro-cookie-creami",
+    "title": "Churro Cookie Creami",
+    "tagline": "Crumbl Churro Cookie remake in the Ninja Creami: a warm cinnamon protein base spun and loaded with Cinnamon Toast Crunch inside and on top. About 280 calories and 35g protein for the entire finished pint.",
+    "heroImage": "/images/churro-cookie-creami/hero-polished.webp",
+    "prepImage": "/images/churro-cookie-creami/base-polished.webp",
+    "prepImageCaption": "The frozen cinnamon Nurri 2% milk and whey isolate base before spinning.",
+    "video": "/videos/churro-cookie-creami/828-Churro-Cookie-Creami.mp4",
+    "videoPoster": "/images/churro-cookie-creami/hero-polished.webp",
+    "socialHashtags": [
+      "#TheSplitPlate",
+      "#NinjaCreami",
+      "#ProteinIceCream",
+      "#CinnamonToastCrunch",
+      "#CinnamonDessert"
+    ],
+    "socialImages": [
+      "/images/churro-cookie-creami/base-polished.webp",
+      "/images/churro-cookie-creami/cereal-ramekin-polished.webp",
+      "/images/churro-cookie-creami/mixin-pint-polished.webp",
+      "/images/churro-cookie-creami/topping-polished.webp",
+      "/images/churro-cookie-creami/finished-bowl-polished.webp"
+    ],
+    "socialCarousel": {
+      "heroBadge": "CrumblCreamiCut • 9/10",
+      "heroAccent": "amber",
+      "heroTitle": "Churro Cookie Creami",
+      "heroStats": [
+        {
+          "value": "~280",
+          "label": "cal • whole pint"
+        },
+        {
+          "value": "35g",
+          "label": "protein • whole pint"
+        },
+        {
+          "value": "1",
+          "label": "finished pint"
+        }
+      ],
+      "hook": "Crumbl’s Churro Cookie, Creami-style: 1 tsp cinnamon in the base plus Cinnamon Toast Crunch inside and on top.",
+      "captionTitle": "Churro Cookie Creami • ~280 cal / 35g protein",
+      "captionBody": "Churro Cookie, Creami-style 🌀 9/10.\nCinnamon Toast Crunch inside and on top @cinnamontoastcrunch\n\nAbout 280 calories and 35g protein for the WHOLE finished pint, including the mix-in and topping.\n\nBASE\n• 1 cup (240ml) Nurri plain 2% ultra-filtered milk\n• ½ labelled serving Opportuniteas unflavored whey isolate\n• 2 tbsp monk-fruit/erythritol sweetener\n• ⅛ tsp guar gum, leveled\n• Pinch of salt\n• 1 tsp ground cinnamon\n\nMIX-IN\n• 7g Cinnamon Toast Crunch\n\nTOPPING\n• Another 7g Cinnamon Toast Crunch\n\nBlend the base until smooth. Freeze upright and level for 24 hours. Rest on the counter for 5 minutes, then process on Regular Ice Cream. Add the 7g cereal mix-in and Respin without adding liquid. Scoop into a bowl and add the remaining 7g cereal on top.\n\nMacro honesty: calculated estimate is about 275 calories and 34.8g protein; rounded here to about 280 calories and 35g. This includes all 14g cereal. Labels, portions and the weight of a teaspoon of cinnamon can change the estimate. One complete finished pint is the serving basis.\n\nInspired by the Churro Cookie from @crumbl. The cookie itself isn’t an ingredient.\n\nSave this for your next cinnamon craving.\n\n#NinjaCreami #ProteinIceCream #CinnamonToastCrunch #CinnamonDessert #TheSplitPlate",
+      "heroPhoto": "/images/churro-cookie-creami/hero-polished.webp",
+      "ingredientGroups": [
+        {
+          "card": 1,
+          "accent": "amber",
+          "heading": "Cinnamon Base (1 Pint)",
+          "items": [
+            {
+              "quantity": "1 cup (240ml)",
+              "text": "Nurri plain 2% ultra-filtered milk"
+            },
+            {
+              "quantity": "1/2 serving",
+              "text": "Opportuniteas unflavored whey isolate"
+            },
+            {
+              "quantity": "2 tbsp",
+              "text": "Monk-fruit/erythritol sweetener"
+            },
+            {
+              "quantity": "1/8 tsp + pinch",
+              "text": "Guar gum (leveled) + pinch of salt"
+            },
+            {
+              "quantity": "1 tsp",
+              "text": "Ground cinnamon"
+            }
+          ]
+        },
+        {
+          "card": 2,
+          "accent": "coral",
+          "heading": "Mix-in & Topping (14g Total)",
+          "items": [
+            {
+              "quantity": "7g",
+              "text": "Cinnamon Toast Crunch (respin mix-in)"
+            },
+            {
+              "quantity": "7g",
+              "text": "Cinnamon Toast Crunch (bowl topping)"
+            }
+          ]
+        }
+      ],
+      "ingredientCardPhotos": [
+        "/images/churro-cookie-creami/base-polished.webp",
+        "/images/churro-cookie-creami/cereal-ramekin-polished.webp"
+      ],
+      "methodGroups": [
+        {
+          "card": 1,
+          "accent": "amber",
+          "heading": "Blend, Freeze & First Spin",
+          "items": [
+            {
+              "number": 1,
+              "heading": "Blend & freeze 24h",
+              "body": "Blend milk, whey isolate, sweetener, guar gum, salt, and 1 tsp ground cinnamon until smooth. Freeze upright and level 24 hours."
+            },
+            {
+              "number": 2,
+              "heading": "Spin & add 7g cereal",
+              "body": "Rest 5 minutes on the counter, process on Regular Ice Cream, and pack 7g Cinnamon Toast Crunch into the center."
+            }
+          ]
+        },
+        {
+          "card": 2,
+          "accent": "coral",
+          "heading": "Respin & Cereal Finish",
+          "items": [
+            {
+              "number": 3,
+              "heading": "No-liquid Respin",
+              "body": "Run a Respin cycle without adding extra liquid to fold the cinnamon cereal through the pint."
+            },
+            {
+              "number": 4,
+              "heading": "Scoop & top with 7g cereal",
+              "body": "Scoop into a serving bowl and scatter the remaining 7g Cinnamon Toast Crunch over the top."
+            }
+          ]
+        }
+      ],
+      "methodCardPhotos": [
+        "/images/churro-cookie-creami/mixin-pint-polished.webp",
+        "/images/churro-cookie-creami/topping-polished.webp"
+      ],
+      "servingPhoto": {
+        "src": "/images/churro-cookie-creami/finished-bowl-polished.webp",
+        "layout": "side"
+      },
+      "servingGroups": [
+        {
+          "accent": "coral",
+          "heading": "Whole finished pint (9/10)",
+          "items": [
+            {
+              "text": "Calculated at ~275.5 cal and 34.8g protein (~280 cal / 35g protein displayed) for the complete finished pint including all 14g Cinnamon Toast Crunch."
+            }
+          ]
+        }
+      ],
+      "engagementQuestion": "9/10 score: are you team Cinnamon Toast Crunch inside the Respin or piled on top?"
+    },
+    "calories": 280,
+    "caloriesPerServing": 280,
+    "protein": 35,
+    "proteinPerServing": 35,
+    "fat": 6,
+    "fatPerServing": 6,
+    "carbs": 24,
+    "carbsPerServing": 24,
+    "sugar": 10,
+    "sugarPerServing": 10,
+    "servings": 1,
+    "servingSize": "1 whole finished Creami pint (with 14g cereal)",
+    "time": "24 hr freeze + 5 min rest + spin",
+    "bestFor": [
+      "Crumbl Churro Cookie remake",
+      "Cinnamon Toast Crunch lovers",
+      "High-protein dessert",
+      "Whole-pint macro treat"
+    ],
+    "ingredients": [
+      "--- BASE ---",
+      "1 cup (240ml) Nurri plain 2% ultra-filtered milk",
+      "1/2 labelled serving Opportuniteas unflavored whey isolate",
+      "2 tbsp monk-fruit/erythritol sweetener",
+      "1/8 tsp guar gum, leveled",
+      "Pinch of salt",
+      "1 tsp ground cinnamon",
+      "--- MIX-IN ---",
+      "7g Cinnamon Toast Crunch cereal",
+      "--- TOPPING ---",
+      "7g Cinnamon Toast Crunch cereal"
+    ],
+    "steps": [
+      {
+        "text": "BLEND & FREEZE BASE: Blend 1 cup Nurri 2% milk, 1/2 serving unflavored whey isolate, 2 tbsp monk-fruit sweetener, 1/8 tsp guar gum, a pinch of salt, and 1 tsp ground cinnamon until smooth. Freeze upright and level for 24 hours.",
+        "image": "/images/churro-cookie-creami/base-polished.webp",
+        "imageAlt": "Churro Cookie Creami: frozen cinnamon protein base in pint"
+      },
+      {
+        "text": "MEASURE CEREAL: Weigh out 14g total of Cinnamon Toast Crunch—7g for the mix-in and 7g for the topping.",
+        "image": "/images/churro-cookie-creami/cereal-ramekin-polished.webp",
+        "imageAlt": "Churro Cookie Creami: Cinnamon Toast Crunch measured in white ramekin"
+      },
+      {
+        "text": "FIRST SPIN & MIX-IN: Rest the pint on the counter for 5 minutes, then process on Regular Ice Cream. Add 7g Cinnamon Toast Crunch into the center and Respin without adding liquid.",
+        "image": "/images/churro-cookie-creami/mixin-pint-polished.webp",
+        "imageAlt": "Churro Cookie Creami: 7g Cinnamon Toast Crunch added before Respin"
+      },
+      {
+        "text": "SCOOP & TOP: Scoop the finished cinnamon ice cream into a bowl and scatter the remaining 7g Cinnamon Toast Crunch on top.",
+        "image": "/images/churro-cookie-creami/topping-polished.webp",
+        "imageAlt": "Churro Cookie Creami: sprinkling Cinnamon Toast Crunch topping onto bowl"
+      }
+    ],
+    "macroHonesty": "Calculated estimate is ~275.5 calories and 34.8g protein for the complete finished pint, displayed as ~280 calories and 35g protein. Breakdown: 1 cup Nurri plain 2% milk (150 cal, 20g protein) + 1/2 serving Opportuniteas unflavored whey isolate (60 cal, 14g protein) + 14g total Cinnamon Toast Crunch (~58.0 cal, ~0.68g protein) + 1 tsp ground cinnamon (~6.4 cal, ~0.10g protein, assumed 2.6g) + sweetener/guar/salt (~1 cal). Inspired by the Churro Cookie from Crumbl; actual cookie is not an ingredient.",
+    "allergens": [
+      "dairy",
+      "wheat",
+      "gluten",
+      "soy"
+    ],
+    "dietTags": [
+      "high-protein",
+      "make-ahead",
+      "frozen-dessert",
+      "vegetarian"
+    ],
+    "relatedIds": [
+      "brown-sugar-cinnamon-cookie-creami",
+      "cinnamon-roll-cookie-protein-creami",
+      "sea-salt-toffee-skillet-cookie-creami"
+    ],
+    "mealPrep": {
+      "storage": "Freeze the unspun base upright and level for up to 1 week. Add the Cinnamon Toast Crunch mix-in and topping right when serving so the cereal stays crisp.",
+      "lasts": "Unspun frozen pint keeps 1 week; eat immediately after Respin and topping.",
+      "reheat": "Do not heat the pint."
     }
   },
 ];
