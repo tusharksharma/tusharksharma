@@ -4516,10 +4516,10 @@ export const quickLunches = [
     prepImage: "/images/crispy-chicken-hot-honey-mustard/step-pour-hot-honey-mustard.webp",
     video: "/videos/crispy-chicken-hot-honey-mustard/quick-lunches-episode-8-chicken-hot-honey-mustard-365cal-32protein-text.mp4",
     socialImages: [
-      "/images/crispy-chicken-hot-honey-mustard/hero-finished-chicken-hot-honey-mustard.webp",
-      "/images/crispy-chicken-hot-honey-mustard/context-kirkland-chicken-chunks.webp",
-      "/images/crispy-chicken-hot-honey-mustard/context-trader-joes-hot-honey-mustard.webp",
-      "/images/crispy-chicken-hot-honey-mustard/step-pour-hot-honey-mustard.webp",
+      "/images/crispy-chicken-hot-honey-mustard/hero-finished-plate-polished.webp",
+      "/images/crispy-chicken-hot-honey-mustard/context-hot-honey-mustard-jar-polished.webp",
+      "/images/crispy-chicken-hot-honey-mustard/step-pour-hot-honey-mustard-polished.webp",
+      "/images/crispy-chicken-hot-honey-mustard/serving-dip-closeup-polished.webp",
     ],
     socialHashtags: [
       "#QuickLunches",
@@ -4529,11 +4529,11 @@ export const quickLunches = [
       "#TheSplitPlate",
     ],
     socialCarousel: {
-      heroBadge: "Quick Lunches · Ep. 9",
+      heroBadge: "Quick Lunches",
       heroAccent: "coral",
       heroTitle: "Crispy Chicken + Hot Honey Mustard",
       hook: "Six ounces of crispy chicken breast chunks plus one tablespoon of hot honey mustard. About 365 calories and 32g protein.",
-      heroPhoto: "/images/crispy-chicken-hot-honey-mustard/hero-finished-chicken-hot-honey-mustard.webp",
+      heroPhoto: "/images/crispy-chicken-hot-honey-mustard/hero-finished-plate-polished.webp",
       ingredientGroups: [
         {
           accent: "coral",
@@ -4556,12 +4556,12 @@ export const quickLunches = [
         },
       ],
       ingredientCardPhotos: [
-        { src: "/images/crispy-chicken-hot-honey-mustard/context-kirkland-chicken-chunks.webp", position: "50% 50%", zoom: 1.02, layout: "side" },
+        { src: "/images/crispy-chicken-hot-honey-mustard/context-hot-honey-mustard-jar-polished.webp", position: "50% 50%", zoom: 1.02, layout: "side" },
       ],
       methodCardPhotos: [
-        { src: "/images/crispy-chicken-hot-honey-mustard/step-pour-hot-honey-mustard.webp", position: "50% 50%", zoom: 1.02, layout: "side" },
+        { src: "/images/crispy-chicken-hot-honey-mustard/step-pour-hot-honey-mustard-polished.webp", position: "50% 50%", zoom: 1.02, layout: "side" },
       ],
-      servingPhoto: "/images/crispy-chicken-hot-honey-mustard/hero-finished-chicken-hot-honey-mustard.webp",
+      servingPhoto: "/images/crispy-chicken-hot-honey-mustard/serving-dip-closeup-polished.webp",
       servingGroups: [
         {
           accent: "coral",
@@ -4579,7 +4579,7 @@ export const quickLunches = [
           ],
         },
       ],
-      endUrl: "thesplitplate.com/cookbook",
+      endUrl: "thesplitplate.com/cookbook/crispy-chicken-money-mustard",
       engagementQuestion: "What sauce would you use?",
     },
     flavorProfile: "Crispy, savory chicken with a sweet, tangy mustard dip and a mild chili finish.",

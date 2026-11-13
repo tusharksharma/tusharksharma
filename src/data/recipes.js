@@ -6798,6 +6798,180 @@ const recipes = [
         "Turmeric + cumin + garlic powder + onion powder (T2 yellow-rice spice rack — generic dry spices from any pantry; no brand-specific call-out).",
       ],
     },
+    socialCarousel: {
+      "heroBadge": "Split Plate Dinner",
+      "heroAccent": "amber",
+      "heroTitle": "Halal Cart Chicken Rice Bowls",
+      "heroStats": [
+        {
+          "value": "550",
+          "label": "cal adult"
+        },
+        {
+          "value": "50g",
+          "label": "protein"
+        },
+        {
+          "value": "40",
+          "label": "min"
+        }
+      ],
+      "hook": "One griddle of shawarma chicken and one pot of yellow rice. Adults get toum + harissa; kids get a toum-only tray.",
+      "heroPhoto": "/images/high-protein-halal-cart-chicken-rice-bowls/hero-split-plate-polished.webp",
+      "captionBody": "Halal cart night without ordering out: Trader Joe's shawarma chicken thighs chopped on the griddle, plus yellow rice cooked in bone broth with a Bare Bones broth stick. Adults get a big plate with Mezete toum and Shuug harissa (~550 cal / 50g protein, estimated). Kids get the same chicken and rice in a compartment tray with toum only, no harissa (~305 cal / 27g protein, estimated). Recipe: thesplitplate.com/recipes/high-protein-halal-cart-chicken-rice-bowls",
+      "ingredientGroups": [
+        {
+          "card": 0,
+          "accent": "amber",
+          "heading": "Shared cook",
+          "items": [
+            {
+              "quantity": "1.5 lb",
+              "text": "Trader Joe's Shawarma-Style Chicken Thighs"
+            },
+            {
+              "quantity": "1 cup",
+              "text": "Basmati rice, rinsed"
+            },
+            {
+              "quantity": "1.5 cups",
+              "text": "Kirkland chicken sipping bone broth"
+            },
+            {
+              "quantity": "1 stick",
+              "text": "Bare Bones instant bone broth (15g)"
+            },
+            {
+              "quantity": "1 tbsp",
+              "text": "Ghee",
+              "note": "+ turmeric, cumin, garlic & onion powder, salt"
+            }
+          ]
+        },
+        {
+          "card": 1,
+          "accent": "coral",
+          "heading": "Adult bowl",
+          "items": [
+            {
+              "quantity": "2 tbsp",
+              "text": "Mezete toum",
+              "note": "Over chicken + rice"
+            },
+            {
+              "quantity": "1 tbsp",
+              "text": "Shuug Original Harissa",
+              "note": "Chicken only"
+            }
+          ]
+        },
+        {
+          "card": 1,
+          "accent": "green",
+          "heading": "Kid tray + cold side",
+          "items": [
+            {
+              "quantity": "1 tbsp",
+              "text": "Mezete toum",
+              "note": "On the chicken only, no harissa"
+            },
+            {
+              "quantity": "1/2 head + 2",
+              "text": "Iceberg, shredded + Roma tomatoes, diced"
+            }
+          ]
+        }
+      ],
+      "methodGroups": [
+        {
+          "accent": "amber",
+          "heading": "Two timers",
+          "items": [
+            {
+              "number": 1,
+              "heading": "Start the rice",
+              "body": "Rice, broth, ghee, broth stick and spices. Boil, then cover on lowest heat 15 min. Rest 10, fluff."
+            },
+            {
+              "number": 2,
+              "heading": "Griddle + chop",
+              "body": "Sear thighs 3-4 min, flip, then chop in the pan for crispy edges. Cook to 165°F."
+            }
+          ]
+        },
+        {
+          "accent": "amber",
+          "heading": "Two plates",
+          "items": [
+            {
+              "number": 3,
+              "heading": "Adult plate",
+              "body": "3/4 cup rice, 8 oz chicken, lettuce + tomato. Toum over everything; harissa on the chicken."
+            },
+            {
+              "number": 4,
+              "heading": "Kid tray",
+              "body": "1/2 cup rice and 4 oz chicken with toum in separate sections; lettuce + tomato on the side."
+            }
+          ]
+        }
+      ],
+      "ingredientCardPhotos": [
+        {
+          "src": "/images/high-protein-halal-cart-chicken-rice-bowls/step-05-griddle-chicken-polished.webp",
+          "position": "50% 50%",
+          "zoom": 1.03,
+          "layout": "side"
+        },
+        {
+          "src": "/images/high-protein-halal-cart-chicken-rice-bowls/brand-shuug-harissa-hot-sauce-polished.webp",
+          "position": "50% 50%",
+          "zoom": 1.03,
+          "layout": "side"
+        }
+      ],
+      "methodCardPhotos": [
+        {
+          "src": "/images/high-protein-halal-cart-chicken-rice-bowls/step-06-chop-griddled-chicken-polished.webp",
+          "position": "50% 50%",
+          "zoom": 1.03,
+          "layout": "side"
+        },
+        {
+          "src": "/images/high-protein-halal-cart-chicken-rice-bowls/step-09-build-adult-bowl-polished.webp",
+          "position": "50% 50%",
+          "zoom": 1.03,
+          "layout": "side"
+        }
+      ],
+      "servingPhoto": {
+        "src": "/images/high-protein-halal-cart-chicken-rice-bowls/kid-deconstructed-white-sauce-polished.webp",
+        "position": "50% 50%",
+        "zoom": 1.03,
+        "layout": "side"
+      },
+      "servingGroups": [
+        {
+          "accent": "coral",
+          "heading": "Adult plate",
+          "items": [
+            {
+              "text": "8 oz chicken + 3/4 cup yellow rice with toum + harissa. ~550 cal / 50g protein (estimated)."
+            }
+          ]
+        },
+        {
+          "accent": "green",
+          "heading": "Kid tray",
+          "items": [
+            {
+              "text": "4 oz chicken + 1/2 cup rice, toum on the chicken, no harissa. ~305 cal / 27g protein (estimated)."
+            }
+          ]
+        }
+      ],
+      "engagementQuestion": "Toum only, or toum + harissa?"
+    },
     slug: "high-protein-halal-cart-chicken-rice-bowls",
     video: "/videos/high-protein-halal-cart-chicken-rice-bowls/ID.012.-.High-Protein.Halal.Cart.Chicken.Rice.Bowls.mp4",
     // Polished-only carousel — Gemini Path A outputs from the 60-sec cook
@@ -7024,6 +7198,175 @@ const recipes = [
         "Chosen Foods Classic Mayo with avocado oil (T2 kid sauce — mild, neutral, avocado-oil base). 1 tbsp total for 2 kids. Sub any plain mayo (Duke's, Hellmann's) or skip if the kid doesn't want sauce.",
         "Smoky Chipotle Crema (T1 adult sauce — see /cookbook/smoky-chipotle-crema for the recipe). 2 tbsp total for 2 adults. Sub a store-bought chipotle sauce or skip — the adult plate still works on the parmesan rub alone, just less heat.",
       ],
+    },
+    socialCarousel: {
+      "heroBadge": "Split Plate Dinner",
+      "heroAccent": "amber",
+      "heroTitle": "Garlic Parmesan Drumsticks + Chipotle Corn",
+      "heroStats": [
+        {
+          "value": "350",
+          "label": "cal adult"
+        },
+        {
+          "value": "30g",
+          "label": "protein"
+        },
+        {
+          "value": "1",
+          "label": "sheet pan"
+        }
+      ],
+      "hook": "Drumsticks and corn roast on one rack. Adults get chipotle crema on the corn; kids get mayo and cucumber.",
+      "heroPhoto": "/images/garlic-parmesan-chicken-drumsticks-chipotle-corn/split-adult-kid-plates-polished.webp",
+      "captionBody": "Six drumsticks dry-rubbed with Dan-O's Cheesoning, baking powder, garlic powder, salt and paprika, roasted on one rack with three ears of corn at 425°F. Adult plate: 2 drumsticks + 1 ear of corn with Smoky Chipotle Crema (~350 cal / 30g protein, estimated). Kid plate: 1 drumstick + half an ear + cucumber sticks with mayo on the side (~200 cal / 16g protein, estimated). Recipe: thesplitplate.com/recipes/garlic-parmesan-chicken-drumsticks-chipotle-corn",
+      "ingredientGroups": [
+        {
+          "card": 0,
+          "accent": "amber",
+          "heading": "One rack",
+          "items": [
+            {
+              "quantity": "6",
+              "text": "Chicken drumsticks, bone-in, skin-on"
+            },
+            {
+              "quantity": "3 ears",
+              "text": "Corn, shucked"
+            },
+            {
+              "quantity": "2 tbsp",
+              "text": "Dan-O's Cheesoning"
+            },
+            {
+              "quantity": "1 tbsp",
+              "text": "Clabber Girl baking powder"
+            },
+            {
+              "quantity": "1 tsp each",
+              "text": "Garlic powder, kosher salt, paprika"
+            }
+          ]
+        },
+        {
+          "card": 1,
+          "accent": "coral",
+          "heading": "Adult finish",
+          "items": [
+            {
+              "quantity": "1 tbsp/plate",
+              "text": "Smoky Chipotle Crema",
+              "note": "Drizzled over the corn"
+            }
+          ]
+        },
+        {
+          "card": 1,
+          "accent": "green",
+          "heading": "Kid finish",
+          "items": [
+            {
+              "quantity": "1/2 tbsp/plate",
+              "text": "Chosen Foods Classic Mayo",
+              "note": "On the side"
+            },
+            {
+              "quantity": "1 small",
+              "text": "Cucumber, cut into sticks"
+            }
+          ]
+        }
+      ],
+      "methodGroups": [
+        {
+          "accent": "amber",
+          "heading": "Rub + rack",
+          "items": [
+            {
+              "number": 1,
+              "heading": "Dry + rub",
+              "body": "Pat drumsticks very dry. Mix the rub and press it onto every side."
+            },
+            {
+              "number": 2,
+              "heading": "Rack it",
+              "body": "Drumsticks 1 inch apart on a wire rack over a sheet pan, corn alongside."
+            }
+          ]
+        },
+        {
+          "accent": "amber",
+          "heading": "Roast + split",
+          "items": [
+            {
+              "number": 3,
+              "heading": "425°F, ~40 min",
+              "body": "No flipping. Probe at 35 min; pull at 175°F+ at the bone."
+            },
+            {
+              "number": 4,
+              "heading": "Two plates",
+              "body": "Adults: 2 drums + 1 ear with crema. Kids: 1 drum + 1/2 ear, cucumber, mayo."
+            }
+          ]
+        }
+      ],
+      "ingredientCardPhotos": [
+        {
+          "src": "/images/garlic-parmesan-chicken-drumsticks-chipotle-corn/step-season-drumsticks-polished.webp",
+          "position": "50% 50%",
+          "zoom": 1.03,
+          "layout": "side"
+        },
+        {
+          "src": "/images/garlic-parmesan-chicken-drumsticks-chipotle-corn/context-chosen-mayo-polished.webp",
+          "position": "50% 50%",
+          "zoom": 1.03,
+          "layout": "side"
+        }
+      ],
+      "methodCardPhotos": [
+        {
+          "src": "/images/garlic-parmesan-chicken-drumsticks-chipotle-corn/step-rack-chicken-corn-polished.webp",
+          "position": "50% 50%",
+          "zoom": 1.03,
+          "layout": "side"
+        },
+        {
+          "src": "/images/garlic-parmesan-chicken-drumsticks-chipotle-corn/step-oven-roast-polished.webp",
+          "position": "50% 50%",
+          "zoom": 1.03,
+          "layout": "side"
+        }
+      ],
+      "servingPhoto": {
+        "src": "/images/garlic-parmesan-chicken-drumsticks-chipotle-corn/hero-final-plate-polished.webp",
+        "position": "50% 50%",
+        "zoom": 1.03,
+        "layout": "side"
+      },
+      "servingGroups": [
+        {
+          "accent": "coral",
+          "heading": "Adult plate",
+          "items": [
+            {
+              "text": "2 drumsticks + 1 ear corn with chipotle crema. ~350 cal / 30g protein (estimated)."
+            }
+          ]
+        },
+        {
+          "accent": "green",
+          "heading": "Kid plate",
+          "items": [
+            {
+              "text": "1 drumstick + 1/2 ear corn, cucumber sticks, mayo on the side. ~200 cal / 16g protein (estimated)."
+            }
+          ]
+        }
+      ],
+      "engagementQuestion": "Chipotle crema or plain mayo on your corn?",
+      "criticalComponent": false
     },
     slug: "garlic-parmesan-chicken-drumsticks-chipotle-corn",
     video: "/videos/garlic-parmesan-chicken-drumsticks-chipotle-corn/ID.300.-.Garlic.Parmesan.Chicken.Drumsticks.-.Chipotle.Corn.mp4",
@@ -8100,6 +8443,179 @@ const recipes = [
         "Primal Kitchen secret sauce (kid top drizzle). Sub any kid-friendly bottled slider sauce — Sweet Baby Ray's, Chick-fil-A copycat, whatever they trust.",
       ],
     },
+    socialCarousel: {
+      "heroBadge": "Split Plate Dinner",
+      "heroAccent": "amber",
+      "heroTitle": "Philly Cheesesteak Sliders",
+      "heroStats": [
+        {
+          "value": "470",
+          "label": "cal adult"
+        },
+        {
+          "value": "40g",
+          "label": "protein"
+        },
+        {
+          "value": "1",
+          "label": "tray"
+        }
+      ],
+      "hook": "One shared steak, pepper and onion filling. Sola rolls for adults, regular slider rolls for kids, same tray.",
+      "heroPhoto": "/images/high-protein-philly-cheesesteak-sliders/final-plated-sliders-polished.webp",
+      "captionBody": "One pan of Gary's QuickSteak with peppers, onions and bone broth fills one tray of sliders, split by bread, cheese and sauce. Adults: 3 Sola sliders with Smoky Chipotle Crema, thin provolone, fat-free mozzarella and Tari hot sauce (~470 cal / 40g protein, estimated). Kids: 3 regular sliders with mayo, double provolone and Primal Kitchen secret sauce (~420 cal / 22g protein, estimated). Recipe: thesplitplate.com/recipes/high-protein-philly-cheesesteak-sliders",
+      "ingredientGroups": [
+        {
+          "card": 0,
+          "accent": "amber",
+          "heading": "Shared filling",
+          "items": [
+            {
+              "quantity": "24 oz",
+              "text": "Gary's QuickSteak beef (6 pucks)",
+              "note": "With included Creole seasoning"
+            },
+            {
+              "quantity": "12 oz",
+              "text": "Peppers + onions",
+              "note": "+ ~1 tsp taco seasoning"
+            },
+            {
+              "quantity": "1/3 cup",
+              "text": "Bone broth"
+            },
+            {
+              "quantity": "18 slices",
+              "text": "Sargento thin provolone",
+              "note": "6 adult / 12 kid"
+            }
+          ]
+        },
+        {
+          "card": 1,
+          "accent": "coral",
+          "heading": "Adult side",
+          "items": [
+            {
+              "quantity": "6",
+              "text": "Sola rolls"
+            },
+            {
+              "quantity": "1/2 ea.",
+              "text": "Smoky Chipotle Crema + Tari hot sauce"
+            },
+            {
+              "quantity": "3 oz",
+              "text": "Fat-free mozzarella"
+            }
+          ]
+        },
+        {
+          "card": 1,
+          "accent": "green",
+          "heading": "Kid side",
+          "items": [
+            {
+              "quantity": "6",
+              "text": "Regular slider rolls"
+            },
+            {
+              "quantity": "1/2 ea.",
+              "text": "Mayo + Primal Kitchen secret sauce"
+            }
+          ]
+        }
+      ],
+      "methodGroups": [
+        {
+          "accent": "amber",
+          "heading": "One pan",
+          "items": [
+            {
+              "number": 1,
+              "heading": "Brown the beef",
+              "body": "Pucks from frozen, 3-4 min per side with the Creole seasoning. Chop into strips; set aside."
+            },
+            {
+              "number": 2,
+              "heading": "Peppers + onions",
+              "body": "Same pan with taco seasoning, 5-6 min. Add the broth, reduce 2 min, return the beef."
+            }
+          ]
+        },
+        {
+          "accent": "amber",
+          "heading": "One tray, two sides",
+          "items": [
+            {
+              "number": 3,
+              "heading": "Build",
+              "body": "Sola rolls on the adult side, regular rolls on the kid side. Sauces, provolone, filling, top cheese, top sauces."
+            },
+            {
+              "number": 4,
+              "heading": "Bake",
+              "body": "Tops on, light avocado oil spray, foil. 350°F for 20 min. Cut and plate 3 per person."
+            }
+          ]
+        }
+      ],
+      "ingredientCardPhotos": [
+        {
+          "src": "/images/high-protein-philly-cheesesteak-sliders/step-03-peppers-onions-polished.webp",
+          "position": "50% 50%",
+          "zoom": 1.03,
+          "layout": "side"
+        },
+        {
+          "src": "/images/high-protein-philly-cheesesteak-sliders/split-adult-kid-bread-build-polished.webp",
+          "position": "50% 50%",
+          "zoom": 1.03,
+          "layout": "side"
+        }
+      ],
+      "methodCardPhotos": [
+        {
+          "src": "/images/high-protein-philly-cheesesteak-sliders/step-05-one-pan-filling-polished.webp",
+          "position": "50% 50%",
+          "zoom": 1.03,
+          "layout": "side"
+        },
+        {
+          "src": "/images/high-protein-philly-cheesesteak-sliders/step-12-baked-covered-result-polished.webp",
+          "position": "50% 50%",
+          "zoom": 1.03,
+          "layout": "side"
+        }
+      ],
+      "servingPhoto": {
+        "src": "/images/high-protein-philly-cheesesteak-sliders/hero-bite-cheesesteak-slider-polished.webp",
+        "position": "50% 50%",
+        "zoom": 1.03,
+        "layout": "side"
+      },
+      "servingGroups": [
+        {
+          "accent": "coral",
+          "heading": "Adult plate",
+          "items": [
+            {
+              "text": "3 Sola sliders. ~470 cal / 40g protein (estimated)."
+            }
+          ]
+        },
+        {
+          "accent": "green",
+          "heading": "Kid plate",
+          "items": [
+            {
+              "text": "3 regular sliders with double provolone. ~420 cal / 22g protein (estimated)."
+            }
+          ]
+        }
+      ],
+      "engagementQuestion": "Chipotle crema or secret sauce side of the tray?"
+    },
     slug: "high-protein-philly-cheesesteak-sliders",
     video: "/videos/high-protein-philly-cheesesteak-sliders/ID.023.-.High-Protein.Philly.Cheesesteak.Sliders.mp4",
     // socialImages — step-execution order per [feedback-social-images-step-
@@ -8982,6 +9498,180 @@ const recipes = [
         "Velveeta Original (2 oz adult pot + 1 oz kid pot, melt). Half a slice per adult container melts under the hot sauce in seconds. Sub American slices for a cleaner ingredient list.",
         "Kirkland chicken bone broth (1/4 cup adult + 1/8 cup kid, sauce loosener). Same SKU used across id 24 / id 30 / id 38 / id 39 / id 41 / id 42. Sub any low-sodium chicken stock.",
       ],
+    },
+    socialCarousel: {
+      "heroBadge": "Split Plate Meal Prep",
+      "heroAccent": "amber",
+      "heroTitle": "Chili Mac and Cheese",
+      "heroStats": [
+        {
+          "value": "380",
+          "label": "cal adult"
+        },
+        {
+          "value": "39g",
+          "label": "protein"
+        },
+        {
+          "value": "8",
+          "label": "containers"
+        }
+      ],
+      "hook": "One blended cottage-cheese sauce, two pastas. Higher-fiber elbows for adults, regular elbows for kids.",
+      "heroPhoto": "/images/chili-mac-and-cheese/hero-adult-kid-chili-mac-containers-polished.webp",
+      "captionBody": "Chili mac meal prep from leftover Hot Dog Chili Base: one blended cottage-cheese sauce, split 2:1 into two pots. Adults get Carbe Diem higher-fiber elbows and a full chili serving (~380 cal / 39g protein per container, estimated). Kids get Barilla regular elbows with half a chili serving; kid macros are not published because the cottage cheese label was not verified. 4 adult + 4 kid containers. Recipe: thesplitplate.com/recipes/chili-mac-and-cheese",
+      "ingredientGroups": [
+        {
+          "card": 0,
+          "accent": "amber",
+          "heading": "Two pastas + chili",
+          "items": [
+            {
+              "quantity": "8 oz dry",
+              "text": "Carbe Diem elbows",
+              "note": "Adult pot"
+            },
+            {
+              "quantity": "6 oz dry",
+              "text": "Barilla regular elbows",
+              "note": "Kid pot"
+            },
+            {
+              "quantity": "6 servings",
+              "text": "Reserved Hot Dog Chili Base",
+              "note": "~420-480 g"
+            }
+          ]
+        },
+        {
+          "card": 1,
+          "accent": "coral",
+          "heading": "Blended sauce",
+          "items": [
+            {
+              "quantity": "~300 g",
+              "text": "Cottage cheese"
+            },
+            {
+              "quantity": "1/2 cup",
+              "text": "Fat-free Fairlife milk"
+            },
+            {
+              "quantity": "2 tbsp ea.",
+              "text": "Nutritional yeast + cheddar powder"
+            },
+            {
+              "quantity": "3 oz",
+              "text": "Velveeta",
+              "note": "2 oz adult pot / 1 oz kid pot"
+            },
+            {
+              "quantity": "3/8 cup",
+              "text": "Kirkland chicken bone broth",
+              "note": "1/4 cup adult / 1/8 cup kid"
+            }
+          ]
+        }
+      ],
+      "methodGroups": [
+        {
+          "accent": "amber",
+          "heading": "One sauce",
+          "items": [
+            {
+              "number": 1,
+              "heading": "Blend",
+              "body": "Cottage cheese, milk, nutritional yeast and cheddar powder until smooth and pourable."
+            },
+            {
+              "number": 2,
+              "heading": "Two pots",
+              "body": "Cook each pasta per its package in salted water. Drain and return to its pot."
+            },
+            {
+              "number": 3,
+              "heading": "Divide 2:1",
+              "body": "Two parts sauce to the adult pot, one part to the kid pot."
+            }
+          ]
+        },
+        {
+          "accent": "amber",
+          "heading": "Two pots",
+          "items": [
+            {
+              "number": 4,
+              "heading": "Melt Velveeta",
+              "body": "2 oz adult, 1 oz kid. Low heat until glossy, before the chili goes in."
+            },
+            {
+              "number": 5,
+              "heading": "Fold in chili",
+              "body": "4 servings in the adult pot, 2 in the kid pot. Loosen with bone broth."
+            },
+            {
+              "number": 6,
+              "heading": "Portion 4 + 4",
+              "body": "Cool 20-30 min uncovered, seal and refrigerate. Reheat to 165°F."
+            }
+          ]
+        }
+      ],
+      "ingredientCardPhotos": [
+        {
+          "src": "/images/chili-mac-and-cheese/context-adult-high-fiber-elbows-polished.webp",
+          "position": "50% 50%",
+          "zoom": 1.03,
+          "layout": "side"
+        },
+        {
+          "src": "/images/chili-mac-and-cheese/step-01-cottage-cheese-polished.webp",
+          "position": "50% 50%",
+          "zoom": 1.03,
+          "layout": "side"
+        }
+      ],
+      "methodCardPhotos": [
+        {
+          "src": "/images/chili-mac-and-cheese/step-07-divide-cheese-sauce-polished.webp",
+          "position": "50% 50%",
+          "zoom": 1.03,
+          "layout": "side"
+        },
+        {
+          "src": "/images/chili-mac-and-cheese/step-09-add-leftover-chili-polished.webp",
+          "position": "50% 50%",
+          "zoom": 1.03,
+          "layout": "side"
+        }
+      ],
+      "servingPhoto": {
+        "src": "/images/chili-mac-and-cheese/final-chili-mac-fork-reveal-polished.webp",
+        "position": "50% 50%",
+        "zoom": 1.03,
+        "layout": "side"
+      },
+      "servingGroups": [
+        {
+          "accent": "coral",
+          "heading": "Adult container",
+          "items": [
+            {
+              "text": "2 oz dry higher-fiber elbows + a full chili serving. ~380 cal / 39g protein (estimated)."
+            }
+          ]
+        },
+        {
+          "accent": "green",
+          "heading": "Kid container",
+          "items": [
+            {
+              "text": "Regular elbows + half a chili serving, same sauce base. Kid macros not published."
+            }
+          ]
+        }
+      ],
+      "engagementQuestion": "Would your kids eat the chili folded in or on the side?"
     },
     slug: "chili-mac-and-cheese",
     // socialImages — 6-cap step-order per [feedback-social-images-step-order].
@@ -10107,6 +10797,185 @@ const recipes = [
         "1 tbsp toum or preferred mayo-based sauce for the kid plates (1/2 tbsp per child in Tushar's build).",
       ],
     },
+    socialCarousel: {
+      "heroBadge": "Split Plate Dinner",
+      "heroAccent": "amber",
+      "heroTitle": "Cilantro-Lime Rice Bowls + Chipotle Chicken",
+      "heroStats": [
+        {
+          "value": "472",
+          "label": "cal adult"
+        },
+        {
+          "value": "43g",
+          "label": "protein"
+        },
+        {
+          "value": "15",
+          "label": "min w/ rice"
+        }
+      ],
+      "hook": "One shared cook of rice, chicken and corn. Adults get cilantro-lime rice + Tari Verde; kids get buttery rice + toum.",
+      "heroPhoto": "/images/cilantro-lime-chipotle-chicken-rice/hero-split-adult-kid-plates-strip-polished.webp",
+      "captionBody": "One cook, two finishes: Bone Broth Rice, chargrilled chipotle chicken reheated in the air fryer, and fire-roasted corn boiled for 5 minutes. Adults get cilantro-lime rice with 6 oz chicken, 2 oz corn and 1 tbsp Tari Verde (~472 cal / 43g protein, estimated). Kids get buttery rice with 3 oz chicken, 2 oz corn and 1/2 tbsp toum; kid macros are not published. Recipe: thesplitplate.com/recipes/cilantro-lime-rice-chipotle-chicken-fire-roasted-corn",
+      "ingredientGroups": [
+        {
+          "card": 0,
+          "accent": "amber",
+          "heading": "Shared cook",
+          "items": [
+            {
+              "quantity": "3 servings",
+              "text": "Bone Broth Rice",
+              "note": "Fresh or reheated meal prep"
+            },
+            {
+              "quantity": "18 oz",
+              "text": "Cooked chargrilled chipotle chicken"
+            },
+            {
+              "quantity": "8 oz",
+              "text": "Frozen fire-roasted corn"
+            },
+            {
+              "quantity": "1-2",
+              "text": "Limes + salt"
+            }
+          ]
+        },
+        {
+          "card": 1,
+          "accent": "coral",
+          "heading": "Adult finish",
+          "items": [
+            {
+              "quantity": "1 handful",
+              "text": "Fresh cilantro, chopped"
+            },
+            {
+              "quantity": "1 tbsp/plate",
+              "text": "Tari Verde",
+              "note": "Drizzled on top"
+            }
+          ]
+        },
+        {
+          "card": 1,
+          "accent": "green",
+          "heading": "Kid finish",
+          "items": [
+            {
+              "quantity": "1/2 tbsp/tray",
+              "text": "Butter",
+              "note": "Tossed into warm rice"
+            },
+            {
+              "quantity": "1/2 tbsp/tray",
+              "text": "Toum or mayo-based sauce"
+            }
+          ]
+        }
+      ],
+      "methodGroups": [
+        {
+          "accent": "amber",
+          "heading": "Shared cook",
+          "items": [
+            {
+              "number": 1,
+              "heading": "Rice",
+              "body": "Cook Bone Broth Rice fresh, or reheat 3 stored servings until steaming."
+            },
+            {
+              "number": 2,
+              "heading": "Chicken",
+              "body": "Air fry 10 min at the package temperature until hot throughout."
+            },
+            {
+              "number": 3,
+              "heading": "Corn",
+              "body": "Boil 5 min in salted water. Drain; season with lime and salt."
+            }
+          ]
+        },
+        {
+          "accent": "amber",
+          "heading": "Two finishes",
+          "items": [
+            {
+              "number": 4,
+              "heading": "Adult rice",
+              "body": "Toss 2 rice servings with cilantro, lime and salt while warm."
+            },
+            {
+              "number": 5,
+              "heading": "Adult plates",
+              "body": "6 oz chicken + 2 oz corn each. 1 tbsp Tari Verde on top."
+            },
+            {
+              "number": 6,
+              "heading": "Kid trays",
+              "body": "Buttered rice, 3 oz chicken, 2 oz corn, 1/2 tbsp toum on the chicken."
+            }
+          ]
+        }
+      ],
+      "ingredientCardPhotos": [
+        {
+          "src": "/images/cilantro-lime-chipotle-chicken-rice/step-01-bone-broth-rice-polished.webp",
+          "position": "50% 50%",
+          "zoom": 1.03,
+          "layout": "side"
+        },
+        {
+          "src": "/images/cilantro-lime-chipotle-chicken-rice/step-03-air-fryer-chicken-polished.webp",
+          "position": "50% 50%",
+          "zoom": 1.03,
+          "layout": "side"
+        }
+      ],
+      "methodCardPhotos": [
+        {
+          "src": "/images/cilantro-lime-chipotle-chicken-rice/step-04-fire-roasted-corn-polished.webp",
+          "position": "50% 50%",
+          "zoom": 1.03,
+          "layout": "side"
+        },
+        {
+          "src": "/images/cilantro-lime-chipotle-chicken-rice/step-02-cilantro-lime-rice-polished.webp",
+          "position": "50% 50%",
+          "zoom": 1.03,
+          "layout": "side"
+        }
+      ],
+      "servingPhoto": {
+        "src": "/images/cilantro-lime-chipotle-chicken-rice/step-06-adult-tari-verde-finish-polished.webp",
+        "position": "50% 50%",
+        "zoom": 1.03,
+        "layout": "side"
+      },
+      "servingGroups": [
+        {
+          "accent": "coral",
+          "heading": "Adult plate",
+          "items": [
+            {
+              "text": "Cilantro-lime rice, 6 oz chicken, 2 oz corn, Tari Verde. ~472 cal / 43g protein (estimated)."
+            }
+          ]
+        },
+        {
+          "accent": "green",
+          "heading": "Kid tray",
+          "items": [
+            {
+              "text": "Buttery rice, 3 oz chicken, 2 oz corn, toum. Kid macros not published; adjust to appetite."
+            }
+          ]
+        }
+      ],
+      "engagementQuestion": "Tari Verde or toum on your bowl?"
+    },
     slug: "cilantro-lime-rice-chipotle-chicken-fire-roasted-corn",
     socialImages: [
       "/images/cilantro-lime-chipotle-chicken-rice/hero-split-adult-kid-plates-polished.webp",
@@ -10277,6 +11146,190 @@ const recipes = [
         "Chili-garlic sauce, to taste, for the adult section only.",
         "Cooking spray for the 9x13 baking dish.",
       ],
+    },
+    socialCarousel: {
+      "heroBadge": "Split Plate Dinner",
+      "heroAccent": "amber",
+      "heroTitle": "Viral Dumpling Lasagna, Proteinized",
+      "heroStats": [
+        {
+          "value": "450",
+          "label": "cal adult"
+        },
+        {
+          "value": "40g",
+          "label": "protein"
+        },
+        {
+          "value": "6",
+          "label": "servings"
+        }
+      ],
+      "hook": "51 wonton wrappers, lean chicken + pork, one pan. Chili-garlic goes on the adult squares only.",
+      "heroPhoto": "/images/viral-dumpling-lasagna-proteinized/hero-split-adult-kid-plates-strip-polished.webp",
+      "captionBody": "A leaner, higher-protein take on the viral dumpling lasagna: 51 wonton wrappers layered 15 / 9 / 12 / 15 with 1 lb lean ground chicken + 1 lb lean ground pork, soy, rice vinegar, umami seasoning, ginger-garlic paste and scallions. 1 cup chicken broth on top, covered at 400°F for 30 min. One-sixth of the pan is ~450 cal / 40g protein (estimated). Chili-garlic only on the adult section; kids get half servings with no chili-garlic, and kid macros are not published. Recipe: thesplitplate.com/recipes/viral-dumpling-lasagna-proteinized",
+      "ingredientGroups": [
+        {
+          "card": 0,
+          "accent": "amber",
+          "heading": "Filling",
+          "items": [
+            {
+              "quantity": "1 lb",
+              "text": "93/7 lean ground chicken"
+            },
+            {
+              "quantity": "1 lb",
+              "text": "95/5 lean ground pork"
+            },
+            {
+              "quantity": "2 tbsp each",
+              "text": "Soy sauce, rice vinegar, umami seasoning"
+            },
+            {
+              "quantity": "2 tbsp",
+              "text": "Ginger-garlic paste"
+            },
+            {
+              "quantity": "1 bunch",
+              "text": "Scallions",
+              "note": "Half in, half for garnish"
+            }
+          ]
+        },
+        {
+          "card": 1,
+          "accent": "amber",
+          "heading": "Layers + finish",
+          "items": [
+            {
+              "quantity": "51",
+              "text": "Wonton wrappers",
+              "note": "15 / 9 / 12 / 15"
+            },
+            {
+              "quantity": "1 cup",
+              "text": "Chicken broth",
+              "note": "Poured over the top"
+            },
+            {
+              "quantity": "to taste",
+              "text": "Soy drizzle + reserved scallions"
+            }
+          ]
+        },
+        {
+          "card": 1,
+          "accent": "coral",
+          "heading": "Adult only",
+          "items": [
+            {
+              "quantity": "to taste",
+              "text": "Chili-garlic sauce",
+              "note": "Kid section stays mild"
+            }
+          ]
+        }
+      ],
+      "methodGroups": [
+        {
+          "accent": "amber",
+          "heading": "Build",
+          "items": [
+            {
+              "number": 1,
+              "heading": "Mix",
+              "body": "Combine both meats with half the scallions, soy, vinegar, umami seasoning and ginger-garlic."
+            },
+            {
+              "number": 2,
+              "heading": "Layer dry",
+              "body": "15 wrappers, 1/3 filling, 9 wrappers, 1/3, 12 wrappers, last 1/3, then the final 15."
+            },
+            {
+              "number": 3,
+              "heading": "Broth + foil",
+              "body": "Pour 1 cup broth evenly over the top. Cover tightly with foil."
+            }
+          ]
+        },
+        {
+          "accent": "amber",
+          "heading": "Bake + split",
+          "items": [
+            {
+              "number": 4,
+              "heading": "400°F, 30 min",
+              "body": "Covered. Center reads 165°F. Rest 5-10 min."
+            },
+            {
+              "number": 5,
+              "heading": "Cut 6",
+              "body": "Soy drizzle and scallions over the whole pan."
+            },
+            {
+              "number": 6,
+              "heading": "Adult section",
+              "body": "Chili-garlic on the adult squares only. Kids get a half serving, no chili-garlic."
+            }
+          ]
+        }
+      ],
+      "ingredientCardPhotos": [
+        {
+          "src": "/images/viral-dumpling-lasagna-proteinized/context-lean-chicken-pork-polished.webp",
+          "position": "50% 50%",
+          "zoom": 1.03,
+          "layout": "side"
+        },
+        {
+          "src": "/images/viral-dumpling-lasagna-proteinized/step-01-mix-filling-polished.webp",
+          "position": "50% 50%",
+          "zoom": 1.03,
+          "layout": "side"
+        }
+      ],
+      "methodCardPhotos": [
+        {
+          "src": "/images/viral-dumpling-lasagna-proteinized/step-02-layer-filling-wrappers-polished.webp",
+          "position": "50% 50%",
+          "zoom": 1.03,
+          "layout": "side"
+        },
+        {
+          "src": "/images/viral-dumpling-lasagna-proteinized/step-06-split-adult-chili-garlic-polished.webp",
+          "position": "50% 50%",
+          "zoom": 1.03,
+          "layout": "side"
+        }
+      ],
+      "servingPhoto": {
+        "src": "/images/viral-dumpling-lasagna-proteinized/step-07-lift-layered-serving-polished.webp",
+        "position": "50% 50%",
+        "zoom": 1.03,
+        "layout": "side"
+      },
+      "servingGroups": [
+        {
+          "accent": "coral",
+          "heading": "Adult plate",
+          "items": [
+            {
+              "text": "One-sixth of the pan with chili-garlic. ~450 cal / 40g protein (estimated)."
+            }
+          ]
+        },
+        {
+          "accent": "green",
+          "heading": "Kid tray",
+          "items": [
+            {
+              "text": "A half serving from the mild section, no chili-garlic. Kid macros not published."
+            }
+          ]
+        }
+      ],
+      "engagementQuestion": "Chili-garlic on top, or keep yours mild?"
     },
     slug: "viral-dumpling-lasagna-proteinized",
     socialImages: [
