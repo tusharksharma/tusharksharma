@@ -55,6 +55,30 @@ export const xThoughtCarousels = [
         "Seven small dinner moves from this week: a fresh side for freezer nights, a second finish instead of a second dinner, and crunch worth protecting. Save this for the next 5:30 scramble. Full recipes: link in bio.\n\n#FamilyDinner #WeeknightDinner #CookingTips",
     },
   },
+  {
+    slug: "seven-small-fixes-before-you-change-the-meal",
+    title: "Seven small fixes before you change the meal",
+    subtitle: "Check the labels, cut the extra mix-in, serve it unassembled—what got food made Nov 9–15.",
+    // Friday publish date for this carousel (not the first daily thought date).
+    initialMainPostDate: "2026-11-20",
+    weekLabel: "Nov 9 – Nov 15, 2026",
+    // First card is the thumbnail (no separate cover); cards 1–7 are the seven daily thoughts.
+    cards: [
+      { src: "/images/x-thoughts-2026-11-20/x-01.jpg", date: "Nov 9, 2026", label: "1 / 7" },
+      { src: "/images/x-thoughts-2026-11-20/x-02.jpg", date: "Nov 10, 2026", label: "2 / 7" },
+      { src: "/images/x-thoughts-2026-11-20/x-03.jpg", date: "Nov 11, 2026", label: "3 / 7" },
+      { src: "/images/x-thoughts-2026-11-20/x-04.jpg", date: "Nov 12, 2026", label: "4 / 7" },
+      { src: "/images/x-thoughts-2026-11-20/x-05.jpg", date: "Nov 13, 2026", label: "5 / 7" },
+      { src: "/images/x-thoughts-2026-11-20/x-06.jpg", date: "Nov 14, 2026", label: "6 / 7" },
+      { src: "/images/x-thoughts-2026-11-20/x-07.jpg", date: "Nov 15, 2026", label: "7 / 7" },
+    ],
+    caption: {
+      default:
+        "Seven small fixes from this week: check viral macros against your own labels, beat the delivery app with a 15-minute fallback, and serve picky eaters the same food, unassembled. Save this for the next 5:30 scramble. Full recipes: link in bio.\n\n#FamilyDinner #HighProtein #PickyEaters",
+      tiktok:
+        "Seven small fixes from this week: check viral macros against your own labels, beat the delivery app with a 15-minute fallback, and serve picky eaters the same food, unassembled. Save this for the next 5:30 scramble. Full recipes: link in bio.\n\n#FamilyDinner #HighProtein #PickyEaters",
+    },
+  },
 ];
 
 export function findXThoughtCarousel(slug) {
