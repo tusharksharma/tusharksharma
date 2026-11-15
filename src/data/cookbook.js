@@ -3899,6 +3899,223 @@ export const batchPrep = [
 
 export const quickLunches = [
   {
+    "id": "extra-chicken-bonus-lunch",
+    "title": "Extra-Chicken Bonus Lunch",
+    "tagline": "When the grocery pack of chicken has more than dinner needs, save one spare boneless skinless chicken breast for an 8-minute air-fryer lunch with Hot Honey Mustard.",
+    "heroImage": "/images/extra-chicken-bonus-lunch/hero-polished.webp",
+    "prepImage": "/images/extra-chicken-bonus-lunch/seasoned-strips-polished.webp",
+    "prepImageCaption": "One spare chicken breast cut into thin strips, seasoned to taste, and misted with a half-second spray of avocado oil.",
+    "video": "/videos/extra-chicken-bonus-lunch/835-Extra-Chicken-Bonus-Lunch.mp4",
+    "videoPoster": "/images/extra-chicken-bonus-lunch/hero-polished.webp",
+    "socialHashtags": [
+      "#MealPrepTip",
+      "#QuickLunch",
+      "#AirFryerChicken",
+      "#HighProteinLunch",
+      "#TheSplitPlate"
+    ],
+    "socialImages": [
+      "/images/extra-chicken-bonus-lunch/cut-strips-polished.webp",
+      "/images/extra-chicken-bonus-lunch/seasoned-strips-polished.webp",
+      "/images/extra-chicken-bonus-lunch/cooked-basket-polished.webp",
+      "/images/extra-chicken-bonus-lunch/sauce-pour-polished.webp",
+      "/images/extra-chicken-bonus-lunch/finished-plate-polished.webp"
+    ],
+    "socialCarousel": {
+      "heroBadge": "Quick Lunches \u2022 Kitchen Habit",
+      "heroAccent": "coral",
+      "heroTitle": "Extra-Chicken Bonus Lunch",
+      "heroStats": [
+        {
+          "value": "1 breast",
+          "label": "saved from dinner pack"
+        },
+        {
+          "value": "8 min",
+          "label": "at 375\u00b0F air-fry"
+        },
+        {
+          "value": "165\u00b0F",
+          "label": "internal temp check"
+        }
+      ],
+      "hook": "When the chicken pack has more than the dinner recipe needs, don\u2019t recalculate dinner\u2014save the extra breast for tomorrow\u2019s quick lunch.",
+      "captionTitle": "Extra-Chicken Bonus Lunch \u2022 375\u00b0F for ~8 min",
+      "captionBody": "When the chicken pack has more than the dinner recipe needs, don\u2019t recalculate the whole recipe. Save the extra breast for a quick lunch.\n\nCut 1 boneless, skinless chicken breast into thin strips, season to taste, and add a half-second spray of avocado oil. Air-fry at 375\u00b0F for about 8 minutes until it reaches 165\u00b0F, then plate with your favorite dipping sauce\u2014Trader Joe\u2019s Hot Honey Mustard here.\n\nNo exact macro count on this one since the spare breast and sauce weren\u2019t weighed.\n\nSave this for your next big pack of chicken.\n\n@traderjoes\n\n#MealPrepTip #QuickLunch #AirFryerChicken #HighProteinLunch #TheSplitPlate",
+      "heroPhoto": "/images/extra-chicken-bonus-lunch/hero-polished.webp",
+      "ingredientGroups": [
+        {
+          "card": 1,
+          "accent": "amber",
+          "heading": "The Spare Breast",
+          "items": [
+            {
+              "quantity": "1",
+              "text": "Spare boneless, skinless chicken breast (saved from a dinner pack)"
+            },
+            {
+              "quantity": "To taste",
+              "text": "Favorite savory chicken seasoning"
+            }
+          ]
+        },
+        {
+          "card": 2,
+          "accent": "coral",
+          "heading": "Spray & Dip",
+          "items": [
+            {
+              "quantity": "1/2-sec spray",
+              "text": "Avocado oil spray"
+            },
+            {
+              "quantity": "To taste",
+              "text": "Favorite dipping sauce (Trader Joe\u2019s Hot Honey Mustard filmed)"
+            }
+          ]
+        }
+      ],
+      "ingredientCardPhotos": [
+        {
+          "src": "/images/extra-chicken-bonus-lunch/cut-strips-polished.webp",
+          "layout": "side"
+        },
+        {
+          "src": "/images/extra-chicken-bonus-lunch/seasoned-strips-polished.webp",
+          "layout": "side"
+        }
+      ],
+      "methodLabel": "SLICE, AIR-FRY & DIP",
+      "methodGroups": [
+        {
+          "card": 1,
+          "accent": "amber",
+          "heading": "Slice & Season",
+          "items": [
+            {
+              "number": 1,
+              "heading": "Save the extra breast",
+              "body": "Keep the dinner recipe math intact and set aside the extra chicken breast from the grocery pack."
+            },
+            {
+              "number": 2,
+              "heading": "Cut into thin strips & season",
+              "body": "Slice into even strips, season to taste, and coat lightly with a half-second spray of avocado oil."
+            }
+          ]
+        },
+        {
+          "card": 2,
+          "accent": "coral",
+          "heading": "Air-Fry & Plate",
+          "items": [
+            {
+              "number": 3,
+              "heading": "Air-fry at 375\u00b0F for ~8 min",
+              "body": "Arrange in a single layer in the air-fryer basket and cook at 375\u00b0F for about 8 minutes until the thickest piece reaches 165\u00b0F."
+            },
+            {
+              "number": 4,
+              "heading": "Plate with dipping sauce",
+              "body": "Transfer to a plate and add your favorite dipping sauce\u2014Trader Joe\u2019s Hot Honey Mustard shown here."
+            }
+          ]
+        }
+      ],
+      "methodCardPhotos": [
+        {
+          "src": "/images/extra-chicken-bonus-lunch/cooked-basket-polished.webp",
+          "layout": "side"
+        },
+        {
+          "src": "/images/extra-chicken-bonus-lunch/sauce-pour-polished.webp",
+          "layout": "side"
+        }
+      ],
+      "servingPhoto": {
+        "src": "/images/extra-chicken-bonus-lunch/finished-plate-polished.webp",
+        "layout": "side"
+      },
+      "servingGroups": [
+        {
+          "accent": "coral",
+          "heading": "One Bonus Lunch",
+          "items": [
+            {
+              "text": "No exact macro count is claimed for this habit post because the spare chicken breast and dipping sauce were not weighed and a timed half-second spray is not a measured weight."
+            }
+          ]
+        }
+      ],
+      "engagementQuestion": "What dipping sauce are you putting on this plate?"
+    },
+    "flavorProfile": "Juicy, savory-seasoned air-fried chicken breast strips paired with sweet-tangy Trader Joe\u2019s Hot Honey Mustard.",
+    "servings": 1,
+    "servingSize": "1 spare chicken breast lunch plate (unweighed habit build)",
+    "time": "8 min air-fry at 375\u00b0F",
+    "bestFor": [
+      "Quick lunch",
+      "Air-fryer chicken",
+      "Using extra chicken from dinner packs",
+      "Work-from-home lunch"
+    ],
+    "useThisWhen": "Your grocery pack of chicken breasts weighs more than the dinner recipe calls for and you want a fast, zero-math lunch instead of scaling the dinner sauce.",
+    "flavorTarget": "Tender, golden-seasoned unbreaded chicken strips cooked just to 165\u00b0F so they stay juicy, dipped in sweet-heat honey mustard.",
+    "ingredients": [
+      "1 boneless, skinless chicken breast (the spare breast from a larger dinner pack)",
+      "Your favorite chicken seasoning, to taste",
+      "A half-second spray of avocado oil",
+      "Your favorite dipping sauce, as desired (filmed: Trader Joe\u2019s Hot Honey Mustard)"
+    ],
+    "steps": [
+      {
+        "text": "SLICE THE SPARE BREAST: Cut the spare boneless, skinless chicken breast into thin, evenly sized strips.",
+        "image": "/images/extra-chicken-bonus-lunch/cut-strips-polished.webp",
+        "imageAlt": "Extra-Chicken Bonus Lunch: raw boneless skinless chicken breast sliced into thin strips"
+      },
+      {
+        "text": "SEASON & SPRAY: Season the strips to taste and coat lightly with a half-second spray of avocado oil.",
+        "image": "/images/extra-chicken-bonus-lunch/seasoned-strips-polished.webp",
+        "imageAlt": "Extra-Chicken Bonus Lunch: seasoned chicken breast strips on a cutting board"
+      },
+      {
+        "text": "AIR-FRY AT 375\u00b0F: Arrange in a single layer in the air-fryer basket. Air-fry at 375\u00b0F for about 8 minutes until cooked through and the thickest strip reaches 165\u00b0F on a food thermometer.",
+        "image": "/images/extra-chicken-bonus-lunch/cooked-basket-polished.webp",
+        "imageAlt": "Extra-Chicken Bonus Lunch: golden seasoned chicken strips in the air-fryer basket"
+      },
+      {
+        "text": "PLATE & DIP: Transfer the hot chicken strips to a plate and serve with your favorite dipping sauce (Trader Joe\u2019s Hot Honey Mustard shown).",
+        "image": "/images/extra-chicken-bonus-lunch/sauce-pour-polished.webp",
+        "imageAlt": "Extra-Chicken Bonus Lunch: squeezing Trader Joe's Hot Honey Mustard onto the plate beside cooked chicken strips"
+      }
+    ],
+    "executionRules": [
+      "Instead of recalculating a dinner recipe when a grocery pack has an extra breast, keep the dinner recipe as written and save the spare breast for lunch.",
+      "Check the thickest strip with a food thermometer to confirm 165\u00b0F; cook time can vary slightly with strip thickness and air-fryer model.",
+      "No exact calorie or protein figure is published for this build because the spare chicken breast and dipping sauce were not weighed."
+    ],
+    "macroHonesty": "No exact calorie or protein count is claimed for this recipe. The spare chicken breast and dipping sauce were not weighed, and a timed half-second spray of avocado oil is not a measured weight. If you want to log your own plate, weigh your raw chicken breast and measure your dipping sauce on the scale.",
+    "allergens": [
+      "mustard"
+    ],
+    "dietTags": [
+      "high-protein",
+      "gluten-free",
+      "dairy-free",
+      "pork-free"
+    ],
+    "relatedIds": [
+      "hot-honey-mustard-crispy-chicken-tacos",
+      "crispy-chicken-money-mustard",
+      "caesar-crunch-wrap"
+    ],
+    "mealPrep": {
+      "storage": "Keep the spare raw chicken breast refrigerated in an airtight container and cook within 1\u20132 days, or air-fry ahead and refrigerate cooked strips for up to 3\u20134 days.",
+      "lasts": "Best air-fried fresh in 8 minutes; cooked strips keep 3\u20134 days refrigerated.",
+      "reheat": "Reheat cooked strips in the air fryer at 350\u00b0F for 2\u20133 minutes just until warm."
+    }
+  },
+  {
     id: "hot-honey-mustard-crispy-chicken-tacos",
     title: "Hot Honey Mustard Crispy Chicken Tacos",
     tagline: "Three crispy chicken tacos with creamy Caesar and sweet heat. About 510 calories and 44g protein for all three with optional chilies.",
@@ -18342,6 +18559,262 @@ const DESSERT_CATALOG = [
       storage: "Freeze the unspun base upright and level. Spin and add toppings when ready to eat.",
       lasts: "Follow the Creami machine guidance for storage and reprocessing.",
       reheat: "Do not heat the pint."
+    }
+  },
+  {
+    "id": "crumbl-peanut-butter-cup-creami",
+    "title": "Peanut Butter Cup Cookie Creami",
+    "tagline": "Crumbl\u2019s Peanut Butter Cup Cookie ft. REESE\u2019S, Creami-style (10/10): a PB2 peanut butter ice cream base with zero mix-ins, topped with a 2-ingredient PB2 + sugar-free maple sauce, a crushed standard Reese\u2019s cup, and sugar-free chocolate syrup. About 380 calories and 43g protein for the whole pint.",
+    "heroImage": "/images/crumbl-peanut-butter-cup-creami/hero-polished.webp",
+    "prepImage": "/images/crumbl-peanut-butter-cup-creami/pb2-maple-sauce-polished.webp",
+    "prepImageCaption": "1 tbsp PB2 Original stirred with 1 tbsp sugar-free maple syrup creates the thick, glossy peanut-maple topping sauce.",
+    "video": "/videos/crumbl-peanut-butter-cup-creami/836-Crumbl-Peanut-Butter-Cup-Creami.mp4",
+    "videoPoster": "/images/crumbl-peanut-butter-cup-creami/hero-polished.webp",
+    "socialHashtags": [
+      "#CrumblCreamiCut",
+      "#ProteinIceCream",
+      "#NinjaCreami",
+      "#PeanutButter",
+      "#PB2",
+      "#TheSplitPlate"
+    ],
+    "socialImages": [
+      "/images/crumbl-peanut-butter-cup-creami/base-polished.webp",
+      "/images/crumbl-peanut-butter-cup-creami/spun-pint-polished.webp",
+      "/images/crumbl-peanut-butter-cup-creami/pb2-maple-sauce-polished.webp",
+      "/images/crumbl-peanut-butter-cup-creami/creamy-scoop-polished.webp",
+      "/images/crumbl-peanut-butter-cup-creami/finished-pint-polished.webp"
+    ],
+    "socialCarousel": {
+      "heroBadge": "CrumblCreamiCut \u2022 10/10",
+      "heroAccent": "amber",
+      "heroTitle": "Peanut Butter Cup Cookie Creami",
+      "heroStats": [
+        {
+          "value": "~380",
+          "label": "cal \u2022 whole pint"
+        },
+        {
+          "value": "43g",
+          "label": "protein \u2022 whole pint"
+        },
+        {
+          "value": "10/10",
+          "label": "creator score"
+        }
+      ],
+      "hook": "My coffee Creami has competition. This peanut butter topping fest gets 10/10\u2014the PB2 + sugar-free maple combo is so good.",
+      "captionTitle": "Peanut Butter Cup Cookie Creami \u2022 ~380 cal / 43g protein",
+      "captionBody": "My coffee Creami has competition. This peanut butter topping fest gets 10/10\u2014the PB2 + sugar-free maple combo is so good.\n\nWhole pint, all toppings included: \u2248380 calories \u00b7 43g protein\n\nBase:\n\u2022 1 cup (240ml) Nurri plain 2% ultra-filtered milk\n\u2022 \u00bd labelled serving Opportuniteas unflavored whey isolate\n\u2022 2 tbsp zero-calorie monk-fruit/erythritol sweetener\n\u2022 \u215b tsp guar gum, levelled\n\u2022 Pinch of salt\n\u2022 1 tbsp PB2 Original powdered peanut butter\n\nToppings:\n\u2022 1 tbsp PB2 Original + 1 tbsp Maple Grove Farms sugar-free maple-flavor syrup, stirred together\n\u2022 1 standard Reese\u2019s milk-chocolate peanut butter cup, crushed\n\u2022 \u00bd tbsp Hershey\u2019s sugar-free chocolate syrup\n\nBlend the base until smooth and freeze upright on a level surface for 24 hours. Rest about 5 minutes, spin on Regular Ice Cream, and re-spin if needed for a creamy texture without adding liquid. No mix-in cycle: this one is all about the toppings. Stir the PB2 and maple syrup into a sauce, then top with the peanut-maple sauce, crushed Reese\u2019s cup, and chocolate syrup.\n\nInspired by Crumbl\u2019s Peanut Butter Cup Cookie ft. REESE\u2019S; not affiliated with or endorsed by Crumbl or Reese\u2019s. Macros are a label-based estimate (383.5 cal / 42.5g protein before rounding) and vary by brand and portion weight.\n\n@crumbl @pb2foods\n\n#CrumblCreamiCut #ProteinIceCream #NinjaCreami #PeanutButter #PB2 #TheSplitPlate",
+      "heroPhoto": "/images/crumbl-peanut-butter-cup-creami/hero-polished.webp",
+      "ingredientGroups": [
+        {
+          "card": 1,
+          "accent": "amber",
+          "heading": "Peanut Butter Base (1 Pint)",
+          "items": [
+            {
+              "quantity": "1 cup (240ml)",
+              "text": "Nurri plain 2% ultra-filtered milk"
+            },
+            {
+              "quantity": "1/2 serving",
+              "text": "Opportuniteas unflavored whey isolate"
+            },
+            {
+              "quantity": "2 tbsp",
+              "text": "Zero-calorie monk-fruit/erythritol sweetener"
+            },
+            {
+              "quantity": "1/8 tsp + pinch",
+              "text": "Guar gum (levelled) + pinch of salt"
+            },
+            {
+              "quantity": "1 tbsp",
+              "text": "PB2 Original powdered peanut butter"
+            }
+          ]
+        },
+        {
+          "card": 2,
+          "accent": "coral",
+          "heading": "Toppings Only (No Mix-Ins)",
+          "items": [
+            {
+              "quantity": "1 tbsp + 1 tbsp",
+              "text": "PB2 Original + Maple Grove Farms sugar-free maple syrup (stirred into sauce)"
+            },
+            {
+              "quantity": "1 standard cup",
+              "text": "Reese\u2019s milk-chocolate peanut butter cup (~21g, crushed)"
+            },
+            {
+              "quantity": "1/2 tbsp",
+              "text": "Hershey\u2019s sugar-free chocolate syrup"
+            }
+          ]
+        }
+      ],
+      "ingredientCardPhotos": [
+        {
+          "src": "/images/crumbl-peanut-butter-cup-creami/base-polished.webp",
+          "layout": "side"
+        },
+        {
+          "src": "/images/crumbl-peanut-butter-cup-creami/pb2-maple-sauce-polished.webp",
+          "layout": "side"
+        }
+      ],
+      "methodLabel": "SPIN, STIR & TOP",
+      "methodGroups": [
+        {
+          "card": 1,
+          "accent": "amber",
+          "heading": "Blend, Freeze & Spin",
+          "items": [
+            {
+              "number": 1,
+              "heading": "Blend & freeze 24h",
+              "body": "Blend the milk, whey isolate, sweetener, levelled guar gum, salt, and 1 tbsp PB2 until smooth. Freeze upright on a level surface for 24 hours."
+            },
+            {
+              "number": 2,
+              "heading": "Spin (no mix-ins)",
+              "body": "Rest about 5 minutes on the counter, then process on Regular Ice Cream. Re-spin if needed without adding extra liquid."
+            }
+          ]
+        },
+        {
+          "card": 2,
+          "accent": "coral",
+          "heading": "Peanut-Maple Sauce & Finish",
+          "items": [
+            {
+              "number": 3,
+              "heading": "Stir PB2 + maple sauce",
+              "body": "In a small bowl, stir 1 tbsp PB2 Original with 1 tbsp sugar-free maple syrup until thick and glossy."
+            },
+            {
+              "number": 4,
+              "heading": "Scoop & load toppings",
+              "body": "Scoop the Creami and top with the peanut-maple sauce, 1 crushed standard Reese\u2019s cup, and 1/2 tbsp sugar-free chocolate syrup."
+            }
+          ]
+        }
+      ],
+      "methodCardPhotos": [
+        {
+          "src": "/images/crumbl-peanut-butter-cup-creami/spun-pint-polished.webp",
+          "layout": "side"
+        },
+        {
+          "src": "/images/crumbl-peanut-butter-cup-creami/creamy-scoop-polished.webp",
+          "layout": "side"
+        }
+      ],
+      "servingPhoto": {
+        "src": "/images/crumbl-peanut-butter-cup-creami/finished-pint-polished.webp",
+        "layout": "side"
+      },
+      "servingGroups": [
+        {
+          "accent": "coral",
+          "heading": "Whole Finished Pint (10/10)",
+          "items": [
+            {
+              "text": "Estimated at 383.5 calories and 42.5g protein (rounded to \u2248380 cal / 43g protein) for the entire finished pint with all toppings included."
+            }
+          ]
+        }
+      ],
+      "engagementQuestion": "10/10 score: have you tried stirring PB2 with sugar-free maple syrup as an ice cream topping yet?"
+    },
+    "flavorProfile": "Creamy peanut-butter ice cream crowned with a thick, glossy PB2-maple sauce, crushed milk-chocolate Reese\u2019s peanut butter cup pieces, and sugar-free chocolate syrup.",
+    "calories": 380,
+    "caloriesPerServing": 380,
+    "protein": 43,
+    "proteinPerServing": 43,
+    "fat": 13,
+    "fatPerServing": 13,
+    "carbs": 31,
+    "carbsPerServing": 31,
+    "sugar": 19,
+    "sugarPerServing": 19,
+    "servings": 1,
+    "servingSize": "1 whole finished Creami pint (all toppings included)",
+    "time": "24 hr freeze + 5 min rest + spin",
+    "bestFor": [
+      "Crumbl Peanut Butter Cup Cookie remake",
+      "Peanut butter lovers",
+      "High-protein dessert",
+      "Whole-pint macro treat"
+    ],
+    "useThisWhen": "You want a 10/10 peanut butter cup ice cream pint where all the texture and flavor contrast lives on top\u2014glossy PB2-maple sauce, real crushed Reese\u2019s cup, and chocolate syrup over a 43g-protein pint.",
+    "flavorTarget": "Smooth peanut butter ice cream with a rich, maple-sweetened peanut butter swirl, cold milk-chocolate peanut butter cup crunch, and chocolate drizzle.",
+    "ingredients": [
+      "--- BASE ---",
+      "1 cup (240ml) Nurri plain 2% ultra-filtered milk",
+      "1/2 labelled serving Opportuniteas unflavored whey isolate",
+      "2 tbsp zero-calorie monk-fruit/erythritol sweetener",
+      "1/8 tsp guar gum, levelled",
+      "Pinch of salt",
+      "1 tbsp PB2 Original powdered peanut butter",
+      "--- MIX-IN ---",
+      "None (no mix-in cycle; all extras go on top)",
+      "--- TOPPINGS ---",
+      "1 tbsp PB2 Original powdered peanut butter (for peanut-maple sauce)",
+      "1 tbsp Maple Grove Farms sugar-free maple-flavor syrup (stirred with the PB2)",
+      "1 standard Reese\u2019s milk-chocolate peanut butter cup (~21g), crushed",
+      "1/2 tbsp Hershey\u2019s sugar-free chocolate syrup"
+    ],
+    "steps": [
+      {
+        "text": "BLEND & FREEZE BASE: Blend 1 cup Nurri plain 2% milk, 1/2 serving unflavored whey isolate, 2 tbsp monk-fruit/erythritol sweetener, 1/8 tsp levelled guar gum, a pinch of salt, and 1 tbsp PB2 Original until smooth. Freeze upright on a level surface for 24 hours.",
+        "image": "/images/crumbl-peanut-butter-cup-creami/base-polished.webp",
+        "imageAlt": "Peanut Butter Cup Cookie Creami: blended PB2 and milk base in Ninja Creami pint"
+      },
+      {
+        "text": "REST & SPIN (NO MIX-INS): Let the frozen pint sit on the counter for about 5 minutes, then process on Regular Ice Cream. Re-spin if needed for a creamy texture without adding extra liquid.",
+        "image": "/images/crumbl-peanut-butter-cup-creami/spun-pint-polished.webp",
+        "imageAlt": "Peanut Butter Cup Cookie Creami: freshly spun creamy peanut butter ice cream in pint"
+      },
+      {
+        "text": "STIR PB2-MAPLE SAUCE: In a small bowl, stir 1 tbsp PB2 Original with 1 tbsp Maple Grove Farms sugar-free maple syrup until it forms a thick, glossy peanut-maple sauce.",
+        "image": "/images/crumbl-peanut-butter-cup-creami/pb2-maple-sauce-polished.webp",
+        "imageAlt": "Peanut Butter Cup Cookie Creami: stirring PB2 and sugar-free maple syrup into a glossy sauce"
+      },
+      {
+        "text": "SCOOP & TOP: Scoop the peanut butter ice cream into a bowl and top with the PB2-maple sauce, 1 crushed standard Reese\u2019s peanut butter cup, and 1/2 tbsp Hershey\u2019s sugar-free chocolate syrup.",
+        "image": "/images/crumbl-peanut-butter-cup-creami/creamy-scoop-polished.webp",
+        "imageAlt": "Peanut Butter Cup Cookie Creami: scooping creamy peanut butter ice cream into glass bowl"
+      }
+    ],
+    "executionRules": [
+      "No mix-in cycle is used for this build; keep the crushed Reese\u2019s cup, PB2-maple sauce, and chocolate syrup on top so every bite has concentrated texture.",
+      "Use a level 1/8 teaspoon of guar gum and do not add extra liquid during the Re-spin.",
+      "Nutrition covers the entire finished pint including both tablespoons of PB2 (1 tbsp in the base + 1 tbsp in the sauce), the standard Reese\u2019s cup, and the syrups."
+    ],
+    "macroHonesty": "Label-based estimate is 383.5 calories and 42.5g protein for the entire finished pint, rounded to \u2248380 calories and 43g protein. Breakdown: 1 cup Nurri plain 2% milk (150 cal, 20g protein) + 1/2 serving Opportuniteas unflavored whey isolate (60 cal, 14g protein) + 2 tbsp total PB2 Original across base and topping (60 cal, 6g protein) + 1 tbsp Maple Grove Farms sugar-free maple syrup (5 cal, 0g protein) + 1 standard Reese\u2019s peanut butter cup (~21g; 105 cal, 2.5g protein) + 1/2 tbsp Hershey\u2019s sugar-free chocolate syrup (2.5 cal, 0g protein) + guar/sweetener/salt (1 cal). Inspired by Crumbl\u2019s Peanut Butter Cup Cookie ft. REESE\u2019S; not affiliated with or endorsed by Crumbl or Reese\u2019s.",
+    "allergens": [
+      "dairy",
+      "peanuts",
+      "soy"
+    ],
+    "dietTags": [
+      "high-protein",
+      "gluten-free",
+      "make-ahead",
+      "frozen-dessert"
+    ],
+    "relatedIds": [
+      "coffee-chocolate-brownie-protein-creami",
+      "peanut-butter-bar-cookie-creami",
+      "oatmeal-creme-pie-creami"
+    ],
+    "mealPrep": {
+      "storage": "Freeze the unspun PB2 base upright and level for up to 1 week. Stir the PB2-maple sauce and add the crushed Reese\u2019s cup right when serving.",
+      "lasts": "Unspun frozen pint keeps 1 week; enjoy immediately after spinning and topping.",
+      "reheat": "Do not heat the pint."
     }
   },
   {

@@ -1123,5 +1123,15 @@
     "initialMainPostDate": null,
     "initialMainCreatedAt": "2026-11-14",
     "firstAddedAt": "2026-11-14"
+  },
+  "extra-chicken-bonus-lunch": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": "2026-11-15",
+    "firstAddedAt": "2026-11-15"
+  },
+  "crumbl-peanut-butter-cup-creami": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": "2026-11-15",
+    "firstAddedAt": "2026-11-15"
   }
 }
