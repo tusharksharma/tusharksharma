@@ -15321,6 +15321,282 @@ const recipes = [
       "Makes 3 adult servings (~500 cal / 62g protein for two wraps) and 2 kid servings (~340 cal / 28g protein including two Street Tacos flour tortillas and 1 tbsp toum).",
       "Verified platform tags: Instagram @MissionFoodsUS @shuugsauce @mezete_global; TikTok @missionfoods @shuugsauce."
     ]
+  },
+  {
+      "id": 82,
+      "status": "live",
+      "slug": "friendsgiving-green-bean-chicken-casserole",
+      "proteinAnchor": "chicken",
+      "mealType": "dinner",
+      "flavorDirection": "creamy-comfort",
+      "splitFriendly": "full",
+      "title": "Friendsgiving Green Bean Chicken Casserole",
+      "category": "Family Dinner",
+      "pillar": "Protein Meals",
+      "tags": [
+          "chicken",
+          "casserole",
+          "friendsgiving",
+          "green-beans",
+          "cottage-cheese",
+          "family-dinner",
+          "high-protein",
+          "holiday"
+      ],
+      "time": "35 min",
+      "servings": 8,
+      "protein": 34,
+      "calories": 360,
+      "image": "/images/friendsgiving-green-bean-chicken-casserole/hero-polished.webp",
+      "imagePosition": "center center",
+      "prepImage": "/images/friendsgiving-green-bean-chicken-casserole/family-plates-polished.webp",
+      "prepImageCaption": "The family plates: kids get the green bean chicken casserole alongside buttered brioche rolls, while adults pair 1/8 of the casserole with roasted cubed sweet potatoes.",
+      "video": "/videos/friendsgiving-green-bean-chicken-casserole/833-Friendsgiving-Green-Bean-Chicken-Casserole.mp4",
+      "videoPoster": "/images/friendsgiving-green-bean-chicken-casserole/hero-polished.webp",
+      "role": "Green bean casserole turned into a high-protein Friendsgiving main with a blended cottage-cheese mushroom cream sauce",
+      "makeThisWhen": "You want a cozy holiday or Friendsgiving casserole that eats like comfort food but packs ~34g protein per 1/8 pan (~360 cal), with roasted sweet potatoes for adults (~510 cal, 37g protein plate) and brioche rolls for kids.",
+      "hook": "Green bean casserole, but make it dinner. My kids couldn’t tell there was cottage cheese in the sauce, and I bet your guests won’t either.",
+      "description": "Makes 8 adult casserole servings (~360 cal and 34g protein per 1/8 pan, including crispy onions and oil). Blended Nancy’s 2% cottage cheese and Nurri whole protein milk form a silky mushroom-herb cream sauce folded with 30 oz Del Real pulled chicken, blanched green beans, and Velveeta Mexican shreds, baked at 450°F for 15 minutes and topped with Fresh Gourmet crispy onions. Served with roasted sweet potatoes for the adult plate (~510 cal, 37g protein) and brioche rolls for the kids.",
+      "ingredients": [
+          "30 oz Del Real lightly seasoned pulled chicken (two 15 oz packs)",
+          "16 oz green beans, trimmed and chopped",
+          "8 oz sliced white mushrooms",
+          "1 medium onion, diced (about 150g)",
+          "4 garlic cloves, minced",
+          "1/2 tbsp avocado oil (for casserole skillet)",
+          "4 tbsp all-purpose flour (about 30g)",
+          "1 cup Kirkland chicken bone broth",
+          "16 oz (454g) Nancy’s 2% cottage cheese",
+          "1/2 cup (120ml) Nurri whole ultra-filtered protein milk",
+          "8 oz Velveeta Mexican Style shreds, divided between filling and top",
+          "1/2 tsp dried thyme",
+          "1/4 tsp rubbed sage",
+          "1/2 tsp black pepper + salt to taste",
+          "4 oz Fresh Gourmet crispy onions (added after baking)",
+          "Adult side: 16 oz pre-cut sweet potatoes + 1/2 tbsp avocado oil + seasoning (divided across 3 adults)",
+          "Kid side: Brioche rolls, toasted and buttered"
+      ],
+      "executionRules": [
+          "Blend the 16 oz Nancy’s 2% cottage cheese and 1/2 cup Nurri whole protein milk until completely smooth before starting the pan.",
+          "Blanch the trimmed, chopped green beans until bright green and crisp-tender, then drain thoroughly so excess water does not thin the sauce.",
+          "Brown the sliced mushrooms and diced onion in 1/2 tbsp avocado oil until their moisture cooks off, then add garlic, thyme, sage, pepper, flour, and bone broth.",
+          "Bake the assembled 9×13 casserole (topped with the remaining Velveeta shreds) at 450°F for 15 minutes until hot and bubbling, then add the 4 oz Fresh Gourmet crispy onions AFTER baking so they stay crisp."
+      ],
+      "troubleshooting": [
+          {
+              "problem": "Casserole sauce turns watery after baking",
+              "fix": "Drain the blanched green beans thoroughly and cook the mushrooms and onions until their released moisture evaporates before stirring in the flour and bone broth."
+          },
+          {
+              "problem": "Crispy onions burn or soften in the oven",
+              "fix": "Bake the casserole with the Velveeta shreds first at 450°F for 15 minutes, then scatter the Fresh Gourmet crispy onions over the bubbling top right after pulling it from the oven."
+          }
+      ],
+      "splitCook": {
+          "adult": {
+              "label": "Adult Plate — 1/8 Casserole + 1/3 Roasted Sweet Potato Batch (~510 cal / 37g protein)",
+              "extraIngredients": [
+                  "16 oz pre-cut sweet potatoes (divided across 3 adults)",
+                  "1/2 tbsp avocado oil + seasoning"
+              ],
+              "steps": [
+                  "Toss 16 oz pre-cut sweet potatoes with 1/2 tbsp avocado oil and seasoning, and roast until tender and browned.",
+                  "Plate 1/8 of the finished green bean chicken casserole (~360 cal, 34g protein) alongside 1/3 of the roasted sweet potato batch (~150 cal, 2.4g protein) for an ~510 cal, 37g protein dinner plate."
+              ]
+          },
+          "kid": {
+              "label": "Kid Plate — Casserole + Buttered Brioche Rolls",
+              "extraIngredients": [
+                  "Brioche rolls (toasted and buttered; portions not weighed)"
+              ],
+              "steps": [
+                  "Serve a kid portion of the creamy green bean chicken casserole alongside toasted, buttered brioche rolls (kid portions were not weighed, so no child-plate macro is claimed)."
+              ]
+          },
+          "sharedIngredients": [
+              "30 oz Del Real pulled chicken (two 15 oz packs)",
+              "16 oz green beans, trimmed/chopped",
+              "8 oz sliced mushrooms + 1 medium diced onion + 4 minced garlic cloves",
+              "1/2 tbsp avocado oil + 4 tbsp all-purpose flour + 1 cup Kirkland chicken bone broth",
+              "16 oz Nancy’s 2% cottage cheese + 1/2 cup Nurri whole protein milk",
+              "8 oz Velveeta Mexican shreds + 1/2 tsp dried thyme + 1/4 tsp rubbed sage + 1/2 tsp black pepper",
+              "4 oz Fresh Gourmet crispy onions"
+          ],
+          "sharedSteps": [
+              "Blend cottage cheese and milk smooth. Blanch green beans until bright green and crisp-tender; drain well.",
+              "Heat 1/2 tbsp avocado oil and brown mushrooms and onion until moisture cooks off. Add garlic, thyme, sage, and pepper. Stir in flour and cook briefly, then add bone broth and stir until thickened.",
+              "Stir in the blended cottage-cheese sauce, pulled chicken, green beans, and part of the Velveeta shreds. Transfer to a 9×13 dish, top with remaining shreds, and bake at 450°F for 15 minutes until bubbling. Top with crispy onions after baking and rest before serving."
+          ]
+      },
+      "socialImages": [
+          "/images/friendsgiving-green-bean-chicken-casserole/mushrooms-sauce-polished.webp",
+          "/images/friendsgiving-green-bean-chicken-casserole/chicken-beans-fold-polished.webp",
+          "/images/friendsgiving-green-bean-chicken-casserole/baked-casserole-polished.webp",
+          "/images/friendsgiving-green-bean-chicken-casserole/family-plates-polished.webp",
+          "/images/friendsgiving-green-bean-chicken-casserole/adult-plates-polished.webp"
+      ],
+      "socialCarousel": {
+          "heroBadge": "Friendsgiving main • 8 servings",
+          "heroAccent": "amber",
+          "heroTitle": "Friendsgiving Green Bean Chicken Casserole",
+          "heroStats": [
+              {
+                  "value": "~360 cal",
+                  "label": "per 1/8 casserole"
+              },
+              {
+                  "value": "34g protein",
+                  "label": "per 1/8 casserole"
+              },
+              {
+                  "value": "~510 / 37g",
+                  "label": "adult plate w/ sweet potato"
+              }
+          ],
+          "heroPhoto": "/images/friendsgiving-green-bean-chicken-casserole/hero-polished.webp",
+          "hook": "Green bean casserole, but make it dinner. My kids couldn’t tell there was cottage cheese in the sauce.",
+          "captionTitle": "Friendsgiving Green Bean Chicken Casserole — ~360 cal / 34g protein per 1/8 pan",
+          "captionBody": "Green bean casserole, but make it dinner 🦃 Cozy, delicious, and perfect for the season. My kids couldn’t tell there was cottage cheese in the sauce.\n\nMakes 8 adult casserole servings.\n≈360 cal · 34g protein per ⅛ pan, including crispy onions and oil.\nMy adult plate: ≈510 cal · 37g protein with the sweet-potato side below.\nSave this for your Friendsgiving main.\n\nCASSEROLE\n• 30 oz Del Real pulled chicken (two 15 oz packs)\n• 16 oz green beans, trimmed/chopped\n• 8 oz sliced mushrooms\n• 1 medium onion, diced (about 150g)\n• 4 garlic cloves, minced\n• ½ tbsp avocado oil\n• 4 tbsp all-purpose flour (about 30g)\n• 1 cup Kirkland chicken bone broth\n• 16 oz / 454g Nancy’s 2% cottage cheese\n• ½ cup Nurri whole protein milk\n• 8 oz Velveeta Mexican shreds, divided between filling and top\n• ½ tsp dried thyme\n• ¼ tsp rubbed sage\n• ½ tsp black pepper; salt to taste\n• 4 oz Fresh Gourmet crispy onions\n\nBlend cottage cheese and milk smooth. Blanch beans until bright green and crisp-tender; drain well. Heat oil and brown mushrooms/onion until their moisture cooks off. Add garlic, thyme, sage and pepper. Stir in flour and cook briefly, then add broth and stir until thickened. Stir in the blended sauce, chicken, beans and some shreds. Transfer to a 9×13 dish and top with the remaining shreds. Bake at 450°F for 15 minutes, until hot and bubbling. Add crispy onions after baking, as I did here. Let rest before serving.\n\nTHE PLATES\nAdults: roast 16 oz pre-cut sweet potatoes with ½ tbsp avocado oil and seasoning until tender/browned; divide between 3 adults. Each adult macro estimate above = ⅛ casserole + ⅓ of this potato batch. We served the kids brioche rolls instead; their portions weren’t weighed, so no child-plate macro claimed.\n\nMacro honesty: estimates use the actual Del Real, Nancy’s 2%, Nurri whole, Velveeta and Fresh Gourmet products, standard produce/flour values and both confirmed oil portions. Sweet potatoes are separate from casserole macros. Swapping plain breast or other products changes the numbers.\n\n@delrealfoods @velveeta @freshgourmet_ingredients\n\n#Friendsgiving #GreenBeanCasserole #HighProteinDinner #FamilyDinner #TheSplitPlate",
+          "ingredientGroups": [
+              {
+                  "card": 1,
+                  "accent": "amber",
+                  "heading": "Chicken, Veg & Roux Base",
+                  "items": [
+                      {
+                          "quantity": "30 oz",
+                          "text": "Del Real pulled chicken (two 15 oz packs)"
+                      },
+                      {
+                          "quantity": "16 oz + 8 oz",
+                          "text": "Trimmed/chopped green beans + sliced mushrooms"
+                      },
+                      {
+                          "quantity": "1 med + 4 cloves",
+                          "text": "Diced onion (~150g) + minced garlic + 1/2 tbsp avocado oil"
+                      },
+                      {
+                          "quantity": "4 tbsp + 1 cup",
+                          "text": "All-purpose flour (~30g) + Kirkland chicken bone broth"
+                      }
+                  ]
+              },
+              {
+                  "card": 2,
+                  "accent": "green",
+                  "heading": "Creamy Sauce, Topping & Sides",
+                  "items": [
+                      {
+                          "quantity": "16 oz + 1/2 cup",
+                          "text": "Nancy’s 2% cottage cheese + Nurri whole protein milk"
+                      },
+                      {
+                          "quantity": "8 oz + herbs",
+                          "text": "Velveeta Mexican shreds + 1/2 tsp thyme, 1/4 tsp sage, 1/2 tsp pepper"
+                      },
+                      {
+                          "quantity": "4 oz",
+                          "text": "Fresh Gourmet crispy onions (added after baking)"
+                      },
+                      {
+                          "quantity": "Sides",
+                          "text": "Adults: 16 oz sweet potatoes + 1/2 tbsp oil (÷3) • Kids: brioche rolls"
+                      }
+                  ]
+              }
+          ],
+          "ingredientCardPhotos": [
+              "/images/friendsgiving-green-bean-chicken-casserole/mushrooms-sauce-polished.webp",
+              "/images/friendsgiving-green-bean-chicken-casserole/chicken-beans-fold-polished.webp"
+          ],
+          "methodGroups": [
+              {
+                  "card": 1,
+                  "accent": "amber",
+                  "heading": "Build Sauce & Fold Casserole",
+                  "items": [
+                      {
+                          "number": 1,
+                          "heading": "Blend sauce & brown mushrooms",
+                          "body": "Blend cottage cheese and milk smooth. Blanch and drain green beans. Brown mushrooms and onion in 1/2 tbsp oil, add garlic, herbs, flour, and broth."
+                      },
+                      {
+                          "number": 2,
+                          "heading": "Fold chicken, beans & cheese",
+                          "body": "Stir in the blended cottage-cheese sauce, 30 oz pulled chicken, green beans, and part of the Velveeta shreds; transfer to a 9×13 dish."
+                      }
+                  ]
+              },
+              {
+                  "card": 2,
+                  "accent": "coral",
+                  "heading": "Bake, Top & Plate Family Dinner",
+                  "items": [
+                      {
+                          "number": 3,
+                          "heading": "Bake 450°F 15m + crispy onions",
+                          "body": "Top with remaining shreds, bake at 450°F for 15 minutes until bubbling, then scatter 4 oz crispy onions on top after baking."
+                      },
+                      {
+                          "number": 4,
+                          "heading": "Serve adult & kid plates",
+                          "body": "Plate 1/8 casserole with 1/3 of the roasted sweet potato batch for adults (~510 cal, 37g protein), and serve kids with buttered brioche rolls."
+                      }
+                  ]
+              }
+          ],
+          "methodCardPhotos": [
+              "/images/friendsgiving-green-bean-chicken-casserole/baked-casserole-polished.webp",
+              "/images/friendsgiving-green-bean-chicken-casserole/family-plates-polished.webp"
+          ],
+          "servingPhoto": {
+              "src": "/images/friendsgiving-green-bean-chicken-casserole/adult-plates-polished.webp",
+              "layout": "side"
+          },
+          "servingGroups": [
+              {
+                  "accent": "amber",
+                  "heading": "Per 1/8 Casserole (8 Servings)",
+                  "items": [
+                      {
+                          "text": "Approximately 360 cal and 34g protein per 1/8 pan (~358.8 cal / 34.5g calculated), including all 4 oz Fresh Gourmet crispy onions and 1/2 tbsp avocado oil."
+                      }
+                  ]
+              },
+              {
+                  "accent": "coral",
+                  "heading": "Adult Plate & Kid Brioche Plate",
+                  "items": [
+                      {
+                          "text": "Adult plate (1/8 casserole + 1/3 of 16 oz sweet potatoes roasted in 1/2 tbsp oil): ≈510 cal and 37g protein (~508.8 cal / 36.8g calculated). Kids get brioche rolls (portions unweighed)."
+                      }
+                  ]
+              }
+          ],
+          "engagementQuestion": "Friendsgiving table: are you pairing this green bean chicken casserole with roasted sweet potatoes or buttered brioche rolls?"
+      },
+      "meta": {
+          "macros": {
+              "calories": 360,
+              "protein": 34,
+              "estimated": true
+          },
+          "macroHonesty": "Whole 9×13 casserole batch (8 servings): ~2,870.5 cal / 275.8g protein / 186.6g carbs / 121.7g fat (~358.8 cal and 34.5g protein per 1/8 pan, displayed as ≈360 cal / 34g protein). Anchored on 30 oz Del Real Pulled Chicken (840 cal, 138g protein), 454g Nancy’s 2% cottage cheese (~330.2 cal, 57.8g protein), 1/2 cup Nurri whole protein milk (85 cal, 10g protein), 8 oz Velveeta Mexican shreds (480 cal, 40g protein), 4 oz Fresh Gourmet crispy onions (648 cal, 0g label protein), 1 cup Kirkland chicken bone broth (45 cal, 9g protein), 1/2 tbsp avocado oil (60 cal), 4 tbsp flour (~109.2 cal, 3.1g protein), 16 oz green beans (~140.6 cal, 8.3g protein), 8 oz mushrooms (~49.9 cal, 7.0g protein), 150g onion (60 cal, 1.7g protein), 12g garlic (~17.9 cal, 0.8g protein), and herbs (~4.7 cal). Adult plate adds 1/3 of a 16 oz raw sweet-potato batch roasted with 1/2 tbsp avocado oil (~150.0 cal, 2.4g protein) for ~508.8 cal and 36.8g protein (displayed as ≈510 cal / 37g protein). Kid brioche plate portions were not weighed.",
+          "substitutionNotes": [
+              "Del Real Lightly Seasoned Pulled Chicken uses breast and leg meat with juices (140 cal / 23g protein per 5 oz); swapping plain chicken breast changes the macros.",
+              "Add the 4 oz Fresh Gourmet crispy onions after baking at 450°F so they stay golden and crisp."
+          ]
+      },
+      "mealPrep": {
+          "storage": "Store leftover casserole in an airtight container in the refrigerator for up to 4 days.",
+          "reheat": "Reheat portions in a 375°F oven or air fryer for 8–10 minutes so the crispy onion topping re-crisps.",
+          "lasts": "Up to 4 days refrigerated."
+      },
+      "editorialNotes": [
+          "Inventory 833 package: Friendsgiving Green Bean Chicken Casserole. Video: 833-Friendsgiving-Green-Bean-Chicken-Casserole.mp4.",
+          "Makes 8 adult casserole servings (≈360 cal / 34g protein per 1/8 pan); adult plate with 1/3 of 16 oz roasted sweet potatoes is ≈510 cal / 37g protein.",
+          "Verified platform tags: Instagram @delrealfoods @velveeta @freshgourmet_ingredients; TikTok @cheesy_velveeta @freshgourmet_ingredients."
+      ]
   }
 ];
 
