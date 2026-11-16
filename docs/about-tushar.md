@@ -571,7 +571,7 @@ He confirmed that each of these finished pints was one serving for himself, star
 
 ## Confirmed firsthand stories — green bean chicken casserole, November 15, 2026
 
-Source: Tushar's ten-part written interview for the long-form green bean chicken casserole episode, plus recipe confirmation that day. Raw answers remain in the private project. This records the interview, not a completed or published film. Reuses and extends BIO-035 (cottage cheese), BIO-071 (occasions), and BIO-079 (Velveeta), rather than replacing them.
+Source: Tushar's ten-part written interview for the long-form green bean chicken casserole episode, plus recipe confirmation that day. Audited again at package closeout on November 15: BIO-097–102 cover the confirmed personal learnings; the subsequent spoken promo CTA is an editorial preference, recorded in the long-form skill rather than duplicated as a life story. Raw answers remain in the private project. This records the interview, not a completed or published film. Reuses and extends BIO-035 (cottage cheese), BIO-071 (occasions), and BIO-079 (Velveeta), rather than replacing them.
 
 ### BIO-097: Thanksgiving has its own household menu
 

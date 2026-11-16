@@ -97,3 +97,10 @@ Before changing existing schedules, read exact local IDs and actual platform row
 In the current Meta composer, assigning a date or time value can leave the displayed value unchanged after Save. Enter the value through the actual field, commit it with Tab/blur, and read back the displayed date, hour, minute and AM/PM before scheduling. Verify the success receipt and scheduled row afterward. Use the same check for Story fields; do not treat a successful input call as a changed schedule. This is an observed UI recovery, not a requirement to use one input method on every platform.
 
 A Story upload can remain in Processing media while the schedule button is disabled. Preserve that composer and work on independent companions; resume only once the exact media is ready. A scheduling-in-progress notice is not the final scheduled-row audit.
+
+
+## Spoken YouTube invitation — November 15, 2026
+
+Tushar requested and approved this closing for the casserole companion shorts: “Watch the full video on YouTube for detailed steps and some fun family stories.” Use a spoken invitation as the final beat of future long-form companion shorts, naming YouTube and the useful extra content in the full film. A text-only “full cook on YouTube” overlay does not replace the spoken line. Mention family stories only when that film actually contains them; otherwise name its real additional value. This rule applies to companions promoting a full film, not every standalone recipe short.
+
+Keep Marcus at normal speed, add matching captions, and carry the invitation over relevant real footage. Preserve the 0.2-second opening cover and do not add an ending cover flash. Include the closing in the initial script and narration budget; reuse one approved take across the companion set when the wording matches. Existing script/budget approval applies within its scope, while new wording or additional spend follows the current approval rules. Verify the encoded ending and caption timing before delivery.
