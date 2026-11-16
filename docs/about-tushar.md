@@ -567,3 +567,32 @@ Sea Salt Toffee scored 10/10 for him. Marshmallow creme incorporated after the f
 ### BIO-096: The whole pint remains his serving context
 
 He confirmed that each of these finished pints was one serving for himself, starting with one cup of milk, and that he ate the whole finished pint. This adds the milk amount to BIO-069's existing serving context without creating a new protein target. Ice cream and a show after the children are in bed is an established routine, not a new weekly anecdote. His younger daughter has become accustomed to the Creami sound. No additional family tasting reactions were supplied for this trio.
+
+
+## Confirmed firsthand stories — green bean chicken casserole, November 15, 2026
+
+Source: Tushar's ten-part written interview for the long-form green bean chicken casserole episode, plus recipe confirmation that day. Raw answers remain in the private project. This records the interview, not a completed or published film. Reuses and extends BIO-035 (cottage cheese), BIO-071 (occasions), and BIO-079 (Velveeta), rather than replacing them.
+
+### BIO-097: Thanksgiving has its own household menu
+
+Thanksgiving is normally celebrated at home with his wife and two daughters; extended family is in Houston and India. Green bean casserole is a regular part of the meal, and green beans are the vegetable his older daughter reliably enjoys. They have made turkey a couple of times but usually choose chicken, which he finds more flavorful and forgiving. The children think of it as a little “baby turkey.” Their usual sides include mashed potatoes and rolls, with pie, generally chocolate. They have tried stuffing but are not big fans. He did not establish when he first tried green bean casserole.
+
+### BIO-098: A seasonal side became the main dish
+
+He made this casserole as a seasonal video ahead of an anniversary celebration, not for an actual Friendsgiving gathering or a guest test. He wanted to turn a familiar side into a higher-protein main meal by adding prepared chicken. He would consider serving it at a celebration or potluck, but is less certain about making it a regular weeknight dinner. Guest reactions remain untested. Specific upcoming travel plans stay in the private interview and episode script.
+
+### BIO-099: A familiar side gives children something to eat
+
+His wife loved the casserole's comfort-food appeal, and he loved it too. The children liked it and ate enough for him to feel happy with the result, despite some complaining. He does not expect every meal to become their favorite. He serves a familiar carbohydrate alongside dinner so they have something they will eat while getting an opportunity to try the rest. This describes his household approach, not a universal feeding prescription. No definite child quote about a “weird” sauce or claim that they failed to identify cottage cheese was confirmed; no specific mushroom verdict was supplied.
+
+### BIO-100: Shortcuts work together
+
+Prepared pulled chicken, precut sweet potatoes, frozen precut beans, Velveeta shreds and store-bought crispy onions made this dinner practical. He did not single out one shortcut as the biggest contributor: their combined convenience was the point. He likes Velveeta shreds for melt, taste and macros, extending BIO-079 without verifying a new label claim. Mushrooms are the ingredient he specifically described buying fresh, removing stems from and cutting to his preferred size, because he has not found a prepared option that suits him. His Friends analogy was that all six characters make the show work, as the supporting ingredients do here.
+
+### BIO-101: Casserole leftovers reheated well
+
+He could not taste cottage cheese in this sauce and feels increasingly confident using it as a sauce base. These leftovers reheated well in the microwave. He reports better experiences warming cottage-cheese sauces from cold than adding cold cottage cheese directly to an already-hot pan. This is his cooking observation, not a controlled test or guarantee for every sauce. He did not describe the reheated onion topping's crunch or adding fresh onions, and did not identify a specific sauce thickness problem or change.
+
+### BIO-102: Holiday enjoyment does not require exact macros
+
+Extending BIO-071, he does not think celebrations need to revolve around precise macro targets. He welcomes a version that tastes good and fits his goals, but will not spend a holiday searching for one or worrying if unavailable. Tracking on a trip may satisfy curiosity; enjoyment and family time matter more. He sees movement, exercise, moderation and habits across the year as the broader lifestyle, rather than treating a special meal as something to fret over.
