@@ -18562,6 +18562,244 @@ const DESSERT_CATALOG = [
     }
   },
   {
+    "id": "coffee-toffee-creami",
+    "title": "Coffee Toffee Creami",
+    "tagline": "Decaf coffee and English toffee Ninja Creami: 1/2 tbsp decaf instant coffee blended into the Nurri 2% and whey isolate base, then 15g HEATH chocolatey English toffee bits mixed in on Respin. About 300 calories and 34g protein for the whole finished pint.",
+    "heroImage": "/images/coffee-toffee-creami/hero-polished.webp",
+    "prepImage": "/images/coffee-toffee-creami/coffee-base-polished.webp",
+    "prepImageCaption": "1/2 tbsp Nescaf\u00e9 Taster\u2019s Choice decaf instant coffee added directly to the Nurri 2% milk and unflavored whey isolate base before blending.",
+    "video": "/videos/coffee-toffee-creami/847-Coffee-Toffee-Creami.mp4",
+    "videoPoster": "/images/coffee-toffee-creami/hero-polished.webp",
+    "socialHashtags": [
+      "#CoffeeIceCream",
+      "#NinjaCreami",
+      "#ProteinDessert",
+      "#Toffee",
+      "#DecafCoffee",
+      "#TheSplitPlate"
+    ],
+    "socialImages": [
+      "/images/coffee-toffee-creami/coffee-base-polished.webp",
+      "/images/coffee-toffee-creami/blend-base-polished.webp",
+      "/images/coffee-toffee-creami/toffee-mixin-polished.webp",
+      "/images/coffee-toffee-creami/finished-respin-polished.webp",
+      "/images/coffee-toffee-creami/finished-scoop-polished.webp"
+    ],
+    "socialCarousel": {
+      "heroBadge": "Standalone Creami \u2022 Whole Pint",
+      "heroAccent": "amber",
+      "heroTitle": "Coffee Toffee Creami",
+      "heroStats": [
+        {
+          "value": "~300",
+          "label": "cal \u2022 whole pint"
+        },
+        {
+          "value": "34g",
+          "label": "protein \u2022 whole pint"
+        },
+        {
+          "value": "15g",
+          "label": "HEATH toffee mix-in"
+        }
+      ],
+      "hook": "Here\u2019s your bite. Here\u2019s mine. 1/2 tbsp decaf instant coffee in the base, then 15g HEATH English toffee bits mixed in.",
+      "captionTitle": "Coffee Toffee Creami \u2022 ~300 cal / 34g protein",
+      "captionBody": "Here\u2019s your bite. Here\u2019s mine. Coffee Toffee Creami \u2615\ufe0f\n\n\u00bd tbsp decaf instant coffee in my usual base, then 15g HEATH toffee bits mixed in. No extra topping.\n\nCOFFEE TOFFEE CREAMI\nMakes 1 whole finished pint\nEstimated whole pint: \u2248300 calories \u00b7 34g protein \u00b7 10g fat. Approximately 15g carbohydrate before the sweetener\u2019s sugar alcohols; total label carbs depend on the sweetener brand/grams. Label estimates, not laboratory values.\n\nBASE\n\u2022 1 cup (240ml) Nurri plain 2% ultra-filtered milk\n\u2022 \u00bd labeled serving Opportuniteas unflavored whey isolate (60 calories / 14g protein)\n\u2022 2 tbsp monk-fruit/erythritol sweetener\n\u2022 \u215b tsp guar gum, leveled\n\u2022 Pinch of salt\n\u2022 \u00bd tbsp decaf instant coffee (Nescaf\u00e9 Taster\u2019s Choice Decaf House Blend used)\n\nMIX-IN\n\u2022 15g HEATH chocolatey English toffee bits\nNo additional topping.\n\nMETHOD\n1. Blend all base ingredients, including the decaf coffee, until smooth. Freeze upright and level for 24 hours in a compatible Creami pint, respecting its fill line.\n2. Rest on the counter 5 minutes, then process on Regular Ice Cream.\n3. Add all 15g toffee bits after the first spin and run Respin without adding liquid, following your machine\u2019s instructions and fill limits.\n4. Serve. That\u2019s the complete flavor build: coffee in the base, toffee mixed in.\n\nSave this for your next coffee craving.\nOpening format inspired by @heresyourbite.\n\n#CoffeeIceCream #NinjaCreami #ProteinDessert #Toffee #DecafCoffee",
+      "heroPhoto": "/images/coffee-toffee-creami/hero-polished.webp",
+      "ingredientGroups": [
+        {
+          "card": 1,
+          "accent": "amber",
+          "heading": "Decaf Coffee Base (1 Pint)",
+          "items": [
+            {
+              "quantity": "1 cup (240ml)",
+              "text": "Nurri plain 2% ultra-filtered milk"
+            },
+            {
+              "quantity": "1/2 serving",
+              "text": "Opportuniteas unflavored whey isolate (60 cal / 14g protein)"
+            },
+            {
+              "quantity": "2 tbsp + 1/8 tsp",
+              "text": "Monk-fruit/erythritol sweetener + leveled guar gum + pinch salt"
+            },
+            {
+              "quantity": "1/2 tbsp",
+              "text": "Decaf instant coffee (Nescaf\u00e9 Taster\u2019s Choice Decaf House Blend)"
+            }
+          ]
+        },
+        {
+          "card": 2,
+          "accent": "coral",
+          "heading": "Mix-In Only (No Extra Topping)",
+          "items": [
+            {
+              "quantity": "15g",
+              "text": "HEATH chocolatey English toffee bits (mixed in after first spin)"
+            }
+          ]
+        }
+      ],
+      "ingredientCardPhotos": [
+        {
+          "src": "/images/coffee-toffee-creami/coffee-base-polished.webp",
+          "layout": "side"
+        },
+        {
+          "src": "/images/coffee-toffee-creami/toffee-mixin-polished.webp",
+          "layout": "side"
+        }
+      ],
+      "methodLabel": "BLEND, SPIN & RESPIN",
+      "methodGroups": [
+        {
+          "card": 1,
+          "accent": "amber",
+          "heading": "Blend Decaf Base & Freeze 24h",
+          "items": [
+            {
+              "number": 1,
+              "heading": "Blend smooth & freeze",
+              "body": "Blend the milk, whey isolate, sweetener, leveled guar gum, pinch of salt, and 1/2 tbsp decaf instant coffee until smooth. Freeze upright and level 24 hours."
+            },
+            {
+              "number": 2,
+              "heading": "Rest 5m & spin Regular Ice Cream",
+              "body": "Rest on the counter for 5 minutes, then process on Regular Ice Cream."
+            }
+          ]
+        },
+        {
+          "card": 2,
+          "accent": "coral",
+          "heading": "Add 15g Toffee Bits & Respin",
+          "items": [
+            {
+              "number": 3,
+              "heading": "Pour in 15g HEATH toffee bits",
+              "body": "Add all 15g chocolatey English toffee bits into the center well after the first spin."
+            },
+            {
+              "number": 4,
+              "heading": "Respin without extra liquid",
+              "body": "Run Respin without adding liquid so the toffee bits distribute throughout the coffee ice cream. Serve straight from the pint."
+            }
+          ]
+        }
+      ],
+      "methodCardPhotos": [
+        {
+          "src": "/images/coffee-toffee-creami/blend-base-polished.webp",
+          "layout": "side"
+        },
+        {
+          "src": "/images/coffee-toffee-creami/finished-respin-polished.webp",
+          "layout": "side"
+        }
+      ],
+      "servingPhoto": {
+        "src": "/images/coffee-toffee-creami/finished-scoop-polished.webp",
+        "layout": "side"
+      },
+      "servingGroups": [
+        {
+          "accent": "coral",
+          "heading": "Whole Finished Pint",
+          "items": [
+            {
+              "text": "Estimated at \u2248300 calories, 34g protein, and 10g fat for the complete finished pint (~291\u2013298.5 cal calculated across the base, decaf coffee, and 15g HEATH bits)."
+            },
+            {
+              "text": "Approximately 15g carbohydrate before the sweetener\u2019s sugar alcohols; total label carbs depend on the monk-fruit/erythritol brand and grams used."
+            }
+          ]
+        }
+      ],
+      "engagementQuestion": "Coffee ice cream lovers: are you keeping toffee bits as the only mix-in or adding a drizzle on top?"
+    },
+    "flavorProfile": "Smooth espresso-latte decaf coffee ice cream studded with crunchy, buttery milk-chocolate HEATH English toffee bits.",
+    "calories": 300,
+    "caloriesPerServing": 300,
+    "protein": 34,
+    "proteinPerServing": 34,
+    "fat": 10,
+    "fatPerServing": 10,
+    "servings": 1,
+    "servingSize": "1 whole finished Creami pint (with 15g HEATH toffee bits)",
+    "time": "24 hr freeze + 5 min rest + spin",
+    "bestFor": [
+      "Coffee ice cream lovers",
+      "Evening decaf dessert",
+      "High-protein Ninja Creami",
+      "Whole-pint macro treat"
+    ],
+    "useThisWhen": "You want a rich coffee-and-toffee ice cream pint at night using decaf instant coffee and real HEATH English toffee bits for ~300 calories and 34g protein across the whole pint.",
+    "flavorTarget": "Clean roast coffee ice cream with buttery, crunchy chocolate-toffee flecks in every spoonful.",
+    "ingredients": [
+      "--- BASE ---",
+      "1 cup (240ml) Nurri plain 2% ultra-filtered milk",
+      "1/2 labeled serving Opportuniteas unflavored whey isolate (60 calories / 14g protein)",
+      "2 tbsp monk-fruit/erythritol sweetener",
+      "1/8 tsp guar gum, leveled",
+      "Pinch of salt",
+      "1/2 tbsp decaf instant coffee (Nescaf\u00e9 Taster\u2019s Choice Decaf House Blend used)",
+      "--- MIX-IN ---",
+      "15g HEATH chocolatey English toffee bits (no additional topping)"
+    ],
+    "steps": [
+      {
+        "text": "ADD COFFEE BASE INGREDIENTS: Combine 1 cup Nurri plain 2% milk, 1/2 serving unflavored whey isolate, 2 tbsp monk-fruit/erythritol sweetener, 1/8 tsp leveled guar gum, a pinch of salt, and 1/2 tbsp decaf instant coffee in a Creami pint.",
+        "image": "/images/coffee-toffee-creami/coffee-base-polished.webp",
+        "imageAlt": "Coffee Toffee Creami: decaf instant coffee granules on whey isolate and milk in Ninja Creami pint"
+      },
+      {
+        "text": "BLEND & FREEZE 24H: Blend all base ingredients until smooth, respecting the pint fill line. Freeze upright and level for 24 hours.",
+        "image": "/images/coffee-toffee-creami/blend-base-polished.webp",
+        "imageAlt": "Coffee Toffee Creami: immersion blending the decaf coffee milk base until smooth"
+      },
+      {
+        "text": "FIRST SPIN & ADD 15G TOFFEE BITS: Rest the pint on the counter for 5 minutes, then process on Regular Ice Cream. Add all 15g HEATH chocolatey English toffee bits into the center well.",
+        "image": "/images/coffee-toffee-creami/toffee-mixin-polished.webp",
+        "imageAlt": "Coffee Toffee Creami: pouring 15g HEATH English toffee bits into the spun coffee ice cream"
+      },
+      {
+        "text": "RESPIN & SERVE: Run Respin without adding liquid so the toffee bits fold evenly through the pint. Serve immediately.",
+        "image": "/images/coffee-toffee-creami/finished-respin-polished.webp",
+        "imageAlt": "Coffee Toffee Creami: finished respun coffee toffee protein ice cream pint with spoonful"
+      }
+    ],
+    "executionRules": [
+      "All 15g of HEATH chocolatey English toffee bits go into the post-spin Respin cycle without adding liquid; no additional topping is used.",
+      "Decaf instant coffee reduces caffeine compared to regular instant coffee, though decaf is not a zero-caffeine claim.",
+      "Total carbohydrate before the sweetener\u2019s sugar alcohols is approximately 15g (14\u201316g range); total label carbs depend on the specific monk-fruit/erythritol brand and weight."
+    ],
+    "macroHonesty": "Label-based whole-pint estimate is ~291\u2013298.5 calories, 34g protein, and 10g fat, displayed as \u2248300 calories and 34g protein for the entire finished pint. Breakdown: 1 cup Nurri plain 2% milk (150 cal, 20g protein, 5g carbs, 5g fat) + 1/2 serving Opportuniteas unflavored whey isolate (60 cal, 14g protein, 0g carbs, 0g fat) + 15g HEATH chocolatey English toffee bits (80 cal, 0g protein, 9g carbs, 5g fat) + 1/2 tbsp / 1.5 tsp decaf instant coffee (0\u20137.5 cal allowance) + sweetener/guar/salt (1 cal). Approximately 15g carbohydrate before the sweetener\u2019s sugar alcohols.",
+    "allergens": [
+      "dairy",
+      "almonds",
+      "soy"
+    ],
+    "dietTags": [
+      "high-protein",
+      "gluten-free",
+      "make-ahead",
+      "frozen-dessert"
+    ],
+    "relatedIds": [
+      "coffee-chocolate-brownie-protein-creami",
+      "butter-caramel-popcorn-creami",
+      "sea-salt-toffee-skillet-cookie-creami"
+    ],
+    "mealPrep": {
+      "storage": "Freeze the blended coffee base upright and level for up to 1 week. Spin and mix in the 15g HEATH toffee bits when ready to eat.",
+      "lasts": "Unspun frozen pint keeps 1 week; enjoy immediately after Respin.",
+      "reheat": "Do not heat the pint."
+    }
+  },
+  {
     "id": "butter-caramel-popcorn-creami",
     "title": "Butter Caramel Popcorn Creami",
     "tagline": "Movie-theater popcorn in the Ninja Creami (8.8/10): a butter-popcorn-seasoned and caramel-emulsion protein base spun and loaded with LesserEvil Himalayan Gold popcorn and sugar-free salted caramel inside and on top. About 270 calories and 35g protein for the whole finished pint.",
