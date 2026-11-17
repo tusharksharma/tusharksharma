@@ -15873,6 +15873,260 @@ const recipes = [
           "Inventory 844 package: Cottage-Cheese Marry Me Chicken (Full Recipe). Video: 844-Marry-Me-Chicken-Full-Recipe.mp4.",
           "Adult plate: \u2248450 cal / 53g protein (1/8 chicken/sauce batch + 56g dry Carbe Diem penne). Verified tag: @carbe_diem_foods."
       ]
+  },
+  {
+      "id": 84,
+      "status": "live",
+      "slug": "three-ingredient-german-beef-and-mash",
+      "proteinAnchor": "beef",
+      "mealType": "dinner",
+      "flavorDirection": "savory-gravy",
+      "splitFriendly": "full",
+      "title": "Three-Ingredient German Beef + Mash",
+      "category": "Family Dinner",
+      "pillar": "Protein Meals",
+      "tags": [
+          "beef",
+          "sauerbraten",
+          "mashed-potatoes",
+          "three-ingredient",
+          "costco-shortcut",
+          "family-dinner",
+          "high-protein",
+          "weeknight-shortcut"
+      ],
+      "time": "15 min",
+      "servings": 4,
+      "protein": 42,
+      "calories": 360,
+      "image": "/images/three-ingredient-german-beef-and-mash/hero-polished.webp",
+      "imagePosition": "center center",
+      "prepImage": "/images/three-ingredient-german-beef-and-mash/family-plates-polished.webp",
+      "prepImageCaption": "The family plates: adults get 210g German beef sauerbraten and gravy with 1/4 of the protein-milk mashed potato batch (~363 cal, 41.5g protein), while kids get 105g beef, mash to appetite, and toasted buttered rolls.",
+      "video": "/videos/three-ingredient-german-beef-and-mash/846-Three-Ingredient-German-Beef-and-Mash.mp4",
+      "videoPoster": "/images/three-ingredient-german-beef-and-mash/hero-polished.webp",
+      "role": "Three supermarket products plus water turn into a comforting German beef sauerbraten and high-protein mashed potato family dinner",
+      "makeThisWhen": "You need a fast, comforting weeknight family dinner using three supermarket staples\u2014Costco \u00c0 La Carte Beef Sauerbraten, Idahoan potato flakes, and Nurri whole protein milk\u2014landing at \u2248363 calories and 41.5g protein per adult plate with zero added butter or oil.",
+      "hook": "Three supermarket ingredients, plus water. That counts as a busy parent\u2019s home-cooked family dinner to me.",
+      "description": "Mash batch makes 4 adult side portions using 88g dry Idahoan Original potato flakes (4 labeled servings / 1 1/3 cups), 1 cup (240ml) Nurri whole ultra-filtered protein milk, and 1 1/2 cups boiling water\u2014with no added butter or oil. Paired with 210g (1 1/2 labeled servings) of Costco\u2019s \u00c0 La Carte Beef Sauerbraten with its gravy, the adult plate is approximately 363 calories, 41.5g protein, 24.3g total carbs, and 11g fat (rounded on-screen to \u2248360 cal / 42g protein). Kids receive 105g (3/4 labeled serving) of beef, mash to appetite, and separate toasted rolls.",
+      "ingredients": [
+          "\u00c0 La Carte Beef Sauerbraten with gravy (Burnett Fine Foods, Costco): 210g per adult (1 1/2 \u00d7 140g labeled servings); 105g per kid (3/4 labeled serving)",
+          "88g Idahoan Original dry potato flakes (4 labeled servings / 1 1/3 cups total for the 4-portion mash batch)",
+          "1 cup (240ml) Nurri whole ultra-filtered protein milk (for the mash batch)",
+          "1 1/2 cups (about 360ml) water",
+          "Optional adult finish: red chili flakes to taste (separate from base macro calculation)",
+          "Optional kid side: toasted buttered rolls (separate from the three-ingredient beef-and-mash build)"
+      ],
+      "executionRules": [
+          "Heat the prepared \u00c0 La Carte Beef Sauerbraten and its gravy according to the package instructions.",
+          "Bring 1 1/2 cups water to a boil in a saucepan, remove from the heat, and stir in 88g dry Idahoan potato flakes and 1 cup Nurri whole protein milk until evenly hydrated and creamy (filmed sequence: water \u2192 flakes \u2192 milk). No butter or oil is added.",
+          "Divide the finished mash into 4 equal adult side portions (each equals 22g dry flakes and 1/4 cup Nurri milk) and pair each adult plate with 210g beef sauerbraten and gravy.",
+          "Serve kids 105g beef (3/4 labeled serving) and mash to appetite; their toasted rolls are separate from the three-product build and no child macro target is claimed."
+      ],
+      "troubleshooting": [
+          {
+              "problem": "Mashed potatoes feel too thick or stiff after standing",
+              "fix": "Stir in an extra splash of hot water or protein milk right before plating to loosen the potato flakes to your preferred creaminess."
+          },
+          {
+              "problem": "Want to log exact macros from your own kitchen",
+              "fix": "Weigh 210g heated beef sauerbraten with gravy per adult plate and divide the 88g flake + 240ml milk mash batch into 4 equal portions; any extra butter, chili flakes, or kid rolls are separate."
+          }
+      ],
+      "splitCook": {
+          "adult": {
+              "label": "Adult Plate \u2014 210g Beef Sauerbraten (1.5 Servings) + 1/4 Mash Batch (~363 cal / 41.5g protein)",
+              "extraIngredients": [
+                  "210g \u00c0 La Carte Beef Sauerbraten with gravy (1 1/2 labeled servings)",
+                  "Optional: pinch of red chili flakes"
+              ],
+              "steps": [
+                  "Plate 1/4 of the protein-milk mashed potato batch (equivalent to 22g dry flakes + 1/4 cup Nurri whole milk).",
+                  "Add 210g heated beef sauerbraten and spoon the included gravy over the beef and mash (\u2248363 cal, 41.5g protein, 24.3g carbs, 11g fat; rounded to \u2248360 cal / 42g protein in video)."
+              ]
+          },
+          "kid": {
+              "label": "Kid Plate \u2014 105g Beef Sauerbraten (3/4 Serving) + Mash + Toasted Rolls",
+              "extraIngredients": [
+                  "105g \u00c0 La Carte Beef Sauerbraten with gravy (3/4 labeled serving)",
+                  "Toasted buttered rolls (separate from the 3-ingredient build)"
+              ],
+              "steps": [
+                  "Serve 105g heated beef sauerbraten with gravy, an age-appropriate scoop of the creamy mashed potatoes, and toasted buttered rolls on the side."
+              ]
+          },
+          "sharedIngredients": [
+              "\u00c0 La Carte Beef Sauerbraten with gravy (Burnett Fine Foods, Costco)",
+              "88g Idahoan Original dry potato flakes (4 labeled servings / 1 1/3 cups)",
+              "1 cup (240ml) Nurri whole ultra-filtered protein milk + 1 1/2 cups boiling water"
+          ],
+          "sharedSteps": [
+              "Heat the packaged beef sauerbraten and gravy according to its package directions.",
+              "Bring 1 1/2 cups water to a boil in a saucepan, remove from heat, and stir in the 88g potato flakes and 1 cup Nurri whole milk until fluffy and creamy. Let stand briefly, then fluff and divide into 4 adult side portions."
+          ]
+      },
+      "socialImages": [
+          "/images/three-ingredient-german-beef-and-mash/milk-pour-polished.webp",
+          "/images/three-ingredient-german-beef-and-mash/mash-stir-polished.webp",
+          "/images/three-ingredient-german-beef-and-mash/beef-gravy-polished.webp",
+          "/images/three-ingredient-german-beef-and-mash/family-plates-polished.webp",
+          "/images/three-ingredient-german-beef-and-mash/adult-plate-polished.webp"
+      ],
+      "socialCarousel": {
+          "heroBadge": "3-Product Shortcut \u2022 Family Dinner",
+          "heroAccent": "amber",
+          "heroTitle": "Three-Ingredient German Beef + Mash",
+          "heroStats": [
+              {
+                  "value": "~363 cal",
+                  "label": "adult plate (~360 video)"
+              },
+              {
+                  "value": "41.5g P",
+                  "label": "adult plate (~42g video)"
+              },
+              {
+                  "value": "3 products",
+                  "label": "+ water, zero butter"
+              }
+          ],
+          "heroPhoto": "/images/three-ingredient-german-beef-and-mash/hero-polished.webp",
+          "hook": "Three supermarket ingredients, plus water. That counts as a busy parent\u2019s home-cooked family dinner to me.",
+          "captionTitle": "Three-Ingredient German Beef + Mash \u2014 ~363 cal / 41.5g protein per adult plate",
+          "captionBody": "Three supermarket ingredients, plus water. That counts as a busy parent\u2019s home-cooked family dinner to me.\n\nGERMAN BEEF + MASH\nMash yield: 4 adult side portions.\n\n\u2022 \u00c0 La Carte Beef Sauerbraten from Costco, with its gravy: 210g per adult (1\u00bd labeled servings); 105g per kid (\u00be serving).\n\u2022 Idahoan Original potato flakes: 88g dry / 4 labeled servings (1\u2153 cups).\n\u2022 Nurri whole ultra-filtered milk: 1 cup / 240ml.\nPlus 1\u00bd cups water. No added butter or oil in this calculation.\n\n1. Heat the beef and gravy according to your package.\n2. Bring the water to a boil and remove from heat. Stir in the flakes and milk until creamy; let stand briefly, then fluff. The filmed order is water \u2192 flakes \u2192 milk.\n3. Divide the mash into four equal adult side portions. Serve one with 210g beef and its included gravy. Kids get 105g beef and mash to appetite; their rolls are separate from this three-product build.\n\nMY PLATE, ESTIMATE: \u2248363 cal \u00b7 41.5g protein \u00b7 24.3g carbs \u00b7 11g fat. Includes 1\u00bd beef servings + \u00bc mash batch. Labels/portions vary; extra toppings or rolls aren't included. Three products, not three ingredients inside the packaged foods.\n\nSave this for a comfort-food shortcut.\n\n#FamilyDinner #DinnerShortcut #Sauerbraten #HighProteinDinner #TheSplitPlate\n\n@drinknurri @idahoanfoods",
+          "ingredientGroups": [
+              {
+                  "card": 1,
+                  "accent": "amber",
+                  "heading": "3 Supermarket Products (+ Water)",
+                  "items": [
+                      {
+                          "quantity": "210g / adult",
+                          "text": "\u00c0 La Carte Beef Sauerbraten with gravy (1.5 \u00d7 140g servings; 105g / 0.75 serving per kid)"
+                      },
+                      {
+                          "quantity": "88g dry (1 1/3 cups)",
+                          "text": "Idahoan Original potato flakes (4 labeled servings)"
+                      },
+                      {
+                          "quantity": "1 cup (240ml)",
+                          "text": "Nurri whole ultra-filtered protein milk"
+                      },
+                      {
+                          "quantity": "1 1/2 cups",
+                          "text": "Boiling water (no added butter or oil)"
+                      }
+                  ]
+              },
+              {
+                  "card": 2,
+                  "accent": "coral",
+                  "heading": "Adult vs. Kid Plate Split",
+                  "items": [
+                      {
+                          "quantity": "Adult plate",
+                          "text": "210g beef sauerbraten & gravy + 1/4 of the mash batch (\u2248363 cal / 41.5g protein)"
+                      },
+                      {
+                          "quantity": "Kid plate",
+                          "text": "105g beef sauerbraten + mash to appetite (toasted rolls shown are separate)"
+                      }
+                  ]
+              }
+          ],
+          "ingredientCardPhotos": [
+              "/images/three-ingredient-german-beef-and-mash/milk-pour-polished.webp",
+              "/images/three-ingredient-german-beef-and-mash/beef-gravy-polished.webp"
+          ],
+          "methodGroups": [
+              {
+                  "card": 1,
+                  "accent": "amber",
+                  "heading": "Heat Beef & Stir Protein Mash",
+                  "items": [
+                      {
+                          "number": 1,
+                          "heading": "Heat packaged beef sauerbraten",
+                          "body": "Heat the \u00c0 La Carte Beef Sauerbraten and its gravy according to package instructions."
+                      },
+                      {
+                          "number": 2,
+                          "heading": "Hydrate flakes with water & Nurri milk",
+                          "body": "Bring 1 1/2 cups water to a boil, remove from heat, and stir in 88g potato flakes and 1 cup Nurri whole milk until creamy. Let stand briefly, then fluff."
+                      }
+                  ]
+              },
+              {
+                  "card": 2,
+                  "accent": "coral",
+                  "heading": "Portion 4 Ways & Spoon Gravy",
+                  "items": [
+                      {
+                          "number": 3,
+                          "heading": "Divide mash into 4 adult side portions",
+                          "body": "Each quarter-batch contains 22g dry potato flakes and 1/4 cup Nurri whole milk with zero added butter or oil."
+                      },
+                      {
+                          "number": 4,
+                          "heading": "Plate beef, mash & gravy",
+                          "body": "Plate 210g beef with 1 mash portion per adult and ladle the included gravy over top. Serve kids 105g beef and mash to appetite."
+                      }
+                  ]
+              }
+          ],
+          "methodCardPhotos": [
+              "/images/three-ingredient-german-beef-and-mash/mash-stir-polished.webp",
+              "/images/three-ingredient-german-beef-and-mash/family-plates-polished.webp"
+          ],
+          "servingPhoto": {
+              "src": "/images/three-ingredient-german-beef-and-mash/adult-plate-polished.webp",
+              "layout": "side"
+          },
+          "servingGroups": [
+              {
+                  "accent": "coral",
+                  "heading": "Adult Plate Estimate (\u2248363 cal / 41.5g P)",
+                  "items": [
+                      {
+                          "text": "210g beef sauerbraten with gravy (240 cal, 34.5g P, 6g C, 9g F) + 1/4 mash batch (22g flakes: 80 cal, 2g P, 17g C, 0g F; 1/4 cup Nurri whole milk: 42.5 cal, 5g P, 1.25g C, 2g F) = 362.5 cal, 41.5g protein, 24.25g carbs, 11g fat."
+                      }
+                  ]
+              },
+              {
+                  "accent": "amber",
+                  "heading": "Macro Honesty",
+                  "items": [
+                      {
+                          "text": "Video rounds to \u2248360 cal / 42g protein. Counts three supermarket products (not three ingredients inside packaged foods); kids\u2019 rolls and optional chili flakes are separate."
+                      }
+                  ]
+              }
+          ],
+          "engagementQuestion": "Busy-weeknight call: does a 3-product supermarket assembly count as home-cooked dinner in your house?"
+      },
+      "meta": {
+          "macros": {
+              "calories": 360,
+              "protein": 42,
+              "carbs": 24,
+              "fat": 11,
+              "estimated": true
+          },
+          "macroHonesty": "Adult plate label-based estimate is 362.5 calories, 41.5g protein, 24.25g total carbs, and 11g fat (displayed as \u2248363 cal / 41.5g protein in captions and rounded to \u2248360 cal / 42g protein in video). Component breakdown: 1 1/2 labeled servings (210g) \u00c0 La Carte Beef Sauerbraten with gravy (240 cal, 34.5g protein, 6g carbs, 9g fat based on 140g label serving) + 1/4 of the 4-serving mash batch made from 88g Idahoan Original dry potato flakes (22g per serving: 80 cal, 2g protein, 17g carbs, 0g fat) and 1 cup / 240ml Nurri whole ultra-filtered milk (1/4 cup per serving: 42.5 cal, 5g protein, 1.25g carbs, 2g fat) + 1 1/2 cups water. No added butter or oil is included. Kids receive 105g beef (3/4 labeled serving) and mash to appetite; kids\u2019 rolls and optional adult chili flakes are separate.",
+          "substitutionNotes": [
+              "Three-ingredient title refers to three supermarket products plus water, not three individual ingredients inside the prepared beef sauerbraten.",
+              "Nurri whole ultra-filtered milk replaces butter and regular milk in the instant mash, adding 5g protein per quarter-batch."
+          ]
+      },
+      "mealPrep": {
+          "storage": "Store leftover heated beef sauerbraten with gravy and leftover mashed potatoes in separate airtight containers in the refrigerator for up to 3\u20134 days.",
+          "reheat": "Reheat beef and mash gently on the stovetop or in the microwave with a splash of water or milk to keep the mash creamy.",
+          "lasts": "Up to 3\u20134 days refrigerated."
+      },
+      "editorialNotes": [
+          "Inventory 846 package: Three-Ingredient German Beef + Mash. Video: 846-Three-Ingredient-German-Beef-and-Mash.mp4.",
+          "Adult plate: \u2248363 cal / 41.5g protein / 24.3g carbs / 11g fat (rounded on-screen to \u2248360 cal / 42g protein). Verified tags: @drinknurri @idahoanfoods."
+      ]
   }
 ];
 
