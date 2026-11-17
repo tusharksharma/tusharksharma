@@ -18562,6 +18562,251 @@ const DESSERT_CATALOG = [
     }
   },
   {
+    "id": "butter-caramel-popcorn-creami",
+    "title": "Butter Caramel Popcorn Creami",
+    "tagline": "Movie-theater popcorn in the Ninja Creami (8.8/10): a butter-popcorn-seasoned and caramel-emulsion protein base spun and loaded with LesserEvil Himalayan Gold popcorn and sugar-free salted caramel inside and on top. About 270 calories and 35g protein for the whole finished pint.",
+    "heroImage": "/images/butter-caramel-popcorn-creami/hero-polished.webp",
+    "prepImage": "/images/butter-caramel-popcorn-creami/base-emulsion-polished.webp",
+    "prepImageCaption": "1 tsp Kernel Season\u2019s Butter popcorn seasoning and 1/2 tsp LorAnn Caramel Bakery Emulsion go into the Nurri 2% milk and whey isolate base before blending.",
+    "video": "/videos/butter-caramel-popcorn-creami/843-Butter-Caramel-Popcorn-Creami.mp4",
+    "videoPoster": "/images/butter-caramel-popcorn-creami/hero-polished.webp",
+    "socialHashtags": [
+      "#NinjaCreami",
+      "#ProteinIceCream",
+      "#PopcornIceCream",
+      "#TheSplitPlate"
+    ],
+    "socialImages": [
+      "/images/butter-caramel-popcorn-creami/base-emulsion-polished.webp",
+      "/images/butter-caramel-popcorn-creami/spun-texture-polished.webp",
+      "/images/butter-caramel-popcorn-creami/mixin-caramel-polished.webp",
+      "/images/butter-caramel-popcorn-creami/top-popcorn-polished.webp",
+      "/images/butter-caramel-popcorn-creami/finished-pint-polished.webp"
+    ],
+    "socialCarousel": {
+      "heroBadge": "Standalone Creami \u2022 8.8/10",
+      "heroAccent": "amber",
+      "heroTitle": "Butter Caramel Popcorn Creami",
+      "heroStats": [
+        {
+          "value": "~270",
+          "label": "cal \u2022 whole pint"
+        },
+        {
+          "value": "35g",
+          "label": "protein \u2022 whole pint"
+        },
+        {
+          "value": "8.8/10",
+          "label": "creator score"
+        }
+      ],
+      "hook": "Movie-theater popcorn, Creami-style\u2026 almost too realistic. 8.8/10: delicious, with that lingering salty movie-theater-popcorn feeling afterward.",
+      "captionTitle": "Butter Caramel Popcorn Creami \u2022 ~270 cal / 35g protein",
+      "captionBody": "Movie-theater popcorn, Creami-style\u2026 almost too realistic \ud83c\udf7f\n8.8/10: delicious, but that lingering salty movie-theater-popcorn feeling followed me afterward.\n\u2248270 cal \u00b7 35g protein for the WHOLE finished pint (label-based estimate, all toppings included).\n\nBASE\n1 cup / 240ml Nurri plain 2% ultra-filtered milk\n\u00bd labelled serving Opportuniteas unflavored whey isolate\n2 tbsp monk-fruit/erythritol sweetener\n\u215b tsp guar gum, leveled + pinch salt\n1 tsp Kernel Season\u2019s Butter popcorn seasoning\n\u00bd tsp LorAnn caramel bakery emulsion\n\nMIX-IN\n5g LesserEvil Himalayan Gold butter-flavor popcorn\n\u00bd tbsp Jordan\u2019s Skinny Mixes sugar-free salted caramel sauce\n\nTOPPING\nAnother 5g popcorn + \u00bd tbsp of that caramel sauce\n(10g popcorn + 1 tbsp caramel total.)\n\nBlend the base smooth. Freeze upright and level 24 hours in a compatible pint. Rest on the counter 5 minutes. Process Regular Ice Cream, add the mix-ins, then Respin without extra liquid. Add toppings after processing; follow your machine\u2019s fill limits/instructions. Makes 1 pint.\n\nThat\u2019s the tested build. For a less salty version, try less seasoning or omit the extra pinch of salt; that variation hasn\u2019t been tested here.\n\nSave this for your next popcorn craving.\n@kernelseasons @skinnymixes\n#NinjaCreami #ProteinIceCream #PopcornIceCream #TheSplitPlate",
+      "heroPhoto": "/images/butter-caramel-popcorn-creami/hero-polished.webp",
+      "ingredientGroups": [
+        {
+          "card": 1,
+          "accent": "amber",
+          "heading": "Butter Caramel Base (1 Pint)",
+          "items": [
+            {
+              "quantity": "1 cup (240ml)",
+              "text": "Nurri plain 2% ultra-filtered milk"
+            },
+            {
+              "quantity": "1/2 serving",
+              "text": "Opportuniteas unflavored whey isolate (60 cal / 14g protein)"
+            },
+            {
+              "quantity": "2 tbsp + 1/8 tsp",
+              "text": "Monk-fruit/erythritol sweetener + leveled guar gum + pinch salt"
+            },
+            {
+              "quantity": "1 tsp",
+              "text": "Kernel Season\u2019s Butter Popcorn Seasoning"
+            },
+            {
+              "quantity": "1/2 tsp",
+              "text": "LorAnn Caramel Bakery Emulsion"
+            }
+          ]
+        },
+        {
+          "card": 2,
+          "accent": "coral",
+          "heading": "Mix-In & Topping (10g Popcorn + 1 tbsp Caramel)",
+          "items": [
+            {
+              "quantity": "5g + 1/2 tbsp",
+              "text": "LesserEvil Himalayan Gold butter popcorn + Skinny Mixes SF salted caramel (mix-in)"
+            },
+            {
+              "quantity": "5g + 1/2 tbsp",
+              "text": "Same popcorn + same sugar-free salted caramel sauce (topping)"
+            }
+          ]
+        }
+      ],
+      "ingredientCardPhotos": [
+        {
+          "src": "/images/butter-caramel-popcorn-creami/base-emulsion-polished.webp",
+          "layout": "side"
+        },
+        {
+          "src": "/images/butter-caramel-popcorn-creami/mixin-caramel-polished.webp",
+          "layout": "side"
+        }
+      ],
+      "methodLabel": "BLEND, SPIN & TOP",
+      "methodGroups": [
+        {
+          "card": 1,
+          "accent": "amber",
+          "heading": "Blend, Freeze & First Spin",
+          "items": [
+            {
+              "number": 1,
+              "heading": "Blend base & freeze 24h",
+              "body": "Blend the milk, whey isolate, sweetener, leveled guar gum, pinch of salt, 1 tsp butter popcorn seasoning, and 1/2 tsp caramel emulsion until smooth. Freeze upright and level 24 hours."
+            },
+            {
+              "number": 2,
+              "heading": "Spin on Regular Ice Cream",
+              "body": "Rest 5 minutes on the counter, then process on Regular Ice Cream (not Lite)."
+            }
+          ]
+        },
+        {
+          "card": 2,
+          "accent": "coral",
+          "heading": "Respin Mix-In & Caramel Finish",
+          "items": [
+            {
+              "number": 3,
+              "heading": "Add 5g popcorn + 1/2 tbsp caramel & Respin",
+              "body": "Add 5g LesserEvil butter popcorn and 1/2 tbsp sugar-free salted caramel sauce, then run Respin without adding liquid."
+            },
+            {
+              "number": 4,
+              "heading": "Top with 5g popcorn + 1/2 tbsp caramel",
+              "body": "Finish the pint with the remaining 5g popcorn and 1/2 tbsp sugar-free salted caramel sauce."
+            }
+          ]
+        }
+      ],
+      "methodCardPhotos": [
+        {
+          "src": "/images/butter-caramel-popcorn-creami/spun-texture-polished.webp",
+          "layout": "side"
+        },
+        {
+          "src": "/images/butter-caramel-popcorn-creami/top-popcorn-polished.webp",
+          "layout": "side"
+        }
+      ],
+      "servingPhoto": {
+        "src": "/images/butter-caramel-popcorn-creami/finished-pint-polished.webp",
+        "layout": "side"
+      },
+      "servingGroups": [
+        {
+          "accent": "coral",
+          "heading": "Whole Finished Pint (8.8/10)",
+          "items": [
+            {
+              "text": "Estimated at ~272 calories and 34.7g protein (rounded to \u2248270 cal / 35g protein) for the entire finished pint including all 10g popcorn and 1 tbsp sugar-free caramel sauce."
+            },
+            {
+              "text": "My verdict: 8.8/10. Delicious\u2014the only drawback was that lingering salty movie-theater-popcorn feeling afterward. For a less salty build, reduce the seasoning or skip the extra pinch of salt."
+            }
+          ]
+        }
+      ],
+      "engagementQuestion": "8.8/10 score: would you try buttered caramel popcorn in a Ninja Creami pint?"
+    },
+    "flavorProfile": "Buttery, salted-caramel movie-theater popcorn ice cream with real LesserEvil butter popcorn and glossy sugar-free salted caramel ribbons.",
+    "calories": 270,
+    "caloriesPerServing": 270,
+    "protein": 35,
+    "proteinPerServing": 35,
+    "servings": 1,
+    "servingSize": "1 whole finished Creami pint (with 10g popcorn + 1 tbsp caramel sauce)",
+    "time": "24 hr freeze + 5 min rest + spin",
+    "bestFor": [
+      "Salty-sweet popcorn cravings",
+      "Movie-night protein dessert",
+      "Ninja Creami standalone flavor",
+      "Whole-pint macro treat"
+    ],
+    "useThisWhen": "You want a salty-sweet movie-theater butter caramel popcorn ice cream pint for ~270 calories and 35g protein across the entire finished pint.",
+    "flavorTarget": "Rich buttery popcorn and caramel notes with a true movie-theater salty finish.",
+    "ingredients": [
+      "--- BASE ---",
+      "1 cup (240ml) Nurri plain 2% ultra-filtered milk",
+      "1/2 labelled serving Opportuniteas unflavored whey isolate (60 cal / 14g protein)",
+      "2 tbsp monk-fruit/erythritol sweetener",
+      "1/8 tsp guar gum, leveled",
+      "Pinch of salt (usual base)",
+      "1 tsp Kernel Season\u2019s Butter Popcorn Seasoning",
+      "1/2 tsp LorAnn Caramel Bakery Emulsion",
+      "--- MIX-IN ---",
+      "5g LesserEvil Himalayan Gold butter-flavor popcorn",
+      "1/2 tbsp Jordan\u2019s Skinny Mixes Sugar Free Salted Caramel Sauce",
+      "--- TOPPING ---",
+      "5g LesserEvil Himalayan Gold butter-flavor popcorn",
+      "1/2 tbsp Jordan\u2019s Skinny Mixes Sugar Free Salted Caramel Sauce (10g popcorn and 1 tbsp caramel total)"
+    ],
+    "steps": [
+      {
+        "text": "BLEND & FREEZE BASE: Blend 1 cup Nurri plain 2% milk, 1/2 serving unflavored whey isolate, 2 tbsp monk-fruit/erythritol sweetener, 1/8 tsp leveled guar gum, a pinch of salt, 1 tsp Kernel Season\u2019s Butter Popcorn Seasoning, and 1/2 tsp LorAnn Caramel Bakery Emulsion until smooth. Freeze upright and level for 24 hours.",
+        "image": "/images/butter-caramel-popcorn-creami/base-emulsion-polished.webp",
+        "imageAlt": "Butter Caramel Popcorn Creami: adding 1/2 tsp caramel bakery emulsion to the butter-popcorn-seasoned milk and whey base"
+      },
+      {
+        "text": "REST & FIRST SPIN: Rest the pint on the counter for 5 minutes, then process on Regular Ice Cream (not Lite).",
+        "image": "/images/butter-caramel-popcorn-creami/spun-texture-polished.webp",
+        "imageAlt": "Butter Caramel Popcorn Creami: smooth pale buttery-yellow ice cream after the first spin"
+      },
+      {
+        "text": "ADD MIX-INS & RESPIN: Add 5g LesserEvil Himalayan Gold popcorn and 1/2 tbsp Jordan\u2019s Skinny Mixes sugar-free salted caramel sauce to the center well. Run Respin without adding liquid.",
+        "image": "/images/butter-caramel-popcorn-creami/mixin-caramel-polished.webp",
+        "imageAlt": "Butter Caramel Popcorn Creami: 5g butter popcorn and sugar-free salted caramel sauce in the center well before Respin"
+      },
+      {
+        "text": "TOP & SERVE: Finish the pint with the remaining 5g popcorn and 1/2 tbsp sugar-free salted caramel sauce (10g popcorn and 1 tbsp caramel total across mix-in and topping).",
+        "image": "/images/butter-caramel-popcorn-creami/top-popcorn-polished.webp",
+        "imageAlt": "Butter Caramel Popcorn Creami: topping the respun pint with crisp butter popcorn before the final caramel drizzle"
+      }
+    ],
+    "executionRules": [
+      "Process on Regular Ice Cream (not Lite), and run Respin without adding extra liquid.",
+      "Total additions across mix-in and topping are 10g LesserEvil Himalayan Gold popcorn and 1 tbsp Jordan\u2019s Skinny Mixes sugar-free salted caramel sauce.",
+      "The salted popcorn seasoning, salted popcorn, usual pinch of salt, and salted caramel all contribute to a lingering movie-theater salty finish; reducing the seasoning or omitting the extra pinch of salt is an optional future adjustment (not tested here)."
+    ],
+    "macroHonesty": "Calculated whole-pint estimate is ~271.8 calories and 34.7g protein, rounded to \u2248270 calories and 35g protein for the entire finished pint including all mix-ins and toppings. Breakdown: 1 cup Nurri plain 2% milk (150 cal, 20g protein) + 1/2 serving Opportuniteas unflavored whey isolate (60 cal, 14g protein) + 1 tsp Kernel Season\u2019s Butter Popcorn Seasoning (8 cal, 0g protein; manufacturer basis 2 cal per 1/4 tsp) + 1/2 tsp LorAnn Caramel Bakery Emulsion (~6.4 cal allowance for ~3g / 2.5ml at 212 kcal/100g) + 10g total LesserEvil Himalayan Gold popcorn (~46.4 cal, 0.7g protein from 130 cal / 2g protein per 28g label) + 1 tbsp total Jordan\u2019s Skinny Mixes sugar-free salted caramel sauce (0 cal label) + sweetener/guar/salt (1 cal).",
+    "allergens": [
+      "dairy"
+    ],
+    "dietTags": [
+      "high-protein",
+      "gluten-free",
+      "make-ahead",
+      "frozen-dessert"
+    ],
+    "relatedIds": [
+      "crumbl-peanut-butter-cup-creami",
+      "sea-salt-toffee-skillet-cookie-creami",
+      "oatmeal-creme-pie-creami"
+    ],
+    "mealPrep": {
+      "storage": "Freeze the blended base upright and level for up to 1 week. Add the popcorn and caramel sauce when spinning to serve.",
+      "lasts": "Unspun frozen pint keeps 1 week; enjoy immediately after Respin and topping.",
+      "reheat": "Do not heat the pint."
+    }
+  },
+  {
     "id": "crumbl-peanut-butter-cup-creami",
     "title": "Peanut Butter Cup Cookie Creami",
     "tagline": "Crumbl\u2019s Peanut Butter Cup Cookie ft. REESE\u2019S, Creami-style (10/10): a PB2 peanut butter ice cream base with zero mix-ins, topped with a 2-ingredient PB2 + sugar-free maple sauce, a crushed standard Reese\u2019s cup, and sugar-free chocolate syrup. About 380 calories and 43g protein for the whole pint.",

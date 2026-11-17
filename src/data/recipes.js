@@ -15598,6 +15598,282 @@ const recipes = [
           "Verified platform tags: Instagram @delrealfoods @velveeta @freshgourmet_ingredients; TikTok @cheesy_velveeta @freshgourmet_ingredients."
       ]
   }
+,
+  {
+      "id": 83,
+      "status": "live",
+      "slug": "marry-me-chicken",
+      "proteinAnchor": "chicken",
+      "mealType": "pasta",
+      "flavorDirection": "creamy-comfort",
+      "splitFriendly": "full",
+      "title": "Cottage-Cheese Marry Me Chicken",
+      "category": "Family Dinner",
+      "pillar": "Protein Meals",
+      "tags": [
+          "chicken",
+          "pasta",
+          "marry-me-chicken",
+          "cottage-cheese",
+          "sun-dried-tomatoes",
+          "spinach",
+          "family-dinner",
+          "split-cook",
+          "high-protein"
+      ],
+      "time": "35 min",
+      "servings": 8,
+      "protein": 53,
+      "calories": 450,
+      "image": "/images/marry-me-chicken/hero-polished.webp",
+      "imagePosition": "center center",
+      "prepImage": "/images/marry-me-chicken/family-plates-polished.webp",
+      "prepImageCaption": "One shared chicken-and-sauce pan served over two pasta plates: Carbe Diem penne with chili flakes for adults (~450 cal, 53g protein) and regular Barilla pasta for kids.",
+      "video": "/videos/marry-me-chicken/844-Marry-Me-Chicken-Full-Recipe.mp4",
+      "videoPoster": "/images/marry-me-chicken/hero-polished.webp",
+      "role": "Creamy sun-dried tomato & spinach Marry Me chicken with zero heavy cream\u2014one shared skillet served over Carbe Diem for adults and regular pasta for kids",
+      "makeThisWhen": "You want a rich, restaurant-style Marry Me chicken pasta dinner with zero heavy cream that hits ~450 calories and 53g protein per adult plate (with 56g dry Carbe Diem penne) while feeding the whole family from one chicken skillet.",
+      "hook": "Marry Me chicken, zero heavy cream. One chicken pan, two pasta plates\u2014and 53g protein on the adult plate.",
+      "description": "Makes 8 adult-equivalent portions of chicken and sauce (for our family, two dinners for 3 adults and 2 kids, with each child getting about half an adult chicken/sauce portion). Three pounds of seared boneless, skinless chicken thighs, drained sun-dried tomatoes, garlic, chicken bone broth, and wilted spinach are folded off-heat with a velvety blend of Good Culture 2% cottage cheese, Nurri whole protein milk, and Kraft grated Parmesan/Romano/Asiago cheese. Adult plate (~450 cal, 53g protein, 44g total carbs, 25g fiber, 15g fat) pairs 1/8 of the chicken/sauce batch with 56g dry Carbe Diem penne and chili flakes; kids get their portion over regular Barilla pasta.",
+      "ingredients": [
+          "3 lb (about 1,361g) raw, trimmed boneless skinless chicken thighs",
+          "1 tbsp oil from the sun-dried-tomato jar",
+          "Chicken seasonings to taste: garlic powder, Italian seasoning, smoked paprika, salt, and black pepper",
+          "2 garlic cloves, minced",
+          "60g drained bettergoods diced sun-dried tomatoes",
+          "1/2 cup (120ml) Kirkland chicken bone broth",
+          "5 oz (about 142g) fresh baby spinach",
+          "440g Good Culture 2% cottage cheese",
+          "1/4 cup (60ml) Nurri lactose-free whole protein milk",
+          "60g Kraft grated Parmesan, Romano & Asiago cheese blend",
+          "Garlic seasoning and black pepper to taste for blender sauce (Dan-O\u2019s SPG Tri-O shown)",
+          "Adult pasta: 56g dry Carbe Diem penne per adult plate",
+          "Kid pasta: 42g dry regular Barilla pasta per kid plate (or portion to appetite)",
+          "Adult finish: red chili flakes to taste; optional fresh basil and lemon juice"
+      ],
+      "executionRules": [
+          "Blend the 440g Good Culture 2% cottage cheese, 1/4 cup Nurri whole protein milk, 60g grated Parmesan/Romano/Asiago blend, and garlic seasoning until completely smooth before heating the sauce.",
+          "Cook the adult Carbe Diem pasta and kid regular Barilla pasta in separate pots according to package directions, and reserve a little starchy pasta water.",
+          "Sear the seasoned chicken thighs in batches in 1 tbsp sun-dried-tomato jar oil until browned and at least 165\u00b0F internally; rest and cut into bite-size pieces.",
+          "Take the pan off the heat briefly before adding the sauce, temper a little warm pan liquid into the blended cottage-cheese sauce, then fold into the chicken and warm on the lowest heat so it steams gently without boiling."
+      ],
+      "troubleshooting": [
+          {
+              "problem": "Cottage-cheese cream sauce separates or turns grainy in the skillet",
+              "fix": "Never boil the blended sauce. Take the skillet off the heat briefly, stir a splash of warm pan liquid into the blender cup to temper it, then fold into the chicken over the lowest heat setting so it steams gently without bubbling."
+          },
+          {
+              "problem": "Sauce thickens too much when coating the chicken",
+              "fix": "Loosen with a splash of reserved pasta water while stirring gently over low heat."
+          }
+      ],
+      "splitCook": {
+          "adult": {
+              "label": "Adult Plate \u2014 1/8 Chicken & Sauce + 56g Dry Carbe Diem Penne (~450 cal / 53g protein)",
+              "extraIngredients": [
+                  "56g dry Carbe Diem penne per adult plate",
+                  "Red chili flakes to taste (about 1/2 tsp)"
+              ],
+              "steps": [
+                  "Cook 56g dry Carbe Diem penne per adult plate according to package directions.",
+                  "Top with 1/8 of the shared Marry Me chicken and cottage-cheese cream sauce batch and finish with red chili flakes (~450 cal, 53g protein, 44g total carbs, 25g fiber, 15g fat)."
+              ]
+          },
+          "kid": {
+              "label": "Kid Plate \u2014 Mild Shared Chicken & Sauce + Regular Barilla Pasta",
+              "extraIngredients": [
+                  "42g dry regular Barilla pasta per kid plate (or portion to suit appetite)"
+              ],
+              "steps": [
+                  "Cook regular Barilla pasta separately and serve with a kid-sized portion of the mild shared Marry Me chicken and sauce (skip the chili flakes; no public child macro target is claimed)."
+              ]
+          },
+          "sharedIngredients": [
+              "3 lb raw, trimmed boneless skinless chicken thighs + 1 tbsp sun-dried-tomato jar oil",
+              "Garlic powder, Italian seasoning, smoked paprika, salt & pepper",
+              "2 minced garlic cloves + 60g drained bettergoods diced sun-dried tomatoes",
+              "1/2 cup Kirkland chicken bone broth + 5 oz fresh spinach",
+              "440g Good Culture 2% cottage cheese + 1/4 cup Nurri whole protein milk + 60g Kraft grated Parmesan/Romano/Asiago blend"
+          ],
+          "sharedSteps": [
+              "Blend cottage cheese, milk, grated three-cheese blend, and garlic seasoning until completely smooth.",
+              "Pat chicken thighs dry, season, and sear in batches in 1 tbsp tomato-jar oil until browned and at least 165\u00b0F internally. Rest and chop into bite-size pieces.",
+              "Lower heat, briefly cook drained sun-dried tomatoes and minced garlic, deglaze with 1/2 cup bone broth, and wilt 5 oz spinach.",
+              "Take pan off heat briefly, temper a little warm pan liquid into the blended sauce, return the chopped chicken, and fold in the sauce over lowest heat without boiling."
+          ]
+      },
+      "socialImages": [
+          "/images/marry-me-chicken/sear-chicken-polished.webp",
+          "/images/marry-me-chicken/spinach-tomatoes-polished.webp",
+          "/images/marry-me-chicken/sauce-fold-polished.webp",
+          "/images/marry-me-chicken/kid-adult-plates-polished.webp",
+          "/images/marry-me-chicken/family-plates-polished.webp"
+      ],
+      "socialCarousel": {
+          "heroBadge": "Split Plate Dinner \u2022 Zero Heavy Cream",
+          "heroAccent": "coral",
+          "heroTitle": "Cottage-Cheese Marry Me Chicken",
+          "heroStats": [
+              {
+                  "value": "~450 cal",
+                  "label": "adult plate w/ Carbe Diem"
+              },
+              {
+                  "value": "53g protein",
+                  "label": "adult plate w/ Carbe Diem"
+              },
+              {
+                  "value": "8 portions",
+                  "label": "shared chicken & sauce pan"
+              }
+          ],
+          "heroPhoto": "/images/marry-me-chicken/hero-polished.webp",
+          "hook": "Marry Me chicken, zero heavy cream. One chicken pan, two pasta plates\u2014and 53g protein on the adult plate.",
+          "captionTitle": "Cottage-Cheese Marry Me Chicken \u2014 ~450 cal / 53g protein per adult plate",
+          "captionBody": "Marry Me chicken, zero heavy cream. One chicken pan, two pasta plates.\n\nADULT PLATE \u2248450 cal \u00b7 53g protein: \u215b chicken/sauce batch + 56g dry Carbe Diem. Estimate; labels, trimming and retained oil vary. Kids get different portions.\n\nYIELD: 8 adult-equivalent chicken/sauce portions. For us: 2 dinners for 3 adults + 2 kids, each child getting about half an adult chicken/sauce portion.\n\nCHICKEN + PAN\n\u2022 3 lb raw trimmed boneless skinless thighs\n\u2022 1 tbsp oil from the tomato jar\n\u2022 Garlic powder, Italian seasoning, smoked paprika, salt + pepper, to taste\n\u2022 2 minced garlic cloves\n\u2022 60g drained bettergoods sun-dried tomatoes\n\u2022 \u00bd cup Kirkland chicken bone broth\n\u2022 5 oz spinach\n\nBLEND SMOOTH\n\u2022 440g Good Culture 2% cottage cheese\n\u2022 \u00bc cup Nurri whole protein milk\n\u2022 60g Kraft grated Parmesan/Romano/Asiago blend\n\u2022 Garlic seasoning + pepper, to taste\n\nPASTA + FINISH\nAdults: 56g dry Carbe Diem each. Kids: 42g dry Barilla each, or suit their appetite. Chili flakes for adults; optional basil/lemon to taste.\n\n1. Blend the sauce completely smooth.\n2. Cook pastas separately per package; save pasta water.\n3. Pat chicken dry and season. Sear in measured jar oil, in batches, until browned and at least 165\u00b0F inside. Rest and chop.\n4. Lower heat. Cook tomatoes and garlic briefly, then deglaze with broth. Add spinach and wilt.\n5. Return chicken. Turn heat right down; briefly remove pan from heat if too hot. Stir a little warm pan liquid into the blend, then gently stir sauce into the chicken. Warm on lowest heat without boiling. Loosen with pasta water if needed. Taste before optional lemon.\n6. Serve shared chicken/sauce over each pasta. Chili flakes just on adult plates.\n\nSave this for your next creamy family dinner.\n@carbe_diem_foods\n#MarryMeChicken #CottageCheeseRecipes #HighProteinDinner #FamilyDinner #TheSplitPlate",
+          "ingredientGroups": [
+              {
+                  "card": 1,
+                  "accent": "amber",
+                  "heading": "Chicken & Skillet Pan (8 Portions)",
+                  "items": [
+                      {
+                          "quantity": "3 lb (~1,361g)",
+                          "text": "Raw trimmed boneless skinless chicken thighs"
+                      },
+                      {
+                          "quantity": "1 tbsp + seasonings",
+                          "text": "Oil from sun-dried-tomato jar + garlic powder, Italian, smoked paprika, S&P"
+                      },
+                      {
+                          "quantity": "60g + 2 cloves",
+                          "text": "Drained bettergoods diced sun-dried tomatoes + minced garlic"
+                      },
+                      {
+                          "quantity": "1/2 cup + 5 oz",
+                          "text": "Kirkland chicken bone broth (120ml) + fresh spinach"
+                      }
+                  ]
+              },
+              {
+                  "card": 2,
+                  "accent": "coral",
+                  "heading": "Blended Sauce & Split Pastas",
+                  "items": [
+                      {
+                          "quantity": "440g + 1/4 cup",
+                          "text": "Good Culture 2% cottage cheese + Nurri whole protein milk"
+                      },
+                      {
+                          "quantity": "60g + SPG",
+                          "text": "Kraft grated Parmesan/Romano/Asiago blend + garlic seasoning & pepper"
+                      },
+                      {
+                          "quantity": "56g dry / adult",
+                          "text": "Carbe Diem penne + chili flakes on adult plates"
+                      },
+                      {
+                          "quantity": "42g dry / kid",
+                          "text": "Regular Barilla pasta (mild, no chili flakes)"
+                      }
+                  ]
+              }
+          ],
+          "ingredientCardPhotos": [
+              "/images/marry-me-chicken/sear-chicken-polished.webp",
+              "/images/marry-me-chicken/spinach-tomatoes-polished.webp"
+          ],
+          "methodGroups": [
+              {
+                  "card": 1,
+                  "accent": "amber",
+                  "heading": "Blend Sauce, Sear Thighs & Wilt Spinach",
+                  "items": [
+                      {
+                          "number": 1,
+                          "heading": "Blend sauce & cook pastas separately",
+                          "body": "Blend cottage cheese, milk, grated three-cheese blend, and garlic seasoning smooth. Cook Carbe Diem and regular pasta separately; reserve pasta water."
+                      },
+                      {
+                          "number": 2,
+                          "heading": "Sear thighs to 165\u00b0F & build pan base",
+                          "body": "Sear seasoned thighs in 1 tbsp jar oil in batches to 165\u00b0F, rest, and chop. Lower heat, cook sun-dried tomatoes and garlic, deglaze with broth, and wilt spinach."
+                      }
+                  ]
+              },
+              {
+                  "card": 2,
+                  "accent": "coral",
+                  "heading": "Temper Off-Heat & Plate Two Ways",
+                  "items": [
+                      {
+                          "number": 3,
+                          "heading": "Temper & fold on lowest heat",
+                          "body": "Take pan off heat briefly, stir warm pan liquid into the blended sauce, return chicken, and fold gently over lowest heat so it steams without boiling."
+                      },
+                      {
+                          "number": 4,
+                          "heading": "Serve kids mild & adults over Carbe Diem",
+                          "body": "Spoon shared chicken and sauce over regular pasta for kids and over 56g dry Carbe Diem for adults, finishing adult bowls with chili flakes."
+                      }
+                  ]
+              }
+          ],
+          "methodCardPhotos": [
+              "/images/marry-me-chicken/sauce-fold-polished.webp",
+              "/images/marry-me-chicken/kid-adult-plates-polished.webp"
+          ],
+          "servingPhoto": {
+              "src": "/images/marry-me-chicken/family-plates-polished.webp",
+              "layout": "side"
+          },
+          "servingGroups": [
+              {
+                  "accent": "coral",
+                  "heading": "Adult Plate (1/8 Pan + 56g Dry Carbe Diem)",
+                  "items": [
+                      {
+                          "text": "Approximately 450 calories, 53g protein, 44g total carbs, 25g fiber, and 15g fat (~445.6 cal / 53.2g protein calculated)."
+                      }
+                  ]
+              },
+              {
+                  "accent": "amber",
+                  "heading": "Family Yield (8 Adult-Equivalent Pan Portions)",
+                  "items": [
+                      {
+                          "text": "Covers two dinners for 3 adults and 2 kids (each kid gets ~1/2 an adult chicken/sauce portion over regular Barilla pasta; no public child macro target claimed)."
+                      }
+                  ]
+              }
+          ],
+          "engagementQuestion": "Creamy pasta night: are you team sun-dried tomatoes or extra spinach in Marry Me chicken?"
+      },
+      "meta": {
+          "macros": {
+              "calories": 450,
+              "protein": 53,
+              "carbs": 44,
+              "fat": 15,
+              "fiber": 25,
+              "estimated": true
+          },
+          "macroHonesty": "Whole chicken-and-sauce pan (8 adult-equivalent portions): ~2,684.8 calories, 361.7g protein, 34.9g total carbs, 117.0g fat, 8.2g fiber (~335.6 cal / 45.2g protein per 1/8 pan). Adult plate adds 56g dry Carbe Diem penne (110 cal, 8g protein, 40g total carbs, 24g fiber, 0.5g fat) for ~445.6 calories, 53.2g protein, 44.4g total carbs, 25.0g fiber, and 15.1g fat\u2014rounded to \u2248450 calories and 53g protein. Anchored on 3 lb raw trimmed boneless skinless chicken thighs (USDA FDC 173627; 1,646.5 cal, 267.5g protein), 440g Good Culture 2% cottage cheese (360 cal, 56g protein), 1/4 cup Nurri whole protein milk (42.5 cal, 5g protein), 60g Kraft grated Parmesan/Romano/Asiago blend (240 cal, 24g protein), 60g drained bettergoods sun-dried tomatoes (~207.7 cal), 1 tbsp tomato-jar oil (119 cal, 13.5g fat), 1/2 cup Kirkland chicken bone broth (22.5 cal, 4.5g protein), 5 oz raw spinach (32.6 cal, 4.1g protein), 2 garlic cloves (8.9 cal), and seasoning allowance (5 cal). Kids\u2019 plates use regular Barilla pasta and smaller chicken/sauce portions and are not described by the adult macro estimate.",
+          "substitutionNotes": [
+              "Keep the pan off a boil once the cottage-cheese sauce goes in; gentle steaming heat keeps the emulsion silky.",
+              "Adult macros include 56g dry Carbe Diem penne; using regular pasta changes the calorie and fiber numbers."
+          ]
+      },
+      "mealPrep": {
+          "storage": "Store the cooked chicken-and-sauce batch and the cooked pastas in separate airtight containers in the refrigerator for up to 3\u20134 days.",
+          "reheat": "Warm gently on low heat or at 50% microwave power with a splash of reserved pasta water or milk so the cottage-cheese sauce stays smooth.",
+          "lasts": "Up to 3\u20134 days refrigerated (enough for 2 family dinners for 3 adults and 2 kids)."
+      },
+      "editorialNotes": [
+          "Inventory 844 package: Cottage-Cheese Marry Me Chicken (Full Recipe). Video: 844-Marry-Me-Chicken-Full-Recipe.mp4.",
+          "Adult plate: \u2248450 cal / 53g protein (1/8 chicken/sauce batch + 56g dry Carbe Diem penne). Verified tag: @carbe_diem_foods."
+      ]
+  }
 ];
 
 export default recipes;
