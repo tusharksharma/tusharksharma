@@ -3899,6 +3899,229 @@ export const batchPrep = [
 
 export const quickLunches = [
   {
+    "id": "open-faced-steak-cheese-sando",
+    "title": "Open-Faced Steak and Cheese Sando",
+    "tagline": "Ready-cooked steak bites over melted Velveeta on two slices of Inked Keto sourdough, finished with TARI Smoky Heat and Tropical Kick\u2014both toasts together are one serving at \u2248270 calories and 34g protein.",
+    "heroImage": "/images/open-faced-steak-cheese-sando/hero-polished.webp",
+    "prepImage": "/images/open-faced-steak-cheese-sando/steak-assembly-polished.webp",
+    "prepImageCaption": "Two toasted slices of Inked Keto Big Bread Wolf Sourdough topped with Velveeta Original slices and a whole 91g pouch of Fresh Additions fully cooked steak bites before baking.",
+    "video": "/videos/open-faced-steak-cheese-sando/848-Open-Faced-Steak-Cheese-Sando.mp4",
+    "videoPoster": "/images/open-faced-steak-cheese-sando/hero-polished.webp",
+    "calories": 270,
+    "protein": 34,
+    "carbs": 30,
+    "fat": 10,
+    "fiber": 20,
+    "socialHashtags": [
+      "#SteakAndCheese",
+      "#EasyLunch",
+      "#HighProteinLunch",
+      "#OpenFacedSandwich",
+      "#LunchShortcut"
+    ],
+    "socialImages": [
+      "/images/open-faced-steak-cheese-sando/cheese-toast-polished.webp",
+      "/images/open-faced-steak-cheese-sando/steak-assembly-polished.webp",
+      "/images/open-faced-steak-cheese-sando/baked-melt-polished.webp",
+      "/images/open-faced-steak-cheese-sando/smoky-heat-polished.webp",
+      "/images/open-faced-steak-cheese-sando/tropical-kick-polished.webp"
+    ],
+    "socialCarousel": {
+      "heroBadge": "Quick Lunches \u2022 5-Min Air-Fryer Bake",
+      "heroAccent": "amber",
+      "heroTitle": "Open-Faced Steak & Cheese Sando",
+      "heroStats": [
+        {
+          "value": "\u2248270 cal",
+          "label": "both toasts + sauces"
+        },
+        {
+          "value": "34g P",
+          "label": "both toasts together"
+        },
+        {
+          "value": "20g fiber",
+          "label": "~9.7g net carbs"
+        }
+      ],
+      "hook": "Ready-cooked steak is my shortcut to a steak-and-cheese lunch. Two open-faced toasts, two TARI finishes, one serving\u2014\u2248270 calories and 34g protein including both sauces.",
+      "captionTitle": "Open-Faced Steak and Cheese Sando \u2014 \u2248270 cal / 34g protein (both toasts)",
+      "captionBody": "Ready-cooked steak is my shortcut to a steak-and-cheese lunch. Two open-faced toasts, two TARI finishes, one serving. \u2248270 calories and 34g protein including both sauces.\n\nOPEN-FACED STEAK AND CHEESE SANDO\nYield: 1 serving = both open-faced toasts.\n\nIngredients\n\u2022 2 slices Inked Keto Big Bread Wolf Sourdough (54g total)\n\u2022 1 whole pouch Fresh Additions fully cooked steak bites (91g)\n\u2022 2 Velveeta Original slices (42g total)\n\u2022 1 tsp TARI Smoky Heat sauce\n\u2022 1 tsp TARI Tropical Kick sauce\nNo added butter or oil.\n\nMethod\n1. Toast the bread. Place one Velveeta slice on each toast.\n2. Divide the ready-cooked steak bites between the two toasts.\n3. Place in the air-fryer basket. Suggested setting: Bake at 350\u00b0F / 175\u00b0C for about 5 minutes, until the cheese melts and the precooked steak is warmed through. The filmed cook confirmed Bake and five minutes; the temperature is a suggested setting because it was not recorded. Follow the steak package\u2019s reheating instructions and adjust for your appliance.\n4. Finish one toast with 1 tsp Smoky Heat and the other with 1 tsp Tropical Kick. Serve both as one lunch.\n\nEstimated nutrition \u2014 BOTH toasts, including both sauces\n270 calories \u00b7 34g protein \u00b7 29.7g total carbohydrate \u00b7 9.8g fat.\nIncludes 20g fiber; approximately 9.7g net carbohydrate (total minus fiber).\nBased on the specified US product labels. This is the Inked Keto bread, not ordinary sourdough; substitutions and label rounding change the estimate.\n\nSave this for your next easy lunch.\n\nSauce finish: @tari.usa\n#SteakAndCheese #EasyLunch #HighProteinLunch #OpenFacedSandwich #LunchShortcut",
+      "heroPhoto": "/images/open-faced-steak-cheese-sando/hero-polished.webp",
+      "ingredientGroups": [
+        {
+          "card": 1,
+          "accent": "amber",
+          "heading": "Bread, Steak & Melt (1 Serving = Both Toasts)",
+          "items": [
+            {
+              "quantity": "2 slices (54g)",
+              "text": "Inked Keto Big Bread Wolf Sourdough (60 cal, 8g P, 22g C, 20g fiber, 2g F)"
+            },
+            {
+              "quantity": "1 pouch (91g)",
+              "text": "Fresh Additions fully cooked steak bites (120 cal, 20g P, 1g C, 3g F)"
+            },
+            {
+              "quantity": "2 slices (42g)",
+              "text": "Velveeta Original cheese slices (80 cal, 6g P, 6g C, 4g F)"
+            }
+          ]
+        },
+        {
+          "card": 2,
+          "accent": "coral",
+          "heading": "Paired TARI Sauce Finish (No Added Butter/Oil)",
+          "items": [
+            {
+              "quantity": "1 tsp (5g)",
+              "text": "TARI Smoky Heat hot sauce (one toast; 0 cal labeled per 1 tsp)"
+            },
+            {
+              "quantity": "1 tsp (~5g)",
+              "text": "TARI Tropical Kick hot sauce (second toast; 10 cal, 0.7g C, 0.8g F)"
+            }
+          ]
+        }
+      ],
+      "ingredientCardPhotos": [
+        {
+          "src": "/images/open-faced-steak-cheese-sando/cheese-toast-polished.webp",
+          "layout": "side"
+        },
+        {
+          "src": "/images/open-faced-steak-cheese-sando/steak-assembly-polished.webp",
+          "layout": "side"
+        }
+      ],
+      "methodLabel": "TOAST, LAYER, BAKE & DRIZZLE",
+      "methodGroups": [
+        {
+          "card": 1,
+          "accent": "amber",
+          "heading": "Toast, Layer & Bake 5 Min",
+          "items": [
+            {
+              "number": 1,
+              "heading": "Toast sourdough & add Velveeta",
+              "body": "Toast both slices of Inked Keto Big Bread Wolf Sourdough and place 1 Velveeta Original slice on each toast."
+            },
+            {
+              "number": 2,
+              "heading": "Divide steak pouch & air-fryer Bake",
+              "body": "Divide the 91g pouch of Fresh Additions cooked steak bites across both toasts. Place in the air-fryer basket on Bake for ~5 minutes (suggested 350\u00b0F / 175\u00b0C) until the cheese melts and the steak warms through."
+            }
+          ]
+        },
+        {
+          "card": 2,
+          "accent": "coral",
+          "heading": "Two TARI Sauce Finishes",
+          "items": [
+            {
+              "number": 3,
+              "heading": "Finish with Smoky Heat & Tropical Kick",
+              "body": "Drizzle one toast with 1 tsp TARI Smoky Heat and the second toast with 1 tsp TARI Tropical Kick. Serve both open-faced toasts together as one lunch."
+            }
+          ]
+        }
+      ],
+      "methodCardPhotos": [
+        {
+          "src": "/images/open-faced-steak-cheese-sando/baked-melt-polished.webp",
+          "layout": "side"
+        },
+        {
+          "src": "/images/open-faced-steak-cheese-sando/smoky-heat-polished.webp",
+          "layout": "side"
+        }
+      ],
+      "servingPhoto": {
+        "src": "/images/open-faced-steak-cheese-sando/hero-polished.webp",
+        "layout": "side"
+      },
+      "servingGroups": [
+        {
+          "accent": "coral",
+          "heading": "Both Toasts + Both Sauces = 1 Serving",
+          "items": [
+            {
+              "text": "270 calories \u00b7 34g protein \u00b7 29.7g total carbs (20g dietary fiber; ~9.7g net carbs) \u00b7 9.8g fat. Uses Inked Keto sourdough (not ordinary sourdough) with zero added butter or oil."
+            }
+          ]
+        }
+      ],
+      "engagementQuestion": "Which toast are you grabbing first\u2014Smoky Heat or Tropical Kick?"
+    },
+    "flavorProfile": "Crisp keto sourdough toast layered with melty Velveeta and tender ready-cooked steak bites, finished two ways with smoky-savory TARI Smoky Heat and bright, fruity-spicy TARI Tropical Kick.",
+    "servings": 1,
+    "servingSize": "Both open-faced toasts together, including both 1 tsp sauces",
+    "time": "5 min air-fryer Bake (plus toasting)",
+    "bestFor": [
+      "Quick high-protein lunch",
+      "Work-from-home lunch shortcut",
+      "Ready-cooked steak upgrades",
+      "High-fiber open-faced sandwiches"
+    ],
+    "useThisWhen": "You want a hot steak-and-cheese lunch in minutes without searing raw steak or dirtying a skillet\u2014using a single 91g pouch of ready-cooked steak bites across two open-faced keto sourdough toasts.",
+    "flavorTarget": "Warm, melty cheese pull under juicy cubed steak bites on crisp sourdough toast, with one toast bringing smoky pepper heat and the other bringing bright tropical heat.",
+    "ingredients": [
+      "2 slices Inked Keto Big Bread Wolf Sourdough (54g total)",
+      "1 whole pouch Fresh Additions fully cooked steak bites (91g)",
+      "2 Velveeta Original slices (42g total)",
+      "1 tsp (5g) TARI Smoky Heat sauce",
+      "1 tsp (approx. 5g) TARI Tropical Kick sauce",
+      "No added butter or oil"
+    ],
+    "steps": [
+      {
+        "text": "TOAST & ADD CHEESE: Toast the 2 slices of Inked Keto Big Bread Wolf Sourdough, then place 1 Velveeta Original slice onto each toast.",
+        "image": "/images/open-faced-steak-cheese-sando/cheese-toast-polished.webp",
+        "imageAlt": "Open-Faced Steak and Cheese Sando: two toasted sourdough slices topped with Velveeta cheese slices"
+      },
+      {
+        "text": "DIVIDE READY-COOKED STEAK: Open the 91g pouch of Fresh Additions fully cooked steak bites and divide the steak evenly between the two cheese-topped toasts.",
+        "image": "/images/open-faced-steak-cheese-sando/steak-assembly-polished.webp",
+        "imageAlt": "Open-Faced Steak and Cheese Sando: dividing cooked steak bites over Velveeta cheese on two slices of toast"
+      },
+      {
+        "text": "AIR-FRYER BAKE (~5 MIN): Place both open-faced toasts in the air-fryer basket. Suggested setting: Bake at 350\u00b0F / 175\u00b0C for about 5 minutes until the Velveeta melts and the precooked steak is warmed through (Bake mode and 5 minutes were confirmed on film; 350\u00b0F / 175\u00b0C is a suggested temperature).",
+        "image": "/images/open-faced-steak-cheese-sando/baked-melt-polished.webp",
+        "imageAlt": "Open-Faced Steak and Cheese Sando: two steak and cheese toasts in the air-fryer basket"
+      },
+      {
+        "text": "FINISH WITH TWO TARI SAUCES: Drizzle one toast with 1 tsp TARI Smoky Heat and the second toast with 1 tsp TARI Tropical Kick. Serve both toasts together as one lunch.",
+        "image": "/images/open-faced-steak-cheese-sando/smoky-heat-polished.webp",
+        "imageAlt": "Open-Faced Steak and Cheese Sando: drizzling TARI hot sauce over the melted cheese and steak toast"
+      }
+    ],
+    "executionRules": [
+      "Both open-faced toasts together count as 1 full lunch serving (270 calories, 34g protein, 29.7g total carbs with 20g fiber, 9.8g fat), including 1 tsp of each TARI sauce.",
+      "No butter or oil is added to the bread or steak.",
+      "The filmed cook confirmed the air-fryer Bake mode and 5-minute time; 350\u00b0F / 175\u00b0C is a suggested temperature because the exact temperature was not recorded."
+    ],
+    "macroHonesty": "Label-based estimate for BOTH open-faced toasts together (including both sauces): 270 calories, 34g protein, 29.7g total carbohydrate (including 20g dietary fiber; ~9.7g net carbs), and 9.8g fat. Breakdown: 2 slices / 54g Inked Keto Big Bread Wolf Sourdough (60 cal, 8g protein, 22g total carbs, 20g fiber, 2g fat) + 1 whole pouch / 91g US Fresh Additions fully cooked steak bites (120 cal, 20g protein, 1g carbs, 0g fiber, 3g fat) + 2 slices / 42g Velveeta Original (80 cal, 6g protein, 6g carbs, 0g fiber, 4g fat) + 1 tsp / ~5g TARI Tropical Kick (10 cal, 0g protein, 0.7g carbs, 0.8g fat; 1/3 of 1 tbsp / 15g label serving) + 1 tsp / 5g TARI Smoky Heat (0 cal, 0g protein, 0g carbs, 0g fat per label). Uses Inked Keto sourdough, not ordinary sourdough; no added butter or oil.",
+    "allergens": [
+      "wheat",
+      "gluten",
+      "dairy"
+    ],
+    "dietTags": [
+      "high-protein",
+      "high-fiber",
+      "quick-lunch"
+    ],
+    "relatedIds": [
+      "extra-chicken-bonus-lunch",
+      "toasted-roast-beef-cheese-sandwich"
+    ],
+    "mealPrep": {
+      "storage": "Keep unopened Fresh Additions steak pouches, Velveeta slices, and TARI sauces refrigerated. Assemble and bake fresh in 5 minutes when ready to eat.",
+      "lasts": "Best assembled and baked fresh.",
+      "reheat": "Baked toasts are best eaten hot right out of the air fryer so the sourdough stays crisp."
+    }
+  },
+  {
     "id": "extra-chicken-bonus-lunch",
     "title": "Extra-Chicken Bonus Lunch",
     "tagline": "When the grocery pack of chicken has more than dinner needs, save one spare boneless skinless chicken breast for an 8-minute air-fryer lunch with Hot Honey Mustard.",

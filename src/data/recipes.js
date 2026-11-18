@@ -4576,6 +4576,7 @@ const recipes = [
     carbLevel: "high",
     meta: {
       macros: { protein: 32, calories: 460, fat: 16, carbs: 48, netCarbs: 44, estimated: true },
+      macroHonesty: "Reference recipe estimate is ≈460 calories and 32g protein per serving—not a weighed calculation of the entire mixed platter shown. This is a flexible dinner idea to replicate rather than a prescribed portion; actual nutrition varies with the number and type of kebabs, how much Vadilal rumali roti you use, and how much Deep coriander chutney you toss into the onion-cucumber salad. Manufacturer label references: Colonel Kababz Chicken Seekh Kabab is 110 cal / 14g protein per 2 pieces (80g); Colonel Kababz Beef Seekh Kabab is 50 cal / 6g protein per 1 kebab (39g, milder spice); Vadilal Rumali Roti is 120 cal / 3g protein per piece (40g); Deep Coriander Chutney is 20 cal / 1g protein per 2 tbsp (28g). No added oil or butter is used, and no fixed kids’ calorie or protein target is claimed.",
       allergens: ["gluten", "dairy"],
       warnings: ["contains-gluten", "contains-dairy", "spicy-adult-version"],
       dietTags: ["egg-free", "soy-free", "nut-free", "halal"],
@@ -4606,6 +4607,10 @@ const recipes = [
     protein: 32,
     calories: 460,
     image: "/images/emergency-kebab-night/split-plate-cover-polished.webp",
+    prepImage: "/images/emergency-kebab-night/platter-hero-polished.webp",
+    prepImageCaption: "Emergency Kebab Night platter: air-fried Colonel Kababz chicken and beef seekh kebabs, warm Vadilal rumali roti, and red-onion cucumber salad tossed with Deep coriander chutney.",
+    video: "/videos/emergency-kebab-night/849-Emergency-Kebab-Night.mp4",
+    videoPoster: "/images/emergency-kebab-night/platter-hero-polished.webp",
     socialImages: [
       "/images/emergency-kebab-night/mise-en-place-polished.webp",
       "/images/emergency-kebab-night/hero-polished.webp",
@@ -4619,7 +4624,8 @@ const recipes = [
       heroStats: [{ value: "20", label: "min" }, { value: "~460", label: "cal adult" }, { value: "~32g", label: "protein" }],
       hook: "Frozen seekh + rumali + a 5-minute onion-cucumber salad. Adults get chicken heat; kids get mild beef.",
       heroPhoto: "/images/emergency-kebab-night/split-plate-cover-polished.webp",
-      captionBody: "Emergency kebab night is freezer-to-plate: Colonel Kababz chicken seekh for adults, beef seekh for kids, both air-fried for char, with Vadilal rumali and a quick onion-cucumber-chutney salad. Adult plate estimate ~460 cal / 32g protein from the recipe macros. Recipe: thesplitplate.com/recipes/emergency-kebab-night",
+      captionTitle: "Emergency Kebab Night — ≈460 cal / 32g protein reference recipe estimate (portions vary)",
+      captionBody: "This is why I keep kebabs in the freezer. Chicken, beef, warm rumali and green-chutney salad—all from one practical dinner idea.\n\nEMERGENCY KEBAB NIGHT\nA flexible dinner idea, not a prescribed portion.\nReference batch: about 4 recipe servings; adjust kebabs and bread to appetite.\n\nIngredients\n• 1 box Colonel Kababz Chicken Seekh Kabab (about 8 pieces / 11 oz)\n• 1 box Colonel Kababz Beef Seekh Kabab (about 8 pieces / 11 oz)\n• 1 pack Vadilal Rumali Roti (6 pieces / 240g)\n• 1 medium red onion, thinly sliced\n• 1 medium cucumber, sliced or cut into sticks, if available\n• 2–3 tbsp Deep coriander chutney, or to taste\n• A pinch of salt\n• Lime wedges, optional\nNo added oil or butter.\n\nMethod\n1. Put the fully cooked frozen chicken and beef seekh kebabs in the air fryer together. Air-fry at 400°F / 205°C for about 12 minutes, shaking at 6 minutes, until hot throughout with browned edges. Check the package and adjust for your appliance/basket size.\n2. Slice the onion thinly, add a pinch of salt and let it sit for about 5 minutes while the kebabs heat. Prepare cucumber if you have it.\n3. Warm the rumali roti in a damp paper towel in the microwave for about 30 seconds, following the package and warming only until pliable.\n4. Toss adult onion/cucumber salad with the green chutney to taste.\n5. Choose chicken, beef or both. Beef is less spicy. Add warm roti and the chutney salad. Cut the kids’ kebabs as needed and keep their bread plain; cucumber if available or extra bread is optional.\n\nPortions and nutrition\nThis is an idea to replicate, not a rule about how much to eat. I adjust portions to hunger and keep an eye on how much bread I use.\n≈460 calories / 32g protein is the linked recipe’s reference estimate per serving—not a calculation of the entire mixed platter shown. Actual nutrition changes with the number/type of kebabs, roti and chutney. No fixed kids’ calorie or protein target is provided.\nRecipe: https://thesplitplate.com/recipes/emergency-kebab-night\n\nSave this for your next emergency dinner.\n\nRumali shortcut: @vadilalglobal\n\n#FamilyDinner #FreezerMeal #KebabNight #EasyDinner #AirFryerDinner",
       ingredientGroups: [
         { card: 0, accent: "amber", heading: "Freezer protein + carb", items: [
           { quantity: "1 box", text: "Colonel Kababz Chicken Seekh", note: "Adult — slight kick" },
