@@ -11,7 +11,7 @@ Read this **before generating or revising any short-form video cover**. This is 
 - Every publishable video has its own clean/editorial and heightened creator-style ("gimmicky") cover options. Keep both; never overwrite an approved version. For a multi-video dinner, make the adult-food and two-plate subjects distinct as required by the dinner package.
 - Export each final as a high-quality **sRGB JPG, exactly 1080 x 1920 (9:16)**. Keep the lossless/editable source, source-frame references, and prompt in the video project. Put posting copies in Downloads when surfacing or delivering a video.
 - Name files predictably: `<video-slug>-cover.jpg` and `<video-slug>-cover-gimmicky.jpg` (add `-v2`, `-v3`, etc. only for revisions). Record final cover paths in that video's `VIDEO_INVENTORY` production note; a JPG does not get its own video row.
-- A cover can be baked into frame 0 only when that video's approved package calls for it. Keep the first *moving* hook immediate; no prolonged still. The dinner rule for standalone manual-upload covers remains an exception: do not bake those into the MP4 by default.
+- Place the selected thumbnail at **frame 0** of every short, including dinners. Hold it for **0.2 seconds**, rounded to whole frames (6 at 30 fps, 12 at 60 fps). Cut immediately to the moving hook and finish on the closing shot. Keep the standalone cover JPG.
 
 ## Visual system
 

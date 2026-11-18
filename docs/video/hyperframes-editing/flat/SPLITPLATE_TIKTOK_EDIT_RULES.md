@@ -147,7 +147,7 @@ Before preview approval, check all seven against the actual timeline. In no-Marc
 ## TikTok Cover And Thumbnail Deliverable
 
 - Follow `SPLITPLATE_THUMBNAIL_PLAYBOOK.md` for both clean and creator-style 1080x1920 JPG options, factual image finishing, exact typography, face/no-face choice, delivery, and inventory recording.
-- Bake the approved cover into frame 0 only when the approved package calls for it; do not hold the still over the moving hook. Standalone manual-upload dinner covers are not baked by default.
+- Place the selected thumbnail at **frame 0** of every short, including dinners. Hold it for **0.2 seconds**, rounded to whole frames (6 at 30 fps, 12 at 60 fps). Cut immediately to the moving hook and finish on the closing shot. Keep the standalone JPG in the delivery folder for manual cover uploads.
 
 ## Text Overlays
 
