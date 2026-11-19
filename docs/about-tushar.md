@@ -596,3 +596,32 @@ He could not taste cottage cheese in this sauce and feels increasingly confident
 ### BIO-102: Holiday enjoyment does not require exact macros
 
 Extending BIO-071, he does not think celebrations need to revolve around precise macro targets. He welcomes a version that tastes good and fits his goals, but will not spend a holiday searching for one or worrying if unavailable. Tracking on a trip may satisfy curiosity; enjoyment and family time matter more. He sees movement, exercise, moderation and habits across the year as the broader lifestyle, rather than treating a special meal as something to fret over.
+
+
+## Confirmed firsthand stories — Marry Me Chicken, captured November 18, 2026
+
+Source: Tushar's ten-part written interview, later exact ingredient/brand confirmation, and approved narration for the Marry Me Chicken long-form episode. This is the closeout capture date; the actual cooking evening is historical. Private interview and footage remain outside Git. These extend the existing family-pasta, cottage-cheese and practical-meal principles without implying that the film has been published.
+
+### BIO-103: Pasta is a shared starting point
+
+Pasta is something the whole family agrees on, and the kids particularly enjoy chicken pasta. This Marry Me Chicken was his first time making or eating the dish; he has not directly compared it with a traditional cream-based version. Everyone loved this batch. It yielded eight adult-equivalent chicken/sauce portions, covering two dinners for three adults and two kids. No individual family quotes were supplied.
+
+### BIO-104: An informal 1–2–3 pasta shortcut
+
+He thinks about pasta, sauce and protein separately, assigns each an informal score, and aims for six overall. His examples place higher-protein/higher-fiber pasta at one, Carbe Diem at two and regular pasta at three; cottage cheese alone at one, cottage cheese mixed with milk/cheese/Alfredo at two and full-fat Alfredo at three; chicken breast or lean ground beef at one, thighs at two, and bacon or fattier steak at three. This dinner was two plus two plus two; regular pasta, mixed sauce and breast could be three plus two plus one. This is a personal choice-making heuristic, not a nutrition calculation or evidence that equal scores mean equal calories. He does not want every component made leaner at the expense of enjoyment.
+
+### BIO-105: Same chicken and sauce, different pasta
+
+The adults had Carbe Diem, which tastes like regular pasta to them; he likes its lower calories and higher fiber. The kids had regular pasta from a bulk Costco purchase. Its brand was not confirmed, so do not turn his mention of Barilla as another usual option into a batch-specific fact. The shared chicken and sauce kept this one dinner despite different pasta choices.
+
+### BIO-106: Sun-dried tomatoes were the standout
+
+Sun-dried tomatoes supplied much of the flavor he enjoyed. Adding more is his main proposed next-time change. The existing sauce quantity suited him because he does not prefer especially saucy pasta. Extra milk is an untested adjustment he might consider for more sauce, not a verified modified recipe. Leftovers reheated well in the microwave without noticeable sauce splitting; storage method and reheating time were not supplied.
+
+### BIO-107: Early seasoning made a relaxed evening possible
+
+For this historical Tuesday, the children swam from four to four-thirty and the family was home around five. He had seasoned the chicken before leaving. He cooked while the children bathed and described roughly an hour at a relaxed pace. This is the account of one evening, not a new permanent schedule or a timed thirty-minute recipe claim.
+
+### BIO-108: Adjustable heat makes the Dash useful
+
+The Dash skillet is becoming a favorite for everyday meals and meal prep because he can turn it down while finishing other parts of dinner. For this batch he left it on the lowest setting, covered, while pasta cooked. The recalled 250°F was the dial, not a measured sauce temperature; hold time and tempering were unconfirmed. The sauce held up, but this does not overturn his previous experience of cottage-cheese sauces separating under excessive heat. He still prefers stainless steel for a very hot steak sear.
