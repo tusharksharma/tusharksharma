@@ -1825,7 +1825,7 @@ export const breakfasts = [
     tagline: "Same meal. Different plates. Everyone wins.",
     heroImage: "/images/loaded-steak-egg-skillet/hero-loaded-steak-egg-skillet.webp",
     prepImage: "/images/loaded-steak-egg-skillet/step-01-three-eggs.webp",
-    video: "/videos/loaded-steak-egg-skillet/loaded-steak-egg-skillet-300cal-40protein-marcus.mp4",
+    video: "/videos/loaded-steak-egg-skillet/853-Loaded-Steak-Egg-Skillet.mp4",
     originalSoundVideo: "/videos/loaded-steak-egg-skillet/loaded-steak-egg-skillet-clean-original-sound.mp4",
     textOriginalSoundVideo: "/videos/loaded-steak-egg-skillet/loaded-steak-egg-skillet-text-original-sound.mp4",
     flavorProfile: "Savory, rich, clean heat (adult), mild comfort (kid)",
@@ -18782,6 +18782,485 @@ const DESSERT_CATALOG = [
       storage: "Freeze the unspun base upright and level. Spin and add toppings when ready to eat.",
       lasts: "Follow the Creami machine guidance for storage and reprocessing.",
       reheat: "Do not heat the pint."
+    }
+  },
+  {
+    "id": "mint-chip-candy-cane-creami",
+    "title": "Mint Chip feat. Candy Cane Creami",
+    "tagline": "Peppermint-chocolate Ninja Creami: Nurri 2% milk and unflavored whey isolate with 1/4 tsp mint extract, respun with 7g Lily\u2019s chocolate melted with 3/4 tsp coconut oil, and topped with 2 crushed mini candy canes. About 310 calories and 35g protein for the whole finished pint.",
+    "heroImage": "/images/mint-chip-candy-cane-creami/hero-polished.webp",
+    "prepImage": "/images/mint-chip-candy-cane-creami/chocolate-pour-polished.webp",
+    "prepImageCaption": "7g Lily\u2019s chocolate chips melted gently with 3/4 tsp coconut oil and drizzled over the first-spin mint ice cream before running Respin.",
+    "video": "/videos/mint-chip-candy-cane-creami/852-Mint-Chip-Candy-Cane-Creami.mp4",
+    "videoPoster": "/images/mint-chip-candy-cane-creami/hero-polished.webp",
+    "calories": 310,
+    "caloriesPerServing": 310,
+    "protein": 35,
+    "proteinPerServing": 35,
+    "socialHashtags": [
+      "#NinjaCreami",
+      "#MintChip",
+      "#CandyCane",
+      "#ChristmasDessert",
+      "#ProteinIceCream"
+    ],
+    "socialImages": [
+      "/images/mint-chip-candy-cane-creami/mint-base-polished.webp",
+      "/images/mint-chip-candy-cane-creami/chocolate-pour-polished.webp",
+      "/images/mint-chip-candy-cane-creami/respin-reveal-polished.webp",
+      "/images/mint-chip-candy-cane-creami/candy-finish-polished.webp",
+      "/images/mint-chip-candy-cane-creami/final-scoop-polished.webp"
+    ],
+    "socialCarousel": {
+      "heroBadge": "Holiday Creami \u2022 Whole Pint",
+      "heroAccent": "amber",
+      "heroTitle": "Mint Chip feat. Candy Cane Creami",
+      "heroStats": [
+        {
+          "value": "\u2248310 cal",
+          "label": "whole pint w/ canes"
+        },
+        {
+          "value": "35g P",
+          "label": "whole finished pint"
+        },
+        {
+          "value": "2 canes",
+          "label": "+ 7g Lily\u2019s stracciatella"
+        }
+      ],
+      "hook": "Mint chip, with a candy-cane finish. \u2248310 calories and 35g protein for the whole finished pint including the melted chocolate and both crushed mini candy canes.",
+      "captionTitle": "Mint Chip feat. Candy Cane Creami \u2014 \u2248310 cal / 35g protein whole pint",
+      "captionBody": "Mint chip, with a candy-cane finish \ud83c\udf84 Smash \u2192 pint \u2192 bite \u2192 build.\n\n\u2248310 calories / 35g protein for the whole finished pint (est.). Save this flavor.\n\nBase: 1 cup (240 ml) Nurri 2% milk, \u00bd serving unflavored whey isolate (60 cal / 14g protein), 2 tbsp monk-fruit/erythritol, \u215b tsp guar gum, pinch salt and \u00bc tsp mint extract. Green coloring optional.\nChocolate: 7g Lily\u2019s + \u00be tsp coconut oil.\nTopping: 2 crushed mini candy canes.\n\nBlend the base smooth. Freeze level 24 h. Rest 5 min, then run Regular Ice Cream. Melt the chocolate and oil gently; drizzle over the spun pint. Respin without extra liquid. Add the crushed canes on top after processing.\n\nThe recipe uses my saved base routine; the overnight freeze and machine cycles are abbreviated in the edit. Nutrition includes every addition and uses reference labels, including two typical 4.3g mini canes and Lily\u2019s Dark Chocolate Style. Cane size and chocolate variety vary, so check your labels.\n\nMusic: Jingle Bell Rock \u2014 Bobby Helms.\n#NinjaCreami #MintChip #CandyCane #ChristmasDessert #ProteinIceCream",
+      "heroPhoto": "/images/mint-chip-candy-cane-creami/hero-polished.webp",
+      "ingredientGroups": [
+        {
+          "card": 1,
+          "accent": "amber",
+          "heading": "Mint Protein Base (1 Pint)",
+          "items": [
+            {
+              "quantity": "1 cup (240ml)",
+              "text": "Nurri plain 2% ultra-filtered milk (150 cal, 20g P)"
+            },
+            {
+              "quantity": "1/2 serving",
+              "text": "Opportuniteas unflavored whey isolate (60 cal, 14g P)"
+            },
+            {
+              "quantity": "2 tbsp",
+              "text": "Monk-fruit/erythritol sweetener"
+            },
+            {
+              "quantity": "1/8 tsp + pinch",
+              "text": "Leveled guar gum + pinch of salt"
+            },
+            {
+              "quantity": "1/4 tsp",
+              "text": "Mint extract (optional drop of green food coloring)"
+            }
+          ]
+        },
+        {
+          "card": 2,
+          "accent": "coral",
+          "heading": "Chocolate Shell & Candy Cane Finish",
+          "items": [
+            {
+              "quantity": "7g",
+              "text": "Lily\u2019s chocolate chips/melts (30 cal, 0.5g P reference)"
+            },
+            {
+              "quantity": "3/4 tsp",
+              "text": "Coconut oil (30 cal; melted with chocolate)"
+            },
+            {
+              "quantity": "2 mini",
+              "text": "Mini peppermint candy canes, crushed (~33 cal reference)"
+            }
+          ]
+        }
+      ],
+      "ingredientCardPhotos": [
+        {
+          "src": "/images/mint-chip-candy-cane-creami/mint-base-polished.webp",
+          "layout": "side"
+        },
+        {
+          "src": "/images/mint-chip-candy-cane-creami/chocolate-pour-polished.webp",
+          "layout": "side"
+        }
+      ],
+      "methodLabel": "BLEND, SPIN, DRIZZLE & TOP",
+      "methodGroups": [
+        {
+          "card": 1,
+          "accent": "amber",
+          "heading": "Blend, Freeze 24h & First Spin",
+          "items": [
+            {
+              "number": 1,
+              "heading": "Blend mint base & freeze 24 hours",
+              "body": "Blend the milk, whey isolate, sweetener, guar gum, salt, mint extract, and optional green coloring until smooth. Freeze upright and level for 24 hours."
+            },
+            {
+              "number": 2,
+              "heading": "Rest 5 min & spin Regular Ice Cream",
+              "body": "Let the frozen pint sit on the counter for 5 minutes, then process on Regular Ice Cream."
+            }
+          ]
+        },
+        {
+          "card": 2,
+          "accent": "coral",
+          "heading": "Chocolate Respin & Candy Cane Crunch",
+          "items": [
+            {
+              "number": 3,
+              "heading": "Melt chocolate + coconut oil & Respin",
+              "body": "Gently melt 7g Lily\u2019s chocolate with 3/4 tsp coconut oil until smooth, drizzle over the spun mint ice cream, and run Respin without adding liquid."
+            },
+            {
+              "number": 4,
+              "heading": "Top with 2 crushed mini candy canes",
+              "body": "Crush the two mini candy canes and scatter them over top after processing."
+            }
+          ]
+        }
+      ],
+      "methodCardPhotos": [
+        {
+          "src": "/images/mint-chip-candy-cane-creami/respin-reveal-polished.webp",
+          "layout": "side"
+        },
+        {
+          "src": "/images/mint-chip-candy-cane-creami/candy-finish-polished.webp",
+          "layout": "side"
+        }
+      ],
+      "servingPhoto": {
+        "src": "/images/mint-chip-candy-cane-creami/hero-polished.webp",
+        "layout": "side"
+      },
+      "servingGroups": [
+        {
+          "accent": "coral",
+          "heading": "Whole Finished Pint (\u2248310 cal / 35g P)",
+          "items": [
+            {
+              "text": "310.3 calories and 34.5g protein (rounded to \u2248310 cal / 35g protein) for the entire pint including the 7g Lily\u2019s chocolate, 3/4 tsp coconut oil, and both mini candy canes."
+            }
+          ]
+        }
+      ],
+      "engagementQuestion": "Are you team mint chip year-round or only during candy-cane season?"
+    },
+    "flavorProfile": "Cool peppermint creaminess with crisp stracciatella chocolate flecks formed when melted Lily\u2019s chocolate and coconut oil hit the cold spun pint, finished with crunchy crushed peppermint candy canes.",
+    "servings": 1,
+    "servingSize": "1 whole finished pint (including chocolate, coconut oil, and both mini candy canes)",
+    "time": "5 min active + 24 hr freeze",
+    "bestFor": [
+      "Holiday protein dessert",
+      "Mint chocolate chip lovers",
+      "Whole-pint macro-friendly ice cream"
+    ],
+    "useThisWhen": "You want a festive mint-chip and candy-cane ice cream pint for ~310 calories and 35g protein where melted chocolate and coconut oil shatter into fine chocolate flecks during the Respin cycle.",
+    "flavorTarget": "Clean, refreshing mint ice cream studded with snappy dark-chocolate flecks and brisk peppermint candy-cane crunch on top.",
+    "ingredients": [
+      "--- BASE ---",
+      "1 cup (240 ml) Nurri plain 2% ultra-filtered milk",
+      "1/2 labeled serving Opportuniteas unflavored whey isolate (60 cal / 14g protein)",
+      "2 tbsp monk-fruit/erythritol sweetener",
+      "1/8 tsp guar gum, leveled",
+      "Pinch of salt",
+      "1/4 tsp mint extract",
+      "Optional green food coloring",
+      "--- CHOCOLATE ---",
+      "7g Lily\u2019s chocolate chips/melts",
+      "3/4 tsp coconut oil",
+      "--- TOPPING ---",
+      "2 mini candy canes, crushed"
+    ],
+    "steps": [
+      {
+        "text": "BLEND & FREEZE (24 HOURS): Blend all base ingredients (Nurri 2% milk, unflavored whey isolate, sweetener, guar gum, salt, mint extract, and optional green coloring) until smooth. Freeze upright and level for 24 hours.",
+        "image": "/images/mint-chip-candy-cane-creami/mint-base-polished.webp",
+        "imageAlt": "Mint Chip feat. Candy Cane Creami: adding mint extract and green drop to the milk and whey base"
+      },
+      {
+        "text": "FIRST SPIN & MELTED CHOCOLATE DRIZZLE: Rest the frozen pint for 5 minutes, then run Regular Ice Cream. Gently melt 7g Lily\u2019s chocolate with 3/4 tsp coconut oil until smooth and drizzle over the spun mint ice cream.",
+        "image": "/images/mint-chip-candy-cane-creami/chocolate-pour-polished.webp",
+        "imageAlt": "Mint Chip feat. Candy Cane Creami: drizzling melted Lily's chocolate and coconut oil into the spun mint ice cream"
+      },
+      {
+        "text": "RESPIN FOR STRACCIATELLA CHIP TEXTURE: Run Respin without adding liquid so the machine shatters and distributes the chocolate throughout the mint ice cream.",
+        "image": "/images/mint-chip-candy-cane-creami/respin-reveal-polished.webp",
+        "imageAlt": "Mint Chip feat. Candy Cane Creami: respun mint chip ice cream with chocolate flecks distributed throughout"
+      },
+      {
+        "text": "CRUSHED CANDY CANE FINISH: Crush the 2 mini candy canes and scatter them on top after processing. Scoop and enjoy.",
+        "image": "/images/mint-chip-candy-cane-creami/candy-finish-polished.webp",
+        "imageAlt": "Mint Chip feat. Candy Cane Creami: crushed mini candy canes scattered over the finished mint chip pint"
+      }
+    ],
+    "executionRules": [
+      "Melt the 7g Lily\u2019s chocolate with 3/4 tsp coconut oil gently so it pours smoothly and shatters into fine chocolate flecks during the Respin cycle (no extra liquid added).",
+      "Add the 2 crushed mini candy canes on top after processing so they keep their crisp peppermint crunch.",
+      "Total carbohydrate is not asserted as a single fixed number because sweetener sugar-alcohol labeling and mini candy-cane weights vary by brand."
+    ],
+    "macroHonesty": "Reference estimate for the whole finished pint (including chocolate, coconut oil, and both mini candy canes): \u2248310 calories and 35g protein (310.3 kcal / 34.5g protein calculated). Breakdown: 1 cup / 240ml Nurri plain 2% ultra-filtered milk (150 cal, 20g protein) + 1/2 serving Opportuniteas unflavored whey isolate (60 cal, 14g protein) + 7g Lily\u2019s Dark Chocolate Style Baking Chips reference (30 cal, 0.5g protein) + 3/4 tsp coconut oil (30 cal, 0g protein) + 2 mini peppermint candy canes (~8.7g / 33.3 cal reference based on Brach\u2019s 3 pieces / 13g = 50 cal) + 1/4 tsp mint extract (6 cal allowance) + sweetener/guar/salt (1 cal). Total carbohydrate is not asserted because sweetener sugar-alcohol labeling and exact chip/cane labels vary.",
+    "allergens": [
+      "dairy"
+    ],
+    "dietTags": [
+      "high-protein",
+      "gluten-free",
+      "frozen-dessert",
+      "holiday"
+    ],
+    "relatedIds": [
+      "coffee-toffee-creami",
+      "butter-caramel-popcorn-creami",
+      "frozen-hot-chocolate-cookie-creami"
+    ],
+    "mealPrep": {
+      "storage": "Freeze the blended mint base upright and level for up to 1 week. Spin, drizzle melted chocolate, respin, and top with crushed candy canes right before serving.",
+      "lasts": "Unspun pint keeps 1 week frozen; enjoy immediately after adding crushed candy canes.",
+      "reheat": "Do not heat the pint; melt only the 7g chocolate and 3/4 tsp coconut oil."
+    }
+  },
+  {
+    "id": "chocolate-protein-pumpkin-gummies",
+    "title": "Chocolate Protein Pumpkin Gummies",
+    "tagline": "Thanksgiving pumpkin-molded chocolate protein gummies inspired by Chef Out West: grass-fed beef gelatin bloomed in cool water, gently warmed with PEScience chocolate protein, cocoa powder, monk-fruit sweetener, and vanilla, then chilled in silicone pumpkin molds. About 93 calories and 18g protein per 1/4 batch.",
+    "heroImage": "/images/chocolate-protein-pumpkin-gummies/hero-polished.webp",
+    "prepImage": "/images/chocolate-protein-pumpkin-gummies/pour-molds-polished.webp",
+    "prepImageCaption": "Pouring the smooth chocolate-gelatin protein mixture into silicone pumpkin molds before chilling for 3 hours.",
+    "video": "/videos/chocolate-protein-pumpkin-gummies/859-Chocolate-Protein-Pumpkin-Gummies.mp4",
+    "videoPoster": "/images/chocolate-protein-pumpkin-gummies/hero-polished.webp",
+    "calories": 372,
+    "caloriesPerServing": 93,
+    "protein": 72,
+    "proteinPerServing": 18,
+    "carbs": 122,
+    "carbsPerServing": 30,
+    "fat": 6,
+    "fatPerServing": 1.4,
+    "servings": 4,
+    "servingSize": "1/4 of the batch (mold size changes total gummy count)",
+    "time": "10 min active + 3 hr chill",
+    "socialHashtags": [
+      "#ThanksgivingDessert",
+      "#ProteinGummies",
+      "#ChocolateDessert",
+      "#EasyDessert",
+      "#FallRecipes"
+    ],
+    "socialImages": [
+      "/images/chocolate-protein-pumpkin-gummies/bloom-gelatin-polished.webp",
+      "/images/chocolate-protein-pumpkin-gummies/smooth-mixture-polished.webp",
+      "/images/chocolate-protein-pumpkin-gummies/pour-molds-polished.webp",
+      "/images/chocolate-protein-pumpkin-gummies/mold-set-polished.webp",
+      "/images/chocolate-protein-pumpkin-gummies/pumpkin-in-hand-polished.webp"
+    ],
+    "socialCarousel": {
+      "heroBadge": "Thanksgiving Treat \u2022 4 Portions",
+      "heroAccent": "amber",
+      "heroTitle": "Chocolate Protein Pumpkin Gummies",
+      "heroStats": [
+        {
+          "value": "93 cal",
+          "label": "per 1/4 batch (~90 video)"
+        },
+        {
+          "value": "18g P",
+          "label": "per 1/4 batch (72g batch)"
+        },
+        {
+          "value": "1.4g F",
+          "label": "30g C (~24g erythritol)"
+        }
+      ],
+      "hook": "Last chance to make something pumpkin-y this year: chocolate protein gummies set in silicone pumpkin molds, inspired by @thechefoutwest\u2019s chocolate protein gummy skulls.",
+      "captionTitle": "Chocolate Protein Pumpkin Gummies \u2014 93 cal / 18g protein per 1/4 batch",
+      "captionBody": "Last chance to make something pumpkin-y this year. \ud83c\udf83 I made chocolate protein gummies in pumpkin molds, inspired by @thechefoutwest\u2019s chocolate protein gummy skulls.\n\nMakes one batch (4 equal portions)\n\n\u2022 4 cups water, divided\n\u2022 4 tbsp unflavored gelatin (I used Thrive Market Grass-Fed Beef Gelatin)\n\u2022 1 scoop PEScience chocolate protein powder\n\u2022 \u00bd cup unsweetened cocoa powder\n\u2022 \u00bd cup Whole Earth monk fruit\u2013erythritol\n\u2022 1 tsp vanilla extract\n\n1. Sprinkle the gelatin over 2 cups cool water and let it bloom for a few minutes.\n2. Whisk in the protein powder, cocoa, sweetener and vanilla. Warm gently and whisk until smooth and fully dissolved. Keep it below a boil.\n3. Stir in the remaining 2 cups cold water. Pour into silicone pumpkin molds and refrigerate about 3 hours, until set.\n\nEstimated per \u00bc batch: 93 calories, 18g protein, 30g total carbs and 1.4g fat. About 24g of the total carbs are erythritol.\n\nSave this for Thanksgiving.\n\nInspired by @thechefoutwest\nhttps://thechefoutwest.com/chocolate-protein-gummy-skulls/\n\n#ThanksgivingDessert #ProteinGummies #ChocolateDessert #EasyDessert #FallRecipes",
+      "heroPhoto": "/images/chocolate-protein-pumpkin-gummies/hero-polished.webp",
+      "ingredientGroups": [
+        {
+          "card": 1,
+          "accent": "amber",
+          "heading": "Gelatin & Water Base (4 Portions)",
+          "items": [
+            {
+              "quantity": "4 cups divided",
+              "text": "Water (2 cups cool to bloom gelatin + 2 cups cold stirred in after warming)"
+            },
+            {
+              "quantity": "4 tbsp (48g)",
+              "text": "Unflavored gelatin (Thrive Market Grass-Fed Beef Gelatin: 160 cal, 40g P)"
+            }
+          ]
+        },
+        {
+          "card": 2,
+          "accent": "coral",
+          "heading": "Chocolate Protein & Sweetener",
+          "items": [
+            {
+              "quantity": "1 scoop",
+              "text": "PEScience chocolate protein powder (120 cal, 24g P, 1g C, 1.5g F)"
+            },
+            {
+              "quantity": "1/2 cup (~40g)",
+              "text": "Unsweetened cocoa powder (80 cal, 8g P, 24g C, 4g F)"
+            },
+            {
+              "quantity": "1/2 cup (~96g)",
+              "text": "Whole Earth monk fruit\u2013erythritol sweetener (0 cal, 96g erythritol)"
+            },
+            {
+              "quantity": "1 tsp",
+              "text": "Vanilla extract (12 cal)"
+            }
+          ]
+        }
+      ],
+      "ingredientCardPhotos": [
+        {
+          "src": "/images/chocolate-protein-pumpkin-gummies/bloom-gelatin-polished.webp",
+          "layout": "side"
+        },
+        {
+          "src": "/images/chocolate-protein-pumpkin-gummies/smooth-mixture-polished.webp",
+          "layout": "side"
+        }
+      ],
+      "methodLabel": "BLOOM, WARM, MOLD & CHILL",
+      "methodGroups": [
+        {
+          "card": 1,
+          "accent": "amber",
+          "heading": "Bloom Gelatin & Warm Below a Boil",
+          "items": [
+            {
+              "number": 1,
+              "heading": "Bloom gelatin in 2 cups cool water",
+              "body": "Sprinkle 4 tbsp unflavored gelatin over 2 cups cool water in a saucepan and let it bloom for a few minutes."
+            },
+            {
+              "number": 2,
+              "heading": "Whisk & warm gently until smooth",
+              "body": "Whisk in 1 scoop chocolate protein powder, 1/2 cup cocoa powder, 1/2 cup monk fruit\u2013erythritol, and 1 tsp vanilla. Warm gently while whisking until smooth and dissolved\u2014keep below a boil."
+            }
+          ]
+        },
+        {
+          "card": 2,
+          "accent": "coral",
+          "heading": "Add Cold Water & Chill 3 Hours",
+          "items": [
+            {
+              "number": 3,
+              "heading": "Stir in remaining 2 cups cold water",
+              "body": "Remove from heat and stir in the remaining 2 cups cold water to cool the mixture."
+            },
+            {
+              "number": 4,
+              "heading": "Pour into pumpkin molds & chill ~3 hours",
+              "body": "Pour into silicone pumpkin molds and refrigerate for about 3 hours until firm and set, then unmold."
+            }
+          ]
+        }
+      ],
+      "methodCardPhotos": [
+        {
+          "src": "/images/chocolate-protein-pumpkin-gummies/pour-molds-polished.webp",
+          "layout": "side"
+        },
+        {
+          "src": "/images/chocolate-protein-pumpkin-gummies/mold-set-polished.webp",
+          "layout": "side"
+        }
+      ],
+      "servingPhoto": {
+        "src": "/images/chocolate-protein-pumpkin-gummies/pumpkin-in-hand-polished.webp",
+        "layout": "side"
+      },
+      "servingGroups": [
+        {
+          "accent": "coral",
+          "heading": "Per 1/4 Batch (93 cal / 18g P)",
+          "items": [
+            {
+              "text": "93 calories (rounded to ~90 on-screen), 18g protein (includes 10g from gelatin), 30g total carbs (~24g erythritol), and 1.4g fat per 1/4 batch. Whole batch: \u2248372 cal / 72g protein."
+            }
+          ]
+        }
+      ],
+      "engagementQuestion": "Would you try chocolate protein gummies in Thanksgiving pumpkin molds?"
+    },
+    "flavorProfile": "Fudgy, pudding-meets-gummy dark chocolate bite from cocoa powder and chocolate whey/casein blend set firm with unflavored gelatin.",
+    "bestFor": [
+      "Thanksgiving high-protein treat",
+      "Make-ahead fridge snack",
+      "Low-fat chocolate dessert"
+    ],
+    "useThisWhen": "You want a make-ahead Thanksgiving chocolate treat that keeps in the fridge and delivers 18g protein for ~93 calories per quarter-batch.",
+    "flavorTarget": "Smooth, snappy-yet-creamy chocolate gelatin gummies with rich cocoa depth and zero gritty powder.",
+    "ingredients": [
+      "4 cups water, divided (2 cups cool + 2 cups cold)",
+      "4 tbsp unflavored gelatin (filmed: Thrive Market Grass-Fed Beef Gelatin, 48g)",
+      "1 scoop PEScience chocolate protein powder",
+      "1/2 cup unsweetened cocoa powder (8 tbsp / ~40g)",
+      "1/2 cup Whole Earth monk fruit\u2013erythritol sweetener (24 tsp / ~96g)",
+      "1 tsp vanilla extract"
+    ],
+    "steps": [
+      {
+        "text": "BLOOM THE GELATIN: Sprinkle 4 tbsp unflavored gelatin over 2 cups cool water in a saucepan and let it bloom for a few minutes.",
+        "image": "/images/chocolate-protein-pumpkin-gummies/bloom-gelatin-polished.webp",
+        "imageAlt": "Chocolate Protein Pumpkin Gummies: sprinkling unflavored gelatin over cool water in a saucepan"
+      },
+      {
+        "text": "WHISK & WARM GENTLY: Whisk in 1 scoop PEScience chocolate protein powder, 1/2 cup unsweetened cocoa powder, 1/2 cup monk fruit\u2013erythritol, and 1 tsp vanilla extract. Warm gently while whisking until smooth and fully dissolved; keep below a boil.",
+        "image": "/images/chocolate-protein-pumpkin-gummies/smooth-mixture-polished.webp",
+        "imageAlt": "Chocolate Protein Pumpkin Gummies: whisking the chocolate protein and cocoa mixture over gentle heat until glossy and smooth"
+      },
+      {
+        "text": "ADD COLD WATER & POUR INTO MOLDS: Stir in the remaining 2 cups cold water, then pour the mixture into silicone pumpkin molds.",
+        "image": "/images/chocolate-protein-pumpkin-gummies/pour-molds-polished.webp",
+        "imageAlt": "Chocolate Protein Pumpkin Gummies: pouring the chocolate mixture into orange silicone pumpkin molds"
+      },
+      {
+        "text": "CHILL ~3 HOURS & UNMOLD: Refrigerate for about 3 hours until completely set, then pop the chocolate pumpkins out of the silicone molds.",
+        "image": "/images/chocolate-protein-pumpkin-gummies/pumpkin-in-hand-polished.webp",
+        "imageAlt": "Chocolate Protein Pumpkin Gummies: unmolded glossy chocolate protein pumpkin gummy"
+      }
+    ],
+    "executionRules": [
+      "Bloom the gelatin in 2 cups cool water first, then warm gently below a boil while whisking in the protein powder, cocoa, sweetener, and vanilla so the protein does not curdle and the gelatin sets properly.",
+      "Because silicone mold sizes vary, macros are calculated per 1/4 of the total batch rather than per individual pumpkin.",
+      "Inspired by Chef Out West\u2019s chocolate protein gummy skulls (https://thechefoutwest.com/chocolate-protein-gummy-skulls/)."
+    ],
+    "macroHonesty": "Estimated per 1/4 batch: \u224893 calories (rounded to ~90 on-screen), 18g protein, 30g total carbs (including ~24g erythritol), and 1.4g fat. Whole batch (4 portions): \u2248372 calories, 72g protein, 121.5g total carbs, and 5.5g fat. Breakdown for full batch: 4 tbsp / 48g Thrive Market Grass-Fed Beef Gelatin (160 cal, 40g protein, 0g carbs, 0g fat; contributes 10g protein per 1/4 batch) + 1 scoop PEScience chocolate protein powder (120 cal, 24g protein, 1g carbs, 1.5g fat) + 1/2 cup / ~40g unsweetened cocoa powder (80 cal, 8g protein, 24g carbs, 4g fat using Hershey\u2019s label reference) + 1/2 cup / ~96g Whole Earth Monk Fruit with Erythritol (0 cal, 0g protein, 96g total carbs / 96g erythritol) + 1 tsp vanilla extract (12 cal, ~0.5g carbs) + 4 cups water (0 cal).",
+    "allergens": [
+      "dairy"
+    ],
+    "dietTags": [
+      "high-protein",
+      "gluten-free",
+      "low-fat",
+      "make-ahead"
+    ],
+    "relatedIds": [
+      "protein-gulab-jamun",
+      "mint-chip-candy-cane-creami",
+      "coffee-toffee-creami"
+    ],
+    "mealPrep": {
+      "storage": "Store unmolded gummies in an airtight container in the refrigerator for up to 5 days.",
+      "lasts": "Up to 5 days refrigerated.",
+      "reheat": "Serve chilled straight from the refrigerator; do not heat or they will melt."
     }
   },
   {
