@@ -1,5 +1,9 @@
 # Current Split Plate editing rules
 
+## Review in HyperFrames Studio — November 18, 2026
+
+- Open every Split Plate HyperFrames edit for review in HyperFrames Studio with `hyperframes preview --background`. Verify the project URL opens the correct timeline and check playback at the changed section, including captions and audio. Lead the review message with the package folder and include the live Studio timeline link before requesting approval. Keep the preview running during review. Include the encoded MP4 as a companion for checking the exact export.
+
 ## First-frame thumbnail and package handoff — November 18, 2026
 
 - Place the selected thumbnail at **frame 0** of every short, including dinners. Hold it for **0.2 seconds**, rounded to whole frames (6 at 30 fps, 12 at 60 fps). Cut immediately to the moving hook and finish on the closing shot. Keep the standalone cover JPG.

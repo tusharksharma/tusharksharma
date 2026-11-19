@@ -54,6 +54,8 @@ Before calling a package Ready, satisfy all applicable cover, caption, manifest,
 
 ## Handoff and revisions
 
+Open every Split Plate HyperFrames edit for review in HyperFrames Studio with `hyperframes preview --background`. Verify the project URL opens the correct timeline and check playback at the changed section, including captions and audio. Lead the review message with the package folder and include the live Studio timeline link before requesting approval. Keep the preview running during review. Include the encoded MP4 as a companion for checking the exact export.
+
 Lead the handoff with the package folder link. Keep user-facing deliverables inside that folder and link to files within it when useful.
 
 Use the user's production project, outside the public source repo for private material. Preserve the brief, approved script, source allocation, selected tool versions, editable timeline, QA evidence and export paths. Record status as planned, awaiting approval, preview, encoded, verified or Ready according to the evidence.
