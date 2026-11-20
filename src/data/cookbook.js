@@ -18785,6 +18785,466 @@ const DESSERT_CATALOG = [
     }
   },
   {
+    "id": "brownie-batter-cookie-creami",
+    "title": "Brownie Batter Cookie Creami",
+    "tagline": "Crumbl Creami Cut of the Brownie Batter Cookie (8.6/10): Nurri 2% milk and unflavored whey isolate blended with 1 tbsp Ghirardelli unsweetened Dutch-process cocoa, then folded with 1/2 of a warmed Barebells Brownie Batter protein bar. About 325\u2013330 calories and 45g protein for the whole finished pint.",
+    "heroImage": "/images/brownie-batter-cookie-creami/hero-polished.webp",
+    "prepImage": "/images/brownie-batter-cookie-creami/dutch-cocoa-polished.webp",
+    "prepImageCaption": "1 tbsp Ghirardelli unsweetened Dutch-process cocoa layered over the Nurri 2% milk and unflavored whey isolate base before immersion blending.",
+    "video": "/videos/brownie-batter-cookie-creami/862-Brownie-Batter-Cookie-Creami.mp4",
+    "videoPoster": "/images/brownie-batter-cookie-creami/hero-polished.webp",
+    "calories": 330,
+    "caloriesPerServing": 330,
+    "protein": 45,
+    "proteinPerServing": 45,
+    "socialHashtags": [
+      "#CrumblCreamiCut",
+      "#NinjaCreami",
+      "#BrownieBatter",
+      "#ProteinIceCream",
+      "#Barebells"
+    ],
+    "socialImages": [
+      "/images/brownie-batter-cookie-creami/dutch-cocoa-polished.webp",
+      "/images/brownie-batter-cookie-creami/blend-base-polished.webp",
+      "/images/brownie-batter-cookie-creami/warmed-bar-mixin-polished.webp",
+      "/images/brownie-batter-cookie-creami/swirl-reveal-polished.webp",
+      "/images/brownie-batter-cookie-creami/scoop-into-glass-polished.webp"
+    ],
+    "socialCarousel": {
+      "heroBadge": "Crumbl Creami Cut \u2022 8.6/10",
+      "heroAccent": "amber",
+      "heroTitle": "Brownie Batter Cookie Creami",
+      "heroStats": [
+        {
+          "value": "\u2248325\u2013330",
+          "label": "calories \u2022 whole pint"
+        },
+        {
+          "value": "45g P",
+          "label": "whole finished pint"
+        },
+        {
+          "value": "8.6/10",
+          "label": "rich chocolate score"
+        }
+      ],
+      "hook": "Crumbl\u2019s Brownie Batter Cookie, Creami-style\u20148.6/10. Dutch-process cocoa in the base plus half a warmed Barebells Brownie Batter bar folded in for \u2248325\u2013330 calories and 45g protein.",
+      "captionTitle": "Crumbl Brownie Batter Cookie Creami \u2014 \u2248325\u2013330 cal / 45g protein (8.6/10)",
+      "captionBody": "Crumbl\u2019s Brownie Batter Cookie, Creami-style. 8.6/10. I used Dutch-process cocoa in my usual base and warmed up half a Barebells Brownie Batter bar for the mix-in.\n\nWhole pint: \u2248325\u2013330 calories \u00b7 45 g protein.\n\nBase: 1 cup Nurri 2% ultra-filtered milk, \u00bd labeled serving Opportuniteas unflavored whey isolate, 2 tbsp zero-calorie monk fruit\u2013erythritol, \u215b tsp guar gum, a pinch of salt and 1 tbsp unsweetened Dutch-process cocoa.\nMix-in: \u00bd Barebells Brownie Batter Original Protein Bar, warmed until soft.\n\nBlend until smooth, freeze upright for 24 hours, then rest about 5 minutes and run Regular Ice Cream. Make a well in the center, add the warmed half-bar and process to fold it in. Scoop and serve.\n\nSave this for your next chocolate craving.\n\n#CrumblCreamiCut #NinjaCreami #BrownieBatter #ProteinIceCream #Barebells\n@crumbl @barebells.usa",
+      "heroPhoto": "/images/brownie-batter-cookie-creami/hero-polished.webp",
+      "ingredientGroups": [
+        {
+          "card": 1,
+          "accent": "amber",
+          "heading": "Dutch-Cocoa Brownie Base (1 Pint)",
+          "items": [
+            {
+              "quantity": "1 cup (240 mL)",
+              "text": "Nurri 2% ultra-filtered milk (150 cal, 20g P)"
+            },
+            {
+              "quantity": "1/2 serving",
+              "text": "Opportuniteas unflavored whey isolate (60 cal, 14g P)"
+            },
+            {
+              "quantity": "1 tbsp",
+              "text": "Ghirardelli unsweetened Dutch-process cocoa (15 cal, 1g P)"
+            },
+            {
+              "quantity": "2 tbsp",
+              "text": "Zero-calorie monk fruit\u2013erythritol sweetener"
+            },
+            {
+              "quantity": "1/8 tsp + pinch",
+              "text": "Guar gum + pinch of salt"
+            }
+          ]
+        },
+        {
+          "card": 2,
+          "accent": "coral",
+          "heading": "Warmed Brownie Bar Mix-In (No Separate Topping)",
+          "items": [
+            {
+              "quantity": "1/2 bar (~27.5g)",
+              "text": "Barebells Brownie Batter Original Protein Bar, warmed until soft (105 cal, 10g P)"
+            }
+          ]
+        }
+      ],
+      "ingredientCardPhotos": [
+        {
+          "src": "/images/brownie-batter-cookie-creami/dutch-cocoa-polished.webp",
+          "layout": "side"
+        },
+        {
+          "src": "/images/brownie-batter-cookie-creami/warmed-bar-mixin-polished.webp",
+          "layout": "side"
+        }
+      ],
+      "methodLabel": "BLEND, FREEZE, SPIN & FOLD IN",
+      "methodGroups": [
+        {
+          "card": 1,
+          "accent": "amber",
+          "heading": "Blend Dutch-Cocoa Base & Freeze 24h",
+          "items": [
+            {
+              "number": 1,
+              "heading": "Blend base with Dutch-process cocoa",
+              "body": "Blend the Nurri 2% milk, unflavored whey isolate, sweetener, guar gum, salt, and 1 tbsp Ghirardelli unsweetened Dutch-process cocoa until smooth. Freeze upright and level for 24 hours."
+            },
+            {
+              "number": 2,
+              "heading": "Rest 5 min & run Regular Ice Cream",
+              "body": "Let the frozen pint rest for about 5 minutes, then spin on Regular Ice Cream."
+            }
+          ]
+        },
+        {
+          "card": 2,
+          "accent": "coral",
+          "heading": "Warm Half Barebells Bar & Fold In",
+          "items": [
+            {
+              "number": 3,
+              "heading": "Add warmed half-bar to center well",
+              "body": "Warm 1/2 of a Barebells Brownie Batter Original Protein Bar (~27.5g) until soft, place it into a center well in the spun pint, and process to fold fudgy brownie pieces throughout."
+            }
+          ]
+        }
+      ],
+      "methodCardPhotos": [
+        {
+          "src": "/images/brownie-batter-cookie-creami/blend-base-polished.webp",
+          "layout": "side"
+        },
+        {
+          "src": "/images/brownie-batter-cookie-creami/swirl-reveal-polished.webp",
+          "layout": "side"
+        }
+      ],
+      "servingPhoto": {
+        "src": "/images/brownie-batter-cookie-creami/scoop-into-glass-polished.webp",
+        "layout": "side"
+      },
+      "servingGroups": [
+        {
+          "accent": "coral",
+          "heading": "Whole Pint (\u2248325\u2013330 cal / 45g P) \u2022 Score: 8.6/10",
+          "items": [
+            {
+              "text": "Listed label portions sum to ~330 calories and 45g protein (narration rounds to ~325 cal; displayed as \u2248325\u2013330 cal / 45g protein) including the full warmed half-bar. No separate topping."
+            }
+          ]
+        }
+      ],
+      "engagementQuestion": "Have you tried warming a Barebells Brownie Batter bar before tossing it into a Creami?"
+    },
+    "flavorProfile": "Deep Dutch-process chocolate ice cream swirled with fudgy, chewy chunks of warmed Barebells Brownie Batter protein bar.",
+    "servings": 1,
+    "servingSize": "1 whole finished pint (including 1/2 Barebells Brownie Batter bar)",
+    "time": "5 min active + 24 hr freeze",
+    "bestFor": [
+      "Fudgy chocolate brownie cravings",
+      "45g protein whole-pint dessert",
+      "Crumbl Creami Cut series"
+    ],
+    "useThisWhen": "You want a rich, 45g-protein chocolate brownie pint inspired by Crumbl\u2019s Brownie Batter Cookie where warming half a Barebells Brownie Batter bar before mixing keeps the chunks fudgy instead of rock-hard.",
+    "flavorTarget": "Dark, velvety Dutch-cocoa ice cream loaded with soft, gooey brownie-batter bar ribbons (score: 8.6/10).",
+    "ingredients": [
+      "--- BASE ---",
+      "1 cup (240 mL) Nurri 2% ultra-filtered milk",
+      "1/2 labeled serving Opportuniteas unflavored whey isolate",
+      "2 tbsp zero-calorie monk fruit\u2013erythritol sweetener",
+      "1/8 tsp guar gum",
+      "Pinch of salt",
+      "1 tbsp Ghirardelli unsweetened Dutch-process cocoa",
+      "--- MIX-IN ---",
+      "1/2 Barebells Brownie Batter Original Protein Bar (about 27.5g), warmed until soft (no separate topping)"
+    ],
+    "steps": [
+      {
+        "text": "BUILD THE DUTCH-COCOA BASE: Add 1 cup (240 mL) Nurri 2% milk, 1/2 serving Opportuniteas unflavored whey isolate, 2 tbsp monk fruit\u2013erythritol sweetener, 1/8 tsp guar gum, a pinch of salt, and 1 tbsp Ghirardelli unsweetened Dutch-process cocoa to the Creami pint.",
+        "image": "/images/brownie-batter-cookie-creami/dutch-cocoa-polished.webp",
+        "imageAlt": "Brownie Batter Cookie Creami: Ninja Creami pint with milk, whey powder, and a mound of dark Dutch-process cocoa"
+      },
+      {
+        "text": "BLEND & FREEZE (24 HOURS): Immersion-blend the chocolate base until completely smooth, then freeze upright and level for 24 hours below the fill line.",
+        "image": "/images/brownie-batter-cookie-creami/blend-base-polished.webp",
+        "imageAlt": "Brownie Batter Cookie Creami: immersion blending the Dutch-cocoa milk base inside the Ninja Creami pint"
+      },
+      {
+        "text": "FIRST SPIN & ADD WARMED BAREBELLS HALF-BAR: Rest the frozen pint for about 5 minutes and run Regular Ice Cream. Make a well in the middle, warm 1/2 of a Barebells Brownie Batter Original Protein Bar (~27.5g) until soft, and add it to the center well.",
+        "image": "/images/brownie-batter-cookie-creami/warmed-bar-mixin-polished.webp",
+        "imageAlt": "Brownie Batter Cookie Creami: placing the warmed glossy Barebells Brownie Batter bar half into the center well of the spun chocolate pint"
+      },
+      {
+        "text": "FOLD IN & SCOOP: Process to fold the warmed brownie-batter bar through the chocolate ice cream, then scoop and serve.",
+        "image": "/images/brownie-batter-cookie-creami/scoop-into-glass-polished.webp",
+        "imageAlt": "Brownie Batter Cookie Creami: scooping rich chocolate brownie-batter ice cream with fudgy brownie chunks into a ribbed glass bowl"
+      }
+    ],
+    "executionRules": [
+      "Warm the half Barebells Brownie Batter bar until soft before adding it to the center well so it folds into fudgy brownie ribbons instead of freezing stiff.",
+      "No separate topping is added; all half-bar macros are included in the whole-pint total.",
+      "Score: 8.6/10."
+    ],
+    "macroHonesty": "Whole finished pint with mix-in: \u2248325\u2013330 calories and 45g protein (listed label portions sum to ~330\u2013331 calories and 45g protein; narration rounds to ~325 calories). Breakdown: 1 cup / 240 mL Nurri 2% ultra-filtered milk (150 cal, 20g protein) + 1/2 labeled serving Opportuniteas unflavored whey isolate (60 cal, 14g protein) + 1 tbsp Ghirardelli unsweetened Dutch-process cocoa (15 cal, 1g protein) + 1/2 of a 55g Barebells Brownie Batter Original Protein Bar (~27.5g: 105 cal, 10g protein) + 2 tbsp monk fruit\u2013erythritol sweetener, pinch of salt, and 1/8 tsp guar gum (\u22480\u20131 cal, 0g protein).",
+    "allergens": [
+      "dairy",
+      "soy"
+    ],
+    "dietTags": [
+      "high-protein",
+      "gluten-free",
+      "frozen-dessert"
+    ],
+    "relatedIds": [
+      "cake-batter-cupcake-cookie-creami",
+      "coffee-chocolate-brownie-protein-creami",
+      "brookies-and-cream-protein-creami"
+    ],
+    "mealPrep": {
+      "storage": "Freeze the blended Dutch-cocoa base upright and level for up to 1 week. Spin and fold in the warmed half Barebells bar right before serving.",
+      "lasts": "Unspun pint keeps 1 week frozen; best enjoyed fresh after folding in the warmed bar.",
+      "reheat": "Warm only the half Barebells bar until soft before mixing into the spun pint."
+    }
+  },
+  {
+    "id": "cake-batter-cupcake-cookie-creami",
+    "title": "Cake Batter Cupcake Cookie Creami",
+    "tagline": "Crumbl Creami Cut of the Cake Batter Cupcake Cookie: Nurri 2% milk and unflavored whey isolate flavored with 1/2 tsp brown butter emulsion and 1/2 tsp vanilla extract, mixed with 1 Quest Bake Shop Birthday Cake Frosted Cookie. About 310 calories and 39g protein for the whole finished pint (Score: 6.7/10).",
+    "heroImage": "/images/cake-batter-cupcake-cookie-creami/hero-polished.webp",
+    "prepImage": "/images/cake-batter-cupcake-cookie-creami/brown-butter-polished.webp",
+    "prepImageCaption": "1/2 tsp brown butter emulsion and 1/2 tsp vanilla extract added to the Nurri 2% milk and unflavored whey isolate base before blending.",
+    "video": "/videos/cake-batter-cupcake-cookie-creami/860-Cake-Batter-Cupcake-Cookie-Creami.mp4",
+    "videoPoster": "/images/cake-batter-cupcake-cookie-creami/hero-polished.webp",
+    "calories": 310,
+    "caloriesPerServing": 310,
+    "protein": 39,
+    "proteinPerServing": 39,
+    "socialHashtags": [
+      "#CrumblCreamiCut",
+      "#NinjaCreami",
+      "#ProteinIceCream",
+      "#CakeBatter",
+      "#BirthdayCakeCreami"
+    ],
+    "socialImages": [
+      "/images/cake-batter-cupcake-cookie-creami/brown-butter-polished.webp",
+      "/images/cake-batter-cupcake-cookie-creami/blend-base-polished.webp",
+      "/images/cake-batter-cupcake-cookie-creami/quest-cookie-polished.webp",
+      "/images/cake-batter-cupcake-cookie-creami/cookie-mixin-polished.webp",
+      "/images/cake-batter-cupcake-cookie-creami/soft-serve-polished.webp"
+    ],
+    "socialCarousel": {
+      "heroBadge": "Crumbl Creami Cut \u2022 6.7/10",
+      "heroAccent": "amber",
+      "heroTitle": "Cake Batter Cupcake Cookie Creami",
+      "heroStats": [
+        {
+          "value": "\u2248310 cal",
+          "label": "whole pint (~307\u2013311)"
+        },
+        {
+          "value": "39g P",
+          "label": "whole finished pint"
+        },
+        {
+          "value": "6.7/10",
+          "label": "honest taste score"
+        }
+      ],
+      "hook": "6.7/10 for my birthday cake Creami. I hit Re-spin after adding the Quest cookie and got soft serve\u2014and I\u2019d give it the same score either way because cake batter ice cream needs something crunchy for me.",
+      "captionTitle": "Crumbl Cake Batter Cupcake Cookie Creami \u2014 \u2248310 cal / 39g protein (6.7/10)",
+      "captionBody": "6.7/10 for my birthday cake Creami. I hit Re-spin after adding the Quest cookie and got soft serve. I\u2019d give it the same score either way. I like my cake as cake, and cake batter ice cream needs something crunchy for me.\n\nThis is my Crumbl Creami Cut of the Cake Batter Cupcake Cookie. The finished pint is about 310 calories and 39 g protein.\n\nBase: 1 cup Nurri 2% ultra-filtered milk, \u00bd serving Opportuniteas unflavored whey, 2 tbsp zero-calorie monk fruit\u2013erythritol, \u215b tsp guar gum, a pinch of salt, \u00bd tsp brown butter emulsion and \u00bd tsp vanilla extract.\nMix-in: 1 Quest Bake Shop Birthday Cake Frosted Cookie. No toppings.\n\nBlend, freeze flat for 24 hours, rest about 5 minutes and spin on Regular Ice Cream. Add the cookie and select Mix-In. I accidentally selected Re-spin for the filmed batch.\n\nWhat would you add for crunch?\n\n#CrumblCreamiCut #NinjaCreami #ProteinIceCream #CakeBatter #BirthdayCakeCreami\n@crumbl @questnutrition",
+      "heroPhoto": "/images/cake-batter-cupcake-cookie-creami/hero-polished.webp",
+      "ingredientGroups": [
+        {
+          "card": 1,
+          "accent": "amber",
+          "heading": "Cake Batter Base (1 Pint)",
+          "items": [
+            {
+              "quantity": "1 cup (240 mL)",
+              "text": "Nurri 2% ultra-filtered milk (150 cal, 20g P)"
+            },
+            {
+              "quantity": "1/2 serving",
+              "text": "Opportuniteas unflavored whey isolate (60 cal, 14g P)"
+            },
+            {
+              "quantity": "2 tbsp",
+              "text": "Zero-calorie monk fruit\u2013erythritol sweetener"
+            },
+            {
+              "quantity": "1/8 tsp + pinch",
+              "text": "Guar gum + pinch of salt"
+            },
+            {
+              "quantity": "1/2 tsp each",
+              "text": "Brown butter emulsion + vanilla extract (\u22487\u201311 cal total)"
+            }
+          ]
+        },
+        {
+          "card": 2,
+          "accent": "coral",
+          "heading": "Birthday Cake Cookie Mix-In (No Toppings)",
+          "items": [
+            {
+              "quantity": "1 cookie (25g)",
+              "text": "Quest Bake Shop Birthday Cake Frosted Cookie (90 cal, 5g P)"
+            }
+          ]
+        }
+      ],
+      "ingredientCardPhotos": [
+        {
+          "src": "/images/cake-batter-cupcake-cookie-creami/brown-butter-polished.webp",
+          "layout": "side"
+        },
+        {
+          "src": "/images/cake-batter-cupcake-cookie-creami/quest-cookie-polished.webp",
+          "layout": "side"
+        }
+      ],
+      "methodLabel": "BLEND, FREEZE, SPIN & MIX-IN",
+      "methodGroups": [
+        {
+          "card": 1,
+          "accent": "amber",
+          "heading": "Blend Base & Freeze 24 Hours",
+          "items": [
+            {
+              "number": 1,
+              "heading": "Blend cake-batter base smooth",
+              "body": "Blend the Nurri 2% milk, unflavored whey isolate, sweetener, guar gum, salt, 1/2 tsp brown butter emulsion, and 1/2 tsp vanilla extract until smooth. Freeze upright and level for 24 hours."
+            },
+            {
+              "number": 2,
+              "heading": "Rest 5 min & run Regular Ice Cream",
+              "body": "Let the frozen pint sit out for about 5 minutes, then process on Regular Ice Cream."
+            }
+          ]
+        },
+        {
+          "card": 2,
+          "accent": "coral",
+          "heading": "Fold In Quest Frosted Cookie",
+          "items": [
+            {
+              "number": 3,
+              "heading": "Add cookie to center well & run Mix-In",
+              "body": "Make a well in the center of the spun pint, add the 25g Quest Birthday Cake Frosted Cookie, and run Mix-In (hitting Re-spin after adding the cookie turns the pint into soft serve)."
+            }
+          ]
+        }
+      ],
+      "methodCardPhotos": [
+        {
+          "src": "/images/cake-batter-cupcake-cookie-creami/blend-base-polished.webp",
+          "layout": "side"
+        },
+        {
+          "src": "/images/cake-batter-cupcake-cookie-creami/cookie-mixin-polished.webp",
+          "layout": "side"
+        }
+      ],
+      "servingPhoto": {
+        "src": "/images/cake-batter-cupcake-cookie-creami/soft-serve-polished.webp",
+        "layout": "side"
+      },
+      "servingGroups": [
+        {
+          "accent": "coral",
+          "heading": "Whole Pint (\u2248310 cal / 39g P) \u2022 Score: 6.7/10",
+          "items": [
+            {
+              "text": "\u2248307\u2013311 calories and 39g protein (displayed as \u2248310 cal / 39g protein) for the entire finished pint. Honest verdict: 6.7/10\u2014soft-serve texture came from hitting Re-spin instead of Mix-In, and cake-batter ice cream benefits from a crunchy contrast."
+            }
+          ]
+        }
+      ],
+      "engagementQuestion": "What would you add to a cake-batter Creami to give it more crunch?"
+    },
+    "flavorProfile": "Sweet birthday-cake vanilla and warm brown-butter ice cream folded with soft frosted birthday-cake protein cookie pieces and rainbow sprinkles.",
+    "servings": 1,
+    "servingSize": "1 whole finished pint (including 1 Quest Birthday Cake Frosted Cookie)",
+    "time": "5 min active + 24 hr freeze",
+    "bestFor": [
+      "Birthday cake flavor fans",
+      "Crumbl Creami Cut series",
+      "High-protein soft-serve or scoopable pint"
+    ],
+    "useThisWhen": "You want a birthday-cake protein pint inspired by Crumbl\u2019s Cake Batter Cupcake Cookie landing at \u2248310 calories and 39g protein.",
+    "flavorTarget": "Buttery vanilla cake-batter base with soft frosted cookie pieces (score: 6.7/10; use Mix-In rather than Re-spin if you want firmer cookie chunks).",
+    "ingredients": [
+      "--- BASE ---",
+      "1 cup (240 mL) Nurri 2% ultra-filtered milk",
+      "1/2 labeled serving Opportuniteas unflavored whey isolate",
+      "2 tbsp zero-calorie monk fruit\u2013erythritol sweetener",
+      "1/8 tsp guar gum",
+      "Pinch of salt",
+      "1/2 tsp brown butter emulsion",
+      "1/2 tsp vanilla extract",
+      "--- MIX-IN ---",
+      "1 Quest Bake Shop Birthday Cake Frosted Cookie (about 25g; no toppings)"
+    ],
+    "steps": [
+      {
+        "text": "FLAVOR THE BASE: Add 1 cup (240 mL) Nurri 2% milk, 1/2 serving Opportuniteas unflavored whey isolate, 2 tbsp monk fruit\u2013erythritol sweetener, 1/8 tsp guar gum, a pinch of salt, 1/2 tsp brown butter emulsion, and 1/2 tsp vanilla extract to the Creami pint.",
+        "image": "/images/cake-batter-cupcake-cookie-creami/brown-butter-polished.webp",
+        "imageAlt": "Cake Batter Cupcake Cookie Creami: measuring brown butter emulsion into the milk and whey base"
+      },
+      {
+        "text": "BLEND & FREEZE (24 HOURS): Blend the base until smooth. Freeze the pint upright and level for 24 hours below the fill line.",
+        "image": "/images/cake-batter-cupcake-cookie-creami/blend-base-polished.webp",
+        "imageAlt": "Cake Batter Cupcake Cookie Creami: immersion blending the cake batter base inside the Ninja Creami pint"
+      },
+      {
+        "text": "FIRST SPIN & ADD QUEST COOKIE: Rest the frozen pint for about 5 minutes, then run Regular Ice Cream. Make a well in the center and add 1 Quest Bake Shop Birthday Cake Frosted Cookie (25g).",
+        "image": "/images/cake-batter-cupcake-cookie-creami/cookie-mixin-polished.webp",
+        "imageAlt": "Cake Batter Cupcake Cookie Creami: placing the Quest Birthday Cake Frosted Cookie into the center well of the spun pint"
+      },
+      {
+        "text": "FOLD IN & SERVE: Run Mix-In to fold the cookie pieces through the pint (selecting Re-spin instead of Mix-In after adding the cookie produces a soft-serve texture, as shown in the filmed batch).",
+        "image": "/images/cake-batter-cupcake-cookie-creami/soft-serve-polished.webp",
+        "imageAlt": "Cake Batter Cupcake Cookie Creami: creamy cake batter soft-serve swirl in a ribbed glass bowl"
+      }
+    ],
+    "executionRules": [
+      "Select Mix-In (not Re-spin) after placing the Quest Birthday Cake Frosted Cookie into the center well if you want firmer ice cream and intact cookie pieces; hitting Re-spin turns the pint into soft serve.",
+      "No additional toppings are used beyond the single 25g Quest cookie mix-in.",
+      "Honest score: 6.7/10\u2014the creator prefers cake as actual cake and notes that cake-batter ice cream needs a crunchy element."
+    ],
+    "macroHonesty": "Estimated whole finished pint: \u2248307\u2013311 calories and 39g protein, displayed as \u2248310 calories and 39g protein. Breakdown: 1 cup / 240 mL Nurri 2% ultra-filtered milk (150 cal, 20g protein) + 1/2 labeled serving Opportuniteas unflavored whey isolate (60 cal, 14g protein) + 1 Quest Bake Shop Birthday Cake Frosted Cookie (25g single-cookie pack: 90 cal, 5g protein) + 1/2 tsp brown butter emulsion, 1/2 tsp vanilla extract, and 1/8 tsp guar gum (\u22487\u201311 cal allowance, 0g protein) + 2 tbsp zero-calorie monk fruit\u2013erythritol sweetener and pinch of salt (0 cal).",
+    "allergens": [
+      "dairy",
+      "eggs",
+      "almonds",
+      "peanuts",
+      "soy"
+    ],
+    "dietTags": [
+      "high-protein",
+      "gluten-free",
+      "frozen-dessert"
+    ],
+    "relatedIds": [
+      "brownie-batter-cookie-creami",
+      "butter-caramel-popcorn-creami",
+      "crumbl-peanut-butter-cup-creami"
+    ],
+    "mealPrep": {
+      "storage": "Freeze the blended cake-batter base upright and level for up to 1 week. Spin and fold in the Quest cookie right before serving.",
+      "lasts": "Unspun pint keeps 1 week frozen; enjoy immediately after folding in the cookie.",
+      "reheat": "Do not heat the pint."
+    }
+  },
+  {
     "id": "mint-chip-candy-cane-creami",
     "title": "Mint Chip feat. Candy Cane Creami",
     "tagline": "Peppermint-chocolate Ninja Creami: Nurri 2% milk and unflavored whey isolate with 1/4 tsp mint extract, respun with 7g Lily\u2019s chocolate melted with 3/4 tsp coconut oil, and topped with 2 crushed mini candy canes. About 310 calories and 35g protein for the whole finished pint.",

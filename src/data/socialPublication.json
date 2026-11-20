@@ -1173,5 +1173,15 @@
     "initialMainPostDate": null,
     "initialMainCreatedAt": "2026-11-18",
     "firstAddedAt": "2026-11-18"
+  },
+  "cake-batter-cupcake-cookie-creami": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": "2026-11-20",
+    "firstAddedAt": "2026-11-20"
+  },
+  "brownie-batter-cookie-creami": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": "2026-11-20",
+    "firstAddedAt": "2026-11-20"
   }
 }
