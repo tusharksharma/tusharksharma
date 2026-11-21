@@ -1183,5 +1183,25 @@
     "initialMainPostDate": null,
     "initialMainCreatedAt": "2026-11-20",
     "firstAddedAt": "2026-11-20"
+  },
+  "protein-mashed-popcorn": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": "2026-11-21",
+    "firstAddedAt": "2026-11-21"
+  },
+  "cookies-and-cream-milkshake-creami": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": "2026-11-21",
+    "firstAddedAt": "2026-11-21"
+  },
+  "crispy-potato-skins": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": "2026-11-21",
+    "firstAddedAt": "2026-11-21"
+  },
+  "emergency-chicken-piccata": {
+    "initialMainPostDate": null,
+    "initialMainCreatedAt": "2026-11-21",
+    "firstAddedAt": "2026-11-21"
   }
 }

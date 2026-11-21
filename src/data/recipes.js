@@ -16133,6 +16133,250 @@ const recipes = [
           "Inventory 846 package: Three-Ingredient German Beef + Mash. Video: 846-Three-Ingredient-German-Beef-and-Mash.mp4.",
           "Adult plate: \u2248363 cal / 41.5g protein / 24.3g carbs / 11g fat (rounded on-screen to \u2248360 cal / 42g protein). Verified tags: @drinknurri @idahoanfoods."
       ]
+  },
+  {
+      "id": 85,
+      "status": "live",
+      "slug": "emergency-chicken-piccata",
+      "proteinAnchor": "chicken",
+      "mealType": "dinner",
+      "flavorDirection": "lemon-caper",
+      "splitFriendly": "full",
+      "title": "Emergency Costco Chicken Piccata & Spaghetti",
+      "category": "Family Dinner",
+      "pillar": "Protein Meals",
+      "tags": [
+          "chicken",
+          "chicken-piccata",
+          "costco-shortcut",
+          "spaghetti",
+          "carbe-diem",
+          "emergency-dinner",
+          "20-min",
+          "family-dinner",
+          "split-plate"
+      ],
+      "time": "20 min",
+      "servings": 4,
+      "protein": 34,
+      "calories": 390,
+      "image": "/images/emergency-chicken-piccata/hero-polished.webp",
+      "imagePosition": "center center",
+      "prepImage": "/images/emergency-chicken-piccata/both-plates-polished.webp",
+      "prepImageCaption": "Two plates from the same Costco Sabatino\u2019s Chicken Piccata skillet: the adult bowl pairs 210g chicken piccata and sauce with 2 oz dry Carbe Diem spaghetti, 1 tsp olive oil, and red pepper flakes (\u2248390 cal / 34g protein), while the kid plate pairs 105g chicken piccata with regular spaghetti.",
+      "video": "/videos/emergency-chicken-piccata/869-Emergency-Chicken-Piccata.mp4",
+      "videoPoster": "/images/emergency-chicken-piccata/hero-polished.webp",
+      "role": "A 20-minute fridge-rescue family dinner using Costco\u2019s fully cooked Sabatino\u2019s Tuscan Style Chicken Piccata over Carbe Diem spaghetti for adults and regular spaghetti for kids",
+      "makeThisWhen": "Kids\u2019 practice ran late and you need a 20-minute home dinner from the fridge: warm Costco\u2019s fully cooked Sabatino\u2019s Tuscan Style Chicken Piccata with its lemon-caper sauce while boiling Carbe Diem spaghetti for adults and regular spaghetti for kids.",
+      "hook": "Kids\u2019 practice ran late? This is the Costco chicken I keep in the fridge for nights like that. Warm the chicken and lemon-caper sauce while the spaghetti cooks\u2014two plates from the same chicken.",
+      "description": "One package of Costco\u2019s fully cooked Sabatino\u2019s Tuscan Style Chicken Piccata (with creamy lemon-caper sauce and sun-dried tomatoes) anchors both plates in about 20 minutes. Each adult bowl combines 1 1/2 labeled servings (210g) of chicken piccata and sauce with 2 oz dry (56g) Carbe Diem spaghetti and 1 tsp olive oil (plus crushed red pepper to taste) for approximately 390 calories, 34g protein, 46g total carbs (including 24g fiber from Carbe Diem), and 16g fat (350 calories before the 1 tsp olive oil). Each child plate uses 3/4 labeled serving (105g) of chicken piccata with regular spaghetti to appetite and optional butter.",
+      "ingredients": [
+          "Sabatino\u2019s Tuscan Style Chicken Piccata with lemon-caper sauce (Costco, 32 oz fully cooked): 1 1/2 package servings (210g) per adult; 3/4 package serving (105g) per child",
+          "2 oz dry (56g) Carbe Diem spaghetti per adult",
+          "1 tsp olive oil per adult bowl",
+          "Crushed red pepper flakes to taste (adult bowl)",
+          "Regular spaghetti to appetite (kid plate)",
+          "Optional butter to taste (kid spaghetti)"
+      ],
+      "executionRules": [
+          "Cook the two pastas (Carbe Diem spaghetti for adults, regular spaghetti for kids) according to package instructions\u2014or reheat plain cooked spaghetti if you already have some ready.",
+          "Warm the fully cooked Sabatino\u2019s chicken breast pieces in a skillet, pour in the included lemon-caper sauce with sun-dried tomatoes, and stir until heated through.",
+          "Toss each adult portion of cooked Carbe Diem spaghetti (56g dry) with 1 tsp olive oil, top with 1 1/2 servings (210g) of chicken piccata and sauce, and finish with crushed red pepper flakes.",
+          "Serve each kid 3/4 serving (105g) of chicken piccata alongside regular spaghetti tossed with butter if desired."
+      ],
+      "troubleshooting": [
+          {
+              "problem": "Lemon-caper sauce reduces too quickly in the skillet",
+              "fix": "Warm the pre-cooked chicken first over medium heat, then add the sauce packet toward the end just until bubbling and heated through so the sauce stays glossy."
+          },
+          {
+              "problem": "Tracking the adult bowl without added oil",
+              "fix": "The chicken-and-pasta subtotal (210g Sabatino\u2019s piccata + 56g dry Carbe Diem spaghetti) is 350 calories, 33.5g protein, 46g total carbs (24g fiber), and 11g fat; adding 1 tsp olive oil brings the served bowl to \u2248390 calories and \u224815.5g fat (rounded to 16g)."
+          }
+      ],
+      "splitCook": {
+          "adult": {
+              "label": "Adult Bowl \u2014 210g Sabatino\u2019s Chicken Piccata (1.5 Servings) + 2 oz Dry Carbe Diem Spaghetti + 1 tsp Olive Oil (\u2248390 cal / 34g P)",
+              "extraIngredients": [
+                  "210g Sabatino\u2019s Tuscan Style Chicken Piccata with sauce (1 1/2 labeled servings)",
+                  "2 oz dry (56g) Carbe Diem spaghetti",
+                  "1 tsp olive oil",
+                  "Crushed red pepper flakes to taste"
+              ],
+              "steps": [
+                  "Cook 2 oz dry (56g) Carbe Diem spaghetti according to package directions, drain, and toss with 1 tsp olive oil.",
+                  "Top with 1 1/2 servings (210g) of warmed chicken piccata and lemon-caper sauce, then finish with crushed red pepper flakes (\u2248390 cal, 34g protein, 46g total carbs with 24g fiber, 16g fat)."
+              ]
+          },
+          "kid": {
+              "label": "Kid Plate \u2014 105g Sabatino\u2019s Chicken Piccata (3/4 Serving) + Regular Spaghetti",
+              "extraIngredients": [
+                  "105g Sabatino\u2019s Tuscan Style Chicken Piccata with sauce (3/4 labeled serving)",
+                  "Regular spaghetti, cooked to appetite",
+                  "Optional: butter to taste"
+              ],
+              "steps": [
+                  "Plate cooked regular spaghetti (tossed with a little butter if desired) and serve 3/4 serving (105g) of warmed chicken piccata and sauce alongside."
+              ]
+          },
+          "sharedIngredients": [
+              "Sabatino\u2019s Tuscan Style Chicken Piccata with Creamy Lemon Caper Sauce & Sun-Dried Tomatoes (Costco, 32 oz refrigerated fully cooked package)"
+          ],
+          "sharedSteps": [
+              "Boil the pastas while warming the fully cooked chicken in a skillet over medium heat.",
+              "Pour the included lemon-caper sauce packet over the chicken in the skillet and stir until heated through."
+          ]
+      },
+      "socialImages": [
+          "/images/emergency-chicken-piccata/costco-pack-polished.webp",
+          "/images/emergency-chicken-piccata/skillet-piccata-polished.webp",
+          "/images/emergency-chicken-piccata/carbe-diem-polished.webp",
+          "/images/emergency-chicken-piccata/both-plates-polished.webp",
+          "/images/emergency-chicken-piccata/adult-bowl-polished.webp"
+      ],
+      "socialCarousel": {
+          "heroBadge": "20-Min Fridge Rescue \u2022 Costco Split",
+          "heroAccent": "amber",
+          "heroTitle": "Emergency Costco Chicken Piccata & Spaghetti",
+          "heroStats": [
+              {
+                  "value": "\u2248390 cal",
+                  "label": "adult bowl w/ olive oil"
+              },
+              {
+                  "value": "34g P",
+                  "label": "adult bowl (33.5g)"
+              },
+              {
+                  "value": "20 min",
+                  "label": "same chicken, 2 pastas"
+              }
+          ],
+          "heroPhoto": "/images/emergency-chicken-piccata/hero-polished.webp",
+          "hook": "Kids\u2019 practice ran late? This is the Costco chicken I keep in the fridge for nights like that. Warm the chicken and lemon-caper sauce while the spaghetti cooks\u2014two plates from the same chicken.",
+          "captionTitle": "20-Minute Costco Chicken Piccata & Spaghetti \u2014 \u2248390 cal / 34g protein adult bowl",
+          "captionBody": "Kids\u2019 practice ran late? This is the Costco chicken I keep in the fridge for nights like that. Sabatino\u2019s Tuscan Style Chicken Piccata is fully cooked and comes with lemon-caper sauce. Warm both while the spaghetti cooks. I make two plates from the same chicken.\n\nMy bowl \u00b7 \u2248390 calories \u00b7 34 g protein \u00b7 46 g total carbs \u00b7 16 g fat, including the olive oil.\n\nIngredients and portions\n\u2022 Per adult \u00b7 1\u00bd package servings of chicken piccata with sauce (210 g), 2 oz dry Carbe Diem spaghetti (56 g), and 1 tsp olive oil. Crushed red pepper to taste.\n\u2022 Per child \u00b7 \u00be package serving of chicken piccata with sauce (105 g), regular spaghetti to appetite, and butter to taste if desired.\n\nMethod\n1. Cook the two pastas according to their packages, or reheat plain spaghetti if you have some ready.\n2. While the pasta cooks, warm the fully cooked chicken in a skillet. Add the included lemon-caper sauce and stir until heated through, following the package directions.\n3. Toss each adult portion of Carbe Diem with 1 tsp olive oil and top it with 1\u00bd servings of piccata. Add crushed red pepper to taste.\n4. Serve \u00be serving of piccata with each kid\u2019s portion of regular spaghetti. Add butter to the spaghetti if they like.\n\nAbout 20 minutes. What\u2019s the emergency dinner you keep in your fridge?\n\n#CostcoFinds #ChickenPiccata #CarbeDiem #QuickFamilyDinner #TheSplitPlate",
+          "ingredientGroups": [
+              {
+                  "card": 1,
+                  "accent": "amber",
+                  "heading": "Adult Bowl (\u2248390 cal / 34g P)",
+                  "items": [
+                      {
+                          "quantity": "210g (1.5 servings)",
+                          "text": "Sabatino\u2019s Tuscan Style Chicken Piccata with sauce (240 cal, 25.5g P, 6g C, 10.5g F)"
+                      },
+                      {
+                          "quantity": "2 oz dry (56g)",
+                          "text": "Carbe Diem spaghetti (110 cal, 8g P, 40g C, 24g fiber, 0.5g F)"
+                      },
+                      {
+                          "quantity": "1 tsp + pinch",
+                          "text": "Olive oil (\u224840 cal, 4.5g F) + crushed red pepper flakes to taste"
+                      }
+                  ]
+              },
+              {
+                  "card": 2,
+                  "accent": "coral",
+                  "heading": "Kid Plate Split",
+                  "items": [
+                      {
+                          "quantity": "105g (3/4 serving)",
+                          "text": "Sabatino\u2019s Tuscan Style Chicken Piccata with lemon-caper sauce"
+                      },
+                      {
+                          "quantity": "To appetite",
+                          "text": "Regular spaghetti, with optional butter to taste"
+                      }
+                  ]
+              }
+          ],
+          "ingredientCardPhotos": [
+              "/images/emergency-chicken-piccata/costco-pack-polished.webp",
+              "/images/emergency-chicken-piccata/carbe-diem-polished.webp"
+          ],
+          "methodGroups": [
+              {
+                  "card": 1,
+                  "accent": "amber",
+                  "heading": "Boil Pastas & Warm Skillet Piccata",
+                  "items": [
+                      {
+                          "number": 1,
+                          "heading": "Cook Carbe Diem & regular spaghetti",
+                          "body": "Boil the Carbe Diem spaghetti for adults and regular spaghetti for kids according to package directions (or reheat cooked plain spaghetti)."
+                      },
+                      {
+                          "number": 2,
+                          "heading": "Warm chicken & lemon-caper sauce in skillet",
+                          "body": "Warm the fully cooked Sabatino\u2019s chicken breast pieces in a skillet, add the included lemon-caper sauce packet, and stir until bubbling and heated through."
+                      }
+                  ]
+              },
+              {
+                  "card": 2,
+                  "accent": "coral",
+                  "heading": "Plate Adult Bowl & Kid Plate",
+                  "items": [
+                      {
+                          "number": 3,
+                          "heading": "Toss adult pasta with 1 tsp olive oil & top with 210g piccata",
+                          "body": "Toss 2 oz dry cooked Carbe Diem spaghetti with 1 tsp olive oil, top with 1.5 servings (210g) chicken piccata and sauce, and add crushed red pepper."
+                      },
+                      {
+                          "number": 4,
+                          "heading": "Serve kid plate with 105g piccata",
+                          "body": "Plate each child\u2019s regular spaghetti (with butter if desired) alongside 3/4 serving (105g) of chicken piccata."
+                      }
+                  ]
+              }
+          ],
+          "methodCardPhotos": [
+              "/images/emergency-chicken-piccata/skillet-piccata-polished.webp",
+              "/images/emergency-chicken-piccata/both-plates-polished.webp"
+          ],
+          "servingPhoto": {
+              "src": "/images/emergency-chicken-piccata/adult-bowl-polished.webp",
+              "layout": "side"
+          },
+          "servingGroups": [
+              {
+                  "accent": "coral",
+                  "heading": "Served Adult Bowl (\u2248390 cal / 34g P)",
+                  "items": [
+                      {
+                          "text": "Chicken & pasta subtotal is 350 cal, 33.5g protein, 46g total carbs (24g dietary fiber), and 11g fat. Adding 1 tsp olive oil (\u224840 cal, 4.5g fat) brings the served bowl to \u2248390 cal, 33.5g protein (rounded to 34g), 46g carbs, and \u224815.5g fat (rounded to 16g)."
+                      }
+                  ]
+              }
+          ],
+          "engagementQuestion": "What is the emergency 20-minute dinner you keep in your fridge for late practice nights?"
+      },
+      "meta": {
+          "macros": {
+              "calories": 390,
+              "protein": 34,
+              "carbs": 46,
+              "fat": 16,
+              "fiber": 24,
+              "estimated": true
+          },
+          "macroHonesty": "Served adult bowl estimate: \u2248390 calories, 33.5g protein (rounded to 34g), 46g total carbs (including 24g dietary fiber from Carbe Diem spaghetti), and \u224815.5g fat (rounded to 16g). Breakdown: 1 1/2 labeled servings (210g) Sabatino\u2019s Tuscan Style Chicken Piccata with sauce (240 cal, 25.5g protein, 6g carbs, 10.5g fat based on 140g label serving = 160 cal / 17g P / 4g C / 7g F) + 2 oz dry (56g) Carbe Diem spaghetti (110 cal, 8g protein, 40g total carbs, 24g fiber, 0.5g fat) = 350 cal / 33.5g P chicken-and-pasta subtotal, plus 1 tsp olive oil (\u224840 cal, 4.5g fat). Kid plate uses 3/4 labeled serving (105g) chicken piccata with regular spaghetti to appetite and optional butter; no fixed kid macro target is claimed.",
+          "substitutionNotes": [
+              "Sabatino\u2019s Tuscan Style Chicken Piccata is a fully cooked refrigerated Costco entr\u00e9e that includes both the sliced chicken breast and the lemon-caper sun-dried tomato sauce.",
+              "Carbe Diem spaghetti keeps the adult pasta base at 110 calories, 8g protein, and 24g fiber per 2 oz dry portion."
+          ]
+      },
+      "mealPrep": {
+          "storage": "Keep unopened Sabatino\u2019s Chicken Piccata refrigerated until cook night; store cooked leftover chicken piccata and cooked pastas in separate airtight containers in the refrigerator for up to 3\u20134 days.",
+          "reheat": "Warm gently in a covered skillet over medium-low heat or in the microwave with a splash of water so the lemon-caper sauce stays glossy.",
+          "lasts": "Up to 3\u20134 days refrigerated once opened/heated."
+      },
+      "editorialNotes": [
+          "Inventory 869 package: Emergency Costco Chicken Piccata and Spaghetti. Video: 869-Emergency-Chicken-Piccata.mp4.",
+          "Adult bowl: \u2248390 cal / 34g protein / 46g carbs (24g fiber) / 16g fat (includes 1 tsp olive oil; 350 cal subtotal before olive oil)."
+      ]
   }
 ];
 

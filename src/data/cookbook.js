@@ -18785,6 +18785,240 @@ const DESSERT_CATALOG = [
     }
   },
   {
+    "id": "cookies-and-cream-milkshake-creami",
+    "title": "Cookies & Cream Milkshake Creami",
+    "tagline": "Crumbl Creami Cut of the Cookies & Cream Milkshake Cookie ft. MINI OREO\u00ae (10/10): Nurri 2% milk and unflavored whey isolate with 3 HighKey Original chocolate sandwich cookies\u2014one blended into the base, one mixed into the spun pint, and one crumbled on top. About 280 calories and 35g protein for the whole finished pint.",
+    "heroImage": "/images/cookies-and-cream-milkshake-creami/hero-polished.webp",
+    "prepImage": "/images/cookies-and-cream-milkshake-creami/cookie-base-polished.webp",
+    "prepImageCaption": "Triple cookie strategy: 1 HighKey chocolate sandwich cookie goes straight into the Nurri 2% milk and whey isolate base before immersion blending.",
+    "video": "/videos/cookies-and-cream-milkshake-creami/864-Cookies-and-Cream-Milkshake-Creami.mp4",
+    "videoPoster": "/images/cookies-and-cream-milkshake-creami/hero-polished.webp",
+    "calories": 280,
+    "caloriesPerServing": 280,
+    "protein": 35,
+    "proteinPerServing": 35,
+    "socialHashtags": [
+      "#CrumblCreamiCut",
+      "#NinjaCreami",
+      "#CookiesAndCream",
+      "#ProteinIceCream",
+      "#HighKey"
+    ],
+    "socialImages": [
+      "/images/cookies-and-cream-milkshake-creami/cookie-base-polished.webp",
+      "/images/cookies-and-cream-milkshake-creami/blend-base-polished.webp",
+      "/images/cookies-and-cream-milkshake-creami/cookie-mixin-polished.webp",
+      "/images/cookies-and-cream-milkshake-creami/crumble-topping-polished.webp",
+      "/images/cookies-and-cream-milkshake-creami/finished-mug-polished.webp"
+    ],
+    "socialCarousel": {
+      "heroBadge": "Crumbl Creami Cut \u2022 10/10",
+      "heroAccent": "amber",
+      "heroTitle": "Cookies & Cream Milkshake Creami",
+      "heroStats": [
+        {
+          "value": "\u2248280 cal",
+          "label": "whole pint + topping"
+        },
+        {
+          "value": "35g P",
+          "label": "whole finished pint"
+        },
+        {
+          "value": "10/10",
+          "label": "3 HighKey cookies"
+        }
+      ],
+      "hook": "Cookies and cream in every bite\u2014triple cookie fest, 10/10. One HighKey cookie blended into the base, one mixed in, and one crumbled over the scoop for \u2248280 calories and 35g protein.",
+      "captionTitle": "Crumbl Cookies & Cream Milkshake Creami \u2014 \u2248280 cal / 35g protein (10/10)",
+      "captionBody": "Cookies and cream in every bite. I took Crumbl\u2019s Cookies & Cream Milkshake Cookie ft. MINI OREO\u00ae and made it into a protein Creami with a HighKey cookie blended into the base, another mixed in, and one crumbled over the scoop. Triple cookie fest. 10/10.\n\nWhole finished pint: \u2248280 calories \u00b7 35 g protein\n\nIngredients\n\u2022 1 cup (240 mL) Nurri 2% ultra-filtered milk\n\u2022 \u00bd labeled serving Opportuniteas unflavored whey isolate\n\u2022 2 tbsp zero-calorie monk fruit\u2013erythritol sweetener\n\u2022 \u215b tsp guar gum\n\u2022 Pinch of salt\n\u2022 3 HighKey Original chocolate sandwich cookies, divided\n\nMethod\n1. Blend the milk, whey, sweetener, guar gum, salt, and 1 cookie in the pint until smooth. Freeze upright for 24 hours.\n2. Rest for 5 minutes. Run the regular Ice Cream cycle. Add 1 cookie in the center and process to distribute.\n3. Scoop and crumble the third cookie over the finished Creami.\n\nSave this one for your next cookies-and-cream craving.\n\n#CrumblCreamiCut #NinjaCreami #CookiesAndCream #ProteinIceCream #HighKey",
+      "heroPhoto": "/images/cookies-and-cream-milkshake-creami/hero-polished.webp",
+      "ingredientGroups": [
+        {
+          "card": 1,
+          "accent": "amber",
+          "heading": "Cookies-in-Base Milkshake Pint",
+          "items": [
+            {
+              "quantity": "1 cup (240 mL)",
+              "text": "Nurri 2% ultra-filtered milk (150 cal, 20g P)"
+            },
+            {
+              "quantity": "1/2 serving",
+              "text": "Opportuniteas unflavored whey isolate (60 cal, 14g P)"
+            },
+            {
+              "quantity": "2 tbsp",
+              "text": "Zero-calorie monk fruit\u2013erythritol sweetener"
+            },
+            {
+              "quantity": "1/8 tsp + pinch",
+              "text": "Guar gum + pinch of salt"
+            }
+          ]
+        },
+        {
+          "card": 2,
+          "accent": "coral",
+          "heading": "Triple Cookie Split (3 HighKey Cookies = 70 cal / 1g P)",
+          "items": [
+            {
+              "quantity": "1 cookie",
+              "text": "HighKey Original chocolate sandwich cookie blended straight into the liquid base"
+            },
+            {
+              "quantity": "1 cookie",
+              "text": "HighKey cookie added to the center well and processed after the first spin"
+            },
+            {
+              "quantity": "1 cookie",
+              "text": "HighKey cookie crumbled over the finished scoop"
+            }
+          ]
+        }
+      ],
+      "ingredientCardPhotos": [
+        {
+          "src": "/images/cookies-and-cream-milkshake-creami/cookie-base-polished.webp",
+          "layout": "side"
+        },
+        {
+          "src": "/images/cookies-and-cream-milkshake-creami/blend-base-polished.webp",
+          "layout": "side"
+        }
+      ],
+      "methodLabel": "BLEND 1, MIX-IN 1, CRUMBLE 1",
+      "methodGroups": [
+        {
+          "card": 1,
+          "accent": "amber",
+          "heading": "Blend First Cookie Into Base & Freeze 24h",
+          "items": [
+            {
+              "number": 1,
+              "heading": "Immersion-blend 1 cookie into the base",
+              "body": "Blend the milk, whey isolate, sweetener, guar gum, salt, and 1 HighKey sandwich cookie right in the pint so the entire base tastes like cookies-and-cream milkshake. Freeze upright for 24 hours."
+            },
+            {
+              "number": 2,
+              "heading": "Rest 5 min & run Regular Ice Cream",
+              "body": "Let the frozen pint sit on the counter for 5 minutes, then spin on Regular Ice Cream."
+            }
+          ]
+        },
+        {
+          "card": 2,
+          "accent": "coral",
+          "heading": "Mix In Second Cookie & Crumble Third on Top",
+          "items": [
+            {
+              "number": 3,
+              "heading": "Add 2nd cookie to center well & process",
+              "body": "Place the second HighKey sandwich cookie in the center well of the spun pint and process to distribute cookie chunks throughout."
+            },
+            {
+              "number": 4,
+              "heading": "Scoop & crumble 3rd cookie on top",
+              "body": "Scoop into a glass mug and crumble the third HighKey cookie over the top."
+            }
+          ]
+        }
+      ],
+      "methodCardPhotos": [
+        {
+          "src": "/images/cookies-and-cream-milkshake-creami/cookie-mixin-polished.webp",
+          "layout": "side"
+        },
+        {
+          "src": "/images/cookies-and-cream-milkshake-creami/crumble-topping-polished.webp",
+          "layout": "side"
+        }
+      ],
+      "servingPhoto": {
+        "src": "/images/cookies-and-cream-milkshake-creami/finished-mug-polished.webp",
+        "layout": "side"
+      },
+      "servingGroups": [
+        {
+          "accent": "coral",
+          "heading": "Whole Pint + Topping (\u2248280 cal / 35g P) \u2022 10/10",
+          "items": [
+            {
+              "text": "Nurri 2% milk (150 cal, 20g P) + 1/2 serving Opportuniteas whey isolate (60 cal, 14g P) + 3 HighKey Original chocolate sandwich cookies (70 cal, 1g P) = \u2248280 calories and 35g protein for the entire finished pint."
+            }
+          ]
+        }
+      ],
+      "engagementQuestion": "Do you blend a cookie directly into your Creami base or save them all for the mix-in?"
+    },
+    "flavorProfile": "True cookies-and-cream milkshake flavor in every spoonful from blending one chocolate sandwich cookie into the liquid base, layered with mixed-in cookie chunks and crisp crumbled cookie on top.",
+    "servings": 1,
+    "servingSize": "1 whole finished pint (including all 3 HighKey cookies)",
+    "time": "5 min active + 24 hr freeze",
+    "bestFor": [
+      "10/10 cookies-and-cream cravings",
+      "Under-300-calorie whole protein pint",
+      "Crumbl Creami Cut series"
+    ],
+    "useThisWhen": "You want a 10/10 cookies-and-cream milkshake pint where even the ice cream base tastes infused with chocolate wafer and cream\u2014landing at \u2248280 calories and 35g protein for the whole pint.",
+    "flavorTarget": "Thick, cookies-and-cream milkshake ice cream speckled with fine cookie dust, chunkier mixed-in cookie pieces, and a crunchy cookie crumble crown (score: 10/10).",
+    "ingredients": [
+      "1 cup (240 mL) Nurri 2% ultra-filtered milk",
+      "1/2 labeled serving Opportuniteas unflavored whey isolate",
+      "2 tbsp zero-calorie monk fruit\u2013erythritol sweetener",
+      "1/8 tsp guar gum",
+      "Pinch of salt",
+      "3 HighKey Original chocolate sandwich cookies, divided (1 blended into base, 1 mixed in, 1 crumbled on top)"
+    ],
+    "steps": [
+      {
+        "text": "ADD FIRST COOKIE TO BASE: Add 1 cup (240 mL) Nurri 2% milk, 1/2 serving Opportuniteas unflavored whey isolate, 2 tbsp monk fruit\u2013erythritol sweetener, 1/8 tsp guar gum, a pinch of salt, and 1 HighKey Original chocolate sandwich cookie to the Creami pint.",
+        "image": "/images/cookies-and-cream-milkshake-creami/cookie-base-polished.webp",
+        "imageAlt": "Cookies & Cream Milkshake Creami: dropping the first HighKey chocolate sandwich cookie into the milk and whey base"
+      },
+      {
+        "text": "BLEND & FREEZE (24 HOURS): Immersion-blend the base and cookie until smooth and speckled, then freeze upright and level for 24 hours.",
+        "image": "/images/cookies-and-cream-milkshake-creami/blend-base-polished.webp",
+        "imageAlt": "Cookies & Cream Milkshake Creami: immersion blending the cookies-and-cream base in the Ninja Creami pint"
+      },
+      {
+        "text": "FIRST SPIN & MIX IN SECOND COOKIE: Rest the frozen pint for 5 minutes and run the Regular Ice Cream cycle. Place the second HighKey cookie into the center well and process to distribute.",
+        "image": "/images/cookies-and-cream-milkshake-creami/cookie-mixin-polished.webp",
+        "imageAlt": "Cookies & Cream Milkshake Creami: second HighKey chocolate sandwich cookie in the center well of the spun pint"
+      },
+      {
+        "text": "SCOOP & CRUMBLE THIRD COOKIE: Scoop the finished cookies-and-cream ice cream and crumble the third HighKey cookie over the top.",
+        "image": "/images/cookies-and-cream-milkshake-creami/finished-mug-polished.webp",
+        "imageAlt": "Cookies & Cream Milkshake Creami: glass mug of cookies and cream protein ice cream topped with crumbled chocolate sandwich cookie"
+      }
+    ],
+    "executionRules": [
+      "Divide the 3 HighKey Original chocolate sandwich cookies across all three stages\u20141 blended into the liquid base, 1 mixed in after spinning, and 1 crumbled on top\u2014so every bite has cookies-and-cream flavor and crunch.",
+      "All 3 cookies are included in the \u2248280-calorie, 35g-protein whole-pint total.",
+      "Score: 10/10."
+    ],
+    "macroHonesty": "Whole-pint estimate (including all 3 HighKey cookies): \u2248280 calories and 35g protein. Breakdown: 1 cup / 240 mL Nurri 2% ultra-filtered protein milk (150 cal, 20g protein) + 1/2 labeled serving Opportuniteas unflavored whey isolate (60 cal, 14g protein) + 3 HighKey Original chocolate sandwich cookies (70 cal, 1g protein per 3-cookie serving) + 2 tbsp zero-calorie monk fruit\u2013erythritol sweetener, 1/8 tsp guar gum, and pinch of salt (trace / label-rounded).",
+    "allergens": [
+      "dairy",
+      "eggs"
+    ],
+    "dietTags": [
+      "high-protein",
+      "gluten-free",
+      "frozen-dessert"
+    ],
+    "relatedIds": [
+      "brownie-batter-cookie-creami",
+      "cake-batter-cupcake-cookie-creami",
+      "brookies-and-cream-protein-creami"
+    ],
+    "mealPrep": {
+      "storage": "Freeze the blended cookies-and-cream base upright and level for up to 1 week. Spin, mix in the second cookie, and crumble the third cookie on top right before serving.",
+      "lasts": "Unspun pint keeps 1 week frozen; enjoy immediately after adding the cookie mix-in and topping.",
+      "reheat": "Do not heat the pint."
+    }
+  },
+  {
     "id": "brownie-batter-cookie-creami",
     "title": "Brownie Batter Cookie Creami",
     "tagline": "Crumbl Creami Cut of the Brownie Batter Cookie (8.6/10): Nurri 2% milk and unflavored whey isolate blended with 1 tbsp Ghirardelli unsweetened Dutch-process cocoa, then folded with 1/2 of a warmed Barebells Brownie Batter protein bar. About 325\u2013330 calories and 45g protein for the whole finished pint.",
@@ -20932,6 +21166,432 @@ export const desserts = DESSERT_CATALOG.filter((item) => !item.id.includes("crea
 // with crispy chicken on top, etc.). Eat solo when you need a quick base, or
 // stack them into bigger meals.
 export const bases = [
+  {
+    "id": "protein-mashed-popcorn",
+    "title": "Protein Mashed Popcorn",
+    "tagline": "Buttery mashed potatoes without a stick of butter: 700g peeled gold potatoes mashed with blended Good Culture 2% cottage cheese, Nurri whole protein milk, and 1 tbsp Kernel Season\u2019s Butter Popcorn Seasoning. Makes 4 servings at \u2248180 calories, 9g protein, and 1.6g fat each.",
+    "heroImage": "/images/protein-mashed-popcorn/hero-polished.webp",
+    "prepImage": "/images/protein-mashed-popcorn/dairy-blend-polished.webp",
+    "prepImageCaption": "150g Good Culture 2% cottage cheese blended smooth with 1/4 cup Nurri whole protein milk and folded into 700g hot riced gold potatoes with 1 tbsp butter popcorn seasoning.",
+    "video": "/videos/protein-mashed-popcorn/863-Protein-Mashed-Popcorn.mp4",
+    "videoPoster": "/images/protein-mashed-popcorn/hero-polished.webp",
+    "calories": 729,
+    "caloriesPerServing": 180,
+    "protein": 37,
+    "proteinPerServing": 9,
+    "carbs": 119,
+    "carbsPerServing": 30,
+    "fat": 6.5,
+    "fatPerServing": 1.6,
+    "servings": 4,
+    "servingSize": "1/4 of the batch (from 700g raw peeled gold potatoes)",
+    "time": "20 min",
+    "socialHashtags": [
+      "#MashedPotatoes",
+      "#HighProteinRecipes",
+      "#CottageCheeseRecipes",
+      "#FamilyDinner",
+      "#TheSplitPlate"
+    ],
+    "socialImages": [
+      "/images/protein-mashed-popcorn/fork-tender-polished.webp",
+      "/images/protein-mashed-popcorn/dairy-blend-polished.webp",
+      "/images/protein-mashed-popcorn/butter-seasoning-polished.webp",
+      "/images/protein-mashed-popcorn/creamy-finish-polished.webp",
+      "/images/protein-mashed-popcorn/served-mash-polished.webp"
+    ],
+    "socialCarousel": {
+      "heroBadge": "Family Dinner Side \u2022 4 Servings",
+      "heroAccent": "amber",
+      "heroTitle": "Protein Mashed Popcorn",
+      "heroStats": [
+        {
+          "value": "\u2248180 cal",
+          "label": "per 1/4 batch (182.3)"
+        },
+        {
+          "value": "9g P",
+          "label": "vs. 4g regular mash"
+        },
+        {
+          "value": "1.6g F",
+          "label": "vs. 12.5g regular mash"
+        }
+      ],
+      "hook": "I made protein mashed popcorn and my kids devoured it. The buttery flavor comes from butter popcorn seasoning, and blended cottage cheese makes the mash creamy\u2014\u2248180 calories, 9g protein, and 1.6g fat per serving.",
+      "captionTitle": "Protein Mashed Popcorn \u2014 \u2248180 cal / 9g protein / 1.6g fat per serving",
+      "captionBody": "I made protein mashed popcorn and my kids devoured it. The buttery flavor comes from butter popcorn seasoning, and blended cottage cheese makes the mash creamy.\n\nMy mash per serving: \u2248180 calories \u00b7 9 g protein \u00b7 1.6 g fat. Makes 4 servings.\n\nRegular butter mash reference: \u2248240 calories \u00b7 4 g protein \u00b7 12.5 g fat per serving. Both batches start with 700 g of potatoes and are divided into four. The reference uses \u00bc cup regular whole milk and 4 tbsp butter. Estimates cover the mashed potatoes.\n\nIngredients\n\u2022 700 g potatoes, peeled and weighed raw\n\u2022 150 g Good Culture 2% cottage cheese\n\u2022 \u00bc cup Nurri whole protein milk\n\u2022 1 tbsp Kernel Season\u2019s Butter Popcorn Seasoning\n\nMethod\n1. Boil the peeled potatoes in water until fork-tender. Drain and mash while hot.\n2. Blend the cottage cheese and milk until smooth. Stir the blend into the hot potatoes.\n3. Add the butter popcorn seasoning and fold until creamy. Divide into four servings.\n\nSave this for your next family dinner.\n\n#MashedPotatoes #HighProteinRecipes #CottageCheeseRecipes #FamilyDinner #TheSplitPlate",
+      "heroPhoto": "/images/protein-mashed-popcorn/hero-polished.webp",
+      "ingredientGroups": [
+        {
+          "card": 1,
+          "accent": "amber",
+          "heading": "4-Serving Potato & Protein Dairy Base",
+          "items": [
+            {
+              "quantity": "700g raw",
+              "text": "Gold potatoes, peeled and weighed raw (504 cal, 12.6g P, 112g C, 1.8g F)"
+            },
+            {
+              "quantity": "150g",
+              "text": "Good Culture 2% cottage cheese (122.7 cal, 19.1g P, 5.5g C, 2.7g F)"
+            },
+            {
+              "quantity": "1/4 cup",
+              "text": "Nurri whole ultra-filtered protein milk (42.5 cal, 5.0g P, 1.3g C, 2.0g F)"
+            }
+          ]
+        },
+        {
+          "card": 2,
+          "accent": "coral",
+          "heading": "The Butter-Flavor Lever",
+          "items": [
+            {
+              "quantity": "1 tbsp",
+              "text": "Kernel Season\u2019s Butter Popcorn Seasoning (60 cal across the batch; real butter powder flavor without 4 tbsp butter)"
+            }
+          ]
+        }
+      ],
+      "ingredientCardPhotos": [
+        {
+          "src": "/images/protein-mashed-popcorn/fork-tender-polished.webp",
+          "layout": "side"
+        },
+        {
+          "src": "/images/protein-mashed-popcorn/butter-seasoning-polished.webp",
+          "layout": "side"
+        }
+      ],
+      "methodLabel": "BOIL, BLEND DAIRY & SEASON",
+      "methodGroups": [
+        {
+          "card": 1,
+          "accent": "amber",
+          "heading": "Boil Potatoes & Blend Cottage Cheese",
+          "items": [
+            {
+              "number": 1,
+              "heading": "Boil 700g peeled potatoes until fork-tender",
+              "body": "Boil the peeled gold potatoes in water until fork-tender, then drain and mash or rice while hot."
+            },
+            {
+              "number": 2,
+              "heading": "Blend cottage cheese & Nurri milk smooth",
+              "body": "Blend 150g Good Culture 2% cottage cheese with 1/4 cup Nurri whole protein milk until completely smooth and stir into the hot potatoes."
+            }
+          ]
+        },
+        {
+          "card": 2,
+          "accent": "coral",
+          "heading": "Fold In Butter Popcorn Seasoning",
+          "items": [
+            {
+              "number": 3,
+              "heading": "Season with 1 tbsp butter popcorn seasoning",
+              "body": "Add 1 tbsp Kernel Season\u2019s Butter Popcorn Seasoning, fold until velvety and creamy, and divide into 4 equal servings (pair with Crispy Potato Skins made from the saved peels)."
+            }
+          ]
+        }
+      ],
+      "methodCardPhotos": [
+        {
+          "src": "/images/protein-mashed-popcorn/dairy-blend-polished.webp",
+          "layout": "side"
+        },
+        {
+          "src": "/images/protein-mashed-popcorn/creamy-finish-polished.webp",
+          "layout": "side"
+        }
+      ],
+      "servingPhoto": {
+        "src": "/images/protein-mashed-popcorn/served-mash-polished.webp",
+        "layout": "side"
+      },
+      "servingGroups": [
+        {
+          "accent": "coral",
+          "heading": "Per 1/4 Batch: \u2248180 cal / 9g P / 1.6g F",
+          "items": [
+            {
+              "text": "My mash (1/4 batch): 182.3 cal, 9.2g protein, 29.7g carbs, 1.6g fat (rounded to \u2248180 cal / 9g P / 1.6g F). Regular butter mash reference (700g potatoes + 1/4 cup whole milk + 4 tbsp salted butter): 237.3 cal, 3.8g protein, 28.7g carbs, 12.5g fat per 1/4 batch."
+            }
+          ]
+        }
+      ],
+      "engagementQuestion": "Have you ever tried butter popcorn seasoning in mashed potatoes?"
+    },
+    "flavorProfile": "Fluffy, velvety gold mashed potatoes with concentrated movie-theater butter flavor from butter popcorn seasoning and rich creaminess from whipped cottage cheese and protein milk.",
+    "bestFor": [
+      "High-protein mashed potato side",
+      "Holiday & weeknight family dinners",
+      "Low-fat comfort food swap"
+    ],
+    "useThisWhen": "You want real-potato mash with unmistakable buttery flavor for ~180 calories, 9g protein, and 1.6g fat per serving instead of loading the bowl with 4 tablespoons of butter.",
+    "flavorTarget": "Creamy, lump-free, savory-buttery mashed potatoes where the blended cottage cheese disappears completely into the hot potato.",
+    "ingredients": [
+      "700g gold potatoes, peeled and weighed raw (save the peels for Crispy Potato Skins)",
+      "150g Good Culture 2% cottage cheese",
+      "1/4 cup Nurri whole ultra-filtered protein milk",
+      "1 tbsp Kernel Season\u2019s Butter Popcorn Seasoning"
+    ],
+    "steps": [
+      {
+        "text": "BOIL & MASH POTATOES: Peel 700g raw gold potatoes (save the peels for Crispy Potato Skins) and boil in water until fork-tender. Drain and mash or rice while hot.",
+        "image": "/images/protein-mashed-popcorn/fork-tender-polished.webp",
+        "imageAlt": "Protein Mashed Popcorn: checking boiled peeled gold potatoes with a fork"
+      },
+      {
+        "text": "BLEND COTTAGE CHEESE & PROTEIN MILK: Blend 150g Good Culture 2% cottage cheese and 1/4 cup Nurri whole protein milk until completely smooth, then pour over the hot mashed potatoes.",
+        "image": "/images/protein-mashed-popcorn/dairy-blend-polished.webp",
+        "imageAlt": "Protein Mashed Popcorn: pouring blended cottage cheese and protein milk over riced potatoes"
+      },
+      {
+        "text": "ADD BUTTER POPCORN SEASONING: Sprinkle in 1 tbsp Kernel Season\u2019s Butter Popcorn Seasoning.",
+        "image": "/images/protein-mashed-popcorn/butter-seasoning-polished.webp",
+        "imageAlt": "Protein Mashed Popcorn: adding Kernel Season's Butter Popcorn Seasoning to the bowl"
+      },
+      {
+        "text": "FOLD & SERVE (4 PORTIONS): Fold until smooth and creamy, then divide into 4 equal servings.",
+        "image": "/images/protein-mashed-popcorn/creamy-finish-polished.webp",
+        "imageAlt": "Protein Mashed Popcorn: folding the creamy buttery mashed potatoes with a blue spatula"
+      }
+    ],
+    "executionRules": [
+      "Weigh the 700g gold potatoes after peeling so the 4-portion nutrition calculation stays exact, and save the peels to air-fry into Crispy Potato Skins.",
+      "Blend the cottage cheese and Nurri milk completely smooth before folding into the hot potatoes so there are zero curds.",
+      "Kernel Season\u2019s Butter Popcorn Seasoning contains real butter powder and salt, delivering butter flavor and seasoning in one step."
+    ],
+    "macroHonesty": "Per 1/4 batch (from 700g peeled raw gold potatoes): 182.3 calories, 9.2g protein, 29.7g total carbs, and 1.6g fat (displayed as \u2248180 cal \u00b7 9g protein \u00b7 1.6g fat). Full 4-serving batch: 729.2 calories, 36.7g protein, 118.8g carbs, 6.5g fat from 700g peeled raw gold potatoes (504 cal, 12.6g P, 112.0g C, 1.8g F) + 150g Good Culture 2% cottage cheese (122.7 cal, 19.1g P, 5.5g C, 2.7g F) + 1/4 cup Nurri whole protein milk (42.5 cal, 5.0g P, 1.3g C, 2.0g F) + 1 tbsp Kernel Season\u2019s Butter Popcorn Seasoning (60 cal based on 5 cal per 1/4 tsp label panel). Regular butter mash reference (700g potatoes + 1/4 cup whole milk + 4 tbsp salted butter) is 237.3 cal, 3.8g protein, 28.7g carbs, and 12.5g fat per 1/4 batch.",
+    "allergens": [
+      "dairy"
+    ],
+    "dietTags": [
+      "high-protein",
+      "gluten-free",
+      "vegetarian"
+    ],
+    "relatedIds": [
+      "crispy-potato-skins",
+      "bone-broth-rice"
+    ],
+    "mealPrep": {
+      "storage": "Store leftover mash in an airtight container in the refrigerator for up to 3\u20134 days.",
+      "lasts": "3\u20134 days refrigerated.",
+      "reheat": "Warm gently on the stovetop or in the microwave with a splash of milk to loosen."
+    }
+  },
+  {
+    "id": "crispy-potato-skins",
+    "title": "Crispy Potato Skins",
+    "tagline": "Zero-waste crunchy topper for mashed potatoes: save 100g of potato peels, rinse and pat dry, toss with 1 tbsp olive oil and 1 tsp Kernel Season\u2019s Butter Popcorn Seasoning, and air-fry at 325\u00b0F for 15\u201320 minutes until golden and crisp.",
+    "heroImage": "/images/crispy-potato-skins/hero-polished.webp",
+    "prepImage": "/images/crispy-potato-skins/olive-oil-polished.webp",
+    "prepImageCaption": "100g rinsed and dried potato peels tossed with 1 tbsp olive oil and 1 tsp Kernel Season\u2019s Butter Popcorn Seasoning before air-frying at 325\u00b0F.",
+    "video": "/videos/crispy-potato-skins/868-Crispy-Potato-Skins.mp4",
+    "videoPoster": "/images/crispy-potato-skins/hero-polished.webp",
+    "servings": 4,
+    "servingSize": "Crispy peel topper for a 4-serving batch of mashed potatoes",
+    "time": "15\u201320 min air-fry at 325\u00b0F",
+    "socialHashtags": [
+      "#CrispyPotatoSkins",
+      "#AirFryerRecipes",
+      "#MashedPotatoes",
+      "#KitchenTips",
+      "#TheSplitPlate"
+    ],
+    "socialImages": [
+      "/images/crispy-potato-skins/rinse-peels-polished.webp",
+      "/images/crispy-potato-skins/olive-oil-polished.webp",
+      "/images/crispy-potato-skins/seasoning-polished.webp",
+      "/images/crispy-potato-skins/golden-basket-polished.webp",
+      "/images/crispy-potato-skins/plated-skins-polished.webp"
+    ],
+    "socialCarousel": {
+      "heroBadge": "Zero-Waste Topper \u2022 Air Fryer",
+      "heroAccent": "amber",
+      "heroTitle": "Crispy Potato Skins",
+      "heroStats": [
+        {
+          "value": "100g",
+          "label": "saved potato peels"
+        },
+        {
+          "value": "325\u00b0F",
+          "label": "15\u201320 min air-fry"
+        },
+        {
+          "value": "3 items",
+          "label": "peels, olive oil, seasoning"
+        }
+      ],
+      "hook": "Making mashed potatoes? Save the peels. Air-fry them at 325\u00b0F with olive oil and butter popcorn seasoning, then pile them on your mash for a buttery crunch.",
+      "captionTitle": "Crispy Potato Skins \u2014 Save the Peels for Your Mashed Potatoes",
+      "captionBody": "Making mashed potatoes? Save the peels. Air-fry them with olive oil and butter popcorn seasoning, then pile them on your mash for a buttery crunch.\n\nIngredients\n\u2022 100 g potato peels\n\u2022 1 tbsp olive oil\n\u2022 1 tsp Kernel Season\u2019s Butter Popcorn Seasoning\n\nMethod\n1. Rinse the peels and pat them dry between paper towels.\n2. Toss with the olive oil and butter popcorn seasoning.\n3. Spread them out in the air-fryer basket. Air-fry at 325\u00b0F for 15\u201320 minutes, until golden and crisp. Start checking at 15 minutes.\n4. Add them to the mash just before serving so they stay crisp.\n\nSave this for your next batch of mashed potatoes.\n\n#CrispyPotatoSkins #AirFryerRecipes #MashedPotatoes #KitchenTips #TheSplitPlate",
+      "heroPhoto": "/images/crispy-potato-skins/hero-polished.webp",
+      "ingredientGroups": [
+        {
+          "card": 1,
+          "accent": "amber",
+          "heading": "Saved Peels & Oil",
+          "items": [
+            {
+              "quantity": "100g",
+              "text": "Potato peels (saved from peeling potatoes for Protein Mashed Popcorn)"
+            },
+            {
+              "quantity": "1 tbsp",
+              "text": "Olive oil"
+            }
+          ]
+        },
+        {
+          "card": 2,
+          "accent": "coral",
+          "heading": "Buttery Crunch Finish",
+          "items": [
+            {
+              "quantity": "1 tsp",
+              "text": "Kernel Season\u2019s Butter Popcorn Seasoning"
+            }
+          ]
+        }
+      ],
+      "ingredientCardPhotos": [
+        {
+          "src": "/images/crispy-potato-skins/rinse-peels-polished.webp",
+          "layout": "side"
+        },
+        {
+          "src": "/images/crispy-potato-skins/olive-oil-polished.webp",
+          "layout": "side"
+        }
+      ],
+      "methodLabel": "RINSE, DRY, TOSS & AIR-FRY",
+      "methodGroups": [
+        {
+          "card": 1,
+          "accent": "amber",
+          "heading": "Rinse, Pat Dry & Season",
+          "items": [
+            {
+              "number": 1,
+              "heading": "Rinse & dry the peels thoroughly",
+              "body": "Rinse 100g potato peels in cool water to remove surface starch, then pat them completely dry between paper towels."
+            },
+            {
+              "number": 2,
+              "heading": "Toss with olive oil & butter seasoning",
+              "body": "Toss the dried peels with 1 tbsp olive oil and 1 tsp Kernel Season\u2019s Butter Popcorn Seasoning."
+            }
+          ]
+        },
+        {
+          "card": 2,
+          "accent": "coral",
+          "heading": "Air-Fry at 325\u00b0F & Top the Mash",
+          "items": [
+            {
+              "number": 3,
+              "heading": "Air-fry at 325\u00b0F for 15\u201320 minutes",
+              "body": "Spread in the air-fryer basket and cook at 325\u00b0F for 15\u201320 minutes until golden and crisp (start checking at 15 minutes)."
+            },
+            {
+              "number": 4,
+              "heading": "Pile onto mashed potatoes right before serving",
+              "body": "Scatter the hot, crispy skins over your mashed potatoes right at the table so they keep their crunch."
+            }
+          ]
+        }
+      ],
+      "methodCardPhotos": [
+        {
+          "src": "/images/crispy-potato-skins/seasoning-polished.webp",
+          "layout": "side"
+        },
+        {
+          "src": "/images/crispy-potato-skins/golden-basket-polished.webp",
+          "layout": "side"
+        }
+      ],
+      "servingPhoto": {
+        "src": "/images/crispy-potato-skins/plated-skins-polished.webp",
+        "layout": "side"
+      },
+      "servingGroups": [
+        {
+          "accent": "coral",
+          "heading": "Companion Crunch for Protein Mashed Popcorn",
+          "items": [
+            {
+              "text": "Designed as the crispy texture contrast on top of Protein Mashed Popcorn\u2014turning the peels you would normally throw away into golden potato-skin curls."
+            }
+          ]
+        }
+      ],
+      "engagementQuestion": "Do you normally toss your potato peels or crisp them up?"
+    },
+    "flavorProfile": "Salty, golden-fried potato-skin crunch coated in olive oil and buttery popcorn seasoning.",
+    "bestFor": [
+      "Crunchy topping for mashed potatoes",
+      "Zero-waste kitchen habit",
+      "Air-fryer side upgrade"
+    ],
+    "useThisWhen": "You just peeled potatoes for mashed potatoes and want to turn the peels into a crispy, buttery topping in the air fryer while the potatoes boil.",
+    "flavorTarget": "Crisp, blistered potato-peel ribbons with rich butter-popcorn saltiness.",
+    "ingredients": [
+      "100g potato peels (saved from peeling potatoes for mashed potatoes)",
+      "1 tbsp olive oil",
+      "1 tsp Kernel Season\u2019s Butter Popcorn Seasoning"
+    ],
+    "steps": [
+      {
+        "text": "RINSE & PAT DRY: Rinse 100g potato peels in water and pat them thoroughly dry between paper towels.",
+        "image": "/images/crispy-potato-skins/rinse-peels-polished.webp",
+        "imageAlt": "Crispy Potato Skins: rinsing fresh potato peels in a stainless steel bowl"
+      },
+      {
+        "text": "TOSS WITH OLIVE OIL & BUTTER SEASONING: Add 1 tbsp olive oil and 1 tsp Kernel Season\u2019s Butter Popcorn Seasoning and toss until the peels are evenly coated.",
+        "image": "/images/crispy-potato-skins/olive-oil-polished.webp",
+        "imageAlt": "Crispy Potato Skins: adding 1 tbsp olive oil to the dried potato peels"
+      },
+      {
+        "text": "AIR-FRY AT 325\u00b0F (15\u201320 MIN): Spread the seasoned peels in the air-fryer basket and air-fry at 325\u00b0F for 15\u201320 minutes until golden brown and crisp, checking starting at 15 minutes.",
+        "image": "/images/crispy-potato-skins/golden-basket-polished.webp",
+        "imageAlt": "Crispy Potato Skins: golden crispy potato peels in the air-fryer basket"
+      },
+      {
+        "text": "TOP THE MASH & SERVE: Pile the crispy potato skins on top of Protein Mashed Popcorn right before serving so they stay crisp.",
+        "image": "/images/crispy-potato-skins/plated-skins-polished.webp",
+        "imageAlt": "Crispy Potato Skins: piling crispy air-fried potato skins onto a bowl of mashed potatoes"
+      }
+    ],
+    "executionRules": [
+      "Pat the rinsed peels thoroughly dry between paper towels before oiling so they crisp instead of steaming.",
+      "Start checking the air fryer at 15 minutes at 325\u00b0F since thin peels brown quickly once their moisture evaporates.",
+      "Add the crispy skins to the mashed potatoes right before serving so they keep their crunch."
+    ],
+    "macroHonesty": "Companion kitchen-tip recipe using 100g potato peels, 1 tbsp olive oil, and 1 tsp Kernel Season\u2019s Butter Popcorn Seasoning. No separate per-serving macro claim is asserted in the video.",
+    "allergens": [
+      "dairy"
+    ],
+    "dietTags": [
+      "gluten-free",
+      "vegetarian",
+      "zero-waste"
+    ],
+    "relatedIds": [
+      "protein-mashed-popcorn",
+      "bone-broth-rice"
+    ],
+    "mealPrep": {
+      "storage": "Best eaten fresh out of the air fryer while crisp.",
+      "lasts": "Enjoy same day; re-crisp in the air fryer if needed.",
+      "reheat": "Re-crisp at 325\u00b0F in the air fryer for 2\u20133 minutes."
+    }
+  },
   {
     id: "bone-broth-rice",
     title: "Bone Broth Rice",

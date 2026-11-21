@@ -81,6 +81,7 @@
   <url><loc>https://thesplitplate.com/recipes/friendsgiving-green-bean-chicken-casserole</loc><priority>0.8</priority></url>
   <url><loc>https://thesplitplate.com/recipes/marry-me-chicken</loc><priority>0.8</priority></url>
   <url><loc>https://thesplitplate.com/recipes/three-ingredient-german-beef-and-mash</loc><priority>0.8</priority></url>
+  <url><loc>https://thesplitplate.com/recipes/emergency-chicken-piccata</loc><priority>0.8</priority></url>
   <url><loc>https://thesplitplate.com/cookbook/high-protein-chipotle-style-queso</loc><priority>0.7</priority></url>
   <url><loc>https://thesplitplate.com/cookbook/high-protein-caesar-dressing</loc><priority>0.7</priority></url>
   <url><loc>https://thesplitplate.com/cookbook/high-protein-cilantro-jalapeno-ranch</loc><priority>0.7</priority></url>
@@ -208,6 +209,7 @@
   <url><loc>https://thesplitplate.com/cookbook/brookies-and-cream-protein-creami</loc><priority>0.7</priority></url>
   <url><loc>https://thesplitplate.com/cookbook/frozen-hot-chocolate-cookie-creami</loc><priority>0.7</priority></url>
   <url><loc>https://thesplitplate.com/cookbook/sea-salt-toffee-skillet-cookie-creami</loc><priority>0.7</priority></url>
+  <url><loc>https://thesplitplate.com/cookbook/cookies-and-cream-milkshake-creami</loc><priority>0.7</priority></url>
   <url><loc>https://thesplitplate.com/cookbook/brownie-batter-cookie-creami</loc><priority>0.7</priority></url>
   <url><loc>https://thesplitplate.com/cookbook/cake-batter-cupcake-cookie-creami</loc><priority>0.7</priority></url>
   <url><loc>https://thesplitplate.com/cookbook/mint-chip-candy-cane-creami</loc><priority>0.7</priority></url>
@@ -216,6 +218,8 @@
   <url><loc>https://thesplitplate.com/cookbook/crumbl-peanut-butter-cup-creami</loc><priority>0.7</priority></url>
   <url><loc>https://thesplitplate.com/cookbook/oatmeal-creme-pie-creami</loc><priority>0.7</priority></url>
   <url><loc>https://thesplitplate.com/cookbook/churro-cookie-creami</loc><priority>0.7</priority></url>
+  <url><loc>https://thesplitplate.com/cookbook/protein-mashed-popcorn</loc><priority>0.7</priority></url>
+  <url><loc>https://thesplitplate.com/cookbook/crispy-potato-skins</loc><priority>0.7</priority></url>
   <url><loc>https://thesplitplate.com/cookbook/bone-broth-rice</loc><priority>0.7</priority></url>
   <url><loc>https://thesplitplate.com/cookbook/spicy-umami-fried-rice</loc><priority>0.7</priority></url>
   <url><loc>https://thesplitplate.com/cookbook/tks-sweet-heat-chicken</loc><priority>0.7</priority></url>
