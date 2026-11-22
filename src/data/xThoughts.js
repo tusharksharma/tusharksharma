@@ -79,6 +79,31 @@ export const xThoughtCarousels = [
         "Seven small fixes from this week: check viral macros against your own labels, beat the delivery app with a 15-minute fallback, and serve picky eaters the same food, unassembled. Save this for the next 5:30 scramble. Full recipes: link in bio.\n\n#FamilyDinner #HighProtein #PickyEaters",
     },
   },
+  {
+    slug: "seven-ways-to-keep-the-table-simple",
+    title: "Seven ways to keep the table simple",
+    subtitle: "Split the carb, plan the dessert, fit Thanksgiving to your table—what got food made Nov 16–22.",
+    // Friday publish date for this carousel (not the first daily thought date).
+    initialMainPostDate: "2026-11-27",
+    weekLabel: "Nov 16 – Nov 22, 2026",
+    // First card is the thumbnail (no separate cover); cards 1–7 are the seven daily thoughts.
+    // Card 5 is the Nov 20 thought (posted Nov 21; posts can't be backdated).
+    cards: [
+      { src: "/images/x-thoughts-2026-11-27/x-01.jpg", date: "Nov 16, 2026", label: "1 / 7" },
+      { src: "/images/x-thoughts-2026-11-27/x-02.jpg", date: "Nov 17, 2026", label: "2 / 7" },
+      { src: "/images/x-thoughts-2026-11-27/x-03.jpg", date: "Nov 18, 2026", label: "3 / 7" },
+      { src: "/images/x-thoughts-2026-11-27/x-04.jpg", date: "Nov 19, 2026", label: "4 / 7" },
+      { src: "/images/x-thoughts-2026-11-27/x-05.jpg", date: "Nov 20, 2026", label: "5 / 7" },
+      { src: "/images/x-thoughts-2026-11-27/x-06.jpg", date: "Nov 21, 2026", label: "6 / 7" },
+      { src: "/images/x-thoughts-2026-11-27/x-07.jpg", date: "Nov 22, 2026", label: "7 / 7" },
+    ],
+    caption: {
+      default:
+        "Seven simple moves from this week: split the carb instead of the meal, plan dessert into the day, and fit Thanksgiving to the table you actually have. Save this for the next 5:30 scramble. Full recipes: link in bio.\n\n#FamilyDinner #Thanksgiving #HighProtein",
+      tiktok:
+        "Seven simple moves from this week: split the carb instead of the meal, plan dessert into the day, and fit Thanksgiving to the table you actually have. Save this for the next 5:30 scramble. Full recipes: link in bio.\n\n#FamilyDinner #Thanksgiving #HighProtein",
+    },
+  },
 ];
 
 export function findXThoughtCarousel(slug) {

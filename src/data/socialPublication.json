@@ -1208,5 +1208,10 @@
     "initialMainPostDate": null,
     "initialMainCreatedAt": "2026-11-21",
     "firstAddedAt": "2026-11-21"
+  },
+  "seven-ways-to-keep-the-table-simple": {
+    "initialMainPostDate": "2026-11-27",
+    "initialMainCreatedAt": "2026-11-27",
+    "firstAddedAt": "2026-11-27"
   }
 }
