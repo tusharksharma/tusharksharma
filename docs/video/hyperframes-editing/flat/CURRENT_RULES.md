@@ -1,5 +1,17 @@
 # Current Split Plate editing rules
 
+## One video per dinner — November 21, 2026
+
+- Produce one main dinner video by default. Use the strongest available hook, preparation, plating, and tasting footage in the main. Show the adult and kids’ plates together when that is part of the recipe.
+- Create a dinner teaser, adult cut, comment-recipe cut, or other companion only when Tushar requests that deliverable for the project. The six-ingredient threshold by itself does not add a second dinner video. The non-dinner complexity rule still applies. Keep the existing source-allocation and reserve requirements.
+
+## Hooks, Marcus tests, macros, and retailer marks — November 21, 2026
+
+- When Tushar requests Hook Scout or supplies the Format Finder brief, choose a named format and write three hook options grounded in the actual footage and recipe. Put the selected hook into the exact Marcus read for approval. A real family constraint and a visible solution work for the Common Problem My Solution format.
+- Use Marcus at 1.0× by default. When Tushar asks to test a different rate, apply it to the approved take with pitch preserved, then sync the captions and picture to the resulting audio. Record the tested rate and review the decoded speech for natural pacing, pronunciation, and intelligibility. The 1.1× Chicken Piccata test applies to that edit.
+- Calculate macros for the bowl as served, including confirmed measured additions such as oil, butter, sauces, and toppings. Use the filmed package labels or manufacturer data and the confirmed serving weights. Prefer the same serving basis in narration and graphics. If approved narration gives a subtotal, label it and show what was added to reach the served total. Put adult numbers next to the adult food when both plates appear.
+- When Tushar requests a retailer logo and the retailer explains the shortcut, source the official asset and time one brief animation to the spoken name. Keep the logo legible and inside the safe area without blocking the food. Check the cue in HyperFrames and the encoded preview. Costco’s bounce in Chicken Piccata was a request for that video.
+
 ## Review in HyperFrames Studio — November 18, 2026
 
 - Open every Split Plate HyperFrames edit for review in HyperFrames Studio with `hyperframes preview --background`. Verify the project URL opens the correct timeline and check playback at the changed section, including captions and audio. Lead the review message with the package folder and include the live Studio timeline link before requesting approval. Keep the preview running during review. Include the encoded MP4 as a companion for checking the exact export.
@@ -68,8 +80,9 @@ Updated October 14, 2026. Apply these explicit user preferences when older refer
 
 ## Sound
 
+- **November 20, 2026 standing rule from Tushar:** include a continuous background music bed in new short-form edits and revisions, including Marcus and text-only cuts, unless Tushar directs otherwise. Rotate the supplied original tracks by mood and pace. Keep the bed clearly below Marcus and useful kitchen sounds, with rock beds slightly quieter under speech.
 - Level follows the October 24, 2026 override above. Keep original/natural clip sound about **-22 dB**, well under Marcus, because the footage often includes kids' noise. Keep music very light so the voiceover dominates. Kids' noise stays down. A genuine sensory sound that is not kids' noise may be lifted briefly at its action.
-- Evaluate music for each cut; rotate the user's original tracks by mood and fit instead of using one universal bed. The older roughly 10% linear-gain starting point is not a loudness target that can compete with Marcus.
+- Judge level by listening to the decoded mix. Earlier gain suggestions are starting points rather than mastering targets.
 - Listen to the final decoded mix; timeline presence, a large fader number, or waveform height does not prove audibility. Earlier wording that said to preserve and elevate genuine kitchen sounds does not authorize raising kids' noise.
 - Stylized whooshes/chimes may support cuts and graphics. Artificial sounds must not fabricate a food crack, crunch, texture, child reaction or other evidence. Use real sensory sound when available, under the October 24 level rule.
 - Keep Marcus intelligible and peak headroom intact. Measure final decoded audio and check phone audibility; asset-specific gains and a reviewer's LUFS claim are not universal mix settings.
@@ -112,4 +125,4 @@ Treat missing sub-composition timelines and preview/export discrepancies as a QA
 
 ## Marcus delivery — October 27, 2026
 
-Confirmed October 27, 2026: Marcus must always play at regular speed (provider speed 1.0 and timeline playback rate 1.0). Never slow his narration with atempo, time-stretching or added silence to reach a duration target. Keep pauses within and between narration excerpts at no more than one second; trim excess quiet and ripple picture/captions while preserving the correct cooking-action match. Measure the rendered narration gaps and review the joins. Intentional branded intro, genuine recorded dialogue, and the requested music-backed nutrition/watch-next sequence are separate scenes, not excuses for narration padding. If the required runtime needs more content, ask Tushar for real stories and obtain approval for exact added paid narration. Do not silently shorten a film below his minimum or retrofit previously approved releases.
+Confirmed October 27, 2026: Marcus defaults to regular speed (provider speed 1.0 and timeline playback rate 1.0). Apply the explicitly requested speed-test exception in CURRENT_RULES when relevant. Never slow narration or add silence to fill a duration target. Keep pauses within and between narration excerpts at no more than one second; trim excess quiet and ripple picture/captions while preserving the correct cooking-action match. Measure the rendered narration gaps and review the joins. Intentional branded intro, genuine recorded dialogue, and the requested music-backed nutrition/watch-next sequence are separate scenes, not excuses for narration padding. If the required runtime needs more content, ask Tushar for real stories and obtain approval for exact added paid narration. Do not silently shorten a film below his minimum or retrofit previously approved releases.

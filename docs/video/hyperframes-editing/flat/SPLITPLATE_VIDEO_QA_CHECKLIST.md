@@ -8,18 +8,19 @@ Run this for **each publishable cut**, including a teaser, full dinner, adult co
 - [ ] Watch each candidate at phone size with and without audio. Pick a genuine visible event—a sizzle, flip, crack, crunch, pour, scoop, cheese pull, or moving food/reaction—not a text-only promise, held plate, empty pan, or setup movement.
 - [ ] Confirm the chosen moving event follows the 0.2-second opening cover and is underway within the first second, remaining legible through the first 1–1.5 seconds of motion. Inspect the cover at frame 0, then the picture at ~0.5s, ~1.5s, and 3s; a contact sheet alone cannot prove motion or sound. Provenance: on October 24, 2026 Tushar moved the bold cover from an end tail to this opening.
 - [ ] Keep original/natural clip sound very low, about -22 dB and well under Marcus, because the footage often includes kids' noise (Tushar, October 24, 2026). Listen to the decoded mix. Briefly lift a genuine sensory sound only when it is not kids' noise. Do not give kids' noise an audible moment before narration.
-- [ ] Make an explicit music-bed decision for this cut. Check the actual narration gaps, sensory hook, mood, and available original tracks. Keep any bed very light under Marcus so the voiceover dominates. Record the chosen track/gain or `no music` with the reason. Do not add music automatically merely because a track exists. The older roughly 10% linear-gain starting point is not permission to compete with Marcus.
+- [ ] Check the quiet continuous music bed, including text-only cuts, unless Tushar directed otherwise. Record the chosen original track and level. Keep rock beds slightly quieter under Marcus and confirm speech and genuine useful kitchen sound are clear in the encoded mix.
 
 ## 2. Story and claim QA
 
 - [ ] Hook text and Marcus add complementary information; neither merely reads the other. The first three seconds make the food or practical promise understandable muted.
 - [ ] The next shots pay off the opening, with no false action label (for example, an empty pan called a sear). The first distinct payoff and the final plate are visible, not hidden by copy or CTA.
-- [ ] Every ingredient, macro, serving, brand, and family-split claim matches the current recipe, actual footage, and user corrections. Unconfirmed claims stay out of postable renders.
+- [ ] Every ingredient, macro, serving, brand, and family-split claim matches the current recipe, actual footage, and user corrections. Confirm the displayed total includes measured additions and identify any narrated subtotal or adult serving basis. Unconfirmed claims stay out of postable renders.
 - [ ] Match cuts, narration, on-screen text, and real footage timing; a flash-forward is allowed, but the method must become clear afterward. Cut dead air and repeated mechanics while leaving room for the strongest sensory moment.
 - [ ] Use one natural CTA, then inspect its entrance, midpoint, and last frame. For recipe cuts, retain the approved modern three-second save treatment where appropriate.
 
 ## 3. Production and tracking QA
 
+- [ ] Verify the one-video dinner scope or explicitly requested companions. For a requested Marcus speed test, confirm pitch, speech timing and captions at the tested rate. For a requested retailer logo, confirm the official asset cues on the name in Studio and in the encoded preview.
 - [ ] Verify no source-time overlap across publishable cuts or the five reserved clips; update and read back the source-allocation map and `UNUSED_CLIP_INVENTORY` entries.
 - [ ] Confirm portrait framing, HDR/SDR decision, brand palette, TikTok safe area, legibility, contrast, and restrained food grade. Inspect contact sheet **and** moving preview.
 - [ ] Inspect the source and finished cover options for likeness, truthful food, polish, and legible type. Verify the selected thumbnail in the first decoded frame, count the opening hold at the export frame rate, and confirm the moving-hook handoff and closing shot. The default hold is 0.2 seconds (6 frames at 30 fps, 12 at 60 fps). Record the selected JPG and decoded frame count in QA.

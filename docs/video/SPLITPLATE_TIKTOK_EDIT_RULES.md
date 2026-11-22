@@ -17,12 +17,11 @@ Performance sheet: `Split Plate — Video Performance` at `https://docs.google.c
 - Before approving a narrative, identify the post's primary audience signal: family dinner, lunchbox, bedtime, workday pressure, different adult/kid preferences, grocery reality, home-gym access, or another concrete parent system. Do not rely on a generic closing question to establish the audience after the recipe is over.
 - Do not force a parent label or hook into every post. Creami and dessert videos may lead with flavor, texture, a surprising ingredient, an experiment, or a useful discovery when that is the strongest concept.
 - Avoid `zero-guilt`, `guilt-free reward`, cheat-food morality, and similar framing. Enjoyment without food guilt is the house voice.
-- **Dinner completion gate:** allocate footage and produce the companion cuts together. Every dinner requires a distinct (1) 7-second teaser, (2) full Split Plate version, and (3) full adult version. A fourth, under-15-second comment-recipe cut is required when the complete served recipe has six or more ingredients (excluding water and optional garnish), or when Tushar explicitly requests it. Do not call the package complete until every required cut is rendered, packaged, inventoried separately, and audited for zero cross-cut raw source-time overlap. Do not silently omit a required cut because an earlier edit consumed its footage.
+- **Dinner completion gate:** deliver one main Split Plate dinner video by default. Create companion cuts only when requested. Follow CURRENT_RULES for scope and use the strongest footage in the main.
 - Dinner videos should sell the "One Cook, Two Plates" system, not just the food.
 - For dinner recipes, show the adult plate and kid plate early when footage exists.
 - A single adult plate can be the payoff, but the split adult/kid composition is the stronger brand hook.
-- For every dinner with enough footage, build two full-length publishable edits: a Split Plate version that explains the shared cook and the adult/kid finishes, plus an adult-focused companion that follows the adult recipe, macros, and payoff without prescribing kid portions. Give the two edits different visual spines and use alternate source ranges wherever possible.
-- Create two separate 1080x1920 manual-cover assets for every dinner: one adult cover centered on the finished adult plate with adult macros, and one Split Plate cover that visibly includes both plate styles and names the shared-cook value. Covers are standalone image files for manual upload and are not baked into the videos.
+- Create both clean and bold 1080×1920 cover options for the main dinner video. If Tushar requests another publishable cut, give it its own cover options. Follow the first-frame and standalone JPG requirements in CURRENT_RULES.
 - Use practical parent language: weeknight hack, busy parents, one pan, one cook, kid-friendly version.
 - Core origin story: the user cooked separately for kids for about 6 years. Kids ate around 5:30 pm, adults ate around 8 pm after bedtime, and dinner meant up to 3 hours in the kitchen. When the kids reached roughly 3 and 6, the family bought a new dining table and intentionally moved toward eating together with one cook and two plate styles.
 - Split-plate philosophy: kids are not given keto/fat-free macro substitutes by default. Kids should generally get normal growing-years food; their adjustments are usually deconstructed plates, less spice, smaller portions, normal tortillas/bagels/cheese, or simpler sauce.
@@ -85,11 +84,11 @@ Performance sheet: `Split Plate — Video Performance` at `https://docs.google.c
 
 ## Multi-Version Recipe And Reserve Workflow
 
-- For every dinner, decide the required three-cut baseline and whether the complexity rule adds a fourth cut **before editing any timeline**. Allocate all required cuts and the reserve bank from the same raw-footage review. Different posting dates do not turn this into separate production jobs.
-- For other complicated recipes, plan purpose-specific companion cuts only when enough distinct preparation, transformation, or payoff footage exists to support genuinely different posts; the six-ingredient comment-cut rule still applies across recipe series.
-- For **non-dinner** simple assembly recipes, snack boxes, quick sandwiches, basic drinks, or other builds whose complete method is understandable in roughly 15-30 seconds, do not automatically require a teaser or `comment recipe` cut. Prioritize one strong main edit and preserve alternate footage for compilations, community posts, or future series recaps. The dinner three-cut baseline still applies to dinners.
-- Decide the scope before allocating footage. If an optional short version would merely repeat the main edit without creating a new curiosity hook or useful compressed recipe story, keep it as an internal compilation asset rather than scheduling it as a standalone post. For a required dinner cut, request pickup footage or explicit scope approval rather than silently skipping it.
-- For dinner packages, allocate the strongest raw moments across these distinct jobs before building any one edit:
+- Allocate the main dinner video, the reserve bank, and any explicitly requested cuts from the same raw footage review before editing.
+- Apply the six-ingredient comment-cut rule to non-dinner recipes. The single-video dinner default applies regardless of ingredient count.
+- For **non-dinner** simple assembly recipes, snack boxes, quick sandwiches, and similar builds, prioritize one main edit and preserve alternate footage for reuse. Follow the complexity rule when it applies.
+- Decide the scope before allocating footage. Keep optional edits that repeat the main as internal compilation assets unless Tushar approves them for a standalone post.
+- For dinners, give the strongest raw moments to the main edit. If Tushar requests companions, allocate distinct raw ranges to each requested job:
   - **7-second teaser:** its own immediate sensory/finished-dish hook and curiosity gap, not a trimmed full edit or a compressed tutorial.
   - **Full Split Plate:** the shared cook, adult and kid plate finishes, practical family reason, naturally paced Marcus narration, and engagement question.
   - **Full adult:** a distinct adult-food visual spine, method, and payoff, without reusing the Split Plate cut's raw source-time ranges.
@@ -112,7 +111,7 @@ Performance sheet: `Split Plate — Video Performance` at `https://docs.google.c
 - When rebuilding a post that received no distribution, treat every raw range used in all previously posted versions as unavailable. Changing only the hook, CTA, duration, or one clip is not a materially new edit when the rest of the visual timeline is unchanged.
 - Before delivering a replacement, compare its source manifest against every prior posted manifest and verify that the new visual spine has no reused raw ranges whenever enough untouched footage exists.
 - Do not bake music into any version unless explicitly requested. Keep original cooking sound beneath Marcus where narration is used.
-- Inventory each required dinner cut and reserve asset separately. Give all publishable versions different filenames, captions, and posting slots. Every rendered canonical MP4 gets its own `VIDEO_INVENTORY` row: Split Plate, adult, teaser, and the under-15 comment recipe when required, plus any retained clean/text/Marcus variants. Do not let an output disappear merely because another row represents the same recipe.
+- Inventory each approved publishable video and reserve asset separately. Give any requested publishable companions their own filenames and captions. Keep internal alternate exports in the project records.
 - **Agenda/inventory readback gate:** when a video was built for a scheduled agenda item, delivery is not complete until the exact agenda row contains the final inventory ID, current status, postable path, and production note, and the matching `VIDEO_INVENTORY` row points to the approved canonical file and current hash. Read both rows back after writing and verify the canonical path still exists. A successful render by itself is not completion.
 - Inventory optional short cuts from simple recipes as `compilation reserve` unless Tushar explicitly approves them for standalone posting. Do not assign them a posting slot merely because they were rendered.
 - Treat the captions as distinct jobs, not shorter copies of one another:
@@ -273,7 +272,7 @@ Performance sheet: `Split Plate — Video Performance` at `https://docs.google.c
 - Open with the finished proteinized result plus a brief reference to the viral original. Use a credited screenshot or picture-in-picture when appropriate, then move immediately into original creator footage.
 - Finish with an honest verdict covering taste, effort, macro improvement, and whether the creator would make it again. A failed proteinization can still be a useful episode.
 - Use a trend-specific discussion question such as `Worth proteinizing, or should this one stay original?` rather than a generic engagement prompt.
-- Avoid baking music into the export. Preserve original cooking sound and leave room for the user to add a current TikTok track in-app.
+- Use the continuous original bed described in CURRENT_RULES. Preserve useful original cooking sound and leave room for any platform audio Tushar adds in-app.
 
 ### Weekly Planning Defaults
 
@@ -285,10 +284,10 @@ Performance sheet: `Split Plate — Video Performance` at `https://docs.google.c
 - Lead with a specific problem, surprising result, useful discovery, or clear point of view. Merely adding a parent label is not a concept.
 - For Split Plate dinners, test an immediate food payoff or two-plate reveal when supported by footage. For Creami, use flavor, texture, experiment, or ingredient discovery when stronger than a parent hook.
 - Treat posting times as test windows. Do not describe midday/evening as proven optimal or claim a precise number of hours is required for a post to breathe.
-- Publish a complicated recipe's 7-second teaser before its Split Plate main in the same calendar week.
-- Schedule the adult-focused version in the following week. Never place it beside the main as a same-week duplicate.
-- Schedule the under-15 comment-recipe cut the week after the adult version and within 14 days of the full main. The delayed cut needs alternate footage, opening language, and a purpose-specific caption.
-- Produce and inventory all three baseline dinner cuts together when the raw recipe is edited; include the fourth comment-recipe cut when required. The cuts may publish over successive weeks, but their footage ownership is decided in the same production pass. Mark the comment-recipe export with its earliest eligible posting date so it is not scheduled prematurely.
+- If Tushar requests a dinner teaser and authorizes scheduling, plan it ahead of the main.
+- When an adult companion and scheduling are requested, give it a separate slot with the spacing in the production rules.
+- When a dinner comment-recipe cut and scheduling are requested, follow the timing in the production rules and give the cut alternate footage, a distinct hook, and its own caption.
+- Produce and inventory the main dinner cut and any requested companions using one preallocated source map. Record applicable scheduling constraints for approved companions.
 - Before adding any post to a weekly plan, check both `VIDEO_INVENTORY` and the TikTok `Latest` / `History` posting data. Match on inventory ID, exact title, recipe slug, caption language, and close topic variants; a renamed post can still be a duplicate.
 - Treat `Ready` only as a production status. It does **not** mean the video is unposted. If posting data is stale, refresh it when possible and search the available history before scheduling.
 - `RECIPE VIDEO COVERAGE` answers whether a recipe has appeared in some form; it does not prove that a specific Marcus edit, teaser, under-15 cut, or carousel was posted. Reconcile the exact inventory version against TikTok history before scheduling it.
@@ -318,7 +317,7 @@ Performance sheet: `Split Plate — Video Performance` at `https://docs.google.c
 - Assume the recurring Proffee base unless Tushar explicitly changes it: 1/2 serving unflavored whey isolate, 2 tsp monk fruit sweetener, 2-3 tbsp hot water, ice as needed, and 1/2 cup fat-free ultra-filtered milk.
 - Tushar uses 1 tbsp instant coffee for a strong drink; present 1/2-1 tbsp in the recipe and note that most people may prefer 1/2 tbsp.
 - Do not re-ask the recurring base ingredients for each episode. Ask only for the flavor-specific additions, complete-drink macros, and Tushar's verdict when those details are missing.
-- Default Proffee videos to process-led ASMR: original kitchen sound, no Marcus, no music, natural-speed actions, and magic cuts that remove inactive handling without rushing the audible action.
+- Default Proffee videos to process-led ASMR: lead with original kitchen sound, use natural-speed actions and magic cuts, and follow CURRENT_RULES for the quiet music bed. Omit Marcus unless requested.
 
 ### Website-Agent Package Handoff
 
