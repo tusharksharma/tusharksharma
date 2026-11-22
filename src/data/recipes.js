@@ -16377,6 +16377,257 @@ const recipes = [
           "Inventory 869 package: Emergency Costco Chicken Piccata and Spaghetti. Video: 869-Emergency-Chicken-Piccata.mp4.",
           "Adult bowl: \u2248390 cal / 34g protein / 46g carbs (24g fiber) / 16g fat (includes 1 tsp olive oil; 350 cal subtotal before olive oil)."
       ]
+  },
+  {
+      "id": 86,
+      "status": "live",
+      "slug": "lazy-but-getting-jacked-thanksgiving",
+      "proteinAnchor": "turkey",
+      "mealType": "dinner",
+      "flavorDirection": "savory-gravy",
+      "splitFriendly": "full",
+      "title": "Lazy But Getting Jacked Thanksgiving",
+      "category": "Family Dinner",
+      "pillar": "Protein Meals",
+      "tags": [
+          "turkey",
+          "thanksgiving",
+          "mashed-potatoes",
+          "crispy-potato-skins",
+          "cottage-cheese",
+          "family-dinner",
+          "high-protein",
+          "weeknight-shortcut"
+      ],
+      "time": "25 min",
+      "servings": 4,
+      "protein": 39,
+      "calories": 413,
+      "image": "/images/lazy-but-getting-jacked-thanksgiving/hero-polished.webp",
+      "imagePosition": "center center",
+      "prepImage": "/images/lazy-but-getting-jacked-thanksgiving/both-plates-polished.webp",
+      "prepImageCaption": "Thanksgiving for four: the adult plate combines 1 1/2 label servings of Hormel Square Table sliced turkey breast and gravy, 1/4 batch of Protein Mashed Popcorn, and 1/3 batch of Crispy Potato Skins (\u2248413 cal / 39g protein), while kids get the same turkey and cottage-cheese mash in a kid-sized portion.",
+      "video": "/videos/lazy-but-getting-jacked-thanksgiving/870-Lazy-But-Getting-Jacked-Thanksgiving.mp4",
+      "videoPoster": "/images/lazy-but-getting-jacked-thanksgiving/hero-polished.webp",
+      "role": "A low-effort, high-protein Thanksgiving dinner for four pairing Hormel sliced turkey breast and gravy with cottage-cheese Protein Mashed Popcorn and air-fried Crispy Potato Skins",
+      "makeThisWhen": "You want a Thanksgiving-style turkey-and-mashed-potatoes dinner for four without roasting a whole bird\u2014landing at \u2248413 calories, 39g protein, 38g carbs, and 10g fat per adult plate.",
+      "hook": "Thanksgiving for four means I can keep it simple: warm up Hormel sliced turkey breast and gravy, serve it with cottage-cheese mash, and air-fry the potato peels for a buttery crunch.",
+      "description": "This simple Thanksgiving plate for four combines three components: 1 1/2 label servings of Hormel Square Table sliced roasted turkey breast with its packaged gravy (165 cal, 28.5g protein, 4.5g carbs, 3.75g fat), 1/4 batch of Protein Mashed Popcorn (182 cal, 9.2g protein, 29.7g carbs, 1.6g fat from 700g peeled raw gold potatoes, 150g Good Culture 2% cottage cheese, 1/4 cup Nurri whole protein milk, and 1 tbsp Kernel Season\u2019s butter popcorn seasoning), and 1/3 batch of Crispy Potato Skins (66 cal, 0.9g protein, 4.1g carbs, 4.5g fat from 100g potato peels air-fried at 325\u00b0F with 1 tbsp olive oil and 1 tsp butter popcorn seasoning). Total adult plate with the packaged turkey gravy is \u2248413 calories, 38.6g protein (rounded to 39g), 38.3g carbs (rounded to 38g), and 9.9g fat (rounded to 10g); any separate gravy added on top of the mash is additional. Kids eat the same turkey and mash with an age-appropriate turkey portion.",
+      "ingredients": [
+          "--- TURKEY & GRAVY ---",
+          "Hormel Square Table Sliced Roasted Turkey Breast & Gravy: 1 1/2 label servings (210g) per adult plate (kids receive a smaller portion from the tray)",
+          "--- PROTEIN MASHED POPCORN (4 SERVINGS; 1/4 BATCH PER ADULT PLATE) ---",
+          "700g raw gold potatoes, peeled and weighed raw (save 100g peels for the crispy skins)",
+          "150g Good Culture 2% cottage cheese",
+          "1/4 cup Nurri whole ultra-filtered protein milk",
+          "1 tbsp Kernel Season\u2019s Butter Popcorn Seasoning",
+          "--- CRISPY POTATO SKINS (1/3 BATCH PER ADULT PLATE) ---",
+          "100g potato peels (rinsed and patted dry)",
+          "1 tbsp olive oil",
+          "1 tsp Kernel Season\u2019s Butter Popcorn Seasoning",
+          "Optional: additional gravy for the mash (counted separately from the 413-calorie base estimate)"
+      ],
+      "executionRules": [
+          "Peel and weigh 700g raw gold potatoes, boil until fork-tender, and mash with 150g Good Culture 2% cottage cheese blended smooth with 1/4 cup Nurri whole protein milk plus 1 tbsp Kernel Season\u2019s Butter Popcorn Seasoning (makes 4 servings).",
+          "Rinse 100g saved potato peels, pat thoroughly dry, toss with 1 tbsp olive oil and 1 tsp Kernel Season\u2019s Butter Popcorn Seasoning, and air-fry at 325\u00b0F for 15\u201320 minutes until golden and crisp.",
+          "Warm the Hormel Square Table sliced turkey breast and its packaged gravy in a skillet, then plate 1 1/2 label servings for the adult plate alongside 1/4 batch of the mash and 1/3 batch of the crispy potato skins.",
+          "Serve kids the same turkey and cottage-cheese mash with a smaller turkey portion cut into bite-sized pieces."
+      ],
+      "troubleshooting": [
+          {
+              "problem": "Potato skins come out soft instead of crisp",
+              "fix": "Pat the rinsed peels completely dry between paper towels before tossing with olive oil and butter popcorn seasoning, and spread them out in the air-fryer basket at 325\u00b0F for the full 15\u201320 minutes."
+          },
+          {
+              "problem": "Logging extra gravy on top of the mashed potatoes",
+              "fix": "The \u2248413-calorie, 39g-protein estimate includes the gravy packaged inside the 1 1/2 servings of Hormel turkey breast; add any separate gravy spooned onto the mash to your own count."
+          }
+      ],
+      "splitCook": {
+          "adult": {
+              "label": "Adult Plate \u2014 1.5 Servings Hormel Turkey & Gravy + 1/4 Batch Mash + 1/3 Batch Crispy Skins (\u2248413 cal / 39g P)",
+              "extraIngredients": [
+                  "1 1/2 label servings (210g) Hormel Square Table sliced turkey breast and gravy (165 cal / 28.5g P)",
+                  "1/3 batch Crispy Potato Skins (66 cal / 0.9g P)",
+                  "Optional: extra gravy on mash (separate from base macro estimate)"
+              ],
+              "steps": [
+                  "Plate 1 1/2 label servings of warmed Hormel sliced turkey breast with its packaged gravy and 1/4 batch of Protein Mashed Popcorn.",
+                  "Add 1/3 batch of the air-fried Crispy Potato Skins on the side for buttery crunch (\u2248413 cal, 39g protein, 38g carbs, 10g fat before any separate gravy)."
+              ]
+          },
+          "kid": {
+              "label": "Kid Plate \u2014 Bite-Sized Hormel Turkey & Gravy + Protein Mashed Popcorn",
+              "extraIngredients": [
+                  "Kid-sized portion of Hormel Square Table sliced turkey breast and gravy, cut into bite-sized pieces"
+              ],
+              "steps": [
+                  "Cut the warmed sliced turkey breast with gravy into bite-sized pieces on the kid plate and add a scoop of the creamy Protein Mashed Popcorn alongside."
+              ]
+          },
+          "sharedIngredients": [
+              "Hormel Square Table Sliced Roasted Turkey Breast & Gravy",
+              "Protein Mashed Popcorn batch (700g peeled raw potatoes + 150g Good Culture 2% cottage cheese + 1/4 cup Nurri whole protein milk + 1 tbsp butter popcorn seasoning)",
+              "Crispy Potato Skins batch (100g potato peels + 1 tbsp olive oil + 1 tsp butter popcorn seasoning)"
+          ],
+          "sharedSteps": [
+              "Boil the 700g peeled potatoes until fork-tender, then fold with the smooth blended cottage cheese, Nurri protein milk, and 1 tbsp butter popcorn seasoning.",
+              "Air-fry the 100g dried, oiled, and seasoned potato peels at 325\u00b0F for 15\u201320 minutes while warming the sliced turkey breast and gravy in a skillet."
+          ]
+      },
+      "socialImages": [
+          "/images/lazy-but-getting-jacked-thanksgiving/warm-turkey-polished.webp",
+          "/images/lazy-but-getting-jacked-thanksgiving/mash-spoon-polished.webp",
+          "/images/lazy-but-getting-jacked-thanksgiving/crispy-skins-polished.webp",
+          "/images/lazy-but-getting-jacked-thanksgiving/both-plates-polished.webp",
+          "/images/lazy-but-getting-jacked-thanksgiving/adult-plate-polished.webp"
+      ],
+      "socialCarousel": {
+          "heroBadge": "Thanksgiving for 4 \u2022 Shortcut Split",
+          "heroAccent": "amber",
+          "heroTitle": "Lazy But Getting Jacked Thanksgiving",
+          "heroStats": [
+              {
+                  "value": "\u2248413 cal",
+                  "label": "adult plate w/ skins"
+              },
+              {
+                  "value": "39g P",
+                  "label": "adult plate (38.6g)"
+              },
+              {
+                  "value": "10g F",
+                  "label": "38g carbs \u2022 3 components"
+              }
+          ],
+          "heroPhoto": "/images/lazy-but-getting-jacked-thanksgiving/hero-polished.webp",
+          "hook": "Thanksgiving for four means I can keep it simple: warm up Hormel sliced turkey breast and gravy, serve it with my cottage-cheese mash, and air-fry the potato peels for a buttery crunch.",
+          "captionTitle": "Lazy But Getting Jacked Thanksgiving \u2014 \u2248413 cal / 39g protein adult plate",
+          "captionBody": "Thanksgiving for four means I can keep it simple. I warmed up Hormel sliced turkey breast and gravy, served it with my cottage cheese mash, and air-fried the potato peels for a buttery crunch. The kids had the same turkey and mash. I gave myself a bigger turkey portion.\n\nMy plate \u00b7 \u2248413 calories \u00b7 39 g protein \u00b7 38 g carbs \u00b7 10 g fat. Includes the gravy in the turkey package. Add any separate toppings to your own count.\n\nWhat I used for my plate\n\u2022 1\u00bd label servings Hormel Square Table sliced turkey breast and gravy\n\u2022 \u00bc batch Protein Mashed Popcorn\n\u2022 \u2153 batch crispy potato skins\n\nProtein Mashed Popcorn\nPeel and weigh 700 g raw potatoes, then boil until fork-tender. Blend 150 g Good Culture 2% cottage cheese with \u00bc cup Nurri whole protein milk. Stir into the hot mash with 1 tbsp Kernel Season\u2019s butter popcorn seasoning. Makes four servings.\n\nCrispy potato skins\nRinse 100 g potato peels and pat them dry. Toss with 1 tbsp olive oil and 1 tsp Kernel Season\u2019s butter popcorn seasoning. Air-fry at 325\u00b0F for 15\u201320 minutes, until golden and crisp. Serve with the mash.\n\nSave this for a Thanksgiving that fits your week.\n\n#ThanksgivingForFour #HighProteinMeals #ThanksgivingDinner #MashedPotatoes #TheSplitPlate\n@hormelfoods @good_culture",
+          "ingredientGroups": [
+              {
+                  "card": 1,
+                  "accent": "amber",
+                  "heading": "Adult Plate Breakdown (\u2248413 cal / 39g P)",
+                  "items": [
+                      {
+                          "quantity": "1 1/2 servings",
+                          "text": "Hormel Square Table sliced turkey breast and gravy (165 cal, 28.5g P, 4.5g C, 3.75g F)"
+                      },
+                      {
+                          "quantity": "1/4 batch",
+                          "text": "Protein Mashed Popcorn (182 cal, 9.2g P, 29.7g C, 1.6g F)"
+                      },
+                      {
+                          "quantity": "1/3 batch",
+                          "text": "Crispy Potato Skins (66 cal, 0.9g P, 4.1g C, 4.5g F)"
+                      }
+                  ]
+              },
+              {
+                  "card": 2,
+                  "accent": "coral",
+                  "heading": "Mash & Crispy Skins Batch Ingredients",
+                  "items": [
+                      {
+                          "quantity": "700g + 100g peels",
+                          "text": "Peeled raw gold potatoes for mash + 100g saved peels for air-fryer skins"
+                      },
+                      {
+                          "quantity": "150g + 1/4 cup",
+                          "text": "Good Culture 2% cottage cheese + Nurri whole protein milk"
+                      },
+                      {
+                          "quantity": "1 tbsp + 1 tsp",
+                          "text": "Kernel Season\u2019s Butter Popcorn Seasoning (1 tbsp in mash, 1 tsp on skins with 1 tbsp olive oil)"
+                      }
+                  ]
+              }
+          ],
+          "ingredientCardPhotos": [
+              "/images/lazy-but-getting-jacked-thanksgiving/warm-turkey-polished.webp",
+              "/images/lazy-but-getting-jacked-thanksgiving/crispy-skins-polished.webp"
+          ],
+          "methodGroups": [
+              {
+                  "card": 1,
+                  "accent": "amber",
+                  "heading": "Make Mash & Air-Fry Saved Peels",
+                  "items": [
+                      {
+                          "number": 1,
+                          "heading": "Whip Protein Mashed Popcorn (4 servings)",
+                          "body": "Boil 700g peeled gold potatoes until fork-tender, mash while hot, and fold with 150g Good Culture 2% cottage cheese blended smooth with 1/4 cup Nurri whole milk plus 1 tbsp butter popcorn seasoning."
+                      },
+                      {
+                          "number": 2,
+                          "heading": "Air-fry 100g potato peels at 325\u00b0F (15\u201320 min)",
+                          "body": "Rinse and dry 100g saved peels, toss with 1 tbsp olive oil and 1 tsp butter popcorn seasoning, and air-fry at 325\u00b0F for 15\u201320 minutes until crisp."
+                      }
+                  ]
+              },
+              {
+                  "card": 2,
+                  "accent": "coral",
+                  "heading": "Warm Turkey & Split the Plates",
+                  "items": [
+                      {
+                          "number": 3,
+                          "heading": "Warm Hormel sliced turkey breast & gravy",
+                          "body": "Warm the packaged sliced turkey breast and gravy in a skillet over medium heat."
+                      },
+                      {
+                          "number": 4,
+                          "heading": "Plate adult & kid portions",
+                          "body": "Serve the adult plate with 1.5 servings turkey and gravy, 1/4 batch mash, and 1/3 batch crispy skins. Serve kids the same turkey and mash in a smaller portion."
+                      }
+                  ]
+              }
+          ],
+          "methodCardPhotos": [
+              "/images/lazy-but-getting-jacked-thanksgiving/mash-spoon-polished.webp",
+              "/images/lazy-but-getting-jacked-thanksgiving/both-plates-polished.webp"
+          ],
+          "servingPhoto": {
+              "src": "/images/lazy-but-getting-jacked-thanksgiving/adult-plate-polished.webp",
+              "layout": "side"
+          },
+          "servingGroups": [
+              {
+                  "accent": "coral",
+                  "heading": "Adult Plate (\u2248413 cal / 39g P / 38g C / 10g F)",
+                  "items": [
+                      {
+                          "text": "Sides subtotal (1/4 batch Protein Mashed Popcorn + 1/3 batch Crispy Potato Skins) = 248 cal, 10.1g protein, 33.8g carbs, 6.1g fat. Adding 1 1/2 label servings Hormel turkey breast & gravy (165 cal, 28.5g protein, 4.5g carbs, 3.75g fat) = 413 cal, 38.6g protein (39g), 38.3g carbs (38g), and 9.9g fat (10g). Separate gravy on mash is additional."
+                      }
+                  ]
+              }
+          ],
+          "engagementQuestion": "What is your favorite shortcut for keeping a small family Thanksgiving simple?"
+      },
+      "meta": {
+          "macros": {
+              "calories": 413,
+              "protein": 39,
+              "carbs": 38,
+              "fat": 10,
+              "estimated": true
+          },
+          "macroHonesty": "Adult plate estimate with packaged turkey gravy (before any separate gravy or toppings added to the mash): 413 calories, 38.6g protein (rounded to 39g), 38.3g total carbs (rounded to 38g), and 9.9g fat (rounded to 10g). Component breakdown: 1 1/2 label servings Hormel Square Table Sliced Roasted Turkey Breast & Gravy (165 cal, 28.5g protein, 4.5g carbs, 3.75g fat based on 140g label serving = 110 cal / 19g P / 3g C / 2.5g F) + 1/4 batch Protein Mashed Popcorn (182 cal, 9.2g protein, 29.7g carbs, 1.6g fat) + 1/3 batch Crispy Potato Skins (66 cal, 0.9g protein, 4.1g carbs, 4.5g fat from 100g USDA raw potato skin + 1 tbsp olive oil + 1 tsp Kernel Season\u2019s butter popcorn seasoning). Confirmed sides subtotal is 248 cal, 10.1g protein, 33.8g carbs, and 6.1g fat.",
+          "substitutionNotes": [
+              "Cross-links directly with Cookbook bases Protein Mashed Popcorn (/cookbook/protein-mashed-popcorn) and Crispy Potato Skins (/cookbook/crispy-potato-skins).",
+              "Any separate gravy spooned onto the mashed potatoes beyond the gravy included in the Hormel turkey package is additional."
+          ]
+      },
+      "mealPrep": {
+          "storage": "Store leftover turkey with gravy and leftover Protein Mashed Popcorn in separate airtight containers in the refrigerator for up to 3\u20134 days. Crisp the potato skins fresh in the air fryer before serving.",
+          "reheat": "Warm turkey and mash gently on the stovetop or in the microwave; re-crisp any leftover potato skins in the air fryer at 325\u00b0F for 2\u20133 minutes.",
+          "lasts": "Turkey and mash keep 3\u20134 days refrigerated; crispy skins are best same day."
+      },
+      "editorialNotes": [
+          "Inventory 870 package: Lazy But Getting Jacked Thanksgiving. Video: 870-Lazy-But-Getting-Jacked-Thanksgiving.mp4.",
+          "Adult plate: \u2248413 cal / 39g protein / 38g carbs / 10g fat (1.5 servings Hormel turkey breast & gravy + 1/4 batch Protein Mashed Popcorn + 1/3 batch Crispy Potato Skins). Verified tags: @hormelfoods @good_culture."
+      ]
   }
 ];
 
